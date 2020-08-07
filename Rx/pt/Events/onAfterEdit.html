@@ -139,29 +139,9 @@
 </thead>
 <tbody>
 <tr><td>fillRange</td><td>object</td><td>Range used for fill</td></tr>
-<tr><td>autoFillType</td><td>longint</td><td>Value used for the fill.</td></tr>
+<tr><td>autoFillType</td><td>longint</td><td>Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically</td><td></td><td>fillDirection</td><td>longint</td><td>Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled</td></tr>
 </tbody>
 </table>
-<ul>
-<li>0: Cells are filled with all data (values, formatting, and formulas)
-<ul>
-<li>1: Cells are filled with automatically sequential data
-<ul>
-<li>2: Cells are filled with formatting only
-<ul>
-<li>3: Cells are filled with values but not formatting
-<ul>
-<li>4: Values are removed from the cells
-<ul>
-<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.
-<ul>
-<li>0: The cells to the left are filled
-<ul>
-<li>1: The cells to the right are filled
-<ul>
-<li>2: The cells above are filled
-<ul>
-<li><p>3: The cells below are filled|</p>
 <h4><a class="anchor" aria-hidden="true" id="action--formulachanged"></a><a href="#action--formulachanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>action = formulaChanged</h4>
 <table>
 <thead>
@@ -172,109 +152,40 @@
 <tr><td>formula</td><td>text</td><td>The formula entered</td></tr>
 </tbody>
 </table>
-</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-<pre><code class="hljs">                                    #### action = clipboardPasted
-                                    
-                                    &lt;table&gt;
-                                      &lt;tr&gt;
-                                        &lt;th&gt;
-                                          Property
-                                        &lt;/th&gt;
-                                        
-                                        &lt;th&gt;
-                                          Type
-                                        &lt;/th&gt;
-                                        
-                                        &lt;th&gt;
-                                          Description
-                                        &lt;/th&gt;
-                                      &lt;/tr&gt;
-                                      
-                                      &lt;tr&gt;
-                                        &lt;td&gt;
-                                          range
-                                        &lt;/td&gt;
-                                        
-                                        &lt;td&gt;
-                                          object
-                                        &lt;/td&gt;
-                                        
-                                        &lt;td&gt;
-                                          Cell range
-                                        &lt;/td&gt;
-                                      &lt;/tr&gt;
-                                      
-                                      &lt;tr&gt;
-                                        &lt;td&gt;
-                                          pasteOption
-                                        &lt;/td&gt;
-                                        
-                                        &lt;td&gt;
-                                          longint
-                                        &lt;/td&gt;
-                                        
-                                        &lt;td&gt;
-                                          Specifies what is pasted from the clipboard:
-                                          
-                                          &lt;li&gt;
-                                            0: Everything is pasted (values, formatting, and formulas)&lt;li&gt;
-                                              1: Only values are pasted&lt;li&gt;
-                                                2: Only the formatting is pasted&lt;li&gt;
-                                                  3: Only formulas are pasted&lt;li&gt;
-                                                    4: Values and formatting are pasted (not formulas)&lt;li&gt;
-                                                      5: Formulas and formatting are pasted (not values)&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt;
-                                                        &lt;td&gt;
-                                                          pasteData
-                                                        &lt;/td&gt;
-                                                        
-                                                        &lt;td&gt;
-                                                          object
-                                                        &lt;/td&gt;
-                                                        
-                                                        &lt;td&gt;
-                                                          The data from the clipboard to be pasted
-                                                          
-                                                          &lt;li&gt;
-                                                            &quot;text&quot; (text): The text from the clipboard&lt;li&gt;
-                                                              &quot;html&quot; (text): The HTML from the clipboard&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;h4&gt;
-                                                                Example
-                                                              &lt;/h4&gt;
-                                                              &lt;p&gt;
-                                                                Here is an example handling an &lt;code&gt;On After Edit&lt;/code&gt; event:
-                                                              &lt;/p&gt;
-                                                              &lt;pre&gt;&lt;code class=&quot;4d&quot;&gt; If(FORM Event.code=On After Edit)
-If(FORM Event.action=&quot;valueChanged&quot;)
-   ALERT(&quot;WARNING: You are currently changing the value\  
-   from &quot;+String(FORM Event.oldValue)+\  
-   &quot; to &quot;+String(FORM Event.newValue)+&quot;!&quot;)
-End if
+<h4><a class="anchor" aria-hidden="true" id="action--clipboardpasted"></a><a href="#action--clipboardpasted" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>action = clipboardPasted</h4>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>range</td><td>object</td><td>Cell range</td></tr>
+<tr><td>pasteOption</td><td>longint</td><td>Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values)</td></tr>
+<tr><td>pasteData</td><td>object</td><td>The data from the clipboard to be pasted<li>&quot;text&quot; (text): The text from the clipboard<li>&quot;html&quot; (text): The HTML from the clipboard</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Here is an example handling an <code>On After Edit</code> event:</p>
+<pre><code class="hljs css language-4d"> If(FORM Event.code=On After Edit)
+    If(FORM Event.action="valueChanged")
+       ALERT("WARNING: You are currently changing the value\  
+       from "+String(FORM Event.oldValue)+\  
+       " to "+String(FORM Event.newValue)+"!")
+    End if
+ End if
 </code></pre>
-<p>End if
-</code></pre>
-<p>
-The above example could generate an event object like this:
-</p>
-<pre><code class="hljs">{</p>
-<p>&quot;code&quot;:45;
-&quot;description&quot;:&quot;On After Edit&quot;;
-&quot;objectName&quot;:&quot;ViewProArea&quot;
-&quot;sheetname&quot;:&quot;Sheet1&quot;;
-&quot;action&quot;:&quot;valueChanged&quot;;
-&quot;range&quot;: {area:ViewProArea,ranges:[{column:1,row:2,sheet:1}]};
-&quot;oldValue&quot;:&quot;The quick brown fox&quot;;
-&quot;newValue&quot;:&quot;jumped over the lazy dog&quot;;
+<p>The above example could generate an event object like this:</p>
+<pre><code class="hljs">{
+
+<span class="hljs-string">"code"</span>:<span class="hljs-number">45</span>;
+<span class="hljs-string">"description"</span>:<span class="hljs-string">"On After Edit"</span>;
+<span class="hljs-string">"objectName"</span>:<span class="hljs-string">"ViewProArea"</span>
+<span class="hljs-string">"sheetname"</span>:<span class="hljs-string">"Sheet1"</span>;
+<span class="hljs-string">"action"</span>:<span class="hljs-string">"valueChanged"</span>;
+<span class="hljs-string">"range"</span>: {<span class="hljs-string">area:</span>ViewProArea,<span class="hljs-string">ranges:</span>[{<span class="hljs-string">column:</span><span class="hljs-number">1</span>,<span class="hljs-string">row:</span><span class="hljs-number">2</span>,<span class="hljs-string">sheet:</span><span class="hljs-number">1</span>}]};
+<span class="hljs-string">"oldValue"</span>:<span class="hljs-string">"The quick brown fox"</span>;
+<span class="hljs-string">"newValue"</span>:<span class="hljs-string">"jumped over the lazy dog"</span>;
 }
-</code></pre></p>
+</code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/pt/Events/onActivate.html"><span class="arrow-prev">← </span><span>On Activate</span></a><a class="docs-next button" href="/docs/Rx/pt/Events/onAfterKeystroke.html"><span>On After Keystroke</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a><ul class="toc-headings"><li><a href="#general-case">General case</a></li><li><a href="#4d-view-pro">4D View Pro</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

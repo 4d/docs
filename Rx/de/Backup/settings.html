@@ -90,6 +90,8 @@
 <li><strong>Personalized</strong>: Used to configure &quot;tailormade&quot; automatic backups. When you select this option, several additional entry areas appear:
 <ul>
 <li><strong>Every X hour(s)</strong>: Allows programming backups on an hourly basis. You can enter a value between 1 and 24.</li>
+</ul>
+<ul>
 <li><strong>Every X day(s) at x</strong>: Allows programming backups on a daily basis. For example, enter 1 if you want to perform a daily backup. When this option is checked, you must enter the time when the backup should start.</li>
 <li><strong>Every X week(s) day at x</strong>: Allows programming backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must enter the day(s) of the week and the time when the backup should start. You can select several days of the week, if desired. For example, you can use this option to set two weekly backups: one on Wednesday and one on Friday.</li>
 <li><strong>Every X month(s), Xth Day at x</strong>: Allows programming backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup should start.</li>
@@ -129,14 +131,18 @@
 <p><img src="/docs/Rx/assets/en/Backup/backup04.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="general-settings"></a><a href="#general-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General settings</h3>
 <ul>
-<li><p><strong>Keep only the last X backup files</strong>: This parameter activates and configures the mechanism used to delete the oldest backup files, which avoids the risk of saturating the disk drive. This feature works as follows: Once the current backup is complete, 4D deletes the oldest archive if it is found in the same location as the archive being backed up and has the same name (you can request that the oldest archive be deleted before the backup in order to save space). If, for example, the number of sets is set to 3, the first three backups create the archives MyBase-0001, MyBase-0002, and MyBase-0003 respectively. During the fourth backup, the archive MyBase-0004 is created and MyBase-0001 is deleted. By default, the mechanism for deleting sets is enabled and 4D keeps 3 backup sets. To disable the mechanism, simply deselect the option.</p>
+<li><strong>Keep only the last X backup files</strong>: This parameter activates and configures the mechanism used to delete the oldest backup files, which avoids the risk of saturating the disk drive. This feature works as follows: Once the current backup is complete, 4D deletes the oldest archive if it is found in the same location as the archive being backed up and has the same name (you can request that the oldest archive be deleted before the backup in order to save space). If, for example, the number of sets is set to 3, the first three backups create the archives MyBase-0001, MyBase-0002, and MyBase-0003 respectively. During the fourth backup, the archive MyBase-0004 is created and MyBase-0001 is deleted. By default, the mechanism for deleting sets is enabled and 4D keeps 3 backup sets. To disable the mechanism, simply deselect the option.</li>
+</ul>
 <blockquote>
 <p>This parameter concerns both database and log file backups.</p>
-</blockquote></li>
-<li><p><strong>Backup only if the data file has been modified</strong>: When this option is checked, 4D starts scheduled backups only if data has been added, changed or deleted in the database since the last backup. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. No error is generated; however the backup journal notes that the backup has been postponed. This option also allows saving machine time for the backup of databases principally used for viewing purposes. Please note that enabling this option does not take any modifications made to the project files or attached files into account.</p>
+</blockquote>
+<ul>
+<li><strong>Backup only if the data file has been modified</strong>: When this option is checked, 4D starts scheduled backups only if data has been added, changed or deleted in the database since the last backup. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. No error is generated; however the backup journal notes that the backup has been postponed. This option also allows saving machine time for the backup of databases principally used for viewing purposes. Please note that enabling this option does not take any modifications made to the project files or attached files into account.</li>
+</ul>
 <blockquote>
 <p>This parameter concerns both database and log file backups.</p>
-</blockquote></li>
+</blockquote>
+<ul>
 <li><p><strong>Delete oldest backup file before/after backup</strong>: This option is only used if the &quot;Keep only the last X backup files&quot; option is checked. It specifies whether 4D should start by deleting the oldest archive before starting the backup (<strong>before</strong> option) or whether the deletion should take place once the backup is completed (<strong>after</strong> option). In order for this mechanism to work, the oldest archive must not have been renamed or moved.</p></li>
 <li><p><strong>If backup fails</strong>: This option allows setting the mechanism used to handle failed backups (backup impossible). When a backup cannot be performed, 4D lets you carry out a new attempt.</p>
 <ul>
@@ -166,11 +172,13 @@
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="automatic-restore"></a><a href="#automatic-restore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automatic Restore</h3>
 <ul>
-<li><p><strong>Restore last backup if database is damaged</strong>: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the database, if an anomaly is detected (corrupted file, for example) during database launch. No intervention is required on the part of the user; however, the operation is logged in the backup journal.</p>
+<li><strong>Restore last backup if database is damaged</strong>: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the database, if an anomaly is detected (corrupted file, for example) during database launch. No intervention is required on the part of the user; however, the operation is logged in the backup journal.</li>
+</ul>
 <blockquote>
 <p>In the case of an automatic restore, only the data file is restored. If you wish to get the attached files or the project files, you must perform a manual restore.</p>
-</blockquote></li>
-<li><p><strong>Integrate last log file if database is incomplete</strong>: When this option is checked, the program automatically integrates the log file when opening or restoring the database.</p>
+</blockquote>
+<ul>
+<li><strong>Integrate last log file if database is incomplete</strong>: When this option is checked, the program automatically integrates the log file when opening or restoring the database.
 <ul>
 <li>When opening a database, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.</li>
 <li>When restoring a database, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.</li>

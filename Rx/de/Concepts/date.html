@@ -70,18 +70,18 @@
 <li>Datenfelder, Variablen oder Ausdrücke vom Typ Datum umfassen den Bereich 1.1.100 bis 31.12.32.767. Das Datum wird in der deutschen Version von 4D im Format Tag/Monat/Jahr dargestellt, in der internationalen Version im Format Monat/Tag/Jahr.</li>
 <li>Auch wenn die Datumsdarstellung über C_DATE bis zum Jahr 32 767 funktioniert, können über das Betriebssystem laufende Operationen eine niedrigere Grenze vorschreiben.</li>
 </ul>
-<p><strong>Hinweis:</strong> Bei der Beschreibung von Befehlen im Handbuch 4D Programmiersprache werden Datumsparameter als Datum bezeichnet, wenn nichts anderes angegeben ist.</p>
+<p><strong>Note:</strong> In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.</p>
 <h2><a class="anchor" aria-hidden="true" id="datumsformat"></a><a href="#datumsformat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datumsformat</h2>
 <p>Ein Datumsformat steht zwischen Ausrufezeichen (!…!). Ein Datum muss im ISO Format strukturiert werden (!YYYY-MM-DD!). Hier ein paar Beispiele:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-literal">!1976-01-01!</span>
 <span class="hljs-literal">!2004-09-29!</span>
 <span class="hljs-literal">!2015-12-31!</span>
 </code></pre>
-<p>Ein Nulldatum wird als <em>!00-00-00!</em> angegeben.</p>
-<p><strong>Tipp:</strong> Der Methodeneditor enthält ein Kürzel zur Eingabe eines Nulldatums. Tippen Sie einfach das Ausrufezeichen (!) und drücken die Enter-Taste.</p>
+<p>A null date is specified by <em>!00-00-00!</em>.</p>
+<p><strong>Tip:</strong> The Method Editor includes a shortcut for entering a null date. Tippen Sie einfach das Ausrufezeichen (!) und drücken die Enter-Taste.</p>
 <p><strong>Hinweise:</strong></p>
 <ul>
-<li>Zur Wahrung der Kompatibilität lässt 4D die Eingabe zweistelliger Jahreszahlen zu. Eine zweistellige Jahreszahl bedeutet 20. oder 21. Jahrhundert, je nachdem ob es größer oder kleiner als 30 ist, außer die Einstellung wurde mit dem Befehl <code>SET DEFAULT CENTURY</code> geändert.</li>
+<li>Zur Wahrung der Kompatibilität lässt 4D die Eingabe zweistelliger Jahreszahlen zu. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the <code>SET DEFAULT CENTURY</code> command.</li>
 <li>Haben Sie die Option &quot;Verwende regionale Systemeinstellungen&quot; (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden. Im allgemeinen gilt in einer deutschen Umgebung für Datum das Format Tag. Monat. Jahr, getrennt durch Punkte; in der US-Version das Format Monat/Tag/Jahr, getrennt durch Schrägstriche (/).</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="datumsoperatoren"></a><a href="#datumsoperatoren" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datumsoperatoren</h2>
@@ -97,13 +97,13 @@
 <tr><td></td><td></td><td></td><td>!2017-01-20! = !2017-01-01!</td><td>Falsch</td></tr>
 <tr><td>Ungleichheit</td><td>Datum # Datum</td><td>Boolean</td><td>!2017-01-20! # !2017-01-01!</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>!2017-01-20! # !2017-01-20!</td><td>Falsch</td></tr>
-<tr><td>Größer als</td><td>Datum &gt; Datum</td><td>Boolean</td><td>!2017-01-20! &gt; !2017-01-01!</td><td>Wahr</td></tr>
+<tr><td>Größer als</td><td>Date &gt; Date</td><td>Boolean</td><td>!2017-01-20! &gt; !2017-01-01!</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>!2017-01-20! &gt; !2017-01-20!</td><td>Falsch</td></tr>
-<tr><td>Kleiner als</td><td>Datum &gt; Datum</td><td>Boolean</td><td>!2017-01-01! &lt; !2017-01-20!</td><td>Wahr</td></tr>
+<tr><td>Kleiner als</td><td>Date &lt; Date</td><td>Boolean</td><td>!2017-01-01! &lt; !2017-01-20!</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>!2017-01-20! &lt; !2017-01-20!</td><td>Falsch</td></tr>
-<tr><td>Größer als oder gleich</td><td>Datum &gt;= Datum</td><td>Boolean</td><td>!2017-01-20! &gt;=!2017-01-01!</td><td>Wahr</td></tr>
+<tr><td>Größer als oder gleich</td><td>Date &gt;= Date</td><td>Boolean</td><td>!2017-01-20! &gt;=!2017-01-01!</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>!2017-01-01!&gt;=!2017-01-20!</td><td>Falsch</td></tr>
-<tr><td>Kleiner als oder gleich</td><td>Datum &lt;= Date</td><td>Boolean</td><td>!2017-01-01!&lt;=!2017-01-20!</td><td>Wahr</td></tr>
+<tr><td>Kleiner als oder gleich</td><td>Date &lt;= Date</td><td>Boolean</td><td>!2017-01-01!&lt;=!2017-01-20!</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>!2017-01-20!&lt;=!2017-01-01!</td><td>Falsch</td></tr>
 </tbody>
 </table>

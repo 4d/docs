@@ -77,56 +77,59 @@
 <h2><a class="anchor" aria-hidden="true" id="creating-forms"></a><a href="#creating-forms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating forms</h2>
 <p>You can add or modify 4D forms using the following elements:</p>
 <ul>
-<li><p><strong>4D Developer interface:</strong> Create new forms from the <strong>File</strong> menu or the <strong>Explorer</strong> window.</p></li>
-<li><p><strong>Form Editor</strong>: Modify your forms using the <strong><a href="/docs/Rx/es/FormEditor/formEditor.html">Form Editor</a></strong>.</p></li>
-<li><p><strong>JSON code:</strong> Create and design your forms using JSON and save the form files at the <a href="/docs/Rx/es/Project/architecture.html#sources-folder">appropriate location</a>. Example:</p>
-<p>{
-&quot;windowTitle&quot;: &quot;Hello World&quot;,
-&quot;windowMinWidth&quot;: 220,
-&quot;windowMinHeight&quot;: 80,
-&quot;method&quot;: &quot;HWexample&quot;,
-&quot;pages&quot;: [
-null,
-{
-&quot;objects&quot;: {
-&quot;text&quot;: {
-&quot;type&quot;: &quot;text&quot;,
-&quot;text&quot;: &quot;Hello World!&quot;,
-&quot;textAlign&quot;: &quot;center&quot;,
-&quot;left&quot;: 50,
-&quot;top&quot;: 120,
-&quot;width&quot;: 120,
-&quot;height&quot;: 80
-},
-&quot;image&quot;: {
-&quot;type&quot;: &quot;picture&quot;,
-&quot;pictureFormat&quot;: &quot;scaled&quot;,
-&quot;picture&quot;: &quot;/RESOURCES/Images/HW.png&quot;,
-&quot;alignment&quot;:&quot;center&quot;,
-&quot;left&quot;: 70,
-&quot;top&quot;: 20,
-&quot;width&quot;:75,
-&quot;height&quot;:75<br>
-},
-&quot;button&quot;: {
-&quot;type&quot;: &quot;button&quot;,
-&quot;text&quot;: &quot;OK&quot;,
-&quot;action&quot;: &quot;Cancel&quot;,
-&quot;left&quot;: 60,
-&quot;top&quot;: 160,
-&quot;width&quot;: 100,
-&quot;height&quot;: 20
-}
-}
-}
-]
-}</p></li>
+<li><strong>4D Developer interface:</strong> Create new forms from the <strong>File</strong> menu or the <strong>Explorer</strong> window.</li>
+<li><strong>Form Editor</strong>: Modify your forms using the <strong><a href="/docs/Rx/es/FormEditor/formEditor.html">Form Editor</a></strong>.</li>
+<li><strong>JSON code:</strong> Create and design your forms using JSON and save the form files at the <a href="/docs/Rx/es/Project/architecture.html#sources-folder">appropriate location</a>. Example:</li>
 </ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"windowTitle"</span>: <span class="hljs-string">"Hello World"</span>,
+    <span class="hljs-attr">"windowMinWidth"</span>: <span class="hljs-number">220</span>,
+    <span class="hljs-attr">"windowMinHeight"</span>: <span class="hljs-number">80</span>,
+    <span class="hljs-attr">"method"</span>: <span class="hljs-string">"HWexample"</span>,
+    <span class="hljs-attr">"pages"</span>: [
+        <span class="hljs-literal">null</span>,
+        {
+            <span class="hljs-attr">"objects"</span>: {
+                <span class="hljs-attr">"text"</span>: {
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"text"</span>,
+                <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Hello World!"</span>,
+                <span class="hljs-attr">"textAlign"</span>: <span class="hljs-string">"center"</span>,
+                <span class="hljs-attr">"left"</span>: <span class="hljs-number">50</span>,
+                <span class="hljs-attr">"top"</span>: <span class="hljs-number">120</span>,
+                <span class="hljs-attr">"width"</span>: <span class="hljs-number">120</span>,
+                <span class="hljs-attr">"height"</span>: <span class="hljs-number">80</span>
+                },
+                <span class="hljs-attr">"image"</span>: {
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"picture"</span>,
+                <span class="hljs-attr">"pictureFormat"</span>: <span class="hljs-string">"scaled"</span>,
+                <span class="hljs-attr">"picture"</span>: <span class="hljs-string">"/RESOURCES/Images/HW.png"</span>,
+                <span class="hljs-attr">"alignment"</span>:<span class="hljs-string">"center"</span>, 
+                <span class="hljs-attr">"left"</span>: <span class="hljs-number">70</span>,
+                <span class="hljs-attr">"top"</span>: <span class="hljs-number">20</span>, 
+                <span class="hljs-attr">"width"</span>:<span class="hljs-number">75</span>, 
+                <span class="hljs-attr">"height"</span>:<span class="hljs-number">75</span>        
+                },
+                <span class="hljs-attr">"button"</span>: {
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"button"</span>,
+                <span class="hljs-attr">"text"</span>: <span class="hljs-string">"OK"</span>,
+                <span class="hljs-attr">"action"</span>: <span class="hljs-string">"Cancel"</span>,
+                <span class="hljs-attr">"left"</span>: <span class="hljs-number">60</span>,
+                <span class="hljs-attr">"top"</span>: <span class="hljs-number">160</span>,
+                <span class="hljs-attr">"width"</span>: <span class="hljs-number">100</span>,
+                <span class="hljs-attr">"height"</span>: <span class="hljs-number">20</span>
+                }
+            }
+        }
+    ]
+}
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="project-form-and-table-form"></a><a href="#project-form-and-table-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project form and Table form</h2>
 <p>There are two categories of forms:</p>
 <ul>
-<li><p><strong>Project forms</strong> - Independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.</p></li>
-<li><p><strong>Table forms</strong> - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Typically, a table has separate input and output forms.</p></li>
+<li><strong>Project forms</strong> - Independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.</li>
+</ul>
+<ul>
+<li><strong>Table forms</strong> - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Typically, a table has separate input and output forms.</li>
 </ul>
 <p>Typically, you select the form category when you create the form, but you can change it afterwards.</p>
 <h2><a class="anchor" aria-hidden="true" id="form-pages"></a><a href="#form-pages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form pages</h2>

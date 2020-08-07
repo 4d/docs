@@ -68,7 +68,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/Concepts/dt_pointer.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Zeiger</h1></header><article><div><span><p>Eine Variable oder ein Ausdruck vom Typ Zeiger verweist auf eine andere Variable (inkl. Arrays und Array Elemente), Tabelle, Datenfeld oder Objekt. Ein Datenfeld kann nicht vom Typ Zeiger sein.</p>
 <p>Mit Hilfe der Zeiger können Sie Ihre Methoden strukturunabhängig schreiben und dadurch Ihre Programme übertragbarer gestalten. Sie können mit einem Zeiger auf verschiedene Objekte, wie Tabellen, Datenfelder, Variablen, Objekte und Arrays, einfach über ihre Namen zugreifen. Jedoch ist es oft hilfreich, auf diese Elemente zuzugreifen, ohne ihre Namen zu kennen. Das können Sie mit Zeigern tun.</p>
-<p>Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. Sie sagen z. B. zu einem Freund, &quot;Lass uns eine Fahrt mit Deinem Auto machen&quot;, anstatt &quot;Lass uns eine Fahrt mit dem Auto mit dem Kennzeichen M123ABC machen&quot;. Sie verweisen also auf das Auto mit dem Kennzeichen M123ABC durch die Aussage &quot;mit Deinem Auto&quot;. Die Aussage &quot;Auto mit dem Kennzeichen M123ABC&quot; ist sozusagen der Name eines Objekts und die Aussage &quot;mit Deinem Auto&quot; ist wie ein Zeiger, der auf das Objekt verweist.</p>
+<p>Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.</p>
 <p>Die Möglichkeit, auf etwas zu verweisen, ohne die Identität exakt zu kennen, hat einige Vorteile. Ihr Freund kann ein neues Auto haben, und die Aussage &quot;mit Deinem Auto&quot; passt weiterhin, denn es bleibt ein Auto und gehört Ihrem Freund. Zeiger arbeiten auf dieselbe Weise. Ein Zeiger kann beispielsweise einmal auf ein numerisches Datenfeld mit Namen Alter verweisen und später auf eine numerische Variable, umbenannt in Rentenalter. In beiden Fällen zeigt der Zeiger auf numerische Daten, die sich in einer Berechnung verwenden lassen.</p>
 <p>Mit Zeigern können Sie auf Tabellen, Datenfelder, Variablen, Arrays und seine Elemente, und Objekte verweisen. Folgende Tabelle zeigt ein Beispiel für jeden Datentyp:</p>
 <table>
@@ -88,22 +88,22 @@
 <p>Wir erläutern die Verwendung von Zeigern an einem Beispiel. Dieses Beispiel zeigt, wie Sie über einen Zeiger auf eine Variable zugreifen können. Wir erstellen zuerst eine Variable:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$MyVar</span>:=<span class="hljs-string">"Hello"</span>
 </code></pre>
-<p>$MyVar ist eine Variable mit der Zeichenkette “Hello”. Wir erstellen nun den Zeiger auf $MyVar:</p>
+<p>$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$MyPointer</span>)  
 <span class="hljs-variable">$MyPointer</span>:=-&gt;<span class="hljs-variable">$MyVar</span>
 </code></pre>
-<p>Das Symbol -&gt; bedeutet “setze Zeiger auf.” Dieses Symbol ist die Kombination aus einem Bindestrich und dem Zeichen “größer als”. In diesem Fall zeigt der Zeiger auf $MyVar. Dieser Zeiger wird mit dem Zuordnungsoperator dem Zeiger MyPointer zugewiesen.</p>
+<p>The -&gt; symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In diesem Fall zeigt der Zeiger auf $MyVar. Dieser Zeiger wird mit dem Zuordnungsoperator dem Zeiger MyPointer zugewiesen.</p>
 <p>$MyPointer ist nun eine Variable mit einem Zeiger auf $MyVar. $MyPointer enthält nicht “Hello”, den Wert von $MyVar, vielmehr erhalten Sie diesen Wert über $MyPointer. Folgender Ausdruck gibt den Wert in $MyVar zurück:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$MyPointer</span>-&gt;
 </code></pre>
-<p>In diesem Fall gibt er die Zeichenkette “Hello” zurück. Das Symbol -&gt; nach dem Zeiger verweist auf das Objekt, auf das gezeigt wird. Das nennt man Dereferenzierung.</p>
-<p>Das bedeutet, Sie können den Ausdruck $MyPointer-&gt; überall verwenden, wo Sie auch die urspüngliche Variable $MyVar einsetzen können. Folgende Programmierzeile zeigt z. B. eine Warnung mit dem darin enthaltenen Wort Hello:</p>
+<p>In diesem Fall gibt er die Zeichenkette “Hello” zurück. The -&gt; symbol, when it follows a pointer, references the object pointed to. Das nennt man Dereferenzierung.</p>
+<p>It is important to understand that you can use a pointer followed by the -&gt; symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-&gt; anywhere that you could use the original $MyVar variable. Folgende Programmierzeile zeigt z. B. eine Warnung mit dem darin enthaltenen Wort Hello:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ALERT</span>(<span class="hljs-variable">$MyPointer</span>-&gt;)
 </code></pre>
 <p>Über $MyPointer können Sie auch den Inhalt von $MyVar ändern. Folgende Anweisung speichert die Zeichenkette &quot;Goodbye&quot; in der Variablen $MyVar:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$MyPointer</span>-&gt;:=<span class="hljs-string">"Goodbye"</span>
 </code></pre>
-<p>Wie Sie sehen, verhält sich der Ausdruck $MyPointer-&gt; wie die Variable $MyVar. Die beiden nachfolgenden Zeilen führen dieselbe Aktion aus—beide zeigen eine Warnung mit dem aktuellen Wert der Variablen $MyVar:</p>
+<p>If you examine the two uses of the expression $MyPointer-&gt;, you will see that it acts just as if you had used $MyVar instead. Die beiden nachfolgenden Zeilen führen dieselbe Aktion aus—beide zeigen eine Warnung mit dem aktuellen Wert der Variablen $MyVar:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ALERT</span>(<span class="hljs-variable">$MyPointer</span>-&gt;)
 <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$MyVar</span>)
 </code></pre>
@@ -203,7 +203,7 @@
  <span class="hljs-variable">$2</span>-&gt;:=<span class="hljs-function">Lowercase</span>(<span class="hljs-variable">$2</span>-&gt;)
 </code></pre>
 <p>Nachfolgende Zeile wandelt über die Methode <code>takeTwo</code> ein Datenfeld in Großbuchstaben um und eine Variable in Kleinbuchstaben:</p>
-<pre><code class="hljs">takeTwo(-&gt;[myTable]myField;-&gt;$MyVar)
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">takeTwo</span><span class="hljs-params">(-&gt;[myTable]myField;-&gt;<span class="hljs-variable">$MyVar</span>)</span></span>
 </code></pre>
 <p>Enthält das Datenfeld [myTable]myField den String &quot;jones&quot;, wird es umgewandelt in &quot;JONES&quot;. Enthält die Variable $MyVar den String &quot;HELLO&quot;, wird er umgewandelt in &quot;Hello&quot;.</p>
 <p>Achten Sie darauf, dass in der Methode takeTwo und immer, wenn Sie Zeiger verwenden, das angesprochene Objekt vom richtigen Datentyp ist. Im vorigen Beispiel muss der Zeiger ein Objekt vom Typ String oder Text ansprechen.</p>
@@ -218,19 +218,19 @@
 <p>Es zeigt eine Meldung mit dem Inhalt “Goodbye”.</p>
 <p>Im folgenden werden die einzelnen Zeilen erläutert:</p>
 <ul>
-<li>$MyVar:=&quot;Hello&quot; --&gt; Diese Zeile setzt die Zeichenkette &quot;Hello&quot; in die Variable $MyVar.</li>
-<li>$PointerOne:=-&gt;$MyVar --&gt; $PointerOne enthält nun den Zeiger auf $MyVar.</li>
-<li>$PointerTwo:=-&gt;$PointerOne --&gt; $PointerTwo (eine neue Variable) enthält einen Zeiger auf $PointerOne, der auf $MyVar zeigt.</li>
-<li>($PointerTwo-&gt;)-&gt;:=&quot;Goodbye&quot; --&gt; $PointerTwo-&gt; verweist auf den Inhalt von $PointerOne, der wiederum auf $MyVar verweist. Therefore ($PointerTwo-&gt;)-&gt; verweist also auf den Inhalt von $MyVar. In diesem Beispiel ist also der Variablen $MyVar &quot;Goodbye&quot; zugewiesen.</li>
-<li>ALERT (($PointerTwo-&gt;)-&gt;) --&gt; Hier gilt das gleiche: $PointerTwo-&gt; verweist auf den Inhalt von $PointerOne, der wiederum auf $MyVar verweist. Therefore ($PointerTwo-&gt;)-&gt; verweist also auf den Inhalt von $MyVar. In diesem Fall zeigt die Meldung den Inhalt von $MyVar an.</li>
+<li>$MyVar:=&quot;Hello&quot; --&gt; This line puts the string &quot;Hello&quot; into the variable $MyVar.</li>
+<li>$PointerOne:=-&gt;$MyVar --&gt; $PointerOne now contains a pointer to $MyVar.</li>
+<li>$PointerTwo:=-&gt;$PointerOne --&gt; $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.</li>
+<li>($PointerTwo-&gt;)-&gt;:=&quot;Goodbye&quot; --&gt; $PointerTwo-&gt; references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar. In diesem Beispiel ist also der Variablen $MyVar &quot;Goodbye&quot; zugewiesen.</li>
+<li>ALERT (($PointerTwo-&gt;)-&gt;) --&gt; Same thing: $PointerTwo-&gt; references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar. In diesem Fall zeigt die Meldung den Inhalt von $MyVar an.</li>
 </ul>
 <p>Die folgende Zeile setzt &quot;Hello&quot; in $MyVar:</p>
 <pre><code class="hljs css language-4d">(<span class="hljs-variable">$PointerTwo</span>-&gt;)-&gt;:=<span class="hljs-string">"Hello"</span>
 </code></pre>
 <p>Die folgende Zeile nimmt &quot;Hello&quot; aus $MyVar und setzt es in $NewVar:</p>
-<pre><code class="hljs">$NewVar:=($PointerTwo-&gt;)-&gt;
+<pre><code class="hljs"><span class="hljs-variable">$NewVar</span><span class="hljs-symbol">:</span>=(<span class="hljs-variable">$PointerTwo</span>-&gt;)-&gt;
 </code></pre>
-<p><strong>Wichtig:</strong> Bei mehrfacher Dereferenzierung müssen Sie mit Klammern arbeiten.</p>
+<p><strong>Important:</strong> Multiple dereferencing requires parentheses.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/de/Concepts/picture.html"><span class="arrow-prev">← </span><span>Bild</span></a><a class="docs-next button" href="/docs/Rx/de/Concepts/string.html"><span>String</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#zeiger-verwenden">Zeiger verwenden</a></li><li><a href="#zeigeroperatoren">Zeigeroperatoren</a></li><li><a href="#zeiger-verwenden-1">Zeiger verwenden</a><ul class="toc-headings"><li><a href="#zeiger-auf-tabellen">Zeiger auf Tabellen</a></li><li><a href="#zeiger-auf-datenfelder">Zeiger auf Datenfelder</a></li><li><a href="#zeiger-auf-lokale-variablen">Zeiger auf lokale Variablen</a></li><li><a href="#zeiger-auf-array-elemente">Zeiger auf Array Elemente</a></li><li><a href="#zeiger-auf-arrays">Zeiger auf Arrays</a></li><li><a href="#zeiger-als-parameter-in-methoden">Zeiger als Parameter in Methoden</a></li><li><a href="#zeiger-auf-zeiger">Zeiger auf Zeiger</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

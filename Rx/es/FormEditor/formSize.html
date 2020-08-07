@@ -71,244 +71,75 @@
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="size-based-on"></a><a href="#size-based-on" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Size based on</h2>
 <ul>
-<li><strong>Automatic Size</strong>: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the <a href="#hor-margin"><strong>Hor. Margin</strong></a> and <a href="#vert-margin"><strong>Vert. Margin</strong></a> fields.</li>
+<li><strong>Automatic Size</strong>: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the <a href="#hor-margin"><strong>Hor. Margin</strong></a> and <a href="#vert-margin"><strong>Vert. Margin</strong></a> fields. <p> You can choose this option when you want to use active objects placed in an offscreen area (<em>i.e.</em>, outside the bounding rectangle of the window) with an automatic size window. Thanks to this option, the presence of these objects will not modify the size of the window.</li>
 </ul>
-<p>&lt;</p>
-<p>p&gt; You can choose this option when you want to use active objects placed in an offscreen area (<em>i.e.</em>, outside the bounding rectangle of the window) with an automatic size window. Thanks to this option, the presence of these objects will not modify the size of the window.</p>
 <ul>
 <li><p><strong>Set Size</strong>: The size of the form will be based on what you enter (in pixels) in the <a href="#width"><strong>Width</strong></a> and <a href="#height"><strong>Height</strong></a> fields.</p></li>
-<li><p>**\</p>
-<p><object name>
-</strong>: The size of the form will be based on the position of the selected form object. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.</p></li> </ul></p>
-<pre><code class="hljs">&lt;blockquote&gt;
-  &lt;p&gt;
-    For output forms, only the &lt;a href=&quot;#hor-margin&quot;&gt;&lt;strong&gt;Hor. margin&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&quot;width&quot;&gt;&lt;strong&gt;Width&lt;/strong&gt;&lt;/a&gt; fields are available.
-  &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4&gt;
-  JSON Grammar
-&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;
-      Name
-    &lt;/th&gt;
-    
-    &lt;th&gt;
-      Data Type
-    &lt;/th&gt;
-    
-    &lt;th&gt;
-      Possible Values
-    &lt;/th&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      formSizeAnchor
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      string
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      Name of object to use to defined the size of the form
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;
-  Height
-&lt;/h2&gt;
-
-&lt;p&gt;
-  Height of the form (in pixels) when the &lt;a href=&quot;#size-based-on&quot;&gt;form size&lt;/a&gt; is &lt;strong&gt;Set size&lt;/strong&gt;.
-&lt;/p&gt;
-
-&lt;h4&gt;
-  JSON Grammar
-&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;
-      Name
-    &lt;/th&gt;
-    
-    &lt;th&gt;
-      Data Type
-    &lt;/th&gt;
-    
-    &lt;th&gt;
-      Possible Values
-    &lt;/th&gt;
-  &lt;/tr&gt;
-  
-  &lt;tr&gt;
-    &lt;td&gt;
-      height
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      number
-    &lt;/td&gt;
-    
-    &lt;td&gt;
-      integer value
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;
-  Hor. Margin
-&lt;/h2&gt;
-
-&lt;p&gt;
-  Value to add (in pixels) to the right margin of the form when the &lt;a href=&quot;#size-based-on&quot;&gt;form size&lt;/a&gt; is &lt;strong&gt;Automatic size&lt;/strong&gt; or &lt;strong&gt;\
-  
-  &lt;object name&gt;
-    &lt;/strong&gt;&lt;/p&gt; 
-    
-    &lt;p&gt;
-      This value also determines the right-hand margins of forms used in the Label editor.
-    &lt;/p&gt;
-    
-    &lt;h4&gt;
-      JSON Grammar
-    &lt;/h4&gt;
-    
-    &lt;table&gt;
-      &lt;tr&gt;
-        &lt;th&gt;
-          Name
-        &lt;/th&gt;
-        
-        &lt;th&gt;
-          Data Type
-        &lt;/th&gt;
-        
-        &lt;th&gt;
-          Possible Values
-        &lt;/th&gt;
-      &lt;/tr&gt;
-      
-      &lt;tr&gt;
-        &lt;td&gt;
-          rightMargin
-        &lt;/td&gt;
-        
-        &lt;td&gt;
-          number
-        &lt;/td&gt;
-        
-        &lt;td&gt;
-          integer value
-        &lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/table&gt;
-    
-    &lt;hr /&gt;
-    
-    &lt;h2&gt;
-      Vert. Margin
-    &lt;/h2&gt;
-    
-    &lt;p&gt;
-      Value to add (in pixels) to the bottom margin of the form when the &lt;a href=&quot;#size-based-on&quot;&gt;form size&lt;/a&gt; is &lt;strong&gt;Automatic size&lt;/strong&gt; or &lt;strong&gt;\
-      
-      &lt;object name&gt;
-        &lt;/strong&gt;.&lt;/p&gt; 
-        
-        &lt;p&gt;
-          This value also determines the top margins of forms used in the Label editor.
-        &lt;/p&gt;
-        
-        &lt;h4&gt;
-          JSON Grammar
-        &lt;/h4&gt;
-        
-        &lt;table&gt;
-          &lt;tr&gt;
-            &lt;th&gt;
-              Name
-            &lt;/th&gt;
-            
-            &lt;th&gt;
-              Data Type
-            &lt;/th&gt;
-            
-            &lt;th&gt;
-              Possible Values
-            &lt;/th&gt;
-          &lt;/tr&gt;
-          
-          &lt;tr&gt;
-            &lt;td&gt;
-              bottomMargin
-            &lt;/td&gt;
-            
-            &lt;td&gt;
-              number
-            &lt;/td&gt;
-            
-            &lt;td&gt;
-              integer value
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/table&gt;
-        
-        &lt;hr /&gt;
-        
-        &lt;h2&gt;
-          Width
-        &lt;/h2&gt;
-        
-        &lt;p&gt;
-          Width of the form (in pixels) when the &lt;a href=&quot;#size-based-on&quot;&gt;form size&lt;/a&gt; is &lt;strong&gt;Set size&lt;/strong&gt;.
-        &lt;/p&gt;
-        
-        &lt;h4&gt;
-          JSON Grammar
-        &lt;/h4&gt;
-        
-        &lt;table&gt;
-          &lt;tr&gt;
-            &lt;th&gt;
-              Name
-            &lt;/th&gt;
-            
-            &lt;th&gt;
-              Data Type
-            &lt;/th&gt;
-            
-            &lt;th&gt;
-              Possible Values
-            &lt;/th&gt;
-          &lt;/tr&gt;
-          
-          &lt;tr&gt;
-            &lt;td&gt;
-              width
-            &lt;/td&gt;
-            
-            &lt;td&gt;
-              number
-            &lt;/td&gt;
-            
-            &lt;td&gt;
-              integer value
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/table&gt;</code></pre></li>
+<li><p><strong>&lt;object name&gt;</strong>: The size of the form will be based on the position of the selected form object. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.</p></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/FormEditor/propertiesForm.html"><span class="arrow-prev">← </span><span>Form Properties</span></a><a class="docs-next button" href="/docs/Rx/es/FormEditor/markers.html"><span>Markers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#size-based-on">Size based on</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<blockquote>
+<p>For output forms, only the <a href="#hor-margin"><strong>Hor. margin</strong></a> or <a href="width"><strong>Width</strong></a> fields are available.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar"></a><a href="#json-grammar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>formSizeAnchor</td><td>string</td><td>Name of object to use to defined the size of the form</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="height"></a><a href="#height" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Height</h2>
+<p>Height of the form (in pixels) when the <a href="#size-based-on">form size</a> is <strong>Set size</strong>.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-1"></a><a href="#json-grammar-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>height</td><td>number</td><td>integer value</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="hor-margin"></a><a href="#hor-margin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hor. Margin</h2>
+<p>Value to add (in pixels) to the right margin of the form when the <a href="#size-based-on">form size</a> is <strong>Automatic size</strong> or <strong>&lt;object name&gt;</strong></p>
+<p>This value also determines the right-hand margins of forms used in the Label editor.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-2"></a><a href="#json-grammar-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>rightMargin</td><td>number</td><td>integer value</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="vert-margin"></a><a href="#vert-margin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vert. Margin</h2>
+<p>Value to add (in pixels) to the bottom margin of the form when the <a href="#size-based-on">form size</a> is <strong>Automatic size</strong> or <strong>&lt;object name&gt;</strong>.</p>
+<p>This value also determines the top margins of forms used in the Label editor.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-3"></a><a href="#json-grammar-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>bottomMargin</td><td>number</td><td>integer value</td></tr>
+</tbody>
+</table>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="width"></a><a href="#width" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Width</h2>
+<p>Width of the form (in pixels) when the <a href="#size-based-on">form size</a> is <strong>Set size</strong>.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-4"></a><a href="#json-grammar-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>width</td><td>number</td><td>integer value</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/FormEditor/propertiesForm.html"><span class="arrow-prev">← </span><span>Form Properties</span></a><a class="docs-next button" href="/docs/Rx/es/FormEditor/markers.html"><span>Markers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#size-based-on">Size based on</a></li><li><a href="#height">Height</a></li><li><a href="#hor-margin">Hor. Margin</a></li><li><a href="#vert-margin">Vert. Margin</a></li><li><a href="#width">Width</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

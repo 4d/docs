@@ -88,28 +88,9 @@
 <tr><th>Display Type</th><th>Scale Factor</th><th>Example</th></tr>
 </thead>
 <tbody>
-<tr><td>Standard Resolution</td><td>1:1 pixel density.</td><td><strong>1x</strong></td></tr>
+<tr><td>Standard Resolution</td><td>1:1 pixel density.</td><td><strong>1x</strong><br><img src="/docs/Rx/assets/en/FormEditor/pictureScale1.png" alt=""><br><em>circle.png</em></td></tr>
+<tr><td>High Resolution</td><td>Pixel density increased by a factor of 2 or 3.</td><td><table><th>2x</th><th>3x</th><tr><td><img src="/docs/Rx/assets/en/FormEditor/pictureScale2.png" alt=""><br><em>circle@2x.png</em></td><td><img src="/docs/Rx/assets/en/FormEditor/pictureScale3.png" alt=""><br><em>circle@3x.png</em></td></tr></table></td></tr>
 </tbody>
-</table>
-<p><img src="/docs/Rx/assets/en/FormEditor/pictureScale1.png" alt="">  <br>
-<em>circle.png</em> |
-| High Resolution     | Pixel density increased by a factor of 2 or 3. |                                                                     |</p>
-<table>
-  <th>
-    2x
-  </th>
-  <th>
-    3x
-  </th>
-  <tr>
-    <td>
-      ![](/docs/Rx/assets/en/FormEditor/pictureScale2.png)<br />*circle@2x.png*
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  ![](/docs/Rx/assets/en/FormEditor/pictureScale3.png)&lt;br /&gt;*circle@3x.png*
-&lt;/td&gt;
-</code></pre>
-  </tr>
 </table>
 <p>High resolution pictures with the @nx convention can be used in the following objects:</p>
 <ul>
@@ -120,45 +101,26 @@
 <li><a href="/docs/Rx/es/FormObjects/listboxOverview.html#list-box-headers">List box headers</a></li>
 <li><a href="/docs/Rx/es/Menus/properties.html#item-icon">Menu icons</a></li>
 </ul>
-<p>4D automatically prioritizes pictures with the highest resolution. <br />  <br>
-<strong>Example</strong>: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Even if a command or property specifies <em>circle.png</em>, <em>circle@3x.png</em> will be used (if it exists).</p>
+<p>4D automatically prioritizes pictures with the highest resolution. <br><br> <strong>Example</strong>: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D  automatically renders the highest possible resolution of the picture. Even if a command or property specifies <em>circle.png</em>, <em>circle@3x.png</em> will be used (if it exists).</p>
 <blockquote>
 <p>Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="dpi-macos-and-windows"></a><a href="#dpi-macos-and-windows" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DPI (macOs and Windows)</h3>
-<p>While 4D automatically prioritizes the highest resolution, there are, however, some behavioral differences depending on screen and image dpi<em>(</em>)*, and picture format:</p>
+<p>While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi<em>(*)</em>, and picture format:</p>
 <table>
 <thead>
 <tr><th>Operation</th><th>Behavior</th></tr>
 </thead>
 <tbody>
-<tr><td>Drop or Paste</td><td>If the picture has:</td></tr>
+<tr><td>Drop or Paste</td><td>If the picture has:<p><ul><li><strong>72dpi or 96dpi</strong> -  The picture is &quot;<a href="/docs/Rx/es/FormObjects/propertiesPicture.html#center--truncated-non-centered">Center</a>&quot; formatted and the object containing the picture has the same number of pixels.</li><li><strong>Other dpi</strong> - The picture is &quot;<a href="/docs/Rx/es/FormObjects/propertiesPicture.html#scaled-to-fit">Scaled to fit</a>&quot; formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li><strong>No dpi</strong> - The picture is &quot;<a href="/docs/Rx/es/FormObjects/propertiesPicture.html#scaled-to-fit">Scaled to fit</a>&quot; formatted.<p></li></td></tr>
+<tr><td><a href="https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057">Automatic Size</a> (Form Editor context menu)</td><td>If the picture's display format  is:<p><ul><li><strong><a href="/docs/Rx/es/FormObjects/propertiesPicture.html#scaled-to-fit">Scaled</a></strong> - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li><strong>Not scaled</strong> - The object containing the picture has the same number of pixels as the picture.</li></ul><p></td></tr>
 </tbody>
 </table>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>ul&gt;</p>
-<ul>
-<li><p><strong>72dpi or 96dpi</strong> - The picture is &quot;<a href="/docs/Rx/es/FormObjects/propertiesPicture.html#center--truncated-non-centered">Center</a>&quot; formatted and the object containing the picture has the same number of pixels.</p></li>
-<li><p><strong>Other dpi</strong> - The picture is &quot;<a href="/docs/Rx/es/FormObjects/propertiesPicture.html#scaled-to-fit">Scaled to fit</a>&quot; formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</p></li>
-<li><p><strong>No dpi</strong> - The picture is &quot;<a href="/docs/Rx/es/FormObjects/propertiesPicture.html#scaled-to-fit">Scaled to fit</a>&quot; formatted.</p>
-&lt;</p>
-<p>p&gt;</li>| |<a href="https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057">Automatic Size</a> (Form Editor context menu)|If the picture's display format is:</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<ul>
-<li><strong>[Scaled](/docs/Rx/es/FormObjects/propertiesPicture.html#scaled-to-fit)</strong> - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi)</li>
-<li><strong>Not scaled</strong> - The object containing the picture has the same number of pixels as the picture.</li>
-</ul>
-<p>&lt;</p>
-<p>p&gt;|</p>
-<p><em>(</em>) Typically, macOS = 72dpi, Windows = 96dpi*</p>
+<p><em>(*) Typically,  macOS = 72dpi, Windows = 96dpi</em></p>
 <h2><a class="anchor" aria-hidden="true" id="mouse-coordinates-in-a-picture"></a><a href="#mouse-coordinates-in-a-picture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mouse Coordinates in a Picture</h2>
 <p>4D lets you retrieve the local coordinates of the mouse in an <a href="/docs/Rx/es/FormObjects/inputOverview.html">input object</a> associated with a <a href="/docs/Rx/es/FormObjects/propertiesObject.html#expression-type">picture expression</a>, in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. This mechanism, similar to that of a picture map, can be used, for example, to handle scrollable button bars or the interface of cartography software.</p>
 <p>The coordinates are returned in the <em>MouseX</em> and <em>MouseY</em> <a href="https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html">System Variables</a>. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in <em>MouseX</em> and <em>MouseY</em>.</p>
-<p>You can get the value of these variables as part of the <a href="/docs/Rx/es/Events/onClicked.html"><code>On Clicked</code></a>, <a href="/docs/Rx/es/Events/onDoubleClicked.html"><code>On Double Clicked</code></a>, <a href="/docs/Rx/es/Events/onMouseUp.html"><code>On Mouse up</code></a>, <a href="/docs/Rx/es/Events/onMouseEnter.html"><code>On Mouse Enter</code></a>, or <a href="/docs/Rx/es/Events/onMouseMove.html"><code>On Mouse Move</code></a> form events.</p></li>
-</ul>
+<p>You can get the value of these variables as part of the <a href="/docs/Rx/es/Events/onClicked.html"><code>On Clicked</code></a>, <a href="/docs/Rx/es/Events/onDoubleClicked.html"><code>On Double Clicked</code></a>, <a href="/docs/Rx/es/Events/onMouseUp.html"><code>On Mouse up</code></a>, <a href="/docs/Rx/es/Events/onMouseEnter.html"><code>On Mouse Enter</code></a>, or <a href="/docs/Rx/es/Events/onMouseMove.html"><code>On Mouse Move</code></a> form events.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/FormEditor/stylesheets.html"><span class="arrow-prev">← </span><span>Style sheets</span></a><a class="docs-next button" href="/docs/Rx/es/FormEditor/jsonReference.html"><span>JSON property list</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#native-formats-supported">Native Formats Supported</a><ul class="toc-headings"><li><a href="#unavailable-picture-format">Unavailable picture format</a></li></ul></li><li><a href="#high-resolution-pictures">High Resolution Pictures</a><ul class="toc-headings"><li><a href="#scale-factor-macos-only">Scale factor (macOS only)</a></li><li><a href="#dpi-macos-and-windows">DPI (macOs and Windows)</a></li></ul></li><li><a href="#mouse-coordinates-in-a-picture">Mouse Coordinates in a Picture</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

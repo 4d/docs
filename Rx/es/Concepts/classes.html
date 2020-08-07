@@ -112,9 +112,9 @@ Class constructor</span>
   <span class="hljs-literal">This</span>.lastName:=<span class="hljs-variable">$2</span>
 </code></pre>
 <p>In a method, creating a &quot;Person&quot;:</p>
-<pre><code class="hljs">C_OBJECT($o)
-$o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)  
-// $o: {firstName: &quot;John&quot;;lastName: &quot;Doe&quot; }
+<pre><code class="hljs">C_OBJECT(<span class="hljs-variable">$o</span>)
+<span class="hljs-variable">$o</span>:=cs.Person.new(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Doe"</span>)  
+<span class="hljs-regexp">//</span> <span class="hljs-variable">$o</span>: {firstName: <span class="hljs-string">"John"</span>;lastName: <span class="hljs-string">"Doe"</span> }
 </code></pre>
 <p>Note that you could create an empty class file, and instantiate empty objects. For example, if you create the following <code>Empty.4dm</code> class file:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Empty.4dm class file</span>

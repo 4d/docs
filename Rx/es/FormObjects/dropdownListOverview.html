@@ -77,21 +77,21 @@
 <li><p>Enter a list of default values in the object properties by selecting &quot;&lt;Static List&gt;&quot; in the <a href="/docs/Rx/es/FormObjects/propertiesDataSource.html">Data Source</a> theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.</p></li>
 <li><p>Before the object is displayed, execute code that assigns values to the array elements. For example:</p></li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-function">  ARRAY TEXT</span>(<span class="hljs-variable">$aCities</span>;<span class="hljs-number">6</span>) 
-  <span class="hljs-variable">$aCities{1}</span>:=<span class="hljs-string">"Philadelphia"</span> 
-  <span class="hljs-variable">$aCities{2}</span>:=<span class="hljs-string">"Pittsburg"</span> 
-  <span class="hljs-variable">$aCities{3}</span>:=<span class="hljs-string">"Grand Blanc"</span> 
-  <span class="hljs-variable">$aCities{4}</span>:=<span class="hljs-string">"Bad Axe"</span> 
-  <span class="hljs-variable">$aCities{5}</span>:=<span class="hljs-string">"Frostbite Falls"</span> 
-  <span class="hljs-variable">$aCities{6}</span>:=<span class="hljs-string">"Green Bay"</span> 
+<pre><code class="hljs css language-4d"><span class="hljs-function">  ARRAY TEXT</span>(aCities;<span class="hljs-number">6</span>) 
+  aCities{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Philadelphia"</span> 
+  aCities{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Pittsburg"</span> 
+  aCities{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Grand Blanc"</span> 
+  aCities{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Bad Axe"</span> 
+  aCities{<span class="hljs-number">5</span>}:=<span class="hljs-string">"Frostbite Falls"</span> 
+  aCities{<span class="hljs-number">6</span>}:=<span class="hljs-string">"Green Bay"</span> 
 </code></pre>
-<p>In this case, the name of the variable associated with the object in the form must be <em>$aCities</em>. This code could be placed in the form method and be executed when the <code>On Load</code> form event runs.</p>
+<p>In this case, the name of the variable associated with the object in the form must be <em>aCities</em>. This code could be placed in the form method and be executed when the <code>On Load</code> form event runs.</p>
 <ul>
 <li>Before the object is displayed, load the values of a list into the array using the <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html">LIST TO ARRAY</a> command. For example:</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-function">   LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;<span class="hljs-variable">$aCities</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">   LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;aCities)
 </code></pre>
-<p>In this case also, the name of the variable associated with the object in the form must be <em>$aCities</em>. This code would be run in place of the assignment statements shown above.</p>
+<p>In this case also, the name of the variable associated with the object in the form must be <em>aCities</em>. This code would be run in place of the assignment statements shown above.</p>
 <p>If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">  Case of</span>
     :(Form event=On Load)

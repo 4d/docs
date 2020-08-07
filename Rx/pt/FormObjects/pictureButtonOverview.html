@@ -70,9 +70,8 @@
 <p>A picture button is similar to a <a href="/docs/Rx/pt/FormObjects/buttonOverview.html">standard button</a>. However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.</p>
 <p>Picture buttons can be used in two ways:</p>
 <ul>
-<li>As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.<br>
-For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.</li>
-</ul>
+<li><p>As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.<br>
+For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.</p>
 <table>
 <thead>
 <tr><th>Property</th><th>JSON name</th><th>Value</th></tr>
@@ -85,9 +84,9 @@ For example, a table of thumbnails that has one row of four columns, each thumbn
 <tr><td>Use Last Frame as Disabled</td><td>useLastFrameAsDisabled</td><td>true</td></tr>
 </tbody>
 </table>
-<ul>
-<li>As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With <a href="/docs/Rx/pt/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menus</a>, all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).<br>
-Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:</li>
+</li>
+<li><p>As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With <a href="/docs/Rx/pt/FormObjects/picturePopupMenuOverview.html">Picture Pop-up Menus</a>, all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).<br>
+Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:</p></li>
 </ul>
 <p><img src="/docs/Rx/assets/en/FormObjects/button_pictureButton.png" alt=""></p>
 <p>Clicking the object changes the picture.</p>
@@ -97,7 +96,7 @@ Here is an example of a picture button. Suppose you want to give the users of a 
 <li><p>First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.</p>
 <p><img src="/docs/Rx/assets/en/FormObjects/pictureButton_grid.png" alt=""></p></li>
 </ol>
-<p>You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).</p>
+<p>You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).</p>
 <ol start="2">
 <li><p>Next, make sure the image is in your project's Resources and enter the path in the <a href="/docs/Rx/pt/FormObjects/propertiesTextAndPicture.html#picture-pathname">Pathname</a> property.</p></li>
 <li><p>Define the graphic's <a href="/docs/Rx/pt/FormObjects/propertiesCrop.html">Rows and Columns</a> properties.</p></li>
