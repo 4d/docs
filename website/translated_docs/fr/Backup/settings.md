@@ -48,7 +48,7 @@ Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la 
 - **Fichier de données** : fichier de données de la base. Lorsque cette option est cochée, les éléments suivants sont automatiquement sauvegardés en même temps que les données :
     - le fichier journal courant de la base de données (le cas échéant),
     - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire *les paramètres utilisateur pour les données*.
-- **Fichier de structure** : fichiers et dossiers de la base. Dans le cas de bases compilées, cette option permet de sauvegarder le fichier .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up.
+- **Fichier de structure** : fichiers et dossiers de la base. Dans le cas de bases compilées, cette option permet de sauvegarder le fichier .4dz. Lorsque cette option est cochée, le dossier complet `Settings` situé [au même niveau que le dossier Project](Project/architecture.md#settings-folder-1), c'est-à-dire les *paramètres utilisateur*, est automatiquement sauvegardé.
 - **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*f
 - **Fichiers joints** : cette zone permet de désigner un ensemble de fichiers et/ou de dossiers à sauvegarder en même temps que la base. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”.
     - **Supprimer** : retire de la liste des fichiers joints l’élément sélectionné.
@@ -121,6 +121,6 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.
 
-> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> Dans le cas d'une restauration automatique, seuls les éléments suivants sont restaurés: - fichier .4DD - fichier .4DIndx - fichier .4DSyncData - fichier .4DSyncHeader - dossier External Data
 > 
-> If you wish to get the attached files or the project files, you must perform a [manual restore](restore.md#manually-restoring-a-backup-standard-dialog).
+> Si vous souhaitez obtenir les fichiers joints ou les fichiers de projet, vous devez effectuer une [restauration manuelle](restore.md#manually-restoring-a-backup-standard-dialog).
