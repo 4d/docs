@@ -13,11 +13,11 @@ The `File` class provides properties and functions that allow you to create and 
 
 ### ZIP Archives
 
-The `File` class also allows you to create and manipulate 4D ZIP archives (one or more `File`s compressed to be smaller than their original size). These archives are created with a ".zip" extension and can be used to:
+The `File` class also allows you to create and manipulate 4D ZIP archives (one or more `File` objects compressed to be smaller than their original size). These archives are created with a ".zip" extension and can be used to:
 
 *	Save disk space
 *	Store data on a removable media device
-*	Easily transfer files/folders via mediums which may have size limitations (e.g., email or inter/intranet systems)
+*	Easily transfer files via mediums which may have size limitations (e.g., email or inter/intranet systems)
 
 4D ZIP file archives are created and handled with the following 4D commands:
 

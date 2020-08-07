@@ -16,6 +16,8 @@ title: Folder Functions
 </details>
 
 
+**Not available for ZIP archives**
+
 **.create( )** -> boolean
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -70,7 +72,11 @@ End if
 |v17 R5|Added
 </details>
 
+
+**Not available for ZIP archives**
+
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|object|->|Destination folder for the alias or shortcut|
@@ -116,6 +122,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |v17 R5|Added
 </details>
 
+
+**Not available for ZIP archives**
+
 **.delete**( { *option* } )
 
 |Parameter|Type||Description|
@@ -158,6 +167,9 @@ macOS: -45 (The file is locked or the pathname is not correct)
 |v17 R5|Added
 </details>
 
+
+**Not available for ZIP archives**
+
 **.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|
 |---|----|---|---|
@@ -197,6 +209,11 @@ C_OBJECT($tomove;$moved)
 |---|---|
 |v17 R5|Added
 </details>
+
+
+
+**Not available for ZIP archives**
+
 
 **.rename**( *newName* ) -> object
 |Parameter|Type||Description|

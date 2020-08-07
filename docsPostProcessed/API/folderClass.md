@@ -7,8 +7,22 @@ title: Folder
 
 The `Folder` class provides properties and functions that allow you to create and manipulate `Folder` objects.
 
+### Folders
+
 `Folder` objects are created with the [`Folder`](https://doc.4d.com/4Dv18R4/4D/18-R4/Folder.301-4982248.en.html) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`create( )`](#create-) function.
 
+### ZIP Archives
+
+The `File` class also allows you to create and manipulate 4D ZIP archives (one or more `Folder` objects compressed to be smaller than their original size). These archives are created with a ".zip" extension and can be used to:
+
+*	Save disk space
+*	Store data on a removable media device
+*	Easily transfer files via mediums which may have size limitations (e.g., email or inter/intranet systems)
+
+4D ZIP folder archives are created and handled with the following 4D commands:
+
+*	[ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html)
+*	[ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html)
 
 **Example**
 
@@ -128,6 +142,8 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 </details>
 
 
+**Not available for ZIP archives**
+
 **.create( )** -> boolean
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -179,7 +195,11 @@ End if
 |v17 R5|Added
 </details>
 
+
+**Not available for ZIP archives**
+
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|object|->|Destination folder for the alias or shortcut|
@@ -223,6 +243,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |---|---|
 |v17 R5|Added
 </details>
+
+
+**Not available for ZIP archives**
 
 **.delete**( { *option* } )
 
@@ -451,6 +474,9 @@ Folder icon [picture](../Concepts/picture.html).
 |v17 R5|Added
 </details>
 
+
+**Not available for ZIP archives**
+
 **.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|
 |---|----|---|---|
@@ -490,6 +516,11 @@ C_OBJECT($tomove;$moved)
 |---|---|
 |v17 R5|Added
 </details>
+
+
+
+**Not available for ZIP archives**
+
 
 **.rename**( *newName* ) -> object
 |Parameter|Type||Description|
