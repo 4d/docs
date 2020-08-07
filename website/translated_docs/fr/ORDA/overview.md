@@ -7,16 +7,16 @@ title: Aperçu
 
 ORDA signifie **Object Relational Data Access** (Accès objet aux données relationnelles). C'est une technologie avancée permettant l'accès au modèle et aux données d'une base de données à l'aide d'objets.
 
-Relations are transparently included in the concept, in combination with [lazy loading](glossary.md#lazy-loading), to remove all the typical hassles of data selection or transfer from the developer.
+Les relations font partie du concept de façon transparente, en combinaison avec le principe du [Lazy loading](glossary.md#lazy-loading), afin de supprimer toutes les problématiques spécifiques à la sélection ou au transfert de données.
 
-With ORDA, data is accessed through an abstraction layer, the [datastore](dsMapping.md#datastore). A datastore is an object that provides an interface to the database model and data through objects and classes. For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md##attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
+Avec ORDA, les données sont accessibles via une couche d'abstraction, le [datastore](dsMapping.md#datastore). Un datastore est un objet fournissant une interface au modèle de base de données et aux données via des objets et des classes. Par exemple, une table correspond à un objet [dataclass](dsMapping.md#dataclass), un champ est un [attribut](dsMapping.md##attribute) d'une dataclass, et les enregistrements sont des [entités](dsMapping.md#entity) et des [sélections d'éntités](dsMapping.md#entity-selection).
 
 
-## Why use ORDA?
+## Pourquoi utiliser ORDA ?
 
-Instead of representing information as tables, records, and fields, ORDA uses an alternate approach that more accurately maps data to real-world concepts.
+Au lieu de représenter des informations sous forme de tables, d'enregistrements et de champs, ORDA utilise une autre approche qui permet de faire correspondre plus précisément les données aux concepts concrets.
 
-Imagine the ability to denormalize a relational structure, yet not affect efficiency. Imagine describing everything about the business objects in your application in such a way that using the data becomes simple and straightforward and removes the need for a complete understanding of the relational structure.
+Imaginez la possibilité de dénormaliser une structure relationnelle sans pour autant réduire l'efficacité. Imagine describing everything about the business objects in your application in such a way that using the data becomes simple and straightforward and removes the need for a complete understanding of the relational structure.
 
 In the ORDA data model, a single dataclass can incorporate all of the elements that make up a traditional relational database table, but can also include values from related parent entities, and direct references to related entities and entity selections.
 
