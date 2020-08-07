@@ -341,7 +341,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 
 
 
-#### `method` attribute
+#### attribut `method`
 
 When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
 
@@ -352,7 +352,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 | Propriété | Type | Description |
 | --------- | ---- | ----------- |
 |           |      |             |
- source|String|method code|
+ source|Chaine|Code de la méthode|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
 
@@ -402,12 +402,12 @@ Function onInvoke($editor : Object)->$result : Object
 |              | [].message            | Texte      | Description of the error                 |
 |              | [].componentSignature | Texte      | Internal component signature             |
 
-The `onError` function is executed when the macros processor encounters an error.
+La fonction `onError` est exécutée lorsque le processeur de macros rencontre une erreur.
 
-When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. It is the case for example if executing a macro would result in:
+Lors de l'exécution d'une macro, si 4D rencontre une erreur qui empêche l'annulation de la macro, il n'exécute pas la macro. C'est le cas par exemple si l'exécution d'une macro se traduirait par :
 
-- deleting or modifying a script whose file is read-only.
-- creating two objects with the same internal ID.
+- supprimer ou modifier un script dont le fichier est en lecture seule.
+- créer deux objets avec le même ID interne.
 
 #### Exemple
 
