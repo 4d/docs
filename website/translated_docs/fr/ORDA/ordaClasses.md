@@ -1,6 +1,6 @@
 ---
 id: ordaClasses
-title: Data Model Classes
+title: Classes du modèle de données
 ---
 
 ## Fonction d'aperçu
@@ -288,7 +288,7 @@ Pour ouvrir une classe ORDA définie dans l'éditeur de méthode 4D, sélectionn
 
 ![](assets/en/ORDA/classORDA4.png)
 
-For ORDA classes based upon the local datastore (`ds`), you can directly access the class code from the 4D Structure window:
+Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéder directement au code de la classe depuis la fenêtre de 4D Structure :
 
 ![](assets/en/ORDA/classORDA5.png)
 
