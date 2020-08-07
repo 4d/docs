@@ -1,6 +1,6 @@
 ---
 id: creating
-title: Creating or opening a project
+title: Créer ou ouvrir un projet
 ---
 
 
