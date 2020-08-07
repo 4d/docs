@@ -248,161 +248,161 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 > 4D Volume Desktop のバージョン番号は、4D Developer のバージョン番号と合致する必要があります。 たとえば、4D Developer の v18 を利用していれば、4D Volume Desktop v18 が必要です。
 
-クライアントアプリから特定のアドレスを使用して (サブネットワーク上にサーバー名が公開されていない) サーバーに接続したい場合、buildapp.4DSettings ファイル内の `IPAddress` XML キーを使用する必要があります。 この点についてのより詳細な情報については、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを参照してください。 接続失敗時の特定の機構を実装することもできます。 The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+クライアントアプリから特定のアドレスを使用して (サブネットワーク上にサーバー名が公開されていない) サーバーに接続したい場合、buildapp.4DSettings ファイル内の `IPAddress` XML キーを使用する必要があります。 この点についてのより詳細な情報については、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドを参照してください。 接続失敗時の特定の機構を実装することもできます。 詳細は [クライアントアプリケーションによる接続の管理](#クライアント接続の管理) で説明されています。
 
-#### Copy of client applications in the server application
+#### サーバーアプリケーション内部のクライアントアプリケーションのコピー
 
-The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
+このエリアのオプションを使用して、クライアント/サーバーアプリケーションの新しいバージョンがビルドされた際の、ネットワーク越しにクライアントを自動更新するメカニズムを設定できます。
 
-- **Allow automatic update of Windows client application** - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.
-- **Allow automatic update of Macintosh client application** - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.
+- **Windows クライアントアプリケーションの自動更新を有効にする** - このオプションを選択すると、ネットワーク越しの Windows クライアントの自動更新を有効にすることができます。
+- **macOS クライアントアプリケーションの自動更新を有効にする** - このオプションを選択すると、ネットワーク越しの macOS クライアントの自動更新を有効にすることができます。
 
-*   **Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.
+クロスプラットフォームなクライアントアプリケーションの場合には、ビルドをおこなうマシンとは別のプラットフォーム用の 4D Volume Desktop アプリケーションの場所を選択する必要があります。
 
-    For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
-
-
-
-#### Displaying update notification
-
-The client application update notification is carried out automatically following the server application update.
-
-It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). If you have followed the process for generating a cross-platform client application, a .*4darchive* update file is available for each platform:
-
-To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. The rest of the process is automatic.
-
-On the client side, when the “old” client application tries to connect to the updated server application, a dialog box is displayed on the client machine, indicating that a new version is available. The user can either update their version or cancel the dialog box.
-
-*   If the user clicks **OK**, the new version is downloaded to the client machine over the network. ダウンロードが完了すると古いクライアントアプリケーションが閉じられて、新しいバージョンが起動しサーバーに接続します。 The old version of the application is then placed in the machine’s recycle bin.
-*   If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Otherwise (by default), the connection is established.
-
-#### Forcing automatic updates
-
-In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.
-
-To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. すると、未更新クライアントからの接続は更新メカニズムによって拒否されます。 For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
-
-The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
-
-
-#### Update Error
-
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. The application is now going to quit.”
-
-There are many possible causes for this error. When you get this message, it is advisable to check the following parameters first off:
-
-*   **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
-*   **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
-
-
-### Generated files
-
-Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
-> These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
-
-The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. このフォルダーを各クライアントにインストールします。 The *\<ApplicationName>Server* folder contains the server portion of the application.
-
-The contents of these folders vary depending on the current platform:
-
-*   *Windows* - Each folder contains the application executable file, named *\<ApplicationName>Client.exe* for the client part and *\<ApplicationName>Server.exe* for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-*   *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. 各パッケージには動作に必要なすべてのファイルが含まれます。 Under macOS, launch a package by double-clicking it.
-
-    > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
-
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 This file is used during the automatic client application update.
-
-#### Customizing 4D Volume Desktop folder
-
-When building a double-clickable application, 4D copies the contents of the 4D Volume Desktop folder into the Final Application subfolder of the destination folder. 元の 4D Server と 4D Volume Desktop の内容は必要に応じてカスタマイズできます。 You can, for instance:
-
-- Install a 4D Volume Desktop version corresponding to a specific language;
-- Add a custom PlugIns folder;
-- Customize the contents of the Resources folder.
-
-#### Location of Web files
-
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
-
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-- Default Web root folder (WebFolder).
-
-Items must be installed:
-*   **on Windows**
-    *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
-    *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
-
-*   **on macOS**
-    *   **Server application** - next to the *\<ApplicationName>Server* software package.
-    *   **Client application** - next to the *\<ApplicationName>Client* software package.
+たとえば Windows 上で **[...]** ボタンをクリックし、macOS 用の 4D Volume Desktop.app フォルダーを選択します。
 
 
 
+#### 更新通知の表示
+
+サーバーが更新されると、各クライアントマシン上に自動で更新通知がおこなわれます。
+
+これは次のように動作します: クライアント/サーバーアプリケーションの新しいバージョンをビルドする際、新しいクライアントは **ApplicationName** Server フォルダー内の **Upgrade4DClient** サブフォルダーに圧縮して格納されます (macOSでは、これらのフォルダーはサーバーパッケージ内に配置されます)。 クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に *.4darchive* という更新ファイルが格納されます:
+
+クライアントアプリケーションに更新を通知するには、古いサーバーアプリケーションを新しいバージョンで置き換えて起動します。 あとの処理は自動でおこなわれます。
+
+古いバージョンのクライアントが、更新されたサーバーに接続を試みると、新しいバージョンが利用可能である旨を伝えるダイアログがクライアントマシン上に表示されます。 ユーザーはバージョンを更新するか、ダイアログをキャンセルできます。
+
+*   ユーザーが **OK** をクリックすると、新バージョンがネットワーク越しにクライアントマシンにダウンロードされます。 ダウンロードが完了すると古いクライアントアプリケーションが閉じられて、新しいバージョンが起動しサーバーに接続します。 古いバージョンはゴミ箱に移動されます。
+*   ユーザーが **キャンセル** をクリックすると、更新手続きはキャンセルされます。古いクライアントのバージョンがサーバーの許可する範囲外であれば (後述参照)、アプリケーションは閉じられて、接続することはできません。 そうでなければ接続が行われます。
+
+#### 自動更新の強制
+
+更新のダウンロードをキャンセルさせたくない場合、 たとえば新しいメジャーバージョンの 4D Server を使用するような場合、新しいバージョンのクライアントアプリケーションを各クライアントマシンに必ずインストールしなければなりません。
+
+更新を強制するには、サーバーアプリケーションと互換性のあるバージョン番号の範囲からクライアントアプリケーションの現バージョン番号を除外します。 すると、未更新クライアントからの接続は更新メカニズムによって拒否されます。 たとえば、クライアントサーバーアプリケーションの新しいバージョン番号がの 6 の場合、バージョン番号が 5 以下のクライアントアプリケーションを許可しないようにできます。
+
+[現在のバージョン](build-server-application) はアプリケーションビルドダイアログのクライアント/サーバーページで設定できます (前述)。 接続を許可するバージョン番号の範囲は [XML キー](#アプリケーションビルド設定) で設定します。
 
 
-## Plugins & components page
+#### エラーが発生する場合
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
+クライアントアプリケーションの更新を実行できなかった場合、クライアントマシンには次のメッセージが表示されます: "クライアントアプリケーションの更新に失敗しました。 アプリケーションは終了します。"
 
-The page lists the elements loaded by the current 4D application:
+このエラーが発生する原因は複数ありえます。 このエラーが表示されるような場合は、まず次の点をチェックしてみてください:
+
+*   **パス名** - アプリケーションビルドダイアログや XML キー (たとえば *ClientMacFolderToWin*) で指定されたパス名の有効性をチェックしてください。 とくに 4D Volume Desktop へのパスをチェックしてください。
+*   **読み書き権限** - クライアントマシン上でカレントユーザーがクライアントアプリケーションを更新する書き込みアクセス権を持っているか確認してください。
+
+
+### 生成されるファイル
+
+クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に **Client Server executable** という名前の新しいフォルダーが作成されます。 このフォルダーにはさらに2つのサブフォルダー、 *\<ApplicationName> Client* と *\<ApplicationName> Server* があります。
+> エラーが発生した場合これらのフォルダーは作成されません。 そのような場合はエラーの原因を特定するために [ログファイル](#ログファイル) の内容を確認してください。
+
+*\<ApplicationName> Client* フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。 このフォルダーを各クライアントにインストールします。 *\<ApplicationName> Server* フォルダーはサーバーアプリケーションを格納します。
+
+これらのフォルダーの内容はカレントのプラットフォームにより異なります:
+
+*   *Windows* - 各フォルダーに*\<ApplicationName>Client.exe* (クライアント用) あるいは*\<ApplicationName>Server.exe* (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
+*   *macOS* - 各フォルダーは*\<ApplicationName>Client.app* (クライアント用) と*\<ApplicationName>Server.app* (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOSではアプリケーションを実行するためにパッケージをダブルクリックします。
+
+    > ビルドされた macOS パッケージには、Windows 版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。
+
+"クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
+
+#### サーバーやクライアントフォルダーのカスタマイズ
+
+クライアント/サーバーアプリケーションのビルド中に、4D Server フォルダーの内容は Server サブフォルダーに、4D Volume Desktop フォルダーの内容は Client サブフォルダーにコピーされます。 元の 4D Server と 4D Volume Desktop の内容は必要に応じてカスタマイズできます。 たとえば、次のようなことが可能です
+
+- 特定の言語に対応した4D Serverをインストールする
+- Plugins フォルダーにプラグインを追加する
+- Resources フォルダーのコンテンツをカスタマイズする
+
+#### Web ファイルの場所
+
+サーバーやクライアントを Web サーバーとして使用する場合、Web サーバーが使用するファイルを 特定の場所に配置しなければなりません:
+
+- *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL 接続で使用されます。
+- デフォルト Web ルートフォルダー (WebFolder)
+
+インストール場所:
+*   **Windows**
+    *   **サーバーアプリケーション** - *Client Server executable\ \<ApplicationName>Server\Server Database* サブフォルダー内にこれらの項目を配置します。
+    *   **クライアントアプリケーション** - *Client Server executable\ \<ApplicationName>Client* サブフォルダー内にこれらの項目を配置します。
+
+*   **macOS**
+    *   **サーバーアプリケーション** - *\<ApplicationName>Server* ソフトウェアパッケージと同階層にこれらの項目を配置します。
+    *   **クライアントアプリケーション** - *\<ApplicationName>Client* ソフトウェアパッケージと同階層にこれらの項目を配置します。
+
+
+
+
+
+## プラグイン&コンポーネントページ
+
+このページではビルドするアプリケーションに含める [プラグイン](Concepts/plug-ins.md) や [コンポーネント](Concepts/components.md) を設定できます。
+
+このページには現在 4D にロードされているプラグインやコンポーネントがリストされます:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-*    **Active** column - Indicates that the items will be integrated into the application package built. デフォルトですべての項目が選択されています。 To exclude a plug-in or a component, deselect the check box next to it.
+*    **アクティブ** 列 - その行の項目をビルドするアプリケーションに統合するかどうかを指定します。 デフォルトですべての項目が選択されています。 プラグインやコンポーネントをアプリケーションから除外するには、チェックボックスの選択を外します。
 
-*   **Plugins and components** column - Displays the name of the plug-in/component.
+*   **プラグイン&コンポーネント** 列 - プラグイン/コンポーネントの名称を表示します。
 
-*   **ID** column - Displays the plug-in/component's identification number (if any).
+*   **ID** 列 - プラグイン/コンポーネントの ID (あれば) を表示します。
 
-*   **Type** column - Indicates the type of item: plug-in or component.
+*   **タイプ** 列 - その要素がプラグインであるかコンポーネントであるかが表示されます。
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
+アプリケーションにその他の (現在 4D にロードされていない) プラグインやコンポーネントを統合したい場合、4D Server や 4D Volume Desktop の **Plugins** や **Components** フォルダーにそれらを配置します。 ソースアプリケーションのフォルダーから内容をコピーするメカニズム ([4D Volume Desktop フォルダーのカスタマイズ](#4D-Volume-Desktop-フォルダーのカスタマイズ) 参照) により、どんなタイプのファイルでもアプリケーションに統合することができます。
 
-If there is a conflict between two different versions of the same plug-in (one loaded by 4D and the other located in the source application folder), priority goes to the plug-in installed in the 4D Volume Desktop/4D Server folder. However, if there are two instances of the same component, the application will not open.
-> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
-
-
+同じプラグインの異なるバージョンが見つかった場合 (現在 4D にロードされているものと同じプラグインが、ソースアプリケーションのフォルダーにも配置されている場合など)、4D Volume Desktop/4D Server フォルダーにインストールされているバージョンが優先されます。 他方、同じコンポーネントが両方にインストールされていた場合は、アプリケーションを開くことはできません。
+> 配布するアプリケーションでプラグインやコンポーネントを使用するには、それぞれ適切なライセンスが必要です。
 
 
 
 
-## Licenses & Certificate page
 
-The Licences & Certificate page can be used to:
 
-*   designate the license number(s) that you want to integrate into your single-user stand-alone application
-*   sign the application by means of a certificate in macOS.
+## ライセンス&証明書ページ
+
+ライセンス&証明書のページでは、次のようなことができます:
+
+*   シングルユーザーのスタンドアロンアプリケーションに統合するライセンス番号を指定します。
+*   macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 
 ![](assets/en/Project/buildapplicenseProj.png)
 
-### Licenses
+### ライセンスリスト
 
-This tab displays the list of available deployment licenses that you can integrate into your application. デフォルトでリストは空です。 You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+アプリケーションに統合するのに使用できる配付ライセンスの一覧を表示します。 デフォルトでリストは空です。 アプリケーションをビルドするには *4D Developer Professional* ライセンスと、その開発ライセンスに対応する *4D Desktop Volume* ライセンスを指定しなければなりません。 現在使用されているものとは別の4D Developer Professional のライセンス番号とその付属ライセンスを追加することもできます。
 
-To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
+ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。
 
-When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
+\[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については 詳しくは [Get 4D folder](https://doc.4d.com/4Dv18/4D/18/Get-4D-folder.301-4505365.ja.html) コマンドの説明を参照してください。
 
-You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
+開発ライセンスとそれに対応した配布ライセンスを選択します。 これらのファイルは *4D Developer Professional* ライセンスや *4D Desktop Volume* ライセンスをアクティベーションした際、この場所にコピーされます。
 
-Once you have selected a file, the list will indicate the characteristics of the license that it contains.
+ファイルを選択すると、リストに選択内容が反映されます:
 
-*   **License #** - Product license number
-*   **License** - Name of the product
-*   **Expiration date** - Expiration date of the license (if any)
-*   **Path** -  Location on disk
+*   **ライセンス #** - 製品ライセンス番号
+*   **ライセンス** - プロダクト名
+*   **有効期限** - ライセンスの有効期限 (あれば)
+*   **パス** -  ディスク上のライセンスの場所
 
-If a license is not valid, a message will warn you.
+ライセンスが有効でない場合、警告が表示されます。
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
-> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
+必要なだけ有効なファイルを選択することができます。 実行可能アプリケーションをビルドする際に 4D は最も適切なライセンスを使用します。
+> "R-リリース" バージョンのアプリケーションをビルドするには、専用の "R" ライセンスが必要です ("R" 製品用のライセンス番号は "R-" から始まる番号です)。
 
-After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
+アプリケーションビルド後、配布ライセンスファイルは実行可能ファイルと同階層 (Windows) やパッケージ内 (macOS) に自動でコピーされます。
 
 
-### OS X signing certificate
+### OS X 署名に使用する証明書
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
+アプリケーションビルダーは、macOS 環境下において組み込み 4D アプリに署名をする機能を備えています (macOS のシングルユーザーアプリ、サーバーおよびクライアントアプリ)。 Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
 
 - Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
 
