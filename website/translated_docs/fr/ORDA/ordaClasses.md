@@ -284,7 +284,7 @@ Une fois qu'une classe est définie, son nom n'est plus grisé dans l'Explorateu
 
 ### Modifier des classes
 
-To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window (like for any class):
+Pour ouvrir une classe ORDA définie dans l'éditeur de méthode 4D, sélectionnez ou double-cliquez sur un nom de classe ORDA et utilisez **Editer...** dans le menu contextuel/menu d'options de la fenêtre d'Explorateur (comme pour n'importe quelle classe) :
 
 ![](assets/en/ORDA/classORDA4.png)
 
@@ -295,7 +295,7 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ### Éditeur de méthode
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+Dans l'éditeur de méthode de 4D, les variables saisies comme une classe ORDA bénéficient automatiquement des fonctionnalités d'auto-complétion. Exemple avec une variable de classe Entity :
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
 
