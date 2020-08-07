@@ -23,7 +23,7 @@ title: Sue après frappe clavier
 > 
 > > Ces événements sont également activés par des commandes de langage qui simulent une action utilisateur telle que `POST KEY`.
 > 
-> The `On After Keystroke` event is not generated:
+> L'événement `On After Keystroke` n'est pas généré :
 > 
 > - in [list box columns](FormObjects/listbox_overview.md#list-box-columns) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 > - when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). Pour traiter ces événements, vous devez utiliser [`On After Edit`](onAfterEdit.md).
