@@ -46,7 +46,7 @@ Function onInvoke($editor : Object)->$result : Object
 
     var $btnHello : Object
 
-    // Create a "Hello" button
+    // Créer un bouton "Hello"
     $btnHello:=New object("type"; "button"; \
     "text"; "Hello World!"; \
     "method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -56,14 +56,14 @@ Function onInvoke($editor : Object)->$result : Object
     "top"; 0; \
     "left"; 0)  
 
-    // Add button in the current page
+    // Ajouter un bouton dans la page courante
     $editor.editor.currentPage.objects.btnHello:=$btnHello  
 
-    // Select the new button in the form editor
+    // Sélectionner le nouveau bouton dans l'éditeur de formulaire
     $editor.editor.currentSelection.clear() //unselect elements
     $editor.editor.currentSelection.push("btnHello")    
 
-    // Notify the modification to the 4D Form editor
+    // Notifier la modification à l'éditeur de formulaire 4D 
     $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
         "currentPage"; $editor.editor.currentPage)
 ```
@@ -262,15 +262,15 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| Paramètres | Type  | Description                                              |
-| ---------- | ----- | -------------------------------------------------------- |
-| $macro     | Objet | Macro declaration object (in the `formMacros.json` file) |
+| Paramètres | Type  | Description                                                       |
+| ---------- | ----- | ----------------------------------------------------------------- |
+| $macro     | Objet | Objet de déclaration de macro (dans le fichier `formMacros.json`) |
 
-Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
+Les macros sont instanciées à l'aide d'une fonction [class constructor](Concepts/classes.md#class-constructor), le cas échéant.
 
-The class constructor is called once during class instantiation, which occurs at application startup.
+Le class constructor est appelé une fois lors de l'instanciation de classe, qui se produit au démarrage de l'application.
 
-Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+Les propriétés personnalisées ajoutées à la [déclaration macro](#declaring-macros) sont retournées dans le paramètre de la fonction class contructor.
 
 
 #### Exemple
@@ -293,7 +293,7 @@ Vous pouvez écrire :
 ```code4d  
 // Class "AlignOnTarget"
 Class constructor($macro : Object)
-    This.myParameter:=$macro.myParam //left
+    This.myParameter:=$macro.myParam //gauche
     ...
 ```
 
@@ -307,13 +307,13 @@ Class constructor($macro : Object)
 | $editor    | Objet | Form properties                                  |
 | $result    | Objet | Form properties modified by the macro (optional) |
 
-The `onInvoke` function is automatically executed each time the macro is called.
+La fonction `onInvoke` est automatiquement exécutée à chaque fois que la macro est appelée.
 
-When the function is called, it receives in the `$editor` parameter a copy of all the elements of the form with their current values. You can then execute any operation on these properties.
+Lorsque la fonction est appelée, elle reçoit dans le paramètre `$editor` une copie de tous les éléments du formulaire avec leurs valeurs courantes. Vous pouvez ensuite exécuter n'importe quelle opération sur ces propriétés.
 
-Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
+Une fois les opérations terminées, si la macro entraîne la modification, l'ajout ou la suppression d'objets, vous pouvez transmettre les propriétés modifiées résultantes dans `$result`. Le processeur de macros analysera les propriétés retournées et appliquera les opérations nécessaires dans le formulaire. Évidemment, moins vous retournez de propriétés, moins le traitement prendra du temps.
 
-Here are the properties of the `$editor` object:
+Voici les propriétés de l'objet `$editor` :
 
 | Propriété                 | Type       | Description                                                                       |
 | ------------------------- | ---------- | --------------------------------------------------------------------------------- |
