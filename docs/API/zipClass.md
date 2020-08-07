@@ -16,66 +16,38 @@ A 4D ZIP archive is a `File` or `Folder` object containing one or more files and
 *	[ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html)
 
 
-## Properties
+## Summary 
 
-A `File` object contains the following properties and functions:
-
-<!-- INCLUDE document.properties -->
-
-
-## Functions 
-
-|Summary|
-|---|
-|[<!-- INCLUDE #document.copyTo().Syntax -->](#copyto-)|
-|<!-- INCLUDE #document.copyTo().Summary -->|
-|[<!-- INCLUDE #file.create().Syntax -->](#create-)| 
-|<!-- INCLUDE #file.create().Summary --><p><!--INCLUDE file.create().Note -->|
-|[<!-- INCLUDE #file.createAlias().Syntax -->](#createalias-) |
-|<!-- INCLUDE #file.createAlias().Summary --><p><!--INCLUDE file.createAlias().Note --> |
-|[<!-- INCLUDE #file.delete().Syntax -->](#delete-) |
-|<!-- INCLUDE #file.delete().Summary --><p><!--INCLUDE file.delete().Note --> |
-|[<!-- INCLUDE #document.getContent().Syntax -->](#getcontent-)|
-|<!-- INCLUDE #document.getContent().Summary -->|
-|[<!-- INCLUDE #document.getIcon().Syntax -->](#geticon-)|
-|<!-- INCLUDE #document.getIcon().Summary -->|
-|[<!-- INCLUDE #document.getText().Syntax -->](#gettext-)|
-|<!-- INCLUDE #document.getText().Summary -->|
-|[<!-- INCLUDE #file.moveTo().Syntax -->](#moveto-)|
-|<!-- INCLUDE #file.moveTo().Summary --><p><!--INCLUDE file.moveTo().Note -->|
-|[<!-- INCLUDE #file.rename().Syntax -->](#rename-)|
-|<!-- INCLUDE #file.rename().Summary --><p><!--INCLUDE file.rename().Note -->|
-|[<!-- INCLUDE #file.setContent().Syntax -->](#setcontent-)|
-|<!-- INCLUDE #file.setContent().Summary --><p><!--INCLUDE file.setContent().Note -->|
-|[<!-- INCLUDE #file.setText().Syntax -->](#settext-)|
-|<!-- INCLUDE #file.setText().Summary --><p><!--INCLUDE file.setText().Note -->|
+|Files|Folders |
+|---|---|
+|[.copyTo( )](fileClass.html#copyto-)|[.copyTo( )](folderClass.html#copyto-)|
+|[.creationDate](fileClass.html#creationdate)|[.creationDate](folderClass.html#creationdate)<p>Date may be different for the root folder from a folder within the archive|
+|[.creationTime](fileClass.html#creationtime)|[.creationTime](folderClass.html#creationtime)<p>Time may be different for the root folder from a folder within the archive|
+|[.exists](fileClass.html#exists)|[.exists](folderClass.html#exists)|
+|[.extension](fileClass.html#extension)|[.extension](folderClass.html#extension)|
+||[.file( )](folderClass.html#file-)|
+||[.files( )](folderClass.html#files-)|
+||[.folder( )](folderClass.html#folder-)|
+||[.folders( )](folderClass.html#folders-)|
+|[.fullName](fileClass.html#fullname)|[.fullName](folderClass.html#fullname)|
+|[.getContent( )](fileClass.html#getcontent-)||
+|[.getIcon( )](fileClass.html#geticon-)|[.getIcon( )](folderClass.html#geticon-)|
+|[.getText( )](fileClass.html#gettext-)||
+|[.hidden](fileClass.html#hidden)|[.hidden](folderClass.html#hidden)|
+|[.isAlias](fileClass.html#isalias)|[.isAlias](folderClass.html#isalias)|
+|[.isFile](fileClass.html#isfile)|[.isFile](folderClass.html#isfile)|
+|[.isFolder](fileClass.html#ifFolder)|[.isFolder](folderClass.html#isFolder)|
+||[.isPackage](folderClass.html#ispackage)|
+|[.isWritable](fileClass.html#iswritable)<p>Always false||
+|[.modificationDate](fileClass.html#modificationdate)|[.modificationDate](folderClass.html#modificationdate)<p>Date may be different for the root folder from a folder within the archive|
+|[.modificationTime](fileClass.html#modificationtime)|[.modificationTime](folderClass.html#modificationtime)<p>Time may be different for the root folder from a folder within the archive|
+|[.name](fileClass.html#name)|[.name](folderClass.html#name)|
+|[.original](fileClass.html#original)|[.original](folderClass.html#original)|
+|[.parent](fileClass.html#parent)|[.parent](folderClass.html#parent)<p>The archive's virtual root folder has no parent. However, the folders within the archive may have a parent other than the root.|
+|[.path](fileClass.html#path)<p>Returns a path relative to the archive|[.path](folderClass.html#path)<p>Returns a path relative to the archive|
+|[.platformPath](fileClass.html#platformpath)|[.platformPath](folderClass.html#platformpath)|
 
 
-
-
-
-
-<!-- INCLUDE document.copyTo().Desc -->
-
-<!-- INCLUDE file.create().Desc -->
-
-<!-- INCLUDE file.createAlias().Desc -->
-
-<!-- INCLUDE file.delete().Desc -->
-
-<!-- INCLUDE document.getContent().Desc -->
-
-<!-- INCLUDE document.getIcon().Desc -->
-
-<!-- INCLUDE document.getText().Desc -->
-
-<!-- INCLUDE file.moveTo().Desc -->
-
-<!-- INCLUDE file.rename().Desc -->
-
-<!-- INCLUDE file.setContent().Desc -->
-
-<!-- INCLUDE file.setText().Desc -->
 
 
 

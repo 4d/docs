@@ -14,64 +14,64 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 ```
 
-## Functions & Properties
+## Summary
 
 ||
 |---|
 |[**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object](#copyto-)|
-|copies a `Folder` object (source file/folder) into the specified *destinationFolder* |
+|&nbsp;&nbsp;&nbsp;&nbsp;copies a `Folder` object (source file/folder) into the specified *destinationFolder* |
 |[**.create( )** -> boolean](#create-)| 
-|creates a folder on disk according to the properties of the `Folder` object|
+|&nbsp;&nbsp;&nbsp;&nbsp;creates a folder on disk according to the properties of the `Folder` object|
 |[**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object](#createalias-) |
-|creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object |
+|&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows) |
 |[**.creationDate** -> creation date](#creationdate)|
-|returns the creation date of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the creation date of the folder|
 |[**.creationTime** -> creation time](#creationtime)|
-|returns the creation  time of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the creation  time of the folder|
 |[**.delete**( { *option* } )](#delete-) |
-|deletes the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;deletes the folder|
 |[**.exists** -> boolean](#exists)|
-|returns true if the folder exists on disk|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder exists on disk|
 |[**.extension** -> folder name extension](#extension)|
-|returns the extension of the folder name|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name|
 |[**.fullName** -> full folder name](#fullname)|
-|returns the full name of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder|
 |[**.getIcon**( { *size* } ) -> picture](#geticon-)|
-|the icon of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;the icon of the folder|
 |[**.hidden** -> boolean](#hidden)|
-|returns true if the folder is set as "hidden" at the system level|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder is set as "hidden" at the system level|
 |[**.isAlias** -> boolean](#isalias)|
-|always returns **false** for a `Folder` object|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns **false** for a `Folder` object|
 |[**.isFile** -> boolean](#isfile)|
-|always returns **false** for a folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns **false** for a folder|
 |[**.isFolder** -> boolean](#ifFolder)|
-|always returns **true** for a folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns **true** for a folder|
 |[**.isWritable** -> boolean](#ispackage)|
-|returns true if the folder is a package on macOS  (and exists on disk)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder is a package on macOS  (and exists on disk)|
 |[**.modificationDate** -> modification date](#modificationdate)|
-|returns the date of the folder's last modification|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the date of the folder's last modification|
 |[**.modificationTime** -> modification date](#modificationtime)|
-|returns the time of the folder's last modification|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the time of the folder's last modification|
 |[**.name** -> file name](#name)|
-|returns the name of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the folder|
 |[**.original** -> object](#original)|
-|returns the same folder object as the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the same folder object as the folder|
 |[**.parent** -> object](#parent)|
-|returns the parent folder object of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the parent folder object of the folder|
 |[**.path** -> text](#path)|
-|returns the POSIX path of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the POSIX path of the folder|
 |[**.platformPath** -> text](#platformpath)|
-|returns the path of the folder expressed with the current platform syntax|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the path of the folder expressed with the current platform syntax|
 |[**.moveTo**( *destinationFolder* { ; *newName*} )  -> object](#moveto-)|
-|moves or renames the `Folder` object (source folder) into the specified *destinationFolder*|
+|&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `Folder` object (source folder) into the specified *destinationFolder*|
 |[**.rename**( *newName* ) -> object](#rename-)|
-|renames the folder with the name you passed in *newName* and returns the renamed `Folder` object|
+|&nbsp;&nbsp;&nbsp;&nbsp;renames the folder with the name you passed in *newName* and returns the renamed `Folder` object|
 
 
+---
 
 
-
-### .copyTo( )
+## .copyTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -116,9 +116,11 @@ $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
  
- 
 
-### .create( )
+
+---
+
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -171,7 +173,9 @@ End if
 
 
 
-### .createAlias( )
+---
+
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -219,7 +223,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 
 
-### .creationDate
+---
+
+## .creationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -240,7 +246,9 @@ This property is **read-only**.
 
 
 
-### .creationTime
+---
+
+## .creationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -261,7 +269,9 @@ This property is **read-only**.
 
 
 
-### .delete( )
+---
+
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -305,7 +315,9 @@ macOS: -45 (The file is locked or the pathname is not correct)
 
 
 
-### .exists
+---
+
+## .exists
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -326,7 +338,9 @@ This property is **read-only**.
 
 
 
-### .extension
+---
+
+## .extension
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -347,7 +361,9 @@ This property is **read-only**.
 
 
 
-### .file( )
+---
+
+## .file( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -379,7 +395,9 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 
-### .files( )
+---
+
+## .files( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -434,7 +452,9 @@ You want to get all files that are not invisible in the Documents folder:
 
 
 
-### .folder( )
+---
+
+## .folder( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -466,7 +486,9 @@ A `Folder` object or null if *path* is invalid.
 
 
 
-### .folders( )
+---
+
+## .folders( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -505,7 +527,9 @@ You want the collection of all folders and subfolders of the database folder:
 
 
 
-### .fullName
+---
+
+## .fullName
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -526,7 +550,9 @@ This property is **read-only**.
 
 
 
-### .getIcon( )
+---
+
+## .getIcon( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -554,7 +580,9 @@ Folder icon [picture](../Concepts/picture.html).
 
 
 
-### .hidden
+---
+
+## .hidden
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -575,7 +603,10 @@ This property is **read-only**.
 
 
 
-### .isAlias
+---
+
+
+## .isAlias
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -596,7 +627,10 @@ This property is **read-only**.
 
 
 
-### .isFile
+---
+
+
+## .isFile
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -617,7 +651,10 @@ This property is **read-only**.
 
 
 
-### .isFolder
+---
+
+
+## .isFolder
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -639,7 +676,10 @@ This property is **read-only**.
 
 
 
-### .isPackage
+---
+
+
+## .isPackage
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -662,7 +702,10 @@ This property is **read-only**.
 
 
 
-### .modificationDate
+---
+
+
+## .modificationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -683,7 +726,10 @@ This property is **read-only**.
 
 
 
-### .modificationTime
+---
+
+
+## .modificationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -704,7 +750,10 @@ This property is **read-only**.
 
 
 
-### .moveTo( )
+---
+
+
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -744,7 +793,10 @@ C_OBJECT($tomove;$moved)
 ```
 
 
-### .name
+---
+
+
+## .name
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -765,7 +817,10 @@ This property is **read-only**.
 
 
 
-### .original
+---
+
+
+## .original
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -788,7 +843,10 @@ This property is **read-only**.
 
 
 
-### .parent
+---
+
+
+## .parent
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -811,7 +869,10 @@ This property is **read-only**.
 
 
 
-### .path
+---
+
+
+## .path
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -832,7 +893,10 @@ This property is **read-only**.
 
 
 
-### .platformPath
+---
+
+
+## .platformPath
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -853,8 +917,11 @@ This property is **read-only**.
 
 
 
+---
+
+
  
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|

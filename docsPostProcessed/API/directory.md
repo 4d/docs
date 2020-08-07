@@ -6,7 +6,7 @@ title:  Class
 ## Description
 
 
-### .creationDate
+## .creationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -26,8 +26,9 @@ The `.creationDate` property  returns the creation date of the folder.
 This property is **read-only**. 
 
  
+--- 
  
- ### .creationTime
+ ## .creationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -47,10 +48,10 @@ The `.creationTime` property  returns the creation  time of the folder (expresse
 This property is **read-only**. 
 
 
+---
 
 
-
-### .exists
+## .exists
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -71,10 +72,10 @@ This property is **read-only**.
 
 
 
+---
 
 
-
-### .extension
+## .extension
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -95,9 +96,9 @@ This property is **read-only**.
 
 
 
+---
 
-
-### .fullName
+## .fullName
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -118,9 +119,9 @@ This property is **read-only**.
 
 
 
+---
 
-
-### .hidden
+## .hidden
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -140,10 +141,10 @@ The `.hidden` property returns true if the folder is set as "hidden" at the syst
 This property is **read-only**. 
 
 
+---
 
 
-
-### .isAlias
+## .isAlias
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -163,9 +164,9 @@ The `.isAlias` property always returns **false** for a `Folder` object.
 This property is **read-only**. 
 
 
+---
 
-
-### .isFile
+## .isFile
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -185,9 +186,9 @@ The `.isFile` property always returns **false** for a folder.
 This property is **read-only**. 
 
 
+---
 
-
-### .isFolder
+## .isFolder
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -208,9 +209,9 @@ The `.isFolder` property always returns **true** for a folder.
 This property is **read-only**. 
 
 
+---
 
-
-### .isPackage
+## .isPackage
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -233,9 +234,9 @@ This property is **read-only**.
 
 
 
+---
 
-
-### .modificationDate
+## .modificationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -256,9 +257,9 @@ This property is **read-only**.
 
 
 
+---
 
-
-### .modificationTime
+## .modificationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -278,9 +279,9 @@ The `.modificationTime` property returns the time of the folder's last modificat
 This property is **read-only**. 
 
 
+---
 
-
-### .name
+## .name
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -300,8 +301,9 @@ The `.name` property returns the name of the folder, without extension (if any).
 This property is **read-only**. 
 
 
+---
 
-### .original
+## .original
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -323,10 +325,10 @@ This property is **read-only**.
 >This property is available on folders to allow generic code to process folders or files.
 
 
+---
 
 
-
-### .parent
+## .parent
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -349,9 +351,9 @@ This property is **read-only**.
 
 
 
+---
 
-
-### .path
+## .path
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -371,9 +373,9 @@ The `.path` property returns the POSIX path of the folder. If the path represent
 This property is **read-only**. 
 
 
+---
 
-
-### .platformPath
+## .platformPath
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -394,19 +396,13 @@ This property is **read-only**.
 
 
 
+---
 
 
 
 
 
-
-
-
-
-
-
-
-### .copyTo( )
+## .copyTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -451,10 +447,11 @@ $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
  
- 
+
+---
 
 
-### .file( )
+## .file( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -485,8 +482,9 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ```
 
 
+---
 
-### .files( )
+## .files( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -540,9 +538,9 @@ You want to get all files that are not invisible in the Documents folder:
 ```
 
 
+---
 
-
-### .folder( )
+## .folder( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -573,9 +571,9 @@ A `Folder` object or null if *path* is invalid.
 ```
 
 
+---
 
-
-### .folders( )
+## .folders( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -613,8 +611,9 @@ You want the collection of all folders and subfolders of the database folder:
 ```
 
 
+---
 
-### .getIcon( )
+## .getIcon( )
 
 <details><summary>History</summary>
 |Version|Changes|

@@ -7,7 +7,7 @@ title: File functions
 ## Functions
 
 
-### .create( )
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -46,7 +46,7 @@ Creation of a preferences file in the database folder:
 
 
 
-### .createAlias( )
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -91,7 +91,7 @@ You want to create an alias to a file in your database folder:
  $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
 ```
 
-### .delete( )
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -130,7 +130,7 @@ You want to delete a specific file in the database folder:
  
 
  
-### .moveTo( )
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -170,7 +170,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
  
  
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -209,7 +209,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
  
-### .setContent( )
+## .setContent( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -241,7 +241,7 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 
 
  
-### .setText( )
+## .setText( )
 
 <details><summary>History</summary>
 |Version|Changes|

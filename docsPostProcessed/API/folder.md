@@ -7,7 +7,7 @@ title: Folder Functions
 ## Functions
 
 
-### .create( )
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -60,10 +60,10 @@ End if
 
 
 
+---
 
 
-
-### .createAlias( )
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -110,9 +110,9 @@ $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
 $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 
+---
 
-
-### .delete( )
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -155,9 +155,9 @@ When `Delete with contents` is passed:
 macOS: -45 (The file is locked or the pathname is not correct)
 
  
- 
+--- 
 
-### .moveTo( )
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -196,9 +196,10 @@ C_OBJECT($tomove;$moved)
  $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")
 ```
 
+---
  
  
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|

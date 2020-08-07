@@ -7,7 +7,7 @@ title:  Class
 
 
 <!-- REF directory.creationDate.Desc -->
-### .creationDate
+## .creationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -32,9 +32,10 @@ This property is **read-only**.
 
 <!-- END REF -->
  
+--- 
  
  <!-- REF directory.creationTime.Desc -->
-### .creationTime
+## .creationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -59,11 +60,11 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 
 <!-- REF directory.exists.Desc -->
-### .exists
+## .exists
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -89,11 +90,11 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-
+---
 
 
 <!-- REF directory.extension.Desc -->
-### .extension
+## .extension
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -119,10 +120,10 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-
+---
 
 <!-- REF directory.fullName.Desc -->
-### .fullName
+## .fullName
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -148,10 +149,10 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-
+---
 
 <!-- REF directory.hidden.Desc -->
-### .hidden
+## .hidden
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -176,11 +177,11 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 
 <!-- REF directory.isAlias.Desc -->
-### .isAlias
+## .isAlias
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -205,10 +206,10 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 <!-- REF directory.isFile.Desc -->
-### .isFile
+## .isFile
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -233,10 +234,10 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 <!-- REF directory.isFolder.Desc -->
-### .isFolder
+## .isFolder
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -261,10 +262,10 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 <!-- REF directory.isPackage.Desc -->
-### .isPackage
+## .isPackage
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -292,10 +293,10 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-
+---
 
 <!-- REF directory.modificationDate.Desc -->
-### .modificationDate
+## .modificationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -321,10 +322,10 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-
+---
 
 <!-- REF directory.modificationTime.Desc -->
-### .modificationTime
+## .modificationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -349,10 +350,10 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 <!-- REF directory.name.Desc -->
-### .name
+## .name
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -377,9 +378,10 @@ This property is **read-only**.
 
 <!-- END REF -->
 
+---
 
 <!-- REF directory.original.Desc -->
-### .original
+## .original
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -406,11 +408,11 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 
 <!-- REF directory.parent.Desc -->
-### .parent
+## .parent
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -438,10 +440,10 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-
+---
 
 <!-- REF directory.path.Desc -->
-### .path
+## .path
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -466,10 +468,10 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
+---
 
 <!-- REF directory.platformPath.Desc -->
-### .platformPath
+## .platformPath
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -495,20 +497,14 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-
-
-
-
-
-
-
+---
 
 
 
 
 
 <!-- REF directory.copyTo().Desc -->
-### .copyTo( )
+## .copyTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -557,12 +553,13 @@ $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
  
- <!-- END REF -->
+<!-- END REF -->
 
+---
 
 
 <!-- REF directory.file().Desc -->
-### .file( )
+## .file( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -598,9 +595,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <!-- END REF -->
 
+---
 
 <!-- REF directory.files().Desc -->
-### .files( )
+## .files( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -659,10 +657,10 @@ You want to get all files that are not invisible in the Documents folder:
 
 <!-- END REF -->
 
-
+---
 
 <!-- REF directory.folder().Desc -->
-### .folder( )
+## .folder( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -698,10 +696,10 @@ A `Folder` object or null if *path* is invalid.
 
 <!-- END REF -->
 
-
+---
 
 <!-- REF directory.folders().Desc -->
-### .folders( )
+## .folders( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -744,9 +742,10 @@ You want the collection of all folders and subfolders of the database folder:
 
 <!-- END REF -->
 
+---
 
 <!-- REF directory.getIcon().Desc -->
-### .getIcon( )
+## .getIcon( )
 
 <details><summary>History</summary>
 |Version|Changes|

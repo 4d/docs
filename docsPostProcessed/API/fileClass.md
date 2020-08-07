@@ -15,73 +15,73 @@ C_BOOLEAN($created)
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-## Functions & Properties
+## Summary
 
 ||
 |---|
 |[**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object](#copyto-)|
-|copies a `File` object (source file/folder) into the specified *destinationFolder* |
+|&nbsp;&nbsp;&nbsp;&nbsp;copies a `File` object (source file/folder) into the specified *destinationFolder* |
 |[**.create( )** -> boolean ](#create-)| 
-|creates a file on disk according to the properties of the `File` object|
+|&nbsp;&nbsp;&nbsp;&nbsp;creates a file on disk according to the properties of the `File` object|
 |[**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object](#createalias-) |
-|creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object|
+|&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)|
 |[**.creationDate** -> creation date](#creationdate)|
-|returns the creation date of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the creation date of the file|
 |[**.creationTime** -> creation time](#creationtime)|
-|returns the creation  time of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the creation  time of the file|
 |[**.delete( )**](#delete-) |
-|deletes the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;deletes the file|
 |[**.exists** -> boolean](#exists)|
-|returns true if the file exists on disk|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the file exists on disk|
 |[**.extension** -> file extension](#extension)|
-|returns the extension of the file name|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the file name|
 |[**.fullName** -> full file name](#fullname)|
-|returns the full name of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the file|
 |[**.getContent( )**  -> BLOB](#getcontent-)|
 |returns a `BLOB` containing the entire content of a file|
 |[**.getIcon**( { *size* } ) -> picture](#geticon-)|
-|the icon of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
 |[**.getText**( { *charSet* } { ; } { *breakMode*} ) -> text](#gettext-)|
-|returns the contents of the file as text |
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
 |[**.hidden** -> boolean](#hidden)|
-|returns true if the file is set as "hidden" at the system level|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the file is set as "hidden" at the system level|
 |[**.isAlias** -> boolean](#isalias)|
-|returns true if the file is an alias, a shortcut, or a symbolic link|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the file is an alias, a shortcut, or a symbolic link|
 |[**.isFile** -> boolean](#isfile)|
-|always returns true for a file|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns true for a file|
 |[**.isFolder** -> boolean](#ifFolder)|
-|always returns false for a file|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns false for a file|
 |[**.isWritable** -> boolean](#iswritable)|
-|returns true if the file exists on disk and is writable|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the file exists on disk and is writable|
 |[**.modificationDate** -> modification date](#modificationdate)|
-|returns the date of the file's last modification|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the date of the file's last modification|
 |[**.modificationTime** -> modification date](#modificationtime)|
-|returns the time of the file's last modification|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the time of the file's last modification|
 |[**.moveTo**( *destinationFolder* { ; *newName*} )  -> object](#moveto-)|
-|moves or renames the `File` object into the specified *destinationFolder*|
+|&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `File` object into the specified *destinationFolder*|
 |[**.name** -> file name](#name)|
-|returns the name of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the file|
 |[**.original** -> object](#original)|
-|returns the target element for an alias, a shortcut, or a symbolic link file|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the target element for an alias, a shortcut, or a symbolic link file|
 |[**.parent** -> object](#parent)|
-|returns the parent folder object of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the parent folder object of the file|
 |[**.path** -> text](#path)|
-|returns the POSIX path of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the POSIX path of the file|
 |[**.platformPath** -> text](#platformpath)|
-|returns the path of the file expressed with the current platform syntax|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the path of the file expressed with the current platform syntax|
 |[**.rename**( *newName* ) -> object](#rename-)|
-|renames the file with the name you passed in *newName* and returns the renamed `File` object|
+|&nbsp;&nbsp;&nbsp;&nbsp;renames the file with the name you passed in *newName* and returns the renamed `File` object|
 |[**.setContent** ( *content* ) ](#setcontent-)|
-|rewrites the entire content of the file using the data stored in the *content* BLOB|
+|&nbsp;&nbsp;&nbsp;&nbsp;rewrites the entire content of the file using the data stored in the *content* BLOB|
 |[**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) ](#settext-)|
-|writes *text* as the new contents of the file|
+|&nbsp;&nbsp;&nbsp;&nbsp;writes *text* as the new contents of the file|
 |[**.size** -> file size](#size)|
-|returns the size of the file expressed in bytes|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the size of the file expressed in bytes|
 
 
+---
 
-
-### .copyTo( )
+## .copyTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -128,7 +128,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
  
 
-### .create( )
+---
+
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -164,7 +166,10 @@ Creation of a preferences file in the database folder:
 ```
 
 
-### .createAlias( )
+---
+
+
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -210,7 +215,10 @@ You want to create an alias to a file in your database folder:
 ```
 
 
-### .creationDate
+---
+
+
+## .creationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -231,7 +239,10 @@ This property is **read-only**.
 
 
 
-### .creationTime
+---
+
+
+## .creationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -252,7 +263,10 @@ This property is **read-only**.
 
 
 
-### .delete( )
+---
+
+
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -290,7 +304,10 @@ You want to delete a specific file in the database folder:
 ``` 
 
 
-### .exists
+---
+
+
+## .exists
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -311,7 +328,10 @@ This property is **read-only**.
 
 
 
-### .extension
+---
+
+
+## .extension
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -332,7 +352,10 @@ This property is **read-only**.
 
 
 
-### .fullName
+---
+
+
+## .fullName
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -353,7 +376,10 @@ This property is **read-only**.
 
 
 
-### .getContent( )
+---
+
+
+## .getContent( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -389,7 +415,10 @@ To save a document's contents in a `BLOB` field:
 
 
 
-### .getIcon( )
+---
+
+
+## .getIcon( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -418,7 +447,10 @@ File icon [picture](../Concepts/picture.html).
 
 
 
-### .getText( )
+---
+
+
+## .getText( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -485,7 +517,10 @@ When you execute this code:
 
 
 
-### .hidden
+---
+
+
+## .hidden
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -506,7 +541,10 @@ This property is **read-only**.
 
 
 
-### .isAlias
+---
+
+
+## .isAlias
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -527,7 +565,10 @@ This property is **read-only**.
 
 
 
-### .isFile
+---
+
+
+## .isFile
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -548,7 +589,10 @@ This property is **read-only**.
 
 
 
-### .isFolder
+---
+
+
+## .isFolder
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -569,7 +613,10 @@ This property is **read-only**.
 
 
 
-### .isWritable
+---
+
+
+## .isWritable
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -601,7 +648,10 @@ This property is **read-only**.
 
 
 
-### .modificationDate
+---
+
+
+## .modificationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -622,7 +672,10 @@ This property is **read-only**.
 
 
 
-### .modificationTime
+---
+
+
+## .modificationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -643,7 +696,10 @@ This property is **read-only**.
 
 
 
-### .moveTo( )
+---
+
+
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -682,7 +738,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
 
 
-### .name
+---
+
+
+## .name
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -703,7 +762,10 @@ This property is **read-only**.
 
 
 
-### .original
+---
+
+
+## .original
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -729,7 +791,10 @@ This property is **read-only**.
 
 
 
-### .parent
+---
+
+
+## .parent
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -750,7 +815,10 @@ This property is **read-only**.
 
 
 
-### .path
+---
+
+
+## .path
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -771,7 +839,10 @@ This property is **read-only**.
 
 
 
-### .platformPath
+---
+
+
+## .platformPath
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -792,8 +863,11 @@ This property is **read-only**.
 
 
 
+---
+
+
  
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -830,8 +904,11 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 ```
 
 
+---
+
+
  
-### .setContent( )
+## .setContent( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -858,8 +935,11 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 ```
 
 
+---
+
+
  
-### .setText( )
+## .setText( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -906,7 +986,10 @@ $myFile.setText("Hello world")
 ```
 
 
-### .size
+---
+
+
+## .size
 
 <details><summary>History</summary>
 |Version|Changes|

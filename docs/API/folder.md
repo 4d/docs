@@ -8,7 +8,7 @@ title: Folder Functions
 
 
 <!-- REF folder.create().Desc -->
-### .create( )
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -66,11 +66,11 @@ End if
 <!-- END REF -->
 
 
-
+---
 
 
 <!-- REF folder.createAlias().Desc -->
-### .createAlias( )
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -95,7 +95,7 @@ End if
 
 
 ##### Description
-The `.createAlias( )` function <!-- REF #folder.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object<!-- END REF -->.
+The `.createAlias( )` function <!-- REF #folder.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -122,10 +122,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 <!-- END REF -->
 
-
+---
 
 <!-- REF folder.delete().Desc -->
-### .delete( )
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -173,10 +173,10 @@ macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
  
- 
+--- 
 
 <!-- REF folder.moveTo().Desc -->
-### .moveTo( )
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -220,9 +220,10 @@ C_OBJECT($tomove;$moved)
 ```
 <!-- END REF -->
 
+---
  
 <!-- REF folder.rename().Desc --> 
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|

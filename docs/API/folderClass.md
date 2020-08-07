@@ -14,116 +14,183 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 ```
 
-## Functions & Properties
+## Summary
 
 ||
 |---|
 |[<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto-)|
-|<!-- INCLUDE #directory.copyTo().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
 |[<!-- INCLUDE #folder.create().Syntax -->](#create-)| 
-|<!-- INCLUDE #folder.create().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.create().Summary -->|
 |[<!-- INCLUDE #folder.createAlias().Syntax -->](#createalias-) |
-|<!-- INCLUDE #folder.createAlias().Summary --> |
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.createAlias().Summary --> |
 |[<!-- INCLUDE #directory.creationDate.Syntax -->](#creationdate)|
-|<!-- INCLUDE #directory.creationDate.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary -->|
 |[<!-- INCLUDE #directory.creationTime.Syntax -->](#creationtime)|
-|<!-- INCLUDE #directory.creationTime.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary -->|
 |[<!-- INCLUDE #folder.delete().Syntax -->](#delete-) |
-|<!-- INCLUDE #folder.delete().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.delete().Summary -->|
 |[<!-- INCLUDE #directory.exists.Syntax -->](#exists)|
-|<!-- INCLUDE #directory.exists.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
 |[<!-- INCLUDE #directory.extension.Syntax -->](#extension)|
-|<!-- INCLUDE #directory.extension.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->|
 |[<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)|
-|<!-- INCLUDE #directory.fullName.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->|
 |[<!-- INCLUDE #directory.getIcon().Syntax -->](#geticon-)|
-|<!-- INCLUDE #directory.getIcon().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.getIcon().Summary -->|
 |[<!-- INCLUDE #directory.hidden.Syntax -->](#hidden)|
-|<!-- INCLUDE #directory.hidden.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.hidden.Summary -->|
 |[<!-- INCLUDE #directory.isAlias.Syntax -->](#isalias)|
-|<!-- INCLUDE #directory.isAlias.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isAlias.Summary -->|
 |[<!-- INCLUDE #directory.isFile.Syntax -->](#isfile)|
-|<!-- INCLUDE #directory.isFile.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFile.Summary -->|
 |[<!-- INCLUDE #directory.isFolder.Syntax -->](#ifFolder)|
-|<!-- INCLUDE #directory.isFolder.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFolder.Summary -->|
 |[<!-- INCLUDE #directory.isPackage.Syntax -->](#ispackage)|
-|<!-- INCLUDE #directory.isPackage.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isPackage.Summary -->|
 |[<!-- INCLUDE #directory.modificationDate.Syntax -->](#modificationdate)|
-|<!-- INCLUDE #directory.modificationDate.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationDate.Summary -->|
 |[<!-- INCLUDE #directory.modificationTime.Syntax -->](#modificationtime)|
-|<!-- INCLUDE #directory.modificationTime.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationTime.Summary -->|
 |[<!-- INCLUDE #directory.name.Syntax -->](#name)|
-|<!-- INCLUDE #directory.name.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.name.Summary -->|
 |[<!-- INCLUDE #directory.original.Syntax -->](#original)|
-|<!-- INCLUDE #directory.original.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.original.Summary -->|
 |[<!-- INCLUDE #directory.parent.Syntax -->](#parent)|
-|<!-- INCLUDE #directory.parent.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.parent.Summary -->|
 |[<!-- INCLUDE #directory.path.Syntax -->](#path)|
-|<!-- INCLUDE #directory.path.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary -->|
 |[<!-- INCLUDE #directory.platformPath.Syntax -->](#platformpath)|
-|<!-- INCLUDE #directory.platformPath.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->|
 |[<!-- INCLUDE #folder.moveTo().Syntax -->](#moveto-)|
-|<!-- INCLUDE #folder.moveTo().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.moveTo().Summary -->|
 |[<!-- INCLUDE #folder.rename().Syntax -->](#rename-)|
-|<!-- INCLUDE #folder.rename().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.rename().Summary -->|
 
 
-
+---
 
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
+---
+
 <!-- INCLUDE folder.create().Desc -->
+
+---
 
 <!-- INCLUDE folder.createAlias().Desc -->
 
+---
+
 <!-- INCLUDE directory.creationDate.Desc -->
+
+---
 
 <!-- INCLUDE directory.creationTime.Desc -->
 
+---
+
 <!-- INCLUDE folder.delete().Desc -->
+
+---
 
 <!-- INCLUDE directory.exists.Desc -->
 
+---
+
 <!-- INCLUDE directory.extension.Desc -->
+
+---
 
 <!-- INCLUDE directory.file().Desc -->
 
+---
+
 <!-- INCLUDE directory.files().Desc -->
+
+---
 
 <!-- INCLUDE directory.folder().Desc -->
 
+---
+
 <!-- INCLUDE directory.folders().Desc -->
+
+---
 
 <!-- INCLUDE directory.fullName.Desc -->
 
+---
+
 <!-- INCLUDE directory.getIcon().Desc -->
+
+---
 
 <!-- INCLUDE directory.hidden.Desc -->
 
+---
+
+
 <!-- INCLUDE directory.isAlias.Desc -->
+
+---
+
 
 <!-- INCLUDE directory.isFile.Desc -->
 
+---
+
+
 <!-- INCLUDE directory.isFolder.Desc -->
+
+---
+
 
 <!-- INCLUDE directory.isPackage.Desc -->
 
+---
+
+
 <!-- INCLUDE directory.modificationDate.Desc -->
+
+---
+
 
 <!-- INCLUDE directory.modificationTime.Desc -->
 
+---
+
+
 <!-- INCLUDE folder.moveTo().Desc -->
+
+---
+
 
 <!-- INCLUDE directory.name.Desc -->
 
+---
+
+
 <!-- INCLUDE directory.original.Desc -->
+
+---
+
 
 <!-- INCLUDE directory.parent.Desc -->
 
+---
+
+
 <!-- INCLUDE directory.path.Desc -->
 
+---
+
+
 <!-- INCLUDE directory.platformPath.Desc -->
+
+---
+
 
 <!-- INCLUDE folder.rename().Desc -->
 

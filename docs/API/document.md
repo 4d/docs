@@ -7,7 +7,7 @@ title: Document Class
 
 
 <!-- REF document.creationDate.Desc -->
-### .creationDate
+## .creationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -34,7 +34,7 @@ This property is **read-only**.
  
  
  <!-- REF document.creationTime.Desc -->
-### .creationTime
+## .creationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -63,7 +63,7 @@ This property is **read-only**.
 
 
 <!-- REF document.exists.Desc -->
-### .exists
+## .exists
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -93,7 +93,7 @@ This property is **read-only**.
 
 
 <!-- REF document.extension.Desc -->
-### .extension
+## .extension
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -122,7 +122,7 @@ This property is **read-only**.
 
 
 <!-- REF document.fullName.Desc -->
-### .fullName
+## .fullName
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -151,7 +151,7 @@ This property is **read-only**.
 
 
 <!-- REF document.hidden.Desc -->
-### .hidden
+## .hidden
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -180,7 +180,7 @@ This property is **read-only**.
 
 
 <!-- REF document.isAlias.Desc -->
-### .isAlias
+## .isAlias
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -208,7 +208,7 @@ This property is **read-only**.
 
 
 <!-- REF document.isFile.Desc -->
-### .isFile
+## .isFile
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -236,7 +236,7 @@ This property is **read-only**.
 
 
 <!-- REF document.isFolder.Desc -->
-### .isFolder
+## .isFolder
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -265,7 +265,7 @@ This property is **read-only**.
 
 
 <!-- REF document.isWritable.Desc -->
-### .isWritable
+## .isWritable
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -305,7 +305,7 @@ This property is **read-only**.
 
 
 <!-- REF document.modificationDate.Desc -->
-### .modificationDate
+## .modificationDate
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -334,7 +334,7 @@ This property is **read-only**.
 
 
 <!-- REF document.modificationTime.Desc -->
-### .modificationTime
+## .modificationTime
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -362,7 +362,7 @@ This property is **read-only**.
 
 
 <!-- REF document.name.Desc -->
-### .name
+## .name
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -389,7 +389,7 @@ This property is **read-only**.
 
 
 <!-- REF document.original.Desc -->
-### .original
+## .original
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -423,7 +423,7 @@ This property is **read-only**.
 
 
 <!-- REF document.parent.Desc -->
-### .parent
+## .parent
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -452,7 +452,7 @@ This property is **read-only**.
 
 
 <!-- REF document.path.Desc -->
-### .path
+## .path
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -480,7 +480,7 @@ This property is **read-only**.
 
 
 <!-- REF document.platformPath.Desc -->
-### .platformPath
+## .platformPath
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -509,7 +509,7 @@ This property is **read-only**.
 
 
 <!-- REF document.size.Desc -->
-### .size
+## .size
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -544,7 +544,7 @@ This property is **read-only**.
 
 
 <!-- REF document.copyTo().Desc -->
-### .copyTo( )
+## .copyTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -598,7 +598,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF document.getContent().Desc -->
-### .getContent( )
+## .getContent( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -641,7 +641,7 @@ To save a document's contents in a `BLOB` field:
 
 
 <!-- REF document.getIcon().Desc -->
-### .getIcon( )
+## .getIcon( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -677,7 +677,7 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF document.getText().Desc -->
-### .getText( )
+## .getText( )
 
 <details><summary>History</summary>
 |Version|Changes|

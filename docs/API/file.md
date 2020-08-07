@@ -8,7 +8,7 @@ title: File functions
 
 
 <!-- REF file.create().Desc -->
-### .create( )
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -55,7 +55,7 @@ Creation of a preferences file in the database folder:
 
 
 <!-- REF file.createAlias().Desc -->
-### .createAlias( )
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -77,7 +77,7 @@ Creation of a preferences file in the database folder:
 
 
 ##### Description
-The `.createAlias( )` function <!-- REF #file.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object<!-- END REF -->.
+The `.createAlias( )` function <!-- REF #file.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -106,7 +106,7 @@ You want to create an alias to a file in your database folder:
 <!-- END REF -->
 
 <!-- REF file.delete().Desc -->
-### .delete( )
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -151,7 +151,7 @@ You want to delete a specific file in the database folder:
 
  
 <!-- REF file.moveTo().Desc -->
-### .moveTo( )
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -196,7 +196,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
  
 <!-- REF file.rename().Desc --> 
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -240,7 +240,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 <!-- REF file.setContent().Desc --> 
-### .setContent( )
+## .setContent( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -277,7 +277,7 @@ The `.setContent( )` function <!-- REF #file.setContent().Summary -->rewrites th
 
 
 <!-- REF file.setText().Desc --> 
-### .setText( )
+## .setText( )
 
 <details><summary>History</summary>
 |Version|Changes|
