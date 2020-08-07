@@ -7,7 +7,7 @@ Form events are events that can lead to the execution of the form method and/or 
 
 In your code, you control the events using the `FORM Event` command, that returns the triggered event. たとえば:
 
-```4d
+```4d  
 //code of a button
 If(FORM Event.code=On Clicked) 
 // do something when the button is clicked
@@ -15,6 +15,7 @@ End if
 ```
 
 > Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
+
 
 ## Event object
 
@@ -25,9 +26,10 @@ Each event is returned as an object by the `FORM Event` command. By default, it 
 |       |   |    |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
 
-`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")| 
+`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
 
 Additional properties are returned when the event occurs on specific objects. For example, the [On After Edit](onAfterEdit.md) event object returned by a [4D View Pro area](FormObjects/viewProArea_overview.md) contains `sheetName` or `action` properties.
+
 
 ## Events and Methods
 
@@ -108,7 +110,7 @@ The following table summarizes how object and form methods are called for each e
 | On VP Ready              | Yes (4D View Pro Area)              | Never       | Involved object only   |
 | On Row Resize            | Yes (4D View Pro Area)              | Never       | Involved object only   |
 
-
 Always keep in mind that, for any event, the method of a form or an object is called if the corresponding event property is selected for the form or objects. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.
 
 > WARNING: The [On Load](onLoad) and [On Unload](onUnloas) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
+

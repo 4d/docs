@@ -8,12 +8,13 @@ Grâce à son langage 4D intégré, qui comprend plus de 1300 commandes, 4D est 
 - Accéder par programmation à tous les éditeurs de gestion des enregistrements (tris, recherches, etc.),
 - Créer et imprimer des états et des étiquettes complexes avec les données de la base,
 - Communiquer avec d’autres systèmes d’information,
-- Envoyer des e-mails, 
+- Envoyer des e-mails,
 - Gérer des documents et des pages web,
 - Importer et exporter des données entre des bases 4D et d’autres applications,
 - Incorporer des procédures écrites dans d’autres langages que celui de 4D.
 
 La flexibilité et la puissance du langage de 4D en font l’outil idéal pour exécuter toute une gamme de fonctions de gestion de l’information. Les utilisateurs novices peuvent exécuter des calculs rapidement, les utilisateurs plus expérimentés peuvent personnaliser leurs bases sans connaissances préalables en programmation et les développeurs chevronnés peuvent utiliser ce langage puissant pour ajouter à leurs bases de données des fonctions sophistiquées, allant jusqu'au transfert de fichiers, aux communications et au suivi. Quant aux développeurs ayant une maîtrise de la programmation dans d’autres langages, ils peuvent ajouter leurs propres commandes au langage de 4D.
+
 
 ## Qu'est-ce qu'un langage ?
 
@@ -56,6 +57,6 @@ Le langage 4D n’est pas un langage informatique traditionnel. C’est un des l
 
 Pour utiliser les langages traditionnels, vous devez avant tout réaliser des maquettes détaillées. C’est même l'une des principales phases d’un développement. 4D vous permet de commencer à utiliser le langage à tout moment et dans n’importe quelle partie de votre base. Vous pouvez commencer par ajouter une méthode objet dans un formulaire, puis plus tard une ou deux méthodes formulaires. Comme votre base devient plus sophistiquée, vous pouvez ajouter une méthode projet contrôlée par un menu. Vous êtes totalement libre d’utiliser une petite partie du langage ou une partie plus étendue. Ce n’est pas “tout ou rien”, comme c’est le cas dans beaucoup d’autres bases de données.
 
-Les langages traditionnels vous obligent à définir et à pré-déclarer vos objets sous une forme syntaxique rigide. Dans 4D, vous créez simplement un objet, comme un bouton, et vous l’utilisez. 4D gère automatiquement l’objet pour vous. Par exemple, pour utiliser un bouton, il suffit de le dessiner dans un formulaire et de lui donner un nom. Lorsque l’utilisateur clique sur le bouton, le langage déclenche automatiquement vos méthodes.
+Les langages traditionnels vous obligent à définir et à pré-déclarer vos objets sous une forme syntaxique rigide. Dans 4D, créez simplement un objet, tel qu'un bouton, et utilisez-le. 4D se charge de la gestion de l'objet. Par exemple, pour utiliser un bouton, il suffit de le dessiner dans un formulaire et de lui donner un nom. Lorsque l’utilisateur clique sur le bouton, le langage déclenche automatiquement vos méthodes.
 
 Les langages traditionnels sont souvent rigides et inflexibles, et exigent que les commandes soient saisies dans un style très formel et contraignant. Le langage de 4D rompt avec la tradition, au grand bénéfice de l’utilisateur.

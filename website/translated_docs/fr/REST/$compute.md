@@ -5,19 +5,21 @@ title: '$compute'
 
 Calculez des attributs spécifiques (par exemple, `Employee/salary/?$compute=sum)` ou dans le cas d'un attribut Objet (par exemple, Employee/objectAtt.property1/?$compute=sum)
 
+
 ## Description
 
 Ce paramètre vous permet de réaliser des calculs avec vos données.
 
 Si vous souhaitez effectuer un calcul avec un attribut, saisissez ce qui suit :
 
-`GET  /rest/Employee/salary/?$compute=$all`
+ `GET  /rest/Employee/salary/?$compute=$all`
 
 Si vous souhaitez passer un attribut Objet, vous devez passer l'une de ses propriétés. Par exemple:
 
-`GET  /rest/Employee/objectAtt.property1/?$compute=$all`
+ `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
 Vous pouvez utiliser l'un des mots clés suivants :
+
 
 | Mot-clé | Description                                                                                                                                                                                  |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,39 +35,41 @@ Vous pouvez utiliser l'un des mots clés suivants :
 
 Si vous souhaitez obtenir tous les calculs pour un attribut de type Numérique, vous pouvez écrire :
 
-`GET  /rest/Employee/salary/?$compute=$all`
+ `GET  /rest/Employee/salary/?$compute=$all`
 
 **Réponse** :
 
-    {
-        "salary": {
-            "count": 4,
-            "sum": 335000,
-            "average": 83750,
-            "min": 70000,
-            "max": 99000
-        }
+````
+{
+    "salary": {
+        "count": 4,
+        "sum": 335000,
+        "average": 83750,
+        "min": 70000,
+        "max": 99000
     }
-    
+}
+````
 
 Si vous souhaitez obtenir tous les calculs pour un attribut de type Chaîne, vous pouvez écrire :
 
-`GET  /rest/Employee/firstName/?$compute=$all`
+ `GET  /rest/Employee/firstName/?$compute=$all`
 
 **Réponse** :
 
-    {
-        "salary": {
-            "count": 4,
-            "min": Anne,
-            "max": Victor
-        }
+````
+{
+    "salary": {
+        "count": 4,
+        "min": Anne,
+        "max": Victor
     }
-    
+}
+````
 
 Si vous souhaitez obtenir un calcul avec un attribut, vous pouvez écrire ce qui suit :
 
-`GET  /rest/Employee/salary/?$compute=sum`
+ `GET  /rest/Employee/salary/?$compute=sum`
 
 **Réponse** :
 
@@ -73,8 +77,8 @@ Si vous souhaitez obtenir un calcul avec un attribut, vous pouvez écrire ce qui
 
 Si vous souhaitez effectuer un calcul avec un attribut Objet, vous pouvez saisir ce qui suit :
 
-`GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
+ `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
 Réponse :
 
-`45`
+`45`  

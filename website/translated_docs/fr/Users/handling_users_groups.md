@@ -8,22 +8,19 @@ title: Gestion des groupes et utilisateurs 4D
 4D fournit à certains utilisateurs des privilèges d’accès standard ainsi que des prérogatives spécifiques. Une fois qu’un système d’utilisateurs et de groupes a été créé, ces privilèges standard prennent effet.
 
 L’utilisateur le plus puissant est le **Super_Utilisateur**. Aucune partie de la base de données n’est inaccessible au Super_Utilisateur. Le Super_Utilisateur peut :
-
 - accéder à tous les serveurs de la base sans restrictions,
-- créer des utilisateurs et des groupes, 
-- affecter des privilèges d’accès aux groupes, 
-- utiliser le mode Développement. En monoposte, les droits d'accès du Super_Utilisateur sont toujours utilisés. En mode client/serveur, l'affectation d'un mot de passe au Super_Utilisateur affiche la boîte de dialogue de connexion. L'accès au mode Développement est en lecture seule.
+- créer des utilisateurs et des groupes,
+- affecter des privilèges d’accès aux groupes,
+- utiliser le mode Développement. En monoposte, les droits d'accès du Super_Utilisateur sont toujours utilisés. En mode client/serveur, l'affectation d'un mot de passe au Super_Utilisateur affiche la boîte de dialogue de connexion.  L'accès au mode Développement est en lecture seule.
 
 Après le Super_Utilisateur, le second plus puissant utilisateur est **l’Administrateur**, qui est en général responsable de la gestion du système d’accès et des fonctionnalités d'administration.
 
 L'Administrateur peut :
-
-- créer des utilisateurs et des groupes, 
-- accéder au moniteur et à la fenêtre d'administration de 4D Server 
-- accéder à la fenêtre CSM pour gérer les sauvegardes, restitutions ou le serveur. 
+- créer des utilisateurs et des groupes,
+- accéder au moniteur et à la fenêtre d'administration de 4D Server
+- accéder à la fenêtre CSM pour gérer les sauvegardes, restitutions ou le serveur.
 
 L'Administrateur ne peut pas :
-
 - modifier l'utilisateur Super_Utilisateur
 - par défaut, accéder à des objets protégés de la base. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. L'Administrateur doit faire partie d'un ou plusieurs groupes pour avoir des privilèges d’accès dans la base. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
 
@@ -35,6 +32,8 @@ Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes le
 Vous pouvez renommer les utilisateurs Super_Utilisateur et Administrateur. Dans le langage, Super_Utilisateur porte toujours l'identifiant 1 et l'Administrateur l'identifiant 2.
 
 Le Super_Utilisateur et l’Administrateur peuvent créer chacun 16 000 groupes et 16 000 utilisateurs.
+
+
 
 ## Éditeur d'utilisateurs
 
@@ -48,7 +47,7 @@ Vous utilisez l’éditeur d’utilisateurs pour créer des comptes utilisateurs
 
 Pour ajouter un utilisateur depuis la boite à outils :
 
-1. Sélectionnez **Boîte à outils > Utilisateurs** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D. 4D affiche la fenêtre d’édition des utilisateurs. 
+1. Sélectionnez **Boîte à outils > Utilisateurs** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D. 4D affiche la fenêtre d’édition des utilisateurs.
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 
@@ -80,6 +79,7 @@ Les utilisateurs supprimés n'apparaissent plus dans la liste de l'éditeur d'ut
 
 - **Méthodes de démarrage** : Nom d'une méthode associée qui sera automatiquement associée lorsque l'utilisateur ouvre la base (facultatif). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.
 
+
 ## Éditeur de groupes
 
 L'éditeur de groupes se trouve dans la boîte à outils de 4D.
@@ -95,14 +95,15 @@ Pour créer un groupe :
 1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
 
 2. Cliquez sur le bouton ![](assets/en/Users/PlussNew.png) situé en-dessous de la liste des groupes.  
-    OU  
-    Faites un clic droit sur la liste de groupes et sélectionnez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
+   OU  
+   Faites un clic droit sur la liste de groupes et sélectionnez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande Dupliquer permet de créer rapidement plusieurs groupes ayant des caractéristiques communes.
 
 4D ajoute un nouveau groupe à la liste, nommé par défaut "Nouveau groupe1".
 
 3. Saisissez le nom du nouveau groupe. Le nom du groupe peut avoir une longueur maximale de 15 caractères. Vous pouvez renommer un groupe à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+
 
 ### Placer des utilisateurs ou des groupes dans des groupes
 
@@ -131,6 +132,7 @@ La zone “Plug-ins” de la page Groupes de la boîte à outils liste tous les 
 ![](assets/en/Users/plugins.png)
 
 Les lignes **4D Client Web Server** et **4D Client SOAP Server** permettent contrôler la possibilité de publication Web et SOAP (Web Services) de chaque 4D en mode distant. En effet, ces licences sont considérées par 4D Server comme des licences de plug-ins. Ainsi, comme pour un plug-in, vous pouvez restreindre le droit d’utiliser ces licences à un groupe d’utilisateurs spécifique.
+
 
 ### Un schéma d’accès hiérarchique
 

@@ -12,17 +12,21 @@ Allows defining specific print settings for the form. This feature is useful to 
 
 You can modify the following print settings:
 
-* Paper format 
-* Paper orientation 
-* Page scaling
+*   Paper format
+*   Paper orientation
+*   Page scaling
+
 
 > Available options depend on the system configuration.
+
+
+
 
 #### JSON 文法
 
 | 名           | データタイプ | とりうる値                                                                                |
 | ----------- | ------ | ------------------------------------------------------------------------------------ |
-| pageFormat  | object | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
+| pageFormat  | オブジェクト | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
 | paperName   | string | "A4", "US Letter"...                                                                 |
 | paperWidth  | string | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
 | paperHeight | string | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
@@ -30,4 +34,12 @@ You can modify the following print settings:
 | scale       | number | 最小値: 0                                                                               |
 
 
-* * *
+---
+
+
+
+
+
+
+
+

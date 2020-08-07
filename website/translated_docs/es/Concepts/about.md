@@ -8,12 +8,13 @@ The 4D built-in language, consisting of more than 1300 commands, makes 4D a powe
 - Programmatically access any of the record management editors (order by, query, and so on),
 - Create and print complex reports and labels with the information from the database,
 - Communicate with other devices,
-- Send emails, 
+- Send emails,
 - Manage documents and web pages,
 - Import and export data between 4D databases and other applications,
 - Incorporate procedures written in other languages into the 4D programming language.
 
 The flexibility and power of the 4D programming language make it the ideal tool for all levels of users and developers to accomplish a complete range of information management tasks. Novice users can quickly perform calculations. Experienced users without programming experience can customize their databases. Experienced developers can use this powerful programming language to add sophisticated features and capabilities to their databases, including file transfer, communications, monitoring. Developers with programming experience in other languages can add their own commands to the 4D language.
+
 
 ## What is a Language?
 

@@ -323,13 +323,6 @@ The contents of these folders vary depending on the current platform:
 
 If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.
 
-#### Customizing 4D Volume Desktop folder  
-
-When building a double-clickable application, 4D copies the contents of the 4D Volume Desktop folder into the Final Application subfolder of the destination folder. You are then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for instance:
-
-- Install a 4D Volume Desktop version corresponding to a specific language;
-- Add a custom PlugIns folder;
-- Customize the contents of the Resources folder.
 
 #### Location of Web files  
 

@@ -8,7 +8,6 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 - Un nom de propriété est toujours un texte, par exemple "Nom".
 
 - Une valeur de propriété peut être du type suivant :
-    
     - Nombre (réel, entier long, etc.)
     - Texte
     - null
@@ -36,7 +35,6 @@ Chaque valeur de propriété accessible par la notation objet est considérée c
 Les objets doivent être initialisés à l'aide, par exemple, de la commande `New object`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification de leurs propriétés.
 
 Exemple :
-
 ```4d
  C_OBJET($obVar) //création d'une variable 4D de type objet.
  $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
@@ -46,8 +44,9 @@ Exemple :
 
 Vous pouvez créer deux types d'objets :
 
-- standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process. 
-- partagés, à l'aide de la commande `New shared object`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md). 
+- standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
+- partagés, à l'aide de la commande `New shared object`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
+
 
 ## Principes de syntaxe
 
@@ -60,7 +59,6 @@ Avec la notation objet, il est possible d'accéder aux propriétés d'objets (au
 - à l'aide du symbole "point" : > objet.NomPropriété
 
 Exemple :
-
 ```4d
      employee.name:="Smith"
 ```
@@ -68,7 +66,6 @@ Exemple :
 - à l'aide d'une chaîne entre crochets : > objet["NomPropriété"]
 
 Voici quelques exemples :
-
 ```4d
      $vName:=employee["name"]
      //ou :
@@ -78,11 +75,9 @@ Voici quelques exemples :
 ```
 
 Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, la notation objet requiert une séquence de symboles pour accéder aux sous-propriétés, par exemple :
-
 ```4d
  $vAge:=employee.children[2].age
 ```
-
 La notation objet est utilisable avec tout élément de langage qui contient ou retourne un objet, c'est-à-dire :
 
 - avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Voici quelques exemples :
@@ -94,7 +89,6 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
  $pop:=$aObjCountries{2}.population //tableau d'objets
  $val:=$myCollection[3].subvalue //élément de collection
 ```
-
 - avec les **commandes 4D** qui retournent des objets. Exemple :
 
 ```4d
@@ -119,18 +113,15 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 ```
 
 ### Pointeurs
-
 **Note :** Les objets étant toujours passés par référence, l'utilisation de pointeurs n'est généralement pas nécessaire. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
 
 La notation objet pour les pointeurs est semblable à la notation objet standard, à la seule différence que le symbole "point" doit être omis.
 
 - Accès direct :
-    
-    > pointeurObjet->nomPropriété
+> pointeurObjet->nomPropriété
 
 - Accès par le nom :
-    
-    > pointeurObjet->["nomPropriété"]
+> pointeurObjet-> nomPropriété"]
 
 Exemple :
 
@@ -156,7 +147,7 @@ Pour plus d'informations, veuillez vous reporter à la description de la command
 
 ### Valeur Indéfinie
 
-L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). En règle générale, lorsque le code tente de lire ou d'affecter des expressions indéfinies, 4D génère des erreurs, hormis dans les cas décrits ci-dessous : 
+L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). En règle générale, lorsque le code tente de lire ou d'affecter des expressions indéfinies, 4D génère des erreurs, hormis dans les cas décrits ci-dessous :
 
 - Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
 
@@ -197,7 +188,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
      End case
 ```
 
-- L'affectation d'une valeur indéfinie à une propriété d'objet existante réinitialise ou efface sa valeur, selon son type : 
+- L'affectation d'une valeur indéfinie à une propriété d'objet existante réinitialise ou efface sa valeur, selon son type :
  - Objet, collection, pointeur : Null
  - Image : image vide
  - Booléen : False
@@ -235,8 +226,8 @@ Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on 
 - L'utilisation d'un champ comme indice de collection, par exemple a.b[[Table1]Id], n'est pas autorisé. Vous devez utiliser une variable intermédiaire.
 - La création d'attributs d'objets à l'aide d'une chaîne entre crochets permet de s'affranchir des règles d'ECMA Script. Par exemple, l'attribut $o["Mon Att. nom"] est valide dans 4D, malgré l'espace. Dans ce cas cependant, il ne sera pas possible d'utiliser la notation à points avec cet attribut.
 
-## Exemples
 
+## Exemples
 L'utilisation de la notation objet simplifie grandement le code 4D de manipulation des objets. A noter toutefois que la notation utilisant les commandes "OB" reste entièrement prise en charge.
 
 - Ecriture et lecture de propriétés d'objets (cet exemple compare la notation objet et la syntaxe avec commandes) :
@@ -276,8 +267,7 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-
-- Vous pouvez accéder aux propriétés d'objets via des chaînes grâce à l'opérateur [ ] 
+- Vous pouvez accéder aux propriétés d'objets via des chaînes grâce à l'opérateur [ ]
 
 ```4d
  $Emp["city"]:="Berlin" //modification de la propriété city

@@ -18,9 +18,9 @@ The `On Begin Drag Over` event is useful for preparing of the drag action. It ca
 
 - Add data and signatures to the pasteboard (via the `APPEND DATA TO PASTEBOARD` command).
 - Use a custom icon during the drag action (via the `SET DRAG ICON` command).
-- Accept or refuse dragging via $0 in the method of the dragged object. 
-    - To indicate that drag actions are accepted, the method of the source object must return 0 (zero); you must therefore execute `$0:=0`. 
-    - To indicate that drag actions are refused, the method of the source object must return -1 (minus one); you must therefore execute `$0:=-1`. 
+- Accept or refuse dragging via $0 in the method of the dragged object.
+    - To indicate that drag actions are accepted, the method of the source object must return 0 (zero); you must therefore execute `$0:=0`.
+    - To indicate that drag actions are refused, the method of the source object must return -1 (minus one); you must therefore execute `$0:=-1`.
     - If no result is returned, 4D considers that drag actions are accepted.
 
 4D data are put in the pasteboard before calling the event. For example, in the case of dragging without the **Automatic Drag** action, the dragged text is already in the pasteboard when the event is called.

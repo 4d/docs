@@ -21,7 +21,6 @@ This event is generated when the height of a row is modified by a user in a 4D V
 | range       | object      | Cell range of the rows whose heights have changed                |
 | header      | boolean     | True if the column header row (first row) is resized, else false |
 
-
 #### Exemple
 
 ```4d

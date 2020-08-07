@@ -11,78 +11,41 @@ New 4D application projects can be created from **4D** or **4D Server** (see [De
 To create a new project:
 
 1. Launch 4D or 4D Server.
-2. Select **New > Project...** from the **File** menu: 
+2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-<
+3. Enter the name of your project folder and click **Save**.<p> This name will be used:
+    - as the name of the entire project folder,
+    - as the name of the .4DProject file at the first level of the "Project" folder.
 
-p>![](assets/en/getStart/projectCreate1.png)
-
-<
-
-p>OR
-
-<
-
-p>(4D only) Select **Project...** from the **New** toolbar button:
-
-<
-
-p>![](assets/en/getStart/projectCreate2.png)
-
-<
-
-p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
-
-3. Enter the name of your project folder and click **Save**.
-
-<
-
-p> This name will be used: - as the name of the entire project folder, - as the name of the .4DProject file at the first level of the "Project" folder.
-
-      You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
-    
+    You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
 
 When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. For more information, refer to [Architecture of a 4D Project](Project/architecture.md).
 
 You can then start developing your project.
 
+
 ## Opening a local project
 
 To open an existing project locally from 4D:
 
-1. Select **Open a local application project** in the Welcome Wizard dialog, 
+1. Select **Open a local application project** in the Welcome Wizard dialog, <p>OR<p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> The standard Open dialog appears.
 
-<
+2. Select the project's `.4dproject` file and click **Open**.<p> By default, the project is opened with its current data file. Other file types are suggested:
 
-p>OR
-
-<
-
-p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.
-
-<
-
-p> The standard Open dialog appears.
-
-2. Select the project's `.4dproject` file and click **Open**.
-
-<
-
-p> By default, the project is opened with its current data file. Other file types are suggested:
-
-- *Packed project files*: `.4dz` extension - deployment projects
-- *Shortcut files*: `.4dlink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
-- *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
+    - *Packed project files*: `.4dz` extension  - deployment projects
+    - *Shortcut files*: `.4dlink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
+    - *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
 
 ### Options
 
 In addition to standard system options, the *Open* dialog in 4D provides two menus with specific options that are available using the **Open** button and the **Data file** menu.
 
 - **Open** - opening mode of the project:
-    
-    - **Interpreted** or **Compiled**: These options are available when the selected project contains both [interpreted and compiled code](Concepts/interpreted.md). 
-    - **[Maintenance Security Center](MSC/overview.md)**: Opening in secure mode allowing access to damaged projects in order to perform any necessary repairs. 
+    - **Interpreted** or **Compiled**: These options are available when the selected project contains both [interpreted and compiled code](Concepts/interpreted.md).
+    - **[Maintenance Security Center](MSC/overview.md)**: Opening in secure mode allowing access to damaged projects in order to perform any necessary repairs.
+
 - **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected.
+
 
 ## Opening a remote project
 
@@ -90,15 +53,7 @@ The first time you connect to a 4D Server project via a remote 4D, you will usua
 
 To connect remotely to a 4D Server project:
 
-1. Select **Connect to 4D Server** in the Welcome Wizard dialog, 
-
-<
-
-p>OR
-
-<
-
-p> Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
+1. Select **Connect to 4D Server** in the Welcome Wizard dialog, <p>OR<p> Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
 
 The 4D Server connection dialog appears. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
 
@@ -114,16 +69,9 @@ If the published project is not displayed in the **Available** list, select **Cu
 
 ![](assets/en/getStart/serverConnect2.png)
 
+
 - **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched. 
-
-<
-
-p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`.
-
-<
-
-p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
+- **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
 
 Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
 
@@ -131,14 +79,15 @@ Once this page assigns a server, clicking the **OK** button will allow you to co
 
 Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
 
+
+
 ## Project opening shortcuts
 
 4D offers two ways to let you open projects directly and bypass the Open dialog:
 
 - via menu options:
-    
-    - *Menu bar* - **File** > **Open Recent Projects / {project name}** 
-    - *4D Tool bar* - Select the project from the menu associated with the **Open** button 
+    -   *Menu bar* - **File** > **Open Recent Projects / {project name}**
+    -   *4D Tool bar* -  Select the project from the menu associated with the **Open** button
+
 - via preferences:
-    
-    - Set the **At startup** general preference to **Open last used project**.
+    -   Set the **At startup** general preference to **Open last used project**. 

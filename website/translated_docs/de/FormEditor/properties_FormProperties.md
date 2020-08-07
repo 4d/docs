@@ -3,7 +3,7 @@ id: propertiesForm
 title: Form Properties
 ---
 
-* * *
+---
 
 ## Pages
 
@@ -14,24 +14,26 @@ Each form has is made of at least two pages:
 
 For more information, please refer to [Form pages](forms.md#form-pages).
 
+
 #### JSON Grammar
 
 | Name  | Datentyp   | Possible Values                                                          |
 | ----- | ---------- | ------------------------------------------------------------------------ |
 | pages | collection | Collection of pages (each page is an object, page 0 is the first element |
 
+---
 
-* * *
 
 ## Form Name
 
 This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
 
+
 #### JSON Grammar
 
 The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
 
-* * *
+---
 
 ## Form Type
 
@@ -43,7 +45,9 @@ Each table in a database generally has at least two table forms. One for listing
 
 - Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](assets/en/FormObjects/formInput.png)
 
+
 Supported types depend on the form category:
+
 
 | Form Type                | JSON grammar     | Description                                                   | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
@@ -60,8 +64,7 @@ Supported types depend on the form category:
 | ----------- | -------- | ------------------------------------------------------------ |
 | destination | string   | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
-
-* * *
+---
 
 ## Inherited Form Name
 
@@ -71,20 +74,22 @@ To inherit from a table form, set the table in the [Inherited Form Table](#inher
 
 To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
+
 #### JSON Grammar
 
 | Name          | Datentyp | Possible Values                                                                                                    |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
 | inheritedForm | string   | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
+---
 
-* * *
 
 ## Inherited Form Table
 
 This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
 
 Set to **\<None>** in the Property List (or " " in JSON) to inherited from a project form.
+
 
 #### JSON Grammar
 
@@ -93,13 +98,15 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 | inheritedFormTable | string or number | table name or table number |
 
 
-* * *
+---
 
 ## Published as Subform
 
 For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host database, it must have been explicitly shared. When this property is selected, the form will be published in the host database.
 
 Only project forms can be specified as published subforms.
+
+
 
 #### JSON Grammar
 
@@ -108,15 +115,14 @@ Only project forms can be specified as published subforms.
 | shared | boolean  | true, false     |
 
 
-* * *
+---
 
 ## Save Geometry
 
 When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
 
-* the current page,
-* the position, size and visibility of each form object (including the size and visibility of list box columns).
-
+*   the current page,
+*   the position, size and visibility of each form object (including the size and visibility of list box columns).
 > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
 
 When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
@@ -127,12 +133,11 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 | ---------------- | -------- | --------------- |
 | memorizeGeometry | boolean  | true, false     |
 
-
 #### See also
-
 [**Save Value**](FormObjects/properties_Object.md#save-value)
 
-* * *
+
+---
 
 ## Window Title
 
@@ -140,12 +145,11 @@ The window title is used when the form is opened using the `Open form window` an
 
 You can use dynamic references to set the window titles for forms, *i.e.*:
 
-* A standard XLIFF reference stored in the Resources folder.
-* A table or field label: The syntax to apply is <?[TableNum]FieldNum> or 
-    
-    <?[TableName]FieldName>.
-
-* A variable or a field: The syntax to apply is \<VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
+*   A standard XLIFF reference stored in the Resources folder.
+*   A table or field label: The syntax to apply is <?[TableNum]FieldNum> or 
+  
+  <?[TableName]FieldName>.
+*   A variable or a field: The syntax to apply is \<VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
 
 > The number of characters for a window title is limited to 31.
 
@@ -154,3 +158,5 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 | Name        | Datentyp | Possible Values                                        |
 | ----------- | -------- | ------------------------------------------------------ |
 | windowTitle | string   | The name of the window as plain text or as a reference |
+
+

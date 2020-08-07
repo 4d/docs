@@ -13,6 +13,7 @@ Once created, you can use a variable wherever you need it in your database. For 
  [MyTable]MyField:=MyText
 ```
 
+
 Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
 ## Declaring Variables
@@ -20,7 +21,7 @@ Variables are language objects; you can create and use variables that will never
 You create variables by declaring them. The 4D language offers two ways to declare variables:
 
 - using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only). 
+- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only).
 
 **Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
@@ -30,36 +31,37 @@ You create variables by declaring them. The 4D language offers two ways to decla
  // and assigns the current date plus 30 days
 ```
 
+
 ### Using the `var` keyword
 
 Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
 
 To declare a variable of any type with the `var` keyword, use the following syntax:
 
-`var <varName>{, <varName2>,...}{ : <varType>}`
+`var <varName>{; <varName2>;...}{ : <varType>}`
 
 For example:
 
 ```4d
 var $myText : Text  //a text variable
-var myDate1, myDate2 : Date  //several date variables
+var myDate1; myDate2 : Date  //several date variables
 var $myFile : 4D.File  //a file class object variable
 var $myVar //a variant variable
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.  
+`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
 This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
 `varType` can be:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type, 
+- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
 
 If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-<table>
+<table spaces-before="0" line-breaks-before="2">
   <tr>
     <th>
       varType
@@ -216,7 +218,7 @@ The following table lists all supported `varType` values:
 - To declare local and process basic variables:
 
 ```4d
-var $myText, myText, $vt : Text
+var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
@@ -239,6 +241,7 @@ var $myClass : cs.MyClass
 var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
+
 
 ### Using a C_ directive
 
@@ -265,6 +268,7 @@ The following are some basic variable declarations:
 
 **Note:** Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
 
+
 ## Assigning Data
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
@@ -275,17 +279,17 @@ The assignment operator is a primary way to create a variable and to put data in
 MyNumber:=3
 ```
 
-creates the variable *MyNumber* and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
 
 > It is usually not recommended to create variables without [declaring their type](#creating-variables).
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
+Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, *[Products]Size* would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+In this case, _[Products]Size_ would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
 
 You assign data to array elements by using curly braces ({...}):
 
@@ -349,3 +353,5 @@ Interprocess variables are available throughout the database and are shared acro
 The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
+
+

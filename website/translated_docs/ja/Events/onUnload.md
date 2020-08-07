@@ -16,9 +16,12 @@ All the objects of the form (from any page) whose `On Unload` object event prope
 
 > The [`On Load`](onLoad.md) and [`On Unload`] events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
 
+
+
 ### Subform
 
 The `On Unload` event is generated when the subform is closing (this event must also have been activated at the parent form level in order to be taken into account). The event is generated before those of the parent form. Also note that, in accordance with the operating principles of form events, if the subform is placed on a page other than page 0 or 1, this event will only be generated when that page is closed (and not when the form is closed).
+
 
 ### 参照
 

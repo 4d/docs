@@ -8,22 +8,19 @@ title: Managing 4D users and groups
 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
 
 The most powerful user is named **Designer**. No aspect of the database is closed to the Designer. The Designer can:
-
 - access all database servers without restriction,
-- create users and groups, 
-- assign access privileges to groups, 
-- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog. Access to Design environment is read-only.
+- create users and groups,
+- assign access privileges to groups,
+- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
 
 After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
 
 The Administrator can:
-
-- create users and groups, 
-- access the 4D Server Administration window and monitor 
-- access the MSC window to monitor backup, restore, or server. 
+- create users and groups,
+- access the 4D Server Administration window and monitor
+- access the MSC window to monitor backup, restore, or server.
 
 The Administrator cannot:
-
 - edit the Designer user
 - by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
@@ -35,6 +32,8 @@ Both the Designer and Administrator are available by default in all databases. I
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
 The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
+
+
 
 ## Users editor
 
@@ -48,7 +47,7 @@ You use the users editor to create user accounts, set their properties and assig
 
 To add a user from the Toolbox :
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor. 
+1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
 
 The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
@@ -80,6 +79,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 - **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). This method can be used for example to load the user preferences.
 
+
 ## Groups editor
 
 The editor for groups is located in the Toolbox of 4D.
@@ -92,17 +92,18 @@ Keep in mind that once a group has been created, it cannot be deleted. If you wa
 
 To create a group:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the database.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the database.
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
-    OR  
-    Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
+   OR  
+   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 
 > The Duplicate command can be used to create several groups having the same characteristics quickly.
 
 4D adds a new group to the list, named "New groupX" by default.
 
 3. Enter the name of the new group. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+
 
 ### Placing users or groups into groups
 
@@ -131,6 +132,7 @@ The “Plug-in” area on the Groups page of the tool box lists all the plug-ins
 ![](assets/en/Users/plugins.png)
 
 The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
+
 
 ### An access hierarchy scheme
 

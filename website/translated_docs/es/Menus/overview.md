@@ -14,7 +14,6 @@ You can have many separate menu bars for each database. For example, you can use
 You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
 
 When you design menus, keep the following two rules in mind:
-
 - Use menus for functions that are suited to menus: Menu commands should perform tasks such as adding a record, searching for records, or printing a report.
 - Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
 
@@ -24,8 +23,8 @@ To create menus and menu bars, you can use either:
 - language commands for the "Menus" theme,
 - a combination of both.
 
-## Menu editor
 
+## Menu editor
 The Menu editor is accessed using the **Menus** button of the Toolbox.
 
 ![](assets/en/Menus/editor1.png)

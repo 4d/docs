@@ -5,19 +5,21 @@ title: '$compute'
 
 Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)
 
+
 ## Description
 
 This parameter allows you to do calculations on your data.
 
 If you want to perform a calculation on an attribute, you write the following:
 
-`GET  /rest/Employee/salary/?$compute=$all`
+ `GET  /rest/Employee/salary/?$compute=$all`
 
 If you want to pass an Object attribute, you must pass one of its property. For example:
 
-`GET  /rest/Employee/objectAtt.property1/?$compute=$all`
+ `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
 You can use any of the following keywords:
+
 
 | Keyword | Description                                                                                                                                                                           |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,39 +35,41 @@ You can use any of the following keywords:
 
 If you want to get all the computations for an attribute of type Number, you can write:
 
-`GET  /rest/Employee/salary/?$compute=$all`
+ `GET  /rest/Employee/salary/?$compute=$all`
 
 **Response**:
 
-    {
-        "salary": {
-            "count": 4,
-            "sum": 335000,
-            "average": 83750,
-            "min": 70000,
-            "max": 99000
-        }
+````
+{
+    "salary": {
+        "count": 4,
+        "sum": 335000,
+        "average": 83750,
+        "min": 70000,
+        "max": 99000
     }
-    
+}
+````
 
 If you want to get all the computations for an attribute of type String, you can write:
 
-`GET  /rest/Employee/firstName/?$compute=$all`
+ `GET  /rest/Employee/firstName/?$compute=$all`
 
 **Response**:
 
-    {
-        "salary": {
-            "count": 4,
-            "min": Anne,
-            "max": Victor
-        }
+````
+{
+    "salary": {
+        "count": 4,
+        "min": Anne,
+        "max": Victor
     }
-    
+}
+````
 
 If you want to just get one calculation on an attribute, you can write the following:
 
-`GET  /rest/Employee/salary/?$compute=sum`
+ `GET  /rest/Employee/salary/?$compute=sum`
 
 **Response**:
 
@@ -73,8 +77,8 @@ If you want to just get one calculation on an attribute, you can write the follo
 
 If you want to perform a calculation on an Object attribute, you can write the following:
 
-`GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
+ `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
 Response:
 
-`45`
+`45`  

@@ -8,7 +8,6 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
 - Ein Eigenschaftenname ist immer ein Text, z. B. "Name".
 
 - Der Wert einer Eigenschaft kann einer der folgenden Typen sein:
-    
     - numerisch (Zahl, Ganzzahl, etc.)
     - Text
     - Null
@@ -21,9 +20,9 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
 
 (*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
 
-**Warnung:** Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.
+**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
 
-Objekte vom Typ Variable, Felder oder Ausdruck verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
+You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
 
 Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Ist Objektnotation in Ihrer Anwendung aktiviert (siehe unten), können Sie solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 
@@ -36,7 +35,6 @@ Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als 
 Objekte müssen initialisiert sein, z. B. mit dem Befehl `New object`, sonst wird beim Versuch, ihre Elemente zu lesen oder zu modifizieren, ein Syntaxfehler erzeugt.
 
 Beispiel:
-
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -46,8 +44,9 @@ Beispiel:
 
 Sie können zwei Arten von Objekten erstellen:
 
-- regular (non-shared) objects mit dem Befehl `New object`. Diese Objekte lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen. 
+- regular (non-shared) objects mit dem Befehl `New object`. Diese Objekte lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
 - shared objects mit dem Befehl `New shared object`. Diese Objekte lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Objekte wird über `Use...End use` Strukturen gesteuert. Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
+
 
 ## Grundlagen der Syntax
 
@@ -57,18 +56,16 @@ Mit Objektnotation können Sie auf Werte von Objekteigenschaften über eine Kett
 
 Objektnotation bietet zwei Wege, um auf Objekteigenschaften zuzugreifen:
 
-- Über das Zeichen "Punkt": > object.propertyName
+- using a "dot" symbol: > object.propertyName
 
 Beispiel:
-
 ```4d
      employee.name:="Smith"
 ```
 
-- Über eine Zeichenkette in eckigen Klammern: > object. propertyName
+- using a string within square brackets: > object["propertyName"]
 
 Beispiele:
-
 ```4d
      $vName:=employee["name"]
      //or also:
@@ -78,14 +75,12 @@ Beispiele:
 ```
 
 Da der Wert einer Objekteigenschaft ein Objekt oder eine Collection sein kann, akzeptiert Objektnotation eine Folge von Symbolen, um auf Untereigenschaften zuzugreifen, wie zum Beispiel:
-
 ```4d
  $vAge:=employee.children[2].age
 ```
-
 Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein Objekt enthalten oder zurückgeben, wie z.B:
 
-- **Die Objekte selbst** (gespeichert in Variablen, Feldern, Objekteigenschaften, Objekt Arrays oder Collection Elementen). Beispiele:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Beispiele:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -94,14 +89,13 @@ Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-
-- **4D Befehle**, die Objekte zurückgeben. Beispiel:
+- **4D commands** that return objects. Beispiel:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Projektmethoden**, die Objekte zurückgeben. Beispiel:
+- **Project methods** that return objects. Beispiel:
 
 ```4d
       // MyMethod1
@@ -112,25 +106,22 @@ Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Beispiel:
+- **Collections** Example:
 
 ```4d
      myColl.length //size of the collection
 ```
 
 ### Zeiger
-
-**Vorbemerkung:** Da Objekte immer per Referenz übergeben werden, sind normalerweise keine Zeiger erforderlich. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.
+**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.
 
 Die Objektnotation mit Zeigern ist ähnlich wie die Objektnotation direkt mit Objekten, der Unterschied ist Weglassen des Zeichens "Punkt".
 
 - Direkter Zugriff:
-    
-    > pointerOnObject->propertyName
+> pointerOnObject->propertyName
 
 - Zugriff über Name:
-    
-    > pointerOnObject->["propertyName"]
+> pointerOnObject->["propertyName"]
 
 Beispiel:
 
@@ -145,7 +136,7 @@ Beispiel:
 
 ### Wert Null
 
-Die Objektnotation unterstützt über die Funktion **Null** den **Nullwert**. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:
+When using the object notation, the **null** value is supported though the **Null** command. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:
 
 ```4d
  myObject.address.zip:=Null
@@ -168,7 +159,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
       //$val=0
 ```
 
-- Lesen der Eigenschaft **length** einer undefinierten Collection ergibt 0:
+- Reading the **length** property of an undefined collection produces 0:
 
 ```4d
      C_COLLECTION($c) //variable created but no collection is defined
@@ -197,7 +188,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      End case
 ```
 
-- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen initialisiert je nach Typ ihren Wert neu oder hebt ihn auf: 
+- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
  - Objekt, Collection, Zeiger: Null
  - Bild: Leeres Bild
  - Boolean: Falsch
@@ -235,8 +226,8 @@ Die Namensvergabe für Token, z.B. Namen von Objekteigenschaften, auf die über 
 - Die Verwendung eines Tabellenfeldes als Collection Index, wie z.B. a.b[[Table1]Id], ist nicht erlaubt. Sie müssen eine Variable dazwischen setzen.
 - Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut $o["My Att"] ist in 4D auch trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation verwenden.
 
-## Beispiele
 
+## Beispiele
 Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekten. Beachten Sie, dass die Befehlsnotation weiterhin voll unterstützt wird.
 
 - Objekte schreiben und lesen (dieses Beispiel vergleicht Objektnotation und Befehlsnotation miteinander):
@@ -276,8 +267,7 @@ Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekte
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-
-- Mit dem Operator [ ] können Sie auf Eigenschaften als String zugreifen 
+- Mit dem Operator [ ] können Sie auf Eigenschaften als String zugreifen
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

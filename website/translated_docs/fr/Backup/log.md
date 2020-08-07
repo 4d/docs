@@ -20,7 +20,7 @@ Ainsi, chaque opération effectuée par un utilisateur provoque deux actions sim
 - Ajouts d’enregistrements et de BLOBs,
 - Modifications d’enregistrements,
 - Suppressions d’enregistrements,
-- Créations et fermetures de transactions. 
+- Créations et fermetures de transactions.
 
 Pour plus d’informations sur ces actions, reportez-vous à la section [Page Analyse d'activités](MSC/analysis.md) du CSM.
 
@@ -30,10 +30,12 @@ Ce schéma résume le principe général de fonctionnement du fichier d’histor
 
 ![](assets/en/Backup/backup05.png)
 
+
 Le fichier d’historique courant est automatiquement sauvegardé avec le fichier de données courant. Ce mécanisme procure deux avantages principaux :
 
 - Eviter la saturation du disque accueillant le fichier d’historique. En effet, sans sauvegarde, l’historique grossirait indéfiniment au fur et à mesure de l’exploitation de la base et finirait par saturer votre disque. A chaque sauvegarde du fichier de données, 4D ou 4D Server ferme le fichier d’historique courant et débute immédiatement un nouveau fichier vide, évitant ainsi le risque de saturation. L’ancien fichier d’historique est alors archivé puis éventuellement détruit, conformément au mécanisme des jeux de sauvegarde.
 - Conserver les fichiers d’historique correspondant aux sauvegardes, afin de pouvoir analyser ou réparer a posteriori une base. En effet, l’intégration du fichier d’historique ne peut se faire que dans la base qui lui correspond. Il est donc important, pour pouvoir intégrer correctement un fichier d’historique dans une sauvegarde, de disposer de sauvegardes et d’historiques archivés simultanément.
+
 
 ## Créer le fichier d’historique
 
@@ -61,6 +63,7 @@ Dans tous les autres cas, au moment où vous validez la fenêtre des Propriété
 Sans autre manipulation de votre part, toutes les opérations effectuées sur les données s’inscriront dans ce fichier, et il sera utilisé également lors des ouvertures ultérieures de la base.
 
 Vous devrez créer un autre fichier d’historique si vous créez un nouveau fichier de données. Vous devrez désigner ou créer un autre fichier d’historique si vous ouvrez un autre fichier de données non associé à un fichier d’historique (ou si le fichier d’historique est manquant).
+
 
 ## Fermer l’historique
 

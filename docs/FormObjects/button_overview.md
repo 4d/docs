@@ -20,6 +20,8 @@ Normally, you would activate the `On Clicked` event and the method would run onl
 
 The [variable](properties_Object.md#variable-or-expression) associated with a button is automatically set to **0** when the form is executed for the first time in Design or Application mode. When the user clicks a button, its variable is set to **1**. 
 
+
+
 > A button can be assigned both a standard action and a method. In this case, if the button is not disabled by the standard action, the method is executed before the standard action.
 
 
@@ -183,11 +185,11 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
 ### OS X Gradient
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option. 
+The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option. 
 
 By default, the OS X Gradient style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
- - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
+ - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed on the right side of the button. 
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
@@ -212,7 +214,7 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
 ### OS X Textured
 
-The OS X Textured button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option. 
+The OS X Textured button style is nearly identical to the [Bevel](#bevel) style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option. 
 
 By default, the OS X Textured style appears as:
 
@@ -362,5 +364,5 @@ Additional specific properties are available, depending on the [button style](#b
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
 - [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
-- [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+- [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
 

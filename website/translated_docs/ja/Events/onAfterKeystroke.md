@@ -21,5 +21,4 @@ Keep in mind that user modifications that are not carried out using the keyboard
 > The [`On Before Keystroke`](onBeforeKeystroke.md) and `On After Keystroke` events are not generated when using an input method. An input method (or IME, Input Method Editor) is a program or a system component that can be used to enter complex characters or symbols (for example, Japanese or Chinese) using a Western keyboard.
 
 ### 参照
-
 [On Before Keystroke](onBeforeKeystroke.md).
