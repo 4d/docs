@@ -3,28 +3,9 @@ id: folderClass
 title: Folder 
 ---
 
-## Overview
-
-The `Folder` class provides properties and functions that allow you to create and manipulate `Folder` objects.
-
-### Folders
-
 `Folder` objects are created with the [`Folder`](https://doc.4d.com/4Dv18R4/4D/18-R4/Folder.301-4982248.en.html) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`create( )`](#create-) function.
 
-### ZIP Archives
-
-The `File` class also allows you to create and manipulate 4D ZIP archives (one or more `Folder` objects compressed to be smaller than their original size). These archives are created with a ".zip" extension and can be used to:
-
-*	Save disk space
-*	Store data on a removable media device
-*	Easily transfer files via mediums which may have size limitations (e.g., email or inter/intranet systems)
-
-4D ZIP folder archives are created and handled with the following 4D commands:
-
-*	[ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html)
-*	[ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html)
-
-**Example**
+### Example
 
 The following example creates a "John Smith" folder:
 
@@ -33,60 +14,64 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 ```
 
+## Summary
 
-
-
-## Properties
-
-A `Folder` object contains the following properties and functions:
-
-|Property|Type|Description|
-|----|----|-----------|
-|creationDate|Date|<ul><li>**Folder**: Returns the creation date of the folder. This property is **read-only**.</li><li>**ZIP archive**: Date may be different for the root folder from a folder within the archive</li></ul>|
-|creationTime| Time|<ul><li>**Folder**: Returns the creation time of the folder (expressed as a number of seconds beginning at 00:00). This property is **read-only**.</li><li>**ZIP archive**: Time may be different for the root folder from a folder within the archive</li></ul>|
-|exists|Boolean | Returns **true** if the folder exists on disk, and **false** otherwise. This property is **read-only**.|
-|extension|Text |Returns the extension of the folder name. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension. This property is **read-only**.| 
-|fullName| Text|Returns the full name of the folder, including its extension (if any). This property is **read-only**.|
-|hidden |Boolean |  Returns **true** if the folder is set as "hidden" at the system level, and **false** otherwise. This property is **read-only**.|
-|isAlias|Boolean |Returns **true** if the folder is an alias, a shortcut, or a symbolic link, and **false** otherwise. This property is **read-only**.|
-|isFile |Boolean |Always returns **false** for a folder. This property is **read-only**.|
-|isFolder|Boolean |Always returns **true** for a folder. This property is **read-only**.| 
-|isPackage|Boolean |Always returns **true** for a package. This property is **read-only**.|  
-|modificationDate| Date| <ul><li>**Folder**: Returns the date of the folder's last modification. This property is **read-only**.</li><li>**ZIP archive**: Date may be different for the root folder from a folder within the archive</li></ul>| 
-|modificationTime|Time |<ul><li>**Folder**: Returns the time of the folder's last modification (expressed as a number of seconds beginning at 00:00). This property is **read-only**.</li><li>**ZIP archive**: Time may be different for the root folder from a folder within the archive</li></ul>|
-|name|Text | Returns the name of the folder, without extension (if any). This property is **read-only**.|
-|original |Object |Returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:<ul><li>a file object </li><li>a folder object</li></ul>For non-alias files, the property returns the same file object as the file. This property is **read-only**.|
-|parent|Object |<ul><li>**Folder**: Returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned. This property is **read-only**.</li><li>**ZIP archive**: The archive's virtual root folder has no parent. However, the folders within the archive may have a parent other than the root.</li></ul>|
-|path|Text |<ul><li>**Folder**: Returns the POSIX path of the folder. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned. This property is **read-only**.</li><li>**ZIP archive**: Returns a path relative to the archive</li></ul>|
-|platformPath|Text  |Returns the path of the folder expressed with the current platform syntax. This property is **read-only**.|
-
-
-
-
-## Functions 
-
-|Summary|
+||
 |---|
 |[**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object](#copyto-)|
-|copies a `Folder` object (source file/folder) into the specified *destinationFolder* |
+|&nbsp;&nbsp;&nbsp;&nbsp;copies a `Folder` object (source file/folder) into the specified *destinationFolder* |
 |[**.create( )** -> boolean](#create-)| 
-|creates a folder on disk according to the properties of the `Folder` object|
+|&nbsp;&nbsp;&nbsp;&nbsp;creates a folder on disk according to the properties of the `Folder` object|
 |[**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object](#createalias-) |
-|creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object |
+|&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows) |
+|[**.creationDate** -> creation date](#creationdate)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the creation date of the folder|
+|[**.creationTime** -> creation time](#creationtime)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the creation  time of the folder|
 |[**.delete**( { *option* } )](#delete-) |
-|deletes the folder |
+|&nbsp;&nbsp;&nbsp;&nbsp;deletes the folder|
+|[**.exists** -> boolean](#exists)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder exists on disk|
+|[**.extension** -> folder name extension](#extension)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name|
+|[**.fullName** -> full folder name](#fullname)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder|
 |[**.getIcon**( { *size* } ) -> picture](#geticon-)|
-|the icon of the folder|
+|&nbsp;&nbsp;&nbsp;&nbsp;the icon of the folder|
+|[**.hidden** -> boolean](#hidden)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder is set as "hidden" at the system level|
+|[**.isAlias** -> boolean](#isalias)|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns **false** for a `Folder` object|
+|[**.isFile** -> boolean](#isfile)|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns **false** for a folder|
+|[**.isFolder** -> boolean](#ifFolder)|
+|&nbsp;&nbsp;&nbsp;&nbsp;always returns **true** for a folder|
+|[**.isWritable** -> boolean](#ispackage)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder is a package on macOS  (and exists on disk)|
+|[**.modificationDate** -> modification date](#modificationdate)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the date of the folder's last modification|
+|[**.modificationTime** -> modification date](#modificationtime)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the time of the folder's last modification|
+|[**.name** -> file name](#name)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the folder|
+|[**.original** -> object](#original)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the same folder object as the folder|
+|[**.parent** -> object](#parent)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the parent folder object of the folder|
+|[**.path** -> text](#path)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the POSIX path of the folder|
+|[**.platformPath** -> text](#platformpath)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the path of the folder expressed with the current platform syntax|
 |[**.moveTo**( *destinationFolder* { ; *newName*} )  -> object](#moveto-)|
-|moves or renames the `Folder` object (source folder) into the specified *destinationFolder*|
+|&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `Folder` object (source folder) into the specified *destinationFolder*|
 |[**.rename**( *newName* ) -> object](#rename-)|
-|renames the folder with the name you passed in *newName* and returns the renamed `Folder` object|
+|&nbsp;&nbsp;&nbsp;&nbsp;renames the folder with the name you passed in *newName* and returns the renamed `Folder` object|
 
 
+---
 
 
-
-### .copyTo( )
+## .copyTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -131,9 +116,11 @@ $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
  
- 
 
-### .create( )
+
+---
+
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -142,7 +129,6 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 </details>
 
 
-**Not available for ZIP archives**
 
 **.create( )** -> boolean
 |Parameter|Type||Description|
@@ -187,7 +173,9 @@ End if
 
 
 
-### .createAlias( )
+---
+
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -196,7 +184,6 @@ End if
 </details>
 
 
-**Not available for ZIP archives**
 
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
 
@@ -236,7 +223,55 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 
 
-### .delete( )
+---
+
+## .creationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationDate** -> creation date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Creation date|
+
+
+##### Description
+The `.creationDate` property  returns the creation date of the folder.
+
+This property is **read-only**. 
+
+
+
+---
+
+## .creationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.creationTime** -> creation time
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Creation time|
+
+
+##### Description
+The `.creationTime` property  returns the creation  time of the folder (expressed as a number of seconds beginning at 00:00).
+
+This property is **read-only**. 
+
+
+
+---
+
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -245,13 +280,13 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 </details>
 
 
-**Not available for ZIP archives**
 
 **.delete**( { *option* } )
 
 |Parameter|Type||Description|
 |---|----|---|---|
 |option |longint|->|Folder deletion option|
+
 
 
 ##### Description
@@ -280,7 +315,55 @@ macOS: -45 (The file is locked or the pathname is not correct)
 
 
 
-### .file( )
+---
+
+## .exists
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.exists** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the folder exists, false otherwise|
+
+
+##### Description
+The `.exists` property  returns true if the folder exists on disk, and false otherwise.
+
+This property is **read-only**. 
+
+
+
+---
+
+## .extension
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.extension** -> folder name extension
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Folder name extension (if any)|
+
+
+##### Description
+The `.extension` property  returns the extension of the folder name. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+
+This property is **read-only**. 
+
+
+
+---
+
+## .file( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -312,7 +395,9 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 
-### .files( )
+---
+
+## .files( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -346,6 +431,7 @@ Collection of `File` objects.
 
 You want to know if there are invisible files in the Database folder:
 
+
 ```4d
  C_COLLECTION($all;$noInvisible)
  $all:=Folder(fk database folder).files()
@@ -366,7 +452,9 @@ You want to get all files that are not invisible in the Documents folder:
 
 
 
-### .folder( )
+---
+
+## .folder( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -398,7 +486,9 @@ A `Folder` object or null if *path* is invalid.
 
 
 
-### .folders( )
+---
+
+## .folders( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -437,8 +527,32 @@ You want the collection of all folders and subfolders of the database folder:
 
 
 
+---
 
-### .getIcon( )
+## .fullName
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.fullName** -> full folder name
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Full folder name, including extension (if any)|
+
+
+##### Description
+The `.fullName` property returns the full name of the folder, including its extension (if any).
+
+This property is **read-only**. 
+
+
+
+---
+
+## .getIcon( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -466,7 +580,9 @@ Folder icon [picture](../Concepts/picture.html).
 
 
 
-### .moveTo( )
+---
+
+## .hidden
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -474,8 +590,177 @@ Folder icon [picture](../Concepts/picture.html).
 |v17 R5|Added
 </details>
 
+**.hidden** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the hidden system flag is set for the folder, false otherwise|
 
-**Not available for ZIP archives**
+
+##### Description
+The `.hidden` property returns true if the folder is set as "hidden" at the system level, and false otherwise. 
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .isAlias
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isAlias** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+
+
+##### Description
+The `.isAlias` property always returns **false** for a `Folder` object. 
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .isFile
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFile** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+
+
+##### Description
+The `.isFile` property always returns **false** for a folder. 
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .isFolder
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isFolder** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|Always false|
+true
+
+
+##### Description
+The `.isFolder` property always returns **true** for a folder. 
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .isPackage
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.isWritable** -> boolean
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|boolean|<-|True if the folder is a package on macOS (always false on Windows)|
+
+
+##### Description
+The `.isPackage` property returns true if the folder is a package on macOS  (and exists on disk). Otherwise, it returns false.
+
+On Windows, `.isPackage` always returns **false**.
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .modificationDate
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationDate** -> modification date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|date|<-|Modification date|
+
+
+##### Description
+The `.modificationDate` property returns the date of the folder's last modification. 
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .modificationTime
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.modificationTime** -> modification date
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|time|<-|Modification time|
+
+
+##### Description
+The `.modificationTime` property returns the time of the folder's last modification (expressed as a number of seconds beginning at 00:00). 
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .moveTo( )
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
 
 **.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|
@@ -508,8 +793,10 @@ C_OBJECT($tomove;$moved)
 ```
 
 
- 
-### .rename( )
+---
+
+
+## .name
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -517,10 +804,130 @@ C_OBJECT($tomove;$moved)
 |v17 R5|Added
 </details>
 
+**.name** -> file name
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Folder name without extension (if any)|
 
 
-**Not available for ZIP archives**
+##### Description
+The `.name` property returns the name of the folder, without extension (if any). 
 
+This property is **read-only**. 
+
+
+
+---
+
+
+## .original
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.original** -> object
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Same folder object|
+
+
+##### Description
+The `.original` property returns the same folder object as the folder. 
+
+This property is **read-only**. 
+
+>This property is available on folders to allow generic code to process folders or files.
+
+
+
+---
+
+
+## .parent
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.parent** -> object
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|object|<-|Parent folder object (if any)|
+
+
+##### Description
+The `.parent` property returns the parent folder object of the folder. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+
+If the folder does not have a parent (root), the null value is returned. 
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .path
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.path** -> text
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|POSIX path (including filesystem if any)|
+
+
+##### Description
+The `.path` property returns the POSIX path of the folder. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+
+This property is **read-only**. 
+
+
+
+---
+
+
+## .platformPath
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
+
+**.platformPath** -> text
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|text|<-|Path expressed with the platform syntax|
+
+
+##### Description
+The `.platformPath` property returns the path of the folder expressed with the current platform syntax.
+
+This property is **read-only**. 
+
+
+
+---
+
+
+ 
+## .rename( )
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added
+</details>
 
 **.rename**( *newName* ) -> object
 |Parameter|Type||Description|

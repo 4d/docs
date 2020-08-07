@@ -3,28 +3,10 @@ id: fileClass
 title: File 
 ---
 
-## Overview
-
-The `File` class provides properties and functions that allow you to create and manipulate `File` objects.
-
-### Files
 
 `File` objects are created with the [`File`](https://doc.4d.com/4Dv18R4/4D/18-R4/File.301-4982190.en.html) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`create( )`](#create-) function.
 
-### ZIP Archives
-
-The `File` class also allows you to create and manipulate 4D ZIP archives (one or more `File` objects compressed to be smaller than their original size). These archives are created with a ".zip" extension and can be used to:
-
-*	Save disk space
-*	Store data on a removable media device
-*	Easily transfer files via mediums which may have size limitations (e.g., email or inter/intranet systems)
-
-4D ZIP file archives are created and handled with the following 4D commands:
-
-*	[ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html)
-*	[ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html)
-
-**Example**
+### Example
 
 The following example creates a preferences file in the database folder:
 
@@ -33,68 +15,212 @@ C_BOOLEAN($created)
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
+## Summary
 
-
-## Properties
-
-A `File` object contains the following properties and functions:
-
-<!-- INCLUDE document.properties -->
-
-
-## Functions 
-
-|Summary|
+||
 |---|
 |[<!-- INCLUDE #document.copyTo().Syntax -->](#copyto-)|
-|<!-- INCLUDE #document.copyTo().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->|
 |[<!-- INCLUDE #file.create().Syntax -->](#create-)| 
-|<!-- INCLUDE #file.create().Summary --><p><!--INCLUDE file.create().Note -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #file.create().Summary -->|
 |[<!-- INCLUDE #file.createAlias().Syntax -->](#createalias-) |
-|<!-- INCLUDE #file.createAlias().Summary --><p><!--INCLUDE file.createAlias().Note --> |
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #file.createAlias().Summary -->|
+|[<!-- INCLUDE #document.creationDate.Syntax -->](#creationdate)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationDate.Summary -->|
+|[<!-- INCLUDE #document.creationTime.Syntax -->](#creationtime)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationTime.Summary -->|
 |[<!-- INCLUDE #file.delete().Syntax -->](#delete-) |
-|<!-- INCLUDE #file.delete().Summary --><p><!--INCLUDE file.delete().Note --> |
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #file.delete().Summary -->|
+|[<!-- INCLUDE #document.exists.Syntax -->](#exists)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.exists.Summary -->|
+|[<!-- INCLUDE #document.extension.Syntax -->](#extension)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
+|[<!-- INCLUDE #document.fullName.Syntax -->](#fullname)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
 |[<!-- INCLUDE #document.getContent().Syntax -->](#getcontent-)|
 |<!-- INCLUDE #document.getContent().Summary -->|
 |[<!-- INCLUDE #document.getIcon().Syntax -->](#geticon-)|
-|<!-- INCLUDE #document.getIcon().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 |[<!-- INCLUDE #document.getText().Syntax -->](#gettext-)|
-|<!-- INCLUDE #document.getText().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
+|[<!-- INCLUDE #document.hidden.Syntax -->](#hidden)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
+|[<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->|
+|[<!-- INCLUDE #document.isFile.Syntax -->](#isfile)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
+|[<!-- INCLUDE #document.isFolder.Syntax -->](#ifFolder)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
+|[<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
+|[<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary -->|
+|[<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
 |[<!-- INCLUDE #file.moveTo().Syntax -->](#moveto-)|
-|<!-- INCLUDE #file.moveTo().Summary --><p><!--INCLUDE file.moveTo().Note -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #file.moveTo().Summary -->|
+|[<!-- INCLUDE #document.name.Syntax -->](#name)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.name.Summary -->|
+|[<!-- INCLUDE #document.original.Syntax -->](#original)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.original.Summary -->|
+|[<!-- INCLUDE #document.parent.Syntax -->](#parent)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.parent.Summary -->|
+|[<!-- INCLUDE #document.path.Syntax -->](#path)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->|
+|[<!-- INCLUDE #document.platformPath.Syntax -->](#platformpath)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.platformPath.Summary -->|
 |[<!-- INCLUDE #file.rename().Syntax -->](#rename-)|
-|<!-- INCLUDE #file.rename().Summary --><p><!--INCLUDE file.rename().Note -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #file.rename().Summary -->|
 |[<!-- INCLUDE #file.setContent().Syntax -->](#setcontent-)|
-|<!-- INCLUDE #file.setContent().Summary --><p><!--INCLUDE file.setContent().Note -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #file.setContent().Summary -->|
 |[<!-- INCLUDE #file.setText().Syntax -->](#settext-)|
-|<!-- INCLUDE #file.setText().Summary --><p><!--INCLUDE file.setText().Note -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #file.setText().Summary -->|
+|[<!-- INCLUDE #document.size.Syntax -->](#size)|
+|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
 
 
-
-
-
+---
 
 <!-- INCLUDE document.copyTo().Desc -->
 
+---
+
 <!-- INCLUDE file.create().Desc -->
+
+---
+
 
 <!-- INCLUDE file.createAlias().Desc -->
 
+---
+
+
+<!-- INCLUDE document.creationDate.Desc -->
+
+---
+
+
+<!-- INCLUDE document.creationTime.Desc -->
+
+---
+
+
 <!-- INCLUDE file.delete().Desc -->
+
+---
+
+
+<!-- INCLUDE document.exists.Desc -->
+
+---
+
+
+<!-- INCLUDE document.extension.Desc -->
+
+---
+
+
+<!-- INCLUDE document.fullName.Desc -->
+
+---
+
 
 <!-- INCLUDE document.getContent().Desc -->
 
+---
+
+
 <!-- INCLUDE document.getIcon().Desc -->
+
+---
+
 
 <!-- INCLUDE document.getText().Desc -->
 
+---
+
+
+<!-- INCLUDE document.hidden.Desc -->
+
+---
+
+
+<!-- INCLUDE document.isAlias.Desc -->
+
+---
+
+
+<!-- INCLUDE document.isFile.Desc -->
+
+---
+
+
+<!-- INCLUDE document.isFolder.Desc -->
+
+---
+
+
+<!-- INCLUDE document.isWritable.Desc -->
+
+---
+
+
+<!-- INCLUDE document.modificationDate.Desc -->
+
+---
+
+
+<!-- INCLUDE document.modificationTime.Desc -->
+
+---
+
+
 <!-- INCLUDE file.moveTo().Desc -->
+
+---
+
+
+<!-- INCLUDE document.name.Desc -->
+
+---
+
+
+<!-- INCLUDE document.original.Desc -->
+
+---
+
+
+<!-- INCLUDE document.parent.Desc -->
+
+---
+
+
+<!-- INCLUDE document.path.Desc -->
+
+---
+
+
+<!-- INCLUDE document.platformPath.Desc -->
+
+---
+
 
 <!-- INCLUDE file.rename().Desc -->
 
+---
+
+
 <!-- INCLUDE file.setContent().Desc -->
 
+---
+
+
 <!-- INCLUDE file.setText().Desc -->
+
+---
+
+
+<!-- INCLUDE document.size.Desc -->
 
 
 

@@ -1,9 +1,9 @@
 ---
 id: cryptoClass
-title: CryptoKey 
+title: CryptoKey
 ---
 
-The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair. 
+The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair.
 
 This class is available from the `4D` class store.
 
@@ -16,7 +16,7 @@ The following sample code signs and verifies a message using a new ECDSA key pai
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
   // Get signature as base64
-$message:="hello world" 
+$message:="hello world"
 $signature:=$key.sign($message;New object("hash";"HASH256"))
 
   // Verify signature
@@ -97,7 +97,7 @@ The returned `cryptoKey` object encapsulates an encryption key pair. It is a sha
 <!-- END REF -->
 
 Defined only for ECDSA keys: the <!-- REF #cryptokey.curve.Summary -->normalised curve name of the key. <!-- END REF -->
-Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512. 
+Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
 
 ---
@@ -141,7 +141,7 @@ The function returns a status object with `success` property set to `true` if th
 
 |Property|Type|Description|
 |---|---|---|
-|success|boolean|True if the message has been successfully decrypted| 
+|success|boolean|True if the message has been successfully decrypted|
 |result|text|Message decrypted and decoded using the `options.encodingDecrypted`|
 |errors|collection|If `success` is `false`, may contain a collection of errors|
 
@@ -169,7 +169,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 |options|object|->|Encoding options|
 |encrypted|text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 <!-- END REF -->
- 
+
 The `.encrypt( )` function <!-- REF #cryptokey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. The algorithm used depends on the type of the key.
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
@@ -184,7 +184,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 
 #### *encrypted*
- 
+
 The returned value is an encrypted message.
 <!-- END REF -->
 
@@ -210,11 +210,11 @@ The returned value is an encrypted message.
 |privateKey|text|<-|Private key in PEM format|
 <!-- END REF -->
 
-The `.getPrivateKey( )` function  <!-- REF #cryptokey.getPrivateKey().Summary -->returns the private key of the `cryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available. 
+The `.getPrivateKey( )` function  <!-- REF #cryptokey.getPrivateKey().Summary -->returns the private key of the `cryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
 #### *privateKey*
 
-The returned value is the private key. 
+The returned value is the private key.
 <!-- END REF -->
 
 
@@ -242,7 +242,7 @@ The `.getPublicKey( )` function <!-- REF #cryptokey.getPublicKey().Summary -->re
 
 #### *publicKey*
 
-The returned value is the public key. 
+The returned value is the public key.
 <!-- END REF -->
 
 ---
@@ -362,7 +362,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 |---|---|---|---|
 |message|text|->|Message string that was used to produce the signature|  
 |signature|text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
-|options|object|->|Signing options| 
+|options|object|->|Signing options|
 |status|object|<-|Result of the verification|
 <!-- END REF -->
 
@@ -382,7 +382,7 @@ The `cryptoKey` must contain a valid **public** key.
 
 #### *status*
 
-The function returns a `status` object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches). 
+The function returns a `status` object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches).
 
 In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
@@ -391,6 +391,3 @@ In case the signature couldn't be verified because it was not signed with the sa
 |success|boolean|True if the signature matches the message|
 |errors|collection|If `success` is `false`, may contain a collection of errors|
 <!-- END REF -->
-
-
-

@@ -7,7 +7,7 @@ title: Folder Functions
 ## Functions
 
 
-### .create( )
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -16,7 +16,6 @@ title: Folder Functions
 </details>
 
 
-**Not available for ZIP archives**
 
 **.create( )** -> boolean
 |Parameter|Type||Description|
@@ -61,10 +60,10 @@ End if
 
 
 
+---
 
 
-
-### .createAlias( )
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -73,7 +72,6 @@ End if
 </details>
 
 
-**Not available for ZIP archives**
 
 **.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
 
@@ -112,9 +110,9 @@ $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
 $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 
+---
 
-
-### .delete( )
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -123,13 +121,13 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 </details>
 
 
-**Not available for ZIP archives**
 
 **.delete**( { *option* } )
 
 |Parameter|Type||Description|
 |---|----|---|---|
 |option |longint|->|Folder deletion option|
+
 
 
 ##### Description
@@ -157,9 +155,9 @@ When `Delete with contents` is passed:
 macOS: -45 (The file is locked or the pathname is not correct)
 
  
- 
+--- 
 
-### .moveTo( )
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -167,8 +165,6 @@ macOS: -45 (The file is locked or the pathname is not correct)
 |v17 R5|Added
 </details>
 
-
-**Not available for ZIP archives**
 
 **.moveTo**( *destinationFolder* { ; *newName*} )  -> object
 |Parameter|Type||Description|
@@ -200,20 +196,16 @@ C_OBJECT($tomove;$moved)
  $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")
 ```
 
+---
  
  
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
 |v17 R5|Added
 </details>
-
-
-
-**Not available for ZIP archives**
-
 
 **.rename**( *newName* ) -> object
 |Parameter|Type||Description|

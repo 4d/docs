@@ -8,7 +8,7 @@ title: Folder Functions
 
 
 <!-- REF folder.create().Desc -->
-### .create( )
+## .create( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -16,9 +16,6 @@ title: Folder Functions
 |v17 R5|Added
 </details>
 
-
-<!--REF folder.create().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #folder.create().Syntax -->
@@ -36,7 +33,7 @@ title: Folder Functions
 
 The `.create( )` function <!-- REF #folder.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [<!-- INCLUDE directory.platformPath -->](#platformpath) or [<!-- INCLUDE directory.path -->](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
 **Returned value**
 
@@ -69,11 +66,11 @@ End if
 <!-- END REF -->
 
 
-
+---
 
 
 <!-- REF folder.createAlias().Desc -->
-### .createAlias( )
+## .createAlias( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -81,9 +78,6 @@ End if
 |v17 R5|Added
 </details>
 
-
-<!--REF folder.createAlias().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #folder.createAlias().Syntax -->
@@ -101,7 +95,7 @@ End if
 
 
 ##### Description
-The `.createAlias( )` function <!-- REF #folder.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object<!-- END REF -->.
+The `.createAlias( )` function <!-- REF #folder.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -128,10 +122,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 <!-- END REF -->
 
-
+---
 
 <!-- REF folder.delete().Desc -->
-### .delete( )
+## .delete( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -139,9 +133,6 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |v17 R5|Added
 </details>
 
-
-<!--REF folder.delete().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #folder.delete().Syntax -->
@@ -153,6 +144,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |---|----|---|---|
 |option |longint|->|Folder deletion option|
 <!-- END REF -->
+
 
 
 ##### Description
@@ -181,20 +173,16 @@ macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
  
- 
+--- 
 
 <!-- REF folder.moveTo().Desc -->
-### .moveTo( )
+## .moveTo( )
 
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
 |v17 R5|Added
 </details>
-
-
-<!--REF folder.moveTo().Note -->
-**Not available for ZIP archives**<!-- END REF -->
 
 
 <!--REF #folder.moveTo().Syntax -->
@@ -232,22 +220,16 @@ C_OBJECT($tomove;$moved)
 ```
 <!-- END REF -->
 
+---
  
 <!-- REF folder.rename().Desc --> 
-### .rename( )
+## .rename( )
 
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
 |v17 R5|Added
 </details>
-
-
-
-<!--REF folder.rename().Note -->
-**Not available for ZIP archives**<!-- END REF -->
-
-
 
 <!--REF #folder.rename().Syntax -->
 **.rename**( *newName* ) -> object<!-- END REF -->
