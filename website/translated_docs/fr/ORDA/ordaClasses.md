@@ -3,38 +3,38 @@ id: ordaClasses
 title: Data Model Classes
 ---
 
-## Preview feature
+## Fonction d'aperçu
 
-> ORDA data model class functions are provided as a **preview feature** in 4D v18 R4: all functions you create are exposed without restrictions. Future releases will include more control over the function availability, especially from REST requests. In the next release, **by default all your data model class functions will be set to private**. You will have to specify individually each function that you want to be exposed.
+> Les fonctions de classe ORDA du modèle de données sont fournies en tant que **fonctionnalité de prévisualisation** dans 4D v18 R4 : toutes les fonctions que vous créez sont exposées sans restrictions. Les futures versions octroieront plus de contrôle sur les fonctions, en particulier à partir des requêtes REST. Dans la prochaine version, **par défaut, toutes les fonctions de classe de votre modèle de données seront définies comme privées**. Vous devrez spécifier individuellement chaque fonction que vous souhaitez exposer.
 
 ## Aperçu
 
-ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
+ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les sélections d'entités et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
 
-For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple to call as:
+Par exemple, vous pouvez créer une fonction `getNextWithHigherSalary()` dans la classe `EmployeeEntity` pour retourner les employés ayant un salaire supérieur à celui qui est sélectionné. Il serait aussi simple à appeler que :
 
 ```4d
 $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
 ```
 
-Developers can not only use these functions in local datastores, but also in client/server as well as remote architectures (see the full example [below](#example-with-remote-datastore)):
+Les développeurs peuvent non seulement utiliser ces fonctions dans des datastores locaux, mais également dans des architectures client/serveur et des architectures distantes (voir l'exemple complet [ci-dessous](#example-with-remote-datastore)) :
 
 ```4d
- //$cityManager is the reference of a remote datastore
+ //$cityManager est la référence d'un datastore distant
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
-Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained or reused:
+Grâce à cette fonctionnalité, toute la logique métier de votre application 4D peut être stockée comme une couche indépendante afin d'être facilement maintenue ou réutilisée :
 
-- it allows you to "hide" the overall complexity of the underlying physical structure and only expose understandable and ready-to-use functions.
+- elle vous permet de «masquer» la complexité globale de la structure physique sous-jacente et d'exposer uniquement des fonctions compréhensibles et prêtes à l'emploi.
 
-- if the physical structure evolves, you simply to adapt function code and client applications will continue to call them transparently.
+- si la structure physique évolue, il vous suffit d'adapter le code de la fonction et les applications clientes continueront de les appeler de manière transparente.
 
 
 ![](assets/en/ORDA/api.png)
 
 
-In addition, 4D Developer [automatically pre-creates](#creating-classes) the classes for each available data model object.
+De plus, 4D Developer [crée préalablement et automatiquement](#creating-classes) les classes pour chaque objet de modèle de données disponible.
 
 ## Architecture
 
@@ -44,9 +44,9 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 
-| Class                       | Example name         | Instantiated by                                                                                                                                                                                                                                                                                                                                                                   |
+| Class                       | Example name         | Instanciée par                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs.DataStore                | cs.DataStore         | `ds` command                                                                                                                                                                                                                                                                                                                                                                      |
+| cs.DataStore                | cs.DataStore         | Commande `ds`                                                                                                                                                                                                                                                                                                                                                                     |
 | cs.*DataClassName*          | cs.Employee          | `dataStore.DataClassName`, `dataStore[DataClassName]`                                                                                                                                                                                                                                                                                                                             |
 | cs.*DataClassName*Entity    | cs.EmployeeEntity    | `dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`                                                                                                                                                                                              |
 | cs.*DataClassName*Selection | cs.EmployeeSelection | `dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection` |
@@ -109,8 +109,8 @@ Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
 Class extends DataClass
 
-// Returns companies which revenue is over the average
-// Returns an entity selection related to the DataClass Company 
+// Retourne les entreprises dont le revenu est au-dessus de la moyenne
+// Retourne une sélection d'entités relative à DataClass Company 
 
 Function GetBestOnes()
     $sel:=This.query("revenues >= :1";This.all().average("revenues"));
@@ -125,13 +125,13 @@ Then, you can get an entity selection of the "best" companies by executing:
 ```
 
 
-#### Example with a remote datastore
+#### Exemple avec un datastore distant
 
 The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+La classe `City Class` fournit une API :
 
 ```4d  
 // cs.City class
@@ -219,7 +219,7 @@ Function getPopulation()
 
 Function isBigCity
 C_BOOLEAN($0)
-// The function getPopulation() is usable inside the class
+// La fonction getPopulation() peut être utilisée dans la classe
 $0:=This.getPopulation()>50000
 ```
 
@@ -236,9 +236,9 @@ If ($city.isBigCity())
 End if
 ```
 
-## Definition Rules
+## Règles de définition
 
-When creating or editing data model classes, you must pay attention to the rules described below.
+Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous.
 
 - Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D table names must be compliant in order to avoid any conflict in the **cs** namespace. En particulier :
     - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
