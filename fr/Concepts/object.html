@@ -160,15 +160,17 @@
 <p><strong>Note :</strong> Les objets étant toujours passés par référence, l'utilisation de pointeurs n'est généralement pas nécessaire. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.</p>
 <p>La notation objet pour les pointeurs est semblable à la notation objet standard, à la seule différence que le symbole &quot;point&quot; doit être omis.</p>
 <ul>
-<li><p>Accès direct :</p>
+<li>Accès direct :</li>
+</ul>
 <blockquote>
 <p>pointeurObjet-&gt;nomPropriété</p>
-</blockquote></li>
-<li><p>Accès par le nom :</p>
-<blockquote>
-<p>pointeurObjet-&gt;[&quot;nomPropriété&quot;]</p>
-</blockquote></li>
+</blockquote>
+<ul>
+<li>Accès par le nom :</li>
 </ul>
+<blockquote>
+<p>pointeurObjet-&gt; nomPropriété&quot;]</p>
+</blockquote>
 <p>Exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(vObj)
 <span class="hljs-function"> C_POINTER</span>(vPtr)

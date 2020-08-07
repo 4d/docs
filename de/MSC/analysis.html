@@ -74,8 +74,8 @@
 <p>Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten liefern verschiedene Informationen zur Operation. Durch Anklicken der Kopfteile können Sie die Spalten beliebig umstellen.</p>
 <p>Über diese Informationen können Sie die Quelle und den Kontext jeder Operation identifizieren:</p>
 <ul>
-<li><p><strong>Operation</strong>: Sequenznummer der Operation im Logbuch.</p></li>
-<li><p><strong>Aktion</strong>: Art der in den Daten ausgeführten Operation. Diese Spalte kann eine der nachfolgenden Operationen anzeigen:</p>
+<li><p><strong>Operation</strong>: Sequence number of operation in the log file.</p></li>
+<li><p><strong>Action</strong>: Type of operation performed on the data. Diese Spalte kann eine der nachfolgenden Operationen anzeigen:</p>
 <ul>
 <li>Öffnen der Datendatei: Datendatei öffnen</li>
 <li>Schließen der Datendatei: Eine geöffnete Datendatei wird geschlossen</li>
@@ -90,18 +90,18 @@
 <li>Abbrechen der Transaktion: Transaktion annulliert</li>
 <li>Update context: Change in extra data (e.g. a call to <code>CHANGE CURRENT USER</code> or <code>SET USER ALIAS</code>).</li>
 </ul></li>
-<li><p><strong>Tabelle</strong>: Tabelle, zu welcher der hinzugefügte/gelöschte/geänderte Datensatz bzw. das BLOB gehört</p></li>
-<li><p><strong>Primärschlüssel/BLOB</strong>: Inhalt des Primärschlüssels für jeden Datensatz (besteht der Primärschlüssel aus mehreren Feldern, sind die einzelnen Werte durch Strichpunkte voneinander getrennt) oder Sequenznummer des BLOB, welche an der Operation beteiligt ist.</p></li>
-<li><p><strong>Prozess</strong>: Interne Nummer des Prozesses, in dem die Operation ausgeführt wurde. Diese interne Nummer entspricht dem Kontext der Operation.</p></li>
-<li><p><strong>Größe</strong>: Größe (in Bytes) der Daten, die durch die Operation bearbeitet werden.</p></li>
-<li><p><strong>Datum und Uhrzeit</strong>: Datum und Uhrzeit, zu der die Operation ausgeführt wurde.</p></li>
+<li><p><strong>Table</strong>: Table to which the added/deleted/modified record or BLOB belongs.</p></li>
+<li><p><strong>Primary Key/BLOB</strong>: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.</p></li>
+<li><p><strong>Process</strong>: Internal number of process in which the operation was carried out. Diese interne Nummer entspricht dem Kontext der Operation.</p></li>
+<li><p><strong>Size</strong>: Size (in bytes) of data processed by the operation.</p></li>
+<li><p><strong>Date and Hour</strong>: Date and hour when the operation was performed.</p></li>
 <li><p><strong>System User</strong>: System name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the session name of the user is displayed.</p></li>
 <li><p><strong>4D User</strong>: 4D user name of the user that performed the operation. If an alias is defined for the user, the alias is displayed instead of the 4D user name.</p></li>
 <li><p><strong>Values</strong>: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.<br>
 <em><strong>Note:</strong> If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.</em></p></li>
 <li><p><strong>Records</strong>: Record number.</p></li>
 </ul>
-<p>Klicken Sie am unteren Rand auf die Schaltfläche <strong>Analysieren</strong>, um den Inhalt des aktuellen Logbuchs der ausgewählten Datenbank anzuzeigen. Es hat in 4D standardmäßig den Namen dataname.journal. Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. Mit der Schaltfläche <strong>Exportieren</strong> exportieren Sie den Inhalt der Datei als Text.</p>
+<p>Click on <strong>Analyze</strong> to update the contents of the current log file of the selected database (named by default dataname.journal). Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. The <strong>Export...</strong> button can be used to export the contents of the file as text.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/de/MSC/information.html"><span class="arrow-prev">← </span><span>Seite Information</span></a><a class="docs-next button" href="/docs/de/MSC/verify.html"><span>Seite Prüfen</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

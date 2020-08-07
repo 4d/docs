@@ -67,8 +67,8 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/Concepts/classes.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Klassen</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
-<p>Die 4D Programmiersprache unterstützt das Konzept <strong>Klassen</strong>. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.</p>
-<p>Ist eine Klasse definiert, können Sie Objekte dieser Klasse als <strong>Instanz</strong> überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz seiner Klasse. Eine Klasse kann eine andere Klasse <code>erweitern</code> und erbt dann von deren Funktionen.</p>
+<p>The 4D language supports the concept of <strong>classes</strong>. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.</p>
+<p>Once a class is defined, you can <strong>instantiate</strong> objects of this class anywhere in your code. Jedes Objekt ist eine Instanz seiner Klasse. Eine Klasse kann eine andere Klasse <code>erweitern</code> und erbt dann von deren Funktionen.</p>
 <p>Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf einer Kette von Prototypen.</p>
 <h3><a class="anchor" aria-hidden="true" id="objekt-klasse"></a><a href="#objekt-klasse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objekt Klasse</h3>
 <p>Die Klasse ist selbst ein Objekt vom Typ &quot;Klasse&quot;. Ein Objekt Klasse hat folgende Eigenschaften und Methoden:</p>
@@ -112,9 +112,9 @@ Class constructor</span>
   <span class="hljs-literal">This</span>.lastName:=<span class="hljs-variable">$2</span>
 </code></pre>
 <p>In einer Methode erstellen Sie eine &quot;Person&quot;:</p>
-<pre><code class="hljs">C_OBJECT($o)
-$o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)  
-// $o: {firstName: &quot;John&quot;;lastName: &quot;Doe&quot; }
+<pre><code class="hljs">C_OBJECT(<span class="hljs-variable">$o</span>)
+<span class="hljs-variable">$o</span>:=cs.Person.new(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Doe"</span>)  
+<span class="hljs-regexp">//</span> <span class="hljs-variable">$o</span>: {firstName: <span class="hljs-string">"John"</span>;lastName: <span class="hljs-string">"Doe"</span> }
 </code></pre>
 <p>Sie könnten auch eine leere Datei Klasse erstellen und Instanzen auf leere Objekte setzen. Legen Sie z.B. die Datei Klasse <code>Empty.4dm</code> wie folgt an:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Empty.4dm class file</span>
@@ -131,7 +131,7 @@ $o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)
 <li>Ein Store für in 4D integrierte Klassen. Er wird über den Befehl <code>4D</code> zurückgegeben.</li>
 <li>Ein Store für Klassen pro geöffneter Anwendung oder Komponente. Er wird über den Befehl <code>cs</code> zurückgegeben. Das sind &quot;Benutzerklassen&quot;.</li>
 </ul>
-<p>Sie können z.B. für ein Objekt von myClass mit der Anweisung <code>cs.myClass.new()</code> eine neue Instanz erstellen (<code>cs</code> bedeutet <em>classtore</em>).</p>
+<p>For example, you create a new instance of an object of myClass using the <code>cs.myClass.new()</code> statement (<code>cs</code> means <em>classtore</em>).</p>
 <h2><a class="anchor" aria-hidden="true" id="benutzerklassen-verwalten"></a><a href="#benutzerklassen-verwalten" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benutzerklassen verwalten</h2>
 <h3><a class="anchor" aria-hidden="true" id="datei-klasse"></a><a href="#datei-klasse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datei Klasse</h3>
 <p>Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner <code>/Project/Sources/Classes/</code> gespeichert wird. Der Name der Datei ist der Klassenname.</p>
@@ -159,17 +159,17 @@ $o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)
 <li>Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="4d-entwickleroberfläche"></a><a href="#4d-entwickleroberfläche" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D Entwickleroberfläche</h3>
-<p>Beim Erstellen auf der 4D Entwickleroberfläche wird eine Datei Klasse automatisch an der passenden Stelle gespeichert, entweder über das Menü <strong>Datei/Ablage</strong> oder über den Explorer.</p>
+<p>Class files are automatically stored at the appropriate location when created through the 4D Developer interface, either via the <strong>File</strong> menu or the Explorer.</p>
 <h4><a class="anchor" aria-hidden="true" id="menü-dateiablage-und-werkzeugleiste"></a><a href="#menü-dateiablage-und-werkzeugleiste" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Menü Datei/Ablage und Werkzeugleiste</h4>
-<p>Sie erstellen eine Datei Klasse für das Projekt über den Eintrag <strong>Neu &gt; Klasse</strong> im Menü <strong>Datei/Ablage</strong> oder über das <strong>Icon Neu</strong> in der Werkzeugleiste.</p>
-<p>Sie können auch die Tastenkombination <strong>Strg+Shift+Alt+k</strong> verwenden.</p>
+<p>You can create a new class file for the project by selecting <strong>New &gt; Class...</strong> in the 4D Developer <strong>File</strong> menu or from the toolbar.</p>
+<p>You can also use the <strong>Ctrl+Shift+Alt+k</strong> shortcut.</p>
 <h4><a class="anchor" aria-hidden="true" id="explorer"></a><a href="#explorer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Explorer</h4>
-<p>Im Explorer werden Klassen auf der Seite <strong>Methoden</strong> in der Kategorie <strong>Klassen</strong> gruppiert.</p>
+<p>In the <strong>Methods</strong> page of the Explorer, classes are grouped in the <strong>Classes</strong> category.</p>
 <p>Um eine neue Klasse zu erstellen:</p>
 <ul>
-<li>Wählen Sie die Kategorie <strong>Klassen</strong> und klicken auf die Schaltfläche<img src="/docs/assets/en/Users/PlussNew.png" alt="">.</li>
-<li>Wählen Sie am unteren Rand des Explorer-Fensters im Menü Optionen oder im Kontextmenü der Kategorie Klassen den Eintrag <strong>Neue Klasse</strong>. <img src="/docs/assets/en/Concepts/newClass.png" alt=""></li>
-<li>Wählen Sie auf der Seite Home im Menü Optionen am unteren Rand den Eintrag <strong>Neu &gt; Klasse...</strong>.</li>
+<li>select the <strong>Classes</strong> category and click on the <img src="/docs/assets/en/Users/PlussNew.png" alt=""> button.</li>
+<li>select <strong>New Class...</strong> from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. <img src="/docs/assets/en/Concepts/newClass.png" alt=""></li>
+<li>select <strong>New &gt; Class...</strong> from the contexual menu of the Explorer's Home page.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="unterstützung-von-code-für-klassen"></a><a href="#unterstützung-von-code-für-klassen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unterstützung von Code für Klassen</h4>
 <p>In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:</p>
@@ -178,16 +178,16 @@ $o:=cs.Person.new(&quot;John&quot;;&quot;Doe&quot;)
 <ul>
 <li>Es kann keine Klasse laufen</li>
 <li>Eine Klassenfunktion ist ein Code Block</li>
-<li><strong>Goto definition</strong> auf ein Object Member sucht nach Deklarationen der Class Function; Beispiel: &quot;$o.f()&quot; findet &quot;Function f&quot;.</li>
-<li><strong>Search references</strong> auf Deklarationen von Class Function sucht nach der Funktion, die als Object Member verwendet wird; Beispiel: &quot;Function f&quot; findet &quot;$o.f()&quot;.</li>
+<li><strong>Goto definition</strong> on an object member searches for class Function declarations; for example, &quot;$o.f()&quot; will find &quot;Function f&quot;.</li>
+<li><strong>Search references</strong> on class function declaration searches for the function used as object member; for example, &quot;Function f&quot; will find &quot;$o.f()&quot;.</li>
 </ul></li>
-<li>Im Runtime-Explorer und Debugger werden Class Functions mit dem Format &lt;ClassName&gt; Constructor oder .\ angezeigt.<ClassName> <FunctionName></li>
+<li>Im Runtime-Explorer und Debugger werden Class Functions mit dem Format &lt;ClassName&gt; Constructor oder .\ angezeigt.<ClassName> <FunctionName> format.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="eine-klasse-löschen"></a><a href="#eine-klasse-löschen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eine Klasse löschen</h3>
 <p>Um eine vorhandene Klasse zu löschen, können Sie:</p>
 <ul>
 <li>Auf Ihrer Festplatte im Ordner &quot;Classes&quot; die Klassendatei .4dm löschen,</li>
-<li>Die Klasse im Explorer auswählen und am unteren Rand auf das Icon <img src="/docs/assets/en/Users/MinussNew.png" alt=""> klicken oder im Kontextmenü den Eintrag <strong>In Papierkorb verschieben</strong> wählen.</li>
+<li>in the Explorer, select the class and click <img src="/docs/assets/en/Users/MinussNew.png" alt=""> or choose <strong>Move to Trash</strong> from the contextual menu.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="schlüsselwörter-für-klassen"></a><a href="#schlüsselwörter-für-klassen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schlüsselwörter für Klassen</h2>
 <p>In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:</p>
@@ -212,10 +212,10 @@ Function</span> getAge
 <span class="hljs-function">  C_LONGINT</span>(<span class="hljs-variable">$0</span>)
   <span class="hljs-variable">$0</span>:=(Current date-<span class="hljs-literal">This</span>.birthdate)/<span class="hljs-number">365.25</span>
 </code></pre>
-<p>Der Befehl <code>Current method name</code> gibt für eine Function zurück: &quot;<em>&lt;ClassName&gt;.&lt;FunctionName&gt;</em>&quot;, z.B. &quot;MyClass.myMethod&quot;.</p>
-<p>Im Code der Anwendung werden Functions der Klasse als Member Methods der Instanz des Objekts aufgerufen und können Parameter empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt</p>
+<p>For a class function, the <code>Current method name</code> command returns: &quot;<em>&lt;ClassName&gt;.&lt;FunctionName&gt;</em>&quot;, for example &quot;MyClass.myMethod&quot;.</p>
+<p>In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:</p>
 <ul>
-<li>Verwendung des Operators <code>()</code> For example <code>myObject.methodName(&quot;hello&quot;)</code>.</li>
+<li>use of the <code>()</code> operator. For example <code>myObject.methodName(&quot;hello&quot;)</code>.</li>
 <li>use of a &quot;Function&quot; class member methods
 <ul>
 <li><code>apply()</code></li>

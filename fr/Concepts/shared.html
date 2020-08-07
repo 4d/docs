@@ -117,29 +117,29 @@ End<span class="hljs-keyword"> Use</span>
 <p>La structure <code>Use...End use</code> définit une séquence d'instructions qui exécutera des tâches sur le paramètre <em>Objet_partagé_ou_Collection_partagée</em> sous la protection d'un sémaphore interne. <em>Objet_partagé_ou_Collection_partagée</em> peut être tout objet partagé ou collection partagée valide.</p>
 <p>Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les <strong>Process 4D préemptifs</strong>. Ils peuvent être passés par référence en paramètre d'un process à un autre. Pour plus de détails sur les objets partagés et les collections partagées, reportez-vous à la page <strong>Objets et collections partagés</strong>. Encadrer les modifications sur les objets partagés et les collections partagées à l'aide des mots-clés <code>Use...End use</code> est obligatoire pour empêcher les accès concurrents entre les process.</p>
 <ul>
-<li>Une fois que la ligne <strong>Use/Utiliser</strong> est exécutée avec succès, toutes les propriétés/éléments de <em>Objet_partagé_ou_Collection_partagée</em> sont verrouillé(e) s en écriture pour tous les autres process jusqu'à ce que la ligne <code>End use/Fin</code> utiliser correspondante soit éxécutée.</li>
+<li>Une fois que la ligne <strong>Use/Utiliser</strong> est exécutée avec succès, toutes les propriétés/éléments de _Objet_partagé<em>ou_Collection_partagée</em> sont verrouillé(e) s en écriture pour tous les autres process jusqu'à ce que la ligne <code>End use/Fin</code> utiliser correspondante soit éxécutée.</li>
 <li>La séquence <em>d'instructions</em> peut alors effectuer toute modification dans les propriétés/éléments de Objet_partagé_ou_Collection_partagée sans risque d'accès concurrent.</li>
-<li>Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre <em>Objet_partagé_ou_Collection_partagée</em>, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf.** Utilisation des objets et collections partagés**).</li>
-<li>Si un autre process tente d'accéder à une propriété de <em>Objet_partagé_ou_Collection_partagée</em> ou une propriété connectée alors qu'une séquence <strong>Utiliser...Fin</strong> utiliser est en cours d'exécution sur le même Objet_partagé_ou_Collection_partagée, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée.</li>
-<li>La ligne <strong>End use/Fin</strong> utiliser déverrouille les propriétés de <em>Objet_partagé_ou_Collection_partagée</em> et tous les objets qui partagent le même locking identifier.</li>
+<li>Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre _Objet_partagé<em>ou_Collection_partagée</em>, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf.** Utilisation des objets et collections partagés**).</li>
+<li>Si un autre process tente d'accéder à une propriété de _Objet_partagé<em>ou_Collection_partagée</em> ou une propriété connectée alors qu'une séquence <strong>Utiliser...Fin</strong> utiliser est en cours d'exécution sur le même Objet_partagé_ou_Collection_partagée, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée.</li>
+<li>La ligne <strong>End use/Fin</strong> utiliser déverrouille les propriétés de _Objet_partagé<em>ou_Collection_partagée</em> et tous les objets qui partagent le même locking identifier.</li>
 <li>Plusieurs structures <strong>Utiliser...Fin</strong> utiliser peuvent être imbriquées dans le code 4D. Dans ce cas, tous les verrouillages sont empilés et les propriétés/éléments ne seront déverrouillé(e) s que lorsque le dernier appel de End use/Fin utiliser sera exécuté.</li>
 </ul>
 <p><strong>Note :</strong> Si une fonction membre d'une collection modifie une collection partagée, un <strong>Utiliser</strong> interne est automatiquement mis en place pour cette collection partagée durant l'exécution de la fonction.</p>
 <h2><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h2>
 <p>Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventaire parmi différents produits et mettre à jour le même objet partagé. Le process principal instancie un objet partagé vide et ensuite lance les autres process, passant en paramètre l'objet partagé et les produits à comptabiliser :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY TEXT</span>(<span class="hljs-variable">$_items</span>;<span class="hljs-number">0</span>)
- ... <span class="hljs-comment">//remplit le tableau avec les éléments à compter</span>
+ ... <span class="hljs-comment">//remplir le tableau avec les éléments à compter</span>
  <span class="hljs-variable">$nbItems</span>:=<span class="hljs-function">Size of array</span>(<span class="hljs-variable">$_items</span>)
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$inventory</span>)
  <span class="hljs-variable">$inventory</span>:=New shared object<span class="hljs-keyword">
  Use</span>(<span class="hljs-variable">$inventory</span>)
     <span class="hljs-variable">$inventory</span>.nbItems:=<span class="hljs-variable">$nbItems</span><span class="hljs-keyword">
  End use</span>
- 
-  <span class="hljs-comment">//Créer process</span><span class="hljs-keyword">
-  For</span>(<span class="hljs-variable">$i</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$nbItems</span>)
+
+  <span class="hljs-comment">//Créer un process</span><span class="hljs-keyword">
+ For</span>(<span class="hljs-variable">$i</span>;<span class="hljs-number">1</span>;<span class="hljs-variable">$nbItems</span>)
     <span class="hljs-variable">$ps</span>:=<span class="hljs-function">New process</span>(<span class="hljs-string">"HowMany"</span>;<span class="hljs-number">0</span>;<span class="hljs-string">"HowMany_"</span>+<span class="hljs-variable">$_items{</span><span class="hljs-variable">$i}</span>;<span class="hljs-variable">$_items{</span><span class="hljs-variable">$i}</span>;<span class="hljs-variable">$inventory</span>)
-  <span class="hljs-comment">//$inventory object sent by reference</span><span class="hljs-keyword">
+  <span class="hljs-comment">// objet $inventory envoyé par référence</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <p>Dans la méthode &quot;HowMany&quot;, l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :</p>

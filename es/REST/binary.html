@@ -68,9 +68,9 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/REST/$binary.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">$binary</h1></header><article><div><span><p>Pass &quot;true&quot; to save the BLOB as a document (must also pass <code>$expand={blobAttributeName}</code>)</p>
 <h2><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h2>
-<p><code>$binary</code> allows you to save the BLOB as a document. You must also use the <a href="/docs/es/REST/expand.html"><code>$expand</code></a> command in conjunction with it.</p>
+<p><code>$binary</code> allows you to save the BLOB as a document.  You must also use the <a href="/docs/es/REST/expand.html"><code>$expand</code></a> command in conjunction with it.</p>
 <p>When you make the following request:</p>
-<pre><code class="hljs">GET  /rest/Company(11)/blobAtt?$binary=true&amp;$expand=blobAtt
+<pre><code class="hljs"><span class="hljs-builtin-name">GET</span>  /rest/Company(11)/blobAtt?<span class="hljs-variable">$binary</span>=<span class="hljs-literal">true</span>&amp;<span class="hljs-variable">$expand</span>=blobAtt
 </code></pre>
 <p>You will be asked where to save the BLOB to disk:</p>
 <p><img src="/docs/assets/en/REST/binary.png" alt=""></p>

@@ -72,7 +72,7 @@
 <ul>
 <li>Un nom doit commencer par un caractère alphabétique (une lettre), un tiret bas ou un dollar (&quot;$&quot;) (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).</li>
 <li>Le nom peut ensuite contenir des caractères alphabétiques, des caractères numériques, des espaces et des tirets bas (_).</li>
-<li>Les points (.) et les crochets ([ ]) sont interdits dans les noms de tables, champs, méthodes ou variables.</li>
+<li>Les points (&quot;.&quot;) et les crochets (&quot;[ ]&quot;) sont interdits dans les noms de tables, champs, méthodes ou variables.</li>
 <li>Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.</li>
 <li>Les caractères réservés car utilisés comme opérateurs, comme l’astérisque (*) ou le +, sont interdits.</li>
 <li>Les noms réservés, c'est-à-dire les noms de commandes 4D (<code>Date</code>, <code>Time</code>, etc), les mots-clés (If, For, etc.) et les constantes.</li>
@@ -81,7 +81,7 @@
 <h3><a class="anchor" aria-hidden="true" id="règles-supplémentaires-pour-les-propriétés-dobjet-et-les-noms-orda"></a><a href="#règles-supplémentaires-pour-les-propriétés-dobjet-et-les-noms-orda" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Règles supplémentaires pour les propriétés d'objet et les noms ORDA</h3>
 <ul>
 <li>Les espaces sont interdits.</li>
-<li>Les points (.) et les crochets ([ ]) sont interdits.</li>
+<li>Les points (&quot;.&quot;) et les crochets (&quot;[ ]&quot;) sont interdits.</li>
 <li>Les noms sont sensibles à la casse.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="règles-supplémentaires-pour-sql"></a><a href="#règles-supplémentaires-pour-sql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Règles supplémentaires pour SQL</h3>
@@ -174,7 +174,7 @@ If</span>(<span class="hljs-variable">&lt;&gt;asMotsClés{1}</span>=<span class=
           <span class="hljs-variable">$viValeurSuivante</span>:=<span class="hljs-variable">$aiGrosTableau{Taille tableau</span>(<span class="hljs-variable">$aiGrosTableau</span>)}
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="eléments-de-tableaux-à-deux-dimensions"></a><a href="#eléments-de-tableaux-à-deux-dimensions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eléments de tableaux à deux dimensions</h3>
-<p>Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…}). L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.</p>
+<p>Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.</p>
 <p>Voici quelques exemples :</p>
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">// Adresser un élément d'un tableau interprocess à deux dimensions</span><span class="hljs-keyword">
  If</span>(<span class="hljs-variable">&lt;&gt;asMotsClés{</span><span class="hljs-variable">$vlLigneSuivante}{1}</span>=<span class="hljs-string">"Stop"</span>)
@@ -192,7 +192,7 @@ If</span>(<span class="hljs-variable">&lt;&gt;asMotsClés{1}</span>=<span class=
           <span class="hljs-variable">$viValeurSuivante</span>:=<span class="hljs-variable">$aiGrosTableau{</span><span class="hljs-variable">$vlSet}{Taille tableau</span>(<span class="hljs-variable">$aiGrosTableau{</span><span class="hljs-variable">$vlSet}</span>)}
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="propriétés-attributs-dobjets"></a><a href="#propriétés-attributs-dobjets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés (attributs) d'objets</h2>
-<p>Lorsque la notation objet est activée (cf. Page Compatibilité), vous désignez un attribut d'objet (aussi appelé propriété d'objet) en saisissant son nom précédé d'un point (.) à la suite du nom de l'objet (ou de l'attribut) qui le contient. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.</p>
+<p>When object notation is enabled, you designate an object attribute (also called object property) by placing a point (&quot;.&quot;) between the name of the object (or attribute) and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.</p>
 <p>Voici quelques exemples :</p>
 <pre><code class="hljs css language-4d">monObjet.monAttribut:=<span class="hljs-string">"10"</span>
  <span class="hljs-variable">$valeur</span>:=<span class="hljs-variable">$clientObj</span>.data.address.city

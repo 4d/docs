@@ -99,8 +99,8 @@
 </table>
 <p>For information about how to create an entity selection, refer to <code>$method=entityset</code>. If you want to remove the entity selection from 4D Server's cache, use <code>$method=release</code>.</p>
 <blockquote>
-<p>4D also creates its own entity selections for optimization purposes, so the ones you create with <code>$method=entityset</code> are not the only ones returned.</p>
-<p><strong>IMPORTANT</strong> If your project is in <strong>Controlled Admin Access Mode</strong>, you must first log into the project as a user in the Admin group.</p>
+<p>4D also creates its own entity selections for optimization purposes, so the ones you create with <code>$method=entityset</code> are not the only ones returned.
+<strong>IMPORTANT</strong> If your project is in <strong>Controlled Admin Access Mode</strong>, you must first log into the project as a user in the Admin group.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="sessioninfo"></a><a href="#sessioninfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sessionInfo</h3>
 <p>For each user session, the following information is returned in the <em>sessionInfo</em> collection:</p>
@@ -120,61 +120,61 @@
 <p><code>GET /rest/$info</code></p>
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
-cacheSize: 209715200,
-usedCache: 3136000,
-entitySetCount: 4,
-entitySet: [
+<span class="hljs-symbol">cacheSize:</span> <span class="hljs-number">209715200</span>,
+<span class="hljs-symbol">usedCache:</span> <span class="hljs-number">3136000</span>,
+<span class="hljs-symbol">entitySetCount:</span> <span class="hljs-number">4</span>,
+<span class="hljs-symbol">entitySet:</span> [
     {
-        id: &quot;1418741678864021B56F8C6D77F2FC06&quot;,
-        tableName: &quot;Company&quot;,
-        selectionSize: 1,
-        sorted: false,
-        refreshed: &quot;2011-11-18T10:30:30Z&quot;,
-        expires: &quot;2011-11-18T10:35:30Z&quot;
+<span class="hljs-symbol">        id:</span> <span class="hljs-string">"1418741678864021B56F8C6D77F2FC06"</span>,
+<span class="hljs-symbol">        tableName:</span> <span class="hljs-string">"Company"</span>,
+<span class="hljs-symbol">        selectionSize:</span> <span class="hljs-number">1</span>,
+<span class="hljs-symbol">        sorted:</span> false,
+<span class="hljs-symbol">        refreshed:</span> <span class="hljs-string">"2011-11-18T10:30:30Z"</span>,
+<span class="hljs-symbol">        expires:</span> <span class="hljs-string">"2011-11-18T10:35:30Z"</span>
     },
     {
-        id: &quot;CAD79E5BF339462E85DA613754C05CC0&quot;,
-        tableName: &quot;People&quot;,
-        selectionSize: 49,
-        sorted: true,
-        refreshed: &quot;2011-11-18T10:28:43Z&quot;,
-        expires: &quot;2011-11-18T10:38:43Z&quot;
+<span class="hljs-symbol">        id:</span> <span class="hljs-string">"CAD79E5BF339462E85DA613754C05CC0"</span>,
+<span class="hljs-symbol">        tableName:</span> <span class="hljs-string">"People"</span>,
+<span class="hljs-symbol">        selectionSize:</span> <span class="hljs-number">49</span>,
+<span class="hljs-symbol">        sorted:</span> true,
+<span class="hljs-symbol">        refreshed:</span> <span class="hljs-string">"2011-11-18T10:28:43Z"</span>,
+<span class="hljs-symbol">        expires:</span> <span class="hljs-string">"2011-11-18T10:38:43Z"</span>
     },
     {
-        id: &quot;F4514C59D6B642099764C15D2BF51624&quot;,
-        tableName: &quot;People&quot;,
-        selectionSize: 37,
-        sorted: false,
-        refreshed: &quot;2011-11-18T10:24:24Z&quot;,
-        expires: &quot;2011-11-18T12:24:24Z&quot;
+<span class="hljs-symbol">        id:</span> <span class="hljs-string">"F4514C59D6B642099764C15D2BF51624"</span>,
+<span class="hljs-symbol">        tableName:</span> <span class="hljs-string">"People"</span>,
+<span class="hljs-symbol">        selectionSize:</span> <span class="hljs-number">37</span>,
+<span class="hljs-symbol">        sorted:</span> false,
+<span class="hljs-symbol">        refreshed:</span> <span class="hljs-string">"2011-11-18T10:24:24Z"</span>,
+<span class="hljs-symbol">        expires:</span> <span class="hljs-string">"2011-11-18T12:24:24Z"</span>
     }
 ],
-ProgressInfo: [
+<span class="hljs-symbol">ProgressInfo:</span> [
     {
-        UserInfo: &quot;flushProgressIndicator&quot;,
-        sessions: 0,
-        percent: 0
+<span class="hljs-symbol">        UserInfo:</span> <span class="hljs-string">"flushProgressIndicator"</span>,
+<span class="hljs-symbol">        sessions:</span> <span class="hljs-number">0</span>,
+<span class="hljs-symbol">        percent:</span> <span class="hljs-number">0</span>
     },
     {
-        UserInfo: &quot;indexProgressIndicator&quot;,
-        sessions: 0,
-        percent: 0
+<span class="hljs-symbol">        UserInfo:</span> <span class="hljs-string">"indexProgressIndicator"</span>,
+<span class="hljs-symbol">        sessions:</span> <span class="hljs-number">0</span>,
+<span class="hljs-symbol">        percent:</span> <span class="hljs-number">0</span>
     }
 ],
-sessionInfo: [ 
+<span class="hljs-symbol">sessionInfo:</span> [ 
     {
-        sessionID: &quot;6657ABBCEE7C3B4089C20D8995851E30&quot;,
-        userID: &quot;36713176D42DB045B01B8E650E8FA9C6&quot;,
-        userName: &quot;james&quot;,
-        lifeTime: 3600,
-        expiration: &quot;2013-04-22T12:45:08Z&quot;
+<span class="hljs-symbol">        sessionID:</span> <span class="hljs-string">"6657ABBCEE7C3B4089C20D8995851E30"</span>,
+<span class="hljs-symbol">        userID:</span> <span class="hljs-string">"36713176D42DB045B01B8E650E8FA9C6"</span>,
+<span class="hljs-symbol">        userName:</span> <span class="hljs-string">"james"</span>,
+<span class="hljs-symbol">        lifeTime:</span> <span class="hljs-number">3600</span>,
+<span class="hljs-symbol">        expiration:</span> <span class="hljs-string">"2013-04-22T12:45:08Z"</span>
     },
     {
-        sessionID: &quot;A85F253EDE90CA458940337BE2939F6F&quot;,
-        userID: &quot;00000000000000000000000000000000&quot;,
-        userName: &quot;default guest&quot;,
-        lifeTime: 3600,
-        expiration: &quot;2013-04-23T10:30:25Z&quot;
+<span class="hljs-symbol">        sessionID:</span> <span class="hljs-string">"A85F253EDE90CA458940337BE2939F6F"</span>,
+<span class="hljs-symbol">        userID:</span> <span class="hljs-string">"00000000000000000000000000000000"</span>,
+<span class="hljs-symbol">        userName:</span> <span class="hljs-string">"default guest"</span>,
+<span class="hljs-symbol">        lifeTime:</span> <span class="hljs-number">3600</span>,
+<span class="hljs-symbol">        expiration:</span> <span class="hljs-string">"2013-04-23T10:30:25Z"</span>
 }
 ]
 }

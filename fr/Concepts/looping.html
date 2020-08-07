@@ -81,7 +81,7 @@
 </code></pre>
 <p>Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de manière incontrôlée), vous pouvez utiliser les fonctions de débogage de 4D et remonter à la source du problème. Pour plus d'informations sur ce point, reportez-vous à la section <a href="/docs/fr/Concepts/error-handling.html">Débogueur</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
-<pre><code class="hljs css language-4d"><span class="hljs-function"> CONFIRM</span>(<span class="hljs-string">"Add a new record?"</span>) <span class="hljs-comment">// Est-ce que l'utilisateur veut ajouter un enregistrement?</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function"> CONFIRM</span>(<span class="hljs-string">"Add a new record?"</span>) <span class="hljs-comment">//L'utilisateur souhaite-t-il ajouter un enregistrement ?</span><span class="hljs-keyword">
  While</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">// Tant que l'utilisateur accepte</span>
 <span class="hljs-function">    ADD RECORD</span>([aTable]) <span class="hljs-comment">// Ajouter un nouvel enregistrement</span><span class="hljs-keyword">
 End while</span> <span class="hljs-comment">// Une boucle While se termine toujours par End while</span>
@@ -371,9 +371,9 @@ For</span>(<span class="hljs-variable">$vlCounter</span>;<span class="hljs-numbe
  End for each</span>
 </code></pre>
 <pre><code class="hljs">{
-    &quot;firstname&quot;: &quot;GREGORY&quot;,
-    &quot;lastname&quot;: &quot;BADIKORA&quot;,
-    &quot;age&quot;: 20
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"GREGORY"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"BADIKORA"</span>,
+    <span class="hljs-attr">"age"</span>: <span class="hljs-number">20</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="paramètres-début--fin"></a><a href="#paramètres-début--fin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paramètres début / fin</h3>
@@ -387,8 +387,8 @@ For</span>(<span class="hljs-variable">$vlCounter</span>;<span class="hljs-numbe
 <p>Par exemple:</p>
 <ul>
 <li>une collection contient 10 éléments (numérotés de 0 à 9)</li>
-<li>début=-4 -&gt; début=-4+10=6 -&gt; l'itération démarre au 6e élément (numéro 5)</li>
-<li>fin=-2 -&gt; fin=-2+10=8 -&gt; l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément.</li>
+<li>début=-4 &gt; début=-4+10=6 &gt; l'itération démarre au 6e élément (numéro 5)</li>
+<li>fin=-2 &gt; fin=-2+10=8 &gt; l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-5"></a><a href="#exemple-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$col</span>;<span class="hljs-variable">$col2</span>)

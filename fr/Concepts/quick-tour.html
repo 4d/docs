@@ -94,7 +94,7 @@ MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme
 <p>Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :</p>
 <pre><code class="hljs css language-4d">MyOtherDate:=Current date+<span class="hljs-number">30</span>
 </code></pre>
-<p>The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with <code>var</code> cannot change the type. In <a href="/docs/fr/Concepts/interpreted-compiled.html">compiled mode</a> however, the type can never be changed, regardless of how the variable was declared.</p>
+<p>La ligne de code indique &quot;MyOtherDate obtient la date actuelle plus 30 jours.&quot; This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with <code>var</code> cannot change the type. In <a href="/docs/fr/Concepts/interpreted-compiled.html">compiled mode</a> however, the type can never be changed, regardless of how the variable was declared.</p>
 <h2><a class="anchor" aria-hidden="true" id="commandes"></a><a href="#commandes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commandes</h2>
 <p>Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que <code>CREATE RECORD</code> ou <code>ALERT</code>, sont décrites dans le <em>Manuel Langage de 4D</em>, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">COPY DOCUMENT</span>(<span class="hljs-string">"dossier1\\nom1"</span>;<span class="hljs-string">"dossier2\\"</span> ; <span class="hljs-string">"nouveau"</span>)
@@ -162,9 +162,9 @@ End for</span>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].age
 </code></pre>
 <p>A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :</p>
-<pre><code class="hljs">$f:=New object
-$f.message:=New formula(ALERT(&quot;Hello world!&quot;))
-$f.message() //affiche &quot;Hello world!&quot;
+<pre><code class="hljs"><span class="hljs-built_in">$f</span>:=<span class="hljs-keyword">New</span> object
+<span class="hljs-built_in">$f</span>.message:=<span class="hljs-keyword">New</span> formula(ALERT(<span class="hljs-string">"Hello world!"</span>))
+<span class="hljs-built_in">$f</span>.message() <span class="hljs-comment">//affiche "Hello world!"</span>
 </code></pre>
 <p>Pour accéder à un élément de collection, vous devez passer le numéro de l'élément situé entre crochets :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_COLLECTION</span>(myColl)
@@ -172,18 +172,18 @@ myColl:=<span class="hljs-function">New collection</span>(<span class="hljs-stri
 myColl[<span class="hljs-number">3</span>]  <span class="hljs-comment">//accède au 4ème élément de la collection</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="classes"></a><a href="#classes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classes</h2>
-<p>The 4D language supports object classes. Add a <code>myClass.4dm</code> file in the Project/Sources/Classes folder of a project to create a class named &quot;myClass&quot;.</p>
-<p>To instantiate an object of the class in a method, call the user class from the <em>class store</em> (<code>cs</code>) and use the <code>new()</code> member function. You can pass parameters.</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// in a 4D method</span>
+<p>Le langage 4D prend en charge les classes d'objets. Ajoutez un fichier <code>myClass.4dm</code> dans le dossier Project/Sources/Classes d'un projet pour créer une classe nommée &quot;myClass&quot;.</p>
+<p>To instantiate an object of the class in a method, call the user class from the <em>class store</em> (<code>cs</code>) and use the <code>new()</code> member function. Vous pouvez passer des paramètres.</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// dans une méthode 4D</span>
 <span class="hljs-variable">$o</span>:=cs.myClass.<span class="hljs-function">new</span>() 
 </code></pre>
-<p>In the <code>myClass</code> class method, use the <code>Function &lt;methodName&gt;</code> statement to define the <em>methodName</em> class member method. A class member method can receive and return parameters like any method, and use <code>This</code> as the object instance.</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//in the myClass.4dm file</span><span class="hljs-keyword">
-Function</span> hello
-<span class="hljs-function">  C_TEXT</span>(<span class="hljs-variable">$0</span>)
-  <span class="hljs-variable">$0</span>:=<span class="hljs-string">"Hello "</span>+<span class="hljs-literal">This</span>.who
+<p>In the <code>myClass</code> class method, use the <code>Function &lt;methodName&gt;</code>  statement to define the <em>methodName</em> class member method. Une méthode membre de classe peut recevoir et retourner des paramètres comme n'importe quelle méthode, et utiliser <code>This</code> comme instance d'objet.</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// dans le fichier myClass.4dm</span>
+Fonction bonjour
+<span class="hljs-function">  C_TEXT </span>(<span class="hljs-number">0</span> $)
+  <span class="hljs-variable">$0</span>: = <span class="hljs-string">"Hello"</span> + <span class="hljs-literal">This</span>.who
 </code></pre>
-<p>To execute a class member method, just use the <code>()</code> operator on the member method of the object instance.</p>
+<p>Pour exécuter une méthode membre de classe, utilisez simplement l'opérateur <code>()</code> sur la méthode membre de l'instance d'objet.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=cs.myClass.<span class="hljs-function">new</span>()
 <span class="hljs-variable">$o</span>.who:=<span class="hljs-string">"World"</span>
 <span class="hljs-variable">$message</span>:=<span class="hljs-variable">$o</span>.myClass.<span class="hljs-function">hello</span>()  
@@ -197,7 +197,7 @@ Class constructor</span>
 <span class="hljs-literal">This</span>.width:=<span class="hljs-variable">$2  </span>
 <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Rectangle"</span>
 </code></pre>
-<p>A class can inherit from another class by using <code>Class inherits &lt;ClassName&gt;</code>. Superclasses can be called using the <code>Super</code> command. Par exemple:</p>
+<p>A class can extend another class by using <code>Class extends &lt;ClassName&gt;</code>. Superclasses can be called using the <code>Super</code> command. Par exemple:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//in the Square.4dm file</span><span class="hljs-keyword">
 Class extends</span> rectangle<span class="hljs-keyword">
 
@@ -238,7 +238,7 @@ Class constructor</span>
 <h2><a class="anchor" aria-hidden="true" id="expressions"></a><a href="#expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions</h2>
 <p>Pour parler simplement, les expressions retournent une valeur. En fait, lorsque vous programmez avec 4D, vous utilisez systématiquement des expressions et avez tendance à les manipuler uniquement à travers la valeur qu’elles représentent. Les expressions sont aussi appelées formules.</p>
 <p>Les expressions peuvent être constituées de presque tous les éléments du langage : commandes, opérateurs, variables, champs, propriétés d'objets et éléments de collection. Vous utilisez des expressions pour écrire des lignes de code, qui sont à leur tour utilisées pour construire des méthodes. Des expressions sont employées à chaque fois que le langage 4D a besoin de connaître la valeur d’une donnée.</p>
-<p>Les expressions sont rarement “indépendantes”. Il n’y a que peu d’endroits dans 4D où une expression peut être utilisée en tant que telle. Par exemple :</p>
+<p>Les expressions sont rarement «autonomes». Il existe plusieurs endroits dans 4D où une expression peut être utilisée seule. Par exemple :</p>
 <ul>
 <li>Editeur de formule (apply formula, query with formula, order by formula)</li>
 <li>La commande <code>EXECUTE FORMULA</code></li>
@@ -255,7 +255,7 @@ Class constructor</span>
 <tbody>
 <tr><td>“Bonjour”</td><td>Chaine</td><td>Le mot Bonjour est une constante chaîne, signalée par les guillemets.</td></tr>
 <tr><td>“Bonjour ” + “à tous”</td><td>Chaine</td><td>Deux chaînes, “Bonjour ” et “à tous”, sont mises bout à bout (concaténées) à l'aide de l'opérateur de concaténation de chaînes (+). La chaîne “Bonjour à tous” est retournée.</td></tr>
-<tr><td>“M. ” + [Amis]Nom</td><td>Chaine</td><td>Deux chaînes sont concaténées : la chaîne “M. ” et la valeur courante du champ Nom de la table Amis. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.</td></tr>
+<tr><td>“Mr. ” + [Personnes]Nom</td><td>Chaine</td><td>Deux chaînes sont concaténées : la chaîne &quot;Mr.&quot; et la valeur courante du champ Nom dans la table Personnes. Si le champ contient “Dupont”, l'expression retourne “M. Dupont”.</td></tr>
 <tr><td>Uppercase(&quot;smith&quot;)</td><td>Chaine</td><td>Cette expression utilise <code>Uppercase</code>, une commande du langage, pour convertir la chaîne &quot;dupont&quot; en majuscules. Elle retourne “DUPONT”.</td></tr>
 <tr><td>4</td><td>Nombre</td><td>C'est une constante numérique, 4.</td></tr>
 <tr><td>4 * 2</td><td>Nombre</td><td>Deux nombres, 4 et 2, sont multipliés à l'aide de l'opérateur de multiplication (*). Le résultat est le nombre 8.</td></tr>
@@ -268,13 +268,13 @@ Class constructor</span>
 <tr><td>10 # 20</td><td>Booléen</td><td>C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.</td></tr>
 <tr><td>“ABC” = “XYZ”</td><td>Booléen</td><td>C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.</td></tr>
 <tr><td>MonImage + 50</td><td>Image</td><td>Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.</td></tr>
-<tr><td>-&gt;[Amis]Nom</td><td>Pointeur</td><td>Cette expression retourne un pointeur vers le champ [Amis]Nom.</td></tr>
+<tr><td>-&gt;[Personnes]Nom</td><td>Pointeur</td><td>Cette expression retourne un pointeur vers le champ [Amis]Nom.</td></tr>
 <tr><td>Table(1)</td><td>Pointeur</td><td>C'est une commande qui retourne un pointeur vers la première table.</td></tr>
 <tr><td>JSON Parse (MaChaine)</td><td>Objet</td><td>C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)</td></tr>
 <tr><td>JSON Parse (MonTabJSON)</td><td>Collection</td><td>C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)</td></tr>
 <tr><td>Form.pageNumber</td><td>Propriété objet</td><td>Une propriété objet est une expression qui peut être de tout type</td></tr>
 <tr><td>Col[5]</td><td>Élément de collection</td><td>Un élément de collection est une expression qui peut être de tout type</td></tr>
-<tr><td>$entitySel[0]</td><td>Entity</td><td>Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est <strong>pas assignable</strong></td></tr>
+<tr><td>$entitySel[0]</td><td>Entity</td><td>Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est <strong>pas affectable</strong></td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="expressions-assignables-et-non-assignables"></a><a href="#expressions-assignables-et-non-assignables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions assignables et non-assignables</h3>
@@ -312,7 +312,7 @@ For</span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number
   End for</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="commentaires-en-ligne-ou-multi-lignes--"></a><a href="#commentaires-en-ligne-ou-multi-lignes--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commentaires en ligne ou multi-lignes (/* */)</h4>
-<p>Entourez le contenu avec les caractères <code>/*...*/</code> pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par <code>/*</code> et se terminent par <code>*/</code>.</p>
+<p>Entourez le contenu avec des caractères <code>/*</code> ... <code>*/</code> pour créer des commentaires en ligne ou des blocs de commentaires multilignes. Les blocs de commentaire en ligne et multi-lignes commencent par <code>/*</code> et se terminent par <code>*/</code>.</p>
 <ul>
 <li>Les <strong>lignes de commentaires en ligne</strong> - peuvent être insérées n'importe où dans le code. Exemple :</li>
 </ul>

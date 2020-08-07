@@ -77,21 +77,21 @@
 <li><p>Saisir une liste de valeurs par défaut dans les propriétés de l’objet<Static List>Pour cela, dans le thème <a href="/docs/fr/FormObjects/propertiesDataSource.html">Sources de données</a> de la Liste des propriétés, sélectionnez &quot;&quot;. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.</p></li>
 <li><p>Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple:</p></li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-function">  ARRAY TEXT</span>(<span class="hljs-variable">$aCities</span>;<span class="hljs-number">6</span>) 
-  <span class="hljs-variable">$aCities{1}</span>:=<span class="hljs-string">"Philadelphie"</span> 
-  <span class="hljs-variable">$aCities{2}</span>:=<span class="hljs-string">"Pittsburg"</span> 
-  <span class="hljs-variable">$aCities{3}</span>:=<span class="hljs-string">"Grand Blanc"</span> 
-  <span class="hljs-variable">$aCities{4}</span>:=<span class="hljs-string">"Bad Axe"</span> 
-  <span class="hljs-variable">$aCities{5}</span>:=<span class="hljs-string">"Frostbite Falls"</span> 
-  <span class="hljs-variable">$aCities{6}</span>:=<span class="hljs-string">"Green Bay"</span> 
+<pre><code class="hljs css language-4d"><span class="hljs-function">  ARRAY TEXT</span>(aCities;<span class="hljs-number">6</span>) 
+  aCities{<span class="hljs-number">1</span>}:=<span class="hljs-string">"Philadelphia"</span> 
+  aCities{<span class="hljs-number">2</span>}:=<span class="hljs-string">"Pittsburg"</span> 
+  aCities{<span class="hljs-number">3</span>}:=<span class="hljs-string">"Grand Blanc"</span> 
+  aCities{<span class="hljs-number">4</span>}:=<span class="hljs-string">"Bad Axe"</span> 
+  aCities{<span class="hljs-number">5</span>}:=<span class="hljs-string">"Frostbite Falls"</span> 
+  aCities{<span class="hljs-number">6</span>}:=<span class="hljs-string">"Green Bay"</span> 
 </code></pre>
-<p>In this case, the name of the variable associated with the object in the form must be <em>$aCities</em>. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire <code>Sur chargement</code> se produit.</p>
+<p>In this case, the name of the variable associated with the object in the form must be <em>aCities</em>. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire <code>Sur chargement</code> se produit.</p>
 <ul>
 <li>Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html">LIST TO ARRAY</a>. Par exemple:</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-function">   LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;<span class="hljs-variable">$aCities</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">   LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;aCities)
 </code></pre>
-<p>In this case also, the name of the variable associated with the object in the form must be <em>$aCities</em>. Ce code peut être exécuté à la place de celui proposé plus haut.</p>
+<p>In this case also, the name of the variable associated with the object in the form must be <em>aCities</em>. Ce code peut être exécuté à la place de celui proposé plus haut.</p>
 <p>Si vous voulez stocker dans un champ le choix de l’utilisateur, il est nécessaire d’écrire du code pour affecter les valeurs et de l’exécuter après la validation de l’enregistrement. Ce code pourrait être le suivant :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">  Case of</span>
     :(Form event=On Load)

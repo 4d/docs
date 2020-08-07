@@ -71,7 +71,7 @@
 <li>Zeiten werden im 24 Stundenformat angezeigt.</li>
 <li>Ein Wert vom Typ Zeit kann wie eine Zahl behandelt werden. Die von einer Zeit zurückgegebene Zahl ist die Anzahl Sekunden ab Mitternacht (00:00:00).</li>
 </ul>
-<p><strong>Hinweis:</strong> Im Handbuch 4D Programmiersprache werden Zeitparameter in der Beschreibung der Befehle generell als Zeit bezeichnet, außer es ist anders angegeben.</p>
+<p><strong>Note:</strong> In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.</p>
 <h2><a class="anchor" aria-hidden="true" id="zeitformate"></a><a href="#zeitformate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Zeitformate</h2>
 <p>Eine Zeitkonstante steht zwischen Fragezeichen (?...?).</p>
 <p>Ein Zeitformat erscheint in der Reihenfolge Stunde:Minute:Sekunde, getrennt durch Doppelpunkt (:). Zeiten erscheinen im 24-Stunden Format.</p>
@@ -81,7 +81,7 @@
 <span class="hljs-literal">?13:01:59?</span> <span class="hljs-comment">` 13 Uhr, 1 Minute und 59 Sekunden</span>
 </code></pre>
 <p>Eine Nullzeit wird als ?00:00:00? angegeben</p>
-<p><strong>Tipp:</strong> Der Methodeneditor hat ein Tastaturkürzel für Nullzeit. Tippen Sie ein Fragezeichen (?) und drücken die Eingabetaste.</p>
+<p><strong>Tip:</strong> The Method Editor includes a shortcut for entering a null time. Tippen Sie ein Fragezeichen (?) und drücken die Eingabetaste.</p>
 <h2><a class="anchor" aria-hidden="true" id="zeitoperatoren"></a><a href="#zeitoperatoren" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Zeitoperatoren</h2>
 <table>
 <thead>
@@ -101,13 +101,13 @@
 <tr><td></td><td></td><td></td><td>?01:02:03? = ?01:02:04?</td><td>Falsch</td></tr>
 <tr><td>Ungleichheit</td><td>Zeit # Zeit</td><td>Boolean</td><td>?01:02:03? # ?01:02:04?</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? # ?01:02:03?</td><td>Falsch</td></tr>
-<tr><td>Größer als</td><td>Zeit &gt; Zeit</td><td>Boolean</td><td>?01:02:04? &gt; ?01:02:03?</td><td>Wahr</td></tr>
+<tr><td>Größer als</td><td>Time &gt; Time</td><td>Boolean</td><td>?01:02:04? &gt; ?01:02:03?</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? &gt; ?01:02:03?</td><td>Falsch</td></tr>
-<tr><td>Kleiner als</td><td>Zeit &lt; Zeit</td><td>Boolean</td><td>?01:02:03? &lt; ?01:02:04?</td><td>Wahr</td></tr>
+<tr><td>Kleiner als</td><td>Time &lt; Time</td><td>Boolean</td><td>?01:02:03? &lt; ?01:02:04?</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? &lt; ?01:02:03?</td><td>Falsch</td></tr>
-<tr><td>Größer als oder gleich</td><td>Zeit &gt;= Zeit</td><td>Boolean</td><td>?01:02:03? &gt;=?01:02:03?</td><td>Wahr</td></tr>
+<tr><td>Größer als oder gleich</td><td>Time &gt;= Time</td><td>Boolean</td><td>?01:02:03? &gt;=?01:02:03?</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:03? &gt;=?01:02:04?</td><td>Falsch</td></tr>
-<tr><td>Kleiner als oder gleich</td><td>Zeit &lt;= Time</td><td>Boolean</td><td>?01:02:03? &lt;=?01:02:03?</td><td>Wahr</td></tr>
+<tr><td>Kleiner als oder gleich</td><td>Time &lt;= Time</td><td>Boolean</td><td>?01:02:03? &lt;=?01:02:03?</td><td>Wahr</td></tr>
 <tr><td></td><td></td><td></td><td>?01:02:04? &lt;=?01:02:03?</td><td>Falsch</td></tr>
 </tbody>
 </table>

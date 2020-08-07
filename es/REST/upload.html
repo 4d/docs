@@ -80,28 +80,29 @@
 <p><code>POST /rest/Employee/?$method=update</code></p>
 <p><strong>POST data</strong>:</p>
 <pre><code class="hljs">{
-    __KEY: &quot;12&quot;,
-    __STAMP: 4,
-    photo: { &quot;ID&quot;: &quot;D507BC03E613487E9B4C2F6A0512FE50&quot; } 
+    <span class="hljs-attribute">__KEY</span>: <span class="hljs-string">"12"</span>,
+    __STAMP: <span class="hljs-number">4</span>,
+    photo: { <span class="hljs-string">"ID"</span>: <span class="hljs-string">"D507BC03E613487E9B4C2F6A0512FE50"</span> } 
 }
 </code></pre>
 <p><strong>Response</strong>:</p>
 <p>The modified entity is returned:</p>
 <pre><code class="hljs">{
-    &quot;__KEY&quot;: &quot;12&quot;, 
-    &quot;__STAMP&quot;: 5, 
-    &quot;uri&quot;: &quot;http://127.0.0.1:8081/rest/Employee(12)&quot;, 
-    &quot;ID&quot;: 12, 
-    &quot;firstName&quot;: &quot;John&quot;, 
-    &quot;firstName&quot;: &quot;Smith&quot;,
-    &quot;photo&quot;:
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"12"</span>, 
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">5</span>, 
+    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Employee(12)"</span>, 
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">12</span>, 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"John"</span>, 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Smith"</span>,
+    <span class="hljs-attr">"photo"</span>:
     {
-        &quot;__deferred&quot;:
+        <span class="hljs-attr">"__deferred"</span>:
         {
-            &quot;uri&quot;: &quot;/rest/Employee(12)/photo?$imageformat=best&amp;$version=1&amp;$expand=photo&quot;,
-            &quot;image&quot;: true
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Employee(12)/photo?$imageformat=best&amp;$version=1&amp;$expand=photo"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-literal">true</span>
         }
-    },}</code></pre>
+    },}
+</code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/REST/info.html"><span class="arrow-prev">← </span><span>$info</span></a><a class="docs-next button" href="/docs/es/REST/%7BdataClass%7D.html"><span class="function-name-prevnext">{dataClass}</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#image-upload-example">Image upload example</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

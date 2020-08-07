@@ -130,34 +130,34 @@
 <p><code>GET /rest/People/firstName,lastName/</code></p>
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
-    __entityModel: &quot;People&quot;,
-    __COUNT: 4,
-    __SENT: 4,
-    __FIRST: 0,
-    __ENTITIES: [
+<span class="hljs-symbol">    __entityModel:</span> <span class="hljs-string">"People"</span>,
+<span class="hljs-symbol">    __COUNT:</span> <span class="hljs-number">4</span>,
+<span class="hljs-symbol">    __SENT:</span> <span class="hljs-number">4</span>,
+<span class="hljs-symbol">    __FIRST:</span> <span class="hljs-number">0</span>,
+<span class="hljs-symbol">    __ENTITIES:</span> [
         {
-            __KEY: &quot;1&quot;,
-            __STAMP: 1,
-            firstName: &quot;John&quot;,
-            lastName: &quot;Smith&quot;
+<span class="hljs-symbol">            __KEY:</span> <span class="hljs-string">"1"</span>,
+<span class="hljs-symbol">            __STAMP:</span> <span class="hljs-number">1</span>,
+<span class="hljs-symbol">            firstName:</span> <span class="hljs-string">"John"</span>,
+<span class="hljs-symbol">            lastName:</span> <span class="hljs-string">"Smith"</span>
         },
         {
-            __KEY: &quot;2&quot;,
-            __STAMP: 2,
-            firstName: &quot;Susan&quot;,
-            lastName: &quot;O'Leary&quot;
+<span class="hljs-symbol">            __KEY:</span> <span class="hljs-string">"2"</span>,
+<span class="hljs-symbol">            __STAMP:</span> <span class="hljs-number">2</span>,
+<span class="hljs-symbol">            firstName:</span> <span class="hljs-string">"Susan"</span>,
+<span class="hljs-symbol">            lastName:</span> <span class="hljs-string">"O'Leary"</span>
         },
         {
-            __KEY: &quot;3&quot;,
-            __STAMP: 2,
-            firstName: &quot;Pete&quot;,
-            lastName: &quot;Marley&quot;
+<span class="hljs-symbol">            __KEY:</span> <span class="hljs-string">"3"</span>,
+<span class="hljs-symbol">            __STAMP:</span> <span class="hljs-number">2</span>,
+<span class="hljs-symbol">            firstName:</span> <span class="hljs-string">"Pete"</span>,
+<span class="hljs-symbol">            lastName:</span> <span class="hljs-string">"Marley"</span>
         },
         {
-            __KEY: &quot;4&quot;,
-            __STAMP: 1,
-            firstName: &quot;Beth&quot;,
-            lastName: &quot;Adams&quot;
+<span class="hljs-symbol">            __KEY:</span> <span class="hljs-string">"4"</span>,
+<span class="hljs-symbol">            __STAMP:</span> <span class="hljs-number">1</span>,
+<span class="hljs-symbol">            firstName:</span> <span class="hljs-string">"Beth"</span>,
+<span class="hljs-symbol">            lastName:</span> <span class="hljs-string">"Adams"</span>
         }
     ]
 }
@@ -165,16 +165,16 @@
 <p><code>GET /rest/People/firstName,lastName/?$filter=&quot;lastName='A@'&quot;/</code></p>
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
-    __entityModel: &quot;People&quot;,
-    __COUNT: 1,
-    __SENT: 1,
-    __FIRST: 0,
-    __ENTITIES: [
+<span class="hljs-symbol">    __entityModel:</span> <span class="hljs-string">"People"</span>,
+<span class="hljs-symbol">    __COUNT:</span> <span class="hljs-number">1</span>,
+<span class="hljs-symbol">    __SENT:</span> <span class="hljs-number">1</span>,
+<span class="hljs-symbol">    __FIRST:</span> <span class="hljs-number">0</span>,
+<span class="hljs-symbol">    __ENTITIES:</span> [
         {
-            __KEY: &quot;4&quot;,
-            __STAMP: 4,
-            firstName: &quot;Beth&quot;,
-            lastName: &quot;Adams&quot;
+<span class="hljs-symbol">            __KEY:</span> <span class="hljs-string">"4"</span>,
+<span class="hljs-symbol">            __STAMP:</span> <span class="hljs-number">4</span>,
+<span class="hljs-symbol">            firstName:</span> <span class="hljs-string">"Beth"</span>,
+<span class="hljs-symbol">            lastName:</span> <span class="hljs-string">"Adams"</span>
         }
     ]
 }
@@ -184,31 +184,31 @@
 <p><code>GET /rest/People(3)/firstName,lastName/</code></p>
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
-    __entityModel: &quot;People&quot;,
-    __KEY: &quot;3&quot;,
-    __STAMP: 2,
-    firstName: &quot;Pete&quot;,
-    lastName: &quot;Marley&quot;
+<span class="hljs-symbol">    __entityModel:</span> <span class="hljs-string">"People"</span>,
+<span class="hljs-symbol">    __KEY:</span> <span class="hljs-string">"3"</span>,
+<span class="hljs-symbol">    __STAMP:</span> <span class="hljs-number">2</span>,
+<span class="hljs-symbol">    firstName:</span> <span class="hljs-string">"Pete"</span>,
+<span class="hljs-symbol">    lastName:</span> <span class="hljs-string">"Marley"</span>
 }
 </code></pre>
 <p><code>GET /rest/People(3)/</code></p>
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
-    __entityModel: &quot;People&quot;,
-    __KEY: &quot;3&quot;,
-    __STAMP: 2,
-    ID: 3,
-    firstName: &quot;Pete&quot;,
-    lastName: &quot;Marley&quot;,
-    salary: 30000,
-    employer: {
-        __deferred: {
-            uri: &quot;http://127.0.0.1:8081/rest/Company(3)&quot;,
-            __KEY: &quot;3&quot;
+<span class="hljs-symbol">    __entityModel:</span> <span class="hljs-string">"People"</span>,
+<span class="hljs-symbol">    __KEY:</span> <span class="hljs-string">"3"</span>,
+<span class="hljs-symbol">    __STAMP:</span> <span class="hljs-number">2</span>,
+<span class="hljs-symbol">    ID:</span> <span class="hljs-number">3</span>,
+<span class="hljs-symbol">    firstName:</span> <span class="hljs-string">"Pete"</span>,
+<span class="hljs-symbol">    lastName:</span> <span class="hljs-string">"Marley"</span>,
+<span class="hljs-symbol">    salary:</span> <span class="hljs-number">30000</span>,
+<span class="hljs-symbol">    employer:</span> {
+<span class="hljs-symbol">        __deferred:</span> {
+<span class="hljs-symbol">            uri:</span> <span class="hljs-string">"http://127.0.0.1:8081/rest/Company(3)"</span>,
+<span class="hljs-symbol">            __KEY:</span> <span class="hljs-string">"3"</span>
         }
     },
-    fullName: &quot;Pete Marley&quot;,
-    employerName: &quot;microsoft&quot;
+<span class="hljs-symbol">    fullName:</span> <span class="hljs-string">"Pete Marley"</span>,
+<span class="hljs-symbol">    employerName:</span> <span class="hljs-string">"microsoft"</span>
 
 }
 </code></pre>

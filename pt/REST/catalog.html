@@ -98,16 +98,16 @@
 <p><code>GET /rest/$catalog</code></p>
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
-    dataClasses: [
+    <span class="hljs-attribute">dataClasses</span>: [
         {
-            name: &quot;Company&quot;,
-            uri: &quot;http://127.0.0.1:8081/rest/$catalog/Company&quot;,
-            dataURI: &quot;http://127.0.0.1:8081/rest/Company&quot;
+            name: <span class="hljs-string">"Company"</span>,
+            uri: <span class="hljs-string">"http://127.0.0.1:8081/rest/$catalog/Company"</span>,
+            dataURI: <span class="hljs-string">"http://127.0.0.1:8081/rest/Company"</span>
         },
         {
-            name: &quot;Employee&quot;,
-            uri: &quot;http://127.0.0.1:8081/rest/$catalog/Employee&quot;,
-            dataURI: &quot;http://127.0.0.1:8081/rest/Employee&quot;
+            <span class="hljs-attribute">name</span>: <span class="hljs-string">"Employee"</span>,
+            uri: <span class="hljs-string">"http://127.0.0.1:8081/rest/$catalog/Employee"</span>,
+            dataURI: <span class="hljs-string">"http://127.0.0.1:8081/rest/Employee"</span>
         }
     ]
 }
@@ -122,99 +122,99 @@
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
 
-    &quot;dataClasses&quot;: [
+    <span class="hljs-attr">"dataClasses"</span>: [
         {
-            &quot;name&quot;: &quot;Company&quot;,
-            &quot;className&quot;: &quot;Company&quot;,
-            &quot;collectionName&quot;: &quot;CompanySelection&quot;,
-            &quot;tableNumber&quot;: 2,
-            &quot;scope&quot;: &quot;public&quot;,
-            &quot;dataURI&quot;: &quot;/rest/Company&quot;,
-            &quot;attributes&quot;: [
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Company"</span>,
+            <span class="hljs-attr">"className"</span>: <span class="hljs-string">"Company"</span>,
+            <span class="hljs-attr">"collectionName"</span>: <span class="hljs-string">"CompanySelection"</span>,
+            <span class="hljs-attr">"tableNumber"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+            <span class="hljs-attr">"dataURI"</span>: <span class="hljs-string">"/rest/Company"</span>,
+            <span class="hljs-attr">"attributes"</span>: [
                 {
-                    &quot;name&quot;: &quot;ID&quot;,
-                    &quot;kind&quot;: &quot;storage&quot;,
-                    &quot;fieldPos&quot;: 1,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;indexed&quot;: true,
-                    &quot;type&quot;: &quot;long&quot;,
-                    &quot;identifying&quot;: true
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ID"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"storage"</span>,
+                    <span class="hljs-attr">"fieldPos"</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"long"</span>,
+                    <span class="hljs-attr">"identifying"</span>: <span class="hljs-literal">true</span>
                 },
                 {
-                    &quot;name&quot;: &quot;name&quot;,
-                    &quot;kind&quot;: &quot;storage&quot;,
-                    &quot;fieldPos&quot;: 2,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;type&quot;: &quot;string&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"name"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"storage"</span>,
+                    <span class="hljs-attr">"fieldPos"</span>: <span class="hljs-number">2</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>
                 },
                 {
-                    &quot;name&quot;: &quot;revenues&quot;,
-                    &quot;kind&quot;: &quot;storage&quot;,
-                    &quot;fieldPos&quot;: 3,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;type&quot;: &quot;number&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"revenues"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"storage"</span>,
+                    <span class="hljs-attr">"fieldPos"</span>: <span class="hljs-number">3</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"number"</span>
                 },
                 {
-                    &quot;name&quot;: &quot;staff&quot;,
-                    &quot;kind&quot;: &quot;relatedEntities&quot;,
-                    &quot;fieldPos&quot;: 4,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;type&quot;: &quot;EmployeeSelection&quot;,
-                    &quot;reversePath&quot;: true,
-                    &quot;path&quot;: &quot;employer&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"staff"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"relatedEntities"</span>,
+                    <span class="hljs-attr">"fieldPos"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmployeeSelection"</span>,
+                    <span class="hljs-attr">"reversePath"</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"employer"</span>
                 },
                 {
-                    &quot;name&quot;: &quot;url&quot;,
-                    &quot;kind&quot;: &quot;storage&quot;,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;type&quot;: &quot;string&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"url"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"storage"</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>
                 }
             ],
-            &quot;key&quot;: [
+            <span class="hljs-attr">"key"</span>: [
                 {
-                    &quot;name&quot;: &quot;ID&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ID"</span>
                 }
             ]
         },
         {
-            &quot;name&quot;: &quot;Employee&quot;,
-            &quot;className&quot;: &quot;Employee&quot;,
-            &quot;collectionName&quot;: &quot;EmployeeSelection&quot;,
-            &quot;tableNumber&quot;: 1,
-            &quot;scope&quot;: &quot;public&quot;,
-            &quot;dataURI&quot;: &quot;/rest/Employee&quot;,
-            &quot;attributes&quot;: [
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Employee"</span>,
+            <span class="hljs-attr">"className"</span>: <span class="hljs-string">"Employee"</span>,
+            <span class="hljs-attr">"collectionName"</span>: <span class="hljs-string">"EmployeeSelection"</span>,
+            <span class="hljs-attr">"tableNumber"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+            <span class="hljs-attr">"dataURI"</span>: <span class="hljs-string">"/rest/Employee"</span>,
+            <span class="hljs-attr">"attributes"</span>: [
                 {
-                    &quot;name&quot;: &quot;ID&quot;,
-                    &quot;kind&quot;: &quot;storage&quot;,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;indexed&quot;: true,
-                    &quot;type&quot;: &quot;long&quot;,
-                    &quot;identifying&quot;: true
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ID"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"storage"</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"long"</span>,
+                    <span class="hljs-attr">"identifying"</span>: <span class="hljs-literal">true</span>
                 },
                 {
-                    &quot;name&quot;: &quot;firstname&quot;,
-                    &quot;kind&quot;: &quot;storage&quot;,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;type&quot;: &quot;string&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"firstname"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"storage"</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>
                 },
                 {
-                    &quot;name&quot;: &quot;lastname&quot;,
-                    &quot;kind&quot;: &quot;storage&quot;,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;type&quot;: &quot;string&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"lastname"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"storage"</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>
                 },
                 {
-                    &quot;name&quot;: &quot;employer&quot;,
-                    &quot;kind&quot;: &quot;relatedEntity&quot;,
-                    &quot;scope&quot;: &quot;public&quot;,
-                    &quot;type&quot;: &quot;Company&quot;,
-                    &quot;path&quot;: &quot;Company&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"employer"</span>,
+                    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"relatedEntity"</span>,
+                    <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"public"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Company"</span>,
+                    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"Company"</span>
                 }
             ],
-            &quot;key&quot;: [
+            <span class="hljs-attr">"key"</span>: [
                 {
-                    &quot;name&quot;: &quot;ID&quot;
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ID"</span>
                 }
             ]
         }
@@ -272,98 +272,99 @@
 <p><code>GET /rest/$catalog/Employee</code></p>
 <p><strong>Result</strong>:</p>
 <pre><code class="hljs">{
-    name: &quot;Employee&quot;,
-    className: &quot;Employee&quot;,
-    collectionName: &quot;EmployeeCollection&quot;,
-    scope: &quot;public&quot;,
-    dataURI: &quot;http://127.0.0.1:8081/rest/Employee&quot;,
-    defaultTopSize: 20,
-    extraProperties: {
-        panelColor: &quot;#76923C&quot;,
-        __CDATA: &quot;\n\n\t\t\n&quot;,
-        panel: {
-            isOpen: &quot;true&quot;,
-            pathVisible: &quot;true&quot;,
-            __CDATA: &quot;\n\n\t\t\t\n&quot;,
-            position: {
-                X: &quot;394&quot;,
-                Y: &quot;42&quot;
+<span class="hljs-symbol">    name:</span> <span class="hljs-string">"Employee"</span>,
+<span class="hljs-symbol">    className:</span> <span class="hljs-string">"Employee"</span>,
+<span class="hljs-symbol">    collectionName:</span> <span class="hljs-string">"EmployeeCollection"</span>,
+<span class="hljs-symbol">    scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">    dataURI:</span> <span class="hljs-string">"http://127.0.0.1:8081/rest/Employee"</span>,
+<span class="hljs-symbol">    defaultTopSize:</span> <span class="hljs-number">20</span>,
+<span class="hljs-symbol">    extraProperties:</span> {
+<span class="hljs-symbol">        panelColor:</span> <span class="hljs-string">"#76923C"</span>,
+<span class="hljs-symbol">        __CDATA:</span> <span class="hljs-string">"\n\n\t\t\n"</span>,
+<span class="hljs-symbol">        panel:</span> {
+<span class="hljs-symbol">            isOpen:</span> <span class="hljs-string">"true"</span>,
+<span class="hljs-symbol">            pathVisible:</span> <span class="hljs-string">"true"</span>,
+<span class="hljs-symbol">            __CDATA:</span> <span class="hljs-string">"\n\n\t\t\t\n"</span>,
+<span class="hljs-symbol">            position:</span> {
+<span class="hljs-symbol">                X:</span> <span class="hljs-string">"394"</span>,
+<span class="hljs-symbol">                Y:</span> <span class="hljs-string">"42"</span>
             }
         }
     },
-    attributes: [
+<span class="hljs-symbol">    attributes:</span> [
         {
-            name: &quot;ID&quot;,
-            kind: &quot;storage&quot;,
-            scope: &quot;public&quot;,
-            indexed: true,
-            type: &quot;long&quot;,
-            identifying: true
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"ID"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"storage"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            indexed:</span> true,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"long"</span>,
+<span class="hljs-symbol">            identifying:</span> true
         },
         {
-            name: &quot;firstName&quot;,
-            kind: &quot;storage&quot;,
-            scope: &quot;public&quot;,
-            type: &quot;string&quot;
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"firstName"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"storage"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"string"</span>
         },
         {
-            name: &quot;lastName&quot;,
-            kind: &quot;storage&quot;,
-            scope: &quot;public&quot;,
-            type: &quot;string&quot;
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"lastName"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"storage"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"string"</span>
         },
         {
-            name: &quot;fullName&quot;,
-            kind: &quot;calculated&quot;,
-            scope: &quot;public&quot;,
-            type: &quot;string&quot;,
-            readOnly: true
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"fullName"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"calculated"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"string"</span>,
+<span class="hljs-symbol">            readOnly:</span> true
         },
         {
-            name: &quot;salary&quot;,
-            kind: &quot;storage&quot;,
-            scope: &quot;public&quot;,
-            type: &quot;number&quot;,
-            defaultFormat: {
-                format: &quot;$###,###.00&quot;
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"salary"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"storage"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"number"</span>,
+<span class="hljs-symbol">            defaultFormat:</span> {
+<span class="hljs-symbol">                format:</span> <span class="hljs-string">"$###,###.00"</span>
             }
         },
         {
-            name: &quot;photo&quot;,
-            kind: &quot;storage&quot;,
-            scope: &quot;public&quot;,
-            type: &quot;image&quot;
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"photo"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"storage"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"image"</span>
         },
         {
-            name: &quot;employer&quot;,
-            kind: &quot;relatedEntity&quot;,
-            scope: &quot;public&quot;,
-            type: &quot;Company&quot;,
-            path: &quot;Company&quot;
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"employer"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"relatedEntity"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"Company"</span>,
+<span class="hljs-symbol">            path:</span> <span class="hljs-string">"Company"</span>
         },
         {
-            name: &quot;employerName&quot;,
-            kind: &quot;alias&quot;,
-            scope: &quot;public&quot;,
-
-            type: &quot;string&quot;,
-            path: &quot;employer.name&quot;,
-            readOnly: true
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"employerName"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"alias"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">
+            type:</span> <span class="hljs-string">"string"</span>,
+<span class="hljs-symbol">            path:</span> <span class="hljs-string">"employer.name"</span>,
+<span class="hljs-symbol">            readOnly:</span> true
         },
         {
-            name: &quot;description&quot;,
-            kind: &quot;storage&quot;,
-            scope: &quot;public&quot;,
-            type: &quot;string&quot;,
-            multiLine: true
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"description"</span>,
+<span class="hljs-symbol">            kind:</span> <span class="hljs-string">"storage"</span>,
+<span class="hljs-symbol">            scope:</span> <span class="hljs-string">"public"</span>,
+<span class="hljs-symbol">            type:</span> <span class="hljs-string">"string"</span>,
+<span class="hljs-symbol">            multiLine:</span> true
         },
    ],
-    key: [
+<span class="hljs-symbol">    key:</span> [
         {
-            name: &quot;ID&quot;
+<span class="hljs-symbol">            name:</span> <span class="hljs-string">"ID"</span>
         }
     ]
-}</code></pre>
+}
+</code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/REST/REST_requests.html"><span class="arrow-prev">← </span><span>About REST Requests</span></a><a class="docs-next button" href="/docs/pt/REST/directory.html"><span>$directory</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#available-syntaxes">Available syntaxes</a></li><li><a href="#catalog">$catalog</a><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#example">Example</a></li></ul></li><li><a href="#catalogall">$catalog/$all</a><ul class="toc-headings"><li><a href="#description-1">Description</a></li><li><a href="#example-1">Example</a></li></ul></li><li><a href="#catalogdataclass">$catalog/{dataClass}</a><ul class="toc-headings"><li><a href="#description-2">Description</a></li><li><a href="#dataclass">DataClass</a></li><li><a href="#attributes">Attribute(s)</a></li><li><a href="#primary-key">Primary Key</a></li><li><a href="#example-2">Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

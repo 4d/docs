@@ -100,74 +100,74 @@
 <h2><a class="anchor" aria-hidden="true" id="accessing-4d-data-through-the-browser"></a><a href="#accessing-4d-data-through-the-browser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accessing 4D data through the browser</h2>
 <p>You can now read and edit data within 4D only through REST requests.</p>
 <p>Any 4D REST URL request starts with <code>/rest</code>, to be inserted after the <code>address:port</code> area. For example, to see what's inside the 4D datastore, you can write:</p>
-<pre><code class="hljs">http://127.0.0.1/rest/$catalog
+<pre><code class="hljs">http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><span class="hljs-regexp">/rest/</span><span class="hljs-variable">$catalog</span>
 </code></pre>
 <p>The REST server replies:</p>
 <pre><code class="hljs">{
-    &quot;__UNIQID&quot;: &quot;96A49F7EF2ABDE44BF32059D9ABC65C1&quot;,
-    &quot;dataClasses&quot;: [
+    <span class="hljs-attr">"__UNIQID"</span>: <span class="hljs-string">"96A49F7EF2ABDE44BF32059D9ABC65C1"</span>,
+    <span class="hljs-attr">"dataClasses"</span>: [
         {
-            &quot;name&quot;: &quot;Employees&quot;,
-            &quot;uri&quot;: &quot;/rest/$catalog/Employees&quot;,
-            &quot;dataURI&quot;: &quot;/rest/Employees&quot;
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Employees"</span>,
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/$catalog/Employees"</span>,
+            <span class="hljs-attr">"dataURI"</span>: <span class="hljs-string">"/rest/Employees"</span>
         }
     ]
 }
 </code></pre>
 <p>It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:</p>
-<pre><code class="hljs">/rest/$catalog/Employees
+<pre><code class="hljs">/<span class="hljs-built_in">rest</span>/$catalog/Employees
 </code></pre>
 <p>If you want to get all entities of the Employee dataclass, you write:</p>
-<pre><code class="hljs">/rest/Employees
+<pre><code class="hljs">/<span class="hljs-built_in">rest</span>/Employees
 </code></pre>
 <p><strong>Response:</strong></p>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;Employees&quot;,
-    &quot;__GlobalStamp&quot;: 0,
-    &quot;__COUNT&quot;: 3,
-    &quot;__FIRST&quot;: 0,
-    &quot;__ENTITIES&quot;: [
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Employees"</span>,
+    <span class="hljs-attr">"__GlobalStamp"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"__COUNT"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"__FIRST"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"__ENTITIES"</span>: [
         {
-            &quot;__KEY&quot;: &quot;1&quot;,
-            &quot;__TIMESTAMP&quot;: &quot;2020-01-07T17:07:52.467Z&quot;,
-            &quot;__STAMP&quot;: 2,
-            &quot;ID&quot;: 1,
-            &quot;Lastname&quot;: &quot;Brown&quot;,
-            &quot;Firstname&quot;: &quot;Michael&quot;,
-            &quot;Salary&quot;: 25000
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+            <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-01-07T17:07:52.467Z"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"Lastname"</span>: <span class="hljs-string">"Brown"</span>,
+            <span class="hljs-attr">"Firstname"</span>: <span class="hljs-string">"Michael"</span>,
+            <span class="hljs-attr">"Salary"</span>: <span class="hljs-number">25000</span>
         },
         {
-            &quot;__KEY&quot;: &quot;2&quot;,
-            &quot;__TIMESTAMP&quot;: &quot;2020-01-07T17:08:14.387Z&quot;,
-            &quot;__STAMP&quot;: 2,
-            &quot;ID&quot;: 2,
-            &quot;Lastname&quot;: &quot;Jones&quot;,
-            &quot;Firstname&quot;: &quot;Maryanne&quot;,
-            &quot;Salary&quot;: 35000
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span>,
+            <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-01-07T17:08:14.387Z"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"Lastname"</span>: <span class="hljs-string">"Jones"</span>,
+            <span class="hljs-attr">"Firstname"</span>: <span class="hljs-string">"Maryanne"</span>,
+            <span class="hljs-attr">"Salary"</span>: <span class="hljs-number">35000</span>
         },
         {
-            &quot;__KEY&quot;: &quot;3&quot;,
-            &quot;__TIMESTAMP&quot;: &quot;2020-01-07T17:08:34.844Z&quot;,
-            &quot;__STAMP&quot;: 2,
-            &quot;ID&quot;: 3,
-            &quot;Lastname&quot;: &quot;Smithers&quot;,
-            &quot;Firstname&quot;: &quot;Jack&quot;,
-            &quot;Salary&quot;: 41000
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"3"</span>,
+            <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-01-07T17:08:34.844Z"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">"Lastname"</span>: <span class="hljs-string">"Smithers"</span>,
+            <span class="hljs-attr">"Firstname"</span>: <span class="hljs-string">"Jack"</span>,
+            <span class="hljs-attr">"Salary"</span>: <span class="hljs-number">41000</span>
         }
     ],
-    &quot;__SENT&quot;: 3
+    <span class="hljs-attr">"__SENT"</span>: <span class="hljs-number">3</span>
 }
 </code></pre>
 <p>You have many possibilities to filter data to receive. For example, to get only the &quot;Lastname&quot; attribute value from the 2nd entity, you can just write:</p>
-<pre><code class="hljs">/rest/Employees(2)/Lastname
+<pre><code class="hljs"><span class="hljs-string">/rest/Employees</span><span class="hljs-params">(2)</span><span class="hljs-string">/Lastname</span>
 </code></pre>
 <p><strong>Response:</strong></p>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;Employees&quot;,
-    &quot;__KEY&quot;: &quot;2&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;2020-01-07T17:08:14.387Z&quot;,
-    &quot;__STAMP&quot;: 2,
-    &quot;Lastname&quot;: &quot;Jones&quot;
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Employees"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-01-07T17:08:14.387Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"Lastname"</span>: <span class="hljs-string">"Jones"</span>
 }
 </code></pre>
 <p>The 4D <a href="/docs/de/REST/REST_requests.html">REST API</a> provides various commands to interact with the 4D database.</p>

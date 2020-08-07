@@ -106,11 +106,11 @@ The function is searched in the entity selection class first. If not found, it i
 </ul>
 <p>See <a href="#request-receiving-an-entity-as-parameter">this example</a> and <a href="#request-receiving-an-entity-selection-as-parameter">this example</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="scalar-value-parameter"></a><a href="#scalar-value-parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scalar value parameter</h3>
-<p>Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a dataclass function <code>getCities()</code> receiving text parameters: <code>/rest/City/getCities</code></p>
+<p>Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function <code>getCities()</code> receiving text parameters: <code>/rest/City/getCities</code></p>
 <p><strong>Parameters in body:</strong> [&quot;Aguada&quot;,&quot;Paris&quot;]</p>
 <p>All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. &quot;2020-08-22T22:00:000Z&quot;).</p>
 <h3><a class="anchor" aria-hidden="true" id="entity-parameter"></a><a href="#entity-parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity parameter</h3>
-<p>Entities passed in parameters are referenced on the server through their key (<em>i.e.</em> __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.</p>
+<p>Entities passed in parameters are referenced on the server through their key (<em>i.e.</em> __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.</p>
 <blockquote>
 <p>If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.</p>
 </blockquote>
@@ -154,31 +154,31 @@ The function is searched in the entity selection class first. If not found, it i
 <p><img src="/docs/assets/en/REST/ordastructure.png" alt="alt-text"></p>
 <h3><a class="anchor" aria-hidden="true" id="using-a-datastore-class-function"></a><a href="#using-a-datastore-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a datastore class function</h3>
 <p>The US_Cities <code>DataStore</code> class provides an API:</p>
-<pre><code class="hljs">// DataStore class
+<pre><code class="hljs">// DataStore <span class="hljs-class"><span class="hljs-keyword">class</span></span>
 
-Class extends DataStoreImplementation
+<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataStoreImplementation</span></span>
 
-Function getName()
-    $0:=&quot;US cities and zip codes manager&quot; 
+<span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getName</span>(</span>)
+    <span class="hljs-number">$0</span>:=<span class="hljs-string">"US cities and zip codes manager"</span> 
 </code></pre>
 <p>You can then run this request:</p>
 <p><strong>POST</strong> <code>127.0.0.1:8111/rest/$catalog/getName</code></p>
 <h4><a class="anchor" aria-hidden="true" id="result"></a><a href="#result" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-&quot;result&quot;: &quot;US cities and zip codes manager&quot; 
+<span class="hljs-attr">"result"</span>: <span class="hljs-string">"US cities and zip codes manager"</span> 
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-a-dataclass-class-function"></a><a href="#using-a-dataclass-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a dataclass class function</h3>
 <p>The Dataclass class <code>City</code> provides an API that returns a city entity from a name passed in parameter:</p>
-<pre><code class="hljs">// City class
+<pre><code class="hljs"><span class="hljs-comment">// City class</span><span class="hljs-keyword">
 
-Class extends DataClass
+Class extends</span> DataClass<span class="hljs-keyword">
 
-Function getCity()
-    var $0 : cs.CityEntity
-    var $1,$nameParam : text
-    $nameParam:=$1
-    $0:=This.query(&quot;name = :1&quot;;$nameParam).first()
+Function</span><span class="hljs-function"> getCity</span>()<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$0 </span>: cs.CityEntity<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$1</span>,<span class="hljs-variable">$nameParam </span>: text
+    <span class="hljs-variable">$nameParam</span>:=<span class="hljs-variable">$1</span>
+    <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"name = :1"</span>;<span class="hljs-variable">$nameParam</span>).<span class="hljs-function">first</span>()
 </code></pre>
 <p>You can then run this request:</p>
 <p><strong>POST</strong> <code>127.0.0.1:8111/rest/City/getCity</code></p>
@@ -186,148 +186,149 @@ Function getCity()
 <h4><a class="anchor" aria-hidden="true" id="result-1"></a><a href="#result-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <p>The result is an entity:</p>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;City&quot;,
-    &quot;__DATACLASS&quot;: &quot;City&quot;,
-    &quot;__KEY&quot;: &quot;1&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;2020-03-09T08:03:19.923Z&quot;,
-    &quot;__STAMP&quot;: 1,
-    &quot;ID&quot;: 1,
-    &quot;name&quot;: &quot;Aguada&quot;,
-    &quot;countyFIPS&quot;: 72003,
-    &quot;county&quot;: {
-        &quot;__deferred&quot;: {
-            &quot;uri&quot;: &quot;/rest/County(72003)&quot;,
-            &quot;__KEY&quot;: &quot;72003&quot; 
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"City"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"City"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-03-09T08:03:19.923Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Aguada"</span>,
+    <span class="hljs-attr">"countyFIPS"</span>: <span class="hljs-number">72003</span>,
+    <span class="hljs-attr">"county"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/County(72003)"</span>,
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"72003"</span> 
         }
     },
-    &quot;zips&quot;: {
-        &quot;__deferred&quot;: {
-            &quot;uri&quot;: &quot;/rest/City(1)/zips?$expand=zips&quot; 
+    <span class="hljs-attr">"zips"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/City(1)/zips?$expand=zips"</span> 
         }
     }
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entity-class-function"></a><a href="#using-an-entity-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entity class function</h3>
 <p>The Entity class <code>CityEntity</code> provides an API:</p>
-<pre><code class="hljs">// CityEntity class
+<pre><code class="hljs">// CityEntity <span class="hljs-class"><span class="hljs-keyword">class</span></span>
 
-Class extends Entity
+<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Entity</span></span>
 
-Function getPopulation()
-    $0:=This.zips.sum(&quot;population&quot;)
+<span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getPopulation</span>(</span>)
+    <span class="hljs-number">$0</span>:=This.zips.sum(<span class="hljs-string">"population"</span>)
 </code></pre>
 <p>You can then run this request:</p>
 <p><strong>POST</strong> <code>127.0.0.1:8111/rest/City(2)/getPopulation</code></p>
 <h4><a class="anchor" aria-hidden="true" id="result-2"></a><a href="#result-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;result&quot;: 48814
+    <span class="hljs-attr">"result"</span>: <span class="hljs-number">48814</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entityselection-class-function"></a><a href="#using-an-entityselection-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entitySelection class function</h3>
 <p>The EntitySelection class <code>CitySelection</code> provides an API:</p>
-<pre><code class="hljs">// CitySelection class
+<pre><code class="hljs">// CitySelection <span class="hljs-class"><span class="hljs-keyword">class</span></span>
 
-Class extends EntitySelection
+<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">EntitySelection</span></span>
 
-Function getPopulation()
-    $0:=This.zips.sum(&quot;population&quot;)
+<span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getPopulation</span>(</span>)
+    <span class="hljs-number">$0</span>:=This.zips.sum(<span class="hljs-string">"population"</span>)
 </code></pre>
 <p>You can then run this request:</p>
 <p><strong>POST</strong> <code>127.0.0.1:8111/rest/City/getPopulation/?$filter=&quot;ID&lt;3&quot;</code></p>
 <h4><a class="anchor" aria-hidden="true" id="result-3"></a><a href="#result-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;result&quot;: 87256
+    <span class="hljs-attr">"result"</span>: <span class="hljs-number">87256</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entityselection-class-function-and-an-entityset"></a><a href="#using-an-entityselection-class-function-and-an-entityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entitySelection class function and an entitySet</h3>
 <p>The <code>StudentsSelection</code> class has a <code>getAgeAverage</code> function:</p>
-<pre><code class="hljs">// StudentsSelection Class
+<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class</span><span class="hljs-keyword">
 
-Class extends EntitySelection
+Class extends</span> EntitySelection<span class="hljs-keyword">
 
-Function getAgeAverage
-    C_LONGINT($sum;$0)
-    C_OBJECT($s)
+Function</span> getAgeAverage
+<span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$sum</span>;<span class="hljs-variable">$0</span>)
+<span class="hljs-function">    C_OBJECT</span>(<span class="hljs-variable">$s</span>)
 
-    $sum:=0
-    For each ($s;This)
-        $sum:=$sum+$s.age()
-    End for each 
-    $0:=$sum/This.length
+    <span class="hljs-variable">$sum</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
+    For each</span> (<span class="hljs-variable">$s</span>;<span class="hljs-literal">This</span>)
+        <span class="hljs-variable">$sum</span>:=<span class="hljs-variable">$sum</span>+<span class="hljs-variable">$s</span>.<span class="hljs-function">age</span>()<span class="hljs-keyword">
+    End for each</span> 
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$sum</span>/<span class="hljs-literal">This</span>.length
 </code></pre>
 <p>Once you have created an entityset, you can run this request:</p>
 <p><strong>POST</strong> <code>127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532</code></p>
 <h4><a class="anchor" aria-hidden="true" id="result-4"></a><a href="#result-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;result&quot;: 34
+    <span class="hljs-attr">"result"</span>: <span class="hljs-number">34</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entityselection-class-function-and-an-orderby"></a><a href="#using-an-entityselection-class-function-and-an-orderby" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entitySelection class function and an orderBy</h3>
 <p>The <code>StudentsSelection</code> class has a <code>getLastSummary</code> function:</p>
-<pre><code class="hljs">// StudentsSelection Class
+<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class</span><span class="hljs-keyword">
 
 
-Class extends EntitySelection
+Class extends</span> EntitySelection<span class="hljs-keyword">
 
-Function getLastSummary
-    C_TEXT($0)
-    C_OBJECT($last)
+Function</span> getLastSummary
+<span class="hljs-function">    C_TEXT</span>(<span class="hljs-variable">$0</span>)
+<span class="hljs-function">    C_OBJECT</span>(<span class="hljs-variable">$last</span>)
 
-    $last:=This.last()
-    $0:=$last.firstname+&quot; - &quot;+$last.lastname+&quot; is ... &quot;+String($last.age())
+    <span class="hljs-variable">$last</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">last</span>()
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$last</span>.firstname+<span class="hljs-string">" - "</span>+<span class="hljs-variable">$last</span>.lastname+<span class="hljs-string">" is ... "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$last</span>.<span class="hljs-function">age</span>())
 </code></pre>
 <p>You can then run this request:</p>
 <p><strong>POST</strong> <code>127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter=&quot;lastname=b@&quot;&amp;$orderby=&quot;lastname&quot;</code></p>
 <h4><a class="anchor" aria-hidden="true" id="result-5"></a><a href="#result-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;result&quot;: &quot;Wilbert - Bull is ... 21&quot; 
+    <span class="hljs-attr">"result"</span>: <span class="hljs-string">"Wilbert - Bull is ... 21"</span> 
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entity-to-be-created-on-the-server"></a><a href="#using-an-entity-to-be-created-on-the-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entity to be created on the server</h3>
 <p>The Dataclass class <code>Students</code> has the function <code>pushData()</code> receiving an entity containing data from the client. The <code>checkData()</code> method runs some controls. If they are OK, the entity is saved and returned.</p>
-<pre><code class="hljs">// Students Class
+<pre><code class="hljs"><span class="hljs-comment">// Students Class</span><span class="hljs-keyword">
 
-Class extends DataClass
+Class extends</span> DataClass<span class="hljs-keyword">
 
-Function pushData
-    var $1, $entity, $status, $0 : Object
+Function</span> pushData<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$entity</span>, <span class="hljs-variable">$status</span>, <span class="hljs-variable">$0 </span>: Object
 
-    $entity:=$1
+    <span class="hljs-variable">$entity</span>:=<span class="hljs-variable">$1</span>
 
-    $status:=checkData($entity) // $status is an object with a success boolean property
+    <span class="hljs-variable">$status</span>:=<span class="hljs-function">checkData</span>(<span class="hljs-variable">$entity</span>) <span class="hljs-comment">// $status is an object with a success boolean property</span>
 
-    $0:=$status
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$status</span><span class="hljs-keyword">
 
-    If ($status.success)
-        $status:=$entity.save()
-       If ($status.success)
-           $0:=$entity
-      End if 
-    End if
+    If</span> (<span class="hljs-variable">$status</span>.success)
+        <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>()<span class="hljs-keyword">
+       If</span> (<span class="hljs-variable">$status</span>.success)
+           <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$entity</span><span class="hljs-keyword">
+      End if</span><span class="hljs-keyword"> 
+    End if</span>
+
 </code></pre>
 <p>You run this request:</p>
 <p><strong>POST</strong> <code>http://127.0.0.1:8044/rest/Students/pushData</code></p>
 <p>Body of the request:</p>
 <pre><code class="hljs">[{
-&quot;__DATACLASS&quot;:&quot;Students&quot;,
-&quot;__ENTITY&quot;:true,
-&quot;firstname&quot;:&quot;Ann&quot;,
-&quot;lastname&quot;:&quot;Brown&quot; 
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Students"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"firstname"</span>:<span class="hljs-string">"Ann"</span>,
+<span class="hljs-attr">"lastname"</span>:<span class="hljs-string">"Brown"</span> 
 }]
 </code></pre>
 <p>Since no <code>__KEY</code> is given, a new Students entity is loaded on the server <strong>with the attributes received from the client</strong>. Because the <code>pushData()</code> function runs a <code>save()</code> action, the new entity is created.</p>
 <h4><a class="anchor" aria-hidden="true" id="result-6"></a><a href="#result-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;Students&quot;,
-    &quot;__DATACLASS&quot;: &quot;Students&quot;,
-    &quot;__KEY&quot;: &quot;55&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;2020-06-16T10:54:41.805Z&quot;,
-    &quot;__STAMP&quot;: 1,
-    &quot;ID&quot;: 55,
-    &quot;firstname&quot;: &quot;Ann&quot;,
-    &quot;lastname&quot;: &quot;BROWN&quot;,
-    &quot;schoolID&quot;: null,
-    &quot;school&quot;: null
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"55"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-06-16T10:54:41.805Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">55</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Ann"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"BROWN"</span>,
+    <span class="hljs-attr">"schoolID"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"school"</span>: <span class="hljs-literal">null</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entity-to-be-updated-on-the-server"></a><a href="#using-an-entity-to-be-updated-on-the-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entity to be updated on the server</h3>
@@ -336,25 +337,25 @@ Function pushData
 <p><strong>POST:</strong><code>http://127.0.0.1:8044/rest/Students/pushData</code></p>
 <p>Body of the request:</p>
 <pre><code class="hljs">[{
-&quot;__DATACLASS&quot;:&quot;Students&quot;,
-&quot;__ENTITY&quot;:true,
-&quot;lastname&quot;:&quot;Brownie&quot;,
-&quot;__KEY&quot;:55
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Students"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"lastname"</span>:<span class="hljs-string">"Brownie"</span>,
+<span class="hljs-attr">"__KEY"</span>:<span class="hljs-number">55</span>
 }]
 </code></pre>
 <p>Since <code>__KEY</code> is given, the Students entity with primary key 55 is loaded <strong>with the lastname value received from the client</strong>. Because the function runs a <code>save()</code> action, the entity is updated.</p>
 <h4><a class="anchor" aria-hidden="true" id="result-7"></a><a href="#result-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;Students&quot;,
-    &quot;__DATACLASS&quot;: &quot;Students&quot;,
-    &quot;__KEY&quot;: &quot;55&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;2020-06-16T11:10:21.679Z&quot;,
-    &quot;__STAMP&quot;: 3,
-    &quot;ID&quot;: 55,
-    &quot;firstname&quot;: &quot;Ann&quot;,
-    &quot;lastname&quot;: &quot;BROWNIE&quot;,
-    &quot;schoolID&quot;: null,
-    &quot;school&quot;: null 
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"55"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-06-16T11:10:21.679Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">55</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Ann"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"BROWNIE"</span>,
+    <span class="hljs-attr">"schoolID"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"school"</span>: <span class="hljs-literal">null</span> 
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="creating-an-entity-with-a-related-entity"></a><a href="#creating-an-entity-with-a-related-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating an entity with a related entity</h3>
@@ -363,94 +364,94 @@ Function pushData
 <p><strong>POST:</strong><code>http://127.0.0.1:8044/rest/Students/pushData</code></p>
 <p>Body of the request:</p>
 <pre><code class="hljs">[{
-&quot;__DATACLASS&quot;:&quot;Students&quot;,
-&quot;__ENTITY&quot;:true,
-&quot;firstname&quot;:&quot;John&quot;,
-&quot;lastname&quot;:&quot;Smith&quot;,
-&quot;school&quot;:{&quot;__KEY&quot;:2}
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Students"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"firstname"</span>:<span class="hljs-string">"John"</span>,
+<span class="hljs-attr">"lastname"</span>:<span class="hljs-string">"Smith"</span>,
+<span class="hljs-attr">"school"</span>:{<span class="hljs-attr">"__KEY"</span>:<span class="hljs-number">2</span>}
 }]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="result-8"></a><a href="#result-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;Students&quot;,
-    &quot;__DATACLASS&quot;: &quot;Students&quot;,
-    &quot;__KEY&quot;: &quot;56&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;2020-06-16T11:16:47.601Z&quot;,
-    &quot;__STAMP&quot;: 1,
-    &quot;ID&quot;: 56,
-    &quot;firstname&quot;: &quot;John&quot;,
-    &quot;lastname&quot;: &quot;SMITH&quot;,
-    &quot;schoolID&quot;: 2,
-       &quot;school&quot;: {
-        &quot;__deferred&quot;: {
-            &quot;uri&quot;: &quot;/rest/Schools(2)&quot;,
-            &quot;__KEY&quot;: &quot;2&quot; 
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"56"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-06-16T11:16:47.601Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">56</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"John"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"SMITH"</span>,
+    <span class="hljs-attr">"schoolID"</span>: <span class="hljs-number">2</span>,
+       <span class="hljs-attr">"school"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Schools(2)"</span>,
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span> 
         }
     }
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="updating-an-entity-with-a-related-entity"></a><a href="#updating-an-entity-with-a-related-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating an entity with a related entity</h3>
 <p>In this example, we associate an existing school to a Students entity. The <code>StudentsEntity</code> class has an API:</p>
-<pre><code class="hljs">// StudentsEntity class
+<pre><code class="hljs"><span class="hljs-comment">// StudentsEntity class</span><span class="hljs-keyword">
 
-Class extends Entity
+Class extends</span> Entity<span class="hljs-keyword">
 
-Function putToSchool()
-    var $1, $school , $0, $status : Object
+Function</span><span class="hljs-function"> putToSchool</span>()<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$school </span>, <span class="hljs-variable">$0</span>, <span class="hljs-variable">$status </span>: Object
 
-        //$1 is a Schools entity
-    $school:=$1
-        //Associate the related entity school to the current Students entity
-    This.school:=$school
+        <span class="hljs-comment">//$1 is a Schools entity</span>
+    <span class="hljs-variable">$school</span>:=<span class="hljs-variable">$1</span>
+        <span class="hljs-comment">//Associate the related entity school to the current Students entity</span>
+    <span class="hljs-literal">This</span>.school:=<span class="hljs-variable">$school</span>
 
-    $status:=This.save()
+    <span class="hljs-variable">$status</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">save</span>()
 
-    $0:=$status
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$status</span>
 </code></pre>
 <p>You run this request, called on a Students entity : <strong>POST</strong> <code>http://127.0.0.1:8044/rest/Students(1)/putToSchool</code> Body of the request:</p>
 <pre><code class="hljs">[{
-&quot;__DATACLASS&quot;:&quot;Schools&quot;,
-&quot;__ENTITY&quot;:true,
-&quot;__KEY&quot;:2
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Schools"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"__KEY"</span>:<span class="hljs-number">2</span>
 }]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="result-9"></a><a href="#result-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <pre><code class="hljs">{
-    &quot;result&quot;: {
-        &quot;success&quot;: true
+    <span class="hljs-attr">"result"</span>: {
+        <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>
     }
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="receiving-an-entity-selection-as-parameter"></a><a href="#receiving-an-entity-selection-as-parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Receiving an entity selection as parameter</h3>
 <p>In the <code>Students</code> Dataclass class, the <code>setFinalExam()</code> function updates a received entity selection ($1). It actually updates the <em>finalExam</em> attribute with the received value ($2). It returns the primary keys of the updated entities.</p>
-<pre><code class="hljs">// Students class
+<pre><code class="hljs"><span class="hljs-comment">// Students class</span><span class="hljs-keyword">
 
-Class extends DataClass
+Class extends</span> DataClass<span class="hljs-keyword">
 
-Function setFinalExam()
+Function</span><span class="hljs-function"> setFinalExam</span>()<span class="hljs-keyword">
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$es</span>, <span class="hljs-variable">$student</span>, <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$2</span>, <span class="hljs-variable">$examResult </span>: Text<span class="hljs-keyword">
 
-    var $keys, $0 : Collection
+    var</span> <span class="hljs-variable">$keys</span>, <span class="hljs-variable">$0 </span>: Collection
 
-      //Entity selection
-    $es:=$1
+      <span class="hljs-comment">//Entity selection</span>
+    <span class="hljs-variable">$es</span>:=<span class="hljs-variable">$1</span>
 
-    $examResult:=$2
+    <span class="hljs-variable">$examResult</span>:=<span class="hljs-variable">$2</span>
 
-    $keys:=New collection()
+    <span class="hljs-variable">$keys</span>:=<span class="hljs-function">New collection</span>()
 
-      //Loop on the entity selection
-    For each ($student;$es)
-        $student.finalExam:=$examResult
-        $status:=$student.save()
-        If ($status.success)
-            $keys.push($student.ID)
-        End if 
-    End for each 
+      <span class="hljs-comment">//Loop on the entity selection</span><span class="hljs-keyword">
+    For each</span> (<span class="hljs-variable">$student</span>;<span class="hljs-variable">$es</span>)
+        <span class="hljs-variable">$student</span>.finalExam:=<span class="hljs-variable">$examResult</span>
+        <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$student</span>.<span class="hljs-function">save</span>()<span class="hljs-keyword">
+        If</span> (<span class="hljs-variable">$status</span>.success)
+            <span class="hljs-variable">$keys</span>.<span class="hljs-function">push</span>(<span class="hljs-variable">$student</span>.ID)<span class="hljs-keyword">
+        End if</span><span class="hljs-keyword"> 
+    End for each</span> 
 
-    $0:=$keys
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$keys</span>
 </code></pre>
 <p>An entity set is first created with this request:</p>
 <p><code>http://127.0.0.1:8044/rest/Students/?$filter=&quot;ID&lt;3&quot;&amp;$method=entityset</code></p>
@@ -459,18 +460,19 @@ Function setFinalExam()
 <p>Body of the request:</p>
 <pre><code class="hljs">[
 {
-&quot;__ENTITIES&quot;:true,
-&quot;__DATASET&quot;:&quot;9B9C053A111E4A288E9C1E48965FE671&quot; 
+<span class="hljs-attr">"__ENTITIES"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"__DATASET"</span>:<span class="hljs-string">"9B9C053A111E4A288E9C1E48965FE671"</span> 
 },
-&quot;Passed&quot; 
+<span class="hljs-string">"Passed"</span> 
 ]
+
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="result-10"></a><a href="#result-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <p>The entities with primary keys 1 and 2 have been updated.</p>
 <pre><code class="hljs">{
-    &quot;result&quot;: [
-        1,
-        2
+    <span class="hljs-attr">"result"</span>: [
+        <span class="hljs-number">1</span>,
+        <span class="hljs-number">2</span>
     ]
 }
 </code></pre>

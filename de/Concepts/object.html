@@ -83,8 +83,8 @@
 </ul></li>
 </ul>
 <p>(*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild &quot;[Objekt Bild]&quot; an.</p>
-<p><strong>Warnung:</strong> Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.</p>
-<p>Objekte vom Typ Variable, Felder oder Ausdruck verwalten Sie über Befehle im Kapitel <strong>Objekte (Sprache</strong>), oder über die Objektnotation (siehe <a href="/docs/de/Concepts/object.html#syntax-basics">Grundlagen der Syntax</a>). Über spezifische Befehle im Kapitel Suchen wie <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code> oder <code>ORDER BY ATTRIBUTE</code> können Sie mit Objektfeldern arbeiten.</p>
+<p><strong>Warning:</strong> Keep in mind that attribute names differentiate between upper and lower case.</p>
+<p>You manage Object type variables, fields or expressions using the commands available in the <strong>Objects (Language)</strong> theme or through the object notation (see <a href="/docs/de/Concepts/object.html#syntax-basics">Syntax basics</a>). Über spezifische Befehle im Kapitel Suchen wie <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code> oder <code>ORDER BY ATTRIBUTE</code> können Sie mit Objektfeldern arbeiten.</p>
 <p>Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Ist Objektnotation in Ihrer Anwendung aktiviert (siehe unten), können Sie solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:</p>
 <ul>
 <li>In 4D Code, entweder in den Methoden (Methodeneditor) oder extern geschrieben (Formeln, Dateien mit 4D Tags, die mit PROCESS 4D TAGS oder dem Web Server bearbeitet werden, Exportdateien, 4D Write Pro Dokumente...),</li>
@@ -108,13 +108,13 @@
 <h3><a class="anchor" aria-hidden="true" id="objekteigenschaften"></a><a href="#objekteigenschaften" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objekteigenschaften</h3>
 <p>Objektnotation bietet zwei Wege, um auf Objekteigenschaften zuzugreifen:</p>
 <ul>
-<li>Über das Zeichen &quot;Punkt&quot;: &gt; object.propertyName</li>
+<li>using a &quot;dot&quot; symbol: &gt; object.propertyName</li>
 </ul>
 <p>Beispiel:</p>
 <pre><code class="hljs css language-4d">     employee.name:=<span class="hljs-string">"Smith"</span>
 </code></pre>
 <ul>
-<li>Über eine Zeichenkette in eckigen Klammern: &gt; object. propertyName</li>
+<li>using a string within square brackets: &gt; object[&quot;propertyName&quot;]</li>
 </ul>
 <p>Beispiele:</p>
 <pre><code class="hljs css language-4d">     <span class="hljs-variable">$vName</span>:=employee[<span class="hljs-string">"name"</span>]
@@ -128,7 +128,7 @@
 </code></pre>
 <p>Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein Objekt enthalten oder zurückgeben, wie z.B:</p>
 <ul>
-<li><strong>Die Objekte selbst</strong> (gespeichert in Variablen, Feldern, Objekteigenschaften, Objekt Arrays oder Collection Elementen). Beispiele:</li>
+<li><strong>Objects</strong> themselves (stored in variables, fields, object properties, object arrays, or collection elements). Beispiele:</li>
 </ul>
 <pre><code class="hljs css language-4d">     <span class="hljs-variable">$age</span>:=<span class="hljs-variable">$myObjVar</span>.employee.age <span class="hljs-comment">//variable</span>
      <span class="hljs-variable">$addr</span>:=[Emp]data_obj.address <span class="hljs-comment">//field</span>
@@ -137,12 +137,12 @@
      <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$myCollection</span>[<span class="hljs-number">3</span>].subvalue <span class="hljs-comment">//collection element</span>
 </code></pre>
 <ul>
-<li><strong>4D Befehle</strong>, die Objekte zurückgeben. Beispiel:</li>
+<li><strong>4D commands</strong> that return objects. Beispiel:</li>
 </ul>
 <pre><code class="hljs css language-4d">     <span class="hljs-variable">$measures</span>:=Get database measures.DB.tables
 </code></pre>
 <ul>
-<li><strong>Projektmethoden</strong>, die Objekte zurückgeben. Beispiel:</li>
+<li><strong>Project methods</strong> that return objects. Beispiel:</li>
 </ul>
 <pre><code class="hljs css language-4d">      <span class="hljs-comment">// MyMethod1</span>
 <span class="hljs-function">     C_OBJECT</span>(<span class="hljs-variable">$0</span>)
@@ -152,23 +152,25 @@
      <span class="hljs-variable">$result</span>:=MyMethod1.a <span class="hljs-comment">//10</span>
 </code></pre>
 <ul>
-<li><strong>Collections</strong> Beispiel:</li>
+<li><strong>Collections</strong> Example:</li>
 </ul>
 <pre><code class="hljs css language-4d">     myColl.length <span class="hljs-comment">//size of the collection</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="zeiger"></a><a href="#zeiger" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Zeiger</h3>
-<p><strong>Vorbemerkung:</strong> Da Objekte immer per Referenz übergeben werden, sind normalerweise keine Zeiger erforderlich. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.</p>
+<p><strong>Preliminary Note:</strong> Since objects are always passed by reference, there is usually no need to use pointers. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.</p>
 <p>Die Objektnotation mit Zeigern ist ähnlich wie die Objektnotation direkt mit Objekten, der Unterschied ist Weglassen des Zeichens &quot;Punkt&quot;.</p>
 <ul>
-<li><p>Direkter Zugriff:</p>
+<li>Direkter Zugriff:</li>
+</ul>
 <blockquote>
 <p>pointerOnObject-&gt;propertyName</p>
-</blockquote></li>
-<li><p>Zugriff über Name:</p>
+</blockquote>
+<ul>
+<li>Zugriff über Name:</li>
+</ul>
 <blockquote>
 <p>pointerOnObject-&gt;[&quot;propertyName&quot;]</p>
-</blockquote></li>
-</ul>
+</blockquote>
 <p>Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(vObj)
 <span class="hljs-function"> C_POINTER</span>(vPtr)
@@ -178,7 +180,7 @@
  x:=vPtr-&gt;a <span class="hljs-comment">//x=10</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="wert-null"></a><a href="#wert-null" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wert Null</h3>
-<p>Die Objektnotation unterstützt über die Funktion <strong>Null</strong> den <strong>Nullwert</strong>. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:</p>
+<p>When using the object notation, the <strong>null</strong> value is supported though the <strong>Null</strong> command. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:</p>
 <pre><code class="hljs css language-4d"> myObject.address.zip:=<span class="hljs-literal">Null</span><span class="hljs-keyword">
  If</span>(myColl[<span class="hljs-number">2</span>]=<span class="hljs-literal">Null</span>)
 </code></pre>
@@ -195,7 +197,7 @@
       <span class="hljs-comment">//$val=0</span>
 </code></pre>
 <ul>
-<li>Lesen der Eigenschaft <strong>length</strong> einer undefinierten Collection ergibt 0:</li>
+<li>Reading the <strong>length</strong> property of an undefined collection produces 0:</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function">     C_COLLECTION</span>(<span class="hljs-variable">$c</span>) <span class="hljs-comment">//variable created but no collection is defined</span>
      <span class="hljs-variable">$size</span>:=<span class="hljs-variable">$c</span>.length <span class="hljs-comment">//$size = 0</span>

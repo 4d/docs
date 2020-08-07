@@ -72,45 +72,45 @@
 <h2><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h2>
 <p>Nous appelons la requête REST suivante dans une transaction.</p>
 <p><code>POST /rest/Employee?$method=update&amp;$atomic=true</code></p>
-<p><strong>POST data</strong>:</p>
+<p><strong>Données POST</strong> :</p>
 <pre><code class="hljs">[
 {
-    &quot;__KEY&quot;: &quot;200&quot;,
-    &quot;firstname&quot;: &quot;John&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"200"</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"John"</span>
 },
 {
-    &quot;__KEY&quot;: &quot;201&quot;,
-    &quot;firstname&quot;: &quot;Harry&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"201"</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Harry"</span>
 }
 ]
 </code></pre>
 <p>Nous obtenons l'erreur suivante dans la deuxième entité ; la première entité n'est donc pas sauvegardée :</p>
 <pre><code class="hljs">{
-    &quot;__STATUS&quot;: {
-        &quot;success&quot;: true
+    <span class="hljs-attr">"__STATUS"</span>: {
+        <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>
     },
-    &quot;__KEY&quot;: &quot;200&quot;,
-    &quot;__STAMP&quot;: 1,
-    &quot;uri&quot;: &quot;/rest/Employee(200)&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;!!2020-04-03!!&quot;,
-    &quot;ID&quot;: 200,
-    &quot;firstname&quot;: &quot;John&quot;,
-    &quot;lastname&quot;: &quot;Keeling&quot;,
-    &quot;isWoman&quot;: false,
-    &quot;numberOfKids&quot;: 2,
-    &quot;addressID&quot;: 200,
-    &quot;gender&quot;: false,
-    &quot;address&quot;: {
-        &quot;__deferred&quot;: {
-            &quot;uri&quot;: &quot;/rest/Address(200)&quot;,
-            &quot;__KEY&quot;: &quot;200&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"200"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Employee(200)"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"!!2020-04-03!!"</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">200</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"John"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"Keeling"</span>,
+    <span class="hljs-attr">"isWoman"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"numberOfKids"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"addressID"</span>: <span class="hljs-number">200</span>,
+    <span class="hljs-attr">"gender"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"address"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Address(200)"</span>,
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"200"</span>
         }
     },
-    &quot;__ERROR&quot;: [
+    <span class="hljs-attr">"__ERROR"</span>: [
         {
-            &quot;message&quot;: &quot;Cannot find entity with \&quot;201\&quot; key in the \&quot;Employee\&quot; datastore class&quot;,
-            &quot;componentSignature&quot;: &quot;dbmg&quot;,
-            &quot;errCode&quot;: 1542
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cannot find entity with \"201\" key in the \"Employee\" datastore class"</span>,
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1542</span>
         }
     ]
 }

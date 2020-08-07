@@ -70,49 +70,28 @@
 <p>New 4D application projects can be created from <strong>4D</strong> or <strong>4D Server</strong> (see <a href="/docs/es/Project/developing.html">Developing a project</a>). In any case, project files are stored on the local machine.</p>
 <p>To create a new project:</p>
 <ol>
-<li>Launch 4D or 4D Server.</li>
-<li>Select <strong>New &gt; Project...</strong> from the <strong>File</strong> menu:</li>
+<li><p>Launch 4D or 4D Server.</p></li>
+<li><p>Select <strong>New &gt; Project...</strong> from the <strong>File</strong> menu: <p><img src="/docs/assets/en/getStart/projectCreate1.png" alt=""><p>OR<p>(4D only) Select <strong>Project...</strong> from the <strong>New</strong> toolbar button:<p><img src="/docs/assets/en/getStart/projectCreate2.png" alt=""><p>A standard <strong>Save</strong> dialog appears so you can choose the name and location of the 4D project's main folder.</p></li>
+<li><p>Enter the name of your project folder and click <strong>Save</strong>.<p> This name will be used:</p>
+<ul>
+<li>as the name of the entire project folder,</li>
+<li>as the name of the .4DProject file at the first level of the &quot;Project&quot; folder.</li>
+</ul>
+<p>You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.</p></li>
 </ol>
-<p>&lt;</p>
-<p>p&gt;<img src="/docs/assets/en/getStart/projectCreate1.png" alt=""></p>
-<p>&lt;</p>
-<p>p&gt;OR</p>
-<p>&lt;</p>
-<p>p&gt;(4D only) Select <strong>Project...</strong> from the <strong>New</strong> toolbar button:</p>
-<p>&lt;</p>
-<p>p&gt;<img src="/docs/assets/en/getStart/projectCreate2.png" alt=""></p>
-<p>&lt;</p>
-<p>p&gt;A standard <strong>Save</strong> dialog appears so you can choose the name and location of the 4D project's main folder.</p>
-<ol start="3">
-<li>Enter the name of your project folder and click <strong>Save</strong>.</li>
-</ol>
-<p>&lt;</p>
-<p>p&gt; This name will be used: - as the name of the entire project folder, - as the name of the .4DProject file at the first level of the &quot;Project&quot; folder.</p>
-<pre><code class="hljs">  You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
-</code></pre>
 <p>When you validate the <strong>Save</strong> dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. For more information, refer to <a href="/docs/es/Project/architecture.html">Architecture of a 4D Project</a>.</p>
 <p>You can then start developing your project.</p>
 <h2><a class="anchor" aria-hidden="true" id="opening-a-local-project"></a><a href="#opening-a-local-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opening a local project</h2>
 <p>To open an existing project locally from 4D:</p>
 <ol>
-<li>Select <strong>Open a local application project</strong> in the Welcome Wizard dialog,</li>
-</ol>
-<p>&lt;</p>
-<p>p&gt;OR</p>
-<p>&lt;</p>
-<p>p&gt; Select <strong>Open/Local Project...</strong> from the <strong>File</strong> menu or the <strong>Open</strong> toolbar button.</p>
-<p>&lt;</p>
-<p>p&gt; The standard Open dialog appears.</p>
-<ol start="2">
-<li>Select the project's <code>.4dproject</code> file and click <strong>Open</strong>.</li>
-</ol>
-<p>&lt;</p>
-<p>p&gt; By default, the project is opened with its current data file. Other file types are suggested:</p>
+<li><p>Select <strong>Open a local application project</strong> in the Welcome Wizard dialog, <p>OR<p> Select <strong>Open/Local Project...</strong> from the <strong>File</strong> menu or the <strong>Open</strong> toolbar button.<p> The standard Open dialog appears.</p></li>
+<li><p>Select the project's <code>.4dproject</code> file and click <strong>Open</strong>.<p> By default, the project is opened with its current data file. Other file types are suggested:</p>
 <ul>
-<li><em>Packed project files</em>: <code>.4dz</code> extension - deployment projects</li>
+<li><em>Packed project files</em>: <code>.4dz</code> extension  - deployment projects</li>
 <li><em>Shortcut files</em>: <code>.4dlink</code> extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)</li>
 <li><em>Binary files</em>: <code>.4db</code> or <code>.4dc</code> extension - legacy 4D database formats</li>
-</ul>
+</ul></li>
+</ol>
 <h3><a class="anchor" aria-hidden="true" id="options"></a><a href="#options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Options</h3>
 <p>In addition to standard system options, the <em>Open</em> dialog in 4D provides two menus with specific options that are available using the <strong>Open</strong> button and the <strong>Data file</strong> menu.</p>
 <ul>
@@ -127,12 +106,8 @@
 <p>The first time you connect to a 4D Server project via a remote 4D, you will usually use the standard connection dialog. Thereafter, you will be able to connect directly using the <strong>Open Recent Projects</strong> menu or a 4DLink shortcut file (<a href="#project-opening-shortcuts">see below</a>).</p>
 <p>To connect remotely to a 4D Server project:</p>
 <ol>
-<li>Select <strong>Connect to 4D Server</strong> in the Welcome Wizard dialog,</li>
+<li>Select <strong>Connect to 4D Server</strong> in the Welcome Wizard dialog, <p>OR<p> Select <strong>Open/Remote Project...</strong> from the <strong>File</strong> menu or the <strong>Open</strong> toolbar button.</li>
 </ol>
-<p>&lt;</p>
-<p>p&gt;OR</p>
-<p>&lt;</p>
-<p>p&gt; Select <strong>Open/Remote Project...</strong> from the <strong>File</strong> menu or the <strong>Open</strong> toolbar button.</p>
 <p>The 4D Server connection dialog appears. This dialog has three tabs: <strong>Recent</strong>, <strong>Available</strong>, and <strong>Custom</strong>.</p>
 <p>If 4D Server is connected to the same network as the remote 4D, select <strong>Available</strong>. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.</p>
 <p><img src="/docs/assets/en/getStart/serverConnect.png" alt=""></p>
@@ -144,12 +119,8 @@
 <p><img src="/docs/assets/en/getStart/serverConnect2.png" alt=""></p>
 <ul>
 <li><strong>Project name</strong>: Defines the local name of the 4D Server project. This name will be used in the <strong>Recent</strong> page when referring to the project.</li>
-<li><strong>Network address</strong>: The IP address of the machine where the 4D Server was launched.</li>
+<li><strong>Network address</strong>: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: <code>192.168.92.104:19814</code>. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.</li>
 </ul>
-<p>&lt;</p>
-<p>p&gt;If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: <code>192.168.92.104:19814</code>.</p>
-<p>&lt;</p>
-<p>p&gt;By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.</p>
 <p>Once this page assigns a server, clicking the <strong>OK</strong> button will allow you to connect to the server.</p>
 <blockquote>
 <p>If the project is published with the encryption option enabled, you must add a circumflex accent (^) before the name, otherwise the connection will be refused. For more information, refer to the Encrypting Client/Server Connections section.</p>
@@ -161,7 +132,7 @@
 <li><p>via menu options:</p>
 <ul>
 <li><em>Menu bar</em> - <strong>File</strong> &gt; <strong>Open Recent Projects / {project name}</strong></li>
-<li><em>4D Tool bar</em> - Select the project from the menu associated with the <strong>Open</strong> button</li>
+<li><em>4D Tool bar</em> -  Select the project from the menu associated with the <strong>Open</strong> button</li>
 </ul></li>
 <li><p>via preferences:</p>
 <ul>

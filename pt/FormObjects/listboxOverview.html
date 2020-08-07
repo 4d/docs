@@ -221,97 +221,40 @@
 <tr><th>Form event</th><th>Additional Properties Returned (see <a href="https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html">Form event</a> for main properties)</th><th>Comments</th></tr>
 </thead>
 <tbody>
-<tr><td>On After Edit</td><td>- <a href="#additional-properties">column</a></td></tr>
+<tr><td>On After Edit</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On After Keystroke</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On After Sort</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">headerName</a></li></td><td><em>Compound formulas cannot be sorted. <br>(e.g., This.firstName + This.lastName)</em></td></tr>
+<tr><td>On Alternative Click</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Arrays list boxes only</em></td></tr>
+<tr><td>On Before Data Entry</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Before Keystroke</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Begin Drag Over</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Clicked</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Close Detail</td><td><li><a href="#additional-properties">row</a></li></td><td><em>Current Selection &amp; Named Selection list boxes only</em></td></tr>
+<tr><td>On Collapse</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Hierarchical list box only</em></td></tr>
+<tr><td>On Column Moved</td><td><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">newPosition</a></li><li><a href="#additional-properties">oldPosition</a></li></td><td></td></tr>
+<tr><td>On Column Resize</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">newSize</a></li><li><a href="#additional-properties">oldSize</a></li></td><td></td></tr>
+<tr><td>On Data Change</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Delete Action</td><td><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Display Detail</td><td><li><a href="#additional-properties">isRowSelected</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Double Clicked</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Drag Over</td><td><li><a href="#additional-properties">area</a></li><li><a href="#additional-properties">areaName</a></li><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Drop</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Expand</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Hierarchical list box only</em></td></tr>
+<tr><td>On Footer Click</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">footerName</a></li></td><td><em>Arrays, Current Selection &amp; Named Selection list boxes only</em></td></tr>
+<tr><td>On Getting Focus</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Additional properties returned only when editing a cell</em></td></tr>
+<tr><td>On Header Click</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">headerName</a></li></td><td></td></tr>
+<tr><td>On Load</td><td></td><td></td></tr>
+<tr><td>On Losing Focus</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Additional properties returned only when editing a cell has been completed</em></td></tr>
+<tr><td>On Mouse Enter</td><td><li><a href="#additional-properties">area</a></li><li><a href="#additional-properties">areaName</a></li><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Mouse Leave</td><td></td><td></td></tr>
+<tr><td>On Mouse Move</td><td><li><a href="#additional-properties">area</a></li><li><a href="#additional-properties">areaName</a></li><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Open Detail</td><td><li><a href="#additional-properties">row</a></li></td><td><em>Current Selection &amp; Named Selection list boxes only</em></td></tr>
+<tr><td>On Row Moved</td><td><li><a href="#additional-properties">newPosition</a></li><li><a href="#additional-properties">oldPosition</a></li></td><td><em>Arrays list boxes only</em></td></tr>
+<tr><td>On Selection Change</td><td></td><td></td></tr>
+<tr><td>On Scroll</td><td><li><a href="#additional-properties">horizontalScroll</a></li><li><a href="#additional-properties">verticalScroll</a></li></td><td></td></tr>
+<tr><td>On Unload</td><td></td><td></td></tr>
 </tbody>
 </table>
-<ul>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On After Keystroke   | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On After Sort        | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">headerName</a>                                                                | <em>Compound formulas cannot be sorted.<br>
-(e.g., This.firstName + This.lastName)</em> |
-| On Alternative Click | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Arrays list boxes only</em>                                                        |
-| On Before Data Entry | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Before Keystroke  | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Begin Drag Over   | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Clicked           | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Close Detail      | - <a href="#additional-properties">row</a>                                                                                                                                                 | <em>Current Selection &amp; Named Selection list boxes only</em>                           |
-| On Collapse          | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Hierarchical list box only</em>                                                    |
-| On Column Moved      | - <a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">newPosition</a></li>
-<li><a href="#additional-properties">oldPosition</a>                                                          |                                                                                 |
-| On Column Resize     | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">newSize</a></li>
-<li><a href="#additional-properties">oldSize</a>                               |                                                                                 |
-| On Data Change       | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Delete Action     | - <a href="#additional-properties">row</a>                                                                                                                                                 |                                                                                 |
-| On Display Detail    | - <a href="#additional-properties">isRowSelected</a></li>
-<li><a href="#additional-properties">row</a>                                                                                                       |                                                                                 |
-| On Double Clicked    | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Drag Over         | - <a href="#additional-properties">area</a></li>
-<li><a href="#additional-properties">areaName</a></li>
-<li><a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a> |                                                                                 |
-| On Drop              | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Expand            | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Hierarchical list box only</em>                                                    |
-| On Footer Click      | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">footerName</a>                                                                | <em>Arrays, Current Selection &amp; Named Selection list boxes only</em>                   |
-| On Getting Focus     | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Additional properties returned only when editing a cell</em>                       |
-| On Header Click      | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">headerName</a>                                                                |                                                                                 |
-| On Load              |                                                                                                                                                                                 |                                                                                 |
-| On Losing Focus      | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Additional properties returned only when editing a cell has been completed</em>    |
-| On Mouse Enter       | - <a href="#additional-properties">area</a></li>
-<li><a href="#additional-properties">areaName</a></li>
-<li><a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a> |                                                                                 |
-| On Mouse Leave       |                                                                                                                                                                                 |                                                                                 |
-| On Mouse Move        | - <a href="#additional-properties">area</a></li>
-<li><a href="#additional-properties">areaName</a></li>
-<li><a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a> |                                                                                 |
-| On Open Detail       | - <a href="#additional-properties">row</a>                                                                                                                                                 | <em>Current Selection &amp; Named Selection list boxes only</em>                           |
-| On Row Moved         | - <a href="#additional-properties">newPosition</a></li>
-<li><a href="#additional-properties">oldPosition</a>                                                                                                 | <em>Arrays list boxes only</em>                                                        |
-| On Selection Change  |                                                                                                                                                                                 |                                                                                 |
-| On Scroll            | - <a href="#additional-properties">horizontalScroll</a></li>
-<li><a href="#additional-properties">verticalScroll</a>                                                                                         |                                                                                 |
-| On Unload            |                                                                                                                                                                                 |                                                                                 |</li>
-</ul>
 <h4><a class="anchor" aria-hidden="true" id="additional-properties"></a><a href="#additional-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Properties</h4>
 <p>Form events on list box or list box column objects may return the following additional properties:</p>
 <table>
@@ -353,74 +296,30 @@
 <tr><th>Form event</th><th>Additional Properties Returned (see <a href="https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html">Form event</a> for main properties)</th><th>Comments</th></tr>
 </thead>
 <tbody>
-<tr><td>On After Edit</td><td>- <a href="#additional-properties">column</a></td></tr>
+<tr><td>On After Edit</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On After Keystroke</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On After Sort</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">headerName</a></li></td><td><em>Compound formulas cannot be sorted. <br>(e.g., This.firstName + This.lastName)</em></td></tr>
+<tr><td>On Alternative Click</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Arrays list boxes only</em></td></tr>
+<tr><td>On Before Data Entry</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Before Keystroke</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Begin Drag Over</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Clicked</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Column Moved</td><td><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">newPosition</a></li><li><a href="#additional-properties">oldPosition</a></li></td><td></td></tr>
+<tr><td>On Column Resize</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">newSize</a></li><li><a href="#additional-properties">oldSize</a></li></td><td></td></tr>
+<tr><td>On Data Change</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Double Clicked</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Drag Over</td><td><li><a href="#additional-properties">area</a></li><li><a href="#additional-properties">areaName</a></li><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Drop</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td></td></tr>
+<tr><td>On Footer Click</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">footerName</a></li></td><td><em>Arrays, Current Selection &amp; Named Selection list boxes only</em></td></tr>
+<tr><td>On Getting Focus</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Additional properties returned only when editing a cell</em></td></tr>
+<tr><td>On Header Click</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">headerName</a></li></td><td></td></tr>
+<tr><td>On Load</td><td></td><td></td></tr>
+<tr><td>On Losing Focus</td><td><li><a href="#additional-properties">column</a></li><li><a href="#additional-properties">columnName</a></li><li><a href="#additional-properties">row</a></li></td><td><em>Additional properties returned only when editing a cell has been completed</em></td></tr>
+<tr><td>On Row Moved</td><td><li><a href="#additional-properties">newPosition</a></li><li><a href="#additional-properties">oldPosition</a></li></td><td><em>Arrays list boxes only</em></td></tr>
+<tr><td>On Scroll</td><td><li><a href="#additional-properties">horizontalScroll</a></li><li><a href="#additional-properties">verticalScroll</a></li></td><td></td></tr>
+<tr><td>On Unload</td><td></td><td></td></tr>
 </tbody>
 </table>
-<ul>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On After Keystroke   | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On After Sort        | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">headerName</a>                                                                | <em>Compound formulas cannot be sorted.<br>
-(e.g., This.firstName + This.lastName)</em> |
-| On Alternative Click | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Arrays list boxes only</em>                                                        |
-| On Before Data Entry | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Before Keystroke  | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Begin Drag Over   | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Clicked           | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Column Moved      | - <a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">newPosition</a></li>
-<li><a href="#additional-properties">oldPosition</a>                                                          |                                                                                 |
-| On Column Resize     | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">newSize</a></li>
-<li><a href="#additional-properties">oldSize</a>                               |                                                                                 |
-| On Data Change       | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Double Clicked    | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Drag Over         | - <a href="#additional-properties">area</a></li>
-<li><a href="#additional-properties">areaName</a></li>
-<li><a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a> |                                                                                 |
-| On Drop              | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       |                                                                                 |
-| On Footer Click      | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">footerName</a>                                                                | <em>Arrays, Current Selection &amp; Named Selection list boxes only</em>                   |
-| On Getting Focus     | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Additional properties returned only when editing a cell</em>                       |
-| On Header Click      | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">headerName</a>                                                                |                                                                                 |
-| On Load              |                                                                                                                                                                                 |                                                                                 |
-| On Losing Focus      | - <a href="#additional-properties">column</a></li>
-<li><a href="#additional-properties">columnName</a></li>
-<li><a href="#additional-properties">row</a>                                                                       | <em>Additional properties returned only when editing a cell has been completed</em>    |
-| On Row Moved         | - <a href="#additional-properties">newPosition</a></li>
-<li><a href="#additional-properties">oldPosition</a>                                                                                                 | <em>Arrays list boxes only</em>                                                        |
-| On Scroll            | - <a href="#additional-properties">horizontalScroll</a></li>
-<li><a href="#additional-properties">verticalScroll</a>                                                                                         |                                                                                 |
-| On Unload            |                                                                                                                                                                                 |                                                                                 |</li>
-</ul>
 <h2><a class="anchor" aria-hidden="true" id="list-box-headers"></a><a href="#list-box-headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List box headers</h2>
 <blockquote>
 <p>To be able to access the header properties of a list box, you must enable the <a href="/docs/pt/FormObjects/propertiesHeaders.html#display-headers">Display Headers</a> option of the list box.</p>
@@ -554,7 +453,7 @@
 <p>You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:</p>
 <p><img src="/docs/assets/en/FormObjects/listbox_styles7.png" alt=""></p>
 <p>For an array type list box, you need to update the <a href="/docs/pt/FormObjects/propertiesBackgroundAndBorder.html#row-background-color-array">Row Background Color Array</a> by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:</p>
-<pre><code class="hljs">    &quot;rowFillSource&quot;: &quot;_ListboxBackground&quot;,
+<pre><code class="hljs">    <span class="hljs-string">"rowFillSource"</span>: <span class="hljs-string">"_ListboxBackground"</span>,
 </code></pre>
 <p>In the object method of the list box, you can write:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
@@ -572,8 +471,8 @@
 </code></pre>
 <p>For a selection type list box, to produce the same effect you can use a method to update the <a href="/docs/pt/FormObjects/propertiesBackgroundAndBorder.html#background-color-expression">Background Color Expression</a> based on the set specified in the <a href="/docs/pt/FormObjects/propertiesListBox.html#highlight-set">Highlight Set</a> property.</p>
 <p>For example, in the JSON form, you have defined the following Highlight Set and Background Color Expression for the list box:</p>
-<pre><code class="hljs">    &quot;highlightSet&quot;: &quot;$SampleSet&quot;,
-    &quot;rowFillSource&quot;: &quot;UI_SetColor&quot;,
+<pre><code class="hljs">    <span class="hljs-string">"highlightSet"</span>: <span class="hljs-string">"<span class="hljs-variable">$SampleSet</span>"</span>,
+    <span class="hljs-string">"rowFillSource"</span>: <span class="hljs-string">"UI_SetColor"</span>,
 </code></pre>
 <p>You can write in the <em>UI_SetColor</em> method:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(<span class="hljs-function">Is in set</span>(<span class="hljs-string">"$SampleSet"</span>))
@@ -725,9 +624,8 @@
 <p>If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:</p>
 <p><img src="/docs/assets/en/FormObjects/hierarch2.png" alt=""></p>
 <p>The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:</p>
-<blockquote>
-<p>A B A C</p>
-</blockquote>
+<pre><code class="hljs">&gt; A B A C
+</code></pre>
 <p>To expand or collapse a hierarchical &quot;node,&quot; you can just click on it. If you <strong>Alt+click</strong> (Windows) or <strong>Option+click</strong> (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the <code>LISTBOX EXPAND</code> and <code>LISTBOX COLLAPSE</code> commands.</p>
 <p>When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.</p>
 <h4><a class="anchor" aria-hidden="true" id="sorts-in-hierarchical-list-boxes"></a><a href="#sorts-in-hierarchical-list-boxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sorts in hierarchical list boxes</h4>
@@ -926,8 +824,7 @@
 <tr><th>Attribute</th><th>Available value(s)</th><th>valueType(s)</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>behavior</td><td>threeStates</td><td>integer</td><td>Represents a numeric value as a three-states check box.</td></tr>
-<tr><td>2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled</td></tr>
+<tr><td>behavior</td><td>threeStates</td><td>integer</td><td>Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled</td></tr>
 </tbody>
 </table>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob3</span>)
@@ -1074,9 +971,11 @@
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$ob4</span>)
 <span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob4</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"color"</span>)
 <span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob4</span>;<span class="hljs-string">"value"</span>;<span class="hljs-number">0x00FF0000</span>)
-</code></pre>
-<p><img src="/docs/assets/en/FormObjects/listbox_column_objectArray_colorValue.png" alt=""></p></li>
-<li><p>If the value is a text, then the text is displayed (<em>e.g.</em>: &quot;value&quot;;&quot;Automatic&quot;).</p></li>
+</code></pre></li>
+</ul>
+<p><img src="/docs/assets/en/FormObjects/listbox_column_objectArray_colorValue.png" alt=""></p>
+<ul>
+<li>If the value is a text, then the text is displayed (<em>e.g.</em>: &quot;value&quot;;&quot;Automatic&quot;).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="event-valuetype"></a><a href="#event-valuetype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>event valueType</h4>
 <p>The &quot;event&quot; valueType displays a simple button that generates an <code>On Clicked</code> event when clicked. No data or value can be passed or returned.</p>

@@ -94,7 +94,7 @@
 <p><code>POST /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete</code></p>
 <p>Response:</p>
 <pre><code class="hljs">{
-    &quot;ok&quot;: true
+    <span class="hljs-attr">"ok"</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="methodentityset"></a><a href="#methodentityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=entityset</h2>
@@ -123,20 +123,20 @@
 <h4><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response:</h4>
 <p>If the request was successful, the following response is returned:</p>
 <pre><code class="hljs">{
-    &quot;ok&quot;: true
+    <span class="hljs-string">"ok"</span>: <span class="hljs-literal">true</span>
 }
-If the entity set wasn't found, an error is returned:
+<span class="hljs-keyword">If</span> the entity <span class="hljs-builtin-name">set</span> wasn<span class="hljs-string">'t found, an error is returned:
 
 {
-    &quot;__ERROR&quot;: [
+    "__ERROR": [
         {
-             &quot;message&quot;: &quot;Error code: 1802\nEntitySet  \&quot;4C51204DD8184B65AC7D79F09A077F24\&quot; cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n&quot;,
-            &quot;componentSignature&quot;: &quot;dbmg&quot;,
-            &quot;errCode&quot;: 1802
+             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  '</span>dbmg<span class="hljs-string">'\ntask 22, name: '</span>HTTP<span class="hljs-built_in"> connection </span>handler<span class="hljs-string">'\n",
+            "componentSignature": "dbmg",
+            "errCode": 1802
         }
     ]
 }
-</code></pre>
+</span></code></pre>
 <h2><a class="anchor" aria-hidden="true" id="methodsubentityset"></a><a href="#methodsubentityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=subentityset</h2>
 <p>Creates an entity set in 4D Server's cache based on the collection of related entities defined in the REST request</p>
 <h3><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
@@ -149,37 +149,37 @@ If the entity set wasn't found, an error is returned:
 <h4><a class="anchor" aria-hidden="true" id="response-1"></a><a href="#response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response:</h4>
 <pre><code class="hljs">{
 
-    &quot;__ENTITYSET&quot;: &quot;/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB&quot;,
-    &quot;__entityModel&quot;: &quot;Employee&quot;,
-    &quot;__COUNT&quot;: 2,
-    &quot;__SENT&quot;: 2,
-    &quot;__FIRST&quot;: 0,
-    &quot;__ENTITIES&quot;: [
+    <span class="hljs-attr">"__ENTITYSET"</span>: <span class="hljs-string">"/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB"</span>,
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Employee"</span>,
+    <span class="hljs-attr">"__COUNT"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"__SENT"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"__FIRST"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"__ENTITIES"</span>: [
         {
-            &quot;__KEY&quot;: &quot;4&quot;,
-            &quot;__STAMP&quot;: 1,
-            &quot;ID&quot;: 4,
-            &quot;firstName&quot;: &quot;Linda&quot;,
-            &quot;lastName&quot;: &quot;Jones&quot;,
-            &quot;birthday&quot;: &quot;1970-10-05T14:23:00Z&quot;,
-            &quot;employer&quot;: {
-                &quot;__deferred&quot;: {
-                    &quot;uri&quot;: &quot;/rest/Company(1)&quot;,
-                    &quot;__KEY&quot;: &quot;1&quot;
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"4"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Linda"</span>,
+            <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Jones"</span>,
+            <span class="hljs-attr">"birthday"</span>: <span class="hljs-string">"1970-10-05T14:23:00Z"</span>,
+            <span class="hljs-attr">"employer"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Company(1)"</span>,
+                    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>
                 }
             }
         },
         {
-            &quot;__KEY&quot;: &quot;1&quot;,
-            &quot;__STAMP&quot;: 3,
-            &quot;ID&quot;: 1,
-            &quot;firstName&quot;: &quot;John&quot;,
-            &quot;lastName&quot;: &quot;Smith&quot;,
-            &quot;birthday&quot;: &quot;1985-11-01T15:23:00Z&quot;,
-            &quot;employer&quot;: {
-                &quot;__deferred&quot;: {
-                    &quot;uri&quot;: &quot;/rest/Company(1)&quot;,
-                    &quot;__KEY&quot;: &quot;1&quot;
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+            <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"John"</span>,
+            <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Smith"</span>,
+            <span class="hljs-attr">"birthday"</span>: <span class="hljs-string">"1985-11-01T15:23:00Z"</span>,
+            <span class="hljs-attr">"employer"</span>: {
+                <span class="hljs-attr">"__deferred"</span>: {
+                    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Company(1)"</span>,
+                    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>
                 }
             }
         }
@@ -209,10 +209,10 @@ If the entity set wasn't found, an error is returned:
 <p><code>POST /rest/Person/?$method=update</code></p>
 <p><strong>POST data:</strong></p>
 <pre><code class="hljs">{
-    __KEY: &quot;340&quot;,
-    __STAMP: 2,
-    firstName: &quot;Pete&quot;,
-    lastName: &quot;Miller&quot;
+    <span class="hljs-attribute">__KEY</span>: <span class="hljs-string">"340"</span>,
+    __STAMP: <span class="hljs-number">2</span>,
+    firstName: <span class="hljs-string">"Pete"</span>,
+    lastName: <span class="hljs-string">"Miller"</span>
 }
 </code></pre>
 <p>The firstName and lastName attributes in the entity indicated above will be modified leaving all other attributes (except calculated ones based on these attributes) unchanged.</p>
@@ -220,87 +220,89 @@ If the entity set wasn't found, an error is returned:
 <p><code>POST /rest/Person/?$method=update</code></p>
 <p><strong>POST data:</strong></p>
 <pre><code class="hljs">{ 
-    firstName: &quot;John&quot;,
-    lastName: &quot;Smith&quot;
+    <span class="hljs-attribute">firstName</span>: <span class="hljs-string">"John"</span>,
+    lastName: <span class="hljs-string">"Smith"</span>
 }
 </code></pre>
 <p>You can also create and update multiple entities at the same time using the same URL above by passing multiple objects in an array to the POST:</p>
 <p><code>POST /rest/Person/?$method=update</code></p>
 <p><strong>POST data:</strong></p>
 <pre><code class="hljs">[{ 
-    &quot;__KEY&quot;: &quot;309&quot;,
-    &quot;__STAMP&quot;: 5,
-    &quot;ID&quot;: &quot;309&quot;,
-    &quot;firstName&quot;: &quot;Penelope&quot;,
-    &quot;lastName&quot;: &quot;Miller&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"309"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-string">"309"</span>,
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Penelope"</span>,
+    <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Miller"</span>
 }, { 
-    &quot;firstName&quot;: &quot;Ann&quot;,
-    &quot;lastName&quot;: &quot;Jones&quot;
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Ann"</span>,
+    <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Jones"</span>
 }]
 </code></pre>
 <p><strong>Response:</strong></p>
 <p>When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:</p>
 <pre><code class="hljs">{
-    &quot;__KEY&quot;: &quot;622&quot;, 
-    &quot;__STAMP&quot;: 1, 
-    &quot;uri&quot;: &quot;http://127.0.0.1:8081/rest/Employee(622)&quot;, 
-    &quot;__TIMESTAMP&quot;: &quot;!!2020-04-03!!&quot;,
-    &quot;ID&quot;: 622, 
-    &quot;firstName&quot;: &quot;John&quot;, 
-    &quot;firstName&quot;: &quot;Smith&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"622"</span>, 
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>, 
+    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://127.0.0.1:8081/rest/Employee(622)"</span>, 
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"!!2020-04-03!!"</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">622</span>, 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"John"</span>, 
+    <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Smith"</span>
 }
 </code></pre>
 <p>If, for example, the stamp is not correct, the following error is returned:</p>
 <pre><code class="hljs">{
-    &quot;__STATUS&quot;: {
-        &quot;status&quot;: 2,
-        &quot;statusText&quot;: &quot;Stamp has changed&quot;,
-        &quot;success&quot;: false
+    <span class="hljs-attr">"__STATUS"</span>: {
+        <span class="hljs-attr">"status"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-attr">"statusText"</span>: <span class="hljs-string">"Stamp has changed"</span>,
+        <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>
     },
-    &quot;__KEY&quot;: &quot;1&quot;,
-    &quot;__STAMP&quot;: 12,
-    &quot;__TIMESTAMP&quot;: &quot;!!2020-03-31!!&quot;,
-    &quot;ID&quot;: 1,
-    &quot;firstname&quot;: &quot;Denise&quot;,
-    &quot;lastname&quot;: &quot;O'Peters&quot;,
-    &quot;isWoman&quot;: true,
-    &quot;numberOfKids&quot;: 1,
-    &quot;addressID&quot;: 1,
-    &quot;gender&quot;: true,
-    &quot;imageAtt&quot;: {
-        &quot;__deferred&quot;: {
-            &quot;uri&quot;: &quot;/rest/Persons(1)/imageAtt?$imageformat=best&amp;$version=12&amp;$expand=imageAtt&quot;,
-            &quot;image&quot;: true
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"!!2020-03-31!!"</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Denise"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"O'Peters"</span>,
+    <span class="hljs-attr">"isWoman"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"numberOfKids"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"addressID"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"gender"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"imageAtt"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Persons(1)/imageAtt?$imageformat=best&amp;$version=12&amp;$expand=imageAtt"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-literal">true</span>
         }
     },
-    &quot;extra&quot;: {
-        &quot;num&quot;: 1,
-        &quot;alpha&quot;: &quot;I am 1&quot;
+    <span class="hljs-attr">"extra"</span>: {
+        <span class="hljs-attr">"num"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"alpha"</span>: <span class="hljs-string">"I am 1"</span>
     },
-    &quot;address&quot;: {
-        &quot;__deferred&quot;: {
-            &quot;uri&quot;: &quot;/rest/Address(1)&quot;,
-            &quot;__KEY&quot;: &quot;1&quot;
+    <span class="hljs-attr">"address"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Address(1)"</span>,
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>
         }
     },
-    &quot;__ERROR&quot;: [
+    <span class="hljs-attr">"__ERROR"</span>: [
         {
-            &quot;message&quot;: &quot;Given stamp does not match current one for record# 0 of table Persons&quot;,
-            &quot;componentSignature&quot;: &quot;dbmg&quot;,
-            &quot;errCode&quot;: 1263
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Given stamp does not match current one for record# 0 of table Persons"</span>,
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1263</span>
         },
         {
-            &quot;message&quot;: &quot;Cannot save record 0 in table Persons of database remote_dataStore&quot;,
-            &quot;componentSignature&quot;: &quot;dbmg&quot;,
-            &quot;errCode&quot;: 1046
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cannot save record 0 in table Persons of database remote_dataStore"</span>,
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1046</span>
         },
         {
-            &quot;message&quot;: &quot;The entity# 1 in the \&quot;Persons\&quot; datastore class cannot be saved&quot;,
-            &quot;componentSignature&quot;: &quot;dbmg&quot;,
-            &quot;errCode&quot;: 1517
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"The entity# 1 in the \"Persons\" datastore class cannot be saved"</span>,
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1517</span>
         }
     ]
-}{}</code></pre>
+}{}
+
+</code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/REST/imageformat.html"><span class="arrow-prev">← </span><span>$imageformat</span></a><a class="docs-next button" href="/docs/pt/REST/orderby.html"><span>$orderby</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#available-syntaxes">Available syntaxes</a></li><li><a href="#methoddelete">$method=delete</a><ul class="toc-headings"><li><a href="#description">Description</a></li></ul></li><li><a href="#example">Example</a></li><li><a href="#methodentityset">$method=entityset</a><ul class="toc-headings"><li><a href="#description-1">Description</a></li><li><a href="#example-1">Example</a></li></ul></li><li><a href="#methodrelease">$method=release</a><ul class="toc-headings"><li><a href="#description-2">Description</a></li><li><a href="#example-2">Example</a></li></ul></li><li><a href="#methodsubentityset">$method=subentityset</a><ul class="toc-headings"><li><a href="#description-3">Description</a></li><li><a href="#example-3">Example</a></li></ul></li><li><a href="#methodupdate">$method=update</a><ul class="toc-headings"><li><a href="#description-4">Description</a></li><li><a href="#example-4">Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
