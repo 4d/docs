@@ -36,7 +36,8 @@ Once created, you can use a variable wherever you need it in your database. For 
 The following are some basic variable declarations:
 
 ```4d
-<br /> C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
+
+ C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
  C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
  C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
  C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
@@ -54,15 +55,15 @@ The assignment operator is the primary way to create a variable and to put data 
 MyNumber:=3
 ```
 
-creates the variable *MyNumber* and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
+Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, *[Products]Size* would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+In this case, _[Products]Size_ would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
 
 You assign data to array elements by using curly braces ({...}):
 

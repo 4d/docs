@@ -7,11 +7,13 @@ Un projet 4D contient l'intégralité du code source d'une application de base d
 
 Les projets 4D sont créés et gérés à l'aide de l'application 4D Developer. Les fichiers de projet sont ensuite utilisés pour créer les fichiers de déploiement d'application finaux, qui peuvent être ouverts avec 4D Server ou une licence 4D Volume (applications fusionnées).
 
+
 ## Fichiers du projet
 
 Les fichiers de projet 4D sont ouverts et édités à l'aide d'applications standard de la plate-forme 4D. Des éditeurs complets sont disponibles pour gérer les fichiers, y compris un éditeur de structure, un éditeur de méthode, un éditeur de formulaire, un éditeur de menu, etc.
 
 De plus, les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils peuvent être lus ou édités manuellement par les développeurs, à l’aide de n’importe quel éditeur de code.
+
 
 ## Contrôle de la source
 
@@ -22,6 +24,7 @@ La flexibilité du développement d'un projet 4D est particulièrement démontr�
 - Versioning
 - Comparaisons de révision
 - Retours en arrière (Rollbacks)
+
 
 ## Travailler avec des projets
 

@@ -4,7 +4,7 @@ title: Date
 ---
 
 - A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
-- Although the representation mode for dates by can work with dates up to the year 32 767, certain operations passing through the system impose a lower limit. 
+- Although the representation mode for dates by can work with dates up to the year 32 767, certain operations passing through the system impose a lower limit.
 
 **Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.
 
@@ -18,13 +18,13 @@ A date literal constant is enclosed by exclamation marks (!…!). A date must be
 !2015-12-31!
 ```
 
-A null date is specified by *!00-00-00!*.
+A null date is specified by _!00-00-00!_.
 
 **Tip:** The Method Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
 
 **Notes:**
 
-- For compatibility reasons, 4D accepts two-digit years to be entered. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the ```SET DEFAULT CENTURY``` command.
+- For compatibility reasons, 4D accepts two-digit years to be entered. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the `SET DEFAULT CENTURY` command.
 - If you have checked the "Use regional system settings" option (see Methods Page), you must use the date format defined in your system. Generally, in a US environment, dates are entered in the form month/day/year, with a slash "/" separating the values.
 
 ## Date operators

@@ -40,6 +40,7 @@ Au moment de restituer une sauvegarde et d'intégrer le fichier d'historique cou
 
 La séquence suivante illustre les principes d'une opération de clé multiple de sauvegarde/restitution :
 
+
 | Opération                                | Fichiers générés                                   | Commentaire                                                                                                                                                                                                                                                                                           |
 | ---------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Créer une nouvelle base de données       |                                                    |                                                                                                                                                                                                                                                                                                       |
@@ -59,8 +60,6 @@ La séquence suivante illustre les principes d'une opération de clé multiple d
 | Sauvegarder la base de données           | Fichiers 0006.4BL et 0007.4BK (chiffrés avec clé2) | Il est possible de restituer 0006.4BK et d'intégrer 0006.4BL                                                                                                                                                                                                                                          |
 | Ajouter des données (enregistrement # 8) |                                                    |                                                                                                                                                                                                                                                                                                       |
 | Sauvegarder la base de données           | Fichiers 0007.4BL et 0008.4BK (chiffrés avec clé2) | Il est possible de restituer 0006.4BK et d'intégrer 0006.4BL + 0007.4BL. Il est possible de restituer 0007.4BK et d'intégrer 0007.4BL                                                                                                                                                                 |
-
-
 > Au moment de restituer une sauvegarde et d'intégrer un ou plusieurs fichiers .4BL, les fichiers restitués .4BK et .4BL doivent avoir la même clé de chiffrement. Durant le processus d'intégration, si aucune clé de chiffrement valide n'est trouvée dans le trousseau de 4D lors de l'intégration du fichier .4BL, une erreur est générée.
 > 
 > Si vous avez stocké plusieurs clés de données sur le même appareil externe, la restitution d'une sauvegarde et l'intégration de fichiers d'historique permettront de trouver automatiquement la clé correspondant à l'appareil connecté.

@@ -18,7 +18,6 @@ La nature modulaire de l'environnement 4D permet la création d'applications de 
 Un plug-in est un morceau de code que 4D lance au démarrage. Il ajoute des fonctionnalités à 4D et augmente ainsi sa capacité.
 
 Habituellement, un plug-in fait des choses :
-
 - Que 4D ne peut pas effectuer (c'est-à-dire une technologie de plate-forme spécifique),
 - Qui sera très difficile à écrire en utilisant uniquement 4D,
 - Qui sont uniquement disponibles en tant que point d'entrée de plug-in
@@ -48,9 +47,9 @@ Les dossiers “NomPlugin.bundle” (appelés paquets ou packages sous Mac Os) c
 
 Vous pouvez placer les dossiers PlugIns et Components à deux endroits :
 
-- Au niveau de l’application 4D exécutable, c'est-à-dire .: 
+- Au niveau de l’application 4D exécutable, c'est-à-dire .:
   - Sous Windows : à côté du fichier .exe
-  - Sous Mac Os : au premier niveau du dossier Contents, à l’intérieur du package de l’application.  
+  - Sous Mac Os : au premier niveau du dossier Contents, à l’intérieur du package de l’application.   
     Dans ce cas, les plug-ins et les composants sont disponibles dans toutes les bases de données ouvertes par cette application.
 - Au même niveau que le fichier de structure de la base. Dans ce cas, les plug-ins et les composants sont disponibles dans cette base de données uniquement.
 

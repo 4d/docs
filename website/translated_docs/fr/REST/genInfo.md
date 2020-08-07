@@ -16,6 +16,7 @@ Pour obtenir la collection de toutes les dataclass exposées avec leurs attribut
 
 `GET /rest/$catalog/$all`
 
+
 ## Informations sur le cache
 
 Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les sélections d'entités stockées dans le cache du 4D Server et sur l'exécution des sessions utilisateur.
@@ -29,7 +30,6 @@ Par exemple:
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
 Ces propriétés sont des objets contenant des informations sur la façon dont le serveur exécute les requêtes composites en interne via des dataclass et des relations :
-
 - **queryPlan** : objet contenant la description détaillée de la requête juste avant son exécution (c'est-à-dire la requête planifiée).
 - **queryPath** : objet contenant la description détaillée de la requête telle qu'elle a été réellement effectuée.
 

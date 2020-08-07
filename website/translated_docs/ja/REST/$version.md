@@ -15,4 +15,4 @@ The value of the image's version parameter is modified by the server.
 
 The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
 
-`GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
+ `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`

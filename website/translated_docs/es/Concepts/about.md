@@ -15,6 +15,7 @@ The 4D built-in language, consisting of more than 1300 commands, makes 4D a powe
 
 The flexibility and power of the 4D programming language make it the ideal tool for all levels of users and developers to accomplish a complete range of information management tasks. Novice users can quickly perform calculations. Experienced users without programming experience can customize their databases. Experienced developers can use this powerful programming language to add sophisticated features and capabilities to their databases, including file transfer, communications, monitoring. Developers with programming experience in other languages can add their own commands to the 4D language.
 
+
 ## What is a Language?
 
 The 4D language is not very different from the spoken language we use every day. It is a form of communication used to express ideas, inform, and instruct. Like a spoken language, 4D has its own vocabulary, grammar, and syntax; you use it to tell 4D how to manage your database and data.

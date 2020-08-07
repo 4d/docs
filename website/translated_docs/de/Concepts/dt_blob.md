@@ -14,7 +14,6 @@ Sie können BLOBs von 4D als Parameter an 4D Befehle oder Plug-In Routinen über
 Wollen Sie ein BLOB für Ihre eigenen Methoden übergeben, können Sie auch einen Zeiger auf das BLOB definieren und den Zeiger als Parameter übergeben.
 
 **Beispiele:**
-
 ```4d
   ` Declare a variable of type BLOB
  C_BLOB(anyBlobVar)
@@ -28,15 +27,13 @@ Wollen Sie ein BLOB für Ihre eigenen Methoden übergeben, können Sie auch eine
   ` A pointer to the BLOB is passed as parameter to a user method
  COMPUTE BLOB(->anyBlobVar)
 ```
-
-**Hinweis für Plug-In Entwickler:** Ein BLOB Parameter wird als “&0” deklariert (der Buchstabe “O”, nicht die Ziffer “0”).
+**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
 
 ## Zuweisung
 
 Sie können BLOBs gegenseitig zuweisen.
 
 **Beispiel:**
-
 ```4d
   ` Declare two variables of type BLOB
  C_BLOB(vBlobA;vBlobB)
@@ -51,7 +48,6 @@ Sie können jedoch keinen Operator auf BLOBs anwenden.
 ## BLOB Inhalt ansprechen
 
 Sie können jedes Byte eines BLOB über geschweifte Klammern {...} individuell ansprechen. Bytes in einem BLOB werden von 0 bis N-1 nummeriert, wobei N die Größe des BLOB ist. Beispiel:
-
 ```4d
   ` Declare a variable of type BLOB
  C_BLOB(vBlob)
@@ -62,5 +58,4 @@ Sie können jedes Byte eines BLOB über geschweifte Klammern {...} individuell a
     vBlob{vByte}:=0
  End for
 ```
-
 Da jedes Byte eines BLOB einzeln ansprechbar ist, können Sie in einem Feld bzw. einer Variablen vom Typ BLOB speichern, was Sie möchten.

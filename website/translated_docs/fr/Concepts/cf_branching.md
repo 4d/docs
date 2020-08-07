@@ -16,7 +16,6 @@ End if
 ```
 
 A noter que l'élément `Else` est optionnel, vous pouvez écrire :
-
 ```4d
  If(Boolean_Expression)
     instruction(s)
@@ -33,7 +32,7 @@ A noter que l'expression booléenne est toujours évaluée en totalité. Examino
  End if
 ```
 
-L'expression n'est TRUE que si les deux méthodes sont TRUE. Or, même si *MethodA* retourne FALSE, 4D évaluera quand même *MethodB*, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
+L'expression n'est TRUE que si les deux méthodes sont TRUE. Or, même si _MethodA_ retourne FALSE, 4D évaluera quand même _MethodB_, ce qui représente une perte de temps inutile. Dans ce cas, il est préférable d'utiliser une structure du type :
 
 ```4d
  If(MethodA)
@@ -43,7 +42,7 @@ L'expression n'est TRUE que si les deux méthodes sont TRUE. Or, même si *Metho
  End if
 ```
 
-Le résultat est équivalent et *MethodB* n'est évaluée que si nécessaire.
+Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 
 ### Exemple
 
@@ -65,7 +64,6 @@ Le résultat est équivalent et *MethodB* n'est évaluée que si nécessaire.
     instruction(s)
  End if
 ```
-
 ou :
 
 ```4d
@@ -78,7 +76,6 @@ ou :
 ## Au cas ou...Sinon...Fin de cas
 
 La syntaxe de la structure conditionnelle `Case of...Else...End case` est la suivante :
-
 ```4d
  Case of
     :(Expression_booléenne)
@@ -97,7 +94,6 @@ La syntaxe de la structure conditionnelle `Case of...Else...End case` est la sui
 ```
 
 A noter que l'élément `Else` est optionnel, vous pouvez écrire :
-
 ```4d
  Case of
     :(Expression_booléenne)
@@ -112,7 +108,6 @@ A noter que l'élément `Else` est optionnel, vous pouvez écrire :
        instruction(s)
  End case
 ```
-
 Tout comme la structure `If...Else...End if`, la structure `Case of...Else...End case` permet également à votre méthode de choisir parmi plusieurs séquences d’instructions. A la différence de la structure `If...Else...End`, la structure `Case of...Else...End case` peut tester un nombre illimité d’expressions booléennes et exécuter la séquence d’instructions correspondant à la valeur TRUE.
 
 Chaque expression booléenne débute par le caractère deux points (`:`). La combinaison de deux points et d’une expression booléenne est appelée un cas. Par exemple, la ligne suivante est un cas :
@@ -131,13 +126,13 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 
 ```4d
  Case of
-    :(vResult=1) // Teste si le numéro est 1
-       ALERT("One.") // Si c’est 1, afficher une alerte
-    :(vResult=2) // Teste si le numéro est 2
-       ALERT("Two.") // Si c’est 2, afficher une alerte
-    :(vResult=3) // Teste si le numéro est 3
-       ALERT("Three.") // Si c’est 3, afficher une alerte
-    Else  // Si ce n’est ni 1 ni 2 ni 3, afficher une alerte
+    :(vResult=1) //Tester si le chiffre est 1
+       ALERT("One.") //Si le chiffre est 1, afficher une alerte
+    :(vResult=2) //Tester si le chiffre est 2
+       ALERT("Two.") //Si le chiffre est 2, afficher une alerte
+    :(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
        ALERT("It was not one, two, or three.")
  End case
 ```
@@ -145,16 +140,16 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 A titre de comparaison, voici la version avec `If...Else...End if` de la même méthode :
 
 ```4d
- If(vResult=1) //Teste si le numéro est 1
-    ALERT("One.") //Si c’est 1, afficher une alerte
+ If(vResult=1) //Tester si le chiffre est 1
+    ALERT("One.") //Si le chiffre est 1, afficher une alerte
  Else
-    If(vResult=2) //Test si le numéro est 2
-       ALERT("Two.") //Si c’est 2, afficher une alerte
+    If(vResult=2) //Tester si le chiffre est 2
+       ALERT("Two.") //Si le chiffre est 2, afficher une alerte
     Else
-       If(vResult=3) //Teste si le numéro est 3
-          ALERT("Three.") //Si c’est 3, afficher une alerte
-       Else //Si ce n’est ni 1, 2 ni 3, afficher l’alerte
-          ALERT("It was not one, two, or three.")
+    If(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
        End if
     End if
  End if
@@ -162,14 +157,14 @@ A titre de comparaison, voici la version avec `If...Else...End if` de la même m
 
 Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul le premier cas TRUE rencontré est exécuté. Même si d’autres cas sont TRUE, seules les instructions suivant le premier cas TRUE seront prises en compte.
 
-Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. Par exemple, si vous souhaitez traiter le cas simple (vResult=1) et le cas complexe (vResult=1) & (vCondition#2) et que vous structurez la méthode de la manière suivante : 
+Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. Par exemple, si vous souhaitez traiter le cas simple (vResult=1) et le cas complexe (vResult=1) & (vCondition#2) et que vous structurez la méthode de la manière suivante :
 
 ```4d
  Case of
     :(vResult=1)
-       ... //instruction(s)
-    :((vResult=1) & (vCondition#2)) //Les instructions suivant ce cas ne seront jamais exécutées
-       ... //instruction(s)
+       ... //déclaration(s)
+    :((vResult=1) & (vCondition#2)) //ce cas ne sera jamais détecté
+       ... //déclaration(s)
  End case
 ```
 
@@ -177,17 +172,14 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) // Les cas complexes doivent toujours être placés en premier
-       ... //Instruction(s)
+    :((vResult=1) & (vCondition#2)) //ce cas sera détecté en premier
+       ... //déclaration(s)
     :(vResult=1)
-       ... //instruction(s)
+       ... //déclaration(s)
  End case
 ```
 
-
-
 **Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
-
 ```4d
  Case of
     :(Expression_booléenne)
@@ -202,7 +194,6 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 ```
 
 ou :
-
 ```4d
  Case of
     :(Expression_booléenne)
@@ -217,7 +208,6 @@ ou :
 ```
 
 ou :
-
 ```4d
  Case of
     Else

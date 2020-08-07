@@ -14,7 +14,6 @@ Vous pouvez disposer de différentes barres de menus dans la même base de donn�
 Vous pouvez utiliser le même menu dans plusieurs barres de menus et menus, ou ne pas l’attacher et le gérer uniquement par programmation (on parle dans ce cas de menu indépendant).
 
 Lorsque vous créez des menus, il est utile de garder à l’esprit les deux règles suivantes :
-
 - N’utilisez les menus que pour des tâches qui leurs sont adaptées : Les commandes de menus doivent réaliser des tâches telles que l’ajout d’un enregistrement, les recherches ou les impressions.
 - Groupez les commandes de menus par fonctions : l’utilisateur doit pouvoir être capable de s’orienter dans un ordre logique de menus. Par exemple, toutes les commandes de menu qui permettent de naviguer dans la base doivent être placées dans le même menu.
 
@@ -24,8 +23,8 @@ Pour créer des menus et des barres de menus, vous pouvez utiliser soit :
 - les commandes du langage,
 - un mélange des deux.
 
-## Éditeur de menus
 
+## Éditeur de menus
 L’éditeur de menus est accessible via le bouton **Menus** de la Boîte à outils.
 
 ![](assets/en/Menus/editor1.png)

@@ -5,11 +5,13 @@ title: Installation and activation
 
 Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.
 
+
 ## Required configuration
 
 Refer to the [product download page](https://us.4d.com/product-download) on the 4D web site for minimum Mac / Windows configuration for your 4D series.
 
 All the details are available on the [Resources page](https://us.4d.com/resources/feature-release) of the 4D Web site.
+
 
 ## Installation on disk
 
@@ -17,6 +19,7 @@ All the details are available on the [Resources page](https://us.4d.com/resource
 
 1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
 2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
+
 
 ## Activation of a product
 
@@ -46,6 +49,7 @@ The **License Manager** dialog box is displayed (Instant Activation page is sele
 
 ![](assets/en/getStart/helpMenu.png)
 
+
 ## 4D Activation mode
 
 4D offers three activation modes. We recommend **Instant Activation**.
@@ -54,13 +58,14 @@ The **License Manager** dialog box is displayed (Instant Activation page is sele
 
 Enter your user ID (email or 4D account) as well as your password. If you do not have an existing user account, you will need to create it at the following address:
 
-<https://account.4d.com/us/login.shtml>
+[https://account.4d.com/us/login.shtml](https://account.4d.com/us/login.shtml)
 
 ![](assets/en/getStart/activ1.png)
 
 Then enter the license number of the product you want to activate. This number is provided by email or by mail after a product is purchased.
 
 ![](assets/en/getStart/activ2.png)
+
 
 ### Deferred Activation
 
@@ -72,7 +77,7 @@ If you are unable to use [instant activation](#instant-activation) because your 
 ![](assets/en/getStart/activ3.png)
 
 3. Save the *reg.txt* file to a USB drive and take it to a computer that has internet access.
-4. On the machine with internet access, login to <https://activation.4d.com>.
+4. On the machine with internet access, login to [https://activation.4d.com](https://activation.4d.com).
 5. On the Web page, click on the **Choose File...** button and select the *reg.txt* file from steps 3 and 4; then click on the **Activate** button.
 6. Download the serial file(s).
 
@@ -95,6 +100,7 @@ Your 4D application is now activated.
 
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
+
 ## Adding licenses
 
 You can add new licenses, for example to extend the capacities of your application, at any time.
@@ -113,9 +119,11 @@ You can use the **Refresh** button in the following contexts:
 - When you have purchased an additional expansion and want to activate it,
 - When you need to update an expired temporary number (Partners or evolutions).
 
+
+
 ## 4D Online Store
 
-In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can reach the store at the following address: <https://store.4d.com/us/> (you will need to select your country).
+In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can reach the store at the following address: [https://store.4d.com/us/](https://store.4d.com/us/) (you will need to select your country).
 
 Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
 
@@ -141,6 +149,7 @@ You can use projects to organize your licenses according to your needs:
 
 ![](assets/en/getStart/licens6.png)
 
+
 ## Troubleshooting
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
@@ -151,8 +160,8 @@ If the installation or activation process fails, please check the following tabl
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
 | Failure of on-line activation                                 | Antivirus application, firewall, proxy                     | 1- Temporarily disable your antivirus application or your firewall OR 2- Use deferred activation (not available with licenses for "R" versions) |
 
-
 If this information does not help you resolve your problem, please contact 4D or your local distributor.
+
 
 ## Contacts
 
@@ -160,12 +169,14 @@ For any questions about the installation or activation of your product, please c
 
 For the US:
 
-- Web: <https://us.4d.com/4d-technical-support>
+- Web: [https://us.4d.com/4d-technical-support](https://us.4d.com/4d-technical-support)
 - Telephone: 1-408-557-4600
 
 For the UK:
 
-- Web: <https://uk.4d.com/4d-technical-support>
+- Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
 - Telephone: 01625 536178
 
-Find the 4D developer community on line here: <https://discuss.4d.com>.
+
+Find the 4D developer community on line here: [https://discuss.4d.com](https://discuss.4d.com).
+
