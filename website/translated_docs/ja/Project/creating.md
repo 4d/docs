@@ -4,7 +4,7 @@ title: Creating or opening a project
 ---
 
 
-## Creating a project
+## プロジェクトの作成
 
 New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
 
