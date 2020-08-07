@@ -67,7 +67,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/FormEditor/createStylesheet.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Feuilles de style (style sheets)</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="aperçu"></a><a href="#aperçu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aperçu</h2>
-<p>Une feuille de style regroupe une combinaison d’attributs d'objets formulaire — allant des attributs de texte à quasiment tous les attributs d'objet disponibles.</p>
+<p>Une feuille de style regroupe une combinaison d’attributs d'objets formulaire —  allant des attributs de texte à quasiment tous les attributs d'objet disponibles.</p>
 <p>Outre l’harmonisation de l’interface de vos applications, l’usage de feuilles de style a trois avantages majeurs :</p>
 <ul>
 <li>Gain de temps en développement : pour chaque objet, vous définissez en une seule opération un ensemble de paramétrages.</li>
@@ -102,51 +102,51 @@
 <p>The object type corresponds to the JSON <a href="/docs/18/fr/FormObjects/propertiesObject.html#type">type</a> property of form objects.</p>
 </blockquote>
 <p>Dans l'exemple suivant, tous les objets du type <em>bouton</em> afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :</p>
-<pre><code class="hljs">button {
-    font-family: Helvetica Neue;
-    font-size: 20px;
+<pre><code class="hljs"><span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">font-family</span>: Helvetica Neue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
 }
 </code></pre>
 <p>To apply the same style to multiple types of objects, specify the object types separated by a &quot;,&quot; then in curly braces, declare the style(s) to apply:</p>
-<pre><code class="hljs">text, input {
-  text-align: left;
-  stroke: grey;
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span>, <span class="hljs-selector-tag">input</span> {
+  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">stroke</span>: grey;
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nom-dobjet"></a><a href="#nom-dobjet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nom d'objet</h3>
 <p>Le nom de l'objet correspond au <strong>sélecteur d'ID</strong> CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.</p>
 <p>Désignez l'objet avec le caractère &quot;#&quot; avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.</p>
 <p>Dans l'exemple suivant, le texte de l'objet portant le nom &quot;okButton&quot; sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels :</p>
-<pre><code class="hljs">#okButton {
-    font-family: Helvetica Neue;
-    font-size: 20px;
+<pre><code class="hljs"><span class="hljs-selector-id">#okButton</span> {
+    <span class="hljs-attribute">font-family</span>: Helvetica Neue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="class"></a><a href="#class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class</h3>
 <p>Class correspond au <strong>sélecteur class</strong> CSS et définit un objet le style de tous les objets formulaires de l'attribut <code>class</code>.</p>
 <p>Vous pouvez spécifier les classes à utiliser avec un caractère &quot;.&quot; suivi du nom de la classe et, entre accolades, déclarez le(s) style(s) à appliquer.</p>
 <p>Dans l'exemple suivant, le texte de tous les objets de la classe <code>okButtons</code> sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels, alignée au centre :</p>
-<pre><code class="hljs">.okButtons {
-    font-family: Helvetica Neue;
-    font-size: 20px;
-    text-align: center;
+<pre><code class="hljs"><span class="hljs-selector-class">.okButtons</span> {
+    <span class="hljs-attribute">font-family</span>: Helvetica Neue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">text-align</span>: center;
 }
 </code></pre>
 <p>Pour indiquer qu'un style doit être appliqué uniquement à des objets de type différent, spécifiez le type suivi de &quot;.&quot; et du nom de la classe, puis déclarez entre accolades le(s) style(s) à appliquer.</p>
-<pre><code class="hljs">text.center {
-  text-align: center;
-  stroke: red;
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-class">.center</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">stroke</span>: red;
 }
 </code></pre>
 <p>Dans la description du formulaire 4D, vous associez un nom de classe à un objet à l'aide de l'attribut <code>class</code>. Cet attribut contient un ou plusieurs noms de &quot;class&quot;, séparés par un espace :</p>
-<pre><code class="hljs">class: &quot;okButtons important&quot;             
+<pre><code class="hljs"><span class="hljs-keyword">class</span>: "<span class="hljs-symbol">okButtons</span> <span class="hljs-symbol">important</span>"             
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="tous-les-objets"></a><a href="#tous-les-objets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tous les objets</h3>
 <p>Le caractère &quot;*&quot; correspond au <strong>sélecteur universel</strong> CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.</p>
 <p>Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère &quot;*&quot;, puis, entre accolades, déclarez le(s) style(s) à appliquer.</p>
 <p>Dans l'exemple suivant, tous les objets auront un fond gris :</p>
 <pre><code class="hljs">* {
-  fill: gray;
+  <span class="hljs-attribute">fill</span>: gray;
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="attributs-spécifiques"></a><a href="#attributs-spécifiques" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributs spécifiques</h3>
@@ -166,38 +166,37 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemples"></a><a href="#exemples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemples</h4>
 <p>Tous les objets ayant l'attribut <code>borderStyle</code> auront des lignes violettes :</p>
-<pre><code class="hljs">[borderStyle]
+<pre><code class="hljs"><span class="hljs-selector-attr">[borderStyle]</span>
 {
-     stroke: purple;
+     <span class="hljs-attribute">stroke</span>: purple;
 }
 </code></pre>
 <p>Tous les objets de type texte ayant un attribut text dont la valeur est &quot;Hello&quot; auront des lettres bleues :</p>
-<pre><code class="hljs">text[text=Hello]
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-attr">[text=Hello]</span>
 {
-     stroke: blue;
+     <span class="hljs-attribute">stroke</span>: blue;
 }
 </code></pre>
 <p>Tous les objets ayant un attribut text dont la valeur est &quot;Hello&quot; auront des traits bleus :</p>
-<pre><code class="hljs">[text~=Hello]
+<pre><code class="hljs"><span class="hljs-selector-attr">[text~=Hello]</span>
 {
-     stroke: blue;
+     <span class="hljs-attribute">stroke</span>: blue;
 }
+
 </code></pre>
 <p>Tous les objets de type texte ayant un attribut text dont la valeur commence par &quot;Hello&quot; auront des lettres jaunes :</p>
-<pre><code class="hljs">text[text|=Hello]
+<pre><code class="hljs"><span class="hljs-selector-tag">text</span><span class="hljs-selector-attr">[text|=Hello]</span>
 {
-     stroke: yellow;
+     <span class="hljs-attribute">stroke</span>: yellow;
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="déclarations-de-feuilles-de-style"></a><a href="#déclarations-de-feuilles-de-style" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Déclarations de feuilles de style</h2>
-<p>La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :</p>
-<ul>
-<li>&quot;method&quot;</li>
-<li>&quot;type&quot;</li>
-<li>&quot;type&quot;</li>
-<li>&quot;class&quot;</li>
-<li>choiceList, excludedList, labels, list, requiredList (type liste)</li>
-</ul>
+<p>La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
+- &quot;method&quot;
+- &quot;type&quot;
+- &quot;type&quot;
+- &quot;class&quot;
+- choiceList, excludedList, labels, list, requiredList (type liste)</p>
 <p>Les attributs d'objet formulaire peuvent être déclarés avec leur nom JSON en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes). Pour plus d'informations, voir la page <strong>Formulaires dynamiques</strong> dans le manuel du mode Développement.</p>
 <h3><a class="anchor" aria-hidden="true" id="mappage-dattributs"></a><a href="#mappage-dattributs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mappage d'attributs</h3>
 <p>Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.</p>
@@ -223,10 +222,11 @@
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="valeurs-dattributs-spécifiques"></a><a href="#valeurs-dattributs-spécifiques" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Valeurs d'attributs spécifiques</h3>
 <ul>
-<li><p>Pour les attributs <code>icon</code>, <code>picture</code>, et <code>customBackgroundPicture</code> qui prennent en charge un chemin vers une image, la syntaxe est la suivante :</p>
-<p>icon: url(&quot;/RESOURCES/Images/Buttons/edit.png&quot;); /* chemin absolu <em>/
-icon: url(&quot;edit.png&quot;); /</em> chemin relatif vers le fichier du formulaire */</p></li>
+<li>Pour les attributs <code>icon</code>, <code>picture</code>, et <code>customBackgroundPicture</code> qui prennent en charge un chemin vers une image, la syntaxe est la suivante :</li>
 </ul>
+<pre><code class="hljs"><span class="hljs-attribute">icon</span>: url(<span class="hljs-string">"/RESOURCES/Images/Buttons/edit.png"</span>); <span class="hljs-comment">/* chemin absolu */</span>
+<span class="hljs-attribute">icon</span>: url(<span class="hljs-string">"edit.png"</span>); <span class="hljs-comment">/* chemin relatif vers le fichier du formulaire */</span>
+</code></pre>
 <ul>
 <li><p>Pour <code>fill</code>, <code>stroke</code> , <code>alternateFill</code> , <code>horizontalLineStroke</code> et <code>verticalLineStroke</code>, trois syntaxes sont prises en charge :</p>
 <ul>
@@ -266,33 +266,31 @@ icon: url(&quot;edit.png&quot;); /</em> chemin relatif vers le fichier du formul
 <h3><a class="anchor" aria-hidden="true" id="feuilles-de-style-multiples"></a><a href="#feuilles-de-style-multiples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Feuilles de style multiples</h3>
 <p>A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ordre suivant :</p>
 <ol>
-<li>Le formulaire 4D chargera d’abord le fichier CSS par défaut <code>/SOURCES/styleSheets.css</code>.</li>
-<li>It will then load the CSS file for the current platform <code>/SOURCES/styleSheets_mac.css</code> or <code>/SOURCES/styleSheets_windows.css</code>.</li>
-<li>S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :</li>
-</ol>
+<li><p>Le formulaire 4D chargera d’abord le fichier CSS par défaut <code>/SOURCES/styleSheets.css</code>.</p></li>
+<li><p>Il chargera ensuite le fichier CSS pour la plate-forme courante <code>/SOURCES/styleSheets__mac.css</code> ou <code>/SOURCES/styleSheets_windows.css</code>.</p></li>
+<li><p>S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :</p>
 <ul>
-<li><pre><code class="hljs">  un fichier pour les deux plateformes :
-  
-
-  &quot;css&quot;: &quot;&lt;path&gt;&quot;
-</code></pre></li>
-<li><pre><code class="hljs">  ou une liste de fichiers pour les deux plateformes :
-  
-
-  &quot;css&quot;: [
-         &quot;&lt;path1&gt;&quot;,
-         &quot;&lt;path2&gt;&quot;
-          ],
-</code></pre></li>
-<li><pre><code class="hljs">  ou une liste de fichiers par plateforme :
-  
-
-   &quot;css&quot;: [
-          {&quot;path&quot;: &quot;&lt;path&gt;&quot;, &quot;media&quot;: &quot;mac&quot;},
-          {&quot;path&quot;: &quot;&lt;path&gt;&quot;, &quot;media&quot;: &quot;windows&quot;},
-      ],
-</code></pre></li>
+<li>un fichier pour les deux plateformes :</li>
 </ul>
+<pre><code class="hljs"><span class="hljs-string">"css"</span>: <span class="hljs-string">"&lt;path&gt;"</span>
+</code></pre>
+<ul>
+<li>ou une liste de fichiers pour les deux plateformes :</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-string">"css"</span>: [
+     <span class="hljs-string">"&lt;path1&gt;"</span>,
+     <span class="hljs-string">"&lt;path2&gt;"</span>
+      ],
+</code></pre>
+<ul>
+<li>ou une liste de fichiers par plateforme :</li>
+</ul>
+<pre><code class="hljs"> <span class="hljs-string">"css"</span>: [
+        {<span class="hljs-string">"path"</span>: <span class="hljs-string">"&lt;path&gt;"</span>, <span class="hljs-string">"media"</span>: <span class="hljs-string">"mac"</span>},
+        {<span class="hljs-string">"path"</span>: <span class="hljs-string">"&lt;path&gt;"</span>, <span class="hljs-string">"media"</span>: <span class="hljs-string">"windows"</span>},
+    ],
+</code></pre></li>
+</ol>
 <blockquote>
 <p>Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. * Pour des raisons de sécurité, seuls les chemins de système de fichiers (filesystem) sont acceptés pour les chemins absolus. (<em>ex :</em>, &quot;/RESOURCES&quot;, &quot;/DATA&quot;)</p>
 </blockquote>

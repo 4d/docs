@@ -71,14 +71,16 @@
 <p>Lorsque vous avez des attributs relationnels dans une dataclass, utilisez <code>$attributes</code> pour définir le chemin des attributs dont vous souhaitez obtenir les valeurs pour l'entité ou les entités associées.</p>
 <p>Vous pouvez appliquer des <code>$attributes</code> à une entité (par exemple, People (1)) ou à une entity selection (par exemple, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).</p>
 <ul>
-<li><p>Si <code>$attributes</code> n'est pas spécifié dans une requête, ou si la valeur &quot;*&quot; est passée, tous les attributs disponibles sont extraits. <strong>Related entity</strong> attributes are extracted with the simple form: an object with property <code>__KEY</code> (primary key) and <code>URI</code>. Les attributs des <strong>entités relatives</strong> ne sont pas extraits.</p></li>
+<li><p>Si <code>$attributes</code> n'est pas spécifié dans une requête, ou si la valeur &quot;*&quot; est passée, tous les attributs disponibles sont extraits. Les attributs <strong>d'entité relative</strong> sont extraits avec la forme simple : un objet avec la propriété <code>__KEY</code> (clé primaire) et <code>URI</code>. Les attributs des <strong>entités relatives</strong> ne sont pas extraits.</p></li>
 <li><p>Si <code>$attributes</code> est spécifié pour les attributs **d'entité relative ** :</p>
 <ul>
-<li><code>$attributes=relatedEntity</code>: the related entity is returned with simple form (deferred __KEY property (primary key)) and <code>URI</code>.</li>
+<li><code>$attributes=relatedEntity</code> : l'entité relative est retournée sous une forme simple (propriété __KEY différée (clé primaire)) et <code>URI</code>.</li>
 <li><code>$attributes=relatedEntity.*</code> : tous les attributs de l'entité relative sont retournés</li>
 <li><code>$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...</code> : seuls ces attributs de l'entité relative sont retournés.</li>
 </ul></li>
-<li><p>Si <code>$attributes</code> est spécifié pour les attributs <strong>d'entités relatives</strong> :</p>
+</ul>
+<ul>
+<li>Si <code>$attributes</code> est spécifié pour les attributs <strong>d'entités relatives</strong> :
 <ul>
 <li><code>$attributes=relatedEntities.*</code> : toutes les propriétés des entités relatives sont retournées</li>
 <li><code>$attributes=relatedEntities.attributePath1, relatedEntity.attributePath2, ...</code> : seuls ces attributs des entités relatives sont retournés.</li>
@@ -89,27 +91,27 @@
 <p><code>GET /rest/Company(1)/?$attributes=employees.lastname</code></p>
 <p><strong>Réponse</strong> :</p>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;Company&quot;,
-    &quot;__KEY&quot;: &quot;1&quot;,  
-    &quot;__TIMESTAMP&quot;: &quot;2018-04-25T14:41:16.237Z&quot;,
-    &quot;__STAMP&quot;: 2,
-    &quot;employees&quot;: {
-        &quot;__ENTITYSET&quot;: &quot;/rest/Company(1)/employees?$expand=employees&quot;,
-        &quot;__GlobalStamp&quot;: 50,
-        &quot;__COUNT&quot;: 135,
-        &quot;__FIRST&quot;: 0,
-        &quot;__ENTITIES&quot;: [
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Company"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,  
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2018-04-25T14:41:16.237Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"employees"</span>: {
+        <span class="hljs-attr">"__ENTITYSET"</span>: <span class="hljs-string">"/rest/Company(1)/employees?$expand=employees"</span>,
+        <span class="hljs-attr">"__GlobalStamp"</span>: <span class="hljs-number">50</span>,
+        <span class="hljs-attr">"__COUNT"</span>: <span class="hljs-number">135</span>,
+        <span class="hljs-attr">"__FIRST"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"__ENTITIES"</span>: [
             {
-                &quot;__KEY&quot;: &quot;1&quot;,
-                &quot;__TIMESTAMP&quot;: &quot;2019-12-01T20:18:26.046Z&quot;,
-                &quot;__STAMP&quot;: 5,
-                &quot;lastname&quot;: &quot;ESSEAL&quot;
+                <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+                <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2019-12-01T20:18:26.046Z"</span>,
+                <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">5</span>,
+                <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"ESSEAL"</span>
             },
             {
-                &quot;__KEY&quot;: &quot;2&quot;,
-                &quot;__TIMESTAMP&quot;: &quot;2019-12-04T10:58:42.542Z&quot;,
-                &quot;__STAMP&quot;: 6,
-                &quot;lastname&quot;: &quot;JONES&quot;
+                <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span>,
+                <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2019-12-04T10:58:42.542Z"</span>,
+                <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">6</span>,
+                <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"JONES"</span>
             },
             ...
     }
@@ -124,15 +126,15 @@
 <p><code>GET /rest/Employee(1)?$attributes=employer.name</code></p>
 <p><strong>Réponse</strong> :</p>
 <pre><code class="hljs">{
-    &quot;__entityModel&quot;: &quot;Employee&quot;,
-    &quot;__KEY&quot;: &quot;1&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;2019-12-01T20:18:26.046Z&quot;,
-    &quot;__STAMP&quot;: 5,
-    &quot;employer&quot;: {
-        &quot;__KEY&quot;: &quot;1&quot;,
-        &quot;__TIMESTAMP&quot;: &quot;2018-04-25T14:41:16.237Z&quot;,
-        &quot;__STAMP&quot;: 0,
-        &quot;name&quot;: &quot;Adobe&quot;
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Employee"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2019-12-01T20:18:26.046Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-attr">"employer"</span>: {
+        <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+        <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2018-04-25T14:41:16.237Z"</span>,
+        <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Adobe"</span>
     }
 }
 </code></pre>

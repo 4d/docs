@@ -82,7 +82,7 @@ MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme
 <span class="hljs-variable">$myHour</span>:=<span class="hljs-literal">?08:12:55?</span> <span class="hljs-comment">//assigns a time literal</span>
 </code></pre>
 <p>Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er kombiniert nicht Ausdrücke zu einem neuen, sondern kopiert die Werte des Ausdrucks auf seiner rechten Seite in die Variable oder das Feld auf seiner linken Seite.</p>
-<p><strong>Wichtig:</strong> Verwechseln Sie NICHT den Zuweisungsoperator := mit dem Vergleichsoperator ist gleich =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Denn solche Fehler sind für den Compiler nur schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.</p>
+<p><strong>Important:</strong> Do NOT confuse the assignment operator := with the equality comparison operator =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Denn solche Fehler sind für den Compiler nur schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.</p>
 <h2><a class="anchor" aria-hidden="true" id="variablen"></a><a href="#variablen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variablen</h2>
 <p>Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit einem <code>C_XXX</code> Befehl. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_DATE</span>(MyDate) <span class="hljs-comment">//Date type for MyDate variable</span>
@@ -90,9 +90,9 @@ MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme
 <p>Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren, wie es bei Feldern erforderlich ist. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:</p>
 <pre><code class="hljs css language-4d">MyOtherDate:=Current date+<span class="hljs-number">30</span>
 </code></pre>
-<p>Der Code liest “MyOtherDate gibt das aktuelle Datum plus 30 Tage an”. Diese Zeile erstellt eine Variable, weist ihr temporär den Typ Datum und einen Inhalt zu. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit <code>C_XXX</code> typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.</p>
+<p>The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit <code>C_XXX</code> typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.</p>
 <h2><a class="anchor" aria-hidden="true" id="befehle"></a><a href="#befehle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Befehle</h2>
-<p>4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. <code>CREATE RECORD</code> oder <code>ALERT</code> werden im Handbuch <em>4D Programmiersprache</em> beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:</p>
+<p>4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. All 4D commands, such as <code>CREATE RECORD</code>, or <code>ALERT</code>, are described in the <em>4D Language Reference</em> manual, grouped by theme. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">COPY DOCUMENT</span>(<span class="hljs-string">"folder1\\name1"</span>;<span class="hljs-string">"folder2\\"</span> ; <span class="hljs-string">"new"</span>)
 </code></pre>
 <p>Einige Befehle sind an Collections oder Objekte gebunden. In diesem Fall werden sie Methoden genannt und mit der Objektnotation verwendet. Beispiel:</p>
@@ -116,7 +116,7 @@ objectRef:=<span class="hljs-function">SVG_New_arc</span>(svgRef;<span class="hl
 <pre><code class="hljs css language-4d">vRef:=<span class="hljs-function">Open document</span>(<span class="hljs-string">"PassFile"</span>;<span class="hljs-string">"TEXT"</span>;Read Mode) <span class="hljs-comment">// open doc in read only mode</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="methoden"></a><a href="#methoden" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methoden</h2>
-<p>4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene <strong>Projektmethoden</strong> erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.</p>
+<p>4D provides a large number of built-in methods (or commands) but also lets you can create your own <strong>project methods</strong>. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.</p>
 <p>Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. A statement performs an action, and may be simple or complex.</p>
 <p>Zum Beispiel ist die folgende Zeile eine Anweisung, die ein Dialogfenster zum Bestätigen anzeigt:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">CONFIRM</span>(<span class="hljs-string">"Do you really want to close this account?"</span>;<span class="hljs-string">"Yes"</span>;<span class="hljs-string">"No"</span>)
@@ -145,7 +145,7 @@ End for</span>
 <p>In manchen Fällen müssen Sie Daten als einen Typ speichern und als anderen Typ verwenden. Die Programmiersprache enthält eine ganze Reihe von Befehlen, mit denen Sie einen Datentyp in einen anderen konvertieren können. Sie müssen zum Beispiel eine Artikelnummer erstellen, die mit einer Zahl beginnt und mit Zeichen wie &quot;abc&quot; endet. In diesem Fall schreiben Sie:</p>
 <pre><code class="hljs css language-4d">[Products]Part Number:=<span class="hljs-function">String</span>(Number)+<span class="hljs-string">"abc"</span>
 </code></pre>
-<p>Ist <em>Number</em> 17, dann erhält <em>[Products]Part Number</em> den String &quot;17abc&quot;.</p>
+<p>If <em>Number</em> is 17, then <em>[Products]Part Number</em> will get the string “17abc”.</p>
 <p>Die komplette Übersicht der Datentypen finden Sie im Abschnitt <a href="/docs/18/de/Concepts/data-types.html">Datentypen</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="objekte-und-collections"></a><a href="#objekte-und-collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objekte und Collections</h2>
 <p>Sie können Objekte und Collections der 4D Programmiersprache mit der Objektnotation verwalten, um ihre Werte zu erhalten oder zu setzen. Beispiel:</p>
@@ -158,9 +158,9 @@ End for</span>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].age
 </code></pre>
 <p>Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mit einer eingebundenen Methode (eine Formel), müssen Sie an den Eigenschaftnamen Klammern () anfügen, um die Methode auszuführen:</p>
-<pre><code class="hljs">$f:=New object
-$f.message:=New formula(ALERT(&quot;Hello world!&quot;))
-$f.message() //displays &quot;Hello world!&quot;
+<pre><code class="hljs"><span class="hljs-built_in">$f</span>:=<span class="hljs-keyword">New</span> object
+<span class="hljs-built_in">$f</span>.message:=<span class="hljs-keyword">New</span> formula(ALERT(<span class="hljs-string">"Hello world!"</span>))
+<span class="hljs-built_in">$f</span>.message() <span class="hljs-comment">//displays "Hello world!"</span>
 </code></pre>
 <p>Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_COLLECTION</span>(myColl)
@@ -195,7 +195,7 @@ myColl[<span class="hljs-number">3</span>]  <span class="hljs-comment">//access 
 <h2><a class="anchor" aria-hidden="true" id="ausdrücke"></a><a href="#ausdrücke" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ausdrücke</h2>
 <p>Ausdrücke werden gesetzt und geben einen Wert zurück. Tatsächlich verwenden Sie in der 4D Programmiersprache andauernd Ausdrücke und betrachten sie eher als den Wert, den sie darstellen. Ausdrücke werden manchmal auch als Formeln bezeichnet.</p>
 <p>Ausdrücke setzen sich aus fast allen anderen Teilen der Programmiersprache zusammen: Befehle, Operatoren, Variablen, Felder, Objekteigenschaften und Elemente von Collections. Mit Ausdrücken erstellen Sie Anweisungen (Code-Zeilen), die sie dann zum Erstellen von Methoden verwenden. Die Programmiersprache verwendet Ausdrücke überall, wo sie einen Teil von Daten braucht.</p>
-<p>Ausdrücke sind selten eigenständig. Es gibt jedoch einige Stellen in 4D, wo sich ein Ausdruck allein verwenden lässt. Das gilt für:</p>
+<p>Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Das gilt für:</p>
 <ul>
 <li>Formulareditor (Formel anwenden, Suche mit Formel, Sortiere nach Formel)</li>
 <li>Befehl <code>EXECUTE FORMULA</code></li>
@@ -212,7 +212,7 @@ myColl[<span class="hljs-number">3</span>]  <span class="hljs-comment">//access 
 <tbody>
 <tr><td>“Hello”</td><td>String</td><td>Das Wort Hello ist eine String Konstante, angegeben in doppelten Anführungszeichen.</td></tr>
 <tr><td>“Hello ” + “there”</td><td>String</td><td>Die beiden Strings “Hello ” und “there” werden mit dem String Operator (+) zusammengefügt. Der String “Hello there” wird zurückgegeben.</td></tr>
-<tr><td>“Mr. ” + [People]Name</td><td>String</td><td>Zwei Strings werden zusammengefügt: der String &quot;Mr. ” und der aktuelle Wert des Feldes Name in der Tabelle People. Enthält das Feld “Smith”, gibt der Ausdruck “Mr. Smith” zurück.</td></tr>
+<tr><td>“Mr. ” + [People]Name</td><td>String</td><td>Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. Enthält das Feld “Smith”, gibt der Ausdruck “Mr. Smith” zurück.</td></tr>
 <tr><td>Uppercase(&quot;smith&quot;)</td><td>String</td><td>Dieser Ausdruck verwendet den 4D Befehl <code>Uppercase</code>, um den String “smith” in Großbuchstaben umzuwandeln. Er gibt “SMITH” zurück.</td></tr>
 <tr><td>4</td><td>Zahl</td><td>Dies ist die numerische Konstante 4.</td></tr>
 <tr><td>4 * 2</td><td>Zahl</td><td>Die beiden Zahlen 4 und 2 werden mit dem Operator (*) multipliziert. Das ergibt die Zahl 8.</td></tr>
@@ -231,11 +231,11 @@ myColl[<span class="hljs-number">3</span>]  <span class="hljs-comment">//access 
 <tr><td>JSON Parse (MyJSONArray)</td><td>Collection</td><td>Dies ist ein Befehl, der MyJSONArray als eine Collection zurückgibt (bei geeignetem Format)</td></tr>
 <tr><td>Form.pageNumber</td><td>Objekteigenschaft</td><td>Eine Objekteigenschaft ist ein Ausdruck, der jeder unterstützte Typ sein kann</td></tr>
 <tr><td>Col[5]</td><td>Collection Element</td><td>Ein Collection Element ist ein Ausdruck, der jeder unterstützte Typ sein kann</td></tr>
-<tr><td>$entitySel[0]</td><td>Entity</td><td>Ein Element einer ORDA Entity-Selection ist ein Ausdruck vom Typ Entity. Diese Art Ausdruck ist <strong>nicht-zuweisbar</strong></td></tr>
+<tr><td>$entitySel[0]</td><td>Entity</td><td>Ein Element einer ORDA Entity-Selection ist ein Ausdruck vom Typ Entity. This kind of expression is <strong>non-assignable</strong></td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="zuweisbare-und-nicht-zuweisbare-ausdrücke"></a><a href="#zuweisbare-und-nicht-zuweisbare-ausdrücke" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Zuweisbare und nicht-zuweisbare Ausdrücke</h3>
-<p>Ein Ausdruck kann einfach eine wortgetreue Konstante sein, wie die Zahl 4 oder der String &quot;Hello&quot;, oder eine Variable wie <code>$myButton</code>. Er kann auch Operatoren verwenden. Zum Beispiel ist 4 + 2 ein Ausdruck, der den Operator (+) zum Addieren von zwei Zahlen verwendet und das Ergebnis 6 zurückgibt. Diese Ausdrücke sind in allen Fällen <strong>nicht-zuweisbar</strong>, d.h. Sie können ihnen keinen Wert zuweisen. In 4D können Ausdrücke <strong>zuweisbar</strong> sein. Ein Ausdruck ist zuweisbar, wenn er sich auf der rechten Seite einer Zuweisung verwenden lässt. Beispiel:</p>
+<p>Ein Ausdruck kann einfach eine wortgetreue Konstante sein, wie die Zahl 4 oder der String &quot;Hello&quot;, oder eine Variable wie <code>$myButton</code>. Er kann auch Operatoren verwenden. Zum Beispiel ist 4 + 2 ein Ausdruck, der den Operator (+) zum Addieren von zwei Zahlen verwendet und das Ergebnis 6 zurückgibt. In any cases, these expressions are <strong>non-assignable</strong>, which means that you cannot assign a value to them. In 4D, expressions can be <strong>assignable</strong>. Ein Ausdruck ist zuweisbar, wenn er sich auf der rechten Seite einer Zuweisung verwenden lässt. Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//$myVar variable is assignable, you can write:  </span>
 <span class="hljs-variable">$myVar</span>:=<span class="hljs-string">"Hello"</span> <span class="hljs-comment">//assign "Hello" to myVar</span>
 <span class="hljs-comment">//Form.pageNumber is assignable, you can write:  </span>
@@ -246,7 +246,7 @@ Form.pageTotal- Form.pageNumber:=<span class="hljs-number">10</span> <span class
 <p>Im allgemeinen sind Ausdrücke mit Operator nicht-zuweisbar. Beispiel: <code>[Person]FirstName+&quot; &quot;+[Person]LastName</code> ist nicht zuweisbar.</p>
 <h2><a class="anchor" aria-hidden="true" id="zeiger"></a><a href="#zeiger" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Zeiger</h2>
 <p>Die 4D Programmiersprache bietet eine fortschrittliche Implementierung von Zeigern zum Schreiben von leistungsfähigem und modularem Code. Mit Zeigern können Sie auf Tabellen, Datenfelder, Variablen, Arrays und Array Elemente verweisen.</p>
-<p>Ein Zeiger wird mit dem Symbol &quot;-&gt;&quot; vor dem Elementnamen erstellt und durch das Symbol &quot;-&gt;&quot; nach dem Elementnamen wieder aufgelöst (dereferenziert).</p>
+<p>A pointer to an element is created by adding a &quot;-&gt;&quot; symbol before the element name, and can be dereferenced by adding the &quot;-&gt;&quot; symbol after the pointer name.</p>
 <pre><code class="hljs css language-4d">MyVar:=<span class="hljs-string">"Hello"</span>
 MyPointer:=-&gt;MyVar
 <span class="hljs-function">ALERT</span>(MyPointer-&gt;)
@@ -269,15 +269,15 @@ For</span>(<span class="hljs-variable">$vCounter</span>;<span class="hljs-number
  End for</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ein--oder-mehrzeilige-kommentare--"></a><a href="#ein--oder-mehrzeilige-kommentare--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ein- oder mehrzeilige Kommentare (/* */)</h4>
-<p>Umklammern Sie den Inhalt mit <code>/*</code> ... <code>*/</code> Zeichen zum Erstellen von eingebundenen Kommentaren oder mehrzeiligen Kommentarblöcken. Beide Arten beginnen mit <code>/*</code> und enden mit <code>*/</code>.</p>
+<p>Surround contents with <code>/*</code> ... <code>*/</code> characters to create inline comments or multiline comment blocks. Beide Arten beginnen mit <code>/*</code> und enden mit <code>*/</code>.</p>
 <ul>
-<li><strong>Eingebundene Kommentare</strong> können überall im Code eingefügt werden. Beispiel:</li>
+<li><strong>Inline comments</strong> can be inserted anywhere in the code. Beispiel:</li>
 </ul>
 <pre><code class="hljs css language-4d">Für <span class="hljs-comment">/* eingebundenen Kommentar */</span> (<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)...<span class="hljs-keyword">
 End for</span>
 </code></pre>
 <ul>
-<li><strong>Mehrzeilige Kommentarblöcke</strong> können eine ungegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:</li>
+<li><strong>Multiline comment blocks</strong> allows commenting an unlimited number of lines. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span> (<span class="hljs-variable">$vCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
 <span class="hljs-comment">/*

@@ -160,15 +160,17 @@
 <p><strong>Note :</strong> Les objets étant toujours passés par référence, l'utilisation de pointeurs n'est généralement pas nécessaire. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.</p>
 <p>La notation objet pour les pointeurs est semblable à la notation objet standard, à la seule différence que le symbole &quot;point&quot; doit être omis.</p>
 <ul>
-<li><p>Accès direct :</p>
+<li>Accès direct :</li>
+</ul>
 <blockquote>
 <p>pointeurObjet-&gt;nomPropriété</p>
-</blockquote></li>
-<li><p>Accès par le nom :</p>
-<blockquote>
-<p>pointeurObjet-&gt;[&quot;nomPropriété&quot;]</p>
-</blockquote></li>
+</blockquote>
+<ul>
+<li>Accès par le nom :</li>
 </ul>
+<blockquote>
+<p>pointeurObjet-&gt; nomPropriété&quot;]</p>
+</blockquote>
 <p>Exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(vObj)
 <span class="hljs-function"> C_POINTER</span>(vPtr)
@@ -243,7 +245,7 @@
   <span class="hljs-comment">//afin d'éviter des erreurs dans le code</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="identifiants-de-propriétés-dobjets"></a><a href="#identifiants-de-propriétés-dobjets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identifiants de propriétés d'objets</h2>
-<p>Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. They must comply with JavaScript Identifier Grammar (see <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-7.6">ECMA Script standard</a>):</p>
+<p>Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. Ils doivent se conformer à la grammaire des identificateurs JavaScript (voir <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-7.6">la norme ECMA Script</a>):</p>
 <ul>
 <li>le premier caractère doit être une lettre, un trait de soulignement (_) ou le symbole dollar ($),</li>
 <li>les autres caractères peuvent être des lettres, des chiffres, des traits de soulignement ou des symboles dollar (les espaces sont proscrits),</li>

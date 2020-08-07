@@ -106,8 +106,6 @@
 <li>TableForms</li>
 <li>Triggers</li>
 </ul></li>
-</ul>
-<ul>
 <li>DerivedData</li>
 <li>Trash (le cas échéant)</li>
 </ul>
@@ -154,7 +152,7 @@
 <tr><td><em>methodName</em>.4dm</td><td>Méthodes projet définies dans la base. Un fichier par méthode</td><td>Texte</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="classes-folder"></a><a href="#classes-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classes folder</h4>
+<h4><a class="anchor" aria-hidden="true" id="dossier-classes"></a><a href="#dossier-classes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Classes</h4>
 <table>
 <thead>
 <tr><th>Contenu</th><th>Description</th><th>Format</th></tr>
@@ -169,10 +167,10 @@
 <tr><th>Contenu</th><th>Description</th><th>Format</th></tr>
 </thead>
 <tbody>
-<tr><td><em>nomFormulaire</em>/form.4DForm</td><td>Description du formulaire projet</td><td>json</td></tr>
-<tr><td><em>nomFormulaire</em>/method.4dm</td><td>Méthode formulaire projet</td><td>Texte</td></tr>
-<tr><td><em>nomFormulaire</em>/Images/<em>nomImage</em></td><td>Image statique du formulaire projet</td><td>picture</td></tr>
-<tr><td><em>nomFormulaire</em>/ObjectMethods/<em>nomObjet</em>.4dm</td><td>Méthodes objet. Un fichier par méthode objet</td><td>Texte</td></tr>
+<tr><td><em>formName</em>/form.4DForm</td><td>Description du formulaire projet</td><td>json</td></tr>
+<tr><td><em>formName</em>/method.4dm</td><td>Méthode formulaire projet</td><td>Texte</td></tr>
+<tr><td><em>formName</em>/Images/<em>pictureName</em></td><td>Image statique du formulaire projet</td><td>picture</td></tr>
+<tr><td><em>formName</em>/ObjectMethods/<em>objectName</em>.4dm</td><td>Méthodes objet. Un fichier par méthode objet</td><td>Texte</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="dossier-tableforms"></a><a href="#dossier-tableforms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier TableForms</h4>
@@ -181,14 +179,14 @@
 <tr><th>Contenu</th><th>Description</th><th>Format</th></tr>
 </thead>
 <tbody>
-<tr><td><em>n</em>/Input/<em>nomFormulaire</em>/form.4DForm</td><td>Description du formulaire d'entrée de la table (n étant le numéro de table)</td><td>json</td></tr>
-<tr><td><em>n</em>/Input/<em>nomFormulaire</em>/Images/<em>nomImage</em></td><td>Images statiques du formulaire d'entrée de la table</td><td>picture</td></tr>
-<tr><td><em>n</em>/Input/<em>nomFormulaire</em>/method.4dm</td><td>Méthode du formulaire d'entrée de la table</td><td>Texte</td></tr>
-<tr><td><em>n</em>/Input/<em>nomFormulaire</em>/ObjectMethods/<em>nomObjet</em>.4dm</td><td>Méthodes objet du formulaire d'entrée. Un fichier par méthode objet</td><td>Texte</td></tr>
-<tr><td><em>n</em>/Output/<em>nomFormulaire</em>/form.4DForm</td><td>Description du formulaire de sortie de la table (n étant le numéro de table)</td><td>json</td></tr>
-<tr><td><em>n</em>/Output/<em>nomFormulaire</em>/Images/<em>nomImage</em></td><td>Images statiques du formulaire de sortie de la table</td><td>picture</td></tr>
-<tr><td><em>n</em>/Output/<em>nomFormulaire</em>/method.4dm</td><td>Méthode du formulaire de sortie de la table</td><td>Texte</td></tr>
-<tr><td><em>n</em>/Output/<em>nomFormulaire</em>/ObjectMethods/<em>nomObjet</em>.4dm</td><td>Méthodes objet du formulaire de sortie. Un fichier par méthode objet</td><td>Texte</td></tr>
+<tr><td><em>n</em>/Input/<em>formName</em>/form.4DForm</td><td>Description du formulaire d'entrée de la table (n étant le numéro de table)</td><td>json</td></tr>
+<tr><td><em>n</em>/Input/<em>formName</em>/Images/<em>pictureName</em></td><td>Images statiques du formulaire d'entrée de la table</td><td>picture</td></tr>
+<tr><td><em>n</em>/Input/<em>formName</em>/method.4dm</td><td>Méthode du formulaire d'entrée de la table</td><td>Texte</td></tr>
+<tr><td><em>n</em>/Input/<em>formName</em>/ObjectMethods/<em>objectName</em>.4dm</td><td>Méthodes objet du formulaire d'entrée. Un fichier par méthode objet</td><td>Texte</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/form.4DForm</td><td>Description du formulaire de sortie de la table (n étant le numéro de table)</td><td>json</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/Images/<em>pictureName</em></td><td>Images statiques du formulaire de sortie de la table</td><td>picture</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/method.4dm</td><td>Méthode du formulaire de sortie de la table</td><td>Texte</td></tr>
+<tr><td><em>n</em>/Output/<em>formName</em>/ObjectMethods/<em>objectName</em>.4dm</td><td>Méthodes objet du formulaire de sortie. Un fichier par méthode objet</td><td>Texte</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="dossier-triggers"></a><a href="#dossier-triggers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Triggers</h4>
@@ -239,7 +237,7 @@
 <h3><a class="anchor" aria-hidden="true" id="dossier-settings"></a><a href="#dossier-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Settings</h3>
 <p>Ce dossier contient des <strong>fichiers de propriétés utilisateur pour fichier de données</strong> utilisés pour l'administration de la base de données.</p>
 <blockquote>
-<p>These settings take priority over <strong><a href="#settings-folder-1">user settings files</a></strong> and <strong>structure settings</strong> files.</p>
+<p>Ces paramètres ont la priorité sur les <strong><a href="#settings-folder-1">fichiers de propriétés utilisateur</a></strong> et les fichiers de <strong>propriétés structure</strong>.</p>
 </blockquote>
 <table>
 <thead>
@@ -254,12 +252,11 @@
 <h3><a class="anchor" aria-hidden="true" id="dossier-logs"></a><a href="#dossier-logs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Logs</h3>
 <p>Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les fichiers journaux comprennent notamment :</p>
 <ul>
-<li><p>conversion de base de données,</p></li>
-<li><p>requêtes de serveur Web,</p></li>
-<li><p>journal des activités de sauvegarde/restitution (*Journal de sauvegarde[xxx].txt, voir <a href="/docs/18/fr/Backup/backup.html#backup-journal">Journal de sauvegarde</a>)</li></p>
-<ul>
+<li>conversion de base de données,</li>
+<li>requêtes de serveur Web,</li>
+<li>journal des activités de sauvegarde/restitution (<em>Journal de sauvegarde[xxx].txt</em>, voir <a href="/docs/18/fr/Backup/backup.html#backup-journal">Journal de sauvegarde</a>)</li>
 <li>débogage de commandes,</li>
-<li>Requêtes 4D Server (générées sur les postes clients et sur le serveur).</ul></li>
+<li>Requêtes 4D Server (générées sur les postes clients et sur le serveur).</li>
 </ul>
 <blockquote>
 <p>Un dossier Logs supplémentaire est disponible dans le dossier des préférences utilisateur du système (dossier 4D actif, voir la commande <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html">Lire dossier 4D</a>) pour les fichiers journaux de maintenance et dans les cas où le dossier de données est en lecture seule.</p>
@@ -279,33 +276,30 @@
 <tr><td>Backup.4DSettings</td><td>Paramètres de sauvegarde de la base de données, utilisés pour définir les <a href="/docs/18/fr/Backup/settings.html">options de sauvegarde</a>) à chaque lancement de sauvegarde. Ce fichier peut également être utilisé pour lire ou définir des options supplémentaires, telles que la quantité d'informations stockées dans le <em>journal de sauvegarde</em>. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel <em>Sauvegarde des clés XML 4D</em>.</td><td>XML</td></tr>
 </tbody>
 </table>
-</li>
-</ul>
-<pre><code class="hljs">## Dossier userPreferences.*userName*
-
-Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
-
-| Contenu                      | Description                                                           | Format |
-| ---------------------------- | --------------------------------------------------------------------- | ------ |
-| methodPreferences.json       | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
-| methodWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
-| formWindowPositions.json     | Position de la fenêtre de l'utilisateur courant pour les formulaires  | JSON   |
-| workspace.json               | Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets | JSON   |
-| debuggerCatches.json         | Appels vers commandes                                                 | JSON   |
-| recentTables.json            | Liste ordonée de tables                                               | JSON   |
-| preferencesv15.4DPreferences | Préférences utilisateur                                               | JSON   |
-
-
-## Dossier Components
-
-Ce dossier contient les composants disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
-
-&gt; Une base projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components de la base hôte. - à des fins de déploiement : créer le composant (voir [Créer un package projet](/docs/18/fr/Project/building.html)) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de la base hôte.
-
-## Dossier Plugins
-
-Ce dossier contient les plug-ins disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.</code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/fr/Project/creating.html"><span class="arrow-prev">← </span><span>Créer un projet 4D</span></a><a class="docs-next button" href="/docs/18/fr/Project/developing.html"><span>Développer un projet</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#dossier-project">Dossier Project</a><ul class="toc-headings"><li><a href="#fichier-nombase4dproject">Fichier <em>nomBase</em>.4DProject</a></li><li><a href="#dossier-sources">Dossier Sources</a></li><li><a href="#dossier-trash">Dossier Trash</a></li><li><a href="#dossier-deriveddata">Dossier DerivedData</a></li></ul></li><li><a href="#dossier-resources">Dossier Resources</a></li><li><a href="#dossier-data">Dossier Data</a><ul class="toc-headings"><li><a href="#dossier-settings">Dossier Settings</a></li><li><a href="#dossier-logs">Dossier Logs</a></li></ul></li><li><a href="#dossier-settings-1">Dossier Settings</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="dossier-userpreferencesusername"></a><a href="#dossier-userpreferencesusername" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier userPreferences.<em>userName</em></h2>
+<p>Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :</p>
+<table>
+<thead>
+<tr><th>Contenu</th><th>Description</th><th>Format</th></tr>
+</thead>
+<tbody>
+<tr><td>methodPreferences.json</td><td>Préférences de l'éditeur de méthodes de l'utilisateur courant</td><td>JSON</td></tr>
+<tr><td>methodWindowPositions.json</td><td>Position de la fenêtre de l'utilisateur courant pour les méthodes</td><td>JSON</td></tr>
+<tr><td>formWindowPositions.json</td><td>Position de la fenêtre de l'utilisateur courant pour les formulaires</td><td>JSON</td></tr>
+<tr><td>workspace.json</td><td>Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets</td><td>JSON</td></tr>
+<tr><td>debuggerCatches.json</td><td>Appels vers commandes</td><td>JSON</td></tr>
+<tr><td>recentTables.json</td><td>Liste ordonée de tables</td><td>JSON</td></tr>
+<tr><td>preferencesv15.4DPreferences</td><td>Préférences utilisateur</td><td>JSON</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="dossier-components"></a><a href="#dossier-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Components</h2>
+<p>Ce dossier contient les composants disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.</p>
+<blockquote>
+<p>Une base projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components de la base hôte. - à des fins de déploiement : créer le composant (voir <a href="/docs/18/fr/Project/building.html">Créer un package projet</a>) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de la base hôte.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="dossier-plugins"></a><a href="#dossier-plugins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Plugins</h2>
+<p>Ce dossier contient les plug-ins disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/fr/Project/creating.html"><span class="arrow-prev">← </span><span>Créer un projet 4D</span></a><a class="docs-next button" href="/docs/18/fr/Project/developing.html"><span>Développer un projet</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#dossier-project">Dossier Project</a><ul class="toc-headings"><li><a href="#fichier-nombase4dproject">Fichier <em>nomBase</em>.4DProject</a></li><li><a href="#dossier-sources">Dossier Sources</a></li><li><a href="#dossier-trash">Dossier Trash</a></li><li><a href="#dossier-deriveddata">Dossier DerivedData</a></li></ul></li><li><a href="#dossier-resources">Dossier Resources</a></li><li><a href="#dossier-data">Dossier Data</a><ul class="toc-headings"><li><a href="#dossier-settings">Dossier Settings</a></li><li><a href="#dossier-logs">Dossier Logs</a></li></ul></li><li><a href="#dossier-settings-1">Dossier Settings</a></li><li><a href="#dossier-userpreferencesusername">Dossier userPreferences.<em>userName</em></a></li><li><a href="#dossier-components">Dossier Components</a></li><li><a href="#dossier-plugins">Dossier Plugins</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

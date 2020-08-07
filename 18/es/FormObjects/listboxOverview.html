@@ -357,7 +357,7 @@
 <p>You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:</p>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_styles7.png" alt=""></p>
 <p>For an array type list box, you need to update the <a href="/docs/18/es/FormObjects/propertiesBackgroundAndBorder.html#row-background-color-array">Row Background Color Array</a> by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:</p>
-<pre><code class="hljs">    &quot;rowFillSource&quot;: &quot;_ListboxBackground&quot;,
+<pre><code class="hljs">    <span class="hljs-string">"rowFillSource"</span>: <span class="hljs-string">"_ListboxBackground"</span>,
 </code></pre>
 <p>In the object method of the list box, you can write:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
@@ -375,8 +375,8 @@
 </code></pre>
 <p>For a selection type list box, to produce the same effect you can use a method to update the <a href="/docs/18/es/FormObjects/propertiesBackgroundAndBorder.html#background-color-expression">Background Color Expression</a> based on the set specified in the <a href="/docs/18/es/FormObjects/propertiesListBox.html#highlight-set">Highlight Set</a> property.</p>
 <p>For example, in the JSON form, you have defined the following Highlight Set and Background Color Expression for the list box:</p>
-<pre><code class="hljs">    &quot;highlightSet&quot;: &quot;$SampleSet&quot;,
-    &quot;rowFillSource&quot;: &quot;UI_SetColor&quot;,
+<pre><code class="hljs">    <span class="hljs-string">"highlightSet"</span>: <span class="hljs-string">"<span class="hljs-variable">$SampleSet</span>"</span>,
+    <span class="hljs-string">"rowFillSource"</span>: <span class="hljs-string">"UI_SetColor"</span>,
 </code></pre>
 <p>You can write in the <em>UI_SetColor</em> method:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(<span class="hljs-function">Is in set</span>(<span class="hljs-string">"$SampleSet"</span>))
@@ -528,9 +528,8 @@
 <p>If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:</p>
 <p><img src="/docs/18/assets/en/FormObjects/hierarch2.png" alt=""></p>
 <p>The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:</p>
-<blockquote>
-<p>A B A C</p>
-</blockquote>
+<pre><code class="hljs">&gt; A B A C
+</code></pre>
 <p>To expand or collapse a hierarchical &quot;node,&quot; you can just click on it. If you <strong>Alt+click</strong> (Windows) or <strong>Option+click</strong> (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the <code>LISTBOX EXPAND</code> and <code>LISTBOX COLLAPSE</code> commands.</p>
 <p>When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.</p>
 <h4><a class="anchor" aria-hidden="true" id="sorts-in-hierarchical-list-boxes"></a><a href="#sorts-in-hierarchical-list-boxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sorts in hierarchical list boxes</h4>
@@ -732,8 +731,7 @@
 <tr><th>Attribute</th><th>Available value(s)</th><th>valueType(s)</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>behavior</td><td>threeStates</td><td>integer</td><td>Represents a numeric value as a three-states check box.</td></tr>
-<tr><td>2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled</td></tr>
+<tr><td>behavior</td><td>threeStates</td><td>integer</td><td>Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled</td></tr>
 </tbody>
 </table>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob3</span>)
@@ -880,9 +878,11 @@
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$ob4</span>)
 <span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob4</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"color"</span>)
 <span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob4</span>;<span class="hljs-string">"value"</span>;<span class="hljs-number">0x00FF0000</span>)
-</code></pre>
-<p><img src="/docs/18/assets/en/FormObjects/listbox_column_objectArray_colorValue.png" alt=""></p></li>
-<li><p>If the value is a text, then the text is displayed (<em>e.g.</em>: &quot;value&quot;;&quot;Automatic&quot;).</p></li>
+</code></pre></li>
+</ul>
+<p><img src="/docs/18/assets/en/FormObjects/listbox_column_objectArray_colorValue.png" alt=""></p>
+<ul>
+<li>If the value is a text, then the text is displayed (<em>e.g.</em>: &quot;value&quot;;&quot;Automatic&quot;).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="event-valuetype"></a><a href="#event-valuetype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>event valueType</h4>
 <p>The &quot;event&quot; valueType displays a simple button that generates an <code>On Clicked</code> event when clicked. No data or value can be passed or returned.</p>

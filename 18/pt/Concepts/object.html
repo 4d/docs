@@ -160,15 +160,17 @@
 <p><strong>Preliminary Note:</strong> Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.</p>
 <p>Using object notation with pointers is very similar to using object notation directly with objects, except that the &quot;dot&quot; symbol must be omitted.</p>
 <ul>
-<li><p>Direct access:</p>
+<li>Direct access:</li>
+</ul>
 <blockquote>
 <p>pointerOnObject-&gt;propertyName</p>
-</blockquote></li>
-<li><p>Access by name:</p>
+</blockquote>
+<ul>
+<li>Access by name:</li>
+</ul>
 <blockquote>
 <p>pointerOnObject-&gt;[&quot;propertyName&quot;]</p>
-</blockquote></li>
-</ul>
+</blockquote>
 <p>Example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(vObj)
 <span class="hljs-function"> C_POINTER</span>(vPtr)

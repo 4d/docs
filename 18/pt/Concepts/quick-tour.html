@@ -158,9 +158,9 @@ End for</span>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$vAge</span>:=employee.children[<span class="hljs-number">2</span>].age
 </code></pre>
 <p>Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:</p>
-<pre><code class="hljs">$f:=New object
-$f.message:=New formula(ALERT(&quot;Hello world!&quot;))
-$f.message() //displays &quot;Hello world!&quot;
+<pre><code class="hljs"><span class="hljs-built_in">$f</span>:=<span class="hljs-keyword">New</span> object
+<span class="hljs-built_in">$f</span>.message:=<span class="hljs-keyword">New</span> formula(ALERT(<span class="hljs-string">"Hello world!"</span>))
+<span class="hljs-built_in">$f</span>.message() <span class="hljs-comment">//displays "Hello world!"</span>
 </code></pre>
 <p>To access a collection element, you have to pass the element number embedded in square brackets:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_COLLECTION</span>(myColl)

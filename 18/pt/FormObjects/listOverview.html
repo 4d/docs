@@ -74,7 +74,7 @@
 <p>The contents of a hierarchical list form object can be initialized in one of the following ways:</p>
 <ul>
 <li>Associate an existing <a href="/docs/18/pt/FormObjects/propertiesDataSource.html#choice-list">choice list</a> to the object. The choice list must have been defined in the List editor in Design mode.</li>
-<li>Directly assign a hierarchical list reference to the <a href="/docs/18/pt/FormObjects/propertiesObject.html#variable-or-expression">variable or expression</a> associated with the form object.</li>
+<li>Directly assign a hierarchical list  reference to the <a href="/docs/18/pt/FormObjects/propertiesObject.html#variable-or-expression">variable or expression</a> associated with the form object.</li>
 </ul>
 <p>In both cases, you manage a hierarchical list at runtime through its <em>ListRef</em> reference, using the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html">Hierarchical list</a> commands in the 4D language.</p>
 <h2><a class="anchor" aria-hidden="true" id="listref-and-object-name"></a><a href="#listref-and-object-name" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ListRef and object name</h2>
@@ -165,13 +165,11 @@
 </blockquote>
 <p>Here are a few tips for using reference numbers:</p>
 <ol>
-<li>You do not need to identify each item with a unique number (beginner level).</li>
-</ol>
+<li><p>You do not need to identify each item with a unique number (beginner level).</p>
 <ul>
 <li>First example: you build a system of tabs by programming, for example, an address book. Since the system returns the number of the tab selected, you will probably not need more information than this. In this case, do not worry about item reference numbers: pass any value (except 0) in the <em>itemRef</em> parameter. Note that for an address book system, you can predefine a list A, B, ..., Z in Design mode. You can also create it by programming in order to eliminate any letters for which there are no records.</li>
 <li>Second example: while working with a database, you progressively build a list of keywords. You can save this list at the end of each session by using the <code>SAVE LIST</code> or <code>LIST TO BLOB</code> commands and reload it at the beginning of each new session using the <code>Load list</code> or <code>BLOB to list</code> commands. You can display this list in a floating palette; when each user clicks on a keyword in the list, the item chosen is inserted into the enterable area that is selected in the foreground process. The important thing is that you only process the item selected, because the <code>Selected list items</code> command returns the position of the item that you must process. When using this position value, you obtain the title of the item by means of the <code>GET LIST ITEM</code> command. Here again, you do not need to identify each item individually; you can pass any value (except 0) in the <em>itemRef</em> parameter.</li>
-</ul>
-<ol start="2">
+</ul></li>
 <li><p>You need to partially identify the list items (intermediary level).<br>
 You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the <code>APPEND TO LIST</code> command. In this example, we use the item reference numbers to store record numbers. However, we must be able to establish a distinction between items that correspond to the [Department] records and those that correspond to the [Employees] records.</p></li>
 <li><p>You need to identify all the list items individually (advanced level).<br>

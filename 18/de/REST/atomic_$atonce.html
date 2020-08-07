@@ -75,42 +75,42 @@
 <p><strong>POST data</strong>:</p>
 <pre><code class="hljs">[
 {
-    &quot;__KEY&quot;: &quot;200&quot;,
-    &quot;firstname&quot;: &quot;John&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"200"</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"John"</span>
 },
 {
-    &quot;__KEY&quot;: &quot;201&quot;,
-    &quot;firstname&quot;: &quot;Harry&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"201"</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Harry"</span>
 }
 ]
 </code></pre>
 <p>We get the following error in the second entity and therefore the first entity is not saved either:</p>
 <pre><code class="hljs">{
-    &quot;__STATUS&quot;: {
-        &quot;success&quot;: true
+    <span class="hljs-attr">"__STATUS"</span>: {
+        <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>
     },
-    &quot;__KEY&quot;: &quot;200&quot;,
-    &quot;__STAMP&quot;: 1,
-    &quot;uri&quot;: &quot;/rest/Employee(200)&quot;,
-    &quot;__TIMESTAMP&quot;: &quot;!!2020-04-03!!&quot;,
-    &quot;ID&quot;: 200,
-    &quot;firstname&quot;: &quot;John&quot;,
-    &quot;lastname&quot;: &quot;Keeling&quot;,
-    &quot;isWoman&quot;: false,
-    &quot;numberOfKids&quot;: 2,
-    &quot;addressID&quot;: 200,
-    &quot;gender&quot;: false,
-    &quot;address&quot;: {
-        &quot;__deferred&quot;: {
-            &quot;uri&quot;: &quot;/rest/Address(200)&quot;,
-            &quot;__KEY&quot;: &quot;200&quot;
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"200"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Employee(200)"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"!!2020-04-03!!"</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">200</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"John"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"Keeling"</span>,
+    <span class="hljs-attr">"isWoman"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"numberOfKids"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"addressID"</span>: <span class="hljs-number">200</span>,
+    <span class="hljs-attr">"gender"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"address"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Address(200)"</span>,
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"200"</span>
         }
     },
-    &quot;__ERROR&quot;: [
+    <span class="hljs-attr">"__ERROR"</span>: [
         {
-            &quot;message&quot;: &quot;Cannot find entity with \&quot;201\&quot; key in the \&quot;Employee\&quot; datastore class&quot;,
-            &quot;componentSignature&quot;: &quot;dbmg&quot;,
-            &quot;errCode&quot;: 1542
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cannot find entity with \"201\" key in the \"Employee\" datastore class"</span>,
+            <span class="hljs-attr">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-attr">"errCode"</span>: <span class="hljs-number">1542</span>
         }
     ]
 }
