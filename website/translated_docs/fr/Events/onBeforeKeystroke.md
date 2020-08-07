@@ -17,7 +17,7 @@ title: Sue avant frappe clavier
 
 ## Description
 
-Après avoir sélectionné les événements `On Before Keystroke` et [`On After Keystroke event`](onAfterKeystroke.md) pour un objet, vous pouvez détecter et gérer les frappes au sein de l'objet, en utilisant la commande `Form event` qui retournera `On Before Keystroke` puis [`On After Keystroke`](onAfterKeystroke.md) (pour plus d'informations, veuillez vous reporter à la description de la commande `Get edited text`). Within the `On Before Keystroke` event, the `FILTER KEYSTROKE` command can be used to filter typed chars.
+Après avoir sélectionné les événements `On Before Keystroke` et [`On After Keystroke event`](onAfterKeystroke.md) pour un objet, vous pouvez détecter et gérer les frappes au sein de l'objet, en utilisant la commande `Form event` qui retournera `On Before Keystroke` puis [`On After Keystroke`](onAfterKeystroke.md) (pour plus d'informations, veuillez vous reporter à la description de la commande `Get edited text`). Dans l'événement `On Before Keystroke`, la commande `FILTER KEYSTROKE` peut être utilisée pour filtrer les caractères typés.
 
 > Ces événements sont également activés par des commandes de langage qui simulent une action utilisateur telle que `POST KEY`.
 
@@ -29,7 +29,7 @@ L'événement `On Before Keystroke` n'est pas généré :
 
 ### Objets non saisissables
 
-L'événement `On Before Keystroke` peut être généré dans des objets non saisissables, par exemple dans une list box même si les cellules de la list box ne sont pas saisissables ou si les lignes ne peuvent pas être sélectionnées. This allows you to build interfaces where the user can scroll dynamically to a specific row in a list box by entering the first letters of a value. In case where the list box cells are enterable, you can use the `Is editing text` command to know if the user is actually entering text in a cell or is using the type-ahead feature and then, execute appropriate code.
+L'événement `On Before Keystroke` peut être généré dans des objets non saisissables, par exemple dans une list box même si les cellules de la list box ne sont pas saisissables ou si les lignes ne peuvent pas être sélectionnées. Cela vous permet de créer des interfaces dans lesquelles l'utilisateur peut faire défiler dynamiquement jusqu'à une ligne spécifique dans une list box en saisissant les premières lettres d'une valeur. Dans le cas où les cellules de la list box sont saisissables, vous pouvez utiliser la commande `Is editing text` pour savoir si l'utilisateur saisit réellement du texte dans une cellule ou s'il utilise la fonction de saisie prédictive, puis exécutez le code approprié.
 
 
 ### Séquence de frappe
