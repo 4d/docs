@@ -78,7 +78,7 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 | ---------------- | ------------------------------------------------------------- | ------ |
 | *methodName*.4dm | Méthodes projet définies dans la base. Un fichier par méthode | Texte  |
 
-#### Classes folder
+#### Dossier Classes
 
 | Contenu         | Description                                                                                                                        | Format |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
