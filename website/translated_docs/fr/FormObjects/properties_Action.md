@@ -193,7 +193,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md)
+[Liste hiérarchique](list_overview.md)
 
 
 
