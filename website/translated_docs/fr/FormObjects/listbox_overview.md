@@ -66,9 +66,9 @@ The 4D Language includes a dedicated "List Box" theme for list box commands, but
 
 
 
-## List box objects
+## Objets de type List box
 
-### Array list boxes
+### List box de type tableau
 
 In an array list box, each column must be associated with a one-dimensional 4D array; all array types can be used, with the exception of pointer arrays. The number of rows is based on the number of array elements.
 
@@ -456,7 +456,7 @@ Keep in mind that expressions are automatically re-evaluated each time the:
 - form window containing the list box becomes, or ceases to be, the frontmost window.
 
 
-#### Array list boxes
+#### List box de type tableau
 You have to parse the Boolean array [Variable or Expression](properties_Object.md#variable-or-expression) associated with the list box to determine whether rows are selected or not selected.
 
 You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
