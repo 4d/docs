@@ -14,7 +14,7 @@ Since projects are in human-readable, plain text files (JSON, XML, etc.), they c
 
 In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](Project/architecture.md).
 
-4D プロジェクト開発の柔軟性が一番顕著になるのは、複数のデベロッパーがアプリケーションの同じ部分で同時に作業しなければならないときです。 4D project files are particularly well suited to be managed by a **source control** repository (Perforce, Git, SVN, etc.), allowing development teams to take advantage of features such as:
+4D プロジェクト開発の柔軟性が一番顕著になるのは、複数のデベロッパーがアプリケーションの同じ部分で同時に作業しなければならないときです。 4D プロジェクトファイルの管理には、Perforce、Git、SVNなどの**ソース管理**リポジトリがとくに適しており、これらによって開発チームはつぎのような機能を活用できます:
 
 - バージョン管理
 - リビジョン比較

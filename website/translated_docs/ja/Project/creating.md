@@ -4,7 +4,7 @@ title: Creating or opening a project
 ---
 
 
-## Creating a project
+## プロジェクトの作成
 
 New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
 
@@ -13,7 +13,7 @@ To create a new project:
 1. Launch 4D or 4D Server.
 2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Enter the name of your project folder and click **Save**.<p> この名称はつぎの場所に使用されます:
+3. プロジェクトフォルダー名を入力したら、**保存**をクリックします。<p> この名称はつぎの場所に使用されます:
     - as the name of the entire project folder,
     - "Project" フォルダーの中にある .4DProject ファイルの名称<br /><br />
 

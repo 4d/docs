@@ -1,6 +1,6 @@
 ---
 id: remoteDatastore
-title: Using a remote datastore
+title: Utiliser un datastore distant
 ---
 
 A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different remote clients:

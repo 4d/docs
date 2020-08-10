@@ -29,29 +29,29 @@ Une heure nulle s’écrit ?00:00:00?
 
 ## Opérateurs sur les heures
 
-| Opération           | Syntaxe        | Retourne | Expression              | Valeur     |
-| ------------------- | -------------- | -------- | ----------------------- | ---------- |
-| Addition            | Time + Time    | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Soustraction        | Time - Time    | Heure    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition            | Time + Number  | Nombre   | ?02:03:04? + 65         | 7449       |
-| Soustraction        | Time – Number  | Nombre   | ?02:03:04? – 65         | 7319       |
-| Multiplication      | Time * Number  | Nombre   | ?02:03:04? * 2          | 14768      |
-| Division            | Time / Number  | Nombre   | ?02:03:04? / 2          | 3692       |
-| Division entière    | Time \ Number | Nombre   | ?02:03:04? \ 2         | 3692       |
-| Modulo              | Time % Time    | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo              | Time % Number  | Nombre   | ?02:03:04? % 2          | 0          |
-| Egalité             | Time = Time    | Booléen  | ?01:02:03? = ?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:03? = ?01:02:04? | Faux       |
-| Inégalité           | Time # Time    | Booléen  | ?01:02:03? # ?01:02:04? | Vrai       |
-|                     |                |          | ?01:02:03? # ?01:02:03? | Faux       |
-| Supérieur à         | Heure > Heure  | Booléen  | ?01:02:04? > ?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:03? > ?01:02:03? | Faux       |
-| Inférieur à         | Heure < Heure  | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
-|                     |                |          | ?01:02:03? < ?01:02:03? | Faux       |
-| Supérieur ou égal à | Heure >= Heure | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:03? >=?01:02:04? | Faux       |
-| Inférieur ou égal à | Heure <= Heure | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
-|                     |                |          | ?01:02:04? <=?01:02:03? | Faux       |
+| Opération           | Syntaxe         | Retourne | Expression              | Valeur     |
+| ------------------- | --------------- | -------- | ----------------------- | ---------- |
+| Addition            | Heure + Heure   | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? + 65         | 7449       |
+| Soustraction        | Heure – Nombre  | Nombre   | ?02:03:04? – 65         | 7319       |
+| Multiplication      | Heure * Nombre  | Nombre   | ?02:03:04? * 2          | 14768      |
+| Division            | Heure / Nombre  | Nombre   | ?02:03:04? / 2          | 3692       |
+| Division entière    | Heure \ Nombre | Nombre   | ?02:03:04? \ 2         | 3692       |
+| Modulo              | Heure % Heure   | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo              | Heure % Nombre  | Nombre   | ?02:03:04? % 2          | 0          |
+| Egalité             | Heure = Heure   | Booléen  | ?01:02:03? = ?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? = ?01:02:04? | Faux       |
+| Inégalité           | Heure # Heure   | Booléen  | ?01:02:03? # ?01:02:04? | Vrai       |
+|                     |                 |          | ?01:02:03? # ?01:02:03? | Faux       |
+| Supérieur à         | Heure > Heure   | Booléen  | ?01:02:04? > ?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? > ?01:02:03? | Faux       |
+| Inférieur à         | Heure < Heure   | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
+|                     |                 |          | ?01:02:03? < ?01:02:03? | Faux       |
+| Supérieur ou égal à | Heure >= Heure  | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? >=?01:02:04? | Faux       |
+| Inférieur ou égal à | Heure <= Heure  | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:04? <=?01:02:03? | Faux       |
 
 ### Exemple 1
 

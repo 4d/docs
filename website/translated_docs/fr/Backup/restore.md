@@ -37,7 +37,7 @@ Vous pouvez également cliquer sur le bouton **[...]** et indiquer un autre empl
 
 Le dossier d’arrivée est affiché. Lors de la restitution, 4D place tous les fichiers sauvegardés dans ce dossier, quelle que soit la position des fichiers originaux sur le disque au moment de la sauvegarde. De cette façon, vous retrouverez plus facilement vos fichiers.
 
-> Any content related to the data file (files and `Settings` folder) are automatically restored in a `Data` subfolder within the destination folder.
+> Tout contenu lié au fichier de données (dossier files et `Settings`) est automatiquement restauré dans un sous-dossier `Data`du dossier de destination.
 
 
 ## Restitution manuelle d’une sauvegarde (CSM)

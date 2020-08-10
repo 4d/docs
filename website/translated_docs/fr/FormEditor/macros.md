@@ -46,7 +46,7 @@ Function onInvoke($editor : Object)->$result : Object
 
     var $btnHello : Object
 
-    // Create a "Hello" button
+    // Créer un bouton "Hello"
     $btnHello:=New object("type"; "button"; \
     "text"; "Hello World!"; \
     "method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -56,14 +56,14 @@ Function onInvoke($editor : Object)->$result : Object
     "top"; 0; \
     "left"; 0)  
 
-    // Add button in the current page
+    // Ajouter un bouton dans la page courante
     $editor.editor.currentPage.objects.btnHello:=$btnHello  
 
-    // Select the new button in the form editor
+    // Sélectionner le nouveau bouton dans l'éditeur de formulaire
     $editor.editor.currentSelection.clear() //unselect elements
     $editor.editor.currentSelection.push("btnHello")    
 
-    // Notify the modification to the 4D Form editor
+    // Notifier la modification à l'éditeur de formulaire 4D 
     $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
         "currentPage"; $editor.editor.currentPage)
 ```
@@ -262,15 +262,15 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| Paramètres | Type  | Description                                              |
-| ---------- | ----- | -------------------------------------------------------- |
-| $macro     | Objet | Macro declaration object (in the `formMacros.json` file) |
+| Paramètres | Type  | Description                                                       |
+| ---------- | ----- | ----------------------------------------------------------------- |
+| $macro     | Objet | Objet de déclaration de macro (dans le fichier `formMacros.json`) |
 
-Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
+Les macros sont instanciées à l'aide d'une fonction [class constructor](Concepts/classes.md#class-constructor), le cas échéant.
 
-The class constructor is called once during class instantiation, which occurs at application startup.
+Le class constructor est appelé une fois lors de l'instanciation de classe, qui se produit au démarrage de l'application.
 
-Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+Les propriétés personnalisées ajoutées à la [déclaration macro](#declaring-macros) sont retournées dans le paramètre de la fonction class contructor.
 
 
 #### Exemple
@@ -293,7 +293,7 @@ Vous pouvez écrire :
 ```code4d  
 // Class "AlignOnTarget"
 Class constructor($macro : Object)
-    This.myParameter:=$macro.myParam //left
+    This.myParameter:=$macro.myParam //gauche
     ...
 ```
 
@@ -307,13 +307,13 @@ Class constructor($macro : Object)
 | $editor    | Objet | Form properties                                  |
 | $result    | Objet | Form properties modified by the macro (optional) |
 
-The `onInvoke` function is automatically executed each time the macro is called.
+La fonction `onInvoke` est automatiquement exécutée à chaque fois que la macro est appelée.
 
-When the function is called, it receives in the `$editor` parameter a copy of all the elements of the form with their current values. You can then execute any operation on these properties.
+Lorsque la fonction est appelée, elle reçoit dans le paramètre `$editor` une copie de tous les éléments du formulaire avec leurs valeurs courantes. Vous pouvez ensuite exécuter n'importe quelle opération sur ces propriétés.
 
-Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
+Une fois les opérations terminées, si la macro entraîne la modification, l'ajout ou la suppression d'objets, vous pouvez transmettre les propriétés modifiées résultantes dans `$result`. Le processeur de macros analysera les propriétés retournées et appliquera les opérations nécessaires dans le formulaire. Évidemment, moins vous retournez de propriétés, moins le traitement prendra du temps.
 
-Here are the properties of the `$editor` object:
+Voici les propriétés de l'objet `$editor` :
 
 | Propriété                 | Type       | Description                                                                       |
 | ------------------------- | ---------- | --------------------------------------------------------------------------------- |
@@ -341,7 +341,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 
 
 
-#### `method` attribute
+#### attribut `method`
 
 When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
 
@@ -352,7 +352,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 | Propriété | Type | Description |
 | --------- | ---- | ----------- |
 |           |      |             |
- source|String|method code|
+ source|Chaine|Code de la méthode|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
 
@@ -402,12 +402,12 @@ Function onInvoke($editor : Object)->$result : Object
 |              | [].message            | Texte      | Description of the error                 |
 |              | [].componentSignature | Texte      | Internal component signature             |
 
-The `onError` function is executed when the macros processor encounters an error.
+La fonction `onError` est exécutée lorsque le processeur de macros rencontre une erreur.
 
-When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. It is the case for example if executing a macro would result in:
+Lors de l'exécution d'une macro, si 4D rencontre une erreur qui empêche l'annulation de la macro, il n'exécute pas la macro. C'est le cas par exemple si l'exécution d'une macro se traduirait par :
 
-- deleting or modifying a script whose file is read-only.
-- creating two objects with the same internal ID.
+- supprimer ou modifier un script dont le fichier est en lecture seule.
+- créer deux objets avec le même ID interne.
 
 #### Exemple
 

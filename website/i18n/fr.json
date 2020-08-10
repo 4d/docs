@@ -364,7 +364,7 @@
         "title": "Input"
       },
       "FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "Liste hiérarchique"
       },
       "FormObjects/listboxOverview": {
         "title": "List Box"
@@ -569,22 +569,22 @@
         "title": "Glossaire"
       },
       "ORDA/ordaClasses": {
-        "title": "Data Model Classes"
+        "title": "Classes du modèle de données"
       },
       "ORDA/overview": {
         "title": "Aperçu"
       },
       "ORDA/quickTour": {
-        "title": "A Quick Tour in ORDA"
+        "title": "Tour d'horizon d'ORDA"
       },
       "ORDA/remoteDatastore": {
-        "title": "Using a remote datastore"
+        "title": "Utiliser un datastore distant"
       },
       "Project/architecture": {
         "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Creating or opening a project"
+        "title": "Créer ou ouvrir un projet"
       },
       "Project/developing": {
         "title": "Développer un projet"

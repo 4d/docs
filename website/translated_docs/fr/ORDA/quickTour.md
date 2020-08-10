@@ -1,13 +1,13 @@
 ---
 id: quickTour
-title: A Quick Tour in ORDA
+title: Tour d'horizon d'ORDA
 ---
 
 Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
 
 ## Exploring the datastore
 
-The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
+La banque de données ORDA est automatiquement basée sur une structure de base de données 4D, à condition qu'elle soit conforme aux prérequis ORDA. Cet exemple utilisera la structure de base de données 4D simple suivante: Pour savoir ce qui est exposé en tant que magasin de données, créez une nouvelle méthode de projet, écrivez la ligne suivante: TRACE Exécutez la méthode - elle appelle simplement la fenêtre du débogueur. Dans la zone Expression, double-cliquez pour insérer une expression et entrez ds. Il renvoie l'objet de banque de données. Déployez l'objet, vous pouvez voir que les tables et les champs sont automatiquement exposés par ORDA en tant que propriétés de l'objet ds: Cela signifie par exemple que, chaque fois que vous avez besoin de vous référer au champ city de la table [Company], dans ORDA il vous suffit d'écrire: ds.Company.city // renvoie le nom de la ville Dans le monde ORDA, ds.Company est une classe de données. ds.Company.city est un attribut. ORDA est sensible à la casse. ds.company.city ne fera pas référence à l'attribut ds.Company.city. Vous avez également remarqué la propriété extra hires dans la classe de données ds.Company. Cela ne correspond pas à un champ. embauche est en fait le nom de la relation un à plusieurs entre l'entreprise et l'employé: Nom de la relation tel que défini dans l'inspecteur Cela signifie que, chaque fois que vous avez besoin d'accéder à la liste des employés travaillant pour une entreprise, dans ORDA il vous suffit d'écrire: ds.Company.hires // renvoie la liste des employés Mais n'allez pas trop vite. Voyons maintenant comment enregistrer des données dans des classes de données ORDA. Ajout de données Dans ORDA, vous pouvez ajouter un enregistrement à une classe de données à l'aide de la commande new (). Dans le monde ORDA, un enregistrement est une entité - une entité est elle-même un objet. Une commande attachée à un objet spécifique est appelée une méthode membre. $ entity: = ds.Company.new () // créer une nouvelle référence d'entité // dans la classe de données de l'entreprise // et affectez-le à la variable $ entity Un nouvel objet entité contient une "copie" de tous les attributs de sa classe de données parent, vous pouvez donc leur attribuer des valeurs: $ entity.name: = "ACME, inc." $ entity.city: = "Londres" //$entity.ID est automatiquement rempli Pour le moment, l'entité n'existe qu'en mémoire. Pour le stocker dans le fichier de données, vous devez l'enregistrer à l'aide de la méthode membre save ().
 
 This example will use the following simple 4D database structure:
 

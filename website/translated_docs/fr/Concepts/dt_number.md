@@ -136,7 +136,7 @@ Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effe
 
 ### Exemples
 
-| Opération             | Exemple                                     | Result     |
+| Opération             | Exemple                                     | Résultat   |
 | --------------------- | ------------------------------------------- | ---------- |
 | ET                    | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
 | OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
