@@ -55,6 +55,7 @@ class Index extends React.Component {
 	  backup: <translate>Backup and Restore</translate>,
     licenses: <translate>License Management</translate>,
     buildApp: <translate>Build Application</translate>,
+	langRef: <translate>Language Reference (doc.4d.com)</translate>,
 	  users: <translate>Access Rights</translate>
     };
 
@@ -78,6 +79,7 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)<br>
                   [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
+				  [${subContents.langRef}](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-Language-Reference.100-4981854.en.html)<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/cryptoClass.html)<br>
                   [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
