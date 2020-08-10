@@ -55,7 +55,7 @@ class Index extends React.Component {
 	  backup: <translate>Backup and Restore</translate>,
     licenses: <translate>License Management</translate>,
     buildApp: <translate>Build Application</translate>,
-	langRef: <translate>Language Reference (doc.4d.com)</translate>,
+	langRef: <translate>Language Reference (4D Doc Center)</translate>,
 	  users: <translate>Access Rights</translate>
     };
 
