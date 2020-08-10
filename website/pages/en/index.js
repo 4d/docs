@@ -66,7 +66,7 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.installation}](${siteConfig.baseUrl}${this.props.language}/GettingStarted/installation.html)<br>
 				  [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
-				  [${subContents.langRef}](https://doc.4d.com/4Dv18R3/4D/18-R3/4D-Language-Reference.100-4900358.en.html)<br>
+				  [${subContents.langRef}](https://doc.4d.com/4Dv18/4D/18/4D-Language-Reference.100-4504285.en.html)<br>
 				  [${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
