@@ -76,7 +76,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 | Properties               | 型                                    | 説明                                                                         |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS              | 文字列                                  | Mandatory - Indicates the Dataclass of the entity                          |
+| __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
 | __ENTITY                 | ブール                                  | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
@@ -99,11 +99,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | 型     | 説明                                                                                   |
-| ------------------------ | ----- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed | Optional - Values to modify                                                          |
-| __DATASET                | 文字列   | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | ブール   | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Properties               | 型      | 説明                                                                                   |
+| ------------------------ | ------ | ------------------------------------------------------------------------------------ |
+| Attributes of the entity | mixed  | Optional - Values to modify                                                          |
+| __DATASET                | String | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES               | ブール    | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
