@@ -25,7 +25,7 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 プロジェクトは **ローカル** または **リモート** で開くことができます:
 
 - **[ローカル](creating.md#ローカルプロジェクトを開く)** - プロジェクトファイルは使用するマシン内に保存されています。アプリケーションを開いて編集できるのは、そのマシンのみです。
-- **[remotely](creating.md#opening-a-remote-project)** - project files are stored on the 4D Server machine; 4D applications connect to the server and open the project in read-only mode, usually for testing purposes. However, a project opened by 4D Server is editable by 4D if [both applications are on the same machine](Project/developing.md#using-4d-developer-on-the-same-machine).
+- **[リモート](creating.md#opening-a-remote-project)** - プロジェクトファイルは 4D Server を実行するマシン内に保存されています。4D を使って、クライアントとしてサーバーに接続し、プロジェクトを読み取り専用モードで開くことができます (おもにテスト目的)。 クライアントとサーバーの [両方が同一のマシン上で動いている](Project/developing.md#using-4d-developer-on-the-same-machine) 場合に限り、4D は 4D Server で実行されているプロジェクトを編集することができます。
 
 ![](assets/en/getStart/localremote.png)
 
