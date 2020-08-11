@@ -25,7 +25,7 @@ title: データタイプの概要
 | [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `C_BLOB`, `ARRAY BLOB`       |
 | [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | `C_OBJECT`, `ARRAY OBJECT`   |
 | [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `C_COLLECTION`               |
-| バリアント                                 | -       | ◯       | `C_VARIANT`                  |
+| [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | `C_VARIANT`                  |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
