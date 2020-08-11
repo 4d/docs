@@ -57,7 +57,8 @@ Case of
 ...
 : (Value type($1)=Is text)
 ...
-End case
+//déclaration(s)
+ End case
 ```
 
 > Lorsque des variables variant ne sont pas nécessaires (c'est-à-dire lorsque le type de données est connu), il est recommandé d'utiliser des variables typées standard. Les variables typées standard fournissent de meilleures performances, un code plus clair et permettent au compilateur d'éviter les bugs liés à des types de données passés qui sont inattendus. 
