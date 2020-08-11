@@ -185,7 +185,7 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 |            |                   |        |    |                                                                                                                                                                               |
 | result     |                   | Texte  | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                                                                                                             |
 
-Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
+Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -215,7 +215,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 |            | result            | Texte      |    | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`                                                                                                     |
 |            | errors            | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                             |
 
-Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
+Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
