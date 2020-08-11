@@ -23,13 +23,13 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 * オブジェクトが表示される前に、値を配列要素に代入するコードを実行します。 たとえば:
 
 ```4d
-  ARRAY TEXT($aCities;6)
-  $aCities{1}:="Philadelphia"
-  $aCities{2}:="Pittsburg"
-  $aCities{3}:="Grand Blanc"
-  $aCities{4}:="Bad Axe"
-  $aCities{5}:="Frostbite Falls"
-  $aCities{6}:="Green Bay"
+  ARRAY TEXT(aCities;6)
+  aCities{1}:="Philadelphia"
+  aCities{2}:="Pittsburg"
+  aCities{3}:="Grand Blanc"
+  aCities{4}:="Bad Axe"
+  aCities{5}:="Frostbite Falls"
+  aCities{6}:="Green Bay"$aCities
 ```
 この場合、フォームのオブジェクトに関連付けた変数名は *aCities* でなければなりません。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
