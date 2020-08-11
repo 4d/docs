@@ -39,7 +39,7 @@ title: ドキュメンテーション
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
 - **Documentation**
-    + **クラス**
+    + **Classes**
         * myClass.md
     + **DatabaseMethods**
         * onStartup.md
@@ -153,7 +153,7 @@ _イタリック_
 ```
 
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- 4D コードハイライトが付くコードブロックタグ (\```4d ... ```)
 
     \``` 4d  
   C_TEXT($txt)  
@@ -191,7 +191,7 @@ _イタリック_
 
 [![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
-[![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D ブログロゴ")](https://blog.4d.com)
 
 > 詳細については [GitHug Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
 

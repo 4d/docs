@@ -42,7 +42,7 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "クラス"
+        "title": "Classes"
       },
       "Concepts/components": {
         "title": "コンポーネント"
@@ -78,7 +78,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "文字列"
+        "title": "String"
       },
       "Concepts/time": {
         "title": "時間"
@@ -427,7 +427,7 @@
         "title": "リストボックス"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "オブジェクト"
       },
       "FormObjects/propertiesPicture": {
         "title": "ピクチャー"
@@ -584,7 +584,7 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "Creating or opening a project"
+        "title": "プロジェクトの作成・開始"
       },
       "Project/developing": {
         "title": "プロジェクトの開発"
@@ -731,7 +731,7 @@
     "Starting 4D|in index page Getting started": "4D を始める",
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project Management|in index page Getting started": "プロジェクト管理",
-    "Object Relational Data Access (ORDA)|in index page Getting started": "オブジェクト・リレーショナル・データアクセス (ORDA)",
+    "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "フォーム",
     "Form Properties|no description given": "Form Properties",
@@ -745,7 +745,7 @@
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
-    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
+    "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
