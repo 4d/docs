@@ -34,5 +34,6 @@ This example shows how to respond to a close window event with a form used for r
           CANCEL
        End if
   //...
+ //déclaration(s)
  End case
 ```
