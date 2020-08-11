@@ -24,9 +24,7 @@ Each event is returned as an object by the `FORM Event` command. By default, it 
 | Propriété | Type | Description |
 | --------- | ---- | ----------- |
 |           |      |             |
- objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
-
-`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
+ objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the
 
 Additional properties are returned when the event occurs on specific objects. For example, the [On After Edit](onAfterEdit.md) event object returned by a [4D View Pro area](FormObjects/viewProArea_overview.md) contains `sheetName` or `action` properties.
 
