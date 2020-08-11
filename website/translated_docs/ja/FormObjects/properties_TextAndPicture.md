@@ -232,12 +232,12 @@ title: テキスト、ピクチャー
 
 それぞれのオプションにより、ボタンとポップアップメニューとの関係が指定されます:
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button. <li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。
+<li>ポップアップメニューが **分離** している場合、ボタンの左部分をクリックするとボタンのカレントアクションが直接実行されます。このアクションは、ボタンの右側からアクセスできるポップアップメニューを使用して変更することができます。 <li>ポップアップメニューが **リンク** している場合、ボタンをクリックしてもポップアップメニューが表示されるだけです。 このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。
 
 
 ### ポップアップメニューの管理
 
-"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューとその値の表示は、すべて開発者が処理しなくてはなりません。具体的にはフォームイベントや [Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.ja.html)、[Pop up menu](https://doc.4d.com/4Dv18/4D/18/Pop-up-menu.301-4504659.ja.html) コマンドを使用してこれを処理します。
 
 
 #### JSON 文法
