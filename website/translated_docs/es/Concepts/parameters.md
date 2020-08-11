@@ -312,7 +312,7 @@ This command means that starting with the fourth  parameter (included), the meth
 
 ## Returning values
 
-Data can be returned from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Data can be returned from methods and class functions. Data can be returned from methods. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
 
 ```4d
 MyLength:=Length("How did I get here?")
