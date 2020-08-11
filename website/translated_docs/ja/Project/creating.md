@@ -1,32 +1,32 @@
 ---
 id: creating
-title: Creating or opening a project
+title: プロジェクトの作成・開始
 ---
 
 
 ## プロジェクトの作成
 
-New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
+新規の 4D アプリケーションプロジェクトを作成できるのは **4D** または **4D Server** アプリケーションです ([プロジェクトの開発](Project/developing.md) 参照)。 いずれの場合も、プロジェクトファイルはローカルマシン上に保存します。
 
-To create a new project:
+新規プロジェクトを作成するには:
 
-1. Launch 4D or 4D Server.
-2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+1. 4D または 4D Server を起動します。
+2. **ファイル** メニューより **新規 > プロジェクト...**を選択します: <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D のみ) **新規** ツールバーボタンより **プロジェクト...**を選択します:<p>![](assets/en/getStart/projectCreate2.png)<p>標準の **保存** ダイアログが表示され、4D プロジェクトの名前と保存場所を指定します。
 
 3. プロジェクトフォルダー名を入力したら、**保存**をクリックします。<p> この名称はつぎの場所に使用されます:
-    - as the name of the entire project folder,
+    - プロジェクト全体を保存するフォルダーの名称
     - "Project" フォルダーの中にある .4DProject ファイルの名称<br /><br />
 
-    OS によって許可されている名称であれば使用可能です。 However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
+    OS によって許可されている名称であれば使用可能です。 しかしながら、異なる OS での使用を予定していたり、ソース管理ツールを利用したりするのであれば、それらの命名規則を考慮する必要があります。
 
-When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. (詳細については [4D プロジェクトのアーキテクチャー](Project/architecture.md) を参照ください)。
+**保存** ダイアログを受け入れると、4D は開いているプロジェクト (あれば) を閉じ、指定の場所にプロジェクトフォルダーを作成し、プロジェクトに必要なファイルを設置します。 (詳細については [4D プロジェクトのアーキテクチャー](Project/architecture.md) を参照ください)。
 
-You can then start developing your project.
+これで、プロジェクトの開発を始めることができます。
 
 
 ## ローカルプロジェクトを開く
 
-To open an existing project locally from 4D:
+既存のローカルプロジェクトを 4D で開くには:
 
 1. Select **Open a local application project** in the Welcome Wizard dialog, <p>OR<p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> The standard Open dialog appears.
 
