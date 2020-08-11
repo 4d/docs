@@ -577,9 +577,6 @@
       "ORDA/quickTour": {
         "title": "Tour d'horizon d'ORDA"
       },
-      "ORDA/remoteDatastore": {
-        "title": "Utiliser un datastore distant"
-      },
       "Project/architecture": {
         "title": "Architecture of a project"
       },
