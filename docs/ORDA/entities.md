@@ -19,7 +19,7 @@ Entity attributes are directly available as properties of the entity object. For
 
 For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
 
-```code4d
+```4d
 var $myEntity : cs.EmployeeEntity
 $myEntity:=ds.Employee.new() //Create a new object of the entity type
 $myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
@@ -35,7 +35,7 @@ An entity contains a reference to a 4D record. Different entities can reference 
 
 If you execute the following code:
 
-```code4d
+```4d
  var $e1; $e2 : cs.EmployeeEntity
  $e1:=ds.Employee.get(1) //access the employee with ID 1
  $e2:=$e1
@@ -50,7 +50,7 @@ This is illustrated by the following graphic:
 
 Now if you execute:
 
-```code4d
+```4d
  var $e1; $e2 : cs.EmployeeEntity
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
@@ -66,9 +66,9 @@ This is illustrated by the following graphic:
 
 Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
 
-In fact, $e1 and $e2 is not the entity itself, but a reference to the entity. It means that you can pass it directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. For example:
+In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. For example:
 
-```code4d
+```4d
  For each($entity;$selection)
     do_Capitalize($entity)
  End for each
@@ -76,7 +76,7 @@ In fact, $e1 and $e2 is not the entity itself, but a reference to the entity. It
  
 And the method is:
 
-```code4d
+```4d
  $entity:=$1
  $name:=$entity.lastname
  If(Not($name=Null))
@@ -87,7 +87,7 @@ And the method is:
  
 You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
 
->With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [Lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+>With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
 
 
 ## Using entity attributes  
@@ -98,10 +98,10 @@ Entity attributes store data and map corresponding fields in the corresponding t
 
 For example, to set a storage attribute:
 
-```code4d
+```4d
  $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=entity.lastname //get the employee name, e.g. "Smith"
- entity.lastname:="Jones" //set the employee name
+ $name:=$entity.lastname //get the employee name, e.g. "Smith"
+ $entity.lastname:="Jones" //set the employee name
 ```
 
 >Pictures attributes cannot be assigned directly with a given path in an entity.
@@ -112,7 +112,7 @@ Accessing a related attribute depends on the attribute kind. For example, with t
 
 You can access data through the related object(s):
 
-```code4d
+```4d
  $entity:=ds.Project.all().first().theClient //get the Company entity associated to the project
  $EntitySel:=ds.Company.all().first().companyProjects //get the selection of projects for the company
 ```
@@ -123,7 +123,7 @@ Note that both *theClient* and *companyProjects* in the above example are primar
 
 Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
 
-```code4d
+```4d
  $myEmp:=ds.Employee.get(50)
  $manLev2:=$myEmp.manager.manager.lastname
 ```
@@ -145,7 +145,7 @@ In this example, an entity in the "Employee" dataclass contains an object of typ
 
 To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. For example:
 
-```code4d
+```4d
  $emp:=ds.Employee.new() // create an employee
  $emp.lastname:="Smith" // assign a value to an attribute
  $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //assign a company entity
@@ -154,7 +154,7 @@ To assign a value directly to the "employer" attribute, you must pass an existin
 
 4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. For example:
 
-```code4d
+```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
  $emp.employer:=2 // assign a primary key to the relation attribute
@@ -198,12 +198,12 @@ You can simultaneously create and use as many different entity selections as you
 
 All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. For example:
 
-```code4d
- locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- localEmails:=locals.emailAddress //collection of email addresses (strings)
+```4d
+ $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
+ $localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```
 
-This code returns in *localEmails* a collection of email addresses as strings.
+This code returns in *$localEmails* a collection of email addresses as strings.
 
 ### Entity selections and Relation attributes  
 
@@ -211,10 +211,10 @@ In addition to the variety of ways you can query, you can also use relation attr
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
-```code4d
-myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
- $myInvoices:=myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in myParts
+```4d
+ $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+ $myInvoices:=$myParts.invoiceItems.invoice
+  //All invoices with at least one line item related to a part in $myParts
 ```
 
 The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
@@ -250,7 +250,7 @@ The following diagram illustrates optimistic locking:
 
 This can also be illustrated by the following code:
 
-```code4d
+```4d
  $person1:=ds.Person.get(1) //Reference to entity
  $person2:=ds.Person.get(1) //Other reference to same entity
  $person1.name:="Bill"
@@ -267,7 +267,7 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
-This feature is based upon two methods of the Entity class:
+This feature is based upon two methods of the `Entity` class:
 
 *	`entity.lock()`
 *	`entity.unlock()`
@@ -319,14 +319,14 @@ The following methods automatically associate the optimization context of the so
 
 Given the following code:
 
-```code4d
+```4d
  $sel:=$ds.Employee.query("firstname = ab@")
  For each($e;$sel)
     $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in $sel after a learning phase. 
+Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* after a learning phase. 
 
  
 
@@ -342,9 +342,9 @@ A same optimization context property can be passed to unlimited number of entity
 
 **Example with `dataClass.query( )` method:**
 
-```code4d
- C_OBJECT($sel1;$sel2;$sel3;$sel4;$querysettings;$querysettings2)
- C_COLLECTION($data)
+```4d
+ var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
+ var $data : Collection
  $querysettings:=New object("context";"shortList")
  $querysettings2:=New object("context";"longList")
  
@@ -376,7 +376,7 @@ Subsequent requests to server sent by entity browsing methods will also support 
 
 For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
 
-```code4d
+```4d
  $myEntity:=Form.currentElement //current item expression
   //... do something
  $myEntity:=$myEntity.next() //loads the next entity using the same context

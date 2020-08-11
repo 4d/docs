@@ -35,9 +35,9 @@ The following rules are applied for any conversions:
 
 ### Rules for remote access control
 
-When accessing to a remote datastore through the `Open datastore` command, only tables and fields with the **Exposed as REST resource** property are available remotely. 
+When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely. 
 
-This option must be selected at the 4D structure level for each table and field that you want to be exposed as dataclass in the datastore:
+This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:
 
 ![](assets/en/Orda/ExposeDataclass.png)
 
@@ -55,7 +55,7 @@ When the current ORDA model layer has been invalidated, it is automatically relo
 However, the updated ORDA model layer is not automatically available in the following contexts:
 
 *	a remote 4D application connected to 4D Server -- the remote application must reconnect to the server. 
-*	a remote datastore (opened using `Open datastore`) -- a new session must be opened. 
+*	a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened. 
 
 
 ## Object definition
@@ -67,10 +67,7 @@ The datastore is the interface object to a database. It builds a representation 
 - The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
 - Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
 
-When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed. The **Expose as REST resource** option must be selected at the 4D structure level for each table that you want to be exposed as dataclass in the datastore:
-
-![](assets/en/Orda/ExposeDataclass.png)
-
+When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed. 
 
 4D allows you to handle the following datastores:
 
@@ -81,7 +78,7 @@ A datastore references only a single local or remote database.
 
 The datastore object itself cannot be copied as an object:
 
-```code4d 
+```4d 
 $mydatastore:=OB Copy(ds) //returns null
 ```
 
@@ -89,7 +86,7 @@ $mydatastore:=OB Copy(ds) //returns null
 The datastore properties are however enumerable:
 
 
-```code4d 
+```4d 
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds;$prop)
   //$prop contains the names of all the dataclasses
@@ -103,7 +100,7 @@ The main (default) datastore is always available through the `ds` command, but t
 
 A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
 
-All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through REST, the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore. 
+All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore. 
 
 For example, consider the following table in the 4D structure:
 
@@ -111,7 +108,7 @@ For example, consider the following table in the 4D structure:
 
 The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
 
-```code4d 
+```4d 
 var $compClass : cs.Company //declares a $compClass object variable of the Company class
 $compClass:=ds.Company //assigns the Company dataclass reference to $compClass
 ```
@@ -125,7 +122,7 @@ The dataclass offers an abstraction of the physical database and allows handling
 
 The dataclass object itself cannot be copied as an object:
 
-```code4d 
+```4d 
 $mydataclass:=OB Copy(ds.Employee) //returns null
 ```
 
@@ -142,14 +139,14 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 Dataclass properties are attribute objects describing the underlying fields or relations. For example:
 
-```code4d 
+```4d 
  $nameAttribute:=ds.Company.name //reference to class attribute
  $revenuesAttribute:=ds.Company["revenues"] //alternate way
 ```
 
 This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
 
-All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through REST, the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute. 
+All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute. 
 
 
 #### Storage and Relation attributes  
@@ -189,13 +186,13 @@ The purpose of the entity is to manage data (create, update, delete). When an en
 
 The entity object itself cannot be copied as an object:
 
-```code4d
+```4d
  $myentity:=OB Copy(ds.Employee.get(1)) //returns null
 ```
 
 The entity properties are however enumerable:
 
-```code4d
+```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.get(1);$prop)
   //$prop contains the names of all the entity attributes
@@ -208,7 +205,7 @@ An entity selection is an object containing one or more reference(s) to entities
 
 Example:
 
-```code4d
+```4d
 var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
 $e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
 ``` 
@@ -217,13 +214,13 @@ Entity selections can be "ordered" or "unordered" (this point is discussed in be
 
 The entity selection object itself cannot be copied as an object:
 
-```code4d
+```4d
  $myentitysel:=OB Copy(ds.Employee.all()) //returns null
 ``` 
  
 The entity selection properties are however enumerable:
 
-```code4d
+```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.all();$prop)
   //$prop contains the names of the entity selection properties

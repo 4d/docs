@@ -27,6 +27,8 @@ These principles are illustrated in the following graphics:
 
 ![](assets/en/Orda/sessions.png)
 
+> For sessions opened by REST requests, please refer to [Users and sessions](REST/authUsers.md).
+
 ## Viewing sessions  
 
 Processes that manage sessions for datastore access are shown in the 4D Server administration window:
