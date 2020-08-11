@@ -136,13 +136,13 @@ The following table lists the bitwise operators and their effects:
 
 ### Beispiele
 
-| Operation              | Beispiel                                    | Result     |
-| ---------------------- | ------------------------------------------- | ---------- |
-| Bitwise AND            | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
-| Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
-| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
-| Left Bit Shift         | 0x0000FFFF << 8                             | 0x00FFFF00 |
-| Right Bit Shift        | 0x0000FFFF >> 8                             | 0x000000FF |
-| Bit Set                | 0x00000000 ?+ 16                            | 0x00010000 |
-| Bit Clear              | 0x00010000 ?- 16                            | 0x00000000 |
-| Bit Test               | 0x00010000 ?? 16                            | Wahr       |
+| Operation              | Beispiel                        | Result     |
+| ---------------------- | ------------------------------- | ---------- |
+| Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
+| Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
+| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
+| Left Bit Shift         | 0x0000FFFF << 8                 | 0x00FFFF00 |
+| Right Bit Shift        | 0x0000FFFF >> 8                 | 0x000000FF |
+| Bit Set                | 0x00000000 ?+ 16                | 0x00010000 |
+| Bit Clear              | 0x00010000 ?- 16                | 0x00000000 |
+| Bit Test               | 0x00010000 ?? 16                | Wahr       |
