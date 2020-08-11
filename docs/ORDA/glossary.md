@@ -27,19 +27,6 @@ An attributePath is the path of an attribute inside a given dataclass or entity.
 
 Code for the user class function(s). 
 
-## Class function
- 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
-
-These methods are also called **member functions**, or **member methods**. 
-
-For example, the `query()` class function is a function of dataclasses. If you have stored a dataclass object in the `$myClass` variable, you can write:
-
-```code4d
-$myClass.query("name = smith")
-```
-
-
 ## Data model class
 
 Extended class available for a data model object. 
@@ -116,7 +103,7 @@ An entity selection can also be empty.
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in data model classes, e.g. `EmployeeEntity`. 
+Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`. 
 
 
 ## Lazy loading 
@@ -129,7 +116,13 @@ The Datastore object matching the opened 4D database (standalone or client/serve
 
 ## Method 
  
-See [class function](#class-function).
+ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
+
+For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
+
+```code4d
+$myClass.query("name = smith")
+```
 
 ## Mixed data type  
 

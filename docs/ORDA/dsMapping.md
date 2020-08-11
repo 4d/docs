@@ -3,10 +3,10 @@ id: dsmapping
 title: Data Model Objects
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
+The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects. 
+ 
 
-
-## Structure mapping
+## Structure mapping 
 
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
@@ -15,7 +15,7 @@ When you call a datastore using the `ds` or the `Open datastore` command, 4D aut
 *	Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
 
 ![](assets/en/Orda/datastoreMapping.png)
-
+ 
 
 ### General rules
 
@@ -28,14 +28,14 @@ The following rules are applied for any conversions:
 *	[BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. BLOB type attributes are returned as Null in entities and cannot be assigned.
 
 > ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields,
+> - the "Invisible" option for tables or fields, 
 > - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
 > - the "Manual" or "Automatic" property of relations.
 
 
 ### Rules for remote access control
 
-When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely.
+When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely. 
 
 This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:
 
@@ -54,8 +54,8 @@ When the current ORDA model layer has been invalidated, it is automatically relo
 
 However, the updated ORDA model layer is not automatically available in the following contexts:
 
-*	a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
-*	a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened.
+*	a remote 4D application connected to 4D Server -- the remote application must reconnect to the server. 
+*	a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened. 
 
 
 ## Object definition
@@ -67,18 +67,18 @@ The datastore is the interface object to a database. It builds a representation 
 - The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
 - Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
 
-When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed.
+When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed. 
 
 4D allows you to handle the following datastores:
 
 - the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
-- one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
+- one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command. 
 
 A datastore references only a single local or remote database.
 
 The datastore object itself cannot be copied as an object:
 
-```4d
+```4d 
 $mydatastore:=OB Copy(ds) //returns null
 ```
 
@@ -86,7 +86,7 @@ $mydatastore:=OB Copy(ds) //returns null
 The datastore properties are however enumerable:
 
 
-```4d
+```4d 
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds;$prop)
   //$prop contains the names of all the dataclasses
@@ -94,13 +94,13 @@ The datastore properties are however enumerable:
 
 
 
-The main (default) datastore is always available through the `ds` command, but the `Open datastore` command allows referencing any remote datastore.
+The main (default) datastore is always available through the `ds` command, but the `Open datastore` command allows referencing any remote datastore. 
 
-## Dataclass
+### Dataclass
 
 A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
 
-All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
+All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore. 
 
 For example, consider the following table in the 4D structure:
 
@@ -108,7 +108,7 @@ For example, consider the following table in the 4D structure:
 
 The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
 
-```4d
+```4d 
 var $compClass : cs.Company //declares a $compClass object variable of the Company class
 $compClass:=ds.Company //assigns the Company dataclass reference to $compClass
 ```
@@ -122,34 +122,34 @@ The dataclass offers an abstraction of the physical database and allows handling
 
 The dataclass object itself cannot be copied as an object:
 
-```4d
+```4d 
 $mydataclass:=OB Copy(ds.Employee) //returns null
 ```
 
 The dataclass properties are however enumerable:
 
-```code4d
+```code4d 
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
 //$prop contains the names of all the dataclasse attributes
 ```
 
 
-## Attribute
+### Attribute
 
 Dataclass properties are attribute objects describing the underlying fields or relations. For example:
 
-```4d
+```4d 
  $nameAttribute:=ds.Company.name //reference to class attribute
  $revenuesAttribute:=ds.Company["revenues"] //alternate way
 ```
 
 This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
 
-All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
+All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute. 
 
 
-### Storage and Relation attributes  
+#### Storage and Relation attributes  
 
 Dataclass attributes come in several kinds: storage, relatedEntity, and relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support the standard 4D data type (integer, text, object, etc.).
 
@@ -178,9 +178,9 @@ All dataclass attributes are exposed as properties of the dataclass:
 
 Keep in mind that these objects describe attributes, but do not give access to data. Reading or writing data is done through [entity objects](entities.md#using-entity-attributes).
 
-## Entity
+### Entity
 
-An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
+An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore. 
 
 The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
 
@@ -199,7 +199,7 @@ The entity properties are however enumerable:
 ```
 
 
-## Entity selection
+### Entity selection
 
 An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
@@ -208,16 +208,16 @@ Example:
 ```4d
 var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
 $e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
-```
-
-Entity selections can be "ordered" or "unordered" (this point is discussed in below).
+``` 
+ 
+Entity selections can be "ordered" or "unordered" (this point is discussed in below). 
 
 The entity selection object itself cannot be copied as an object:
 
 ```4d
  $myentitysel:=OB Copy(ds.Employee.all()) //returns null
-```
-
+``` 
+ 
 The entity selection properties are however enumerable:
 
 ```4d
@@ -228,7 +228,7 @@ The entity selection properties are however enumerable:
 ```
 
 
-### Ordered or unordered entity selection
+#### Ordered or unordered entity selection
 
 For optimization reasons, by default 4D ORDA usually creates unordered entity selections, except when you use the `orderBy( )` method or use specific options. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
 
@@ -245,59 +245,7 @@ Unordered entity selections are created in the following cases:
 
 >The following entity selections are always **ordered**:
 >
->*	entity selections returned by 4D Server to a remote client
+>*	entity selections returned by 4D Server to a remote client 
 >*	entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
-
-
-## Structure mapping
-
-When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
-
-*	Tables are mapped to dataclasses.
-*	Fields are mapped to storage attributes.
-*	Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
-
-![](assets/en/Orda/datastoreMapping.png)
-
-
-### General rules
-
-The following rules are applied for any conversions:
-
-* Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*	A datastore only references tables with a single primary key. The following tables are not referenced:
-	*	Tables without a primary key
-	*	Tables with composite primary keys.
-*	[BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. BLOB type attributes are returned as Null in entities and cannot be assigned.
-
-> ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields,
-> - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
-> - the "Manual" or "Automatic" property of relations.
-
-
-### Rules for remote access control
-
-When accessing to a remote datastore through the `Open datastore` command, only tables and fields with the **Exposed as REST resource** property are available remotely.
-
-This option must be selected at the 4D structure level for each table and field that you want to be exposed as dataclass in the datastore:
-
-![](assets/en/Orda/ExposeDataclass.png)
-
-
-### Data model update  
-
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
-
-*	adding or removing a table, a field, or a relation
-*	renaming of a table, a field, or a relation
-*	changing a core property of a field (type, unique, index, autoincrement, null value support)
-
-When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
-
-However, the updated ORDA model layer is not automatically available in the following contexts:
-
-*	a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
-*	a remote datastore (opened using `Open datastore`) -- a new session must be opened.
