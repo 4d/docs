@@ -244,7 +244,7 @@
         "title": "Sur changement page"
       },
       "Events/onPlugInArea": {
-        "title": "Sur appel zone du plug in\t"
+        "title": "Sur appel zone du plug in"
       },
       "Events/onPrintingBreak": {
         "title": "On Printing Break"
