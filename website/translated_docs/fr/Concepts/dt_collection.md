@@ -46,8 +46,7 @@ Les collections doivent être initialisées à l'aide, par exemple, de la comman
 
 Exemple :
 ```4d
- C_COLLECTION($colVar) //création d'une variable 4D de type collection.
- $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
+ C_COLLECTION($colVar) //création d'une variable 4D de type collection. $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
 ```
 
 ### Collection standard ou collection partagée
@@ -68,7 +67,7 @@ A noter que, même si elle n'a pas de paramètres, une méthode membre doit êtr
 Par exemple:
 
 ```4d
- $newCol:=$col.copy() //copie de $col vers $newCol
+$newCol:=$col.copy() //copie de $col vers $newCol
  $col.push(10;100) //ajout de 10 et 100 à la collection
 ```
 
