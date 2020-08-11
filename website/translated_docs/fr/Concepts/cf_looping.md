@@ -26,7 +26,7 @@ Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de 
 ### Exemple
 
 ```4d
- CONFIRM("Add a new record?") //L'utilisateur souhaite-t-il ajouter un enregistrement ?
+ CONFIRM("Add a new record?") //L'utilisateur souhaite-t-il ajouter un enregistrement ? //L'utilisateur souhaite-t-il ajouter un enregistrement ?
  While(OK=1) // Tant que l'utilisateur accepte
     ADD RECORD([aTable]) // Ajouter un nouvel enregistrement
 End while // Une boucle While se termine toujours par End while
@@ -302,8 +302,8 @@ La collection doit contenir uniquement des éléments du même type. Dans le cas
 
 A chaque itération de la boucle, la variable _Elément_courant_ reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- Si la variable _Elément_courant_ est de type objet ou collection (i.e. si _Expression_ est une collection d'objets ou une collection de collections), la modification de cette variable modifiera automatiquement l'élément correspondant de la collection (car les objets et les collections sont passés par référence). Si la variable est de type scalaire, sa modification ne sera pas répercutée sur l'élément de la collection.
 - La variable _Elément_courant_ doit être du même type que les éléments de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- Si la variable _Elément_courant_ est de type objet ou collection (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable _Elément_courant_ ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
 
 #### Exemple
@@ -396,7 +396,7 @@ Si *fin* est omis ou si *fin* est plus grand que le nombre d'éléments de *Expr
 Par exemple:
 - une collection contient 10 éléments (numérotés de 0 à 9)
 - début=-4 > début=-4+10=6 > l'itération démarre au 6e élément (numéro 5)
-- fin=-2 > fin=-2+10=8 > l'itération stoppe avant le 8e élément (numéro 7), i.e. après le 7e élément.
+- fin=-2 > fin=-2+10=8 > l'itération stoppe avant le 8e élément (numéro 7), i.e.
 
 #### Exemple
 
