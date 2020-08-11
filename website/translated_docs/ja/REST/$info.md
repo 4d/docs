@@ -21,14 +21,14 @@ When you call this request for your project, you retrieve information in the fol
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
-| プロパティ         | 型   | 説明                                                                                                                                                                                                                                                                  |
-| ------------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | 文字列 | A UUID that references the entity set.                                                                                                                                                                                                                              |
-| dataClass     | 文字列 | Name of the datastore class.                                                                                                                                                                                                                                        |
-| selectionSize | 数値  | Number of entities in the entity selection.                                                                                                                                                                                                                         |
-| sorted        | ブール | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
-| refreshed     | 日付  | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
-| expires       | 日付  | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
+| プロパティ         | 型      | 説明                                                                                                                                                                                                                                                                  |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | String | A UUID that references the entity set.                                                                                                                                                                                                                              |
+| dataClass     | String | Name of the datastore class.                                                                                                                                                                                                                                        |
+| selectionSize | 数値     | Number of entities in the entity selection.                                                                                                                                                                                                                         |
+| sorted        | ブール    | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
+| refreshed     | 日付     | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
+| expires       | 日付     | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
 
 For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 > 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
@@ -38,12 +38,12 @@ For information about how to create an entity selection, refer to `$method=entit
 
 For each user session, the following information is returned in the *sessionInfo* collection:
 
-| プロパティ      | 型   | 説明                                                           |
-| ---------- | --- | ------------------------------------------------------------ |
-| sessionID  | 文字列 | A UUID that references the session.                          |
-| userName   | 文字列 | The name of the user who runs the session.                   |
-| lifeTime   | 数値  | The lifetime of a user session in seconds (3600 by default). |
-| expiration | 日付  | The current expiration date and time of the user session.    |
+| プロパティ      | 型      | 説明                                                           |
+| ---------- | ------ | ------------------------------------------------------------ |
+| sessionID  | String | A UUID that references the session.                          |
+| userName   | String | The name of the user who runs the session.                   |
+| lifeTime   | 数値     | The lifetime of a user session in seconds (3600 by default). |
+| expiration | 日付     | The current expiration date and time of the user session.    |
 
 ## 例題
 
