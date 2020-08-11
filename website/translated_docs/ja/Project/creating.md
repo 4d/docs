@@ -24,7 +24,7 @@ When you validate the **Save** dialog, 4D closes the current project (if any), c
 You can then start developing your project.
 
 
-## Opening a local project
+## ローカルプロジェクトを開く
 
 To open an existing project locally from 4D:
 
@@ -47,7 +47,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 - **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected.
 
 
-## Opening a remote project
+## リモートプロジェクトを開く
 
 The first time you connect to a 4D Server project via a remote 4D, you will usually use the standard connection dialog. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file ([see below](#project-opening-shortcuts)).
 
