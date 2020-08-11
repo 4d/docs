@@ -29,12 +29,12 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 
 ![](assets/en/getStart/localremote.png)
 
-When you select the project to open, you also select the mode to be used.
+ローカルかリモートかは、実行するプロジェクトを選択する際に選択します。
 
 
-## Deployment
+## 運用
 
-Project files can be compiled and easily deployed for your web, mobile, or desktop (client-server or single-user) application.
+プロジェクトファイルをコンパイルし、Web、モバイル、またはデスクトップ (クライアントサーバーまたはシングルユーザー) で運用することができます。
 
 Final application deployment files are generated during the building process, using the [4D build manager](Admin/building.md). Applications can be opened by 4D Server, 4D, or merged with 4D Volume license.
 
