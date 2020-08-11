@@ -64,12 +64,12 @@ title: ピクチャー
 
 高解像度が自動的に優先されますが、スクリーンやピクチャーの dpi *(\*)*、およびピクチャー形式によって、動作に違いが生じることがあります:
 
-| 演算子                                                                                                                                      | 動作                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| ドロップ、ペースト                                                                                                                                | ピクチャーの設定:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li> |
-| [Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu) | If the picture's display format  is:<ul><li>**[スケーリング](FormObjects/properties_Picture.md#スケーリング)** - ピクチャーを表示しているオブジェクトのピクセル数は (ピクチャーのピクセル数 / ピクチャーの dpi) * (スクリーンの dpi) にリサイズされます。 </li> <li>**スケーリング以外** - ピクチャーを表示しているオブジェクトは、ピクチャーと同じピクセル数です。</li></ul><p>                        |
+| 演算子                                                                                                                         | 動作                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| ドロップ、ペースト                                                                                                                   | ピクチャーの設定:<ul><li>**72dpi または 96dpi** - ピクチャーは [中央合わせ](FormObjects/properties_Picture.md#中央合わせ-トランケート-中央合わせしない) 表示され、ピクチャーを表示しているオブジェクトは同じピクセル数です。</li><li>**その他の dpi** - ピクチャーは "[スケーリング](FormObjects/properties_Picture.md#スケーリング)" 表示され、ピクチャーを表示しているオブジェクトのピクセル数は (ピクチャーのピクセル数 / ピクチャーの dpi) * (スクリーンの dpi) です。</li> <li>**dpi なし** - ピクチャーは "[スケーリング](FormObjects/properties_Picture.md#スケーリング)" 表示されます。</li> |
+| [自動サイズ](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.ja.html#148057) (フォームエディターのコンテキストメニュー) | ピクチャーの表示が:<ul><li>**[スケーリング](FormObjects/properties_Picture.md#スケーリング)** - ピクチャーを表示しているオブジェクトのピクセル数は (ピクチャーのピクセル数 / ピクチャーの dpi) * (スクリーンの dpi) にリサイズされます。 </li> <li>**スケーリング以外** - ピクチャーを表示しているオブジェクトは、ピクチャーと同じピクセル数です。</li></ul><p>                                                  |
 
-*(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
+*(\*) 通常は  macOS = 72dpi, Windows = 96dpi*
 
 
 
