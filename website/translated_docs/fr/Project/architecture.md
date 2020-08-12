@@ -55,7 +55,7 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 | Contenu                 | Description                                                                                                                                                                                                                                    | Format |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                               | XML    |
-| folders.json            | Explorer folder definitions                                                                                                                                                                                                                    | JSON   |
+| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                      | JSON   |
 | menus.json              | Définit les menus                                                                                                                                                                                                                              | JSON   |
 | settings.4DSettings     | Propriétés de la base *Structure*. Si les *propriétés utilisateur* sont définis, ils auront la priorité sur ces propriétés. Si les *propriétés utilisateur pour fichier de données* sont définies, elles auront la priorité sur ces propriétés | XML    |
 | tips.json               | Définit les messages d'aide                                                                                                                                                                                                                    | JSON   |
@@ -80,26 +80,26 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier Classes
 
-| Contenu         | Description                                                                                                                        | Format |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | Texte  |
+| Contenu         | Description                                                                                                                                                   | Format |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| *className*.4dm | Méthode de définition de classe utilisateur, permettant d'instancier des objets spécifiques. Un fichier par classe, le nom du fichier est le nom de la classe | Texte  |
 
 
 #### Dossier Forms
 
-| Contenu                                   | Description                                  | Format  |
-| ----------------------------------------- | -------------------------------------------- | ------- |
-| *formName*/form.4DForm                    | Description du formulaire projet             | json    |
-| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte   |
-| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | picture |
-| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte   |
+| Contenu                                   | Description                                  | Format |
+| ----------------------------------------- | -------------------------------------------- | ------ |
+| *formName*/form.4DForm                    | Description du formulaire projet             | json   |
+| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte  |
+| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | image  |
+| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte  |
 
 #### Dossier TableForms
 
 | Contenu                                              | Description                                                                  | Format  |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------- | ------- |
 | *n*/Input/*formName*/form.4DForm                     | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json    |
-| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | picture |
+| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | image   |
 | *n*/Input/*formName*/method.4dm                      | Méthode du formulaire d'entrée de la table                                   | Texte   |
 | *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte   |
 | *n*/Output/*formName*/form.4DForm                    | Description du formulaire de sortie de la table (n étant le numéro de table) | json    |
@@ -165,8 +165,8 @@ Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de d
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
-| settings.4DSettings | Propriétés de la base personnalisée pour ce fichier de données                                                                                                                                                                                                                                 | XML    |
-| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                                                                                                         | JSON   |
+| settings.4DSettings | Propriétés personnalisées de la base pour ce fichier de données                                                                                                                                                                                                                                | XML    |
+| directory.json      | Description des groupes et utilisateurs 4D et leurs droits d'accès lorsque la base est lancée avec un fichier de données.                                                                                                                                                                      | JSON   |
 
 
 
@@ -186,7 +186,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 
 Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
 
-> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+> Si un fichier de propriétés de données existe dans un dossier Settings du [dossier Data](#settings-folder), il est prioritaire sur le fichier de propriétés utilisateur.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
