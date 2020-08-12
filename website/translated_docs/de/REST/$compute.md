@@ -6,7 +6,7 @@ title: '$compute'
 Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)
 
 
-## Description
+## Beschreibung
 
 This parameter allows you to do calculations on your data.
 
@@ -21,7 +21,7 @@ If you want to pass an Object attribute, you must pass one of its property. Beis
 You can use any of the following keywords:
 
 
-| Keyword | Description                                                                                                                                                                           |
+| Keyword | Beschreibung                                                                                                                                                                          |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $all    | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
 | average | Get the average on a numerical attribute                                                                                                                                              |
