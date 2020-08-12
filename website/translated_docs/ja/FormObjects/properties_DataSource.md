@@ -22,9 +22,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値       |
-| ------------------ | ------ | ----------- |
-| automaticInsertion | ブール    | true, false |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| automaticInsertion | boolean | true, false |
 
 #### 対象オブジェクト
 
