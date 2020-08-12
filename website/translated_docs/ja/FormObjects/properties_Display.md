@@ -400,7 +400,7 @@ title: 表示フォーマット
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#リストボックス列)
 
 
 
@@ -481,7 +481,7 @@ title: 表示フォーマット
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#リストボックス列)
 
 
 
