@@ -9,11 +9,11 @@ Numerisch ist der Oberbegriff für:
 - Datenfeld, Variable oder Ausdruck vom Typ Lange Ganzzahl. Der Typ Lange Ganzzahl (4 Bytes) umfasst den Bereich -2 147 483 648 bis 2 147 483 647 (-2^31..(2^31)-1).
 - Datenfeld, Variable oder Ausdruck vom Typ Lange Ganzzahl. Der Typ Ganzzahl (2 Bytes) umfasst den Bereich -32 768 bis 32 767 (2^15..(2^15)-1).
 
-**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
+**Hinweis:** Feldwerte vom Typ Ganzzahl werden in der 4D Programmiersprache automatisch in Lange Ganzzahl umgewandelt.
 
 Sie können numerische Datentypen untereinander zuweisen. 4D erledigt die Konvertierung und kürzt oder rundet bei Bedarf. Jedoch gibt die Konvertierung bei Werten außerhalb des entsprechenden Bereichs keinen gültigen Wert zurück. Sie können numerische Datentypen in Ausdrücken miteinander mischen.
 
-**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+**Hinweis:** Bei der Beschreibung von Befehlen im Handbuch 4D Programmiersprache gilt der Begriff numerisch für alle Datentypen der Art Zahl, Ganzzahl und Lange Ganzzahl, wenn nichts anderes angegeben ist.
 
 
 ## Zahlenformate
@@ -26,7 +26,7 @@ Eine numerische Konstante wird als einfache Zahl geschrieben. Hier sehen Sie ein
 0.0076
 ```
 
-> The default decimal separator is a period (.), regardless of the system language. If you have checked the "Use regional system settings" option in the Methods Page of the Preferences, you must use the separator defined in your system.
+> Der Dezimaltrenner ist standardmäßig ein Punkt (.), unabhängig von der Sprache des Betriebssystems. If you have checked the "Use regional system settings" option in the Methods Page of the Preferences, you must use the separator defined in your system.
 
 Negative Zahlen werden mit dem Minuszeichen (-) angegeben. Beispiel:
 
@@ -38,27 +38,27 @@ Negative Zahlen werden mit dem Minuszeichen (-) angegeben. Beispiel:
 
 ## Zahlenoperatoren
 
-| Operation               | Syntax           | Ergibt  | Ausdruck | Wert   |
-| ----------------------- | ---------------- | ------- | -------- | ------ |
-| Addition                | Zahl + Zahl      | Zahl    | 2 + 3    | 5      |
-| Subtraktion             | Zahl - Zahl      | Zahl    | 3 – 2    | 1      |
-| Multiplikation          | Zahl * Zahl      | Zahl    | 5 * 2    | 10     |
-| Division                | Number / Number  | Zahl    | 5 / 2    | 2.5    |
-| Ganzzahlige Division    | Zahl \ Zahl     | Zahl    | 5 \ 2   | 2      |
-| Modulo                  | Zahl % Zahl      | Zahl    | 5 % 2    | 1      |
-| Exponent                | Zahl ^ Zahl      | Zahl    | 2 ^ 3    | 8      |
-| Gleichheit              | Zahl = Zahl      | Boolean | 10 = 10  | Wahr   |
-|                         |                  |         | 10 = 11  | Falsch |
-| Ungleichheit            | Zahl # Zahl      | Boolean | 10 #11   | Wahr   |
-|                         |                  |         | 10 # 10  | Falsch |
-| Größer als              | Number > Number  | Boolean | 11 > 10  | Wahr   |
-|                         |                  |         | 10 > 11  | Falsch |
-| Kleiner als             | Number < Number  | Boolean | 10 < 11  | Wahr   |
-|                         |                  |         | 11 < 10  | Falsch |
-| Größer als oder gleich  | Number >= Number | Boolean | 11 >= 10 | Wahr   |
-|                         |                  |         | 10 >= 11 | Falsch |
-| Kleiner als oder gleich | Number <= Number | Boolean | 10 <= 11 | Wahr   |
-|                         |                  |         | 11 <= 10 | Falsch |
+| Operation               | Syntax       | Ergibt  | Ausdruck | Wert   |
+| ----------------------- | ------------ | ------- | -------- | ------ |
+| Addition                | Zahl + Zahl  | Zahl    | 2 + 3    | 5      |
+| Subtraktion             | Zahl - Zahl  | Zahl    | 3 – 2    | 1      |
+| Multiplikation          | Zahl * Zahl  | Zahl    | 5 * 2    | 10     |
+| Division                | Zahl / Zahl  | Zahl    | 5 / 2    | 2.5    |
+| Ganzzahlige Division    | Zahl \ Zahl | Zahl    | 5 \ 2   | 2      |
+| Modulo                  | Zahl % Zahl  | Zahl    | 5 % 2    | 1      |
+| Exponent                | Zahl ^ Zahl  | Zahl    | 2 ^ 3    | 8      |
+| Gleichheit              | Zahl = Zahl  | Boolean | 10 = 10  | Wahr   |
+|                         |              |         | 10 = 11  | Falsch |
+| Ungleichheit            | Zahl # Zahl  | Boolean | 10 #11   | Wahr   |
+|                         |              |         | 10 # 10  | Falsch |
+| Größer als              | Zahl > Zahl  | Boolean | 11 > 10  | Wahr   |
+|                         |              |         | 10 > 11  | Falsch |
+| Kleiner als             | Zahl < Zahl  | Boolean | 10 < 11  | Wahr   |
+|                         |              |         | 11 < 10  | Falsch |
+| Größer als oder gleich  | Zahl >= Zahl | Boolean | 11 >= 10 | Wahr   |
+|                         |              |         | 10 >= 11 | Falsch |
+| Kleiner als oder gleich | Zahl <= Zahl | Boolean | 10 <= 11 | Wahr   |
+|                         |              |         | 11 <= 10 | Falsch |
 
 Der Modulo Operator % dividiert die erste Zahl durch die zweite und übergibt den ganzzahligen Restwert. Hier sehen Sie ein paar Beispiele:
 
