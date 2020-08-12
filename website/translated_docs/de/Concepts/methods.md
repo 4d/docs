@@ -99,14 +99,14 @@ Die Syntax mit Klammern wird auch unterstützt:
 $o["custom_Alert"]() //displays "Hello world!"
 ```
 
-You can also [pass parameters](Concepts/parameters.md) to your formula when you call it by using $1, $2… just like with 4D project methods:
+Sie können auch [Parameter](Concepts/parameters.md) in Ihrer Formel übergeben, wenn Sie diese, wie in 4D Projektmethoden, mit $1, $2… aufrufen:
 
 ```4d
 //fullName method
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
-You can encapsulate `fullName` in an object:
+Sie können `fullName` in ein Objekt einbinden:
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
@@ -114,14 +114,14 @@ $result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
-Combined with the `This`function, such object methods allow writing powerful generic code. Beispiel:
+In Kombination mit der Funktion `This` können Sie mit solchen Objektmethoden leistungsstarken generischen Code schreiben. Beispiel:
 
 ```4d
 //fullName2 method
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
-Then the method acts like a new, calculated attribute that can be added to other attributes:
+Die Methode arbeitet dann wie ein neues berechnetes Attribut, dass sich in andere Attribute einfügen lässt:
 
 ```4d
 C_OBJECT($o)
@@ -134,45 +134,45 @@ $result:=$o.fullName()
 
 
 
-Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
+Beachten Sie, dass eine objektgebundene Methode, selbst wenn sie keine Parameter hat, zum Ausführen mit Klammern ( ) aufgerufen werden muss. Sonst wird nur die Objekteigenschaft aufgerufen und sie gibt eine neue Referenz zur Formel zurück (und führt sie nicht aus):
 
 ```4d
 $o:=$f.message //returns the formula object in $o
 ```
 
-### Menu Methods
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database.
+### Menümethode
+Eine Menümethode wird in der Anwendungsumgebung aufgerufen, wenn Sie den dazugehörigen eigenen Menübefehl auswählen. Sie weisen die Methode dem Menübefehl im Methodeneditor zu oder über einen Befehl aus dem Kapitel "Menüs". Die Methoden wird ausgeführt, wenn der Menübefehl ausgewählt wird. Dies ist einer der Hauptaspekte bei der eigenen Gestaltung von Anwendungen. Durch Einrichten eigener Menüs mit dazugehörigen Menümethoden, die bestimmte Aktionen ausführen, personalisieren Sie Ihre Anwendung.
 
-Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
+Mit eigenen Menübefehlen können eine oder mehrere Aktivitäten ausgelöst werden. Ein Menübefehl für die Eingabe von Datensätzen kann beispielsweise zwei Tasks ausführen: Das entsprechende Eingabeformular anzeigen und den Befehl `ADD RECORD` aufrufen, bis der Benutzer die Eingabe von Daten beendet.
 
-Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the database.
+Das automatisierte Ablaufen mehrerer Aktivitäten ist eine Leistungsstärke der Programmiersprache. Über eigene Menüs automatisieren Sie mehrere Tasks und bieten Benutzern eine bessere Führung.
 
 
-### Process Methods
+### Prozessmethode
 
-A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
+Eine **Prozessmethode** wird aufgerufen, wenn ein Prozess startet. Der Prozess dauert nur solange, wie die Prozessmethode ausgeführt wird, außer es ist ein Worker Prozess. Beachten Sie, dass eine Menümethode, die einem Menübefehl mit der Eigenschaft* Starte neuen Prozess* zugeordnet ist, gleichzeitig die Prozessmethode für den neu gestarteten Prozess ist.
 
-### Event and Error catching Methods
-An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
+### Auf Ereignis oder Fehler bezogene Methode
+Eine **ereignisbezogene Methode** läuft in einem eigenen Prozess, wie eine Prozessmethode, die Ereignisse abfängt. Normalerweise verwaltet 4D die meisten Ereignisse automatisch für Sie. Beispielsweise bei der Dateneingabe nimmt 4D Tastaturkürzel und Klicks wahr, ruft die entsprechenden Objekt- und Formularmethoden auf, so dass Sie von diesen Methoden aus auf die Ereignisse entsprechend antworten können. Weitere Informationen dazu finden Sie unter dem Befehl `ON EVENT CALL`.
 
-An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
+Eine **fehlerbezogene Methode** ist eine unterbrechende Projektmethode. Immer wenn ein Fehler oder eine Ausnahme auftreten, läuft diese Methode in dem Prozess ab, in welchem sie installiert ist. Weitere Informationen dazu finden Sie unter dem Befehl `ON ERR CALL`.
 
-## Recursive Project Methods
+## Rekursive Projektmethoden
 
-Project methods can call themselves. Beispiel:
+Projektmethoden können sich auch selbst aufrufen. Beispiel:
 
-- The method A may call the method B which may call A, so A will call B again and so on.
-- A method can call itself.
+- Die Methode A ruft die Methode B auf, die A aufruft, so ruft A wieder B auf, usw.
+- Eine Methode kann sich selbst aufrufen.
 
-This is called recursion. The 4D language fully supports recursion.
+Das nennt man Rekursion. Die 4D Programmiersprache unterstützt Rekursivität.
 
-Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+Hier ein Beispiel. Wir haben eine Tabelle `[Friends and Relatives]`, die extrem vereinfacht, so aussieht:
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 
-For this example, we assume the values in the fields are unique (there are no two persons with the same name). Given a name, you want to build the sentence “A friend of mine, John who is the child of Paul who is the child of Jane who is the child of Robert who is the child of Eleanor, does this for a living!”:
+Für dieses Beispiel nehmen wir an, dass die Werte der Datenfelder einmalig sind, d. h. es gibt nicht zwei Personen mit demselben Namen. Sie wollen für einen gegebenen Namen folgenden Satz erstellen: “John, mein Freund, der das Kind ist von Paul, der das Kind ist von Jane, die das Kind ist von Robert, der das Kind ist von Eleanor, tut dies für sein Leben gern!”:
 
-1. You can build the sentence in this way:
+1. Sie können den Satz folgendermaßen anlegen:
 
 ```4d
  $vsName:=Request("Enter the name:";"John")
@@ -194,7 +194,7 @@ For this example, we assume the values in the fields are unique (there are no tw
  End if
 ```
 
-2. You can also build it this way:
+2. oder folgendermaßen:
 
 ```4d
  $vsName:=Request("Enter the name:";"John")
@@ -206,7 +206,7 @@ For this example, we assume the values in the fields are unique (there are no tw
  End if
 ```
 
-with the recursive function `Genealogy of` listed here:
+mit der rekursiven Methode `Genealogy of`:
 
 ```4d
   ` Genealogy of project method
@@ -220,11 +220,11 @@ with the recursive function `Genealogy of` listed here:
  End if
 ```
 
-Note the `Genealogy of` method which calls itself.
+Beachten Sie die Methode `Genealogy of`, die sich selbst aufruft.
 
-The first way is an **iterative algorithm**. The second way is a **recursive algorithm**.
+Die erste Möglichkeit ist ein **iterativer Algorithmus**,  die zweite ein **rekursiver Algorithmus**.
 
-When implementing code for cases like the previous example, it is important to note that you can always write methods using iteration or recursion. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
+Sie können beim Einfügen von Code wie im oben aufgeführten Beispiel sowohl iterative als auch rekursive Methoden schreiben. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
 
 Some typical uses of recursion in 4D are:
 
