@@ -98,7 +98,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 
 ---
-## Locked columns and static columns
+## スクロールしない列数/ドラッグしない列数
 
 Locked columns and static columns are two separate and independent functionalities in list boxes:
 
