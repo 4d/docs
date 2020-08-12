@@ -34,7 +34,7 @@ title: テキスト、ピクチャー
 
 |   名   | データタイプ | とりうる値                                                                                                                                                              |
 |:-----:|:------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |  テキスト  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |  text  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### 対象オブジェクト
@@ -84,7 +84,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox_overview.md#list-box-headers)
+[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox_overview.md#リストボックスヘッダー)
 
 
 
@@ -150,9 +150,9 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-| 名    | データタイプ  | とりうる値                           |
-| ---- | ------- | ------------------------------- |
-| icon | picture | POSIX シンタックスの相対パス、またはファイルシステムパス |
+| 名    | データタイプ | とりうる値                           |
+| ---- | ------ | ------------------------------- |
+| icon | ピクチャー  | POSIX シンタックスの相対パス、またはファイルシステムパス |
 
 #### 対象オブジェクト
 
