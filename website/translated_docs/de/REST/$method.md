@@ -7,7 +7,7 @@ This parameter allows you to define the operation to execute with the returned e
 
 ## Available syntaxes
 
-| Syntax                                          | Beispiel                                                                                        | Description                                                                                                |
+| Syntax                                          | Beispiel                                                                                        | Beschreibung                                                                                               |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Deletes the current entity, entity collection, or entity selection                                         |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request |
@@ -24,7 +24,7 @@ This parameter allows you to define the operation to execute with the returned e
 Deletes the current entity, entity collection, or entity selection (created through REST)
 
 
-### Description
+### Beschreibung
 
 With `$method=delete`, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
 
@@ -57,7 +57,7 @@ Response:
 
 Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request
 
-### Description
+### Beschreibung
 
 When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to `$entityset/{entitySetID}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.
 
@@ -87,7 +87,7 @@ After you create an entity set, the first element, `__ENTITYSET`, is added to th
 
 Releases an existing entity set stored in 4D Server's cache.
 
-### Description
+### Beschreibung
 
 You can release an entity set, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
 
@@ -124,7 +124,7 @@ If the entity set wasn't found, an error is returned:
 Creates an entity set in 4D Server's cache based on the collection of related entities defined in the REST request
 
 
-### Description
+### Beschreibung
 
 `$method=subentityset` allows you to sort the data returned by the relation attribute defined in the REST request.
 
@@ -188,7 +188,7 @@ If you want to retrieve only the related entities for a specific entity, you can
 
 Updates and/or creates one or more entities
 
-### Description
+### Beschreibung
 
 `$method=update` allows you to update and/or create one or more entities in a single **POST**. If you update and/or create one entity, it is done in an object with each property an attribute with its value, *e.g.*, `{ lastName: "Smith" }`. If you update and/or create multiple entities, you must create a collection of objects.
 
