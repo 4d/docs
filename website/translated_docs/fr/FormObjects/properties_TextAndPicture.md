@@ -4,7 +4,7 @@ title: Texte et Image
 ---
 
 ---
-## Background pathname
+## Chemin d'accès arrière-plan
 
 Définit le chemin d'accès de l'image qui sera dessinée en arrière-plan de l'objet. Si l'objet utilise une [icône](#picture-pathname) avec [différents états](#number-of-states), l'image de fond prendra automatiquement en charge le même nombre d'états.
 
@@ -91,7 +91,7 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 
 ---
-## Icon Offset
+## Décalage icône
 
 Sets a custom offset value in pixels, which will be used when the button is clicked
 
