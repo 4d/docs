@@ -577,9 +577,6 @@
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"
       },
-      "ORDA/remoteDatastore": {
-        "title": "Using a remote datastore"
-      },
       "Project/architecture": {
         "title": "Architecture of a project"
       },
@@ -745,7 +742,7 @@
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
-    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
+    "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
