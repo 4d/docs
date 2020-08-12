@@ -244,7 +244,7 @@
         "title": "Sur changement page"
       },
       "Events/onPlugInArea": {
-        "title": "Sur appel zone du plug in\t"
+        "title": "Sur appel zone du plug in"
       },
       "Events/onPrintingBreak": {
         "title": "On Printing Break"
@@ -576,9 +576,6 @@
       },
       "ORDA/quickTour": {
         "title": "Tour d'horizon d'ORDA"
-      },
-      "ORDA/remoteDatastore": {
-        "title": "Utiliser un datastore distant"
       },
       "Project/architecture": {
         "title": "Architecture of a project"
