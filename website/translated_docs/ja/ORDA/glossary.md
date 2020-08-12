@@ -135,9 +135,9 @@ See [class function](#class-function).
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. :
 
 *   number
-*   テキスト
+*   text
 *   null
-*   ブール
+*   boolean
 *   date
 *   オブジェクト
 *   コレクション
