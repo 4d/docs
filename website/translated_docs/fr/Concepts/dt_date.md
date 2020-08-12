@@ -32,17 +32,17 @@ Une date nulle s’écrit _!00-00-00!_.
 | Opération           | Syntaxe          | Retourne | Expression                   | Valeur       |
 | ------------------- | ---------------- | -------- | ---------------------------- | ------------ |
 | Différence          | Date - Date      | Nombre   | !2017-01-20! - !2017-01-01!  | 19           |
-| Addition            | Date + Numérique | Date     | !2017-01-20! + 9             | !2017-01-29! |
-| Soustraction        | Date - Numérique | Date     | !2017-01-20! - 9             | !2017-01-11! |
-| Egalité             | Date = Date      | Booléen  | !2017-01-01! =!2017-01-01!   | Vrai         |
-|                     |                  |          | !2017-01-20! = !2017-01-01!  | Faux         |
-| Inégalité           | Date # Date      | Booléen  | !2017-01-20! # !2017-01-01!  | Vrai         |
-|                     |                  |          | !2017-01-20! # !2017-01-20!  | Faux         |
-| Supérieur à         | Date > Date      | Booléen  | !2017-01-20! > !2017-01-01!  | Vrai         |
-|                     |                  |          | !2017-01-20! > !2017-01-20!  | Faux         |
-| Inférieur à         | Date < Date      | Booléen  | !2017-01-01! < !2017-01-20!  | Vrai         |
-|                     |                  |          | !2017-01-20! < !2017-01-20!  | Faux         |
-| Supérieur ou égal à | Date >= Date     | Booléen  | !2017-01-20! >=!2017-01-01!  | Vrai         |
+| Addition            | Date + Numérique | Date     | !2017-01-20! !2017-01-20!    | !2017-01-29! |
+| Soustraction        | Date - Numérique | Date     | !2017-01-20! !2017-01-01!    | !2017-01-11! |
+| Egalité             | Date = Date      | Booléen  | !2017-01-20! = !2017-01-01!  | Vrai         |
+|                     |                  |          | !2017-01-20! !2017-01-20!    | Faux         |
+| Inégalité           | Date # Date      | Booléen  | !2017-01-20! !2017-01-01!    | Vrai         |
+|                     |                  |          | !2017-01-20! !2017-01-20!    | Faux         |
+| Supérieur à         | Date > Date      | Booléen  | !2017-01-20! !2017-01-20!    | Vrai         |
+|                     |                  |          | !2017-01-20! !2017-01-20!    | Faux         |
+| Inférieur à         | Date < Date      | Booléen  | !2017-01-20! !2017-01-20!    | Vrai         |
+|                     |                  |          | !2017-01-20! !2017-01-20!    | Faux         |
+| Supérieur ou égal à | Date >= Date     | Booléen  | !2017-01-20! !2017-01-20!    | Vrai         |
 |                     |                  |          | !2017-01-01!>=!2017-01-20!   | Faux         |
 | Inférieur ou égal à | Date \<= Date   | Booléen  | !2017-01-01!\<=!2017-01-20! | Vrai         |
 |                     |                  |          | !2017-01-20!\<=!2017-01-01! | Faux         |

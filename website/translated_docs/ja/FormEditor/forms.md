@@ -20,7 +20,7 @@ Forms can also contain other forms through the following features:
 You can add or modify 4D forms using the following elements:
 
 - **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
-- **Form Editor**: Modify your forms using the **[Form Editor](formEditor.md)**.
+- **フォームエディター**: フォームの編集は **[Form Editor](formEditor.md)** を使っておこないます。
 - **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). 例:
 
 ```

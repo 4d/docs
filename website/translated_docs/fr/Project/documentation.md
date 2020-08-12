@@ -5,6 +5,7 @@ title: Documenter un projet
 
 ## Aperçu
 
+
 Dans les bases projet, vous pouvez documenter vos méthodes ainsi que vos formulaires, vos tables ou vos champs. La création d'une documentation est particulièrement appropriée pour les bases de données développées par plusieurs programmeurs et constitue généralement une bonne pratique en matière de programmation. La documentation peut contenir une description d'un élément ainsi que toute information nécessaire à la compréhension du fonctionnement de cet élément d'une base de données.
 
 Les éléments de projet suivants acceptent la documentation :
@@ -21,6 +22,7 @@ La documentation s'affiche dans la zone d'aperçu (panneau de droite) de l'Explo
 
 Il peut également être partiellement exposé en tant que [conseils de l'éditeur de code](#viewing-documentation-in-the-code-editor).
 
+
 ## Fichiers documentation
 
 ### Nom du fichier de documentation
@@ -29,6 +31,7 @@ Les fichiers de documentation ont le même nom que l'élément auquel ils sont r
 
 Dans l'Explorateur, 4D affiche automatiquement le fichier de documentation avec le même nom que l'élément sélectionné (voir ci-dessous).
 
+
 ### Architecture des fichiers de documentation
 
 Tous les fichiers de documentation sont stockés dans le dossier `Documentation`, situé au premier niveau du dossier Package.
@@ -36,31 +39,31 @@ Tous les fichiers de documentation sont stockés dans le dossier `Documentation`
 L'architecture du dossier `Documentation` est la suivante :
 
 - **Documentation**
-    
-    + **Classes** 
+    + **Classes**
         * myClass.md
-    * **DatabaseMethods** 
+    + **DatabaseMethods**
         * onStartup.md
         * ...
-    * **Formulaires** 
+    + **Formulaires**
         * loginDial.md
         * ...
-    * **Méthodes** 
+    + **Méthodes**
         * myMethod.md
         * ...
-    * **TableForms** 
-        * **1** 
+    + **TableForms**
+        * **1**
             - input.md
             - ...
-        - ...
-    - **Triggers** 
+        * ...
+    + **Triggers**
         * table1.md
         * ...
-* Un formulaire projet et sa méthode de formulaire projet partagent le même fichier de documentation pour le formulaire et la méthode.
 
-* Un formulaire table et sa méthode de formulaire table partagent le même fichier de documentation pour le formulaire et la méthode.
+- Un formulaire projet et sa méthode de formulaire projet partagent le même fichier de documentation pour le formulaire et la méthode.
+- Un formulaire table et sa méthode de formulaire table partagent le même fichier de documentation pour le formulaire et la méthode.
 
 > Renommer ou supprimer un élément documenté dans votre projet renomme ou supprime également le fichier Markdown associé à l'élément.
+
 
 ## Documentation dans l'Explorateur
 
@@ -93,6 +96,8 @@ S'il n'y a pas de fichier de documentation pour l'élément sélectionné, vous 
 
 Si un fichier de documentation existe déjà pour l'élément sélectionné, vous pouvez l'ouvrir avec votre éditeur Markdown en choisissant l'option **Modifier la documentation...** dans le menu contextuel ou le menu d'options de l'Explorateur.
 
+
+
 ## Visualiser la documentation dans l'éditeur de code
 
 L'éditeur de code 4D affiche une partie de la documentation d'une méthode dans son info-bulle.
@@ -107,6 +112,8 @@ Si un fichier nommé "\<MethodName>.md" existe dans le dossier "\<package>/docum
 
 > Sinon, l'éditeur de code affiche [le bloc de commentaire en haut du code de la méthode](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
+
+
 ## Définition du fichier de documentation
 
 4D utilise un modèle de base pour créer de nouveaux fichiers de documentation. Ce modèle propose des fonctionnalités spécifiques qui vous permettent [d'afficher des informations dans l'éditeur de code](#viewing-documentation-in-the-code-editor).
@@ -117,127 +124,84 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
 
 ![](assets/en/Project/comments-explo4.png)
 
-<table>
-  <tr>
-    <th>
-      Ligne
-    </th>
-    
-    <th>
-      Description
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      \<!-- Type your summary here -->
-    </td>
-    
-    <td>
-      Commentaire HTML. Utilisé en priorité comme description de méthode dans les <a href="#viewing-documentation-in-the-code-editor">astuces de l'éditeur de code</a>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      ## Description
-    </td>
-    
-    <td>
-      Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les astuces de l'éditeur de code si le commentaire HTML n'est pas utilisé
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      ## Example
-    </td>
-    
-    <td>
-      Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      ```4D <br>Saisissez votre exemple ici ```
-    </td>
-    
-    <td>
-      Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)
-    </td>
-  </tr>
-</table>
+
+
+| Ligne                                                 | Description                                                                                                                                                                                         |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \<!-- Type your summary here -->| Commentaire HTML. Utilisé en priorité comme description de méthode dans les [astuces de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |
+| ## Description                                       | Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les astuces de l'éditeur de code si le commentaire HTML n'est pas utilisé |
+| ## Example                                           | Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code                                                                                                                 |
+| \``` 4D <br>Insérez votre exemple ici \` `` | Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)                                                                                                                |
+
 
 ### Prise en charge du markdown
-
 - La balise de titre est prise en charge :
-
-    # Title 1
-    ## Title 2
-    ### Title 3
-    
+```
+# Title 1
+## Title 2
+### Title 3
+```
 
 - Les balises de style (italique, gras, barré) sont prises en charge :
 
-    _italic_
-    **bold**
-    **_bold/italic_**
-    ~~strikethrough~~
-    
+```
+_italic_
+**bold**
+**_bold/italic_**
+~~strikethrough~~
+```
 
-- La balise du bloc de code (```4d ...```) est prise en charge avec le code couleur de 4D :
-    
-    \
-    
-        4d  
-          C_TEXT($txt)  
-          $txt:="Hello world!"  
-          \
+
+- La balise du bloc de code (\```4d ... ```) est supportée avec le surlignage du code 4D :
+
+    \``` 4d  
+C_TEXT($txt)  
+$txt:="Hello world!"  
+  \` ``
+
 
 - La balise de tableau est prise en charge :
 
-    | Parameter | Type   | Description  |
-    | --------- | ------ | ------------ |
-    | wpArea    | String |Write pro area|
-    | toolbar   | String |Toolbar name  |
-    
+```
+| Parameter | Type   | Description  |
+| --------- | ------ | ------------ |
+| wpArea    | String |Write pro area|
+| toolbar   | String |Toolbar name  |
+```
 
 - La balise de lien est prise en charge :
 
-    // Case 1
-    The [documentation](https://doc.4d.com) of the command ....
-    
-    // Case 2
-    [4D blog][1]
-    
-    [1]: https://blog.4d.com
-    
+```
+// Case 1
+The [documentation](https://doc.4d.com) of the command ....
+
+// Case 2
+[4D blog][1]
+
+[1]: https://blog.4d.com
+```
 
 - Les balises d'image sont prises en charge :
 
-    ![image info](pictures/image.png)
-    
-    ![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
-    
-    [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
-    
+```
+![image info](pictures/image.png)
 
+![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
+
+[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+```
 [![logo blog 4D avec lien](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
 > Pour plus d'informations, consultez le [guide Markdown GitHub](https://guides.github.com/features/mastering-markdown/).
+
+
+
 
 ## Exemple
 
 Dans le fichier `WP SwitchToolbar.md`, vous pouvez entrer le code suivant :
 
 ```4d
-<!-- Cette méthode retourne un logo différent, en fonction du paramètre size -->
-
-
-GetLogo (size) -> logo
-
-
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
 | size      | Longint | in | Logo style selector (1 to 5)  |

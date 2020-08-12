@@ -9,7 +9,7 @@ La gestion des erreurs répond à deux besoins principaux :
 
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
 - détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
-> Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
+> > Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
 
 ## Installer une méthode de gestion des erreurs
 
@@ -87,6 +87,8 @@ ON ERR CALL("emptyMethod") //emptyMethod existe mais elle est vide
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
     ALERT("File not found.")
+End if
+ON ERR CALL.("")
 End if
 ON ERR CALL.("")
 ```

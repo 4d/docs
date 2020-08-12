@@ -235,7 +235,7 @@
         "title": "Sur changement page"
       },
       "Events/onPlugInArea": {
-        "title": "Sur appel zone du plug in\t"
+        "title": "Sur appel zone du plug in"
       },
       "Events/onPrintingBreak": {
         "title": "On Printing Break"
@@ -352,7 +352,7 @@
         "title": "Input"
       },
       "FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "Liste hiérarchique"
       },
       "FormObjects/listboxOverview": {
         "title": "List Box"
@@ -672,8 +672,8 @@
       }
     },
     "links": {
-      "v18 R3 BETA": "v18 R3 BETA",
-      "v18 R2": "v18 R2",
+      "v18 R4 BETA": "v18 R4 BETA",
+      "v18 R3": "v18 R3",
       "v18": "v18"
     },
     "categories": {
@@ -707,6 +707,7 @@
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
+    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Users and Groups|no description given": "Groupes et utilisateurs",
     "Getting started|no description given": "Prise en main",
     "Developing a Desktop application|no description given": "Développer une application Desktop",

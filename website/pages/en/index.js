@@ -50,6 +50,7 @@ class Index extends React.Component {
 	  restServer: <translate>REST Server</translate>,
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
+	  langRef: <translate>Language Reference (4D Doc Center)</translate>,
 	  users: <translate>Users and Groups</translate>
     };
 
@@ -64,7 +65,10 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[${subContents.installation}](${siteConfig.baseUrl}${this.props.language}/GettingStarted/installation.html)<br>[${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
+                  content: `[${subContents.installation}](${siteConfig.baseUrl}${this.props.language}/GettingStarted/installation.html)<br>
+				  [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
+				  [${subContents.langRef}](https://doc.4d.com/4Dv18R3/4D/18-R3/4D-Language-Reference.100-4900358.en.html)<br>
+				  [${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_GettingStarted.png`,
                   imageAlign: 'top',
                   imageAlt: 'Get started',

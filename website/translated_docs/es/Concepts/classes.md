@@ -396,6 +396,27 @@ This example illustrates the use of `Super` in a class constructor. The command 
 
 #### Example 2
 
+This example illustrates the use of `Super` in a class member method. Function getArea C_LONGINT($0) $0:=This.height*This.width </code></pre>
+
+```4d
+  //Class: Square
+
+ Class extends Rectangle
+
+ Class constructor
+ C_LONGINT($1)
+
+  // It calls the parent class's constructor with lengths
+  // provided for the Rectangle's width and height
+ Super($1;$1)
+
+  // In derived classes, Super must be called before you
+  // can use 'This'
+ This.name:="Square"
+```
+
+#### Example 2
+
 This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
 
 ```4d
@@ -437,7 +458,7 @@ Then you can write in a project method:
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
+In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
 
 When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
 
@@ -496,6 +517,13 @@ Several commands of the 4D language allows you to handle class features.
 #### OB Class ( object ) -> Object | Null
 
 `OB Class` returns the class of the object passed in parameter.
+
+
+### OB Instance of
+
+#### OB Instance of ( object ; class ) -> Boolean
+
+`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
 
 
 ### OB Instance of

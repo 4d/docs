@@ -11,6 +11,9 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
+
+
+
 ## Adding, modifying, and deleting entities
 
 With the REST API, you can perform all the manipulations to data as you can in 4D.
@@ -21,9 +24,12 @@ Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7Bda
 
 Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
+
 ## Navigating data
 
 Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
+
+
 
 ## Creating and managing entity set
 
@@ -34,6 +40,7 @@ To create an entity set, call [`$method=entityset`]($method.md#methodentityset) 
 To access the entity set, you must use `$entityset/{entitySetID}`, for example:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
+
 
 By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). The timeout is continually being reset to the value defined for its timeout (either the default one or the one you define) each time you use it.
 
@@ -47,6 +54,8 @@ Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityse
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
+
+
 ## Calculating data
 
 By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. You can also compute all values with the $all keyword.
@@ -58,6 +67,7 @@ For example, to get the highest salary:
 To compute all values and return a JSON object:
 
 `/rest/Employee/salary/?$compute=$all`
+
 
 ## Getting data from methods
 
@@ -108,11 +118,10 @@ You can apply this filter in the following ways:
 |                        | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
 | エンティティセレクション           | {dataClass}/{att1,att2...}/$entityset/{entitySetID} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
 
-
 The attributes must be delimited by a comma, *i.e.*, `/Employee/firstName,lastName,salary`. Storage or relation attributes can be passed.
 
-### 例題
 
+### 例題
 Here are a few examples, showing you how to specify which attributes to return depending on the technique used to retrieve entities.
 
 You can apply this technique to:
@@ -125,116 +134,124 @@ You can apply this technique to:
 
 The following requests returns only the first name and last name from the People datastore class (either the entire datastore class or a selection of entities based on the search defined in `$filter`).
 
-`GET  /rest/People/firstName,lastName/`
+ `GET  /rest/People/firstName,lastName/`
+
 
 **Result**:
 
-    {
-        __entityModel: "People",
-        __COUNT: 4,
-        __SENT: 4,
-        __FIRST: 0,
-        __ENTITIES: [
-            {
-                __KEY: "1",
-                __STAMP: 1,
-                firstName: "John",
-                lastName: "Smith"
-            },
-            {
-                __KEY: "2",
-                __STAMP: 2,
-                firstName: "Susan",
-                lastName: "O'Leary"
-            },
-            {
-                __KEY: "3",
-                __STAMP: 2,
-                firstName: "Pete",
-                lastName: "Marley"
-            },
-            {
-                __KEY: "4",
-                __STAMP: 1,
-                firstName: "Beth",
-                lastName: "Adams"
-            }
-        ]
-    }
-    
+````
+{
+    __entityModel: "People",
+    __COUNT: 4,
+    __SENT: 4,
+    __FIRST: 0,
+    __ENTITIES: [
+        {
+            __KEY: "1",
+            __STAMP: 1,
+            firstName: "John",
+            lastName: "Smith"
+        },
+        {
+            __KEY: "2",
+            __STAMP: 2,
+            firstName: "Susan",
+            lastName: "O'Leary"
+        },
+        {
+            __KEY: "3",
+            __STAMP: 2,
+            firstName: "Pete",
+            lastName: "Marley"
+        },
+        {
+            __KEY: "4",
+            __STAMP: 1,
+            firstName: "Beth",
+            lastName: "Adams"
+        }
+    ]
+}
+````
+
 
 `GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
 
 **Result**:
 
-    {
-        __entityModel: "People",
-        __COUNT: 1,
-        __SENT: 1,
-        __FIRST: 0,
-        __ENTITIES: [
-            {
-                __KEY: "4",
-                __STAMP: 4,
-                firstName: "Beth",
-                lastName: "Adams"
-            }
-        ]
-    }
-    
+````
+{
+    __entityModel: "People",
+    __COUNT: 1,
+    __SENT: 1,
+    __FIRST: 0,
+    __ENTITIES: [
+        {
+            __KEY: "4",
+            __STAMP: 4,
+            firstName: "Beth",
+            lastName: "Adams"
+        }
+    ]
+}
+````
+
 
 #### Entity Example
-
 The following request returns only the first name and last name attributes from a specific entity in the People dataclass:
 
-`GET  /rest/People(3)/firstName,lastName/`
+ `GET  /rest/People(3)/firstName,lastName/`
 
 **Result**:
 
-    {
-        __entityModel: "People",
-        __KEY: "3",
-        __STAMP: 2,
-        firstName: "Pete",
-        lastName: "Marley"
-    }
-    
+````
+{
+    __entityModel: "People",
+    __KEY: "3",
+    __STAMP: 2,
+    firstName: "Pete",
+    lastName: "Marley"
+}
+````
 
-`GET  /rest/People(3)/`
+
+ `GET  /rest/People(3)/`
 
 **Result**:
 
-    {
-        __entityModel: "People",
-        __KEY: "3",
-        __STAMP: 2,
-        ID: 3,
-        firstName: "Pete",
-        lastName: "Marley",
-        salary: 30000,
-        employer: {
-            __deferred: {
-                uri: "http://127.0.0.1:8081/rest/Company(3)",
-                __KEY: "3"
-            }
-        },
-        fullName: "Pete Marley",
-        employerName: "microsoft"
-    
-    }
-    
+````
+{
+    __entityModel: "People",
+    __KEY: "3",
+    __STAMP: 2,
+    ID: 3,
+    firstName: "Pete",
+    lastName: "Marley",
+    salary: 30000,
+    employer: {
+        __deferred: {
+            uri: "http://127.0.0.1:8081/rest/Company(3)",
+            __KEY: "3"
+        }
+    },
+    fullName: "Pete Marley",
+    employerName: "microsoft"
+
+}
+````
 
 #### Entity Set Example
 
 Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 
-`GET /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
+ `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
+
 
 ## Viewing an image attribute
 
 If you want to view an image attribute in its entirety, write the following:
 
-`GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
+ `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
 For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
 
@@ -242,10 +259,13 @@ For more information about the image formats, refer to [`$imageformat`]($imagefo
 
 If you want to save a BLOB stored in your dataclass, you can write the following:
 
-`GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
+  `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
+
 
 ## Retrieving only one entity
 
 You can use the [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. たとえば:
 
-`GET  /rest/Company:companyCode("Acme001")`
+ `GET  /rest/Company:companyCode("Acme001")`
+ 
+ 

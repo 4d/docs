@@ -25,7 +25,7 @@ title: データタイプの概要
 | [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `C_BLOB`, `ARRAY BLOB`       |
 | [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | `C_OBJECT`, `ARRAY OBJECT`   |
 | [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `C_COLLECTION`               |
-| バリアント                                 | -       | ◯       | `C_VARIANT`                  |
+| [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | `C_VARIANT`                  |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
@@ -72,9 +72,9 @@ title: データタイプの概要
 | データタイプ  | 文字列に変換 | 数値に変換 | 日付に変換 | 時間に変換 | ブールに変換 |
 | ------- | ------ | ----- | ----- | ----- | ------ |
 | 文字列 (1) |        | Num   | 日付    | 時間    | Bool   |
-| 数値 (2)  | 文字列    |       |       |       | Bool   |
-| 日付      | 文字列    |       |       |       | Bool   |
-| 時間      | 文字列    |       |       |       | Bool   |
+| 数値 (2)  | String |       |       |       | Bool   |
+| 日付      | String |       |       |       | Bool   |
+| 時間      | String |       |       |       | Bool   |
 | ブール     |        | Num   |       |       |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。

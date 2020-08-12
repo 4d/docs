@@ -8,7 +8,7 @@ title: On After Edit
 | 45   | [4D View Pro area](FormObjects/viewProArea_overview) - [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The contents of the enterable object that has the focus has just been modified |
 
 
-## Description
+## Beschreibung
 
 ### General case
 
@@ -25,7 +25,7 @@ When it is used, this event is generated after each change made to the contents 
 
 The object returned by the `FORM Event` command contains:
 
-| Property    | Typ            | Description                                                                                         |
+| Property    | Typ            | Beschreibung                                                                                        |
 | ----------- | -------------- | --------------------------------------------------------------------------------------------------- |
 | code        | Lange Ganzzahl | On After Edit                                                                                       |
 | description | Text           | "On After Edit"                                                                                     |
@@ -37,14 +37,14 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = editChange
 
-| Property    | Typ     | Description                       |
+| Property    | Typ     | Beschreibung                      |
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 #### action = valueChanged
 
-| Property | Typ     | Description                 |
+| Property | Typ     | Beschreibung                |
 | -------- | ------- | --------------------------- |
 | range    | object  | Cell range                  |
 | oldValue | variant | Value of cell before change |
@@ -53,7 +53,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| Property  | Typ     | Description                                         |
+| Property  | Typ     | Beschreibung                                        |
 | --------- | ------- | --------------------------------------------------- |
 | fromRange | object  | Range of source cell range (being dragged)          |
 | toRange   | object  | Range of the destination cell range (drop location) |
@@ -63,7 +63,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragFillBlock
 
-| Property  | Typ    | Description         |
+| Property  | Typ    | Beschreibung        |
 | --------- | ------ | ------------------- |
 | fillRange | object | Range used for fill |
  autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
@@ -71,14 +71,14 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = formulaChanged
 
-| Property | Typ    | Description         |
+| Property | Typ    | Beschreibung        |
 | -------- | ------ | ------------------- |
 | range    | object | Cell range          |
 | formula  | Text   | The formula entered |
 
 #### action = clipboardPasted
 
-| Property    | Typ            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Property    | Typ            | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | range       | object         | Cell range                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | pasteOption | Lange Ganzzahl | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values) |

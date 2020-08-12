@@ -16,9 +16,9 @@ The list found in the left part of the window displays any existing backups of t
 
 When you select a backup in this list, the right part of the window displays the information concerning this particular backup:
 
-- **Path**: Complete pathname of the selected backup file. Clicking the Show button opens the backup file in a system window. 
+- **Path**: Complete pathname of the selected backup file. Clicking the Show button opens the backup file in a system window.
 - **Date and Time**: Date and time of backup.
-- **Content**: Contents of the backup file. Each item in the list has a check box next to it which can be used to indicate whether or not you want to restore it. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored. 
+- **Content**: Contents of the backup file. Each item in the list has a check box next to it which can be used to indicate whether or not you want to restore it. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored.
 - **Destination folder of the restored files**: Folder where the restored files will be placed. By default, 4D restores the files in a folder named “Archivename” (no extension) that is placed next to the database structure file. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
 
 The **Restore** button launches the manual restoration of the selected element(s).
@@ -36,9 +36,10 @@ Keep in mind that the data encryption key (passphrase) may have been changed thr
 When restoring a backup and integrating the current log file in a encrypted database:
 
 - If you restore a backup using an old passphrase, this passphrase will be required at the next database startup.
-- After an encryption, when opening the encrypted data file, a backup is run and a new journal file is created. Thus, it is not possible to restore a .4BK file encrypted with one key and integrate .4BL files encrypted with another key. 
+- After an encryption, when opening the encrypted data file, a backup is run and a new journal file is created. Thus, it is not possible to restore a .4BK file encrypted with one key and integrate .4BL files encrypted with another key.
 
 The following sequence illustrates the principles of a multi-key backup/restore operation:
+
 
 | 演算子                         | Generated files                                   | Comment                                                                                                                                                                                                                      |
 | --------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,8 +60,6 @@ The following sequence illustrates the principles of a multi-key backup/restore 
 | Backup database             | 0006.4BL and 0007.4BK files (encrypted with key2) | We can restore 0006.4BK and integrate 0006.4BL                                                                                                                                                                               |
 | Add data (record # 8)       |                                                   |                                                                                                                                                                                                                              |
 | Backup database             | 0007.4BL and 0008.4BK files (encrypted with key2) | We can restore 0006.4BK and integrate 0006.4BL + 0007.4BL. We can restore 0007.4BK and integrate 0007.4BL                                                                                                                    |
-
-
 > When restoring a backup and integrating one or several .4BL files, the restored .4BK and .4BL files must have the same encryption key. During the integration process, if no valid encryption key is found in the 4D keychain when the .4BL file is integrated, an error is generated.
 > 
 > If you have stored successive data keys on the same external device, restoring a backup and integrating log files will automatically find the matching key if the device is connected.

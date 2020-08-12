@@ -10,6 +10,7 @@ La fenêtre du Centre de sécurité et de maintenance (CSM) rassemble tous les o
 
 Vous pouvez accéder à la fenêtre du CSM de plusieurs manières. Le mode d’accès détermine également le mode d’ouverture de la base : mode “maintenance” ou mode “standard”. En mode maintenance, la base n’est pas ouverte par 4D, seule sa référence est fournie au CSM. En mode standard, la base est ouverte par 4D.
 
+
 ## Accès au CSM en mode maintenance
 
 En mode maintenance, seule la fenêtre du CSM est affichée (la base n’est pas ouverte par l’application 4D). Ce principe permet notamment d’accéder à des bases trop endommagées pour pouvoir être ouvertes en mode standard par 4D. En outre, certaines opérations (compactage, réparation...) nécessitent que la base soit ouverte en mode maintenance (cf. [FFFF](#disponibilite-des-fonctionnalites)).
@@ -18,18 +19,18 @@ Vous pouvez ouvrir le CSM en mode maintenance depuis deux emplacements :
 
 - **Boîte de dialogue standard d’ouverture** La boîte de dialogue standard d’ouverture de base de données comporte l’option **Centre de sécurité de maintenance** sous forme de menu associé au bouton **Ouvrir** : ![](assets/en/MSC/MSC_standardOpen.png)
 - Menu **Aide/Centre de sécurité et de maintenance** ou bouton **CSM** de la barre d’outils (base non ouverte)  
-    ![](assets/en/MSC/mscicon.png)  
-    Lorsque vous appelez cette fonction, une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de désigner la base à examiner. La base ne sera pas ouverte par 4D.
+  ![](assets/en/MSC/mscicon.png)   
+  Lorsque vous appelez cette fonction, une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de désigner la base à examiner. La base ne sera pas ouverte par 4D.
 
 ## Accès au CSM en mode standard
 
 En mode standard, une base de données est ouverte. Dans ce mode, certaines fonctions de maintenance ne sont pas disponibles. Vous disposez de plusieurs possibilités pour accéder à la fenêtre du CSM :
 
 - Utiliser le Menu **Aide/Centre de sécurité et de maintenance** ou le bouton **CSM** de la barre d’outils :  
-    ![](assets/en/MSC/mscicon.png) 
+  ![](assets/en/MSC/mscicon.png)
 - Utiliser l'action standard “CSM” qu’il est possible d’associer à une commande de menu ou à un objet de formulaire (cf. section "Actions standard").
 
-- A l’aide de la commande de langage ```OPEN SECURITY CENTER``` .
+- Use the `OPEN SECURITY CENTER` language command.
 
 ## Disponibilité des fonctionnalités
 
@@ -37,4 +38,4 @@ Certaines fonctions du CSM ne sont pas disponibles suivant le mode d’ouverture
 
 - Les informations relatives à la sauvegarde sont disponibles uniquement lorsque la base de données est ouverte (le CSM doit avoir été ouvert en mode standard).
 - Les fonctions de compactage, retour arrière, restitution, réparation et chiffrement des données ne sont utilisables qu’avec des bases de données non ouvertes (le CSM doit avoir été ouvert en mode maintenance). Si ces fonctions sont utilisées alors que la base est ouverte en mode standard, une boîte de dialogue s’affiche, vous permettant de relancer l’application en mode maintenance.
-- Dans les bases chiffrées, l'accès aux données chiffrées ou au fichier .journal nécessite qu'une clé de chiffrement des données valide soit fournie (voir [Page Chiffrement](encrypt.md)). Sinon, les données chiffrées ne sont pas visibles.
+- Dans les bases chiffrées, l'accès aux données chiffrées ou au fichier .journal nécessite qu'une clé de chiffrement des données valide soit fournie (voir [Page Chiffrement](encrypt.md)). Sinon, les données chiffrées ne sont pas visibles. 

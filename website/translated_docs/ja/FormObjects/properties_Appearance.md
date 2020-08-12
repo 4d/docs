@@ -42,9 +42,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| hideFocusRing | ブール    | true, false |
+| 名             | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| hideFocusRing | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -65,9 +65,9 @@ By default, this option is not enabled.
 
 #### JSON 文法
 
-| 名                   | データタイプ | とりうる値       |
-| ------------------- | ------ | ----------- |
-| hideSystemHighlight | ブール    | true, false |
+| 名                   | データタイプ  | とりうる値       |
+| ------------------- | ------- | ----------- |
+| hideSystemHighlight | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -97,7 +97,7 @@ Available values:
 
 | 名                   | データタイプ | とりうる値                            |
 | ------------------- | ------ | -------------------------------- |
-| scrollbarHorizontal | テキスト   | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | text   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
@@ -107,7 +107,7 @@ Available values:
 [Vertical scroll bar](#vertical-scroll-bar)
 
 ---
-## Resolution
+## 解像度
 
 Sets the screen resolution for the 4D Write Pro area contents. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
 
@@ -126,7 +126,7 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 
 ---
-## Show background
+## 背景を表示
 
 Displays/hides both background images and background color.
 
@@ -143,7 +143,7 @@ Displays/hides both background images and background color.
 [4D Write Pro area](writeProArea_overview.md)
 
 ---
-## Show footers
+## フッター表示
 
 Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
@@ -180,7 +180,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 [4D View Pro area](viewProArea_overview.md)
 
 ---
-## Show headers
+## ヘッダーを表示
 
 Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
@@ -199,7 +199,7 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 
 ---
-## Show hidden characters
+## 非表示文字を表示
 
 Displays/hides invisible characters
 
@@ -217,7 +217,7 @@ Displays/hides invisible characters
 
 
 ---
-## Show horizontal ruler
+## 水平ルーラーを表示
 
 Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
 
@@ -238,7 +238,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 
 ---
-## Show HTML WYSYWIG
+## HTML WYSYWIG 表示
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
@@ -255,7 +255,7 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 [4D Write Pro area](writeProArea_overview.md)
 
 ---
-## Show page frame
+## ページフレームを表示
 
 Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
 
@@ -274,7 +274,7 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 
 ---
-## Show references
+## 参照を表示
 
 Displays all 4D expressions inserted in the 4D Write Pro document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
 
@@ -301,7 +301,7 @@ With the Show references property on, the reference is displayed:
 [4D Write Pro area](writeProArea_overview.md)
 
 ---
-## Show vertical ruler
+## 垂直ルーラーを表示
 
 Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
 
@@ -319,7 +319,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 
 ---
-## Tab Control Direction
+## タブコントロールの位置
 
 You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
 
@@ -338,7 +338,7 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 
 ---
-## User Interface
+## ユーザーインターフェース
 
 You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
 
@@ -381,7 +381,7 @@ Available values:
 
 | 名                 | データタイプ | とりうる値                            |
 | ----------------- | ------ | -------------------------------- |
-| scrollbarVertical | テキスト   | "visible", "hidden", "automatic" |
+| scrollbarVertical | text   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
@@ -392,7 +392,7 @@ Available values:
 [Horizontal scroll bar](#horizontal-scroll-bar)
 
 ---
-## View mode
+## ビューモード
 
 Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
 
@@ -416,7 +416,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 [4D Write Pro area](writeProArea_overview.md)
 
 ---
-## Zoom
+## 拡大
 
 Sets the zoom percentage for displaying 4D Write Pro area contents.
 

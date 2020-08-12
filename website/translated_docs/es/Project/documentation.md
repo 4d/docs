@@ -5,6 +5,7 @@ title: Documenting a project
 
 ## Overview
 
+
 In project databases, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for databases being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the database.
 
 The following project elements accept documentation:
@@ -21,6 +22,7 @@ Documentation is displayed in the preview area (right-side panel) of the Explore
 
 It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
 
+
 ## Documentation files
 
 ### Documentation file name
@@ -29,6 +31,7 @@ Documentation files have the same name as their attached element, with the ".md"
 
 In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
 
+
 ### Documentation file architecture
 
 All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
@@ -36,31 +39,31 @@ All documentation files are stored in the `Documentation` folder, located at the
 The `Documentation` folder architecture is the following:
 
 - **Documentation**
-    
-    + **Classes** 
+    + **Classes**
         * myClass.md
-    * **DatabaseMethods** 
+    + **DatabaseMethods**
         * onStartup.md
         * ...
-    * **Forms** 
+    + **Forms**
         * loginDial.md
         * ...
-    * **Methods** 
+    + **Methods**
         * myMethod.md
         * ...
-    * **TableForms** 
-        * **1** 
+    + **TableForms**
+        * **1**
             - input.md
             - ...
-        - ...
-    - **Triggers** 
+        * ...
+    + **Triggers**
         * table1.md
         * ...
-* A project form and its project form method share the same documentation file for form and method.
 
-* A table form and its table form method share the same documentation file for form and method.
+- A project form and its project form method share the same documentation file for form and method.
+- A table form and its table form method share the same documentation file for form and method.
 
 > Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
+
 
 ## Documentation in the Explorer
 
@@ -93,6 +96,8 @@ If there is no documentation file for the selected element, you can:
 
 If a documentation file already exists for the selected element, you can open it with your Markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
 
+
+
 ## Viewing documentation in the code editor
 
 The 4D code editor displays a part of a method's documentation in its help tip.
@@ -107,6 +112,8 @@ If a file named "\<MethodName>.md" exists in "\<package>/documentation" folder, 
 
 > Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
+
+
 ## Documentation file definition
 
 4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
@@ -117,115 +124,78 @@ New documentation files are created with the following default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
-<table>
-  <tr>
-    <th>
-      Line
-    </th>
-    
-    <th>
-      Description
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      \<!-- Type your summary here -->
-    </td>
-    
-    <td>
-      HTML comment. Used in priority as the method description in the <a href="#viewing-documentation-in-the-code-editor">code editor tips</a>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      ## Description
-    </td>
-    
-    <td>
-      Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      ## Example
-    </td>
-    
-    <td>
-      Heading level 2, you can use this area to show sample code
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      ```4D <br>Type your example here ```
-    </td>
-    
-    <td>
-      Used to format 4D code examples (uses highlight.js library)
-    </td>
-  </tr>
-</table>
+
+
+| Line                                               | Description                                                                                                                                          |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \<!-- Type your summary here -->| HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
+| ## Description                                    | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
+| ## Example                                        | Heading level 2, you can use this area to show sample code                                                                                           |
+| \``` 4D <br>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
+
 
 ### Supported Markdown
-
 - The title tag is supported:
-
-    # Title 1
-    ## Title 2
-    ### Title 3
-    
+```
+# Title 1
+## Title 2
+### Title 3
+```
 
 - The style tags (italic, bold, strikethrough) are supported:
 
-    _italic_
-    **bold**
-    **_bold/italic_**
-    ~~strikethrough~~
-    
+```
+_italic_
+**bold**
+**_bold/italic_**
+~~strikethrough~~
+```
 
-- The code block tag (```4d ...```) is supported with 4D code highlight:
-    
-    \
-    
-        4d  
-          C_TEXT($txt)  
-          $txt:="Hello world!"  
-          \
+
+- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+
+    \``` 4d  
+  C_TEXT($txt)  
+  $txt:="Hello world!"  
+  \` ``
+
 
 - The table tag is supported:
 
-    | Parameter | Type   | Description  |
-    | --------- | ------ | ------------ |
-    | wpArea    | String |Write pro area|
-    | toolbar   | String |Toolbar name  |
-    
+```
+| Parameter | Type   | Description  |
+| --------- | ------ | ------------ |
+| wpArea    | String |Write pro area|
+| toolbar   | String |Toolbar name  |
+```
 
 - The link tag is supported:
 
-    // Case 1
-    The [documentation](https://doc.4d.com) of the command ....
-    
-    // Case 2
-    [4D blog][1]
-    
-    [1]: https://blog.4d.com
-    
+```
+// Case 1
+The [documentation](https://doc.4d.com) of the command ....
+
+// Case 2
+[4D blog][1]
+
+[1]: https://blog.4d.com
+```
 
 - The image tags are supported:
 
-    ![image info](pictures/image.png)
-    
-    ![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
-    
-    [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
-    
+```
+![image info](pictures/image.png)
 
+![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
+
+[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+```
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
 > For more information, see the [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/).
+
+
+
 
 ## Example
 

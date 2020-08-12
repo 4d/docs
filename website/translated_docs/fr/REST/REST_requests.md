@@ -24,20 +24,18 @@ Si toutes les requêtes REST doivent contenir les paramètres URI et Resource, l
 
 Comme pour tous les URI, le premier paramètre est délimité par un «?» et tous les paramètres suivants par un «&». Par exemple:
 
-`GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
-
+ `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > Vous pouvez placer toutes les valeurs entre guillemets en cas de doute. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
 
 Les paramètres vous permettent de manipuler des données dans des dataclass de votre projet 4D. Outre la récupération de données à l'aide des méthodes HTTP `GET`, vous pouvez également ajouter, mettre à jour et supprimer des entités d'une classe de datastore à l'aide des méthodes HTTP `POST`.
 
 Si vous souhaitez que les données soient retournées dans un tableau au lieu d'un JSON, utilisez le paramètre [`$asArray`]($asArray.md).
 
-## Statut et réponse REST
 
+## Statut et réponse REST
 À chaque requête REST, le serveur retourne l'état et une réponse (avec ou sans erreur).
 
 ### Statut de la requête
-
 Avec chaque requête REST, vous obtenez le statut et la réponse. Voici quelques exemples de statuts :
 
 | Statut                    | Description                                                                      |
@@ -49,9 +47,11 @@ Avec chaque requête REST, vous obtenez le statut et la réponse. Voici quelques
 | 404 Not Found             | La data n'est pas accessible via REST ou bien l'ensemble d'entités n'existe pas. |
 | 500 Internal Server Error | Erreur lors du traitement de la requête REST.                                    |
 
-
 ### Réponse
 
 La réponse (au format JSON) varie en fonction de la requête.
 
 Si une erreur survient, elle sera envoyée avec la réponse du serveur ou bien ce sera la réponse du serveur.
+
+ 
+

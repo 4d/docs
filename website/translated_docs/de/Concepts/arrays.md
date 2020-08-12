@@ -3,8 +3,8 @@ id: arrays
 title: Arrays
 ---
 
-An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnummeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
-> In most cases, it is recommended to use **collections** instead of **arrays**. Collections sind flexibler und bieten ein breites Spektrum an spezifischen Methoden. Weitere Informationen dazu finden Sie im Abschnitt [Collection](Concepts/dt_collection.md).
+Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede Variable wird als **Element** des Array bezeichnet. Ein Array erhält seine Größe beim Erstellen; Sie können die Größe beliebig oft verändern durch Hinzufügen, Ändern oder Löschen von Elementen oder über den Befehl, der es erstellt hat. Array Elemente werden von 1 bis N durchnummeriert, wobei N die Größe des Array ist. Ein Array hat immer ein spezielles [Element Null](#using-the-element-zero-of-an-array). Arrays sind 4D Variablen. Ein Array hat, wie jede Variable, eine Reichweite und wendet bis auf wenige Ausnahmen die Regeln der 4D Programmiersprache an.
+> In den meisten Fällen empfiehlt es sich, **Collections** anstelle von **Arrays** zu verwenden. Collections sind flexibler und bieten ein breites Spektrum an spezifischen Methoden. Weitere Informationen dazu finden Sie im Abschnitt [Collection](Concepts/dt_collection.md).
 
 
 ## Arrays erstellen
@@ -44,7 +44,7 @@ Auf Elemente in einem Array verweisen Sie über geschweifte Klammern ({…}). Di
 ```
 Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über eine Variable vom Typ Zahl ansprechen, z. B. atNames{3}. Über eine Schleife (`For...End for`, `Repeat...Until` oder `While...End while`) können kompakte Teile des Code alle oder bestimmte Elemente in einem Array ansprechen.
 
-**Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). Zuweisen und Vergleichen sind ganz unterschiedliche Operationen.
+**Wichtig:** Achten Sie darauf, dass Sie den Zuweisungsoperator (:=) nicht mit dem Vergleichsoperator ist gleich (=) verwechseln. Zuweisen und Vergleichen sind ganz unterschiedliche Operationen.
 
 
 ### Ein Array einem anderen Array zuweisen
@@ -142,7 +142,7 @@ Vorausgesetzt, dieses zweidimensionale Array wurde initialisiert, erhalten Sie n
  End for
 ```
 
-**Note:** As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.
+**Hinweis:** Wie Sie in diesem Beispiel sehen, können Reihen in zweidimensionalen Arrays dieselbe oder verschiedene Größen haben.
 
 ## Arrays und Speicher
 
@@ -156,7 +156,7 @@ Dieses Vorgehen ist für Arrays undenkbar. Das hat folgende Gründe:
 - Da ein Array immer vollständig im Speicher gehalten wird, müssten Sie alle Informationen dieser Arrays während der ganzen Arbeitssitzung im Speicher halten, auch wenn die Daten nicht ständig in Gebrauch sind.
 - Diese Arrays müssten bei jedem Starten der Datenbank komplett geladen und dann beim Beenden auf der Festplatte gesichert werden, selbst wenn die Daten während der ganzen Arbeitssitzung weder benutzt noch verändert wurden.
 
-**Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. Andererseits sind Arrays, da sie im Hauptspeicher gehalten werden, sehr schnell und leicht zu verwalten.
+**Fazit:** In Arrays sollten überschaubare Datenmengen für eine kurze Zeitspanne gehalten werden. Andererseits sind Arrays, da sie im Hauptspeicher gehalten werden, sehr schnell und leicht zu verwalten.
 
 Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausenden von Elementen einsetzen. Nachfolgende Tabelle zeigt die Formel zum Berechnen der Speicherbelegung für jeden Array-Typ:
 

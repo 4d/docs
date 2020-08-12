@@ -672,8 +672,8 @@
       }
     },
     "links": {
-      "v18 R3 BETA": "v18 R3 BETA",
-      "v18 R2": "v18 R2",
+      "v18 R4 BETA": "v18 R4 BETA",
+      "v18 R3": "v18 R3",
       "v18": "v18"
     },
     "categories": {
@@ -707,6 +707,7 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
+    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Users and Groups|no description given": "Users and Groups",
     "Getting started|no description given": "Getting started",
     "Developing a Desktop application|no description given": "Developing a Desktop application",

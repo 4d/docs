@@ -37,9 +37,9 @@ This event is generated when the user clicks anywhere on a 4D View Pro document.
 | プロパティ       | 型      | 説明                             |
 | ----------- | ------ | ------------------------------ |
 | code        | 倍長整数   | On Clicked                     |
-| description | テキスト   | "On Clicked"                   |
-| objectName  | テキスト   | 4D View Pro area name          |
-| sheetName   | テキスト   | Name of the sheet of the event |
+| description | text   | "On Clicked"                   |
+| objectName  | text   | 4D View Pro area name          |
+| sheetName   | text   | Name of the sheet of the event |
 | range       | オブジェクト | Cell range                     |
 
 #### 例題

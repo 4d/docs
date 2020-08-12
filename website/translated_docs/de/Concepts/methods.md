@@ -4,12 +4,12 @@ title: Methoden
 ---
 
 
-A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
+Eine Methode ist in der Regel ein Stück Code, der eine oder mehrere Aktionen ausführt. In der 4D Programmiersprache gibt es zwei Kategorien von Methoden:
 
-- **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
-    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+- **Integrierte Methoden**, die 4D oder third-party Entwickler liefern und sich nur in Ihrem Code aufrufen lassen. Zu integrierten Methoden gehören:
+    - Befehle und Funktionen des 4D API (Application Programming Interface), wie z. B. `ALERT` oder `Current date`.
+    - Methoden, die Collections oder native Objekten zugewiesen sind, wie z.B. `collection.orderBy()` oder `entity.save()`.
+    - Befehle aus Plug-Ins oder Komponenten, die von 4D oder third-Party Entwicklern kommen, wie z. B. `SVG_New_arc`.
 
     Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
 
@@ -238,7 +238,7 @@ Some typical uses of recursion in 4D are:
 
 In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
 
-| Typ                              | Calling context                                                                          | Accepts parameters | Description                                                                                                                                                          |
+| Typ                              | Calling context                                                                          | Accepts parameters | Beschreibung                                                                                                                                                         |
 | -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | Nein               | Property of a form object (also called widget)                                                                                                                       |
 | **Form method**                  | Automatic, when an event involves the form to which the method is attached               | Nein               | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |

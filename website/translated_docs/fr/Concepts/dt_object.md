@@ -36,8 +36,7 @@ Les objets doivent être initialisés à l'aide, par exemple, de la commande `Ne
 
 Exemple :
 ```4d
- C_OBJET($obVar) //création d'une variable 4D de type objet.
- $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
+ C_OBJET($obVar) //création d'une variable 4D de type objet. $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
 ```
 
 ### Objet standard ou partagé
@@ -149,7 +148,7 @@ Pour plus d'informations, veuillez vous reporter à la description de la command
 
 L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). En règle générale, lorsque le code tente de lire ou d'affecter des expressions indéfinies, 4D génère des erreurs, hormis dans les cas décrits ci-dessous :
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
+- La lecture d'une propriété d'un objet ou d'une valeur indéfini(e) retourne Indéfini ; l'affectation d'une valeur indéfinie à des variables (hors tableaux) a le même effet qu'appeler `CLEAR VARIABLE` avec elles :
 
 ```4d
      C_OBJET($o)
@@ -171,7 +170,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 ```4d
      C_OBJECT($o)
  mymethod($o.a) //passage d'un paramètre indéfini
- 
+
   //Dans la méthode mymethod
  C_TEXT($1) //Paramètre de type texte
   // $1 contient ""
@@ -194,7 +193,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
  - Booléen : False
  - Chaîne : ""
  - Numérique : 0
- - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""! si la base utilise le type date pour les objets, sinon ""
+ - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""
  - Heure : 0 (nombre de ms)
  - Indéfini, Null : pas de changement
 
@@ -215,7 +214,7 @@ Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous
 
 ## Identifiants de propriétés d'objets
 
-Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. Ils doivent se conformer à la grammaire des identificateurs JavaScript (voir [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - le premier caractère doit être une lettre, un trait de soulignement (_) ou le symbole dollar ($),
 - les autres caractères peuvent être des lettres, des chiffres, des traits de soulignement ou des symboles dollar (les espaces sont proscrits),
@@ -238,12 +237,12 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
  $myObj:=New object //création d'un objet et affectation à la variable
  $myObj.age:=56
  $age:=$myObj.age //56
- 
+
   // Utilisation de la syntaxe par commande
  C_OBJECT($myObj2) //déclaration d'une variable objet 4D
  OB SET($myObj2;"age";42) //création d'un objet et création de la propriété age
  $age:=OB Get($myObj2;"age") //42
- 
+
   // Bien entendu, les deux notations peuvent être utilisées simultanément
  C_OBJECT($myObj3)
  OB SET($myObj3;"age";10)

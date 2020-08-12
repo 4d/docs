@@ -7,9 +7,10 @@ title: Configuration du serveur
 
 Pour commencer à utiliser les fonctionnalités REST, vous devez démarrer et configurer le serveur 4D REST.
 
-> - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D gratuite disponible.  
->     
-> - Sur 4D monoposte, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test. Vous devez gérer le [cookie de session](authUsers.md#session-cookie) pour utiliser la même session pour votre application. 
+> - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D gratuite disponible.<br>
+> - Sur 4D monoposte, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test. Vous devez gérer le [cookie de session](authUsers.md#session-cookie) pour utiliser la même session pour votre application.
+
+
 
 ## Démarrage du serveur REST
 
@@ -21,16 +22,17 @@ Pour des raisons de sécurité, par défaut, 4D ne répond pas aux requêtes RES
 
 Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'affiche lorsque vous cochez cette option, pour attirer votre attention sur le fait que lorsque les services REST sont activés, l'accès par défaut aux objets de base de données est gratuit tant que les accès REST n'ont pas été configurés.
 
+
 ## Configuration de l'accès REST
 
 Par défaut, les accès REST sont ouverts à tous les utilisateurs, ce qui n'est évidemment pas recommandé pour des raisons de sécurité et de contrôle de l'utilisation des licences clientes.
 
 Vous pouvez configurer les accès REST de l'une des manières suivantes :
-
 - assigner un groupe d'utilisateurs en **lecture/écriture** aux services REST dans la page "Web/REST" des paramètres de la base;
 - saisir d'une méthode base `On REST Authentication`pour intercepter et gérer chaque demande REST initiale.
 
 > Vous ne pouvez pas utiliser les deux fonctionnalités simultanément. Une fois qu'une méthode base `On REST Authentication` a été définie, 4D lui donne entièrement le contrôle des requêtes REST .
+
 
 ### Utilisation des paramètres de la base
 
@@ -41,17 +43,18 @@ Par défaut, le menu affiche **<Anyone>**, ce qui signifie que les accès REST s
 > Pour que ce paramètre prenne effet, la méthode base `On REST Authentication` ne doit pas être définie. S'il existe, 4D ignore les paramètres d'accès définis dans les propriétés de la base.
 
 ### Méthode base On REST Authentication
-
 La méthode base `On REST Authentication` vous permet de contrôler de manière personnalisée l’ouverture des sessions REST sur 4D. Cette méthode base est automatiquement appelée lorsqu'une nouvelle session est ouverte à l'aide d'une requête REST. Lorsqu'une [requête d’ouverture de session REST](authUsers.md) est reçue, les identifiants de connexion sont fournis dans l’en-tête de la requête. La méthode base `On REST Authentication` est appelée afin de vous permettre d’évaluer ces identifiants. Vous pouvez utiliser la liste des utilisateurs de la base 4D ou votre propre table d’identifiants. Pour obtenir plus d'informations, veuillez vous reporter à la [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.fe.html) de la méthode base `On REST Authentication`.
+
+
 
 ## Exposer les tables et les champs
 
 Une fois que les services REST sont activés dans la base 4D, par défaut une session REST peut accéder à toutes les tables et les champs du datastore, et utiliser leurs données. Par exemple, si votre base de données contient une table [Employee], il est possible d'écrire :
 
-    http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
-    
-    
+```
+http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
 
+```
 Cette requête retournera tous les employés dont le champ "salary" est supérieur à 10 000.
 
 > Les tables et/ou champs 4D dont l'attribut est "invisible" sont également exposés par défaut dans REST.
@@ -70,6 +73,7 @@ Pour supprimer l'exposition REST d'une table :
 
 2. Décochez l'option **Exposer en tant que ressource REST** : ![alt-text](assets/en/REST/table.png) Procédez ainsi pour chaque table dont l'exposition doit être modifiée.
 
+
 ### Exposer des champs
 
 Par défaut, touts les champs d'une base 4D sont exposés dans REST.
@@ -80,6 +84,6 @@ Pour supprimer l'exposition REST d'un champ :
 
 1. Affichez l'Inspecteur de champ dans l'Editeur de structure et sélectionnez le champ à modifier.
 
-2. Décochez la case **Exposer en tant que ressource RES**T pour le champ. ![alt-text](assets/en/REST/field.png) Répétez cette opération pour chaque champ dont l'exposition doit être modifiée.
+2. Décochez la case **Exposer en tant que ressource REST** pour le champ. ![alt-text](assets/en/REST/field.png) Répétez cette opération pour chaque champ dont l'exposition doit être modifiée.
 
 > Pour qu'un champ soit accessible via REST, la table parente doit l'être également. Si la table parente n'est pas exposée, aucun de ses champs ne le sera, quel que soit leur statut.
