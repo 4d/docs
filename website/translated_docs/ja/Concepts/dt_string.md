@@ -1,6 +1,6 @@
 ---
 id: string
-title: 文字列
+title: String
 ---
 
 文字列とは、以下を示す総称です:
@@ -35,25 +35,25 @@ title: 文字列
 
 ## 文字列演算子
 
-| 演算子      | シンタックス           | 戻り値 | 式                       | 結果       |
-| -------- | ---------------- | --- | ----------------------- | -------- |
-| 連結 (結合)  | 文字列 + 文字列        | 文字列 | "abc" + "def"           | "abcdef" |
-| 繰り返し     | 文字列 * 数値         | 文字列 | "ab" * 3                | "ababab" |
-| 等しい      | 文字列 = 文字列        | ブール | "abc" = "abc"           | True     |
-|          |                  |     | "abc" = "abd"           | False    |
-| 異なる      | 文字列 # 文字列        | ブール | "abc" # "abd"           | True     |
-|          |                  |     | "abc" # "abc"           | False    |
-| 大きい      | 文字列 > 文字列        | ブール | "abd" > "abc"           | True     |
-|          |                  |     | "abc" > "abc"           | False    |
-| 小さい      | 文字列 < 文字列        | ブール | "abc" < "abd"           | True     |
-|          |                  |     | "abc" < "abc"           | False    |
-| 以上       | 文字列 >= 文字列       | ブール | "abd" >= "abc"          | True     |
-|          |                  |     | "abc" >= "abd"          | False    |
-| 以下       | String <= String | ブール | "abc" <= "abd"          | True     |
-|          |                  |     | "abd" <= "abc"          | False    |
-| キーワードを含む | 文字列 % 文字列        | ブール | "Alpha Bravo" % "Bravo" | True     |
-|          |                  |     | "Alpha Bravo" % "ravo"  | False    |
-|          | ピクチャー % 文字列      | ブール | Picture_expr % "Mer"    | True (*) |
+| 演算子      | シンタックス      | 戻り値    | 式                       | 結果       |
+| -------- | ----------- | ------ | ----------------------- | -------- |
+| 連結 (結合)  | 文字列 + 文字列   | String | "abc" + "def"           | "abcdef" |
+| 繰り返し     | 文字列 * 数値    | String | "ab" * 3                | "ababab" |
+| 等しい      | 文字列 = 文字列   | ブール    | "abc" = "abc"           | True     |
+|          |             |        | "abc" = "abd"           | False    |
+| 異なる      | 文字列 # 文字列   | ブール    | "abc" # "abd"           | True     |
+|          |             |        | "abc" # "abc"           | False    |
+| 大きい      | 文字列 > 文字列   | ブール    | "abd" > "abc"           | True     |
+|          |             |        | "abc" > "abc"           | False    |
+| 小さい      | 文字列 < 文字列   | ブール    | "abc" < "abd"           | True     |
+|          |             |        | "abc" < "abc"           | False    |
+| 以上       | 文字列 >= 文字列  | ブール    | "abd" >= "abc"          | True     |
+|          |             |        | "abc" >= "abd"          | False    |
+| 以下       | 文字列 <= 文字列  | ブール    | "abc" <= "abd"          | True     |
+|          |             |        | "abd" <= "abc"          | False    |
+| キーワードを含む | 文字列 % 文字列   | ブール    | "Alpha Bravo" % "Bravo" | True     |
+|          |             |        | "Alpha Bravo" % "ravo"  | False    |
+|          | ピクチャー % 文字列 | ブール    | Picture_expr % "Mer"    | True (*) |
 
 (*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
 
@@ -138,7 +138,7 @@ Character code("A")=Character code("a")
      "Alpha,Bravo,Charlie"%"Alpha" // true
      "Software and Computers"%"comput@" // true
 ```
-> **注:** - 4Dは、<>=# 演算子を使った文字列比較や、キーワードの検出にICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照して下さい: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries) - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照してください。
+> **注:**<br /> - 4Dは、<>=# 演算子を使った文字列比較や、キーワードの検出にICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照して下さい: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries) <br />- 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照してください。
 
 ## 文字参照記号
 文字参照記号: [[...]]

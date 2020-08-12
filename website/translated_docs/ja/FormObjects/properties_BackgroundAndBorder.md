@@ -20,7 +20,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 
 ---
-## Background Color / Fill Color
+## 背景色/塗りカラー
 
 Defines the background color of an object.
 
@@ -74,7 +74,7 @@ Allows setting a standard style for the object border.
 
 | 名           | データタイプ | とりうる値                                                             |
 | ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### 対象オブジェクト
 
@@ -83,7 +83,7 @@ Allows setting a standard style for the object border.
 
 
 ---
-## Dotted Line Type
+## 点線タイプ
 
 Describes dotted line type as a sequence of black and white points.
 
@@ -113,9 +113,9 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値       |
-| ------------------ | ------ | ----------- |
-| hideExtraBlankRows | ブール    | true, false |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| hideExtraBlankRows | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -125,7 +125,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 
 ---
-## Line Color
+## 線カラー
 
 Designates the color of the object's lines. The color can be specified by:
 
@@ -150,7 +150,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 
 ---
-## Line Width
+## 線幅
 
 Designates the thickness of a line.
 
@@ -222,10 +222,10 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 | 名    | データタイプ | とりうる値         |
 | ---- | ------ | ------------- |
-| fill | テキスト   | "transparent" |
+| fill | text   | "transparent" |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md#overview)
 
 #### 参照
-[Background Color / Fill Color](#background-color-fill-color)
+[背景色/塗りカラー](#background-color-fill-color)

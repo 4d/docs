@@ -4,7 +4,7 @@ title: Range of Values
 ---
 
 ---
-## Default value
+## デフォルト値
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
 
@@ -13,7 +13,7 @@ The default value can only be used if the [data source type](properties_Object.m
 - number/integer
 - date
 - time
-- ブール
+- boolean
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
@@ -60,7 +60,7 @@ Allows setting a list whose values cannot be entered in the object. ユーザー
 
 ---
 
-## Required List
+## 指定リスト
 
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 

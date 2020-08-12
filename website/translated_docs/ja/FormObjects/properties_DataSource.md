@@ -22,9 +22,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値       |
-| ------------------ | ------ | ----------- |
-| automaticInsertion | ブール    | true, false |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| automaticInsertion | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -53,7 +53,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 
 ---
-## Choice List (static list)
+## 選択リスト (静的リスト)
 
 List of static values to use as labels for the tab control object.
 
@@ -128,7 +128,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ---
 
-## Default (list of) values
+## デフォルト値
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
@@ -163,7 +163,7 @@ A 4D expression to be associated with a column. You can enter:
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
-    *   文字列
+    *   String
     *   Numeric
     *   日付
     *   時間
@@ -173,7 +173,7 @@ A 4D expression to be associated with a column. You can enter:
 
 -   A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
   The following expression types are supported:
-    *   文字列
+    *   String
     *   Numeric
     *   日付
     *   ピクチャー
@@ -277,7 +277,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 
 ---
-## Selection Name
+## 命名セレクション
 `Named selection list boxes`
 
 Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.

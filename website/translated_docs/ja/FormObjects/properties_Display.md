@@ -400,7 +400,7 @@ title: 表示フォーマット
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#リストボックス列)
 
 
 
@@ -416,9 +416,9 @@ title: 表示フォーマット
 
 #### JSON 文法
 
-| 名       | データタイプ | とりうる値       |
-| ------- | ------ | ----------- |
-| display | ブール    | true, false |
+| 名       | データタイプ  | とりうる値       |
+| ------- | ------- | ----------- |
+| display | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -453,9 +453,9 @@ title: 表示フォーマット
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値       |
-| ---------- | ------ | ----------- |
-| threeState | ブール    | true, false |
+| 名          | データタイプ  | とりうる値       |
+| ---------- | ------- | ----------- |
+| threeState | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -481,7 +481,7 @@ title: 表示フォーマット
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox_overview.md#リストボックス列)
 
 
 

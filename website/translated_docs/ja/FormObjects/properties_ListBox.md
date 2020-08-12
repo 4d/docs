@@ -98,7 +98,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 
 ---
-## Locked columns and static columns
+## スクロールしない列数/ドラッグしない列数
 
 Locked columns and static columns are two separate and independent functionalities in list boxes:
 
@@ -126,9 +126,9 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 #### JSON 文法
 
-| 名                 | データタイプ | とりうる値  |
-| ----------------- | ------ | ------ |
-| lockedColumnCount | 整数     | 最小値: 0 |
+| 名                 | データタイプ  | とりうる値  |
+| ----------------- | ------- | ------ |
+| lockedColumnCount | integer | 最小値: 0 |
 
 #### 対象オブジェクト
 
@@ -141,9 +141,9 @@ Number of columns that cannot be moved during execution.
 
 #### JSON 文法
 
-| 名                 | データタイプ | とりうる値  |
-| ----------------- | ------ | ------ |
-| staticColumnCount | 整数     | 最小値: 0 |
+| 名                 | データタイプ  | とりうる値  |
+| ----------------- | ------- | ------ |
+| staticColumnCount | integer | 最小値: 0 |
 
 #### 対象オブジェクト
 
@@ -162,9 +162,9 @@ Sets the number of columns of the list box.
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値  |
-| ----------- | ------ | ------ |
-| columnCount | 整数     | 最小値: 1 |
+| 名           | データタイプ  | とりうる値  |
+| ----------- | ------- | ------ |
+| columnCount | integer | 最小値: 1 |
 
 #### 対象オブジェクト
 

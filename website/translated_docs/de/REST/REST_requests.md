@@ -38,7 +38,7 @@ With each REST request, the server returns the status and a response (with or wi
 ### Request Status
 With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
 
-| Status                    | Description                                                                |
+| Status                    | Beschreibung                                                               |
 | ------------------------- | -------------------------------------------------------------------------- |
 | 0                         | Request not processed (server might not be started).                       |
 | 200 OK                    | Request processed without error.                                           |

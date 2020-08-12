@@ -96,7 +96,7 @@ Three options are available:
 
 
 ---
-## Pusher
+## 以降のオブジェクトを移動する
 
 When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
 
@@ -123,15 +123,15 @@ When this property is not applied to the splitter, the result is as follows:
 
 
 ---
-## Resizable
+## サイズ変更可
 
 Designates if the size of the column can be modified by the user.
 
 #### JSON 文法
 
-| 名         | データタイプ |      とりうる値      |
-|:--------- |:------:|:---------------:|
-| resizable |  ブール   | "true", "false" |
+| 名         | データタイプ  |      とりうる値      |
+|:--------- |:-------:|:---------------:|
+| resizable | boolean | "true", "false" |
 
 #### 対象オブジェクト
 

@@ -4,7 +4,7 @@ title: Entry
 ---
 
 ---
-## Auto Spellcheck
+## 自動スペルチェック
 
 4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
@@ -13,9 +13,9 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値       |
-| ---------- | ------ | ----------- |
-| spellcheck | ブール    | true, false |
+| 名          | データタイプ  | とりうる値       |
+| ---------- | ------- | ----------- |
+| spellcheck | boolean | true, false |
 
 
 #### 対象オブジェクト
@@ -24,7 +24,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 
 ---
-## Context Menu
+## コンテキストメニュー
 
 Allows the user access to a standard context menu in the object when the form is executed.
 
@@ -54,7 +54,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 
 ---
-## Enterable
+## 入力可
 
 The Enterable attribute indicates whether users can enter values into the object.
 
@@ -65,9 +65,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値       |
-| --------- | ------ | ----------- |
-| enterable | ブール    | true, false |
+| 名         | データタイプ  | とりうる値       |
+| --------- | ------- | ----------- |
+| enterable | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -75,7 +75,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 
 ---
-## Entry Filter
+## 入力フィルター
 
 An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
 
@@ -99,7 +99,7 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Entry Filter                    | 説明                                                                                                                                           |
+| 入力フィルター                         | 説明                                                                                                                                           |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
 | &9                              | Allow only numbers.                                                                                                                          |
@@ -155,9 +155,9 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値       |
-| --------- | ------ | ----------- |
-| focusable | ブール    | true, false |
+| 名         | データタイプ  | とりうる値       |
+| --------- | ------- | ----------- |
+| focusable | boolean | true, false |
 
 
 #### 対象オブジェクト
@@ -168,7 +168,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 
 ---
-## Keyboard Layout
+## キーボードレイアウト
 
 This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
 
@@ -180,7 +180,7 @@ By default, the object uses the current keyboard layout.
 
 | 名               | データタイプ | とりうる値                                                                       |
 | --------------- | ------ | --------------------------------------------------------------------------- |
-| keyboardDialect | テキスト   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| keyboardDialect | text   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
 #### 対象オブジェクト
@@ -190,7 +190,7 @@ By default, the object uses the current keyboard layout.
 
 
 ---
-## Multiline
+## 複数行
 
 This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
 
@@ -212,7 +212,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 | 名         | データタイプ | とりうる値                                             |
 | --------- | ------ | ------------------------------------------------- |
-| multiline | テキスト   | "yes", "no", "automatic" (default if not defined) |
+| multiline | text   | "yes", "no", "automatic" (default if not defined) |
 
 
 #### 対象オブジェクト
@@ -262,16 +262,16 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 
 ---
-## Selection always visible
+## 選択を常に表示
 
 This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
 
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| showSelection | ブール    | true, false |
+| 名             | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| showSelection | boolean | true, false |
 
 
 #### 対象オブジェクト
@@ -295,15 +295,15 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                                                                                                                                                                                                                                                                                       |
-| --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | ブール    | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | ブール    | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | ブール    | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | ブール    | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | ブール    | true, false                                                                                                                                                                                                                                                                                 |
-|                 |        |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| 名               | データタイプ  | とりうる値                                                                                                                                                                                                                                                                                       |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | boolean | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | boolean | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | boolean | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | boolean | true, false                                                                                                                                                                                                                                                                                 |
+|                 |         |                                                                                                                                                                                                                                                                                             |
+| shortcutKey     | string  | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 #### 対象オブジェクト
@@ -325,9 +325,9 @@ When this option is not enabled, users must first select the cell row and then c
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値       |
-| --------------- | ------ | ----------- |
-| singleClickEdit | ブール    | true, false |
+| 名               | データタイプ  | とりうる値       |
+| --------------- | ------- | ----------- |
+| singleClickEdit | boolean | true, false |
 
 #### 対象オブジェクト
 

@@ -11,7 +11,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 - Un nom doit commencer par un caractère alphabétique (une lettre), un tiret bas ou un dollar ("$") (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).
 - Le nom peut ensuite contenir des caractères alphabétiques, des caractères numériques, des espaces et des tirets bas (_).
-- Les points (".") et les crochets ("[ ]") sont interdits dans les noms de tables, champs, méthodes ou variables.
+- Les points (".") Les points (".") et les crochets ("[ ]") sont interdits dans les noms de tables, champs, méthodes ou variables.
 - Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.
 - Les caractères réservés car utilisés comme opérateurs, comme l’astérisque (*) ou le +, sont interdits.
 - Les noms réservés, c'est-à-dire les noms de commandes 4D (`Date`, `Time`, etc), les mots-clés (If, For, etc.) et les constantes.
@@ -19,7 +19,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 ### Règles supplémentaires pour les propriétés d'objet et les noms ORDA
 - Les espaces sont interdits.
-- Les points (".") et les crochets ("[ ]") sont interdits.
+- Les points (".") Les points (".") et les crochets ("[ ]") sont interdits.
 - Les noms sont sensibles à la casse.
 
 ### Règles supplémentaires pour SQL
@@ -135,12 +135,12 @@ Voici quelques exemples :
 If(<>asMotsClés{1}="Stop")
     <>atSujets{$vlElem}:=[Topics]Sujet
     $viValeurSuivante:=<>aiGrosTableau{Taille tableau(<>aiGrosTableau)}
- 
+
   // Adresser un élément d'un tableau process
     If(asMotsClés{1}="Stop")
        atSujets{$vlElem}:=[Topics]Sujet
        $viValeurSuivante:=aiGrosTableau{Taille tableau(aiGrosTableau)}
- 
+
   // Adresser un élément d'un tableau local
        If($asMotsClés{1}="Stop")
           $atSujets{$vlElem}:=[Topics]Sujet
@@ -148,7 +148,7 @@ If(<>asMotsClés{1}="Stop")
 ```
 
 ### Eléments de tableaux à deux dimensions
-Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
+Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
 
 Voici quelques exemples :
 ```4d
@@ -156,12 +156,12 @@ Voici quelques exemples :
  If(<>asMotsClés{$vlLigneSuivante}{1}="Stop")
     <>atSujets{10}{$vlElem}:=[Topics]Sujet
     $viValeurSuivante:=<>aiGrosTableau{$vlSet}{Taille tableau(<>aiGrosTableau{$vlSet})}
- 
+
   // Adresser un élément d'un tableau process à deux dimensions
     If(asMotsClés{$vlLigneSuivante}{1}="Stop")
        atSujets{10}{$vlElem}:=[Topics]Sujet
        $viValeurSuivante:=aiGrosTableau{$vlSet}{Taille tableau(aiGrosTableau{$vlSet})}
- 
+
   // Adresser un élément d'un tableau interprocess à deux dimensions
        If($asMotsClés{$vlLigneSuivante}{1}="Stop")
           $atSujets{10}{$vlElem}:=[Topics]Sujet
@@ -170,7 +170,7 @@ Voici quelques exemples :
 
 ## Propriétés (attributs) d'objets
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
+When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. between the name of the object (or attribute) and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
 Voici quelques exemples :
 ```4d
@@ -215,7 +215,7 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 ```
 
-**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
+**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
 
 **Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
 
@@ -237,14 +237,14 @@ Voici quelques exemples :
 ```4d
     // Dans DROP SPACES, $1 est pointeur sur le champ [Personnes]Nom
  DROP SPACES(->[Personnes]Nom)
- 
+
   // Dans Créateur tableau :
   // - $1 est un numérique qui vaut 1
   // - $2 est un numérique qui vaut 5
   // - $3 est un texte ou un alpha qui vaut "Super"
   // - La valeur résultante est assignée à $0
  $vsRésultat:=Calc creator(1;5;"Super")
- 
+
   // Dans Poubelle :
   // - Les trois paramètres sont de type Texte ou Alpha
   // - Vous pouvez y accéder par $1, $2 ou $3
@@ -350,26 +350,26 @@ Voici quelques exemples :
 
 Le tableau suivant résume les principes de nommage des identifiants dans les méthodes.
 
-| Identifiant                       | Longueur max. | Exemple                        |
-| --------------------------------- | ------------- | ------------------------------ |
-| Table                             | 31            | [Factures]                     |
-| Champ                             | 31            | [Employés]Nom                  |
-| Variable/Tableau interprocess     | <> + 31       | <><>vlProcessSuivantID         |
-| Variable/Tableau process          | 31            | vsNomCourant                   |
-| Variable/Tableau local(e)         | $ + 31        | $vlCompteurLocal               |
-| Propriétés d'objets               | 255           | $o.monAttribut                 |
-| Formulaire                        | 31            | "Formulaire Web perso"         |
-| Objet de formulaire               | 255           | "MonBouton"                    |
-| Méthode                           | 31            | M_AJOUTER_CLIENTS            |
-| Commande de plug-in               | 31            | WR INSERER TEXTE               |
-| Ensemble interprocess             | <> + 255      | "<>Enregistrements à archiver" |
-| Ensemble process                  | 255           | "Enregistrements actuels"      |
-| Ensemble client                   | $ + 255       | "$Sujets précédents"           |
-| Sélection temporaire              | 255           | "Employés de A à Z"            |
-| Sélection temporaire interprocess | <> + 255      | "<>Employés de Z à A"          |
-| Process local                     | $ + 255       | "$SuivreEvénements"            |
-| Process global                    | 255           | "*P_MODULE_FACTURES*"        |
-| Sémaphore                         | 255           | "monsémaphore"                 |
+| Identifiant                       | Longueur Longueur max. | Exemple                        |
+| --------------------------------- | ---------------------- | ------------------------------ |
+| Table                             | 31                     | [Factures]                     |
+| Champ                             | 31                     | [Employés]Nom                  |
+| Variable/Tableau interprocess     | <> + 31                | <>vlProcessSuivantID           |
+| Variable/Tableau process          | 31                     | vsNomCourant                   |
+| Variable/Tableau local(e)         | $ + 31                 | $vlCompteurLocal               |
+| Propriétés d'objets               | 255                    | $o.monAttribut                 |
+| Formulaire                        | 31                     | "Formulaire Web perso"         |
+| Objet de formulaire               | 255                    | "MonBouton"                    |
+| Méthode                           | 31                     | M_AJOUTER_CLIENTS            |
+| Commande de plug-in               | 31                     | WR INSERER TEXTE               |
+| Ensemble interprocess             | <> + 255               | "<>Enregistrements à archiver" |
+| Ensemble process                  | 255                    | "Enregistrements actuels"      |
+| Ensemble client                   | $ + 255                | "$Sujets précédents"           |
+| Sélection temporaire              | 255                    | "Employés de A à Z"            |
+| Sélection temporaire interprocess | <> + 255               | "<>Employés de Z à A"          |
+| Process local                     | $ + 255                | "$SuivreEvénements"            |
+| Process global                    | 255                    | "*P_MODULE_FACTURES*"        |
+| Sémaphore                         | 255                    | "monsémaphore"                 |
 
 **Note :** En cas d'utilisation de caractères non romans dans les noms des identifiants, leur taille maximum peut être inférieure.
 
