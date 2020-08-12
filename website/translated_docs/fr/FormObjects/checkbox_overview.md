@@ -138,7 +138,7 @@ Le style du bouton Barre outils est initialement destiné à être intégré dan
 
 Le style Barre outils possède un fond transparent et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
-Example with states unchecked / checked / highlighted:
+Exemples avec les états coché / non coché / surligné :
 
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
@@ -167,7 +167,7 @@ La case à cochre Bevel combine l'apparence du style [Classique](#regular) (c'es
 
 Le style Bevel possède un fond gris clair et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
-Example with states unchecked / checked / highlighted:
+Exemples avec les états coché / non coché / surligné :
 
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
@@ -225,7 +225,7 @@ Exemple sous macOS :
 
 Le style de case à cocher OS X Gradient est presque identique au style [Bevel](#bevel), à l'exception de son apparence qui peut, en fonction du système d'exploitation, avoir deux tons. Comme pour le style Bevel, le style OS X Gradient combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar).
 
-The OS X Gradient style has a light gray background with a title and is displayed as a two-tone system button on macOS. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
+Le style Gradient OS X a un arrière-plan gris clair et un titre et s'affiche sous la forme d'un bouton système bicolore sur macOS. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
   ![](assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
@@ -288,11 +288,11 @@ Le style de case à cocher Office XP combine l'apparence du style [Classique](#r
 
 Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Example with states unchecked / checked / highlighted:
+ - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Exemples avec les états coché / non coché / surligné :
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *Sous macOS* - son arrière-plan est toujours affiché. Example with states unchecked / checked:
+ - *Sous macOS* - son arrière-plan est toujours affiché. Exemples avec les états cochés / non cochés :
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -376,8 +376,8 @@ Sous macOS et Windows, une case à cocher avec le style "Disclosure" apparaît c
 
 Le style de case à cocher personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des propriétés spécifiques:
 
--  [Background pathname](properties_TextAndPicture.md#backgroundPathname)
-- [Icon Offset](properties_TextAndPicture.md#icon-offset)
+-  [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname)
+- [Décalage icône](properties_TextAndPicture.md#icon-offset)
 - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) and [Marge verticale](properties_TextAndPicture.md#verticalMargin)
 
 Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée conjointement avec une </a>image d'arrière-plan</a> [à 4 états](properties_TextAndPicture.md#number-of-states).
@@ -392,7 +392,7 @@ Il est généralement associé à une [image à 4 états](properties_TextAndPict
         "icon": "/RESOURCES/smiley.jpg",
         "iconFrame": 4,
         "customBackgroundPicture": "/RESOURCES/paper.jpg",
-        "iconOffset": 5, //custom icon offset when clicked
+        "iconOffset": 5, //décalage icône personnalisé lors du clic 
         "left": 60,
         "top": 160,
         "width": 100,       
@@ -410,7 +410,7 @@ Il est généralement associé à une [image à 4 états](properties_TextAndPict
 Toutes les cases à cocher partagent une même série de propriétés de base :
 
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Style de bouton](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Police](properties_Text.md#font) - [Couleur de la police](properties_Text.md#font-color) - [Taille de la police](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nom](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Raccourci](properties_Entry.md#shortcut) - [Action standard](properties_Action.md#standard-action) - [Titre](properties_Object.md#title) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)
 
 
 Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
