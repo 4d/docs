@@ -9,10 +9,10 @@ Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
 ## 説明
 $queryplan returns the query plan as it was passed to 4D Server.
 
-| プロパティ    | 型   | 説明                                                                                          |
-| -------- | --- | ------------------------------------------------------------------------------------------- |
-| item     | 文字列 | Actual query executed                                                                       |
-| subquery | 配列  | If there is a subquery, an additional object containing an item property (as the one above) |
+| プロパティ    | 型      | 説明                                                                                          |
+| -------- | ------ | ------------------------------------------------------------------------------------------- |
+| item     | String | Actual query executed                                                                       |
+| subquery | 配列     | If there is a subquery, an additional object containing an item property (as the one above) |
 
 For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
 
