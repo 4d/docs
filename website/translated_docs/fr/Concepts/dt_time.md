@@ -32,26 +32,26 @@ Une heure nulle s’écrit ?00:00:00?
 | Opération           | Syntaxe         | Retourne | Expression              | Valeur     |
 | ------------------- | --------------- | -------- | ----------------------- | ---------- |
 | Addition            | Heure + Heure   | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? + 65         | 7449       |
-| Soustraction        | Heure – Nombre  | Nombre   | ?02:03:04? – 65         | 7319       |
-| Multiplication      | Heure * Nombre  | Nombre   | ?02:03:04? * 2          | 14768      |
-| Division            | Heure / Nombre  | Nombre   | ?02:03:04? / 2          | 3692       |
-| Division entière    | Heure \ Nombre | Nombre   | ?02:03:04? \ 2         | 3692       |
+| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? ?01:02:03?   | ?01:01:01? |
+| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? ?01:02:03?   | 7449       |
+| Soustraction        | Heure – Nombre  | Nombre   | ?02:03:04? ?01:02:03?   | 7319       |
+| Multiplication      | Heure * Nombre  | Nombre   | ?02:03:04? ?01:02:03?   | 14768      |
+| Division            | Heure / Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 3692       |
+| Division entière    | Heure \ Nombre | Nombre   | ?02:03:04? ?01:02:03?   | 3692       |
 | Modulo              | Heure % Heure   | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
 | Modulo              | Heure % Nombre  | Nombre   | ?02:03:04? % 2          | 0          |
-| Egalité             | Heure = Heure   | Booléen  | ?01:02:03? = ?01:02:03? | Vrai       |
-|                     |                 |          | ?01:02:03? = ?01:02:04? | Faux       |
-| Inégalité           | Heure # Heure   | Booléen  | ?01:02:03? # ?01:02:04? | Vrai       |
-|                     |                 |          | ?01:02:03? # ?01:02:03? | Faux       |
-| Supérieur à         | Heure > Heure   | Booléen  | ?01:02:04? > ?01:02:03? | Vrai       |
-|                     |                 |          | ?01:02:03? > ?01:02:03? | Faux       |
-| Inférieur à         | Heure < Heure   | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
-|                     |                 |          | ?01:02:03? < ?01:02:03? | Faux       |
+| Egalité             | Heure = Heure   | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:04?   | Faux       |
+| Inégalité           | Heure # Heure   | Booléen  | ?01:02:03? ?01:02:03?   | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:03?   | Faux       |
+| Supérieur à         | Heure > Heure   | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
+|                     |                 |          | ?01:02:03? < ?01:02:04? | Faux       |
+| Inférieur à         | Heure < Heure   | Booléen  | ?01:02:03? ?01:02:04?   | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:03?   | Faux       |
 | Supérieur ou égal à | Heure >= Heure  | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |
 |                     |                 |          | ?01:02:03? >=?01:02:04? | Faux       |
 | Inférieur ou égal à | Heure <= Heure  | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
-|                     |                 |          | ?01:02:04? <=?01:02:03? | Faux       |
+|                     |                 |          | ?01:02:03? <=?01:02:03? | Faux       |
 
 ### Exemple 1
 
@@ -81,6 +81,6 @@ L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du fo
 $t1:=?23:00:00? // Il est 23 heures.
   //On souhaite ajouter 2 heures 30
  $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? et il est 1h 30 du matin le matin suivant
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? et il est 1h 30 du matin le matin suivant le matin suivant
 ```
 

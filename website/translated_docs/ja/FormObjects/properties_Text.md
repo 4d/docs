@@ -150,9 +150,9 @@ Allows defining the object's font size in points.
 
 #### JSON 文法
 
-| 名        | データタイプ | とりうる値                       |
-| -------- | ------ | --------------------------- |
-| fontSize | 整数     | Font size in points. 最小値: 0 |
+| 名        | データタイプ  | とりうる値                       |
+| -------- | ------- | --------------------------- |
+| fontSize | integer | Font size in points. 最小値: 0 |
 
 #### 対象オブジェクト
 

@@ -15,7 +15,7 @@ In the steps collection, there is an object with the following properties defini
 
 | プロパティ         | 型      | 説明                                                                          |
 | ------------- | ------ | --------------------------------------------------------------------------- |
-| description   | 文字列    | Actual query executed or "AND" when there are multiple steps                |
+| description   | String | Actual query executed or "AND" when there are multiple steps                |
 | time          | 数値     | Number of milliseconds needed to execute the query                          |
 | recordsfounds | 数値     | Number of records found                                                     |
 | steps         | コレクション | An collection with an object defining the subsequent step of the query path |

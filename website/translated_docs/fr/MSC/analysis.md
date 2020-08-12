@@ -33,8 +33,8 @@ Les informations affichées permettent d’identifier la source et le contexte d
 - **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération. Taille : taille en octets des données traitées par l’opération.
 - **Taille** : taille (en octets) des données traitées par l’opération.
 - **Date et Heure** : date et heure à laquelle l’opération a été effectuée.
-- **System User**: System name of the user that performed the operation. En version client-serveur, il s’agit du nom de la machine du poste client. En version monoposte, le nom de session de l’utilisateur s'affiche.
 - **4D User**: 4D user name of the user that performed the operation. Si un alias est défini pour l'utilisateur, l'alias s'affiche à la place du nom d'utilisateur 4D.
+- **System User**: System name of the user that performed the operation. Si un alias est défini pour l'utilisateur, l'alias s'affiche à la place du nom d'utilisateur 4D.
 - **Valeurs** : valeurs des champs de l’enregistrement en cas d’ajout ou de modification. Les valeurs sont séparées par des “;”. Seules les valeurs représentables sous forme alphanumérique sont affichées.  
   ***Note** : Si la base est chiffrée et si aucune clé de données valide correspondant au fichier d'historique n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne.*
 - **Enregistrements** : Numéro de l’enregistrement.

@@ -30,7 +30,7 @@ title: プロジェクトのアーキテクチャー
 
 - *databaseName*.4DProject ファイル
 - Sources
-    + クラス
+    + Classes
     + DatabaseMethods
     + メソッド
     + フォーム

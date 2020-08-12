@@ -19,7 +19,7 @@ Les attributs de l'entité sont directement disponibles en tant que propriétés
 
 Par exemple, nous voulons créer une nouvelle entité dans la dataclass "Employee" dans le datastore courant avec "John" et "Dupont" affectés aux attributs de prénom et de nom :
 
-```code4d
+```4d
 var $myEntity : cs.EmployeeEntity
 $myEntity:=ds.Employee.new() //Créer un nouvel objet de type entité
 $myEntity.name:="Dupont" //assigner 'Dupont' à l'attribut 'name'
@@ -34,7 +34,7 @@ Une entité contient une référence à un enregistrement 4D. Différentes entit
 
 Si vous exécutez le code suivant :
 
-```code4d
+```4d
  var $e1; $e2 : cs.EmployeeEntity
  $e1:=ds.Employee.get(1) //accéder à l'employé avec ID 1
  $e2:=$e1
@@ -49,7 +49,7 @@ Ceci est illustré par le graphique suivant :
 
 Maintenant, si vous exécutez :
 
-```code4d
+```4d
  var $e1; $e2 : cs.EmployeeEntity
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
@@ -65,9 +65,9 @@ Ceci est illustré par le graphique suivant :
 
 A noter cependant que les entités font référence au même enregistrement. Dans tous les cas, si vous appelez la méthode `entity.save()`, l'enregistrement sera mis à jour (sauf en cas de conflit, voir [Verrouillage d'entité](#entity-locking)).
 
-De fait, $e1 et $e2 ne sont pas l'entité elle-même, mais une référence à l'entité. Cela signifie que vous pouvez la passer directement à n'importe quelle fonction ou méthode, et qu'elle agira comme un pointeur, et plus rapidement qu'un pointeur 4D. Par exemple:
+In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Par exemple:
 
-```code4d
+```4d
  For each($entity;$selection)
     do_Capitalize($entity)
  End for each
@@ -75,7 +75,7 @@ De fait, $e1 et $e2 ne sont pas l'entité elle-même, mais une référence à l'
 
 Et la méthode est :
 
-```code4d
+```4d
  $entity:=$1
  $name:=$entity.lastname
  If(Not($name=Null))
@@ -85,7 +85,7 @@ Et la méthode est :
 ```
 
 Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et passer leurs références directement en tant que [paramètres](Concepts/parameters.md).
-> Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [chargement différé](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
+> Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
 
 
 ## Utilisation des attributs d'entités
@@ -95,10 +95,10 @@ Les attributs d'entité stockent les données et mappent les champs correspondan
 
 Par exemple, pour définir un attribut de stockage :
 
-```code4d
- $entity:=ds.Employee.get(1) //obtenir l'attribut d'Employee avec l'ID 1
- $name:=entity.lastname //obtenir le nom de l'employé, par exemple "Dupont"
- entity.lastname:="Jones" //définir le nom de l'employé
+```4d
+ $entity:=ds.Employee.get(1) //get employee attribute with ID 1
+ $name:=$entity.lastname //get the employee name, e.g. "Smith"
+ $entity.lastname:="Jones" //set the employee name
 ```
 > Les attributs d'images ne peuvent pas être assignés directement à un chemin donné dans une entité.
 
@@ -108,7 +108,7 @@ L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec l
 
 Vous pouvez accéder aux données via le ou les objets associé(s) :
 
-```code4d
+```4d
  $entity:=ds.Project.all().first().theClient //récupérer l'entité Company associée au projet
  $EntitySel:=ds.Company.all().first().companyProjects //récupère la sélection de projets pour l'entreprise(Company)
 ```
@@ -119,7 +119,7 @@ Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des at
 
 Chaque employé peut être un manager et peut avoir un manager. Pour obtenir le manager du manager d'un employé, vous pouvez simplement écrire :
 
-```code4d
+```4d
  $myEmp:=ds.Employee.get(50)
  $manLev2:=$myEmp.manager.manager.lastname
 ```
@@ -140,7 +140,7 @@ Dans cet exemple, une entité de la dataclass "Employee" contient un objet de ty
 
 Pour attribuer une valeur directement à l'attribut "employer", vous devez passer une entité existante de la dataclass "Company". Par exemple:
 
-```code4d
+```4d
  $emp:=ds.Employee.new() // créer un employé
  $emp.lastname:="Smith" // attribuer une valeur à un attribut
  $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //attribuer une entité de "company"
@@ -149,7 +149,7 @@ Pour attribuer une valeur directement à l'attribut "employer", vous devez passe
 
 4D fournit une fonctionnalité supplémentaire pour saisir un attribut de relation pour une entité N liée à une entité "1": vous passez directement la clé primaire de l'entité "1" lors de l'attribution d'une valeur à l'attribut de relation. Pour que cela fonctionne, passez des données de type Numérique ou Texte (la valeur de la clé primaire) à l'attribut de relation. 4D se charge alors automatiquement de rechercher l'entité correspondante dans la dataclass. Par exemple:
 
-```code4d
+```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
  $emp.employer:=2 // attribuer une clé primaire à l'attribut relation
@@ -192,12 +192,12 @@ Vous pouvez créer et utiliser simultanément autant de sélections d'entités d
 
 Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple:
 
-```code4d
- locals:=ds.Person.query("city =: 1"; "San Jose") // sélection d'entité de personnes
- localEmails:=locals.emailAddress // collection d'adresses e-mail (chaînes)
+```4d
+ $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
+ $localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```
 
-Ce code retourne dans *localEmails* une collection d'adresses e-mail sous forme de chaînes.
+This code returns in *$localEmails* a collection of email addresses as strings.
 
 ### Sélections d'entités et attributs de relation
 
@@ -205,10 +205,10 @@ Outre la variété de méthodes de recherche, vous pouvez également utiliser de
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
-```code4d
-myParts:=ds.Part.query("ID < 100") //Retourne les parties dont l'ID est inférieur à 100
- $myInvoices:=myParts.invoiceItems.invoice
-  //Toutes les factures avec au moins un élément de ligne lié à une partie de myParts
+```4d
+ $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+ $myInvoices:=$myParts.invoiceItems.invoice
+  //All invoices with at least one line item related to a part in $myParts
 ```
 
 La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut de relation est utilisé comme propriété d'une sélection d'entité, le résultat est toujours une autre sélection d'entité, même si une seule entité est retournée. Lorsqu'un attribut de relation est utilisé comme propriété d'une sélection d'entité et qu'aucune entité n'est retournée, le résultat est une sélection d'entité vide et non nulle.
@@ -244,7 +244,7 @@ Le diagramme suivant illustre le verrouillage optimiste :
 
 Cela peut également être illustré par le code suivant :
 
-```code4d
+```4d
  $person1:=ds.Person.get(1) //Référence à l'entité
  $person2:=ds.Person.get(1) //Autre référence à la même entité
  $person1.name:="Bill"
@@ -260,7 +260,7 @@ Lorsque cette situation se produit, vous pouvez, par exemple, recharger l'entit�
 
 Vous pouvez verrouiller et déverrouiller des entités à la demande lorsque vous accédez aux données. Lorsqu'une entité est verrouillée par un process, elle est chargée en lecture/écriture dans ce process mais elle est verrouillée pour tous les autres process. L'entité peut être chargée uniquement en mode lecture seule dans ces process; ses valeurs ne peuvent pas être modifiées ou enregistrées.
 
-Cette fonctionnalité est basée sur deux méthodes de la classe Entity :
+This feature is based upon two methods of the `Entity` class:
 
 *   `entity.lock()`
 *   `entity.unlock()`
@@ -312,14 +312,14 @@ Les méthodes suivantes associent automatiquement le contexte d'optimisation de 
 
 Considérons le code suivant :
 
-```code4d
+```4d
  $sel:=$ds.Employee.query("firstname = ab@")
  For each($e;$sel)
     $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer renvoie à la table Company 
  End for each
 ```
 
-Grâce à l'optimisation, cette requête récupérera uniquement les données des attributs utilisés (prénom, nom, employeur, employeur.name) dans $sel après la phase d'apprentissage.
+Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* after a learning phase.
 
 
 
@@ -334,23 +334,23 @@ Une même propriété de contexte d'optimisation peut être passée à un nombre
 
 **Exemple avec la méthode `dataClass.query( )` :**
 
-```code4d
- C_OBJECT($sel1;$sel2;$sel3;$sel4;$querysettings;$querysettings2)
- C_COLLECTION($data)
+```4d
+ var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
+ var $data : Collection
  $querysettings:=New object("context";"shortList")
  $querysettings2:=New object("context";"longList")
 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // Dans la méthode extractData, une optimisation est déclenchée et associée au contexte "shortList"
+ $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // Dans la méthode extractData, l'optimisation associée au contexte "shortList" est appliquée
+ $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // Dans la méthode extractDetailedData, une optimisation est déclenchée et associée au contexte "longList"
+ $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // Dans la méthode extractDetailedData, l'optimisation associée au contexte "longList" est appliquée
+ $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
 ```
 
 ### Listbox basée sur une sélection d'entités
@@ -368,7 +368,7 @@ Cette optimisation sera également prise en charge par les requêtes ultérieure
 
 Par exemple, le code suivant charge l'entité sélectionnée et permet de naviguer dans la sélection d'entités. Les entités sont chargées dans un contexte séparé et le contexte initial de la listbox demeure inchangé :
 
-```code4d
+```4d
  $myEntity:=Form.currentElement //expression de l'élément courant 
   //... faire quelque chose
  $myEntity:=$myEntity.next() //charge la prochaine entité à l'aide du même contexte
