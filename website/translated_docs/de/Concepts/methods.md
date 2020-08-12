@@ -173,22 +173,22 @@ Eine **ereignisbezogene Methode** läuft in einem eigenen Prozess, wie eine Proz
 
 Eine **fehlerbezogene Methode** ist eine unterbrechende Projektmethode. Immer wenn ein Fehler oder eine Ausnahme auftreten, läuft diese Methode in dem Prozess ab, in welchem sie installiert ist. Weitere Informationen dazu finden Sie unter dem Befehl `ON ERR CALL`.
 
-## Recursive Project Methods
+## Rekursive Projektmethoden
 
-Project methods can call themselves. Beispiel:
+Projektmethoden können sich auch selbst aufrufen. Beispiel:
 
-- The method A may call the method B which may call A, so A will call B again and so on.
-- A method can call itself.
+- Die Methode A ruft die Methode B auf, die A aufruft, so ruft A wieder B auf, usw.
+- Eine Methode kann sich selbst aufrufen.
 
-This is called recursion. The 4D language fully supports recursion.
+Das nennt man Rekursion. Die 4D Programmiersprache unterstützt Rekursivität.
 
-Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+Hier ein Beispiel. Wir haben eine Tabelle `[Friends and Relatives]`, die extrem vereinfacht, so aussieht:
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 
-For this example, we assume the values in the fields are unique (there are no two persons with the same name). Given a name, you want to build the sentence “A friend of mine, John who is the child of Paul who is the child of Jane who is the child of Robert who is the child of Eleanor, does this for a living!”:
+Für dieses Beispiel nehmen wir an, dass die Werte der Datenfelder einmalig sind, d. h. es gibt nicht zwei Personen mit demselben Namen. Sie wollen für einen gegebenen Namen folgenden Satz erstellen: “John, mein Freund, der das Kind ist von Paul, der das Kind ist von Jane, die das Kind ist von Robert, der das Kind ist von Eleanor, tut dies für sein Leben gern!”:
 
-1. You can build the sentence in this way:
+1. Sie können den Satz folgendermaßen anlegen:
 
 ```4d
  $vsName:=Request("Enter the name:";"John")
@@ -210,7 +210,7 @@ For this example, we assume the values in the fields are unique (there are no tw
  End if
 ```
 
-2. You can also build it this way:
+2. oder folgendermaßen:
 
 ```4d
  $vsName:=Request("Enter the name:";"John")
@@ -222,7 +222,7 @@ For this example, we assume the values in the fields are unique (there are no tw
  End if
 ```
 
-with the recursive function `Genealogy of` listed here:
+mit der rekursiven Methode `Genealogy of`:
 
 ```4d
   ` Genealogy of project method
@@ -236,15 +236,15 @@ with the recursive function `Genealogy of` listed here:
  End if
 ```
 
-Note the `Genealogy of` method which calls itself.
+Beachten Sie die Methode `Genealogy of`, die sich selbst aufruft.
 
-The first way is an **iterative algorithm**. The second way is a **recursive algorithm**.
+Die erste Möglichkeit ist ein **iterativer Algorithmus**,  die zweite ein **rekursiver Algorithmus**.
 
-When implementing code for cases like the previous example, it is important to note that you can always write methods using iteration or recursion. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
+Sie können beim Einfügen von Code wie im oben aufgeführten Beispiel sowohl iterative als auch rekursive Methoden schreiben. Rekursion macht die Programmierung im allgemeinen präziser, leichter zu lesen und zu warten, sie ist jedoch nicht zwingend.
 
-Some typical uses of recursion in 4D are:
+Einige typische Verwendungen für Rekursion in 4D sind:
 
-- Treating records within tables that relate to each other in the same way as in the example.
-- Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.
+- Datensätze in Tabellen bearbeiten, die wie im obigen Beispiel miteinander verknüpft sind.
+- Dokumente und Ordner auf Ihrer Festplatte mit den Befehlen `FOLDER LIST` und `DOCUMENT LIST` durchlaufen. Ein Ordner kann Ordner und Dokumente enthalten, die Unterordner selbst können Ordner und Dokumente enthalten, usw.
 
-**Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
+**Wichtig:** Rekursive Abfragen sollten immer an einem bestimmten Punkt enden. Im Beispiel ruft sich die Methode `Genealogy of` nicht mehr selbst auf, wenn die Suche keinen Datensatz zurückgibt. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
