@@ -15,7 +15,7 @@ All the details are available on the [Resources page](https://us.4d.com/resource
 
 ## Installation sur disque
 
-4D products are installed from the 4D Web site:
+Les produits 4D sont installés à partir du site web de 4D :
 
 1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
 2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
@@ -167,16 +167,16 @@ If this information does not help you resolve your problem, please contact 4D or
 
 Pour toute question relative à l’installation ou l’activation de votre produit, veuillez contacter 4D Sas ou votre distributeur local.
 
-For the US:
+Pour la France :
 
-- Web: [https://us.4d.com/4d-technical-support](https://us.4d.com/4d-technical-support)
-- Telephone: 1-408-557-4600
+- Web : [http://www.4d.com/fr/](https://us.4d.com/4d-technical-support)
+- Téléphone : 0892 68 09 97 (0,34 Euro Ttc/Min)
 
-For the UK:
+Pour le Royaume-Uni :
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
-- Telephone: 01625 536178
+- Téléphone : 01625 536178
 
 
-Find the 4D developer community on line here: [https://discuss.4d.com](https://discuss.4d.com).
+Retrouvez la communauté des développeurs 4D en ligne ici: [https://discuss.4d.com](https://discuss.4d.com).
 
