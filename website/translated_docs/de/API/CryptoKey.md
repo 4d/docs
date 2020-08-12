@@ -13,7 +13,7 @@ This class is available from the `4D` class store.
 
 A `cryptoKey` object is instanciated by the [4D.CryptoKey.new](#4dcryptokeynew) method. It has the following properties (all are read-only):
 
-| Property | Typ     | Description                                                                                                              |
+| Property | Typ     | Beschreibung                                                                                                             |
 | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
 | type     | Text    | Name of the key type. For example: "ECDSA" or "RSA".                                                                     |
 | size     | integer | Defined only for RSA keys: the size of the key in bits. Typically 2048                                                   |
@@ -48,7 +48,7 @@ ASSERT($status.success)
 
 #### 4D.CryptoKey.new(settings) -> keyPair
 
-| Parameter | Property | Typ     |    | Description                                                                                                                    |
+| Parameter | Property | Typ     |    | Beschreibung                                                                                                                   |
 | --------- | -------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------ |
 | settings  |          | object  | -> | Settings to generate or load a key pair                                                                                        |
 |           | type     | Text    |    | Type of the key: "RSA", "ECDSA", or "PEM" (see below)                                                                          |
@@ -80,7 +80,7 @@ The resulting `keyPair` object is a shared object and can therefore be used by m
 
 #### cryptoKey.getPrivateKey() -> privateKey
 
-| Parameter  | Property | Typ  |    | Description               |
+| Parameter  | Property | Typ  |    | Beschreibung              |
 | ---------- | -------- | ---- | -- | ------------------------- |
 |            |          |      |    |                           |
 | privateKey |          | Text | <- | Private key in PEM format |
@@ -99,7 +99,7 @@ This method returns the private key of the `cryptoKey` object in PEM format, or 
 
 #### cryptoKey.getPublicKey() -> publicKey
 
-| Parameter | Property | Typ  |    | Description              |
+| Parameter | Property | Typ  |    | Beschreibung             |
 | --------- | -------- | ---- | -- | ------------------------ |
 |           |          |      |    |                          |
 | publicKey |          | Text | <- | Public key in PEM format |
@@ -118,7 +118,7 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 
 #### cryptoKey.sign(message;options) -> signature
 
-| Parameter | Property | Typ     |    | Description                                                                                                                                                             |
+| Parameter | Property | Typ     |    | Beschreibung                                                                                                                                                            |
 | --------- | -------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message   |          | Text    | -> | Message string to sign                                                                                                                                                  |
 | options   |          | object  | -> | Signing options                                                                                                                                                         |
@@ -143,7 +143,7 @@ The `cryptoKey` must contain a valid **private** key.
 
 #### cryptoKey.verify(message;signature;options) -> status
 
-| Parameter | Property | Typ        |    | Description                                                                                                                                                             |
+| Parameter | Property | Typ        |    | Beschreibung                                                                                                                                                            |
 | --------- | -------- | ---------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message   |          | Text       | -> | Message string that was used to produce the signature                                                                                                                   |
 | signature |          | Text       | -> | Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option                                                                              |
@@ -175,7 +175,7 @@ The `cryptoKey` must contain a valid **public** key.
 
 #### cryptoKey.encrypt(message;options) -> result
 
-| Parameter | Property          | Typ    |    | Description                                                                                                                                               |
+| Parameter | Property          | Typ    |    | Beschreibung                                                                                                                                              |
 | --------- | ----------------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message   |                   | Text   | -> | Message string to be encoded using options.encodingDecrypted and encrypted.                                                                               |
 | options   |                   | object | -> | Encoding options                                                                                                                                          |
@@ -202,7 +202,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 #### cryptoKey.decrypt(message;options) -> status
 
-| Parameter | Property          | Typ        |    | Description                                                                                                                                      |
+| Parameter | Property          | Typ        |    | Beschreibung                                                                                                                                     |
 | --------- | ----------------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | message   |                   | Text       | -> | Message string to be decoded using options.encodingEncrypted and decrypted.                                                                      |
 | options   |                   | object     | -> | Decoding options                                                                                                                                 |
