@@ -13,9 +13,9 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値       |
-| ---------- | ------ | ----------- |
-| spellcheck | ブール    | true, false |
+| 名          | データタイプ  | とりうる値       |
+| ---------- | ------- | ----------- |
+| spellcheck | boolean | true, false |
 
 
 #### 対象オブジェクト
@@ -65,9 +65,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値       |
-| --------- | ------ | ----------- |
-| enterable | ブール    | true, false |
+| 名         | データタイプ  | とりうる値       |
+| --------- | ------- | ----------- |
+| enterable | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -155,9 +155,9 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値       |
-| --------- | ------ | ----------- |
-| focusable | ブール    | true, false |
+| 名         | データタイプ  | とりうる値       |
+| --------- | ------- | ----------- |
+| focusable | boolean | true, false |
 
 
 #### 対象オブジェクト
@@ -180,7 +180,7 @@ By default, the object uses the current keyboard layout.
 
 | 名               | データタイプ | とりうる値                                                                       |
 | --------------- | ------ | --------------------------------------------------------------------------- |
-| keyboardDialect | テキスト   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| keyboardDialect | text   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
 #### 対象オブジェクト
@@ -212,7 +212,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 | 名         | データタイプ | とりうる値                                             |
 | --------- | ------ | ------------------------------------------------- |
-| multiline | テキスト   | "yes", "no", "automatic" (default if not defined) |
+| multiline | text   | "yes", "no", "automatic" (default if not defined) |
 
 
 #### 対象オブジェクト
@@ -269,9 +269,9 @@ This property keeps the selection visible within the object after it has lost th
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| showSelection | ブール    | true, false |
+| 名             | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| showSelection | boolean | true, false |
 
 
 #### 対象オブジェクト
@@ -295,15 +295,15 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                                                                                                                                                                                                                                                                                       |
-| --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | ブール    | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | ブール    | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | ブール    | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | ブール    | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | ブール    | true, false                                                                                                                                                                                                                                                                                 |
-|                 |        |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| 名               | データタイプ  | とりうる値                                                                                                                                                                                                                                                                                       |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | boolean | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | boolean | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | boolean | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | boolean | true, false                                                                                                                                                                                                                                                                                 |
+|                 |         |                                                                                                                                                                                                                                                                                             |
+| shortcutKey     | string  | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 #### 対象オブジェクト
@@ -325,9 +325,9 @@ When this option is not enabled, users must first select the cell row and then c
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値       |
-| --------------- | ------ | ----------- |
-| singleClickEdit | ブール    | true, false |
+| 名               | データタイプ  | とりうる値       |
+| --------------- | ------- | ----------- |
+| singleClickEdit | boolean | true, false |
 
 #### 対象オブジェクト
 
