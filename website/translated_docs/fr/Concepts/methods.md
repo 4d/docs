@@ -12,7 +12,7 @@ La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lign
 
 ## Types de méthodes
 
-Dans le langage 4D, il existe plusieurs catégories de méthodes : La catégorie dépend de la façon dont elle a été appelée :
+Dans le langage 4D, il existe plusieurs catégories de méthodes : La catégorie dépend de la façon dont elle a été appelée : La catégorie dépend de la façon dont elle a été appelée :
 
 | Type                             | Contexte d'appel                                                                                                            | Accepte les paramètres | Description                                                                                                                                                                                                             |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -182,7 +182,7 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple:
 
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Examinons l'exemple suivant : vous disposez d'une table `[Amis et relations]` composée de l'ensemble de champs suivant (très simplifié) :
+Examinons l'exemple suivant : Examinons l'exemple suivant : vous disposez d'une table `[Amis et relations]` composée de l'ensemble de champs suivant (très simplifié) :
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`
 
@@ -220,6 +220,8 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
        ALERT("Un de mes amis, "+Généalogie de($vsNom)+", fait cela pour gagner sa vie !")
     End if
  End if
+    End if
+ End if
 ```
 
 en utilisant la fonction récursive `Généalogie de` suivante :
@@ -228,7 +230,7 @@ en utilisant la fonction récursive `Généalogie de` suivante :
   // Méthode projet Généalogie de
   // Généalogie de ( Chaîne ) -> Texte
   // Généalogie de ( Nom ) -> Partie de la phrase
- 
+
  $0:=$1
  QUERY([Amis et parents];[Amis et parents]Enfant'Nom=$1)
 If(Enregistrements trouves([Amis et parents])>0)
