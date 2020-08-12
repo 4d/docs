@@ -139,7 +139,7 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 
 #### Supported syntaxes
 
-| Syntax                    | Description                                                                                             |
+| Syntax                    | Beschreibung                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [attribute]               | matches objects with the `attribute`                                                                    |
 | [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |

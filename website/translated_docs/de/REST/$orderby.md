@@ -6,7 +6,7 @@ title: '$orderby'
 
 Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$orderby="lastName desc, salary asc"`)
 
-## Description
+## Beschreibung
 
 `$orderby` orders the entities returned by the REST request. For each attribute, you specify the order as `ASC` (or `asc`) for ascending order and `DESC` (`desc`) for descending order. By default, the data is sorted in ascending order. If you want to specify multiple attributes, you can delimit them with a comma, *e.g.*, `$orderby="lastName desc, firstName asc"`.
 
