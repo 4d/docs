@@ -27,7 +27,7 @@ Wollen Sie ein BLOB für Ihre eigenen Methoden übergeben, können Sie auch eine
   ` A pointer to the BLOB is passed as parameter to a user method
  COMPUTE BLOB(->anyBlobVar)
 ```
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+**Hinweis für Plug-In Entwickler:** Ein BLOB Parameter wird als “&0” deklariert (der Buchstabe “O”, nicht die Ziffer “0”).
 
 ## Zuweisung
 
