@@ -39,7 +39,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_Action.md#standard-action">action</a>
+      <a href="properties_Action.md#標準アクション">action</a>
     </td>
     
     <td>
