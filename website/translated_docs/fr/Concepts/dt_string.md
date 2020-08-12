@@ -78,7 +78,7 @@ Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 
 ### Le joker (@)
 
-Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Il remplace un ou plusieurs caractères. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
+Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
 
 ```4d
 "abcdefghij"="abc@"
@@ -197,7 +197,7 @@ La méthode projet suivante ajoute une lettre capitale à tous les mots du texte
   // Méthode projet de passage en capitale
   // PasserEnCap ( Texte ) -> Texte
   // PasserEnCap ( Texte source ) -> Texte avec des lettres capitales
- 
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)
@@ -216,6 +216,6 @@ Une fois cette méthode placée dans la base, la ligne :
 ALERT(Capitalize_text("Bonjour, mon nom est Jean Bon et je me présente aux présidentielles !"))
 ```
 
-... affiche l'alerte suivante :
+affiche l'alerte suivante :
 
 ![alt-text](assets/en/Concepts/Jane_doe.en.png)
