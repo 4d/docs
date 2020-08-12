@@ -300,7 +300,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 
 ---
-## Meta Info Expression
+## メタ情報式
 `Collection or entity selection type list boxes`
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
@@ -367,7 +367,7 @@ $0:=Form.meta
 
 
 ---
-## Multi-style
+## マルチスタイル
 
 This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
 
@@ -428,7 +428,7 @@ This property enables the possibility of using specific styles in the selected a
 
 <hr />
 <h2 spaces-before="0">
-  Orientation
+  方向
 </h2>
 
 <p spaces-before="0">
@@ -667,7 +667,7 @@ This property enables the possibility of using specific styles in the selected a
 
 <hr />
 <h2 spaces-before="0">
-  Store with default style tags
+  スタイルタグを全て保存
 </h2>
 
 <p spaces-before="0">
