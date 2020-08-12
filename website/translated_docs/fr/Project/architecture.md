@@ -3,9 +3,9 @@ id: architecture
 title: Architecture of a project
 ---
 
-A 4D project is made of several folders and files, stored within a single parent database folder (package folder). Par exemple:
+Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base (dossier package). Par exemple:
 
-- MyProject
+- MonProjet
     - Composants
     - Données
         - Logs
@@ -55,7 +55,7 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 | Contenu                 | Description                                                                                                                                                                                                                                    | Format |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                               | XML    |
-| folders.json            | Explorer folder definitions                                                                                                                                                                                                                    | JSON   |
+| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                      | JSON   |
 | menus.json              | Définit les menus                                                                                                                                                                                                                              | JSON   |
 | settings.4DSettings     | Propriétés de la base *Structure*. Si les *propriétés utilisateur* sont définis, ils auront la priorité sur ces propriétés. Si les *propriétés utilisateur pour fichier de données* sont définies, elles auront la priorité sur ces propriétés | XML    |
 | tips.json               | Définit les messages d'aide                                                                                                                                                                                                                    | JSON   |
@@ -80,9 +80,9 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier Classes
 
-| Contenu         | Description                                                                                                                        | Format |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | Texte  |
+| Contenu         | Description                                                                                                                                                   | Format |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| *className*.4dm | Méthode de définition de classe utilisateur, permettant d'instancier des objets spécifiques. Un fichier par classe, le nom du fichier est le nom de la classe | Texte  |
 
 
 #### Dossier Forms
@@ -165,8 +165,8 @@ Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de d
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
-| settings.4DSettings | Propriétés de la base personnalisée pour ce fichier de données                                                                                                                                                                                                                                 | XML    |
-| directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                                                                                                         | JSON   |
+| settings.4DSettings | Propriétés personnalisées de la base pour ce fichier de données                                                                                                                                                                                                                                | XML    |
+| directory.json      | Description des groupes et utilisateurs 4D et leurs droits d'accès lorsque la base est lancée avec un fichier de données.                                                                                                                                                                      | JSON   |
 
 
 
@@ -186,7 +186,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 
 Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
 
-> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+> Si un fichier de propriétés de données existe dans un dossier Settings du [dossier Data](#settings-folder), il est prioritaire sur le fichier de propriétés utilisateur.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
