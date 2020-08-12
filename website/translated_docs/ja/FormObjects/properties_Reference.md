@@ -67,7 +67,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_BackgroundAndBorder.md#alternate-background-color">alternateFill</a>
+      <a href="properties_BackgroundAndBorder.md#交互に使用する背景色">alternateFill</a>
     </td>
     
     <td>
@@ -343,7 +343,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_TextAndPicture.md#icon-offset">customOffset</a>
+      <a href="properties_TextAndPicture.md#アイコンオフセット">customOffset</a>
     </td>
     
     <td>
