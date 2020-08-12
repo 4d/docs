@@ -102,7 +102,7 @@ Klassen sind über Stores für Klassen verfügbar. Two class stores are availabl
 
 #### cs -> classStore
 
-| Parameter  | Typ    |    | Description                                   |
+| Parameter  | Typ    |    | Beschreibung                                  |
 | ---------- | ------ | -- | --------------------------------------------- |
 | classStore | object | <- | User class store for the project or component |
 
@@ -120,7 +120,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| Parameter  | Typ    |    | Description    |
+| Parameter  | Typ    |    | Beschreibung   |
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | 4D class store |
 
@@ -159,7 +159,7 @@ Ein Objekt Klasse ist ein shared Object, d. h. es lässt sich aus verschiedenen 
 
 #### cs.\<ClassName>.new() -> classObject
 
-| Parameter   | Typ    |    | Description                           |
+| Parameter   | Typ    |    | Beschreibung                          |
 | ----------- | ------ | -- | ------------------------------------- |
 | classObject | object | <- | New object of the \<ClassName> class |
 
