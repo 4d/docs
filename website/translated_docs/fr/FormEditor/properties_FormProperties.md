@@ -123,7 +123,7 @@ When the option is used, if the window is opened using the `Open form window` co
 
 *   the current page,
 *   the position, size and visibility of each form object (including the size and visibility of list box columns).
-> This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
 
 When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
 
@@ -146,9 +146,7 @@ The window title is used when the form is opened using the `Open form window` an
 You can use dynamic references to set the window titles for forms, *i.e.*:
 
 *   A standard XLIFF reference stored in the Resources folder.
-*   A table or field label: The syntax to apply is <?[TableNum]FieldNum> or 
-  
-  <?[TableName]FieldName>.
+*   A table or field label: The syntax to apply is <?[TableNum]FieldNum> or
 *   A variable or a field: The syntax to apply is \<VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
 
 > The number of characters for a window title is limited to 31.
