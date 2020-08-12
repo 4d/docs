@@ -8,7 +8,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 ## Available syntaxes
 
-| Syntax                                                                                                     | Beispiel                                                                           | Description                                                  |
+| Syntax                                                                                                     | Beispiel                                                                           | Beschreibung                                                 |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Retrieves an existing entity set                             |
 | [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Creates a new entity set from comparing existing entity sets |
@@ -21,7 +21,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 
-### Description
+### Beschreibung
 
 This syntax allows you to execute any operation on a defined entity set.
 
@@ -40,14 +40,14 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| Parameter        | Typ    | Description                                                    |
+| Parameter        | Typ    | Beschreibung                                                   |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | String | One of the logical operators to test with the other entity set |
 | $otherCollection | String | Entity set ID                                                  |
 
 
 
-### Description
+### Beschreibung
 
 After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same datastore class.
 
@@ -55,7 +55,7 @@ You can then create another entity set containing the results from this call by 
 
 Here are the logical operators:
 
-| Operator  | Description                                                                                                                                                |
+| Operator  | Beschreibung                                                                                                                                               |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | UND       | Returns the entities in common to both entity sets                                                                                                         |
 | ODER      | Returns the entities in both entity sets                                                                                                                   |
