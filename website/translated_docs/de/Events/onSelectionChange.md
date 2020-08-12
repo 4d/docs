@@ -8,7 +8,7 @@ title: On Selection Change
 | 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
 
 
-## Description
+## Beschreibung
 
 This event can be generated in different contexts.
 
@@ -16,7 +16,7 @@ This event can be generated in different contexts.
 ### 4D View Pro
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property      | Typ            | Description                    |
+| Property      | Typ            | Beschreibung                   |
 | ------------- | -------------- | ------------------------------ |
 | code          | Lange Ganzzahl | 31                             |
 | description   | Text           | "On Selection Change"          |
