@@ -23,7 +23,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | 名        | データタイプ | とりうる値                                                        |
 | -------- | ------ | ------------------------------------------------------------ |
-| dragging | テキスト   | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | text   | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### 対象オブジェクト
@@ -55,7 +55,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | 名        | データタイプ | とりうる値                                                        |
 | -------- | ------ | ------------------------------------------------------------ |
-| dropping | テキスト   | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | text   | "none" (default), "custom", "automatic" (excluding list box) |
 
 #### 対象オブジェクト
 
@@ -67,14 +67,14 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 ---
-## Execute object method
+## オブジェクトメソッド実行
 When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
 
 #### JSON 文法
 
-| 名                   | データタイプ | とりうる値       |
-| ------------------- | ------ | ----------- |
-| continuousExecution | ブール    | true, false |
+| 名                   | データタイプ  | とりうる値       |
+| ------------------- | ------- | ----------- |
+| continuousExecution | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -107,7 +107,7 @@ Several types of method references are supported:
 
 | 名      | データタイプ | とりうる値                                                              |
 | ------ | ------ | ------------------------------------------------------------------ |
-| method | テキスト   | Object method standard or custom file path, or project method name |
+| method | text   | Object method standard or custom file path, or project method name |
 
 
 #### 対象オブジェクト
@@ -125,9 +125,9 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値       |
-| ----------- | ------ | ----------- |
-| movableRows | ブール    | true, false |
+| 名           | データタイプ  | とりうる値       |
+| ----------- | ------- | ----------- |
+| movableRows | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -138,7 +138,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 
 ---
-## Multi-selectable
+## 複数選択可
 
 Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
 
@@ -146,7 +146,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 | 名             | データタイプ | とりうる値                        |
 | ------------- | ------ | ---------------------------- |
-| selectionMode | テキスト   | "multiple", "single", "none" |
+| selectionMode | text   | "multiple", "single", "none" |
 
 #### 対象オブジェクト
 
@@ -168,9 +168,9 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 #### JSON 文法
 
-| 名        | データタイプ | とりうる値       |
-| -------- | ------ | ----------- |
-| sortable | ブール    | true, false |
+| 名        | データタイプ  | とりうる値       |
+| -------- | ------- | ----------- |
+| sortable | boolean | true, false |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md)
