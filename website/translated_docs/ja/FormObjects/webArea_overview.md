@@ -27,7 +27,7 @@ You can choose between [two rendering engines](properties_WebArea.md#use-embedde
 
 Selecting the embedded web rendering engine allows you to call 4D methods from the Web area.
 
-### Access 4D methods
+### 4Dメソッドコールを許可
 When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a Web area.
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
