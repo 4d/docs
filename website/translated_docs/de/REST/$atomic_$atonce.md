@@ -7,7 +7,7 @@ title: '$atomic/$atonce'
 Allows the actions in the REST request to be in a transaction. If there are no errors, the transaction is validated. Otherwise, the transaction is cancelled.
 
 
-## Description
+## Beschreibung
 When you have multiple actions together, you can use `$atomic/$atonce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atonce`.
 
 
