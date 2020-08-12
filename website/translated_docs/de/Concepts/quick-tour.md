@@ -287,7 +287,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 ### Ausdruckstypen
 Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es gibt folgende Typen. Die folgende Übersicht zeigt Beispiele für die verschiedenen Ausdruckstypen.
 
-| Ausdruck                 | Typ                | Description                                                                                                                                                                  |
+| Ausdruck                 | Typ                | Beschreibung                                                                                                                                                                 |
 | ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | String             | Das Wort Hello ist eine String Konstante, angegeben in doppelten Anführungszeichen.                                                                                          |
 | “Hello ” + “there”       | String             | Die beiden Strings “Hello ” und “there” werden mit dem String Operator (+) zusammengefügt. Der String “Hello there” wird zurückgegeben.                                      |
