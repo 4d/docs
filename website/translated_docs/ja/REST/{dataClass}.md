@@ -36,7 +36,7 @@ Here is a description of the data returned:
 
 | プロパティ         | 型      | 説明                                                                                                                                                                                              |
 | ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | 文字列    | Name of the datastore class.                                                                                                                                                                    |
+| __entityModel | String | Name of the datastore class.                                                                                                                                                                    |
 | __COUNT       | 数値     | Number of entities in the datastore class.                                                                                                                                                      |
 | __SENT        | 数値     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
 | __FIRST       | 数値     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
@@ -44,11 +44,11 @@ Here is a description of the data returned:
 
 Each entity contains the following properties:
 
-| プロパティ       | 型   | 説明                                                                                                         |
-| ----------- | --- | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | 文字列 | Value of the primary key defined for the datastore class.                                                  |
-| __TIMESTAMP | 日付  | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | 数値  | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| プロパティ       | 型      | 説明                                                                                                         |
+| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
+| __KEY       | String | Value of the primary key defined for the datastore class.                                                  |
+| __TIMESTAMP | 日付     | Timestamp of the last modification of the entity                                                           |
+| __STAMP     | 数値     | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). たとえば:
 
