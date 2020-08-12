@@ -51,9 +51,9 @@ Supported types depend on the form category:
 
 | Form Type                | JSON grammar     | 説明                                                            | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Detail Form              | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
+| 詳細フォーム                   | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
+| リストフォーム                  | listScreen       | A form for listing records on the screen                      | Table forms                 |
 | List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
 | なし                       | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
@@ -110,9 +110,9 @@ Only project forms can be specified as published subforms.
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値       |
-| ------ | ------ | ----------- |
-| shared | ブール    | true, false |
+| 名      | データタイプ  | とりうる値       |
+| ------ | ------- | ----------- |
+| shared | boolean | true, false |
 
 
 ---
@@ -129,9 +129,9 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 #### JSON 文法
 
-| 名                | データタイプ | とりうる値       |
-| ---------------- | ------ | ----------- |
-| memorizeGeometry | ブール    | true, false |
+| 名                | データタイプ  | とりうる値       |
+| ---------------- | ------- | ----------- |
+| memorizeGeometry | boolean | true, false |
 
 #### 参照
 [**Save Value**](FormObjects/properties_Object.md#save-value)

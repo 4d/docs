@@ -1,55 +1,55 @@
 ---
 id: creating
-title: Creating or opening a project
+title: プロジェクトの作成・開始
 ---
 
 
-## Creating a project
+## プロジェクトの作成
 
-New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
+新規の 4D アプリケーションプロジェクトを作成できるのは **4D** または **4D Server** アプリケーションです ([プロジェクトの開発](Project/developing.md) 参照)。 いずれの場合も、プロジェクトファイルはローカルマシン上に保存します。
 
-To create a new project:
+新規プロジェクトを作成するには:
 
-1. Launch 4D or 4D Server.
-2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+1. 4D または 4D Server を起動します。
+2. **ファイル** メニューより **新規 > プロジェクト...**を選択します: <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D のみ) **新規** ツールバーボタンより **プロジェクト...**を選択します:<p>![](assets/en/getStart/projectCreate2.png)<p>標準の **保存** ダイアログが表示され、4D プロジェクトの名前と保存場所を指定します。
 
-3. Enter the name of your project folder and click **Save**.<p> この名称はつぎの場所に使用されます:
-    - as the name of the entire project folder,
+3. プロジェクトフォルダー名を入力したら、**保存**をクリックします。<p> この名称はつぎの場所に使用されます:
+    - プロジェクト全体を保存するフォルダーの名称
     - "Project" フォルダーの中にある .4DProject ファイルの名称<br /><br />
 
-    OS によって許可されている名称であれば使用可能です。 However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
+    OS によって許可されている名称であれば使用可能です。 しかしながら、異なる OS での使用を予定していたり、ソース管理ツールを利用したりするのであれば、それらの命名規則を考慮する必要があります。
 
-When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. (詳細については [4D プロジェクトのアーキテクチャー](Project/architecture.md) を参照ください)。
+**保存** ダイアログを受け入れると、4D は開いているプロジェクト (あれば) を閉じ、指定の場所にプロジェクトフォルダーを作成し、プロジェクトに必要なファイルを設置します。 (詳細については [4D プロジェクトのアーキテクチャー](Project/architecture.md) を参照ください)。
 
-You can then start developing your project.
+これで、プロジェクトの開発を始めることができます。
 
 
-## Opening a local project
+## ローカルプロジェクトを開く
 
-To open an existing project locally from 4D:
+既存のローカルプロジェクトを 4D で開くには:
 
-1. Select **Open a local application project** in the Welcome Wizard dialog, <p>OR<p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> The standard Open dialog appears.
+1. Welcome ウィザードにて **ローカルアプリケーションプロジェクトを開く** を選択します。 <p>OR<p> **ファイル** メニューより **開く ＞ ローカルプロジェクト...**を選択するか、**開く** ツールバーボタンより同様に選択します。<p> 標準のファイルを開くためのダイアログが表示されます。
 
-2. Select the project's `.4dproject` file and click **Open**.<p> By default, the project is opened with its current data file. Other file types are suggested:
+2. プロジェクトの `.4dproject` ファイルを選択し、**開く** をクリックします。<p> デフォルトで、プロジェクトはカレントデータファイルとともに開かれます。 ほかにも、次のファイルタイプを選択できます:
 
-    - *Packed project files*: `.4dz` extension  - deployment projects
-    - *Shortcut files*: `.4dlink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
-    - *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
+    - *圧縮されたプロジェクトファイル*: `.4dz` 拡張子 - 運用プロジェクト
+    - *ショートカットファイル*: `.4dlink` 拡張子 - プロジェクトやアプリケーションを起動する際に必要な追加のパラメーターを格納しています (アドレス、認証情報、他)
+    - *バイナリファイル*: `.4db` または `.4dc` 拡張子 - 従来の 4D データベース形式
 
 ### Options
 
-In addition to standard system options, the *Open* dialog in 4D provides two menus with specific options that are available using the **Open** button and the **Data file** menu.
+標準のシステムオプションに加え、4D が提供する *開く* ダイアログボックスには、*開く* と**データファイル** という、2つのオプションがあります。
 
-- **Open** - opening mode of the project:
-    - **Interpreted** or **Compiled**: These options are available when the selected project contains both [interpreted and compiled code](Concepts/interpreted.md).
-    - **[Maintenance Security Center](MSC/overview.md)**: Opening in secure mode allowing access to damaged projects in order to perform any necessary repairs.
+- **開く** - プロジェクトを開くモードを指定できます:
+    - **インタープリター** または **コンパイル済み**: これらのオプションは、選択したプロジェクトが [インタープリターおよびコンパイル済みコード](Concepts/interpreted.md) を含んでいる場合に選択可能となります。
+    - **[Maintenance Security Center](MSC/overview.md)**: 損傷を受けたプエロジェクトに必要な修復を施すために、保護モードでプロジェクトを開きます。
 
-- **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected.
+- **データファイル** - プロジェクトで使用するデータファイルを指定できます。 デフォルトでは、**現在のデータファイル** オプションが選択されています。
 
 
-## Opening a remote project
+## リモートプロジェクトを開く
 
-The first time you connect to a 4D Server project via a remote 4D, you will usually use the standard connection dialog. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file ([see below](#project-opening-shortcuts)).
+4D Server 上で動いているプロジェクトに初めて接続する場合は、通常は標準の接続ダイアログを使います。 以降は、**最近使用したプロジェクトを開く** メニューや、4DLink ショートカットファイルを使って ([後述参照](#プロジェクト開始用ショートカット))、直接接続できるようになります。
 
 To connect remotely to a 4D Server project:
 

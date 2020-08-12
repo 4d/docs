@@ -241,7 +241,7 @@ Supported properties depend on the list box type.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Property         | Typ            | Description                                                           |
+| Property         | Typ            | Beschreibung                                                          |
 | ---------------- | -------------- | --------------------------------------------------------------------- |
 | area             | Text           | List box object area ("header", "footer", "cell")                     |
 | areaName         | Text           | Name of the area                                                      |
@@ -896,7 +896,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 |                       | valueType                               | Text | Zahl | integer | boolean | color | event |
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *Description*                           |      |      |         |         |       |       |
+| *Attributes*          | *Beschreibung*                          |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
 | min                   | minimum value                           |      | x    | x       |         |       |       |
 | max                   | maximum value                           |      | x    | x       |         |       |       |
@@ -960,7 +960,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Attribute | Available value(s) | valueType(s) | Description                                                                                                                                                                                  |
+| Attribute | Available value(s) | valueType(s) | Beschreibung                                                                                                                                                                                 |
 | --------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 

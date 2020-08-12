@@ -20,7 +20,7 @@ Sie können jeden gültigen 4D Ausdruck übergeben, der in Ausdruck eine positiv
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Warnung:** Elemente in Collections werden ab 0 nummeriert.
 
 Über Objektnotation können Sie einem Element der Collection einen Wert zuweisen oder einen Wert erhalten:
 
@@ -59,7 +59,7 @@ Sie können zwei Arten von Collections erstellen:
 
 ## Collection Methoden
 
-4D collection references benefit from special methods (sometimes named *member functions*). Sie lassen sich über Objektnotation auf Collection Referenzen mit folgender Syntax verwenden:
+Referenzen auf 4D Collection können spezifische Methoden, genannt *member methods*, nutzen. Sie lassen sich über Objektnotation auf Collection Referenzen mit folgender Syntax verwenden:
 
 > {$result:=}myCollection.memberFunction( {params} )
 
@@ -83,12 +83,12 @@ Einige Methoden geben nach Änderung die ursprüngliche Collection zurück, so d
 ### Parameter propertyPath
 
 
-Several methods accept a _propertyPath_ as parameter. Dieser Parameter steht für:
+Einige Collection Methoden akzeptieren als Parameter einen _propertyPath_. Dieser Parameter steht für:
 
 - Name der Objekteigenschaft, z. B. "lastName"
 - oder Pfad der Objekteigenschaft, z.B. eine Sequenz von Untereigenschaften, durch Punkte getrennt, z.B. "employee.children.firstName".
 
-**Warning:** When using methods and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Warnung:** Sie können bei Methoden und Parametern propertyPath in Eigenschaftsnamen keine Leerzeichen oder ".", "[ ]" verwenden, da 4D den Pfad dann nicht korrekt analysieren kann:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined

@@ -5,7 +5,7 @@ title: '$top/$limit'
 
 Limits the number of entities to return (e.g., `$top=50`)
 
-## Description
+## Beschreibung
 
 `$top/$limit` defines the limit of entities to return. By default, the number is limited to 100. You can use either keyword: `$top` or `$limit`.
 

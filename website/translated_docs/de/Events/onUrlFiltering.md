@@ -8,7 +8,7 @@ title: On URL Filtering
 | 51   | [Web Area](FormObjects/webArea_overview.md) | A URL was blocked by the Web area |
 
 
-## Description
+## Beschreibung
 
 This event is generated when the loading of a URL is blocked by the Web area because of a filter set up using the `WA SET URL FILTERS` command.
 

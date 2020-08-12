@@ -30,9 +30,9 @@ This event is generated when the user clicks on a column or row header in a 4D V
 | プロパティ       | 型      | 説明                                                                                                                                  |
 | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
 | code        | 倍長整数   | 42                                                                                                                                  |
-| description | テキスト   | "On Header Click"                                                                                                                   |
-| objectName  | テキスト   | 4D View Pro area name                                                                                                               |
-| sheetName   | テキスト   | Name of the sheet of the event                                                                                                      |
+| description | text   | "On Header Click"                                                                                                                   |
+| objectName  | text   | 4D View Pro area name                                                                                                               |
+| sheetName   | text   | Name of the sheet of the event                                                                                                      |
 | range       | オブジェクト | Cell range                                                                                                                          |
 | sheetArea   | 倍長整数   | The sheet location where the event took place:<br><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 

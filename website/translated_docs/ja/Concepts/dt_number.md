@@ -136,13 +136,13 @@ title: 数値 (実数、倍長整数、整数)
 
 ### 例題
 
-| 演算子                    | 例題                                          | 戻り値        |
-| ---------------------- | ------------------------------------------- | ---------- |
-| Bitwise AND            | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
-| Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
-| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
-| Left Bit Shift         | 0x0000FFFF << 8                             | 0x00FFFF00 |
-| Right Bit Shift        | 0x0000FFFF >> 8                             | 0x000000FF |
-| Bit Set                | 0x00000000 ?+ 16                            | 0x00010000 |
-| Bit Clear              | 0x00010000 ?- 16                            | 0x00000000 |
-| Bit Test               | 0x00010000 ?? 16                            | True       |
+| 演算子                    | 例題                              | 戻り値        |
+| ---------------------- | ------------------------------- | ---------- |
+| Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
+| Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
+| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
+| Left Bit Shift         | 0x0000FFFF << 8                 | 0x00FFFF00 |
+| Right Bit Shift        | 0x0000FFFF >> 8                 | 0x000000FF |
+| Bit Set                | 0x00000000 ?+ 16                | 0x00010000 |
+| Bit Clear              | 0x00010000 ?- 16                | 0x00000000 |
+| Bit Test               | 0x00010000 ?? 16                | True       |

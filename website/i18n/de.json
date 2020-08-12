@@ -556,8 +556,26 @@
         "title": "Seite Prüfen",
         "sidebar_label": "Seite Prüfen"
       },
+      "ORDA/dsmapping": {
+        "title": "Data Model Objects"
+      },
+      "ORDA/entities": {
+        "title": "Working with data"
+      },
+      "ORDA/glossary": {
+        "title": "Glossary"
+      },
       "ORDA/ordaClasses": {
-        "title": "ORDA Data Model Classes"
+        "title": "Data Model Classes"
+      },
+      "ORDA/overview": {
+        "title": "Overview"
+      },
+      "ORDA/quickTour": {
+        "title": "A Quick Tour in ORDA"
+      },
+      "ORDA/datastores": {
+        "title": "Using a remote datastore"
       },
       "Project/architecture": {
         "title": "Architecture of a project"
@@ -724,6 +742,7 @@
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
+    "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",

@@ -1,12 +1,11 @@
 ---
 id: ordaClasses
-title: ORDA Data Model Classes
+title: Data Model Classes
 ---
 
 ## Preview feature
 
 > ORDA data model class functions are provided as a **preview feature** in 4D v18 R4: all functions you create are exposed without restrictions. Future releases will include more control over the function availability, especially from REST requests. In the next release, **by default all your data model class functions will be set to private**. You will have to specify individually each function that you want to be exposed.
-
 
 ## Overview
 
@@ -36,7 +35,6 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 
 In addition, 4D Developer [automatically pre-creates](#creating-classes) the classes for each available data model object.
-
 
 ## Architecture
 
@@ -248,7 +246,7 @@ When creating or editing data model classes, you must pay attention to the rules
 
 - When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement matches exactly the parent class (case sensitive) name. For example, `Class extends EntitySelection` for an entity selection class.
 
-- You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular [instantiation method](#architecture).
+- You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular method as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
 
 - You cannot override a native ORDA class method from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
@@ -290,7 +288,7 @@ To open a defined ORDA class in the 4D method editor, select or double-click on 
 
 ![](assets/en/ORDA/classORDA4.png)
 
-For ORDA classes based upon the local datastore (ds), you can directly access the class code from the 4D Structure window:
+For ORDA classes based upon the local datastore (`ds`), you can directly access the class code from the 4D Structure window:
 
 ![](assets/en/ORDA/classORDA5.png)
 

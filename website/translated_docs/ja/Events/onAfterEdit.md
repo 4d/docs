@@ -28,10 +28,10 @@ The object returned by the `FORM Event` command contains:
 | プロパティ       | 型    | 説明                                                                                                  |
 | ----------- | ---- | --------------------------------------------------------------------------------------------------- |
 | code        | 倍長整数 | On After Edit                                                                                       |
-| description | テキスト | "On After Edit"                                                                                     |
-| objectName  | テキスト | 4D View Pro area name                                                                               |
-| sheetName   | テキスト | Name of the sheet of the event                                                                      |
-| action      | テキスト | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | text | "On After Edit"                                                                                     |
+| objectName  | text | 4D View Pro area name                                                                               |
+| sheetName   | text | Name of the sheet of the event                                                                      |
+| action      | text | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
@@ -53,12 +53,12 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| プロパティ     | 型      | 説明                                                  |
-| --------- | ------ | --------------------------------------------------- |
-| fromRange | オブジェクト | Range of source cell range (being dragged)          |
-| toRange   | オブジェクト | Range of the destination cell range (drop location) |
-| copy      | ブール    | Specifies if the source range is copied or not      |
-| insert    | ブール    | Specifies if the source range is inserted or not    |
+| プロパティ     | 型       | 説明                                                  |
+| --------- | ------- | --------------------------------------------------- |
+| fromRange | オブジェクト  | Range of source cell range (being dragged)          |
+| toRange   | オブジェクト  | Range of the destination cell range (drop location) |
+| copy      | boolean | Specifies if the source range is copied or not      |
+| insert    | boolean | Specifies if the source range is inserted or not    |
 
 
 #### action = DragFillBlock
@@ -74,7 +74,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | プロパティ   | 型      | 説明                  |
 | ------- | ------ | ------------------- |
 | range   | オブジェクト | Cell range          |
-| formula | テキスト   | The formula entered |
+| formula | text   | The formula entered |
 
 #### action = clipboardPasted
 

@@ -7,7 +7,7 @@ title: '$asArray'
 Returns the result of a query in an array (i.e. a collection) instead of a JSON object.
 
 
-## Description
+## Beschreibung
 
 If you want to receive the response in an array, you just have to add `$asArray` to your REST request (*e.g.*, `$asArray=true`).
 

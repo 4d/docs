@@ -4,15 +4,15 @@ title: Subform
 ---
 
 ---
-## Allow Deletion
+## 削除を許可
 
 Specifies if the user can delete subrecords in a list subform.
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                     |
-| --------------- | ------ | ------------------------- |
-| deletableInList | ブール    | true, false (デフォルトは true) |
+| 名               | データタイプ  | とりうる値                     |
+| --------------- | ------- | ------------------------- |
+| deletableInList | boolean | true, false (デフォルトは true) |
 
 #### 対象オブジェクト
 
@@ -20,7 +20,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 
 ---
-## Detail Form
+## 詳細フォーム
 
 You use this property to declare the detail form to use in the subform. It can be:
 
@@ -42,7 +42,7 @@ You use this property to declare the detail form to use in the subform. It can b
 [Subform](subform_overview.md)
 
 ---
-## Double-click on empty row
+## 空行をダブルクリック
 
 Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
 - Do nothing: Ignores double-click.
@@ -92,7 +92,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 [Double click on empty row](#double-click-on-empty-row)
 
 ---
-## Enterable in list
+## リスト更新可
 
 When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
 
@@ -101,9 +101,9 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値       |
-| --------------- | ------ | ----------- |
-| enterableInList | ブール    | true, false |
+| 名               | データタイプ  | とりうる値       |
+| --------------- | ------- | ----------- |
+| enterableInList | boolean | true, false |
 
 
 #### 対象オブジェクト
@@ -112,7 +112,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 
 ---
-## List Form
+## リストフォーム
 
 You use this property to declare the list form to use in the subform.  A list subform lets you enter, view, and modify data in other tables.
 
@@ -133,7 +133,7 @@ You can also allow the user to enter data in the List form.
 
 
 ---
-## Source
+## ソース
 
 Specifies the table that the list subform belongs to (if any).
 

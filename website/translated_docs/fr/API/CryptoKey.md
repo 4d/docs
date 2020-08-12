@@ -185,7 +185,7 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 |            |                   |        |    |                                                                                                                                                                               |
 | result     |                   | Texte  | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                                                                                                             |
 
-Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
+Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -210,12 +210,12 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 |            | encodingEncrypted | Texte      |    | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
 |            | encodingDecrypted | Texte      |    | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
 |            |                   |            |    |                                                                                                                                                                         |
-| status     |                   | object     | <- | Result                                                                                                                                                                  |
+| status     |                   | object     | <- | Résultat                                                                                                                                                                |
 |            | success           | boolean    |    | True si le message a été déchiffré avec succès                                                                                                                          |
 |            | result            | Texte      |    | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`                                                                                                     |
 |            | errors            | collection |    | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs                                                                                             |
 
-Cette méthode déchiffre le paramètre de `message` à l'aide de la clé **privée**. L'algorithme utilisé dépend du type de clé.
+Cette méthode chiffre le paramètre `message` à l'aide de la clé **publique**. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 

@@ -303,7 +303,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Typ     | Description                                                                                                                                                                                                                                                                                                                                                                |
+| Property name       | Typ     | Beschreibung                                                                                                                                                                                                                                                                                                                                                               |
 | ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
 | fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
@@ -440,7 +440,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Result
+      Ergebnis
     </th>
   </tr>
   

@@ -8,7 +8,7 @@ title: On Scroll
 | 59   | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) - [List Box](FormObjects/listbox_overview.md) | The user scrolls the contents of a picture object or list box using the mouse or keyboard. |
 
 
-## Description
+## Beschreibung
 
 This event can be generated in the context of a picture input or a list box.
 

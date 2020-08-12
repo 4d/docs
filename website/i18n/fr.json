@@ -244,7 +244,7 @@
         "title": "Sur changement page"
       },
       "Events/onPlugInArea": {
-        "title": "Sur appel zone du plug in\t"
+        "title": "Sur appel zone du plug in"
       },
       "Events/onPrintingBreak": {
         "title": "On Printing Break"
@@ -361,7 +361,7 @@
         "title": "Input"
       },
       "FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "Liste hiérarchique"
       },
       "FormObjects/listboxOverview": {
         "title": "List Box"
@@ -556,14 +556,32 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "ORDA/dsmapping": {
+        "title": "Data Model Objects"
+      },
+      "ORDA/entities": {
+        "title": "Travailler avec des données"
+      },
+      "ORDA/glossary": {
+        "title": "Glossaire"
+      },
       "ORDA/ordaClasses": {
-        "title": "Classes ORDA du modèle de données"
+        "title": "Classes du modèle de données"
+      },
+      "ORDA/overview": {
+        "title": "Aperçu"
+      },
+      "ORDA/quickTour": {
+        "title": "Tour d'horizon d'ORDA"
+      },
+      "ORDA/datastores": {
+        "title": "Using a remote datastore"
       },
       "Project/architecture": {
         "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Creating or opening a project"
+        "title": "Créer ou ouvrir un projet"
       },
       "Project/developing": {
         "title": "Développer un projet"
@@ -724,6 +742,7 @@
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
+    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Core Development",

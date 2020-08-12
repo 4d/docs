@@ -8,7 +8,7 @@ title: On Column Resize
 | 33   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The width of a column is modified directly by the user or consequently to a form window resize |
 
 
-## Description
+## Beschreibung
 
 ### List Box
 
@@ -20,7 +20,7 @@ This event is generated when the width of a column in the list box is modified b
 
 This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Typ            | Description                                                         |
+| Property    | Typ            | Beschreibung                                                        |
 | ----------- | -------------- | ------------------------------------------------------------------- |
 | code        | Lange Ganzzahl | On Column Resize                                                    |
 | description | Text           | "On Column Resize"                                                  |

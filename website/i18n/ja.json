@@ -42,7 +42,7 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "クラス"
+        "title": "Classes"
       },
       "Concepts/components": {
         "title": "コンポーネント"
@@ -78,7 +78,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "文字列"
+        "title": "String"
       },
       "Concepts/time": {
         "title": "時間"
@@ -99,7 +99,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "メソッド"
+        "title": "Methods"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -424,7 +424,7 @@
         "title": "リストボックス"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "オブジェクト"
       },
       "FormObjects/propertiesPicture": {
         "title": "ピクチャー"
@@ -556,14 +556,32 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
+      "ORDA/dsmapping": {
+        "title": "Data Model Objects"
+      },
+      "ORDA/entities": {
+        "title": "Working with data"
+      },
+      "ORDA/glossary": {
+        "title": "Glossary"
+      },
       "ORDA/ordaClasses": {
-        "title": "ORDA データモデルクラス"
+        "title": "データモデルクラス"
+      },
+      "ORDA/overview": {
+        "title": "概要"
+      },
+      "ORDA/quickTour": {
+        "title": "A Quick Tour in ORDA"
+      },
+      "ORDA/datastores": {
+        "title": "Using a remote datastore"
       },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "Creating or opening a project"
+        "title": "プロジェクトの作成・開始"
       },
       "Project/developing": {
         "title": "プロジェクトの開発"
@@ -697,7 +715,7 @@
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
       "REST Server": "REST Server",
-      "Forms": "フォーム",
+      "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "Form Object Properties",
@@ -710,9 +728,9 @@
     "Starting 4D|in index page Getting started": "4D を始める",
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project Management|in index page Getting started": "プロジェクト管理",
-    "Object Relational Data Access (ORDA)|in index page Getting started": "オブジェクト・リレーショナル・データアクセス (ORDA)",
+    "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
-    "Forms|no description given": "フォーム",
+    "Forms|no description given": "Forms",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
@@ -724,6 +742,7 @@
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
+    "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",

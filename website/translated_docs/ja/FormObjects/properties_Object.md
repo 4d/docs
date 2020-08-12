@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title: Objects
+title: オブジェクト
 ---
 
 ---
@@ -65,9 +65,9 @@ Here is the list of objects whose value can be saved:
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| memorizeValue | ブール    | true, false |
+| 名             | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| memorizeValue | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -149,7 +149,7 @@ Using a string array (collection of arrays names) as *dataSource* value for a li
 
 
 ---
-## Expression Type
+## 式タイプ
 
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
@@ -175,7 +175,7 @@ However, this property has a typing function in the following specific cases:
 
 
 ---
-## CSS Class
+## CSSクラス
 
 A list of space-separated words used as class selectors in [css files](FormEditor/createStylesheet.md#style-sheet-files).
 
@@ -249,7 +249,7 @@ Specify the type of list box.
 
 
 ---
-## Plug-in Kind
+## プラグインの種類
 
 Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
 
@@ -268,7 +268,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 ---
 
-## Radio Group
+## ラジオグループ
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
@@ -305,7 +305,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 | 名    | データタイプ | とりうる値     |
 | ---- | ------ | --------- |
-| テキスト | string | なんらかのテキスト |
+| text | string | なんらかのテキスト |
 
 #### 対象オブジェクト
 
@@ -318,7 +318,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 
 ---
-## Variable Calculation
+## 変数の計算
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.

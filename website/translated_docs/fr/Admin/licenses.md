@@ -47,9 +47,9 @@ If you are unable to use [instant activation](#instant-activation) because your 
 ![](assets/en/getStart/activ3.png)
 
 3. Enregistrez le fichier *reg.txt* sur un support USB puis connectez ce support à un ordinateur qui a un accès Internet.
-4. On the machine with internet access, login to [https://activation.4d.com](https://activation.4d.com).
+4. Depuis la machine qui a un accès Internet, connectez-vous sur [https://activation.4d.com](https://activation.4d.com).
 5. Dans la page Web, cliquez sur le bouton **Parcourir...** et sélectionnez le fichier *reg.txt* généré lors des étapes 3 et 4 ; puis cliquez sur le bouton **Activer**.
-6. Download the serial file(s).
+6. Téléchargez le(s) fichier(s) de licence.
 
 ![](assets/en/getStart/activ4.png)
 
@@ -62,18 +62,18 @@ Une fois le fichier de licence chargé, cliquez sur le bouton **Suivant**.
 
 ![](assets/en/getStart/activ6.png)
 
-9. Cliquez sur le bouton **Ajouter N°** pour ajouter une autre licence. Repeat these steps until all licenses from step 6 have been integrated.
+9. Cliquez sur le bouton **Ajouter N°** pour ajouter une autre licence. Répétez ces étapes jusqu'à ce que toutes les licences téléchargées à l'étape 6 aient été intégrées.
 
-Your 4D application is now activated.
+Votre application 4D est désormais activée.
 
-### Emergency Activation
+### Activation d’urgence
 
-This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
+Ce mode permet l’activation exceptionnelle et temporaire de l’application 4D (5 jours maximum) sans connexion au site Internet de 4D. Cette activation ne peut être utilisée qu’une seule fois.
 
 
-## Adding licenses
+## Ajouter des licences
 
-You can add new licenses, for example to extend the capacities of your application, at any time.
+Vous pouvez à tout moment ajouter de nouvelles licences, par exemple pour étendre les capacités de votre application.
 
 Choisissez la commande **Gestionnaire de licences...** dans le menu **Aide** de l’application 4D ou 4D Server puis cliquez sur le bouton **Actualiser** :
 
@@ -109,7 +109,7 @@ Sélectionnez la licence que vous souhaitez dans la liste, puis cliquez sur **Li
 
 ![](assets/en/getStart/licens3.png)
 
-You can either select an existing project or create a new one:
+Vous pouvez sélectionner un projet existant ou créer un nouveau :
 
 ![](assets/en/getStart/licens4.png)
 
