@@ -75,7 +75,7 @@
 <pre><code class="hljs css language-4d"> myCollection[<span class="hljs-number">5</span>]  <span class="hljs-comment">//access to 6th element of the collection</span>
  myCollection[<span class="hljs-variable">$var</span>]
 </code></pre>
-<p><strong>Warning:</strong> Collection elements are numbered from 0.</p>
+<p><strong>Warnung:</strong> Elemente in Collections werden ab 0 nummeriert.</p>
 <p>Über Objektnotation können Sie einem Element der Collection einen Wert zuweisen oder einen Wert erhalten:</p>
 <pre><code class="hljs css language-4d"> myCol[<span class="hljs-number">10</span>]:=<span class="hljs-string">"My new element"</span>
  <span class="hljs-variable">$myVar</span>:=myCol[<span class="hljs-number">0</span>]
@@ -101,7 +101,7 @@
 <li>shared Collections mit dem Befehl <code>New shared collection</code>. Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Collections wird über <code>Use...End use</code> Strukturen gesteuert. Weitere Informationen dazu finden Sie auf der Seite <a href="/docs/18/de/Concepts/shared.html">Shared Objects und Collections</a>.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="collection-methoden"></a><a href="#collection-methoden" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Collection Methoden</h2>
-<p>4D collection references benefit from special methods (sometimes named <em>member functions</em>). Sie lassen sich über Objektnotation auf Collection Referenzen mit folgender Syntax verwenden:</p>
+<p>Referenzen auf 4D Collection können spezifische Methoden, genannt <em>member methods</em>, nutzen. Sie lassen sich über Objektnotation auf Collection Referenzen mit folgender Syntax verwenden:</p>
 <blockquote>
 <p>{$result:=}myCollection.memberFunction( {params} )</p>
 </blockquote>
@@ -115,12 +115,12 @@
  <span class="hljs-variable">$col2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">10</span>;<span class="hljs-number">100</span>).<span class="hljs-function">sort</span>() <span class="hljs-comment">//$col2=[5,10,20,100]</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="parameter-propertypath"></a><a href="#parameter-propertypath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameter propertyPath</h3>
-<p>Several methods accept a <em>propertyPath</em> as parameter. Dieser Parameter steht für:</p>
+<p>Einige Collection Methoden akzeptieren als Parameter einen <em>propertyPath</em>. Dieser Parameter steht für:</p>
 <ul>
 <li>Name der Objekteigenschaft, z. B. &quot;lastName&quot;</li>
 <li>oder Pfad der Objekteigenschaft, z.B. eine Sequenz von Untereigenschaften, durch Punkte getrennt, z.B. &quot;employee.children.firstName&quot;.</li>
 </ul>
-<p><strong>Warning:</strong> When using methods and propertyPath parameters, you cannot use &quot;.&quot;, &quot;[ ]&quot;, or spaces in property names since it will prevent 4D from correctly parsing the path:</p>
+<p><strong>Warnung:</strong> Sie können bei Methoden und Parametern propertyPath in Eigenschaftsnamen keine Leerzeichen oder &quot;.&quot;, &quot;[ ]&quot; verwenden, da 4D den Pfad dann nicht korrekt analysieren kann:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vmin</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">min</span>(<span class="hljs-string">"My.special.property"</span>) <span class="hljs-comment">//undefined</span>
  <span class="hljs-variable">$vmin</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">min</span>([<span class="hljs-string">"My.special.property"</span>]) <span class="hljs-comment">//error</span>
 </code></pre>
