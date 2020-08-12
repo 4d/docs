@@ -41,9 +41,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| hideFocusRing | ブール    | true, false |
+| 名             | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| hideFocusRing | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -64,9 +64,9 @@ By default, this option is not enabled.
 
 #### JSON 文法
 
-| 名                   | データタイプ | とりうる値       |
-| ------------------- | ------ | ----------- |
-| hideSystemHighlight | ブール    | true, false |
+| 名                   | データタイプ  | とりうる値       |
+| ------------------- | ------- | ----------- |
+| hideSystemHighlight | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -96,7 +96,7 @@ Available values:
 
 | 名                   | データタイプ | とりうる値                            |
 | ------------------- | ------ | -------------------------------- |
-| scrollbarHorizontal | テキスト   | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | text   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
@@ -380,7 +380,7 @@ Available values:
 
 | 名                 | データタイプ | とりうる値                            |
 | ----------------- | ------ | -------------------------------- |
-| scrollbarVertical | テキスト   | "visible", "hidden", "automatic" |
+| scrollbarVertical | text   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
