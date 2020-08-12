@@ -10,9 +10,9 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                     |
-| --------------- | ------ | ------------------------- |
-| deletableInList | ブール    | true, false (デフォルトは true) |
+| 名               | データタイプ  | とりうる値                     |
+| --------------- | ------- | ------------------------- |
+| deletableInList | boolean | true, false (デフォルトは true) |
 
 #### 対象オブジェクト
 
@@ -101,9 +101,9 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値       |
-| --------------- | ------ | ----------- |
-| enterableInList | ブール    | true, false |
+| 名               | データタイプ  | とりうる値       |
+| --------------- | ------- | ----------- |
+| enterableInList | boolean | true, false |
 
 
 #### 対象オブジェクト

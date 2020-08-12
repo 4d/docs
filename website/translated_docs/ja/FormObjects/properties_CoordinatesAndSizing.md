@@ -30,9 +30,9 @@ When this property is enabled, the height of every row is automatically calculat
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| rowHeightAuto | ブール    | true, false |
+| 名             | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| rowHeightAuto | boolean | true, false |
 
 #### 対象オブジェクト
 

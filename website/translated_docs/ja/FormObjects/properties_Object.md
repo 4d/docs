@@ -277,7 +277,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 | 名    | データタイプ | とりうる値     |
 | ---- | ------ | --------- |
-| テキスト | string | なんらかのテキスト |
+| text | string | なんらかのテキスト |
 
 #### 対象オブジェクト
 

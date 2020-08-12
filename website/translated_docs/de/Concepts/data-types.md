@@ -29,7 +29,7 @@ Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Date
 
 (1) Beachten Sie, dass ORDA die Datenfelder über Objekte (entities) verwaltet und deshalb nur Datentypen unterstützt, die für diese Objekte verfügbar sind. Weitere Informationen dazu finden Sie unter [Objekt](Concepts/dt_object.md).
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) Variant ist derzeit kein *Daten-*, sondern ein *Variablentyp*, der den Wert eines anderen Datentyps enthalten kann.
 
 ## Standardwerte
 
@@ -40,10 +40,10 @@ Der Standardwert richtet sich nach Typ und Kategorie der Variablen, der Kontext 
 - Prozess- und Interprozessvariablen werden immer "auf Null" gesetzt, d.h. "0" ist je nach Fall ein leerer String, ein leeres BLOB, ein Zeiger Nil, ein leeres Datum (00-00-00), etc.
 - Lokale Variablen werden wie folgt gesetzt:
     - Im interpretierten Modus: auf Null (siehe oben)
-    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
+    - Im kompilierten Modus je nach der Option **Lokale Variablen initialisieren** auf der Seite Compiler der Einstellungen:
         - "auf Null": auf Null (siehe oben)
         - " auf zufälligen Wert": 0x72677267 für Zahlen und Uhrzeiten, immer Wahr für Boolean, dasselbe wie "auf Null" für die anderen
-        - "Nein": keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. **Note:** 4D recommends to use "to zero".
+        - "Nein": keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. **Hinweis:** 4D empfiehlt, " auf Null" zu verwenden.
 
 Nachfolgende Übersicht erläutert diese Standardwerte:
 
@@ -81,4 +81,4 @@ Nachfolgende Liste zeigt die wichtigsten Datentypen, in welchen Typ sie konverti
 
 (2) Werte vom Typ Zeit lassen sich wie Zahlen behandeln.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Hinweis:** Durch Kombinieren von Operatoren und anderen Befehlen erreichen Sie auch komplexere Datenkonvertierungen.

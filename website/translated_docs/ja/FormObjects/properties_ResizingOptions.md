@@ -129,9 +129,9 @@ Designates if the size of the column can be modified by the user.
 
 #### JSON 文法
 
-| 名         | データタイプ |      とりうる値      |
-|:--------- |:------:|:---------------:|
-| resizable |  ブール   | "true", "false" |
+| 名         | データタイプ  |      とりうる値      |
+|:--------- |:-------:|:---------------:|
+| resizable | boolean | "true", "false" |
 
 #### 対象オブジェクト
 

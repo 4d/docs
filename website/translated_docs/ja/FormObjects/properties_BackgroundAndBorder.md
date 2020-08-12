@@ -74,7 +74,7 @@ Allows setting a standard style for the object border.
 
 | 名           | データタイプ | とりうる値                                                             |
 | ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### 対象オブジェクト
 
@@ -113,9 +113,9 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値       |
-| ------------------ | ------ | ----------- |
-| hideExtraBlankRows | ブール    | true, false |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| hideExtraBlankRows | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -222,7 +222,7 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 | 名    | データタイプ | とりうる値         |
 | ---- | ------ | ------------- |
-| fill | テキスト   | "transparent" |
+| fill | text   | "transparent" |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md#overview)
