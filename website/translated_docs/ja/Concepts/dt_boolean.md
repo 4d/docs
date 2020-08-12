@@ -1,5 +1,5 @@
 ---
-id: ブール
+id: boolean
 title: ブール
 ---
 
