@@ -440,7 +440,7 @@ This property enables the possibility of using specific styles in the selected a
     </th>
     
     <th>
-      Result
+      Ergebnis
     </th>
   </tr>
   
