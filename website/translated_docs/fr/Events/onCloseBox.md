@@ -25,6 +25,7 @@ This example shows how to respond to a close window event with a form used for r
        If(Modified record($vpFormTable->))
           CONFIRM("This record has been modified. Save Changes?")
           Save Changes?")
+          Save Changes?")
           If(OK=1)
              ACCEPT
           Else
