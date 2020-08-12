@@ -117,11 +117,13 @@
 <p>When you check this option, any folders related to the database are copied into the Build folder as <em>Components</em> and <em>Resources</em> folders. For more information about these folders, refer to <a href="https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374">Database Architecture</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="build-component"></a><a href="#build-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build component</h3>
 <p>Builds a compiled component from the structure.</p>
-<p>A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components&quot; documentation.</p>
-<p>If you have named your application, <em>MyComponent</em>, 4D will create a Components folder containing <em>MyComponent.4dbase</em> folder:</p>
-<p>&lt;</p>
-<p>p&gt;<em>&lt;destination&gt;/Components/name.4dbase/&lt;name&gt;.4DZ</em>.</p>
-<p>The <em>MyComponent.4dbase</em> folder contains: - <em>MyComponent.4DZ</em> file - A <em>Resources</em> folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).</p>
+<p>A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components&quot; documentation.
+If you have named your application, <em>MyComponent</em>, 4D will create a Components folder containing <em>MyComponent.4dbase</em> folder: <p><em>&lt;destination&gt;/Components/name.4dbase/&lt;name&gt;.4DZ</em>.</p>
+<p>The <em>MyComponent.4dbase</em> folder contains:</p>
+<ul>
+<li><em>MyComponent.4DZ</em> file</li>
+<li>A <em>Resources</em> folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="application-page"></a><a href="#application-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Application page</h2>
 <p>This tab allows you can build a stand-alone, single-user version of your application:</p>
 <p><img src="/docs/Rx/assets/en/Project/standaloneProj.png" alt=""></p>
@@ -160,9 +162,9 @@
 <ul>
 <li><p><em>Windows</em></p>
 <ul>
-<li>MyProject.exe - Your executable and a MyProject.rsr (the application resources)</li>
+<li>MyProject.exe  - Your executable and a MyProject.rsr (the application resources)</li>
 <li>4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application</li>
-<li>Database folder - Includes a Resources folder and MyProject.4DZ file. They make up the compiled structure of the database as well as the database Resources folder. <strong>Note</strong>: This folder also contains the <em>Default Data</em> folder, if it has been defined (see <a href="#data-file-management-in-final-applicatons">Data file management in final applications</a>.</li>
+<li>Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the database as well as the database Resources folder. <strong>Note</strong>: This folder also contains the <em>Default Data</em> folder, if it has been defined (see <a href="#data-file-management-in-final-applicatons">Data file management in final applications</a>.</li>
 <li>(Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the database. For more information about this, refer to the <a href="#plugins-and-components">Plugins and components</a> section.</li>
 <li>Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the <a href="#licenses-and-certificate">Licenses &amp; Certificate</a> section.</li>
 <li>Additional items added to the 4D Volume Desktop folder, if any (see <a href="#customizing-4d-volume-desktop-folder">Customizing the 4D Volume Desktop folder</a>).</li>
@@ -236,8 +238,10 @@
 <h4><a class="anchor" aria-hidden="true" id="copy-of-client-applications-in-the-server-application"></a><a href="#copy-of-client-applications-in-the-server-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Copy of client applications in the server application</h4>
 <p>The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.</p>
 <ul>
-<li><p><strong>Allow automatic update of Windows client application</strong> - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.</p></li>
-<li><p><strong>Allow automatic update of Macintosh client application</strong> - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.</p></li>
+<li><strong>Allow automatic update of Windows client application</strong> - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.</li>
+<li><strong>Allow automatic update of Macintosh client application</strong> - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.</li>
+</ul>
+<ul>
 <li><p><strong>Allow automatic update of Macintosh client application</strong> - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.</p>
 <p>For example, if you build your application in Windows, you must use the <strong>[...]</strong> button to designate the 4D Volume Desktop macOS application (provided as a package).</p></li>
 </ul>
@@ -272,8 +276,7 @@
 <li><p><em>Windows</em> - Each folder contains the application executable file, named <em>&lt;ApplicationName&gt;Client.exe</em> for the client part and <em>&lt;ApplicationName&gt;Server.exe</em> for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.</p></li>
 <li><p><em>macOS</em> - Each folder contains only the application package, named &lt;ApplicationName&gt; Client for the client part and &lt;ApplicationName&gt; Server for the server part. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.</p>
 <blockquote>
-<pre><code class="hljs">The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them. 
-</code></pre>
+<p>The macOS packages built contain the same items as the Windows subfolders. You can display their contents (<strong>Control+click</strong> on the icon) in order to be able to modify them.</p>
 </blockquote></li>
 </ul>
 <p>If you checked the “Allow automatic update of client application” option, an additional subfolder called <em>Upgrade4DClient</em> is added in the <em>&lt;ApplicationName&gt;Server</em> folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.</p>
@@ -290,9 +293,14 @@
 <li><em>cert.pem</em> and <em>key.pem</em> files (optional): These files are used for SSL connections and by data encryption commands,</li>
 <li>Default Web root folder (WebFolder).</li>
 </ul>
-<p>Items must be installed: * <strong>on Windows</strong> * <strong>Server application</strong> - in the <em>Client Server executable\ &lt;ApplicationName&gt;Server\Server Database</em> subfolder. * <strong>Client application</strong> - in the <em>Client Server executable\ &lt;ApplicationName&gt;Client</em> subfolder.</p>
+<p>Items must be installed:</p>
 <ul>
-<li><strong>on macOS</strong>
+<li><p><strong>on Windows</strong></p>
+<ul>
+<li><strong>Server application</strong> - in the <em>Client Server executable\ &lt;ApplicationName&gt;Server\Server Database</em> subfolder.</li>
+<li><strong>Client application</strong> - in the <em>Client Server executable\ &lt;ApplicationName&gt;Client</em> subfolder.</li>
+</ul></li>
+<li><p><strong>on macOS</strong></p>
 <ul>
 <li><strong>Server application</strong> - next to the <em>&lt;ApplicationName&gt;Server</em> software package.</li>
 <li><strong>Client application</strong> - next to the <em>&lt;ApplicationName&gt;Client</em> software package.</li>
@@ -330,7 +338,7 @@
 <li><strong>License #</strong> - Product license number</li>
 <li><strong>License</strong> - Name of the product</li>
 <li><strong>Expiration date</strong> - Expiration date of the license (if any)</li>
-<li><strong>Path</strong> - Location on disk</li>
+<li><strong>Path</strong> -  Location on disk</li>
 </ul>
 <p>If a license is not valid, a message will warn you.</p>
 <p>You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.</p>
@@ -363,11 +371,14 @@
 <h2><a class="anchor" aria-hidden="true" id="customizing-application-icons"></a><a href="#customizing-application-icons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customizing application icons</h2>
 <p>4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.</p>
 <ul>
-<li><p><strong>macOs</strong> - When building a double-clickable application, 4D handles the customizing of the icon. In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.</p>
+<li><strong>macOs</strong> - When building a double-clickable application, 4D handles the customizing of the icon. In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.</li>
+</ul>
 <blockquote>
 <p>Apple, Inc. provides a specific tool for building <em>icns</em> icon files (for more information, please refer to <a href="https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2">Apple documentation</a>).</p>
 </blockquote>
-<p>Your icon file must have the same name as the project file and include the <em>.icns</em> extension. 4D automatically takes this file into account when building the double-clickable application (the <em>.icns</em> file is renamed <em>ApplicationName.icns</em> and copied into the Resources folder; the <em>CFBundleFileIcon</em> entry of the <em>info.plist</em> file is updated).</p></li>
+<pre><code class="hljs">Your icon file must have the same name as the project file and include the *.icns* extension. 4D automatically takes this file into account when building the double-clickable application (the *.icns* file is renamed *ApplicationName.icns* and copied into the Resources folder; the *CFBundleFileIcon* entry of the *info.plist* file is updated).
+</code></pre>
+<ul>
 <li><p><strong>Windows</strong> - When building a double-clickable application, 4D handles the customizing of its icon. In order to do this, you must create an icon file (<em>.ico</em> extension), prior to building the application file, and place it next to the project folder.</p>
 <p>Your icon file must have the same name as the project file and include the <em>.ico</em> extension. 4D automatically takes this file into account when building the double-clickable application.</p></li>
 </ul>

@@ -11,14 +11,14 @@
           }
         });
       </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/Project/pictures.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">ピクチャー</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="サポートされるネイティブフォーマット"></a><a href="#サポートされるネイティブフォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>サポートされるネイティブフォーマット</h2>
-<p>4Dはピクチャーフォーマットのネイティブ管理を統合しています。 これは、ピクチャーが変換されることなく、元のフォーマットのまま 4D で格納、表示されることを意味します。 (シェイドや透過など) フォーマットにより異なる特定の機能はコピー・ペーストされる際にも保持され、改変なく表示されます。 このネイティブサポートは 4D に格納されるすべてのピクチャー (スタティックピクチャー、デザインモードでフォームにペーストされたピクチャー、アプリケーションモードでフィールドや変数にペーストされたピクチャーなど) に対して有効です。</p>
+<p>4Dはピクチャーフォーマットのネイティブ管理を統合しています。 これは、ピクチャーが変換されることなく、元のフォーマットのまま 4D で格納、表示されることを意味します。 (シェイドや透過など) フォーマットにより異なる特定の機能はコピー・ペーストされる際にも保持され、改変なく表示されます。 This native support is valid for all pictures stored in 4D: static pictures, pictures pasted into forms in Design mode, pictures pasted into fields or variables in Application mode, etc.</p>
 <p>4D は Windows と macOS の両方においてネイティブな API を使用してフィールドや変数のピクチャーをエンコード (書き込み) およびデコード (読み込み) します。 これらの実装は現在デジタルカメラで使用されている RAW フォーマット含め、数多くのネイティブなフォーマットへのアクセスを提供します。</p>
 <ul>
-<li>Windows では、4DはWIC (Windows Imaging Component) を使用します。</li>
-<li>macOS では、4D は ImageIO を使用します。</li>
+<li>Windows, 4D uses WIC (Windows Imaging Component).</li>
+<li>macOS, 4D uses ImageIO.</li>
 </ul>
 <p>もっとも一般的なフォーマット (例: jpeg、gif、png、tiff、bmp、等) はどちらのフォーマットでもサポートされます。 macOS では、PDF フォーマットのエンコーディング/デコーディングも可能です。</p>
-<p>サポートされるフォーマットの完全なリストは OS や、マシンにインストールされているカスタムコーデックによって異なります。 どのコーデックが利用可能かを調べるためには、<code>PICTURE CODEC LIST</code> コマンドを使用してください。 エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。</p>
+<p>サポートされるフォーマットの完全なリストは OS や、マシンにインストールされているカスタムコーデックによって異なります。 To find out which codecs are available, you must use the <code>PICTURE CODEC LIST</code> command. エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。</p>
 <blockquote>
 <p>WIC および ImageIO はピクチャー内のメタデータの書き込みを許可しています。 <code>SET PICTURE METADATA</code> および <code>GET PICTURE METADATA</code> コマンドを使用することで、それらのメタデータを開発に役立てることができます。</p>
 </blockquote>
@@ -29,67 +29,47 @@
 <li>MIME タイプ (例: “image/jpeg”)</li>
 </ul>
 <p>それぞれのピクチャーフォーマットに対して返される形式は、当該 Codec が OS レベルで記録されている方法に基づきます。</p>
-<p>多くの 4Dピクチャー管理コマンドは Codec ID を引数として受けとることができます。 したがって、<code>PICTURE CODEC LIST</code> から返されるシステムIDを使用しなければなりません。</p>
+<p>Most of the 4D picture management commands can receive a Codec ID as a parameter. したがって、<code>PICTURE CODEC LIST</code> から返されるシステムIDを使用しなければなりません。</p>
 <h3><a class="anchor" aria-hidden="true" id="利用不可能なピクチャーフォーマット"></a><a href="#利用不可能なピクチャーフォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>利用不可能なピクチャーフォーマット</h3>
 <p>マシン上で利用できないフォーマットのピクチャーに対しては、専用のアイコンが表示されます。 アイコンの下部にその拡張子が表示されます。</p>
 <p><img src="/docs/Rx/assets/en/Project/picNoFormat.png" alt=""></p>
 <p>このアイコンは、そのピクチャーが表示されるべきところに自動的に使用されます:</p>
 <p><img src="/docs/Rx/assets/en/Project/picNoFormat2.png" alt=""></p>
 <p>このアイコンは、そのピクチャーがローカルでは表示も編集もできないことを意味します。ですが、中身を改変することなく保存し、他のマシンで表示することは可能です。 たとえば、Windows での PDF ピクチャーや、PICT フォーマットのピクチャーなどが該当します。</p>
-<h3><a class="anchor" aria-hidden="true" id="ピクチャーの解像度"></a><a href="#ピクチャーの解像度" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ピクチャーの解像度</h3>
-<p>macOS および Windows の両方で高解像度表示がサポートされているピクチャーは次のとおりです:</p>
+<h3><a class="anchor" aria-hidden="true" id="picture-resolution"></a><a href="#picture-resolution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Picture Resolution</h3>
+<p>4D supports high resolution displays on both macOS and Windows platforms for the following:</p>
 <ul>
 <li>スタティックピクチャー</li>
-<li>3D ボタン / ラジオ / チェックボックス</li>
-<li>ピクチャーボタン / ポップアップ</li>
+<li>3D buttons/radio/check boxes</li>
+<li>Picture buttons/pop-ups</li>
 <li>タブコントロール</li>
 <li>メニューアイコン</li>
 <li>リストボックスヘッダー</li>
 </ul>
 <p>従来の標準的なディスプレイと比較して、高解像度ディスプレイは高い画素密度を持ちます。 これらの高解像度ディスプレイにおいてピクチャーが正しく表示されるには、適用する <em>スケール係数</em> (例: 2倍、3倍など) に応じてその画素数を増やす必要があります。</p>
-<p>次のテーブルは、ディスプレイの解像度とピクチャーのピクセル密度の違いをまとめています。</p>
+<p>The following table demonstrates the difference between display resolution and picture pixel density.</p>
 <table>
 <thead>
 <tr><th>表示タイプ</th><th>スケール係数</th><th>例題</th></tr>
 </thead>
 <tbody>
-<tr><td>標準解像度</td><td>1:1 ピクセル密度</td><td><strong>1x</strong></td></tr>
+<tr><td>標準解像度</td><td>1:1 ピクセル密度</td><td><strong>1x</strong><br><img src="/docs/Rx/assets/en/Project/pictureScale1.png" alt=""><br><em>circle.png</em></td></tr>
+<tr><td>高解像度</td><td>ピクセル密度は2、または3の係数で増加</td><td><table><th>2x</th><th>3x</th><tr><td><img src="/docs/Rx/assets/en/Project/pictureScale2.png" alt=""><br><em>circle@2x.png</em></td><td><img src="/docs/Rx/assets/en/Project/pictureScale3.png" alt=""><br><em>circle@3x.png</em></td></tr></table></td></tr>
 </tbody>
 </table>
-<p><img src="/docs/Rx/assets/en/Project/pictureScale1.png" alt="">  <br>
-<em>circle.png</em> |
-| 高解像度  | ピクセル密度は2、または3の係数で増加 |                                                                  |</p>
-<table>
-  <th>
-    2x
-  </th>
-  <th>
-    3x
-  </th>
-  <tr>
-    <td>
-      ![](/docs/Rx/assets/en/Project/pictureScale2.png)<br />*circle@2x.png*
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  ![](/docs/Rx/assets/en/Project/pictureScale3.png)&lt;br /&gt;*circle@3x.png*
-&lt;/td&gt;
-</code></pre>
-  </tr>
-</table>
-<p>高解像度のピクチャーを使う場合、ピクチャー名に &quot;@nx&quot; (<em>n</em>: スケール係数) を付けてスケール係数を指定します。 上のテーブルの例でも、高解像度ピクチャーの名前に、<em>circle@2x.png</em>、<em>circle@3x.png</em> といった形でスケール係数が指定されています。</p>
-<p>4D は自動的に最高解像度のピクチャーを優先します。 <br />  <br>
-<strong>例</strong>: 標準解像度と高解像度の２つのスクリーンを使用している際に、片方からもう片方へとフォームを移動させると、4D は常に使用可能な範囲内での最高解像度のピクチャーを表示します。 コマンドまたはプロパティが <em>circle.png</em> を指定していたとしても、<em>circle@3x.png</em> があれば、それを使用します。</p>
+<p>When using high resolution pictures, the scale factor is specified by adding &quot;@nx&quot; in the picture's name (<em>n</em> designates the scale factor). In the table above, you can see that the scale factor is indicated in the names of the high resolution pictures, <em>circle@2x.png</em> and <em>circle@3x.png</em>.</p>
+<p>4D は自動的に最高解像度のピクチャーを優先します。 <br><br> <strong>例</strong>: 標準解像度と高解像度の２つのディスプレイを使用している際に、片方からもう片方へとフォームを移動させると、4D は常に使用可能な範囲内での最高解像度のピクチャーを表示します。 コマンドまたはプロパティが <em>circle.png</em> を指定していたとしても、<em>circle@3x.png</em> があれば、それを使用します。</p>
 <blockquote>
-<p>この優先順位付けはディスプレイ上のピクチャー表示にのみ適用され、印刷に関しては自動適用されないことに留意が必要です。</p>
+<p>Note that this prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.</p>
 </blockquote>
-<p>この解像度に関する自動機能は、プロジェクトデータベースにおいてピクチャーを扱うすべての <a href="../FormObjects/formObjectsOverview.html">4D フォームオブジェクト</a> に対して適用されます。</p>
+<p>This resolution behavior is supported for project databases by all <a href="../FormObjects/formObjectsOverview.html">4D form objects</a> which support images.</p>
 <h2><a class="anchor" aria-hidden="true" id="ピクチャー上のマウス座標"></a><a href="#ピクチャー上のマウス座標" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ピクチャー上のマウス座標</h2>
-<p>4D ではピクチャーフィールドや変数をクリック、またはホバーした際のマウスのローカル座標を取得できます。これはスクロールやズーム処理がおこなわれている場合でも可能です。 このピクチャーマップに似た機構は、たとえば地図作製ソフトウェアのインターフェースや、スクロール可能なボタンバーを管理するのに使用できます。</p>
+<p>4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. このピクチャーマップに似た機構は、たとえば地図作製ソフトウェアのインターフェースや、スクロール可能なボタンバーを管理するのに使用できます。</p>
 <p>座標は <em>MouseX</em> と <em>MouseY</em> <a href="https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.ja.html">システム変数</a> に返されます。 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、<em>MouseX</em> と <em>MouseY</em> には-1が返されます。</p>
 <p>これらの値は、<code>On Clicked</code>、<code>On Double Clicked</code>、<code>On Mouse up</code>、<code>On Mouse Enter</code>、あるいは <code>On Mouse Move</code> フォームイベントの一部として取得することができます。</p>
-<h2><a class="anchor" aria-hidden="true" id="ピクチャー演算子"></a><a href="#ピクチャー演算子" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ピクチャー演算子</h2>
-<p>4Dではピクチャーの連結や重ね合わせなどのピクチャー <strong>演算</strong> をおこなうことができます。 これは <em>4Dランゲージリファレンス</em> の <em>ピクチャー演算子</em> の章で説明されています。</p>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#サポートされるネイティブフォーマット">サポートされるネイティブフォーマット</a><ul class="toc-headings"><li><a href="#ピクチャー-codec-id">ピクチャー Codec ID</a></li><li><a href="#利用不可能なピクチャーフォーマット">利用不可能なピクチャーフォーマット</a></li><li><a href="#ピクチャーの解像度">ピクチャーの解像度</a></li></ul></li><li><a href="#ピクチャー上のマウス座標">ピクチャー上のマウス座標</a></li><li><a href="#ピクチャー演算子">ピクチャー演算子</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="picture-operators"></a><a href="#picture-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Picture Operators</h2>
+<p>4D allows you to carry out <strong>operations</strong> on 4D pictures, such as concatenation, superimposing, etc. This point is covered in the <em>Picture Operators</em> section of the <em>4D Language Reference</em>.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#サポートされるネイティブフォーマット">サポートされるネイティブフォーマット</a><ul class="toc-headings"><li><a href="#ピクチャー-codec-id">ピクチャー Codec ID</a></li><li><a href="#利用不可能なピクチャーフォーマット">利用不可能なピクチャーフォーマット</a></li><li><a href="#picture-resolution">Picture Resolution</a></li></ul></li><li><a href="#ピクチャー上のマウス座標">ピクチャー上のマウス座標</a></li><li><a href="#picture-operators">Picture Operators</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

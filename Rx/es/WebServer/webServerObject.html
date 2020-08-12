@@ -134,99 +134,45 @@ webServer.<span class="hljs-function">start</span>(<span class="hljs-variable">$
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="web-server-properties"></a><a href="#web-server-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web server properties</h2>
 <p>A web server object contains the following properties.</p>
-<p>Character set that the 4D Web Server should use to communicate with browsers connecting to the database. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers <a href="http://www.iana.org/assignments/character-sets">defined by IANA</a> supported by the 4D Web Server:</p>
-<ul>
-<li><p>4 = ISO-8859-1</p></li>
-<li><p>12 = ISO-8859-9</p></li>
-<li><p>13 = ISO-8859-10</p></li>
-<li><p>17 = Shift-JIS</p></li>
-<li><p>2024 = Windows-31J</p></li>
-<li><p>2026 = Big5</p></li>
-<li><p>38 = euc-kr</p></li>
-<li><p>106 = UTF-8</p></li>
-<li><p>2250 = Windows-1250</p></li>
-<li><p>2251 = Windows-1251</p></li>
-<li><p>2253 = Windows-1253</p></li>
-<li><p>2255 = Windows-1255</p></li>
-<li><p>2256 = Windows-1256</td> </tr></p>
-<p></tbody> </table>
-&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default value: 63072000 (2 years)| |HTTPCompressionLevel|number|Compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies). This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed).</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Possible values:</p>
-<ul>
-<li>1 to 9 (where 1 is the fastest compression and 9 the highest).</li>
-<li>-1 = set a compromise between speed and rate of compression.</li>
-</ul>
-<p>Default = 1 (faster compression).| |HTTPCompressionThreshold|number|Size threshold (bytes) for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default compression threshold = 1024 bytes| |HTTPEnabled|boolean|HTTP protocol state| |HTTPPort|number|Listening IP port number for HTTP.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default = 80| |HTTPTrace|boolean|HTTP TRACE activation. For security reasons, by default the Web server rejects HTTP TRACE requests with an error 405. When enabled, the web server replies to HTTP TRACE requests with the request line, header, and body.| |HTTPSEnabled|boolean|HTTPS protocol state| |HTTPSPort|number|Listening IP port number for HTTPS.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default = 443| |inactiveProcessTimeout|number|Life duration (in minutes) of the inactive session processes. At the end of the timeout, the process is killed on the server, the <code>On Web Close Process</code> database method is called, then the session context is destroyed.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default = 480 minutes| |inactiveSessionTimeout|number|Life duration (in minutes) of inactive sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default = 480 minutes| |IPAddressToListen|text|IP address on which the 4D Web Server will receive HTTP requests. Both IPv6 string formats and IPv4 string formats are supported.| |<em>isRunning</em>|boolean|Web server running state| |keepSession|boolean|Session management enabling status</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default = true| |logRecording|number|Log requests (logweb.txt) recording value.</p>
-<ul>
-<li>0 = Do not record (default)</li>
-<li>1 = Record in CLF format</li>
-<li>2 = Record in DLF format</li>
-<li>3 = Record in ELF format</li>
-<li>4 = Record in WLF format| |maxConcurrentProcesses|number|Maximum number of concurrent web processes supported by the web server. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.</li>
-</ul>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Possible values: 10 - 32000</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default = 100| |maxRequestSize|number|Maximum size (in bytes) of incoming HTTP requests (POST) that the Web server is allowed to process. Passing the maximum value (2147483648) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Possible values: 500000 - 2147483648| |maxSessions|number|Maximum number of simultaneous sessions. When you reach the limit, the oldest session is closed (and <code>On Web Close Process</code> database method is called) if the web server needs to create a new one. The number of simultaneous sessions cannot exceed the total number of web processes (<code>maxConcurrentProcesses</code> property, 100 by default)| |minTLSVersion|number|Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Possible values:</p>
-<ul>
-<li>1 = <code>TLSv1_0</code></li>
-<li>2 = <code>TLSv1_1</code></li>
-<li>3 = <code>TLSv1_2</code> (default)</li>
-</ul>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;If modified, the server must be restarted to use the new value.| |<em>name</em>|text|Name of the web server database| |<em>openSSLVersion</em>|text|Version of the OpenSSL library used| |<em>perfectForwardSecrecy</em>|boolean|PFS availability on the server| |rootFolder|text|Path of web server root folder. The path is formatted in POSIX full path using filesystems. When using this property in the <code>settings</code> parameter, it can be a <code>Folder</code> object.| |sessionCookieDomain|text|&quot;domain&quot; field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value &quot;/*.4d.fr&quot; for this selector, the client will only send a cookie when the request is addressed to the domain &quot;.4d.fr&quot;, which excludes servers hosting external static data.| |sessionCookieName|text|Name of the cookie used for storing the session ID.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Default = &quot;4DSID&quot;| |sessionCookiePath|text|&quot;path&quot; field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value &quot;/4DACTION&quot; for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.| |sessionIPAddressValidation|boolean|IP address validation for session cookies. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change.</p>
-<p>&lt;</p>
-<p>p&gt;</p>
-<p>&lt;</p>
-<p>p&gt;Note: this setting lowers the security level of your application|</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>certificateFolder</td><td>text</td><td>Folder where the certificate files are located. The path is formatted in POSIX full path using filesystems. When using this property in the <code>settings</code> parameter, it can be a <code>Folder</code> object.</td></tr>
+<tr><td>characterSet</td><td>number or text</td><td>Character set that the 4D Web Server should use to communicate with browsers connecting to the database. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers <a href="http://www.iana.org/assignments/character-sets">defined by IANA</a> supported by the 4D Web Server: <li>4 = ISO-8859-1</li><li>12 = ISO-8859-9</li><li>13 = ISO-8859-10</li><li>17 = Shift-JIS</li><li>2024 = Windows-31J</li><li>2026 = Big5</li><li>38 = euc-kr</li><li>106 = UTF-8</li><li>2250 = Windows-1250</li><li>2251 = Windows-1251</li><li>2253 = Windows-1253</li><li>2255 = Windows-1255</li><li>2256 = Windows-1256</td></tr>
+<tr><td>cipherSuite</td><td>text</td><td>Cipher list used for the secure protocol. Sets the priority of ciphering algorithms implemented by the web server. Can be a sequence of strings separated by colons (for example &quot;ECDHE-RSA-AES128-...&quot;). See the <a href="https://www.openssl.org/docs/manmaster/man1/ciphers.html">ciphers page</a> on the OpenSSL site.</td></tr>
+<tr><td>debugLog</td><td>number</td><td>Status of the HTTP request log file (HTTPDebugLog_nn.txt, stored in the &quot;Logs&quot; folder of the application -- nn is the file number). <li>0 = disabled</li><li>1 = enabled without body parts (body size is provided in this case)</li><li>3 = enabled with body parts in response only</li><li>5 = enabled with body parts in request only</li><li>7 = enabled with body parts in response and request</li></td></tr>
+<tr><td>defaultHomepage</td><td>text</td><td>Name of the default home page or &quot;&quot; to not send the custom home page</td></tr>
+<tr><td>HSTSEnabled</td><td>boolean</td><td>HTTP Strict Transport Security (HSTS) status. HSTS allows the Web server to declare that browsers should only interact with it via secure HTTPS connections. Browsers will record the HSTS information the first time they receive a response from the web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the <code>HSTSMaxAge</code> property. HSTS requires that HTTPS is enabled on the server. HTTP must also be enabled to allow initial client connections.</td></tr>
+<tr><td>HSTSMaxAge</td><td>number</td><td>Maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration. <p><p>Default value: 63072000 (2 years)</td></tr>
+<tr><td>HTTPCompressionLevel</td><td>number</td><td>Compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies). This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed). <p><p>Possible values: <ul><li>1 to 9 (where 1 is the fastest compression and 9 the highest).</li><li> -1 = set a compromise between speed and rate of compression.</li></ul> Default = 1 (faster compression).</td></tr>
+<tr><td>HTTPCompressionThreshold</td><td>number</td><td>Size threshold (bytes) for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges. <p><p>Default compression threshold = 1024 bytes</td></tr>
+<tr><td>HTTPEnabled</td><td>boolean</td><td>HTTP protocol state</td></tr>
+<tr><td>HTTPPort</td><td>number</td><td>Listening IP port number for HTTP. <p><p>Default = 80</td></tr>
+<tr><td>HTTPTrace</td><td>boolean</td><td>HTTP TRACE activation. For security reasons, by default the Web server rejects HTTP TRACE requests with an error 405. When enabled, the web server replies to HTTP TRACE requests with the request line, header, and body.</td></tr>
+<tr><td>HTTPSEnabled</td><td>boolean</td><td>HTTPS protocol state</td></tr>
+<tr><td>HTTPSPort</td><td>number</td><td>Listening IP port number for HTTPS. <p><p>Default = 443</td></tr>
+<tr><td>inactiveProcessTimeout</td><td>number</td><td>Life duration (in minutes) of the inactive session processes. At the end of the timeout, the process is killed on the server, the <code>On Web Close Process</code> database method is called, then the session context is destroyed. <p><p>Default = 480 minutes</td></tr>
+<tr><td>inactiveSessionTimeout</td><td>number</td><td>Life duration (in minutes) of inactive sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client. <p><p>Default = 480 minutes</td></tr>
+<tr><td>IPAddressToListen</td><td>text</td><td>IP address on which the 4D Web Server will receive HTTP requests. Both IPv6 string formats and IPv4 string formats are supported.</td></tr>
+<tr><td><em>isRunning</em></td><td>boolean</td><td>Web server running state</td></tr>
+<tr><td>keepSession</td><td>boolean</td><td>Session management enabling status <p><p>Default = true</td></tr>
+<tr><td>logRecording</td><td>number</td><td>Log requests (logweb.txt) recording value. <li>0 = Do not record (default)</li><li>1 = Record in CLF format</li><li>2 = Record in DLF format</li><li>3 = Record in ELF format</li><li>4 = Record in WLF format</li></td></tr>
+<tr><td>maxConcurrentProcesses</td><td>number</td><td>Maximum number of concurrent web processes supported by the web server. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests. <p><p>Possible values: 10 - 32000 <p><p>Default = 100</td></tr>
+<tr><td>maxRequestSize</td><td>number</td><td>Maximum size (in bytes) of incoming HTTP requests (POST) that the Web server is allowed to process. Passing the maximum value (2147483648) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it. <p><p>Possible values: 500000 - 2147483648</td></tr>
+<tr><td>maxSessions</td><td>number</td><td>Maximum number of simultaneous sessions. When you reach the limit, the oldest session is closed (and <code>On Web Close Process</code> database method is called) if the web server needs to create a new one. The number of simultaneous sessions cannot exceed the total number of web processes (<code>maxConcurrentProcesses</code> property, 100 by default)</td></tr>
+<tr><td>minTLSVersion</td><td>number</td><td>Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected. <p><p>Possible values:<li>1 = <code>TLSv1_0</code></li><li>2 = <code>TLSv1_1</code></li><li>3 = <code>TLSv1_2</code> (default)</li><p><p>If modified, the server must be restarted to use the new value.</td></tr>
+<tr><td><em>name</em></td><td>text</td><td>Name of the web server database</td></tr>
+<tr><td><em>openSSLVersion</em></td><td>text</td><td>Version of the OpenSSL library used</td></tr>
+<tr><td><em>perfectForwardSecrecy</em></td><td>boolean</td><td>PFS availability on the server</td></tr>
+<tr><td>rootFolder</td><td>text</td><td>Path of web server root folder. The path is formatted in POSIX full path using filesystems. When using this property in the <code>settings</code> parameter, it can be a <code>Folder</code> object.</td></tr>
+<tr><td>sessionCookieDomain</td><td>text</td><td>&quot;domain&quot; field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value &quot;/*.4d.fr&quot; for this selector, the client will only send a cookie when the request is addressed to the domain &quot;.4d.fr&quot;, which excludes servers hosting external static data.</td></tr>
+<tr><td>sessionCookieName</td><td>text</td><td>Name of the cookie used for storing the session ID. <p><p>Default = &quot;4DSID&quot;</td></tr>
+<tr><td>sessionCookiePath</td><td>text</td><td>&quot;path&quot; field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value &quot;/4DACTION&quot; for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.</td></tr>
+<tr><td>sessionIPAddressValidation</td><td>boolean</td><td>IP address validation for session cookies. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change. <p><p>Note: this setting lowers the security level of your application</td></tr>
+</tbody>
+</table>
 <p>These properties are defined:</p>
 <ol>
 <li>using the <code>settings</code> parameter of the <code>webServer.start( )</code> method (except for read-only properties, see below),</li>
@@ -276,8 +222,6 @@ webServer.<span class="hljs-function">start</span>(<span class="hljs-variable">$
 <tr><td><code>WEB Validate digest</code></td><td>Web server that received the request</td></tr>
 </tbody>
 </table>
-</li>
-</ul>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/Users/editing.html"><span class="arrow-prev">← </span><span>Managing 4D users and groups</span></a><a class="docs-next button" href="/docs/Rx/es/REST/gettingStarted.html"><span>Getting Started</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#instantiating-a-web-server-object">Instantiating a web server object</a></li><li><a href="#web-server-methods">Web server methods</a></li><li><a href="#web-server-properties">Web server properties</a></li><li><a href="#scope-of-the-4d-web-commands">Scope of the 4D Web commands</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

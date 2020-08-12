@@ -53,32 +53,12 @@
 <tr><th>Display Type</th><th>Scale Factor</th><th>Example</th></tr>
 </thead>
 <tbody>
-<tr><td>Standard Resolution</td><td>1:1 pixel density.</td><td><strong>1x</strong></td></tr>
+<tr><td>Standard Resolution</td><td>1:1 pixel density.</td><td><strong>1x</strong><br><img src="/docs/Rx/assets/en/Project/pictureScale1.png" alt=""><br><em>circle.png</em></td></tr>
+<tr><td>High Resolution</td><td>Pixel density increased by a factor of 2 or 3.</td><td><table><th>2x</th><th>3x</th><tr><td><img src="/docs/Rx/assets/en/Project/pictureScale2.png" alt=""><br><em>circle@2x.png</em></td><td><img src="/docs/Rx/assets/en/Project/pictureScale3.png" alt=""><br><em>circle@3x.png</em></td></tr></table></td></tr>
 </tbody>
 </table>
-<p><img src="/docs/Rx/assets/en/Project/pictureScale1.png" alt="">  <br>
-<em>circle.png</em> |
-| High Resolution     | Pixel density increased by a factor of 2 or 3. |                                                                  |</p>
-<table>
-  <th>
-    2x
-  </th>
-  <th>
-    3x
-  </th>
-  <tr>
-    <td>
-      ![](/docs/Rx/assets/en/Project/pictureScale2.png)<br />*circle@2x.png*
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  ![](/docs/Rx/assets/en/Project/pictureScale3.png)&lt;br /&gt;*circle@3x.png*
-&lt;/td&gt;
-</code></pre>
-  </tr>
-</table>
 <p>When using high resolution pictures, the scale factor is specified by adding &quot;@nx&quot; in the picture's name (<em>n</em> designates the scale factor). In the table above, you can see that the scale factor is indicated in the names of the high resolution pictures, <em>circle@2x.png</em> and <em>circle@3x.png</em>.</p>
-<p>4D automatically prioritizes pictures with the highest resolution. <br />  <br>
-<strong>Example</strong>: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Even if a command or property specifies <em>circle.png</em>, <em>circle@3x.png</em> will be used (if it exists).</p>
+<p>4D automatically prioritizes pictures with the highest resolution. <br><br> <strong>Example</strong>: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D  automatically renders the highest possible resolution of the picture. Even if a command or property specifies <em>circle.png</em>, <em>circle@3x.png</em> will be used (if it exists).</p>
 <blockquote>
 <p>Note that this prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.</p>
 </blockquote>

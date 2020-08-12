@@ -88,73 +88,74 @@
 <p>And no entities were found, the following query path would be returned, if you write the following:</p>
 <p><code>GET /rest/$querypath</code></p>
 <p><strong>Response</strong>:</p>
-<pre><code class="hljs">__queryPath: {
+<pre><code class="hljs"><span class="hljs-attribute">__queryPath</span>: {
 
-    steps: [
-        {
-            description: &quot;AND&quot;,
-            time: 0,
-            recordsfounds: 0,
-            steps: [
-                {
-                    description: &quot;Join on Table : Company : People.employer = Company.ID&quot;,
-                    time: 0,
-                    recordsfounds: 0,
-                    steps: [
-                        {
-                            steps: [
-                                {
-                                    description: &quot;Company.name = acme&quot;,
-                                    time: 0,
-                                    recordsfounds: 0
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+<span class="yaml">    <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+        <span class="hljs-string">{</span>
+            <span class="hljs-attr">description:</span> <span class="hljs-string">"AND"</span><span class="hljs-string">,</span>
+            <span class="hljs-attr">time:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+            <span class="hljs-attr">recordsfounds:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+            <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+                <span class="hljs-string">{</span>
+                    <span class="hljs-attr">description:</span> <span class="hljs-string">"Join on Table : Company : People.employer = Company.ID"</span><span class="hljs-string">,</span>
+                    <span class="hljs-attr">time:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+                    <span class="hljs-attr">recordsfounds:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+                    <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+                        <span class="hljs-string">{</span>
+                            <span class="hljs-attr">steps:</span> <span class="hljs-string">[</span>
+                                <span class="hljs-string">{</span>
+                                    <span class="hljs-attr">description:</span> <span class="hljs-string">"Company.name = acme"</span><span class="hljs-string">,</span>
+                                    <span class="hljs-attr">time:</span> <span class="hljs-number">0</span><span class="hljs-string">,</span>
+                                    <span class="hljs-attr">recordsfounds:</span> <span class="hljs-number">0</span>
+                                <span class="hljs-string">}</span>
+                            <span class="hljs-string">]</span>
+                        <span class="hljs-string">}</span>
+                    <span class="hljs-string">]</span>
+                <span class="hljs-string">}</span>
+            <span class="hljs-string">]</span>
+        <span class="hljs-string">}</span>
+    <span class="hljs-string">]</span>
 
-}
-</code></pre>
+<span class="hljs-string">}</span>
+</span></code></pre>
 <p>If, on the other hand, the first query returns more than one entity, the second one will be executed. If we execute the following query:</p>
 <p><code>GET /rest/Employee/$filter=&quot;employer.name=a* AND lastName!=smith&quot;&amp;$querypath=true</code></p>
 <p>If at least one entity was found, the following query path would be returned, if you write the following:</p>
 <p><code>GET /rest/$querypath</code></p>
 <p><strong>Respose</strong>:</p>
-<pre><code class="hljs">&quot;__queryPath&quot;: {
-    &quot;steps&quot;: [
+<pre><code class="hljs"><span class="hljs-string">"__queryPath"</span>: {
+    <span class="hljs-string">"steps"</span>: [
         {
-            &quot;description&quot;: &quot;AND&quot;,
-            &quot;time&quot;: 1,
-            &quot;recordsfounds&quot;: 4,
-            &quot;steps&quot;: [
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"AND"</span>,
+            <span class="hljs-string">"time"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">"recordsfounds"</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-string">"steps"</span>: [
                 {
-                    &quot;description&quot;: &quot;Join on Table : Company : Employee.employer = Company.ID&quot;,
-                    &quot;time&quot;: 1,
-                    &quot;recordsfounds&quot;: 4,
-                    &quot;steps&quot;: [
+                    <span class="hljs-string">"description"</span>: <span class="hljs-string">"Join on Table : Company : Employee.employer = Company.ID"</span>,
+                    <span class="hljs-string">"time"</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">"recordsfounds"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-string">"steps"</span>: [
                         {
-                            &quot;steps&quot;: [
+                            <span class="hljs-string">"steps"</span>: [
                                 {
-                                    &quot;description&quot;: &quot;Company.name LIKE a*&quot;,
-                                    &quot;time&quot;: 0,
-                                    &quot;recordsfounds&quot;: 2
+                                    <span class="hljs-string">"description"</span>: <span class="hljs-string">"Company.name LIKE a*"</span>,
+                                    <span class="hljs-string">"time"</span>: <span class="hljs-number">0</span>,
+                                    <span class="hljs-string">"recordsfounds"</span>: <span class="hljs-number">2</span>
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    &quot;description&quot;: &quot;Employee.lastName # smith&quot;,
-                    &quot;time&quot;: 0,
-                    &quot;recordsfounds&quot;: 4
+                    <span class="hljs-string">"description"</span>: <span class="hljs-string">"Employee.lastName # smith"</span>,
+                    <span class="hljs-string">"time"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"recordsfounds"</span>: <span class="hljs-number">4</span>
                 }
             ]
         }
     ]
-}</code></pre>
+}
+</code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/REST/orderby.html"><span class="arrow-prev">← </span><span>$orderby</span></a><a class="docs-next button" href="/docs/Rx/es/REST/queryplan.html"><span>$queryplan</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#example">Example</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {

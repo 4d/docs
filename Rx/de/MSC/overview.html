@@ -67,24 +67,24 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/MSC/overview.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Overview</h1></header><article><div><span><p>Das Fenster Maintenance und Security Center (MSC) enthält alle Tools zum Prüfen, Analysieren, Warten, Sichern, Komprimieren und Verschlüsseln von Datendateien. Das MSC ist in allen 4D Programmen verfügbar, also 4D Developer, 4D Server oder 4D Desktop.</p>
-<p><strong>Hinweis:</strong> Das MSC Fenster ist in einer 4D remote Verbindung nicht verfügbar.</p>
+<p><strong>Note:</strong> The MSC window is not available from a 4D remote connection.</p>
 <p>Es gibt verschiedene Wege, das MSC-Fenster zu öffnen. Die Art des Zugriffs bestimmt auch die Art, wie die Datenbank geöffnet wird: im Wartungs- oder im Standardmodus. Im Wartungsmodus wird die Datenbank nicht durch 4D geöffnet, sondern nur ihre Referenz an MSC geliefert. Im Standardmodus wird die Datenbank von 4D geöffnet.</p>
 <h2><a class="anchor" aria-hidden="true" id="anzeige-im-wartungsmodus"></a><a href="#anzeige-im-wartungsmodus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anzeige im Wartungsmodus</h2>
 <p>Im Wartungsmodus erscheint nur das MSC-Fenster, d. h. die Datenbank wird nicht vom 4D Programm geöffnet. Das bedeutet, dass auch Zugriff auf Datenbanken möglich ist, die sich wegen Beschädigung nicht im Standardmodus öffnen lassen. Außerdem müssen Sie für bestimmte Operationen, wie Komprimieren, Reparieren u. ä. die Datenbank im Wartungsmodus öffnen (siehe unter <a href="#feature-availability">Verfügbarkeit der Funktionen</a>).</p>
 <p>Es gibt zwei Stellen, das MSC im Wartungsmodus zu öffnen:</p>
 <ul>
-<li><strong>Über den Standard-Öffnen Dialog</strong> Der Standarddialog zum Öffnen der Datenbank enthält in der rechten unteren Ecke die Schaltfläche <strong>Öffnen</strong> mit einem PopUp-Menü, in dem Sie die Option <strong>Maintenance Security Center</strong> anklicken können: <img src="/docs/Rx/assets/en/MSC/MSC_standardOpen.png" alt=""></li>
-<li>Über das Menü <strong>Hilfe/Maintenance Security Center</strong> oder die Schaltfläche <strong>MSC</strong> in der Toolbar (Die Datenbank ist nicht geöffnet)<br>
-<img src="/docs/Rx/assets/en/MSC/mscicon.png" alt="">  <br>
-Auf dem Bildschirm erscheint der Standard-Öffnen Dialog, in dem Sie die entsprechende Datenbank auswählen können. Dabei öffnet 4D nicht die Datenbank.</li>
+<li><strong>From the standard database opening dialog box</strong> The standard Open database dialog includes the <strong>Maintenance Security Center</strong> option from the menu associated with the <strong>Open</strong> button: <img src="/docs/Rx/assets/en/MSC/MSC_standardOpen.png" alt=""></li>
+<li><strong>Help/Maintenance Security Center</strong> menu or <strong>MSC</strong> button in the tool bar (database not open)<br>
+<img src="/docs/Rx/assets/en/MSC/mscicon.png" alt="">   <br>
+When you call this function, a standard Open file dialog appears so that you can indicate the database to be examined. Dabei öffnet 4D nicht die Datenbank.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="anzeige-im-standardmodus"></a><a href="#anzeige-im-standardmodus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anzeige im Standardmodus</h2>
 <p>Im Standardmodus wird eine Datenbank geöffnet. Hier sind nicht alle Wartungsfunktionen verfügbar. Es gibt mehrere Möglichkeiten, das MSC Fenster zu öffnen:</p>
 <ul>
-<li><p>Über das Menü <strong>Hilfe/Maintenance Security Center</strong> oder die Schaltfläche <strong>MSC</strong> in der 4D Toolbar:<br>
+<li><p>Use the <strong>Help/Maintenance Security Center</strong> menu or the <strong>MSC</strong> button in the 4D toolbar:<br>
 <img src="/docs/Rx/assets/en/MSC/mscicon.png" alt=""></p></li>
 <li><p>Über die Standardaktion “msc”, die Sie einem Menübefehl oder einem Formularobjekt zuordnen können (siehe Abschnitt &quot;Standardaktionen&quot;).</p></li>
-<li><p>Über den 4D Befehl <code>OPEN SECURITY CENTER</code> .</p></li>
+<li><p>Use the <code>OPEN SECURITY CENTER</code> language command.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="verfügbarkeit-der-funktionen"></a><a href="#verfügbarkeit-der-funktionen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verfügbarkeit der Funktionen</h2>
 <p>Je nach dem Öffnen-Modus in MSC sind bestimmte MSC Funktionen nicht verfügbar:</p>

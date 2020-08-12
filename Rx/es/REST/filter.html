@@ -84,21 +84,19 @@
 <p>For more information regarding how to query data in 4D, refer to the <a href="https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html">dataClass.query()</a> documentation.</p>
 <blockquote>
 <p>When inserting quotes (') or double quotes (&quot;), you must escape them using using their character code:</p>
-<ul>
-<li>Quotes ('): \u0027
-<ul>
-<li><p>Double quotes (&quot;): \u0022</p>
-For example, you can write the following when passing a value with a quote when using the <em>params</em> property:<br>
+<li>Quotes ('):    \u0027 <li>Double quotes ("): \u0022
+<p>For example, you can write the following when passing a value with a quote when using the <em>params</em> property:<br>
 <code>http://127.0.0.1:8081/rest/Person/?$filter=&quot;lastName=:1&quot;&amp;$params='[&quot;O\u0027Reilly&quot;]'</code></p>
-<p>If you pass the value directly, you can write the following: <code>http://127.0.0.1:8081/rest/Person/?$filter=&quot;lastName=O'Reilly&quot;</code></blockquote></p>
+<p>If you pass the value directly, you can write the following: <code>http://127.0.0.1:8081/rest/Person/?$filter=&quot;lastName=O'Reilly&quot;</code></p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="attribute"></a><a href="#attribute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attribute</h2>
 <p>If the attribute is in the same dataclass, you can just pass it directly (<em>e.g.</em>, <code>firstName</code>). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (<em>e.g.</em>, employer.name). The attribute name is case-sensitive (<code>firstName</code> is not equal to <code>FirstName</code>).</p>
 <p>You can also query attributes of type Object by using dot-notation. For example, if you have an attribute whose name is &quot;objAttribute&quot; with the following structure:</p>
-<pre><code class="hljs">  {
-      prop1: &quot;this is my first property&quot;,
-      prop2: 9181,
-      prop3: [&quot;abc&quot;,&quot;def&quot;,&quot;ghi&quot;]
-  }
+<pre><code class="hljs">{
+<span class="hljs-symbol">    prop1:</span> <span class="hljs-string">"this is my first property"</span>,
+<span class="hljs-symbol">    prop2:</span> <span class="hljs-number">9181</span>,
+<span class="hljs-symbol">    prop3:</span> [<span class="hljs-string">"abc"</span>,<span class="hljs-string">"def"</span>,<span class="hljs-string">"ghi"</span>]
+}
 </code></pre>
 <p>You can search in the object by writing the following:</p>
 <p><code>GET /rest/Person/?filter=&quot;objAttribute.prop2 == 9181&quot;</code></p>
@@ -118,30 +116,18 @@ For example, you can write the following when passing a value with a quote when 
 <tr><td>begin</td><td>begins with</td></tr>
 </tbody>
 </table>
-</li>
-</ul></li>
-</ul>
-</blockquote>
-<blockquote>
-<pre><code class="hljs">    ## Examples
-    
-    In the following example, we look for all employees whose last name begins with a &quot;j&quot;:
-    
-         GET  /rest/Employee?$filter=&quot;lastName begin j&quot;
-        
-    
-    In this example, we search the Employee datastore class for all employees whose salary is greater than 20,000 and who do not work for a company named Acme:
-    
-         GET  /rest/Employee?$filter=&quot;salary&gt;20000 AND  
-         employer.name!=acme&quot;&amp;$orderby=&quot;lastName,firstName&quot;
-        
-    
-    In this example, we search the Person datastore class for all the people whose number property in the anotherobj attribute of type Object is greater than 50:
-    
-         GET  /rest/Person/?filter=&quot;anotherobj.mynum &gt; 50&quot;
+<h2><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
+<p>In the following example, we look for all employees whose last name begins with a &quot;j&quot;:</p>
+<pre><code class="hljs"> <span class="hljs-builtin-name">GET</span>  /rest/Employee?<span class="hljs-variable">$filter</span>=<span class="hljs-string">"lastName begin j"</span>
 </code></pre>
-</blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/REST/expand.html"><span class="arrow-prev">← </span><span>$expand</span></a><a class="docs-next button" href="/docs/Rx/es/REST/imageformat.html"><span>$imageformat</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a><ul class="toc-headings"><li><a href="#using-a-simple-filter">Using a simple filter</a></li><li><a href="#using-a-complex-filter">Using a complex filter</a></li><li><a href="#using-the-params-property">Using the params property</a></li></ul></li><li><a href="#attribute">Attribute</a></li><li><a href="#comparator">Comparator</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<p>In this example, we search the Employee datastore class for all employees whose salary is greater than 20,000 and who do not work for a company named Acme:</p>
+<pre><code class="hljs"> <span class="hljs-builtin-name">GET</span>  /rest/Employee?<span class="hljs-variable">$filter</span>=<span class="hljs-string">"salary&gt;20000 AND  
+ employer.name!=acme"</span>&amp;<span class="hljs-variable">$orderby</span>=<span class="hljs-string">"lastName,firstName"</span>
+</code></pre>
+<p>In this example, we search the Person datastore class for all the people whose number property in the anotherobj attribute of type Object is greater than 50:</p>
+<pre><code class="hljs"> <span class="hljs-builtin-name">GET</span>  /rest/Person/?<span class="hljs-attribute">filter</span>=<span class="hljs-string">"anotherobj.mynum &gt; 50"</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/REST/expand.html"><span class="arrow-prev">← </span><span>$expand</span></a><a class="docs-next button" href="/docs/Rx/es/REST/imageformat.html"><span>$imageformat</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a><ul class="toc-headings"><li><a href="#using-a-simple-filter">Using a simple filter</a></li><li><a href="#using-a-complex-filter">Using a complex filter</a></li><li><a href="#using-the-params-property">Using the params property</a></li></ul></li><li><a href="#attribute">Attribute</a></li><li><a href="#comparator">Comparator</a></li><li><a href="#examples">Examples</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
