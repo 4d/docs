@@ -40,10 +40,10 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| 引数               | 型   | 説明                                                             |
-| ---------------- | --- | -------------------------------------------------------------- |
-| $operator        | 文字列 | One of the logical operators to test with the other entity set |
-| $otherCollection | 文字列 | Entity set ID                                                  |
+| 引数               | 型      | 説明                                                             |
+| ---------------- | ------ | -------------------------------------------------------------- |
+| $operator        | String | One of the logical operators to test with the other entity set |
+| $otherCollection | String | Entity set ID                                                  |
 
 
 
