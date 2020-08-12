@@ -210,7 +210,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 |           | encodingEncrypted | Text       |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
 |           | encodingDecrypted | Text       |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
 |           |                   |            |    |                                                                                                                                                  |
-| status    |                   | object     | <- | Result                                                                                                                                           |
+| status    |                   | object     | <- | Ergebnis                                                                                                                                         |
 |           | success           | boolean    |    | True if the message has been successfully decrypted                                                                                              |
 |           | result            | Text       |    | Message decrypted and decoded using the `options.encodingDecrypted`                                                                              |
 |           | errors            | collection |    | If `success` is `false`, may contain a collection of errors                                                                                      |

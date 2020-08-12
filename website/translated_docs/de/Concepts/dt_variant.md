@@ -3,7 +3,7 @@ id: variant
 title: Variant
 ---
 
-Variant ist ein Variablentyp, um Daten von beliebigem festen Typ in eine Variable zu setzen. Dieser Typ lässt sich z.B. zum Schreiben von generischem Code verwenden, der Werte von nicht bekanntem Typ zurückgibt oder empfängt. Das ist beispielsweise bei Code zum Verwalten von Objektattributen der Fall.
+Variant ist ein Variablentyp, um Daten von beliebigem regulären Typ in eine Variable zu setzen. Dieser Typ lässt sich z.B. zum Schreiben von generischem Code verwenden, der Werte von nicht bekanntem Typ zurückgibt oder empfängt. Das ist beispielsweise bei Code zum Verwalten von Objektattributen der Fall.
 
 Eine Variable vom Typ Variant kann einen Wert in folgenden Datentypen enthalten:
 
