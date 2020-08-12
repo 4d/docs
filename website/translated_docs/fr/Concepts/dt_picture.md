@@ -29,17 +29,17 @@ Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pict
 
 ## Opérateurs sur les images
 
-| Opération                 | Syntaxe         | Retourne | Action                                                                                                                                                                   |
-| ------------------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Concaténation horizontale | Image1 + Image2 | Image    | Place Image2 à la droite d'Image1                                                                                                                                        |
-| Concaténation verticale   | Image1 / Image2 | Image    | Place Image2 au-dessous d'Image1                                                                                                                                         |
-| Superposition exclusive   | Image1 & Image2 | Image    | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                   |
-| Superposition inclusive   | Image1 | Image2 | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Déplacement horizontal    | Image + Nombre  | Image    | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                      |
-| Déplacement vertical      | Image / Nombre  | Image    | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                        |
-| Redimensionnement         | Image * Nombre  | Image    | Redimensionne l'image au pourcentage Nombre                                                                                                                              |
-| Extension horizontale     | Image *+ Nombre | Image    | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                              |
-| Extension verticale       | Image *| Nombre | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
+| Opération                 | Syntaxe         | Retourne | Action                                                                                                                                                                              |
+| ------------------------- | --------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Concaténation horizontale | Image1 + Image2 | Image    | Place Image2 à la droite d'Image1                                                                                                                                                   |
+| Concaténation verticale   | Image1 / Image2 | Image    | Place Image2 au-dessous d'Image1                                                                                                                                                    |
+| Superposition exclusive   | Image1 & Image2 | Image    | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                              |
+| Superposition inclusive   | Image1          | Image    | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Déplacement horizontal    | Image + Nombre  | Image    | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                                 |
+| Déplacement vertical      | Image / Nombre  | Image    | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                                   |
+| Redimensionnement         | Image * Nombre  | Image    | Redimensionne l'image au pourcentage Nombre                                                                                                                                         |
+| Extension horizontale     | Image *+ Nombre | Image    | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                         |
+| Extension verticale       | Image *         | Image    | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
 
 **Notes :**
 
