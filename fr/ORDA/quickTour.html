@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="fr"><head><meta name="docsearch:version" content="18 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tour d&#x27;horizon d&#x27;ORDA · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Since ORDA is object-based, using ORDA requires basic knowledge in object programmming."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Tour d&#x27;horizon d&#x27;ORDA · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Since ORDA is object-based, using ORDA requires basic knowledge in object programmming."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/fr"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v18 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v18 R3</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/ORDA/quickTour.html">English</a></li><li><a href="/docs/ja/ORDA/quickTour.html">日本語</a></li><li><a href="/docs/de/ORDA/quickTour.html">Deutsch</a></li><li><a href="/docs/es/ORDA/quickTour.html">Español</a></li><li><a href="/docs/pt/ORDA/quickTour.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/ORDA/quickTour.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Tour d&#x27;horizon d&#x27;ORDA</h1></header><article><div><span><p>Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.</p>
+<h2><a class="anchor" aria-hidden="true" id="exploring-the-datastore"></a><a href="#exploring-the-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exploring the datastore</h2>
+<p>La banque de données ORDA est automatiquement basée sur une structure de base de données 4D, à condition qu'elle soit conforme aux prérequis ORDA. Cet exemple utilisera la structure de base de données 4D simple suivante: Pour savoir ce qui est exposé en tant que magasin de données, créez une nouvelle méthode de projet, écrivez la ligne suivante: TRACE Exécutez la méthode - elle appelle simplement la fenêtre du débogueur. Dans la zone Expression, double-cliquez pour insérer une expression et entrez ds. Il renvoie l'objet de banque de données. Déployez l'objet, vous pouvez voir que les tables et les champs sont automatiquement exposés par ORDA en tant que propriétés de l'objet ds: Cela signifie par exemple que, chaque fois que vous avez besoin de vous référer au champ city de la table [Company], dans ORDA il vous suffit d'écrire: ds.Company.city // renvoie le nom de la ville Dans le monde ORDA, ds.Company est une classe de données. ds.Company.city est un attribut. ORDA est sensible à la casse. ds.company.city ne fera pas référence à l'attribut ds.Company.city. Vous avez également remarqué la propriété extra hires dans la classe de données ds.Company. Cela ne correspond pas à un champ. embauche est en fait le nom de la relation un à plusieurs entre l'entreprise et l'employé: Nom de la relation tel que défini dans l'inspecteur Cela signifie que, chaque fois que vous avez besoin d'accéder à la liste des employés travaillant pour une entreprise, dans ORDA il vous suffit d'écrire: ds.Company.hires // renvoie la liste des employés Mais n'allez pas trop vite. Voyons maintenant comment enregistrer des données dans des classes de données ORDA. Ajout de données Dans ORDA, vous pouvez ajouter un enregistrement à une classe de données à l'aide de la commande new (). Dans le monde ORDA, un enregistrement est une entité - une entité est elle-même un objet. Une commande attachée à un objet spécifique est appelée une méthode membre. $ entity: = ds.Company.new () // créer une nouvelle référence d'entité // dans la classe de données de l'entreprise // et affectez-le à la variable $ entity Un nouvel objet entité contient une &quot;copie&quot; de tous les attributs de sa classe de données parent, vous pouvez donc leur attribuer des valeurs: $ entity.name: = &quot;ACME, inc.&quot; $ entity.city: = &quot;Londres&quot; //$entity.ID est automatiquement rempli Pour le moment, l'entité n'existe qu'en mémoire. Pour le stocker dans le fichier de données, vous devez l'enregistrer à l'aide de la méthode membre save ().</p>
+<p>This example will use the following simple 4D database structure:</p>
+<p><img src="/docs/assets/en/Orda/struc.png" alt=""></p>
+<p>To know what is exposed as the datastore, create a new project method, write the following line:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-attribute">TRACE</span>
+</code></pre>
+<p>Execute the method -- it simply calls the debugger window. In the Expression area, double-click to insert an expression and enter <code>ds</code>. It returns the datastore object. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the <code>ds</code> object:</p>
+<p><img src="/docs/assets/en/Orda/debug1.png" alt=""></p>
+<p>It means for example that, whenever you need to refer to the city field of the [Company] table, in ORDA you just need to write:</p>
+<pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>city <span class="hljs-comment">//returns the name of the city</span>
+</code></pre>
+<blockquote>
+<p>In the ORDA world, ds.Company is a <strong>dataclass</strong>. ds.Company.city is an <strong>attribute</strong>.</p>
+</blockquote>
+<blockquote>
+<p>ORDA is case sensitive. <code>ds.company.city</code> will not refer to the ds.Company.city attribute.</p>
+</blockquote>
+<p>You have also noticed the extra <code>hires</code> property in the ds.Company dataclass. It does not correspond to a field. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
+<p><img src="/docs/assets/en/Orda/struc2s.png" alt=""> <em>Name of the relation as defined in the Inspector</em></p>
+<p>It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:</p>
+<pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>hires <span class="hljs-comment">//returns the list of employees</span>
+</code></pre>
+<p>But don't go too fast. Let's see now how to record data in ORDA dataclasses.</p>
+<h2><a class="anchor" aria-hidden="true" id="adding-data"></a><a href="#adding-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding data</h2>
+<p>In ORDA, you can add a record to a dataclass using the <code>new()</code> command.</p>
+<blockquote>
+<p>In the ORDA world, a record is an <strong>entity</strong> -- an entity is itself an object. A command that is attached to a specific object is called a <strong>member method</strong>.</p>
+</blockquote>
+<pre><code class="hljs css language-code4d"><span class="hljs-symbol">$e</span>ntity:=ds.Company.<span class="hljs-keyword">new</span>() <span class="hljs-comment">//create a new entity reference</span>
+<span class="hljs-comment">//in the Company dataclass  </span>
+<span class="hljs-comment">//and assign it to the $entity variable</span>
+</code></pre>
+<p>A new entity object contains a &quot;copy&quot; of all attributes of its parent dataclass, thus you can assign values to them:</p>
+<pre><code class="hljs css language-code4d">$entity.name:=<span class="hljs-string">"ACME, inc."</span>  
+$entity.city:=<span class="hljs-string">"London"</span>  
+//$entity.ID is automatically<span class="hljs-built_in"> filled
+</span></code></pre>
+<p>Right now, the entity only exists in memory. To store it in the data file, you need to save it using the <code>save()</code> member method:</p>
+<pre><code class="hljs css language-code4d"><span class="hljs-variable">$status</span>:=<span class="hljs-variable">$entity</span>.<span class="hljs-keyword">save</span>()
+</code></pre>
+<p>L'éditeur des utilisateurs se trouve dans la boîte à outils de 4D.</p>
+<p><img src="/docs/assets/en/Users/editor.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="ajouter-et-modifier-des-utilisateurs"></a><a href="#ajouter-et-modifier-des-utilisateurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ajouter et modifier des utilisateurs</h3>
+<p>Vous utilisez l’éditeur d’utilisateurs pour créer des comptes utilisateurs, définir leurs propriétés et leur appartenance aux différents groupes.</p>
+<p>Pour ajouter un utilisateur depuis la boite à outils :</p>
+<ol>
+<li>Sélectionnez <strong>Boîte à outils &gt; Utilisateurs</strong> dans le menu <strong>Développement</strong> ou cliquez sur le bouton <strong>Boîte outils</strong> de la barre d’outils de 4D. 4D affiche la fenêtre d’édition des utilisateurs.</li>
+</ol>
+<p>La liste des utilisateurs affiche tous les utilisateurs, y compris <a href="#designer-and-administrator">le Super_Utilisateur et l'l’Administrateur</a>.</p>
+<ol start="2">
+<li>Cliquez sur le bouton d’ajout <img src="/docs/assets/en/Users/PlussNew.png" alt=""> situé au-dessous de la Liste des utilisateurs. OU Cliquez avec le bouton droit de la souris dans la Liste des utilisateurs et choisissez la commande <strong>Ajouter</strong> ou <strong>Dupliquer</strong> dans le menu contextuel.</li>
+</ol>
+<blockquote>
+<p>La commande <strong>Dupliquer</strong> permet de créer rapidement plusieurs utilisateurs ayant des caractéristiques communes.</p>
+</blockquote>
+<p>4D ajoute un nouvel utilisateur à la liste, nommé par défaut &quot;Nouvel utilisateurN&quot;.</p>
+<ol start="3">
+<li><p>Saisissez le nom du nouvel utilisateur. Ce nom sera utilisé par l’utilisateur pour ouvrir la base. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande <strong>Renommer</strong> du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.</p></li>
+<li><p>Pour saisir le mot de passe de l’utilisateur, cliquez sur le bouton <strong>Modifier...</strong> dans la zone des propriétés de l’utilisateur et saisissez deux fois le mot de passe dans la boite de dialogue. Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).</p></li>
+</ol>
+<blockquote>
+<p>Les utilisateurs peuvent modifier leur mot de passe à tout moment en fonction des options de la page Sécurité des propriétés de la base, ou à l'aide de la commande <code>CHANGE PASSWORD</code>.</p>
+</blockquote>
+<ol start="5">
+<li>Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”. Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.</li>
+</ol>
+<p>L’appartenance des utilisateurs aux groupes peut également être définie par groupe dans la <a href="#configuring-access-groups">page Groupes</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="supprimer-un-utilisateur"></a><a href="#supprimer-un-utilisateur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supprimer un utilisateur</h3>
+<p>Pour supprimer un utilisateur, sélectionnez-le puis cliquez sur le bouton de suppression ou utilisez la commande <strong>Supprimer</strong> du menu contextuel. <img src="/docs/assets/en/Users/MinussNew.png" alt=""></p>
+<p>Les utilisateurs supprimés n'apparaissent plus dans la liste de l'éditeur d'utilisateurs. A noter que les numéros des utilisateurs supprimés peuvent être réattribués lors de la création de nouveaux comptes.</p>
+<h3><a class="anchor" aria-hidden="true" id="propriétés-des-utilisateurs"></a><a href="#propriétés-des-utilisateurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés des utilisateurs</h3>
+<ul>
+<li><p>Le champ <strong>Type d’utilisateur</strong> : le champ Type d’utilisateur contient &quot;Super_Utilisateur&quot;, &quot;Administrateur&quot;, ou (pour tous les autres utilisateurs) &quot;Utilisateur&quot;.</p></li>
+<li><p><strong>Méthodes de démarrage</strong> : Nom d'une méthode associée qui sera automatiquement associée lorsque l'utilisateur ouvre la base (facultatif). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="éditeur-de-groupes"></a><a href="#éditeur-de-groupes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Éditeur de groupes</h2>
+<p>L'éditeur de groupes se trouve dans la boîte à outils de 4D.</p>
+<h3><a class="anchor" aria-hidden="true" id="configurer-des-groupes"></a><a href="#configurer-des-groupes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configurer des groupes</h3>
+<p>Vous utilisez l’éditeur de groupes pour définir les éléments qu’ils contiennent (utilisateurs et/ou autres groupes) et pour répartir les accès aux plug-ins.</p>
+<p>Attention, une fois créé, un groupe ne peut pas être supprimé. Si vous souhaitez désactiver un groupe, il vous suffit de retirer tous les utilisateurs qu’il contient.</p>
+<p>Pour créer un groupe :</p>
+<ol>
+<li><p>Sélectionnez <strong>Boîte à outils &gt; Groupes</strong> dans le menu <strong>Développement</strong> ou cliquez sur le bouton <strong>Boîte outils</strong> de la barre d’outils de 4D puis cliquez sur le bouton <strong>Groupes</strong>. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.</p></li>
+<li><p>Cliquez sur le bouton <img src="/docs/assets/en/Users/PlussNew.png" alt=""> situé en-dessous de la liste des groupes.<br>
+OU<br>
+Faites un clic droit sur la liste de groupes et sélectionnez la commande <strong>Ajouter</strong> ou <strong>Dupliquer</strong> dans le menu contextuel.</p></li>
+</ol>
+<blockquote>
+<p>La commande Dupliquer permet de créer rapidement plusieurs groupes ayant des caractéristiques communes.</p>
+</blockquote>
+<p>4D ajoute un nouveau groupe à la liste, nommé par défaut &quot;Nouveau groupe1&quot;.</p>
+<ol start="3">
+<li>Saisissez le nom du nouveau groupe. Le nom du groupe peut avoir une longueur maximale de 15 caractères. Vous pouvez renommer un groupe à tout moment en utilisant la commande <strong>Renommer</strong> du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="placer-des-utilisateurs-ou-des-groupes-dans-des-groupes"></a><a href="#placer-des-utilisateurs-ou-des-groupes-dans-des-groupes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Placer des utilisateurs ou des groupes dans des groupes</h3>
+<p>Vous pouvez placer tout utilisateur ou tout groupe dans un groupe et vous pouvez aussi le placer dans plusieurs groupes. Il n’est pas obligatoire de placer un utilisateur dans un groupe.</p>
+<p>Pour placer un utilisateur ou un groupe dans un groupe, il suffit de sélectionner le groupe dans la liste puis de cocher l’option &quot;Membre&quot; pour chaque utilisateur ou groupe dans la zone d’attribution des membres :</p>
+<p><img src="/docs/assets/en/Users/groups.png" alt=""></p>
+<p>Si vous cochez le nom d’un utilisateur, l’utilisateur est ajouté au groupe. Si vous cochez un nom de groupe, tous les utilisateurs du groupe sont ajoutés au nouveau groupe. L’utilisateur ou le groupe affilié dispose alors des privilèges d’accès affectés au nouveau groupe.</p>
+<p>Placer des groupes dans d’autres groupes permet de créer une hiérarchie d’utilisateurs. Les utilisateurs d’un groupe placé dans un autre groupe disposent des autorisations d’accès des deux groupes. Reportez-vous au paragraphe <a href="#an-access-hierarchy-scheme">Un schéma d’accès hiérarchique</a> ci-dessous.</p>
+<p>Pour supprimer un utilisateur ou un groupe d’un autre groupe, il suffit de désélectionner l’option correspondante dans la liste des membres.</p>
+<h3><a class="anchor" aria-hidden="true" id="affecter-un-groupe-à-un-plug-in-ou-à-un-serveur"></a><a href="#affecter-un-groupe-à-un-plug-in-ou-à-un-serveur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Affecter un groupe à un plug-in ou à un serveur</h3>
+<p>Vous pouvez affecter un groupe d’accès à tout plug-in 4D installé dans votre base de données. Les plug-ins comprennent tous les plug-ins de 4D ainsi que tout plug-in développés par une société tierce.</p>
+<p>Répartir les accès aux plug-ins vous permet de contrôler l’utilisation des licences dont vous disposez pour ces plug-ins. Tout utilisateur n’appartenant pas au groupe d’accès à un plug-in ne pourra pas charger ce plug-in.</p>
+<p>Vous pouvez également contrôler l’utilisation du serveur Web et du serveur SOAP de 4D en mode distant via la zone d’accès aux plug-ins.</p>
+<p>La zone “Plug-ins” de la page Groupes de la boîte à outils liste tous les plug-ins chargés par l’application 4D. Pour affecter un groupe à un plug-in, il suffit de cocher l’option correspondante.</p>
+<p><img src="/docs/assets/en/Users/plugins.png" alt=""></p>
+<p>Les lignes <strong>4D Client Web Server</strong> et <strong>4D Client SOAP Server</strong> permettent contrôler la possibilité de publication Web et SOAP (Web Services) de chaque 4D en mode distant. En effet, ces licences sont considérées par 4D Server comme des licences de plug-ins. Ainsi, comme pour un plug-in, vous pouvez restreindre le droit d’utiliser ces licences à un groupe d’utilisateurs spécifique.</p>
+<h3><a class="anchor" aria-hidden="true" id="un-schéma-daccès-hiérarchique"></a><a href="#un-schéma-daccès-hiérarchique" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Un schéma d’accès hiérarchique</h3>
+<p>Le meilleur moyen d’assurer la sécurité de votre base de données et de proposer différents niveaux d’accès aux utilisateurs est d’utiliser un schéma hiérarchique des accès. Les utilisateurs peuvent être affectés à différents groupes et les groupes peuvent être hiérarchisés pour créer des niveaux de droits d’accès. Cette section décrit différentes approches de ce thème.</p>
+<p>Dans cet exemple, un utilisateur appartient à l’un des trois groupes définis suivant son niveau de responsabilité. Les utilisateurs du groupe Comptabilité sont responsables de la saisie de données. Les utilisateurs du groupe Dir. finance sont responsables de la mise à jour des données, comme la mise à jour d’enregistrements ou la suppression d’enregistrements obsolètes. Les utilisateurs du groupe Direction générale sont responsables de l’analyse de données, ce qui inclut la réalisation de recherches et l’impression d’états.</p>
+<p>Les groupes sont hiérarchisés afin que les privilèges soient correctement affectés aux utilisateurs de chacun des groupes.</p>
+<ul>
+<li><p>Le groupe Direction générale ne contient que les utilisateurs de “haut niveau”. <img src="/docs/assets/en/Users/schema1.png" alt=""></p></li>
+<li><p>Le groupe Dir. finance contient les utilisateurs du groupe Direction générale. <img src="/docs/assets/en/Users/schema2.png" alt=""></p></li>
+<li><p>Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale. <img src="/docs/assets/en/Users/schema3.png" alt=""></p></li>
+</ul>
+<p>Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.</p>
+<p>Un tel système hiérarchique rend aisée l’affectation d’un utilisateur à un groupe. Il suffit de placer chaque utilisateur dans un groupe et d’utiliser la hiérarchie des groupes pour déterminer les accès.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#exploring-the-datastore">Exploring the datastore</a></li><li><a href="#adding-data">Adding data</a><ul class="toc-headings"><li><a href="#ajouter-et-modifier-des-utilisateurs">Ajouter et modifier des utilisateurs</a></li><li><a href="#supprimer-un-utilisateur">Supprimer un utilisateur</a></li><li><a href="#propriétés-des-utilisateurs">Propriétés des utilisateurs</a></li></ul></li><li><a href="#éditeur-de-groupes">Éditeur de groupes</a><ul class="toc-headings"><li><a href="#configurer-des-groupes">Configurer des groupes</a></li><li><a href="#placer-des-utilisateurs-ou-des-groupes-dans-des-groupes">Placer des utilisateurs ou des groupes dans des groupes</a></li><li><a href="#affecter-un-groupe-à-un-plug-in-ou-à-un-serveur">Affecter un groupe à un plug-in ou à un serveur</a></li><li><a href="#un-schéma-daccès-hiérarchique">Un schéma d’accès hiérarchique</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:fr"]}
+              });
+            </script></body></html>
