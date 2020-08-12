@@ -4,7 +4,7 @@ title: ヘルプ
 ---
 
 ---
-## Help Tip
+## ヘルプTips
 
 This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
 
@@ -24,7 +24,7 @@ You can either:
 
 |    名    | データタイプ | とりうる値                                 |
 |:-------:|:------:| ------------------------------------- |
-| tooltip |  テキスト  | additional information to help a user |
+| tooltip |  text  | additional information to help a user |
 
 #### 対象オブジェクト
 
