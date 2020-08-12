@@ -132,7 +132,7 @@ Here is the description of the JSON file contents:
     </th>
     
     <th>
-      Description
+      Beschreibung
     </th>
   </tr>
   
@@ -262,7 +262,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| Parameter | Typ    | Description                                              |
+| Parameter | Typ    | Beschreibung                                             |
 | --------- | ------ | -------------------------------------------------------- |
 | $macro    | Objekt | Macro declaration object (in the `formMacros.json` file) |
 
@@ -302,7 +302,7 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| Parameter | Typ    | Description                                      |
+| Parameter | Typ    | Beschreibung                                     |
 | --------- | ------ | ------------------------------------------------ |
 | $editor   | Objekt | Form properties                                  |
 | $result   | Objekt | Form properties modified by the macro (optional) |
@@ -315,7 +315,7 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties of the `$editor` object:
 
-| Property                  | Typ        | Description                                                                       |
+| Property                  | Typ        | Beschreibung                                                                      |
 | ------------------------- | ---------- | --------------------------------------------------------------------------------- |
 | $editor.form              | Objekt     | The entire form                                                                   |
 | $editor.file              | File       | File object of the form file                                                      |
@@ -329,7 +329,7 @@ Here are the properties of the `$editor` object:
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Property          | Typ        | Description                                                 |
+| Property          | Typ        | Beschreibung                                                |
 | ----------------- | ---------- | ----------------------------------------------------------- |
 | currentPage       | Objekt     | currentPage including objects modified by the macro, if any |
 | currentSelection  | Collection | currentSelection if modified by the macro                   |
@@ -349,9 +349,9 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using an object with the following structure:
 
-| Property | Typ | Description |
-| -------- | --- | ----------- |
-|          |     |             |
+| Property | Typ | Beschreibung |
+| -------- | --- | ------------ |
+|          |     |              |
  source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
@@ -393,7 +393,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Typ        | Description                              |
+| Parameter    |                       | Typ        | Beschreibung                             |
 | ------------ | --------------------- | ---------- | ---------------------------------------- |
 | $editor      |                       | Objekt     | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | Objekt     | Object returned by [onInvoke](#oninvoke) |

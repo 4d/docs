@@ -10,9 +10,9 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値       |
-| ----------- | ------ | ----------- |
-| showHeaders | ブール    | true, false |
+| 名           | データタイプ  | とりうる値       |
+| ----------- | ------- | ----------- |
+| showHeaders | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -22,7 +22,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 
 ---
-## Height
+## 高さ
 
 This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
 

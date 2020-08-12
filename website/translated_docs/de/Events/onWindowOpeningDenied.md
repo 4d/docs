@@ -8,7 +8,7 @@ title: On Window Opening Denied
 | 53   | [Web Area](FormObjects/webArea_overview.md) | A pop-up window has been blocked |
 
 
-## Description
+## Beschreibung
 
 This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
 

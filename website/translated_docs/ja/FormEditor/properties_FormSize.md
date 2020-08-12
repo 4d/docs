@@ -30,7 +30,7 @@ Size options depend on the value of the **Size based on** option.
 | formSizeAnchor | string | Name of object to use to defined the size of the form |
 
 ---
-## Height
+## 高さ
 
 Height of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
 

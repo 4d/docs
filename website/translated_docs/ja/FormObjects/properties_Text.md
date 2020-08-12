@@ -4,16 +4,16 @@ title: テキスト
 ---
 
 ---
-## Allow font/color picker
+## ピッカーの使用を許可
 
 When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
 
 #### JSON 文法
 
-| プロパティ                | データタイプ | とりうる値                 |
-| -------------------- | ------ | --------------------- |
-| allowFontColorPicker | ブール    | false (default), true |
+| プロパティ                | データタイプ  | とりうる値                 |
+| -------------------- | ------- | --------------------- |
+| allowFontColorPicker | boolean | false (default), true |
 
 #### 対象オブジェクト
 
@@ -31,7 +31,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 | プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
-| fontWeight | テキスト   | "normal", "bold" |
+| fontWeight | text   | "normal", "bold" |
 
 #### 対象オブジェクト
 
@@ -298,21 +298,21 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 
 ---
-## Meta Info Expression
+## メタ情報式
 `Collection or entity selection type list boxes`
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | 型      | 説明                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | string | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
-| fill                | string | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
-| fontStyle           | string | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
-| fontWeight          | string | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
-| textDecoration      | string | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable        | ブール    | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
-| 無効                  | ブール    | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
-| cell.\<columnName> | オブジェクト | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
+| Property name       | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
+| fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
+| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
+| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
+| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
+| unselectable        | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
+| 無効                  | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
+| cell.\<columnName> | オブジェクト  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
@@ -365,7 +365,7 @@ $0:=Form.meta
 
 
 ---
-## Multi-style
+## マルチスタイル
 
 This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
 
@@ -400,7 +400,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      ブール
+      boolean
     </td>
     
     <td>
@@ -426,7 +426,7 @@ This property enables the possibility of using specific styles in the selected a
 
 <hr />
 <h2 spaces-before="0">
-  Orientation
+  方向
 </h2>
 
 <p spaces-before="0">
@@ -665,7 +665,7 @@ This property enables the possibility of using specific styles in the selected a
 
 <hr />
 <h2 spaces-before="0">
-  Store with default style tags
+  スタイルタグを全て保存
 </h2>
 
 <p spaces-before="0">
@@ -719,7 +719,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      ブール
+      boolean
     </td>
     
     <td>

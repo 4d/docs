@@ -7,7 +7,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 > In the "Form Properties" chapter, properties are sorted according to their names and themes in the Property List.
 
 
-| Property                                                                 | Description                                                                            | Possible Values                                                                                                                      |
+| Property                                                                 | Beschreibung                                                                           | Possible Values                                                                                                                      |
 | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | <a name="a">**a**</a>                                                |                                                                                        |                                                                                                                                      |
 | [bottomMargin](properties_FormSize.md#vert-margin)                       | Vertical margin value (in pixels)                                                      | minimum: 0<a name="d"></a>                                                                                                  |

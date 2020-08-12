@@ -22,9 +22,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値       |
-| ------------------ | ------ | ----------- |
-| automaticInsertion | ブール    | true, false |
+| 名                  | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| automaticInsertion | boolean | true, false |
 
 #### 対象オブジェクト
 
@@ -53,7 +53,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 
 ---
-## Choice List (static list)
+## 選択リスト (静的リスト)
 
 List of static values to use as labels for the tab control object.
 
@@ -128,7 +128,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ---
 
-## Default (list of) values
+## デフォルト値
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
@@ -277,7 +277,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 
 ---
-## Selection Name
+## 命名セレクション
 `Named selection list boxes`
 
 Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.

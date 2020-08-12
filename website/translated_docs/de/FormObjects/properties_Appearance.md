@@ -83,7 +83,7 @@ An interface tool allowing the user to move the viewing area to the left or righ
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | JSON value  | Beschreibung                                                                                                                                             |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ja            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | Nein          | "hidden"    | The scrollbar is never visible                                                                                                                           |
@@ -365,7 +365,7 @@ An interface tool allowing the user to move the viewing area up and down.
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | JSON value  | Beschreibung                                                                                                                                             |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ja            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | Nein          | "hidden"    | The scrollbar is never visible                                                                                                                           |

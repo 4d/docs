@@ -27,5 +27,5 @@ Several types of method references are supported:
 
 | 名      | データタイプ | とりうる値                                                            |
 | ------ | ------ | ---------------------------------------------------------------- |
-| method | テキスト   | Form method standard or custom file path, or project method name |
+| method | text   | Form method standard or custom file path, or project method name |
 

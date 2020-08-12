@@ -11,7 +11,7 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 ## Available syntaxes
 
-| Syntax                                                                             | Beispiel                                 | Description                                                                     |
+| Syntax                                                                             | Beispiel                                 | Beschreibung                                                                    |
 | ---------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Returns all the data (by default the first 100 entities) for the dataclass      |
 | [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Returns the data for the specific entity defined by the dataclass's primary key |
@@ -28,13 +28,13 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
 
-### Description
+### Beschreibung
 
 When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
 
 Here is a description of the data returned:
 
-| Property      | Typ        | Description                                                                                                                                                                                     |
+| Property      | Typ        | Beschreibung                                                                                                                                                                                    |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | String     | Name of the datastore class.                                                                                                                                                                    |
 | __COUNT       | Zahl       | Number of entities in the datastore class.                                                                                                                                                      |
@@ -44,7 +44,7 @@ Here is a description of the data returned:
 
 Each entity contains the following properties:
 
-| Property    | Typ    | Description                                                                                                |
+| Property    | Typ    | Beschreibung                                                                                               |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
 | __KEY       | String | Value of the primary key defined for the datastore class.                                                  |
 | __TIMESTAMP | Datum  | Timestamp of the last modification of the entity                                                           |
@@ -146,7 +146,7 @@ Return all the data for a specific datastore class.
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
 
-### Description
+### Beschreibung
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your datastore class. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
@@ -195,7 +195,7 @@ The following request returns all the public data in the Company datastore class
 
 Returns the data for one entity in which the attribute's value is defined
 
-### Description
+### Beschreibung
 
 By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.
 

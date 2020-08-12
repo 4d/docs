@@ -99,7 +99,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "メソッド"
+        "title": "Methods"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -715,7 +715,7 @@
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
       "REST Server": "REST Server",
-      "Forms": "フォーム",
+      "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "Form Object Properties",
@@ -730,7 +730,7 @@
     "Project Management|in index page Getting started": "プロジェクト管理",
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
-    "Forms|no description given": "フォーム",
+    "Forms|no description given": "Forms",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",

@@ -10,7 +10,7 @@ The directory handles user access through REST requests.
 
 Opens a REST session on your 4D application and logs in the user.
 
-### Description
+### Beschreibung
 Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
 
 All parameters must be passed in **headers** of a POST method:
