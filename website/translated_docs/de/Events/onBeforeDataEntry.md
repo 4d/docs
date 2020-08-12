@@ -8,7 +8,7 @@ title: On Before Data Entry
 | 41   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A list box cell is about to change to editing mode |
 
 
-## Description
+## Beschreibung
 
 This event is generated just before a cell in the list box is edited (before the entry cursor is displayed). This event allows the developer, for example, to display a different text depending on whether the user is in the display or edit mode.
 
