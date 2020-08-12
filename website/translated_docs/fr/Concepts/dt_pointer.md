@@ -7,7 +7,7 @@ Les variables ou expressions de type Pointeur sont des références à d'autres 
 
 Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Pour appeler l’un d’entre eux, vous écrivez simplement son nom. Cependant, il est parfois utile de pouvoir appeler ou référencer ces éléments sans nécessairement connaître leur nom. C’est ce que permettent les pointeurs.
 
-Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : «Allons faire un tour en voiture» au lieu de «Allons faire un tour en voiture avec la plaque d’immatriculation 123ABD» Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression «votre voiture» L'expression «voiture avec plaque d'immatriculation 123ABD» est comme le nom d'un objet, et l'utilisation de l'expression «votre voiture» revient à utiliser un pointeur pour référencer l'objet.
+Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : «Allons faire un tour en voiture» au lieu de «Allons faire un tour en voiture avec la plaque d’immatriculation 123ABD» Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression «votre voiture» L'expression «voiture avec plaque d'immatriculation 123ABD» est comme le nom d'un objet, et l'utilisation de l'expression «votre voiture» revient à utiliser un pointeur pour référencer l'objet. Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression «votre voiture» L'expression «voiture avec plaque d'immatriculation 123ABD» est comme le nom d'un objet, et l'utilisation de l'expression «votre voiture» revient à utiliser un pointeur pour référencer l'objet.
 
 La capacité de se référer à quelque chose sans connaître son identité exacte est très utile. Si votre ami s’achetait une nouvelle voiture, l’expression “ta voiture” serait toujours exacte — ce serait toujours une voiture et vous pourriez toujours aller quelque part avec. Les pointeurs fonctionnent de la même manière. Par exemple, un pointeur peut pointer à un moment donné vers un champ numérique appelé Age, et plus tard vers une variable numérique appelée Ancien âge. Dans les deux cas, le pointeur référence des données numériques pouvant être utilisée dans des calculs.
 
@@ -30,13 +30,13 @@ Il est plus facile d’expliquer l’utilisation des pointeurs au travers d’un
 ```4d
 MaVar:="Bonjour"
 ```
-$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
+$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar: We can now create a pointer to $MyVar:
 
 ```4d
 C_POINTER($MonPointeur)
 $MonPointeur:=->MaVar
 ```
-The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MaVar. Ce pointeur est assigné à MonPointeur via l’opérateur d’assignation.
+The -> symbol means “get a pointer to.” The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MaVar. Ce pointeur est assigné à MonPointeur via l’opérateur d’assignation.
 
 $MonPointeur est désormais une variable qui contient un pointeur vers $MaVar. $MonPointeur ne contient pas “Bonjour”, la valeur de $MaVar, mais vous pouvez utiliser $MonPointeur pour obtenir cette valeur. L’expression suivante retourne la valeur de $MaVar :
 ```4d

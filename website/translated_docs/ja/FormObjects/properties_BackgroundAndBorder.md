@@ -20,7 +20,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 
 ---
-## Background Color / Fill Color
+## 背景色/塗りカラー
 
 Defines the background color of an object.
 
@@ -83,7 +83,7 @@ Allows setting a standard style for the object border.
 
 
 ---
-## Dotted Line Type
+## 点線タイプ
 
 Describes dotted line type as a sequence of black and white points.
 
@@ -125,7 +125,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 
 ---
-## Line Color
+## 線カラー
 
 Designates the color of the object's lines. The color can be specified by:
 
@@ -150,7 +150,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 
 ---
-## Line Width
+## 線幅
 
 Designates the thickness of a line.
 
@@ -228,4 +228,4 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 [リストボックス](listbox_overview.md#overview)
 
 #### 参照
-[Background Color / Fill Color](#background-color-fill-color)
+[背景色/塗りカラー](#background-color-fill-color)

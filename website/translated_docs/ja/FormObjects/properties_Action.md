@@ -67,7 +67,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 ---
-## Execute object method
+## オブジェクトメソッド実行
 When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
 
 #### JSON 文法
@@ -138,7 +138,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 
 ---
-## Multi-selectable
+## 複数選択可
 
 Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
 

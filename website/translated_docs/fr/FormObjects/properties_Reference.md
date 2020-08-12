@@ -207,7 +207,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Number of columns.
+      Nombre de colonnes.
     </td>
     
     <td>
@@ -221,7 +221,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      A collection of list box columns
+      Une collection de colonnes list box
     </td>
     
     <td>

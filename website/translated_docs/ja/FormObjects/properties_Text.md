@@ -4,7 +4,7 @@ title: テキスト
 ---
 
 ---
-## Allow font/color picker
+## ピッカーの使用を許可
 
 When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
@@ -152,9 +152,9 @@ Allows defining the object's font size in points.
 
 #### JSON 文法
 
-| 名        | データタイプ | とりうる値                       |
-| -------- | ------ | --------------------------- |
-| fontSize | 整数     | Font size in points. 最小値: 0 |
+| 名        | データタイプ  | とりうる値                       |
+| -------- | ------- | --------------------------- |
+| fontSize | integer | Font size in points. 最小値: 0 |
 
 #### 対象オブジェクト
 
@@ -300,7 +300,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 
 ---
-## Meta Info Expression
+## メタ情報式
 `Collection or entity selection type list boxes`
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
@@ -367,7 +367,7 @@ $0:=Form.meta
 
 
 ---
-## Multi-style
+## マルチスタイル
 
 This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
 
@@ -428,7 +428,7 @@ This property enables the possibility of using specific styles in the selected a
 
 <hr />
 <h2 spaces-before="0">
-  Orientation
+  方向
 </h2>
 
 <p spaces-before="0">
@@ -667,7 +667,7 @@ This property enables the possibility of using specific styles in the selected a
 
 <hr />
 <h2 spaces-before="0">
-  Store with default style tags
+  スタイルタグを全て保存
 </h2>
 
 <p spaces-before="0">

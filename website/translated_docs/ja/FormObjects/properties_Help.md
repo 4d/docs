@@ -4,7 +4,7 @@ title: ヘルプ
 ---
 
 ---
-## Help Tip
+## ヘルプTips
 
 This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
 

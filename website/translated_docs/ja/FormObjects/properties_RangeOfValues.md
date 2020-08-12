@@ -4,7 +4,7 @@ title: Range of Values
 ---
 
 ---
-## Default value
+## デフォルト値
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
 
@@ -60,7 +60,7 @@ Allows setting a list whose values cannot be entered in the object. ユーザー
 
 ---
 
-## Required List
+## 指定リスト
 
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 

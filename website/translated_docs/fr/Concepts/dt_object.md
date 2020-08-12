@@ -36,8 +36,7 @@ Les objets doivent être initialisés à l'aide, par exemple, de la commande `Ne
 
 Exemple :
 ```4d
- C_OBJET($obVar) //création d'une variable 4D de type objet.
- $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
+ C_OBJET($obVar) //création d'une variable 4D de type objet. $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
 ```
 
 ### Objet standard ou partagé
@@ -171,7 +170,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
 ```4d
      C_OBJECT($o)
  mymethod($o.a) //passage d'un paramètre indéfini
- 
+
   //Dans la méthode mymethod
  C_TEXT($1) //Paramètre de type texte
   // $1 contient ""
@@ -194,7 +193,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
  - Booléen : False
  - Chaîne : ""
  - Numérique : 0
- - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""! si la base utilise le type date pour les objets, sinon ""
+ - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""
  - Heure : 0 (nombre de ms)
  - Indéfini, Null : pas de changement
 
@@ -238,12 +237,12 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
  $myObj:=New object //création d'un objet et affectation à la variable
  $myObj.age:=56
  $age:=$myObj.age //56
- 
+
   // Utilisation de la syntaxe par commande
  C_OBJECT($myObj2) //déclaration d'une variable objet 4D
  OB SET($myObj2;"age";42) //création d'un objet et création de la propriété age
  $age:=OB Get($myObj2;"age") //42
- 
+
   // Bien entendu, les deux notations peuvent être utilisées simultanément
  C_OBJECT($myObj3)
  OB SET($myObj3;"age";10)

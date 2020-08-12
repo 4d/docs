@@ -103,16 +103,16 @@ Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une 
 
 Une expression utilisant un opérateur sur les bits retourne une valeur de type Entier long, à l'exception de l'opérateur Tester bit avec lequel l'expression retournée est du type Booléen. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
-| Opération             | Opérateur | Syntaxe                   | Retourne                |
-| --------------------- | --------- | ------------------------- | ----------------------- |
-| ET                    | &         | E. long & E. long         | E. long                 |
-| OU (inclusif)         | &#124;    | E. long &#124; E. long    | E. long                 |
-| OU (exclusif)         | \^&#124; | E. long \^&#124; E. long | E. long                 |
-| Décaler bits à gauche | <<        | E. Long << E. Long        | E. long (voir note n°1) |
-| Décaler bits à droite | >>        | E. Long >> E. Long        | E. long (voir note n°1) |
-| Mettre bit à 1        | ?+        | E. long ?+ E. long        | E. long (voir note n°2) |
-| Mettre bit à 0        | ?-        | E. long ?- E. long        | E. long (voir note n°2) |
-| Tester bit            | ??        | E. long ?? E. long        | Booléen (voir note n°2) |
+| Opération             | Opérateur | Syntaxe                | Retourne                |
+| --------------------- | --------- | ---------------------- | ----------------------- |
+| ET                    | &         | long & E. long         | E. long                 |
+| OU (inclusif)         | &#124;    | long &#124; E. long    | E. long                 |
+| OU (exclusif)         | \^&#124; | long \^&#124; E. long | E. long                 |
+| Décaler bits à gauche | <<        | E. Long << E. Long     | long (voir note n°1)    |
+| Décaler bits à droite | >>        | E. Long >> E. Long     | long (voir note n°1)    |
+| Mettre bit à 1        | ?+        | long ?+ E. long        | long (voir note n°2)    |
+| Mettre bit à 0        | ?-        | long ??                | long (voir note n°2)    |
+| Tester bit            | ??        | E. E. long             | Booléen (voir note n°2) |
 
 #### Notes
 
@@ -136,13 +136,13 @@ Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effe
 
 ### Exemples
 
-| Opération             | Exemple                                     | Résultat   |
-| --------------------- | ------------------------------------------- | ---------- |
-| ET                    | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
-| OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
-| OU (exclusif)         | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
-| Décaler bits à gauche | 0x0000FFFF << 8                             | 0x00FFFF00 |
-| Décaler bits à droite | 0x0000FFFF >> 8                             | 0x000000FF |
-| Mettre bit à 1        | 0x00000000 ?+ 16                            | 0x00010000 |
-| Mettre bit à 0        | 0x00010000 ?- 16                            | 0x00000000 |
-| Tester bit            | 0x00010000 ?? 16                            | Vrai       |
+| Opération             | Exemple                         | Résultat   |
+| --------------------- | ------------------------------- | ---------- |
+| ET                    | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
+| OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
+| OU (exclusif)         | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
+| Décaler bits à gauche | 0x0000FFFF << 8                 | 0x00FFFF00 |
+| Décaler bits à droite | 0x0000FFFF >> 8                 | 0x000000FF |
+| Mettre bit à 1        | 0x00000000 ?+ 16                | 0x00010000 |
+| Mettre bit à 0        | 0x00010000 ?- 16                | 0x00000000 |
+| Tester bit            | 0x00010000 ?? 16                | Vrai       |

@@ -234,27 +234,27 @@ Lecture dans une base de données externe :
  $Ptr_3:=$4
  $Ptr_4:=$5
  $Ptr_5:=$6
- 
+
  Debut SQL
- 
+
     USE DATABASE DATAFILE :[<>MyDatabase];
- 
+
     SELECT ALL ID, kind, name, code, sort_order
     FROM KEEPIT
     INTO :$Ptr_1, :$Ptr_2, :$Ptr_3, :$Ptr_4, :$Ptr_5;
- 
+
     USE DATABASE SQL_INTERNAL;
- 
+
  Fin SQL
 ```
 
 ## Utilisation de ressources
 
-Les composants peuvent utiliser des ressources. Conformément aux principes de gestion des ressources, les fichiers de ressources des composants doivent être placés dans un dossier Resources, situé à côté du fichier .4db ou .4dc du composant. Si le composant est d’architecture .4dbase (architecture conseillée), le dossier Resources doit être placé à l’intérieur de ce dossier.
+Les composants peuvent utiliser des ressources. Si le composant est d’architecture .4dbase (architecture conseillée), le dossier Resources doit être placé à l’intérieur de ce dossier.
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» Les ressources sont divisées entre les différentes bases de données : il n'est pas possible d'accéder aux ressources du composant A depuis le composant B ou depuis la base de données hôte.
+Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» Les ressources sont divisées entre les différentes bases de données : il n'est pas possible d'accéder aux ressources du composant A depuis le composant B ou depuis la base de données hôte.
 
 ## Aide en ligne des composants
 Un mécanisme spécifique a été mis en place afin de permettre aux développeurs d’ajouter des aides en ligne à leurs composants. Le principe est semblable à celui proposé pour les bases de données 4D :

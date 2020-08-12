@@ -39,7 +39,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_Action.md#standard-action">action</a>
+      <a href="properties_Action.md#標準アクション">action</a>
     </td>
     
     <td>
@@ -67,7 +67,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_BackgroundAndBorder.md#alternate-background-color">alternateFill</a>
+      <a href="properties_BackgroundAndBorder.md#交互に使用する背景色">alternateFill</a>
     </td>
     
     <td>
@@ -149,7 +149,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_CoordinatesAndSizing.md#bottom">bottom</a>
+      <a href="properties_CoordinatesAndSizing.md#下">bottom</a>
     </td>
     
     <td>
@@ -189,7 +189,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_Object.md#css-class">class</a>
+      <a href="properties_Object.md#CSSクラス">class</a>
     </td>
     
     <td>
@@ -273,7 +273,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_DataSource.md#current-item">currentItemSource</a>
+      <a href="properties_DataSource.md#カレントの項目">currentItemSource</a>
     </td>
     
     <td>
@@ -287,7 +287,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_DataSource.md#current-item-position">currentItemPositionSource</a>
+      <a href="properties_DataSource.md#カレントの項目の位置">currentItemPositionSource</a>
     </td>
     
     <td>
@@ -343,7 +343,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_TextAndPicture.md#icon-offset">customOffset</a>
+      <a href="properties_TextAndPicture.md#アイコンオフセット">customOffset</a>
     </td>
     
     <td>
@@ -551,7 +551,7 @@ You will find in this page a comprehensive list of all object properties sorted 
   
   <tr>
     <td>
-      <a href="properties_Action.md#droppable">dropping</a>
+      <a href="properties_Action.md#ドラッグ有効">dropping</a>
     </td>
     
     <td>
