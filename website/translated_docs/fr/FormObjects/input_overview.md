@@ -20,12 +20,12 @@ Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet 
 
 ```4d
     "myText": {
-        "type": "input",    //define the type of object
-        "spellcheck": true, //enable spelling verification
-        "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form
-        "width": 100,       //width of the object
-        "height": 20        //height of the object
+        "type": "input",    //définit le type d'objet
+        "spellcheck": true, //active la vérification orthographique
+        "left": 60,         //position gauche dans le formulaire  
+        "top": 160,         //position supérieure dans le formulaire
+        "width": 100,       //largeur de l'objet 
+        "height": 20        //hauteur de l'objet
         }
 ```
 
