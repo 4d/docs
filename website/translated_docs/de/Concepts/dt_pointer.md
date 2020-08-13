@@ -45,7 +45,7 @@ $MyPointer->
 
 In diesem Fall gibt er die Zeichenkette “Hello” zurück. Das Symbol -> nach dem Zeiger verweist auf das Objekt, auf das gezeigt wird. Das nennt man Dereferenzierung.
 
-It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. Folgende Programmierzeile zeigt z. B. eine Warnung mit dem darin enthaltenen Wort Hello:
+Es ist wichtig zu verstehen, dass Sie einen Zeiger gefolgt vom Symbol -> überall verwenden können, wo Sie das Objekt verwenden könnten, auf das der Zeiger zeigt. Das bedeutet, Sie können den Ausdruck $MyPointer-> überall verwenden, wo Sie auch die ursprüngliche Variable $MyVar einsetzen können. Folgende Programmierzeile zeigt z. B. eine Warnung mit dem darin enthaltenen Wort Hello:
 ```4d
 ALERT($MyPointer->)
 ```
