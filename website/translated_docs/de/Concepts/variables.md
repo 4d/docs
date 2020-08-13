@@ -3,7 +3,7 @@ id: variables
 title: Variablen
 ---
 
-Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder** speichern Daten permanent auf der Festplatte, **Variablen** speichern Daten temporär im Speicher.
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
