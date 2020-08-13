@@ -11,7 +11,7 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 - Ein Name kann nur mit einem Buchstaben, einem Unterstrich oder einem Dollarzeichen ("$") beginnen. (Beachten Sie, dass das Dollarzeichen ein Element auf lokaler Ebene kennzeichnen kann, siehe unten.)
 - Der Name kann Buchstaben, Zahlen, Leerzeichen und den Unterstrich ("_") enthalten.
-- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Punkte (".") und Klammern ("[ ]") sind in Tabellen-, Feld-, Methoden- oder Variablennamen nicht erlaubt.
 - Kommas, Schrägstriche, Anführungszeichen und Doppelpunkte sind nicht erlaubt.
 - Zeichen, die für Operatoren reserviert sind, wie z.B. * und +, sind nicht erlaubt.
 - Verwenden Sie keine reservierten Namen, d.h. 4D Befehlsnamen (`Date`, `Time`, usw.), Schlüsselwörter (If, For, usw.) und Konstanten.
@@ -19,14 +19,14 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 ### Zusätzliche Regeln für Namen von Objekteigenschaften und ORDA
 - Leerzeichen sind nicht erlaubt.
-- Periods (".") and brackets ("[ ]") are not allowed.
+- und Klammern ("[ ]") sind nicht erlaubt.
 - Bei den Namen wird zwischen Groß- und Kleinschreibung unterschieden.
 
 ### Zusätzliche Regeln für SQL
 - Nur die Zeichen _0123456789abcdefghijklmnopqrstuvwxyz werden akzeptiert.
 - Namen dürfen keine SQL Schlüsselwörter enthalten, wie command, attribute, etc.
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**Hinweis:** Der SQL-Bereich des Inspektors im Struktureditor zeigt automatisch alle nicht-zugelassenen Zeichen im Namen einer Tabelle oder eines Feldes an.
 
 
 ## Tabellen
@@ -148,7 +148,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
 ### Elemente von zweidimensionalen Arrays
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. Das angesprochene Element besteht aus zwei numerischen Ausdrücken in zwei Sätzen geschweifter Klammern.
+Sie verweisen auf ein Element eines zweidimensionalen Array mit doppelt geschweiften Klammern ({…}).   Das angesprochene Element besteht aus zwei numerischen Ausdrücken in zwei Sätzen geschweifter Klammern.
 
 Beispiele:
 ```4d
@@ -170,7 +170,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 ## Objektattribute
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
+Ist Objektnotation aktiviert, definieren Sie ein Objektattribut (auch Objekteigenschaft genannt) durch Setzen eines Punktes (".") zwischen dem Namen des Objekts (oder Attributs) und dem Namen des Attributs. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
 
 Beispiele:
 ```4d
@@ -178,7 +178,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). Weitere Informationen dazu finden Sie unter [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie unter [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 ## Formulare
 
@@ -200,13 +200,13 @@ Beispiel:
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. Objekte der 4D Programmiersprache werden über Objektnotation oder spezifische Befehle erstellt und verwaltet.
+**Hinweis:** Verwechseln Sie nicht Formularobjekte (Schaltflächen, Listboxen, eingebbare Variablen, etc.) und Objekte in der 4D Programmiersprache. Objekte der 4D Programmiersprache werden über Objektnotation oder spezifische Befehle erstellt und verwaltet.
 
 ## Projektmethoden
 
 Eine Projektmethode (Prozedur und Funktion) kennzeichnen Sie durch ihren Namen. Ein Methodenname kann bis zu 31 Zeichen enthalten.
 
-**Note:** A project method that does not return a result is also called a procedure. Eine Projektmethode, die ein Ergebnis zurückgibt, heißt auch Funktion.
+**Hinweis:** Eine Projektmethode, die kein Ergebnis zurückgibt, heißt auch Prozedur. Eine Projektmethode, die ein Ergebnis zurückgibt, heißt auch Funktion.
 
 Beispiele:
 ```4d
@@ -215,9 +215,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. Öffnen Sie dann eine Datenbank nach einigen Monaten für eine Wartung, erkennen Sie im Explorer Fenster bereits an der Schreibweise des Namens, ob die Methode ein Ergebnis zurückgibt.
+**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. Öffnen Sie dann eine Datenbank nach einigen Monaten für eine Wartung, erkennen Sie im Explorer Fenster bereits an der Schreibweise des Namens, ob die Methode ein Ergebnis zurückgibt.
 
-**Note:** When you call a method, you just type its name. Einige in 4D integrierte Befehle wie z. B. `ON EVENT CALL`, sowie alle Plug-In Befehle erwarten dagegen den Namen der Methode als String, wenn ein Parameter für die Methode übergeben wurde. Beispiel:
+**Hinweis:** Zum Aufrufen einer Methode tippen Sie einfach ihren Namen ein. Einige in 4D integrierte Befehle wie z. B. `ON EVENT CALL`, sowie alle Plug-In Befehle erwarten dagegen den Namen der Methode als String, wenn ein Parameter für die Methode übergeben wurde. Beispiel:
 
 Beispiele:
 ```4d
@@ -284,7 +284,7 @@ Eine Prozessmenge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen 
 ### Client-Mengen
 Der Name eines Client beginnt mit dem Dollarzeichen ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
 
-**Note:** Sets are maintained on the Server machine. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. Dafür verwenden Sie Client-Mengen.
+**Hinweis:** Mengen werden auf dem Server-Rechner gehalten. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. Dafür verwenden Sie Client-Mengen.
 
 Beispiele:
 ```4d
@@ -371,7 +371,7 @@ Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 | Globaler Prozess           | 255        | "*P_INVOICES_MODULE*"    |
 | Semaphore                  | 255        | "mysemaphore"              |
 
-**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+**Hinweis:** Bei Verwenden nicht-romanischer Zeichen in Namen kann die max. Länge kürzer sein.
 
 ## Namenskonflikte lösen
 
