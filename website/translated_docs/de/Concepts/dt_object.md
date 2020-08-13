@@ -20,9 +20,9 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
 
 (*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**Warnung:** Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
+Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
 
 Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Ist Objektnotation in Ihrer Anwendung aktiviert (siehe unten), können Sie solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 
@@ -56,14 +56,14 @@ Mit Objektnotation können Sie auf Werte von Objekteigenschaften über eine Kett
 
 Objektnotation bietet zwei Wege, um auf Objekteigenschaften zuzugreifen:
 
-- using a "dot" symbol: > object.propertyName
+- Über das Zeichen "Punkt": > object.propertyName
 
 Beispiel:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- Über eine Zeichenkette in eckigen Klammern: > object["propertyName"]
 
 Beispiele:
 ```4d
@@ -80,7 +80,7 @@ Da der Wert einer Objekteigenschaft ein Objekt oder eine Collection sein kann, a
 ```
 Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein Objekt enthalten oder zurückgeben, wie z.B:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Beispiele:
+- **Die Objekte selbst** (gespeichert in Variablen, Feldern, Objekteigenschaften, Objekt Arrays oder Collection Elementen). Beispiele:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -89,13 +89,13 @@ Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-- **4D commands** that return objects. Beispiel:
+- **4D Befehle**, die Objekte zurückgeben. Beispiel:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Beispiel:
+- **Projektmethoden**, die Objekte zurückgeben. Beispiel:
 
 ```4d
       // MyMethod1
@@ -106,14 +106,14 @@ Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- **Collections** Beispiel:
 
 ```4d
      myColl.length //size of the collection
 ```
 
 ### Zeiger
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.
+**Vorbemerkung:** Da Objekte immer per Referenz übergeben werden, sind normalerweise keine Zeiger erforderlich. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.
 
 Die Objektnotation mit Zeigern ist ähnlich wie die Objektnotation direkt mit Objekten, der Unterschied ist Weglassen des Zeichens "Punkt".
 
@@ -136,7 +136,7 @@ Beispiel:
 
 ### Wert Null
 
-When using the object notation, the **null** value is supported though the **Null** command. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:
+Die Objektnotation unterstützt den **Nullwert** über die Funktion **Null**. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:
 
 ```4d
  myObject.address.zip:=Null
@@ -159,7 +159,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
       //$val=0
 ```
 
-- Reading the **length** property of an undefined collection produces 0:
+- Lesen der Eigenschaft **length** einer undefinierten Collection ergibt 0:
 
 ```4d
      C_COLLECTION($c) //variable created but no collection is defined
