@@ -3,7 +3,7 @@ id: variables
 title: Variablen
 ---
 
-Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder** speichern Daten permanent auf der Festplatte, **Variablen** speichern Daten temporär im Speicher.
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
@@ -13,7 +13,7 @@ Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen u
 
 Sie erstellen Variablen durch Deklarieren über einen Befehl im Kapitel "Compiler" oder "Arrays".
 
-**Note:**Arrays are a particular type of variables. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
 Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
 
@@ -21,7 +21,7 @@ Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
  C_TEXT(myText)
 ```
 
-**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+**Hinweis:** Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht formell mit Typ definieren, wie es bei Feldern erforderlich ist. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
@@ -47,7 +47,7 @@ Hier sehen Sie einige grundlegende Variablendeklarationen:
 
 ## Daten zuweisen
 
-Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
+Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Daten in eine Variable setzen heißt, **der Variablen die Daten zuweisen**. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
 
 Der Zuweisungsoperator ist wesentlich, um eine Variable zu erstellen und Daten in sie einzusetzen. Sie schreiben den Namen der gewünschten Variablen auf die linke Seite des Zuweisungsoperators. Beispiel:
 
@@ -55,15 +55,15 @@ Der Zuweisungsoperator ist wesentlich, um eine Variable zu erstellen und Daten i
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
+erstellt die Variable _ MyNumber_ und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie _ MyNumber_ auf die rechte Seite des Zuweisungsoperators:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. Dieses Beispiel ist ganz einfach, aber es zeigt, wie Daten über Programmierung von einer Stelle an eine andere übertragen werden.
+In diesem Fall ist _[Products]Size_ gleich 3. Dieses Beispiel ist ganz einfach, aber es zeigt, wie Daten über Programmierung von einer Stelle an eine andere übertragen werden.
 
 Daten an Elemente eines Array weisen Sie über geschweifte Klammern zu, also {...}:
 
@@ -73,11 +73,11 @@ atNames{1}:="Richard"
 
 ## Lokale, Prozess- und Interprozessvariablen
 
-You can create three types of variables: **local**, **process**, and **interprocess**. Der Unterschied sind die jeweilige Reichweite oder die Objekte, für die sie verfügbar sind.
+Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interprozess**. Der Unterschied sind die jeweilige Reichweite oder die Objekte, für die sie verfügbar sind.
 
 ### Lokale Variable
 
-Wie schon der Name sagt, gilt sie lokal für eine Methode, d. h. sie ist nur in der Methode verfügbar, wo sie erstellt wurde. Außerhalb dieser Methode ist sie nicht zugänglich. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+Wie schon der Name sagt, gilt sie lokal für eine Methode, d. h. sie ist nur in der Methode verfügbar, wo sie erstellt wurde. Außerhalb dieser Methode ist sie nicht zugänglich. Lokal zu einer Methode bedeutet formell "lokal in Reichweite". Local variables are used to restrict a variable so that it works only within the method.
 
 Sie verwenden eine lokale Variable, um:
 
