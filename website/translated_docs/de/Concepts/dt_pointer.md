@@ -210,4 +210,4 @@ Die folgende Zeile nimmt "Hello" aus $MyVar und setzt es in $NewVar:
 $NewVar:=($PointerTwo->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Wichtig:** Bei mehrfacher Dereferenzierung müssen Sie mit Klammern arbeiten.
