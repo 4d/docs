@@ -386,4 +386,4 @@ Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrer Anwen
 5. Vordefinierte Konstanten
 6. Variablen
 
-Beispiel: In 4D gibt es den Befehl mit Namen `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Ihre Methode wird nicht aufgerufen. Haben Sie dagegen ein Datenfeld mit dem Namen “Date” angelegt, versucht 4D, dieses Datenfeld anstatt des Befehls `Date` zu benutzen.
+Beispiel: In 4D gibt es den Befehl mit Namen `Date`. Nennen Sie eine Methode *Date*, wertet 4D diese als den integrierten Befehl `Date` und nicht als Ihre Methode. Ihre Methode wird nicht aufgerufen. Haben Sie dagegen ein Datenfeld mit dem Namen “Date” angelegt, versucht 4D, dieses Datenfeld anstatt des Befehls `Date` zu benutzen.
