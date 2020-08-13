@@ -77,7 +77,7 @@ Sie können drei Variablentypen erstellen: **lokal**, **Prozess** und **Interpro
 
 ### Lokale Variable
 
-Wie schon der Name sagt, gilt sie lokal für eine Methode, d. h. sie ist nur in der Methode verfügbar, wo sie erstellt wurde. Außerhalb dieser Methode ist sie nicht zugänglich. Lokal zu einer Methode bedeutet formell "lokal in Reichweite". Local variables are used to restrict a variable so that it works only within the method.
+Wie schon der Name sagt, gilt sie lokal für eine Methode, d. h. sie ist nur in der Methode verfügbar, wo sie erstellt wurde. Außerhalb dieser Methode ist sie nicht zugänglich. Lokal zu einer Methode bedeutet formell "lokal in Reichweite". Lokale Variablen dienen zur Eingrenzung, so dass die Variable nur innerhalb der Methode funktioniert.
 
 Sie verwenden eine lokale Variable, um:
 
@@ -100,7 +100,7 @@ Häufig benötigt eine Anwendung nur eine kurze Info vom Benutzer. Dafür gibt e
 
 Diese Methode fordert den Benutzer auf, eine ID einzugeben. Sie setzt die Antwort in eine lokale Variable $vsID und sucht dann nach der ID, die der Benutzer eingegeben hat. Ist die Methode abgeschlossen, wird die lokale Variable $vsID aus dem Speicher entfernt. Das ist gut so, denn die Variable wird nur einmal und nur in dieser Methode benötigt.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. Weitere Informationen dazu finden Sie unter [Parameter](Concepts/parameters.md).
+**Hinweis:** Die in einer Methode übergebenen Parameter $1, $2... sind lokale Variablen. Weitere Informationen dazu finden Sie unter [Parameter](Concepts/parameters.md).
 
 ### Prozessvariablen
 
@@ -108,7 +108,7 @@ Eine Prozessvariable ist nur innerhalb eines Prozesses verfügbar. Sie ist in de
 
 Der Name der Prozessvariable hat kein vorangestelltes Zeichen. Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. So ist die Variable myVar eine Variable im Prozess P_1 und eine andere im Prozess P_2.
+Im interpretierten Modus werden Variablen dynamisch verwaltet; sie werden erstellt und “on the fly” aus dem Speicher entfernt. Im kompilierten Modus nutzen alle Prozesse, die Sie anlegen (Benutzerprozesse) dieselbe Definition der Prozessvariablen, aber jeder Prozess hat für jede Variable eine andere Instanz. So ist die Variable myVar eine Variable im Prozess P_1 und eine andere im Prozess P_2.
 
 Ein Prozess kann über die Befehle `GET PROCESS VARIABLE` und `SET PROCESS VARIABLE` Prozessvariablen aus einem anderen Prozess "erspähen und anstoßen". Es ist eine gute Programmierpraxis, diese Befehle nur für die Situation anzuwenden, für die sie in 4D hinzugefügt wurden:
 
@@ -116,7 +116,7 @@ Ein Prozess kann über die Befehle `GET PROCESS VARIABLE` und `SET PROCESS VARIA
 - Verwalten von Drag-and-Drop auf Interprozessebene
 - Im Client-/Server-Betrieb zur Kommunikation zwischen Prozessen auf Client-Rechnern und den Serverprozeduren auf Server Rechnern
 
-For more information, see the chapter **Processes** and the description of these commands.
+Weitere Informationen dazu finden Sie im Kapitel **Prozesse** und in der Beschreibung dieser Befehle.
 
 ### Interprozessvariablen
 
