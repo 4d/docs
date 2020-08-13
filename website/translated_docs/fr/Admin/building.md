@@ -129,6 +129,12 @@ The following elements are required for the build:
 - 4D Volume Desktop (the 4D database engine),
 - an [appropriate license](#licenses)
 
+On Windows, this feature creates an executable file (.exe).
+
+The following elements are required for the build:
+- 4D Volume Desktop (the 4D database engine),
+- an [appropriate license](#licenses)
+
 On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
 
 The principle consists of merging a compiled structure file with 4D Volume Desktop. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
@@ -241,6 +247,10 @@ Once built, a client/server application is composed of two customized parts: the
 
 Also, the client/server application is customized and its handling simplified:
 
+- To launch the server portion, the user simply double-clicks on the server application. </p>
+
+Also, the client/server application is customized and its handling simplified:
+
 - To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
 - To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. Il n’est pas nécessaire de choisir une base de données dans une boîte de dialogue de connexion. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Seule la partie cliente peut se connecter à la partie serveur correspondante. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
 - A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
@@ -272,12 +282,26 @@ This option lets you choose the linking mode between the merged application and 
 
 *   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Otherwise, the last opened data file is opened (default mode).
 
+For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
+
+#### Data linking mode
+
+This option lets you choose the linking mode between the merged application and the local data file.
+
+#### Data linking mode
+
+This option lets you choose the linking mode between the merged application and the local data file. Otherwise, the last opened data file is opened (default mode).
+
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
 
 ### Build client application
 
 Checking this option generates the client part of your application during the building phase.
+
+#### 4D Volume Desktop
+
+You must designate the location on your disk of the 4D Volume Desktop application to be used.
 
 #### 4D Volume Desktop
 
@@ -318,6 +342,8 @@ On the client side, when the “old” client application tries to connect to th
 In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.
 
 To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. Dans ce cas, le mécanisme de mise à jour n’autorisera pas la connexion des applications clientes non mises à jour. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
+
+The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
 
 The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box.
 
@@ -387,6 +413,12 @@ The page lists the elements loaded by the current 4D application:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
+*    **Active** column - Indicates that the items will be integrated into the application package built.
+
+The page lists the elements loaded by the current 4D application:
+
+![](assets/en/Project/buildapppluginsProj.png)
+
 *    **Active** column - Indicates that the items will be integrated into the application package built. Par défaut, tous les éléments sont inclus. To exclude a plug-in or a component, deselect the check box next to it.
 
 *   **Plugins and components** column - Displays the name of the plug-in/component.
@@ -422,6 +454,8 @@ To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of
 
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine.
 
+When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine.
+
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
 
 You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
@@ -434,6 +468,8 @@ Once you have selected a file, the list will indicate the characteristics of the
 *   **Path** -  Location on disk
 
 If a license is not valid, a message will warn you.
+
+You can designate as many valid files as you want.
 
 You can designate as many valid files as you want.
 

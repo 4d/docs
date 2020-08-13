@@ -1,6 +1,6 @@
 ---
 id: propertiesObject
-title: Objects
+title: Objekte
 ---
 
 ---

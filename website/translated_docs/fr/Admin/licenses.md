@@ -137,12 +137,12 @@ If this information does not help you resolve your problem, please contact 4D or
 
 Pour toute question relative à l’installation ou l’activation de votre produit, veuillez contacter 4D Sas ou votre distributeur local.
 
-For the US:
+Pour la France :
 
-- Web: [https://us.4d.com/4d-technical-support](https://us.4d.com/4d-technical-support)
-- Telephone: 1-408-557-4600
+- Web : [http://www.4d.com/fr/](https://us.4d.com/4d-technical-support)
+- Téléphone : 0892 68 09 97 (0,34 Euro Ttc/Min)
 
-For the UK:
+Pour le Royaume-Uni :
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
-- Telephone: 01625 536178
+- Téléphone : 01625 536178
