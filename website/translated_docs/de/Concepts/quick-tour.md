@@ -300,16 +300,16 @@ For($vCounter;1;100) //Starting loop
 
 #### Ein- oder mehrzeilige Kommentare (/* */)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Beide Arten beginnen mit ` /*` und enden mit `*/`.
+Umklammern Sie Inhalt mit den Zeichen `/*` ... `*/`, um eingebundene Kommentare oder mehrzeilige Kommentarblöcke zu erstellen. Beide Arten beginnen mit ` /*` und enden mit `*/`.
 
-- **Inline comments** can be inserted anywhere in the code. Beispiel:
+- **Eingebundene Kommentare** können überall im Code eingefügt werden. Beispiel:
 
 ```4d
 Für /* eingebundenen Kommentar */ ($vCounter;1;100)...
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:
+- **Mehrzeilige Kommentarblöcke** können eine ungegrenzte Anzahl Zeilen haben. Sie können verschachtelt sein und jeder Unterblock lässt sich auch auf- oder zuklappen. Beispiel:
 
 ```4d
 For ($vCounter;1;100)
