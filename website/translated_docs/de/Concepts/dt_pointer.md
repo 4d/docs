@@ -7,7 +7,7 @@ Eine Variable oder ein Ausdruck vom Typ Zeiger verweist auf eine andere Variable
 
 Mit Hilfe der Zeiger können Sie Ihre Methoden strukturunabhängig schreiben und dadurch Ihre Programme übertragbarer gestalten. Sie können mit einem Zeiger auf verschiedene Objekte, wie Tabellen, Datenfelder, Variablen, Objekte und Arrays, einfach über ihre Namen zugreifen. Jedoch ist es oft hilfreich, auf diese Elemente zuzugreifen, ohne ihre Namen zu kennen. Das können Sie mit Zeigern tun.
 
-Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. Sie sagen normalerweise zu einem Freund: "Lass uns eine Fahrt in Deinem Auto machen", anstatt "Lass uns eine Fahrt in dem Auto mit dem Kennzeichen M-AX-1234 machen". In diesem Fall verweisen Sie auf das Auto mit dem Kennzeichen M-AX-1234 über den Begriff "Dein Auto". Die Umschreibung "Auto mit dem Kennzeichen M-AX-1234" ist wie der Name eines Objekts und der Begriff "Dein Auto" ist wie ein Zeiger, der auf das Objekt verweist.
 
 Die Möglichkeit, auf etwas zu verweisen, ohne die Identität exakt zu kennen, hat einige Vorteile. Ihr Freund kann ein neues Auto haben, und die Aussage "mit Deinem Auto" passt weiterhin, denn es bleibt ein Auto und gehört Ihrem Freund. Zeiger arbeiten auf dieselbe Weise. Ein Zeiger kann beispielsweise einmal auf ein numerisches Datenfeld mit Namen Alter verweisen und später auf eine numerische Variable, umbenannt in Rentenalter. In beiden Fällen zeigt der Zeiger auf numerische Daten, die sich in einer Berechnung verwenden lassen.
 
@@ -30,7 +30,7 @@ Wir erläutern die Verwendung von Zeigern an einem Beispiel. Dieses Beispiel zei
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
+$MyVar ist jetzt eine Variable mit dem String "Hello". We can now create a pointer to $MyVar:
 
 ```4d
 C_POINTER($MyPointer)  
