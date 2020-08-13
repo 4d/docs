@@ -7,7 +7,7 @@ Eine Variable oder ein Ausdruck vom Typ Zeiger verweist auf eine andere Variable
 
 Mit Hilfe der Zeiger können Sie Ihre Methoden strukturunabhängig schreiben und dadurch Ihre Programme übertragbarer gestalten. Sie können mit einem Zeiger auf verschiedene Objekte, wie Tabellen, Datenfelder, Variablen, Objekte und Arrays, einfach über ihre Namen zugreifen. Jedoch ist es oft hilfreich, auf diese Elemente zuzugreifen, ohne ihre Namen zu kennen. Das können Sie mit Zeigern tun.
 
-Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. Sie sagen normalerweise zu einem Freund: "Lass uns eine Fahrt in Deinem Auto machen", anstatt "Lass uns eine Fahrt in dem Auto mit dem Kennzeichen M-AX-1234 machen". In diesem Fall verweisen Sie auf das Auto mit dem Kennzeichen M-AX-1234 über den Begriff "Dein Auto". The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. Sie sagen normalerweise zu einem Freund: "Lass uns eine Fahrt in Deinem Auto machen", anstatt "Lass uns eine Fahrt in dem Auto mit dem Kennzeichen M-AX-1234 machen". In diesem Fall verweisen Sie auf das Auto mit dem Kennzeichen M-AX-1234 über den Begriff "Dein Auto". Die Umschreibung "Auto mit dem Kennzeichen M-AX-1234" ist wie der Name eines Objekts und der Begriff "Dein Auto" ist wie ein Zeiger, der auf das Objekt verweist.
 
 Die Möglichkeit, auf etwas zu verweisen, ohne die Identität exakt zu kennen, hat einige Vorteile. Ihr Freund kann ein neues Auto haben, und die Aussage "mit Deinem Auto" passt weiterhin, denn es bleibt ein Auto und gehört Ihrem Freund. Zeiger arbeiten auf dieselbe Weise. Ein Zeiger kann beispielsweise einmal auf ein numerisches Datenfeld mit Namen Alter verweisen und später auf eine numerische Variable, umbenannt in Rentenalter. In beiden Fällen zeigt der Zeiger auf numerische Daten, die sich in einer Berechnung verwenden lassen.
 
@@ -30,20 +30,20 @@ Wir erläutern die Verwendung von Zeigern an einem Beispiel. Dieses Beispiel zei
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
+$MyVar ist jetzt eine Variable mit dem String "Hello". Nun können wir einen Zeiger auf $MyVar erstellen:
 
 ```4d
 C_POINTER($MyPointer)  
 $MyPointer:=->$MyVar
 ```
-The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In diesem Fall zeigt der Zeiger auf $MyVar. Dieser Zeiger wird mit dem Zuordnungsoperator dem Zeiger MyPointer zugewiesen.
+Das Symbol -> bedeutet "erhalte einen Zeiger auf". Dieses Symbol setzt sich zusammen aus einem Bindestrich, gefolgt von dem Zeichen "größer als". In diesem Fall erhält sie den Zeiger, der auf $MyVar verweist bzw. zeigt. Dieser Zeiger wird mit dem Zuordnungsoperator dem Zeiger MyPointer zugewiesen.
 
 $MyPointer ist nun eine Variable mit einem Zeiger auf $MyVar. $MyPointer enthält nicht “Hello”, den Wert von $MyVar, vielmehr erhalten Sie diesen Wert über $MyPointer. Folgender Ausdruck gibt den Wert in $MyVar zurück:
 ```4d
 $MyPointer->
 ```
 
-In diesem Fall gibt er die Zeichenkette “Hello” zurück. The -> symbol, when it follows a pointer, references the object pointed to. Das nennt man Dereferenzierung.
+In diesem Fall gibt er die Zeichenkette “Hello” zurück. Das Symbol -> nach dem Zeiger verweist auf das Objekt, auf das gezeigt wird. Das nennt man Dereferenzierung.
 
 It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. Folgende Programmierzeile zeigt z. B. eine Warnung mit dem darin enthaltenen Wort Hello:
 ```4d
