@@ -30,20 +30,20 @@ Wir erläutern die Verwendung von Zeigern an einem Beispiel. Dieses Beispiel zei
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar ist jetzt eine Variable mit dem String "Hello". We can now create a pointer to $MyVar:
+$MyVar ist jetzt eine Variable mit dem String "Hello". Nun können wir einen Zeiger auf $MyVar erstellen:
 
 ```4d
 C_POINTER($MyPointer)  
 $MyPointer:=->$MyVar
 ```
-The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In diesem Fall zeigt der Zeiger auf $MyVar. Dieser Zeiger wird mit dem Zuordnungsoperator dem Zeiger MyPointer zugewiesen.
+Das Symbol -> bedeutet "setze Zeiger auf". Es ist die Kombination aus einem Bindestrich und dem Zeichen “größer als”. In diesem Fall verweist bzw. zeigt der Zeiger auf $MyVar. Dieser Zeiger wird mit dem Zuordnungsoperator dem Zeiger MyPointer zugewiesen.
 
 $MyPointer ist nun eine Variable mit einem Zeiger auf $MyVar. $MyPointer enthält nicht “Hello”, den Wert von $MyVar, vielmehr erhalten Sie diesen Wert über $MyPointer. Folgender Ausdruck gibt den Wert in $MyVar zurück:
 ```4d
 $MyPointer->
 ```
 
-In diesem Fall gibt er die Zeichenkette “Hello” zurück. The -> symbol, when it follows a pointer, references the object pointed to. Das nennt man Dereferenzierung.
+In diesem Fall gibt er die Zeichenkette “Hello” zurück. Das Symbol -> nach dem Zeiger verweist auf das Objekt, auf das gezeigt wird. Das nennt man Dereferenzierung.
 
 It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. Folgende Programmierzeile zeigt z. B. eine Warnung mit dem darin enthaltenen Wort Hello:
 ```4d
