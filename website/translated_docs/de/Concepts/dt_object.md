@@ -136,7 +136,7 @@ Beispiel:
 
 ### Wert Null
 
-When using the object notation, the **null** value is supported though the **Null** command. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:
+Die Objektnotation unterstützt den **Nullwert** über die Funktion **Null**. Damit können Sie Objekteigenschaften oder Collection Elementen den Nullwert zuweisen oder vergleichen, zum Beispiel:
 
 ```4d
  myObject.address.zip:=Null
