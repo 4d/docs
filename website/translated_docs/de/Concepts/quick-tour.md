@@ -56,11 +56,11 @@ Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfa
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
+Die Code-Zeile bedeutet "MyOtherDate erhält das aktuelle Datum plus 30 Tage." This line declares the variable, assigns it with both the (temporary) date type and a content. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
 
 ## Befehle
 
-4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
+4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. `CREATE RECORD` oder `ALERT` werden im Handbuch _4D Programmiersprache_ beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -102,7 +102,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 ## Methoden
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
+4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene **Projektmethoden** erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
 
 Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. Eine Anweisung führt eine Aktion aus, die einfach oder komplex sein kann.
 
@@ -151,7 +151,7 @@ In manchen Fällen müssen Sie Daten als einen Typ speichern und als anderen Typ
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+Ist _Number_ 17, dann erhält _[Products]Part Number_ den String “17abc”.
 
 Die komplette Übersicht der Datentypen finden Sie im Abschnitt [Datentypen](Concepts/data-types.md).
 
@@ -275,7 +275,7 @@ Ausdrücke werden gesetzt und geben einen Wert zurück. Tatsächlich verwenden S
 
 Ausdrücke setzen sich aus fast allen anderen Teilen der Programmiersprache zusammen: Befehle, Operatoren, Variablen, Felder, Objekteigenschaften und Elemente von Collections. Mit Ausdrücken erstellen Sie Anweisungen (Code-Zeilen), die sie dann zum Erstellen von Methoden verwenden. Die Programmiersprache verwendet Ausdrücke überall, wo sie einen Teil von Daten braucht.
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Das gilt für:
+Ausdrücke stehen selten “allein”. There are several places in 4D where an expression can be used by itself. Das gilt für:
 
 - Formulareditor (Formel anwenden, Suche mit Formel, Sortiere nach Formel)
 - Befehl `EXECUTE FORMULA`
