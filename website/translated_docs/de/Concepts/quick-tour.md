@@ -346,7 +346,7 @@ Kommentare sind inaktive Zeilen von Code. Diese Zeilen werden nicht von der 4D P
 Es gibt zwei Varianten zum Erstellen von Kommentaren:
 
 - `//` für einzeilige Kommentare
-- `/*...*/` für ein- oder mehrzeilige Kommentare.
+- `/*...*/` für eingebundene oder mehrzeilige Kommentare.
 
 Beide Varianten lassen sich gleichzeitig verwenden.
 
@@ -363,7 +363,7 @@ For($vCounter;1;100) //Starting loop
  End for
 ```
 
-#### Ein- oder mehrzeilige Kommentare (/* */)
+#### Eingebundene oder mehrzeilige Kommentare (/* */)
 
 Umklammern Sie Inhalt mit den Zeichen `/*` ... `*/`, um eingebundene Kommentare oder mehrzeilige Kommentarblöcke zu erstellen. Beide Arten beginnen mit ` /*` und enden mit `*/`.
 
