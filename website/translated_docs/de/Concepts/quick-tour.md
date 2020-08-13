@@ -32,7 +32,7 @@ $myHour:=?08:12:55? //assigns a time literal
 
 Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er kombiniert nicht Ausdrücke zu einem neuen, sondern kopiert die Werte des Ausdrucks auf seiner rechten Seite in die Variable oder das Feld auf seiner linken Seite.
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Denn solche Fehler sind für den Compiler nur schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.
+**Wichtig:** Verwechseln Sie NICHT den Zuweisungsoperator := mit dem Vergleichsoperator ist gleich =. Es wurde absichtlich ein anderer Zuweisungsoperator (und nicht =) gewählt, um Probleme und Verwirrung zu vermeiden, die in anderen Programmiersprachen oft mit == oder === auftreten. Denn solche Fehler sind für den Compiler nur schwer zu erkennen und führen zu einer zeitaufwändigen Fehlerbehebung.
 
 ## Variablen
 
@@ -48,11 +48,11 @@ Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfa
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `C_XXX` typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.
+Die Code-Zeile bedeutet "MyOtherDate erhält das aktuelle Datum plus 30 Tage." Diese Zeile erstellt die Variable, weist ihr den Datentyp (temporär) und einen Inhalt zu. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `C_XXX` typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.
 
 ## Befehle
 
-4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
+4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. `CREATE RECORD` oder `ALERT` werden im Handbuch _4D Programmiersprache_ beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
@@ -94,7 +94,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 ## Methoden
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
+4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene **Projektmethoden** erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
 
 Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. Eine Anweisung führt eine Aktion aus, die einfach oder komplex sein kann.
 
@@ -143,7 +143,7 @@ In manchen Fällen müssen Sie Daten als einen Typ speichern und als anderen Typ
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+Ist _Number_ 17, dann erhält _[Products]Part Number_ den String “17abc”.
 
 Die komplette Übersicht der Datentypen finden Sie im Abschnitt [Datentypen](Concepts/data-types.md).
 
