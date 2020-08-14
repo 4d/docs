@@ -215,11 +215,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 ```
 
-**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
+**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
-**Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
-
-Voici quelques exemples :
+**Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Voici quelques exemples :
 ```4d
     // Cette commande attend une méthode (fonction) ou une formule
  QUERY BY FORMULA([aTable];Recherche Spéciale)
@@ -376,7 +374,7 @@ Le tableau suivant résume les principes de nommage des identifiants dans les m�
 
 ## Résoudre les conflits de noms
 
-Veillez à utiliser des noms uniques pour les différents éléments de votre base. Si un identifiant d’un certain type a le même nom qu’un autre identifiant d’un autre type (par exemple, si un champ est baptisé Personnes et qu’une variable est également nommée Personnes), 4D utilise un système de priorité.
+Be sure to use unique names for the different elements in your project. If a particular element has the same name as another element of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
 
 4D identifie les noms utilisés dans les méthodes en fonction de l’ordre de priorité suivant :
 
