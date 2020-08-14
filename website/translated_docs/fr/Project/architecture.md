@@ -3,7 +3,7 @@ id: architecture
 title: Architecture of a project
 ---
 
-Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base (dossier package). Par exemple:
+A 4D project is made of several folders and files, stored within a single parent application folder (package folder). Par exemple:
 
 - MonProjet
     - Composants
@@ -28,7 +28,7 @@ Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un 
 
 La hiérarchie du dossier Project se présente généralement comme suit :
 
-- Fichier *nomBase*.4DProject
+- *applicationName*.4DProject file
 - Sources
     + Classes
     + DatabaseMethods
@@ -40,14 +40,14 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 - Trash (le cas échéant)
 
 
-### Fichier *nomBase*.4DProject
+### *applicationName*.4DProject file
 
 Le fichier de développement de projet, utilisé pour désigner et lancer le projet. Ce fichier peut être ouvert par :
 
-- 4D Developer
+- 4D
 - 4D Server (lecture seule, voir [Développer un projet](developing.md))
 
-**Note :** Dans les projets 4D, le développement est réalisé avec 4D Developer et le développement multi-utilisateurs est géré par des outils de contrôle de version. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
+> In 4D projects, development is done with 4D and multi-user development is managed through source control tools. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
 
 
 ### Dossier Sources
@@ -68,15 +68,15 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier DatabaseMethods
 
-| Contenu                  | Description                                                      | Format |
-| ------------------------ | ---------------------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | Méthodes base définies dans la base. Un fichier par méthode base | Texte  |
+| Contenu                  | Description                                                          | Format |
+| ------------------------ | -------------------------------------------------------------------- | ------ |
+| *databaseMethodName*.4dm | Database methods defined in the project. Un fichier par méthode base | Texte  |
 
 #### Dossier Methods
 
-| Contenu          | Description                                                   | Format |
-| ---------------- | ------------------------------------------------------------- | ------ |
-| *methodName*.4dm | Méthodes projet définies dans la base. Un fichier par méthode | Texte  |
+| Contenu          | Description                                                    | Format |
+| ---------------- | -------------------------------------------------------------- | ------ |
+| *methodName*.4dm | Project methods defined in the project. Un fichier par méthode | Texte  |
 
 #### Dossier Classes
 
@@ -111,7 +111,7 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 | Contenu       | Description                                                                                          | Format |
 | ------------- | ---------------------------------------------------------------------------------------------------- | ------ |
-| table_*n*.4dm | Méthodes trigger définies dans la base. Un fichier de trigger par table (n étant le numéro de table) | Texte  |
+| table_*n*.4dm | Trigger methods defined in the project. Un fichier de trigger par table (n étant le numéro de table) | Texte  |
 
 **Note :** L'extension de fichier .4dm est un format de fichier texte contenant le code d'une méthode 4D. Il est compatible avec les outils de contrôle de version.
 
@@ -134,11 +134,11 @@ Le dossier DerivedData contient des données en cache utilisées en interne par 
 
 ## Dossier Resources
 
-Le dossier Resources contient tous les fichiers et dossiers de ressources personnalisés de la base de données. Dans ce dossier, vous pouvez placer tous les fichiers nécessaires à la traduction ou à la personnalisation de l'interface de l'application (fichiers image, fichiers texte, fichiers XLIFF, etc.). 4D utilise des mécanismes automatiques pour manipuler le contenu de ce dossier, notamment pour le traitement des fichiers XLIFF et des images statiques. Pour l'utilisation en mode distant, le dossier Resources vous permet de partager des fichiers entre le serveur et tous les ordinateurs clients. Voir le *Manuel 4D Server - Référence*.
+The Resources folder contains any custom project resource files and folders. Dans ce dossier, vous pouvez placer tous les fichiers nécessaires à la traduction ou à la personnalisation de l'interface de l'application (fichiers image, fichiers texte, fichiers XLIFF, etc.). 4D utilise des mécanismes automatiques pour manipuler le contenu de ce dossier, notamment pour le traitement des fichiers XLIFF et des images statiques. Pour l'utilisation en mode distant, le dossier Resources vous permet de partager des fichiers entre le serveur et tous les ordinateurs clients. Voir le *Manuel 4D Server - Référence*.
 
 | Contenu               | Description                                                                                                                                                                                 | Format  |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés  |
+| *item*                | Project resource files and folders                                                                                                                                                          | variés  |
 | Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | picture |
 
 (*) uniquement si le projet a été exporté depuis une base binaire .4db.
@@ -158,7 +158,7 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 
 ### Dossier Settings
 
-Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de données** utilisés pour l'administration de la base de données.
+This folder contains **user settings files for data** used for application administration.
 
 > Ces paramètres ont la priorité sur les **[fichiers de propriétés utilisateur](#settings-folder-1)** et les fichiers de **propriétés structure**.
 
@@ -166,7 +166,7 @@ Ce dossier contient des **fichiers de propriétés utilisateur pour fichier de d
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 | settings.4DSettings | Propriétés personnalisées de la base pour ce fichier de données                                                                                                                                                                                                                                | XML    |
-| directory.json      | Description des groupes et utilisateurs 4D et leurs droits d'accès lorsque la base est lancée avec un fichier de données.                                                                                                                                                                      | JSON   |
+| directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                                                                                                      | JSON   |
 
 
 
@@ -180,17 +180,17 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 - débogage de commandes,
 - Requêtes 4D Server (générées sur les postes clients et sur le serveur).
 
-> Un dossier Logs supplémentaire est disponible dans le dossier des préférences utilisateur du système (dossier 4D actif, voir la commande [Lire dossier 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html)) pour les fichiers journaux de maintenance et dans les cas où le dossier de données est en lecture seule.
+> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) command) for maintenance log files and in cases where data folder is read-only.
 
 ## Dossier Settings
 
-Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de la base de données. Les fichiers sont ajoutés au dossier si nécessaire.
+This folder contains **user settings files** used for application administration. Files are added to the folder when necessary.
 
 > Si un fichier de propriétés de données existe dans un dossier Settings du [dossier Data](#settings-folder), il est prioritaire sur le fichier de propriétés utilisateur.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| directory.json      | Description des groupes et utilisateurs 4D pour la base de données, ainsi que leurs droits d'accès                                                                                                                                                                                                                                                                                                                                                 | JSON   |
+| directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                                                                                                                                             | JSON   |
 | BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) à chaque lancement de sauvegarde. Ce fichier peut également être utilisé pour lire ou définir des options supplémentaires, telles que la quantité d'informations stockées dans le *journal de sauvegarde*. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 
@@ -212,14 +212,14 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 
 ## Dossier Components
 
-Ce dossier contient les composants disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
+This folder contains the components to be available in the application project only. Il doit être stocké au même niveau que le dossier Project.
 
-> Une base projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components de la base hôte. - à des fins de déploiement : créer le composant (voir [Créer un package projet](building.md)) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de la base hôte.
+> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## Dossier Plugins
 
-Ce dossier contient les plug-ins disponibles dans la base projet uniquement. Il doit être stocké au même niveau que le dossier Project.
+This folder contains the plug-ins to be available in the application project only. Il doit être stocké au même niveau que le dossier Project.
 
 
 ## Dossier documentation
