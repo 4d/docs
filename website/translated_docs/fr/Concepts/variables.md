@@ -7,7 +7,7 @@ Fondamentalement, dans 4D, les données peuvent être stockées de deux manière
 
 Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C’est pratiquement la même chose pour les variables — vous leur donnez un nom et un type (cf. [Type de données](Concepts/data-types.md)).
 
-Une fois créée, vous pouvez utiliser une variable partout dans votre base. For example, you might need to store a text variable in a field of same type:
+Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:
 
 ```4d
  [MaTable]MonChamp:=MonTexte
@@ -311,9 +311,9 @@ Une variable locale, comme son nom l’indique, est locale à une méthode — c
 
 Le nom d’une variable locale commence toujours par le signe dollar ($) et peut contenir jusqu’à 31 autres caractères. Si vous saisissez un nom plus long, 4D le tronque pour le ramener à 31 caractères.
 
-Lorsque vous développez une base comportant de nombreuses méthodes et variables, il arrive souvent que vous n’ayez besoin d’utiliser une variable que dans une méthode. Vous pouvez alors créer et utiliser une variable locale, sans devoir vous soucier de l’existence d’une autre variable du même nom ailleurs dans la base.
+When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. Vous pouvez alors créer et utiliser une variable locale, sans devoir vous soucier de l’existence d’une autre variable du même nom ailleurs dans la base.
 
-Fréquemment, dans une base de données, des informations ponctuelles sont demandées à l’utilisateur. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
+Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
 ```4d
  $vsID:=Request("Saisissez votre numéro d'identification :")
@@ -344,7 +344,7 @@ Pour plus d'informations, reportez-vous à la section **Process** et à la descr
 
 ### Variables interprocess
 
-Les variables interprocess sont visibles dans toute la base et sont disponibles pour tous les process. Les variables interprocess sont principalement utilisées pour le partage d’informations entre les process.
+Interprocess variables are available throughout the project and are shared across all cooperative processes. Les variables interprocess sont principalement utilisées pour le partage d’informations entre les process.
 
 > L'utilisation de variables interprocess n'est pas recommandée car elles ne sont pas disponibles depuis le process préemptif et peuvent rendre le code moins maintenable.
 
