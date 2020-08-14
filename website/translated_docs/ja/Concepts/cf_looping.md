@@ -120,7 +120,7 @@ title: ループ構造
  End for
 ```
 
-データベースで作成する大部分の `For...End for` ループは、上記例題のいずれかの形式になるでしょう。
+Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
 
 ### カウンター変数の減算
 
