@@ -45,7 +45,7 @@ $o:=cs.Person.new("John";"Doe")
 
 たとえば、"Polygon" という名前のクラスを定義するには、次のファイルを作成する必要があります:
 
-- データベースフォルダー
+- Project フォルダー
     + Project
         * Sources
             - Classes
@@ -258,9 +258,9 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
+For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-データベースのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. 次のシンタックスがサポートされています:
 
 - `()` 演算子の使用 例: `myObject.methodName("hello")`
 - "Function" クラスメンバーメソッドの使用:
@@ -382,7 +382,7 @@ The `Class extends` keyword is used in class declaration to create a user class 
 Class extension must respect the following rules:
 
 - A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another database or component.
+- A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
