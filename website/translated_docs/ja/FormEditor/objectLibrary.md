@@ -56,7 +56,7 @@ title: オブジェクトライブラリ
 
 ### オブジェクトライブラリを開く
 
-一つのオブジェクトライブラリを複数のデータベースで同時に開くことはできませんが、 一つのデータベースで複数のライブラリを開くことは可能です。
+A given object library can only be opened by one project at a time. However, several different libraries can be opened in the same project.
 
 カスタムのオブジェクトライブラリを開くには、**ファイル** メニューまたはツールバーから **開く > オブジェクトライブラリ...** コマンドを選択します。 標準のファイルを開くダイアログボックスが表示され、オブジェクトライブラリを選択できます。 次のファイルタイプが選択できます:
 - **.4dproject**
