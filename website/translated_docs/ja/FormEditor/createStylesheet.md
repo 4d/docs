@@ -28,7 +28,7 @@ title: スタイルシート
 
 ### スタイルシートアーキテクチャー
 
-4D フォームに適合するよう調整してあるものの、プロジェクトデータベースのスタイルシートは基本的に CSS2 のシンタックスと文法に沿っています。
+While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
 スタイルシートのスタイル規則は二つの部分から構成されています:
 
