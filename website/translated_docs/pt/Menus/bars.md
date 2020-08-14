@@ -25,7 +25,7 @@ The splash screen picture can be set only in the Menu editor: select the menu ba
 
 You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
 
-> You can choose whether to display or hide this window using the **Display toolbar** option in the Database Settings.
+> You can choose whether to display or hide this window using the **Display toolbar** option in the Settings.
 
 To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
 
