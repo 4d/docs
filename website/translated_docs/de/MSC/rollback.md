@@ -6,7 +6,7 @@ sidebar_label: Seite Zurückfahren
 
 Auf dieser Seite können Sie auf die Funktion Rollback für die im Logbuch ausgeführten Operationen zugreifen. Sie arbeitet ähnlich wie die Operation Rückgängig auf mehreren Ebenen. Das ist besonders hilfreich, wenn ein Datensatz versehentlich in der Datenbank gelöscht wurde.
 
-Diese Funktion ist nur verfügbar, wenn die Datenbank mit einem Logbuch arbeitet.
+This function is only available when the application functions with a data log file.
 
 ![](assets/en/MSC/MSC_rollback1.png)
 
