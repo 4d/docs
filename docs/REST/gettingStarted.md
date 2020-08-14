@@ -3,21 +3,21 @@ id: gettingStarted
 title: Getting Started 
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
+4D provides you with a powerful REST server, that allows direct access to data stored in your 4D applications.
 
-The REST server is included in the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
+The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
 
 This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
-- create and configure a basic 4D database
-- access data from the 4D database through REST using a standard browser.
+- create and configure a basic 4D application project
+- access data from the 4D project through REST using a standard browser.
 
-To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Of course, you could also use a remote architecture.
+To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Of course, you could also use a remote architecture.
 
  
 
-## Creating and configuring the 4D database
+## Creating and configuring the 4D project
 
-1. Launch your 4D or 4D Server application and create a new database. You can name it "Emp4D", for example.
+1. Launch your 4D or 4D Server application and create a new project. You can name it "Emp4D", for example.
 
 2. In the Structure editor, create an [Employees] table and add the following fields to it:
 	- Lastname (Alpha)
@@ -32,7 +32,7 @@ To keep the example simple, we’re going to use a 4D application and a browser 
 
 ![](assets/en/REST/getstarted2.png) 
 
-4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option. 
+4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option. 
 
 5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
 
@@ -135,4 +135,4 @@ You have many possibilities to filter data to receive. For example, to get only 
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D database.  
+The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.  

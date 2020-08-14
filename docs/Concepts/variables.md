@@ -7,7 +7,7 @@ Data in 4D is stored in two fundamentally different ways. **Fields** store data 
 
 When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
 
-Once created, you can use a variable wherever you need it in your database. For example, you might need to store a text variable in a field of same type:
+Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -178,9 +178,9 @@ You may want to use a local variable to:
 
 The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
 
-When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in a database, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
@@ -211,7 +211,7 @@ For more information, see the chapter **Processes** and the description of these
 
 ### Interprocess variables
 
-Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes. 
+Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes. 
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.  
 

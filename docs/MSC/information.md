@@ -8,9 +8,9 @@ The Information page provides information about the 4D and system environments, 
 
 ## Program
 
-This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the ```Get 4D folder``` command in the *4D Language Reference* manual).
+This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the *4D Language Reference* manual).
 
-The central part of the window indicates the name and location of the database project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the database user when passwords have been activated (or Designer if this is not the case).
+The central part of the window indicates the name and location of the project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the current 4D user.
 
 - **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
 ![](assets/en/MSC/MSC_popup.png)
@@ -37,9 +37,8 @@ The page lists all the tables of the database (including invisible tables) as we
 - **Records**: Total number of records in the table. If a record is damaged or cannot be read, *Error* is displayed instead of the number. In this case, you can consider using the verify and repair tools.
 - **Fields**: Number of fields in the table. Invisible fields are counted, however, deleted fields are not counted.
 - **Indexes**: Number of indexes of any kind in the table
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see Encryptable paragraph in the Design Reference Manual).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file.
-***Note:** Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the **Encrypt page** of the database. *
+- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
+- **Encrypted**: If checked, the records of the table are encrypted in the data file. ***Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC.*
 - **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. It actually links records to their physical address. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page).
 ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
 

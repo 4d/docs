@@ -7,9 +7,9 @@ title: Managing 4D users and groups
 
 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect. 
 
-The most powerful user is named **Designer**. No aspect of the database is closed to the Designer. 
+The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. 
 The Designer can:
-- access all database servers without restriction,
+- access all application servers without restriction,
 - create users and groups, 
 - assign access privileges to groups, 
 - access the Design environment.
@@ -25,9 +25,9 @@ The Administrator can:
 
 The Administrator cannot:
 - edit the Designer user
-- by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
-Both the Designer and Administrator are available by default in all databases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Designer icon: ![](assets/en/Users/IconDesigner.png)
 - Administrator icon: ![](assets/en/Users/IconAdmin.png)
@@ -64,12 +64,12 @@ Right-click in the list of users and choose **Add** or **Duplicate** in the cont
 4D adds a new user to the list, named "New userX" by default.
 
 3. Enter the user name. 
-This name will be used by the user to open the database. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+This name will be used by the user to open the application. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. 
 You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 
-> Users can change their password at any time according to the options in the "Security" page of the database settings, or using the `CHANGE PASSWORD` command. 
+> Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command. 
 
 5. Set the group(s) to which the user belongs using the "Member of Groups" table.
 You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
@@ -87,8 +87,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 - **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
 
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional).
-This method can be used for example to load the user preferences. 
+- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). This method can be used for example to load the user preferences. 
 
 
 ## Groups editor
@@ -104,7 +103,7 @@ Keep in mind that once a group has been created, it cannot be deleted. If you wa
 To create a group:
 
 1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button.
-4D displays the groups editor window. The list of groups displays all the groups of the database.
+4D displays the groups editor window. The list of groups displays all the groups of the application project.
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
 OR  
@@ -136,7 +135,7 @@ To remove a user or group from another group, you just need to deselect the corr
 
 ### Assigning a group to a plug-in or to a server  
 
-You can assign a group privileges to any plug-ins installed in the database. This includes all the 4D plug-ins and any third-party plug-ins. 
+You can assign a group privileges to any plug-ins installed in the project. This includes all the 4D plug-ins and any third-party plug-ins. 
  
 Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
 
@@ -151,7 +150,7 @@ The **4D Client Web Server** and **4D Client SOAP Server** items lets you contro
 
 ### An access hierarchy scheme
 
-The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
+The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
 
 In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 

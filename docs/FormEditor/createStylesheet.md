@@ -28,7 +28,7 @@ These files are stored in the project's "/SOURCES" folder.
 
 ### Style Sheet Architecture
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
+While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
 Every style rule in a style sheet contains two parts: 
 

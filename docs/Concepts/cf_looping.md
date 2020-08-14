@@ -120,7 +120,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-Most of the `For...End for` loops you will write in your databases will look like the ones listed in these examples. 
+Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples. 
 
 ### Decrementing variable counter
 

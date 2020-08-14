@@ -3,7 +3,7 @@ id: architecture
 title: Architecture of a project
 ---
 
-A 4D project is made of several folders and files, stored within a single parent database folder (package folder). For example:
+A 4D project is made of several folders and files, stored within a single parent application folder (package folder). For example:
 
 - MyProject
 	- Components
@@ -28,7 +28,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 The Project folder typically contains the following hierarchy:
 
-- *databaseName*.4DProject file
+- *applicationName*.4DProject file
 - Sources
 	+ Classes
 	+ DatabaseMethods
@@ -40,14 +40,14 @@ The Project folder typically contains the following hierarchy:
 - Trash (if any)
 
 
-### *databaseName*.4DProject file
+### *applicationName*.4DProject file
 
 Project development file, used to designate and launch the project. This file can be opened by:
 
-- 4D Developer
+- 4D
 - 4D Server (read-only, see [Developing a project](developing.md))
 
-**Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
+> In 4D projects, development is done with 4D and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
 
 
 ### Sources folder
@@ -70,13 +70,13 @@ styleSheets_windows.css|Windows css style sheets (from converted binary database
 
 Contents|Description|Format
 --------|-------|----
-*databaseMethodName*.4dm|Database methods defined in the database. One file per database method|text
+*databaseMethodName*.4dm|Database methods defined in the project. One file per database method|text
 
 #### Methods folder
 
 Contents|Description|Format
 --------|-------|----
-*methodName*.4dm|Project methods defined in the database. One file per method|text
+*methodName*.4dm|Project methods defined in the project. One file per method|text
 
 #### Classes folder
 
@@ -111,7 +111,7 @@ Contents|Description|Format
 
 Contents|Description|Format
 --------|-------|----
-table_*n*.4dm|Trigger methods defined in the database. One trigger file per table (n is the table number)|text
+table_*n*.4dm|Trigger methods defined in the project. One trigger file per table (n is the table number)|text
 
 **Note:**
 The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools. 
@@ -135,11 +135,11 @@ The DerivedData folder contains cached data used internally by 4D to optimize pr
 
 ## Resources folder
 
-The Resources folder contains any custom database resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
+The Resources folder contains any custom project resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
 Contents|Description|Format
 --------|-------|----
-*item*|Database resource files and folders|various
+*item*|Project resource files and folders|various
 Images/Library/*item*|Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name.|picture
 
 (*) only if the project was exported from a .4db binary database.
@@ -159,7 +159,7 @@ data.match|(internal) UUID matching table number|XML
 
 ### Settings folder
 
-This folder contains **user settings files for data** used for database administration.
+This folder contains **user settings files for data** used for application administration.
 
 > These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files. 
 
@@ -167,7 +167,7 @@ Contents|Description|Format|
 ----|----|---|
 Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
 settings.4DSettings|Custom database settings for this data file|XML
-directory.json|Description of 4D groups, users, and their access rights when the database is run with this data file.|JSON|
+directory.json|Description of 4D groups, users, and their access rights when the application is run with this data file.|JSON|
 
 
 
@@ -181,17 +181,17 @@ The Logs folder contains all log files used by the project. Log files include, i
 - command debugging,
 - 4D Server requests (generated on client machines and on the server).
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command) for maintenance log files and in cases where data folder is read-only.
+> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) command) for maintenance log files and in cases where data folder is read-only.
 
 ## Settings folder
 
-This folder contains **user settings files** used for database administration. File are added to the folder when necessary. 
+This folder contains **user settings files** used for application administration. Files are added to the folder when necessary. 
 
 > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file. 
 
 Contents|Description|Format|
 ----|----|---|
-directory.json|Description of 4D groups and users for the database, as well as their access rights|JSON|  
+directory.json|Description of 4D groups and users for the application, as well as their access rights|JSON|  
 BuildApp.4DSettings|Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command|XML
 Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
 
@@ -213,16 +213,16 @@ preferencesv15.4DPreferences|User preferences|JSON
 
 ## Components folder
 
-This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
+This folder contains the components to be available in the application project only. It must be stored at the same level as the Project folder.
 
-> A project database can be used itself as a component:
-> - for development: put an alias of the .4dproject file in the Components folder of the host database.
-> - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database. 
+> An application project can be used itself as a component:
+> - for development: put an alias of the .4dproject file in the Components folder of the host project.
+> - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application. 
 
 
 ## Plugins folder
 
-This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
+This folder contains the plug-ins to be available in the application project only. It must be stored at the same level as the Project folder.
 
 
 ## Documentation folder
