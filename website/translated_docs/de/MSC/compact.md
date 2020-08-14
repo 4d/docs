@@ -13,7 +13,7 @@ Komprimieren der Dateien erfüllt zwei Anforderungen:
 - **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). Beim Löschen von Datensätzen wird der zuvor belegte Platz in der Datei zum Leerraum. In der Regel verwendet 4D diese Leerräume soweit wie möglich erneut. Da jedoch die Datengröße unterschiedlich ist, entstehen durch sukzessives Löschen oder Ändern unweigerlich nicht-verwendbare Leerräume. Dasselbe passiert, wenn eine große Menge Daten gerade gelöscht wurde: die leeren Stellen bleiben in der Datei ohne Zuweisung. Das Verhältnis zwischen Größe der Datendatei und derzeit für die Daten genutztem Platz ist die Auslastungsrate der Daten. Eine zu geringe Rate ist zunächst Platzverschwendung, kann aber auch die Performance der Datenbank beeinträchtigen. Hier schafft Komprimieren Abhilfe, denn dadurch wird das Speichern der Daten neu organisiert und optimiert, d. h. die Löcher werden entfernt. Der Bereich “Information” fasst die Daten im Hinblick auf Fragmentierung zusammen und schlägt die auszuführenden Operationen vor. Die Registerkarte [Daten](information.md#data) auf der Seite “Information” des MSC gibt die Fragmentierung der aktuellen Datendatei an.
 
 - **Complete updating of data** by applying the current formatting set in the structure file. Das ist hilfreich, wenn Daten aus der gleichen Tabelle in unterschiedlichen Formaten gespeichert wurden, z. B. nach einer Änderung in der Struktur der Anwendung.
-> Komprimieren ist nur im Wartungsmodus verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erhalten Sie die Meldung, dass die Datenbank geschlossen und im Wartungsmodus neu gestartet wird. Sie können jedoch eine Datendatei komprimieren, die nicht von der Datenbank geöffnet ist (siehe unten [Komprimiere Datensätze und Indizes](#komprimiere-datensatze-und-indizes)).
+> Komprimieren ist nur im Wartungsmodus verfügbar. If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the application will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the application (see [Compact records and indexes](#compact-records-and-indexes) below).
 
 ## Standard Komprimierung
 
@@ -24,16 +24,16 @@ Um das Komprimieren direkt zu starten, klicken Sie im MSC-Fenster auf die Schalt
 
 Dieser Vorgang komprimiert die Hauptdatei sowie alle Index-Dateien. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. Haben Sie mehrere Komprimierungen durchgeführt, wird jedes Mal ein neuer Ordner angelegt. Er lautet “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, usw. Im erweiterten Modus können Sie den Ordner zum Abspeichern der Originaldateien verändern.
 
-Ist die Operation abgeschlossen, ersetzen die komprimierten Dateien automatisch die Originaldateien. Die Datenbank ist ohne weitere Bearbeitung sofort einsatzbereit.
+Ist die Operation abgeschlossen, ersetzen die komprimierten Dateien automatisch die Originaldateien. The application is immediately operational without any further manipulation.
 > Bei einer verschlüsselten Anwendung enthält die Komprimierung auch die Schritte Entschlüsselung und Verschlüsselung. Dazu ist auch der aktuelle Verschlüsselungscode erforderlich. Ist noch kein gültiger Datenschlüssel angegeben, erscheint ein Dialogfenster, dass die Passphrase oder den Datenschlüssel anfordert.
 
 **Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
 
 ## Logbuch öffnen
 
-Ist das Komprimieren abgeschlossen, erzeugt 4D ein Logbuch im Ordner Logs der Datenbank. Hier können Sie alle ausgeführten Operationen ansehen. Es wird im XML-Format erstellt und lautet:  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*":
+After compacting is completed, 4D generates a log file in the Logs folder of the project. Hier können Sie alle ausgeführten Operationen ansehen. It is created in XML format and named:  *ApplicationName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
+- *ApplicationName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
@@ -67,5 +67,5 @@ Diese Option baut beim Komprimieren die Adresstabelle für die Datensätze kompl
 
 Beachten Sie, dass diese Option die Komprimierung beträchtlich verlangsamt und alle Mengen, die über den Befehl `SAVE SET` gesichert wurden, ungültig werden. Wir empfehlen außerdem dringend, in diesem Fall gesicherte Mengen zu löschen, da ihre Verwendung zur Auswahl nicht-korrekter Daten führen kann.
 > - Beim Komprimieren werden auch die Datensätze von Tabellen berücksichtigt, die im Papierkorb liegen. Gibt es dort eine große Anzahl Datensätze, kann das ein weiterer Faktor sein, der die Operation verlangsamt.
-> - Diese Option macht die Adresstabelle und folglich auch die Anwendung inkompatibel zum aktuellen Logbuch (sofern vorhanden). Es wird automatisch gesichert und beim nächsten Start der Anwendung muss ein neues Logbuch angelegt werden.
+> - Diese Option macht die Adresstabelle und folglich auch die Anwendung inkompatibel zum aktuellen Logbuch (sofern vorhanden). It will be saved automatically and a new journal file will have to be created the next time the application is launched.
 > - Um zu sehen, ob die Adresstabelle komprimiert werden muss, gehen Sie auf die Seite [Information](information.md) des MSC und vergleichen die Gesamtanzahl der Datensätze mit der Größe der Adresstabelle.
