@@ -7,9 +7,9 @@ title: Générer un package projet
 
 Le générateur d'applications vous permet de :
 
-*   Build a compiled structure, without interpreted code,
+*   Générer une structure compilée, sans code interprété,
 *   Générer une application autonome exécutable, c'est-à-dire fusionnée avec 4D Volume Desktop, le moteur de base de données 4D,
-*   Build different applications from the same compiled structure via an XML project,
+*   Générer différentes applications à partir de la même structure compilée via un projet XML,
 *   Générer des applications client-serveur homogènes,
 *   Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
 *   Enregistrer vos paramètres de génération pour une utilisation ultérieure (bouton *Enregistrer les paramètres*).
@@ -20,7 +20,7 @@ Le générateur d'applications vous permet de :
 
 Générer un package de projet peut être réalisée à l'aide de :
 
-- either the [BUILD APPLICATION](https://doc.4d.com/4Dv18R4/4D/18-R4/BUILD-APPLICATION.301-4982852.en.html) command,
+- soit la commande [BUILD APPLICATION](https://doc.4d.com/4Dv18R4/4D/18-R4/BUILD-APPLICATION.301-4982852.en.html),
 - soit la[ fenêtre Générateur d'application](#application-builder).
 
 Pour afficher la boîte de dialogue du générateur d'application, sélectionnez **Développement** > **Générer l'application...** dans la barre de menus.
@@ -32,7 +32,7 @@ La boîte de dialogue du générateur d'application comprend plusieurs pages acc
 ![](assets/en/Project/appbuilderProj.png)
 
 
-Building can only be carried out once the project is compiled. If you select this command without having previously compiled the project, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the project must be (re)compiled.
+La génération ne peut s'effectuer qu'une fois le projet compilé. Si vous sélectionnez cette commande sans avoir préalablement compilé le projet ou si le code compilé ne correspond pas au code interprété, une boîte de dialogue d'avertissement apparaît indiquant que le projet doit être (re)compilé.
 
 
 ### Paramètres du générateur d'application
@@ -78,18 +78,18 @@ Cet onglet vous permet de générer un fichier de structure compilé standard et
 
 ### Générer une structure compilée
 
-Builds an application containing only compiled code.
+Génère une application contenant uniquement du code compilé.
 
-This feature creates a *.4dz* file within a *Compiled Database/\<project name>* folder. For example, if you have named your application “MyProject”, 4D will create:
+Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database/\<project name>*. Par exemple, si vous avez nommé votre application «MyProject», 4D créera :
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer (4D). La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
+> Un fichier .4dz est essentiellement une version compressée du dossier du projet. Les fichiers .4dz peuvent être utilisés par 4D Server, la licence 4D Volume (applications fusionnées) et 4D Developer (4D). La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
 
 #### Inclure les dossiers associés
 
-When you check this option, any folders related to the project are copied into the Build folder as *Components* and *Resources* folders. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
+Lorsque vous cochez cette option, tous les dossiers liés au projet sont recopiés dans le dossier Build en tant que dossiers *Components* et *Resources*. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
 
 
 ### Générer un composant
