@@ -6,7 +6,7 @@ title: ドキュメンテーション
 ## 概要
 
 
-プロジェクトデータベースにおいては、メソッドやフォーム、テーブル、フィールドに関するドキュメンテーションを作成することができます。 複数のプログラマーによってデータベータを開発している場合などに、ドキュメンテーションの作成はとくに適しています。また、一般的に良いプログラミングの作法としても推奨されます。 ドキュメンテーションには、要素の説明だけでなく、データベースにおけるその要素の機能を理解するために必要なあらゆる情報を含めることができます。
+In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
 ドキュメントすることができるプロジェクト要素は次のとおりです:
 
