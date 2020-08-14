@@ -77,7 +77,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[enterable](properties_Entry.md#enterable)|Indicates whether users can enter values into the object.|true, false|
 |[enterableInList](properties_Subform.md#enterable-in-list)|Indicates whether users can modify record data directly in the list subform.|true, false|
 |[entryFilter](properties_Entry.md#entry-filter)|Associates an entry filter with the object or column cells. This property is not accessible if the Enterable property is not enabled.|Text to narrow entries |
-|[events](https://doc.4d.com/4Dv18/4D/18/Form-Events.302-4504424.en.html)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
+|[events](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |[excludedList](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.<a name="f"></a>|
 |**f**|||
 |[fill](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|

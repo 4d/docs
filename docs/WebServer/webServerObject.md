@@ -5,21 +5,21 @@ title: Web Server object
 
 ## Overview
 
-A 4D project can start and monitor a web server for the main (host) database as well as each hosted component.
+A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
 
-For example, if you installed two components in your main database, you can start and monitor up to three independant web servers from your application:
+For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
 
-- one web server for the host database,
+- one web server for the host application,
 - one web server for the component #1,
 - one web server for the component #2.
 
-Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D database project. 
+Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project. 
 
-Each 4D web server, including the main database's web server, is exposed as a specific **object**. Once instantiated, a web server object can be handled from the current database or from any component. 
+Each 4D web server, including the main application's web server, is exposed as a specific **object**. Once instantiated, a web server object can be handled from the current application or from any component. 
 
 > The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below). 
 
-Each web server (host database or component) can be used in its own separate context, including:
+Each web server (host application or component) can be used in its own separate context, including:
 - `On Web Authentication` and `On Web Connection` database method calls
 - 4D tags processing and method calls,
 - managing web sessions and TLS protocols.
@@ -29,7 +29,7 @@ This feature allows you to develop independant components and features that come
 
 ## Instantiating a web server object
 
-The web server object of the host database (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created database:
+The web server object of the host application (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created project:
 
 ```4d
 $nbSrv:=WEB Server list.length   
@@ -46,8 +46,8 @@ webServer:=WEB Server
 webServer:=WEB Server(Web server database)
 ```
 
-If the database uses components and you want to call: 
-- the host database's web server from a component or 
+If the application uses components and you want to call: 
+- the host application's web server from a component or 
 - the server that received the request (whatever the server), 
 
 you can also use:
@@ -92,7 +92,7 @@ A web server object contains the following properties.
 |Property|Type|Description|
 |---|---|---|
 |certificateFolder|text|Folder where the certificate files are located. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.|
-|characterSet|number or text|Character set that the 4D Web Server should use to communicate with browsers connecting to the database. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets) supported by the 4D Web Server: <li>4 = ISO-8859-1</li><li>12 = ISO-8859-9</li><li>13 = ISO-8859-10</li><li>17 = Shift-JIS</li><li>2024 = Windows-31J</li><li>2026 = Big5</li><li>38 = euc-kr</li><li>106 = UTF-8</li><li>2250 = Windows-1250</li><li>2251 = Windows-1251</li><li>2253 = Windows-1253</li><li>2255 = Windows-1255</li><li>2256 = Windows-1256|
+|characterSet|number or text|Character set that the 4D Web Server should use to communicate with browsers connecting to the application. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets) supported by the 4D Web Server: <li>4 = ISO-8859-1</li><li>12 = ISO-8859-9</li><li>13 = ISO-8859-10</li><li>17 = Shift-JIS</li><li>2024 = Windows-31J</li><li>2026 = Big5</li><li>38 = euc-kr</li><li>106 = UTF-8</li><li>2250 = Windows-1250</li><li>2251 = Windows-1251</li><li>2253 = Windows-1253</li><li>2255 = Windows-1255</li><li>2256 = Windows-1256|
 |cipherSuite|text|Cipher list used for the secure protocol. Sets the priority of ciphering algorithms implemented by the web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.|
 |CORSEnabled|boolean|CORS (Cross-origin resource sharing) service status for the Web server. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.<p><p>Default: False (disabled)<p>For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.|
 |CORSSettings|collection of objects|List of allowed hosts and methods for the CORS service (see `CORSEnabled` above). Each object must contain a **host** property and, optionnally, a **methods** property:<li>**host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. If *host* is not present or empty, the object is ignored. Several syntaxes are supported:<br>192.168.5.17:8081<br>192.168.5.17<br>192.168.\*<br>192.168.\*:8081<br>http://192.168.5.17:8081<br>http://\*.myDomain.com<br>http://myProject.myDomain.com<br>\*.myDomain.com<br>myProject.myDomain.com<br>\*<li>**methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separate each method with a ";" (e,g,: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.|
@@ -117,7 +117,7 @@ A web server object contains the following properties.
 |maxRequestSize|number|Maximum size (in bytes) of incoming HTTP requests (POST) that the Web server is allowed to process. Passing the maximum value (2147483648) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it. <p><p>Possible values: 500000 - 2147483648|
 |maxSessions|number|Maximum number of simultaneous sessions. When you reach the limit, the oldest session is closed (and `On Web Close Process` database method is called) if the web server needs to create a new one. The number of simultaneous sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)|
 |minTLSVersion|number|Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected. <p><p>Possible values:<li>1 = `TLSv1_0`</li><li>2 = `TLSv1_1`</li><li>3 = `TLSv1_2` (default)</li><p><p>If modified, the server must be restarted to use the new value.|
-|*name*|text|Name of the web server database|
+|*name*|text|Name of the web server application|
 |*openSSLVersion*|text|Version of the OpenSSL library used|
 |*perfectForwardSecrecy*|boolean|PFS availability on the server|
 |rootFolder|text|Path of web server root folder. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.|
@@ -129,8 +129,8 @@ A web server object contains the following properties.
 These properties are defined:
 
 1. using the `settings` parameter of the `webServer.start( )` method (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host databases only), 
-3. if not used, in the database settings of the host database or the component. 
+2. if not used, using the `WEB SET OPTION` command (host applications only), 
+3. if not used, in the settings of the host application or the component. 
 
 - If the web server is not started, the properties contain the values that will be used at the next web server startup. 
 - If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the `webServer.start()` method.
@@ -144,30 +144,30 @@ The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-S
 
 |Command|Scope|
 |---|---|
-|`SET DATABASE PARAMETER`|Host database web server|
+|`SET DATABASE PARAMETER`|Host application web server|
 |`WEB CLOSE SESSION`|Web server that received the request|
 |`WEB GET BODY PART`|Web server that received the request|
 |`WEB Get body part count`|Web server that received the request|
 |`WEB Get Current Session ID`|Web server that received the request|
 |`WEB GET HTTP BODY`|Web server that received the request|
 |`WEB GET HTTP HEADER`|Web server that received the request|
-|`WEB GET OPTION`|Host database web server|
-|`WEB Get server info`|Host database web server|
+|`WEB GET OPTION`|Host application web server|
+|`WEB Get server info`|Host application web server|
 |`WEB GET SESSION EXPIRATION`|Web server that received the request|
 |`WEB Get session process count`|Web server that received the request|
-|`WEB GET STATISTICS`|Host database web server|
+|`WEB GET STATISTICS`|Host application web server|
 |`WEB GET VARIABLES`|Web server that received the request|
 |`WEB Is secured connection`|Web server that received the request|
-|`WEB Is server running`|Host database web server|
+|`WEB Is server running`|Host application web server|
 |`WEB SEND BLOB`|Web server that received the request|
 |`WEB SEND FILE`|Web server that received the request|
 |`WEB SEND HTTP REDIRECT`|Web server that received the request|
 |`WEB SEND RAW DATA`|Web server that received the request|
 |`WEB SEND TEXT`|Web server that received the request|
-|`WEB SET HOME PAGE`|Host database web server|
+|`WEB SET HOME PAGE`|Host application web server|
 |`WEB SET HTTP HEADER`|Web server that received the request|
-|`WEB SET OPTION`|Host database web server|
-|`WEB SET ROOT FOLDER`|Host database web server|
-|`WEB START SERVER`|Host database web server|
-|`WEB STOP SERVER`|Host database web server|
+|`WEB SET OPTION`|Host application web server|
+|`WEB SET ROOT FOLDER`|Host application web server|
+|`WEB START SERVER`|Host application web server|
+|`WEB STOP SERVER`|Host application web server|
 |`WEB Validate digest`|Web server that received the request|

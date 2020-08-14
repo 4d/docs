@@ -10,8 +10,8 @@ You can use the Backup page to view some backup parameters of the database and t
 
 This page consists of the following three areas:
 
-- **Backup File Destination**: displays information about the location of the database backup file. It also indicates the free/used space on the backup disk.
-- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the database.
+- **Backup File Destination**: displays information about the location of the application backup file. It also indicates the free/used space on the backup disk.
+- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
 - **Contents of the backup file**: lists the files and folders included in the backup file.
 
 The **Backup** button is used to launch a manual backup. 
