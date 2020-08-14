@@ -4,7 +4,7 @@ title: Page Analyse d'activités
 sidebar_label: Page Analyse d'activités
 ---
 
-La page Analyse d'activités du CSM permet de visualiser le contenu du fichier d’historique courant. Cette fonction est utile pour analyser l’utilisation d’une base de données ou détecter la ou les opération(s) à l’origine d’erreurs ou de dysfonctionnements. Dans le cadre d’une base de données exploitée en client-serveur, elle permet de vérifier les opérations effectuées par chaque poste client.
+La page Analyse d'activités du CSM permet de visualiser le contenu du fichier d’historique courant. This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
 > Il est également possible de revenir en arrière parmi les opérations effectuées sur les données de la base. Pour plus d’informations sur ce point, reportez-vous à la section [Page Retour](rollback.md) arrière.
 
 ![](assets/fr/MSC/MSC_analysis.png)
@@ -39,6 +39,5 @@ Les informations affichées permettent d’identifier la source et le contexte d
   ***Note** : Si la base est chiffrée et si aucune clé de données valide correspondant au fichier d'historique n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne.*
 - **Enregistrements** : Numéro de l’enregistrement.
 
-Cliquez sur le bouton **Analyser** pour mettre à jour le contenu du fichier d’historique courant de la base sélectionnée (nommé par défaut nomdonnées.journal). Le bouton **Parcourir...** vous permet de sélectionner et d’ouvrir un autre fichier d’historique de la base. Le bouton **Exporter...** vous permet d’exporter le contenu du fichier sous forme de texte.
-
+Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. Le bouton **Exporter...** vous permet d’exporter le contenu du fichier sous forme de texte.
 
