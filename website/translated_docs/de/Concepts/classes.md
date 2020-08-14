@@ -45,7 +45,7 @@ Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
 Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Datei anlegen:
 
-- Ordner der Anwendung
+- Project folder
     + Project
         * Sources
             - Klassen
@@ -260,7 +260,7 @@ Function getFullname()->$fullname : Text
 
 For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-In the database code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
 - use of a "Function" class member method:
@@ -382,7 +382,7 @@ The `Class extends` keyword is used in class declaration to create a user class 
 Class extension must respect the following rules:
 
 - A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another database or component.
+- A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
