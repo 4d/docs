@@ -46,7 +46,7 @@ Chaque commande de menu peut avoir une méthode projet ou une action standard qu
 
 Si aucune méthode ou action standard n'est affectée à une commande de menu, le choix de cette commande provoquera la fermeture du mode Application et l'ouverture du mode Développement. Si seul le mode Application est disponible, ce qui signifie un retour au Desktop.
 
-Les actions standard peuvent être utilisées pour effectuer des opérations associées aux fonctions système (copier, quitter, etc.) ou aux fonctions de la base 4D (nouvel enregistrement, tout sélectionner, etc.).
+Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the database (add record, select all, etc.).
 
 Vous pouvez associer à la fois une action standard et une méthode projet à une commande de menu. Dans ce cas, l’action standard n’est jamais exécutée ; toutefois, 4D utilise cette action pour activer/inactiver la commande de menu en fonction du contexte et pour associer une opération spécifique en fonction de la plateforme. Lorsqu’une commande de menu est inactivée, la méthode projet associée ne peut être exécutée.
 
@@ -166,7 +166,7 @@ En règle générale, les styles de police doivent être appliqués à vos menus
 > 
 > ![](assets/en/Menus/iconMenu.png)
 > 
-> Pour définir l’icône dans l'éditeur de menu, choisissez l'option **Ouvrir** pour ouvrir un fichier image à partir du disque. Lorsque vous sélectionnez un fichier image qui n'est pas stocké dans le dossier Resources de la base, il est automatiquement copié dans ce dossier. Une fois définie, l’icône de ligne apparaît dans la zone d’aperçu : 
+> Pour définir l’icône dans l'éditeur de menu, choisissez l'option **Ouvrir** pour ouvrir un fichier image à partir du disque. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Une fois définie, l’icône de ligne apparaît dans la zone d’aperçu : 
 > 
 > ![](assets/en/Menus/iconpreview.png)
 > 
