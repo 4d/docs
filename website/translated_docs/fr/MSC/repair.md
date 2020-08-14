@@ -4,10 +4,10 @@ title: Page Réparation
 sidebar_label: Page Réparation
 ---
 
-Cette page permet de réparer le fichier de données ou le fichier de structure lorsqu’il a été endommagé. Généralement, vous n’utiliserez ces fonctions qu’à la demande de 4D, lorsque des anomalies auront été détectées à l’ouverture de la base ou à la suite d’une [vérification](verify.md).
+Cette page permet de réparer le fichier de données ou le fichier de structure lorsqu’il a été endommagé. Generally, you will only use these functions at the request of 4D, when anomalies have been detected while opening the application or following a [verification](verify.md).
 
 **Attention :** Chaque réparation entraîne la duplication du fichier d’origine et donc l’augmentation de la taille du dossier de l’application. Il est important de prendre cela en considération (notamment sous macOS, où les applications 4D apparaissent sous forme de paquet) afin de ne pas augmenter excessivement la taille de l'application. Une intervention manuelle à l’intérieur du package peut être utile afin de supprimer les copies des fichiers d’origine.
-> La réparation n’est disponible qu’en mode maintenance. Si vous tentez d’effectuer cette opération en mode standard, une boîte de dialogue d’alerte vous prévient que la base va être fermée puis relancée en mode maintenance.
+> La réparation n’est disponible qu’en mode maintenance. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode.
 > Lorsque la base est chiffrée, la réparation des données comprend le déchiffrage et le chiffrage et nécessite ainsi la clé de chiffrement de données courante. Si aucune clé de chiffrement valide n'a déjà été fournie, une boite de dialogue s'affiche pour demander pour demander le mot de passe ou la clé de chiffrement (voir Page Chiffrement).
 
 ## Fichiers
@@ -16,24 +16,26 @@ Cette page permet de réparer le fichier de données ou le fichier de structure 
 Chemin d’accès du fichier de données courant. Le bouton **[...]** permet de désigner un autre fichier de données. Lorsque vous cliquez sur ce bouton, une boîte de dialogue standard d’ouverture de documents s’affiche, vous permettant de désigner le fichier de données à réparer. Si vous effectuez une [réparation standard](#standard_repair), vous devez sélectionner un fichier de données compatible avec le fichier de structure ouvert. Si vous effectuez une réparation par [récupération des en-têtes d'enregistrements](#recover-by-record-headers), vous pouvez sélectionner tout fichier de données. Une fois cette boîte de dialogue validée, le chemin d’accès du fichier à réparer est indiqué dans la fenêtre.
 
 ### Dossier de sauvegarde
-Par défaut, le fichier de données original sera dupliqué avant réparation. Il sera placé dans un sous-dossier libellé “Replaced files (repairing)” dans le dossier de la base. Le second bouton **[...]** permet de désigner un autre emplacement pour les sauvegardes des fichiers originaux effectuées avant réparation. Cette option permet notamment de réparer des fichiers volumineux en utilisant différents disques.
+Par défaut, le fichier de données original sera dupliqué avant réparation. It will be placed in a subfolder named “Replaced files (repairing)” in the application folder. Le second bouton **[...]** permet de désigner un autre emplacement pour les sauvegardes des fichiers originaux effectuées avant réparation. Cette option permet notamment de réparer des fichiers volumineux en utilisant différents disques.
 
 ### Fichiers réparés
-4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. Le fichier d’origine est déplacé dans le dossier nommé "\Replaced Files (Repairing) date heure" dont l’emplacement a été défini dans la zone de "Dossier de sauvegarde" (dossier de la base par défaut). Le fichier vide est rempli avec les données récupérées.
+4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (application folder by default). Le fichier vide est rempli avec les données récupérées.
 
 
 ## Réparation standard
 
 La réparation standard permet de réparer des données dans lesquelles seuls quelques enregistrements ou index sont endommagés (les tables d'adresses sont intactes). Les données sont compactées et réparées. A noter que ce type de réparation ne peut être effectué que si le fichier de données et le fichier de structure correspondent.
 
-A l’issue de la procédure, la page "Réparation" du CSM est affichée. Un message indique si la réparation a été effectuée avec succès. Dans ce cas, vous pouvez immédiatement ouvrir la base. ![](assets/fr/MSC/MSC_RepairOK.png)
+A l’issue de la procédure, la page "Réparation" du CSM est affichée. Un message indique si la réparation a été effectuée avec succès. If so, you can open the application immediately. ![](assets/fr/MSC/MSC_RepairOK.png)
 
 ## Réparation par en-têtes d'enregistrements
 Cette option de réparation de bas niveau est à utiliser uniquement dans le cas où le fichier de données a été fortement endommagé et une fois que toutes les autres solutions (restitution de sauvegarde, réparation standard) se sont avérées inefficaces.
 
 Les enregistrements de 4D sont de taille variable : il est donc nécessaire, pour les retrouver, de conserver dans une table spéciale l’endroit où ils sont stockés sur votre disque. Le programme accède donc à l’adresse de l’enregistrement par l’intermédiaire d’un index et d’une table d’adresses. Si seuls des enregistrements ou des index sont endommagés, l’option de réparation standard suffira généralement pour résoudre le problème. C’est lorsque la table d’adresses est touchée qu’il faudra en venir à une récupération plus sophistiquée, puisqu’il faut la reconstituer. Pour réaliser cette opération, le CSM utilise le marqueur qui se trouve en en-tête de chaque enregistrement. Les marqueurs peuvent être comparés à des résumés des enregistrements, comportant l’essentiel de leurs informations, et à partir desquels une reconstitution de la table d’adresses est possible.
 
-> Si vous avez désélectionné l’option **Enregistrement(s) définitivement supprimé(s)** dans les propriétés d’une table dans la structure de la base, la réparation par marqueurs d’en-êtes pourra faire réapparaître des enregistrements normalement supprimés. La récupération par en-têtes ne tient pas compte des éventuelles contraintes d’intégrité. En particulier, à l’issue de cette opération, vous pouvez obtenir des valeurs dupliquées avec des champs uniques ou des valeurs NULL avec des champs déclarés **non NULL**.
+> If you have deselected the **Records definitively deleted** option in the properties of a table in the structure, performing a recovery by header markers may cause records that were previously deleted to reappear. 
+> 
+> La récupération par en-têtes ne tient pas compte des éventuelles contraintes d’intégrité. En particulier, à l’issue de cette opération, vous pouvez obtenir des valeurs dupliquées avec des champs uniques ou des valeurs NULL avec des champs déclarés **non NULL**.
 
 Lorsque vous cliquez sur le bouton **Réparer**, 4D effectue une analyse complète du fichier de données. A l’issue de cette analyse, le résultat est affiché dans la fenêtre suivante :
 
@@ -61,9 +63,9 @@ Sélectionnez ensuite la table à attribuer dans le tableau des "Tables non attr
 
 ## Voir le compte rendu
 
-Une fois la réparation terminée, 4D génère un fichier de compte-rendu dans le dossier Logs de la base. Ce fichier liste l’ensemble des opérations qui ont été menées. Il est créé au format xml et est nommé *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" où :
+After repair is completed, 4D generates a log file in the Logs folder of the project. Ce fichier liste l’ensemble des opérations qui ont été menées. It is created in XML format and named: *ApplicationName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
-- *NomBase* est le nom du fichier de structure sans extension, par exemple "Factures",
+- *ApplicationName* is the name of the project file without any extension, for example "Invoices",
 - *aaaa-mm-jj hh-mm-ss* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
 
 Lorsque vous cliquez sur le bouton **Voir le compte rendu**, 4D affiche le fichier de compte-rendu le plus récent dans le navigateur par défaut de l’ordinateur.
