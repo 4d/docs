@@ -10,10 +10,10 @@ Les applications 4D fonctionnent en mode **interprété** ou en mode **compilé*
 
 Les avantages procurés par le compilateur sont les suivants :
 
-- **Vitesse :** votre base de données s'exécute de 3 à 1000 fois plus vite.
-- **Vérification du code** : la cohérence interne du code de votre application de base de données est entièrement contrôlée. Les conflits de logique et de syntaxe sont détectés.
-- **Protection :** une fois votre base compilée, vous pouvez en supprimer le code interprété. Alors, la base compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
-- **Application indépendantes "double-cliquables" **: une base compilée peut également être transformée en application indépendante (sous Windows, des fichiers ".EXE") comportant sa propre icône.
+- **Speed**: Your application can run from 3 to 1,000 times faster.
+- **Code checking**: Your application is scanned for the consistency of code. Les conflits de logique et de syntaxe sont détectés.
+- **Protection**: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
+- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
 - **Exécution en mode préemptif** : seul le code compilé peut être exécuté dans un process préemptif.
 
 ## Différences entre le code interprété et le code compilé
@@ -32,9 +32,9 @@ Bien que l'application fonctionnera de la même manière en modes interprété e
 
 ## Utiliser les directives du compilateur avec l'interpréteur
 
-Les directives de compilateur ne sont pas requises pour les bases non compilées. L'interpréteur type automatiquement chaque variable selon son utilisation dans la déclaration, et une variable peut être retypée librement dans la base.
+Compiler directives are not required for uncompiled applications. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
 
-Grâce à cet aspect flexible, il est possible qu'une base agisse différemment en modes interprété et compilé.
+Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes.
 
 Par exemple, si vous écrivez :
 
@@ -42,7 +42,7 @@ Par exemple, si vous écrivez :
 C_ENTIER LONG(MyInt)
 ```
 
-et ailleurs dans la base, vous écrivez :
+and elsewhere in the project, you write:
 ```4d
 MyInt:=3.1416
 ```
@@ -51,7 +51,7 @@ Dans cet exemple, `MyInt` se voit assigner la même valeur (3) dans les modes in
 
 L'interpréteur 4D utilise des directives de compilateur pour typer les variables. Lorsque l'interpréteur rencontre une directive de compilateur, il type la variable en fonction de la directive. Si une déclaration ultérieure tente d'affecter une valeur incorrecte (ex : affecter une valeur alphanumérique à une variable numérique), l'affectation n'aura pas lieu et générera une erreur.
 
-L'ordre d'apparition des deux déclarations importe peu au compilateur, car il scanne d'abord la base dans son intégralité pour les directives du compilateur. En revanche, l'interpréteur n'est pas systématique. Il interprète les déclarations dans leur ordre d'exécution. Cet ordre peut évidemment changer d'une session à l'autre, en fonction de ce que fait l'utilisateur. C'est pourquoi il est important de concevoir votre base de données afin que vos directives de compilateur s'exécutent avant n'importe quelle déclaration contenant des variables déclarées.
+The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. En revanche, l'interpréteur n'est pas systématique. Il interprète les déclarations dans leur ordre d'exécution. Cet ordre peut évidemment changer d'une session à l'autre, en fonction de ce que fait l'utilisateur. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.
 
 
 ## Utiliser des pointeurs pour éviter les retypages
