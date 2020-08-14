@@ -19,7 +19,7 @@ Le mode SDI est disponible uniquement dans l'environnement d'exécution suivant 
 
 L'activation et l'utilisation du mode SDI dans votre application requiert les étapes suivantes :
 
-1. Cochez l'option **Utiliser le mode SDI sous Windows** dans la page "Interface" de la boîte de dialogue des Propriétés de la base.
+1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
 2. Générez une application exécutable (monoposte et/ou application cliente).
 
 Par la suite, lorsqu'elle sera exécutée dans le contexte adéquat (voir ci-dessus), l'application fusionnée fonctionnera automatiquement en mode SDI.
@@ -40,7 +40,7 @@ Les fenêtres peuvent donc être utilisées dans les modes MDI ou SDI sans avoir
 
 #### A propos de la fenêtre d'accueil
 
-- Si l'option **Afficher fenêtres : Accueil** de la page "Interface" a été sélectionnée pour la base de données, la fenêtre d'accueil contiendra les menus qui auraient été affichés dans la fenêtre MDI. Notez également que la fermeture de la fenêtre d'accueil entraînera la sortie de l'application, tout comme dans le mode MDI.
+- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Notez également que la fermeture de la fenêtre d'accueil entraînera la sortie de l'application, tout comme dans le mode MDI.
 - Si l'option Accueil n'a pas été cochée dans la base de données, les menus seront affichés uniquement dans les fenêtres ouvertes, selon les choix du Développeur.
 
 ### Arrêt automatique

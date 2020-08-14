@@ -120,7 +120,7 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
  End for
 ```
 
-La plupart des structures `For...End for` que vous écrirez dans vos bases ressembleront à celles présentées ci-dessus.
+Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
 
 ### Décrémenter la variable Compteur
 

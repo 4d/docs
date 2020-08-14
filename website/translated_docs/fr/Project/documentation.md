@@ -6,7 +6,7 @@ title: Documenter un projet
 ## Aperçu
 
 
-Dans les bases projet, vous pouvez documenter vos méthodes ainsi que vos formulaires, vos tables ou vos champs. La création d'une documentation est particulièrement appropriée pour les bases de données développées par plusieurs programmeurs et constitue généralement une bonne pratique en matière de programmation. La documentation peut contenir une description d'un élément ainsi que toute information nécessaire à la compréhension du fonctionnement de cet élément d'une base de données.
+In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
 Les éléments de projet suivants acceptent la documentation :
 

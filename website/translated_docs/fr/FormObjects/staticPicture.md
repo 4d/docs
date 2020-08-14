@@ -12,7 +12,7 @@ Les images statiques sont des [objets statiques](formObjects_overview.md#active-
 
 Les images statiques sont stockées à l’extérieur des formulaires et insérées par référence. Dans l'éditeur de formules, les objets image statique sont créées par copier-coller ou par glisser-déposer.
 
-> Si vous placez une image statique dans la page 0 d’un formulaire multi-pages, elle apparaîtra comme élément d’arrière-plan de toutes les pages. Vous pouvez également l’inclure dans un formulaire hérité, qui s'applique à l'arrière-plan de différents autres formulaires. Dans les deux cas, votre base s’exécutera plus rapidement.
+> Si vous placez une image statique dans la page 0 d’un formulaire multi-pages, elle apparaîtra comme élément d’arrière-plan de toutes les pages. Vous pouvez également l’inclure dans un formulaire hérité, qui s'applique à l'arrière-plan de différents autres formulaires. Either way, your application will run faster than if the picture was pasted into each page.
 
 
 
@@ -22,7 +22,7 @@ L'image d'origine doit être stockée dans un format géré nativement par 4D (4
 
 Two main locations can be used for static picture path:
 
-- in the **Resources** folder of the project database. Appropriate when you want to share static pictures between several forms in the database. Dans ce cas, le chemin d'accès se trouve dans "/RESOURCES/\<picture path\>".
+- in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. Dans ce cas, le chemin d'accès se trouve dans "/RESOURCES/\<picture path\>".
 - in an image folder (e.g. named **Images**) within the form folder. Convient lorsque les images statiques sont utilisées uniquement dans le formulaire et/ou lorsque vous souhaitez pouvoir déplacer ou dupliquer le formulaire entier dans un ou plusieurs projets. Dans ce cas, le chemin d'accès est "<\picture path\>" et est résolu à partir de la racine du dossier du formulaire.
 
 

@@ -6,7 +6,7 @@ sidebar_label: Page Retour en arrière
 
 La page Retour arrière du CSM permet d’accéder à la fonction de retour en arrière parmi les opérations effectuées dans le fichier de données. Elle s’apparente à une fonction d’annulation multi-niveaux. Elle est utile notamment lorsqu’un enregistrement a été supprimé par erreur dans la base de données.
 
-Pour que cette fonction soit accessible, il est impératif que la base travaille avec un fichier d’historique.
+This function is only available when the application functions with a data log file.
 
 ![](assets/en/MSC/MSC_rollback1.png)
 

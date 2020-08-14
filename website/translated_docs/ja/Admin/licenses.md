@@ -13,7 +13,7 @@ title: 4D ライセンスの管理
 以下の利用モードの場合には、アクティベーションは必要はありません:
 
 - リモートモードで利用される 4D (4D Serverへの接続)
-- インタープリターモードのデータベースを開く場合で、デザインモードへはアクセスしないローカルモードの4D
+- 4D used in local mode with an interpreted application project with no access to the Design environment.
 
 
 ## 初回のアクティベーション

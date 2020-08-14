@@ -15,7 +15,7 @@ Les objets partagés et les collections partagées peuvent être stockés dans d
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Utiliser...Fin utiliser**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Utiliser...Fin utiliser**.
 
-Un catalogue unique et global, retourné par la commande `Storage`, est disponible à tout moment et depuis tout process de la base et de ses composants.
+A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
 ## Utilisation des objets et collections partagés
 Une fois instanciés à l'aide des commandes `Creer objet partage` ou `Creer collection partagee`, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process.

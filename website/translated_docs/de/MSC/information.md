@@ -10,7 +10,7 @@ Die Seite “Information” liefert Informationen über die 4D Umgebung und die 
 
 This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the *4D Language Reference* manual).
 
-Der mittlere Bereich gibt Name und Speicherort der Projektdatei und der Datendatei der Datenbank und des Logbuchs (wenn vorhanden) an. Der untere Bereich zeigt den Namen des 4D Lizenzinhabers, die Art der Lizenz, und bei aktivierten Kennwörtern auch den Anwendernamen. Ist das nicht der Fall, erscheint als Anwendername Designer.
+The central part of the window indicates the name and location of the project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the current 4D user.
 
 - **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
   ![](assets/en/MSC/MSC_popup.png) If you select a menu item (disk or folder), it is displayed in a new system window. The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
@@ -31,8 +31,8 @@ Die Seite listet alle Tabellen der Datenbank - auch die ausgeblendeten - mit den
 - **Records**: Total number of records in the table. If a record is damaged or cannot be read, *Error* is displayed instead of the number. Dann können Sie abwägen, ob Sie die Tools zum Prüfen und Reparieren einsetzen.
 - **Fields**: Number of fields in the table. Ausgeblendete Felder werden mitgezählt, gelöschte Felder dagegen nicht.
 - **Indexes**: Number of indexes of any kind in the table
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see Encryptable paragraph in the Design Reference Manual).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file. ***Note:** Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the **Encrypt page** of the database. *
+- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
+- **Encrypted**: If checked, the records of the table are encrypted in the data file. ***Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC.*
 - **Address Table Size**: Size of the address table for each table. In der Adresstabelle wird pro angelegtem Datensatz in der Tabelle intern ein Element gespeichert. Es verbindet Datensätze mit ihrer physikalischen Adresse. Aus Performance Gründen wird sie beim Löschen von Datensätzen nicht angepasst, so dass ihre Größe von der aktuellen Anzahl der Datensätze in der Tabelle abweichen kann. Bei einem deutlichen Unterschied können Sie die Größe der Adresstabelle über die Option "Komprimiere Adresstabelle" optimieren (siehe Seite [Kompakt](compact.md)). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
 
 

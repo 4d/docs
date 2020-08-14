@@ -25,7 +25,7 @@ L'image d'accueil peut être uniquement paramétrée dans l'éditeur de menus : 
 
 Vous pouvez visualiser le résultat final en testant la barre de menus (cf. paragraphe suivant). En mode Application, l’image est affichée dans la fenêtre d’accueil avec un format du type “tronqué centré”.
 
-> Vous pouvez choisir d’afficher ou de masquer cette fenêtre en cochant l'option **Afficher la barre d'outils** dans les Propriétés de la base.
+> You can choose whether to display or hide this window using the **Display toolbar** option in the Settings.
 
 Pour supprimer l’image personnalisée et afficher l’image par défaut, cliquez sur le bouton **Effacer** ou cliquez dans la zone “Image de fond” et choisissez la commande **Effacer** dans le pop up menu.
 

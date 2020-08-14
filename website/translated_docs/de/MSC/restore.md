@@ -6,32 +6,32 @@ sidebar_label: Seite Wiederherstellen
 
 ## Backup wiederherstellen
 
-You can manually restore an archive of the current database using the **Restore** page. Hier können Sie auch verschiedene Optionen zum Steuern der Wiederherstellung der Datenbank festlegen:
+You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
 
 ![](assets/en/MSC/MSC_restore.png)
 
-> Das automatische Wiederherstellungssystem von 4D stellt Datenbanken wieder her und integriert bei Bedarf das Logbuch der Daten.
+> 4D automatic recovery systems restore applications and include data log file when necessary.
 
-Der linke Bereich enthält die vorhandenen Backups der Datenbank. You can also click on the Browse... button found just under the area in order to open any other archive file from a different location. Es wird dann zur Liste der Archive hinzugefügt.
+The list found in the left part of the window displays any existing backups of the application. You can also click on the **Browse...** button found just under the area in order to open any other archive file from a different location. Es wird dann zur Liste der Archive hinzugefügt.
 
 Wählen Sie hier ein Backup aus, erscheinen im rechten Teil des Fensters Informationen über dieses Backup:
 
 - **Path**: Complete pathname of the selected backup file. Mit der Schaltfläche Anzeigen öffnen Sie die Backup-Datei in einem Systemfenster.
 - **Date and Time**: Date and time of backup.
 - **Content**: Contents of the backup file. Neben jedem Eintrag in der Liste gibt es ein Ankreuzfeld, über das Sie angeben, ob er wiederhergestellt werden soll. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored.
-- **Destination folder of the restored files**: Folder where the restored files will be placed. 4D legt die wiederhergestellten Dateien standardmäßig in einem Ordner mit Namen "Archivname" (ohne Endung) ab, der neben der Strukturdatei der Datenbank liegt. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
+- **Destination folder of the restored files**: Folder where the restored files will be placed. By default, 4D restores the files in a folder named “Archivename” (no extension) that is placed next to the Project folder. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
 
 The **Restore** button launches the manual restoration of the selected element(s).
 
 ## Mehrere Logbücher der Daten nacheinander integrieren
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into a database. Haben Sie z.B. 4 Logbücher (.4BL) passend zu 4 Backups der Datenbank, können Sie das erste Backup wiederherstellen und dann die Logbücher (data log) der Reihe nach integrieren. Auf diese Weise können Sie z. B. eine Datei wiederherstellen, auch wenn die letzten Backup-Dateien fehlen.
+The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. If, for example, you have 4 journal file archives (.4BL) corresponding to 4 backups, you can restore the first backup then integrate the journal (data log) archives one by one. Auf diese Weise können Sie z. B. eine Datei wiederherstellen, auch wenn die letzten Backup-Dateien fehlen.
 
 Ist diese Option markiert, zeigt 4D nach dem Wiederherstellen den Standard Öffnen-Dialog. Hier können Sie das entsprechende Logbuch auswählen. Der Öffnen-Dialog erscheint erneut nach jeder Integration, bis er abgebrochen wird.
 
 ## Eine verschlüsselte Anwendung wiederherstellen
 
-Beachten Sie, dass sich der Verschlüsselungscode (Passphrase) bei mehreren Versionen der Backup Dateien (.4BK), Logbücher (.4BL) und der aktuellen Anwendung geändert haben kann. Es müssen immer passende Verschlüsselungscodes angegeben werden.
+Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current application. Es müssen immer passende Verschlüsselungscodes angegeben werden.
 
 Beim Wiederherstellen eines Backup und Integration des aktuellen Logbuchs in eine verschlüsselte Anwendung gilt folgendes:
 
@@ -43,7 +43,7 @@ Nachfolgende Übersicht zeigt die Vorgehensweise bei einer Operation Backup/Wied
 
 | Operation                         | Generierte Dateien                                     | Kommentar                                                                                                                                                                                                                                            |
 | --------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Neue Anwendung                    |                                                        |                                                                                                                                                                                                                                                      |
+| New data file                     |                                                        |                                                                                                                                                                                                                                                      |
 | Daten hinzufügen (Datensatz # 1)  |                                                        |                                                                                                                                                                                                                                                      |
 | Backup Anwendung                  | 0000.4BL und 0001.4BK                                  |                                                                                                                                                                                                                                                      |
 | Daten hinzufügen (Datensatz # 2)  |                                                        |                                                                                                                                                                                                                                                      |

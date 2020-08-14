@@ -28,7 +28,7 @@ Ces fichiers sont stockés dans le dossier "/SOURCES" du projet.
 
 ### Architecture des feuilles de style
 
-Bien qu'elle soient adaptées aux besoins spécifiques des formulaires 4D, les feuilles de style des bases projet respectent généralement la syntaxe et la grammaire CSS2.
+While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
 Chaque règle de style d'une feuille de style contient deux parties :
 

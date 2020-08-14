@@ -3,12 +3,12 @@ id: components
 title: コンポーネント
 ---
 
-4D のコンポーネントとは、他のデータベースにインストール可能な、1つ以上の機能を持つ 4D メソッドやフォームの一式です。 たとえば、メールの送受信をおこない、それらを 4D データベースに格納するための機能を持ったコンポーネントを作成できます。
+A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different applications. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications.
 
 4D コンポーネントの作成とインストールは直接 4D を使用しておこないます。 4D では、コンポーネントは [プラグイン](Concepts/plug-ins.md) のように扱われ、以下の原則が適用されます:
 
 - コンポーネントは、標準のアーキテクチャーまたはパッケージ (.4dbase 拡張子) の形をしたストラクチャーファイル ( コンパイルまたは非コンパイル) で構成されます。
-- データベースにコンポーネントをインストールするには、データベースのストラクチャーファイルと同階層の "Components" フォルダーにコンポーネントをコピーします。
+- To install a component in an application project, you simply need to copy it into the "Components" folder of the project, at the same level as the Project folder.
 - コンポーネントは次の 4D の要素を呼び出すことができます: プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リスト、ライブラリピクチャーなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
 - コンポーネント内で標準のテーブルやデータファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
 
@@ -17,47 +17,47 @@ title: コンポーネント
 
 4D のコンポーネント管理メカニズムでは、以下の用語とコンセプトを使います:
 
-- **マトリクスデータベース**: コンポーネント開発に使用する4D データベース。 マトリクスデータベースは特別な属性を持たない標準のデータベースです。 マトリクスデータベースはひとつのコンポーネントを構成します。 マトリクスデータベースは、コンポーネントを使用するデータベース (ホストデータベース) の Components フォルダーにコピーして使います。コンパイルされていてもいなくてもかまいません。
-- **ホストデータベース**: コンポーネントがインストールされ、それを使用するデータベース。
-- **コンポーネント**: ホストデータベースによって使用される目的で、同データベースの Components フォルダーにコピーされたマトリクスデータベース (コンパイル済みまたは非コンパイル)。
+- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component. The matrix project is intended to be copied, compiled or not, into the Components folder of the project that will be using the component (host application project).
+- **Host Project**: Application project in which a component is installed and used.
+- **Component**: Matrix project, compiled or not, copied into the Components folder of the host application and whose contents are used in the host applications.
 
-データベースは "マトリクス" にも "ホスト" にもなりえます。言い換えれば、マトリクスデータベース自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
+It should be noted that a project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. しかしコンポーネントが "サブコンポーネント" を使用することはできません。
 
 
 ### コンポーネントの保護: コンパイル
 
-コンポーネントとしてインストールされたマトリクスデータベースのプロジェクトメソッドは、ホストデータベースからデフォルトでアクセス可能です。 特に:
+By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. 特に:
 
-- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストデータベースのメソッドから呼び出し可能です。 エクスプローラーのプレビューエリアでそれらの内容を選択してコピーすることが可能です。 また、その内容はデバッガーで見ることもできます。 しかし、それらをメソッドエディター上で開いたり編集したりすることはできません。
-- マトリクスデータベースの他のプロジェクトメソッドはエクスプローラーに現れません。しかし、ホストデータベースのデバッガーには内容が表示されます。
+- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. エクスプローラーのプレビューエリアでそれらの内容を選択してコピーすることが可能です。 また、その内容はデバッガーで見ることもできます。 しかし、それらをメソッドエディター上で開いたり編集したりすることはできません。
+- The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
 
-コンポーネントのプロジェクトメソッドを効果的に保護するには、マトリクスデータベースをコンパイルして、インタプリターコードを含まない .4dc ファイルとして提供します。 コンパイルされたマトリクスデータベースがコンポーネントとしてインストールされると:
+To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
 
-- エクスプローラーのメソッドページに存在する共有のプロジェクトメソッドは、ホストデータベースのメソッドから呼び出し可能です。 しかし、その内容はプレビューエリアにもデバッガーにも表示されません。
-- マトリクスデータベースの他のプロジェクトメソッドは一切表示されません。
+- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. しかし、その内容はプレビューエリアにもデバッガーにも表示されません。
+- The other project methods of the matrix project will never appear.
 
 
 ## プロジェクトメソッドの共有
-マトリクスデータベースのすべてのプロジェクトメソッドは 、コンポーネントに含まれます。つまり、マトリクスデータベースをコンポーネント化しても、これらのプロジェクトメソッドは同コンポーネントにて呼び出して実行することができます。
+All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component.
 
-他方、デフォルトでは、これらのプロジェクトメソッドはホストデータベースに表示されず、呼び出すこともできません。 プロジェクトメソッドをホストデータベースと共有するには、 マトリクスデータベース側でそのメソッドをそのように明示的に設定しなければなりません。 設定することで、それらのプロジェクトメソッドはホストデータベースにて呼び出すことができるようになります (しかしホストデータベースのメソッドエディターで編集することはできません)。 これらのメソッドはコンポーネントの **エントリーポイント** となります。
+On the other hand, by default these project methods will not be visible, nor can they be called in the host projects. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host database). これらのメソッドはコンポーネントの **エントリーポイント** となります。
 
-**注:** セキュリティのため、デフォルトでは、コンポーネントはホストデータベースのプロジェクトメソッドを実行することはできません。 特定の場合に、ホストデータベースのプロジェクトメソッドにコンポーネントがアクセスできるようにする必要があるかもしれません。 そうするには、ホストデータベースのプロジェクトメソッド側で、コンポーネントからのアクセスを可能にするよう明示的に指定しなければなりません。
+**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate the project methods of the host project that you want to make accessible to the components.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
 ## 変数の渡し方
 
-ローカル、プロセス、インタープロセス変数は、コンポーネントとホストデータベース間で共有されません。 ホストデータベースからコンポーネントの変数、またはその逆にアクセスする唯一の方法はポインターを使用することです。
+The local, process and interprocess variables are not shared between components and host projects. The only way to access component variables from the host project and vice versa is using pointers.
 
 配列を使用した例:
 
 ```4d
-// ホストデータベース側:
+//In the host project:
      ARRAY INTEGER(MyArray;10)
      AMethod(->MyArray)
 
-// コンポーネント側で AMethod プロジェクトメソッドは以下の通りです:
+//In the component, the AMethod project method contains:
      APPEND TO ARRAY($1->;2)
 ```
 
@@ -71,15 +71,15 @@ title: コンポーネント
 ```
 
 
-ホストデータベースとコンポーネント間でポインターを使用して通信をおこなうには、以下の点を考慮する必要があります:
+When you use pointers to allow components and the host project to communicate, you need to take the following specificities into account:
 
-- `Get pointer` をコンポーネント内で使用した場合、このコマンドはホストデータベースの変数へのポインターを返しません。また逆にこのコマンドをホストデータベースで使用した場合も同様です。
+- The `Get pointer` command will not return a pointer to a variable of the host project if it is called from a component and vice versa.
 
-- コンパイル済みデータベースでは、コンパイルされたコンポーネントしか使用できませんが、インタープリターデータベースの場合には、インタープリターおよびコンパイル済みコンポーネントを同時に使用することができます。 この場合、ポインターの利用は以下の原則を守らなければなりません: インタープリターモードでは、コンパイルモードにおいて作成されたポインターを解釈できます。逆にコンパイルモードでは、インタープリターモードにて作成されたポインターを解釈することはできません。 以下の例でこの原則を説明します: 同じホストデータベースにインストールされた 2つのコンポーネント C ( コンパイル済) と I ( インタープリタ) があります:
+- The component architecture allows the coexistence, within the same interpreted project, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled project). この場合、ポインターの利用は以下の原則を守らなければなりません: インタープリターモードでは、コンパイルモードにおいて作成されたポインターを解釈できます。逆にコンパイルモードでは、インタープリターモードにて作成されたポインターを解釈することはできません。 Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host project.
  - コンポーネントC が定義する変数 `myCvar` があるとき、コンポーネントI はポインター `->myCvar` を使用して変数の値にアクセスすることができます。
  - コンポーネントI が定義する変数 `myIvar` があるとき、コンポーネントC はポインター `->myIvar` を使用しても変数の値にアクセスすることはできません。 このシンタックスは実行エラーを起こします。
 
-- `RESOLVE POINTER` を使用したポインターの比較はお勧めできません。 変数の分離の原則により、ホストデータベースとコンポーネント (あるいは他のコンポーネント) で同じ名前の変数が存在することができますが、根本的にそれらは異なる内容を持ちます。 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
+- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -92,9 +92,9 @@ title: コンポーネント
      If(myptr1=myptr2) // このテストはFalse を返します
 ```
 
-## ホストデータベースのテーブルへのアクセス
+## Access to tables of the host project
 
-コンポーネントでテーブルを使用することはできませんが、ホストデータベースとコンポーネントはポインターを使用して通信を行うことができます。 たとえば、以下はコンポーネントで実行可能なメソッドです:
+Although components cannot use tables, pointers can permit host projects and components to communicate with each other. たとえば、以下はコンポーネントで実行可能なメソッドです:
 
 ```4d
 // コンポーネントメソッドの呼び出し
@@ -104,9 +104,9 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 コンポーネント内の `methCreateRec` メソッドのコード:
 
 ```4d
-C_POINTER($1) // ホストデータベースのテーブルへのポインター
-C_POINTER($2) // ホストデータベースのフィールドへのポインター
-C_TEXT($3) // 代入する値
+C_POINTER($1) //Pointer on a table in host project
+C_POINTER($2) //Pointer on a field in host project
+C_TEXT($3) // Value to insert
 
 $tablepointer:=$1
 $fieldpointer:=$2
@@ -120,13 +120,13 @@ SAVE RECORD($tablepointer->)
 
 [使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。ただし `EXECUTE METHOD` コマンドは除きます。このコマンドは、パラメーターにて指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストデータベースのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
+コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。ただし `EXECUTE METHOD` コマンドは除きます。このコマンドは、パラメーターにて指定されたメソッドのコンテキストを使用します。 Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
 
-`SET DATABASE PARAMETER` と `Get database parameter` コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストデータベースに適用されます。
+The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
 
 さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
-`COMPONENT LIST` コマンドを使用して、ホストデータベースにロードされたコンポーネントのリストを取得できます。
+The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host project.
 
 
 ### 使用できないコマンド
@@ -154,24 +154,24 @@ SAVE RECORD($tablepointer->)
 **注:**
 
 - `Current form table` コマンドは、プロジェクトフォームのコンテキストで呼び出されると `Nil` を返します。 ゆえにこのコマンドをコンポーネントで使用することはできません。
-- SQLデータ定義言語のコマンド (`CREATE TABLE`、`DROP TABLE`等) をコンポーネントのフレームワークで使用することはできません。 ただし、外部データベースの場合は使用することができます (`CREATE DATABASE` SQL コマンド参照)。
+- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. ただし、外部データベースの場合は使用することができます (`CREATE DATABASE` SQL コマンド参照)。
 
 ## エラー処理
 
-`ON ERR CALL` コマンドによって実装された [エラー処理メソッド](Concepts/error-handling.md) は、実行中のデータベースに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストデータベースの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
+An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR CALL` command only applies to the running application. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host project is not called, and vice versa.
 
 ## フォームの使用
 
-- 特定のテーブルに属さない" プロジェクトフォーム" のみが、コンポーネント内で利用できます。 マトリクスデータベースのすべてのプロジェクトフォームをコンポーネントで使用することができます。
-- コンポーネントはホストデータベースのテーブルフォームを使用できます。 この場合、コンポーネントのコードでフォームを指定するにあたっては、テーブル名ではなく、テーブルへのポインターを使用しなければならないことに注意してください。
+- 特定のテーブルに属さない" プロジェクトフォーム" のみが、コンポーネント内で利用できます。 Any project forms present in the matrix project can be used by the component.
+- A component can call table forms of the host project. この場合、コンポーネントのコードでフォームを指定するにあたっては、テーブル名ではなく、テーブルへのポインターを使用しなければならないことに注意してください。
 
-**注:** コンポーネントが `ADD RECORD` コマンドを使用すると、ホストデータベースのコンテキストで、ホストデータベースのカレントの入力フォームが表示されます。 したがって、その入力フォーム上に変数が含まれている場合、コンポーネントはその変数にアクセスできません。
+**Note:** If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. したがって、その入力フォーム上に変数が含まれている場合、コンポーネントはその変数にアクセスできません。
 
-- コンポーネントフォームをホストデータベース内でサブフォームとして公開することができます。 これは具体的には、グラフィックオブジェクトを提供するコンポーネントを開発できることを意味します。 たとえば、4D社が提供するウィジェットはコンポーネントのサブフォーム利用に基づいています。
+- You can publish component forms as subforms in the host projects. これは具体的には、グラフィックオブジェクトを提供するコンポーネントを開発できることを意味します。 たとえば、4D社が提供するウィジェットはコンポーネントのサブフォーム利用に基づいています。
 
 ## テーブルやフィールドの利用
 
-コンポーネントは、マトリクスデータベースのストラクチャーで定義されたテーブルやフィールドを使用することはできません。 しかし外部データベースを作成し、そのテーブルやフィールドを必要に応じ利用することはできます。 外部データベースの作成と管理は SQL を用いておこないます。 外部データベースは、メインの4Dデータベースから独立している別の 4Dデータベースですが、メインデータベースから操作が可能です。 外部データベースの利用は、そのデータベースを一時的にカレントデータベースに指定することです。言い換えれば、4Dが実行する SQL クエリのターゲットデータベースとして外部データベースを指定します。 外部データベースの作成は SQL の `CREATE DATABASE` コマンドを使用します。
+A component cannot use the tables and fields defined in the 4D structure of the matrix project. しかし外部データベースを作成し、そのテーブルやフィールドを必要に応じ利用することはできます。 外部データベースの作成と管理は SQL を用いておこないます。 An external database is a 4D project that is independent from the main 4D project, but that you can work with from the main 4D project. 外部データベースの利用は、そのデータベースを一時的にカレントデータベースに指定することです。言い換えれば、4Dが実行する SQL クエリのターゲットデータベースとして外部データベースを指定します。 外部データベースの作成は SQL の `CREATE DATABASE` コマンドを使用します。
 
 ### 例題
 
@@ -207,7 +207,7 @@ SAVE RECORD($tablepointer->)
 外部データベースへのデータ書き込み:
 
 ```4d
- $Ptr_1:=$2 // ホストデータベースへのデータアクセスはポインターを通じておこないます
+ $Ptr_1:=$2 // retrieves data from the host project through pointers
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -229,7 +229,7 @@ SAVE RECORD($tablepointer->)
 外部データベースからデータを読み込み:
 
 ```4d
- $Ptr_1:=$2 // ホストデータベースへのデータアクセスはポインターを通じておこないます
+ $Ptr_1:=$2 // accesses data of the host project through pointers
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -254,10 +254,10 @@ SAVE RECORD($tablepointer->)
 
 これによって自動メカニズムが有効となり、コンポーネントの Resources フォルダー内で見つかった XLIFF ファイルは、 同コンポーネントによってロードされます。
 
-1つ以上のコンポーネントを含むホストデータベースでは、ホストデータベースと同様にそれぞれのコンポーネントも固有のリソースチェーンを持っています。 リソースは異なるデータベース間で分離されます。コンポーネントA のリソースにコンポーネントB やホストデータベースからアクセスすることはできません。
+In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
 
 ## コンポーネントのオンラインヘルプ
-コンポーネントにオンラインヘルプを追加できるように、専用のメカニズムが実装されています。 原理は 4D データベースに提供されているものと同じです:
+コンポーネントにオンラインヘルプを追加できるように、専用のメカニズムが実装されています。 The principle is the same as that provided for 4D projects:
 
 - コンポーネントヘルプは拡張子が .htm, .html または (Windows のみ) .chm で提供されます。
 - ヘルプファイルはコンポーネントのストラクチャーファイルと同階層に置かれ、ストラクチャーと同じ名前でなくてはなりません。
