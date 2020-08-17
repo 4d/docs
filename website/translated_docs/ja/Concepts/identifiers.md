@@ -18,26 +18,57 @@ title: 識別子の命名規則
 - 名前の最後につけたスペースは無視されます。
 
 ### ORDA に適用される追加ルール
+
 - スペースは使えません。
 - ピリオド (".") および大カッコ ("[ ]") は使用できません。
 - 大文字・小文字は区別されます。
 
 ### SQL で処理する場合の追加ルール
+
 - 文字 _0123456789abcdefghijklmnopqrstuvwxyz のみを使用できます。
 - 名前に SQLキーワード (コマンド、属性 等) が含まれていてはなりません。
 
 **注:** ストラクチャーエディターのインスペクター下部にある ”SQL” エリアには、テーブル名やフィールド名として許可されない文字があると警告が表示されます。
 
 
-## テーブル
 
-大カッコ内 ([...]) に名前を入れることで、テーブルを表します。 テーブル名は、31文字以内で指定します。
+
+## 配列
+
+配列は、配列作成時に配列宣言コマンド (ARRAY LONGINT 等) に渡す名前でもって表されます。 Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:
+
+- The name of a **local** array is preceded by the dollar sign ($).
+- The name of a **process** array cannot start with the <> symbols nor the dollar sign $).
+- The name of an **interprocess** array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 例:
 ```4d
-DEFAULT TABLE([Orders])
-FORM SET INPUT([Clients];"Entry")
-ADD RECORD([Letters])
+ARRAY TEXT($atSubjects;Records in table([Topics])) //local array
+SORT ARRAY(asKeywords;>) //process array
+ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //interprocess array
+```
+
+
+### 配列の要素
+中カッコ ("{ }") を使用して、インタープロセス配列、プロセス配列、ローカル配列の要素を参照します。 参照される配列要素は数式で表されます。
+
+例:
+```4d   
+    //Addressing an element of a local array
+If($asKeywords{1}="Stop")
+$atSubjects{$vlElem}:=[Topics]Subject
+$viNextValue:=$aiBigArray{Size of array($aiBigArray)}
+```
+
+### 二次元配列の要素
+中カッコ ("{ }") を2回使用して、2次元配列の要素を参照します 。 参照される要素は2組の中カッコ内の2つの数式で表されます。
+
+例:
+```4d 
+    //Addressing an element of a two-dimensional process array
+If(asKeywords{$vlNextRow}{1}="Stop")
+atSubjects{10}{$vlElem}:=[Topics]Subject
+$viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
 ## フィールド
@@ -51,134 +82,16 @@ QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## インタープロセス変数
+## フォームオブジェクト
 
-名前の先頭にインタープロセス記号 (<>) を付けることによって、インタープロセス変数を表します。
-
-インタープロセス変数名は、<> 記号を除いて最大31文字以内で指定することができます。
+フォームオブジェクトを引数としてコマンドに渡すには、文字列の名称の前に、任意パラメーターである * 記号を使います。 オブジェクト名には最大で255バイトまで含めることができます。
 
 例:
 ```4d
-<>vlProcessID:=Current process
-<>vsKey:=Char(KeyCode)
-If(<>vtName#"")
+OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-## プロセス変数
-
-(<>記号や$記号から始まらない) 名前を使用して、プロセス変数を表します。 プロセス変数の名前は、最大31文字までの長さで指定できます。
-
-例:
-```4d
-<>vrGrandTotal:=Sum([Accounts]Amount)
-If(bValidate=1)
-vsCurrentName:=""
-```
-
-## ローカル変数
-
-ドル記号 ($) を名前の先頭につけてローカル変数を表します。 ローカル変数名は、ドル記号 ($) を除いて31文字まで指定することができます。
-
-例:
-```4d
-For($vlRecord;1;100)
-If($vsTempVar="No")
-$vsMyString:="Hello there"
-```
-
-## 配列
-
-配列は、配列作成時に配列宣言コマンド (ARRAY LONGINT 等) に渡す名前でもって表されます。 配列は変数であり、スコープに基づいて次の3種類があります:
-
-- インタープロセス配列
-- プロセス配列
-- ローカル配列
-
-### インタープロセス配列
-インタープロセス配列の名前は、先頭にインタープロセス記号 (<>) が付きます。
-
-インタープロセス配列名は、インタープロセス記号 (<>) を除いて31文字以内で指定します。
-
-例:
-```4d
-ARRAY TEXT(<>atSubjects;Records in table([Topics]))
-SORT ARRAY(<>asKeywords;>)
-ARRAY INTEGER(<>aiBigArray;10000)
-```
-
-### プロセス配列
-(<>記号や$記号から始まらない) 名前を使用して、プロセス配列を表わします。 プロセス配列名は31文字以内で指定します。
-
-例:
-```4d
-ARRAY TEXT(atSubjects;Records in table([Topics]))
-SORT ARRAY(asKeywords;>)
-ARRAY INTEGER(aiBigArray;10000)
-```
-
-### ローカル配列
-配列名がドル記号 ($) で始まるものは、ローカル配列です。 ローカル配列名は、ドル ($) 記号を除いて31文字以内で指定します。
-
-例:
-```4d
-ARRAY TEXT($atSubjects;Records in table([Topics]))
-SORT ARRAY($asKeywords;>)
-ARRAY INTEGER($aiBigArray;10000)
-```
-
-### 配列の要素
-中カッコ ("{ }") を使用して、インタープロセス配列、プロセス配列、ローカル配列の要素を参照します。 参照される配列要素は数式で表されます。
-
-例:
-```4d  
-    // インタープロセス配列の要素を指定します
-If(<>asKeywords{1}="Stop")
-<>atSubjects{$vlElem}:=[Topics]Subject
-$viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
-
-    // プロセス配列の要素を指定します
-If(asKeywords{1}="Stop")
-atSubjects{$vlElem}:=[Topics]Subject
-$viNextValue:=aiBigArray{Size of array(aiBigArray)}
-
-    // ローカル配列の要素を指定します
-If($asKeywords{1}="Stop")
-$atSubjects{$vlElem}:=[Topics]Subject
-$viNextValue:=$aiBigArray{Size of array($aiBigArray)}
-```
-
-### 二次元配列の要素
-中カッコ ("{ }") を2回使用して、2次元配列の要素を参照します 。 参照される要素は2組の中カッコ内の2つの数式で表されます。
-
-例:
-```4d
-    // 2次元インタープロセス配列の要素を指定します
-If(<>asKeywords{$vlNextRow}{1}="Stop")
-<>atSubjects{10}{$vlElem}:=[Topics]Subject
-$viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
-
-    // 2次元プロセス配列の要素を指定します
-If(asKeywords{$vlNextRow}{1}="Stop")
-atSubjects{10}{$vlElem}:=[Topics]Subject
-$viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
-
-    // 2次元ローカル配列の要素を指定します
-If($asKeywords{$vlNextRow}{1}="Stop")
-$atSubjects{10}{$vlElem}:=[Topics]Subject
-$viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
-```
-
-## オブジェクト属性
-
-オブジェクト記法が有効化されているとき、ドット (".") をオブジェクト名 (あるいは属性名) と属性名の間に置くことでオブジェクト属性 (オブジェクトプロパティとも呼びます) を指定します。 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
-
-例:
-```4d
-myObject.myAttribute:="10"
-$value:=$clientObj.data.address.city
-```
-
-**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、[オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
+**注:** フォームオブジェクト (ボタン、リストボックス、入力可能な変数など) と 4Dランゲージのオブジェクト型を混同しないようにしてください。 4Dランゲージのオブジェクト型はオブジェクト記法と専用のコマンドを使用して作成し、管理されます。
 
 ## Forms
 
@@ -191,16 +104,59 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
-## フォームオブジェクト
+## 命名セレクション
 
-フォームオブジェクトを引数としてコマンドに渡すには、文字列の名称の前に、任意パラメーターである * 記号を使います。 オブジェクト名には最大で255バイトまで含めることができます。
+A named selection name can contain up to 255 characters, not including scope character(s).
+
+- You denote a **process** named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $).
+- You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 例:
 ```4d
-OBJECT SET FONT(*;"Binfo";"Times")
+USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
 ```
 
-**注:** フォームオブジェクト (ボタン、リストボックス、入力可能な変数など) と 4Dランゲージのオブジェクト型を混同しないようにしてください。 4Dランゲージのオブジェクト型はオブジェクト記法と専用のコマンドを使用して作成し、管理されます。
+
+## オブジェクト属性
+
+You designate an object attribute (also called object property) by placing a point (".") between the name of the object and the name of the attribute. 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
+
+例:
+```4d
+myObject.myAttribute:="10"
+$value:=$clientObj.data.address.city
+```
+
+**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+
+
+## プラグインコマンド
+
+プラグインにより定義された名前を使用して、プラグインコマンドを表します。 プラグインコマンド名は 31文字以内で指定します。
+
+例:
+```4d
+$error:=SMTP_From($smtp_id;"henry@gmail.com")
+```
+
+## プロセス
+
+A process name can contain up to 255 characters, not including scope character.
+
+In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
+
+- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $).
+- You denote a **local** process if the name of the process is preceded by a dollar ($) sign.
+
+例:
+```4d
+    // グローバルプロセス "Add Customers" を開始します
+$vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
+    // ローカルプロセス "$Follow Mouse Moves" を開始します
+$vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
+```
+
 
 ## プロジェクトメソッド
 
@@ -251,101 +207,57 @@ $vsResult:=Calc creator(1;5;"Nice")
 vtClone:=Dump("is";"the";"it")
 ```
 
-## プラグインコマンド
-
-プラグインにより定義された名前を使用して、プラグインコマンドを表します。 プラグインコマンド名は 31文字以内で指定します。
-
-例:
-```4d
-$error:=SMTP_From($smtp_id;"henry@gmail.com")
-```
-
 ## セット
 
-スコープに基づき、2種類のセットがあります:
+A set name can contain up to 255 characters, not including scope character()s).
 
-- インタープロセスセット
-- プロセスセット
+- You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $).
+- You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- On 4D Server, the name of a **client** set is preceded by the dollar sign ($). クライアントセット名は、ドル記号を除いて255文字以内で指定します。
 
-4D Server には以下もあります:
-
-- クライアントセット
-
-### インタープロセスセット
-インタープロセスセットの名前は、先頭にインタープロセス記号 (<>) が付きます。
-
-インタープロセスセット名は、インタープロセス記号 (<>) を除いて255文字以内で指定します。
-
-### プロセスセット
-セットの名前を表す文字列を使用してプロセスセットを表します (<>記号も$記号も名前の先頭につきません) 。 プロセスセット名は、255文字以内で指定します。
-
-### クライアントセット
-クライアントセット名は、先頭にドル記号 ($) を指定します。 クライアントセット名は、ドル記号を除いて255文字以内で指定します。
-
-**注:** セットはサーバーマシン上で保守されます。 効率や特殊目的のために、クライアントマシン上でローカルにセットを使用したい場合があります。 このような場合にクライアントセットを使用します。
+> Sets are maintained on the Server machine. 効率や特殊目的のために、クライアントマシン上でローカルにセットを使用したい場合があります。 To do so, you use client sets.
 
 例:
 ```4d
-    // インタープロセスセット
-USE SET("<>Deleted Records")
-CREATE SET([Customers];"<>Customer Orders")
-If(Records in set("<>Selection"+String($i))>0)
-    // プロセスセット
-USE SET("Deleted Records")
-CREATE SET([Customers];"Customer Orders")
-If(Records in set("<>Selection"+String($i))>0)
-    // クライアントセット
-USE SET("$Deleted Records")
-CREATE SET([Customers];"$Customer Orders")
-If(Records in set("$Selection"+String($i))>0)
+CREATE SET([Customers];"Customer Orders")//Process set
+USE SET("<>Deleted Records") //Interprocess set
+If(Records in set("$Selection"+String($i))>0) //Client set
 ```
 
-## 命名セレクション
 
-スコープに基づき、2種類の命名セレクションが存在します:
 
-- インタープロセス命名セレクション
-- プロセス命名セレクション
 
-### インタ－プロセス命名セレクション
-インタープロセス命名セレクションの名前は、先頭にインタープロセス記号 (<>) が付きます。
+## テーブル
 
-インタープロセス命名セレクション名は、インタープロセス記号 (<>) を除いて255文字以内で指定します。
-
-### プロセス命名セレクション
-プロセス命名セレクションの名前を表す文字列式を使用してプロセスセットを表します (<>記号も$記号も名前の先頭につきません) 。 インタープロセスセット名は255文字以内で指定します。
+大カッコ内 ([...]) に名前を入れることで、テーブルを表します。 テーブル名は、31文字以内で指定します。
 
 例:
 ```4d
-
-    // インタープロセス命名セレクション
-USE NAMED SELECTION([Customers];"<>ByZipcode")
-    // プロセス命名セレクション
-USE NAMED SELECTION([Customers];"<>ByZipcode")
+DEFAULT TABLE([Orders])
+FORM SET INPUT([Clients];"Entry")
+ADD RECORD([Letters])
 ```
 
-## プロセス
+## 変数
 
-シングルユーザー版およびクライアント/サーバー版のクライアント側において、2種類のプロセスがあります:
+The name of a variable can be up to 31 characters, not including the scope symbols.
 
-- グロ－バルプロセス
-- ロ－カルプロセス
-
-### グロ－バルプロセス
-$記号以外から始まる文字列を使用してグローバルプロセスの名前を表します。 グローバルプロセス名は、255文字以内で指定します。
-
-### ローカルプロセス
-名前の前にドル記号 ($) をつけてローカルプロセスを表します。 ローカルプロセス名は、ドル記号 ($) を除いて255文字以内で指定します。
+- You designate a **local** variable by placing a dollar sign ($) before the variable name.
+- You designate a **process** variable by using its name (which cannot start with the <> symbols nor the dollar sign $)
+- You designate an **interprocess** variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 例:
+
 ```4d
-    // グローバルプロセス "Add Customers" を開始します
-$vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
-    // ローカルプロセス "$Follow Mouse Moves" を開始します
-$vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
+For($vlRecord;1;100) //local variable
+$vsMyString:="Hello there" //local variable
+If(bValidate=1) //process variable
+<>vlProcessID:=Current process //interprocess variable
 ```
 
-## 命名規則のまとめ
+
+
+## Summary of Identifiers
 
 次の表は、4Dの命名規則についてまとめています。
 
