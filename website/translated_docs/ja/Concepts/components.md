@@ -3,12 +3,12 @@ id: components
 title: コンポーネント
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different applications. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications.
+4D のコンポーネントとは、他のアプリケーションにインストール可能な、1つ以上の機能を持つ 4D メソッドやフォームの一式です。 たとえば、メールの送受信をおこない、それらを 4D アプリケーションに格納するための機能を持ったコンポーネントを作成できます。
 
 4D コンポーネントの作成とインストールは直接 4D を使用しておこないます。 4D では、コンポーネントは [プラグイン](Concepts/plug-ins.md) のように扱われ、以下の原則が適用されます:
 
 - コンポーネントは、標準のアーキテクチャーまたはパッケージ (.4dbase 拡張子) の形をしたストラクチャーファイル ( コンパイルまたは非コンパイル) で構成されます。
-- To install a component in an application project, you simply need to copy it into the "Components" folder of the project, at the same level as the Project folder.
+- アプリケーションプロジェクトにコンポーネントをインストールするには、プロジェクトの Project フォルダーと同階層の "Components" フォルダーにコンポーネントをコピーします。
 - コンポーネントは次の 4D の要素を呼び出すことができます: プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リスト、ライブラリピクチャーなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
 - コンポーネント内で標準のテーブルやデータファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
 
@@ -17,9 +17,9 @@ A 4D component is a set of 4D methods and forms representing one or more functio
 
 4D のコンポーネント管理メカニズムでは、以下の用語とコンセプトを使います:
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component. The matrix project is intended to be copied, compiled or not, into the Components folder of the project that will be using the component (host application project).
-- **Host Project**: Application project in which a component is installed and used.
-- **Component**: Matrix project, compiled or not, copied into the Components folder of the host application and whose contents are used in the host applications.
+- **マトリクスプロジェクト**: コンポーネント開発に使用する4D プロジェクト。 マトリクスプロジェクトは特別な属性を持たない標準のプロジェクトです。 マトリクスプロジェクトはひとつのコンポーネントを構成します。 マトリクスプロジェクトは、コンポーネントを使用するプロジェクト (ホストアプリケーションプロジェクト) の Components フォルダーにコピーして使います。コンパイルされていてもいなくてもかまいません。
+- **ホストプロジェクト**: コンポーネントがインストールされ、それを使用するアプリケーションプロジェクト。
+- **コンポーネント**: ホストアプリケーションによって使用される目的で、同アプリケーションの Components フォルダーにコピーされたマトリクスプロジェクト (コンパイル済みまたは非コンパイル)。
 
 It should be noted that a project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. しかしコンポーネントが "サブコンポーネント" を使用することはできません。
 
