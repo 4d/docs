@@ -7,7 +7,7 @@ title: 変数
 
 データベースを作成する際には、フィールドに名前とデータタイプを指定します。 同様に、変数にも名前と [データタイプ](Concepts/data-types.md) を指定します。
 
-Once created, you can use a variable wherever you need it in your application. たとえば、テキスト変数を同じタイプのフィールドに格納するには次のように書きます:
+いったん作成された変数は、アプリケーションで必要とされる場所に使用できます。 たとえば、テキスト変数を同じタイプのフィールドに格納するには次のように書きます:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -313,9 +313,9 @@ atNames{1}:="Richard"
 
 ローカル変数の名前は必ずドル記号 ($) で始め、この記号を除く31文字までの文字を指定できます。 これより長い名前を指定すると、4D は余分の32文字以降を切り捨てます。
 
-When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. この場合、同じ変数名が他で使用されていないかどうかを気にすることなくローカル変数を作成することができます。
+多くのメソッドや変数を持つアプリケーションプロジェクトで作業する場合、現在作業しているメソッドの範囲内で一時的に変数が必要となる場合がよくあります。 この場合、同じ変数名が他で使用されていないかどうかを気にすることなくローカル変数を作成することができます。
 
-Frequently, in an application, small pieces of information are needed from the user. `Request` コマンドを使って、この情報を取得することができます。 このコマンドはデータ入力を求めるダイアログボックスを表示し、 ユーザーがデータを入力すると、その情報を戻り値として返します。 このようなデータは通常、メソッド内で長期間維持する必要はありません。 これは、ローカル変数を使用する典型的な例といえます。 次に例を示します:
+アプリケーションではしばしば、ユーザーによる少量のデータ入力を必要とする場合があります。 `Request` コマンドを使って、この情報を取得することができます。 このコマンドはデータ入力を求めるダイアログボックスを表示し、 ユーザーがデータを入力すると、その情報を戻り値として返します。 このようなデータは通常、メソッド内で長期間維持する必要はありません。 これは、ローカル変数を使用する典型的な例といえます。 次に例を示します:
 
 ```4d
  $vsID:=Request("ID を入力してください:")
@@ -346,7 +346,7 @@ Frequently, in an application, small pieces of information are needed from the u
 
 ### インタープロセス変数
 
-Interprocess variables are available throughout the project and are shared across all cooperative processes. これらは主としてプロセス間で情報を共有するために使われます。
+インタープロセス変数はプロジェクト全体で使用することができ、すべてのコオペラティブプロセスで共有されます。 これらは主としてプロセス間で情報を共有するために使われます。
 
 > プリエンプティブプロセスにおいては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
