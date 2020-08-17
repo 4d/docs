@@ -120,7 +120,7 @@ title: ループ構造
  End for
 ```
 
-Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
+プロジェクトで作成する大部分の `For...End for` ループは、上記例題のいずれかの形式になるでしょう。
 
 ### カウンター変数の減算
 

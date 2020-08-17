@@ -30,7 +30,7 @@ title: プラグイン
 
 ### 重要な注記
 
-プラグインは、小さな処理をおこなう一つのルーチンを実行するだけの、とても簡単なものでありえます。また、百以上のルーチンとエリアを扱うような、非常に複雑なものでもありえます。 プラグインの機能に制限はありませんが、プラグインの開発にあたっては、プラグインがあくまで従たるコードであることに留意が必要です。 プラグインは 4D 内で実行されます。 プラグインは独立したアプリケーションではなく、4D の一部です。 プラグインは、他のプラグインや 4D 自身と CPU 時間とメモリを共有します。したがって、プラグインのコードは、必要なリソースだけを使用する控えめなコードであるべきです。 For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the application.
+プラグインは、小さな処理をおこなう一つのルーチンを実行するだけの、とても簡単なものでありえます。また、百以上のルーチンとエリアを扱うような、非常に複雑なものでもありえます。 プラグインの機能に制限はありませんが、プラグインの開発にあたっては、プラグインがあくまで従たるコードであることに留意が必要です。 プラグインは 4D 内で実行されます。 プラグインは独立したアプリケーションではなく、4D の一部です。 プラグインは、他のプラグインや 4D 自身と CPU 時間とメモリを共有します。したがって、プラグインのコードは、必要なリソースだけを使用する控えめなコードであるべきです。 たとえば、非常に長いループ処理においては (その重要性が絶対的な優先権を要求しないかぎり)、プラグインは `PA_Yield()` を呼び出して、4D のスケジューラーにも処理時間を割り当てるべきです。
 
 ## プラグインの作り方
 
@@ -43,17 +43,17 @@ title: プラグイン
 
 プラグインやコンポーネントは 4D環境の適切なフォルダーにコピーすることでインストールされます。
 
-Windows および macOS用の 4Dプラグインは、“PluginName.bundle” フォルダー (macOSではパッケージと呼ばれます) に格納されます。 このフォルダーの内部構造により、4D Server環境において、接続するクライアントのOSに応じたプラグインがロード/配信され、クライアント上で実行されます。 To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **Plugins** folder.
+Windows および macOS用の 4Dプラグインは、“PluginName.bundle” フォルダー (macOSではパッケージと呼ばれます) に格納されます。 このフォルダーの内部構造により、4D Server環境において、接続するクライアントのOSに応じたプラグインがロード/配信され、クライアント上で実行されます。 プラグインをインストールするには、この “PluginName.bundle” フォルダー (パッケージ) を**Plugins** フォルダーに配置します。
 
-You can put the Plugins folder in two different places:
+Plugins フォルダーは 2つの異なる場所に配置できます:
 
 - 4D実行アプリケーションレベル:
   - Windows: .exeファイルと同階層
-  - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
-- At the same level as the Project folder. In this case, plug-ins are only available in this particular project.
+  - macOS: アプリケーションパッケージ内の Contentsフォルダーの直下。 この場合、このアプリケーションで開かれるすべてのプロジェクトからプラグインを利用できます。
+- Project フォルダーと同階層:  この場合、プラグインは当該プロジェクトでのみ利用可能です。
 
 場所の選択はプラグインをどのように使用するかによって決定します。
 
 同じプラグインが両方の場所にインストールされている場合、4Dはストラクチャーファイルと同階層にインストールされたもののみをロードします。 コンパイルされ、4D Volume Desktop がマージされたアプリケーションでは、同じプラグインのインスタンスが複数存在する場合、アプリケーションを開くことができません。
 
-プラグインは 4D 起動時にロードされるので、これらをインストールする際には 4Dアプリケーションを終了する必要があります。 Then open your project with 4D. プラグインの利用に特別なライセンスが必要な場合、プラグインはロードされますが、ライセンスをインストールするまで使用することはできません。
+プラグインは 4D 起動時にロードされるので、これらをインストールする際には 4Dアプリケーションを終了する必要があります。 インストールが終了したら 4D でプロジェクトを開きます。 プラグインの利用に特別なライセンスが必要な場合、プラグインはロードされますが、ライセンスをインストールするまで使用することはできません。

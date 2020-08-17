@@ -5,7 +5,7 @@ title: プロジェクトの開発
 
 ## 概要
 
-4D projects are developed using the **4D** application. 4D Developer は 4D プロジェクト用の統合開発環境 (IDE) およびアプリケーションランタイムを提供し、プロジェクトの開発・テスト・デバッグに使います。
+4D プロジェクトは **4D** アプリケーションを使って作成します。 4D Developer は 4D プロジェクト用の統合開発環境 (IDE) およびアプリケーションランタイムを提供し、プロジェクトの開発・テスト・デバッグに使います。
 
 > 4D プロジェクトファイルの大多数はテキストファイルなため、任意のテキストエディターを使って作業することも可能です。 ファイルへの同時アクセスはファイルアクセスマネージャーによって管理されます (後述参照)。
 
@@ -14,9 +14,9 @@ title: プロジェクトの開発
 
 ## 開発環境
 
-Interpreted projects (*applicationName.4DProject*, see [Architecture of a 4D project](architecture.md)) can be opened in the following configurations:
+インタープリター版のプロジェクトファイル (*applicationName.4DProject* ([4D プロジェクトのアーキテクチャー](architecture.md) 参照)) は次の開発環境で開くことができます:
 
-- 4D opening **local project files** - in this case, all aspects of the project are available to the developer. プロジェクトファイルを作成・編集・コンパイルすることができます。 The result of the development can be tested at any moment by using the **Test application** menu command from 4D or using the [integrated web server](WebServer/webServerObject.md).
+- 4D を使い、**ローカルなプロジェクトファイル** を開きます - この場合、プロジェクトのすべての要素が開発者に提供されます。 プロジェクトファイルを作成・編集・コンパイルすることができます。 また、4D にて **Test application** メニューコマンドを実行するか、[統合された Web サーバー](WebServer/webServerObject.md)を使用することで、開発の成果をいつでもテストすることができます。
 - 4D connection from the **same machine as 4D Server** - in this case, development is supported the same as local projects. This feature allows you to develop a client/server application in the same context as the deployment context ()[detailed below](#developing-projects-with-4d-server)).
 - 4D connection from a **remote machine** - in this case, 4D Server sends a .4dz version of the project ([compressed format](building.md#build-compiled-structure)) to 4D. As a consequence, all structure files are read-only. This feature is useful for testing purposes.
 
@@ -65,7 +65,7 @@ However, you need to pay attention to the following behavior differences compare
 
 このエディターの作業対象はディスク上のファイルなため、同じファイルが同時に編集されていたり削除されていたりといった場合には競合が発生します。 たとえば、一つのメソッドをメソッドエディターで編集しつつ、標準のテキストエディターでも開いて変更した場合に競合が起こりえます。
 
-The 4D development framework includes a file access manager to control concurrent access:
+4D のフレームワークには同時アクセスを制御するためのファイルアクセスマネージャーが含まれています:
 
 - 開かれているファイルが OS レベルで読み取り専用の場合、エディターには鍵アイコンが表示されます: ![](assets/en/Project/lockicon.png)
 - 開かれているファイルが複数のアクセスによって同時編集を受けている場合、4D は保存時に警告ダイアログを表示します: ![](assets/en/Project/projectReload.png)
