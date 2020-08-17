@@ -15,7 +15,7 @@ title: 共有オブジェクトと共有コレクション
 
 共有オブジェクト/コレクションを編集するには、**Use...End use** 構文を使う必要があります。 共有オブジェクト/コレクションの値を読むにあたっては、**Use...End use** は必要ありません。
 
-A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+`Storage` コマンドが返す、データベースにおいて固有かつグローバルなカタログは、そのアプリケーション内あるいはコンポーネントからいつでも利用することができ、すべての共有オブジェクトおよびコレクションを保存するのに使用することができます。
 
 ## 共有オブジェクト/共有コレクションの使用
 `New shared object` あるいは `New shared collection` コマンドでインスタンス化されると、その共有オブジェクト/コレクションの属性と要素はどのプロセスからでも編集/読み出しができるようになります。
