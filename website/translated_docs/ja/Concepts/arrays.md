@@ -155,7 +155,7 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 
 - 4つの情報タイプ (郵便番号、市、郡、州) を維持するためには、4つの大きな配列をメモリ内で維持する必要があります。
 - 配列は、常に全体がメモリ内に維持されるため、常時使用しない場合でも、作業セッションの間すべてのデータをメモリに置いておく必要があります。
-- Again, because an array is always held in memory in its entirety, each time the application is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- 配列全体が常にメモリ内に維持されることから、アプリケーションが開始されるたびに 4つの配列をディスクからロードして、終了時にはディスクに保存する必要があります。当該データが作業セッション中に使用・変更されない場合もこれを省略することができません。
 
 **結論:** 配列は、ほどよい量のデータを短時間維持するためのものです。 他方、配列はメモリ内に置かれるため、扱いやすく高速操作が可能です。
 
