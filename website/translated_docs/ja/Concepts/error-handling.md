@@ -11,6 +11,14 @@ title: エラー処理
 - 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など) を独自のインターフェースに置換できます。
 > 4D Server 上で実行されるコードのため、4D Server にはエラー処理メソッドを実装しておくことが強く推奨されます。 このメソッドによって、サーバーマシンにおいて予期せぬダイアログが表示されることを防ぎ、エラーの調査に必要なログを専用ファイルにとることができます。
 
+
+## Error or status
+
+Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
+
+Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method.
+
+
 ## エラー処理メソッドの実装
 
 4D においては、エラー専用のプロジェクトメソッドである **エラー処理** (または **エラーキャッチ**) メソッド内ですべてのエラーをキャッチし、処理することができます。
@@ -26,13 +34,7 @@ ON ERR CALL("IO_ERRORS") // エラー処理メソッドを実装します
 ON ERR CALL("") // エラーの検知を中止します
 ```
 
-### スコープとコンポーネント
-
-アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 ただし、一つのプロセスにつき実装できるのは一つのメソッドのみです。
-
-`ON ERR CALL` コマンドによって実装されたエラー処理メソッドは実行中のアプリケーションにしか適用されません。 つまり、**コンポーネント** によってエラーが生成されても、ホストアプリケーションにおいて `ON ERR CALL` で実装されたエラー処理メソッドは反応しませんし、逆もまた然りです。
-
-`Method called on error` コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドはコンポーネントでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+`Method called on error` コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 It is particularly useful in the context of generic code because it enables you to temporarily change and then restore the error-catching method:
 
 ```4d
  $methCurrent:=Method called on error
@@ -43,6 +45,13 @@ ON ERR CALL("") // エラーの検知を中止します
  ON ERR CALL($methCurrent)
 
 ```
+
+### スコープとコンポーネント
+
+アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 ただし、一つのプロセスにつき実装できるのは一つのメソッドのみです。
+
+`ON ERR CALL` コマンドによって実装されたエラー処理メソッドは実行中のアプリケーションにしか適用されません。 つまり、**コンポーネント** によってエラーが生成されても、ホストアプリケーションにおいて `ON ERR CALL` で実装されたエラー処理メソッドは反応しませんし、逆もまた然りです。
+
 
 ### メソッド内でのエラー処理
 
