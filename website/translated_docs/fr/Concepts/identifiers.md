@@ -18,26 +18,57 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 - 4D ignore les espaces superflus.
 
 ### Règles supplémentaires pour les propriétés d'objet et les noms ORDA
+
 - Les espaces sont interdits.
 - Les points (".") Les points (".") et les crochets ("[ ]") sont interdits.
 - Les noms sont sensibles à la casse.
 
 ### Règles supplémentaires pour SQL
+
 - Seuls les caractères _0123456789abcdefghijklmnopqrstuvwxyz sont acceptés
 - Les noms ne doivent pas comporter de mot-clé SQL (commande, attribut, etc.).
 
 **Note :** La zone "SQL" de l'inspecteur de l'éditeur de Structure signale automatiquement les caractères non autorisés dans un nom de table ou de champ.
 
 
-## Tables
 
-Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.
+
+## Tableaux
+
+Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:
+
+- The name of a **local** array is preceded by the dollar sign ($).
+- The name of a **process** array cannot start with the <> symbols nor the dollar sign $).
+- The name of an **interprocess** array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 Voici quelques exemples :
 ```4d
-DEFAULT TABLE([Commandes])
-FORM SET INPUT([Clients];"Entrée")
-ADD RECORD([Lettres])
+ARRAY TEXT($atSubjects;Records in table([Topics])) //local array
+SORT ARRAY(asKeywords;>) //process array
+ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //interprocess array
+```
+
+
+### Eléments de tableaux
+Vous désignez un élément d’un tableau local, process ou interprocess à l’aide d’accolades ({…}). L’élément référencé (l’indice) est indiqué par une expression numérique.
+
+Voici quelques exemples :
+```4d   
+    //Addressing an element of a local array
+If($asKeywords{1}="Stop")
+$atSubjects{$vlElem}:=[Topics]Subject
+$viNextValue:=$aiBigArray{Size of array($aiBigArray)}
+```
+
+### Eléments de tableaux à deux dimensions
+Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
+
+Voici quelques exemples :
+```4d 
+    //Addressing an element of a two-dimensional process array
+If(asKeywords{$vlNextRow}{1}="Stop")
+atSubjects{10}{$vlElem}:=[Topics]Subject
+$viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
 ## Champs
@@ -51,134 +82,16 @@ Voici quelques exemples :
  [Lettres]Text:=Capitalize text([Lettres]Texte)
 ```
 
-## Variables interprocess
+## Objets de formulaires
 
-Vous désignez une variable interprocess en faisant précéder son nom des symboles (<>), formés des caractères “inférieur à” suivi de “supérieur à”.
+Vous désignez un objet de formulaire en passant son nom sous forme de chaîne, précédée du paramètre *. Un nom d'objet peut contenir jusqu'à 255 octets.
 
-Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, symbole <> non compris.
-
-Voici quelques exemples :
+Exemple :
 ```4d
-<>vlProcessID:=Current process
- <>vsKey:=Char(KeyCode)
-If(<>vtNom#"")
+OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-## Variables process
-
-Vous désignez une variable process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
-
-Voici quelques exemples :
-```4d
-vrGrandTotal:=Sum([Comptes]Montant)
- If(bValider=1)
- vsNomCourant:=""
-```
-
-## Variables locales
-
-Vous désignez une variable locale en faisant précéder son nom du symbole dollar ($). Le nom d’une variable locale peut contenir jusqu’à 31 caractères, signe dollar non compris.
-
-Voici quelques exemples :
-```4d
-For($vlRecord;1;100)
-If($vsTempVar="Non")
-$vsMyString:="Bonjour à tous"
-```
-
-## Tableaux
-
-Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Les tableaux sont des variables, et comme pour les variables, il existe trois types de tableaux qui se différencient par leur portée :
-
-- Tableaux interprocess,
-- Tableaux process,
-- Tableaux locaux.
-
-### Tableaux interprocess
-Le nom d’un tableau interprocess est précédé du symbole (<>), formé des caractères “inférieur à” suivi de “supérieur à”.
-
-Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symbole <> non compris.
-
-Voici quelques exemples :
-```4d
-ARRAY TEXT(<>atSujets;Records in table([Topics]))
-SORT ARRAY(<>asMotsClés;>)
-ARRAY INTEGER(<>aiGrosTableau;10000)
-```
-
-### Tableaux process
-Vous désignez un tableau process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
-
-Voici quelques exemples :
-```4d
-ARRAY TEXT(atSujets;Records in table([Topics]))
- SORT ARRAY(asMotsClés;>)
- ARRAY INTEGER(aiGrosTableau;10000)
-```
-
-### Tableaux locaux
-Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($). Le nom d’un tableau local peut contenir jusqu’à 31 caractères, signe dollar non compris.
-
-Voici quelques exemples :
-```4d
-ARRAY TEXT($atSujets;Records in table([Topics]))
-SORT ARRAY($asMotsClés;>)
-ARRAY INTEGER($aiGrosTableau;10000)
-```
-
-### Eléments de tableaux
-Vous désignez un élément d’un tableau local, process ou interprocess à l’aide d’accolades ({…}). L’élément référencé (l’indice) est indiqué par une expression numérique.
-
-Voici quelques exemples :
-```4d  
-    // Adresser un élément d'un tableau interprocess
-If(<>asMotsClés{1}="Stop")
-    <>atSujets{$vlElem}:=[Topics]Sujet
-    $viValeurSuivante:=<>aiGrosTableau{Taille tableau(<>aiGrosTableau)}
-
-  // Adresser un élément d'un tableau process
-    If(asMotsClés{1}="Stop")
-       atSujets{$vlElem}:=[Topics]Sujet
-       $viValeurSuivante:=aiGrosTableau{Taille tableau(aiGrosTableau)}
-
-  // Adresser un élément d'un tableau local
-       If($asMotsClés{1}="Stop")
-          $atSujets{$vlElem}:=[Topics]Sujet
-          $viValeurSuivante:=$aiGrosTableau{Taille tableau($aiGrosTableau)}
-```
-
-### Eléments de tableaux à deux dimensions
-Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
-
-Voici quelques exemples :
-```4d
-    // Adresser un élément d'un tableau interprocess à deux dimensions
- If(<>asMotsClés{$vlLigneSuivante}{1}="Stop")
-    <>atSujets{10}{$vlElem}:=[Topics]Sujet
-    $viValeurSuivante:=<>aiGrosTableau{$vlSet}{Taille tableau(<>aiGrosTableau{$vlSet})}
-
-  // Adresser un élément d'un tableau process à deux dimensions
-    If(asMotsClés{$vlLigneSuivante}{1}="Stop")
-       atSujets{10}{$vlElem}:=[Topics]Sujet
-       $viValeurSuivante:=aiGrosTableau{$vlSet}{Taille tableau(aiGrosTableau{$vlSet})}
-
-  // Adresser un élément d'un tableau interprocess à deux dimensions
-       If($asMotsClés{$vlLigneSuivante}{1}="Stop")
-          $atSujets{10}{$vlElem}:=[Topics]Sujet
-          $viValeurSuivante:=$aiGrosTableau{$vlSet}{Taille tableau($aiGrosTableau{$vlSet})}
-```
-
-## Propriétés (attributs) d'objets
-
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. between the name of the object (or attribute) and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
-
-Voici quelques exemples :
-```4d
-monObjet.monAttribut:="10"
- $valeur:=$clientObj.data.address.city
-```
-
-**Note :** Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). Pour plus d'informations, reportez-vous à la section [Identificateurs des propriétés d'objets](Concepts/dt_object.md#object-property-identifiers).
+**Note :** Ne confondez pas les objets de formulaire (boutons, list box, variables saisissables...) et les objets du langage 4D. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.
 
 ## Formulaires
 
@@ -191,16 +104,59 @@ FORM SET OUTPUT([Personnes];"Sortie")
  DIALOG([Stock];"Boîte de note"+String($vlStage))
 ```
 
-## Objets de formulaires
+## Sélections temporaires
 
-Vous désignez un objet de formulaire en passant son nom sous forme de chaîne, précédée du paramètre *. Un nom d'objet peut contenir jusqu'à 255 octets.
+A named selection name can contain up to 255 characters, not including scope character(s).
 
-Exemple :
+- You denote a **process** named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $).
+- You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+
+Voici quelques exemples :
 ```4d
-OBJECT SET FONT(*;"Binfo";"Times")
+USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
 ```
 
-**Note :** Ne confondez pas les objets de formulaire (boutons, list box, variables saisissables...) et les objets du langage 4D. Les objets du langage de 4D sont créés et manipulés via la notation objet ou des commandes dédiées.
+
+## Propriétés (attributs) d'objets
+
+You designate an object attribute (also called object property) by placing a point (".") between the name of the object and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
+
+Voici quelques exemples :
+```4d
+monObjet.monAttribut:="10"
+ $valeur:=$clientObj.data.address.city
+```
+
+**Note :** Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+
+
+## Commandes de plug-ins
+
+Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.
+
+Voici quelques exemples :
+```4d
+$erreur:=SMTP_From($smtp_id;"henry@gmail.com")
+```
+
+## Process
+
+A process name can contain up to 255 characters, not including scope character.
+
+In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
+
+- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $).
+- You denote a **local** process if the name of the process is preceded by a dollar ($) sign.
+
+Voici quelques exemples :
+```4d
+    // Lancer le process global "Ajouter Clients"
+ $vlProcessID:=New process("P_AJOUT_CLIENTS";48*1024;"Ajouter Clients")
+  // Lancer le process local "$Suivre Souris"
+ $vlProcessID:=New process("P_SUIVRE_SOURIS";16*1024;"$Suivre Souris")
+```
+
 
 ## Méthodes
 
@@ -251,101 +207,57 @@ Voici quelques exemples :
  vtClone:=Dump("est";"le";"il")
 ```
 
-## Commandes de plug-ins
-
-Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.
-
-Voici quelques exemples :
-```4d
-$erreur:=SMTP_From($smtp_id;"henry@gmail.com")
-```
-
 ## Ensembles
 
-Dans 4D, il existe deux types d'ensembles qui se distinguent par leur portée :
+A set name can contain up to 255 characters, not including scope character()s).
 
-- Ensembles interprocess
-- Ensembles process
+- You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $).
+- You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- On 4D Server, the name of a **client** set is preceded by the dollar sign ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.
 
-On peut également distinguer un troisième type d'ensemble, spécifique à 4D Server :
-
-- Ensembles clients
-
-### Ensembles interprocess
-Un ensemble est déclaré interprocess lorsque son nom, qui est une expression de type chaîne alphanumérique, est précédé du symbole (<>), formé des caractères “inférieur à” suivi de “supérieur à”.
-
-Le nom d’un ensemble interprocess peut comporter jusqu’à 255 caractères, symbole <> non compris.
-
-### Ensembles process
-Vous déclarez un ensemble process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $). Le nom d’un ensemble process peut comporter jusqu’à 255 caractères.
-
-### Ensembles clients
-Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.
-
-**Note :** Les ensembles sont gérés par le serveur. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.
+> Sets are maintained on the Server machine. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. To do so, you use client sets.
 
 Voici quelques exemples :
 ```4d
-    // Ensembles interprocess
-USE SET("<>Enregistrements supprimés")
-CREATE SET([Clients];"<>Commandes clients")
- If(Records in set("<>Sélection"+Chaine($i))>0)
-  // Ensembles process
-  USE SET("Enregistrements supprimés")
-  CREATE SET([Clients];"Commandes clients")
-   If(Records in set("Sélection"+Chaine($i))>0)
-  // Ensembles client
-    USE SET("$Enregistrements supprimés")
-  CREATE SET([Clients];"$Commandes clients")
-      If(Records in set("$Sélection"+Chaine($i))>0)
+CREATE SET([Customers];"Customer Orders")//Process set
+USE SET("<>Deleted Records") //Interprocess set
+If(Records in set("$Selection"+String($i))>0) //Client set
 ```
 
-## Sélections temporaires
 
-Dans 4D, il existe deux types de sélections temporaires, qui se distinguent par leur portée :
 
-- Sélections temporaires interprocess
-- Sélections temporaires process.
 
-### Sélections temporaires interprocess
-Vous désignez une sélection temporaire interprocess en utilisant une expression de type chaîne débutant par le symbole (<>), formé des caractères “inférieur à” suivi de “supérieur à”.
+## Tables
 
-Le nom d'une sélection temporaire interprocess peut contenir jusqu’à 255 caractères, symbole <> non compris.
-
-### Sélections temporaires process
-Vous déclarez une sélection temporaire process en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.
+Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.
 
 Voici quelques exemples :
 ```4d
-
-    // Sélection temporaire interprocess
- USE NAMED SELECTION([Clients];"<>ParCodePostal")
-  // Sélection temporaire process
- USE NAMED SELECTION([Clients];"ParCodePostal")
+DEFAULT TABLE([Commandes])
+FORM SET INPUT([Clients];"Entrée")
+ADD RECORD([Lettres])
 ```
 
-## Process
+## Variables
 
-En mode mono-utilisateur, ou sur le poste client en mode client/serveur, il existe deux types de process :
+The name of a variable can be up to 31 characters, not including the scope symbols.
 
-- Process globaux
-- Process locaux.
-
-### Process globaux
-Vous déclarez un process global en passant une expression de type chaîne de caractères qui représente son nom (qui ne doit pas commencer par le symbole $). Le nom d’un process peut comporter jusqu’à 255 caractères.
-
-### Process locaux
-Vous déclarez un process local lorsque son nom est précédé du symbole dollar ($). Le nom d’un process peut comporter jusqu’à 255 caractères, symbole dollar non compris.
+- You designate a **local** variable by placing a dollar sign ($) before the variable name.
+- You designate a **process** variable by using its name (which cannot start with the <> symbols nor the dollar sign $)
+- You designate an **interprocess** variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
 Voici quelques exemples :
+
 ```4d
-    // Lancer le process global "Ajouter Clients"
- $vlProcessID:=New process("P_AJOUT_CLIENTS";48*1024;"Ajouter Clients")
-  // Lancer le process local "$Suivre Souris"
- $vlProcessID:=New process("P_SUIVRE_SOURIS";16*1024;"$Suivre Souris")
+For($vlRecord;1;100) //local variable
+$vsMyString:="Hello there" //local variable
+If(bValidate=1) //process variable
+<>vlProcessID:=Current process //interprocess variable
 ```
 
-## Résumé des conventions d'écriture dans 4D
+
+
+## Summary of Identifiers
 
 Le tableau suivant résume les principes de nommage des identifiants dans les méthodes.
 
