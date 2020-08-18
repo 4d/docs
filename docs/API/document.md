@@ -16,17 +16,11 @@ title: Document Class
 </details>
 
 <!-- REF #document.creationDate.Syntax -->
-**.creationDate** -> creation date<!-- END REF -->
-
-<!-- REF #document.creationDate.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|date|<-|Creation date|
-<!-- END REF -->
+**.creationDate** -> Date<!-- END REF -->
 
 
-##### Description
-The `.creationDate` property  <!-- REF #document.creationDate.Summary -->returns the creation date of the file<!-- END REF -->.
+#### Description
+The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
 
 This property is **read-only**. 
 
@@ -43,17 +37,11 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.creationTime.Syntax -->
-**.creationTime** -> creation time<!-- END REF -->
-
-<!-- REF #document.creationTime.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|time|<-|Creation time|
-<!-- END REF -->
+**.creationTime** -> Time<!-- END REF -->
 
 
-##### Description
-The `.creationTime` property  <!-- REF #document.creationTime.Summary -->returns the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+#### Description
+The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**. 
 
@@ -74,15 +62,9 @@ This property is **read-only**.
 <!-- REF #document.exists.Syntax -->
 **.exists** -> boolean<!-- END REF -->
 
-<!-- REF #document.exists.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the file exists, false otherwise|
-<!-- END REF -->
 
-
-##### Description
-The `.exists` property  <!-- REF #document.exists.Summary -->returns true if the file exists on disk<!-- END REF -->, and false otherwise.
+#### Description
+The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
 
 This property is **read-only**. 
 
@@ -93,6 +75,7 @@ This property is **read-only**.
 
 
 <!-- REF document.extension.Desc -->
+
 ## .extension
 
 <details><summary>History</summary>
@@ -102,17 +85,10 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.extension.Syntax -->
-**.extension** -> file extension<!-- END REF -->
+**.extension** -> text<!-- END REF -->
 
-<!-- REF #document.extension.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|File name extension (if any)|
-<!-- END REF -->
-
-
-##### Description
-The `.extension` property  <!-- REF #document.extension.Summary -->returns the extension of the file name<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+#### Description
+The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
 This property is **read-only**. 
 
@@ -131,17 +107,10 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.fullName.Syntax -->
-**.fullName** -> full file name<!-- END REF -->
+**.fullName** -> Text<!-- END REF -->
 
-<!-- REF #document.fullName.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|Full file name, including extension (if any)|
-<!-- END REF -->
-
-
-##### Description
-The `.fullName` property <!-- REF #document.fullName.Summary -->returns the full name of the file<!-- END REF -->, including its extension (if any).
+#### Description
+The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
 This property is **read-only**. 
 
@@ -162,15 +131,9 @@ This property is **read-only**.
 <!-- REF #document.hidden.Syntax -->
 **.hidden** -> boolean<!-- END REF -->
 
-<!-- REF #document.hidden.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the hidden system flag is set for the file, false otherwise|
-<!-- END REF -->
 
-
-##### Description
-The `.hidden` property <!-- REF #document.hidden.Summary -->returns true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise. 
+#### Description
+The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise. 
 
 This property is **read-only**. 
 
@@ -191,15 +154,9 @@ This property is **read-only**.
 <!-- REF #document.isAlias.Syntax -->
 **.isAlias** -> boolean<!-- END REF -->
 
-<!-- REF #document.isAlias.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the file is an alias, false otherwise|
-<!-- END REF -->
 
-
-##### Description
-The `.isAlias` property <!-- REF #document.isAlias.Summary -->returns true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise. 
+#### Description
+The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise. 
 
 This property is **read-only**. 
 
@@ -219,15 +176,9 @@ This property is **read-only**.
 <!-- REF #document.isFile.Syntax -->
 **.isFile** -> boolean<!-- END REF -->
 
-<!-- REF #document.isFile.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|Always true|
-<!-- END REF -->
 
-
-##### Description
-The `.isFile` property <!-- REF #document.isFile.Summary -->always returns true for a file<!-- END REF -->. 
+#### Description
+The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->. 
 
 This property is **read-only**. 
 
@@ -247,15 +198,9 @@ This property is **read-only**.
 <!-- REF #document.isFolder.Syntax -->
 **.isFolder** -> boolean<!-- END REF -->
 
-<!-- REF #document.isFolder.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|Always false|
-<!-- END REF -->
 
-
-##### Description
-The `.isFolder` property <!-- REF #document.isFolder.Summary -->always returns false for a file<!-- END REF -->. 
+#### Description
+The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->. 
 
 This property is **read-only**. 
 
@@ -276,17 +221,11 @@ This property is **read-only**.
 <!-- REF #document.isWritable.Syntax -->
 **.isWritable** -> boolean<!-- END REF -->
 
-<!-- REF #document.isWritable.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the file exists on disk and is writable, false otherwise|
-<!-- END REF -->
 
+#### Description
+The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->. 
 
-##### Description
-The `.isWritable` property <!-- REF #document.isWritable.Summary -->returns true if the file exists on disk and is writable<!-- END REF -->. 
-
->The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. 
+>The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file. 
 
 This property is **read-only**. 
 
@@ -314,17 +253,11 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.modificationDate.Syntax -->
-**.modificationDate** -> modification date<!-- END REF -->
-
-<!-- REF #document.modificationDate.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|date|<-|Modification date|
-<!-- END REF -->
+**.modificationDate** -> Date<!-- END REF -->
 
 
-##### Description
-The `.modificationDate` property <!-- REF #document.modificationDate.Summary -->returns the date of the file's last modification<!-- END REF -->. 
+#### Description
+The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->. 
 
 This property is **read-only**. 
 
@@ -343,17 +276,11 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.modificationTime.Syntax -->
-**.modificationTime** -> modification date<!-- END REF -->
-
-<!-- REF #document.modificationTime.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|time|<-|Modification time|
-<!-- END REF -->
+**.modificationTime** -> Time<!-- END REF -->
 
 
 ##### Description
-The `.modificationTime` property <!-- REF #document.modificationTime.Summary -->returns the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00). 
+The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00). 
 
 This property is **read-only**. 
 
@@ -371,17 +298,11 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.name.Syntax -->
-**.name** -> file name<!-- END REF -->
-
-<!-- REF #document.name.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|File name without extension (if any)|
-<!-- END REF -->
+**.name** -> Text<!-- END REF -->
 
 
-##### Description
-The `.name` property <!-- REF #document.name.Summary -->returns the name of the file<!-- END REF -->, without extension (if any). 
+#### Description
+The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->. 
 
 This property is **read-only**. 
 
@@ -400,15 +321,9 @@ This property is **read-only**.
 <!-- REF #document.original.Syntax -->
 **.original** -> object<!-- END REF -->
 
-<!-- REF #document.original.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|object|<-|Target of the alias or symbolic link, otherwise same file object|
-<!-- END REF -->
 
-
-##### Description
-The `.original` property <!-- REF #document.original.Summary -->returns the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
+#### Description
+The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
 
 *	a file object 
 *	a folder object 
@@ -434,15 +349,9 @@ This property is **read-only**.
 <!-- REF #document.parent.Syntax -->
 **.parent** -> object<!-- END REF -->
 
-<!-- REF #document.parent.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|object|<-|Parent folder object for the file|
-<!-- END REF -->
 
-
-##### Description
-The `.parent` property <!-- REF #document.parent.Summary -->returns the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+#### Description
+The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
 This property is **read-only**. 
 
@@ -461,17 +370,11 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.path.Syntax -->
-**.path** -> text<!-- END REF -->
-
-<!-- REF #document.path.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|POSIX path (including filesystem if any)|
-<!-- END REF -->
+**.path** -> Text<!-- END REF -->
 
 
-##### Description
-The `.path` property <!-- REF #document.path.Summary -->returns the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+#### Description
+The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
 This property is **read-only**. 
 
@@ -489,17 +392,11 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.platformPath.Syntax -->
-**.platformPath** -> text<!-- END REF -->
-
-<!-- REF #document.platformPath.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|Path expressed with the platform syntax|
-<!-- END REF -->
+**.platformPath** -> Text<!-- END REF -->
 
 
-##### Description
-The `.platformPath` property <!-- REF #document.platformPath.Summary -->returns the path of the file expressed with the current platform syntax<!-- END REF -->.
+#### Description
+The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
 
 This property is **read-only**. 
 
@@ -518,17 +415,11 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.size.Syntax -->
-**.size** -> file size<!-- END REF -->
-
-<!-- REF #document.size.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|number|<-|Size of the file in bytes|
-<!-- END REF -->
+**.size** -> Number<!-- END REF -->
 
 
-##### Description
-The `.size` property <!-- REF #document.size.Summary -->returns the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
+#### Description
+The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
 
 This property is **read-only**. 
 
@@ -565,8 +456,8 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-##### Description
-The `.copyTo( )` function  <!-- REF #document.copyTo().Summary -->copies a `File` object (source file/folder) into the specified *destinationFolder* <!-- END REF -->.
+#### Description
+The `.copyTo( )` function  <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -583,7 +474,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 
 The copied `File` object.
 
-##### Example
+#### Example
 
 You want to copy a picture *file* from the user's document folder to the database folder:
 
@@ -616,14 +507,14 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- END REF -->
 
 
-##### Description
+#### Description
 The `.getContent( )` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
 
 **Returned value**
 
 A `BLOB`.
 
-##### Example
+#### Example
 
 To save a document's contents in a `BLOB` field:
 
@@ -660,7 +551,7 @@ To save a document's contents in a `BLOB` field:
 <!-- END REF -->
 
 
-##### Description
+#### Description
 The `.getIcon( )` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
@@ -670,6 +561,7 @@ If the file does not exist on disk, a default blank icon is returned.
 **Returned value**
 
 File icon [picture](../Concepts/picture.html).
+
 
 
 <!-- END REF -->
@@ -697,7 +589,7 @@ File icon [picture](../Concepts/picture.html).
 <!-- END REF -->
 
 
-##### Description
+#### Description
 The `.getText( )` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
 In *charSet*, pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
@@ -722,7 +614,7 @@ By default, when you omit the breakMode parameter, line breaks are processed in 
 
 Text of the file.
 
-##### Example
+#### Example
 
 Given the following text document (fields are separated by tabs):
 

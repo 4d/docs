@@ -33,7 +33,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 *	**True** if the file is created successfully;
 *	**False** if a file with the same name already exists or if an error occured.
 
-##### Example
+#### Example
 
 Creation of a preferences file in the database folder:
 
@@ -63,7 +63,7 @@ Creation of a preferences file in the database folder:
 |Result|object|<-|>Alias or shortcut file reference|
 
 
-##### Description
+#### Description
 The `.createAlias( )` function creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
@@ -82,7 +82,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 A `File` object with the `isAlias` property set to true.
 
-##### Example
+#### Example
 
 You want to create an alias to a file in your database folder:
 
@@ -107,7 +107,7 @@ You want to create an alias to a file in your database folder:
 | |  ||Does not require any parameters|
 
 
-##### Description
+#### Description
 The `.delete( )` function deletes the file.
 
 If the file is currently open, an error is generated.
@@ -116,7 +116,7 @@ If the file does not exist on disk, the function does nothing (no error is gener
 
 >**WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
 
-##### Example
+#### Example
 
 You want to delete a specific file in the database folder:
 
@@ -147,7 +147,7 @@ You want to delete a specific file in the database folder:
 |Result|object|<-|Moved file|
 
 
-##### Description
+#### Description
 The `.moveTo( )` function moves or renames the `File` object into the specified *destinationFolder*.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
@@ -159,7 +159,7 @@ By default, the file retains its name when moved. If you want to rename the move
 
 The moved `File` object.
 
-##### Example
+#### Example
 
 
 ```4d
@@ -185,7 +185,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |newName|text|->|New full name for the file|
 |Result|object|<-|Renamed file|
 
-##### Description
+#### Description
 
 The `.rename( )` function renames the file with the name you passed in *newName* and returns the renamed `File` object.
 
@@ -198,7 +198,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 The renamed `File` object.
 
-##### Example
+#### Example
 You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
@@ -224,11 +224,11 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |content|BLOB|->|New contents for the file|
 
 
-##### Description
+#### Description
 The `.setContent( )` function rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
 
 
-##### Example
+#### Example
 
 ```4d
  $myFile:=Folder(fk documents folder).file("Archives/data.txt")
@@ -256,7 +256,7 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 |text|text|->|Text to store in the file|
 |charSet|text, longint|->|Name or number of character set|
 |breakMode|longint|->|Processing mode for line breaks|
-##### Description
+#### Description
 
 The `.setText( )` function writes *text* as the new contents of the file.
 
@@ -280,7 +280,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 
 
-##### Example
+#### Example
 
 ```4d
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)

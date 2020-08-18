@@ -14,14 +14,10 @@ title: Document Class
 |v17 R5|Added
 </details>
 
-**.creationDate** -> creation date
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|date|<-|Creation date|
+**.creationDate** -> Date
 
-
-##### Description
-The `.creationDate` property  returns the creation date of the file.
+#### Description
+The `.creationDate` property returns the creation date of the file.
 
 This property is **read-only**. 
 
@@ -35,13 +31,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.creationTime** -> creation time
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|time|<-|Creation time|
+**.creationTime** -> Time
 
-
-##### Description
+#### Description
 The `.creationTime` property  returns the creation  time of the file (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**. 
@@ -59,15 +51,12 @@ This property is **read-only**.
 </details>
 
 **.exists** -> boolean
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the file exists, false otherwise|
 
-
-##### Description
-The `.exists` property  returns true if the file exists on disk, and false otherwise.
+#### Description
+The `.exists` property returns true if the file exists on disk, and false otherwise.
 
 This property is **read-only**. 
+
 
 
 
@@ -82,14 +71,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.extension** -> file extension
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|File name extension (if any)|
-
-
-##### Description
-The `.extension` property  returns the extension of the file name. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+**.extension** -> text
+#### Description
+The `.extension` property returns the extension of the file name (if any). An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
 This property is **read-only**. 
 
@@ -105,13 +89,8 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.fullName** -> full file name
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|Full file name, including extension (if any)|
-
-
-##### Description
+**.fullName** -> Text
+#### Description
 The `.fullName` property returns the full name of the file, including its extension (if any).
 
 This property is **read-only**. 
@@ -129,12 +108,8 @@ This property is **read-only**.
 </details>
 
 **.hidden** -> boolean
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the hidden system flag is set for the file, false otherwise|
 
-
-##### Description
+#### Description
 The `.hidden` property returns true if the file is set as "hidden" at the system level, and false otherwise. 
 
 This property is **read-only**. 
@@ -152,12 +127,8 @@ This property is **read-only**.
 </details>
 
 **.isAlias** -> boolean
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the file is an alias, false otherwise|
 
-
-##### Description
+#### Description
 The `.isAlias` property returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise. 
 
 This property is **read-only**. 
@@ -174,13 +145,9 @@ This property is **read-only**.
 </details>
 
 **.isFile** -> boolean
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|Always true|
 
-
-##### Description
-The `.isFile` property always returns true for a file. 
+#### Description
+The `.isFile` property returns always true for a file. 
 
 This property is **read-only**. 
 
@@ -196,13 +163,9 @@ This property is **read-only**.
 </details>
 
 **.isFolder** -> boolean
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|Always false|
 
-
-##### Description
-The `.isFolder` property always returns false for a file. 
+#### Description
+The `.isFolder` property returns always false for a file. 
 
 This property is **read-only**. 
 
@@ -219,15 +182,11 @@ This property is **read-only**.
 </details>
 
 **.isWritable** -> boolean
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if the file exists on disk and is writable, false otherwise|
 
-
-##### Description
+#### Description
 The `.isWritable` property returns true if the file exists on disk and is writable. 
 
->The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the writable attribute of the file. 
+>The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file. 
 
 This property is **read-only**. 
 
@@ -252,13 +211,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.modificationDate** -> modification date
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|date|<-|Modification date|
+**.modificationDate** -> Date
 
-
-##### Description
+#### Description
 The `.modificationDate` property returns the date of the file's last modification. 
 
 This property is **read-only**. 
@@ -275,11 +230,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.modificationTime** -> modification date
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|time|<-|Modification time|
-
+**.modificationTime** -> Time
 
 ##### Description
 The `.modificationTime` property returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). 
@@ -297,14 +248,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.name** -> file name
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|File name without extension (if any)|
+**.name** -> Text
 
-
-##### Description
-The `.name` property returns the name of the file, without extension (if any). 
+#### Description
+The `.name` property returns the name of the file without extension (if any). 
 
 This property is **read-only**. 
 
@@ -319,12 +266,8 @@ This property is **read-only**.
 </details>
 
 **.original** -> object
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|object|<-|Target of the alias or symbolic link, otherwise same file object|
 
-
-##### Description
+#### Description
 The `.original` property returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:
 
 *	a file object 
@@ -347,12 +290,8 @@ This property is **read-only**.
 </details>
 
 **.parent** -> object
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|object|<-|Parent folder object for the file|
 
-
-##### Description
+#### Description
 The `.parent` property returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
 This property is **read-only**. 
@@ -369,13 +308,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.path** -> text
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|POSIX path (including filesystem if any)|
+**.path** -> Text
 
-
-##### Description
+#### Description
 The `.path` property returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
 This property is **read-only**. 
@@ -391,13 +326,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.platformPath** -> text
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|Path expressed with the platform syntax|
+**.platformPath** -> Text
 
-
-##### Description
+#### Description
 The `.platformPath` property returns the path of the file expressed with the current platform syntax.
 
 This property is **read-only**. 
@@ -414,13 +345,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.size** -> file size
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|number|<-|Size of the file in bytes|
+**.size** -> Number
 
-
-##### Description
+#### Description
 The `.size` property returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0.
 
 This property is **read-only**. 
@@ -452,8 +379,8 @@ This property is **read-only**.
 |Result|object|<-|Copied file or folder|
 
 
-##### Description
-The `.copyTo( )` function  copies a `File` object (source file/folder) into the specified *destinationFolder* .
+#### Description
+The `.copyTo( )` function  copies the `File` object into the specified *destinationFolder* .
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -470,7 +397,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 
 The copied `File` object.
 
-##### Example
+#### Example
 
 You want to copy a picture *file* from the user's document folder to the database folder:
 
@@ -497,14 +424,14 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 |Result | BLOB |<-|File content|
 
 
-##### Description
+#### Description
 The `.getContent( )` function  returns a `BLOB` containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
 
 **Returned value**
 
 A `BLOB`.
 
-##### Example
+#### Example
 
 To save a document's contents in a `BLOB` field:
 
@@ -535,7 +462,7 @@ To save a document's contents in a `BLOB` field:
 |Result|picture|<-|Icon|
 
 
-##### Description
+#### Description
 The `.getIcon( )` function returns the icon of the file.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
@@ -545,6 +472,7 @@ If the file does not exist on disk, a default blank icon is returned.
 **Returned value**
 
 File icon [picture](../Concepts/picture.html).
+
 
 
 
@@ -566,7 +494,7 @@ File icon [picture](../Concepts/picture.html).
 |Result |text  |<- |Text from the document|
 
 
-##### Description
+#### Description
 The `.getText( )` function returns the contents of the file as text .
 
 In *charSet*, pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
@@ -591,7 +519,7 @@ By default, when you omit the breakMode parameter, line breaks are processed in 
 
 Text of the file.
 
-##### Example
+#### Example
 
 Given the following text document (fields are separated by tabs):
 

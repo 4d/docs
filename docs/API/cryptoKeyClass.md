@@ -87,14 +87,8 @@ The returned `cryptoKey` object encapsulates an encryption key pair. It is a sha
 |v18 R4|Added
 </details>
 
-
 <!-- REF #cryptokey.curve.Syntax -->**.curve** -> *text*<!-- END REF -->
 
-<!-- REF #cryptokey.curve.Params -->
-|Parameter|Type||Description|
-|---|---|---|----|
-|curve|text|<-|Normalised curve name of the key|
-<!-- END REF -->
 
 Defined only for ECDSA keys: the <!-- REF #cryptokey.curve.Summary -->normalised curve name of the key. <!-- END REF -->
 Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
@@ -204,6 +198,7 @@ The returned value is an encrypted message.
 
 <!-- REF #cryptokey.getPrivateKey().Syntax -->**.getPrivateKey( )** -> *privateKey*<!-- END REF -->
 
+
 <!-- REF #cryptokey.getPrivateKey().Params -->
 |Parameter|Type||Description|
 |---|---|----|---|
@@ -258,10 +253,8 @@ The returned value is the public key.
 
 <!-- REF #cryptokey.pem.Syntax -->**.pem** -> *text*<!-- END REF -->
 
-<!-- REF #cryptokey.pem.Params -->
-|Property|Type||Description|
-|---|---|---|----|
-|pem|text|<-|<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->|<!-- END REF -->
+
+<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->
 <!-- END REF -->
 
 
@@ -317,10 +310,6 @@ The utf8 representation of the *message* string.
 
 <!-- REF #cryptokey.size.Syntax -->**.size** -> *integer*<!-- END REF -->
 
-<!-- REF #cryptokey.size.Params -->
-|Property|Type||Description|
-|---|---|---|----|
-|size|integer|<-|Size of the key in bits|<!-- END REF -->
 
 Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the key in bits<!-- END REF -->. Typically 2048 (default).
 
@@ -338,10 +327,6 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 
 <!-- REF #cryptokey.type.Syntax -->**.type** -> *text*<!-- END REF -->
 
-<!-- REF #cryptokey.type.Params -->
-|Property|Type||Description|
-|---|---|---|----|
-|type|text|<-|Name of the key type|<!-- END REF -->
 
 <!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", or "PEM":
 

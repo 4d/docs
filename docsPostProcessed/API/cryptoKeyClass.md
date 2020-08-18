@@ -83,11 +83,7 @@ The returned `cryptoKey` object encapsulates an encryption key pair. It is a sha
 |v18 R4|Added
 </details>
 
-
 **.curve** -> *text*
-|Parameter|Type||Description|
-|---|---|---|----|
-|curve|text|<-|Normalised curve name of the key|
 
 Defined only for ECDSA keys: the normalised curve name of the key. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 
@@ -183,6 +179,7 @@ The returned value is an encrypted message.
 
 
 **.getPrivateKey( )** -> *privateKey*
+
 |Parameter|Type||Description|
 |---|---|----|---|
 |privateKey|text|<-|Private key in PEM format|
@@ -227,9 +224,8 @@ The returned value is the public key.
 
 
 **.pem** -> *text*
-|Property|Type||Description|
-|---|---|---|----|
-|pem|text|<-|PEM definition of an encryption key to load|
+
+PEM definition of an encryption key to load
 
 ---
 ## .sign( )
@@ -275,9 +271,7 @@ The utf8 representation of the *message* string.
 </details>
 
 **.size** -> *integer*
-|Property|Type||Description|
-|---|---|---|----|
-|size|integer|<-|Size of the key in bits|
+
 Defined only for RSA keys: the size of the key in bits. Typically 2048 (default).
 
 ---
@@ -291,9 +285,7 @@ Defined only for RSA keys: the size of the key in bits. Typically 2048 (default)
 
 
 **.type** -> *text*
-|Property|Type||Description|
-|---|---|---|----|
-|type|text|<-|Name of the key type|
+
 Name of the key type - "RSA", "ECDSA", or "PEM":
 
 ---
