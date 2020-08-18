@@ -14,9 +14,9 @@ title: エラー処理
 
 ## エラー/ステータス
 
-Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
+`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
 
-Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method.
+ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 これらのエラーは例外を発生させ、エラー処理メソッドを介して対応する必要があります。
 
 
 ## エラー処理メソッドの実装
