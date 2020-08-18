@@ -12,7 +12,7 @@ title: エラー処理
 > 4D Server 上で実行されるコードのため、4D Server にはエラー処理メソッドを実装しておくことが強く推奨されます。 このメソッドによって、サーバーマシンにおいて予期せぬダイアログが表示されることを防ぎ、エラーの調査に必要なログを専用ファイルにとることができます。
 
 
-## Error or status
+## エラー/ステータス
 
 Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
 
@@ -34,7 +34,7 @@ ON ERR CALL("IO_ERRORS") // エラー処理メソッドを実装します
 ON ERR CALL("") // エラーの検知を中止します
 ```
 
-`Method called on error` コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 It is particularly useful in the context of generic code because it enables you to temporarily change and then restore the error-catching method:
+`Method called on error` コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error
