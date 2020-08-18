@@ -35,17 +35,17 @@ title: 識別子の命名規則
 
 ## 配列
 
-配列は、配列作成時に配列宣言コマンド (ARRAY LONGINT 等) に渡す名前でもって表されます。 Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:
+配列は、配列作成時に配列宣言コマンド (ARRAY LONGINT 等) に渡す名前でもって表されます。 配列は変数であり、配列名はスコープ記号を除いて31文字まで指定することができます。スコープに基づいて次の3種類があります:
 
-- The name of a **local** array is preceded by the dollar sign ($).
-- The name of a **process** array cannot start with the <> symbols nor the dollar sign $).
-- The name of an **interprocess** array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- 配列名がドル記号 ($) で始まるものは、**ローカル** 配列です。
+- (<>記号や$記号から始まらない) 名前を使用して、**プロセス** 配列を表します。
+- **インタープロセス** 配列の名前は、先頭にインタープロセス記号 (<>) が付きます。
 
 例:
 ```4d
-ARRAY TEXT($atSubjects;Records in table([Topics])) //local array
-SORT ARRAY(asKeywords;>) //process array
-ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //interprocess array
+ARRAY TEXT($atSubjects;Records in table([Topics])) // ローカル配列
+SORT ARRAY(asKeywords;>) // プロセス配列
+ARRAY BOOLEAN(<>settings;Records in table([MySettings])) // インタープロセス配列
 ```
 
 
@@ -54,7 +54,7 @@ ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //interprocess array
 
 例:
 ```4d   
-    //Addressing an element of a local array
+    // ローカル配列の特定要素にアクセスする例
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
@@ -65,7 +65,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 
 例:
 ```4d 
-    //Addressing an element of a two-dimensional process array
+    // 二次元配列の特定要素にアクセスする例
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
@@ -106,21 +106,21 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## 命名セレクション
 
-A named selection name can contain up to 255 characters, not including scope character(s).
+命名セレクション名は、スコープ記号を除いて255文字以内で指定します。
 
-- You denote a **process** named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $).
-- You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- **プロセス** 命名セレクションの名前を表す文字列式を使用してプロセスセットを表します (<>記号も$記号も名前の先頭につきません) 。
+- **インタープロセス** 命名セレクションの名前は、先頭にインタープロセス記号 (<>) が付きます。
 
 例:
 ```4d
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
+USE NAMED SELECTION([Customers];"Closed")// プロセス命名セレクション
+USE NAMED SELECTION([Customers];"<>ByZipcode") // インタープロセス命名セレクション
 ```
 
 
 ## オブジェクト属性
 
-You designate an object attribute (also called object property) by placing a point (".") between the name of the object and the name of the attribute. 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
+ドット (".") をオブジェクト名と属性名の間に置くことでオブジェクト属性 (オブジェクトプロパティとも呼びます) を指定します。 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
 
 例:
 ```4d
@@ -128,7 +128,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、\[上述の追加ルール\](#ORDA-に適用される追加ルール) および [オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
 
 
 ## プラグインコマンド
@@ -142,12 +142,12 @@ $error:=SMTP_From($smtp_id;"henry@gmail.com")
 
 ## プロセス
 
-A process name can contain up to 255 characters, not including scope character.
+ローカルプロセス名は、スコープ記号を除いて255文字以内で指定します。
 
-In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
+シングルユーザー版およびクライアント/サーバー版のクライアント側において、**グローバル** と **ローカル** という2種類のプロセススコープがあります。
 
-- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $).
-- You denote a **local** process if the name of the process is preceded by a dollar ($) sign.
+- $記号以外から始まる文字列を使用して **グローバル** プロセスの名前を表します。
+- 名前の前にドル記号 ($) をつけて **ローカル** プロセスを表します。
 
 例:
 ```4d
@@ -209,7 +209,7 @@ vtClone:=Dump("is";"the";"it")
 
 ## セット
 
-A set name can contain up to 255 characters, not including scope character()s).
+セット名は、スコープ記号を除いて255文字以内で指定します。
 
 - You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $).
 - You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
