@@ -1,18 +1,18 @@
 ---
-id: folderClass
-title: Folder 
+id: zipfolderClass
+title: ZIP Folder Archive
 ---
 
-`Folder` objects are created with the [`Folder`](https://doc.4d.com/4Dv18R4/4D/18-R4/Folder.301-4982248.en.html) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`create( )`](#create-) function.
+A 4D ZIP folder archive is a `Folder` object containing one or more folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to:
 
-### Example
+*	Save disk space
+*	Store data on a removable media device
+*	Easily transfer files via mediums which may have size limitations (e.g., email or inter/intranet systems)
 
-The following example creates a "John Smith" folder:
+4D ZIP archives are created and handled with the following 4D commands:
 
-```code4d
-Form.curfolder:=Folder(fk database folder)
-Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
-```
+*	[ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html)
+*	[ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html)
 
 ## Summary
 
@@ -20,16 +20,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 |---|
 |[<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto-)|
 |&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
-|[<!-- INCLUDE #folder.create().Syntax -->](#create-)| 
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.create().Summary -->|
-|[<!-- INCLUDE #folder.createAlias().Syntax -->](#createalias-) |
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.createAlias().Summary --> |
 |[<!-- INCLUDE #directory.creationDate.Syntax -->](#creationdate)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;Date may be different for the root folder from a folder within the archive|
 |[<!-- INCLUDE #directory.creationTime.Syntax -->](#creationtime)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary -->|
-|[<!-- INCLUDE #folder.delete().Syntax -->](#delete-) |
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.delete().Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;Time may be different for the root folder from a folder within the archive|
 |[<!-- INCLUDE #directory.exists.Syntax -->](#exists)|
 |&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
 |[<!-- INCLUDE #directory.extension.Syntax -->](#extension)|
@@ -57,23 +51,20 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 |[<!-- INCLUDE #directory.isPackage.Syntax -->](#ispackage)|
 |&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isPackage.Summary -->|
 |[<!-- INCLUDE #directory.modificationDate.Syntax -->](#modificationdate)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationDate.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;Date may be different for the root folder from a folder within the archive|
 |[<!-- INCLUDE #directory.modificationTime.Syntax -->](#modificationtime)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationTime.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;Time may be different for the root folder from a folder within the archive|
 |[<!-- INCLUDE #directory.name.Syntax -->](#name)|
 |&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.name.Summary -->|
 |[<!-- INCLUDE #directory.original.Syntax -->](#original)|
 |&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.original.Summary -->|
 |[<!-- INCLUDE #directory.parent.Syntax -->](#parent)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.parent.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;The archive's virtual root folder has no parent. However, the folders within the archive may have a parent other than the root.|
 |[<!-- INCLUDE #directory.path.Syntax -->](#path)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary -->|
+|&nbsp;&nbsp;&nbsp;&nbsp;Returns a path relative to the archive|
 |[<!-- INCLUDE #directory.platformPath.Syntax -->](#platformpath)|
 |&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->|
-|[<!-- INCLUDE #folder.moveTo().Syntax -->](#moveto-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.moveTo().Summary -->|
-|[<!-- INCLUDE #folder.rename().Syntax -->](#rename-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folder.rename().Summary -->|
+
 
 
 ---
@@ -83,23 +74,12 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 
 ---
 
-<!-- INCLUDE folder.create().Desc -->
-
----
-
-<!-- INCLUDE folder.createAlias().Desc -->
-
----
-
 <!-- INCLUDE directory.creationDate.Desc -->
 
 ---
 
 <!-- INCLUDE directory.creationTime.Desc -->
 
----
-
-<!-- INCLUDE folder.delete().Desc -->
 
 ---
 
@@ -167,10 +147,6 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 
 <!-- INCLUDE directory.modificationTime.Desc -->
 
----
-
-
-<!-- INCLUDE folder.moveTo().Desc -->
 
 ---
 
@@ -197,10 +173,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 
 <!-- INCLUDE directory.platformPath.Desc -->
 
----
 
-
-<!-- INCLUDE folder.rename().Desc -->
 
 
 

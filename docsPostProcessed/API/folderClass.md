@@ -34,6 +34,14 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 |&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder exists on disk|
 |[**.extension** -> folder name extension](#extension)|
 |&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name|
+|[**.file**( *path* ) -> object](#file-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a `File` object inside the `Folder` object and returns its reference|
+|[**.file**( { *options* } ) -> collection](#files-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a collection of `File` objects contained in the folder|
+|[**.file**( *path* ) -> object](#folder-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a `Folder` object inside the parent `Folder` object and returns its reference|
+|[**.file**( { *options* } ) -> collection](#folders-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a collection of `Folder` objects contained in the parent folder|
 |[**.fullName** -> full folder name](#fullname)|
 |&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder|
 |[**.getIcon**( { *size* } ) -> picture](#geticon-)|
@@ -44,7 +52,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\"; fk platform path)
 |&nbsp;&nbsp;&nbsp;&nbsp;always returns **false** for a `Folder` object|
 |[**.isFile** -> boolean](#isfile)|
 |&nbsp;&nbsp;&nbsp;&nbsp;always returns **false** for a folder|
-|[**.isFolder** -> boolean](#ifFolder)|
+|[**.isFolder** -> boolean](#isfolder)|
 |&nbsp;&nbsp;&nbsp;&nbsp;always returns **true** for a folder|
 |[**.isWritable** -> boolean](#ispackage)|
 |&nbsp;&nbsp;&nbsp;&nbsp;returns true if the folder is a package on macOS  (and exists on disk)|
