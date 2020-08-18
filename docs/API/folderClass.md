@@ -1,6 +1,6 @@
 ---
 id: folderClass
-title: Folder 
+title: Folder
 ---
 
 `Folder` objects are created with the [`Folder`](https://doc.4d.com/4Dv18R4/4D/18-R4/Folder.301-4982248.en.html) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
@@ -169,8 +169,3 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- INCLUDE folder.rename().Desc -->
-
-
-
-
-

@@ -11,6 +11,9 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "API/collectionClass": {
+        "title": "Collections"
+      },
       "API/cryptoKey": {
         "title": "CryptoKey Class"
       },
@@ -18,7 +21,7 @@
         "title": "CryptoKey"
       },
       "API/directory": {
-        "title": "Class"
+        "title": "Directory Class"
       },
       "API/document": {
         "title": "Document Class"
@@ -44,8 +47,26 @@
       "API/folderClass": {
         "title": "Folder"
       },
+      "API/imapTransporterClass": {
+        "title": "IMAP Transporter"
+      },
+      "API/pop3TransporterClass": {
+        "title": "POP3 Transporter"
+      },
+      "API/smtpTransporterClass": {
+        "title": "SMTP Transporter"
+      },
+      "API/transporter": {
+        "title": "Transporter Class"
+      },
       "API/zipClass": {
         "title": "ZIP Archives"
+      },
+      "API/zipfileClass": {
+        "title": "ZIP File Archive"
+      },
+      "API/zipfolderClass": {
+        "title": "ZIP Folder Archive"
       },
       "Backup/backup": {
         "title": "Backup"
