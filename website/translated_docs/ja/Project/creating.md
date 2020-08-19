@@ -51,43 +51,43 @@ title: プロジェクトの作成・開始
 
 4D Server 上で動いているプロジェクトに初めて接続する場合は、通常は標準の接続ダイアログを使います。 以降は、**最近使用したプロジェクトを開く** メニューや、4DLink ショートカットファイルを使って ([後述参照](#プロジェクト開始用ショートカット))、直接接続できるようになります。
 
-To connect remotely to a 4D Server project:
+4D Server で実行されているプロジェクトに接続するには:
 
-1. Select **Connect to 4D Server** in the Welcome Wizard dialog, <p>OR<p> Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
+1. Welcome ウィザードにて **4D Serverに接続** を選択します。 <p>OR<p> **ファイル** メニューより **開く ＞ リモートプロジェクト...**を選択するか、**開く** ツールバーボタンより同様に選択します。
 
-The 4D Server connection dialog appears. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
+4D Server に接続するためのダイアログが表示されます。 ダイアログには **最近使用**、**利用可**、および **カスタム** という、3つのタブがあります。
 
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.
+リモートの 4D と同じネットワークに 4D Server が接続されている場合は **利用可** タブを選択します。 4D Server には組み込みの TCP/IP ブロードキャストシステムがあり、デフォルトで、ネットワーク上に利用可能な 4D Server データベースの名前を公開します。 このリストは、名前が見つかった順に表示され、動的に更新されます。
 
 ![](assets/en/getStart/serverConnect.png)
 
-To connect to a server from the list, double-click on its name or select it and click the **OK** button.
+このリストからサーバーに接続するには、名前上でダブルクリックするか、名前を選択して **OK** ボタンをクリックします。
 
-> A circumflex accent (^) is placed before the name of projects published with the encryption option enabled.
+> 暗号化オプションが有効で公開されているデータベース名の前にはキャレット (^) が置かれます。
 
-If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
+公開されているプロジェクトが **利用可** タブに見つからない場合には、**カスタム** タブを開きます。 カスタムページでは、IPアドレスでネットワーク上のサーバーを指定し、それに任意の名前をつけられます。
 
 ![](assets/en/getStart/serverConnect2.png)
 
 
-- **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
+- **プロジェクト名**: 4D Server プロジェクトのローカル名を指定できます。 この名前は **最近使用** ページでプロジェクトを参照する際に使用されます。
+- **ネットワークアドレス**: 4D Server が起動されたマシンの IPアドレスを指定します。 <p>2つのサーバーが同じマシン上で同時に起動されているときは、IPアドレスの後にコロンとポート番号を続けます。例えば: `192.168.92.104:19820`。 <p>デフォルトで、4D Server の公開ポートは 19813 です。 この番号は、プロジェクト設定で変更できます。
 
-Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
+このページでサーバーを指定したら、**OK** ボタンをクリックしてサーバーに接続できます。
 
-> If the project is published with the encryption option enabled, you must add a circumflex accent (^) before the name, otherwise the connection will be refused. For more information, refer to the Encrypting Client/Server Connections section.
+> データベースが暗号化されて公開されている場合、名前の前にキャレット (^) を置かなければなりません。そうでなければ接続は拒否されます。 詳細はクライアント/サーバー接続の暗号化を参照してください。
 
-Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
+サーバーとの接続が確立されると、そのリモートプロジェクトは **最近使用** タブのリストに加えられます。
 
 
 
-## Project opening shortcuts
+## プロジェクトを開く (その他の方法)
 
-4D offers two ways to let you open projects directly and bypass the Open dialog:
+4D では、開くダイアログを経由しなくてもプロジェクトを開くことのできる方法が 2つあります:
 
-- via menu options:
-    -   *Menu bar* - **File** > **Open Recent Projects / {project name}**
-    -   *4D Tool bar* -  Select the project from the menu associated with the **Open** button
+- メニューを使用:
+    -   *メニューバー* - **ファイル** > **最近使用したデータベースを開く / {project name}**
+    -   *4D ツールバー* -  **開く** ボタンとそのサブメニューを使ってプロジェクトを選択します。
 
-- via preferences:
-    -   Set the **At startup** general preference to **Open last used project**. 
+- 4D 環境設定を使用:
+    -   4D 環境設定の **開始時** オプションに **最後に使用したデータベースを開く** を指定します。 
