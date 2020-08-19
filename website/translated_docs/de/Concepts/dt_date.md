@@ -3,8 +3,8 @@ id: date
 title: Datum
 ---
 
-- A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
-- Auch wenn die Datumsdarstellung über C_DATE bis zum Jahr 32 767 funktioniert, können über das Betriebssystem laufende Operationen eine niedrigere Grenze vorschreiben.
+- Datenfelder, Variablen oder Ausdrücke vom Typ Datum umfassen den Bereich 1.1.100 bis 31.12.32767. Das Datum wird in der deutschen Version von 4D im Format Tag/Monat/Jahr dargestellt, in der internationalen Version im Format Monat/Tag/Jahr.
+- Auch wenn die Datumsdarstellung über C_DATE bis zum Jahr 32767 funktioniert, können über das Betriebssystem laufende Operationen eine niedrigere Grenze vorschreiben.
 
 **Hinweis:** Bei der Beschreibung von Befehlen im Handbuch 4D Programmiersprache werden Datumsparameter als Datum bezeichnet, wenn nichts anderes angegeben ist.
 
@@ -25,7 +25,7 @@ Ein Nulldatum wird als _!00-00-00!_ angegeben.
 **Hinweise:**
 
 -
-- Haben Sie die Option "Verwende regionale Systemeinstellungen" (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden. Im allgemeinen gilt in einer deutschen Umgebung für Datum das Format Tag. Monat. Jahr, getrennt durch Punkte; in der US-Version das Format Monat/Tag/Jahr, getrennt durch Schrägstriche (/).
+- Haben Sie die Option "Verwende regionale Systemeinstellungen" (siehe Seite Methoden), müssen Sie das Datumsformat Ihres Betriebssystems verwenden. Im allgemeinen gilt in einer deutschen Umgebung für Datum das Format Tag. Monat. Jahr, getrennt durch Punkte; in der US-Version das Format Monat/Tag/Jahr, getrennt durch Schrägstriche (/). Wir empfehlen diese Option nicht zu verwenden, weil sie die Weitergabe des Codes (z. B. in Version Control Systeme) behindert.
 
 ## Datumsoperatoren
 
