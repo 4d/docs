@@ -11,86 +11,177 @@ It is created with the [SMTP New transporter](#smtp-new-transporter) command.
 
 ||
 |---|
-|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
-|[<!-- INCLUDE #smtpTransporterClass.bodyCharset.Syntax -->](#bodycharset)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.bodyCharset.Summary -->|
-|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
-|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
-|[<!-- INCLUDE #smtpTransporterClass.headerCharset.Syntax -->](#headercharset)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.headerCharset.Summary -->|
-|[<!-- INCLUDE #transporter.host.Syntax -->](#host)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
-|[<!-- INCLUDE #smtpTransporterClass.keepAlive.Syntax -->](#keepalive)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.keepAlive.Summary -->|
-|[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
-|[<!-- INCLUDE #transporter.port.Syntax -->](#port)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
-|[<!-- INCLUDE #smtpTransporterClass.send().Syntax -->](#send-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.send().Summary -->|
-|[<!-- INCLUDE #smtpTransporterClass.sendTimeOut.Syntax -->](#sendtimeout)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.sendTimeOut.Summary -->|
-|[<!-- INCLUDE #transporter.user.Syntax -->](#user)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
+|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
+|[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->|
+|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
+|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
+|[<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.headerCharset.Summary -->|
+|[<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
+|[<!-- INCLUDE #transporter.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.keepAlive.Summary -->|
+|[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
+|[<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
+|[<!-- INCLUDE #smtpTransporterClass.send().Syntax -->](#send-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.send().Summary -->|
+|[<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->|
+|[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
 ---
 
-<!-- INCLUDE transporter.SMTP&nbsp;New&nbsp;transporter.Desc -->
+<!-- REF smtpTransporterClass.SMTP New transporter.Desc -->
+## SMTP New transporter
+
+Number: 1608
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R4|Added|
+|v17 R5|Modified|
+|v18|Modified|
+</details>
+
+<!-- REF #smtpTransporterClass.SMTP New transporter.Syntax -->
+**SMTP New transporter**( *server* ) -> object<!-- END REF -->
+
+<!-- REF #smtpTransporterClass.SMTP New transporter.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|object|->|Mail server information|
+|Result|object|<-|SMTP Transporter object connection|
+<!-- END REF -->
+
+
+#### Description
+The `SMTP New transporter` command <!-- REF #smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to send emails.
+
+In the *server* parameter, pass an object containing the following properties:
+
+|Property|	Type|	Description|
+|---|---|---|
+|host|	Text|	Name or IP address of the host server to use for SMTP transactions. |
+|port	|Number|	(optional) Port to use for SMTP transactions. Default value=587|
+|keepAlive	|Boolean|	(optional) True to keep the connection alive until the transporter object is destroyed. Defaut value=True|
+|connectionTimeOut|	Number|	(optional) Maximum wait time (in seconds) to establish a connection to the server. Default value=30|
+|sendTimeOut	|Number	|(optional) Maximum wait time (in seconds) of a sendMail call before timeout. Default value=100|
+|authenticationMode|Text|Authentication mode used to open the session on the SMTP server(\*).<p><p>Possible values:<p><ul><li>SMTP authentication CRAM MD5<br>value = CRAM-MD5<br></li><li>SMTP authentication login<br>value = LOGIN</li><li>SMTP authentication plain<br>value = PLAIN</li></ul>|
+|user|	Text|	User name for authentication on the server|
+|password|	Text|	User password for authentication on the server|
+|acceptUnsecureConnection|	Boolean|	True to allow 4D to establish an unencrypted connection if encrypted connection is not possible (**). If False, an error is returned if encrypted connection is not possible. Default value=False|
+|logFile|	Text|	(optional) File path for the extended log file(***). Can be relative (to the current Logs folder) or absolute|
+|headerCharset|	Text|	(optional) Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s).<p><p>Possible values: <ul><li>mail mode ISO2022JP<br>value = US-ASCII\_ISO-2022-JP\_UTF8\_QP<ul><li>headerCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>bodyCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></li><li>mail mode ISO88591<br>value = ISO-8859-1<ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul></li><li>mail mode UTF8<br>value = US-ASCII_UTF8_QP<ul><li>headerCharset & bodyCharset: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value)</li></ul><li>mail mode UTF8 in base64<br>value = US-ASCII_UTF8_B64<ul><li>headerCharset & bodyCharset: US-ASCII if possible, otherwise UTF-8 & base64</li></ul></li></ul>
+|bodyCharset|	Text|	(optional) Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)|
+
+
+
+(*) If *authenticationMode* is null or undefined, the most secure authentication mode supported by the server is used.
+
+(**) Available SMTP secured ports are:
+
+*	465: SMTPS
+*	587 or 25: SMTP with STARTTLS upgrade if supported by the server.
+
+(\*\*\*) Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information, please refer to the **4DSMTPLog.txt** section.
+
+
+**Returned object**
+
+The returned transporter object contains the following **read-only** properties and functions:
+
+**Properties**
+
+*	[<!-- INCLUDE #transporter.host.Syntax -->](#host)
+*	[<!-- INCLUDE #transporter.port.Syntax -->](#port)
+*	[<!-- INCLUDE #transporter.keepAlive.Syntax -->](#keepalive)
+*	[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)
+*	[<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)
+*	[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)
+*	[<!-- INCLUDE #transporter.user.Syntax -->](#user)
+*	[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)
+*	[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)
+*	[<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)
+*	[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)
+
+**Methods**
+
+*	[<!-- INCLUDE #smtpTransporterClass.send().Syntax -->](#send-)
+*	[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkConnection-)
+
+>This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the `.send( )` function is executed.
+>
+>The SMTP connection is automatically closed:
+>
+>*	when the transporter object is destroyed if the `keepAlive` property is true (default),
+>*	after each `.send( )` function execution if the `keepAlive` property is set to false.
+
+#### Example
+
+```4d
+$server:=New object
+ $server.host:="smtp.gmail.com" //Mandatory
+ $server.port:=465
+ $server.user:="4D@gmail.com"
+ $server.password:="XXXX"
+ $server.logFile:="LogTest.txt" //Extended log to save in the Logs folder
+ 
+ 
+ $transporter:=SMTP New transporter($server)
+ 
+ $email:=New object
+ $email.subject:="my first mail "
+ $email.from:="4d@gmail.com"
+ $email.to:="4d@4d.com;test@4d.com"
+ $email.textBody:="Hello World"
+ $email.htmlBody:="<h1>Hello World</h1><h4>'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'</h4>\
+ <p>There are many variations of passages of Lorem Ipsum available."\
+ +"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>"
+ 
+ $status:=$transporter.send($email)
+ If(Not($status.success))
+    ALERT("An error occurred sending the mail: "+$status.message)
+ End if
+```
+
+<!-- END REF -->
+
 
 ---
+
 
 <!-- INCLUDE transporter.authenticationMode.Desc -->
 
 ---
 
-<!-- REF smtpTransporterClass.bodyCharset.Desc -->
-## .bodyCharset
+<!-- INCLUDE transporter.bodyCharset.Desc -->
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added|
-|v18|Modified|
-</details>
-
-<!-- REF #smtpTransporterClass.bodyCharset.Syntax -->
-**.bodyCharset** -> text<!-- END REF -->
-
-<!-- REF #smtpTransporterClass.bodyCharset.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|Charset and encoding used for the body of the Email object|
-<!-- END REF -->
-
-
-##### Description
-The `.bodyCharset` property  <!-- REF #smtpTransporterClass.bodyCharset.Summary -->  contains the charset and encoding used for the body part of the email<!-- END REF -->.
-
-*	subject, 
-*	attachment filename(s), 
-*	email name.
-
-**Possible values:**
-
-|Constant|	Value|	Comment|
-|---|---|---|
-|mail mode ISO2022JP|	US-ASCII_ISO-2022-JP_UTF8_QP	|<ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>|
-|mail mode ISO88591	|ISO-8859-1	|<ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>|
-|mail mode UTF8	|US-ASCII_UTF8_QP|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value)|
-|mail mode UTF8 in base64|US-ASCII_UTF8_B64|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64|
-
-This property is **read-only**. 
-
-<!-- END REF -->
 
 ---
 
 
-<!-- INCLUDE transporter.checkConnection().Descsmtp -->
+<!-- INCLUDE transporter.checkConnection().Desc -->
 
+For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+
+#### Example
+
+```4d
+C_TEXT($pw)
+ C_OBJECT($options)
+ $options:=New object
+ 
+ $pw:=Request("Please enter your password:")
+ $options.host:="smtp.gmail.com"
+ 
+ $options.user:="test@gmail.com"
+ $options.password:=$pw
+ 
+ $transporter:=SMTP New transporter($options)
+ 
+ $status:=$transporter.checkConnection()
+ If($status.success=True)
+    ALERT("SMTP connection check successful!")
+ Else
+    ALERT("Error # "+String($status.status)+", "+$status.statusText)
+ End if
+```
 
 ---
 
@@ -101,86 +192,17 @@ This property is **read-only**.
 
 
 
-<!-- REF smtpTransporterClass.headerCharset.Desc -->
-## .headerCharset
+<!-- INCLUDE transporter.headerCharset.Desc -->
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added|
-|v18|Modified|
-</details>
-
-<!-- REF #smtpTransporterClass.headerCharset.Syntax -->
-**.headerCharset** -> text<!-- END REF -->
-
-<!-- REF #smtpTransporterClass.headerCharset.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|text|<-|Charset and encoding used for headers and names of the Email object|
-<!-- END REF -->
-
-
-##### Description
-The `.headerCharset` property  <!-- REF #smtpTransporterClass.headerCharset.Summary --> contains the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email: 
-
-*	subject, 
-*	attachment filename(s), 
-*	email name.
-
-**Possible values:**
-
-|Constant|	Value|	Comment|
-|---|---|---|
-|mail mode ISO2022JP|	US-ASCII_ISO-2022-JP_UTF8_QP	|<ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>|
-|mail mode ISO88591	|ISO-8859-1	|<ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>|
-|mail mode UTF8	|US-ASCII_UTF8_QP|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value)|
-|mail mode UTF8 in base64|	US-ASCII_UTF8_B64|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64|
-
-This property is **read-only**. 
 
 ---
-
-<!-- END REF -->
-
-
 
 <!-- INCLUDE transporter.host.Desc -->
 
 
 ---
 
-<!-- REF smtpTransporterClass.keepAlive.Desc -->
-## .keepAlive
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R4|Added
-</details>
-
-<!-- REF #smtpTransporterClass.keepAlive.Syntax -->
-**.keepAlive** -> boolean<!-- END REF -->
-
-<!-- REF #smtpTransporterClass.keepAlive.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|boolean|<-|True if connection is kept alive until the transporter object is destroyed|
-<!-- END REF -->
-
-
-##### Description
-The `.keepAlive` property  <!-- REF #smtpTransporterClass.keepAlive.Summary -->contains **True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
-
-The SMTP connection is automatically closed:
-
-*	when the `transporter` object is destroyed if the `.keepAlive` property is true,
-*	after each `.send( )` function execution if the `.keepAlive` property is set to false.
-
-This property is **read-only**. 
-
-<!-- END REF -->
-
+<!-- INCLUDE transporter.keepAlive.Desc -->
 
 ---
 
@@ -217,7 +239,8 @@ This property is **read-only**.
 <!-- END REF -->
 
 
-##### Description
+#### Description
+
 The `.send( )` function  <!-- REF #smtpTransporterClass.send().Summary -->sends the mail object to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->. 
 
 >The `transporter` object must have already been created using the `SMTP New transporter` command.
@@ -233,31 +256,7 @@ For a description of the `Email` object, please refer to the [`Email` object](ht
 ---
 
 
-<!-- REF smtpTransporterClass.sendTimeOut.Desc -->
-## .sendTimeOut
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R4|Added
-</details>
-
-<!-- REF #smtpTransporterClass.sendTimeOut.Syntax -->
-**.sendTimeOut** -> number<!-- END REF -->
-
-<!-- REF #smtpTransporterClass.sendTimeOut.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|number|<-|Maximum wait time (in seconds) of a mail send call before timeout|
-<!-- END REF -->
-
-
-##### Description
-The `.sendTimeOut` property  <!-- REF #smtpTransporterClass.sendTimeOut.Summary -->contains the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object (used to create the `transporter object` with `SMTP New transporter`), the value 100 is used.
-
-This property is **read-only**. 
-
-<!-- END REF -->
+<!-- INCLUDE transporter.sendTimeOut.Desc -->
 
 
 ---

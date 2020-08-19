@@ -5,54 +5,132 @@ title: POP3 Transporter
 
 The POP transporter allows you to retrieve messages from a POP3 email server.
 
-It is created with the [POP3 New transporter](https://doc.4d.com/4Dv18R4/4D/18-R4/POP3-New-transporter.301-4981947.en.html) command.
+It is created with the [POP3 New transporter](#pop3-new-transporter) command.
 
 ## Summary
 
 ||
 |---|
-|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.bodyCharset.Syntax -->](#bodycharset)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.bodyCharset.Summary -->|
-|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summarypop3 -->|
-|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.delete().Syntax -->](#delete-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.delete().Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.getBoxInfo().Syntax -->](#getboxinfo-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getBoxInfo().Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.getMail().Syntax -->](#getmail-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMail().Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.getMailInfo().Syntax -->](#getmailinfo-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMailInfo().Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.getMailInfoList().Syntax -->](#getmailinfolist-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMailInfoList().Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMIMEAsBlob().Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.headerCharset.Syntax -->](#headercharset)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.headerCharset.Summary -->|
-|[<!-- INCLUDE #transporter.host.Syntax -->](#host)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.keepAlive.Syntax -->](#keepalive)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.keepAlive.Summary -->|
-|[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
-|[<!-- INCLUDE #transporter.port.Syntax -->](#port)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.sendTimeOut.Syntax -->](#sendtimeout)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.sendTimeOut.Summary -->|
-|[<!-- INCLUDE #pop3TransporterClass.undeleteAll().Syntax -->](#undeleteall-)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.undeleteAll().Summary -->|
-|[<!-- INCLUDE #transporter.user.Syntax -->](#user)|
-|&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
+|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
+|[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->|
+|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
+|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.delete().Syntax -->](#delete-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.delete().Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.getBoxInfo().Syntax -->](#getboxinfo-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getBoxInfo().Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.getMail().Syntax -->](#getmail-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMail().Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.getMailInfo().Syntax -->](#getmailinfo-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMailInfo().Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.getMailInfoList().Syntax -->](#getmailinfolist-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMailInfoList().Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.getMIMEAsBlob().Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.headerCharset.Syntax -->](#headercharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.headerCharset.Summary -->|
+|[<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.keepAlive.Summary -->|
+|[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
+|[<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.sendTimeOut.Syntax -->](#sendtimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.sendTimeOut.Summary -->|
+|[<!-- INCLUDE #pop3TransporterClass.undeleteAll().Syntax -->](#undeleteall-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.undeleteAll().Summary -->|
+|[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
+
+---
+
+<!-- REF pop3TransporterClass.POP3 New transporter.Desc -->
+## POP3 New transporter
+
+Number: 1697
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R2|Added|
+</details>
+
+<!-- REF #pop3TransporterClass.POP3 New transporter.Syntax -->
+**POP3 New transporter**( *server* ) -> object<!-- END REF -->
+
+<!-- REF #pop3TransporterClass.POP3 New transporter.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|object|->|Mail server information|
+|Result|object|<-|POP3 Transporter object connection|
+<!-- END REF -->
+
+
+#### Description
+The `POP3 New transporter` command <!-- REF #pop3TransporterClass.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
+
+In the *server* parameter, pass an object containing the following properties:
+
+|Property|	Type|	Description|
+|---|---|---|
+|host|	Text|	Name or IP address of the host server to use for POP3 transactions. |
+|port	|Number|	(optional) Port to use for POP3 transactions. Default value=995|
+|authenticationMode|Text|Authentication mode used to open the session on the POP3 server(\*).<p><p>Possible values:<p><ul><li>POP3 authentication APOP<br>value = APOP<br></li><li>POP3 authentication CRAM MD5<br>value = CRAM-MD5<br></li><li>POP3 authentication login<br>value = LOGIN</li><li>POP3 authentication plain<br>value = PLAIN</li></ul>|
+|user|	Text|	User name for authentication on the server|
+|password|	Text|	User password for authentication on the server|
+|acceptUnsecureConnection|	Boolean|	True to allow 4D to establish an unencrypted connection if encrypted connection is not possible (**). If False, an error is returned if encrypted connection is not possible. Default value=False|
+|connectionTimeOut|	Number|	(optional) Maximum wait time (in seconds) to establish a connection to the server. Default value=30|
+|logFile|	Text|	(optional) File path for the extended log file(***). Can be relative (to the current Logs folder) or absolute|
+
+
+(*) If *authenticationMode* is null or undefined, the most secure authentication mode supported by the server is used.
+
+(**) Available POP3 secured ports are:
+
+*	110: POP3 non-encrypted port
+*	995: POP3 with STARTTLS upgrade if supported by the server.
+
+
+**Returned object**
+
+The returned transporter object contains the following **read-only** properties and functions:
+
+**Properties**
+
+*	[<!-- INCLUDE #transporter.host.Syntax -->](#host)
+*	[<!-- INCLUDE #transporter.port.Syntax -->](#port)
+*	[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)
+*	[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)
+*	[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)
+*	[<!-- INCLUDE #transporter.user.Syntax -->](#user)
+*	[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)
+
+**Methods**
+
+*	[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkConnection-)
+*	[<!-- INCLUDE #pop3TransporterClass.delete().Syntax -->](#delete-)
+*	[<!-- INCLUDE #pop3TransporterClass.getBoxInfo().Syntax -->](#getboxinfo-)
+*	[<!-- INCLUDE #pop3TransporterClass.getMail().Syntax -->](#getmail-)
+*	[<!-- INCLUDE #pop3TransporterClass.getMailInfo().Syntax -->](#getmailinfo-)
+*	[<!-- INCLUDE #pop3TransporterClass.getMailInfoList().Syntax -->](#getmailinfolist-)
+*	[<!-- INCLUDE #pop3TransporterClass.undeleteAll().Syntax -->](#undeleteall-)
+*	[<!-- INCLUDE #pop3TransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob-)
+
+>The POP3 connection is automatically closed when the transporter object is destroyed.
+
+#### Example
+
+```4d
+ $server:=New object
+ $server.host:="pop.gmail.com" //Mandatory
+ $server.port:=995
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+ $server.logFile:="LogTest.txt" //log to save in the Logs folder
+ 
+ $transporter:=POP3 New transporter($server)
+ 
+ $status:=$transporter.checkConnection()
+ If(Not($status.success))
+    ALERT("An error occurred receiving the mail: "+$status.statusText)
+ End if
+```
+
+<!-- END REF -->
 
 
 
 ---
 
-<!-- INCLUDE transporter.authenticationMode.Descpop3 -->
+<!-- INCLUDE transporter.authenticationMode.Desc -->
 
 ---
 
@@ -101,6 +179,30 @@ This property is **read-only**.
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
+#### Example
+
+```4d
+C_TEXT($pw)
+ C_OBJECT($options)
+ $options:=New object
+ 
+ $pw:=Request("Please enter your password:")
+ if(OK=1)
+    $options.host:="pop3.gmail.com"
+ 
+    $options.user:="test@gmail.com"
+    $options.password:=$pw
+ 
+    $transporter:=POP3 New transporter($options)
+ 
+    $status:=$transporter.checkConnection()
+    If($status.success)
+       ALERT("POP3 connection check successful!")
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
+```
 
 ---
 
