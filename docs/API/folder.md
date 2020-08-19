@@ -40,26 +40,26 @@ If necessary, the function creates the folder hierachy as described in the [plat
 *	**True** if the folder is created successfully;
 *	**False** if a folder with the same name already exists or if an error occured.
 
-##### Example 1
+#### Example 1
 
 Create an empty folder in the database folder:
 
 ```4d
-C_OBJECT($prefs)
-C_BOOLEAN($created)
+var $prefs : Object
+var $created : Boolean
 $created:=Folder("/PACKAGE/SpecialPrefs").create()
 ```
 
-##### Example 2
+#### Example 2
 
 Creation of the "/Archives2019/January/" folder in the database folder:
 
 ```4d
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
-ALERT("The "+$newFolder.name+" folder was created.")
+	ALERT("The "+$newFolder.name+" folder was created.")
 Else
-ALERT("Impossible to create a "+$newFolder.name+" folder.")
+	ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
 ```
 
@@ -94,7 +94,7 @@ End if
 <!-- END REF -->
 
 
-##### Description
+#### Description
 The `.createAlias( )` function <!-- REF #folder.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
@@ -112,7 +112,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 A `Folder` object with the `isAlias` property set to true.
 
-##### Example
+#### Example
 
 You want to create an alias to an archive folder in your database folder:
 
@@ -147,7 +147,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 
-##### Description
+#### Description
 The `.delete( )` function <!-- REF #folder.delete().Summary -->deletes the folder<!-- END REF -->.
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
@@ -197,7 +197,7 @@ macOS: -45 (The file is locked or the pathname is not correct)
 <!-- END REF -->
 
 
-##### Description
+#### Description
 The `.moveTo( )` function <!-- REF #folder.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
@@ -208,7 +208,7 @@ By default, the folder retains its name when moved. If you want to rename the mo
 
 The moved `Folder` object.
 
-##### Example
+#### Example
 
 You want to move and rename a folder:
 
@@ -243,7 +243,7 @@ C_OBJECT($tomove;$moved)
 
 
 
-##### Description
+#### Description
 
 The `.rename( )` function <!-- REF #folder.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
@@ -254,7 +254,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 The renamed `Folder` object.
 
-##### Example
+#### Example
 
 
 ```4d
