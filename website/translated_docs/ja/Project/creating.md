@@ -73,21 +73,21 @@ title: プロジェクトの作成・開始
 - **プロジェクト名**: 4D Server プロジェクトのローカル名を指定できます。 この名前は **最近使用** ページでプロジェクトを参照する際に使用されます。
 - **ネットワークアドレス**: 4D Server が起動されたマシンの IPアドレスを指定します。 <p>2つのサーバーが同じマシン上で同時に起動されているときは、IPアドレスの後にコロンとポート番号を続けます。例えば: `192.168.92.104:19820`。 <p>デフォルトで、4D Server の公開ポートは 19813 です。 この番号は、プロジェクト設定で変更できます。
 
-Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
+このページでサーバーを指定したら、**OK** ボタンをクリックしてサーバーに接続できます。
 
-> If the project is published with the encryption option enabled, you must add a circumflex accent (^) before the name, otherwise the connection will be refused. For more information, refer to the Encrypting Client/Server Connections section.
+> データベースが暗号化されて公開されている場合、名前の前にキャレット (^) を置かなければなりません。そうでなければ接続は拒否されます。 詳細はクライアント/サーバー接続の暗号化を参照してください。
 
-Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
+サーバーとの接続が確立されると、そのリモートプロジェクトは **最近使用** タブのリストに加えられます。
 
 
 
-## Project opening shortcuts
+## プロジェクトを開く (その他の方法)
 
-4D offers two ways to let you open projects directly and bypass the Open dialog:
+4D では、開くダイアログを経由しなくてもプロジェクトを開くことのできる方法が 2つあります:
 
-- via menu options:
-    -   *Menu bar* - **File** > **Open Recent Projects / {project name}**
-    -   *4D Tool bar* -  Select the project from the menu associated with the **Open** button
+- メニュー経由:
+    -   *メニューバー* - **ファイル** > **最近使用したデータベースを開く / {project name}**
+    -   *4D ツールバー* -  **開く** ボタンとそのサブメニューを使ってプロジェクトを選択します。
 
 - via preferences:
     -   Set the **At startup** general preference to **Open last used project**. 
