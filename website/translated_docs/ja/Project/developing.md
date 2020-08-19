@@ -50,10 +50,10 @@ title: プロジェクトの開発
 
 ただし、[標準のプロジェクトアーキテクチャー](architecture.md) とは次のふるまいにおいて異なりますので、注意が必要です:
 
-- 4D が使用する userPreferences.{username} フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
-- the folder used by 4D for derived data is not the folder named "DerivedData" in the project folder. Instead it is a dedicated folder named "DerivedDataRemote" located in the project system folder.
-- the catalog.4DCatalog file is not edited by 4D but by 4D Server. catalog の情報はクライアント/サーバーリクエストによって同期されます。
-- the directory.json file is not edited by 4D but by 4D Server. directory の情報はクライアント/サーバーリクエストによって同期されます。
+- 4D が使用する userPreferences.{username} フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 この専用の "userPreferences" フォルダーはプロジェクトシステムフォルダー内 (つまり、.4dzプロジェクトを開く場合と同じ場所) に格納されます。
+- 4D が使用する DerivedData フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 この専用の "DerivedDataRemote" フォルダーはプロジェクトのシステムフォルダー内に格納されます。
+- catalog.4DCatalog ファイルは 4D ではなく 4D Server によって編集されます。 catalog の情報はクライアント/サーバーリクエストによって同期されます。
+- directory.json ファイルは 4D ではなく 4D Server によって編集されます。 directory の情報はクライアント/サーバーリクエストによって同期されます。
 - 4D uses its own internal components and plug-ins instead of those in 4D Server.
 
 > It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
