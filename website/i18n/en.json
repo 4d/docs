@@ -11,6 +11,9 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "API/_inheritances": {
+        "title": "API/_inheritances"
+      },
       "API/collectionClass": {
         "title": "Collections"
       },
@@ -60,10 +63,7 @@
         "title": "Transporter Class"
       },
       "API/zipClass": {
-        "title": "ZIP Archives"
-      },
-      "API/zipfileClass": {
-        "title": "ZIP File Archive"
+        "title": "ZIP archive"
       },
       "API/zipfolderClass": {
         "title": "ZIP Folder Archive"
