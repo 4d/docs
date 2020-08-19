@@ -27,24 +27,24 @@ title: プロジェクトの開発
 
 4D Server プロジェクトの開発は次の原則に基づきます:
 
-- プロジェクト機能の作成・テスト・編集はローカルファイルを使い、4D でおこないます。 [4D Server と同じマシン上の 4D](#同じマシン上の-4D-を使う) を使えば、4D Server と直に作業することができます。
+- プロジェクト機能の作成・テスト・編集はローカルファイルを使い、4D でおこないます。 [4D Server と同じマシン上の 4D](#同じマシン上での-4D-の使用) を使えば、4D Server と直に作業することができます。
 
 > ブランチでの開発や、開発途中のプロジェクトの保存、必要に応じたロールバックといった利便性のため、Git などの標準的なソース管理ツールの使用が推奨されます。
 
-- 4D Server can run the *.4DProject* project file (not compressed) in interpreted mode, so that remote 4D can connect and test the features. For this purpose, 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the project.
+- 4D Server は非圧縮の *.4DProject* プロジェクトファイルをインタープリターモードで実行することができ、リモート 4D はそれに接続して機能のテストをおこなえます。 その際に、4D Server はプロジェクトの [.4dz](building.md#コンパイル済みストラクチャーをビルド) ファイルを自動的に作成し、リモートマシンに送信します。
 
-- An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. The project is reloaded:
-    - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
-    - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
-
-
-### Updating project files on remote machines
-
-When an updated .4dz version of the project has been produced on 4D Server, connected remote 4D machines must log out and reconnect to 4D Server in order to benefit from the updated version.
+- プロジェクトが編集され 4D Server にリロードされた場合など、必要に応じてプロジェクトの .4dzファイルは自動的に更新されます。 プロジェクトは次の場合にリロードされます:
+    - 4D Server アプリケーションウィンドウが OS の最前面に来たり、同じマシン上の 4D アプリケーションが編集を保存した場合 (後述参照) に自動でリロードされます。
+    - `RELOAD PROJECT` コマンドが実行されたときにリロードされます。 プロジェクトの新しいバージョンをソース管理システムよりプルしたときなどに、このコマンドを呼び出す必要があります。
 
 
+### リモートマシンのプロジェクトファイルの更新
 
-### 同じマシン上の 4D を使う
+4D Server 上で .4dz ファイルの更新版が生成された場合、その更新版を利用するには、接続中のリモート 4D マシンは一度ログアウトし、4D Server に再接続する必要があります。
+
+
+
+### 同じマシン上での 4D の使用
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 
