@@ -70,8 +70,8 @@ title: プロジェクトの作成・開始
 ![](assets/en/getStart/serverConnect2.png)
 
 
-- **プロジェクト名**: 4D Server プロジェクトのローカル名を指定できます。 This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
+- **プロジェクト名**: 4D Server プロジェクトのローカル名を指定できます。 この名前は **最近使用** ページでプロジェクトを参照する際に使用されます。
+- **ネットワークアドレス**: 4D Server が起動されたマシンの IPアドレスを指定します。 <p>2つのサーバーが同じマシン上で同時に起動されているときは、IPアドレスの後にコロンとポート番号を続けます。例えば: `192.168.92.104:19820`。 <p>デフォルトで、4D Server の公開ポートは 19813 です。 この番号は、プロジェクト設定で変更できます。
 
 Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
 
