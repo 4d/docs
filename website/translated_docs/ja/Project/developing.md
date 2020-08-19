@@ -17,19 +17,19 @@ title: プロジェクトの開発
 インタープリター版のプロジェクトファイル (*applicationName.4DProject* ([4D プロジェクトのアーキテクチャー](architecture.md) 参照)) は次の開発環境で開くことができます:
 
 - 4D を使い、**ローカルなプロジェクトファイル** を開きます - この場合、プロジェクトのすべての要素が開発者に提供されます。 プロジェクトファイルを作成・編集・コンパイルすることができます。 また、4D にて **Test application** メニューコマンドを実行するか、[統合された Web サーバー](WebServer/webServerObject.md)を使用することで、開発の成果をいつでもテストすることができます。
-- 4D connection from the **same machine as 4D Server** - in this case, development is supported the same as local projects. This feature allows you to develop a client/server application in the same context as the deployment context ()[detailed below](#developing-projects-with-4d-server)).
-- 4D connection from a **remote machine** - in this case, 4D Server sends a .4dz version of the project ([compressed format](building.md#build-compiled-structure)) to 4D. As a consequence, all structure files are read-only. This feature is useful for testing purposes.
+- **4D Server と同じマシン上** で 4D を使い、その 4D Server に接続します。この場合、ローカルプロジェクトと同様に開発がおこなえます。 この機能により、クライアント/サーバーアプリケーションを運用時と同じコンテキストで開発することができます ([後述参照](#4D-Serverでのプロジェクト開発))。
+- **リモートマシン** で 4D を使い、4D Server に接続します。この場合、4D Server はプロジェクトを .4dz に[圧縮](building.md#コンパイル済みストラクチャーをビルド)して 4D に送信します。 したがって、すべてのストラクチャーファイルは読み取り専用です。 この機能はテスト用に便利です。
 
 
-## Developing projects with 4D Server
+## 4D Serverでのプロジェクト開発
 
-### Updating project files on the server
+### サーバー上のプロジェクトファイルの更新
 
-Developing a 4D Server project is based upon the following principles:
+4D Server プロジェクトの開発は次の原則に基づきます:
 
-- You create, test, and modify the project features in a local version of the files using 4D. To work directly with 4D Server, you can [use 4D on the same machine as 4D Server](#using-4d-on-the-same-machine).
+- プロジェクト機能の作成・テスト・編集はローカルファイルを使い、4D でおこないます。 [4D Server と同じマシン上の 4D](#同じマシン上の-4D-を使う) を使えば、4D Server と直に作業することができます。
 
-> It is recommended to use a standard source control tool (e.g. Git) in order to work with branches, to save projects at different steps, and/or to revert changes if necessary.
+> ブランチでの開発や、開発途中のプロジェクトの保存、必要に応じたロールバックといった利便性のため、Git などの標準的なソース管理ツールの使用が推奨されます。
 
 - 4D Server can run the *.4DProject* project file (not compressed) in interpreted mode, so that remote 4D can connect and test the features. For this purpose, 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the project.
 
@@ -44,7 +44,7 @@ When an updated .4dz version of the project has been produced on 4D Server, conn
 
 
 
-### Using 4D on the same machine
+### 同じマシン上の 4D を使う
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 
