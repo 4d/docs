@@ -7,7 +7,7 @@ title: ZIP
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
 - You create a 4D ZIP archive with the [ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html) command.
-- 4D ZIP file and folder instances are available through the `root` property (`Folder`) of the object returned by [ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html) command. 
+- 4D ZIP file and folder instances are available through the `root` property (`ZIP Folder`) of the object returned by [ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html) command. 
 
 
 ### Example
@@ -17,11 +17,13 @@ To retrieve and view the contents of a ZIP file object:
 ```4d
 var $path; $archive : 4D.File
 var $zipFile : 4D.ZipFile
+var $zipFolder : 4D.ZipFolder
 var $txt : Text
  
 $path:=Folder(fk desktop folder).file("MyDocs/Archive.zip")
 $archive:=ZIP Read archive($path)
-$zipFile:=$archive.root.files()[0] //read the first zipped file
+$zipFolder:=$archive.root // store the zip main folder
+$zipFile:=$zipFolder.files()[0] //read the first zipped file
 
 If($zipFile.extension=".txt")
 	$txt:=$zipFile.getText()
