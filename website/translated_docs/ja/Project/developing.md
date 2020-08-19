@@ -54,9 +54,9 @@ title: プロジェクトの開発
 - 4D が使用する DerivedData フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 この専用の "DerivedDataRemote" フォルダーはプロジェクトのシステムフォルダー内に格納されます。
 - catalog.4DCatalog ファイルは 4D ではなく 4D Server によって編集されます。 catalog の情報はクライアント/サーバーリクエストによって同期されます。
 - directory.json ファイルは 4D ではなく 4D Server によって編集されます。 directory の情報はクライアント/サーバーリクエストによって同期されます。
-- 4D uses its own internal components and plug-ins instead of those in 4D Server.
+- 4D は、4D Server 上のものではなく、独自の内部的なコンポーネントやプラグインを使用します。
 
-> It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
+> プラグインやコンポーネントを 4D あるいは 4D Server アプリケーションレベルにインストールすることは、推奨されません。
 
 
 ## ファイルの保存
