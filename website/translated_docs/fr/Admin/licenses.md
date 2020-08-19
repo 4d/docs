@@ -3,16 +3,16 @@ id: licenses
 title: Gestion des licences 4D
 ---
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. Habituellement, l'activation est automatique si vous [vous connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'assistant de bienvenue.
+Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Habituellement, l'activation est automatique si vous [vous connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'assistant de bienvenue.
 
 Cependant, dans des cas spécifiques, vous pourriez avoir besoin d'activer vos licences manuellement, si par exemple :
 
 - votre configuration ne permet pas l'activation automatique,
 - vous avez acheté des licences supplémentaires.
 
-No activation is required for the following uses:
+Aucune activation n’est requise pour les usages suivants :
 
-- 4D used in remote mode (connection to a 4D Server)
+- 4D utilisé en mode distant (connexion à un 4D Server)
 - 4D used in local mode with an interpreted application project with no access to the Design environment.
 
 
