@@ -65,12 +65,12 @@ title: プロジェクトの作成・開始
 
 > 暗号化オプションが有効で公開されているデータベース名の前にはキャレット (^) が置かれます。
 
-If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
+公開されているプロジェクトが **利用可** タブに見つからない場合には、**カスタム** タブを開きます。 カスタムページでは、IPアドレスでネットワーク上のサーバーを指定し、それに任意の名前をつけられます。
 
 ![](assets/en/getStart/serverConnect2.png)
 
 
-- **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
+- **プロジェクト名**: 4D Server プロジェクトのローカル名を指定できます。 This name will be used in the **Recent** page when referring to the project.
 - **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
 
 Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
