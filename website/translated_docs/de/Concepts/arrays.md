@@ -155,7 +155,7 @@ Dieses Vorgehen ist für Arrays undenkbar. Das hat folgende Gründe:
 
 - Zum Verwalten der drei Informationstypen (Landeskennzahl, Postleitzahl, Stadt) müssten Sie drei umfangreiche Arrays im Speicher halten.
 - Da ein Array immer vollständig im Speicher gehalten wird, müssten Sie alle Informationen dieser Arrays während der ganzen Arbeitssitzung im Speicher halten, auch wenn die Daten nicht ständig in Gebrauch sind.
-- Again, because an array is always held in memory in its entirety, each time the application is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- Diese Arrays müssten bei jedem Starten der Anwendung komplett geladen und dann beim Beenden auf der Festplatte gesichert werden, selbst wenn die Daten während der ganzen Arbeitssitzung weder benutzt noch verändert wurden.
 
 **Fazit:** In Arrays sollten überschaubare Datenmengen für eine kurze Zeitspanne gehalten werden. Andererseits sind Arrays, da sie im Hauptspeicher gehalten werden, sehr schnell und leicht zu verwalten.
 
