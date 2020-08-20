@@ -43,10 +43,10 @@ Number: 1697
 |v18 R2|Added|
 </details>
 
-<!-- REF #pop3TransporterClass.POP3 New transporter.Syntax -->
+<!-- REF pop3TransporterClass.POP3 New transporter.Syntax -->
 **POP3 New transporter**( *server* ) -> object<!-- END REF -->
 
-<!-- REF #pop3TransporterClass.POP3 New transporter.Params -->
+<!-- REF pop3TransporterClass.POP3 New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
@@ -55,7 +55,7 @@ Number: 1697
 
 
 #### Description
-The `POP3 New transporter` command <!-- REF #pop3TransporterClass.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
+The `POP3 New transporter` command <!-- REF pop3TransporterClass.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
 In the *server* parameter, pass an object containing the following properties:
 

@@ -94,4 +94,3 @@ The following properties and functions from the [Folder](folderClass.md) class a
 |[<!-- INCLUDE #directory.path.Syntax -->](folderClass.md#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary --><p>**Returns a path relative to the archive**|
 |[<!-- INCLUDE #directory.platformPath.Syntax -->](folderClass.md#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->|
 
-

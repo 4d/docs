@@ -39,10 +39,10 @@ Number: 1608
 |v18|Modified|
 </details>
 
-<!-- REF #smtpTransporterClass.SMTP New transporter.Syntax -->
+<!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
 **SMTP New transporter**( *server* ) -> object<!-- END REF -->
 
-<!-- REF #smtpTransporterClass.SMTP New transporter.Params -->
+<!-- REF smtpTransporterClass.SMTP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
@@ -51,7 +51,7 @@ Number: 1608
 
 
 #### Description
-The `SMTP New transporter` command <!-- REF #smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to send emails.
+The `SMTP New transporter` command <!-- REF smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to send emails.
 
 In the *server* parameter, pass an object containing the following properties:
 
