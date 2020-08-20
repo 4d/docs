@@ -17,18 +17,18 @@ All the details are available on the [Resources page](https://us.4d.com/resource
 
 Les produits 4D sont installés à partir du site web de 4D :
 
-1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
-2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
+1. A l’aide de votre navigateur, connectez-vous au site Web de 4D et rendez-vous sur la page de [Téléchargements](https://us.4d.com/product-download/Feature-Release).
+2. Cliquez sur le lien de téléchargement correspondant à votre produit et suivez les instructions affichées à l’écran.
 
 
-## Activation of a product
+## Activation d’un produit
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. You also need to activate any additional licenses you obtain.
+Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. L’activation est également nécessaire en cas d’acquisition d’une licence supplémentaire.
 
-No activation is required for the following uses:
+Aucune activation n’est requise pour les usages suivants :
 
-- 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- 4D utilisé en mode distant (connexion à un 4D Server)
+- 4D utilisé en mode local avec une base interprétée sans accès au mode Développement.
 
 **Important:** You must have an Internet connection and an e-mail account in order to activate your products.
 

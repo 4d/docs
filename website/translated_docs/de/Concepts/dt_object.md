@@ -3,7 +3,7 @@ id: object
 title: Objekte
 ---
 
-Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen enthalten. Die Struktur von "native" 4D Objekten basiert auf dem klassischen Prinzip von "Eigenschaft/Wert" bzw. "Attribut/Wert" Paaren. Die Syntax dieser Objekte basiert auf JSON Notation:
+Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen enthalten. Die Struktur von "native" 4D Objekten basiert auf dem klassischen Prinzip von "Eigenschaft/Wert" bzw. "Key/Value" Paaren. Die Syntax dieser Objekte basiert auf JSON Notation:
 
 - Ein Eigenschaftenname ist immer ein Text, z. B. "Name".
 
@@ -224,7 +224,7 @@ Die Namensvergabe für Token, z.B. Namen von Objekteigenschaften, auf die über 
 **Hinweis:**
 
 - Die Verwendung eines Tabellenfeldes als Collection Index, wie z.B. a.b[[Table1]Id], ist nicht erlaubt. Sie müssen eine Variable dazwischen setzen.
-- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut $o["My Att"] ist in 4D auch trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation verwenden.
+- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut $o["My Att"] ist in 4D trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation verwenden.
 
 
 ## Beispiele
