@@ -84,7 +84,7 @@ Number: 1597
 
 
 #### Description
-The `Formula` command <!-- REF formulaClass.Formula.Summary -->creates a formula object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
+The `Formula` command <!-- REF formulaClass.Formula.Summary -->creates a `Formula` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
 
 Having a formula as an object allows it to be passed as a parameter (calculated attribute) to commands or methods or to be executed from various components without needing to declare them as "shared by components and host database". When called, the formula object is evaluated within the context of the database or component that created it.
 
@@ -125,6 +125,7 @@ For more convenience, parameters can be omitted in the formula object initializa
 
 ```4d
  C_OBJECT($f)
+
  $f:=Formula(myMethod)
   //Writing Formula(myMethod($1;$2) is not necessary
  $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
@@ -313,7 +314,7 @@ Number: 1576
 
 
 #### Description
-The `Parse formula ` command <!-- REF formulaClass.Parse formula.Summary -->analyzes the 4D formula, checks its syntax, and returns its normalized form<!-- END REF -->. This allows the formula to remain valid in the event that a 4D language or structure element (command, constant, table, field, or 4D Plugin) is renamed.
+The `Parse formula` command <!-- REF formulaClass.Parse formula.Summary -->analyzes the 4D formula, checks its syntax, and returns its normalized form<!-- END REF -->. This allows the formula to remain valid in the event that a 4D language or structure element (command, constant, table, field, or 4D Plugin) is renamed.
 
 `Parse formula` can be used to evaluate and translate formulas in the following manner:
 
@@ -532,6 +533,7 @@ This property is **read-only**.
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"
 ``` 
+
 
 
 <!-- END REF -->
