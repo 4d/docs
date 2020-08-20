@@ -412,7 +412,7 @@ Class Constructor({$parameterName : type; ...})
 ```
 
 
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.  
+Eine Function Class Constructor, die [Parameter](#parameters) zulässt, lässt sich zum Definieren einer Benutzerklasse verwenden.  
 
 In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
