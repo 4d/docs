@@ -3,22 +3,22 @@ id: about
 title: Über die 4D Programmiersprache
 ---
 
-The 4D built-in language, consisting of more than 1300 commands, makes 4D a powerful development tool for web, mobile, or desktop applications. Sie können die 4D Sprache für ganz unterschiedliche Aufgaben verwenden - von der Durchführung einfacher Berechnungen bis hin zum Erstellen komplexer individueller Benutzeroberflächen. Sie können zum Beispiel:
+Die in 4D integrierte Sprache mit mehr als 1300 Befehlen macht 4D zu einem leistungsstarken Entwicklungswerkzeug für Web-, Mobile- oder Desktop-Anwendungen. Sie können die 4D Sprache für ganz unterschiedliche Aufgaben verwenden - von der Durchführung einfacher Berechnungen bis hin zum Erstellen komplexer individueller Benutzeroberflächen. Sie können zum Beispiel:
 
 - Den Zugriff auf jeden Editor zur Datensatzverwaltung (Sortieren, Suchen, usw.) per Programmierung steuern
 - Komplexe Berichte und Etiketten mit den Informationen aus der Datenbank erstellen und drucken,
 - mit anderen Geräten kommunizieren,
 - E-Mails senden,
 - Dokumente und Web Seiten verwalten,
-- Import and export data between 4D applications and other applications,
+- Daten zwischen 4D Anwendungen und anderen Applikationen importieren und exportieren,
 - Abläufe, die in anderen Sprachen geschrieben wurden, in die 4D Programmiersprache integrieren.
 
-Die Flexibilität und Leistungsfähigkeit der 4D Programmiersprache macht sie zum idealen Werkzeug für Anwender und Entwickler auf unterschiedlichem Niveau, um eine ganze Reihe von Aufgaben im Informationsmanagement zu erfüllen. Anfänger können schnell Berechnungen durchführen. Experienced users without programming experience can customize their applications. Experienced developers can use this powerful programming language to add sophisticated features and capabilities to their applications, including file transfer, communications, monitoring. Entwickler mit Programmiererfahrung in anderen Sprachen können der 4D Sprache eigene Befehle hinzufügen.
+Die Flexibilität und Leistungsfähigkeit der 4D Programmiersprache macht sie zum idealen Werkzeug für Anwender und Entwickler auf unterschiedlichem Niveau, um eine ganze Reihe von Aufgaben im Informationsmanagement zu erfüllen. Anfänger können schnell Berechnungen durchführen. Erfahrene Benutzer ohne Programmierkenntnisse können ihre Anwendungen selbst anpassen. Erfahrene Entwickler können diese leistungsstarke Programmiersprache nutzen, um ihre Anwendungen mit anspruchsvollen Features und Funktionsweisen auszurüsten, einschließlich Dateiübertragung, Kommunikation und Überwachung. Entwickler mit Programmiererfahrung in anderen Sprachen können der 4D Sprache eigene Befehle hinzufügen.
 
 
 ## Was ist eine Sprache?
 
-Die Sprache von 4D unterscheidet sich kaum von der gesprochenen Sprache im Alltag. Es ist eine Form der Kommunikation, um Ideen auszudrücken, zu informieren und zu instruieren. Like a spoken language, 4D has its own vocabulary, grammar, and syntax; you use it to tell 4D how to manage your application and data.
+Die Sprache von 4D unterscheidet sich kaum von der gesprochenen Sprache im Alltag. Es ist eine Form der Kommunikation, um Ideen auszudrücken, zu informieren und zu instruieren. Wie die gesprochene Sprache hat 4D ein eigenes Vokabular, eine eigene Grammatik und Syntax; damit definieren Sie, wie 4D Ihre Anwendung und Ihre Daten verwalten soll.
 
 Sie müssen nicht die komplette Sprache kennen, um effektiv mit 4D zu arbeiten. Zum Sprechen müssen Sie auch nicht die gesamte englische Sprache beherrschen; Sie können ein kleines Vokabular haben und trotzdem ziemlich eloquent sein. Die 4D Sprache ist ganz ähnlich — Sie müssen nur einen kleinen Teil der Sprache kennen, um produktiv zu werden, und können den Rest bei Bedarf dazulernen.
 
