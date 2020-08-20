@@ -9,8 +9,8 @@ A collection is initialized with:
 
 ||
 |---|
-|[<!-- INCLUDE #collection.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.New collection.Summary -->|
-|[<!-- INCLUDE #collection.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.New shared collection.Summary -->|
+|[<!-- INCLUDE collection.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New collection.Summary -->|
+|[<!-- INCLUDE collection.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New shared collection.Summary -->|
 
 
 ## Example 
@@ -79,10 +79,10 @@ Number: 1472
 |v16 R4|Added|
 </details>
 
-<!-- REF #collection.New collection.Syntax -->
+<!-- REF collection.New collection.Syntax -->
 **New collection** {( *value* {; *value2* ; ... ; *valueN*} )} -> collection<!-- END REF -->
 
-<!-- REF #collection.New collection.Params -->
+<!-- REF collection.New collection.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|number, text, date, object, collection, pointer|->|Collection's value(s)|
@@ -92,7 +92,7 @@ Number: 1472
 
 #### Description
 
-The `New collection` command <!-- REF #collection.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+The `New collection` command <!-- REF collection.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
 
 If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
 
@@ -167,10 +167,10 @@ Number: 1527
 |v16 R6|Added|
 </details>
 
-<!-- REF #collection.New shared collection.Syntax -->
+<!-- REF collection.New shared collection.Syntax -->
 **New shared collection** {( *value* {; *value2* ; ... ; *valueN*} )} -> collection<!-- END REF -->
 
-<!-- REF #collection.New shared collection.Params -->
+<!-- REF collection.New shared collection.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value| |->|Shared collection's value(s)|
@@ -180,7 +180,7 @@ Number: 1527
 
 #### Description
 
-The `New shared collection` command <!-- REF #collection.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+The `New shared collection` command <!-- REF collection.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
 Adding an element to this collection must be surrounded by the `Use...End` use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
 
@@ -1550,7 +1550,7 @@ C_COLLECTION($col)
 
 The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
 
-The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is read-only (you cannot use it to set the size of the collection).
+The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
 
 #### Example
 
@@ -1960,6 +1960,7 @@ Here is the code for ***WordLength***:
 |v16 R6|Added|
 </details>
 
+
 <!-- REF #collection.pop().Syntax -->
 **.pop( )** -> expression <!-- END REF -->
 
@@ -2033,6 +2034,7 @@ C_COLLECTION($col)
  $col.push(6;New object("firstname";"John";"lastname";"Smith"))
   //$col=[1,2,3,6,{firstname:John,lastname:Smith}
 ```
+
 
 
 #### Example 2

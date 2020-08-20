@@ -1,6 +1,6 @@
 ---
 id: smtpTransporterClass
-title: SMTP Transporter 
+title: SMTP Transporter
 ---
 
 The SMTP transporter class allows you to send emails directly through SMTP objects.
@@ -40,10 +40,10 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 |v17 R4|Added|
 </details>
 
-<!-- REF #smtpTransporterClass.SMTP New transporter.Syntax -->
+<!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
 **SMTP New transporter**( *server* ) -> object<!-- END REF -->
 
-<!-- REF #smtpTransporterClass.SMTP New transporter.Params -->
+<!-- REF smtpTransporterClass.SMTP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
@@ -139,10 +139,10 @@ $server:=New object
  $server.user:="4D@gmail.com"
  $server.password:="XXXX"
  $server.logFile:="LogTest.txt" //Extended log to save in the Logs folder
- 
- 
+
+
  $transporter:=SMTP New transporter($server)
- 
+
  $email:=New object
  $email.subject:="my first mail "
  $email.from:="4d@gmail.com"
@@ -151,7 +151,7 @@ $server:=New object
  $email.htmlBody:="<h1>Hello World</h1><h4>'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'</h4>\
  <p>There are many variations of passages of Lorem Ipsum available."\
  +"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>"
- 
+
  $status:=$transporter.send($email)
  If(Not($status.success))
     ALERT("An error occurred sending the mail: "+$status.message)
@@ -187,15 +187,15 @@ For information about SMTP status codes, please refer to [this page](https://www
 C_TEXT($pw)
  C_OBJECT($options)
  $options:=New object
- 
+
  $pw:=Request("Please enter your password:")
  $options.host:="smtp.gmail.com"
- 
+
  $options.user:="test@gmail.com"
  $options.password:=$pw
- 
+
  $transporter:=SMTP New transporter($options)
- 
+
  $status:=$transporter.checkConnection()
  If($status.success=True)
     ALERT("SMTP connection check successful!")
@@ -247,7 +247,7 @@ The SMTP connection is automatically closed:
 *	when the `transporter` object is destroyed if the `.keepAlive` property is true,
 *	after each `.send( )` function execution if the `.keepAlive` property is set to false.
 
-This property is **read-only**. 
+This property is **read-only**.
 
 
 ---
@@ -264,7 +264,7 @@ This property is **read-only**.
 
 ---
 
-## .send( ) 
+## .send( )
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -286,15 +286,15 @@ This property is **read-only**.
 
 #### Description
 
-The `.send( )` function  <!-- REF #smtpTransporterClass.send().Summary -->sends the mail object to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->. 
+The `.send( )` function  <!-- REF #smtpTransporterClass.send().Summary -->sends the mail object to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
 
 >The `transporter` object must have already been created using the `SMTP New transporter` command.
 
 The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send( )`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the `SMTP New transporter` command description.
 
-In *mail*, pass a valid `Email` object to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional. 
+In *mail*, pass a valid `Email` object to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
 
-For a description of the `Email` object, please refer to the [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html) section. 
+For a description of the `Email` object, please refer to the [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html) section.
 
 ---
 
@@ -305,15 +305,3 @@ For a description of the `Email` object, please refer to the [`Email` object](ht
 ---
 
 <!-- INCLUDE transporter.user.Desc -->
-
-
-
-
-
-
-
-
-
-
-
-

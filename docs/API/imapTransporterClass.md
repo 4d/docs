@@ -40,10 +40,10 @@ Number: 1723
 |v18 R4|Added|
 </details>
 
-<!-- REF #imapTransporterClass.IMAP New transporter.Syntax -->
+<!-- REF imapTransporterClass.IMAP New transporter.Syntax -->
 **IMAP New transporter**( *server* ) -> object<!-- END REF -->
 
-<!-- REF #imapTransporterClass.IMAP New transporter.Params -->
+<!-- REF imapTransporterClass.IMAP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
@@ -52,7 +52,7 @@ Number: 1723
 
 
 #### Description
-The `IMAP New transporter` command <!-- REF #imapTransporterClass.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
+The `IMAP New transporter` command <!-- REF imapTransporterClass.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
 In the *server* parameter, pass an object containing the following properties:
 
@@ -237,6 +237,7 @@ Each object of the returned collection contains the following properties:
  
 
 |Property| 	Type|Description |
+
 |---|---|---|
 |\[ ].name|text|Name of the mailbox |
 |\[ ].selectable |boolean |Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>|

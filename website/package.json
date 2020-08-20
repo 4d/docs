@@ -5,7 +5,7 @@
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
     "start": "doc_preprocess --path ../docs/ --output ../docsPostProcessed/ && docusaurus-start",
-    "reload": "doc_preprocess --path ../docs/ --output ../docsPostProcessed/",
+	"doc": "doc_preprocess --path ../docs/ --output ../docsPostProcessed/",
     "build": "docusaurus-build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",

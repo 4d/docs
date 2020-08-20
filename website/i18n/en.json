@@ -17,9 +17,6 @@
       "API/collectionClass": {
         "title": "Collections"
       },
-      "API/cryptoKey": {
-        "title": "CryptoKey Class"
-      },
       "API/cryptoClass": {
         "title": "CryptoKey"
       },
@@ -29,26 +26,20 @@
       "API/document": {
         "title": "Document Class"
       },
-      "API/file_tech": {
-        "title": "File and Folder Methods/Properties"
-      },
       "API/file": {
         "title": "File functions"
       },
       "API/fileClass": {
         "title": "File"
       },
-      "API/fileMethodsandPropertiesandProperties": {
-        "title": "File and Folder Methods"
-      },
-      "API/fileProperties": {
-        "title": "File and Folder Properties"
-      },
       "API/folder": {
         "title": "Folder Functions"
       },
       "API/folderClass": {
         "title": "Folder"
+      },
+      "API/formulaClass": {
+        "title": "Formulas"
       },
       "API/imapTransporterClass": {
         "title": "IMAP Transporter"
