@@ -25,13 +25,21 @@ The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUn
 
 It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
 
-Available SMTP secured ports are:
+Available secured ports are:
 
-- 465: SMTPS
-- 587 or 25: SMTP with STARTTLS upgrade if supported by the server.
+- SMTP
+	- 465: SMTPS
+	- 587 or 25: SMTP with STARTTLS upgrade if supported by the server.
 
-<!-- END REF -->
+- IMAP 
+	- 143: IMAP non-encrypted port
+	- 993: IMAP with STARTTLS upgrade if supported by the server
  
+- POP3
+	- 110: POP3 non-encrypted port
+	- 995: POP3 with STARTTLS upgrade if supported by the server.
+<!-- END REF -->
+
 --- 
  
  <!-- REF transporter.authenticationMode.Desc -->
@@ -41,8 +49,6 @@ Available SMTP secured ports are:
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
-|v18 R2|Modified|
-|v18 R3|Modified|
 </details>
 
 <!-- REF #transporter.authenticationMode.Syntax -->
@@ -50,22 +56,18 @@ Available SMTP secured ports are:
 
 #### Description
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used<!-- END REF --> to open the session on the mail server. 
+The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->. 
 
 By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-
-|	Value|	Comment|
-|---|---|
-|APOP|Authentication using APOP protocol (POP3 only)|
-|CRAM-MD5|Authentication using CRAM-MD5 protocol|
-|	LOGIN|Authentication using LOGIN protocol|
-|	PLAIN|Authentication using PLAIN protocol|
-
-
-This property is **read-only**. 
+|Value|Constants|Comment|
+|---|---|---|
+|APOP|`POP3 authentication APOP`|Authentication using APOP protocol (POP3 only)|
+|CRAM-MD5|`SMTP authentication CRAM MD5`, `POP3 authentication CRAM-MD5`, `IMAP authentication CRAM MD5`|Authentication using CRAM-MD5 protocol|
+|LOGIN|`SMTP authentication login`, `POP3 authentication login`, `IMAP authentication login`|Authentication using LOGIN protocol|
+|PLAIN|`SMTP authentication plain`, `POP3 authentication plain`, `IMAP authentication plain`|Authentication using PLAIN protocol|
 
 <!-- END REF -->
 
@@ -102,33 +104,6 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 |mail mode UTF8	|US-ASCII_UTF8_QP|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)|
 |mail mode UTF8 in base64|US-ASCII_UTF8_B64|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64|
 
-This property is **read-only**. 
-
-<!-- END REF -->
-
----
-
-<!-- REF transporter.checkConnectionDelay.Desc -->
-## .checkConnectionDelay
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v18 R4|Added|
-</details>
-
-<!-- REF #transporter.checkConnectionDelay.Syntax -->
-**.checkConnectionDelay** -> number<!-- END REF -->
-
-
-#### Description
-
-The `.checkConnectionDelay` property <!-- REF #transporter.checkConnectionDelay.Summary -->  contains the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the server object (used to create the transporter object with IMAP New transporter), the value is 300.
-
->**Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless. 
-
-This property is **read-only**. 
-
 <!-- END REF -->
 
 ---
@@ -141,8 +116,6 @@ This property is **read-only**.
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
-|v18 R2|Modified|
-|v18 R3|Modified|
 </details>
 
 <!-- REF #transporter.connectionTimeOut.Syntax -->
@@ -153,8 +126,6 @@ This property is **read-only**.
 #### Description
 
 The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
-
-This property is **read-only**. 
 
 <!-- END REF -->
 
@@ -168,7 +139,6 @@ This property is **read-only**.
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
-|v18|Modified|
 </details>
 
 <!-- REF #transporter.headerCharset.Syntax -->
@@ -177,7 +147,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.headerCharset` property  <!-- REF #transporter.headerCharset.Summary --> contains the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email: 
+The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email: 
 
 *	subject, 
 *	attachment filename(s), 
@@ -192,9 +162,6 @@ The `.headerCharset` property  <!-- REF #transporter.headerCharset.Summary --> c
 |mail mode UTF8	|US-ASCII_UTF8_QP|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value)|
 |mail mode UTF8 in base64|	US-ASCII_UTF8_B64|*headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64|
 
-This property is **read-only**. 
-
-
 <!-- END REF -->
 
 ---
@@ -207,8 +174,6 @@ This property is **read-only**.
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
-|v18 R2|Modified|
-|v18 R3|Modified|
 </details>
 
 <!-- REF #transporter.host.Syntax -->
@@ -218,36 +183,6 @@ This property is **read-only**.
 #### Description
 
 The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
-
-This property is **read-only**. 
-
-<!-- END REF -->
-
----
-
-<!-- REF transporter.keepAlive.Desc -->
-## .keepAlive
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R4|Added
-</details>
-
-<!-- REF #transporter.keepAlive.Syntax -->
-**.keepAlive** -> boolean<!-- END REF -->
-
-
-#### Description
-
-The `.keepAlive` property contains <!-- REF #transporter.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
-
-The SMTP connection is automatically closed:
-
-*	when the `transporter` object is destroyed if the `.keepAlive` property is true,
-*	after each `.send( )` function execution if the `.keepAlive` property is set to false.
-
-This property is **read-only**. 
 
 <!-- END REF -->
 
@@ -260,8 +195,6 @@ This property is **read-only**.
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
-|v18 R2|Modified|
-|v18 R3|Modified|
 </details>
 
 <!-- REF #transporter.logFile.Syntax -->
@@ -270,15 +203,16 @@ This property is **read-only**.
 
 #### Description
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the full path of the log file<!-- END REF --> defined (if any) for the mail connection.
+The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. It can be relative (to the current Logs folder) or absolute. 
 
-For more information about extended log files, refer to:
+Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:
 
 *	**SMTP connections** - [4DSMTPLog.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#4165231) 
 *	**POP3 connections** - [4DPOP3Log.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#4837674)
+*	**IMAP connections** - [4DIMAPLog.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#5040475)
 
 
-This property is **read-only**. 
+
 
 <!-- END REF -->
 
@@ -292,8 +226,6 @@ This property is **read-only**.
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
-|v18 R2|Modified|
-|v18 R3|Modified|
 </details>
 
 <!-- REF #transporter.port.Syntax -->
@@ -302,13 +234,12 @@ This property is **read-only**.
 
 #### Description
 
-The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`), the port used is:
+The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
 *	**SMTP** - 587
 *	**POP3** - 995
+*	**IMAP** - 993
 
-
-This property is **read-only**. 
 
 <!-- END REF -->
 
@@ -330,9 +261,7 @@ This property is **read-only**.
 
 
 #### Description
-The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object (used to create the `transporter object` with `SMTP New transporter`), the value 100 is used.
-
-This property is **read-only**. 
+The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object, the value 100 is used.
 
 <!-- END REF -->
 
@@ -346,7 +275,6 @@ This property is **read-only**.
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
-|v18 R2|Modified|
 </details>
 
 <!-- REF #transporter.user.Syntax -->
@@ -355,8 +283,6 @@ This property is **read-only**.
 
 #### Description
 The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->. 
-
-This property is **read-only**. 
 
 <!-- END REF -->
 
@@ -369,8 +295,6 @@ This property is **read-only**.
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
-|v18 R2|Modified|
-|v18 R4|Modified|
 </details>
 
 <!-- REF #transporter.checkConnection().Syntax -->
@@ -385,10 +309,10 @@ This property is **read-only**.
 
 #### Description
 
-The `.checkConnection( )` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->recreates the connection if necessary, and returns the status. This method allows you to verify that the values provided by the user are valid and consistent.
+The `.checkConnection( )` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
 
-**Returned object**
+#### Returned object
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
@@ -401,8 +325,6 @@ The function sends a request to the mail server and returns an object describing
 ||\[ ].errCode|number|4D error code|
 ||\[ ].message|text|Description of the 4D error|
 ||\[ ].componentSignature|text|Signature of the internal component which returned the error|
-
-
 
 
 
