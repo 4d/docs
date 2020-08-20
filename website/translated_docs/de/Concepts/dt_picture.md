@@ -3,7 +3,7 @@ id: picture
 title: Bild
 ---
 
-Datenfelder, Variablen oder Ausdrücke vom Typ Bild können im Windows- oder im Macintosh-Format sein. Dazu gehört jedes Bild, das Sie in die Zwischenablage legen oder mit 4D Befehlen wie `READ PICTURE FILE` von der Festplatte lesen können.
+Datenfelder, Variablen oder Ausdrücke vom Typ Bild können in gängigen Windows- oder MacOS-Formaten sein. Dazu gehört jedes Bild, das Sie in die Zwischenablage legen oder mit 4D Befehlen wie `READ PICTURE FILE` von der Festplatte lesen können.
 
 4D verwendet native APIs, um Felder und Variablen vom Typ Bild unter Windows und auf macOS zu codieren (schreiben) bzw. decodieren (lesen). Dies bietet Zugriff auf zahlreiche native Formate, inkl. RAW, dem gängigen Format für Digitalkameras.
 
