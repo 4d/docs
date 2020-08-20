@@ -170,15 +170,15 @@ constructor`</a> (optional),</li>
 | classObject | object | <- | Neues Objekt der \<ClassName> class |
 
 
-Die Methode `new()` erstellt und gibt ein Objekt zurück, das eine neue Instanz der Klasse `<ClassName>` ist, in der es aufgerufen wird. It is automatically available on all classes from the `cs` [class store](#class-stores). 
+Die Methode `new()` erstellt und gibt ein Objekt zurück, das eine neue Instanz der Klasse `<ClassName>` ist, in der es aufgerufen wird. Es ist automatisch in allen Klassen aus dem [Store](#class-stores) `cs` verfügbar. 
 
-If it is called on a non-existing class, an error is returned. 
+Wird sie in einer nicht-vorhandenen Klasse aufgerufen, wird ein Fehler zurückgegeben. 
 
 
 
 #### Beispiel
 
-To create a new instance of the Person class:
+Eine neue Instanz der Klasse Person anlegen:
 
 
 
@@ -189,7 +189,7 @@ $person:=cs.Person.new() //create the new instance
 ```
 
 
-Note that you can instantiate empty objects. Legen Sie z.B. die Datei Klasse `Empty.4dm` wie folgt an: 
+Beachten Sie, dass Sie auch Instanzen von leeren Objekten erstellen können. Legen Sie z.B. die Datei Klasse `Empty.4dm` wie folgt an: 
 
 
 
@@ -269,11 +269,11 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Class Functions sind Eigenschaften des Objekts prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function". 
 
-In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
 
 
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im Code-Editor nicht berücksichtigt. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `cs.MyClass` eingeben. "</code>.
 
 Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Beispiel:
 
