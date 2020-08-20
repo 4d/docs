@@ -24,7 +24,7 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
 
 Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
 
-Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. You can use such values wherever 4D expressions are expected:
+Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 
 - In 4D Code, entweder in den Methoden (Methodeneditor) oder extern geschrieben (Formeln, Dateien mit 4D Tags, die mit PROCESS 4D TAGS oder dem Web Server bearbeitet werden, Exportdateien, 4D Write Pro Dokumente...),
 - In den Bereichen Ausdruck des Debugger und des Runtime Explorer,
@@ -224,7 +224,7 @@ Die Namensvergabe für Token, z.B. Namen von Objekteigenschaften, auf die über 
 **Hinweis:**
 
 - Die Verwendung eines Tabellenfeldes als Collection Index, wie z.B. a.b[[Table1]Id], ist nicht erlaubt. Sie müssen eine Variable dazwischen setzen.
-- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut `$o["My Att"]` ist in 4D auch trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation und Autocomplete Features verwenden.
+- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut `$o["My Att"]` ist in 4D trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation und Autocomplete Features verwenden.
 
 
 ## Beispiele
