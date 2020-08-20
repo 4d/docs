@@ -32,16 +32,16 @@ Wozu brauchen wir also eine 4D Sprache? Hier sind einige Anwendungsbereiche:
 - Die Benutzeroberfläche steuern: Fenster und Menüs verwalten, Formulare und Objekte der Oberfläche steuern.
 - Anspruchsvolles Datenmanagement durchführen: beispielsweise Abwicklung von Transaktionen, komplexe Datenvalidierung, Multiuser-Management, Erzeugen von Mengen und Operationen temporärer Auswahlen.
 - Den Computer steuern: Sie können die Kommunikation über die serielle Schnittstelle, die Dokumenten- und die Fehlerverwaltung steuern.
-- Create applications: You can create easy-to-use, customized applications that run stand-alone.
+- Anwendungen erstellen: eigene, leicht-bedienbare Anwendungen einrichten, die eigenständig laufen.
 - Den in 4D integrierten Web Server weiter ausbauen: Dynamische Webseiten, die mit Ihren Daten gefüllt sind, erstellen und aktualisieren.
 
-The language lets you take complete control over the design and operation of your application. 4D provides powerful “generic” editors, but the language lets you customize your application to whatever degree you require.
+Mit der Sprache haben Sie die volle Kontrolle über das Design und die Arbeitsweise Ihrer Anwendung. 4D bietet leistungsstarke "generische" Editoren. Darüberhinaus können Sie mit der Sprache Ihre Anwendung in jedem gewünschten Umfang an Ihre Bedürfnisse anpassen.
 
 ## Kontrolle über Ihre Daten
 
-Mit der 4D Sprache können Sie die vollständige Kontrolle über Ihre Daten auf eine leistungsstarke und elegante Weise übernehmen. Sie eignet sich für Einsteiger und für erfahrene Anwendungsentwickler gleichermaßen. It provides smooth transitions from built-in database functions to a completely customized application.
+Mit der 4D Sprache können Sie die vollständige Kontrolle über Ihre Daten auf eine leistungsstarke und elegante Weise übernehmen. Sie eignet sich für Einsteiger und für erfahrene Anwendungsentwickler gleichermaßen. Sie bietet einen reibungslosen Übergang von den vorgegebenen Funktionen der Datenbank zu einer vollständig angepassten Anwendung.
 
-Die Befehle der 4D Sprache bieten Zugriff auf die standardmäßigen Editoren zur Datenverwaltung. For example, when you use the `QUERY` command, you are presented with the Query Editor (which can be accessed in the Design mode using the Query command in the Records menu. Mit dem Programmierbefehl können Sie nach spezifischen Daten suchen. For example, `QUERY([People];[People]Last Name="Smith")` will find all the people named Smith in your database.
+Die Befehle der 4D Sprache bieten Zugriff auf die standardmäßigen Editoren zur Datenverwaltung. Verwenden Sie zum Beispiel den Befehl `QUERY`, erhalten Sie den Sucheditor (Er lässt sich auch in der Designumgebung über den Befehl Suchen im Menü Datensätze aufrufen). Mit dem Programmierbefehl können Sie nach spezifischen Daten suchen. So findet die Anweisung `QUERY`([People];[People]Last Name="Smith") in Ihrer Datenbank alle Personen mit dem Nachnamen Smith.
 
 Die 4D Programmiersprache ist sehr leistungsstark — ein Befehl ersetzt oft hunderte oder sogar tausende Zeilen Code in herkömlichen Computersprachen. Und gleichzeitig ist die Sprache einfach — denn die Befehle haben ganze englische Namen. Zum Durchführen einer Suche verwenden Sie den Befehl `QUERY`; um einen neuen Datensatz hinzuzufügen, verwenden Sie den Befehl `ADD RECORD`.
 
@@ -55,8 +55,8 @@ Wenn Sie traditionelle Computersprachen kennen, ist dieser Abschnitt sicher inte
 
 Die 4D Programmiersprache ist keine traditionelle Computersprache. Sie ist eine der innovativsten und flexibelsten Sprachen, die heutzutage für Rechner zur Verfügung stehen. Sie ist so konzipiert, dass sie nach Ihrer Art und Weise arbeitet und nicht umgekehrt.
 
-Bei traditionellen Sprachen müssen Sie ausführlich planen. Natürlich zählt Planen zu den wichtigsten Schritten beim Entwickeln. 4D allows you to start using the language at any time and in any part of your project. Sie können z. B. einem Formular zuerst eine Methode hinzufügen, und später weitere dazunehmen. As your application becomes more sophisticated, you might add a project method controlled by a menu. Sie können so viel oder so wenig von der Sprache einsetzen, wie Sie gerade benötigen. Sie müssen nicht – wie in vielen anderen Datenbanken – nach der Devise "Alles oder nichts" arbeiten.
+Bei traditionellen Sprachen müssen Sie ausführlich planen. Natürlich zählt Planen zu den wichtigsten Schritten beim Entwickeln. Mit 4D können Sie die Sprache zu jeder Zeit und an beliebiger Stelle in Ihrem Projekt einsetzen. Sie können z. B. einem Formular zuerst eine Methode hinzufügen, und später weitere dazunehmen. Wird Ihre Anwendung komplexer, können Sie eine über Menü gesteuerte Projektmethode anfügen. Sie können so viel oder so wenig von der Sprache einsetzen, wie Sie gerade benötigen. Sie müssen nicht – wie in vielen anderen Datenbanken – nach der Devise "Alles oder nichts" arbeiten.
 
-Traditional languages force you to define and pre-declare interface objects in formal syntactic terms. In 4D erstellen Sie einfach ein Objekt, wie z. B. eine Schaltfläche und verwenden sie. 4D verwaltet das Objekt automatisch für Sie. Sie zeichnen Ihre Schaltfläche in einem Formular und geben ihr einen Namen. Klickt der Benutzer auf die Schaltfläche, ruft die Sprache automatisch die entsprechenden Methoden auf.
+In traditionellen Sprachen sind Sie gezwungen, Oberflächenobjekte in formalen syntaktischen Begriffen zu definieren und vorab zu deklarieren. In 4D erstellen Sie einfach ein Objekt, wie z. B. eine Schaltfläche und verwenden sie. 4D verwaltet das Objekt automatisch für Sie. Sie zeichnen Ihre Schaltfläche in einem Formular und geben ihr einen Namen. Klickt der Benutzer auf die Schaltfläche, ruft die Sprache automatisch die entsprechenden Methoden auf.
 
 Traditionelle Sprachen sind oft starr und unflexibel, Befehle müssen in genau vorgeschriebener Form und Stil eingegeben werden. Die 4D Programmiersprache macht Schluss damit und Sie profitieren davon.
