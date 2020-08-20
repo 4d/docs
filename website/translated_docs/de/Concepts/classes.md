@@ -328,9 +328,9 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 
 
-> If the type is not stated, the parameter will be defined as `Variant`.
+> Ist kein Typ angegeben, wird der Parameter als `Variant` deklariert.
 
-You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
+Den Rückgabeparameter (optional) deklarieren Sie mit einem Pfeil (->) und der entsprechenden Definition nach der Liste der Eingabeparameter. Zum Beispiel:
 
 
 
@@ -339,7 +339,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example: 
+Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` deklarieren, dann ist er automatisch durch $0 verfügbar. Zum Beispiel:
 
 
 
@@ -350,7 +350,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+> Mit der [klassischen 4D Syntax](parameters.md#sequential-parameters) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
 > 
 > ```4d
 > Function add($x : Integer)
