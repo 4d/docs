@@ -24,7 +24,7 @@
 	],
 
   "ORDA":["ORDA/ordaClasses"],
-  "Class API Reference":["API/cryptoClass","API/fileClass","API/folderClass","API/zipfileClass","API/zipfolderClass","API/smtpTransporterClass","API/pop3TransporterClass","API/imapTransporterClass","API/collectionClass","API/webServerClass"],
+  "Class API Reference":["API/cryptoClass","API/fileClass","API/folderClass","API/zipClass","API/smtpTransporterClass","API/pop3TransporterClass","API/imapTransporterClass","API/collectionClass","API/webServerClass"],
   "Access Rights":["Users/overview","Users/editing"],
   "Administration":["Admin/licenses","Admin/building"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],

@@ -21,11 +21,14 @@ title: Transporter Class
 
 #### Description
 
-The `.acceptUnsecureConnection` property  <!-- REF #transporter.acceptUnsecureConnection.Summary -->contains **True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible. 
 
 It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
 
-This property is **read-only**. 
+Available SMTP secured ports are:
+
+- 465: SMTPS
+- 587 or 25: SMTP with STARTTLS upgrade if supported by the server.
 
 <!-- END REF -->
  
@@ -47,7 +50,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.authenticationMode` property  <!-- REF #transporter.authenticationMode.Summary -->contains the authentication mode actually used<!-- END REF --> to open the session on the mail server. 
+The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used<!-- END REF --> to open the session on the mail server. 
 
 By default, the most secured mode supported by the server is used.
 
@@ -84,7 +87,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.bodyCharset` property  <!-- REF #transporter.bodyCharset.Summary -->  contains the charset and encoding used for the body part of the email<!-- END REF -->.
+The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
 
 *	subject, 
 *	attachment filename(s), 
@@ -149,7 +152,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.connectionTimeOut` property  <!-- REF #transporter.connectionTimeOut.Summary -->contains the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
+The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
 
 This property is **read-only**. 
 
@@ -214,7 +217,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.host` property  <!-- REF #transporter.host.Summary -->contains the name or the IP address of the host server<!-- END REF -->. used for mail transactions (SMTP, POP3, IMAP).
+The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
 
 This property is **read-only**. 
 
@@ -237,7 +240,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.keepAlive` property  <!-- REF #transporter.keepAlive.Summary -->contains **True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
+The `.keepAlive` property contains <!-- REF #transporter.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
 
 The SMTP connection is automatically closed:
 
@@ -267,7 +270,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.logFile` property <!-- REF #transporter.logFile.Summary -->contains the full path of the log file<!-- END REF --> defined (if any) for the mail connection.
+The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the full path of the log file<!-- END REF --> defined (if any) for the mail connection.
 
 For more information about extended log files, refer to:
 
@@ -299,7 +302,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.port` property <!-- REF #transporter.port.Summary -->contains the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`), the port used is:
+The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`), the port used is:
 
 *	**SMTP** - 587
 *	**POP3** - 995
@@ -327,7 +330,7 @@ This property is **read-only**.
 
 
 #### Description
-The `.sendTimeOut` property  <!-- REF #transporter.sendTimeOut.Summary -->contains the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object (used to create the `transporter object` with `SMTP New transporter`), the value 100 is used.
+The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object (used to create the `transporter object` with `SMTP New transporter`), the value 100 is used.
 
 This property is **read-only**. 
 
@@ -351,7 +354,7 @@ This property is **read-only**.
 
 
 #### Description
-The `.user` property <!-- REF #transporter.user.Summary -->contains the user name used for authentication on the mail server<!-- END REF -->. 
+The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->. 
 
 This property is **read-only**. 
 

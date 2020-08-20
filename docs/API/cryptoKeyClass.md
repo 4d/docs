@@ -28,7 +28,7 @@ ASSERT($status.success)
 ## Summary
 ||
 |---|
-|[<!-- INCLUDE #cryptokey.new().Syntax -->](#new-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
+|[<!-- INCLUDE #cryptokey.new().Syntax -->](#4dcryptokeynew-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
 |[<!-- INCLUDE #cryptokey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.curve.Summary --> |
 |[<!-- INCLUDE #cryptokey.decrypt().Syntax -->](#decrypt-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.decrypt().Summary -->|
 |[<!-- INCLUDE #cryptokey.encrypt().Syntax -->](#encrypt-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.encrypt().Summary -->|
@@ -67,10 +67,10 @@ The `4D.CryptoKey.new( )` function  <!-- REF #cryptokey.new().Summary -->creates
 
 |Property|Type|Description|
 |---|---|---|
-|type|text|Type of the key: "RSA", "ECDSA", or "PEM":<li>"RSA": generates an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": loads a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li>|
-|size|integer|Size of RSA key in bits. 2048 by default|
-|curve|text|name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512|
-|pem|text|PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it.|
+|[type](#type)|text|Type of the key: "RSA", "ECDSA", or "PEM":<li>"RSA": generates an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": loads a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li>|
+|[size](#size)|integer|Size of RSA key in bits. 2048 by default|
+|[curve](#curve)|text|name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512|
+|[pem](#pem)|text|PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it.|
 
 #### *cryptoKey*
 
