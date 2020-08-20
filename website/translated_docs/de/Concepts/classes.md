@@ -102,15 +102,15 @@ Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 
 #### cs -> classStore
 
-| Parameter  | Typ    |    | Beschreibung                                              |
-| ---------- | ------ | -- | --------------------------------------------------------- |
-| classStore | object | <- | Store für Benutzerklasse des Projekts oder der Komponente |
+| Parameter  | Typ    |    | Beschreibung                                         |
+| ---------- | ------ | -- | ---------------------------------------------------- |
+| classStore | object | <- | Store der Benutzerklasse für Projekt oder Komponente |
 
-The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+Der Befehl `cs` gibt den Store der Benutzerklassen für das aktuelle Projekt oder die Komponente zurück. Er gibt alle Benutzerklassen zurück, die im geöffneten Projekt bzw. der Komponente [definiert](#class-definition) sind. Standardmäßig sind nur [ORDA Klassen](ORDA/ordaClasses.md) des Projekts verfügbar.
 
 #### Beispiel
 
-You want to create a new instance of an object of `myClass`:
+Eine neue Instanz eines Objekts von `myClass` erstellen:
 
 ```4d
 $instance:=cs.myClass.new()
@@ -120,15 +120,15 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| Parameter  | Typ    |    | Beschreibung   |
-| ---------- | ------ | -- | -------------- |
-| classStore | object | <- | 4D class store |
+| Parameter  | Typ    |    | Beschreibung         |
+| ---------- | ------ | -- | -------------------- |
+| classStore | object | <- | Store für 4D Klassen |
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
+Der Befehl `4D` gibt den Store für in 4D vorgegebene Klassen zurück. Er bietet Zugriff auf spezifische APIs wie [CryptoKey](API/CryptoKey.md).
 
 #### Beispiel
 
-You want to create a new key in the `CryptoKey` class:
+Einen neuen Schlüssel in der Klasse `CryptoKey` erstellen:
 
 ```4d
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
@@ -136,14 +136,14 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 
 
-## Using classes in your code
+## Klassen in Ihrem Code verwenden
 
 
 ### Objekt Klasse
 
-When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgende Eigenschaften und Methoden:
+Ist in einem Projekt eine Klasse [definiert](#class-definition), wird sie in die 4D Programmiersprache Umgebung geladen. Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgende Eigenschaften und Methoden:
 
-- `name` string
+- String `name`
 - Objekt `superclass` (optional, null, wenn nicht vorhanden)
 - Methode `new()`, um Instanzen der Objekte in einer Klasse zu setzen.
 
