@@ -273,7 +273,7 @@ In der Datei mit der Definition der Klasse verwenden Function Deklarationen das 
 
 
 
-> **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im Code-Editor nicht berücksichtigt. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `cs.MyClass` eingeben. "</code>.
+> **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im Code-Editor nicht berücksichtigt. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `"cs.MyClass` eingeben.  
 
 Direkt nach dem Namen von Function lassen sich passende [Parameter](#parameters) angeben mit zugewiesenem Namen und Datentyp, inkl. Rückgabeparameter (optional). Beispiel:
 
@@ -284,7 +284,7 @@ Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
 
-Within a class function, the `This` command is used as the object instance. Beispiel:
+Innerhalb einer Class Function wird der Befehl `This` als Instanz des Objekts verwendet. Beispiel:
 
 
 
@@ -298,27 +298,27 @@ Function getFullname()->$fullname : Text
 ```
 
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<ClassName>.\<FunctionName>*", z.B. "MyClass.myMethod".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. Folgende Syntaxarten werden unterstützt
+Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#class-function-parameters) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- Verwendung des Operators `()` For example, `myObject.methodName("hello")`
-- use of a "Function" class member method: 
+- Verwendung des Operators `()` Zum Beispiel, `myObject.methodName("hello")`
+- Verwendung einer Class Member Method "Function": 
       - `apply()`
     - `call()`
 
 
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **Thread-Safety Warning:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit dem Attribut "Can be run in preemptive process" aufgerufen:</br> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
 
 
 
 
 
 
-#### Parameters
+#### Parameter
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;). 
+Function Parameter werden mit Name und Typ des Parameters, getrennt durch Strichpunkt, deklariert. Der Parametername muss mit den Schreibregeln für Eigenschaftsnamen [ konform sein](Concepts/dt_object.md#object-property-identifiers). Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt. 
 
 
 
