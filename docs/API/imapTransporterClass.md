@@ -538,7 +538,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 >*	If there is no open connection, `.getMIMEAsBlob( )` will open a connection the last mailbox specified with `.selectBox( )`.
  
 
-**Returned BLOB**
+#### Result
 
 `.getMIMEAsBlob( )` returns a `BLOB` which can be archived in a database or converted to an `Email` object with the `MAIL Convert from MIME` command.
 
@@ -548,7 +548,7 @@ For a comprehensive description of mail properties, please refer to the [`Email`
 
 
 ```4d
-C_OBJECT($server;$transporter)
+ C_OBJECT($server;$transporter)
  C_VARIANT($boxInfo)
  C_BLOB($blob)
  
