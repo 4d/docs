@@ -22,11 +22,11 @@ ORDA のデータモデルでは、単一のデータクラスだけで旧来の
 
 クエリは、エンティティセレクションと呼ばれるエンティティのリストを返し、これは SQL のクエリの行セットの役割を果たします。 違いは、各エンティティは自身がどこに所属するかを "知っている" うえ、他のすべてのエンティティとのリレーションを "理解している" ということです。 これはつまり、クエリ内において様々な情報の断片をどのようにリレートさせたらいいか、あるいは、変更された値をリレーショナルストラクチャーに書き込む際にどのようにそれを更新したらいいかを、デベロッパーは説明する必要がないということです。
 
-In addition, ORDA objects such as entity selections or entities can be easily bound to UI objects such as list boxes or variables. Combined with powerful features such as the `This` and `Form` commands, they allow the building modern and modular interfaces based upon objects and collections.
+これに加えて、エンティティセレクションあるいはエンティティなどの ORDA オブジェクトは、リストボックスや変数などのユーザーインターフェース (UI) オブジェクトに簡単に割り当てることができます。 `This` や `Form` コマンドといった強力な機能と組み合わせることで、オブジェクトやコレクションに基づいた、モダンでモジュラーなインターフェースをビルドすることができるようになります。
 
-## How to use ORDA?
+## ORDAの使い方
 
-Basically, ORDA handles objects. In ORDA, all main concepts, including the datastore itself, are available through objects. The datastore is automatically [mapped upon the 4D structure](dsMapping.md).
+原則として、ORDA はオブジェクト型を扱います。 ORDA では、データストア自身を含めすべての主要な概念は、オブジェクトを通して利用可能です。 The datastore is automatically [mapped upon the 4D structure](dsMapping.md).
 
 ORDA objects can be handled like 4D standard objects, but they automatically benefit from specific properties and methods.
 
