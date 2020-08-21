@@ -3,17 +3,19 @@ id: imapTransporterClass
 title: IMAP Transporter 
 ---
 
-The IMAP transporter allows you to retrieve messages from a IMAP email server.
+The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.
 
-It is created with the [IMAP New transporter](#imap-new-transporter) command.
 
-## Summary
+## IMAP Transporter object
+
+IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-new-transporter) command. They provide the following properties and functions:
 
 ||
 |---|
+|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptUnsecureConnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
 |[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
-|[<!-- INCLUDE #transporter.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnectionDelay.Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
@@ -29,10 +31,7 @@ It is created with the [IMAP New transporter](#imap-new-transporter) command.
 
 ---
 
-<!-- REF imapTransporterClass.IMAP New transporter.Desc -->
 ## IMAP New transporter
-
-Number: 1723
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -47,65 +46,34 @@ Number: 1723
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
-|Result|object|<-|IMAP Transporter object connection|
+|Result|object|<-|[IMAP transporter object](#imap-transporter-object)|
 <!-- END REF -->
 
 
 #### Description
-The `IMAP New transporter` command <!-- REF imapTransporterClass.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF -->according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
+The `IMAP New transporter` command <!-- REF imapTransporterClass.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
 In the *server* parameter, pass an object containing the following properties:
 
-|Property|	Type|	Description|
-|---|---|---|
-|host|	Text|	Name or IP address of the host server to use for IMAP transactions. |
-|port	|Number|	(optional) Port to use for IMAP transactions. Default value=993|
-|connectionTimeOut|	Number|	(optional) Maximum wait time (in seconds) to establish a connection to the server. Default value=30|
-|authenticationMode|Text|Authentication mode used to open the session on the IMAP server(\*).<p><p>Possible values:<p><ul><li>IMAP authentication CRAM MD5<br>value = CRAM-MD5<br></li><li>IMAP authentication login<br>value = LOGIN</li><li>IMAP authentication plain<br>value = PLAIN</li></ul>|
-|user|	Text|	User name for authentication on the server|
-|password|	Text|	User password for authentication on the server|
-|acceptUnsecureConnection|	Boolean|	True to allow 4D to establish an unencrypted connection if encrypted connection is not possible (**). If False, an error is returned if encrypted connection is not possible. Default value=False|
-|logFile|	Text|	(optional) File path for the extended log file(***). Can be relative (to the current Logs folder) or absolute|
-|checkConnectionDelay|Number|Maximum time (in seconds) allowed prior to checking the connection to the server. If this time is exceeded between two method calls, the connection to the server will be checked. Default value: 300|
+|*server* property|Default value (if omitted)|
+|---|---|
+|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
+|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
+|[<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|300|
+|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
+|[<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|*mandatory*
+|[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|none|
+|**password** -> text<p>User password for authentication on the server (not returned in *[IMAP transporter](#imap-transporter-object)* object)|none|
+|[<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|993|
+|[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|none|
 
-
-(*) If *authenticationMode* is null or undefined, the most secure authentication mode supported by the server is used.
-
-(**) Available IMAP secured ports are:
-
-*	143: IMAP non-encrypted port
-*	993: IMAP with STARTTLS upgrade if supported by the server.
-
-(\*\*\*) Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information, please refer to the **4DIMAPLog.txt** section.
 
 >**Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
 
-**Returned object**
+#### Result
 
-The returned transporter object contains the following **read-only** properties and functions:
-
-**Properties**
-
-*	[<!-- INCLUDE #transporter.host.Syntax -->](#host)
-*	[<!-- INCLUDE #transporter.port.Syntax -->](#port)
-*	[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)
-*	[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)
-*	[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)
-*	[<!-- INCLUDE #transporter.user.Syntax -->](#user)
-*	[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)
-*	[<!-- INCLUDE #transporter.checkConnectionDelay.Syntax -->](#checkconnectiondelay)
-
-**Methods**
-
-*	[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkConnection-)
-*	[<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo-)
-*	[<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist-)
-*	[<!-- INCLUDE #imapTransporterClass.getDelimiter().Syntax -->](#getdelimiter-)
-*	[<!-- INCLUDE #imapTransporterClass.getMail().Syntax -->](#getmail-)
-*	[<!-- INCLUDE #imapTransporterClass.getMails().Syntax -->](#getmails-)
-*	[<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob-)
-*	[<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox-)
+The function returns an [**IMAP transporter object**](#imap-transporter-object). All returned properties are **read-only**. 
 
 >The IMAP connection is automatically closed when the transporter object is destroyed.
 
@@ -127,8 +95,6 @@ The returned transporter object contains the following **read-only** properties 
  End if
 ```
 
-<!-- END REF -->
-
 
 ---
 
@@ -146,7 +112,23 @@ The returned transporter object contains the following **read-only** properties 
 ---
 
 
-<!-- INCLUDE transporter.checkConnectionDelay.Desc -->
+## .checkConnectionDelay
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R4|Added|
+</details>
+
+<!-- REF #imapTransporterClass.checkConnectionDelay.Syntax -->
+**.checkConnectionDelay** -> number<!-- END REF -->
+
+
+#### Description
+
+The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.checkConnectionDelay.Summary -->  the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the *server* object, the value is 300.
+
+>**Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless. 
 
 ---
 
@@ -231,13 +213,12 @@ $transporter:=IMAP New transporter($server)
 
 The `.getBoxList( )` function  <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server. 
 
-**Returned collection**
+#### Result
 
 Each object of the returned collection contains the following properties:
  
 
 |Property| 	Type|Description |
-
 |---|---|---|
 |\[ ].name|text|Name of the mailbox |
 |\[ ].selectable |boolean |Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>|
@@ -285,7 +266,7 @@ $transporter:=IMAP New transporter($server)
 
 <!-- REF #imapTransporterClass.getDelimiter().Params -->
 |Parameter|Type||Description|
-|---------|--- |:---:|------|
+|-----|--- |:---:|------|
 |Result|text|<-|Hierarchy delimiter character|
 <!-- END REF -->
 
@@ -300,13 +281,13 @@ The delimiter is a character which can be used to:
 *	search higher or lower within the mailbox hierarchy
  
 
-**Returned value**
+#### Result
 
 Mailbox name delimiter character.
 
 
 >*	If there is no open connection, `.getDelimiter( )` will open a connection.
->*	If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the `.checkConnection( )` function is automatically called.
+>*	If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection( )`](#checkconnection-) function is automatically called.
 
 
 #### Example
@@ -372,7 +353,7 @@ The optional *options* parameter allows you pass an object defining additional i
 >*	If there is no open connection, `.getMail( )` will open a connection the last mailbox specified with `.selectBox( )`.
  
 
-**Returned object**
+#### Result
 
 `.getMail( )` returns an `Email` object with the following additional IMAP properties: *id*, *receivedAt*, and *size*. For a comprehensive description of mail properties, please refer to the [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html) section. 
 
@@ -382,7 +363,7 @@ The optional *options* parameter allows you pass an object defining additional i
 You want to get the message with ID = 1: 
 
 ```4d
-C_OBJECT($server;$transporter)
+ C_OBJECT($server;$transporter)
  C_VARIANT($info;$mail;$boxInfo)
  
  $server:=New object
@@ -420,7 +401,7 @@ C_OBJECT($server;$transporter)
 <!-- REF #imapTransporterClass.getMails().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|ids | startMsg|collection, longint|->|Collection of message ID or<br>Sequence number of the first message|
+|ids &#124; startMsg|collection, longint|->|Collection of message ID or<br>Sequence number of the first message|
 |endMsg |longint|->|Sequence number of the last message (if startMsg passed)|
 |options|object|->|Message handling instructions|
 |Result|object|<-|Object containing:<br><ul><li>a collection of Email objects and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|
@@ -443,7 +424,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 **Second syntax:**
 
- ***IMAP_transporter.getMails(startMsg;endMsg{;options}) -> result***
+ ***.getMails(startMsg;endMsg{;options}) -> result***
  
 The second syntax allows you to retrieve messages based on a sequential range. The values passed represent the position of the messages in the mailbox.
 
@@ -464,7 +445,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 >*	If there is no open connection, `.getMails( )` will open a connection the last mailbox specified with `.selectBox( )`.
  
 
-**Returned object**
+#### Result
 
 `.getMails( )` returns an object containing the following collections:
 
@@ -472,8 +453,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 |Property |	Type |	Description |
 |---|---|---|
 |list 	|collection	|Collection of `Email` objects. If no Email objects are found, an empty collection is returned. See [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html).|
-|notFound |collection| 	Collection of:<br><ul><li>
-first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul><br>An empty collection is returned if all messages are found.|
+|notFound |collection| 	Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul><br>An empty collection is returned if all messages are found.|
 
 
 #### Example
@@ -513,6 +493,7 @@ var $server,$transporter,$boxInfo,$result : Object
 ```
 
 <!-- END REF -->
+
 
 ---
 
@@ -557,7 +538,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 >*	If there is no open connection, `.getMIMEAsBlob( )` will open a connection the last mailbox specified with `.selectBox( )`.
  
 
-**Returned BLOB**
+#### Result
 
 `.getMIMEAsBlob( )` returns a `BLOB` which can be archived in a database or converted to an `Email` object with the `MAIL Convert from MIME` command.
 
@@ -567,7 +548,7 @@ For a comprehensive description of mail properties, please refer to the [`Email`
 
 
 ```4d
-C_OBJECT($server;$transporter)
+ C_OBJECT($server;$transporter)
  C_VARIANT($boxInfo)
  C_BLOB($blob)
  
