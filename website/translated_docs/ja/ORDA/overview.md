@@ -9,14 +9,14 @@ ORDA とは **オブジェクト・リレーショナル・データアクセス
 
 この概念には、[レイジーローディング](glossary.md#レイジーローディング) と合わせてリレーションが暗示的に織り込まれており、デベロッパーはありがちなデータセレクションや転送の煩わしさから解放されます。
 
-ORDA では、[データストア](dsMapping.md#データストア) と呼ばれる抽象化レイヤーを通してデータにアクセスします。 データベースモデルとデータへの、オブジェクトやクラスを介したインターフェースを提供するオブジェクトがデータストアです。 For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md##attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
+ORDA では、[データストア](dsMapping.md#データストア) と呼ばれる抽象化レイヤーを通してデータにアクセスします。 データストアとは、データベースモデルとデータへの、オブジェクトやクラスを介したインターフェースを提供するオブジェクトです。 たとえば、テーブルは [データクラス](dsMapping.md#データクラス) オブジェクトにマップされ、フィールドはデータクラスの [属性](dsMapping.md#属性)で、レコードは [エンティティ](dsMapping.md#entity) および [エンティティセレクション](dsMapping.md#エンティティセレクション) を介してアクセスされます。
 
 
-## Why use ORDA?
+## ORDAを使う理由
 
-Instead of representing information as tables, records, and fields, ORDA uses an alternate approach that more accurately maps data to real-world concepts.
+テーブル、フィールド、レコードとして情報を表示する代わりに、ORDA では、より正確に現実世界の概念にデータをマップする、別のアプローチを使用します。
 
-Imagine the ability to denormalize a relational structure, yet not affect efficiency. Imagine describing everything about the business objects in your application in such a way that using the data becomes simple and straightforward and removes the need for a complete understanding of the relational structure.
+効率に影響することなく、リレーショナルストラクチャーを非正規化する能力を想像してみてください。 Imagine describing everything about the business objects in your application in such a way that using the data becomes simple and straightforward and removes the need for a complete understanding of the relational structure.
 
 In the ORDA data model, a single dataclass can incorporate all of the elements that make up a traditional relational database table, but can also include values from related parent entities, and direct references to related entities and entity selections.
 
