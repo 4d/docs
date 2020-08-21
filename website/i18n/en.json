@@ -20,11 +20,23 @@
       "API/cryptoClass": {
         "title": "CryptoKey"
       },
+      "API/dataclassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/dataclassClass": {
+        "title": "DataClass"
+      },
+      "API/datastoreClass": {
+        "title": "DataStore"
+      },
       "API/directory": {
         "title": "Directory Class"
       },
       "API/document": {
         "title": "Document Class"
+      },
+      "API/entityClass": {
+        "title": "Entity"
       },
       "API/file": {
         "title": "File functions"
