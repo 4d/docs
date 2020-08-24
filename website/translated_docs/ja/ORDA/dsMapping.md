@@ -100,31 +100,31 @@ $mydatastore:=OB Copy(ds) // null を返します
 
 4D プロジェクト内のすべてのデータクラスは、`ds` データストアのプロパティとして利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データストアのデータクラスとして公開したい各テーブルについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
-For example, consider the following table in the 4D structure:
+たとえば、4D ストラクチャー内の以下のテーブルについて考えます。
 
 ![](assets/en/Orda/companyTable.png)
 
-The `Company` table is automatically available as a dataclass in the `ds` datastore. 以下のように書くことができます:
+`Company` テーブルは `ds` データストア内のデータクラスとして自動的に利用可能です。 以下のように書くことができます:
 
 ```4d
-var $compClass : cs.Company //declares a $compClass object variable of the Company class
-$compClass:=ds.Company //assigns the Company dataclass reference to $compClass
+var $compClass : cs.Company // Company クラスのオブジェクト変数として $compClass を宣言します
+$compClass:=ds.Company // Company データクラスへの参照を $compClass に代入します
 ```
 
-A dataclass object can contain:
+データクラスオブジェクトは以下のものを格納することができます:
 
 *   attributes
-*   relation attributes
+*   リレーション属性
 
-The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. A query is done from a single dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
+データクラスは実際のデータベースの概略を提供し、概念的なデータモデルの管理を可能にします。 データクラスはデータストアをクエリする唯一の方法です。 クエリは単一のデータクラスを通して実行されます。 クエリはデータクラスの属性およびリレーション属性名に基づいてビルドされます。 リレーション属性は、一つのクエリ内で複数のリンクされたテーブルを用いる手段です。
 
-The dataclass object itself cannot be copied as an object:
+データクラスオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d
-$mydataclass:=OB Copy(ds.Employee) //returns null
+$mydataclass:=OB Copy(ds.Employee) // null を返します
 ```
 
-The dataclass properties are however enumerable:
+しかしながらデータクラスプロパティは取得可能です:
 
 ```code4d
 ARRAY TEXT($prop;0)
