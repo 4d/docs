@@ -227,17 +227,17 @@ $e:=ds.Employee.all() // 結果のエンティティセレクションへの参�
 
 ### エンティティセレクションの順列あり/順列なし
 
-For optimization reasons, by default 4D ORDA usually creates unordered entity selections, except when you use the `orderBy( )` method or use specific options. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
+`orderBy( )` メソッドを使用した場合、あるいは特定のオプションを使用した場合は除き、4D ORDA は最適化の観点からデフォルトで順列なしのエンティティセレクションを作成します。 このドキュメントでは、指定されている場合を除き、"エンティティセレクション" は "順列なしのエンティティセレクション" を指すこととします。
 
-Ordered entity selections are created only when necessary or when specifically requested using options, i.e. in the following cases:
+順列ありのエンティティセレクションは、必要な場合において、あるいはオプションを使用して特別に要求した場合に限り作成されます。たとえば、以下のような場合です:
 
-*   result of an `orderBy()` on a selection (of any type) or an `orderBy()` on a dataclass
-*   result of the `newSelection()` method with the `dk keep ordered` option
+*   セレクション (タイプを問わず) に対して、あるいはデータクラスに対して `orderBy( )` を使った場合の戻り値
+*   `newSelection( )` メソッドに `dk keep ordered` オプションを渡した場合の戻り値
 
-Unordered entity selections are created in the following cases:
+順列なしのエンティティセレクションは以下のような場合に作成されます:
 
-*   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
-*   result of the `newSelection()` method without option,
+*   セレクション (タイプを問わず) に対して、あるいはデータクラスに対して標準の `query( )` を使った場合の戻り値
+*   オプションなしで `newSelection( )` メソッドを使用した場合の戻り値
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
 > The following entity selections are always **ordered**:
 > 
