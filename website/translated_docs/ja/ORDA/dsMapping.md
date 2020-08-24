@@ -3,10 +3,10 @@ id: dsmapping
 title: データモデルオブジェクト
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
+ORDA は、下地である 4D ストラクチャーへの自動マッピングに基づいた技術です。 ORDA は、エンティティやエンティティセレクションオブジェクトを介してデータへのアクセスも提供します。 結果的に ORDA は、データモデルオブジェクト一式の形でデータベース全体を公開します。
 
 
-## Structure mapping
+## ストラクチャーマッピング
 
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
@@ -247,7 +247,7 @@ Unordered entity selections are created in the following cases:
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
 
 
-## Structure mapping
+## ストラクチャーマッピング
 
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
