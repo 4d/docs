@@ -165,19 +165,19 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 これに加えて、以下のリレーション属性もまた自動的に利用可能になります:
 
-*   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
-*   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+*   Project データクラス内: "リレートエンティティ" 型の **theClient** 属性。各 Project (クライアント) に対して最大 1つの Companyが あります。
+*   Company データクラス内: "リレートエンティティズ" 型の**companyProjects** 属性。各 Company に対して不定数の Project があります。
+> データベースリレーションの手動あるいは自動プロパティは、ORDA においては何の効力も持ちません。
 
-All dataclass attributes are exposed as properties of the dataclass:
+すべてのデータクラス属性はデータクラスのプロパティとして公開されています:
 
 ![](assets/en/Orda/dataclassProperties.png)
 
-Keep in mind that these objects describe attributes, but do not give access to data. Reading or writing data is done through [entity objects](entities.md#using-entity-attributes).
+これらのオブジェクトは属性を表しますが、データへのアクセスは与えないという点に注意してください。 データの読み書きは [エンティティオブジェクト](entities.md#エンティティ属性の使用) を通しておこなわれます。
 
 ## エンティティ
 
-An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
+エンティティとは、レコードに相当するものです。 実際にはデータベース内のレコードを参照するオブジェクトです。 エンティティは、[データクラス](#データクラス) のインスタンスとも解釈可能なオブジェクトです。 However, an entity also contains data correlated to the database related to the datastore.
 
 The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
 
