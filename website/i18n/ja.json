@@ -560,7 +560,7 @@
         "sidebar_label": "Verify Page"
       },
       "ORDA/dsmapping": {
-        "title": "Data Model Objects"
+        "title": "データモデルオブジェクト"
       },
       "ORDA/entities": {
         "title": "Working with data"
