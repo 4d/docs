@@ -129,20 +129,20 @@ $mydataclass:=OB Copy(ds.Employee) // null を返します
 ```code4d
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
-//$prop contains the names of all the dataclasse attributes
+// $prop にはすべてのデータクラス属性の名前が格納されます
 ```
 
 
 ## 属性
 
-Dataclass properties are attribute objects describing the underlying fields or relations. たとえば:
+データクラスプロパティは、下地にあるフィールドやリレーションを説明する属性オブジェクトです。 たとえば:
 
 ```4d
- $nameAttribute:=ds.Company.name //reference to class attribute
- $revenuesAttribute:=ds.Company["revenues"] //alternate way
+ $nameAttribute:=ds.Company.name // クラス属性への参照
+ $revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
+このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
 
 All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
 
