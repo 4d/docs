@@ -27,40 +27,40 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
     *   複合プライマリーキーを持つテーブル
 *   [BLOB](Concepts/dt_blob.md) 型の属性はデータストア内では管理されません。 BLOB 型属性はエンティティ内で Null として返され、割り当てることができません。
 
-> ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
+> ORDA のデータストアマッピングでは、次のものは考慮されません:  
+> - テーブルあるいはフィールドの"非表示"オプション<br /> - `SET TABLE TITLES` あるいは `SET FIELD TITLES` を通して定義されたバーチャルストラクチャー<br /> - リレーションの"手動"あるいは"自動"プロパティ
 
 
-### Rules for remote access control
+### リモートデータストアの利用
 
-When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely.
+`Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってリモートデータストアにアクセスする場合、**RESTリソースとして公開** プロパティが設定されているテーブルとフィールドのみ利用可能です。
 
-This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:
+このプロパティは、データストアにデータクラスおよび属性として公開したい各テーブルおよびフィールドについて 4D ストラクチャーのレベルで設定する必要があります:
 
 ![](assets/en/Orda/ExposeDataclass.png)
 
 
-### Data model update
+### データモデルのアップデート
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
+データベースストラクチャーレベルで変更がおこなわれると、カレントの ORDA モデルレイヤーは無効化されます。 これらの変更には、以下のものが含まれます:
 
-*   adding or removing a table, a field, or a relation
-*   renaming of a table, a field, or a relation
-*   changing a core property of a field (type, unique, index, autoincrement, null value support)
+*   テーブル、フィールド、リレーションの追加または削除
+*   テーブル、フィールド、リレーションの名称変更
+*   フィールドの核となるプロパティ (型、重複不可、インデックス、自動インクリメント、null値サポートなど) の変更
 
-When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
+カレントの ORDA モデルレイヤーが無効化されると、その後 4D または 4D Server のローカルの `ds` データストアを呼び出した時にモデルレイヤーが自動的に再読み込みされ、更新されます。 ただし、エンティティやエンティティセレクションなど、ORDA オブジェクトへの既存の参照は、再生成されるまではそれらが作成されたときのモデルを使用し続けるという点に注意してください。
 
-However, the updated ORDA model layer is not automatically available in the following contexts:
+また、アップデートされた ORDA モデルレイヤーは、以下のコンテキストにおいては自動的には利用可能にはなりません:
 
-*   a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
-*   a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened.
+*   4D Server に接続したリモートの 4D -- リモートのアプリケーションはサーバーに再接続する必要があります
+*   `Open datastore` または [REST 呼び出し](REST/gettingStarted.md) を使用して開かれたリモートデータストア -- 新しいセッションを開く必要があります
 
 
 ## Object definition
 
 ### Datastore
 
-The datastore is the interface object to a database. It builds a representation of the whole database as object. A datastore is made of a **model** and **data**:
+データストアとは、データベースにアクセスするためのインターフェースオブジェクトで、 データベース全体をオブジェクトの形で表します。 データストアは **モデル** と **データ** から構成されています:
 
 - The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
 - Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
@@ -268,11 +268,11 @@ Note that when an ordered entity selection becomes an unordered entity selection
     *   複合プライマリーキーを持つテーブル
 *   [BLOB](Concepts/dt_blob.md) 型の属性はデータストア内では管理されません。 BLOB 型属性はエンティティ内で Null として返され、割り当てることができません。
 
-> ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
+> ORDA のデータストアマッピングでは、次のものは考慮されません:  
+> - テーブルあるいはフィールドの"非表示"オプション<br /> - `SET TABLE TITLES` あるいは `SET FIELD TITLES` を通して定義されたバーチャルストラクチャー<br /> - リレーションの"手動"あるいは"自動"プロパティ
 
 
-### Rules for remote access control
+### リモートデータストアの利用
 
 When accessing to a remote datastore through the `Open datastore` command, only tables and fields with the **Exposed as REST resource** property are available remotely.
 
@@ -281,17 +281,17 @@ This option must be selected at the 4D structure level for each table and field 
 ![](assets/en/Orda/ExposeDataclass.png)
 
 
-### Data model update
+### データモデルのアップデート
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
+データベースストラクチャーレベルで変更がおこなわれると、カレントの ORDA モデルレイヤーは無効化されます。 これらの変更には、以下のものが含まれます:
 
-*   adding or removing a table, a field, or a relation
-*   renaming of a table, a field, or a relation
-*   changing a core property of a field (type, unique, index, autoincrement, null value support)
+*   テーブル、フィールド、リレーションの追加または削除
+*   テーブル、フィールド、リレーションの名称変更
+*   フィールドの核となるプロパティ (型、重複不可、インデックス、自動インクリメント、null値サポートなど) の変更
 
-When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
+カレントの ORDA モデルレイヤーが無効化されると、その後 4D または 4D Server のローカルの `ds` データストアを呼び出した時にモデルレイヤーが自動的に再読み込みされ、更新されます。 ただし、エンティティやエンティティセレクションなど、ORDA オブジェクトへの既存の参照は、再生成されるまではそれらが作成されたときのモデルを使用し続けるという点に注意してください。
 
-However, the updated ORDA model layer is not automatically available in the following contexts:
+また、アップデートされた ORDA モデルレイヤーは、以下のコンテキストにおいては自動的には利用可能にはなりません:
 
-*   a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
+*   4D Server に接続したリモートの 4D -- リモートのアプリケーションはサーバーに再接続する必要があります
 *   a remote datastore (opened using `Open datastore`) -- a new session must be opened.
