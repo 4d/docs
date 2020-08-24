@@ -98,7 +98,7 @@ $mydatastore:=OB Copy(ds) // null を返します
 
 データクラスとは、テーブルに相当するものです。 オブジェクトモデルとして使用され、リレーショナル属性 (データクラス間のリレーションに基づいてビルドされた属性) を含めてすべてのフィールドを属性として参照します。 リレーショナル属性はクエリにおいて通常の属性のように使用することができます。
 
-All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
+4D プロジェクト内のすべてのデータクラスは、`ds` データストアのプロパティとして利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データストアのデータクラスとして公開したい各テーブルについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
 For example, consider the following table in the 4D structure:
 
