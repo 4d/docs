@@ -8,24 +8,24 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
 
 ## ストラクチャーマッピング
 
-When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+`ds` および `Open datastore` コマンドを使ってデータストアを呼び出すと、戻り値の [データストア](#データストア) オブジェクトには、対応する 4D ストラクチャーのテーブルとフィールドへの参照が属性として格納されています:
 
-*   Tables are mapped to dataclasses.
-*   Fields are mapped to storage attributes.
-*   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
+*   テーブルはデータクラスへとマップされます。
+*   フィールドはストレージ属性へとマップされます。
+*   リレーションはリレーション属性へとマップされます。ストラクチャーエディター内で定義されたリレーション名はリレーション属性名として使用されます。
 
 ![](assets/en/Orda/datastoreMapping.png)
 
 
-### General rules
+### 変換のルール
 
-The following rules are applied for any conversions:
+変換の際には以下のルールが適用されます:
 
-* Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*   A datastore only references tables with a single primary key. The following tables are not referenced:
-    *   Tables without a primary key
-    *   Tables with composite primary keys.
-*   [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. BLOB type attributes are returned as Null in entities and cannot be assigned.
+* テーブル、フィールド、そしてリレーション名はオブジェクトプロパティ名へとマップされます。 それらの名前が標準のオブジェクト命名規則に則っているようにしてください ([識別子の命名規則](Concepts/identifiers.md) 参照)。
+*   データストアは単一のプライマリーキーを持つテーブルのみを参照します。 以下のテーブルは参照されません:
+    *   プライマリーキーがないテーブル
+    *   複合プライマリーキーを持つテーブル
+*   [BLOB](Concepts/dt_blob.md) 型の属性はデータストア内では管理されません。 BLOB 型属性はエンティティ内で Null として返され、割り当てることができません。
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
@@ -249,24 +249,24 @@ Note that when an ordered entity selection becomes an unordered entity selection
 
 ## ストラクチャーマッピング
 
-When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+`ds` および `Open datastore` コマンドを使ってデータストアを呼び出すと、戻り値の [データストア](#データストア) オブジェクトには、対応する 4D ストラクチャーのテーブルとフィールドへの参照が属性として格納されています:
 
-*   Tables are mapped to dataclasses.
-*   Fields are mapped to storage attributes.
-*   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
+*   テーブルはデータクラスへとマップされます。
+*   フィールドはストレージ属性へとマップされます。
+*   リレーションはリレーション属性へとマップされます。ストラクチャーエディター内で定義されたリレーション名はリレーション属性名として使用されます。
 
 ![](assets/en/Orda/datastoreMapping.png)
 
 
-### General rules
+### 変換のルール
 
-The following rules are applied for any conversions:
+変換の際には以下のルールが適用されます:
 
-* Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*   A datastore only references tables with a single primary key. The following tables are not referenced:
-    *   Tables without a primary key
-    *   Tables with composite primary keys.
-*   [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. BLOB type attributes are returned as Null in entities and cannot be assigned.
+* テーブル、フィールド、そしてリレーション名はオブジェクトプロパティ名へとマップされます。 それらの名前が標準のオブジェクト命名規則に則っているようにしてください ([識別子の命名規則](Concepts/identifiers.md) 参照)。
+*   データストアは単一のプライマリーキーを持つテーブルのみを参照します。 以下のテーブルは参照されません:
+    *   プライマリーキーがないテーブル
+    *   複合プライマリーキーを持つテーブル
+*   [BLOB](Concepts/dt_blob.md) 型の属性はデータストア内では管理されません。 BLOB 型属性はエンティティ内で Null として返され、割り当てることができません。
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
