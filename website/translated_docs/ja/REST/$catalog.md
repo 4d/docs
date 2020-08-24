@@ -191,7 +191,7 @@ Calling `$catalog/{dataClass}` for a specific dataclass will return the followin
 
 The information you retrieve concerns the following:
 
-*   Dataclass
+*   データクラス
 *   Attribute(s)
 *   Method(s) if any
 *   Primary key
