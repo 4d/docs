@@ -144,26 +144,26 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
 
-All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
+テーブル内の適格なフィールドはすべて、親 [データクラス](#データクラス) の属性として利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データクラスの属性として公開したい各フィールドについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
 
-### Storage and Relation attributes
+### ストレージ属性とリレーション属性
 
-Dataclass attributes come in several kinds: storage, relatedEntity, and relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support the standard 4D data type (integer, text, object, etc.).
+データクラス属性にはいくつかの種類があります。ストレージ、リレートエンティティ、リレートエンティティズです。 スカラーである属性 (単一の値のみを提供するもの) は標準の 4D データ型 (整数、テキスト、オブジェクトなど) をサポートします。
 
-*   A **storage attribute** is equivalent to a field in the 4D database and can be indexed. Values assigned to a storage attribute are stored as part of the entity when it is saved. When a storage attribute is accessed, its value comes directly from the datastore. Storage attributes are the most basic building block of an entity and are defined by name and data type.
-*   A **relation attribute** provides access to other entities. Relation attributes can result in either a single entity (or no entity) or an entity selection (0 to N entities). Relation attributes are built upon "classic" relations in the relational structure to provide direct access to related entity or related entities. Relation attributes are directy available in ORDA using their names.
+*   **ストレージ属性** は4D データベース内のフィールドに相当するもので、インデックスをつけることができます。 ストレージ属性に割り当てられた値は、保存時にエンティティの一部として保存されます。 ストレージ属性にアクセスしたとき、その値はデータストアから直接取り出されます。 ストレージ属性はエンティティを構成するもっとも基礎的な要素であり、名前とデータ型により定義されます。
+*   **リレーション属性** は他のエンティティへのアクセスを提供します。 リレーション属性は単一のエンティティ (あるいはエンティティなし) あるいはエンティティセレクション (0からNまでのエンティティ) のどちらかになります。 リレーション属性はリレーショナルストラクチャーの "クラシックな" リレーションに基づいており、リレートエンティティあるいはリレートエンティティズへの直接的なアクセスを提供します。 リレーション属性は、ORDA においては名前を使用することで直接的に利用可能です。
 
-For example, consider the following partial database structure and the relation properties:
+たとえば、以下の部分的なデータベースストラクチャーと、そのリレーションプロパティについて考えます:
 
 ![](assets/en/Orda/relationProperties.png)
 
-All storage attributes will be automatically available:
+すべてのストレージ属性は自動的に利用可能です:
 
-*   in the Project dataclass: "ID", "name", and "companyID"
-*   in the Company dataclass: "ID", "name", and "discount"
+*   Project データクラス内: "ID", "name", および "companyID"
+*   Company データクラス内: "ID", "name", および "discount"
 
-In addition, the following relation attributes will also be automatically available:
+これに加えて、以下のリレーション属性もまた自動的に利用可能になります:
 
 *   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 *   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
