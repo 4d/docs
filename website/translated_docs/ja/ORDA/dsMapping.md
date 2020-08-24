@@ -62,32 +62,32 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
 
 データストアとは、データベースにアクセスするためのインターフェースオブジェクトで、 データベース全体をオブジェクトの形で表します。 データストアは **モデル** と **データ** から構成されています:
 
-- The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
-- Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
+- モデルにはデータストアを構成するすべてのデータクラスが格納され、その詳細な情報も含まれます。 これはその下地にあるデータベース自体からは独立した存在です。
+- データとは、そのモデル内で使用・保存される情報を指します。 たとえば、従業員の名前、住所、生年月日などはデータストア内で扱うことができるデータに含まれます。
 
-When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed.
+コード内で扱うにあたっては、データストアはオブジェクトであり、公開されているすべての [データクラス](#dataclass) をプロパティとして持ちます。
 
-4D allows you to handle the following datastores:
+4D では次のデータストアを扱うことができます:
 
-- the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
-- one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
+- カレント 4D データベースに基づいた、ローカルデータストア。これは、`ds` コマンドで返されるメインデータストアです。
+- リモートデータベースによって REST リソースとして公開された、一つ以上のリモートデータストア。これらは、`Open datastore` コマンドで返されます。
 
-A datastore references only a single local or remote database.
+データストアは単一の、ローカルあるいはリモートのデータベースを参照します。
 
-The datastore object itself cannot be copied as an object:
+データストアオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d
-$mydatastore:=OB Copy(ds) //returns null
+$mydatastore:=OB Copy(ds) // null を返します
 ```
 
 
-The datastore properties are however enumerable:
+しかしながらデータストアプロパティは取得可能です:
 
 
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds;$prop)
-  //$prop contains the names of all the dataclasses
+  // $prop にはすべてのデータクラスの名前が格納されます
 ```
 
 
