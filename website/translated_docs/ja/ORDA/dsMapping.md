@@ -177,22 +177,22 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 ## エンティティ
 
-エンティティとは、レコードに相当するものです。 実際にはデータベース内のレコードを参照するオブジェクトです。 エンティティは、[データクラス](#データクラス) のインスタンスとも解釈可能なオブジェクトです。 However, an entity also contains data correlated to the database related to the datastore.
+エンティティとは、レコードに相当するものです。 実際にはデータベース内のレコードを参照するオブジェクトです。 エンティティは、[データクラス](#データクラス) のインスタンスとも解釈可能なオブジェクトです。 同時にエンティティは、データストアがもとにしているデータベースに相関するデータも格納しています。
 
-The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
+The purpose of the entity is to manage data (create, update, delete). エンティティセレクションを用いてエンティティ参照を取得した場合、その参照にはエンティティセレクションについての情報も保持されるため、セレクションを走査することが可能です。
 
-The entity object itself cannot be copied as an object:
+エンティティオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d
- $myentity:=OB Copy(ds.Employee.get(1)) //returns null
+ $myentity:=OB Copy(ds.Employee.get(1)) // null を返します
 ```
 
-The entity properties are however enumerable:
+しかしながらエンティティプロパティは取得可能です:
 
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.get(1);$prop)
-  //$prop contains the names of all the entity attributes
+  // $prop にはすべてのエンティティ属性の名前が格納されます
 ```
 
 
