@@ -60,7 +60,7 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
 
 ### Datastore
 
-データストアとは、データベースにアクセスするためのインターフェースオブジェクトで、 データベース全体をオブジェクトの形で表します。 データストアは **モデル** と **データ** から構成されています:
+データストアは、データベースへのインターフェースオブジェクトです。 データベース全体を反映したものをオブジェクトとしてビルドします。 データストアは **モデル** と **データ** から構成されています:
 
 - モデルにはデータストアを構成するすべてのデータクラスが格納され、その詳細な情報も含まれます。 これはその下地にあるデータベース自体からは独立した存在です。
 - データとは、そのモデル内で使用・保存される情報を指します。 たとえば、従業員の名前、住所、生年月日などはデータストア内で扱うことができるデータに含まれます。
@@ -92,11 +92,11 @@ $mydatastore:=OB Copy(ds) // null を返します
 
 
 
-The main (default) datastore is always available through the `ds` command, but the `Open datastore` command allows referencing any remote datastore.
+メイン (デフォルト) のデータストアは `ds` コマンドを通して常に利用可能です。`Open datastore` コマンドを使えば、あらゆるリモートデータストアを参照することができます。
 
 ## Dataclass
 
-A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
+データクラスとは、テーブルに相当するものです。 オブジェクトモデルとして使用され、リレーショナル属性 (データクラス間のリレーションに基づいてビルドされた属性) を含めてすべてのフィールドを属性として参照します。 リレーショナル属性はクエリにおいて通常の属性のように使用することができます。
 
 All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
 
