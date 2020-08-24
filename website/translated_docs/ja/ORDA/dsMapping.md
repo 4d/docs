@@ -1,6 +1,6 @@
 ---
 id: dsmapping
-title: Data Model Objects
+title: データモデルオブジェクト
 ---
 
 The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
