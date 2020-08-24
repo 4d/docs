@@ -112,7 +112,7 @@ You can apply this filter in the following ways:
 
 | オブジェクト                 | シンタックス                                              | 例題                                                            |
 | ---------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
-| Dataclass              | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
+| データクラス                 | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Collection of entities | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
 | Specific entity        | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
 |                        | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
