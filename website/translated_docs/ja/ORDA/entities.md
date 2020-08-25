@@ -10,29 +10,29 @@ ORDA では、[エンティティ](dsMapping.md#entity) および [エンティ�
 
 データクラス内に新しいエンティティを作成する方法は二つあります:
 
-*   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-*   You can also create an entity using the `dataClass.new( )` method.
+*   エンティティはデータベースレコードへの参照であるため、"クラシックな" 4Dランゲージを使用してレコードを作成し、それを`entity.next( )` や `entitySelection.first( )` といった ORDAメソッドで参照することでエンティティを作成できます。
+*   また、`dataClass.new( )` メソッドを使用することでもエンティティも作成することができます。
 
-Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the `entity.save( )` method.
+エンティティはメモリ内にしか作成されないという点に注意してください。 データストアに追加したい場合、`entity.save( )` メソッドを呼ぶ必要があります。
 
-Entity attributes are directly available as properties of the entity object. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+エンティティ属性は、エンティティオブジェクトのプロパティとして直接利用可能です。 詳細な情報については、[エンティティ属性の使用](#エンティティ属性の使用) を参照してください。
 
-For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
+たとえば、カレントデータストア内の "Employee" データクラスに新しいエンティティを作成し、firstname と name 属性に "John" と "Dupont" を割り当てたい場合を考えます:
 
 ```4d
 var $myEntity : cs.EmployeeEntity
-$myEntity:=ds.Employee.new() //Create a new object of the entity type
-$myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
-$myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
-$myEntity.save() //save the entity
+$myEntity:=ds.Employee.new() // エンティティ型の新規オブジェクトを作成します
+$myEntity.name:="Dupont" // 'Dupont' を 'name' 属性に代入します
+$myEntity.firstname:="John" // 'John' を 'firstname' 属性に代入します
+$myEntity.save() // エンティティを保存します
 ```
-> An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
+> エンティティは、それが作成されたプロセス内でのみ定義されます。 そのため、たとえばエンティティへの参照を、インタープロセス変数内に保存して他のプロセスで使用する、といったことはできません。
 
-## Entities and references
+## エンティティと参照
 
-An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
+エンティティには、4Dレコードへの参照が格納されています。 異なるエンティティが同じ 4Dレコードを参照することもあり得ます。 また、エンティティは 4Dオブジェクト変数に保存可能であることから、異なる変数が同じエンティティへの参照を格納していることもあり得ます。
 
-If you execute the following code:
+以下のコードを実行した場合:
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
