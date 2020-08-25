@@ -221,39 +221,39 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 ORDA では、以下の二つのロックモードを提供しています:
 
 - 自動的な "オプティミスティック" モード。多くのアプリケーションに適しています。
-- a "pessimistic" mode allowing you to lock entities prior to their access.
+- "ペシミスティック" モード。エンティティをアクセスする前にロックすることができます。
 
-### Automatic optimistic lock
+### 自動オプティミスティック・ロック
 
-This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
+この自動機構は、"オプティミスティック・ロック" に基づいたもので、これは Webアプリケーションの場合にとくに適しています。 この概念は以下のような動作原理に基づいています:
 
-*   All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
-*   Each entity has an internal locking stamp that is incremented each time it is saved.
-*   When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
-    *   When the values match, the entity is saved and the internal stamp value is incremented.
-    *   When the values do not match, it means that another user has modified this entity in the meantime. The save is not performed and an error is returned.
+*   すべてのエンティティは必ず読み書き可能な状態でロードされます。エンティティの *事前* ロックというのはありません。
+*   各エンティティには保存されるたびにインクリメントされる内部的なロックスタンプを持っています。
+*   プロセスあるいはユーザーが `entity.save( )` メソッドでエンティティを保存しようとした場合、4D は保存しようとしているエンティティのスタンプの値とデータ内にあるエンティティのスタンプの値を比較します (データ編集の場合):
+    *   値が合致している場合、エンティティは保存され、内部スタンプの値はインクリメントされます。
+    *   値が合致しない場合、読み込みから保存までの間に他のユーザーがエンティティを編集したことになります。 保存は実行されず、エラーが返されます。
 
-The following diagram illustrates optimistic locking:
+オプティミスティック・ロックの動作は以下ように図解することができます:
 
-1. Two processes load the same entity.<br><br>![](assets/en/Orda/optimisticLock1.png)
+1. 二つのプロセスが同じエンティティを読み込んだとします。<br><br>![](assets/en/Orda/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/Orda/optimisticLock2.png)
+2. 最初のプロセスがエンティティを編集し、それを保存しようとします。 すると `entity.save( )` メソッドが呼び出されます。 4Dエンジンは、編集されたエンティティの内部スタンプ値とデータに保存されているエンティティの内部スタンプ値を自動的に比較します。 これは合致しますので、エンティティは保存され、その内部スタンプ値はインクリメントされます。<br><br>![](assets/en/Orda/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br>![](assets/en/Orda/optimisticLock3.png)
+3. 二つ目のプロセスも読み込んだエンティティを編集し、それを保存しようとします。 すると `entity.save( )` メソッドが呼び出されます。 編集されたエンティティの内部スタンプ値はデータに保存されているエンティティの内部スタンプ値と合致しないので、保存は実行されず、エラーが返されます。<br><br>![](assets/en/Orda/optimisticLock3.png)
 
 
-This can also be illustrated by the following code:
+この流れは以下のコードのように分解することもできます:
 
 ```4d
- $person1:=ds.Person.get(1) //Reference to entity
- $person2:=ds.Person.get(1) //Other reference to same entity
+ $person1:=ds.Person.get(1) // エンティティを参照
+ $person2:=ds.Person.get(1) // 同じエンティティへの別の参照
  $person1.name:="Bill"
- $result:=$person1.save() //$result.success=true, change saved
+ $result:=$person1.save() // $result.success=true, 変更は保存されます
  $person2.name:="William"
- $result:=$person2.save() //$result.success=false, change not saved
+ $result:=$person2.save() // $result.success=false, 変更は保存されません
 ```
 
-In this example, we assign to $person1 a reference to the person entity with a key of 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+この例では、$person1 に Person の、キーが 1 のエンティティを代入します。 次に、同じエンティティの別の参照を変数 $person2 に代入します。 $person1 を用いて、人物の名前を変更してエンティティを保存します。 同じことを $person2 を使用して実行しようとすると、4D はディスク上のエンティティをチェックし、変数 $person2 に代入されたときのものと同じかどうかを調べます。 結果としてこれは同じものでは無いので、success プロパティには false が返され、二つ目の変更は保存されません。
 
 When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload( )` method so that you can try to make the modification again. The `entity.save( )` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
 
