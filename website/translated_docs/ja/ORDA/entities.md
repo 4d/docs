@@ -113,29 +113,29 @@ $myEntity.save() // エンティティを保存します
  $EntitySel:=ds.Company.all().first().companyProjects // 先頭の会社に関連する Project エンティティセレクションを取得します
 ```
 
-Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
+上記の例において、*theClient* と *companyProjects* はどちらもプライマリーリレーション属性であり、二つのデータクラス間の直接的なリレーションを表すことに注意してください。 しかしながら、複数のレベルのリレーションを通したパスに基づいてリレーション属性をビルドすることも可能です(循環参照含む)。 たとえば、以下のようなストラクチャーの場合を考えます:
 
 ![](assets/en/Orda/entityAttributes2.png)
 
-Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
+社員はそれぞれマネージャーにもなりえますし、マネージャーを持つこともできます。 ある社員のマネージャーのマネージャーを取得したい場合、以下のように書くことができます:
 
 ```4d
  $myEmp:=ds.Employee.get(50)
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## リレーション属性への値の代入
 
-In the ORDA architecture, relation attributes directly contain data related to entities:
+ORDAアーキテクチャーでは、リレーション属性はエンティティにリレートされたデータを直接格納します:
 
-*   An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-*   A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+*   N対1型リレーション属性 (**リレートエンティティ (relatedEntity)** 型) は一つのエンティティを格納します。
+*   1対N型リレーション属性 (**リレートエンティティズ (relatedEntities)** 型) はエンティティセレクションを格納します。
 
-Let's look at the following (simplified) structure:
+以下の (単純化された) ストラクチャーを見てみましょう:
 
 ![](assets/en/Orda/entityAttributes3.png)
 
-In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
+この例では、"Employee" データクラスに属するエンティティの "employer" 属性にはエンティティ型のオブジェクト (あるいは null値) が格納されます。 An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
 > In ORDA, the Automatic or Manual property of relations has no effect.
 
 To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. たとえば:
@@ -201,7 +201,7 @@ This code returns in *$localEmails* a collection of email addresses as strings.
 
 ### Entity selections and Relation attributes
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
+In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. たとえば、以下のようなストラクチャーの場合を考えます:
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
