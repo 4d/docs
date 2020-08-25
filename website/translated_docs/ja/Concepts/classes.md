@@ -237,7 +237,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 クラス関数とは、当該クラスのプロトタイプオブジェクトのプロパティです。 また、クラス関数は "Function" クラスのオブジェクトでもあります。
 
-クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 関数名は [プロパティ名の命名規則](Concepts/dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。
 
 > **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
 
@@ -258,9 +258,9 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. 次のシンタックスがサポートされています:
+アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
 
 - `()` 演算子の使用 例: `myObject.methodName("hello")`
 - "Function" クラスメンバーメソッドの使用:
@@ -274,7 +274,7 @@ In the application code, class functions are called as member methods of the obj
 
 #### 引数
 
-関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
+関数の引数は、引数の名称とデータ型をコロンで区切って宣言します。 引数名は [プロパティ名の命名規則](Concepts/dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
