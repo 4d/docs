@@ -160,7 +160,7 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 これはとくに、リレーショナルデータベースから大量のデータを読み込むときに有用です。 このような読み込みでは通常 "ID" カラムが含まれており、これはリレーション属性に直接割り当て可能なプライマリーキーを参照しています。
 
-This also means that you can assign primary keys in the N entities without corresponding entities having already been created in the 1 datastore class. If you assign a primary key that does not exist in the related datastore class, it is nevertheless stored and assigned by 4D as soon as this "1" entity is created.
+これはまた、1 データクラス側で対応するエンティティを事前に作成することなく N エンティティ側のプライマリーキーを割り当てることができるということです。 リレートされているデータクラスに存在しないプライマリーキーを割り当てた場合、それは保管され、"1" データクラス側でエンティティが作成されたときに 4D によって割り当てられます。
 
 You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
 
