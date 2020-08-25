@@ -51,7 +51,7 @@ Database objects available through the ORDA concept, i.e. datastore, dataclasses
 
 Function of an ORDA data model class.
 
-## Dataclass
+## データクラス
 
 A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
 
@@ -62,7 +62,7 @@ A dataclass is related to a single datastore.
 
 Class for specific dataclass objects, in which you can add custom functions.
 
-## Datastore
+## データストア
 
 A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
 
@@ -96,7 +96,7 @@ A deep copy duplicates an object and all the references it contains. After a dee
 
 An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
+An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. エンティティの目的はデータの管理 (作成、更新、削除) です。
 
 For more information, see Entities.
 
