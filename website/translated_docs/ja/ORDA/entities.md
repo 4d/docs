@@ -253,34 +253,34 @@ ORDA では、以下の二つのロックモードを提供しています:
  $result:=$person2.save() // $result.success=false, 変更は保存されません
 ```
 
-この例では、$person1 に Person の、キーが 1 のエンティティを代入します。 次に、同じエンティティの別の参照を変数 $person2 に代入します。 $person1 を用いて、人物の名前を変更してエンティティを保存します。 同じことを $person2 を使用して実行しようとすると、4D はディスク上のエンティティをチェックし、変数 $person2 に代入されたときのものと同じかどうかを調べます。 結果としてこれは同じものでは無いので、success プロパティには false が返され、二つ目の変更は保存されません。
+この例では、$person1 に Person の、キーが 1 のエンティティを代入します。 次に、同じエンティティの別の参照を変数 $person2 に代入します。 $person1 を用いて、人物の名前を変更してエンティティを保存します。 同じことを $person2 を使用して実行しようとすると、4D はディスク上のエンティティをチェックし、変数 $person2 に代入されたものと同じかどうかを調べます。 結果としてこれは同じものでは無いので、success プロパティには false が返され、二つ目の変更は保存されません。
 
-When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload( )` method so that you can try to make the modification again. The `entity.save( )` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
+こういった状況が発生した場合には、たとえば `entity.reload( )` メソッドを使用してディスクからエンティティを再読込し、変更をもう一度おこなうことができます。 また `entity.save( )` メソッドは、異なるプロセスがそれぞれ異なる属性を変更していた場合には保存を実行する "automerge" オプションも提供しています。
 
-### Pessimistic lock
+### ペシミスティック・ロック
 
-You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+エンティティは、データアクセス時に任意にロックおよびアンロックすることができます。 エンティティがプロセスからロックされている場合、そのエンティティはプロセスに読み書き可能モードで読み込まれていますが、他のすべてのプロセスに対してロックされています。 ロックされたエンティティは、他のプロセスからは読み込みモードでのみ読み込むことができます。つまり、その値を編集・保存することはできません。
 
-This feature is based upon two methods of the `Entity` class:
+この機能は `Entity` クラスの 2つのメソッドに基づいています:
 
 *   `entity.lock()`
 *   `entity.unlock()`
 
-For more information, please refer to the descriptions for these methods.
+詳細な情報については、これらのメソッドの説明を参照してください。
 
 
-### Concurrent use of 4D classic locks and ORDA pessimistic locks
+### 4Dクラシック・ロックとORDAのペシミスティック・ロックの組み合わせ
 
-Using both classic and ORDA commands to lock records is based upon the following principles:
+クラシックコマンドと ORDA コマンドの両方を使用してレコードをロックする場合、以下の原則に注意する必要があります:
 
-*   A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
-*   A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
+*   クラシック4Dコマンドを使用してレコードをロックした場合、そのレコードに相当するエンティティを ORDA でロックすることはできません。
+*   ORDA を使用してエンティティをロックした場合、そのエンティティに相当するレコードをクラシック4Dコマンドでロックすることはできません。
 
-These principles are shown in the following diagram:
+これらの原理は以下のような図に表すことができます:
 
 ![](assets/en/Orda/concurrent1.png)
 
-**Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
+**トランザクションロック** はクラシックコマンドと ORDAコマンドの両方に適用されます。 マルチプロセスあるいはマルチユーザーアプリケーションにおいては、トランザクション内でクラシックコマンドを使用してレコードをロックした場合、そのトランザクションが OK あるいはキャンセルされるまで、他のプロセスからそのレコードに相当するエンティティをロックすることはできません (逆もまた然りです)。
 
 *   Example with a lock set by a classic command:<br><br>![](assets/en/Orda/concurrent2.png)
 *   Example with a lock set by an ORDA method:<br><br>![](assets/en/Orda/concurrent3.png)
