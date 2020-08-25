@@ -135,19 +135,19 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 ![](assets/en/Orda/entityAttributes3.png)
 
-この例では、"Employee" データクラスに属するエンティティの "employer" 属性にはエンティティ型のオブジェクト (あるいは null値) が格納されます。 An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
-> In ORDA, the Automatic or Manual property of relations has no effect.
+この例では、"Employee" データクラスに属するエンティティの "employer" 属性には、エンティティ型のオブジェクト (あるいは null値) が格納されます。 "Company" データクラスに属するエンティティの "staff" 属性には、エンティティセレクション型のオブジェクト (あるいは null値) が格納されます。
+> ORDAでは、リレーションの自動あるいは手動プロパティは何の効力も持ちません。
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. たとえば:
+"employer" 属性に直接値を代入したい場合には、"Company" データクラスの既存エンティティを渡す必要があります。 たとえば:
 
 ```4d
- $emp:=ds.Employee.new() // create an employee
- $emp.lastname:="Smith" // assign a value to an attribute
- $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //assign a company entity
+ $emp:=ds.Employee.new() // 新規の社員エンティティを作成します
+ $emp.lastname:="Smith" // 属性に値を代入します
+ $emp.employer:=ds.Company.query("name =:1";"4D")[0]  // リレーション属性に会社エンティティを代入します
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. たとえば:
+4D では "1" エンティティにリレートされている N エンティティ側のリレーション属性への入力を容易にするための追加の機能があります。 For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. たとえば:
 
 ```4d
  $emp:=ds.Employee.new()
