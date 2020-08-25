@@ -282,24 +282,24 @@ ORDA では、以下の二つのロックモードを提供しています:
 
 **トランザクションロック** はクラシックコマンドと ORDAコマンドの両方に適用されます。 マルチプロセスあるいはマルチユーザーアプリケーションにおいては、トランザクション内でクラシックコマンドを使用してレコードをロックした場合、そのトランザクションが OK あるいはキャンセルされるまで、他のプロセスからそのレコードに相当するエンティティをロックすることはできません (逆もまた然りです)。
 
-*   Example with a lock set by a classic command:<br><br>![](assets/en/Orda/concurrent2.png)
-*   Example with a lock set by an ORDA method:<br><br>![](assets/en/Orda/concurrent3.png)
+*   クラシックコマンドを使用してロックした場合:<br><br>![](assets/en/Orda/concurrent2.png)
+*   ORDAメソッドを使用してロックした場合:<br><br>![](assets/en/Orda/concurrent3.png)
 
 
 
-## Client/server optimization
+## クライアント/サーバーの最適化
 
-4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
+4Dは、クライアント/サーバー環境においてエンティティセレクションを使用、あるいはエンティティを読み込む ORDAリクエストについて自動的に最適化する機構を提供しています。 この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。
 
-The following optimization mechanisms are implemented:
+この機能には、以下の最適化機構が実装されています:
 
-*   When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
+*   クライアントがサーバーに対してエンティティセレクションのリクエストを送ると、4D はコード実行の途中で、エンティティセレクションのどの属性がクライアント側で実際に使用されているかを自動的に "学習" し、それに対応した "最適化コンテキスト" をビルドします。 このコンテキストはエンティティセレクションに付随し、使用された属性を保存していきます。 他の属性があとで使用された場合には自動的に情報を更新していきます。
 
-*   Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
+*   サーバー上の同じエンティティセレクションに対してその後に送られたリクエストは、最適化コンテキストを再利用して、サーバーから必要な属性のみを取得していくことで、処理を速くします。 たとえば、エンティティセレクション型のリストボックスにおいては、"学習" フェーズは最初の行を表示中におこなわれるため、次の行からは表示が最適化されています。
 
-*   An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#using-the-context-property) below).
+*   既存の最適化コンテキストは、同じデータクラスの他のエンティティセレクションであればプロパティとして渡すことができるので、学習フェーズを省略して、アプリケーションをより速く実行することができます (以下の [contextプロパティの使用](#contextプロパティの使用) を参照してください)。
 
-The following methods automatically associate the optimization context of the source entity selection to the returned entity selection:
+以下のメソッドは、ソースのエンティティセレクションの最適化コンテキストを、戻り値のエンティティセレクションに自動的に付与します:
 
 *   `entitySelection.and()`
 *   `entitySelection.minus()`
@@ -311,22 +311,22 @@ The following methods automatically associate the optimization context of the so
 
 **例題**
 
-Given the following code:
+以下のようなコードがあるとき:
 
 ```4d
  $sel:=$ds.Employee.query("firstname = ab@")
  For each($e;$sel)
-    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
+    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer は Company テーブルを参照します
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* after a learning phase.
+最適化機構のおかげで、このリクエストは学習フェーズ以降は、*$sel* の中で実際に使用されている属性 (firstname, lastname, employer, employer.name) のデータのみを取得するようになります。
 
 
 
-### Using the context property
+### contextプロパティの使用
 
-You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
+**context** プロパティを使用することで、最適化の利点をさらに増幅させることができます。 このプロパティは、あるエンティティセレクション用に "学習した" 最適化コンテキストを参照します。 It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
 
 A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
