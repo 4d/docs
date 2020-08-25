@@ -96,21 +96,21 @@ $myEntity.save() // エンティティを保存します
 たとえば、ストレージ属性を設定するためには:
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
+ $entity:=ds.Employee.get(1) // ID1 の社員エンティティを取得します
+ $name:=$entity.lastname // 社員のラストネームを取得します。例: "Smith"
+ $entity.lastname:="Jones" // 社員のラストネームを変更します
 ```
-> Pictures attributes cannot be assigned directly with a given path in an entity.
+> ピクチャー属性は、パスを指定してエンティティに直接代入することはできません。
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+リレート属性にアクセスできるかどうかは、属性の型によります。 たとえば、以下のようなストラクチャーがあるとき:
 
 ![](assets/en/Orda/entityAttributes.png)
 
-You can access data through the related object(s):
+リレートされたオブジェクトを通してデータにアクセスすることができます:
 
 ```4d
- $entity:=ds.Project.all().first().theClient //get the Company entity associated to the project
- $EntitySel:=ds.Company.all().first().companyProjects //get the selection of projects for the company
+ $entity:=ds.Project.all().first().theClient // 先頭プロジェクトに関連する Company エンティティを取得します
+ $EntitySel:=ds.Company.all().first().companyProjects // 先頭の会社に関連する Project エンティティセレクションを取得します
 ```
 
 Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
