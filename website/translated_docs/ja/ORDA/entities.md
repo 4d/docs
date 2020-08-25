@@ -173,54 +173,54 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 ## エンティティセレクションの作成
 
-You can create an object of type entity selection as follows:
+以下の方法で、エンティティセレクション型のオブジェクトを作成することができます:
 
-*   Querying the entities in a dataclass (see the `dataClass.query()` method);
-*   Using the `dataClass.all( )` method to select all the entities in a dataclass;
-*   Using the `Create entity selection` command or the `dataClass.newSelection()` method to create a blank entity collection object;
+*   データクラス内のエンティティをクエリする (`dataClass.query( )` メソッド参照)
+*   `dataClass.all( )` メソッドを使用して、データクラス内の全エンティティを選択する
+*   `Create entity selection` コマンドあるいは `dataClass.newSelection( )` メソッドを使用して空のエンティティコレクションオブジェクトを作成する
 
-*   Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
+*   **ORDA - エンティティセレクション** テーマ内の様々なメソッドの中から、`entitySelection.or( )` のように新しいエンティティセレクションを返すものを使用する
 
-*   Using a relation attribute of type "related entities" (see below).
+*   "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
-> An entity selection is only defined in the process where it was created. You cannot, for example, store a reference to an entity selection in an interprocess variable and use it in another process.
+データクラスに対して、異なるエンティティセレクションを好きなだけ同時に作成し、使用することができます。 エンティティセレクションは、エンティティへの参照を格納しているに過ぎないという点に注意してください。 異なるエンティティセレクションが同じエンティティへの参照を格納することも可能です。
+> エンティティセレクションは、それが作成されたプロセスにおいてのみ定義されます。 そのため、たとえばエンティティセレクションへの参照を、インタープロセス変数内に保存して他のプロセスで使用する、といったことはできません。
 
-## Entity selections and attributes
+## エンティティセレクションと属性
 
-### Entity selections and Storage attributes
+### エンティティセレクションとストレージ属性
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. たとえば:
+すべてのストレージ属性 (テキスト、数値、ブール、日付) はエンティティセレクションの、あるいはエンティティのプロパティとして利用可能です。 エンティティセレクションと組み合わせて使用した場合、スカラー属性はスカラー値のコレクションを返します。 たとえば:
 
 ```4d
- $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- $localEmails:=$locals.emailAddress //collection of email addresses (strings)
+ $locals:=ds.Person.query("city = :1";"San Jose") // 個人のエンティティセレクション
+ $localEmails:=$locals.emailAddress // メールアドレス (文字列) のコレクション
 ```
 
-This code returns in *$localEmails* a collection of email addresses as strings.
+このコードは *$localEmails* 内に文字列としてのメールアドレスのコレクションを返します。
 
-### Entity selections and Relation attributes
+### エンティティセレクションとリレーション属性
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. たとえば、以下のようなストラクチャーの場合を考えます:
+様々なクエリの方法に加えて、リレーション属性をエンティティセレクションのプロパティとして使用することで新しいエンティティセレクションを得ることもできます。 たとえば、以下のようなストラクチャーの場合を考えます:
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+ $myParts:=ds.Part.query("ID < 100") // ID が 100未満のパーツを返します
  $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  // $myParts 内のパーツにリレートされている請求項目を1行以上含んでいるすべての請求書
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
+最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、$myInvoices 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
 
 
 ## エンティティロッキング
 
-You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
+一般的に、複数のユーザーあるいはプロセスが同じエンティティを同時に読み込んで変更しようとした際にコンフリクトが発生する可能性を管理する必要があります。 レコードロックは、リレーショナルデータベースにおいてデータに矛盾した更新がなされないようにするための手段です。 読み込み時にレコードをロックして他のプロセスが更新できないようにする、あるいは逆に保存時に読み込んでからの間に他のプロセスがレコードを変更していないかどうかを検証する、というのが基本的な概念です。 前者は **ペシミスティック・レコードロック** と呼ばれ、他のユーザーに対してレコードをロックすることで、変更したいレコードを書き込むことができるようにするものです。 後者は **オプティミスティック・レコードロック** と呼ばれ、レコードが更新される必要がある場合にのみ書き込み権限を与えるという柔軟性があります。 ペシミスティック・レコードロックでは、更新される必要がないときでもレコードはロックされたままです。 オプティミスティック・レコードロックではレコードの書き込みの可能/不可能は更新時に判断されます。
 
-ORDA provides you with two entity locking modes:
+ORDA では、以下の二つのロックモードを提供しています:
 
-- an automatic "optimistic" mode, suitable for most applications,
+- 自動的な "オプティミスティック" モード。多くのアプリケーションに適しています。
 - a "pessimistic" mode allowing you to lock entities prior to their access.
 
 ### Automatic optimistic lock
