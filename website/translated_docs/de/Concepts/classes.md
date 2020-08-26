@@ -364,7 +364,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-#### Example
+#### Beispiel
 
 
 
@@ -397,7 +397,7 @@ $area:=$rect.getArea(50;100) //5000
 
 
 
-### Class constructor
+### Class Constructor
 
 
 
@@ -414,15 +414,15 @@ Class Constructor({$parameterName : type; ...})
 
 Eine Function Class Constructor, die [Parameter](#parameters) zulässt, lässt sich zum Definieren einer Benutzerklasse verwenden.  
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
+In diesem Fall wird der Class Constructur beim Aufrufen der Class Member Method `new()` mit den Parametern aufgerufen, die optional in der Function `new()` übergeben wurden.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
-
-
+Für eine Class Constructor Function gibt der Befehl `Current method name` zurück: "*\<ClassName>.constructor*", z.B. "MyClass.constructor".
 
 
 
-#### Example:
+
+
+#### Beispiel:
 
 
 
@@ -464,7 +464,7 @@ Class extends <ParentClass>
 ```
 
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+Das Schlüsselwort `Class extends` dient in der Deklaration der Klasse zum Erstellen einer Benutzerklasse, die eine Unterklasse einer anderen Benutzerklasse ist. The child class inherits all functions of the parent class.
 
 Class extension must respect the following rules:
 
