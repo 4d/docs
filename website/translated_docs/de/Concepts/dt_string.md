@@ -124,7 +124,7 @@ Der folgende Ausdruck wird korrekt interpretiert:
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
-**Hinweis:**In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
+**Hinweis:** In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
 
 ### Keywords
 
@@ -142,7 +142,7 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
 ## Symbole für direkten Zeichenzugriff
 Mit den Symbolen [[...]]
 
-können Sie sich auf ein einzelnes Zeichen innerhalb einer Zeichenkette beziehen. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+können Sie sich auf ein einzelnes Zeichen innerhalb einer Zeichenkette beziehen. So können Sie in einem Feld bzw. einer Variablen vom Typ Text oder String einzelne Zeichen ansprechen.
 
 Diese Syntax auf der linken Seite des Zuweisungsoperators (:=) weist an der angegebenen Position im String ein Zeichen zu. Beispiel: Ist vsName kein leerer String, setzt folgender Code das erste Zeichen von vsName in Großbuchstaben:
 
@@ -175,8 +175,8 @@ Diese Syntax mit dem gewünschten Zeichen innerhalb eines Ausdrucks gibt es als 
 Beim Einsatz der Symbole für direkten Zeichenzugriff müssen Sie vorhandene Zeichen im String auf dieselbe Weise wie vorhandene Elemente in einem Array ansprechen. Sprechen Sie beispielsweise das 20. Zeichen einer Textvariablen an, muss diese Variable auch mindestens 20 Zeichen enthalten. Ist das nicht der Fall,
 
 - verursacht das im interpretierten Modus keinen Syntaxfehler.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
+- kann das im kompilierten Modus (ohne Optionen) zu einer Speicherverfälschung führen, z. B. wenn Sie ein Zeichen nach dem Ende eines String oder Textes schreiben.
+- kann das im kompilierten Modus mit aktivierter Option Bereichsprüfung einen Fehler auslösen. So löst der folgende Code:
 
 ```
 //Very bad and nasty thing to do, boo!
@@ -184,14 +184,14 @@ Beim Einsatz der Symbole für direkten Zeichenzugriff müssen Sie vorhandene Zei
  vsAnyText[[1]]:="A"
 ```
 
-will trigger the Runtime Error shown here:
+einen Runtime-Fehler aus:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
 ### Beispiel
 
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+Folgende Projektmethode schreibt das erste Zeichen jedes Worts im Text groß, der als Parameter übergeben wurde und gibt den Text mit großen Anfangsbuchstaben zurück:
 
 ```4d
   //Capitalize_text project method
@@ -210,12 +210,12 @@ The following project method capitalizes the first character of each word of the
  End if
 ```
 
-For example, the line:
+Die Zeile:
 
 ```4d
 ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
 ```
 
-displays the alert shown here:
+zeigt folgende Meldung:
 
 ![alt-text](assets/en/Concepts/Jane_doe.en.png)
