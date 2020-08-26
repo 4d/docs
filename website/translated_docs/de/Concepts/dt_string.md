@@ -13,9 +13,9 @@ String ist der Oberbegriff für:
 Ein Stringformat steht zwischen geraden doppelten Anführungszeichen ("..."). Hier ein paar Beispiele für Stringformate:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"Datensätze hinzufügen"
+"Keine Datensätze gefunden."
+"Rechnung"
 ```
 
 Ein leerer String wird mit Anführungszeichen ohne etwas dazwischen angegeben ("").
@@ -31,7 +31,7 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 | \\\         | \ (Backslash - umgekehrter Schrägstrich) |
 | \\"          | " (Anführungszeichen)                     |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
+**Hinweis:** Das Zeichen \ wird unter Windows als Trenner in Pfadnamen verwendet. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
 
 ## String Operatoren
 
@@ -74,11 +74,11 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
       // and so on
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist nicht immer dasselbe wie die Sprache, die für das System definiert wurde.
 
 ### Joker Zeichen (@)
 
-The 4D language supports **@** as a wildcard character. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
+Die 4D Programmiersprache unterstützt **@** als Joker Zeichen. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
@@ -124,7 +124,7 @@ Der folgende Ausdruck wird korrekt interpretiert:
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Hinweis:**In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
 
 ### Keywords
 
@@ -139,10 +139,10 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
 ```
 > **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
-## Character Reference Symbols
-The character reference symbols: [[...]]
+## Symbole für direkten Zeichenzugriff
+Mit den Symbolen [[...]]
 
-These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+können Sie sich auf ein einzelnes Zeichen innerhalb einer Zeichenkette beziehen. This syntax allows you to individually address the characters of a text variable, string variable, or field.
 
 If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
 
