@@ -661,7 +661,7 @@ Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt z
 
 In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. 
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
+When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Zum Beispiel:
 
 
 
@@ -671,25 +671,24 @@ $val:=$o.f() //42
 ```
 
 
-When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+Mit der Function [Class Constructor](#class-constructor) (mit der Methode `new()`) wird das dazugehörige `This` an das neue Objekt in Konstruktion gebunden.
 
 
 
 ```4d
-//Class: ob
+  //Class: ob
 
 Class Constructor  
-
     // Create properties on This as
     // desired by assigning to them
-    This.a:=42 
+    This.a:=42
 ```
 
 
 
 
 ```4d
-// in a 4D method  
+    // in a 4D method  
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
@@ -697,9 +696,9 @@ $val:=$o.a //42
 
 
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+In jedem Fall bezieht sich `This` auf das Objekt, in dem die Methode aufgerufen wurde, als ob die Methode im Objekt wäre.
 
 
 
@@ -711,7 +710,7 @@ Function f()
 ```
 
 
-Then you can write in a project method:
+Dann können Sie in einer Projektmethode schreiben:
 
 
 
@@ -723,7 +722,7 @@ $val:=$o.f() //8
 ```
 
 
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o. 
+In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Since *f* is called as a method of $o, its `This` refers to $o. 
 
 
 
