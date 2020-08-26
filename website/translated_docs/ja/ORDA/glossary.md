@@ -14,17 +14,17 @@ title: 用語集
 属性とは、リレーショナルデータベース内における最小の保存セルです ([リレーション属性](#リレーション属性) も参照してください)。 データクラス属性とエンティティ属性を混同しないようにしてください:
 
 *   データクラスオブジェクトにおける各プロパティは、対応するテーブルの対応するフィールドへとマップするデータクラス属性です (同じ名前と型)。
-*   エンティティオブジェクトにおける各プロパティは、対応するデータストア属性の値を格納するエンティティ属性です。
-> *属性* と *プロパティ* は似た概念です。 "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+*   エンティティオブジェクトにおけるエンティティ属性は、対応するデータストア属性の値を格納するプロパティです。
+> *属性* と *プロパティ* は似た概念です。 "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
 
-## AttributePath
+## 属性パス
 
-An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
+属性パスとは、あるデータクラスあるいはエンティティ内の属性へのパスです。 [プロパティパス](#プロパティパス) も参照してください。
 
 
-## Class code
+## クラスコード
 
-Code for the user class function(s).
+ユーザークラス関数のコード。
 
 ## Class function
 
@@ -53,29 +53,29 @@ Function of an ORDA data model class.
 
 ## データクラス
 
-A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
+データクラスとは、データを記述するオブジェクトモデルです。 データストアによって提供されるデータベースのテーブルは、データクラスを通して管理されます。 データストアから提供されたデータベースの各テーブルは、対応する同名のデータクラスを持ちます。 テーブルの各フィールドは、データクラスの属性です。
 
-A dataclass is related to a single datastore.
+データクラスは単一のデータストアにリレートされています。
 
 
-## DataClass class
+## DataClass クラス
 
-Class for specific dataclass objects, in which you can add custom functions.
+カスタム関数を追加することのできる、特定のデータクラスオブジェクト用のクラス。
 
 ## データストア
 
-A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
+データストアとは、ORDA によって提供されるインターフェースオブジェクトです。データストアはストラクチャーを参照し、データへのアクセスを提供します。 `ds` コマンドによって返されるメインデータベースは、データストア (メインデータストア) として利用可能です。
 
-A datastore provides:
+データストアは以下のものを提供します:
 
-*   a connection to the 4D database
-*   a set of dataclasses to work with the database
+*   4Dデータベースへの接続
+*   データベースを扱うためのデータクラスのセット
 
-The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
+利用できるデータベースは、スタンダロンまたはクライアント/サーバーで開いているメインの 4D データベース (メインデータストア)、および REST リソースとして公開された 4D Server データベースです (リモートデータストア)。
 
-A datastore references only a single database. It is, however, possible to open several datastores to access several databases.
+データストアは単一のデータベースのみを参照しますが、 複数のデータベースをアクセスするために複数のデータストアを開くことも可能です。
 
-## DataStore class
+## DataStore クラス
 
 Class for datastore objects, in which you can add custom functions.
 
@@ -156,7 +156,7 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 ## プロパティ
 
 See [Attribute](#attribute).
-> Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> Attributes and properties are similar concepts. "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
 
 ## PropertyPath
 
