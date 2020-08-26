@@ -128,7 +128,7 @@ Der folgende Ausdruck wird korrekt interpretiert:
 
 ### Schlüsselwörter
 
-Im Gegensatz zu anderen String-Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörtern" in "Texten" nur im ganzen berücksichtigt. Der Operator** %** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. eine Vorsilbe. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Ein Apostroph, z. B. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
+Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörter" in "Texten" nur im ganzen berücksichtigt. Der Operator** %** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. eine Vorsilbe. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Ein Apostroph, z. B. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Returns True
@@ -137,7 +137,7 @@ Im Gegensatz zu anderen String-Vergleichen werden bei der Suche nach Schlüsselw
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+> **Hinweise:** - 4D verwendet die ICU library zum Vergleichen von Strings (mit den Operatoren <>=#) und Suchen von Schlüsselwörtern. Weitere Informationen zu den Regeln bei Schlüsselwörtern finden Sie unter: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In der japanischen Version verwendet 4D zum Suchen von Schlüsselwörtern anstatt ICU standardmäßig Mecab.
 
 ## Symbole für direkten Zeichenzugriff
 Mit den Symbolen [[...]]
