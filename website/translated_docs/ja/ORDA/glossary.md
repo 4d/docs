@@ -77,16 +77,16 @@ Function of an ORDA data model class.
 
 ## DataStore クラス
 
-Class for datastore objects, in which you can add custom functions.
+カスタム関数を追加することのできる、データストアオブジェクト用のクラス。
 
 
 ## DataStoreImplementation
 
-Internal name of the generic DataStore class in the `4D` class store.
+`4D` クラスストア内の DataStore クラスの内部的な名称。
 
-## Deep copy
+## ディープコピー
 
-A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
+ディープコピーとは、あるオブジェクトとそこに格納されるすべての参照の複製です。 ディープコピーのあと、コピーされたコレクションには、すべてのオリジナル要素の複製、つまり新規参照が格納されています。 [シャロウコピー](#シャロウコピー) も合わせて参照してください。
 
 ## ds
 
