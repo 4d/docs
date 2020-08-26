@@ -151,35 +151,35 @@ Built-in class for ORDA objects such as entities, or dataclasses. Functions and 
 
 ## ペシミスティック・ロック
 
-A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
+"ペシミスティック・ロック" とは、`entity.lock( )` メソッドにより、エンティティがアクセスされる前にそれをロックすることを意味します。 ロックが解除されるまで、他のプロセスからはそのエンティティを更新することも、ドロップすることもできません。 クラシック 4Dランゲージにおいてはペシミスティック・ロックのみが利用可能です。 [オプティミスティック・ロック](#オプティミスティック・ロック) も合わせて参照してください。
 
 ## プロパティ
 
-See [Attribute](#attribute).
-> Attributes and properties are similar concepts. "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
+[属性](#属性) を参照してください。
+> 属性とプロパティは似た概念です。 "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
 
-## PropertyPath
+## プロパティパス
 
-A propertyPath is the path to a property in a given object. If the property is nested in several levels, each level separated is by a dot (".").
+プロパティパスとは、あるオブジェクトのプロパティへのパスです。 プロパティが複数の階層にネストされている場合、各階層はドット (".") によって区切られます。
 
 ## Regular class
 
 User class not related to an ORDA object.
 
-## Related dataclass
+## リレートされたデータクラス
 
-These are dataclasses linked by relation attributes.
+リレートされたデータクラスとは、リレーション属性によってリンクされたデータクラスのことを指します。
 
-## Relation attribute
+## リレーション属性
 
-Relation attributes are used to conceptualize relations between dataclasses (many-to-one and one-to-many).
+リレーション属性は、データクラス間のリレーション (1対N および N対1) を概念化するものです。
 
-*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   N対1リレーション (データクラスA はデータクラスB のオカレンスを参照します): リレーション属性はデータクラスA 内で利用可能で、データクラスB の一つのインスタンスを参照します。
+*   1対Nリレーション (データクラスB のオカレンスがデータクラスA の複数のオカレンスを参照します): リレーション属性はデータクラスB 内で利用可能で、データクラスA の複数のインスタンスを参照します。
 
-A dataclass can have recursive relation attributes.
+データクラスは再帰的なリレーション属性を持つことができます。
 
-In an entity, the value of a relation attribute can be an entity or an entity selection.
+エンティティ内では、リレーション属性の値はエンティティあるいはエンティティセレクションとなります。
 
 ## Related entities
 
