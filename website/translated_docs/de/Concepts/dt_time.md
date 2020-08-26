@@ -7,7 +7,7 @@ title: Zeit
 - Zeiten werden im 24 Stundenformat angezeigt.
 - Ein Wert vom Typ Zeit kann wie eine Zahl behandelt werden. Die von einer Zeit zurückgegebene Zahl ist die Anzahl Sekunden ab Mitternacht (00:00:00).
 
-**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Hinweis:** Im Handbuch 4D Programmiersprache werden Zeitparameter in der Beschreibung der Befehle generell als Zeit bezeichnet, außer es ist anders angegeben.
 
 ## Zeitformate
 
@@ -23,9 +23,9 @@ Hier ein paar Beispiele:
 ?13:01:59? ` 13 Uhr, 1 Minute und 59 Sekunden
 ```
 
-Eine Nullzeit wird als ?00:00:00? angegeben
+Eine Leerzeit wird als ?00:00:00? angegeben.
 
-**Tip:** The Method Editor includes a shortcut for entering a null time. Tippen Sie ein Fragezeichen (?) und drücken die Eingabetaste.
+**Tipp:** Der Methodeneditor hat ein Tastaturkürzel für Leerzeit. Tippen Sie ein Fragezeichen (?) und drücken die Eingabetaste.
 
 ## Zeitoperatoren
 
@@ -44,13 +44,13 @@ Eine Nullzeit wird als ?00:00:00? angegeben
 |                         |              |         | ?01:02:03? = ?01:02:04? | Falsch     |
 | Ungleichheit            | Zeit # Zeit  | Boolean | ?01:02:03? # ?01:02:04? | Wahr       |
 |                         |              |         | ?01:02:03? # ?01:02:03? | Falsch     |
-| Größer als              | Time > Time  | Boolean | ?01:02:04? > ?01:02:03? | Wahr       |
+| Größer als              | Zeit > Zeit  | Boolean | ?01:02:04? > ?01:02:03? | Wahr       |
 |                         |              |         | ?01:02:03? > ?01:02:03? | Falsch     |
-| Kleiner als             | Time < Time  | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
+| Kleiner als             | Zeit < Zeit  | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
 |                         |              |         | ?01:02:03? < ?01:02:03? | Falsch     |
-| Größer als oder gleich  | Time >= Time | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
+| Größer als oder gleich  | Zeit >= Zeit | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
 |                         |              |         | ?01:02:03? >=?01:02:04? | Falsch     |
-| Kleiner als oder gleich | Time <= Time | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
+| Kleiner als oder gleich | Zeit <= Zeit | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
 |                         |              |         | ?01:02:04? <=?01:02:03? | Falsch     |
 
 ### Beispiel 1
