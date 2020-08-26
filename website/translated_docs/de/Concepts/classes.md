@@ -464,14 +464,14 @@ Class extends <ParentClass>
 ```
 
 
-Das Schlüsselwort `Class extends` dient in der Deklaration der Klasse zum Erstellen einer Benutzerklasse, die eine Unterklasse einer anderen Benutzerklasse ist. The child class inherits all functions of the parent class.
+Das Schlüsselwort `Class extends` dient in der Deklaration der Klasse zum Erstellen einer Benutzerklasse, die eine Unterklasse einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Functions der übergeordneten Klasse.
 
-Class extension must respect the following rules:
+Für Class Extension gelten folgende Regeln:
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- Eine Benutzerklasse kann keine integrierte Klasse erweitern (außer 4D.Object, die für Benutzerklassen standardmäßig erweitert wird)
+- Eine Benutzerklasse kann keine  Benutzerklasse aus einem anderen Projekt bzw. Komponente erweitern.
+- Eine Benutzerklasse kann sich nicht selbst erweitern.
+- Eine Benutzerklasse lässt sich nicht kreisförmig erweitern (z.B. "a" erweitert "b", das wiederum "a" erweitert).
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
@@ -525,9 +525,9 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
 `Super` serves two different purposes:
 
-- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
+- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. In einem Konstruktor erscheint der Befehl `Super` alleine und muss vor dem Schlüsselwort `This` aufgerufen werden.
   
-      - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
+      - Werden nicht alle Class Constructors im Vererbungsbaum korrekt aufgerufen, wird der Fehler -10748 generiert. It's 4D developer to make sure calls are valid.
     - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
 
     - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
