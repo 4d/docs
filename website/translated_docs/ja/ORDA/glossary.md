@@ -26,7 +26,7 @@ title: 用語集
 
 ユーザークラス関数のコード。
 
-## Class function
+## クラス関数
 
 ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
 
@@ -102,15 +102,15 @@ Function of an ORDA data model class.
 
 ## エンティティセレクション
 
-エンティティセレクションは、一つのオブジェクトです。 データストアをクエリすると、エンティティセレクションが返されます。 An entity selection is a set of references to entities related to the same dataclass.
+エンティティセレクションは、一つのオブジェクトです。 データストアをクエリすると、エンティティセレクションが返されます。 エンティティセレクションとは、同じデータクラスに所属するエンティティへの参照のセットのことです。
 
-An entity selection contains:
+エンティティセレクションは以下を格納します:
 
-*   a set of 0 to X entity references,
-*   a length property (always),
-*   queryPlan and queryPath properties (if asked while querying).
+*   0 から X までのエンティティ参照のセット
+*   length プロパティ(常に存在します)
+*   queryPlan および queryPath プロパティ (クエリ時に要求した場合に存在します)
 
-An entity selection can also be empty.
+エンティティセレクションは空であることもあります。
 
 
 ## Generic class
@@ -118,21 +118,21 @@ An entity selection can also be empty.
 Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in data model classes, e.g. `EmployeeEntity`.
 
 
-## Lazy loading
+## レイジーローディング
 
-Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. This optimization principle is called lazy loading.
+エンティティは参照として管理されているため、データは必要なときにのみロードされます。つまりコードや、インターフェースウィジェットを通してアクセスしたときなどです。 この最適化原理は、レイジーローディングと呼ばれています。
 
-## Main datastore
+## メインデータストア
 
-The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
+開かれている 4Dデータベース (シングルユーザーまたはクライアント/サーバー) に対応するデータストアオブジェクト。 メインデータストアは `ds` コマンドによって返されます。
 
 ## メソッド
 
-See [class function](#class-function).
+[クラス関数](#クラス関数) を参照してください。
 
-## Mixed data type
+## ミックスデータ型
 
-In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. :
+このドキュメントでは、データクラス属性に保存可能な値の様々な型を指定するために、"ミックス" データ型が使用されます。 :
 
 *   number
 *   text
@@ -141,7 +141,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   date
 *   オブジェクト
 *   コレクション
-*   picture(\*)
+*   ピクチャー (\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
