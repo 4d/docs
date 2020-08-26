@@ -1,9 +1,9 @@
 ---
 id: glossary
-title: Glossary
+title: 用語集
 ---
 
-## Main concepts at a glance
+## 主なコンセプトの概要
 
 ![](assets/en/Orda/mainConcepts.png)
 
@@ -11,11 +11,11 @@ title: Glossary
 
 ## 属性
 
-An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
+属性とは、リレーショナルデータベース内における最小の保存セルです ([リレーション属性](#リレーション属性) も参照してください)。 データクラス属性とエンティティ属性を混同しないようにしてください:
 
-*   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
-*   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-> *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+*   データクラスオブジェクトにおける各プロパティは、対応するテーブルの対応するフィールドへとマップするデータクラス属性です (同じ名前と型)。
+*   エンティティオブジェクトにおける各プロパティは、対応するデータストア属性の値を格納するエンティティ属性です。
+> *属性* と *プロパティ* は似た概念です。 "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## AttributePath
 
