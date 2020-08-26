@@ -556,7 +556,7 @@ Super.doSomething(42) //calls "doSomething" function
 
 #### Beispiel 1
 
-Dieses Beispiel zeigt die Verwendung von `Super` in einem Class Constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
+Dieses Beispiel zeigt die Verwendung von `Super` in einem Class Constructor. Dieser Befehl sorgt dafür, dass Teile des Constructors, die für `Rectangle` und `Square` gleich sind, nicht dupliziert werden.
 
 
 
@@ -602,9 +602,9 @@ Function getArea()
 
 
 
-#### Example 2
+#### Beispiel 2
 
-This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
+Dieses Beispiel zeigt die Verwendung von `Super` in einer Class Member Method. Sie haben die Klasse `Rectangle` mit einer Function angelegt:
 
 
 
@@ -617,7 +617,7 @@ Function nbSides()
 ```
 
 
-You also created the `Square` class with a function calling the superclass function:
+Und die Klasse `Square` mit einer Function, die die Superclass Function aufruft:
 
 
 
@@ -632,7 +632,7 @@ Function description()
 ```
 
 
-Then you can write in a project method:
+Dann können Sie in einer Projektmethode schreiben:
 
 
 
@@ -652,12 +652,12 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 #### This -> Object
 
-| Parameter | Type   |    | Description    |
-| --------- | ------ | -- | -------------- |
-| Result    | object | <- | Current object |
+| Parameter | Typ    |    | Beschreibung     |
+| --------- | ------ | -- | ---------------- |
+| Ergebnis  | object | <- | Aktuelles Objekt |
 
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt zurück. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. 
 
