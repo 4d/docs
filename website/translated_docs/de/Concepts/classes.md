@@ -527,10 +527,10 @@ Mit dem Schlüsselwort `Super` lassen sich Aufrufe zur   `Superklasse` machen, z
 
 - Innerhalb des [Constructor Code](#class-constructor) ist `Super` ein Befehl zum Aufrufen des Constructor der Superklasse. In einem Constructor erscheint der Befehl `Super` alleine und muss vor dem Schlüsselwort `This` aufgerufen werden.
   
-      - Werden nicht alle Class Constructors im Vererbungsbaum korrekt aufgerufen, wird der Fehler -10748 generiert. It's 4D developer to make sure calls are valid.
-    - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
+      - Werden nicht alle Class Constructors im Vererbungsbaum korrekt aufgerufen, wird der Fehler -10748 generiert. Der 4D Entwickler muss sicherstellen, dass Aufrufe gültig sind.
+    - Wird `This` in einem Objekt aufgerufen, dessen Superklassen nicht aufgebaut wurden, wird Fehler -10743 generiert.
 
-    - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+    - Wird `Super` in der Reichweite eines Objekts aufgerufen oder in einem Objekt, dessen Constructor der Superklasse bereits aufgerufen wurde, wird Fehler  -10746 generiert.
 
 
 
@@ -542,7 +542,7 @@ This.param:=$text2 // use second param
 ```
 
 
-- inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+- Innerhalb einer [Class Member Function](#class-function) bezeichnet `Super` den Prototyp der Superklasse und erlaubt, eine Function in der Hierarchie der Superklasse aufzurufen.
 
 
 
@@ -554,9 +554,9 @@ Super.doSomething(42) //calls "doSomething" function
 
 
 
-#### Example 1
+#### Beispiel 1
 
-This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
+Dieses Beispiel zeigt die Verwendung von `Super` in einem Class Constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
 
 
 
