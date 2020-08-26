@@ -18,9 +18,9 @@ Das Datumsformat in der Programmiersprache und das bei Eingabe durch den Endanwe
 !2015-12-31!
 ```
 
-Ein Nulldatum wird als _!00-00-00!_ angegeben.
+Ein Leerdatum wird als _!00-00-00!_ angegeben.
 
-**Tipp:** Der Methodeneditor enthält ein Tastenkürzel für Nulldatum. Tippen Sie einfach das Ausrufezeichen (!) und drücken die Enter-Taste.
+**Tipp:** Der Methodeneditor enthält ein Tastenkürzel für Leerdatum. Tippen Sie einfach das Ausrufezeichen (!) und drücken die Enter-Taste.
 
 **Hinweise:**
 
