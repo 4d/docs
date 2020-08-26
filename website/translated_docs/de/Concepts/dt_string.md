@@ -124,7 +124,7 @@ Der folgende Ausdruck wird korrekt interpretiert:
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
-**Hinweis:**In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
+**Hinweis:** In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
 
 ### Keywords
 
