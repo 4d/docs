@@ -86,23 +86,23 @@ Function of an ORDA data model class.
 
 ## ディープコピー
 
-ディープコピーとは、あるオブジェクトとそこに格納されるすべての参照の複製です。 ディープコピーのあと、コピーされたコレクションには、すべてのオリジナル要素の複製、つまり新規参照が格納されています。 [シャロウコピー](#シャロウコピー) も合わせて参照してください。
+ディープコピーは、あるオブジェクトとそこに格納されているすべての参照を複製します。 ディープコピーのあと、コピーされたコレクションには、すべてのオリジナル要素の複製 (つまり新規参照) が格納されています。 [シャロウコピー](#シャロウコピー) も合わせて参照してください。
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. It matches the datastore available upon the 4D main database.
+`ds` は、[データストア](dsMapping.md#データストア) のオブジェクト参照を返す 4Dランゲージコマンドです。 この参照は 4D のメインデータベースが提供するデータストアに合致します。
 
 ## エンティティ
 
-An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
+エンティティとは、データクラスモデルに対応するオブジェクトです。 エンンティティには、データクラスと同じ属性が格納されます。
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. エンティティの目的はデータの管理 (作成、更新、削除) です。
+エンティティは、データクラスのインスタンスとも解釈可能なオブジェクトです。 しかしながら、エンティティはリレートされたデータも格納しています。 エンティティの目的はデータの管理 (作成、更新、削除) です。
 
-For more information, see Entities.
+詳細な情報については、[エンティティ](entities.md) を参照してください。
 
 ## エンティティセレクション
 
-An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
+エンティティセレクションは、一つのオブジェクトです。 データストアをクエリすると、エンティティセレクションが返されます。 An entity selection is a set of references to entities related to the same dataclass.
 
 An entity selection contains:
 
