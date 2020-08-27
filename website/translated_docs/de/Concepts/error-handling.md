@@ -55,7 +55,7 @@ In einer eigenen Fehlermethode erhalten Sie verschiedene Angaben, die zum Identi
   - `Error line` (Lange Ganzzahl): Zeilennummer in der Methode, die den Fehler ausgelöst hat.
   - `Error formula` (Text): Formel des 4D Code (Rohtext), der den Fehler verursacht hat.
 
-(*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.
+(*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.</p>
 
 - Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück.
 
