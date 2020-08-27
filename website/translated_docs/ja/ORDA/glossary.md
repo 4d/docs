@@ -28,7 +28,7 @@ title: 用語集
 
 ## クラス関数
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
+データストア、データクラス、エンティティセレクション、エンティティなどの ORDA オブジェクトは、オブジェクトのクラスを定義します。 They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
 
 These methods are also called **member functions**, or **member methods**.
 
@@ -39,17 +39,17 @@ $myClass.query("name = smith")
 ```
 
 
-## Data model class
+## データモデルクラス
 
-Extended class available for a data model object.
+データモデルオブジェクトに関連して提供される拡張クラス。
 
-## Data model object
+## データモデルオブジェクト
 
-Database objects available through the ORDA concept, i.e. datastore, dataclasses, entities and entity selections.
+ORDA を通して提供されているデータベースオブジェクト (データストア、データクラス、エンティティ、エンティティセレクション)。
 
-## Data model function
+## データモデル関数
 
-Function of an ORDA data model class.
+ORDA データモデルクラスの関数。
 
 ## データクラス
 
@@ -113,9 +113,9 @@ Function of an ORDA data model class.
 エンティティセレクションは空であることもあります。
 
 
-## Generic class
+## 汎用クラス
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in data model classes, e.g. `EmployeeEntity`.
+エンティティやデータクラスなどの ORDA オブジェクト用のビルトインクラス。 汎用クラスのプロパティや関数は、データモデルクラス (例: `EmployeeEntity`) において自動で利用可能です。
 
 
 ## レイジーローディング
@@ -162,9 +162,9 @@ Built-in class for ORDA objects such as entities, or dataclasses. Functions and 
 
 プロパティパスとは、あるオブジェクトのプロパティへのパスです。 プロパティが複数の階層にネストされている場合、各階層はドット (".") によって区切られます。
 
-## Regular class
+## 通常クラス
 
-User class not related to an ORDA object.
+ORDA オブジェクトとは関わりのないユーザークラス。
 
 ## リレートされたデータクラス
 
@@ -205,4 +205,4 @@ User class not related to an ORDA object.
 
 ## Stamp
 
-"オプティミステック" ロックテクノロジーにおいて使用されるものです。 すべてのエンティティにはスタンプと呼ばれる内部カウンターがあり、エンティティが保存されるたびにインクリメントされていきます。 By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+"オプティミステック" ロックテクノロジーにおいて使用されるものです。 すべてのエンティティにはスタンプと呼ばれる内部カウンターがあり、エンティティが保存されるたびにインクリメントされていきます。 エンティティ内のスタンプとディスク上に保存されているエンティティのスタンプを自動的に比較することで、4D は同じエンティティへの書き込みの衝突を防いでいます。
