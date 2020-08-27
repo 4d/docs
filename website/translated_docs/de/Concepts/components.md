@@ -40,7 +40,7 @@ Um die Projektmethoden einer Komponente wirksam zu schützen, kompilieren Sie ei
 ## Projektmethoden gemeinsam nutzen
 Per Definition werden alle Projektmethoden in die Komponente integriert (das Projekt ist die Komponente), d. h. die Komponente kann sie aufrufen und ausführen.
 
-Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in Host Projekten auch nicht aufrufen. Im Matrix Projekt müssen Sie die Methoden, die Sie mit dem Host Projekt teilen wollen, explizit angeben. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host database). Diese Methoden sind die **Schnittstelle** zum Aufrufen der Komponente.
+Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in Host Projekten auch nicht aufrufen. Im Matrix Projekt müssen Sie die Methoden, die Sie mit dem Host Projekt teilen wollen, explizit angeben. Diese Projektmethoden lassen sich im Code des Host Projekts aufrufen. Sie lassen sich jedoch im Methodeneditor des Host Projekts nicht verändern. Diese Methoden sind die **Schnittstelle** zum Aufrufen der Komponente.
 
 **Hinweis:** Aus Sicherheitsgründen kann die Komponente standardmäßig keine Projektmethoden ausführen, die zum Host Projekt gehören. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihres Host Projekts zugreifen kann. Dazu müssen Sie die Projektmethode explizit dem Host Projekt zuweisen, das Sie für die Komponenten zugänglich machen wollen.
 
