@@ -21,17 +21,17 @@ Zur Handhabung von Komponenten in 4D sind folgende Begriffe und Konzepte von Bed
 - **Host Projekt**: Anwendungsprojekt, in dem eine Komponente installiert und verwendet wird.
 - **Komponente**: Matrix Projekt, kompiliert oder nicht, das in den Ordner "Components" der Host Anwendung kopiert wird und deren Inhalt in Host Anwendungen verwendet wird.
 
-It should be noted that a project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
+Beachten Sie, dass ein Projekt sowohl vom Typ “Matrix” als auch “Host” sein kann, d. h. ein Matrix Projekt kann selbst eine oder mehrere Komponenten verwenden. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
 
 
 ### Komponenten durch Kompilieren schützen
 
-By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. Das bedeutet im einzelnen:
+Standardmäßig sind alle Projektmethoden eines Matrix Projekts, das als Komponente installiert ist, potentiell vom Host Projekt aus sichtbar. Das bedeutet im einzelnen:
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. Sie lassen sich jedoch im Methodeneditor weder öffnen, noch verändern.
-- The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
+- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. Sie lassen sich jedoch im Methodeneditor weder öffnen, noch verändern.
+- Andere Projektmethoden des Matrix Projekts erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger des Host Projekts sichtbar.
 
-To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
+Um die Projektmethoden einer Komponente wirksam zu schützen, kompilieren Sie einfach das Matrix Projekt und liefern es als .4dz-Datei. Wird ein kompiliertes Matrix Projekt als Komponente installiert, gilt folgendes:
 
 - The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. Ihr Inhalt erscheint jedoch weder in der Vorschau noch im Debugger.
 - The other project methods of the matrix project will never appear.
