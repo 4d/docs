@@ -5,7 +5,7 @@ title: Zeiger
 
 Eine Variable oder ein Ausdruck vom Typ Zeiger verweist auf eine andere Variable (inkl. Arrays und Array Elemente), Tabelle, Datenfeld oder Objekt. Ein Datenfeld kann nicht vom Typ Zeiger sein.
 
-Mit Hilfe der Zeiger können Sie Ihre Methoden strukturunabhängig schreiben und dadurch Ihre Programme übertragbarer gestalten. Sie können mit einem Zeiger auf verschiedene Objekte, wie Tabellen, Datenfelder, Variablen, Objekte und Arrays, einfach über ihre Namen zugreifen. Jedoch ist es oft hilfreich, auf diese Elemente zuzugreifen, ohne ihre Namen zu kennen. Das können Sie mit Zeigern tun.
+Mit Hilfe der Zeiger können Sie Ihre Methoden strukturunabhängig schreiben und dadurch Ihre Programme übertragbarer gestalten. Sie können mit der Programmiersprache auf verschiedene Objekte, wie Tabellen, Datenfelder, Variablen, Objekte und Arrays, einfach über ihre Namen zugreifen. Jedoch ist es oft hilfreich, auf diese Elemente zuzugreifen, ohne ihre Namen zu kennen. Das können Sie mit Zeigern tun.
 
 Das Konzept hinter Zeigern begegnet Ihnen auch im täglichen Leben. Oft verweisen Sie auf etwas, ohne die Identität exakt zu kennen. Sie sagen normalerweise zu einem Freund: "Lass uns eine Fahrt in Deinem Auto machen", anstatt "Lass uns eine Fahrt in dem Auto mit dem Kennzeichen M-AX-1234 machen". In diesem Fall verweisen Sie auf das Auto mit dem Kennzeichen M-AX-1234 über den Begriff "Dein Auto". Die Umschreibung "Auto mit dem Kennzeichen M-AX-1234" ist wie der Name eines Objekts und der Begriff "Dein Auto" ist wie ein Zeiger, der auf das Objekt verweist.
 
