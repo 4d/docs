@@ -250,7 +250,7 @@ Daten aus der externen Datenbank auslesen:
 
 ## Ressourcen verwenden
 
-Komponenten können Ressourcen verwenden. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder.
+Komponenten können Ressourcen verwenden. Gemäß den Vorgaben zur Ressourcen-Verwaltung muss der Ordner Resources bei einer Komponente mit der Struktur von .4dbase (empfohlene Struktur) in diesen Ordner gelegt werden.
 
 Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
 
