@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Error handling
+title: Fehlerverwaltung
 ---
 
 Fehlerverwaltung bedeutet das Vorwegnehmen und Reagieren auf Fehler, die in Ihrer Anwendung auftreten können. 4D bietet umfassende Unterstützung zum Abfangen und Melden von Fehlern zur Laufzeit und zum Untersuchen der Fehlerursachen.
