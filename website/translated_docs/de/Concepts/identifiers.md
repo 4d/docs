@@ -212,10 +212,10 @@ vtClone:=Dump("is";"the";"it")
 Der Name einer Menge kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
 
 - Eine **Prozess**menge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
-- You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
-- On 4D Server, the name of a **client** set is preceded by the dollar sign ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
+- Eine **Interprozess**menge kennzeichnen Sie mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+- Auf 4D Server beginnt der Name einer **Client**-Menge mit dem Dollarzeichen ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
 
-> Sets are maintained on the Server machine. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. To do so, you use client sets.
+> Mengen werden auf dem Server gehalten. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. Dafür verwenden Sie Client-Mengen.
 
 Beispiele:
 ```4d
@@ -240,7 +240,7 @@ ADD RECORD([Letters])
 
 ## Variablen
 
-The name of a variable can be up to 31 characters, not including the scope symbols.
+Der Name einer Variablen kann ohne die Symbole für Reichweite bis zu 31 Zeichen lang sein.
 
 - You designate a **local** variable by placing a dollar sign ($) before the variable name.
 - You designate a **process** variable by using its name (which cannot start with the <> symbols nor the dollar sign $)
