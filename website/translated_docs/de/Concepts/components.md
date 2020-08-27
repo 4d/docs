@@ -17,11 +17,11 @@ Eine 4D Komponente besteht aus einer Reihe von 4D Methoden und Formularen mit ei
 
 Zur Handhabung von Komponenten in 4D sind folgende Begriffe und Konzepte von Bedeutung:
 
-- **Matrix Database**: 4D database used for developing the component. Die Matrix Datenbank ist eine Standarddatenbank ohne spezifische Attribute. Sie dient zum Erstellen einer einzelnen Komponente. Die Matrix Datenbank wird kompiliert oder unkompiliert in den Ordner "Components" der Datenbank kopiert, welche die Komponente verwendet. Das ist die Host Datenbank.
-- **Host Database**: Database in which a component is installed and used.
-- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
+- **Matrix Projekt**: 4D Projekt zum Entwickeln der Komponente. Das Matrix Projekt ist ein Standardprojekt ohne spezifische Attribute. Es bildet eine einzelne Komponente. Das Matrix Projekt wird kompiliert oder unkompiliert in den Ordner "Components" der 4D oder Host Anwendung kopiert, welche die Komponente verwendet.
+- **Host Projekt**: Anwendungsprojekt, in dem eine Komponente installiert und verwendet wird.
+- **Komponente**: Matrix Projekt, kompiliert oder nicht, das in den Ordner "Components" der 4D oder Host Anwendung kopiert wird und deren Inhalt in Host Anwendungen verwendet wird.
 
-Beachten Sie, dass eine Datenbank sowohl vom Typ “matrix” als auch “host” sein kann, d.h. eine Matrix Datenbank kann selbst eine oder mehrere Komponenten verwenden. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
+Beachten Sie, dass ein Projekt sowohl vom Typ “Matrix” als auch “Host” sein kann, d. h. ein Matrix Projekt kann selbst eine oder mehrere Komponenten verwenden. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
 
 
 ### Komponenten durch Kompilieren schützen
