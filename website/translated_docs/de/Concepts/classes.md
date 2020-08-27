@@ -364,7 +364,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-#### Example
+#### Beispiel
 
 
 
@@ -397,7 +397,7 @@ $area:=$rect.getArea(50;100) //5000
 
 
 
-### Class constructor
+### Class Constructor
 
 
 
@@ -414,15 +414,15 @@ Class Constructor({$parameterName : type; ...})
 
 Eine Function Class Constructor, die [Parameter](#parameters) zulässt, lässt sich zum Definieren einer Benutzerklasse verwenden.  
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
+In diesem Fall wird der Class Constructur beim Aufrufen der Class Member Method `new()` mit den Parametern aufgerufen, die optional in der Function `new()` übergeben wurden.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
-
-
+Für eine Class Constructor Function gibt der Befehl `Current method name` zurück: "*\<ClassName>.constructor*", z.B. "MyClass.constructor".
 
 
 
-#### Example:
+
+
+#### Beispiel:
 
 
 
@@ -464,24 +464,24 @@ Class extends <ParentClass>
 ```
 
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+Das Schlüsselwort `Class extends` dient in der Deklaration der Klasse zum Erstellen einer Benutzerklasse, die eine Unterklasse einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Functions der übergeordneten Klasse.
 
-Class extension must respect the following rules:
+Für Class Extension gelten folgende Regeln:
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- Eine Benutzerklasse kann keine vorgegebene Klasse erweitern (außer 4D.Object, die für Benutzerklassen standardmäßig erweitert wird)
+- Eine Benutzerklasse kann keine  Benutzerklasse aus einem anderen Projekt bzw. Komponente erweitern.
+- Eine Benutzerklasse kann sich nicht selbst erweitern.
+- Eine Benutzerklasse lässt sich nicht kreisförmig erweitern (z.B. "a" erweitert "b", das wiederum "a" erweitert).
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
+Ein Verstoß gegen eine dieser Regeln wird weder vom Code-Editor noch vom Interpreter erkannt, in diesem Fall lösen nur der Compiler und `Syntaxprüfung` einen Fehler aus.
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+Eine erweiterte Klasse kann den Constructor seiner übergeordneten Klasse über den Befehl [`Super`](#super) aufrufen.
 
 
 
-#### Example
+#### Beispiel
 
-This example creates a class called `Square` from a class called `Polygon`.
+Dieses Beispiel erstellt eine Klasse mit Namen `Square` aus einer Klasse mit Namen `Polygon`.
 
 
 
@@ -515,22 +515,22 @@ Class constructor ($side : Integer)
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Type   |    | Description                                    |
-| --------- | ------ | -- | ---------------------------------------------- |
-| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
-| Result    | object | <- | Object's parent                                |
+| Parameter | Typ    |    | Beschreibung                                 |
+| --------- | ------ | -- | -------------------------------------------- |
+| param     | mixed  | -> | Parameter für den übergeordneten Constructor |
+| Ergebnis  | object | <- | Überordnung des Objekts                      |
 
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+Mit dem Schlüsselwort `Super` lassen sich Aufrufe zur   `Superklasse` machen, z.B. zur übergeordneten Klasse.
 
-`Super` serves two different purposes:
+`Super` dient für zwei unterschiedliche Zwecke:
 
-- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
+- Innerhalb des [Constructor Code](#class-constructor) ist `Super` ein Befehl zum Aufrufen des Constructor der Superklasse. In einem Constructor erscheint der Befehl `Super` alleine und muss vor dem Schlüsselwort `This` aufgerufen werden.
   
-      - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
-    - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
+      - Werden nicht alle Class Constructors im Vererbungsbaum korrekt aufgerufen, wird der Fehler -10748 generiert. Der 4D Entwickler muss sicherstellen, dass Aufrufe gültig sind.
+    - Wird `This` in einem Objekt aufgerufen, dessen Superklassen nicht aufgebaut wurden, wird Fehler -10743 generiert.
 
-    - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+    - Wird `Super` in der Reichweite eines Objekts aufgerufen oder in einem Objekt, dessen Constructor der Superklasse bereits aufgerufen wurde, wird Fehler  -10746 generiert.
 
 
 
@@ -542,7 +542,7 @@ This.param:=$text2 // use second param
 ```
 
 
-- inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+- Innerhalb einer [Class Member Function](#class-function) bezeichnet `Super` den Prototyp der Superklasse und erlaubt, eine Function in der Hierarchie der Superklasse aufzurufen.
 
 
 
@@ -554,9 +554,9 @@ Super.doSomething(42) //calls "doSomething" function
 
 
 
-#### Example 1
+#### Beispiel 1
 
-This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
+Dieses Beispiel zeigt die Verwendung von `Super` in einem Class Constructor. Dieser Befehl sorgt dafür, dass Teile des Constructors, die für `Rectangle` und `Square` gleich sind, nicht dupliziert werden.
 
 
 
@@ -602,9 +602,9 @@ Function getArea()
 
 
 
-#### Example 2
+#### Beispiel 2
 
-This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
+Dieses Beispiel zeigt die Verwendung von `Super` in einer Class Member Method. Sie haben die Klasse `Rectangle` mit einer Function angelegt:
 
 
 
@@ -617,7 +617,7 @@ Function nbSides()
 ```
 
 
-You also created the `Square` class with a function calling the superclass function:
+Und die Klasse `Square` mit einer Function, die die Superclass Function aufruft:
 
 
 
@@ -632,7 +632,7 @@ Function description()
 ```
 
 
-Then you can write in a project method:
+Dann können Sie in einer Projektmethode schreiben:
 
 
 
@@ -652,16 +652,16 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 #### This -> Object
 
-| Parameter | Type   |    | Description    |
-| --------- | ------ | -- | -------------- |
-| Result    | object | <- | Current object |
+| Parameter | Typ    |    | Beschreibung     |
+| --------- | ------ | -- | ---------------- |
+| Ergebnis  | object | <- | Aktuelles Objekt |
 
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt zurück. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. 
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
+When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Zum Beispiel:
 
 
 
@@ -671,25 +671,24 @@ $val:=$o.f() //42
 ```
 
 
-When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+Mit der Function [Class Constructor](#class-constructor) (mit der Methode `new()`) wird das dazugehörige `This` an das neue Objekt in Konstruktion gebunden.
 
 
 
 ```4d
-//Class: ob
+  //Class: ob
 
 Class Constructor  
-
     // Create properties on This as
     // desired by assigning to them
-    This.a:=42 
+    This.a:=42
 ```
 
 
 
 
 ```4d
-// in a 4D method  
+    // in a 4D method  
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
@@ -697,9 +696,9 @@ $val:=$o.a //42
 
 
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+In jedem Fall bezieht sich `This` auf das Objekt, in dem die Methode aufgerufen wurde, als ob die Methode im Objekt wäre.
 
 
 
@@ -711,7 +710,7 @@ Function f()
 ```
 
 
-Then you can write in a project method:
+Dann können Sie in einer Projektmethode schreiben:
 
 
 
@@ -723,7 +722,7 @@ $val:=$o.f() //8
 ```
 
 
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o. 
+In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Since *f* is called as a method of $o, its `This` refers to $o. 
 
 
 

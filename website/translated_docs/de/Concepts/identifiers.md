@@ -35,11 +35,11 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 ## Arrays
 
-Ein Array kennzeichnen Sie durch seinen Namen. Das ist der Name, den Sie beim Erstellen des Array übergeben haben, z. B. ARRAY LONGINT. Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:
+Ein Array kennzeichnen Sie durch seinen Namen. Das ist der Name, den Sie beim Erstellen des Array übergeben haben, z. B. ARRAY LONGINT. Arrays sind Variablen. Der Name eines Array kann, wie bei Variablen, bis zu 31 Zeichen lang sein, ohne die Symbole für Reichweite. Es gibt drei Arten von Arrays:
 
-- The name of a **local** array is preceded by the dollar sign ($).
-- The name of a **process** array cannot start with the <> symbols nor the dollar sign $).
-- The name of an **interprocess** array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Der Name eines **lokalen** Array beginnt mit dem Dollarzeichen ($)
+- Der Name eines **Prozess** Array darf weder mit den Symbolen <> noch mit dem Dollarzeichen ($) starten.
+- Der Name eines **Interprozess**-Array beginnt mit den Symbolen <> — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
 ```4d
@@ -106,10 +106,10 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## Temporäre Auswahlen
 
-A named selection name can contain up to 255 characters, not including scope character(s).
+Der Name einer temporären Auswahl kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
 
-- You denote a **process** named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $).
-- You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Eine temporäre **Prozess**auswahl kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Der Name einer temporären **Interprozess**auswahl beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
 ```4d
@@ -120,7 +120,7 @@ USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
 
 ## Objektattribute
 
-You designate an object attribute (also called object property) by placing a point (".") between the name of the object and the name of the attribute. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
+Ein Objektattribut (auch Objekteigenschaft genannt) definieren Sie durch Setzen eines Punktes (".") zwischen dem Namen des Objekts und dem Namen des Attributs. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
 
 Beispiele:
 ```4d
@@ -128,7 +128,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must comply with the ECMAScript specification). For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie oben unter (#zusätzliche-Regeln-für-Namen-von-Objekteigenschaften-und-ORDA) und [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 
 ## Plug-In Befehle
@@ -142,12 +142,12 @@ $error:=SMTP_From($smtp_id;"henry@gmail.com")
 
 ## Prozesse
 
-A process name can contain up to 255 characters, not including scope character.
+Der Name des Prozesses kann ohne Symbol für Reichweite bis zu 255 Zeichen lang sein.
 
-In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
+In der Einzelplatzversion oder auf der Client-Seite in einer Client/Server-Umgebung gibt es zwei Reichweiten für Prozesse: **global** oder **lokal**.
 
-- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $).
-- You denote a **local** process if the name of the process is preceded by a dollar ($) sign.
+- Einen **globalen** Prozess kennzeichnen Sie durch einen String Ausdruck, der seinen Namen darstellt (Er darf nicht mit dem Dollarzeichen $ beginnen).
+- Einen **lokalen** Prozesses kennzeichnen Sie mit dem Dollarzeichen $.
 
 Beispiele:
 ```4d
@@ -171,7 +171,7 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. Öffnen Sie dann ein Projekt nach einigen Monaten für eine Wartung, erkennen Sie im Explorer Fenster bereits an der Schreibweise des Namens, ob die Methode ein Ergebnis zurückgibt.
 
 **Hinweis:** Zum Aufrufen einer Methode tippen Sie einfach ihren Namen ein. Einige in 4D integrierte Befehle wie z. B. `ON EVENT CALL`, sowie alle Plug-In Befehle erwarten dagegen den Namen der Methode als String, wenn ein Parameter für die Methode übergeben wurde. Beispiele:
 ```4d
@@ -209,13 +209,13 @@ vtClone:=Dump("is";"the";"it")
 
 ## Mengen
 
-A set name can contain up to 255 characters, not including scope character()s).
+Ein Mengenname kann ohne Symbol für Reichweite bis zu 255 Zeichen lang sein.
 
-- You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $).
-- You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
-- On 4D Server, the name of a **client** set is preceded by the dollar sign ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
+- Eine **Prozess**menge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Eine **Interprozess**menge kennzeichnen Sie mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+- Auf 4D Server beginnt der Name einer **Client**-Menge mit dem Dollarzeichen ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
 
-> Sets are maintained on the Server machine. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. To do so, you use client sets.
+> Mengen werden auf dem Server gehalten. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. Dafür verwenden Sie Client-Mengen.
 
 Beispiele:
 ```4d
@@ -240,11 +240,11 @@ ADD RECORD([Letters])
 
 ## Variablen
 
-The name of a variable can be up to 31 characters, not including the scope symbols.
+Ein Variablenname kann ohne Symbol für Reichweite bis zu 31 Zeichen lang sein.
 
-- You designate a **local** variable by placing a dollar sign ($) before the variable name.
-- You designate a **process** variable by using its name (which cannot start with the <> symbols nor the dollar sign $)
-- You designate an **interprocess** variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Eine **lokale** Variable kennzeichnen Sie durch das vorangestellte Dollarzeichen ($).
+- Eine **Prozess**variable kennzeichnen Sie durch ihren Namen (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Eine **Interprozess**variable kennzeichnen Sie mit den vorangestellten Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
 
@@ -257,7 +257,7 @@ If(bValidate=1) //process variable
 
 
 
-## Summary of Identifiers
+## Übersicht der Namenskonventionen
 
 Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 
@@ -286,7 +286,7 @@ Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 
 ## Namenskonflikte lösen
 
-Be sure to use unique names for the different elements in your project. If a particular element has the same name as another element of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
+Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrem Projekt einmalig sind. Hat ein Element denselben Namen wie ein anderes Element (beispielsweise ein Datenfeld und eine Variable mit demselben Namen Person), arbeitet 4D mit einer Prioritätenliste.
 
 4D identifiziert Namen in Prozeduren in folgender Reihenfolge:
 

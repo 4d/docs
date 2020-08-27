@@ -13,9 +13,9 @@ String ist der Oberbegriff für:
 Ein Stringformat steht zwischen geraden doppelten Anführungszeichen ("..."). Hier ein paar Beispiele für Stringformate:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"Datensätze hinzufügen"
+"Keine Datensätze gefunden."
+"Rechnung"
 ```
 
 Ein leerer String wird mit Anführungszeichen ohne etwas dazwischen angegeben ("").
@@ -31,7 +31,7 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 | \\\         | \ (Backslash - umgekehrter Schrägstrich) |
 | \\"          | " (Anführungszeichen)                     |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
+**Hinweis:** Das Zeichen \ wird unter Windows als Trenner in Pfadnamen verwendet. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
 
 ## String Operatoren
 
@@ -74,11 +74,11 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
       // and so on
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist nicht immer dasselbe wie die Sprache, die für das System definiert wurde.
 
 ### Joker Zeichen (@)
 
-The 4D language supports **@** as a wildcard character. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
+Die 4D Programmiersprache unterstützt **@** als Joker Zeichen. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
@@ -124,11 +124,11 @@ Der folgende Ausdruck wird korrekt interpretiert:
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Hinweis:** In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
 
-### Keywords
+### Schlüsselwörter
 
-Unlike other string comparisons, searching by keywords looks for "words" in "texts": words are considered both individually and as a whole. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.
+Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörter" in "Texten" nur im ganzen berücksichtigt. Der Operator** %** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. eine Vorsilbe. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Ein Apostroph, z. B. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Returns True
@@ -137,14 +137,14 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-> **Notes:** - 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+> **Hinweise:** - 4D verwendet die ICU library zum Vergleichen von Strings (mit den Operatoren <>=#) und Suchen von Schlüsselwörtern. Weitere Informationen zu den Regeln bei Schlüsselwörtern finden Sie unter: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In der japanischen Version verwendet 4D zum Suchen von Schlüsselwörtern anstatt ICU standardmäßig Mecab.
 
-## Character Reference Symbols
-The character reference symbols: [[...]]
+## Symbole für direkten Zeichenzugriff
+Mit den Symbolen [[...]]
 
-These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+können Sie sich auf ein einzelnes Zeichen innerhalb einer Zeichenkette beziehen. So können Sie in einem Feld bzw. einer Variablen vom Typ Text oder String einzelne Zeichen ansprechen.
 
-If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
+Diese Syntax auf der linken Seite des Zuweisungsoperators (:=) weist an der angegebenen Position in der Zeichenkette ein Zeichen zu. Beispiel: Ist vsName kein leerer String, setzt folgender Code das erste Zeichen von vsName in Großbuchstaben:
 
 ```4d
 If(vsName#"")
@@ -152,7 +152,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Beispiel:
+Diese Syntax mit dem gewünschten Zeichen innerhalb eines Ausdrucks gibt es als String mit einem Zeichen zurück. Beispiel:
 
 ```4d
 //The following example tests if the last character of vtText is an At sign "@"
@@ -170,13 +170,13 @@ Otherwise, if the character reference symbols appear within an expression, they 
  End if
 ```
 
-### Advanced note about invalid character reference
+### Bemerkung zu ungültigem Zeichenzugriff
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+Beim Einsatz der Symbole für direkten Zeichenzugriff müssen Sie vorhandene Zeichen im String auf dieselbe Weise wie vorhandene Elemente in einem Array ansprechen. Sprechen Sie beispielsweise das 20. Zeichen einer Textvariablen an, muss diese Variable auch mindestens 20 Zeichen enthalten. Ist das nicht der Fall,
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
+- verursacht das im interpretierten Modus keinen Syntaxfehler.
+- kann das im kompilierten Modus (ohne Optionen) zu einer Speicherverfälschung führen, z. B. wenn Sie ein Zeichen nach dem Ende eines String oder Textes schreiben.
+- kann das im kompilierten Modus mit aktivierter Option Bereichsprüfung einen Fehler auslösen. So löst der folgende Code:
 
 ```
 //Very bad and nasty thing to do, boo!
@@ -184,14 +184,14 @@ When you use the character reference symbols, you must address existing characte
  vsAnyText[[1]]:="A"
 ```
 
-will trigger the Runtime Error shown here:
+einen Runtime-Fehler aus:
 
 ![alt-text](assets/en/Concepts/Syntax_Error.en.png)
 
 ### Beispiel
 
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+Folgende Projektmethode schreibt das erste Zeichen jedes Worts im Text groß, der als Parameter übergeben wurde und gibt den Text mit großen Anfangsbuchstaben zurück:
 
 ```4d
   //Capitalize_text project method
@@ -210,12 +210,12 @@ The following project method capitalizes the first character of each word of the
  End if
 ```
 
-For example, the line:
+Die Zeile:
 
 ```4d
 ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
 ```
 
-displays the alert shown here:
+zeigt folgende Meldung:
 
 ![alt-text](assets/en/Concepts/Jane_doe.en.png)

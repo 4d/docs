@@ -566,7 +566,7 @@
         "title": "データ操作"
       },
       "ORDA/glossary": {
-        "title": "Glossary"
+        "title": "用語集"
       },
       "ORDA/ordaClasses": {
         "title": "データモデルクラス"
@@ -578,7 +578,7 @@
         "title": "A Quick Tour in ORDA"
       },
       "ORDA/datastores": {
-        "title": "Using a remote datastore"
+        "title": "リモートデータストアの利用"
       },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"
