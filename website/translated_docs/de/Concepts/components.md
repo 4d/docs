@@ -252,13 +252,13 @@ Daten aus der externen Datenbank auslesen:
 
 Komponenten können Ressourcen verwenden. Gemäß den Vorgaben zur Ressourcen-Verwaltung muss der Ordner Resources bei einer Komponente mit der Struktur von .4dbase (empfohlene Struktur) in diesen Ordner gelegt werden.
 
-Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
+Automatische Mechanismen greifen: Die Komponente lädt automatisch die XLIFF Dateien, die in ihrem Ordner Resources gefunden werden.
 
 In einem Host Projekt mit einer oder mehreren Komponenten haben jede Komponente sowie die Host Projekte ihren eigenen "Ressourcen String.” Ressourcen sind auf die verschiedenen Projekte verteilt: Sie können nicht von Komponente B oder dem Host Projekt aus auf die Ressourcen von Komponente A zugreifen.
 
-## On-line help for components
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. Die Vorgehensweise ist genauso wie für 4D Projekte:
+## Online Hilfe für Komponenten
+4D bietet Entwicklern die Möglichkeit, ihre Komponenten mit Online Hilfe zu versehen. Die Vorgehensweise ist genauso wie für 4D Projekte:
 
-- The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
-- The help file must be put next to the structure file of the component and have the same name as the structure file,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file. 
+- Die Hilfedatei für Komponenten muss die Endung .htm, .html oder nur für Windows .chm haben.
+- Die Hilfedatei muss neben der Strukturdatei der Komponente liegen und denselben Namen wie die Strukturdatei haben.
+- Diese Datei wird dann automatisch in das Menü Hilfe der Anwendung geladen. Sie hat den Namen Hilfe für..., gefolgt vom Namen der Hilfedatei. 
