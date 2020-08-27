@@ -163,11 +163,11 @@ Eine [Fehlerverwaltungsmethode](Concepts/error-handling.md), die über den Befeh
 ## Formulare verwenden
 
 - In einer Komponente lassen sich nur "Projektformulare" (d. h. sie sind keiner bestimmten Tabelle zugeordnet) verwenden. Eine Komponente kann alle Projektformulare des Matrix Projekts verwenden.
-- Eine Komponente kann Tabellenformulare des Host Projekts aufrufen. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+- Eine Komponente kann Tabellenformulare des Host Projekts aufrufen. Beachten Sie, dass Sie dann Zeiger anstelle von Tabellennamen zwischen eckigen Klammern [] verwenden müssen, um Formulare im Code der Komponente anzugeben.
 
-**Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
+**Hinweis:** Verwendet eine Komponente den Befehl `ADD RECORD`, wird das aktuelle Eingabeformular des Host Projekts angezeigt. Folglich hat die Komponente keinen Zugriff auf Variablen, die im Formular enthalten sind.
 
-- You can publish component forms as subforms in the host databases. This means that you can, more particularly, develop components offering graphic objects. For example, Widgets provided by 4D are based on the use of subforms in components.
+- Sie können Formulare von Komponenten als Unterformulare in Host Projekten veröffentlichen. Das bedeutet vorallem, dass Sie Komponenten mit grafischen Objekten entwickeln können. For example, Widgets provided by 4D are based on the use of subforms in components.
 
 ## Use of tables and fields
 
