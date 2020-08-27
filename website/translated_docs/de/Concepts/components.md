@@ -154,16 +154,16 @@ Die folgenden Befehle eignen sich nicht zur Verwendung in einer Komponenten, da 
 **Hinweise:**
 
 - Der Befehl `Current form table` gibt `Nil` zurück, wenn er in einem Projektformular aufgerufen wird. Folglich lässt er sich nicht in einer Komponente verwenden.
-- In einem Komponentenprojekt lassen sich keine Befehle zur Definition von SQL Daten, wie `CREATE TABLE`, `DROP TABLE`, etc., verwenden. However, they are supported with external databases (see `CREATE DATABASE` SQL command).
+- In einem Komponentenprojekt lassen sich keine Befehle zur Definition von SQL Daten, wie `CREATE TABLE`, `DROP TABLE`, etc., verwenden. Sie werden jedoch mit externen Anwendungen unterstützt (siehe SQL Befehl ` CREATE DATABASE`).
 
-## Error handling
+## Fehlerverwaltung
 
 Eine [Fehlerverwaltungsmethode](Concepts/error-handling.md), die über den Befehl `ON ERR CALL` eingerichtet wurde, gilt nur für die laufende Anwendung. Erzeugt eine Komponente einen Fehler, wird nicht die Fehlerverwaltungsmethode `ON ERR CALL` des Host Projekts aufgerufen, und umgekehrt.
 
-## Use of forms
+## Formulare verwenden
 
-- Only “project forms” (forms that are not associated with any specific table) can be used in a component. Eine Komponente kann alle Projektformulare des Matrix Projekts verwenden.
-- Eine Komponente kann Tabellenformulare des Host Projekts aufrufen. Note that in this case it is necessary to use pointers rather than table names between brackets [] to specify the forms in the code of the component.
+- In einer Komponente lassen sich nur "Projektformulare" (d. h. sie sind keiner bestimmten Tabelle zugeordnet) verwenden. Eine Komponente kann alle Projektformulare des Matrix Projekts verwenden.
+- Eine Komponente kann Tabellenformulare des Host Projekts aufrufen. Beachten Sie, dass Sie dann Zeiger anstelle von Tabellennamen zwischen eckigen Klammern [] verwenden müssen, um Formulare im Code der Komponente anzugeben.
 
 **Hinweis:** Verwendet eine Komponente den Befehl `ADD RECORD`, wird das aktuelle Eingabeformular des Host Projekts angezeigt. Consequently, if the form includes variables, the component will not have access to it.
 
