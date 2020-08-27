@@ -3,12 +3,12 @@ id: components
 title: Komponenten
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different applications. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications.
+Eine 4D Komponente besteht aus einer Reihe von 4D Methoden und Formularen mit einer oder mehreren Funktionalitäten, die sich in verschiedenen Anwendungen installieren lassen. Sie können z. B. eine 4D E-Mail Komponente entwickeln, die alle Aspekte von Senden, Empfangen und Speichern von E-Mails in 4D Anwendungen verwaltet.
 
 4D Komponenten werden direkt aus 4D erstellt und installiert. Komponenten werden ähnlich wie [ Plug-Ins](Concepts/plug-ins.md) verwaltet. Es gelten folgende Regeln:
 
 - Eine Komponente besteht aus einer gängigen Strukturdatei (kompiliert oder nicht) mit der Standardarchitektur oder in Form eines Pakets (siehe .4dbase Extension).
-- To install a component in an application project, you simply need to copy it into the "Components" folder of the project, at the same level as the Project folder.
+- Zur Installation in einem Anwendungsprojekt kopieren Sie einfach die Komponente in den Ordner "Components" des Projekts auf dieselbe Ebene wie den Projektordner.
 - Eine Komponente kann die meisten der 4D Elemente aufrufen: Projektmethoden, Projektformulare, Menüleisten, Auswahllisten, Bilder aus der Objektbibliothiek, usw. Sie kann keine Datenbankmethoden und Trigger aufrufen.
 - In 4D Komponenten können Sie weder Standardtabellen noch Datendateien verwenden. Eine Komponente kann jedoch Tabellen, Felder und Datendateien über Operationen externer Anwendungen erstellen bzw. verwenden. Dies sind separate 4D Anwendungen, in denen Sie mit SQL Befehlen arbeiten.
 
@@ -17,9 +17,9 @@ A 4D component is a set of 4D methods and forms representing one or more functio
 
 Zur Handhabung von Komponenten in 4D sind folgende Begriffe und Konzepte von Bedeutung:
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component. The matrix project is intended to be copied, compiled or not, into the Components folder of the project that will be using the component (host application project).
-- **Host Project**: Application project in which a component is installed and used.
-- **Component**: Matrix project, compiled or not, copied into the Components folder of the host application and whose contents are used in the host applications.
+- **Matrix Projekt**: 4D Projekt zum Entwickeln der Komponente. Das Matrix Projekt ist ein Standardprojekt ohne spezifische Attribute. Es bildet eine einzelne Komponente. Das Matrix Projekt wird kompiliert oder unkompiliert in den Ordner "Components" des Projekts kopiert, das die Komponente verwendet. Das ist das Host Anwendungsprojekt.
+- **Host Projekt**: Anwendungsprojekt, in dem eine Komponente installiert und verwendet wird.
+- **Komponente**: Matrix Projekt, kompiliert oder nicht, das in den Ordner "Components" der Host Anwendung kopiert wird und deren Inhalt in Host Anwendungen verwendet wird.
 
 It should be noted that a project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. Eine Komponente kann dagegen selbst keine untergeordneten Komponenten verwenden.
 
