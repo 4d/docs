@@ -108,7 +108,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 Der Name einer temporären Auswahl kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
 
-- Eine temporäre Prozessauswahl kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Eine temporäre **Prozess**auswahl kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
 - Der Name einer temporären **Interprozess**auswahl beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
@@ -120,7 +120,7 @@ USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
 
 ## Objektattribute
 
-You designate an object attribute (also called object property) by placing a point (".") between the name of the object and the name of the attribute. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
+Ein Objektattribut (auch Objekteigenschaft genannt) definieren Sie durch Setzen eines Punktes (".") zwischen dem Namen des Objekts und dem Namen des Attributs. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
 
 Beispiele:
 ```4d
@@ -128,7 +128,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must comply with the ECMAScript specification). For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 
 ## Plug-In Befehle
