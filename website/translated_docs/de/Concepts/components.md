@@ -177,11 +177,11 @@ Eine Komponente kann keine Tabellen und Felder verwenden, die in der 4D Struktur
 
 Nachfolgender Code ist in einer Komponente enthalten, er führt drei Grundaktionen mit einer externen Datenbank aus:
 
-- creates the external database if it does not already exist,
-- adds data to the external database,
-- reads data from the external database.
+- Er erstellt die externe Datenbank, wenn sie noch nicht existiert,
+- Er fügt in der externen Datenbank Daten hinzu,
+- Er liest Daten aus der externen Datenbank aus.
 
-Creating the external database:
+Externe Datenbank erstellen:
 
 ```4d
 <>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
@@ -204,7 +204,7 @@ Creating the external database:
  End SQL
 ```
 
-Writing in the external database:
+In der externen Datenbank schreiben
 
 ```4d
  $Ptr_1:=$2 // retrieves data from the host project through pointers
@@ -226,7 +226,7 @@ Writing in the external database:
  End SQL
 ```
 
-Reading from an external database:
+Daten aus der externen Datenbank auslesen:
 
 ```4d
  $Ptr_1:=$2 // accesses data of the host project through pointers
@@ -248,9 +248,9 @@ Reading from an external database:
  End SQL
 ```
 
-## Use of resources
+## Ressourcen verwenden
 
-Components can use resources. In conformity with the resource management principle, if the component is of the .4dbase architecture (recommended architecture), the Resources folder must be placed inside this folder.
+Komponenten können Ressourcen verwenden. Gemäß den Vorgaben zur Ressourcen-Verwaltung muss der Ordner Resources bei einer Komponente mit der Struktur von .4dbase (empfohlene Struktur) in diesen Ordner gelegt werden.
 
 Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
 
