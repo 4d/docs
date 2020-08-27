@@ -12,9 +12,9 @@ Die Fehlerverwaltung erfüllt zwei Hauptanforderungen:
 > Es wird dringend empfohlen, auf 4D Server eine Fehlerverwaltungsmethode für den gesamten auf dem Server laufenden Code zu installieren. Denn solch eine Methode kann vermeiden, dass unerwartete Dialogfenster auf dem Serverrechner erscheinen, und außerdem Fehler in einer speziellen Datei für weitere Analysen protokollieren.
 
 
-## Error or status
+## Fehler oder Status
 
-Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
+Viele Class Functions von 4D, wie `entity.save()` oder `transporter.send()`, geben ein Objekt *status* zurück. Dieses Objekt dient zum Speichern "vorhersehbarer" Fehler in der Runtime-Umgebung, z.B. ungültiges Kennwort, gesperrte Entity, etc., welche die Ausführung des Programms nicht stoppen. Diese Art von Fehlern lässt sich über regulären Code verwalten.
 
 Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method.
 
