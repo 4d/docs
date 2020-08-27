@@ -128,7 +128,7 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie oben unter (#zusätzliche-Regeln-für-Namen-von-Objekteigenschaften-und-ORDA) und [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 
 ## Plug-In Befehle
@@ -142,12 +142,12 @@ $error:=SMTP_From($smtp_id;"henry@gmail.com")
 
 ## Prozesse
 
-A process name can contain up to 255 characters, not including scope character.
+Der Name des Prozesses kann ohne Symbol für Reichweite bis zu 255 Zeichen lang sein.
 
-In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
+In der Einzelplatzversion oder auf der Client-Seite in einer Client/Server-Umgebung gibt es zwei Reichweiten für Prozesse: **global** oder **lokal**.
 
-- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $).
-- You denote a **local** process if the name of the process is preceded by a dollar ($) sign.
+- Einen **globalen** Prozess kennzeichnen Sie durch einen String Ausdruck, der seinen Namen darstellt (Er darf nicht mit dem Dollarzeichen $ beginnen).
+- Einen **lokalen** Prozesses kennzeichnen Sie mit dem Dollarzeichen $.
 
 Beispiele:
 ```4d
@@ -171,7 +171,7 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. Öffnen Sie dann ein Projekt nach einigen Monaten für eine Wartung, erkennen Sie im Explorer Fenster bereits an der Schreibweise des Namens, ob die Methode ein Ergebnis zurückgibt.
 
 **Hinweis:** Zum Aufrufen einer Methode tippen Sie einfach ihren Namen ein. Einige in 4D integrierte Befehle wie z. B. `ON EVENT CALL`, sowie alle Plug-In Befehle erwarten dagegen den Namen der Methode als String, wenn ein Parameter für die Methode übergeben wurde. Beispiele:
 ```4d
@@ -209,9 +209,9 @@ vtClone:=Dump("is";"the";"it")
 
 ## Mengen
 
-A set name can contain up to 255 characters, not including scope character()s).
+Der Name einer Menge kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
 
-- You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $).
+- Eine **Prozess**menge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
 - You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 - On 4D Server, the name of a **client** set is preceded by the dollar sign ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
 
