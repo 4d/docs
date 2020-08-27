@@ -33,14 +33,14 @@ Standardmäßig sind alle Projektmethoden eines Matrix Projekts, das als Kompone
 
 Um die Projektmethoden einer Komponente wirksam zu schützen, kompilieren Sie einfach das Matrix Projekt und liefern es als .4dz-Datei. Wird ein kompiliertes Matrix Projekt als Komponente installiert, gilt folgendes:
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. Ihr Inhalt erscheint jedoch weder in der Vorschau noch im Debugger.
-- The other project methods of the matrix project will never appear.
+- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt erscheint jedoch weder in der Vorschau noch im Debugger.
+- Die anderen Projektmethoden des Matrix Projekts erscheinen nie.
 
 
 ## Projektmethoden gemeinsam nutzen
-All the project methods of a matrix project are by definition included in the component (the project is the component), which means that they can be called and executed by the component.
+Per Definition werden alle Projektmethoden in die Komponente integriert (das Projekt ist die Komponente), d. h. die Komponente kann sie aufrufen und ausführen.
 
-On the other hand, by default these project methods will not be visible, nor can they be called in the host projects. In the matrix project, you must explicitly designate the methods that you want to share with the host project. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host database). These methods form **entry points** in the component.
+Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in Host Projekten auch nicht aufrufen. Im Matrix Projekt müssen Sie die Methoden, die Sie mit dem Host Projekt teilen wollen, explizit angeben. These project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host database). These methods form **entry points** in the component.
 
 **Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate the project methods of the host project that you want to make accessible to the components.
 
