@@ -26,10 +26,10 @@ Beachten Sie, dass ein Projekt sowohl vom Typ “Matrix” als auch “Host” s
 
 ### Komponenten durch Kompilieren schützen
 
-Standardmäßig sind alle Projektmethoden einer Matrix Datenbank, die als Komponente installiert ist, potentiell von der Host Datenbank aus sichtbar. Das bedeutet im einzelnen:
+Standardmäßig sind alle Projektmethoden eines Matrix Projekts, das als Komponente installiert ist, potentiell vom Host Projekt aus sichtbar. Das bedeutet im einzelnen:
 
-- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden der Host Datenbank aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. Sie lassen sich jedoch im Methodeneditor weder öffnen, noch verändern.
-- Andere Projektmethoden der Matrix Datenbank erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger der Host Datenbank sichtbar.
+- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. Sie lassen sich jedoch im Methodeneditor weder öffnen, noch verändern.
+- Andere Projektmethoden des Matrix Projekts erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger des Host Projekts sichtbar.
 
 Um Projektmethoden einer Komponente effektiv zu schützen, müssen Sie lediglich die Matrix Datenbank kompilieren und in Form einer .4dc Datei (kompilierte Datenbank, die keinen interpretierten Code enthält) zur Verfügung stellen. Wird eine kompilierte Matrix Datenbank dann als Komponente installiert, gilt folgendes:
 
@@ -40,9 +40,9 @@ Um Projektmethoden einer Komponente effektiv zu schützen, müssen Sie lediglich
 ## Projektmethoden gemeinsam nutzen
 Per Definition werden alle Projektmethoden in die Komponente integriert (die Datenbank ist die Komponente), d. h. die Komponente kann sie aufrufen und ausführen.
 
-Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in der Host Datenbank auch nicht aufrufen. In der Matrix Datenbank müssen Sie die Methoden, die Sie mit der Host Datenbank teilen wollen, explizit freigeben. Diese Projektmethoden sind dann im Explorer auf der Seite Methoden sichtbar und lassen sich im Code der Host Datenbank aufrufen. Sie lassen sich jedoch im Methodeneditor der Host Datenbank nicht verändern. These methods form **entry points** in the component.
+Andererseits sind diese Projektmethoden standardmäßig nicht sichtbar und lassen sich in der Host Datenbank auch nicht aufrufen. In der Matrix Datenbank müssen Sie die Methoden, die Sie mit der Host Datenbank teilen wollen, explizit freigeben. Diese Projektmethoden sind dann im Explorer auf der Seite Methoden sichtbar und lassen sich im Code der Host Datenbank aufrufen. Sie lassen sich jedoch im Methodeneditor der Host Datenbank nicht verändern. Diese Methoden sind die **Schnittstelle** zum Aufrufen der Komponente.
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihrer Host Datenbank zugreifen kann. Dazu müssen Sie die Projektmethode explizit der Host Datenbank zuweisen, die Sie für die Komponente zugänglich machen wollen.
+**Hinweis:** Aus Sicherheitsgründen kann die Komponente standardmäßig keine Projektmethoden ausführen, die zum Host Projekt gehören. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihrer Host Datenbank zugreifen kann. Dazu müssen Sie die Projektmethode explizit der Host Datenbank zuweisen, die Sie für die Komponente zugänglich machen wollen.
 
 ![](assets/en/Concepts/pict516563.en.png)
 
