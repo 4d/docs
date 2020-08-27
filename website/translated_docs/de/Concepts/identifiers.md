@@ -35,11 +35,11 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 ## Arrays
 
-Ein Array kennzeichnen Sie durch seinen Namen. Das ist der Name, den Sie beim Erstellen des Array übergeben haben, z. B. ARRAY LONGINT. Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:
+Ein Array kennzeichnen Sie durch seinen Namen. Das ist der Name, den Sie beim Erstellen des Array übergeben haben, z. B. ARRAY LONGINT. Arrays sind Variablen. Der Name eines Array kann, wie bei Variablen, bis zu 31 Zeichen lang sein, ohne die Symbole für Reichweite. Es gibt drei Arten von Arrays:
 
-- The name of a **local** array is preceded by the dollar sign ($).
-- The name of a **process** array cannot start with the <> symbols nor the dollar sign $).
-- The name of an **interprocess** array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Der Name eines **lokalen** Array beginnt mit dem Dollarzeichen ($)
+- Der Name eines **Prozess** Array darf weder mit den Symbolen <> noch mit dem Dollarzeichen ($) starten.
+- Der Name eines **Interprozess**-Array beginnt mit den Symbolen <> — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
 ```4d
@@ -106,10 +106,10 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## Temporäre Auswahlen
 
-A named selection name can contain up to 255 characters, not including scope character(s).
+Der Name einer temporären Auswahl kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
 
-- You denote a **process** named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $).
-- You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Eine temporäre Prozessauswahl kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Der Name einer temporären **Interprozess**auswahl beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
 ```4d
