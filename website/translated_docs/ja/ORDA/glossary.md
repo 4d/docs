@@ -28,11 +28,11 @@ title: 用語集
 
 ## クラス関数
 
-データストア、データクラス、エンティティセレクション、エンティティなどの ORDA オブジェクトは、オブジェクトのクラスを定義します。 They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
+データストア、データクラス、エンティティセレクション、エンティティなどの ORDA オブジェクトは、オブジェクトのクラスを定義します。 これらのクラスには、オブジェクトを直接操作するための専用の関数が提供されており、これをクラス関数と呼びます。 この関数を使用するには、オブジェクトのインスタンスに対して呼び出します。
 
-These methods are also called **member functions**, or **member methods**.
+これらは **メンバー関数** または **メンバーメソッド** とも呼ばれます。
 
-For example, the `query()` class function is a function of dataclasses. If you have stored a dataclass object in the `$myClass` variable, you can write:
+たとえば、`query()` クラス関数はデータクラスの関数です。 `$myClass` 変数にデータクラスオブジェクトを格納している場合、次のように書くことができます:
 
 ```code4d
 $myClass.query("name = smith")
