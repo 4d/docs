@@ -254,10 +254,10 @@ Components can use resources. In conformity with the resource management princip
 
 Automatic mechanisms are operational: the XLIFF files found in the Resources folder of a component will be loaded by this component.
 
-In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
+In einem Host Projekt mit einer oder mehreren Komponenten haben jede Komponente sowie die Host Projekte ihren eigenen "Ressourcen String.” Ressourcen sind auf die verschiedenen Projekte verteilt: Sie können nicht von Komponente B oder dem Host Projekt aus auf die Ressourcen von Komponente A zugreifen.
 
 ## On-line help for components
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D projects:
+A specific mechanism has been implemented in order to allow developers to add on-line help to their components. Die Vorgehensweise ist genauso wie für 4D Projekte:
 
 - The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
 - The help file must be put next to the structure file of the component and have the same name as the structure file,
