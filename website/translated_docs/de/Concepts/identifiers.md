@@ -209,7 +209,7 @@ vtClone:=Dump("is";"the";"it")
 
 ## Mengen
 
-Der Name einer Menge kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
+Ein Mengenname kann ohne Symbol für Reichweite bis zu 255 Zeichen lang sein.
 
 - Eine **Prozess**menge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
 - Eine **Interprozess**menge kennzeichnen Sie mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
@@ -240,11 +240,11 @@ ADD RECORD([Letters])
 
 ## Variablen
 
-Der Name einer Variablen kann ohne die Symbole für Reichweite bis zu 31 Zeichen lang sein.
+Ein Variablenname kann ohne Symbol für Reichweite bis zu 31 Zeichen lang sein.
 
-- You designate a **local** variable by placing a dollar sign ($) before the variable name.
-- You designate a **process** variable by using its name (which cannot start with the <> symbols nor the dollar sign $)
-- You designate an **interprocess** variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Eine **lokale** Variable kennzeichnen Sie durch das vorangestellte Dollarzeichen ($).
+- Eine **Prozess**variable kennzeichnen Sie durch ihren Namen (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Eine **Interprozess**variable kennzeichnen Sie mit den vorangestellten Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
 
@@ -257,7 +257,7 @@ If(bValidate=1) //process variable
 
 
 
-## Summary of Identifiers
+## Übersicht der Namenskonventionen
 
 Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 
@@ -286,7 +286,7 @@ Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 
 ## Namenskonflikte lösen
 
-Be sure to use unique names for the different elements in your project. If a particular element has the same name as another element of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
+Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrem Projekt einmalig sind. Hat ein Element denselben Namen wie ein anderes Element (beispielsweise ein Datenfeld und eine Variable mit demselben Namen Person), arbeitet 4D mit einer Prioritätenliste.
 
 4D identifiziert Namen in Prozeduren in folgender Reihenfolge:
 
