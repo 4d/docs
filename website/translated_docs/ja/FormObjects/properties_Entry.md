@@ -194,7 +194,7 @@ By default, the object uses the current keyboard layout.
 
 This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
 
-#### Automatic
+#### 自動
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
 - In multiline inputs, 4D carries out automatic line returns:  
   ![](assets/en/FormObjects/multilineAuto.png)
