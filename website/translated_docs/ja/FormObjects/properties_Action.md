@@ -157,13 +157,13 @@ title: 動作
 ---
 ## ソート可
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. このオプションはデフォルトで選択されています。 Picture type arrays (columns) cannot be sorted using this feature.
+[リストボックス](listbox_overview.md) ヘッダーのクリックによる列データの並べ替えを有効にします。 このオプションはデフォルトで選択されています。 ピクチャー型配列 (列) はこのメカニズムではソートできません。
 
-In list boxes based on a selection of records, the standard sort function is available only:
-*   When the data source is *Current Selection*,
-*   With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
+レコードセレクションに基づくリストボックスの場合、標準のソート機能は以下の場合のみ有効です:
+*   データソースが *カレントセレクション* であり、
+*   その列にフィールドが割り当てられていること (文字、数値、日付、時間、およびブール型)。
 
-In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
+他の場合 (命名セレクションに基づくリストボックスや、式が割り当てられた列)、標準のソート機能は動作しません。 標準のリストボックスソートは、データベースのカレントセレクションの順番を変更します。 しかし、ハイライトされたレコードとカレントレコードは変更されません。 標準の並び替えは、リストボックスのすべての列 (式が割り当てられた列も含む) を同期します。
 
 #### JSON 文法
 
