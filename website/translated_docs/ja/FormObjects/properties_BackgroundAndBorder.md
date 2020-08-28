@@ -46,16 +46,16 @@ title: 背景色と境界線
 
 `セレクションとコレクション型リストボックス`
 
-リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
+リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](https://livedoc.4d.com/--18/-/OBJECT-SET-RGB-COLORS.301-4505456.ja.html) コマンドの説明を参照ください。
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
-> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk background color expression` 定数を指定して設定することもできます。
+> コレクション/エンティティセレクション型リストボックスでは、このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値                                     |
-| ------------- | ------ | ----------------------------------------- |
-| rowFillSource | string | An expression returning a RGB color value |
+| 名             | データタイプ | とりうる値       |
+| ------------- | ------ | ----------- |
+| rowFillSource | string | RGBカラー値を返す式 |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
@@ -68,7 +68,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 ---
 ## 境界線スタイル
 
-Allows setting a standard style for the object border.
+リストボックスの境界線のスタイルを設定します。
 
 #### JSON 文法
 
@@ -78,7 +78,7 @@ Allows setting a standard style for the object border.
 
 #### 対象オブジェクト
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
 
 
 
