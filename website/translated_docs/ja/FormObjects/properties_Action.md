@@ -139,7 +139,7 @@ title: 動作
 ---
 ## 複数選択可
 
-Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
+[階層リスト](list_overview.md) において、複数項目の選択を許可します。
 
 #### JSON 文法
 
