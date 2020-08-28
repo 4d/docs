@@ -397,9 +397,9 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 - **ページ**: もっとも完全といえるビューモードで、ページの枠、余白、改ページ、ヘッダー & フッターなどを含みます。
 - **下書き**: 基本のドキュメントプロパティを含む下書きモードです。
-- **埋め込み**: 埋め込みエリアに適切なビューモードです。余白や、ヘッダー & フッター、ページフレームなどは表示されません。 This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **埋め込み**: 埋め込みエリアに適切なビューモードです。余白や、ヘッダー & フッター、ページフレームなどは表示されません。 このモードは Web に似た出力をするのに使用することもできます (この場合には、[解像度を 96dpi](#解像度) に設定のうえ、[HTML WYSIWYG 表示](#HTML-WYSIWYG-表示) オプションを有効にします)。
 
-> The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
+> ビューモードプロパティは画面上のレンダリングにのみ使用されます。 印刷設定については、専用のレンダリングルールが自動的に適用されます。
 
 
 
@@ -417,7 +417,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 ---
 ## 拡大
 
-Sets the zoom percentage for displaying 4D Write Pro area contents.
+4D Write Pro エリアのコンテンツ表示に使用するズーム率を設定します。
 
 
 #### JSON 文法
