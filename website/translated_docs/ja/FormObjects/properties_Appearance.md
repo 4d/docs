@@ -310,7 +310,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showVerticalRuler|boolean|true (default), false|
+ showVerticalRuler|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
@@ -320,9 +320,9 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 ---
 ## タブコントロールの位置
 
-You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
+フォーム上のタブコントロールの位置を指定することができます。 このプロパティにはすべてのプラットフォームからアクセスできますが、macOS 上でのみ動作します。 タブコントロールは上 (標準)、または下に配置することができます。
 
-When tab controls with a custom direction are displayed under Windows, they automatically return to the standard direction (top).
+位置がカスタマイズされたタブコントロールを Windows で表示すると、自動的に標準の位置 (上) に戻されます。
 
 #### JSON 文法
 
@@ -333,20 +333,20 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### 対象オブジェクト
 
-[Tab Control](tabControl.md)
+[タブコントロール](tabControl.md)
 
 
 ---
 ## ユーザーインターフェース
 
-You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
+4D View Pro エリアにインターフェースを追加することで、エンドユーザーが基本的な編集とデータ操作をおこなえるようになります。 4D では 2種類のインターフェース (**リボン** と **ツールバー**) を提供しており、そのどちらかを選ぶことができます。
 
 #### JSON 文法
 
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- userInterface|text|"none" (default), "ribbon", "toolbar" |
+ userInterface|text|"none" (デフォルト), "ribbon", "toolbar" |
 
 #### 対象オブジェクト
 
@@ -355,25 +355,25 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### 参照
 
-[4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[4D View Pro リファレンスガイド](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 ---
 ## 縦スクロールバー
 
-An interface tool allowing the user to move the viewing area up and down.
+表示エリアを上下に移動できるようにするインターフェースツールです。
 
 使用可能な値:
 
-| プロパティリスト | JSON 値      | 説明                                                                                                                                              |
-| -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。                                                                         |
-| ×        | "hidden"    | スクロールバーは表示されません。                                                                                                                                |
-| 自動       | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame) |
+| プロパティリスト | JSON 値      | 説明                                                                      |
+| -------- | ----------- | ----------------------------------------------------------------------- |
+| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
+| ×        | "hidden"    | スクロールバーは表示されません。                                                        |
+| 自動       | "automatic" | スクロールバーは必要なときに表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより大きい場合には表示されます。      |
 
 > ピクチャー型のオブジェクトは、表示フォーマットが "トランケート (中央合わせなし)" に設定されているときに、スクロールバーを持つことができます。
 
 
-> If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
+> テキスト入力オブジェクトにスクロールバーがない場合、矢印キーを使用してスクロールできます。
 
 
 #### JSON 文法
@@ -388,16 +388,16 @@ An interface tool allowing the user to move the viewing area up and down.
 
 #### 参照
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[横スクロールバー](#horizontal-scroll-bar)
 
 ---
 ## ビューモード
 
-Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
+フォームエリア内の 4D Write Pro ドキュメントの表示モードを設定します。 次の値が提供されています:
 
-- **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
-- **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **ページ**: もっとも完全といえるビューモードで、ページの枠、余白、改ページ、ヘッダー & フッターなどを含みます。
+- **下書き**: 基本のドキュメントプロパティを含む下書きモードです。
+- **埋め込み**: 埋め込みエリアに適切なビューモードです。余白や、ヘッダー & フッター、ページフレームなどは表示されません。 This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
 
 > The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
 
