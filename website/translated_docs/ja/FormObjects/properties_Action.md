@@ -120,7 +120,7 @@ title: 動作
 ## 行の移動可
 `配列型リストボックス`
 
-ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 [セレクション型のリストボックス](listbox_overview.md#セレクションリストボックス) および [階層リストボックス](properties_Hierarchy.md#階層リストボックス) では、このオプションは提供されていません。
 
 #### JSON 文法
 
