@@ -54,13 +54,13 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 ---
 ## セレクションハイライトを非表示
-`Selection type list boxes`
+`セレクション型リストボックス`
 
-This property is used to disable the selection highlight in list boxes.
+リストボックスのセレクションハイライトを非表示にします。
 
-When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+このオプションが有効化されていると、リストボックスにおける行選択を可視化するセレクションハイライトが非表示になります。 ハイライトが非表示になっていても選択行は引き続き機能的に有効です。しかしながら、画面上では選択状態が明示されなくなるため、[プログラムによって選択行を可視化](listbox_overview.md#選択行の見た目のカスタマイズ) する必要があります。
 
-By default, this option is not enabled.
+デフォルトでは、このオプションは有効化されていません。
 
 
 #### JSON 文法
