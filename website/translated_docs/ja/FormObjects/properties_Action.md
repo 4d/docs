@@ -118,9 +118,9 @@ title: 動作
 
 ---
 ## 行の移動可
-`Array type list boxes`
+`配列型リストボックス`
 
-Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 [セレクション型のリストボックス](listbox_overview.md#セレクションリストボックス) および [階層リストボックス](properties_Hierarchy.md#階層リストボックス) では、このオプションは提供されていません。
 
 #### JSON 文法
 
@@ -157,7 +157,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 ---
 ## ソート可
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
+Allows sorting column data by clicking a [listbox](listbox_overview.md) header. このオプションはデフォルトで選択されています。 Picture type arrays (columns) cannot be sorted using this feature.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 *   When the data source is *Current Selection*,
