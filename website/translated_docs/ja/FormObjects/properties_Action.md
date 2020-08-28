@@ -67,7 +67,7 @@ title: 動作
 
 ---
 ## オブジェクトメソッド実行
-When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
+このオプションを選択した場合、ユーザーがインジケーターの値を変更すると *同時に* `On Data Change` イベントが生成され、オブジェクトメソッドが実行されます。 デフォルトでは、*変更後に* メソッドが実行されます。
 
 #### JSON 文法
 
@@ -77,7 +77,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### 対象オブジェクト
 
-[Progress bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 
 
@@ -87,7 +87,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 ---
 ## メソッド
 
-Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+オブジェクトに関連づけられたメソッドへの参照。 オブジェクトメソッドは通常、フォームが表示または印刷されている間、オブジェクトを "管理" します。 オブジェクトメソッドは呼び出す必要がありません。オブジェクトメソッドが関連づけられているオブジェクトに関わるイベントが発生した場合、4D は自動的にオブジェクトメソッドを呼び出します。
 
 Several types of method references are supported:
 
