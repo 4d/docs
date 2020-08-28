@@ -173,7 +173,7 @@ Designates the thickness of a line.
 ---
 ## 行背景色配列
 
-`Array type list boxes`
+`配列型リストボックス`
 
 The name of an array to apply a custom background color to each row of the list box or column.
 
