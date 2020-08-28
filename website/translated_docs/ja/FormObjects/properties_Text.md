@@ -644,7 +644,7 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは <a href="https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html">SET RGB COLORS</a> テーマの定数を使用することができます。 If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+  The name of a Longint array must be used. 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは <a href="https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html">SET RGB COLORS</a> テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 </p>
 
 
