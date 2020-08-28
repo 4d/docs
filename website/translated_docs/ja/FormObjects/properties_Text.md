@@ -279,7 +279,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 
 
@@ -692,7 +692,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md">リストボックス</a> - <a href="listbox_overview.md#リストボックス列">リストボックス列</a>
 </p>
 
 
@@ -752,7 +752,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      The name of a longint array.
+      倍長整数型配列の名前
     </td>
   </tr>
 </table>
