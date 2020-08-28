@@ -93,7 +93,7 @@ title: 動作
 
 - 標準のオブジェクトメソッドファイルパス:   
   `ObjectMethods/objectName.4dm`  
-  (`objectName` には実際の [オブジェクト名](properties_Object.md#オブジェクト名) が入ります)。 このタイプの参照は、当該メソッドファイルがデフォルトの場所 ("sources/forms/*formName*/ObjectMethods/") にあることを示します。 In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+  (`objectName` には実際の [オブジェクト名](properties_Object.md#オブジェクト名) が入ります)。 このタイプの参照は、当該メソッドファイルがデフォルトの場所 ("sources/forms/*formName*/ObjectMethods/") にあることを示します。 この場合、エディター上でフォームオブジェクトに対して操作 (名称変更、複製、コピー/ペーストなど) がおこなわれると、4D はこれらの変更を自動的にオブジェクトメソッドに反映させます。
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
