@@ -85,17 +85,17 @@ title: 背景色と境界線
 ---
 ## 点線タイプ
 
-Describes dotted line type as a sequence of black and white points.
+点線のタイプを、点と白のパターンにより指定します。
 
 #### JSON 文法
 
-| 名               | データタイプ                 | とりうる値                                                                    |
-| --------------- | ---------------------- | ------------------------------------------------------------------------ |
-| strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| 名               | データタイプ     | とりうる値                                              |
+| --------------- | ---------- | -------------------------------------------------- |
+| strokeDashArray | 数値配列または文字列 | 例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
 
 #### 対象オブジェクト
 
-[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[四角](shapes_overview.md#四角) - [楕円](shapes_overview.md#楕円) - [線](shapes_overview.md#線)
 
 
 
@@ -103,11 +103,11 @@ Describes dotted line type as a sequence of black and white points.
 ---
 ## 追加の空白の行を非表示
 
-Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
+リストボックスオブジェクト下部に追加される余分な空白行の表示を管理します。 デフォルトで、4D は空のエリアを埋めるためにこのような行を追加します:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
+このオプションをチェックすると、これらの空白行を除去することができます。 リストボックスオブジェクトの下部は空のままになります:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
@@ -127,21 +127,29 @@ You can remove these empty rows by selecting this option. The bottom of the list
 ---
 ## 線カラー
 
-Designates the color of the object's lines. The color can be specified by:
+オブジェクトの線の色を指定します。 カラーは次の方法で指定できます:
 
-* a color name - like "red"
-* a HEX value - like "#ff0000"
-* an RGB value - like "rgb(255,0,0)"
+* カラーネーム - 例: "red"
+* 16進数値 - 例: "#ff0000"
+* RGB値 - 例: "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+このプロパティは
+OBJECT SET RGB COLORS** コマンドによって設定することができます。</p> 
+
+
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                     |
-| ------ | ------ | ----------------------------------------- |
-| stroke | string | any css value, "transparent", "automatic" |
+| 名      | データタイプ | とりうる値                                |
+| ------ | ------ | ------------------------------------ |
+| stroke | string | 任意の css値; "transparent"; "automatic" |
+
+
+
 
 > This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
+
+
 
 #### 対象オブジェクト
 
@@ -149,10 +157,16 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 
 
+
+
 ---
+
+
 ## 線幅
 
 Designates the thickness of a line.
+
+
 
 #### JSON 文法
 
@@ -160,6 +174,9 @@ Designates the thickness of a line.
 | ----------- | ------ | ----------------------------------------------------------------- |
 | strokeWidth | number | 0 for smallest width on a printed form, or any integer value < 20 |
 
+
+
+
 #### 対象オブジェクト
 
 [Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
@@ -170,7 +187,11 @@ Designates the thickness of a line.
 
 
 
+
+
 ---
+
+
 ## 行背景色配列
 
 `配列型リストボックス`
@@ -181,13 +202,19 @@ The name of a Longint array must be entered. Each element of this array correspo
 
 For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
 
+
+
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // orange
  <>_BgndColors{$i}:=-255 // default value
 ```
+
+
 ![](assets/en/FormObjects/listbox_styles1.png)
 
 Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+
+
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
@@ -195,9 +222,13 @@ Next you want to color the cells with negative values in dark orange. To do this
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
 ```
+
+
 ![](assets/en/FormObjects/listbox_styles2.png)
 
 You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+
+
 
 
 #### JSON 文法
@@ -206,17 +237,27 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 | ------------- | ------ | ---------------------------- |
 | rowFillSource | string | The name of a longint array. |
 
+
+
+
 #### 対象オブジェクト
+
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
 
 
+
+
 ---
+
+
 ## 透過
 
 Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
+
+
 
 #### JSON 文法
 
@@ -224,8 +265,15 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 | ---- | ------ | ------------- |
 | fill | text   | "transparent" |
 
+
+
+
 #### 対象オブジェクト
+
 [リストボックス](listbox_overview.md#overview)
 
+
+
 #### 参照
+
 [背景色/塗りカラー](#background-color-fill-color)
