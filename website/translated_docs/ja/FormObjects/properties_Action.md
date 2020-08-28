@@ -97,30 +97,30 @@ title: 動作
 
 - 拡張子を省いた既存のプロジェクトメソッド名: `myMethod`。この場合、フォームオブジェクトに対して操作がおこなわれても、4D はそれらの変更を自動反映しません。
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `ObjectMethods/objectName.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- .4dm 拡張子を含むカスタムのメソッドファイルパス:   
+  `ObjectMethods/objectName.4dm`。 ファイルシステムも使用できます:  
+  `/RESOURCES/Buttons/bOK.4dm`。 この場合、フォームオブジェクトに対して操作がおこなわれても、4D はそれらの変更を自動反映しません。
 
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                                              |
-| ------ | ------ | ------------------------------------------------------------------ |
-| method | text   | Object method standard or custom file path, or project method name |
+| 名      | データタイプ | とりうる値                                      |
+| ------ | ------ | ------------------------------------------ |
+| method | text   | オブジェクトメソッドの標準またはカスタムのファイルパス、またはプロジェクトメソッド名 |
 
 
 #### 対象オブジェクト
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [Web エリア](webArea_overview.md)
 
 
 
 
 ---
 ## 行の移動可
-`Array type list boxes`
+`配列型リストボックス`
 
-Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
 
 #### JSON 文法
 
@@ -157,7 +157,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 ---
 ## ソート可
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
+Allows sorting column data by clicking a [listbox](listbox_overview.md) header. このオプションはデフォルトで選択されています。 Picture type arrays (columns) cannot be sorted using this feature.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 *   When the data source is *Current Selection*,
