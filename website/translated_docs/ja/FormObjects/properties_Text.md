@@ -370,7 +370,7 @@ $0:=Form.meta
 This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
 
 <p spaces-before="0">
-  By default, this option is not enabled.
+  デフォルトでは、このオプションは有効化されていません。
 </p>
 
 
