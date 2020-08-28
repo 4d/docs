@@ -181,17 +181,17 @@ title: 動作
 
 ---
 ## 標準アクション
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
+アクティブオブジェクトにより実行される典型的な処理 (*例*: レコードの入力・取り消し・削除、レコード間の移動、マルチページフォームでのページ間の移動、など) は、4D より標準アクションとして提供されています。 詳細な情報に関しては、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) の章を参照ください。
 
-You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed.
+フォームオブジェクトには、標準アクションとメソッドの両方を割り当てることができます。 この場合、標準アクションは通常、メソッドの後に実行されます。また、4D はこのアクションを使用して、カレントコンテキストに応じてオブジェクトを有効化/無効化します フォームオブジェクトが無効化されていると、関連づけられたメソッドは実行されません。
 
-You can also set this property using the `OBJECT SET ACTION` command.
+このプロパティは `OBJECT SET ACTION` コマンドによって設定することができます。
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                                                                                            |
-| ------ | ------ | ---------------------------------------------------------------------------------------------------------------- |
-| action | string | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| 名      | データタイプ | とりうる値                                                                              |
+| ------ | ------ | ---------------------------------------------------------------------------------- |
+| action | string | 有効な [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) |
 
 #### 対象オブジェクト
 
