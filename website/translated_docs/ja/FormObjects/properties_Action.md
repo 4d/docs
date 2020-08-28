@@ -45,7 +45,7 @@ title: 動作
 
 - **カスタム**: このモードでは、オブジェクトに対しておこなわれたドロップ操作は、当該オブジェクトのコンテキストにおいて `On Drag Over` と `On Drop` フォームイベントを発生させます。 これを利用して、開発者はメソッドを用いてドロップアクションを管理しなければなりません。    
   つまり、カスタムモードにおいては、ドラッグ＆ドロップ操作のすべてが開発者により管理されます。 このモードでは、ドラッグ＆ドロップに基づいたあらゆるインターフェースを実装することができます。これにはデータの転送を必ずしも伴わないものも含まれ、ファイルを開くや計算をトリガーするなどの任意のアクションを実行することができます。 このモードは専用のプロパティ、イベント、`ペーストボード` テーマのコマンド等の組み合わせに基づいています。
-- **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
+- **自動**: このモードでは、4D は可能な限り自動で、オブジェクトにドロップされたテキストやピクチャー型データの挿入を管理します (データはオブジェクトにペーストされます)。 このモードでは、`On Drag Over` と `On Drop` フォームイベントは生成されません。 他方、ドロップ中の `On After Edit` とオブジェクトがフォーカスを失った時の `On Data Change` イベントは生成されます。
 
 詳細については *4Dランゲージリファレンス* マニュアルの [ドラッグ＆ドロップ](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.ja.html) を参照してください。
 
@@ -58,7 +58,7 @@ title: 動作
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [入力](input_overview.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [プラグインエリア](pluginArea_overview.md)
 
 
 #### 参照
@@ -67,7 +67,7 @@ title: 動作
 
 ---
 ## オブジェクトメソッド実行
-When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
+このオプションを選択した場合、ユーザーがインジケーターの値を変更すると *同時に* `On Data Change` イベントが生成され、オブジェクトメソッドが実行されます。 デフォルトでは、*変更後に* メソッドが実行されます。
 
 #### JSON 文法
 
@@ -77,7 +77,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### 対象オブジェクト
 
-[Progress bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 
 
@@ -87,7 +87,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 ---
 ## メソッド
 
-Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+オブジェクトに関連づけられたメソッド。 Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
 Several types of method references are supported:
 
