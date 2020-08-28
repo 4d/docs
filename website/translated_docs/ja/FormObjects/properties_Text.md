@@ -544,7 +544,7 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  <code>Array type list boxes</code>
+  <code>配列型リストボックス</code>
 </p>
 
 <p spaces-before="0">
@@ -607,7 +607,7 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  <code>Array type list boxes</code>
+  <code>配列型リストボックス</code>
 </p>
 
 <p spaces-before="0">
