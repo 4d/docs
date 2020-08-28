@@ -89,7 +89,7 @@ title: 動作
 
 オブジェクトに関連づけられたメソッドへの参照。 オブジェクトメソッドは通常、フォームが表示または印刷されている間、オブジェクトを "管理" します。 オブジェクトメソッドは呼び出す必要がありません。オブジェクトメソッドが関連づけられているオブジェクトに関わるイベントが発生した場合、4D は自動的にオブジェクトメソッドを呼び出します。
 
-Several types of method references are supported:
+メソッド参照にはいくつかのタイプが利用可能です:
 
 - a standard object method file path, i.e. that uses the following pattern:  
   `ObjectMethods/objectName.4dm`  
