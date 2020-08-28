@@ -147,13 +147,13 @@ OBJECT SET RGB COLORS** コマンドによって設定することができま�
 
 
 
-> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
+> このプロパティはテキスト系のオブジェクトでも利用可能です。この場合、このプロパティはフォントカラーおよびオブジェクトの線カラーの両方を指定します ([フォントカラー](properties_Text.md#フォントカラー) 参照)。
 
 
 
 #### 対象オブジェクト
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[線](shapes_overview.md#線) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角)
 
 
 
@@ -164,22 +164,22 @@ OBJECT SET RGB COLORS** コマンドによって設定することができま�
 
 ## 線幅
 
-Designates the thickness of a line.
+線の幅を指定します。
 
 
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                                             |
-| ----------- | ------ | ----------------------------------------------------------------- |
-| strokeWidth | number | 0 for smallest width on a printed form, or any integer value < 20 |
+| 名           | データタイプ | とりうる値                             |
+| ----------- | ------ | --------------------------------- |
+| strokeWidth | number | 印刷されるフォームにおける最小幅 0 から、整数値 < 20 まで |
 
 
 
 
 #### 対象オブジェクト
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[線](shapes_overview.md#線) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角)
 
 
 
