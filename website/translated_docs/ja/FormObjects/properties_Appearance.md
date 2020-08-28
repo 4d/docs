@@ -30,7 +30,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[通常ボタン](button_overview.md#通常) - [フラットボタン](button_overview.md#フラット)
 
 
 
@@ -38,7 +38,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 ---
 ## フォーカスの四角を隠す
 
-During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
+ランタイムにおいて、タブキーやシングルクリックによってフォーカスを得たフィールドや入力可能なエリアは、選択状態を示す四角で縁取りされます。 このプロパティを使用して、フォーカスの四角を非表示にできます。 特定のインターフェースにおいては、フォーカスの四角を非表示にすることが便利かもしれません。
 
 #### JSON 文法
 
@@ -48,7 +48,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [サブフォーム](subform_overview.md)
 
 
 
