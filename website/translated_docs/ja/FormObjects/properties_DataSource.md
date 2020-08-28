@@ -65,7 +65,7 @@ List of static values to use as labels for the tab control object.
 
 #### 対象オブジェクト
 
-[Tab Control](tabControl.md)
+[タブコントロール](tabControl.md)
 
 
 ---
