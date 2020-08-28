@@ -91,9 +91,9 @@ title: 動作
 
 メソッド参照にはいくつかのタイプが利用可能です:
 
-- a standard object method file path, i.e. that uses the following pattern:  
+- 標準のオブジェクトメソッドファイルパス:   
   `ObjectMethods/objectName.4dm`  
-  ... where `objectName` is the actual [object name](properties_Object.md#object-name). This type of reference indicates that the method file is located at the default location ("sources/forms/*formName*/ObjectMethods/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+  (`objectName` には実際の [オブジェクト名](properties_Object.md#オブジェクト名) が入ります)。 このタイプの参照は、当該メソッドファイルがデフォルトの場所 ("sources/forms/*formName*/ObjectMethods/") にあることを示します。 In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
