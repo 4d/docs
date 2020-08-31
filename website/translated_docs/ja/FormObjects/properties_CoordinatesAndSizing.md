@@ -252,7 +252,7 @@ title: 座標とサイズ
 
 このプロパティは、リストボックスに関連付けたい行高さ配列の名前を指定するのに使用します。 行高さ配列は数値型である必要があります (デフォルトは倍長整数)。
 
-When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
+行高さ配列が定義されているとき、0 ではない値の要素はそれぞれ、リストボックスの対応する行の高さを決定する際に、選択されている行の高さ単位に基づいて考慮されます。
 
 たとえば:
 
@@ -261,15 +261,15 @@ ARRAY LONGINT(RowHeights;20)
 RowHeights{5}:=3
 ```
 
-Assuming that the unit of the rows is "lines," then the fifth row of the list box will have a height of three lines, while every other row will keep its default height.
-> * The Row Height Array property is not taken into account for hierarchical list boxes.
-> * For array-based list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+ここで行の単位が "行" であったとすると、リストボックスの 5行目は 3行分の高さになる一方、他の行はデフォルトの高さを保ちます。
+> * 行高さ配列プロパティは、階層リストボックスに対しては効力を持ちません。
+> * 配列型のリストボックスの場合、このプロパティは [自動行高](#自動行高) オプションがチェックされていない場合に限り使用可能です。
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                        |
-| --------------- | ------ | ---------------------------- |
-| rowHeightSource | string | Name of a 4D array variable. |
+| 名               | データタイプ | とりうる値      |
+| --------------- | ------ | ---------- |
+| rowHeightSource | string | 4D 配列変数の名前 |
 
 #### 対象オブジェクト
 
