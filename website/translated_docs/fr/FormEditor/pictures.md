@@ -50,7 +50,7 @@ High resolution pictures with the @nx convention can be used in the following ob
 *   [Buttons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[check boxes](FormObjects/checkbox_overview.md)
 *   [Picture buttons](FormObjects/pictureButton_overview.md)/[Picture pop-ups](FormObjects/picturePopupMenu_overview.md)
 *   [Tab controls](FormObjects/tabControl.md)
-*   [List box headers](FormObjects/listbox_overview.md#list-box-headers)
+*   [En-têtes de list box](FormObjects/listbox_overview.md#list-box-headers)
 *   [Menu icons](Menus/properties.md#item-icon)
 
 
