@@ -1,11 +1,11 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordinates & Sizing
+title: 座標とサイズ
 ---
 
 ---
 ## 自動行高
-`4D View Pro only: This feature requires a 4D View Pro license.`
+`4D View Pro のみ: この機能には 4D View Pro ライセンスが必要です。`
 
 This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
 
@@ -248,7 +248,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 ---
 ## 行高さ配列
-`4D View Pro only: This feature requires a 4D View Pro license.`
+`4D View Pro のみ: この機能には 4D View Pro ライセンスが必要です。`
 
 This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
 
