@@ -39,13 +39,13 @@ title: 動作
 ---
 ## ドロップ有効
 
-Control whether and how the object can be the destination of a drag and drop operation.
+ユーザーがドラッグ＆ドロップしたデータをオブジェクトが受け取ることができるかどうかを制御します。
 
-Two drop modes are available:
+二つのドロップモードが提供されています:
 
-- **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. You then manage the drop action using a method.    
-  In custom mode, basically the whole drag-and-drop operation is handled by the programmer. このモードでは、ドラッグ＆ドロップに基づいたあらゆるインターフェースを実装することができます。これにはデータの転送を必ずしも伴わないものも含まれ、ファイルを開くや計算をトリガーするなどの任意のアクションを実行することができます。 このモードは専用のプロパティ、イベント、`ペーストボード` テーマのコマンド等の組み合わせに基づいています。
-- **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
+- **カスタム**: このモードでは、オブジェクトに対しておこなわれたドロップ操作は、当該オブジェクトのコンテキストにおいて `On Drag Over` と `On Drop` フォームイベントを発生させます。 これを利用して、開発者はメソッドを用いてドロップアクションを管理しなければなりません。    
+  つまり、カスタムモードにおいては、ドラッグ＆ドロップ操作のすべてが開発者により管理されます。 このモードでは、ドラッグ＆ドロップに基づいたあらゆるインターフェースを実装することができます。これにはデータの転送を必ずしも伴わないものも含まれ、ファイルを開くや計算をトリガーするなどの任意のアクションを実行することができます。 このモードは専用のプロパティ、イベント、`ペーストボード` テーマのコマンド等の組み合わせに基づいています。
+- **自動**: このモードでは、4D は可能な限り自動で、オブジェクトにドロップされたテキストやピクチャー型データの挿入を管理します (データはオブジェクトにペーストされます)。 このモードでは、`On Drag Over` と `On Drop` フォームイベントは生成されません。 他方、ドロップ中の `On After Edit` とオブジェクトがフォーカスを失った時の `On Data Change` イベントは生成されます。
 
 詳細については *4Dランゲージリファレンス* マニュアルの [ドラッグ＆ドロップ](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.ja.html) を参照してください。
 
@@ -58,7 +58,7 @@ Two drop modes are available:
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [入力](input_overview.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [プラグインエリア](pluginArea_overview.md)
 
 
 #### 参照
@@ -67,7 +67,7 @@ Two drop modes are available:
 
 ---
 ## オブジェクトメソッド実行
-When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
+このオプションを選択した場合、ユーザーがインジケーターの値を変更すると *同時に* `On Data Change` イベントが生成され、オブジェクトメソッドが実行されます。 デフォルトでは、*変更後に* メソッドが実行されます。
 
 #### JSON 文法
 
@@ -77,7 +77,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### 対象オブジェクト
 
-[Progress bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 
 
@@ -87,26 +87,26 @@ When this option is enabled, the object method is executed with the `On Data Cha
 ---
 ## メソッド
 
-Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+オブジェクトに関連づけられたメソッドへの参照。 オブジェクトメソッドは通常、フォームが表示または印刷されている間、オブジェクトを "管理" します。 オブジェクトメソッドは呼び出す必要がありません。オブジェクトメソッドが関連づけられているオブジェクトに関わるイベントが発生した場合、4D は自動的にオブジェクトメソッドを呼び出します。
 
-Several types of method references are supported:
+メソッド参照にはいくつかのタイプが利用可能です:
 
-- a standard object method file path, i.e. that uses the following pattern:  
+- 標準のオブジェクトメソッドファイルパス:   
   `ObjectMethods/objectName.4dm`  
-  ... where `objectName` is the actual [object name](properties_Object.md#object-name). This type of reference indicates that the method file is located at the default location ("sources/forms/*formName*/ObjectMethods/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+  (`objectName` には実際の [オブジェクト名](properties_Object.md#オブジェクト名) が入ります)。 このタイプの参照は、当該メソッドファイルがデフォルトの場所 ("sources/forms/*formName*/ObjectMethods/") にあることを示します。 この場合、エディター上でフォームオブジェクトに対して操作 (名称変更、複製、コピー/ペーストなど) がおこなわれると、4D はこれらの変更を自動的にオブジェクトメソッドに反映させます。
 
-- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
+- 拡張子を省いた既存のプロジェクトメソッド名: `myMethod`。この場合、フォームオブジェクトに対して操作がおこなわれても、4D はそれらの変更を自動反映しません。
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `ObjectMethods/objectName.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- .4dm 拡張子を含むカスタムのメソッドファイルパス:   
+  `ObjectMethods/objectName.4dm`。 ファイルシステムも使用できます:  
+  `/RESOURCES/Buttons/bOK.4dm`。 この場合、フォームオブジェクトに対して操作がおこなわれても、4D はそれらの変更を自動反映しません。
 
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                                              |
-| ------ | ------ | ------------------------------------------------------------------ |
-| method | text   | Object method standard or custom file path, or project method name |
+| 名      | データタイプ | とりうる値                                      |
+| ------ | ------ | ------------------------------------------ |
+| method | text   | オブジェクトメソッドの標準またはカスタムのファイルパス、またはプロジェクトメソッド名 |
 
 
 #### 対象オブジェクト
@@ -118,9 +118,9 @@ Several types of method references are supported:
 
 ---
 ## 行の移動可
-`Array type list boxes`
+`配列型リストボックス`
 
-Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 [セレクション型のリストボックス](listbox_overview.md#セレクションリストボックス) および [階層リストボックス](properties_Hierarchy.md#階層リストボックス) では、このオプションは提供されていません。
 
 #### JSON 文法
 
@@ -139,7 +139,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 ---
 ## 複数選択可
 
-Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
+[階層リスト](list_overview.md) において、複数項目の選択を許可します。
 
 #### JSON 文法
 
@@ -157,13 +157,13 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 ---
 ## ソート可
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
+[リストボックス](listbox_overview.md) ヘッダーのクリックによる列データの並べ替えを有効にします。 このオプションはデフォルトで選択されています。 ピクチャー型配列 (列) はこのメカニズムではソートできません。
 
-In list boxes based on a selection of records, the standard sort function is available only:
-*   When the data source is *Current Selection*,
-*   With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
+レコードセレクションに基づくリストボックスの場合、標準のソート機能は以下の場合のみ有効です:
+*   データソースが *カレントセレクション* であり、
+*   その列にフィールドが割り当てられていること (文字、数値、日付、時間、およびブール型)。
 
-In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
+他の場合 (命名セレクションに基づくリストボックスや、式が割り当てられた列)、標準のソート機能は動作しません。 標準のリストボックスソートは、データベースのカレントセレクションの順番を変更します。 しかし、ハイライトされたレコードとカレントレコードは変更されません。 標準の並び替えは、リストボックスのすべての列 (式が割り当てられた列も含む) を同期します。
 
 #### JSON 文法
 
@@ -181,18 +181,18 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 ---
 ## 標準アクション
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
+アクティブオブジェクトにより実行される典型的な処理 (*例*: レコードの入力・取り消し・削除、レコード間の移動、マルチページフォームでのページ間の移動、など) は、4D より標準アクションとして提供されています。 詳細な情報に関しては、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) の章を参照ください。
 
-You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed.
+フォームオブジェクトには、標準アクションとメソッドの両方を割り当てることができます。 この場合、標準アクションは通常、メソッドの後に実行されます。また、4D はこのアクションを使用して、カレントコンテキストに応じてオブジェクトを有効化/無効化します フォームオブジェクトが無効化されていると、関連づけられたメソッドは実行されません。
 
-You can also set this property using the `OBJECT SET ACTION` command.
+このプロパティは `OBJECT SET ACTION` コマンドによって設定することができます。
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                                                                                            |
-| ------ | ------ | ---------------------------------------------------------------------------------------------------------------- |
-| action | string | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| 名      | データタイプ | とりうる値                                                                              |
+| ------ | ------ | ---------------------------------------------------------------------------------- |
+| action | string | 有効な [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) |
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Tab control](tabControl.md)
+[ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックス](listbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [タブコントロール](tabControl.md)

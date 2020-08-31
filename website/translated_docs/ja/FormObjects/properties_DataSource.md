@@ -65,7 +65,7 @@ List of static values to use as labels for the tab control object.
 
 #### 対象オブジェクト
 
-[Tab Control](tabControl.md)
+[タブコントロール](tabControl.md)
 
 
 ---
@@ -119,7 +119,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#list-box-columns)
 
 
 
@@ -196,7 +196,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#list-box-columns)
 
 
 

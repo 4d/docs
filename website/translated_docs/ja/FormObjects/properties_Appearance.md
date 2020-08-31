@@ -30,7 +30,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[通常ボタン](button_overview.md#通常) - [フラットボタン](button_overview.md#フラット)
 
 
 
@@ -38,7 +38,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 ---
 ## フォーカスの四角を隠す
 
-During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
+ランタイムにおいて、タブキーやシングルクリックによってフォーカスを得たフィールドや入力可能なエリアは、選択状態を示す四角で縁取りされます。 このプロパティを使用して、フォーカスの四角を非表示にできます。 特定のインターフェースにおいては、フォーカスの四角を非表示にすることが便利かもしれません。
 
 #### JSON 文法
 
@@ -48,19 +48,19 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [サブフォーム](subform_overview.md)
 
 
 
 ---
 ## セレクションハイライトを非表示
-`Selection type list boxes`
+`セレクション型リストボックス`
 
-This property is used to disable the selection highlight in list boxes.
+リストボックスのセレクションハイライトを非表示にします。
 
-When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+このオプションが有効化されていると、リストボックスにおける行選択を可視化するセレクションハイライトが非表示になります。 ハイライトが非表示になっていても選択行は引き続き機能的に有効です。しかしながら、画面上では選択状態が明示されなくなるため、[プログラムによって選択行を可視化](listbox_overview.md#選択行の見た目のカスタマイズ) する必要があります。
 
-By default, this option is not enabled.
+デフォルトでは、このオプションは有効化されていません。
 
 
 #### JSON 文法
@@ -79,18 +79,18 @@ By default, this option is not enabled.
 ---
 ## 横スクロールバー
 
-An interface tool allowing the user to move the viewing area to the left or right.
+表示エリアを左右に移動できるようにするインターフェースツールです。
 
-Available values:
+使用可能な値:
 
-| Property List | JSON value  | 説明                                                                                                                                                       |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ◯             | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| ×             | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
+| プロパティリスト | JSON 値      | 説明                                                                      |
+| -------- | ----------- | ----------------------------------------------------------------------- |
+| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
+| ×        | "hidden"    | スクロールバーは表示されません。                                                        |
+| 自動       | "automatic" | スクロールバーは必要なときに表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより大きい場合には表示されます。      |
 
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> ピクチャー型のオブジェクトは、表示フォーマットが "トランケート (中央合わせなし)" に設定されているときに、スクロールバーを持つことができます。
 
 
 #### JSON 文法
@@ -101,15 +101,15 @@ Available values:
 
 #### 対象オブジェクト
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 #### 参照
-[Vertical scroll bar](#vertical-scroll-bar)
+[縦スクロールバー](#vertical-scroll-bar)
 
 ---
 ## 解像度
 
-Sets the screen resolution for the 4D Write Pro area contents. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
+4D Write Pro エリアの画面解像度を設定します。 デフォルト値は 72dpi (macOS) で、これはすべてのプラットフォームにおける 4Dフォームの標準解像度です。 96dpi に指定すると、Windows/Web レンダリングを macOS および Windows の両プラットフォームに設定します。 この項目を **自動** に設定すると、macOS と Windows 間でドキュメントのレンダリングが異なることになります。
 
 
 #### JSON 文法
@@ -121,14 +121,14 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 
 
 ---
 ## 背景を表示
 
-Displays/hides both background images and background color.
+ページの背景画像および背景色を表示/非表示にします。
 
 
 #### JSON 文法
@@ -136,16 +136,16 @@ Displays/hides both background images and background color.
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showBackground|boolean|true (default), false|
+ showBackground|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 ## フッター表示
 
-Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
+[ビューモード](#ビューモード) が "ページ" に設定されている場合に、ページのフッターを表示/非表示にします。
 
 
 #### JSON 文法
@@ -153,19 +153,19 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showFooters|boolean|true (default), false|
+ showFooters|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 
 ---
-## Show Formula Bar
+## フォーミュラバーを表示
 
-When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. If not selected, the formula bar is hidden.
+有効化すると、4D View Pro エリアにおいてツールバーのすぐ下にフォーミュラバーが表示されます。 選択されていない場合、フォーミュラバーは非表示となります。
 
-> This property is available only for the [Toolbar](#user-interface) interface.
+> このプロパティは [ツールバー](#ユーザーインターフェース) インターフェースの場合に利用可能です。
 
 
 #### JSON 文法
@@ -173,16 +173,16 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- withFormulaBar|boolean|true (default), false|
+ withFormulaBar|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md)
 
 ---
 ## ヘッダーを表示
 
-Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
+[ビューモード](#ビューモード) が "ページ" に設定されている場合に、ページのヘッダーを表示/非表示にします。
 
 
 #### JSON 文法
@@ -190,18 +190,18 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showHeaders|boolean|true (default), false|
+ showHeaders|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 
 
 ---
 ## 非表示文字を表示
 
-Displays/hides invisible characters
+非表示の文字を表示/非表示にします。
 
 
 #### JSON 文法
@@ -209,17 +209,17 @@ Displays/hides invisible characters
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showHiddenChars|boolean|true (default), false|
+ showHiddenChars|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 
 ---
 ## 水平ルーラーを表示
 
-Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
+ドキュメントビューが [ページモード](#ビューモード) の場合に、水平ルーラーを表示/非表示にします。
 
 
 #### JSON 文法
@@ -227,11 +227,11 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showHorizontalRuler|boolean|true (default), false|
+ showHorizontalRuler|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 
 
@@ -240,7 +240,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 ---
 ## HTML WYSYWIG 表示
 
-Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
+HTML WYSIWYG ビューを有効/無効にします。このビューでは、すべてのブラウザーに対応していない 4D Write Pro の属性が取り除かれます。
 
 
 #### JSON 文法
@@ -248,16 +248,16 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showHTMLWysiwyg|boolean|true, false (default)|
+ showHTMLWysiwyg|boolean|true, false (デフォルト)|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 ## ページフレームを表示
 
-Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
+[ビューモード](#ビューモード) が "ページ" に設定されている場合に、ページのフレームを表示/非表示にします。
 
 
 #### JSON 文法
@@ -269,24 +269,24 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 
 
 ---
 ## 参照を表示
 
-Displays all 4D expressions inserted in the 4D Write Pro document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
+ドキュメントに *参照* として挿入された 4D式をすべて表示します。 このオプションが無効になっていると、4D Write Pro は挿入された 4D式をカレント値で評価して、その*値* を表示します。 4Dフィールドまたは式を挿入すると、4D Write Pro はデフォルトでそのカレント値を表示します。 もとのフィールドや式を確認したいときには、このオプションを有効にします。 すると、これらの参照は灰色の背景色とともにドキュメント内に表示されます。
 
-For example, you have inserted the current date along with a format, the date is displayed:
+たとえば、フォーマットを指定したカレント日付を挿入していると、デフォルトでは次の表示になります:
 
 ![](assets/en/FormObjects/writePro1.png)
 
-With the Show references property on, the reference is displayed:
+参照を表示オプションを有効にすると、代わりにもとの参照が表示されます:
 
 ![](assets/en/FormObjects/writeProExpr.png)
 
-> 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
+> 4D 式を挿入するには、`ST INSERT EXPRESSION` コマンドを使います。
 
 
 #### JSON 文法
@@ -294,16 +294,16 @@ With the Show references property on, the reference is displayed:
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showReferences|boolean|true, false (default)|
+ showReferences|boolean|true, false (デフォルト)|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 ## 垂直ルーラーを表示
 
-Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
+ドキュメントビューが [ページモード](#ビューモード) の場合に、垂直ルーラーを表示/非表示にします。
 
 
 #### JSON 文法
@@ -311,19 +311,19 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- showVerticalRuler|boolean|true (default), false|
+ showVerticalRuler|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 
 ---
 ## タブコントロールの位置
 
-You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
+フォーム上のタブコントロールの位置を指定することができます。 このプロパティにはすべてのプラットフォームからアクセスできますが、macOS 上でのみ動作します。 タブコントロールは上 (標準)、または下に配置することができます。
 
-When tab controls with a custom direction are displayed under Windows, they automatically return to the standard direction (top).
+位置がカスタマイズされたタブコントロールを Windows で表示すると、自動的に標準の位置 (上) に戻されます。
 
 #### JSON 文法
 
@@ -334,47 +334,47 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### 対象オブジェクト
 
-[Tab Control](tabControl.md)
+[タブコントロール](tabControl.md)
 
 
 ---
 ## ユーザーインターフェース
 
-You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
+4D View Pro エリアにインターフェースを追加することで、エンドユーザーが基本的な編集とデータ操作をおこなえるようになります。 4D では 2種類のインターフェース (**リボン** と **ツールバー**) を提供しており、そのどちらかを選ぶことができます。
 
 #### JSON 文法
 
 | 名 | データタイプ | とりうる値 |
 | - | ------ | ----- |
 |   |        |       |
- userInterface|text|"none" (default), "ribbon", "toolbar" |
+ userInterface|text|"none" (デフォルト), "ribbon", "toolbar" |
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md)
 
 
 #### 参照
 
-[4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[4D View Pro リファレンスガイド](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 ---
 ## 縦スクロールバー
 
-An interface tool allowing the user to move the viewing area up and down.
+表示エリアを上下に移動できるようにするインターフェースツールです。
 
-Available values:
+使用可能な値:
 
-| Property List | JSON value  | 説明                                                                                                                                                       |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ◯             | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| ×             | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| プロパティリスト | JSON 値      | 説明                                                                      |
+| -------- | ----------- | ----------------------------------------------------------------------- |
+| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
+| ×        | "hidden"    | スクロールバーは表示されません。                                                        |
+| 自動       | "automatic" | スクロールバーは必要なときに表示されます。つまり、オブジェクトのコンテンツのサイズがフレームのサイズより大きい場合には表示されます。      |
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> ピクチャー型のオブジェクトは、表示フォーマットが "トランケート (中央合わせなし)" に設定されているときに、スクロールバーを持つことができます。
 
 
-> If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
+> テキスト入力オブジェクトにスクロールバーがない場合、矢印キーを使用してスクロールできます。
 
 
 #### JSON 文法
@@ -385,22 +385,22 @@ Available values:
 
 #### 対象オブジェクト
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 #### 参照
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[横スクロールバー](#horizontal-scroll-bar)
 
 ---
 ## ビューモード
 
-Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
+フォームエリア内の 4D Write Pro ドキュメントの表示モードを設定します。 次の値が提供されています:
 
-- **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
-- **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **ページ**: もっとも完全といえるビューモードで、ページの枠、余白、改ページ、ヘッダー & フッターなどを含みます。
+- **下書き**: 基本のドキュメントプロパティを含む下書きモードです。
+- **埋め込み**: 埋め込みエリアに適切なビューモードです。余白や、ヘッダー & フッター、ページフレームなどは表示されません。 このモードは Web に似た出力をするのに使用することもできます (この場合には、[解像度を 96dpi](#解像度) に設定のうえ、[HTML WYSIWYG 表示](#HTML-WYSIWYG-表示) オプションを有効にします)。
 
-> The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
+> ビューモードプロパティは画面上のレンダリングにのみ使用されます。 印刷設定については、専用のレンダリングルールが自動的に適用されます。
 
 
 
@@ -413,12 +413,12 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 ## 拡大
 
-Sets the zoom percentage for displaying 4D Write Pro area contents.
+4D Write Pro エリアのコンテンツ表示に使用するズーム率を設定します。
 
 
 #### JSON 文法
@@ -430,6 +430,6 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)
 
 

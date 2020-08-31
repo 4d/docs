@@ -391,7 +391,7 @@
         "title": "アピアランス"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
-        "title": "Background and Border"
+        "title": "背景色と境界線"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
         "title": "Coordinates & Sizing"
@@ -493,13 +493,13 @@
         "title": "テキスト"
       },
       "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+        "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
         "title": "Web Area"
       },
       "FormObjects/writeProAreaOverview": {
-        "title": "4D Write Pro area"
+        "title": "4D Write Pro エリア"
       },
       "GettingStarted/installation": {
         "title": "インストール"
