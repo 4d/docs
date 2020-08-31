@@ -9,21 +9,21 @@ title: 座標とサイズ
 
 このプロパティは、配列型かつ階層のないリストボックスにおいてのみ使用可能です。 このプロパティはデフォルトではチェックされていません。
 
-このプロパティが有効化されているとき、セルの内容がすべて表示されるように、各行の高さが 4D によって自動的に計算されます 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
+このプロパティが有効化されていると、カラムの内容に応じて各行の高さが 4D によって自動的に計算されます 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
 > リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#horizontal-sizing) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
-When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
+このプロパティが有効化されていると、セルの内容がすべて表示され、切り落とされることがないように各行の高さが自動的に計算されます (ただし[ワードラップ](properties_Display.md#ワードラップ) オプションが無効化されている場合を除きます)。
 
-*   The row height calculation takes into account:
-    *   any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
-    *   any control types (inputs, check boxes, lists, dropdowns),
-    *   fonts, fonts styles and font sizes,
-    *   the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
+*   行の高さを計算する際には、以下のものが考慮されます:
+    *   中身の型 (テキスト、数値、日付、時間、ピクチャー (計算結果はピクチャーフォーマットによります)、オブジェクト)
+    *   コントロールの型 (入力、チェックボックス、リスト、ドロップダウン)
+    *   フォント、フォントスタイル、フォントサイズ
+    *   [ワードラップ](properties_Display.md#ワードラップ) オプション: 無効化されている場合、高さは段落の数に応じます (行は切り落とされます)。有効化されている場合、高さは行数に応じます (切り落とされません)。
 
-*   The row height calculation ignores:
-    *   hidden column contents
-    *   [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
-> Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+*   行の高さを計算する際には、以下のものは考慮されません:
+    *   非表示のカラムの中身
+    *   プロパティリスト内、あるいはプログラミングによって設定された [行の高さ](#行の高さ) および [行高さ配列](#行高さ配列) プロパティ (あった場合)
+> 自動行高オプションを有効化すると、ランタイムにおいて追加の計算が必要となるため、とくにリストボックスが大量の行数を持つ場合に、スクロール時のスムーズさに影響が出る可能性があります。
 
 
 
@@ -36,7 +36,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#list-box-columns)
 
 
 
@@ -45,7 +45,7 @@ When this property is enabled, the height of every row is automatically calculat
 ---
 ## 下
 
-Bottom coordinate of the object in the form.
+フォーム上のオブジェクトの下の座標。
 
 
 #### JSON 文法
@@ -62,7 +62,7 @@ Bottom coordinate of the object in the form.
 ---
 ## 左
 
-Left coordinate of the object on the form.
+フォーム上のオブジェクトの左の座標。
 
 #### JSON 文法
 
@@ -80,7 +80,7 @@ Left coordinate of the object on the form.
 ---
 ## 右
 
-Right coordinate of the object in the form.
+フォーム上のオブジェクトの右の座標。
 
 #### JSON 文法
 
@@ -98,7 +98,7 @@ Right coordinate of the object in the form.
 ---
 ## 上
 
-Top coordinate of the object in the form.
+フォーム上のオブジェクトの上の座標。
 
 #### JSON 文法
 
@@ -196,7 +196,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#list-box-columns)
 
 
 ---
@@ -214,7 +214,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 #### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#list-box-columns)
 
 
 
