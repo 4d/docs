@@ -160,7 +160,7 @@ title: 座標とサイズ
 オブジェクトの横のサイズを指定します。
 > * オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
 > * [リストボックス列](listbox_overview.md#リストボックス列) に [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) プロパティが設定されている場合には、ユーザーは手動でカラムサイズを変更することもできます。
-> * When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> * リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 
 #### JSON 文法
@@ -184,8 +184,8 @@ title: 座標とサイズ
 ---
 ## 最大幅
 
-The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+列の最大幅 (ピクセル単位)。 The width of the column cannot be increased beyond this value when resizing the column or form.
+> リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 
 #### JSON 文法
@@ -203,7 +203,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 ## 最小幅
 
 The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 
 #### JSON 文法
