@@ -30,7 +30,7 @@ L'**objet de langage** est référencé de manière unique par un identifiant in
 
 L'**objet de formulaire** n'est pas nécessairement unique : il peut exister plusieurs représentations d’une même liste hiérarchique dans un même formulaire ou dans des formulaires différents. Comme pour les autres objets de formulaire, vous désignez l'objet dans le langage via la syntaxe (*;"NomListe", etc.).
 
-Vous connectez l'"objet de langage" liste hiérarchique avec l'"objet de formulaire" liste hiérarchique par l'intermédiaire de la variable contenant la valeur de l'identifiant unique RefListe. For example, if you have associated the mylist [variable](properties_Object.md#variable-or-expression) to the form object, you can write:
+Vous connectez l'"objet de langage" liste hiérarchique avec l'"objet de formulaire" liste hiérarchique par l'intermédiaire de la variable contenant la valeur de l'identifiant unique RefListe. Par exemple, si vous avez associé la [variable](properties_Object.md#variable-or-expression) mylist à l'objet de formulaire, vous écrivez :
 
 ```4d
 mylist:=New list
