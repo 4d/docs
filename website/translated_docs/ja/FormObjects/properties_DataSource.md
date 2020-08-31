@@ -94,16 +94,16 @@ title: データソース
 
 ユーザーによって選択されたコレクション要素/エンティティの位置を表す倍長整数が割り当てられる変数あるいは式を指定します。
 
-*   if no element/entity is selected, the variable or expression receives zero,
-*   if a single element/entity is selected, the variable or expression receives its location,
-*   if multiple elements/entities are selected, the variable or expression receives the position of element/entity that was last selected.
+*   要素/エンティティが選択されていない場合、変数あるいは式は 0 を受け取ります。
+*   単一の要素/エンティティが選択されている場合、変数あるいは式はその位置を受け取ります。
+*   複数の要素/エンティティが選択されている場合、変数あるいは式は最後に選択された要素/エンティティの位置を受け取ります。
 > このプロパティは「読み取り専用」であり、リストボックスにおけるユーザーアクションに基づいて自動的に更新されます。 この値を編集してリストボックスの選択状態を変更することはできません。
 
 #### JSON 文法
 
-| 名                         | データタイプ | とりうる値             |
-| ------------------------- | ------ | ----------------- |
-| currentItemPositionSource | string | Number expression |
+| 名                         | データタイプ | とりうる値 |
+| ------------------------- | ------ | ----- |
+| currentItemPositionSource | string | 数値型の式 |
 
 #### 対象オブジェクト
 [リストボックス ](listbox_overview.md)
@@ -115,7 +115,7 @@ title: データソース
 ---
 ## データタイプ
 
-Please refer to [Expression Type](properties_Object.md#expression-type) section.
+[式タイプ](properties_Object.md#式タイプ) を参照ください。
 
 #### 対象オブジェクト
 
@@ -130,7 +130,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ## デフォルト値
 
-List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
+配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。 これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#変数あるいは式) に代入されます。 Using the language, you can manage the object by referring to this array.
 
 > Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
 
