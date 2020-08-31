@@ -10,7 +10,7 @@ title: 座標とサイズ
 このプロパティは、配列型かつ階層のないリストボックスにおいてのみ使用可能です。 このプロパティはデフォルトではチェックされていません。
 
 このプロパティが有効化されていると、カラムの内容に応じて各行の高さが 4D によって自動的に計算されます 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
-> リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#horizontal-sizing) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
+> リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 このプロパティが有効化されていると、セルの内容がすべて表示され、切り落とされることがないように各行の高さが自動的に計算されます (ただし[ワードラップ](properties_Display.md#ワードラップ) オプションが無効化されている場合を除きます)。
 
@@ -140,8 +140,8 @@ title: 座標とサイズ
 ---
 ## 高さ
 
-オブジェクトの高さを指定します。
-> Some objects may have a predefined height that cannot be altered.
+オブジェクトの縦のサイズを指定します。
+> オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
 
 #### JSON 文法
 
@@ -157,9 +157,9 @@ title: 座標とサイズ
 ---
 ## 幅
 
-This property designates an object's horizontal size.
-> * Some objects may have a predefined height that cannot be altered.
-> * If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
+オブジェクトの横のサイズを指定します。
+> * オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
+> * [リストボックス列](listbox_overview.md#リストボックス列) に [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) プロパティが設定されている場合には、ユーザーは手動でカラムサイズを変更することもできます。
 > * When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 
