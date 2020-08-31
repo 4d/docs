@@ -115,13 +115,13 @@ title: 座標とサイズ
 ---
 ## 角の半径
 
-Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+[四角](shapes_overview.md#四角) 型の図形について、角の丸みをピクセル単位で指定します。 デフォルトでは、四角の角の半径は 0ピクセルとなっています。 このプロパティを変更することによって独自の形の角の丸い四角を描画することができます:
 
 ![](assets/en/FormObjects/shape_rectangle.png)
 
-Minimum value is 0, in this case a standard non-rounded rectangle is drawn. Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
+最小値は 0 で、この場合には標準の (角の丸くない) 四角が描画されます。 最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
 
-You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-Get-corner-radius.301-4311357.en.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-CORNER-RADIUS.301-4311356.en.html) commands.
+このプロパティは、[OBJECT Get corner radius](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-corner-radius.301-4505428.ja.html) と [OBJECT SET CORNER RADIUS](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-CORNER-RADIUS.301-4505427.ja.html) コマンドを使用して設定することもできます。
 
 #### JSON 文法
 
@@ -139,8 +139,8 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 ---
 ## 高さ
 
-This property designates an object's vertical size.
-> Some objects may have a predefined height that cannot be altered.
+オブジェクトの縦のサイズを指定します。
+> オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
 
 #### JSON 文法
 
@@ -156,8 +156,8 @@ This property designates an object's vertical size.
 ---
 ## 幅
 
-This property designates an object's horizontal size.
-> * Some objects may have a predefined height that cannot be altered.
+オブジェクトの横のサイズを指定します。
+> * オブジェクトによっては高さが規定されているものがあり、その場合は変更できません。
 > * If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
 > * When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
