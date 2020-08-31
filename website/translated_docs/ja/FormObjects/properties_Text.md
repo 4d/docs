@@ -168,20 +168,25 @@ Designates the font color.
 
 > This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
 
-The color can be specified by:
+カラーは次の方法で指定できます:
 
-* a color name - like "red"
-* a HEX value - like "#ff0000"
-* an RGB value - like "rgb(255,0,0)"
+* カラーネーム - 例: "red"
+* 16進数値 - 例: "#ff0000"
+* RGB値 - 例: "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+このプロパティはOBJECT SET RGB COLORS** コマンドによって設定することができます。</p> 
+
+
 
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                     |
-| ------ | ------ | ----------------------------------------- |
-| stroke | string | any css value, "transparent", "automatic" |
+| 名      | データタイプ | とりうる値                                |
+| ------ | ------ | ------------------------------------ |
+| stroke | string | 任意の css値; "transparent"; "automatic" |
+
+
+
 
 #### 対象オブジェクト
 
@@ -189,7 +194,11 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 
 
+
+
 ---
+
+
 
 ## フォントカラー式
 
@@ -197,17 +206,24 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。
 
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
+
+
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
+
+
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
 Foreground color;Dark shadow color)
 ```
+
+
+
 
 #### JSON 文法
 
@@ -215,11 +231,18 @@ Foreground color;Dark shadow color)
 | --------------- | ------ | --------------------- |
 | rowStrokeSource | string | Font color expression |
 
+
+
+
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md#overview)
 
+
+
 ---
+
+
 ## スタイル式
 
 `Selection and collection/entity selection type list boxes`
@@ -228,14 +251,21 @@ Used to apply a custom character style to each row of the list box or each cell 
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-例:
+例: 
+
+
 
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
+
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
+
+
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+
+
 
 
 #### JSON 文法
@@ -244,9 +274,14 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 | -------------- | ------ | ----------------------------------------------- |
 | rowStyleSource | string | Style expression to evaluate for each row/cell. |
 
+
+
+
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+
 
 
 
@@ -254,9 +289,13 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 
 ---
+
+
 ## 横揃え
 
 Horizontal location of text within the area that contains it.
+
+
 
 #### JSON 文法
 
@@ -264,21 +303,31 @@ Horizontal location of text within the area that contains it.
 | --------- | ------ | ------------------------------------------------- |
 | textAlign | string | "automatic", "right", "center", "justify", "left" |
 
+
+
+
 #### 対象オブジェクト
 
 [Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [Text Area](text.md)
 
 
+
+
 ---
+
+
 ## 縦揃え
 
 Vertical location of text within the area that contains it.
 
 The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
+
 - `bottom` for all data (except pictures) and
 - `top` for picture type data.
 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
+
+
 
 
 #### JSON 文法
@@ -286,6 +335,9 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 | 名             | データタイプ | とりうる値                                  |
 | ------------- | ------ | -------------------------------------- |
 | verticalAlign | string | "automatic", "top", "middle", "bottom" |
+
+
+
 
 #### 対象オブジェクト
 
@@ -299,8 +351,13 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 
 
+
+
 ---
+
+
 ## メタ情報式
+
 `Collection or entity selection type list boxes`
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
@@ -316,11 +373,16 @@ Specifies an expression or a variable which will be evaluated for each row displ
 | 無効                  | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
 | cell.\<columnName> | オブジェクト  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
 
+
+
+
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 The following example uses the *Color* project method.
 
 In the form method, write the following code:
+
+
 
 ```4d
 //form method
@@ -332,6 +394,8 @@ End case
 
 
 In the *Color* method, write the following code:
+
+
 
 ```4d
 //Color method
@@ -345,7 +409,12 @@ Else
 End if
 $0:=Form.meta
 ```
+
+
+
 > See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
+
+
 
 
 
@@ -354,6 +423,9 @@ $0:=Form.meta
 | 名          | データタイプ | とりうる値                                            |
 | ---------- | ------ | ------------------------------------------------ |
 | metaSource | string | Object expression to evaluate for each row/cell. |
+
+
+
 
 #### 対象オブジェクト
 
@@ -366,14 +438,20 @@ $0:=Form.meta
 
 
 
+
+
 ---
+
+
 ## マルチスタイル
 
 This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
 
 <p spaces-before="0">
-  By default, this option is not enabled.
+  デフォルトでは、このオプションは有効化されていません。
 </p>
+
+
 
 
 
@@ -411,6 +489,8 @@ This property enables the possibility of using specific styles in the selected a
   </tr>
 </table>
 
+
+
 <h4 spaces-before="0">
   対象オブジェクト
 </h4>
@@ -426,7 +506,11 @@ This property enables the possibility of using specific styles in the selected a
 
 
 
+
+
 <hr />
+
+
 <h2 spaces-before="0">
   方向
 </h2>
@@ -494,6 +578,8 @@ This property enables the possibility of using specific styles in the selected a
 
 
 
+
+
 <h4 spaces-before="0">
   JSON 文法
 </h4>
@@ -528,6 +614,8 @@ This property enables the possibility of using specific styles in the selected a
   </tr>
 </table>
 
+
+
 <h4 spaces-before="0">
   対象オブジェクト
 </h4>
@@ -540,13 +628,17 @@ This property enables the possibility of using specific styles in the selected a
 
 
 
+
+
 <hr />
+
+
 <h2 spaces-before="0">
   行フォントカラー配列
 </h2>
 
 <p spaces-before="0">
-  <code>Array type list boxes</code>
+  <code>配列型リストボックス</code>
 </p>
 
 <p spaces-before="0">
@@ -554,8 +646,10 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+  The name of a Longint array must be used. 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは <a href="https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html">SET RGB COLORS</a> テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 </p>
+
+
 
 <h4 spaces-before="0">
   JSON 文法
@@ -591,25 +685,31 @@ This property enables the possibility of using specific styles in the selected a
   </tr>
 </table>
 
+
+
 <h4 spaces-before="0">
   対象オブジェクト
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md">リストボックス</a> - <a href="listbox_overview.md#リストボックス列">リストボックス列</a>
 </p>
 
 
 
 
 
+
+
 <hr />
+
+
 <h2 spaces-before="0">
   行スタイル配列
 </h2>
 
 <p spaces-before="0">
-  <code>Array type list boxes</code>
+  <code>配列型リストボックス</code>
 </p>
 
 <p spaces-before="0">
@@ -617,8 +717,10 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+  The name of a Longint array must be used. 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
 </p>
+
+
 
 
 <h4 spaces-before="0">
@@ -650,22 +752,28 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      The name of a longint array.
+      倍長整数型配列の名前
     </td>
   </tr>
 </table>
+
+
 
 <h4 spaces-before="0">
   対象オブジェクト
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md">リストボックス</a> - <a href="listbox_overview.md#リストボックス列">リストボックス列</a>
 </p>
 
 
 
+
+
 <hr />
+
+
 <h2 spaces-before="0">
   スタイルタグを全て保存
 </h2>
@@ -695,6 +803,8 @@ This property enables the possibility of using specific styles in the selected a
 
 <pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
 </code></pre>
+
+
 
 <h4 spaces-before="0">
   JSON 文法
@@ -729,6 +839,8 @@ This property enables the possibility of using specific styles in the selected a
     </td>
   </tr>
 </table>
+
+
 
 <h4 spaces-before="0">
   対象オブジェクト

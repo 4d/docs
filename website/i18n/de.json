@@ -75,7 +75,7 @@
         "title": "Variant"
       },
       "Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "Fehlerverwaltung"
       },
       "Concepts/control-flow": {
         "title": "Ablaufsteuerung Überblick"
@@ -456,7 +456,7 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
-      "4D Language Concepts": "4D Language Concepts",
+      "4D Language Concepts": "Konzepte der 4D Programmiersprache",
       "Project Databases": "Project Databases",
       "Form Editor": "Form Editor",
       "Form Objects": "Form Objects",
