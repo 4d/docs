@@ -6,19 +6,19 @@ title: データソース
 ---
 ## 自動挿入
 
-When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
-- the [Choice List](properties_DataSource.md#choice-list) JSON property
-- the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-NAME.301-4128227.en.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-REFERENCE.301-4128237.en.html) commands.
-- the form editor's Property List.
+このオプションがチェックされていると、オブジェクトに関連付けられた選択リストにない値をユーザーが入力した場合に、その値が自動的にメモリー内のリストに追加されます。 フォームオブジェクトに選択リストを関連付けるには次の方法があります:
+- [選択リスト](properties_DataSource.md#選択リスト) JSON プロパティを使用する
+- [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-LIST-BY-NAME.301-4505451.ja.html) または [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-LIST-BY-REFERENCE.301-4505461.ja.html) コマンドを使用する
+- フォームエディターでプロパティリストを使用する
 
-For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
+たとえば、"France, Germany, Italy" という値を含む選択リストが "Countries" というコンボボックスに関連付けられていた場合を考えます。**自動挿入** のオプションがチェックをされていて、ユーザーが "Spain" という値を入力すると、"Spain" という値が自動的にメモリー内のリストに追加されます:
 
 ![](assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
-> If the list was created from a list defined in Design mode, the original list is not modified.
+当然のことながら、オブジェクトに [除外リスト](properties_RangeOfValues.md#除外リスト) が設定されていた場合には、そのリストに含まれる値を入力することはできません。
+> デザインモードで定義されたリストが関連付けられている場合、自動挿入によって、その元のリストが変更されることはありません。
 
-When the **automatic insertion** option is not selected (default), the value entered is stored in the object but not in the list in memory.
+**自動挿入** のオプションがチェックされていない場合、入力された値はオブジェクトの中には保存されますが、メモリー内のリストには入力されません。
 
 #### JSON 文法
 
@@ -28,7 +28,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 
 
