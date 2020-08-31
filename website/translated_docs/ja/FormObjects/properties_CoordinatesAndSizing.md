@@ -9,7 +9,7 @@ title: 座標とサイズ
 このプロパティは、配列型かつ階層のないリストボックスにおいてのみ使用可能です。 このプロパティはデフォルトではチェックされていません。
 
 このプロパティが有効化されているとき、セルの内容がすべて表示されるように、各行の高さが 4D によって自動的に計算されます 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
-> When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#horizontal-sizing) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
 
 When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
 
