@@ -26,6 +26,8 @@ Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
+The input parameters are separated by semicolons (;). 
+
 The same principles are used when methods are executed through dedicated commands, for example:
 
 ```4d
@@ -42,13 +44,13 @@ MyLength:=Length("How did I get here?")
 
 Any subroutine can return a value. Only one single output parameter can be declared per method or class function.
 
-The input parameters are separated by semicolons (;). Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
+Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
 
-- [named variables](#named-parameters) or
+- [named variables](#named-parameters) (recommended in most cases) or
 - [sequentially numbered variables](#sequential-parameters). 
 
 
-> [Named parameters](#named-parameters) and [Sequential parameters](#sequential-parameters) syntaxes can be mixed with no restriction to declare parameters. For example:
+> Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. For example:
 >
 >```4d
 >Function add($x : Integer)
@@ -254,6 +256,77 @@ This command means that starting with the fourth  parameter (included), the meth
 > The number in the declaration has to be a constant and not a variable.
 
 
+### Declaring parameters for compiled mode
+
+Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble. 
+
+When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `Method` or `Function` prototype. 
+When using the sequential variable syntax, you need to make sure all parameters are properly declared. In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+
+```4d
+  // Capitalize Project Method
+  // Capitalize ( Text ) -> Text
+  // Capitalize ( Source string ) -> Capitalized string
+ 
+ C_TEXT($0;$1)
+ $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
+```
+
+Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. For example:
+
+```4d
+C_TEXT($string)
+C_LONGINT($idProc;$int)
+C_OBJECT($obj)
+
+$idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
+```
+
+This code can be executed in compiled mode only if "foo_method" declares its parameters:
+
+```4d
+//foo_method
+C_TEXT($1)
+C_LONGINT($2)
+C_OBJECT($3)
+...
+```
+
+> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+```4d  
+ // Compiler_method
+ C_REAL(OneMethodAmongOthers;$1) 
+```  
+See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+
+Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+
+- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+
+```4d
+// On Web Connection
+C_TEXT($1;$2;$3;$4;$5;$6)
+```
+
+
+- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+
+- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method.
+**Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+```4d
+ C_LONGINT($0)
+ If(Form event=On Drag Over)
+    $0:=0
+    ...
+    If($DataType=Is picture)
+       $0:=-1
+    End if
+    ...
+ End if
+````
+
+
+
 
 ## Using object properties as named parameters 
 
@@ -347,15 +420,14 @@ The following example displays a text message and can insert the text into a doc
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
  
- C_TEXT($1;$2)
- C_OBJECT($3)
+ Method($message : Text; $path : Text; $wpArea : Object)
   
- ALERT($1)
+ ALERT($message)
  If(Count parameters>=3)
-    WP SET TEXT($3;$1;wk append)
+    WP SET TEXT($wpArea;$1;wk append)
  Else
     If(Count parameters>=2)
-       TEXT TO DOCUMENT($2;$1)
+       TEXT TO DOCUMENT($path;$message)
     End if
  End if
 ```
@@ -367,74 +439,6 @@ APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document
 APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
-
-## Declaring parameters for compiled mode
-
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble. 
-
-In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
-
-```4d
-  // Capitalize Project Method
-  // Capitalize ( Text ) -> Text
-  // Capitalize ( Source string ) -> Capitalized string
- 
- C_TEXT($0;$1)
- $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
-```
-
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. For example:
-
-```4d
-C_TEXT($string)
-C_LONGINT($idProc;$int)
-C_OBJECT($obj)
-
-$idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
-```
-
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
-
-```4d
-//foo_method
-C_TEXT($1)
-C_LONGINT($2)
-C_OBJECT($3)
-...
-```
-
-> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
-```4d  
- // Compiler_method
- C_REAL(OneMethodAmongOthers;$1) 
-```  
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
-
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
-
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
-
-```4d
-// On Web Connection
-C_TEXT($1;$2;$3;$4;$5;$6)
-```
-
-
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
-
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method.
-**Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
-```4d
- C_LONGINT($0)
- If(Form event=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
-````
 
 
 
