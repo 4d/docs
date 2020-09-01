@@ -135,4 +135,4 @@ Designates if the size of the column can be modified by the user.
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#リストボックス列)
