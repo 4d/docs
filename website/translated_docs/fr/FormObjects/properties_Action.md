@@ -205,14 +205,14 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Triable
 
-Permet de trier les données de colonne en cliquant sur un en-tête de [Listbox](listbox_overview.md). Cette option est sélectionnée par défaut. Picture type arrays (columns) cannot be sorted using this feature.
+Permet de trier les données de colonne en cliquant sur un en-tête de [Listbox](listbox_overview.md). Cette option est sélectionnée par défaut. Les tableaux de types d'image (colonnes) ne peuvent pas être triés à l'aide de cette fonction.
 
-In list boxes based on a selection of records, the standard sort function is available only:
+Dans les list box basées sur une sélection d'enregistrements, la fonction de tri standard est disponible uniquement :
 
-*   When the data source is *Current Selection*,
-*   With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
+*   Lorsque la source de données est *Sélection courante*,
+*   Avec des colonnes associées à des champs (de type Alpha, Numérique, Date, Heure ou Booléen).
 
-In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
+Dans d'autres cas (list box basées sur des sélections nommées, colonnes associées à des expressions), la fonction de tri standard n'est pas disponible. Un tri de list box standard modifie l'ordre de la sélection courante dans la base de données. Cependant, les enregistrements en surbrillance et l'enregistrement courant ne sont pas modifiés. Un tri standard synchronise toutes les colonnes de la list box, y compris les colonnes calculées.
 
 
 
