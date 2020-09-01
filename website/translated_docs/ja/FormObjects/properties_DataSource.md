@@ -160,21 +160,20 @@ title: データソース
 
 列に割り当てる 4D式です。 以下のものを指定できます:
 
-- A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+- **単純な変数** (この場合、コンパイル用に明示的に型宣言されている必要があります)。 BLOB と配列型以外のどんな型の変数も使用することができます。 変数の値は通常 `On Display Detail` イベントで計算されます。
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
+- 標準の [Table]Field シンタックスを使用した **フィールド** ([セレクション型リストボックス](listbox_overview.md#セレクションリストボックス) のみ) 例: `[Employees]LastName`。 以下の型のフィールドを使用できます:
     *   String
-    *   Numeric
+    *   数値
     *   日付
     *   時間
     *   ピクチャー
-    *   Boolean  
-      You can use fields from the Master Table or from other tables.
+    *   ブール  
+      マスターテーブルおよび他のテーブルのフィールドを指定できます。
 
--   A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
-  The following expression types are supported:
+-   **4D式** (単純な式、フォーミュラ、または 4Dメソッド)。 式は値を返す必要があります。 値は `On Display Detail` および `On Data Change` イベントで評価されます。 式の結果は、アプリケーションモードでフォームを実行すると自動で表示されます。 The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). 空の場合、列には何も表示されません。
     *   String
-    *   Numeric
+    *   数値
     *   日付
     *   ピクチャー
     *   ブール
