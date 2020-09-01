@@ -82,7 +82,7 @@ title: データソース
 | currentItemSource | string | オブジェクト型の式 |
 
 #### 対象オブジェクト
-[リストボックス ](listbox_overview.md#overview)
+[リストボックス ](listbox_overview.md)
 
 
 
@@ -119,7 +119,7 @@ title: データソース
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#リストボックス列)
 
 
 
@@ -148,7 +148,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### 対象オブジェクト
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[List Box Column (array type only)](listbox_overview.md#リストボックス列)
 
 
 
@@ -196,7 +196,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#リストボックス列)
 
 
 
@@ -217,7 +217,7 @@ All database tables can be used, regardless of whether the form is related to a 
 | table | number | Table number |
 
 #### 対象オブジェクト
-[リストボックス](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md)
 
 
 
@@ -273,7 +273,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 | selectedItemsSource | string | Collection expression |
 
 #### 対象オブジェクト
-[リストボックス ](listbox_overview.md#overview)
+[リストボックス ](listbox_overview.md)
 
 
 ---
@@ -291,4 +291,4 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 | namedSelection | string | Named selection name |
 
 #### 対象オブジェクト
-[リストボックス](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md)
