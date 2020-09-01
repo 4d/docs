@@ -132,23 +132,23 @@ title: データソース
 
 配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。 これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#変数あるいは式) に代入されます。 この配列を参照することで、ランゲージを使ってオブジェクトを管理することができます。
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
+> このプロパティと、新規レコードのフィールド値を定義するのに使える入力オブジェクトの [デフォルト値](properties_RangeOfValues.md#デフォルト値) を混同しないようにしてください。
 
-You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
+デフォルト値のリストを入力します。 フォームエディター上で専用のダイアログが開き、改行で区切られた値を入力することができます。
 
 ![](assets/en/FormObjects/defaultValues.png)
 
-> You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
+> リストボックス列に [選択リスト](properties_DataSource.md#選択リスト) を定義することもできます。 選択リストは列の各行において選択可能な値の候補として使用されますが、デフォルト値のリストはカラムの各行に上から順に割り当てられます。
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                                            |
-| ------ | ------ | ---------------------------------------------------------------- |
-| values | コレクション | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| 名      | データタイプ | とりうる値                                      |
+| ------ | ------ | ------------------------------------------ |
+| values | コレクション | デフォルト値 (文字列) のコレクション。例: "a", "b", "c", "d" |
 
 #### 対象オブジェクト
 
-[List Box Column (array type only)](listbox_overview.md#リストボックス列)
+[リストボックス列 (配列型のみ)](listbox_overview.md#リストボックス列)
 
 
 
