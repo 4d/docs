@@ -5,7 +5,7 @@ title: Hiérarchie
 
 ---
 ## List box hiérarchique
-`Array type list boxes`
+`List box de type tableau`
 
 This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
 
