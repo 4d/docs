@@ -234,7 +234,7 @@ Foreground color;Dark shadow color)
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#overview) 
+[リストボックス](listbox_overview.md) 
 
 
 
