@@ -171,18 +171,19 @@ title: データソース
     *   ブール  
       マスターテーブルおよび他のテーブルのフィールドを指定できます。
 
--   **4D式** (単純な式、フォーミュラ、または 4Dメソッド)。 式は値を返す必要があります。 値は `On Display Detail` および `On Data Change` イベントで評価されます。 式の結果は、アプリケーションモードでフォームを実行すると自動で表示されます。 The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). 空の場合、列には何も表示されません。
+-   **4D式** (単純な式、フォーミュラ、または 4Dメソッド)。 式は値を返す必要があります。 値は `On Display Detail` および `On Data Change` イベントで評価されます。 式の結果は、アプリケーションモードでフォームを実行すると自動で表示されます。 式は、セレクション型リストボックスではマスターテーブルの (カレントまたは命名) セレクションの各レコードごとに、コレクション型リストボックスではコレクションの各要素ごとに、エンティティセレクション型リストボックスではセレクションのエンティティごとに評価されます。 空の場合、列には何も表示されません。   
+  以下の型の式がサポートされています:
     *   String
     *   数値
     *   日付
     *   ピクチャー
     *   ブール
 
-    For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   
-If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression.
+    コレクション/エンティティセレクション型リストボックスにおいては、Null あるいはサポートされない型は空の文字列として表示されます。  
+コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、**This.\<propertyPath>** (ここでの**\<propertyPath>** はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。   
+スカラー値のコレクションを使用した場合、4D は各コレクション要素に対して、単一のプロパティ (名前は "value") を持つオブジェクトを作成し、それに要素の値を格納します。 この場合、**This.value** を式として使用します。
 
-    If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
+    [代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。
 
 If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property.
 
