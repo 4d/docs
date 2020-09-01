@@ -130,7 +130,7 @@ title: データソース
 
 ## デフォルト値
 
-配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。 これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#変数あるいは式) に代入されます。 Using the language, you can manage the object by referring to this array.
+配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。 これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#変数あるいは式) に代入されます。 この配列を参照することで、ランゲージを使ってオブジェクトを管理することができます。
 
 > Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
 
