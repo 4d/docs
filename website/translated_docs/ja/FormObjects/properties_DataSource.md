@@ -185,14 +185,14 @@ title: データソース
 
     [代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。
 
-If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property.
+フィールド、変数、あるいは代入可能な式 (*例: Person.lastName*) を使用した場合、[入力可](properties_Entry.md#入力可) プロパティの設定に基づき列への入力可/不可が決定されます。
 
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                                   |
-| ---------- | ------ | ----------------------------------------------------------------------- |
-| dataSource | string | A 4D variable, field name, or an arbitrary complex language expression. |
+| 名          | データタイプ | とりうる値                     |
+| ---------- | ------ | ------------------------- |
+| dataSource | string | 4D変数、フィールド名、あるいは任意のランゲージ式 |
 
 #### 対象オブジェクト
 
