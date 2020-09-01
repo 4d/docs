@@ -7,17 +7,17 @@ title: Action
 ---
 ## Glissable
 
-Control whether and how the user can drag the object. By default, no drag operation is allowed.
+Contrôlez si l'utilisateur peut faire glisser l'objet et comment il peut le faire. Par défaut, aucune opération de glisser n'est autorisée.
 
 Deux modes de glisser-déposer sont proposés dans 4D :
 
 - Un mode **personnalisé**, dans lequel le glisser déclenche l'événement formulaire `Sur début glisser` dans le contexte de l'objet. Vous gérez ensuite le glisser-déposer à l'aide d'une méthode.   
   En mode personnalisé, le glisser-déposer est géré par le programmeur. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
-- Un mode **automatique**, dans lequel 4D **copie** du texte ou des images directement à partir de l'objet formulaire. It can then be used in the same 4D area, between two 4D areas, or between 4D and another application. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:  
+- Un mode **automatique**, dans lequel 4D **copie** du texte ou des images directement à partir de l'objet formulaire. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. Par exemple, le glisser-déposer automatique vous permet de copier une valeur entre deux champs, sans programmation :  
   ![](assets/en/FormObjects/property_automaticDragDrop.png)  
-  ![](assets/en/FormObjects/property_automaticDragDrop2.png) In this mode, the `On Begin Drag` form event is NOT generated. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. This option is not available for pictures.
+  ![](assets/en/FormObjects/property_automaticDragDrop2.png) Dans ce mode, l'événement de formulaire `Sur début glisser` n'est PAS généré. Si vous souhaitez "forcer" l'utilisation du glissement personnalisé alors que le glissement automatique est activé, maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée pendant l'action. Cette option n'est pas disponible pour les images.
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
+Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) dans le manuel *Langage 4D*.
 
 #### Grammaire JSON
 
@@ -48,7 +48,7 @@ Deux modes de glisser-déposer sont proposés dans 4D :
   In custom mode, basically the whole drag-and-drop operation is handled by the programmer. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
 - **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
+Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) dans le manuel *Langage 4D*.
 
 
 #### Grammaire JSON
