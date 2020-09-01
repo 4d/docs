@@ -205,7 +205,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Triable
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Cette option est sélectionnée par défaut. Picture type arrays (columns) cannot be sorted using this feature.
+Permet de trier les données de colonne en cliquant sur un en-tête de [Listbox](listbox_overview.md). Cette option est sélectionnée par défaut. Picture type arrays (columns) cannot be sorted using this feature.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 
