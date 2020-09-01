@@ -11,7 +11,7 @@ Contrôlez si l'utilisateur peut faire glisser l'objet et comment il peut le fai
 
 Deux modes de glisser-déposer sont proposés dans 4D :
 
-- Un mode **personnalisé**, dans lequel le glisser déclenche l'événement formulaire `Sur début glisser` dans le contexte de l'objet. Vous gérez ensuite le glisser-déposer à l'aide d'une méthode.   
+- Un mode **personnalisé**, dans lequel le glisser déclenche l'événement formulaire `Sur début glisser` dans le contexte de l'objet. Vous gérez ensuite le glisser à l'aide d'une méthode.   
   En mode personnalisé, le glisser-déposer est géré par le programmeur. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
 - Un mode **automatique**, dans lequel 4D **copie** du texte ou des images directement à partir de l'objet formulaire. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. Par exemple, le glisser-déposer automatique vous permet de copier une valeur entre deux champs, sans programmation :  
   ![](assets/en/FormObjects/property_automaticDragDrop.png)  
@@ -40,13 +40,13 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 ---
 ## Déposable
 
-Control whether and how the object can be the destination of a drag and drop operation.
+Contrôlez si et comment l'objet peut être la destination d'une opération de glisser-déposer.
 
 Deux modes de glisser-déposer sont proposés dans 4D :
 
-- **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. You then manage the drop action using a method.    
-  In custom mode, basically the whole drag-and-drop operation is handled by the programmer. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
-- **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
+- Un mode **personnalisé**, dans lequel le déposer déclenche les événements formulaire `Sur glisser` et `Sur déposer` dans le contexte de l'objet. Vous gérez ensuite le déposer à l'aide d'une méthode.    
+  En mode personnalisé, le glisser-déposer est géré par le programmeur. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
+- Un mode **automatique**, dans lequel 4D gère automatiquement — si possible — l’insertion des données glissées de type texte ou image et déposées sur l’objet (les données sont collées dans l’objet). Les événements `Sur glisser` et `Sur déposer` ne sont pas générés. En revanche, les événements `Sur après modification` (lors du déposer) et `Sur données modifiées` (lorsque l'objet perd le focus) sont générés.
 
 Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) dans le manuel *Langage 4D*.
 
@@ -76,9 +76,9 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 ---
 
 
-## Execute object method
+## Exécuter une méthode objet
 
-When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
+Lorsque cette option est activée, la méthode objet est exécutée avec l'événement `Sur données modifiées` *au même moment* où l'utilisateur change la valeur de l'indicateur. Lorsque l'option est désactivée, la méthode est exécutée *après* la modification.
 
 
 
@@ -93,7 +93,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### Objets pris en charge
 
-[Progress bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[Indicateur de progression](progressIndicator.md) - [Règle](ruler.md) - [Stepper](stepper.md)
 
 
 
