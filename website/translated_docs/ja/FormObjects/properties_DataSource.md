@@ -162,25 +162,25 @@ title: データソース
 
 - **単純な変数** (この場合、コンパイル用に明示的に型宣言されている必要があります)。 BLOB と配列型以外のどんな型の変数も使用することができます。 変数の値は通常 `On Display Detail` イベントで計算されます。
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
+- 標準の [Table]Field シンタックスを使用した **フィールド** ([セレクション型リストボックス](listbox_overview.md#セレクションリストボックス) のみ) 例: `[Employees]LastName`。 以下の型のフィールドを使用できます:
     *   String
-    *   Numeric
+    *   数値
     *   日付
     *   時間
     *   ピクチャー
-    *   Boolean  
-      You can use fields from the Master Table or from other tables.
+    *   ブール  
+      マスターテーブルおよび他のテーブルのフィールドを指定できます。
 
--   A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
-  The following expression types are supported:
+-   **4D式** (単純な式、フォーミュラ、または 4Dメソッド)。 式は値を返す必要があります。 値は `On Display Detail` および `On Data Change` イベントで評価されます。 式の結果は、アプリケーションモードでフォームを実行すると自動で表示されます。 式は、セレクション型リストボックスではマスターテーブルの (カレントまたは命名) セレクションの各レコードごとに、コレクション型リストボックスではコレクションの各要素ごとに、エンティティセレクション型リストボックスではセレクションのエンティティごとに評価されます。 空の場合、列には何も表示されません。   
+  以下の型の式がサポートされています:
     *   String
-    *   Numeric
+    *   数値
     *   日付
     *   ピクチャー
     *   ブール
 
-    For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   
+    コレクション/エンティティセレクション型リストボックスにおいては、Null あるいはサポートされない型は空の文字列として表示されます。  
+コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   
 If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression.
 
     If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
