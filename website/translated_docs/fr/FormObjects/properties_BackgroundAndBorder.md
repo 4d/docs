@@ -173,7 +173,7 @@ Designates the thickness of a line.
 ---
 ## Tableau couleurs de fond
 
-`Array type list boxes`
+`List box de type tableau`
 
 The name of an array to apply a custom background color to each row of the list box or column.
 
