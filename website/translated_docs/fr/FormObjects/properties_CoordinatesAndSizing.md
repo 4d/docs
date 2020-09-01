@@ -17,12 +17,12 @@ Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiq
     *   tout type de contenu (texte, numérique, dates, heures, images (le calcul dépend du format de l'image), objets),
     *   tout types de contrôle (zones de saisie, cases à cocher, listes, listes déroulantes),
     *   polices, styles de polices et tailles de polices,
-    *   the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
+    *   l'option [Retour à la ligne](properties_Display.md#wordwrap) : si elle est désactivée, la hauteur est basée sur le nombre de paragraphes (les lignes sont tronquées); si elle est activée, la hauteur est basée sur le nombre de lignes (non tronquées).
 
-*   The row height calculation ignores:
-    *   hidden column contents
-    *   [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
-> Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+*   Le calcul de la hauteur de ligne ne tient pas compte de :
+    *   du contenu de colonne masqué
+    *   des propriétés du tableau [Hauteur de ligne](#row-height) et [Tableau hauteur de lignes](#row-height-array) (le cas échéant) définies dans la liste de propriété ou par programmation.
+> Etant donné qu'elle nécessite des calculs supplémentaires lors de l'exécution, l'option "hauteur de ligne automatique" peut avoir une incidence sur la fluidité du défilement de votre list box, en particulier lorsqu'elle contient un grand nombre de lignes.
 
 
 
@@ -44,7 +44,7 @@ Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiq
 ---
 ## Bas
 
-Bottom coordinate of the object in the form.
+Coordonnées inférieures de l'objet dans le formulaire.
 
 
 #### Grammaire JSON
@@ -61,7 +61,7 @@ Bottom coordinate of the object in the form.
 ---
 ## Gauche
 
-Left coordinate of the object on the form.
+Coordonnées de gauche de l'objet dans le formulaire.
 
 #### Grammaire JSON
 
@@ -79,7 +79,7 @@ Left coordinate of the object on the form.
 ---
 ## Droite
 
-Right coordinate of the object in the form.
+Coordonnées de droite de l'objet dans le formulaire.
 
 #### Grammaire JSON
 
@@ -97,7 +97,7 @@ Right coordinate of the object in the form.
 ---
 ## Haut
 
-Top coordinate of the object in the form.
+Coordonnées supérieures de l'objet dans le formulaire.
 
 #### Grammaire JSON
 
@@ -137,7 +137,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 
 ---
-## Height
+## Hauteur
 
 This property designates an object's vertical size.
 > Some objects may have a predefined height that cannot be altered.
