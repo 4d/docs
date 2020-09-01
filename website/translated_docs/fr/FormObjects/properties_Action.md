@@ -21,9 +21,9 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                            |
-| -------- | --------------- | ------------------------------------------------------------ |
-| dragging | Texte           | "none" (default), "custom", "automatic" (excluding list box) |
+| Nom      | Type de données | Valeurs possibles                                          |
+| -------- | --------------- | ---------------------------------------------------------- |
+| dragging | Texte           | "none" (par défaut), "custom", "automatic" (hors list box) |
 
 
 #### Objets pris en charge
@@ -53,9 +53,9 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                            |
-| -------- | --------------- | ------------------------------------------------------------ |
-| dropping | Texte           | "none" (default), "custom", "automatic" (excluding list box) |
+| Nom      | Type de données | Valeurs possibles                                          |
+| -------- | --------------- | ---------------------------------------------------------- |
+| dropping | Texte           | "none" (par défaut), "custom", "automatic" (hors list box) |
 
 #### Objets pris en charge
 
