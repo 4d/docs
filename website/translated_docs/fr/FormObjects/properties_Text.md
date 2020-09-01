@@ -658,7 +658,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 </p>
 
 
