@@ -150,7 +150,7 @@ Plusieurs types de références de méthode sont pris en charge :
 
 `List box de type tableau`
 
-Autorise le déplacement des lignes pendant l'exécution. Cette option est sélectionnée par défaut. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box). 
+Autorise le déplacement des lignes pendant l'exécution. Cette option est sélectionnée par défaut. Il n'est pas disponible pour les [list box de type sélection](listbox_overview.md#selection-list-boxes) ni pour les [list box en mode hiérarchique](properties_Hierarchy.md#hierarchical-list-box). 
 
 
 
@@ -205,7 +205,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Triable
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Cette option est sélectionnée par défaut. Picture type arrays (columns) cannot be sorted using this feature.
+Permet de trier les données de colonne en cliquant sur un en-tête de [Listbox](listbox_overview.md). Cette option est sélectionnée par défaut. Picture type arrays (columns) cannot be sorted using this feature.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 
@@ -241,11 +241,11 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 ## Action standard
 
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
+Activités typiques à réaliser par les objets actifs (par exemple, permettre à l'utilisateur d'accepter, d'annuler ou de supprimer des enregistrements, de se déplacer entre les enregistrements ou de page en page dans un formulaire multi-pages, etc.) ont été prédéfinies par 4D comme actions standard. Elles sont décrites en détail dans la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) du *manuel de développement*.
 
-You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed. 
+Vous pouvez associer à la fois une action standard et la méthode projet d'un objet. Dans ce cas, l'action standard est généralement exécutée après la méthode et 4D utilise cette action pour activer/désactiver l'objet en fonction du contexte courant. Lorsqu’un objet est désactivé, la méthode projet associée ne peut être exécutée. 
 
-You can also set this property using the `OBJECT SET ACTION` command.
+Vous pouvez également définir cette propriété à l'aide de la commande `OBJECT SET ACTION`.
 
 
 
@@ -253,11 +253,11 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 | Nom    | Type de données | Valeurs possibles                                                                                                |
 | ------ | --------------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | string          | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| action | string          | Le nom d'une [action standard valide](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 
 
 
 #### Objets pris en charge
 
-[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Tab control](tabControl.md)
+[Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Bouton image](pictureButton_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md) - [Onglet](tabControl.md)
