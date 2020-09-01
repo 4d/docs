@@ -76,7 +76,7 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 ---
 
 
-## Exécuter une méthode objet
+## Exécuter méthode objet
 
 Lorsque cette option est activée, la méthode objet est exécutée avec l'événement `Sur données modifiées` *au même moment* où l'utilisateur change la valeur de l'indicateur. Lorsque l'option est désactivée, la méthode est exécutée *après* la modification.
 
@@ -107,28 +107,28 @@ Lorsque cette option est activée, la méthode objet est exécutée avec l'évé
 
 ## Méthode
 
-Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+Référence d'une méthode attachée à l'objet. Les méthodes d'objet "gèrent" généralement l'objet pendant que le formulaire est affiché ou imprimé. Vous n'appelez pas de méthode objet - 4D l'appelle automatiquement lorsqu'un événement implique l'objet auquel la méthode objet est rattachée.
 
-Several types of method references are supported:
+Plusieurs types de références de méthode sont pris en charge :
 
-- a standard object method file path, i.e. that uses the following pattern:  
+- un chemin de fichier de méthode objet standard, c'est-à-dire qui utilise le modèle suivant :  
   `ObjectMethods/objectName.4dm`  
-  ... where `objectName` is the actual [object name](properties_Object.md#object-name). This type of reference indicates that the method file is located at the default location ("sources/forms/*formName*/ObjectMethods/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+  ... où `objectName` est le [nom de l'objet](properties_Object.md#object-name). Ce type de référence indique que le fichier de méthode se trouve à l'emplacement par défaut ("sources/forms/*formName*/ObjectMethods/"). Dans ce cas, 4D gère automatiquement la méthode objet lorsque des opérations sont exécutées sur l'objet formulaire (renommage, duplication, copier/coller, etc.)
 
-- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
+- un nom de méthode projet : nom d'une méthode projet existante sans extension de fichier, c'est-à-dire : `maMéthode` Dans ce cas, 4D ne prend pas en charge automatiquement les opérations objet.
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `ObjectMethods/objectName.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- un chemin d'accès du fichier de méthode personnalisé comprenant l'extension .4dm, par exemple :  
+  `ObjectMethods/objectName.4dm` Vous pouvez également utiliser un filesystem :  
+  `/RESOURCES/Buttons/bOK.4dm` Dans ce cas, 4D ne prend pas en charge automatiquement les opérations sur les objets.
 
 
 
 
 #### Grammaire JSON
 
-| Nom    | Type de données | Valeurs possibles                                                  |
-| ------ | --------------- | ------------------------------------------------------------------ |
-| method | Texte           | Object method standard or custom file path, or project method name |
+| Nom    | Type de données | Valeurs possibles                                                                          |
+| ------ | --------------- | ------------------------------------------------------------------------------------------ |
+| method | Texte           | Chemin de fichier standard ou personnalisé de la méthode objet ou nom de la méthode projet |
 
 
 
@@ -148,9 +148,9 @@ Several types of method references are supported:
 
 ## Lignes déplaçables
 
-`Array type list boxes`
+`List box de type tableau`
 
-Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box). 
+Autorise le déplacement des lignes pendant l'exécution. Cette option est sélectionnée par défaut. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box). 
 
 
 
@@ -205,7 +205,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Triable
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
+Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Cette option est sélectionnée par défaut. Picture type arrays (columns) cannot be sorted using this feature.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 
