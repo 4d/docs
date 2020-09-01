@@ -180,19 +180,19 @@ title: データソース
     *   ブール
 
     コレクション/エンティティセレクション型リストボックスにおいては、Null あるいはサポートされない型は空の文字列として表示されます。  
-コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 For example, you can use **This.\<propertyPath>** where **\<propertyPath>** is the path of a property in the collection or an entity attribute path to access the current value of each element/entity.   
-If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression.
+コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、**This.\<propertyPath>** (ここでの**\<propertyPath>** はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。   
+スカラー値のコレクションを使用した場合、4D は各コレクション要素に対して、単一のプロパティ (名前は "value") を持つオブジェクトを作成し、それに要素の値を格納します。 この場合、**This.value** を式として使用します。
 
-    If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
+    [代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。
 
-If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property.
+フィールド、変数、あるいは代入可能な式 (*例: Person.lastName*) を使用した場合、[入力可](properties_Entry.md#入力可) プロパティの設定に基づき列への入力可/不可が決定されます。
 
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                                   |
-| ---------- | ------ | ----------------------------------------------------------------------- |
-| dataSource | string | A 4D variable, field name, or an arbitrary complex language expression. |
+| 名          | データタイプ | とりうる値                     |
+| ---------- | ------ | ------------------------- |
+| dataSource | string | 4D変数、フィールド名、あるいは任意のランゲージ式 |
 
 #### 対象オブジェクト
 
