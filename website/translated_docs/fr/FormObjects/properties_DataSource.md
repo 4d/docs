@@ -119,7 +119,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -196,7 +196,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
