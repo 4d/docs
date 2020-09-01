@@ -156,9 +156,9 @@ title: データソース
 ---
 ## 式
 
-[セレクション型](listbox_overview.md#セレクションリストボックス) および [コレクション/エンティティセレクション型](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) リストボックスのプロパティです。 See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
+[セレクション型](listbox_overview.md#セレクションリストボックス) および [コレクション/エンティティセレクション型](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) リストボックスのプロパティです。 **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
 
-A 4D expression to be associated with a column. You can enter:
+列に割り当てる 4D式です。 以下のものを指定できます:
 
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
