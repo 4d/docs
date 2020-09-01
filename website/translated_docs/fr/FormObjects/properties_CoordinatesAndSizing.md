@@ -1,10 +1,10 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordinates & Sizing
+title: Coordonnées & dimensions
 ---
 
 ---
-## Automatic Row Height
+## Hauteur de ligne automatique
 `4D View Pro only: This feature requires a 4D View Pro license.`
 
 This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
@@ -36,7 +36,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -196,7 +196,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 ---
@@ -214,7 +214,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
