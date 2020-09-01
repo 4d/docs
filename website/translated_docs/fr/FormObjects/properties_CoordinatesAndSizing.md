@@ -8,15 +8,15 @@ title: Coordonnées & dimensions
 
 Cette propriété n'est disponible que pour les list box de type tableau, non hiérarchiques. Par défaut, cette option n'est pas sélectionnée.
 
-When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
-> When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+Lorsqu'elle est utilisée, la hauteur de chaque ligne de la colonne est automatiquement calculée par 4D, et le contenu de la colonne est pris en compte. A noter que seules les colonnes avec l'option sélectionnée seront prises en compte pour calculer la hauteur de ligne.
+> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandir" a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
 
-When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
+Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiquement calculée afin d'ajuster entièrement le contenu de la cellule ajusté sans être tronqué (sauf si l'option [Wordwrap](properties_Display.md#wordwrap) est désactivée.
 
-*   The row height calculation takes into account:
-    *   any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
-    *   any control types (inputs, check boxes, lists, dropdowns),
-    *   fonts, fonts styles and font sizes,
+*   Le calcul de la hauteur de ligne prend en compte :
+    *   tout type de contenu (texte, numérique, dates, heures, images (le calcul dépend du format de l'image), objets),
+    *   tout types de contrôle (zones de saisie, cases à cocher, listes, listes déroulantes),
+    *   polices, styles de polices et tailles de polices,
     *   the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
 *   The row height calculation ignores:
