@@ -286,9 +286,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles    |
-| -------------- | --------------- | -------------------- |
-| namedSelection | string          | Named selection name |
+| Nom            | Type de données | Valeurs possibles   |
+| -------------- | --------------- | ------------------- |
+| namedSelection | string          | Nom de la sélection |
 
 #### Objets pris en charge
 [List Box](listbox_overview.md#overview)
