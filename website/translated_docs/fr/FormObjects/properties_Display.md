@@ -400,7 +400,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -481,7 +481,7 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
