@@ -135,7 +135,7 @@ Designates if the size of the column can be modified by the user.
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
