@@ -130,7 +130,9 @@ title: 入力
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+コンボボックス - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)</p> 
+
+
 
 
 
@@ -139,18 +141,23 @@ title: 入力
 
 
 ---
+
+
 ## フォーカス可
 
-When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
+オブジェクトに対し **フォーカス可** プロパティが選択されていると、そのオブジェクトはフォーカスを得ることができ、キーボードなどを使用してアクティブ化することができます。 オブジェクトはフォーカスを得ると、オブジェクトごとあるいは OS ごとに定められた方法でハイライトされます。ただし [フォーカスの四角を隠す](properties_Appearance.md#hide-focus-rectangle) オプションが選択されている場合を除きます。
 
-> An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected <p> <p>
+
+> [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。
+
+* ![](assets/en/FormObjects/property_focusable1.png)<br>チェックボックスは選択時にフォーカスを表示します。 <p> <p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
 
-
 When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
+
+
 
 
 #### JSON 文法
@@ -160,6 +167,9 @@ When the **Focusable** property is selected for a non-enterable object, the user
 | focusable | boolean | true, false |
 
 
+
+
+
 #### 対象オブジェクト
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
@@ -167,14 +177,22 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 
 
+
+
 ---
+
+
 ## キーボードレイアウト
 
 This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
 
 By default, the object uses the current keyboard layout.
 
+
+
 > You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
+
+
 
 #### JSON 文法
 
@@ -183,29 +201,47 @@ By default, the object uses the current keyboard layout.
 | keyboardDialect | text   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
+
+
+
 #### 対象オブジェクト
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
 
 
 
+
+
 ---
+
+
 ## 複数行
 
 This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
 
+
+
 #### 自動
+
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
 - In multiline inputs, 4D carries out automatic line returns:  
   ![](assets/en/FormObjects/multilineAuto.png)
 
+
+
 #### ×
+
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
 - There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
   ![](assets/en/FormObjects/multilineNo.png)
 
+
+
 #### ◯
+
 When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
+
+
 
 
 #### JSON 文法
@@ -215,13 +251,20 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 | multiline | text   | "yes", "no", "automatic" (default if not defined) |
 
 
+
+
+
 #### 対象オブジェクト
 
 [入力](input_overview.md)
 
 
 
+
+
 ---
+
+
 ## プレースホルダー
 
 4D can display placeholder text in the fields of your forms.
@@ -240,9 +283,14 @@ A placeholder can be displayed for the following types of data:
 You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
 
     :xliff:PH_Lastname
+    
 
 You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
+
+
 > You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+
+
 
 #### JSON 文法
 
@@ -250,9 +298,14 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 | ----------- | ------ | ---------------------------------------------------------------------------- |
 | placeholder | string | Text to be displayed (grayed out) when the object does not contain any value |
 
+
+
+
 #### 対象オブジェクト
 
 [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
+
+
 
 
 #### 参照
@@ -261,10 +314,16 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 
 
+
+
 ---
+
+
 ## 選択を常に表示
 
 This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
+
+
 
 
 #### JSON 文法
@@ -274,24 +333,34 @@ This property keeps the selection visible within the object after it has lost th
 | showSelection | boolean | true, false |
 
 
+
+
+
 #### 対象オブジェクト
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
 
 
 
+
+
 ---
+
+
 ## ショートカット
 
 This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
 
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
-
 ![](assets/en/FormObjects/property_shortcut.png)
+
+
 > You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
+
+
 
 #### JSON 文法
 
@@ -306,6 +375,9 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | shortcutKey     | string  | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
+
+
+
 #### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
@@ -314,7 +386,11 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 
 
+
+
 ---
+
+
 ## シングルクリック編集
 
 Enables direct passage to edit mode in list boxes.
@@ -323,11 +399,16 @@ When this option is enabled, list box cells switch to edit mode after a single u
 
 When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
 
+
+
 #### JSON 文法
 
 | 名               | データタイプ  | とりうる値       |
 | --------------- | ------- | ----------- |
 | singleClickEdit | boolean | true, false |
+
+
+
 
 #### 対象オブジェクト
 
