@@ -77,9 +77,9 @@ title: 入力
 ---
 ## 入力フィルター
 
-An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
+**日本語利用時の注意点**: 入力フィルターは日本語IME と互換性がありません。入力文字種の制限及び#を使用した入力文字数の制限もできません。たとえば半角数字のみを 2文字だけ入力を許可する目的で、入力フィルターに&9##と指定しても、IME経由での全角数字やその他日本語文字の入力を防ぐことはできませんし、任意の数の文字が入力できてしまいます。アプリケーション仕様としてこのような制御が必要な場合は 4Dコマンドを使用する必要があります。<br /><br /> 入力フィルターを使用するとデータ入力中にユーザーがタイプできる文字を制御できます。 [指定リスト](properties_RangeOfValues.md#指定リスト) とは異なり、入力フィルターは文字ごとに処理がおこなわれます。 たとえば、パーツ番号が常に 2つの文字とそれに続く 3つの数字で構成されるとき、入力フィルターを通してそのパターンを強制することができます。 さらに特定の文字や数字のみを使用するよう制御することもできます。
 
-An entry filter operates only during data entry. It has no effect on data display after the user deselects the object. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
+入力フィルターはデータ入力時にのみ動作します。 オブジェクトの選択をユーザーが解除した後のデータ表示には効果がありません。 通常は、入力フィルターを [表示フォーマット](properties_Display.md) と一緒に使用します。 The filter constrains data entry and the format ensures proper display of the value after data entry.
 
 During data entry, an entry filter evaluates each character as it is typed. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
 
