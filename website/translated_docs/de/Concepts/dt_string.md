@@ -59,18 +59,18 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 
 ## String Vergleiche
 
-- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach   href="dt_string.md#keywords">Schlüsselwort</a>, siehe unten).
+- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach [Schlüsselwörter](dt_string.md#keywords), siehe unten).
 - Bei String Vergleichen wird die Groß- und Kleinschreibung ignoriert, so gibt "a"="A" `TRUE` zurück. Wollen Sie die Schreibweise von zwei Zeichen überprüfen, vergleichen Sie deren Zeichen Codes. So ergibt z. B. folgender Ausdruck `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
-- Bei String Vergleichen werden diakritische Zeichen, wie z. B. Akzente ignoriert, Umlaute, wie ä, ö, ü werden dagegen berücksichtigt. So ergibt z. B. folgender Ausdruck `TRUE`:
+- Bei String Vergleichen werden diakritische Zeichen wie die entsprechenden Zeichen ohne Akzente behandelt. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
      "n"="ñ"
      "n"="Ñ"
-     "A"="å"
+     "A"="ä"
       // and so on
 ```
 
