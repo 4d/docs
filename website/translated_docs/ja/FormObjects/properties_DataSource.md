@@ -226,12 +226,12 @@ title: データソース
 ## 関連付け
 
 
-This property is available in the following conditions:
+このプロパティは以下の場合に表示されます:
 
-- a [choice list](#choice-list) is associated with the object
-- for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- オブジェクトに対して [選択リスト](#選択リスト) が割り当てられている
+- [入力](input_overview.md) および [リストボックス列](listbox_overview.md#リストボックス列) の場合には、ユーザーがリスト内の値のみ入力できるように、オブジェクトに対して [指定リスト](properties_RangeOfValues.md#指定リスト) も定義されている (通常は両方のオプションで同じリストを使用しているはずです)。
 
-This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
+このプロパティは、選択リストに関連付けされたフィールドまたは変数において、フィールドに保存する内容の型を指定します:
 
 - **Save as Value** (default option): the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.
 - **Save as Reference**: the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the `APPEND TO LIST` or `SET LIST ITEM` commands, or in the lists editor.
