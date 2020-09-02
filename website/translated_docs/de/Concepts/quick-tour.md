@@ -56,7 +56,7 @@ Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfa
 MyOtherDate:=Current date+30
 ```
 
-Die Code-Zeile bedeutet "MyOtherDate erhält das aktuelle Datum plus 30 Tage." This line declares the variable, assigns it with both the (temporary) date type and a content. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
+Die Code-Zeile bedeutet "MyOtherDate erhält das aktuelle Datum plus 30 Tage." Diese Zeile erstellt die Variable, weist ihr den Datentyp (temporär) und einen Inhalt zu. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
 
 ## Befehle
 
@@ -195,14 +195,14 @@ myColl[3]  //access to 4th element of the collection
 
 Die 4D Programmiersprache unterstützt Objekt Klassen. Um eine Klasse mit Name "myClass" zu erstellen, fügen Sie im Ordner Project/Sources/Classes eines Projekts die Datei `myClass.4dm` hinzu.
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. Sie können Parameter übergeben.
+Um eine Instanz auf ein Objekt der Klasse in einer Methode zu setzen, rufen Sie die Benutzerklasse aus dem *Class Store* auf (`cs`) und verwenden die Member Function `new()`. Sie können Parameter übergeben.
 
 ```4d  
 // in a 4D method
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
+In der Klassenmethode `myClass` definieren Sie mit der Anweisung `Function <methodName>` die Member Method *methodName* der Klasse. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
 
 ```4d  
 //in the myClass.4dm file
@@ -231,7 +231,7 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superklassen lassen sich über den Befehl `Super` aufrufen. Beispiel:
+Eine Klasse kann über `Class extends <ClassName>` eine andere Klasse erweitern. Superklassen lassen sich über den Befehl `Super` aufrufen. Beispiel:
 
 ```4d  
 //in the Square.4dm file
