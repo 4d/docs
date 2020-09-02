@@ -20,7 +20,7 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 ### Zusätzliche Regeln für Namen von Objekteigenschaften und ORDA
 - Leerzeichen sind nicht erlaubt.
 - Klammern ("[ ]") sind nicht erlaubt.
-- Groß- und Kleinschreibung wird unterschieden.
+- <0>Wichtig:</0> Groß- und Kleinschreibung wird unterschieden.
 
 ### Zusätzliche Regeln für SQL
 - Nur die Zeichen _0123456789abcdefghijklmnopqrstuvwxyz werden akzeptiert.
