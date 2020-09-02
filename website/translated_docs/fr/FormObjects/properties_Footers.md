@@ -6,7 +6,7 @@ title: Pieds
 ---
 ## Afficher pieds
 
-This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
+Cette propriété est utilisée pour afficher ou masquer [les pieds de de colonne listbox](listbox_overview.md#list-box-footers). Il existe un pied par colonne; chaque pied est configuré séparément.
 
 #### Grammaire JSON
 
@@ -24,7 +24,7 @@ This property is used to display or hide [list box column footers](listbox_overv
 ---
 ## Hauteur
 
-This property is used to set the row height for a list box footer in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
+Cette propriété sert à définir la hauteur de ligne d'un pied de list box en **pixels** ou en **lignes de texte** (lorsqu'elle est affichée). Both types of units can be used in the same list box:
 
 *   *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
 
@@ -67,4 +67,4 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### Voir également
 
-[Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)
+[En-têtes](properties_Headers.md) - [Pieds List box](listbox_overview.md#list-box-footers)
