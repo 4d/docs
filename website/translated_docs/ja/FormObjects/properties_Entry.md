@@ -190,15 +190,15 @@ title: 入力
 
 
 
-> You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
+> このプロパティは、`OBJECT SET KEYBOARD LAYOUT` と `OBJECT Get keyboard layout` コマンドを使用して動的に設定することが可能です。
 
 
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                                                                       |
-| --------------- | ------ | --------------------------------------------------------------------------- |
-| keyboardDialect | text   | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| 名               | データタイプ | とりうる値                                                            |
+| --------------- | ------ | ---------------------------------------------------------------- |
+| keyboardDialect | text   | 言語コード (例: "ar-ma", "cs" など) RFC3066, ISO639 および ISO3166 を参照ください。 |
 
 
 
@@ -206,7 +206,7 @@ title: 入力
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
 
 
 
@@ -217,38 +217,38 @@ title: 入力
 
 ## 複数行
 
-This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
+このプロパティは、テキストタイプの式や、文字およびテキストタイプのフィールドが割り当てられている [入力オブジェクト](input_overview.md) で使用できます。 値は、あり・なし・自動 (デフォルト) が選択できます。
 
 
 
 #### 自動
 
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- In multiline inputs, 4D carries out automatic line returns:  
+- 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
+- 複数行の入力オブジェクトの場合、4D は自動で改行します:  
   ![](assets/en/FormObjects/multilineAuto.png)
 
 
 
 #### ×
 
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
+- 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
+- 改行はおこなわれません。テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:  
   ![](assets/en/FormObjects/multilineNo.png)
 
 
 
 #### ◯
 
-When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
+この値を選択すると、追加の [ワードラップ](properties_Display.md#ワードラップ) オプションが表示されます。
 
 
 
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値                                             |
-| --------- | ------ | ------------------------------------------------- |
-| multiline | text   | "yes", "no", "automatic" (default if not defined) |
+| 名         | データタイプ | とりうる値                                       |
+| --------- | ------ | ------------------------------------------- |
+| multiline | text   | "yes", "no", "automatic" (定義されていない場合のデフォルト) |
 
 
 
@@ -338,7 +338,7 @@ This property keeps the selection visible within the object after it has lost th
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
 
 
 
