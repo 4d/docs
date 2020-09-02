@@ -642,7 +642,7 @@ C_OBJECT($USelection;$OSelection)
 </details>
 
 <!-- REF #dataclassClass.query().Syntax -->
-**.query**( *queryString* | *formula* { ; *value* } { ; *value2* ; ... ; *valueN* } { ; *querySettings* } ) -> EntitySelection <!-- END REF -->
+**.query**( *queryString* &#124; *formula* { ; *value* } { ; *value2* ; ... ; *valueN* } { ; *querySettings* } ) -> EntitySelection <!-- END REF -->
 
 <!-- REF #dataclassClass.query().Params -->
 |Parameter|Type||Description|
@@ -690,6 +690,7 @@ where:
 	|---|---|---|
 	|Equal to	|=, ==	|Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.|
 	||===, IS|	Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic|
+
 
 	|Not equal to|	#, !=	|Supports the wildcard (@)|
 	||!==, IS NOT|	Considers the @ as a standard character|
