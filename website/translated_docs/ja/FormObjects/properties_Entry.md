@@ -87,10 +87,10 @@ title: 入力
 
 ### 入力フィルターの定義
 
-ほとんどの場合、あらかじめ用意されている 4D の [ビルトインフィルター](#デフォルト入力フィルター) を使用することができます。しかし、カスタマイズされたフィルターを作成することも可能です。
+ほとんどの場合、あらかじめ用意されている 4D の [ビルトインフィルター](#デフォルト入力フィルター) を使用することができます。しかし、カスタマイズされたフィルターを作成することも可能です:
 
-- you can directly enter a filter definition string
-- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
+- 入力フィルターコードを直接入力することができます。
+- ツールボックスのフィルターエディターで入力フィルターを作成し、その名前を指定することもできます。 The names of custom filters you create begin with a vertical bar (|).
 
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
