@@ -33,4 +33,4 @@ The print options are:
 
 #### Objets pris en charge
 
-[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)
+[Zone de saisie](input_overview.md) - [Sous-formulaires](subform_overview.md) (sous-formulaires liste uniquement) - [Zones 4D Write Pro](writeProArea_overview.md)
