@@ -96,7 +96,7 @@ Three options are available:
 
 
 ---
-## Pusher
+## Pousseur
 
 When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
 
@@ -123,7 +123,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 
 ---
-## Resizable
+## Redimensionnable
 
 Designates if the size of the column can be modified by the user.
 
