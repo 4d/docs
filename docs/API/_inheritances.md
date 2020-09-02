@@ -3,12 +3,15 @@
 <!-- REF #imapTransporterClass._alias_-->IMAPTransporter<!-- END REF -->
 <!-- REF #smtpTransporterClass._alias_-->SMTPTransporter<!-- END REF -->
 <!-- REF #file._alias_-->File<!-- END REF -->
-<!-- REF #zipFile._alias_-->ZipFile><!-- END REF -->
-<!-- REF #zipFolder._alias_-->ZipFolder><!-- END REF -->
+<!-- REF #zipFile._alias_-->ZipFile<!-- END REF -->
+<!-- REF #zipFolder._alias_-->ZipFolder<!-- END REF -->
 <!-- REF #document._alias_-->Document<!-- END REF -->
 <!-- REF #folder._alias_-->Folder<!-- END REF -->
-<!-- REF #cryptoKeyClass._alias_-->CryptoKey<!-- END REF -->
-<!-- REF #collectionClass._alias_-->Collection<!-- END REF -->
+<!-- REF #cryptokey._alias_-->CryptoKey<!-- END REF -->
+<!-- REF #formulaClass._alias_-->Formula<!-- END REF -->
+<!-- REF #collection._alias_-->Collection<!-- END REF -->
+<!-- REF #directory._alias_-->Directory<!-- END REF -->
+<!-- REF #signalClass._alias_-->Signal<!-- END REF -->
 
 
 
