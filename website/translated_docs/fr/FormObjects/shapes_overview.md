@@ -87,7 +87,7 @@ Résultat : ![](assets/en/FormObjects/shape_line2.png)
 
 ## Ovale
 
-Un ovale statique est un objet décoratif contenu dans les formulaires. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
+Un ovale statique est un objet décoratif contenu dans les formulaires. Les objets de forme ovale peuvent être utilisés pour dessiner des formes circulaires (lorsque les propriétés [largeur](properties_CoordinatesAndSizing.md#width) et [hauteur](properties_CoordinatesAndSizing.md#height) sont identiques).
 
 ![](assets/en/FormObjects/shape_oval.png)
 
@@ -95,12 +95,12 @@ Un ovale statique est un objet décoratif contenu dans les formulaires. Oval obj
 
 ```4d
     "myOval": {
-        "type": "oval",     //define the type of object
-        "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form 
-        "width": 100,       //width of the object
-        "height": 20,       //height of the object
-        "fill": "blue"      //define the background color
+        "type": "oval",    //définit le type d'objet
+        "left": 60,             //position sur la gauche du formulaire
+        "top": 160,             //position en haut du formulaire
+        "width": 100,           //largeur de l'objet 
+        "height": 20,           //hauteur de l'objet
+        "borderRadius": 20      //définit la couleur de fond
                 }
 ```
 
