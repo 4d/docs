@@ -79,11 +79,11 @@ title: 入力
 
 **日本語利用時の注意点**: 入力フィルターは日本語IME と互換性がありません。入力文字種の制限及び#を使用した入力文字数の制限もできません。たとえば半角数字のみを 2文字だけ入力を許可する目的で、入力フィルターに&9##と指定しても、IME経由での全角数字やその他日本語文字の入力を防ぐことはできませんし、任意の数の文字が入力できてしまいます。アプリケーション仕様としてこのような制御が必要な場合は 4Dコマンドを使用する必要があります。<br /><br /> 入力フィルターを使用するとデータ入力中にユーザーがタイプできる文字を制御できます。 [指定リスト](properties_RangeOfValues.md#指定リスト) とは異なり、入力フィルターは文字ごとに処理がおこなわれます。 たとえば、パーツ番号が常に 2つの文字とそれに続く 3つの数字で構成されるとき、入力フィルターを通してそのパターンを強制することができます。 さらに特定の文字や数字のみを使用するよう制御することもできます。
 
-入力フィルターはデータ入力時にのみ動作します。 オブジェクトの選択をユーザーが解除した後のデータ表示には効果がありません。 通常は、入力フィルターを [表示フォーマット](properties_Display.md) と一緒に使用します。 The filter constrains data entry and the format ensures proper display of the value after data entry.
+入力フィルターはデータ入力時にのみ動作します。 オブジェクトの選択をユーザーが解除した後のデータ表示には効果がありません。 通常は、入力フィルターを [表示フォーマット](properties_Display.md) と一緒に使用します。 フィルターはデータ入力を制約し、表示フォーマットはデータ入力後の値の表示を制御します。
 
-During data entry, an entry filter evaluates each character as it is typed. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
+データ入力中、タイプされるたびに入力フィルターは文字を評価します。 ユーザーが無効な入力をすると (たとえば文字の代わりに数字)、4D はその入力を受け付けません。 ユーザーが有効な入力をおこなうまで値は変更されません。
 
-Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. When such a format is used, the user does not need to enter the parentheses or the dashes.
+入力フィルターに表示フォーマットを併用することで、形式的な文字をユーザーが入力しなくてすむようにできます。 たとえば、アメリカの電話番号は 3桁のエリアコードに、3桁と4桁に分割される 7桁の番号が続きます。 エリアコードをカッコでくくり、電話番号の3つ目の数字の後にダッシュを表示するような表示フォーマットを利用することができます。 When such a format is used, the user does not need to enter the parentheses or the dashes.
 
 ### Defining an entry filter
 
