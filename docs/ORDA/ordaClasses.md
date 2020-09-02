@@ -3,10 +3,6 @@ id: ordaClasses
 title: Data Model Classes
 ---
 
-## Preview feature
-
-> ORDA data model class functions are provided as a **preview feature** in 4D v18 R4: all functions you create are exposed without restrictions. Future releases will include more control over the function availability, especially from REST requests. In the next release, **by default all your data model class functions will be set to private**. You will have to specify individually each function that you want to be exposed. 
-
 ## Overview
 
 ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions. 
@@ -24,17 +20,18 @@ Developers can not only use these functions in local datastores, but also in cli
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
-Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained or reused:
+Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained, reused, with a high level of security:
 
 - it allows you to "hide" the overall complexity of the underlying physical structure and only expose understandable and ready-to-use functions. 
 
 - if the physical structure evolves, you simply to adapt function code and client applications will continue to call them transparently. 
 
+- by default, all your data model class functions are set to **private** and cannot be called from remote requests. You must declare explicitly each public function using the `exposed` keyword.
 
 ![](assets/en/ORDA/api.png)
 
 
-In addition, 4D Developer [automatically pre-creates](#creating-classes) the classes for each available data model object. 
+In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object. 
 
 ## Architecture
 
