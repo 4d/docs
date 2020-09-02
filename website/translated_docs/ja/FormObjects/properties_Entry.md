@@ -151,11 +151,11 @@ title: 入力
 
 > [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>チェックボックスは選択時にフォーカスを表示します。 <p> <p>
+* ![](assets/en/FormObjects/property_focusable1.png)<br>選択時にフォーカスを表示しているチェックボックス <p> <p>
 
-* ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
+* ![](assets/en/FormObjects/property_focusable2.png)<br>選択されているが、フォーカスを表示していないチェックボックス
 
-When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
+入力できないオブジェクトに **フォーカス可** プロパティが設定されていると、ユーザーはエリアの内容を選択、コピー、およびドラッグ＆ドロップすることができます。
 
 
 
@@ -172,7 +172,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [プラグインエリア](pluginArea_overview.md) - [ラジオボタン](radio_overview.md) - [サブフォーム](subform_overview.md)
 
 
 
@@ -184,9 +184,9 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 ## キーボードレイアウト
 
-This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
+このプロパティは [入力](input_overview.md) オブジェクトに対して特定のキーボードレイアウトを関連付けます。 たとえば、国際的なアプリケーションにおいて、フォーム内にギリシャ文字で入力しなければならないフィールドがあった場合、"ギリシャ語" のキーボードレイアウトをこのフィールドに対して関連付けることができます。 これにより、このフィールドがフォーカスを受けている場合にはデータ入力時にキーボード設定が自動的に変わります。
 
-By default, the object uses the current keyboard layout.
+デフォルトでは、オブジェクトはカレントのキーボードレイアウトを使用します。
 
 
 
