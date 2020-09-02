@@ -26,27 +26,27 @@ title: 入力
 ---
 ## コンテキストメニュー
 
-Allows the user access to a standard context menu in the object when the form is executed.
+このプロパティを有効にすると、フォームの実行中にオブジェクトに対して標準のコンテキストメニューが使用できるようになります。
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display#picture-format) using this menu is temporary; it is not saved with the record.
+ピクチャー型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド (カット、コピー、ペースト、そしてクリア) に加え、ファイルからピクチャーを読み込むために使用することのできる **読み込み...** コマンド、ピクチャーをディスクに保存するのに使用する **別名で保存...** コマンドなどがあります。 また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。**トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
-- **Fonts...**: displays the font system dialog box
-- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
-- commands for supported style modifications: font, size, style, color and background color. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
+[マルチスタイル](properties_Text.md#マルチスタイル) オプションがチェックされているテキスト型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド以外に以下の様なコマンドを使用することができます:
+- **フォント...**: フォントシステムダイアログボックスを表示させます。
+- **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。
+- スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。 このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューへのアクセスは [`WA SET PREFERENCE`](https://doc.4d.com/4Dv18/4D/18/WA-SET-PREFERENCE.301-4504849.ja.html) コマンドを使用して制御できます。
 
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                 |
-| ----------- | ------ | ------------------------------------- |
-| contextMenu | string | "automatic" (used if missing), "none" |
+| 名           | データタイプ | とりうる値                           |
+| ----------- | ------ | ------------------------------- |
+| contextMenu | string | "automatic" (省略時のデフォルト), "none" |
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[入力](input_overview.md) - [Webエリア](webArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 
 
@@ -56,9 +56,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 ---
 ## 入力可
 
-The Enterable attribute indicates whether users can enter values into the object.
+入力可属性は、ユーザーがオブジェクトに値を入力できるかどうかを指定します。
 
-Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. A non-enterable object only displays data. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+すべてのアクティブオブジェクトはデフォルトで入力可です。 If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. A non-enterable object only displays data. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
