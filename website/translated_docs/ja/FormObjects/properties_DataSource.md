@@ -204,17 +204,17 @@ title: データソース
 ---
 
 ## マスターテーブル
-`Current selection list boxes`
+`カレントセレクションリストボックス`
 
-Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
+使用するカレントセレクションが属するテーブルを指定します。 このテーブルとそのカレントセレクションが、リストボックスの列に割り当てられたフィールドの参照を形成します (フィールド参照やフィールドを含む式)。 ある列が他のテーブルのフィールドを参照しているとしても、表示される行の数はマスターテブルのカレントレコード数となります。
 
-All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
+すべてのデータベーステーブルが利用できます。フォームがテーブルに属しているか (テーブルフォームの場合) あるいは属していないか (プロジェクトフォーム) は関係ありません。
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値        |
-| ----- | ------ | ------------ |
-| table | number | Table number |
+| 名     | データタイプ | とりうる値  |
+| ----- | ------ | ------ |
+| table | number | テーブル番号 |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md)
