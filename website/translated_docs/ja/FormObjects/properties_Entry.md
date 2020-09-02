@@ -1,14 +1,14 @@
 ---
 id: propertiesEntry
-title: Entry
+title: 入力
 ---
 
 ---
 ## 自動スペルチェック
 
-4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D にはカスタマイズ可能なスペルチェック機能がビルトインされています。 スペルチェックはテキスト型の [入力](input_overview.md) オブジェクト、そして [4D Write Pro](writeProArea_overview.md)ドキュメントに対して実行可能です。
 
-The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+自動スペルチェックプロパティは、各オブジェクトのスペルチェックを有効にします この場合、スペルチェックはタイプ中に自動的に実行されます。 チェックしたいオブジェクトそれぞれに対して `SPELL CHECKING` 4Dランゲージコマンドを呼び出して実行することもできます。
 
 
 #### JSON 文法
@@ -20,7 +20,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
 
 
 ---
