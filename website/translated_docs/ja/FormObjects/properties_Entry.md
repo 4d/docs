@@ -60,7 +60,7 @@ title: 入力
 
 すべてのアクティブオブジェクトはデフォルトで入力可です。 フォーム上の特定のフィールドやオブジェクトを入力不可にしたい場合、入力可チェックボックスの選択を解除します。 入力不可のオブジェクトはデータの表示のみをおこないます。 当該フィールド名や変数名を使用するメソッドによってデータを制御します。 入力不可オブジェクトでも `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` そして `On Losing Focus` フォームイベントは使用できます。 これらによって、カスタムコンテキストメニューの管理が容易になり、入力不可変数をドラッグ＆ドロップしたり選択したりできるインターフェースをデザインすることができます。
 
-When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
+このプロパティを無効にした場合、リストによってリストボックス列に関連付けられたポップアップメニューも使用できなくなります。
 
 
 #### JSON 文法
@@ -71,13 +71,13 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 
 ---
 ## 入力フィルター
 
-An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
+**日本語利用時の注意点**: 入力フィルターは日本語IME と互換性がありません。入力文字種の制限及び#を使用した入力文字数の制限もできません。たとえば半角数字のみを 2文字だけ入力を許可する目的で、入力フィルターに&9##と指定しても、IME経由での全角数字やその他日本語文字の入力を防ぐことはできませんし、任意の数の文字が入力できてしまいます。アプリケーション仕様としてこのような制御が必要な場合は 4Dコマンドを使用する必要があります。<br /><br /> 入力フィルターを使用するとデータ入力中にユーザーがタイプできる文字を制御できます。 [指定リスト](properties_RangeOfValues.md#指定リスト) とは異なり、入力フィルターは文字ごとに処理がおこなわれます。 For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
 
 An entry filter operates only during data entry. It has no effect on data display after the user deselects the object. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
 
