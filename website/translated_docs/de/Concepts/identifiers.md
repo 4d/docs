@@ -21,7 +21,7 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 - Leerzeichen sind nicht erlaubt.
 - Klammern ("[ ]") sind nicht erlaubt.
-- Groß- und Kleinschreibung wird unterschieden.
+- <0>Wichtig:</0> Groß- und Kleinschreibung wird unterschieden.
 
 ### Zusätzliche Regeln für SQL
 
