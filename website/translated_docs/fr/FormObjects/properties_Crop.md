@@ -6,7 +6,7 @@ title: Découpage
 ---
 ## Columns
 
-Sets the number of columns in a thumbnail table.
+Définit le nombre de colonnes dans un tableau d'imagettes.
 
 #### Grammaire JSON
 
@@ -16,7 +16,7 @@ Sets the number of columns in a thumbnail table.
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Bouton image](pictureButton_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md)
 
 
 
@@ -24,7 +24,7 @@ Sets the number of columns in a thumbnail table.
 ---
 ## Rows
 
-Sets the number of rows in a thumbnail table.
+Définit le nombre de lignes dans un tableau d'imagettes.
 
 #### Grammaire JSON
 
@@ -34,7 +34,7 @@ Sets the number of rows in a thumbnail table.
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Bouton image](pictureButton_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md)
 
 
 

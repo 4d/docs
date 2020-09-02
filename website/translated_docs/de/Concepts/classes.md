@@ -309,7 +309,7 @@ Im Code der Anwendung werden Class Functions als Member Methods der Instanz des 
 
 
 
-> **Thread-Safety Warning:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit dem Attribut "Can be run in preemptive process" aufgerufen:</br> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
+> **Thread-Safety Warnung:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit der Option "In preemptive Prozess starten" aufgerufen:</br> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
 
 
 
@@ -542,7 +542,7 @@ This.param:=$text2 // use second param
 ```
 
 
-- Innerhalb einer [Class Member Function](#class-function) bezeichnet `Super` den Prototyp der Superklasse und erlaubt, eine Function in der Hierarchie der Superklasse aufzurufen.
+- inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
 
 
 

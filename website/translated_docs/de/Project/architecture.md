@@ -18,7 +18,7 @@ A 4D project is made of several folders and files, stored within a single parent
         - Trash
     - Resources
     - Settings
-    - userPreference.username
+    - userPreferences.username
     - WebFolder
 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
@@ -52,18 +52,18 @@ Project development file, used to designate and launch the project. This file ca
 
 ### Sources folder
 
-| Contents                | Beschreibung                                                                                                                                                                          | Format |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| catalog.4DCatalog       | Table and field definitions                                                                                                                                                           | XML    |
-| folders.json            | Explorer folder definitions                                                                                                                                                           | JSON   |
-| menus.json              | Menu definitions                                                                                                                                                                      | JSON   |
-| settings.4DSettings     | *Structure* database settings. If *user settings* are defined, they take priority over these settings. If *user settings for data* are defined, they take priority over user settings | XML    |
-| tips.json               | Defined tips                                                                                                                                                                          | JSON   |
-| lists.json              | Defined lists                                                                                                                                                                         | JSON   |
-| filters.json            | Defined filters                                                                                                                                                                       | JSON   |
-| styleSheets.css         | CSS style sheets                                                                                                                                                                      | CSS    |
-| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                 | CSS    |
-| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                             | CSS    |
+| Contents                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                                         | XML    |
+| folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
+| menus.json              | Menu definitions                                                                                                                                                                                                                                                                                                                                                                                                    | JSON   |
+| settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML    |
+| tips.json               | Defined tips                                                                                                                                                                                                                                                                                                                                                                                                        | JSON   |
+| lists.json              | Defined lists                                                                                                                                                                                                                                                                                                                                                                                                       | JSON   |
+| filters.json            | Defined filters                                                                                                                                                                                                                                                                                                                                                                                                     | JSON   |
+| styleSheets.css         | CSS style sheets                                                                                                                                                                                                                                                                                                                                                                                                    | CSS    |
+| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                                               | CSS    |
+| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                                           | CSS    |
 
 
 #### DatabaseMethods folder
@@ -160,14 +160,13 @@ The data folder contains the data file and all files and folders relating to the
 
 This folder contains **user settings files for data** used for application administration.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **structure settings** files.
+> These settings take priority over **[user settings files](#settings-folder-1)** and **[structure settings](#sources-folder)** files.
 
 | Contents            | Beschreibung                                                                                                                                                                                                        | Format |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
-| settings.4DSettings | Custom database settings for this data file                                                                                                                                                                         | XML    |
 | directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                           | JSON   |
-
+| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
+| settings.4DSettings | Custom database settings for this data file.                                                                                                                                                                        | XML    |
 
 
 ### Logs folder
@@ -184,15 +183,15 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 ## Settings folder
 
-This folder contains **user settings files** used for application administration. Files are added to the folder when necessary.
+This folder contains **user settings files** used for application administration.
 
-> If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
+> These settings take priority over **[structure settings](#sources-folder)** files. However, if a **[user settings file for data](#settings-folder)** exists, it takes priority over user settings file.
 
 | Contents            | Beschreibung                                                                                                                                                                                                                                                                                                                         | Format |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
 | directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                               | JSON   |
-| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML    |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
+| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML    |
 
 
 ## userPreferences.*userName* folder
@@ -214,7 +213,7 @@ This folder contains files that memorize user configurations, e.g. break point p
 
 This folder contains the components to be available in the application project only. It must be stored at the same level as the Project folder.
 
-> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Admin/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## Plugins folder

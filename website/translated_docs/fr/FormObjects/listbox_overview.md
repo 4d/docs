@@ -19,11 +19,11 @@ En exécution, les list box permettent d’afficher et de saisir des données so
 
 Les utilisateurs peuvent saisir et afficher du texte sur plusieurs lignes au sein d’une cellule de list box. Pour ajouter un retour à la ligne, appuyez sur les touches **Ctrl+Retour chariot** sous Windows, ou appuyez sur les touches **Option+Retour chariot** sous macOS.
 
-Booleans and pictures can be displayed in cells, as well as dates, times, or numbers. It is possible to sort column values by clicking on a header ([standard sort](#managing-sorts)). All columns are automatically synchronized.
+Les booléens et les images peuvent être affichés dans des cellules, ainsi que des dates, des heures ou des nombres. Il est possible de trier les valeurs de colonne en cliquant sur un en-tête ([tri standard](#managing-sorts)). Toutes les colonnes sont automatiquement synchronisées.
 
-It is also possible to resize each column, and the user can modify the order of [columns](properties_ListBox.md#locked-columns-and-static-columns) and [rows](properties_Action.md#movable-rows) by moving them using the mouse, if this action is authorized. Note that list boxes can be used in [hierarchical mode](#hierarchical-list-boxes).
+Il est également possible de redimensionner chaque colonne, et l'utilisateur peut modifier l'ordre des [colonnes](properties_ListBox.md#locked-columns-and-static-columns) et des [lignes](properties_Action.md#movable-rows) en les déplaçant à l'aide de la souris, si cette action est autorisée. Notez que les list box peuvent être utilisées [en mode hiérarchique](#hierarchical-list-boxes).
 
-The user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or **Command+click** (macOS) for a non-adjacent selection.
+L'utilisateur peut sélectionner une ou plusieurs lignes à l'aide des raccourcis standard : **Maj + clic** pour une sélection adjacente et **Ctrl + clic** (Windows) ou **Commande + clic** (macOS) pour une sélection non adjacente.
 
 
 ### Parties de list box
@@ -39,10 +39,10 @@ Une list box est composée de quatre parties distinctes :
 
 Chaque partie dispose de son propre nom d’objet et de propriétés spécifiques. Par exemple, le nombre de colonnes ou la couleur alternée de chaque ligne sont définies dans les propriétés de l’objet list box, la largeur de chaque colonne est définie dans les propriétés des colonnes et la police de l’en-tête est définie dans les propriétés des en-têtes.
 
-It is possible to add an object method to the list box object and/or to each column of the list box. Object methods are called in the following order:
+Il est possible d'ajouter une méthode objet à l'objet list box et/ou à chaque colonne de la list box. Les méthodes objet sont appelées dans l'ordre suivant :
 
-1. Object method of each column
-2. Object method of the list box
+1. Méthode objet de chaque colonne
+2. Méthode objet de la list box
 
 The column object method gets events that occur in its [header](#list-box-headers) and [footer](#list-box-footers).
 
@@ -100,7 +100,7 @@ The contents of each row is then evaluated according to a selection of records: 
 In the case of a list box based on the current selection of a table, any modification done from the database side is automatically reflected in the list box, and vice versa. The current selection is therefore always the same in both places.
 
 
-### Collection or Entity selection list boxes
+### List box collection ou entity selection
 
 In this type of list box, each column must be associated to an expression. The contents of each row is then evaluated per collection element or per entity of the entity selection.
 
@@ -306,17 +306,17 @@ You can set standard properties (text, background color, etc.) for each column o
 | On Unload                     |                                                                                                                                                                        |                                                                                                      |
 
 
-## List box headers
+## En-têtes de list box
 
-> To be able to access the header properties of a list box, you must enable the [Display Headers](properties_Headers.md#display-headers) option of the list box.
+> Pour pouvoir accéder aux propriétés des en-têtes d'une list box, vous devez avoir coché l'option [Afficher en-têtes](properties_Headers.md#display-headers) dans la Liste des propriétés de la list box.
 
-When headers are displayed, you can select a header in the Form editor by clicking it when the list box object is selected:
+Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans l'éditeur de formulaires en cliquant dessus lorsque l'objet List box est sélectionné :
 
 ![](assets/en/FormObjects/listbox_header.png)
 
-You can set standard text properties for each column header of the list box; in this case, these properties have priority over those of the column or of the list box itself.
+Vous pouvez définir, pour chaque en-tête de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box.
 
-In addition, you have access to the specific properties for headers. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
+Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
 
 ![](assets/en/FormObjects/lbHeaderIcon.png)
 
@@ -324,24 +324,24 @@ At runtime, events that occur in a header are generated in the [list box column 
 
 When the `OBJECT SET VISIBLE` command is used with a header, it is applied to all headers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"header3";False)` will hide all headers in the list box object to which *header3* belongs and not simply this header.
 
-### Header Specific Properties
+### Propriétés spécifiques des en-têtes
 
-[Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width)
-
-
+[Gras](properties_Text.md#bold) - [Css Class](properties_Object.md#css-class) - [Police](properties_Text.md#font) - [Couleur de fond](properties_Text.md#font-color) - [Message d'aide](properties_Help.md#help-tip) - [Alignement horizontal ](properties_Text.md#horizontal-alignment) - [Emplacement de l'icône](properties_TextAndPicture.md#icon-location) - [Italique](properties_Text.md#italic) - [Nom](properties_Object.md#object-name) - [Chemin d'accès](properties_TextAndPicture.md#picture-pathname) - [Titre](properties_Object.md#title) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Alignement vertical](properties_Text.md#vertical-alignment) - [Largeur](properties_CoordinatesAndSizing.md#width)
 
 
 
-## List box footers
-> To be able to access footer properties for a list box, you must enable the [Display Footers](properties_Footers.md#display-footers) option.
 
-List boxes can contain non-enterable "footers" displaying additional information. For data shown in table form, footers are usually used to display calculations such as totals or averages.
 
-When footers are displayed, you can click to select one when the list box object is selected in the Form editor:
+## Pieds de List box
+> Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
+
+Les List box peuvent contenir des zones de "pied de page" non saisissables, affichant des informations supplémentaires. Dans les données présentées sous forme de tableaux, les pieds sont généralement utilisés pour afficher des calculs, tels que des sommes ou des moyennes.
+
+Lorsque les pieds sont affichés, vous pouvez sélectionner un pied de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :
 
 ![](assets/en/FormObjects/listbox_footers.png)
 
-For each List box column footer, you can set standard text properties: in this case, these properties take priority over those of the column or of the list box. You can also access specific properties for footers. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation).
+Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box. You can also access specific properties for footers. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation).
 
 At runtime, events that occur in a footer are generated in the [list box column object method](#object-methods).
 

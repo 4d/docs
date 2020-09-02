@@ -104,7 +104,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 [階層リスト](list_overview.md) - [サブフォーム](subform_overview.md) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 #### 参照
-[縦スクロールバー](#vertical-scroll-bar)
+[縦スクロールバー](#縦スクロールバー)
 
 ---
 ## 解像度
@@ -356,7 +356,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 参照
 
-[4D View Pro リファレンスガイド](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[4D View Pro リファレンスガイド](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.ja.html)
 
 ---
 ## 縦スクロールバー
@@ -389,7 +389,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 参照
 
-[横スクロールバー](#horizontal-scroll-bar)
+[横スクロールバー](#横スクロールバー)
 
 ---
 ## ビューモード

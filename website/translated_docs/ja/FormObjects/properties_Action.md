@@ -33,7 +33,7 @@ title: 動作
 
 
 #### 参照
-[ドロップ有効](#droppable)
+[ドロップ有効](#ドロップ有効)
 
 
 ---
@@ -62,7 +62,7 @@ title: 動作
 
 
 #### 参照
-[ドラッグ有効](#draggable)
+[ドラッグ有効](#ドラッグ有効)
 
 
 ---
@@ -130,7 +130,7 @@ title: 動作
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md)
 
 
 

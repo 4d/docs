@@ -59,22 +59,22 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 
 ## String Vergleiche
 
-- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach   href="dt_string.md#keywords">Schlüsselwort</a>, siehe unten).
+- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach [Schlüsselwörter](dt_string.md#keywords), siehe unten).
 - Bei String Vergleichen wird die Groß- und Kleinschreibung ignoriert, so gibt "a"="A" `TRUE` zurück. Wollen Sie die Schreibweise von zwei Zeichen überprüfen, vergleichen Sie deren Zeichen Codes. So ergibt z. B. folgender Ausdruck `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
-- Bei String Vergleichen werden diakritische Zeichen, wie z. B. Akzente ignoriert, Umlaute, wie ä, ö, ü werden dagegen berücksichtigt. So ergibt z. B. folgender Ausdruck `TRUE`:
+- Bei String Vergleichen werden diakritische Zeichen wie die entsprechenden Zeichen ohne Akzente behandelt. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
      "n"="ñ"
      "n"="Ñ"
-     "A"="å"
+     "A"="ä"
       // and so on
 ```
 
-**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist nicht immer dasselbe wie die Sprache, die für das System definiert wurde.
+**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist normalerweise das gleiche Format wie das System, kann aber auf eine andere Sprache eingestellt werden. Je nach Sprache können diakritische Zeichen anders bewertet oder sortiert werden.
 
 ### Joker Zeichen (@)
 
@@ -128,7 +128,7 @@ Der folgende Ausdruck wird korrekt interpretiert:
 
 ### Schlüsselwörter
 
-Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörter" in "Texten" nur im ganzen berücksichtigt. Der Operator** %** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. eine Vorsilbe. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Ein Apostroph, z. B. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
+Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörter" in "Texten" nur im ganzen berücksichtigt. Der Operator **%** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. eine Vorsilbe. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Ein Apostroph, z. B. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Returns True
@@ -175,8 +175,8 @@ Diese Syntax mit dem gewünschten Zeichen innerhalb eines Ausdrucks gibt es als 
 Beim Einsatz der Symbole für direkten Zeichenzugriff müssen Sie vorhandene Zeichen im String auf dieselbe Weise wie vorhandene Elemente in einem Array ansprechen. Sprechen Sie beispielsweise das 20. Zeichen einer Textvariablen an, muss diese Variable auch mindestens 20 Zeichen enthalten. Ist das nicht der Fall,
 
 - verursacht das im interpretierten Modus keinen Syntaxfehler.
-- kann das im kompilierten Modus (ohne Optionen) zu einer Speicherverfälschung führen, z. B. wenn Sie ein Zeichen nach dem Ende eines String oder Textes schreiben.
-- kann das im kompilierten Modus mit aktivierter Option Bereichsprüfung einen Fehler auslösen. So löst der folgende Code:
+- kann das im kompilierten Modus (mit deaktivierter Bereichsprüfung) zu einem Absturz wegen Speicherüberlauf führen, z. B. wenn Sie ein Zeichen nach dem Ende eines String oder Textes schreiben.
+- wird das im kompilierten Modus mit aktivierter Option Bereichsprüfung einen Fehler auslösen. So löst der folgende Code:
 
 ```
 //Very bad and nasty thing to do, boo!

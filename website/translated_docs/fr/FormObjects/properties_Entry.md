@@ -4,9 +4,9 @@ title: Saisie
 ---
 
 ---
-## Auto Spellcheck
+## Correction orthographique
 
-4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D inclut des fonctionnalités de correction orthographique intégrées et personnalisables. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
 The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
@@ -20,7 +20,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
+[Zone 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md)
 
 
 ---
@@ -190,29 +190,29 @@ By default, the object uses the current keyboard layout.
 
 
 ---
-## Multiline
+## Multilignes
 
-This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
+Cette propriété est disponible pour les [objets de zone de saisie](input_overview.md) contenant les expressions de type texte et les champs de type alpha et texte. Elle peut prendre trois valeurs : Oui, Non, Automatique (par défaut).
 
 #### Automatic
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- In multiline inputs, 4D carries out automatic line returns:  
+- Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
+- Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques :  
   ![](assets/en/FormObjects/multilineAuto.png)
 
 #### Non
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
+- Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
+- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. Si le champ ou la variable alpha ou texte contient des retour chariots, le texte situé après le premier retour chariot est effacé dès que la zone est modifiée :  
   ![](assets/en/FormObjects/multilineNo.png)
 
 #### Oui
-When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
+Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option [Retour à la ligne](properties_Display.md#wordwrap).
 
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles                                 |
-| --------- | --------------- | ------------------------------------------------- |
-| multiline | Texte           | "yes", "no", "automatic" (default if not defined) |
+| Nom       | Type de données | Valeurs possibles                                   |
+| --------- | --------------- | --------------------------------------------------- |
+| multiline | Texte           | "yes", "no", "automatic" (par défaut si non défini) |
 
 
 #### Objets pris en charge
@@ -246,13 +246,13 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                            |
-| ----------- | --------------- | ---------------------------------------------------------------------------- |
-| placeholder | string          | Text to be displayed (grayed out) when the object does not contain any value |
+| Nom         | Type de données | Valeurs possibles                                                  |
+| ----------- | --------------- | ------------------------------------------------------------------ |
+| placeholder | string          | Texte à afficher (grisé) lorsque l'objet ne contient aucune valeur |
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Zone de saisie](input_overview.md)
 
 
 #### Voir également

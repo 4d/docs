@@ -23,7 +23,7 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
 - Über das Schlüsselwort `var` (empfohlen, besonders wenn Ihr Code Objekte und Klassen verwendet),
 - Über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (überholt, nur in der klassischen Programmiersprache).
 
-**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+**Hinweis:** Auch wenn wir davon abraten, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht formell mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created  
@@ -49,15 +49,15 @@ var $myFile : 4D.File  //a file class object variable
 var $myVar //a variant variable
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` ist der Variablenname, er muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.   
+Diese Syntax unterstützt nur [Deklarationen für lokale und Prozessvariablen](#local-process-and-interprocess-variables), d. h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
 
 `varTyp` kann folgendes sein:
 
 - [Datentyp](Concepts/data-types.md), dann enthält die Variable einen Wert vom deklarierten Typ
 - [Referenz auf eine Klasse](Concepts/classes.md) (4D Klasse oder Benutzerklasse), dann enthält die Variable die Referenz auf ein Objekt der definierten Klasse.
 
-If `varType` is omitted, a variable of the **variant** type is created.
+Ist `varTyp` nicht übergeben, wird eine Variable vom Typ **variant** erstellt.
 
 Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 
@@ -245,7 +245,7 @@ var $entity : cs.EmployeeEntity
 
 ### Eine C_Direktive verwenden
 
-> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
+> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
 
 Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
@@ -266,7 +266,7 @@ Hier sehen Sie einige grundlegende Variablendeklarationen:
  ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
 ```
 
-**Note:** Arrays are a particular type of variables. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
 
 ## Daten zuweisen

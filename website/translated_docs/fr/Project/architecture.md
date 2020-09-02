@@ -18,7 +18,7 @@ A 4D project is made of several folders and files, stored within a single parent
         - Trash
     - Resources
     - Settings
-    - userPreference.username
+    - userPreferences.username
     - WebFolder
 
 > Si votre projet a été converti depuis une base binaire, des dossiers supplémentaires peuvent être présents. Voir "Conversion de bases en projets" sur [doc.4d.com](https://doc.4d.com).
@@ -52,18 +52,18 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 ### Dossier Sources
 
-| Contenu                 | Description                                                                                                                                                                                                                                    | Format |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                               | XML    |
-| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                      | JSON   |
-| menus.json              | Définit les menus                                                                                                                                                                                                                              | JSON   |
-| settings.4DSettings     | Propriétés de la base *Structure*. Si les *propriétés utilisateur* sont définis, ils auront la priorité sur ces propriétés. Si les *propriétés utilisateur pour fichier de données* sont définies, elles auront la priorité sur ces propriétés | XML    |
-| tips.json               | Définit les messages d'aide                                                                                                                                                                                                                    | JSON   |
-| lists.json              | Listes définies                                                                                                                                                                                                                                | JSON   |
-| filters.json            | Filtres définis                                                                                                                                                                                                                                | JSON   |
-| styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                          | CSS    |
-| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                          | CSS    |
-| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                      | CSS    |
+| Contenu                 | Description                                                                                                                                                                                                                                                                                                                                                                                                             | Format |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                                                                                                                                                                                                        | XML    |
+| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                                                                                                                                                                                               | JSON   |
+| menus.json              | Définit les menus                                                                                                                                                                                                                                                                                                                                                                                                       | JSON   |
+| settings.4DSettings     | Propriétés de la base *Structure*. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML    |
+| tips.json               | Définit les messages d'aide                                                                                                                                                                                                                                                                                                                                                                                             | JSON   |
+| lists.json              | Listes définies                                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
+| filters.json            | Filtres définis                                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
+| styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                                                                                                                                                                                                   | CSS    |
+| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                   | CSS    |
+| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                               | CSS    |
 
 
 #### Dossier DatabaseMethods
@@ -160,14 +160,13 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 
 This folder contains **user settings files for data** used for application administration.
 
-> Ces paramètres ont la priorité sur les **[fichiers de propriétés utilisateur](#settings-folder-1)** et les fichiers de **propriétés structure**.
+> These settings take priority over **[user settings files](#settings-folder-1)** and **[structure settings](#sources-folder)** files.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
-| settings.4DSettings | Propriétés personnalisées de la base pour ce fichier de données                                                                                                                                                                                                                                | XML    |
 | directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                                                                                                      | JSON   |
-
+| Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
+| settings.4DSettings | Custom database settings for this data file.                                                                                                                                                                                                                                                   | XML    |
 
 
 ### Dossier Logs
@@ -184,15 +183,15 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 
 ## Dossier Settings
 
-This folder contains **user settings files** used for application administration. Files are added to the folder when necessary.
+This folder contains **user settings files** used for application administration.
 
-> Si un fichier de propriétés de données existe dans un dossier Settings du [dossier Data](#settings-folder), il est prioritaire sur le fichier de propriétés utilisateur.
+> These settings take priority over **[structure settings](#sources-folder)** files. However, if a **[user settings file for data](#settings-folder)** exists, it takes priority over user settings file.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                                                                                                                                             | JSON   |
-| BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) à chaque lancement de sauvegarde. Ce fichier peut également être utilisé pour lire ou définir des options supplémentaires, telles que la quantité d'informations stockées dans le *journal de sauvegarde*. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
+| BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
 
 
 ## Dossier userPreferences.*userName*
@@ -214,7 +213,7 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 
 This folder contains the components to be available in the application project only. Il doit être stocké au même niveau que le dossier Project.
 
-> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Admin/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## Dossier Plugins
