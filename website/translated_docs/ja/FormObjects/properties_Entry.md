@@ -349,30 +349,30 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 ## ショートカット
 
-This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
+[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...] ボタンをクリックします:
 
 ![](assets/en/FormObjects/property_shortcut.png)
 
 
-> You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 メニューへのショートカットの割り当てについては [メニュープロパティを設定する](https://doc.4d.com/4Dv18/4D/18/Setting-menu-properties.300-4575512.ja.html) を参照してください。
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
+4D のデザイン環境で使用できるショートカットの一覧は、環境設定ダイアログの [ショートカットページ](https://doc.4d.com/4Dv18/4D/18/Shortcuts-Page.300-4575689.ja.html) にて確認できます。
 
 
 
 #### JSON 文法
 
-| 名               | データタイプ  | とりうる値                                                                                                                                                                                                                                                                                       |
-| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | boolean | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | boolean | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | boolean | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | boolean | true, false                                                                                                                                                                                                                                                                                 |
-|                 |         |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string  | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| 名               | データタイプ  | とりうる値                                                                                                                                                                                                                                                                             |
+| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                                                                                        |
+| shortcutAlt     | boolean | true, false                                                                                                                                                                                                                                                                       |
+| shortcutCommand | boolean | true, false                                                                                                                                                                                                                                                                       |
+| shortcutControl | boolean | true, false (macOS: Control)                                                                                                                                                                                                                                                      |
+| shortcutShift   | boolean | true, false                                                                                                                                                                                                                                                                       |
+|                 |         |                                                                                                                                                                                                                                                                                   |
+| shortcutKey     | string  | <li>任意の文字キー: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 
@@ -380,7 +380,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ラジオボタン](radio_overview.md)
 
 
 
@@ -393,11 +393,11 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 ## シングルクリック編集
 
-Enables direct passage to edit mode in list boxes.
+リストボックスにおいて、編集モードへの直接移行を可能にします。
 
-When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Note that this option allows cells to be edited even when the list box [selection mode](properties_ListBox.md#selection-mode) is set to "None".
+このオプションがチェックされている場合、そのリストボックスの当該エリアが事前に選択されていたかどうかに関わらず、ユーザーのワンクリックだけでリストボックスセルを編集モードへと移行させることができます。 このオプションは、リストボックスの [選択モード](properties_ListBox.md#選択モード) が "なし" に設定されている場合でもセルの編集を可能にすると言う点に注意してください。
 
-When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
+このオプションがチェックされていない場合、セルの内容を編集するにはユーザーはまず最初に編集したいセルの行を選択し、その次に編集するセルを選択する必要があります。
 
 
 
