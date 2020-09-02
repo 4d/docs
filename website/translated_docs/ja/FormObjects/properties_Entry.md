@@ -285,32 +285,32 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
     :xliff:PH_Lastname
     
 
-You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text. 
+この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。 
 
 
-> You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+> プレースホルダーのテキストは、[OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-PLACEHOLDER.301-4505467.ja.html) と [OBJECT Get placeholder](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-placeholder.301-4505473.ja.html) コマンドを使って、プログラミングによって設定したり取得したりすることができます。
 
 
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                                                        |
-| ----------- | ------ | ---------------------------------------------------------------------------- |
-| placeholder | string | Text to be displayed (grayed out) when the object does not contain any value |
+| 名           | データタイプ | とりうる値                            |
+| ----------- | ------ | -------------------------------- |
+| placeholder | string | オブジェクトに値が格納されていない場合に表示する半透明のテキスト |
 
 
 
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md)
+[コンボボックス](comboBox_overview.md) - [入力](input_overview.md)
 
 
 
 
 #### 参照
 
-[Help tip](properties_Help.md)
+[ヘルプTips](properties_Help.md)
 
 
 
@@ -321,7 +321,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 ## 選択を常に表示
 
-This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
+このプロパティを選択すると、オブジェクト中で選択した文字列の反転状態が、フォーカスを失った後も表示されるようになります。 これにより、テキストスタイルを更新するようなインターフェースの実装が容易になります ([マルチスタイル](properties_Text.md#マルチスタイル) 参照)。
 
 
 
@@ -349,14 +349,14 @@ This property keeps the selection visible within the object after it has lost th
 
 ## ショートカット
 
-This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse. 
+[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。 
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...] ボタンをクリックします:
 
 ![](assets/en/FormObjects/property_shortcut.png)
 
 
-> You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
 
