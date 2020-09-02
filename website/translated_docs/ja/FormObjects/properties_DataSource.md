@@ -238,11 +238,11 @@ title: データソース
 
 このオプションにより、メモリーを節約することができます。フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
-Using this property requires compliance with the following principles:
+リスト項目の参照番号の使用の際には、以下の点に注意する必要があります:
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list).
-- Valid and unique references must be associated with list items.
-- If you use this property for a [drop-down list](dropdownList_Overview.md), it must be associated with a field.
+- 参照を保存するには、データソースのフィールドまたは変数は、数値型である必要があります (リスト内に表示されている値の型とは関係ありません)。
+- リストの項目には有効かつ固有の参照が関連付けられている必要があります。
+- [ドロップダウンリスト](dropdownList_Overview.md) においてこのプロパティを使用する場合、ドロップダウンリストフィールドまたは変数と関連付けられている必要があります。
 
 
 #### JSON 文法
@@ -252,7 +252,7 @@ Using this property requires compliance with the following principles:
 | saveAs | string | "value", "reference" |
 
 #### 対象オブジェクト
-[Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 
 
