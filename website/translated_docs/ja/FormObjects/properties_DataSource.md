@@ -260,17 +260,17 @@ title: データソース
 ## 選択された項目
 `コレクションまたはエンティティセレクションリストボックス`
 
-Specifies a variable or expression that will be assigned the elements or entities selected by the user.
+ユーザーによって選択されている一つ以上のコレクション要素/エンティティが割り当てられる変数あるいは式を指定します。
 
-*   for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
-*   for an entity selection list box, an entity selection object is built. オブジェクト変数あるいはオブジェクトを受け入れる割り当て可能な式を使用する必要があります。
+*   コレクションリストボックスにおいては、コレクション変数あるいはコレクションを受け入れる割り当て可能な式を使用する必要があります。
+*   エンティティセレクションリストボックスにおいては、エンティティセレクションオブジェクトがビルドされます。 オブジェクト変数あるいはオブジェクトを受け入れる割り当て可能な式を使用する必要があります。
 > このプロパティは「読み取り専用」であり、リストボックスにおけるユーザーアクションに基づいて自動的に更新されます。 この値を編集してリストボックスの選択状態を変更することはできません。
 
 #### JSON 文法
 
-| 名                   | データタイプ | とりうる値                 |
-| ------------------- | ------ | --------------------- |
-| selectedItemsSource | string | Collection expression |
+| 名                   | データタイプ | とりうる値   |
+| ------------------- | ------ | ------- |
+| selectedItemsSource | string | コレクション式 |
 
 #### 対象オブジェクト
 [リストボックス ](listbox_overview.md)
@@ -278,17 +278,17 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 ## 命名セレクション
-`Named selection list boxes`
+`命名セレクションリストボックス`
 
-Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+使用する命名セレクションを指定します。 有効な命名セレクションの名前を入力しなければなりません。 使用できるのはプロセスあるいはインタープロセス命名セレクションです。 リストボックスの内容はこのセレクションに基づきます。 選択された命名セレクションは、リストボックスが表示される時点で存在し、有効でなければなりません。そうでない場合、リストボックスは空で表示されます。
 
-> Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
+> 命名セレクションはソート済みのレコードリストです。 これはセレクション中のカレントレコードと並び順をメモリーに保持するために使用されます。 詳細は、*4Dランゲージリファレンス マニュアル* の **命名セレクション** を参照してください。
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                |
-| -------------- | ------ | -------------------- |
-| namedSelection | string | Named selection name |
+| 名              | データタイプ | とりうる値       |
+| -------------- | ------ | ----------- |
+| namedSelection | string | 命名セレクションの名前 |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md)
