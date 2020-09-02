@@ -83,7 +83,7 @@ title: 入力
 
 データ入力中、タイプされるたびに入力フィルターは文字を評価します。 ユーザーが無効な入力をすると (たとえば文字の代わりに数字)、4D はその入力を受け付けません。 ユーザーが有効な入力をおこなうまで値は変更されません。
 
-入力フィルターに表示フォーマットを併用することで、形式的な文字をユーザーが入力しなくてすむようにできます。 たとえば、アメリカの電話番号は 3桁のエリアコードに、3桁と4桁に分割される 7桁の番号が続きます。 エリアコードをカッコでくくり、電話番号の3つ目の数字の後にダッシュを表示するような表示フォーマットを利用することができます。 このようなフォーマットが指定されている場合、カッコやダッシュをユーザーが入力する必要はありません。
+入力フィルターに表示フォーマットを併用することで、形式的な文字をユーザーが入力しなくてすむようにできます。 たとえば、アメリカ合衆国の電話番号は 3桁のエリアコードに、3桁と4桁に分割される 7桁の番号が続きます。 エリアコードをカッコでくくり、電話番号の3つ目の数字の後にダッシュを表示するような表示フォーマットを利用することができます。 このようなフォーマットが指定されている場合、カッコやダッシュをユーザーが入力する必要はありません。
 
 ### 入力フィルターの定義
 
@@ -92,33 +92,33 @@ title: 入力
 - 入力フィルターコードを直接入力することができます。
 - ツールボックスのフィルターエディターで入力フィルターを作成し、その名前を指定することもできます。 開発者が作成したカスタムフィルターはリストの先頭に表示されます。
 
-For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
+入力フィルターの作成に関する詳細は [フィルターとフォーマットのコード](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.ja.html) を参照ください。
 
 
-### Default entry filters
+### デフォルト入力フィルター
 
-Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
+入力フィルタードロップダウンリストから選択できる入力フィルターの説明は以下の表の通りです:
 
-| 入力フィルター                         | 説明                                                                                                                                           |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
-| &9                              | Allow only numbers.                                                                                                                          |
-| &A                              | Allow only capital letters.                                                                                                                  |
-| &a                              | Allow only letters (uppercase and lowercase).                                                                                                |
-| &@                              | Allow only alphanumeric characters. No special characters.                                                                                   |
-| ~a##                            | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
-| !0&9##/##/##                    | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
-| !0&9 Day: ## Month: ## Year: ## | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                     |
-| !0&9##:##                       | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
-| !0&9## Hrs ## Mins ## Secs      | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
-| !0&9Hrs: ## Mins: ## Secs: ##   | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
-| !0&9##-##-##-##                 | Local telephone number format. Display zeros in entry spaces. Allow any number. Three entries, hyphen, four entries.                         |
-| !_&9(###)!0###-####             | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                         |
-| !0&9###-###-###                 | Long distance telephone number. Display zeros in entry spaces. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                  | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
-| ~"A-Z;0-9; ;,;.;-"              | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                |
-| &"a-z;0-9; ;,;.;-"              | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                         |
-| &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
+| 入力フィルター              | 説明                                                                                                                   |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| ~A                   | すべての文字が入力可能、ただし大文字に変換されます。                                                                                           |
+| &9                   | 数字のみ入力可能。                                                                                                            |
+| &A                   | 大文字の文字だけが入力可能。                                                                                                       |
+| &a                   | 文字だけが入力可能 (大文字と小文字)。                                                                                                 |
+| &@                   | 数字と文字が入力可能。 特殊記号を除きます。                                                                                               |
+| ~a##                 | 2桁の任意の文字が入力可能、大文字に変換されます。 (アメリカ合衆国の州名などに使われます)                                                                       |
+| !0&9##/##/##         | 標準の日付入力フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。                                                                           |
+| !0&9##年##月##日        | カスタム日付入力フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。 年月日が 2桁ずつ入力可能。                                                           |
+| !0&9##:##            | 時間入力フォーマット。 時と分だけが入力可能。 入力領域に 0 を表示します。 任意の4桁の数字が入力可能。                                                               |
+| !0&9##時##分           | 時間入力フォーマット。 入力領域に 0 を表示します。 時間と分数を 2桁ずつ入力可能。                                                                         |
+| !0&9##時##分##秒        | 時間入力フォーマット。 入力領域に 0 を表示します。 時間と分数、秒数を 2桁ずつ入力可能。                                                                      |
+| !0&9###-####         | ローカルな郵便番号フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。 (3桁の数字と 4桁の数字)                                                          |
+| !_&9(###) !0###-#### | アメリカ合衆国の電話番号フォーマット。 先頭の 3桁の入力領域にアンダースコアを表示しカッコで囲み、残りの入力領域に 0 を表示。                                                    |
+| !0&9###-###-###      | アメリカ合衆国の電話番号フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。 Three entries, hyphen, three entries, hyphen, four entries.          |
+| !0&9###-##-###       | Social Security number. 入力領域に 0 を表示します。 任意の数値が入力可能。                                                                  |
+| ~"A-Z;0-9; ;,;.;-"   | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.        |
+| &"a-z;0-9; ;,;.;-"   | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens. |
+| &"0-9;.;-"           | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                               |
 
 
 #### JSON 文法
