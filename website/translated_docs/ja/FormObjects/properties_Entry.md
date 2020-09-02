@@ -83,11 +83,11 @@ title: 入力
 
 データ入力中、タイプされるたびに入力フィルターは文字を評価します。 ユーザーが無効な入力をすると (たとえば文字の代わりに数字)、4D はその入力を受け付けません。 ユーザーが有効な入力をおこなうまで値は変更されません。
 
-入力フィルターに表示フォーマットを併用することで、形式的な文字をユーザーが入力しなくてすむようにできます。 たとえば、アメリカの電話番号は 3桁のエリアコードに、3桁と4桁に分割される 7桁の番号が続きます。 エリアコードをカッコでくくり、電話番号の3つ目の数字の後にダッシュを表示するような表示フォーマットを利用することができます。 When such a format is used, the user does not need to enter the parentheses or the dashes.
+入力フィルターに表示フォーマットを併用することで、形式的な文字をユーザーが入力しなくてすむようにできます。 たとえば、アメリカの電話番号は 3桁のエリアコードに、3桁と4桁に分割される 7桁の番号が続きます。 エリアコードをカッコでくくり、電話番号の3つ目の数字の後にダッシュを表示するような表示フォーマットを利用することができます。 このようなフォーマットが指定されている場合、カッコやダッシュをユーザーが入力する必要はありません。
 
-### Defining an entry filter
+### 入力フィルターの定義
 
-Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
+ほとんどの場合、あらかじめ用意されている 4D の [ビルトインフィルター](#デフォルト入力フィルター) を使用することができます。しかし、カスタマイズされたフィルターを作成することも可能です。
 
 - you can directly enter a filter definition string
 - or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
