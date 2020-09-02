@@ -166,7 +166,7 @@
         "title": "Apparence"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
-        "title": "Background and Border"
+        "title": "Fond et bordure"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
         "title": "Coordonnées et dimensions"
@@ -178,7 +178,7 @@
         "title": "Source de données"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "Affichage"
       },
       "FormObjects/propertiesEntry": {
         "title": "Saisie"

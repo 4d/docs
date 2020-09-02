@@ -4,9 +4,9 @@ title: Source de données
 ---
 
 ---
-## Automatic Insertion
+## Insertion automatique
 
-When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
+Lorsque cette option est sélectionnée, si un utilisateur saisit une valeur introuvable dans la liste déroulante associée à l'objet, cette valeur est automatiquement ajoutée à la liste stockée en mémoire. You can associate choice lists to objects using:
 - the [Choice List](properties_DataSource.md#choice-list) JSON property
 - the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-NAME.301-4128227.en.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-REFERENCE.301-4128237.en.html) commands.
 - the form editor's Property List.
@@ -119,7 +119,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -196,7 +196,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -286,9 +286,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles    |
-| -------------- | --------------- | -------------------- |
-| namedSelection | string          | Named selection name |
+| Nom            | Type de données | Valeurs possibles   |
+| -------------- | --------------- | ------------------- |
+| namedSelection | string          | Nom de la sélection |
 
 #### Objets pris en charge
 [List Box](listbox_overview.md#overview)

@@ -546,7 +546,7 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  <code>Array type list boxes</code>
+  <code>List box de type tableau</code>
 </p>
 
 <p spaces-before="0">
@@ -609,7 +609,7 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  <code>Array type list boxes</code>
+  <code>List box de type tableau</code>
 </p>
 
 <p spaces-before="0">
@@ -660,7 +660,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 </p>
 
 
