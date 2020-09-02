@@ -145,13 +145,13 @@ title: 入力
 
 ## フォーカス可
 
-When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
+オブジェクトに対し **フォーカス可** プロパティが選択されていると、そのオブジェクトはフォーカスを得ることができ、キーボードなどを使用してアクティブ化することができます。 オブジェクトはフォーカスを得ると、オブジェクトごとあるいは OS ごとに定められた方法でハイライトされます。ただし [フォーカスの四角を隠す](properties_Appearance.md#hide-focus-rectangle) オプションが選択されている場合を除きます。
 
 
 
-> An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property. 
+> [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。 
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected <p> <p>
+* ![](assets/en/FormObjects/property_focusable1.png)<br>チェックボックスは選択時にフォーカスを表示します。 <p> <p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
 
