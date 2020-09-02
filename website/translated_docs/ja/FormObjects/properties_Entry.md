@@ -35,18 +35,18 @@ title: 入力
 - **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。
 - スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。 このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューへのアクセスは [`WA SET PREFERENCE`](https://doc.4d.com/4Dv18/4D/18/WA-SET-PREFERENCE.301-4504849.ja.html) コマンドを使用して制御できます。
 
 
 #### JSON 文法
 
-| 名           | データタイプ | とりうる値                                 |
-| ----------- | ------ | ------------------------------------- |
-| contextMenu | string | "automatic" (used if missing), "none" |
+| 名           | データタイプ | とりうる値                           |
+| ----------- | ------ | ------------------------------- |
+| contextMenu | string | "automatic" (省略時のデフォルト), "none" |
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[入力](input_overview.md) - [Webエリア](webArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 
 
@@ -56,9 +56,9 @@ title: 入力
 ---
 ## 入力可
 
-The Enterable attribute indicates whether users can enter values into the object.
+入力可属性は、ユーザーがオブジェクトに値を入力できるかどうかを指定します。
 
-Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. A non-enterable object only displays data. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+すべてのアクティブオブジェクトはデフォルトで入力可です。 フォーム上の特定のフィールドやオブジェクトを入力不可にしたい場合、入力可チェックボックスの選択を解除します。 入力不可のオブジェクトはデータの表示のみをおこないます。 当該フィールド名や変数名を使用するメソッドによってデータを制御します。 入力不可オブジェクトでも `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` そして `On Losing Focus` フォームイベントは使用できます。 これらによって、カスタムコンテキストメニューの管理が容易になり、入力不可変数をドラッグ＆ドロップしたり選択したりできるインターフェースをデザインすることができます。
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
