@@ -657,9 +657,9 @@ $message:=$square.description() //I have 4 sides which are all equal
 | Ergebnis  | object | <- | Aktuelles Objekt |
 
 
-Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt zurück. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt zurück. In 4D lässt es sich in [verschiedenen Kontexten](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) verwenden.
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. 
+In den meisten Fällen bestimmt der Wert von `This`, wie eine Function aufgerufen wird. It can't be set by assignment during execution, and it may be different each time the function is called. 
 
 When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Zum Beispiel:
 
