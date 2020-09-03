@@ -1,6 +1,6 @@
 ---
 id: authUsers
-title: Users and sessions
+title: Sessions et utilisateurs
 ---
 
 
@@ -8,7 +8,7 @@ title: Users and sessions
 
 As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
 
-You log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin).
+Connectez un utilisateur à votre application en passant le nom et le mot de passe de l'utilisateur dans [`$directory/login`]($directory.md#directorylogin).
 
 Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
 
@@ -18,7 +18,7 @@ The session will automatically be closed once the timeout is reached.
 
 Chaque requête REST est gérée via une session spécifique sur le serveur 4D.
 
-When a first valid REST request is received, the server creates the session and sends a session cookie named `WASID4D` in the **"Set-Cookie" response header**, containing the session UUID, for example:
+Lorsqu'une première requête REST valide est reçue, le serveur crée la session et envoie un cookie de session nommé `WASID4D` dans l'**en-tête de réponse "Set-Cookie"**, contenant l'UUID de session, par exemple :
 
 ```
 WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
