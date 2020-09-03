@@ -53,6 +53,7 @@ All ORDA data model classes are exposed as properties of the **`cs`** class stor
 In addition, object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an Entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
 
 
+
 ## Class Description
 
 
@@ -233,7 +234,21 @@ If ($city.isBigCity())
 End if
 ```
 
-## Definition Rules
+## Exposed vs non-exposed functions
+
+By default for security reasons, all your data model class functions are **not exposed**. A function that is not exposed cannot be called on its object instance from a remote request. Remote requests include:
+
+- requests sent by client applications working with remote datastores
+- REST requests
+
+An error is returned by 4D to the remote application if it tries to use a non-exposed function. 
+To allow 
+
+
+cannot be called from remote requests. You must declare explicitly each public function using the `exposed` keyword.
+
+
+## Class rules
 
 When creating or editing data model classes, you must pay attention to the rules described below.
 
