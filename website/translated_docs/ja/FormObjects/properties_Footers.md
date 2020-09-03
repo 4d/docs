@@ -26,20 +26,20 @@ title: フッター
 
 このプロパティは、リストボックスフッターの高さを **行** または **ピクセル** 単位で指定します。 同じリストボックス内で異なる単位を使用することもできます:
 
-*   *ピクセル* - 指定された値は当該行に対し直接適用され、列が使用しているフォントサイズ等は考慮されません。 If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
+*   *ピクセル* - 指定された値は当該行に対し直接適用され、列が使用しているフォントサイズ等は考慮されません。 フォントが行の高さに対して大きい場合、テキストは切り取られます。 ピクチャーはフォーマットに基づき、切り取られるかリサイズされます。
 
-*   *Line* - the height is calculated while taking into account the font size of the row concerned.
-    *   If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
-    *   This calculation does not take into account the size of pictures nor any styles applied to the fonts.
-    *   In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
-> This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/List-box-footer-specific-properties.300-4354808.en.html) command.
+*   *行* - 高さは行のフォントサイズに合わせて計算されます。
+    *   複数の異なるサイズが設定されている場合、4D はもっとも大きなものを使用します。 たとえば、行に "Verdana 18", "Geneva 12" そして "Arial 9" が設定されている場合、4D は行の高さの決定に "Verdana 18" を使用します。 複数行の場合はこの高さの倍数が使用されます。
+    *   この計算にはピクチャーのサイズや、フォントに適用されるスタイルは考慮されません。
+    *   macOS 環境下では、選択されたフォントで使用できない文字をユーザーが入力した場合、行の高さが正しくなくなる可能性があります。 この場合には代理フォントが使用され、その結果サイズにばらつきが出る可能性があります。
+> フッターの高さは [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-FOOTERS-HEIGHT.301-4505199.ja.html) コマンドを使用して設定することもできます。
 
 
-Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is "Lucida grande 24", a height of "1 line" is converted to "30 pixels" and a height of "60 pixels" is converted to "2 lines".
+単位の変換: 単位を変更した場合、4D は自動で値を再計算し、結果をプロパティリストに表示します。 たとえば、使用されるフォントが "Lucida grande 24" で高さが "1 行" に設定されていれば "30 ピクセル" に、高さが "60 ピクセル" なら "2 行" になります。
 
-Note that converting back and forth may lead to an end result that is different from the starting value due to the automatic calculations made by 4D. This is illustrated in the following sequences:
+単位の変更を繰り返すと、4D が自動で計算を行うため、最初の値とは結果が異なってしまうこともあります。 たとえば以下のようになります:
 
-*(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
+*(Arial 18)*: 52 ピクセル -> 2 行 -> 40 ピクセル *(Arial 12)*: 3 ピクセル -> 0.4 行が 1 行に切り上げられる -> 19 ピクセル
 
 
 #### JSON 例:
