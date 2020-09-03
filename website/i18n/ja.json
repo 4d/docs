@@ -406,10 +406,10 @@
         "title": "表示フォーマット"
       },
       "FormObjects/propertiesEntry": {
-        "title": "Entry"
+        "title": "入力"
       },
       "FormObjects/propertiesFooters": {
-        "title": "Footers"
+        "title": "フッター"
       },
       "FormObjects/propertiesGridlines": {
         "title": "Gridlines"

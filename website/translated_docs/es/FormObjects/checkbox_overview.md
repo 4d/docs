@@ -21,7 +21,7 @@ A check box can be associated to a [variable or expression](properties_Object.md
 - **integer:** if the box is checked, the variable has the value 1. When not checked, it has the value 0. If check box is in third state (see below), it has the value 2.
 - **boolean:** if the box is checked, the variable has the value `True`. When not checked, it has the value `False`.
 
-Any or all check boxes in a form can be checked or unchecked. A group of check boxes allows the user to select multiple options.
+Any or all check boxes in a form can be checked or unchecked. Multiple check boxes allow the user to select multiple options.
 
 
 ### Three-States check box

@@ -58,10 +58,10 @@ The following table summarizes how object and form methods are called for each e
 | Sur après modification        | Oui                                | Oui                | Objets concernés uniquement |
 | On Getting Focus              | Oui                                | Oui                | Objets concernés uniquement |
 | On Losing Focus               | Oui                                | Oui                | Objets concernés uniquement |
-| Sur activation                | Jamais                             | Oui                | None                        |
-| On Deactivate                 | Jamais                             | Oui                | None                        |
-| Sur appel extérieur           | Jamais                             | Oui                | None                        |
-| Sur changement page           | Jamais                             | Oui                | None                        |
+| Sur activation                | Jamais                             | Oui                | Aucun                       |
+| On Deactivate                 | Jamais                             | Oui                | Aucun                       |
+| Sur appel extérieur           | Jamais                             | Oui                | Aucun                       |
+| Sur changement page           | Jamais                             | Oui                | Aucun                       |
 | Sur début survol              | Oui                                | Oui                | Objets concernés uniquement |
 | Sur déposer                   | Oui                                | Oui                | Objets concernés uniquement |
 | Sur glisser                   | Oui                                | Jamais             | Objets concernés uniquement |
@@ -69,22 +69,22 @@ The following table summarizes how object and form methods are called for each e
 | Sur survol                    | Oui                                | Oui                | Tous les objets             |
 | Sur fin survol                | Oui                                | Oui                | Tous les objets             |
 | On Mouse Up                   | Oui                                | Jamais             | Objets concernés uniquement |
-| Sur menu sélectionné          | Jamais                             | Oui                | None                        |
-| On Bound variable change      | Jamais                             | Oui                | None                        |
+| Sur menu sélectionné          | Jamais                             | Oui                | Aucun                       |
+| On Bound variable change      | Jamais                             | Oui                | Aucun                       |
 | Sur données modifiées         | Oui                                | Oui                | Objets concernés uniquement |
 | Sur appel zone du plug in     | Oui                                | Oui                | Objets concernés uniquement |
 | Sur entête                    | Oui                                | Oui                | Tous les objets             |
 | On Printing Detail            | Oui                                | Oui                | Tous les objets             |
 | On Printing Break             | Oui                                | Oui                | Tous les objets             |
 | On Printing Footer            | Oui                                | Oui                | Tous les objets             |
-| On Close Box                  | Jamais                             | Oui                | None                        |
+| On Close Box                  | Jamais                             | Oui                | Aucun                       |
 | Sur affichage corps           | Oui                                | Oui                | Tous les objets             |
 | Sur ouverture corps           | Oui (List box)                     | Oui                | Aucun, excepté les List box |
 | Sur fermeture corps           | Oui (List box)                     | Oui                | Aucun, excepté les List box |
-| Sur redimensionnement         | Jamais                             | Oui                | None                        |
+| Sur redimensionnement         | Jamais                             | Oui                | Aucun                       |
 | Sur nouvelle sélection        | Oui                                | Oui                | Objets concernés uniquement |
-| Sur chargement ligne          | Jamais                             | Oui                | None                        |
-| Sur minuteur                  | Jamais                             | Oui                | None                        |
+| Sur chargement ligne          | Jamais                             | Oui                | Aucun                       |
+| Sur minuteur                  | Jamais                             | Oui                | Aucun                       |
 | Sur défilement                | Oui                                | Jamais             | Objets concernés uniquement |
 | Sur avant saisie              | Oui (List box)                     | Jamais             | Objets concernés uniquement |
 | Sur déplacement colonne       | Oui (List box)                     | Jamais             | Objets concernés uniquement |
