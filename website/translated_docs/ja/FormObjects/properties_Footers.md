@@ -1,12 +1,12 @@
 ---
 id: propertiesFooters
-title: Footers
+title: フッター
 ---
 
 ---
 ## フッターを表示
 
-This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
+このプロパティは、[リストボックス列フッター](listbox_overview.md#リストボックスフッター) の表示/非表示を指定します。 列ごとに 1つのフッターを表示できます。それぞれのフッターは個別に設定できます。
 
 #### JSON 文法
 
@@ -24,9 +24,9 @@ This property is used to display or hide [list box column footers](listbox_overv
 ---
 ## 高さ
 
-This property is used to set the row height for a list box footer in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
+このプロパティは、リストボックスフッターの高さを **行** または **ピクセル** 単位で指定します。 同じリストボックス内で異なる単位を使用することもできます:
 
-*   *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
+*   *ピクセル* - 指定された値は当該行に対し直接適用され、列が使用しているフォントサイズ等は考慮されません。 If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
 
 *   *Line* - the height is calculated while taking into account the font size of the row concerned.
     *   If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
