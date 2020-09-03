@@ -28,10 +28,10 @@ Assurez-vous, dans les requêtes REST, que ce cookie est inclus dans **l'en-têt
 
 ### Exemple
 
-The way to handle session cookies actually depends on your HTTP client. This example shows how to extract and resend the session cookie in the context of requests handled through the 4D `HTTP Request` command.
+La gestion des cookies de session dépend de votre client HTTP. Cet exemple montre comment extraire et renvoyer le cookie de session dans le contexte des requêtes traitées via la commande 4D `HTTP Request`.
 
 ```4d
-// Creating headers
+// Créer des en-têtes
 ARRAY TEXT(headerNames;0)
 ARRAY TEXT(headerValues;0)
 
@@ -46,21 +46,21 @@ APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
 C_OBJECT($response)
 $response:=New object
 
-//This request opens a session for the user "kind user"
+//Cette requête ouvre une session à l'utilisateur "kind user"
 $result:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/$directory/login";"";\  
     $response;headerNames;headerValues;*)
 
 
-//Build new arrays for headers with only the cookie WASID4D
+//Créer de nouveaux tableaux pour les en-têtes uniquement avec le cookie WASID4D
 buildHeader(->headerNames;->headerValues)
 
-//This other request will not open a new session
+//Cette autre requête n'ouvrira pas une nouvelle session
 $result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\  
     $response;headerNames;headerValues;*)
 ```
 
 ```4d
-// buildHeader project method  
+// méthode projet buildHeader  
 
 C_POINTER($pointerNames;$1;$pointerValues;$2)
 ARRAY TEXT($headerNames;0)
