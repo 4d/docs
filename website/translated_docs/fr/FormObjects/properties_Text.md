@@ -266,7 +266,7 @@ Horizontal location of text within the area that contains it.
 
 #### Objets pris en charge
 
-[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [Text Area](text.md)
+[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns) - [En-tête List Box](listbox_overview.md#list-box-headers) - [Pied List Box](listbox_overview.md#list-box-footers) - [Zone de texte](text.md)
 
 
 ---
@@ -305,7 +305,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Type    | Description                                                                                                                                                                                                                                                                                                                                                                |
+| Nom de propriété    | Type    | Description                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
 | border-style        | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
@@ -323,7 +323,7 @@ The following example uses the *Color* project method.
 In the form method, write the following code:
 
 ```4d
-//form method
+//méthode formulaire
 Case of
   :(Form event=On Load)
    Form.meta:=New object
