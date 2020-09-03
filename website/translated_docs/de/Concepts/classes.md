@@ -722,14 +722,14 @@ $val:=$o.f() //8
 ```
 
 
-In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Since *f* is called as a method of $o, its `This` refers to $o. 
+In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o. 
 
 
 
 
-## Class commands
+## Befehle für Klassen
 
-Several commands of the 4D language allows you to handle class features.
+Einige Befehle der 4D Programmiersprache eignen sich zum Verwalten von Features für Klassen.
 
 
 
@@ -740,7 +740,7 @@ Several commands of the 4D language allows you to handle class features.
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter. 
+`OB Class` gibt die Klasse des Objekts zurück, das im Parameter übergeben ist. 
 
 
 
@@ -751,4 +751,4 @@ Several commands of the 4D language allows you to handle class features.
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`OB Instance of` gibt `wahr` zurück, wenn `object` zu `class` gehört oder zu einer seiner geerbten Klassen, sonst `false`.
