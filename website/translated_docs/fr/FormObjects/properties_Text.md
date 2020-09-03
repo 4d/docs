@@ -584,7 +584,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      The name of a longint array
+      Nom d'un tableau entier long
     </td>
   </tr>
 </table>
@@ -723,7 +723,7 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      true, false (default).
+      true, false (par défaut).
     </td>
   </tr>
 </table>
