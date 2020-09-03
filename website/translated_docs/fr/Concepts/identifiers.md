@@ -7,9 +7,10 @@ Cette section détaille les règles d'écriture et de nommage appliquées aux di
 
 
 ## Règles de base
+
 Les règles suivantes s'appliquent à toutes les structures de 4D.
 
-- Un nom doit commencer par un caractère alphabétique (une lettre), un tiret bas ou un dollar ("$") (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).
+- A name must begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
 - Le nom peut ensuite contenir des caractères alphabétiques, des caractères numériques, des espaces et des tirets bas (_).
 - Les points (".") Les points (".") et les crochets ("[ ]") sont interdits dans les noms de tables, champs, méthodes ou variables.
 - Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.
