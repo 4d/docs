@@ -114,4 +114,4 @@ sessionInfo: [
 ]
 }
 ```
-> The progress indicator information listed after the entity selections is used internally by 4D.
+> Les informations de l'indicateur de progression répertoriées après les sélections d'entités sont utilisées en interne par 4D.
