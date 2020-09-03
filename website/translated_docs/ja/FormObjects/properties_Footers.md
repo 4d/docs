@@ -56,9 +56,9 @@ title: フッター
 
 #### JSON 文法
 
-| 名            | データタイプ | とりうる値                         |
-| ------------ | ------ | ----------------------------- |
-| footerHeight | string | positive decimal+px &#124; em |
+| 名            | データタイプ | とりうる値                 |
+| ------------ | ------ | --------------------- |
+| footerHeight | string | 正の10進数 + px &#124; em |
 
 #### 対象オブジェクト
 
@@ -67,4 +67,4 @@ title: フッター
 
 #### 参照
 
-[Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)
+[ヘッダー](properties_Headers.md) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
