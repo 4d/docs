@@ -412,16 +412,16 @@
         "title": "フッター"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "Gridlines"
+        "title": "グリッド線"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "ヘッダー"
       },
       "FormObjects/propertiesHelp": {
         "title": "ヘルプ"
       },
       "FormObjects/propertiesHierarchy": {
-        "title": "Hierarchy"
+        "title": "階層"
       },
       "FormObjects/propertiesListBox": {
         "title": "リストボックス"
