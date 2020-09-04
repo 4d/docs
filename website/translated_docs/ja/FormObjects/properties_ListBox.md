@@ -206,7 +206,7 @@ title: リストボックス
 
 ![](assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). たとえば:
+要素に対してプロパティを設定すると、(再設定しない限り) 同要素の他の値を上書きするという点に注意してください。 たとえば:
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
@@ -218,9 +218,9 @@ Note that setting properties for an element overrides any other values for this 
 
 #### JSON 文法
 
-| 名                | データタイプ | とりうる値                  |
-| ---------------- | ------ | ---------------------- |
-| rowControlSource | string | Row control array name |
+| 名                | データタイプ | とりうる値        |
+| ---------------- | ------ | ------------ |
+| rowControlSource | string | 行コントロール配列の名称 |
 
 #### 対象オブジェクト
 
@@ -231,10 +231,10 @@ Note that setting properties for an element overrides any other values for this 
 ---
 ## 選択モード
 
-Designates the option for allowing users to select rows:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
+リストボックス行の選択モードを指定します:
+- **なし**: 行を選択することはできません。 [シングルクリック編集](properties_Entry.md#シングルクリック編集) オプションがチェックされている場合を除き、リストボックスをクリックしても効果はありません。 ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
+- **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります  
+  上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
 
 
