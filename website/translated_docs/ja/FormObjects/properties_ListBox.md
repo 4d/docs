@@ -100,11 +100,11 @@ title: リストボックス
 ---
 ## スクロールしない列数/ドラッグしない列数
 
-Locked columns and static columns are two separate and independent functionalities in list boxes:
+スクロールしない列数、およびドラッグしない列数はそれぞれ別個のリストボックス機能です:
 
-*   Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
-*   Static columns cannot be moved by drag and drop within the list box.
-> You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+*   スクロールしない列数は、ユーザーが横スクロールしても、リストボックスの左側に常に表示される列の数を指定します。
+*   ドラッグしない列数は、実行時にドラッグで移動できない列の数を指定します。
+> これらのプロパティはプログラミングによって指定することも可能です。詳細は [4Dランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/4D-Language-Reference.100-4504285.ja.html) マニュアルの [リストボックス](https://doc.4d.com/4Dv18/4D/18/List-Box.201-4504332.ja.html) を参照ください。
 
 These properties interact as follows:
 
