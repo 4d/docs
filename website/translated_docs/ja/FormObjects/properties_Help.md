@@ -31,18 +31,18 @@ title: ヘルプ
 [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](comboBox_overview.md) - [階層リスト](list_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [ラジオボタン](radio_overview.md)
 
 
-#### Other help features
+#### 追加のヘルプ機能
 
-オブジェクトにヘルプTip を関連付ける方法は他にもあります:
+オブジェクトにヘルプTip を関連付ける方法は他にも 2通りあります:
 
-- at the level of the database structure (fields only). In this case, the help tip of the field is displayed in every form where it appears. For more information, refer to “Help Tips” in [Field properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
-- using the **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command, for the current process.
+- データベースストラクチャーレベルにおいて設定することができます (フィールドのみ)。 この場合、当該フィールドが表示されるすべてのフォームにおいて、このヘルプTip が表示されます。 詳細については [フィールドプロパティ](https://doc.4d.com/4Dv18/4D/18/Field-properties.300-4575567.ja.html#3367486) のヘルプTip の章を参照してください)。
+- **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンドを使って、カレントプロセス内で動的に設定します。
 
-When different tips are associated with the same object in several locations, the following priority order is applied:
+同じオブジェクトに対して複数の Tip が関連づけられている場合には、次の優先順位に従って表示されます:
 
-1. structure level (lowest priority)
-2. form editor level
-3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
+1. ストラクチャーレベル (最低優先度)
+2. フォームエディターレベル
+3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンド (最高優先度)
 
 
 #### 参照
