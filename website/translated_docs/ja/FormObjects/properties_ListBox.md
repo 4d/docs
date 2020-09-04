@@ -6,15 +6,15 @@ title: リストボックス
 ---
 ## 列
 
-Collection of columns of the list box.
+リストボックス列のコレクション。
 
 #### JSON 文法
 
-| 名       | データタイプ                       | とりうる値                                            |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| 名       | データタイプ          | とりうる値                 |
+| ------- | --------------- | --------------------- |
+| columns | 列オブジェクトのコレクション。 | リストボックス列のプロパティを格納します。 |
 
-For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
+列オブジェクトに関してサポートされているプロパティの一覧については [列特有のプロパティ](listbox_overview#列特有のプロパティ) の章を参照してください。
 
 #### 対象オブジェクト
 
@@ -22,20 +22,20 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 ---
 ## 詳細フォーム名
-`Selection type list box`
+`セレクション型リストボックス`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+リストボックスの個々のレコードを編集・表示する際に使用するフォームを指定します。
 
-The specified form is displayed:
+指定されたフォームは以下のタイミングで表示されます:
 
-*   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
-*   when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
+*   リストボックスに関連付けられている `addSubrecord` (サブレコード追加)、または `editSubrecord` (サブレコード編集) の標準アクションを使用したとき ([標準アクションの使用](https://doc.4d.com/4Dv18/4D/18/Using-standard-actions.300-4575640.ja.html) を参照してください)。
+*   [行をダブルクリック](#行をダブルクリック) プロパティが「レコード編集」か「レコード表示」に設定されている場合に行をダブルクリックしたとき。
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                                                                                                                                                                 |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
+| 名          | データタイプ | とりうる値                                                                                                                                                        |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| detailForm | string | <li>テーブルまたはプロジェクトフォームの名前 (文字列)<li>フォームを定義する .json ファイルへの POSIX パス (文字列)<li>フォームを定義するオブジェクト |
 
 #### 対象オブジェクト
 
@@ -48,18 +48,18 @@ The specified form is displayed:
 
 ---
 ## 行をダブルクリック
-`Selection type list box`
+`セレクション型リストボックス`
 
-Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
+ユーザーがリストボックスの行をダブルクリックした際に実行されるアクションを指定します。 選択可能なオプションは以下の通りです:
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> Double-clicking an empty row is ignored in list boxes.
+*   **何もしない** (デフォルト): 行をダブルクリックしても自動アクションは発動しません。
+*   **レコード編集**: 行をダブルクリックすると、リストボックスに設定された [詳細フォーム名](#詳細フォーム名) に当該レコードが表示されます レコードは読み書き可能モードで開かれるので、編集が可能です。
+*   **レコード表示**: レコード編集と同様の挙動をしますが、レコードは読み取り専用モードで開かれるため、編集はできません。
+> 空の行へのダブルクリックは無視されます。
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+選択されているアクションに関わらず、`On Double Clicked` フォームイベントが生成されます。
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+「レコード編集」「レコード表示」のアクションに関しては `On Open Detail` フォームイベントも生成されます。 リストボックスに関連付けられた詳細フォームに表示されたレコードが閉じられる際には `On Close Detail` フォームイベントが生成されます (レコードが編集されたかどうかは問いません)。
 
 #### JSON 文法
 
@@ -77,19 +77,19 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 ---
 ## ハイライトセット
 
-`Selection type list box`
+`セレクション型リストボックス`
 
-This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
+このプロパティを使用して、リストボックス中でハイライトされたレコードを管理するために使用するセット名を指定します (**配列** データソースが指定されている場合には、リストボックスに割り当てた変数と同じ名前のブール配列をこの用途で使用します)。
 
-4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
-> * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
-> * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
+4D は *ListBoxSetN* (*N* は 0 から始まり、フォーム上のリストボックスオブジェクトの数に従い増分されます) という名前のデフォルトセットを作成しますが、 必要に応じてこの名前を変更できます。 セットはローカル、プロセスおよびインタープロセスセットを使用できます (ネットワークトラフィックを制限するため、*$LBSet* のようなローカルセットの使用を推奨します)。 指定されたセットは 4D が自動で管理します。 ユーザーが 1つ以上の行を選択すると、セットは即座に更新されます。 プログラムを使用して行を選択したい場合、"セット" テーマのコマンドをこのセットに適用できます。
+> * リストボックス行のハイライトステータスとテーブルレコードのハイライトステータスは完全に独立しています。
+> * "ハイライトセット" プロパティに名前が指定されていない場合、リストボックス中で行を選択することはできません。
 
 #### JSON 文法
 
-| 名            | データタイプ | とりうる値           |
-| ------------ | ------ | --------------- |
-| highlightSet | string | Name of the set |
+| 名            | データタイプ | とりうる値  |
+| ------------ | ------ | ------ |
+| highlightSet | string | セットの名称 |
 
 #### 対象オブジェクト
 
