@@ -188,9 +188,9 @@ title: リストボックス
 | ------------------------ | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | lk row is disabled       | 2  | 対応する行は無効化されています。 テキストや、チェックボックスなどのコントロール類は暗くなっているかグレーアウトされています。 入力可能なテキスト入力エリアは入力可能ではありません。 デフォルト値: 有効化                                                                                                                                                                                                                                                              |
 | lk row is hidden         | 1  | 対応する行は非表示です。 行を非表示にすることは、リストボックスの見た目にのみ影響します。 非表示の行は配列内には存在し、プログラミングを通して管理可能です。 ランゲージコマンド (具体的には `LISTBOX Get number of rows` または `LISTBOX GET CELL POSITION`) は行の表示/非表示のステータスを考慮しません。 たとえば、10行あるリストボックスの、最初の 9行が非表示になっていた場合、`LISTBOX Get number of rows` は10を返します。 ユーザーの視点では、リストボックス内の非表示行の存在は視覚的には認識できません。 表示されいている行のみが (たとえば、"すべてを選択" コマンドなどで) 選択可能です。 デフォルト値: 表示 |
-| lk row is not selectable | 4  | 対応する行は選択可能になっていません (ハイライトできません)。 入力可能なテキスト入力エリアは [シングルクリック編集](properties_Entry.md#シングルクリック編集) オプションが有効になっていない限り入力可能ではありません。 しかしながら、チェックボックスなどのコントロールとリストは機能しています。 This setting is ignored if the list box selection mode is "None". Default value: Selectable                                                                                                        |
+| lk row is not selectable | 4  | 対応する行は選択可能になっていません (ハイライトできません)。 入力可能なテキスト入力エリアは [シングルクリック編集](properties_Entry.md#シングルクリック編集) オプションが有効になっていない限り入力可能ではありません。 しかしながら、チェックボックスなどのコントロールとリストは機能しています。 この設定はリストボックスの選択モードが "なし" の場合には無視されます。 デフォルト値: 選択可能                                                                                                                                                 |
 
-To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
+行のステータスを変えるためには、対応する配列の要素に適切な定数を設定するだけです。 たとえば、10行目を選択不可能に設定したい場合、以下のように書くことができます:
 
 ```4d
  aLControlArr{10}:=lk row is not selectable
@@ -198,7 +198,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
 
 ![](assets/en/FormObjects/listbox_styles5.png)
 
-You can define several interface properties at once:
+複数のインターフェースプロパティを同時に定義することもできます:
 
 ```4d
  aLControlArr{8}:=lk row is not selectable + lk row is disabled
@@ -206,21 +206,21 @@ You can define several interface properties at once:
 
 ![](assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). たとえば:
+要素に対してプロパティを設定すると、(再設定しない限り) 同要素の他の値を上書きするという点に注意してください。 たとえば:
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable
- //sets row 6 as disabled AND not selectable
+ // 6行目を無効化し、かつ選択不可に設定します
  aLControlArr{6}:=lk row is disabled
- //sets row 6 as disabled but selectable again
+ // 6行目を無効化するが、選択不可を再設定していないので選択が可能となります
 ```
 
 
 #### JSON 文法
 
-| 名                | データタイプ | とりうる値                  |
-| ---------------- | ------ | ---------------------- |
-| rowControlSource | string | Row control array name |
+| 名                | データタイプ | とりうる値        |
+| ---------------- | ------ | ------------ |
+| rowControlSource | string | 行コントロール配列の名称 |
 
 #### 対象オブジェクト
 
@@ -231,10 +231,10 @@ Note that setting properties for an element overrides any other values for this 
 ---
 ## 選択モード
 
-Designates the option for allowing users to select rows:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
+リストボックス行の選択モードを指定します:
+- **なし**: 行を選択することはできません。 [シングルクリック編集](properties_Entry.md#シングルクリック編集) オプションがチェックされている場合を除き、リストボックスをクリックしても効果はありません。 ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
+- **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります  
+  上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
 
 
