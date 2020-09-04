@@ -67,15 +67,15 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 `List subform`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
+Sets the action to be performed when a user double-clicks on a row in a list subform. 選択可能なオプションは以下の通りです:
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). The record is opened in read-write mode so it can be modified.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
+*   **何もしない** (デフォルト): 行をダブルクリックしても自動アクションは発動しません。
+*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). レコードは読み書き可能モードで開かれるので、編集が可能です。
+*   **レコード表示**: レコード編集と同様の挙動をしますが、レコードは読み取り専用モードで開かれるため、編集はできません。
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+選択されているアクションに関わらず、`On Double Clicked` フォームイベントが生成されます。
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+「レコード編集」「レコード表示」のアクションに関しては `On Open Detail` フォームイベントも生成されます。 リストボックスに関連付けられた詳細フォームに表示されたレコードが閉じられる際には `On Close Detail` フォームイベントが生成されます (レコードが編集されたかどうかは問いません)。
 
 #### JSON 文法
 
