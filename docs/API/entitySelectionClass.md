@@ -47,9 +47,14 @@ The entity selection properties are however enumerable:
 |[<!-- INCLUDE #entitySelectionClass.minus().Syntax -->](#minus-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.minus().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.or().Syntax -->](#or-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.or().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.orderBy().Syntax -->](#orderby-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.orderBy().Summary -->|
-|[<!-- INCLUDE #entitySelectionClass.touched().Syntax -->](#touched-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.touched().Summary -->|
-|[<!-- INCLUDE #entitySelectionClass.touchedAttributes().Syntax -->](#touchedattributes-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.touchedAttributes().Summary -->|
-|[<!-- INCLUDE #entitySelectionClass.unlock().Syntax -->](#unlock-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.unlock().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.orderByFormula().Syntax -->](#orderbyformula-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.orderByFormula().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.query().Syntax -->](#query-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.query().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.queryPath.Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.queryPlan.Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.refresh().Syntax -->](#refresh-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.refresh().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.slice().Syntax -->](#slice-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.slice().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.sum().Syntax -->](#sum-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.sum().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.toCollection().Syntax -->](#tocollection-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.toCollection().Summary -->|
 
 
 
@@ -1211,130 +1216,185 @@ You can add as many objects in the criteria collection as necessary.
 
 ---
 
-<!-- REF entitySelectionClass.touched().Desc -->
-## .touched( )   
+<!-- REF entitySelectionClass.orderByFormula().Desc -->
+## .orderByFormula( )   
 
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v17|Added|
+|v17 R6|Added|
 
 </details>
 
-<!-- REF #entitySelectionClass.touched().Syntax -->
-**.touched( )**: boolean<!-- END REF -->
+<!-- REF #entitySelectionClass.orderByFormula().Syntax -->
+**.orderByFormula**( *formula* { ; *sortOrder* } { ; *settings* } ) : object<!-- END REF -->
 
-<!-- REF #entitySelectionClass.touched().Params -->
+<!-- REF #entitySelectionClass.orderByFormula().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+|formula|text, object|->|Formula string, or Formula object|	
+|sortOrder |longint|->|`dk ascending` (default) or `dk descending`|	
+|settings|object|->|Parameter(s) for the formula|
+|Result|object|<-|New ordered entity selection|
 <!-- END REF -->
 
 #### Description
 
-The `.touched()` function <!-- REF #entitySelectionClass.touched().Summary -->tests whether or not an entity attribute has been modified<!-- END REF --> since the entity was loaded into memory or saved.
+The `.orderByFormula()` function <!-- REF #entitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formula* and, optionally, *sortOrder* and *settings* parameters.
 
-If an attribute has been modified or calculated, the function returns true, else it returns false. You can use this function to determine if you need to save the entity.
+>This function does not modify the original entity selection.
 
-This function returns false for a new entity that has just been created (with [`.new( )`](dataclassClass.html#new-)). Note however that if you use a function which calculates an attribute of the entity, the `.touched( )` function will then return true. For example, if you call [`.getKey( )`](#getkey-) to calculate the primary key, the `.touched( )` function returns true.
+In the *formula* parameter, you can pass either a text or an object:
 
-#### Example  
+*	text: a 4D expression such as "Year of(this.birthDate)"
+*	object: a valid formula object created using the `Formula` or `Formula from string` command.
 
-In this example, we check to see if it is necessary to save the entity: 
+The *formula* is executed for each entity of the entity selection and its result is used to define the position of the entity in the returned entity selection. The result must be of a sortable type (boolean, date, number, text, time, null).
+
+>A null result is always the smallest value.
+
+By default if you omit the sortOrder parameter, the resulting entity selection is sorted in ascending order. Optionnally, you can pass one of the following values in the sortOrder parameter:
+
+|Constant|	Value|	Comment|
+|---|---|---|
+|dk ascending|	0	|Ascending sort order (default)|
+|dk descending|	1	|Descending sort order|
+
+Within the *formula*, the processed entity and thus its attributes are available through the `This` command (for example, `This.lastName`). 
+
+You can pass parameter(s) to the *formula* using the args property (object) of the settings parameter: *formula* receives the settings.args object in $1.
+
+#### Example 1
+
+Sorting students using a formula provided as text:
 
 ```4d
-C_OBJECT($emp)
- $emp:=ds.Employee.get(672)
- $emp.firstName:=$emp.firstName // Even if updated with the same value, the attribute is marked as touched
- 
- If($emp.touched()) //if at least one of the attributes has been changed
-    $emp.save()
- End if // otherwise, no need to save the entity
+C_OBJECT($es1;$es2)
+ $es1:=ds.Students.query("nationality=:1";"French")
+ $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
+ $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
 
-<!-- END REF -->
-
-
----
-
-<!-- REF entitySelectionClass.touchedAttributes().Desc -->
-## .touchedAttributes( )   
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17|Added|
-
-</details>
-
-<!-- REF #entitySelectionClass.touchedAttributes().Syntax -->
-**.touchedAttributes( )**: collection<!-- END REF -->
-
-<!-- REF #entitySelectionClass.touchedAttributes().Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|Result|collection|<-|Names of touched attributes, or empty collection|
-<!-- END REF -->
-
-#### Description
-
-The `.touchedAttributes()` function <!-- REF #entitySelectionClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified<!-- END REF -->  since the entity was loaded into memory.
-
-This applies for attributes of the type storage or `relatedEntity` (see [.kind](dataclassAttributeClass.html#kind)).
-
-In the case of a related entity having been touched (i.e., the foreign key), the name of the related entity and its primary key's name are returned.
-
-If no entity attribute has been touched, the method returns an empty collection.
-
-#### Example 1  
-
+Same sort order but using a formula object:
 
 ```4d
- C_COLLECTION($touchedAttributes)
- C_OBJECT($emp)
- 
- $touchedAttributes:=New collection
- $emp:=ds.Employee.get(725)
- $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
- $emp.lastName:="Martin"
- $touchedAttributes:=$emp.touchedAttributes()
-  //$touchedAttributes: ["firstName","lastName"]
+ C_OBJECT($es1;$es2;$formula)
+ $es1:=ds.Students.query("nationality=:1";"French")
+ $formula:=Formula(Length(This.lastname))
+ $es2:=$es1.orderByFormula($formula) // ascending by default
+ $es2:=$es1.orderByFormula($formula;dk descending)
 ```
 
 
 #### Example 2  
 
+A formula is given as a formula object with parameters; settings.args object is received as $1 in the ***computeAverage*** method. 
+
+In this example, the marks object field in the **Students** dataClass contains students' grades for each subject. A single formula object is used to compute a student's average grade with different coefficients for schoolA and schoolB.
 
 ```4d
- C_COLLECTION($touchedAttributes)
- C_OBJECT($emp;$company)
+ C_OBJECT($es1;$es2;$formula;$schoolA;$schoolB)
+ $es1:=ds.Students.query("nationality=:1";"French")
+ $formula:=Formula(computeAverage($1))
  
- $touchedAttributes:=New collection
+ $schoolA:=New object() //settings object
+ $schoolA.args:=New object("english";1;"math";1;"history";1) // Coefficients to compute an average
  
- $emp:=ds.Employee.get(672)
- $emp.firstName:=$emp.firstName
- $emp.lastName:="Martin"
+  //Order students according to school A criteria
+ $es2:=$es1.entitySelection.orderByFormula($formula;$schoolA)
  
- $company:=ds.Company.get(121)
- $emp.employer:=$company
+ $schoolB:=New object() //settings object
+ $schoolB.args:=New object("english";1;"math";2;"history";3) // Coefficients to compute an average
  
- $touchedAttributes:=$emp.touchedAttributes()
- 
-  //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
+  //Order students according to school B criteria
+ $es2:=$es1.entitySelection.orderByFormula($formula;dk descending;$schoolB)
 ```
 
-In this case:
-
-*	firstName and lastName have a `storage` kind
-*	employer has a `relatedEntity` kind
-*	employerID is the foreign key of the employer related entity
+```4d
+  //
+  // computeAverage method
+  // -----------------------------
+ C_TEXT($subject)
+ C_LONGINT($0;$average;$sum)
+ C_OBJECT($coefList;$1)
+ 
+ $coefList:=$1
+ $average:=0
+ $sum:=0
+ 
+ For each($subject;$coefList)
+    $sum:=$sum+$coefList[$subject]
+ End for each
+ 
+ For each($subject;This.marks)
+    $average:=$average+(This.marks[$subject]*$coefList[$subject])
+ End for each
+ 
+ $0:=$average/$sum
+```
 
 <!-- END REF -->
 
+
 ---
 
-<!-- REF entitySelectionClass.unlock().Desc -->
-## .unlock( )   
+<!-- REF entitySelectionClass.query().Desc -->
+## .query( )   
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R6|Modified|
+|v17 R5|Modified|
+|v17|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.query().Syntax -->
+**.query**( *queryString* { ; *value* } { ; *value2* ; ... ; *valueN* } { ; *querySettings*} ) : entity selection<p>**.query**( *formula* { ; *value* } { ; *value2* ; ... ; *valueN* } { ; *querySettings*} ) : entity selection><!-- END REF -->
+
+<!-- REF #entitySelectionClass.query().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|queryString &#124; formula |text, object|->|Search criteria as string or formula object|	
+|value |mixed|->|Value(s) to compare when using placeholder(s)|	
+|querySettings |object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|Result|entitySelection|<-|New entitySelection made up of entities from entity selection meeting the search criteria specified in queryString|
+<!-- END REF -->
+
+#### Description
+
+The `.query()` function <!-- REF #entitySelectionClass.query().Summary -->searches for entities that meet the search criteria<!-- END REF -->  specified in *queryString* or *formula* and (optionally) value among all the entities in the entity selection, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+
+>This function does not modify the original entity selection.
+
+If no matching entities are found, an empty `EntitySelection` is returned.
+
+For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query( )`](dataclassClass.html#query-) function description.
+
+>By default if you omit the **order by** statement in the *queryString*, the returned entity selection is not ordered (for more information, please refer to **Ordered vs Unordered entity selections**). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection). 
+
+#### Example 1  
+
+
+```4d
+  C_OBJECT($entitySelectionTemp)
+ $entitySelectionTemp:=dataClass.query("lastName = :1";"M@")
+ Form.emps:=$entitySelectionTemp.query("manager.lastName = :1";"S@")
+```
+
+
+#### Example 2  
+
+More examples of queries can be found in the DataClass [`.query( )`](dataclassClass.html#query-) page. 
+
+<!-- END REF -->
+
+
+---
+
+<!-- REF entitySelectionClass.queryPath.Desc -->
+## .queryPath   
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -1343,57 +1403,750 @@ In this case:
 
 </details>
 
-<!-- REF #entitySelectionClass.unlock().Syntax -->
-**.unlock( )**: object<!-- END REF -->
+<!-- REF #entitySelectionClass.queryPath.Syntax -->
+**.queryPath** : text<!-- END REF -->
 
-<!-- REF #entitySelectionClass.unlock().Params -->
+
+#### Description
+
+The `.queryPath` property <!-- REF #entitySelectionClass.queryPath.Summary -->contains a detailed description of the query <!-- END REF --> as it was actually performed by 4D. This property is available for entitySelection objects generated through queries if the "queryPath":true property was passed in the *querySettings* parameter of the DataClass [`.query( )`](dataclassClass.html#query-) function.
+
+For more information, refer to the **querySettings parameter** paragraph in the DataClass [`.query( )`](dataclassClass.html#query-) page. 
+
+<!-- END REF -->
+
+
+---
+
+<!-- REF entitySelectionClass.queryPlan.Desc -->
+## .queryPlan   
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.queryPlan.Syntax -->
+**.queryPlan** : text<!-- END REF -->
+
+
+#### Description
+
+The `.queryPlan` property <!-- REF #entitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed<!-- END REF --> (i.e., the planned query). This property is available for entitySelection objects generated through queries if the "queryPlan":true property was passed in the querySettings parameter of the DataClass [`.query( )`](dataclassClass.html#query-) function.
+
+For more information, refer to the **querySettings parameter** paragraph in the DataClass [`.query( )`](dataclassClass.html#query-) page. 
+
+<!-- END REF -->
+
+---
+
+<!-- REF entitySelectionClass.refresh().Desc -->
+## .refresh( )   
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R3|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.refresh().Syntax -->
+**.refresh( )**<!-- END REF -->
+
+<!-- REF #entitySelectionClass.refresh().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|object|<-|Status object|
+||||Does not require any parameters|
 <!-- END REF -->
 
 #### Description
 
-The `.unlock()` function <!-- REF #entitySelectionClass.unlock().Summary -->removes the pessimistic lock(\*) on the record matching the entity<!-- END REF -->  in the datastore and table related to its dataclass.
+>This function only works with a remote datastore (client / server or Open datastore connection).
 
-(\*)For more information, please refer to the **Entity locking** page.
+The `.refresh()` function <!-- REF #entitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
-A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).
+By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
->When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. For example:
+#### Example 1 
+
+In this example, classic and ORDA code modify the same data simultaneously:
 
 ```4d
- $e1:=ds.Emp.all()[0]
- $e2:=ds.Emp.all()[0]
- $res:=$e1.lock() //$res.success=true
- $res:=$e2.unlock() //$res.success=false
- $res:=$e1.unlock() //$res.success=true
+ //On a 4D remote
+ 
+ C_OBJECT($selection;$student)
+ 
+ $selection:=ds.Students.query("lastname=:1";"Collins")
+  //The first entity is loaded in the ORDA cache
+ $student:=$selection.first()
+ 
+  //Update with classic 4D, ORDA cache is not aware of if
+ QUERY([Students];[Students]lastname="Collins")
+ [Students]lastname:="Colin"
+ SAVE RECORD([Students])
+ 
+  //to get the latest version, the ORDA cache must be invalidated
+ $selection.refresh()
+  // Even if cache is not expired, the first entity is reloaded from disk
+ $student:=$selection.first()
+ 
+  //$student.lastname contains "Colin"
 ```
 
-**Result**
 
-The object returned by `.unlock( )` contains the following property:
+#### Example 2 
 
-|Property|	Type	|Description|
-|---|---|---|
-|success|	boolean|	True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False.|
-
-#### Example  
-
+A list box displays the Form.students entity selection and several clients work on it. 
 
 ```4d
- C_OBJECT($employee;$status)
- 
- $employee:=ds.Employee.get(725)
- $status:=$employee.lock()
- ... //processing
- $status:=$employee.unlock()
- If($status.success)
-    ALERT("The entity is now unlocked")
- End if
+// Form method:
+ Case of
+    :(Form event code=On Load)
+       Form.students:=ds.Students.all()
+ End case
+  //
+  //
+  // On client #1, the user loads, updates, and saves the first entity
+  // On client #2, the user loads, updates, and saves the same entity
+  //
+  //
+  // On client #1:
+ Form.students.refresh() // Invalidates the ORDA cache for the Form.students entity selection
+  // The list box content is refreshed from the database with update made by client #2
+```
+
+
+<!-- END REF -->
+
+
+---
+
+<!-- REF entitySelectionClass.slice().Desc -->
+## .slice( )   
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.slice().Syntax -->
+**.slice**( *startFrom* { ; *end* } ) : entity selection<!-- END REF -->
+
+<!-- REF #entitySelectionClass.slice().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|startFrom |longint	|->|Index to start the operation at (included)	|
+|end 	|longint|->|End index (not included)|
+|Result|entitySelection|<-|New entity selection containing sliced entities (shallow copy)|
+<!-- END REF -->
+
+#### Description
+
+The `.slice()` function <!-- REF #entitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the startFrom index to the end index (end is not included). This method returns a shallow copy of the entity selection (it uses the same entity references).
+
+>This function does not modify the original entity selection.
+
+The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by end. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
+
+*	If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
+*	If *startFrom >= length*, the function returns an empty entity selection.
+*	If *end* < 0, it is recalculated as *end:=end+length*.
+*	If *end < startFrom* (passed or calculated values), the method does nothing. 
+
+If the entity selection contains entities that were dropped in the meantime, they are also returned. 
+
+#### Example 1 
+
+You want to get a selection of the first 9 entities of the entity selection:
+
+```4d
+C_OBJECT($sel;$sliced)
+$sel:=ds.Employee.query("salary > :1";50000)
+$sliced:=$sel.slice(0;9) //
+```
+
+
+#### Example 2 
+
+Assuming we have ds.Employee.all().length = 10
+
+```4d
+C_OBJECT($slice)
+$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+
 ```
 
 <!-- END REF -->
+
+---
+
+<!-- REF entitySelectionClass.sum().Desc -->
+## .sum( )   
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.sum().Syntax -->
+**.sum**( *attributePath* ) : real<!-- END REF -->
+
+<!-- REF #entitySelectionClass.sum().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attributePath |text|->|Path of the attribute to be used for calculation|
+|Result|real|<-|Sum of entity selection values|
+<!-- END REF -->
+
+#### Description
+
+The `.sum()` function <!-- REF #entitySelectionClass.sum().Summary -->returns the sum for all attributePath values in the entity selection<!-- END REF -->.
+
+`.sum()` returns 0 if the entity selection is empty.
+
+The sum can only be done on values of number type. If the *attributePath* type is object, only numerical values are taken into account for the calculation (other value types are ignored). In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, `.sum()` returns 0.
+
+An error is returned if:
+
+*	*attributePath* is not a numerical or an object attribute,
+*	*attributePath* is a related attribute,
+*	*attributePath* is not found in the entity selection dataclass.
+
+
+
+#### Example 
+
+```4d
+C_OBJECT($sel)
+C_REAL($sum)
+ 
+$sel:=ds.Employee.query("salary < :1";20000)
+$sum:=$sel.sum("salary")
+```
+
+<!-- END REF -->
+
+---
+
+<!-- REF entitySelectionClass.toCollection().Desc -->
+## .toCollection( )   
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.toCollection().Syntax -->
+**.toCollection**( { *filter* ; } { *options* { ; *begin* { ; *howMany* } } } ) : *collection*<!-- END REF -->
+
+<!-- REF #entitySelectionClass.toCollection().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|filter |string, collection|->|Specifies which entity properties to extract|	
+|options|longint|->|`dk with primary key`: adds the primary key<br>`dk with stamp`: adds the stamp|	
+|begin|longint|	->|Designates the starting index|	
+|howMany|longint|->|Number of entities to extract|
+|Result|collection|<-|Collection of objects containing attributes and values of entity selection|
+<!-- END REF -->
+
+#### Description
+
+The `.toCollection()` function <!-- REF #entitySelectionClass.toCollection().Summary -->creates and returns a collection<!-- END REF --> where each element is an object containing a set of properties and values corresponding to the attribute names and values for the entity selection.
+
+If the *filter* parameter is omitted or contains an empty string or "*", all the attributes are extracted. Attributes with "kind" property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Attributes with "kind" property as "relatedEntities" are not extracted.
+
+In the *filter* parameter, you can pass the entity attributes to extract. Two syntaxes are allowed:
+
+*	a string with property paths separated with commas: "propertyPath1, propertyPath2, ...".
+*	a collection of strings: \["propertyPath1","propertyPath2",...]
+
+
+If *filter* is specified for attributes of the `relatedEntity` kind:
+
+*	propertyPath = "relatedEntity" -> it is extracted with simple form
+*	propertyPath = "relatedEntity.*" -> all the properties are extracted
+*	propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted
+
+
+If *filter* is specified for attributes of the `relatedEntities` kind:
+
+*	propertyPath = "relatedEntities.*" -> all the properties are extracted
+*	propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
+
+
+In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
+
+The *begin* parameter allows you to indicate the starting index of the entities to extract. You can pass any value between 0 and entity selection length-1.
+
+The *howMany* parameter lets you specify the number of entities to extract, starting with the one specified in *begin*. Dropped entities are not returned but are taken into account according to *howMany*. For example, if *howMany*= 3 and there is 1 dropped entity, only 2 entities are extracted.
+
+If *howMany* > length of the entity selection, the method returns (length - *begin*) objects.
+
+An empty collection is returned if:
+
+*	the entity selection is empty, or
+*	*begin* is greater than the length of the entity selection.
+
+
+#### Example 1
+
+The following structure will be used throughout all examples of this section:
+
+![](assets/en/API/dataclassAttribute4.png)
+
+
+Example without filter or options parameter:
+
+```4d
+ C_COLLECTION($employeesCollection)
+ C_OBJECT($employees)
+ 
+ $employeesCollection:=New collection
+ $employees:=ds.Employee.all()
+ $employeesCollection:=$employees.toCollection()
+```
+
+Returns:
+
+```4d
+[
+    {
+        "ID": 416,
+        "firstName": "Gregg",
+        "lastName": "Wahl",
+        "salary": 79100,
+        "birthDate": "1963-02-01T00:00:00.000Z",
+        "woman": false,
+        "managerID": 412,
+        "employerID": 20,
+        "photo": "[object Picture]",
+        "extra": null,
+        "employer": {
+            "__KEY": 20
+        },
+        "manager": {
+            "__KEY": 412
+        }
+    },
+    {
+        "ID": 417,
+        "firstName": "Irma",
+        "lastName": "Durham",
+        "salary": 47000,
+        "birthDate": "1992-06-16T00:00:00.000Z",
+        "woman": true,
+        "managerID": 412,
+        "employerID": 20,
+        "photo": "[object Picture]",
+        "extra": null,
+        "employer": {
+            "__KEY": 20
+        },
+        "manager": {
+            "__KEY": 412
+        }
+    }
+]
+```
+
+#### Example 2
+
+Example with options:
+
+```4d
+$employeesCollection:=New collection
+$employees:=ds.Employee.all()
+$employeesCollection:=$employees.toCollection("";dk with primary key+dk with stamp)
+```
+
+Returns:
+
+```4d
+[
+    {
+        "__KEY": 416,
+        "__STAMP": 1,
+        "ID": 416,
+        "firstName": "Gregg",
+        "lastName": "Wahl",
+        "salary": 79100,
+        "birthDate": "1963-02-01T00:00:00.000Z",
+        "woman": false,
+        "managerID": 412,
+        "employerID": 20,
+        "photo": "[object Picture]",
+        "extra": null,
+        "employer": {
+            "__KEY": 20
+        },
+        "manager": {
+            "__KEY": 412
+        }
+    },
+    {
+        "__KEY": 417,
+        "__STAMP": 1,
+        "ID": 417,
+        "firstName": "Irma",
+        "lastName": "Durham",
+        "salary": 47000,
+        "birthDate": "1992-06-16T00:00:00.000Z",
+        "woman": true,
+        "managerID": 412,
+        "employerID": 20,
+        "photo": "[object Picture]",
+        "extra": null,
+        "employer": {
+            "__KEY": 20
+        },
+        "manager": {
+            "__KEY": 412
+        }
+    }]
+```
+
+#### Example 3  
+
+Example with slicing and filtering on properties:
+
+```4d
+$employeesCollection:=New collection
+$filter:=New collection
+$filter.push("firstName")
+$filter.push("lastName")
+ 
+$employees:=ds.Employee.all()
+$employeesCollection:=$employees.toCollection($filter;0;0;2)
+```
+
+Returns:
+
+```4d
+[
+    {
+        "firstName": "Gregg",
+        "lastName": "Wahl"
+    },
+    {
+        "firstName": "Irma",
+        "lastName": "Durham"
+    }
+]
+```
+
+#### Example 4  
+
+Example with `relatedEntity` type with simple form:
+
+```4d
+$employeesCollection:=New collection
+$employeesCollection:=$employees.toCollection("firstName,lastName,employer")
+```
+
+returns:
+
+```4d
+[
+    {
+        "firstName": "Gregg",
+        "lastName": "Wahl",
+        "employer": {
+            "__KEY": 20
+        }
+    },
+    {
+        "firstName": "Irma",
+        "lastName": "Durham",
+        "employer": {
+            "__KEY": 20
+        }
+    },
+    {
+        "firstName": "Lorena",
+        "lastName": "Boothe",
+        "employer": {
+            "__KEY": 20
+        }
+    }
+   ]
+```
+
+#### Example 5  
+
+Example with *filter* as a collection:
+
+```4d
+$employeesCollection:=New collection
+$coll:=New collection("firstName";"lastName")
+$employeesCollection:=$employees.toCollection($coll)
+```
+
+Returns:
+
+```4d
+[
+    {
+        "firstName": "Joanna",
+        "lastName": "Cabrera"
+    },
+    {
+        "firstName": "Alexandra",
+        "lastName": "Coleman"
+    }
+]
+```
+
+#### Example 6  
+
+Example with extraction of all properties of a relatedEntity:
+
+```4d
+$employeesCollection:=New collection
+$coll:=New collection
+$coll.push("firstName")
+$coll.push("lastName")
+$coll.push("employer.*")
+$employeesCollection:=$employees.toCollection($coll)
+```
+
+Returns:
+
+```4d
+[
+    {
+        "firstName": "Gregg",
+        "lastName": "Wahl",
+        "employer": {
+            "ID": 20,
+            "name": "India Astral Secretary",
+            "creationDate": "1984-08-25T00:00:00.000Z",
+            "revenues": 12000000,
+            "extra": null
+        }
+    },
+    {
+        "firstName": "Irma",
+        "lastName": "Durham",
+        "employer": {
+            "ID": 20,
+            "name": "India Astral Secretary",
+            "creationDate": "1984-08-25T00:00:00.000Z",
+            "revenues": 12000000,
+            "extra": null
+        }
+    },
+    {
+        "firstName": "Lorena",
+        "lastName": "Boothe",
+        "employer": {
+            "ID": 20,
+            "name": "India Astral Secretary",
+            "creationDate": "1984-08-25T00:00:00.000Z",
+            "revenues": 12000000,
+            "extra": null
+        }
+    }
+  ]
+```
+
+#### Example 7  
+
+Example with extraction of some properties of a relatedEntity:
+
+```4d
+$employeesCollection:=New collection
+$employeesCollection:=$employees.toCollection("firstName, lastName, employer.name")
+```
+
+```4d
+[
+    {
+        "firstName": "Gregg",
+        "lastName": "Wahl",
+        "employer": {
+            "name": "India Astral Secretary"
+        }
+    },
+    {
+        "firstName": "Irma",
+        "lastName": "Durham",
+        "employer": {
+            "name": "India Astral Secretary"
+        }
+    },
+    {
+        "firstName": "Lorena",
+        "lastName": "Boothe",
+        "employer": {
+            "name": "India Astral Secretary"
+        }
+    }]
+```
+
+#### Example 8  
+
+Example with extraction of some properties of `relatedEntities`:
+
+```4d
+ $employeesCollection:=New collection
+ $employeesCollection:=$employees.toCollection("firstName, lastName, directReports.firstName")
+```
+
+Returns:
+
+```4d
+[
+    {
+        "firstName": "Gregg",
+        "lastName": "Wahl",
+        "directReports": []
+    },
+    {
+        "firstName": "Mike",
+        "lastName": "Phan",
+        "directReports": [
+            {
+                "firstName": "Gary"
+            },
+            {
+                "firstName": "Sadie"
+            },
+            {
+                "firstName": "Christie"
+            }
+        ]
+    },
+    {
+        "firstName": "Gary",
+        "lastName": "Reichert",
+        "directReports": [
+            {
+                "firstName": "Rex"
+            },
+            {
+                "firstName": "Jenny"
+            },
+            {
+                "firstName": "Lowell"
+            }
+        ]
+    }]
+```
+
+#### Example 9  
+
+Example with extraction of all properties of `relatedEntities`:
+
+```4d
+$employeesCollection:=New collection
+$employeesCollection:=$employees.toCollection("firstName, lastName, directReports.*")
+```
+
+```4d
+[
+    {
+        "firstName": "Gregg",
+        "lastName": "Wahl",
+        "directReports": []
+    },    
+    {
+        "firstName": "Mike",
+        "lastName": "Phan",
+        "directReports": [
+            {
+                "ID": 425,
+                "firstName": "Gary",
+                "lastName": "Reichert",
+                "salary": 65800,
+                "birthDate": "1957-12-23T00:00:00.000Z",
+                "woman": false,
+                "managerID": 424,
+                "employerID": 21,
+                "photo": "[object Picture]",
+                "extra": null,
+                "employer": {
+                    "__KEY": 21
+                },
+                "manager": {
+                    "__KEY": 424
+                }
+            },
+            {
+                "ID": 426,
+                "firstName": "Sadie",
+                "lastName": "Gallant",
+                "salary": 35200,
+                "birthDate": "2022-01-03T00:00:00.000Z",
+                "woman": true,
+                "managerID": 424,
+                "employerID": 21,
+                "photo": "[object Picture]",
+                "extra": null,
+                "employer": {
+                    "__KEY": 21
+                },
+                "manager": {
+                    "__KEY": 424
+                }
+            }
+                   ]
+    },
+    {
+        "firstName": "Gary",
+        "lastName": "Reichert",
+        "directReports": [
+            {
+                "ID": 428,
+                "firstName": "Rex",
+                "lastName": "Chance",
+                "salary": 71600,
+                "birthDate": "1968-08-09T00:00:00.000Z",
+                "woman": false,
+                "managerID": 425,
+                "employerID": 21,
+                "photo": "[object Picture]",
+                "extra": null,
+                "employer": {
+                    "__KEY": 21
+                },
+                "manager": {
+                    "__KEY": 425
+                }
+            },
+            {
+                "ID": 429,
+                "firstName": "Jenny",
+                "lastName": "Parks",
+                "salary": 51300,
+                "birthDate": "1984-05-25T00:00:00.000Z",
+                "woman": true,
+                "managerID": 425,
+                "employerID": 21,
+                "photo": "[object Picture]",
+                "extra": null,
+                "employer": {
+                    "__KEY": 21
+                },
+                "manager": {
+                    "__KEY": 425
+                }
+            }
+           ]
+ }
+]
+```
+
+
+<!-- END REF -->
+
 
 
 
