@@ -114,11 +114,11 @@ title: リストボックス
 
 ![](assets/en/FormObjects/property_lockedStaticColumns1.png)
 
-*   If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
+*   "スクロールしない" 列と "ドラッグしない" 列を同じ数に設定した場合、スクロールしないエリア内ではドラッグで移動することもできません。
 
 ![](assets/en/FormObjects/property_lockedStaticColumns2.png)
 
-*   You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
+*   必要に応じてスクロールしない列数とドラッグしない列数をそれぞれ設定できます。 たとえば、スクロールしない列を 3、ドラッグしない列を 1に設定した場合、ユーザーは横スクロールしないエリア内で右側 2つの列を入れ替えることができます。
 
 ### スクロールしない列数
 
@@ -157,8 +157,8 @@ title: リストボックス
 ---
 ## 列数
 
-Sets the number of columns of the list box.
-> You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
+リストボックスに表示される列の数を指定します。
+> [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.ja.html) や [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.ja.html) などのコマンドを使うことで、プログラミングによって列数を動的に変更 (列の追加・削除) することができます。
 
 #### JSON 文法
 
@@ -176,15 +176,15 @@ Sets the number of columns of the list box.
 ---
 ## 行コントロール配列
 
-`Array type list box`
+`配列型リストボックス`
 
-A 4D array controlling the display of list box rows.
+リストボックス行の表示を管理するための 4D配列です。
 
-You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. It can also be designated using the `LISTBOX SET ARRAY` command.
+配列型リストボックスの任意行の "非表示"、"無効化"、"選択可能" プロパティを管理するために、この配列を使用します。 このプロパティは `LISTBOX SET ARRAY` コマンドを使用して設定することができます。
 
-The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
+行コントロール配列は、リストボックス内の要素数と同じ数を含んでいる倍長整数型の配列でなければなりません。 *行コントロール配列* の各要素は対応する行の以下のステータスを表します: "リストボックス" 定数テーマの定数を使って、3つのインターフェースプロパティが利用可能です:
 
-| Constant                 | 結果 | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 定数                       | 結果 | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | lk row is disabled       | 2  | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | lk row is hidden         | 1  | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
