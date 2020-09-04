@@ -1,6 +1,6 @@
 ---
 id: propertiesHierarchy
-title: Hierarchy
+title: 階層
 ---
 
 ---
@@ -11,15 +11,15 @@ title: Hierarchy
 
 *階層リストボックス* オプションが選択されると、追加オプションである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース (*dataSource*) 配列を指定します。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
-See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
+[階層リストボックス](listbox_overview.md#階層リストボックス) 参照
 
 
 
 #### JSON 文法
 
-| 名          | データタイプ       | とりうる値                                            |
-| ---------- | ------------ | ------------------------------------------------ |
-| datasource | string array | Collection of array names defining the hierarchy |
+| 名          | データタイプ | とりうる値          |
+| ---------- | ------ | -------------- |
+| datasource | 文字列配列  | 階層を定義する配列名のセット |
 
 #### 対象オブジェクト
 
