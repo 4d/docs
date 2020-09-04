@@ -98,19 +98,19 @@ title: リストボックス
 
 
 ---
-## スクロールしない列数/ドラッグしない列数
+## スクロールしない列とドラッグしない列
 
-スクロールしない列数、およびドラッグしない列数はそれぞれ別個のリストボックス機能です:
+リストボックスのスクロールしない列とドラッグしない列はそれぞれ独立して動作します:
 
-*   スクロールしない列数は、ユーザーが横スクロールしても、リストボックスの左側に常に表示される列の数を指定します。
-*   ドラッグしない列数は、実行時にドラッグで移動できない列の数を指定します。
-> これらのプロパティはプログラミングによって指定することも可能です。詳細は [4Dランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/4D-Language-Reference.100-4504285.ja.html) マニュアルの [リストボックス](https://doc.4d.com/4Dv18/4D/18/List-Box.201-4504332.ja.html) を参照ください。
+*   スクロールしない列は常にリストボックスの左側に表示され、横スクロールされません。
+*   ドラッグしない列は、リストボックス中でドラッグ＆ドロップによる列の移動ができません。
+> これらのプロパティはプログラミングによって設定することも可能です。詳細は [4Dランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/4D-Language-Reference.100-4504285.ja.html) マニュアルの [リストボックス](https://doc.4d.com/4Dv18/4D/18/List-Box.201-4504332.ja.html) を参照ください。
 
-These properties interact as follows:
+これらのプロパティは以下のように相互作用します:
 
-*   If you set columns that are only static, they cannot be moved.
+*   列を "ドラッグしない" のみを設定した場合、その列は移動することができません。
 
-*   If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area.
+*   列を "スクロールしない" のみに設定した場合、横スクロールしないエリア内に限りドラッグで列を移動することができます。 しかし、そのスクロールしないエリアを越えて移動することはできません。
 
 ![](assets/en/FormObjects/property_lockedStaticColumns1.png)
 
@@ -122,7 +122,7 @@ These properties interact as follows:
 
 ### スクロールしない列数
 
-Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
+ユーザーが横スクロールしても、リストボックスの左側に常に表示される列の数を指定します。
 
 #### JSON 文法
 
@@ -137,7 +137,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 ### ドラッグしない列数
 
-Number of columns that cannot be moved during execution.
+実行時にドラッグで移動できない列の数を指定します。
 
 #### JSON 文法
 
