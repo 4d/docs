@@ -234,8 +234,8 @@ title: リストボックス
 リストボックス行の選択モードを指定します:
 - **なし**: 行を選択することはできません。 [シングルクリック編集](properties_Entry.md#シングルクリック編集) オプションがチェックされている場合を除き、リストボックスをクリックしても効果はありません。 ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
 - **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります  
-  上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode.
+  上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 カレントの行が変更されるたびに、`On Selection Change` フォームイベントが生成されます。
+- **複数**: 標準のショートカットを使用して複数行を同時に選択できます。
 
 
 #### JSON 文法
