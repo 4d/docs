@@ -6,15 +6,15 @@ title: リストボックス
 ---
 ## 列
 
-Collection of columns of the list box.
+リストボックス列のコレクション。
 
 #### JSON 文法
 
-| 名       | データタイプ                       | とりうる値                                            |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| 名       | データタイプ          | とりうる値                 |
+| ------- | --------------- | --------------------- |
+| columns | 列オブジェクトのコレクション。 | リストボックス列のプロパティを格納します。 |
 
-For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
+列オブジェクトに関してサポートされているプロパティの一覧については [列特有のプロパティ](listbox_overview#列特有のプロパティ) の章を参照してください。
 
 #### 対象オブジェクト
 
@@ -22,20 +22,20 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 ---
 ## 詳細フォーム名
-`Selection type list box`
+`セレクション型リストボックス`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+リストボックスの個々のレコードを編集・表示する際に使用するフォームを指定します。
 
-The specified form is displayed:
+指定されたフォームは以下のタイミングで表示されます:
 
-*   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
-*   when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
+*   リストボックスに関連付けられている `addSubrecord` (サブレコード追加)、または `editSubrecord` (サブレコード編集) の標準アクションを使用したとき ([標準アクションの使用](https://doc.4d.com/4Dv18/4D/18/Using-standard-actions.300-4575640.ja.html) を参照してください)。
+*   [行をダブルクリック](#行をダブルクリック) プロパティが「レコード編集」か「レコード表示」に設定されている場合に行をダブルクリックしたとき。
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                                                                                                                                                                 |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string | <li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
+| 名          | データタイプ | とりうる値                                                                                                                                                                   |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | string | <li>テーブルまたはプロジェクトフォームの名前 (文字列)<li>フォームを定義する .json ファイルへの POSIX パス (文字列)<li>Object describing the form |
 
 #### 対象オブジェクト
 
@@ -48,7 +48,7 @@ The specified form is displayed:
 
 ---
 ## 行をダブルクリック
-`Selection type list box`
+`セレクション型リストボックス`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
 
@@ -77,7 +77,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 ---
 ## ハイライトセット
 
-`Selection type list box`
+`セレクション型リストボックス`
 
 This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
 
