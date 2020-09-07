@@ -122,6 +122,7 @@
 <p>Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:</p>
 <pre><code class="hljs css language-4d">
 
+
 <span class="hljs-function"> ARRAY TEXT</span>(atTopics;<span class="hljs-number">100</span>;<span class="hljs-number">50</span>) <span class="hljs-comment">// Creates a text array composed of 100 rows of 50 columns</span>
 </code></pre>
 <p>Two-dimensional arrays are essentially language objects; you can neither display nor print them.</p>
@@ -178,7 +179,7 @@
 <ul>
 <li>In order to maintain the four information types (zip code, city, county, state), you would have to maintain four large arrays in memory.</li>
 <li>Because an array is always held in memory in its entirety, you would have to keep all the zip codes information in memory throughout the whole working session, even though the data is not always in use.</li>
-<li>Again, because an array is always held in memory in its entirety, each time the database is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.</li>
+<li>Again, because an array is always held in memory in its entirety, each time the application is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.</li>
 </ul>
 <p><strong>Conclusion:</strong> Arrays are intended to hold reasonable amounts of data for a short period of time. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.</p>
 <p>However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:</p>

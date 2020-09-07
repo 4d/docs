@@ -68,10 +68,10 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/Users/handling_users_groups.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Managing 4D users and groups</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="designer-and-administrator"></a><a href="#designer-and-administrator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Designer and Administrator</h2>
 <p>4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.</p>
-<p>The most powerful user is named <strong>Designer</strong>. No aspect of the database is closed to the Designer.
+<p>The most powerful user is named <strong>Designer</strong>. No aspect of the application is closed to the Designer.
 The Designer can:</p>
 <ul>
-<li>access all database servers without restriction,</li>
+<li>access all application servers without restriction,</li>
 <li>create users and groups,</li>
 <li>assign access privileges to groups,</li>
 <li>access the Design environment.
@@ -88,9 +88,9 @@ In client/server environment, assigning a password to the Designer activates the
 <p>The Administrator cannot:</p>
 <ul>
 <li>edit the Designer user</li>
-<li>by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.</li>
+<li>by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.</li>
 </ul>
-<p>Both the Designer and Administrator are available by default in all databases. In the <a href="#users-and-groups-editor">user management dialog box</a>, the icons of the Designer and Administrator are displayed in red and green respectively:</p>
+<p>Both the Designer and Administrator are available by default in all applications. In the <a href="#users-and-groups-editor">user management dialog box</a>, the icons of the Designer and Administrator are displayed in red and green respectively:</p>
 <ul>
 <li>Designer icon: <img src="/docs/assets/en/Users/IconDesigner.png" alt=""></li>
 <li>Administrator icon: <img src="/docs/assets/en/Users/IconAdmin.png" alt=""></li>
@@ -119,12 +119,12 @@ Right-click in the list of users and choose <strong>Add</strong> or <strong>Dupl
 <p>4D adds a new user to the list, named &quot;New userX&quot; by default.</p>
 <ol start="3">
 <li><p>Enter the user name.
-This name will be used by the user to open the database. You can rename a user at any time using the <strong>Rename</strong> command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.</p></li>
+This name will be used by the user to open the application. You can rename a user at any time using the <strong>Rename</strong> command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.</p></li>
 <li><p>To enter a password for the user, click the <strong>Edit...</strong> button in the user properties area and enter the password twice in the dialog box.
 You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.</p></li>
 </ol>
 <blockquote>
-<p>Users can change their password at any time according to the options in the &quot;Security&quot; page of the database settings, or using the <code>CHANGE PASSWORD</code> command.</p>
+<p>Users can change their password at any time according to the options in the &quot;Security&quot; page of the structure settings, or using the <code>CHANGE PASSWORD</code> command.</p>
 </blockquote>
 <ol start="5">
 <li>Set the group(s) to which the user belongs using the &quot;Member of Groups&quot; table.
@@ -138,8 +138,7 @@ You can add or remove the selected user to/from a group by checking the correspo
 <h3><a class="anchor" aria-hidden="true" id="user-properties"></a><a href="#user-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User properties</h3>
 <ul>
 <li><p><strong>User Kind</strong>: The User Kind field contains &quot;Designer&quot;, &quot;Administrator&quot;, or (for all other users) &quot;User&quot;.</p></li>
-<li><p><strong>Startup Method</strong>: Name of an associated method that will be automatically executed when the user opens the database (optional).
-This method can be used for example to load the user preferences.</p></li>
+<li><p><strong>Startup Method</strong>: Name of an associated method that will be automatically executed when the user opens the application (optional). This method can be used for example to load the user preferences.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="groups-editor"></a><a href="#groups-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Groups editor</h2>
 <p>The editor for groups is located in the Toolbox of 4D.</p>
@@ -149,7 +148,7 @@ This method can be used for example to load the user preferences.</p></li>
 <p>To create a group:</p>
 <ol>
 <li><p>Select <strong>Tool Box &gt; Groups</strong> in the <strong>Design</strong> menu or click  on the <strong>Tool Box</strong> button of the 4D toolbar then on the <strong>Groups</strong> button.
-4D displays the groups editor window. The list of groups displays all the groups of the database.</p></li>
+4D displays the groups editor window. The list of groups displays all the groups of the application project.</p></li>
 <li><p>Click on the <img src="/docs/assets/en/Users/PlussNew.png" alt=""> button located below the list of groups.<br>
 OR<br>
 Right-click in the list of groups and choose the <strong>Add</strong> or <strong>Duplicate</strong> command in the context menu.</p></li>
@@ -172,7 +171,7 @@ The affiliated user or group will then have the same access privileges as those 
 <p>Placing groups into other groups lets you create a user hierarchy. The users of a group placed in another group will have the access privileges of both groups. See &quot;<a href="#an-access-hierarchy-scheme">An access hierarchy scheme</a>&quot; below.</p>
 <p>To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.</p>
 <h3><a class="anchor" aria-hidden="true" id="assigning-a-group-to-a-plug-in-or-to-a-server"></a><a href="#assigning-a-group-to-a-plug-in-or-to-a-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigning a group to a plug-in or to a server</h3>
-<p>You can assign a group privileges to any plug-ins installed in the database. This includes all the 4D plug-ins and any third-party plug-ins.</p>
+<p>You can assign a group privileges to any plug-ins installed in the project. This includes all the 4D plug-ins and any third-party plug-ins.</p>
 <p>Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.</p>
 <blockquote>
 <p>Used licenses remain attached to 4D user accounts in the group for the whole 4D session.</p>
@@ -181,7 +180,7 @@ The affiliated user or group will then have the same access privileges as those 
 <p><img src="/docs/assets/en/Users/plugins.png" alt=""></p>
 <p>The <strong>4D Client Web Server</strong> and <strong>4D Client SOAP Server</strong> items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.</p>
 <h3><a class="anchor" aria-hidden="true" id="an-access-hierarchy-scheme"></a><a href="#an-access-hierarchy-scheme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>An access hierarchy scheme</h3>
-<p>The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.</p>
+<p>The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.</p>
 <p>In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.</p>
 <p>The groups are then nested so that privileges are correctly distributed to the users of each group.</p>
 <ul>

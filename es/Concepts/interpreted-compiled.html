@@ -73,10 +73,10 @@
 </ul>
 <p>The advantages of the compilation are:</p>
 <ul>
-<li><strong>Speed</strong>: Your database can run from 3 to 1,000 times faster.</li>
-<li><strong>Code checking</strong>: Your database application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.</li>
-<li><strong>Protection</strong>: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.</li>
-<li><strong>Stand-alone double-clickable applications</strong>: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.</li>
+<li><strong>Speed</strong>: Your application can run from 3 to 1,000 times faster.</li>
+<li><strong>Code checking</strong>: Your application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.</li>
+<li><strong>Protection</strong>: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.</li>
+<li><strong>Stand-alone double-clickable applications</strong>: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.</li>
 <li><strong>Preemptive mode</strong>: only compiled code can be executed in preemptive processes.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="differences-between-interpreted-and-compiled-code"></a><a href="#differences-between-interpreted-and-compiled-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Differences between interpreted and compiled code</h2>
@@ -97,17 +97,17 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="using-compiler-directives-with-the-interpreter"></a><a href="#using-compiler-directives-with-the-interpreter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Compiler Directives with the Interpreter</h2>
-<p>Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.</p>
-<p>Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes.</p>
+<p>Compiler directives are not required for uncompiled applications. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.</p>
+<p>Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes.</p>
 <p>For example, if you write:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_LONGINT</span>(MyInt)
 </code></pre>
-<p>and elsewhere in the database, you write:</p>
+<p>and elsewhere in the project, you write:</p>
 <pre><code class="hljs css language-4d">MyInt:=<span class="hljs-number">3.1416</span>
 </code></pre>
 <p>In this example, <code>MyInt</code> is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted <em>prior</em> to the assignment statement.</p>
 <p>The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.</p>
-<p>The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.</p>
+<p>The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.</p>
 <h2><a class="anchor" aria-hidden="true" id="using-pointers-to-avoid-retyping"></a><a href="#using-pointers-to-avoid-retyping" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using pointers to avoid retyping</h2>
 <p>A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$p</span>)

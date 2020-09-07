@@ -70,7 +70,7 @@
 <h2><a class="anchor" aria-hidden="true" id="basic-rules"></a><a href="#basic-rules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Rules</h2>
 <p>The following rules apply for all 4D frameworks.</p>
 <ul>
-<li>A name can begin with an alphabetic character, an underscore, or a dollar (&quot;$&quot;) (note that a dollar sign can denote a local element, see below).</li>
+<li>A name must begin with an alphabetic character, an underscore, or a dollar (&quot;$&quot;) (note that a dollar sign can denote a local element, see below).</li>
 <li>Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character (&quot;_&quot;).</li>
 <li>Periods (&quot;.&quot;) and brackets (&quot;[ ]&quot;) are not allowed in table, field, method, or variable names.</li>
 <li>Commas, slashes, quotation marks, and colons are not allowed.</li>
@@ -90,12 +90,33 @@
 <li>Names must not include any SQL keywords (command, attribute, etc.).</li>
 </ul>
 <p><strong>Note:</strong> The &quot;SQL&quot; area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.</p>
-<h2><a class="anchor" aria-hidden="true" id="tables"></a><a href="#tables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tables</h2>
-<p>You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.</p>
+<h2><a class="anchor" aria-hidden="true" id="arrays"></a><a href="#arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arrays</h2>
+<p>You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:</p>
+<ul>
+<li>The name of a <strong>local</strong> array is preceded by the dollar sign ($).</li>
+<li>The name of a <strong>process</strong> array cannot start with the &lt;&gt; symbols nor the dollar sign $).</li>
+<li>The name of an <strong>interprocess</strong> array is preceded by the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</li>
+</ul>
 <p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">DEFAULT TABLE</span>([Orders])
-<span class="hljs-function">FORM SET INPUT</span>([Clients];<span class="hljs-string">"Entry"</span>)
-<span class="hljs-function">ADD RECORD</span>([Letters])
+<pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$atSubjects</span>;<span class="hljs-function">Records in table</span>([Topics])) <span class="hljs-comment">//local array</span>
+<span class="hljs-function">SORT ARRAY</span>(asKeywords;&gt;) <span class="hljs-comment">//process array</span>
+<span class="hljs-function">ARRAY BOOLEAN</span>(<span class="hljs-variable">&lt;&gt;settings</span>;<span class="hljs-function">Records in table</span>([MySettings])) <span class="hljs-comment">//interprocess array</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="elements-of-arrays"></a><a href="#elements-of-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elements of arrays</h3>
+<p>You reference an element of an interprocess, process or local array by using the curly braces(&quot;{ }&quot;). The element referenced is denoted by a numeric expression.</p>
+<p>Examples:</p>
+<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Addressing an element of a local array</span><span class="hljs-keyword">
+If</span>(<span class="hljs-variable">$asKeywords{1}</span>=<span class="hljs-string">"Stop"</span>)
+<span class="hljs-variable">$atSubjects{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
+<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">$aiBigArray{Size of array</span>(<span class="hljs-variable">$aiBigArray</span>)}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="elements-of-two-dimensional-arrays"></a><a href="#elements-of-two-dimensional-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elements of two-dimensional arrays</h3>
+<p>You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.</p>
+<p>Examples:</p>
+<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Addressing an element of a two-dimensional process array</span><span class="hljs-keyword">
+If</span>(asKeywords{<span class="hljs-variable">$vlNextRow}{1}</span>=<span class="hljs-string">"Stop"</span>)
+atSubjects{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
+<span class="hljs-variable">$viNextValue</span>:=aiBigArray{<span class="hljs-variable">$vlSet}{Size of array</span>(aiBigArray{<span class="hljs-variable">$vlSet}</span>)}
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="fields"></a><a href="#fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fields</h2>
 <p>You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.</p>
@@ -104,100 +125,12 @@
 <span class="hljs-function">QUERY</span>([Clients];[Clients]Name=<span class="hljs-string">"Smith"</span>)
 [Letters]Text:=<span class="hljs-function">Capitalize text</span>([Letters]Text)
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="interprocess-variables"></a><a href="#interprocess-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interprocess Variables</h2>
-<p>You designate an interprocess variable by preceding the name of the variable with the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</p>
-<p>The name of an interprocess variable can be up to 31 characters, not including the &lt;&gt; symbols.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">&lt;&gt;vlProcessID</span>:=Current process
-<span class="hljs-variable">&lt;&gt;vsKey</span>:=<span class="hljs-function">Char</span>(KeyCode)<span class="hljs-keyword">
-If</span>(<span class="hljs-variable">&lt;&gt;vtName</span>#<span class="hljs-string">""</span>)
+<h2><a class="anchor" aria-hidden="true" id="form-objects"></a><a href="#form-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form objects</h2>
+<p>You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">OBJECT SET FONT</span>(*;<span class="hljs-string">"Binfo"</span>;<span class="hljs-string">"Times"</span>)
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="process-variables"></a><a href="#process-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process Variables</h2>
-<p>You designate a process variable by using its name (which cannot start with the &lt;&gt; symbols nor the dollar sign $). A process variable name can contain up to 31 characters.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">&lt;&gt;vrGrandTotal</span>:=<span class="hljs-function">Sum</span>([Accounts]Amount)<span class="hljs-keyword">
-If</span>(bValidate=<span class="hljs-number">1</span>)
-vsCurrentName:=<span class="hljs-string">""</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="local-variables"></a><a href="#local-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Local Variables</h2>
-<p>You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlRecord</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)<span class="hljs-keyword">
-If</span>(<span class="hljs-variable">$vsTempVar</span>=<span class="hljs-string">"No"</span>)
-<span class="hljs-variable">$vsMyString</span>:=<span class="hljs-string">"Hello there"</span>
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="arrays"></a><a href="#arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arrays</h2>
-<p>You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:</p>
-<ul>
-<li>Interprocess arrays,</li>
-<li>Process arrays,</li>
-<li>Local arrays.</li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="interprocess-arrays"></a><a href="#interprocess-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interprocess Arrays</h3>
-<p>The name of an interprocess array is preceded by the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</p>
-<p>An interprocess array name can contain up to 31 characters, not including the &lt;&gt; symbols.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">&lt;&gt;atSubjects</span>;<span class="hljs-function">Records in table</span>([Topics]))
-<span class="hljs-function">SORT ARRAY</span>(<span class="hljs-variable">&lt;&gt;asKeywords</span>;&gt;)
-<span class="hljs-function">ARRAY INTEGER</span>(<span class="hljs-variable">&lt;&gt;aiBigArray</span>;<span class="hljs-number">10000</span>)
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="process-arrays"></a><a href="#process-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process Arrays</h3>
-<p>You designate a process array by using its name (which cannot start with the &lt;&gt; symbols nor the dollar sign $). A process array name can contain up to 31 characters.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY TEXT</span>(atSubjects;<span class="hljs-function">Records in table</span>([Topics]))
-<span class="hljs-function">SORT ARRAY</span>(asKeywords;&gt;)
-<span class="hljs-function">ARRAY INTEGER</span>(aiBigArray;<span class="hljs-number">10000</span>)
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="local-arrays"></a><a href="#local-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Local Arrays</h3>
-<p>The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$atSubjects</span>;<span class="hljs-function">Records in table</span>([Topics]))
-<span class="hljs-function">SORT ARRAY</span>(<span class="hljs-variable">$asKeywords</span>;&gt;)
-<span class="hljs-function">ARRAY INTEGER</span>(<span class="hljs-variable">$aiBigArray</span>;<span class="hljs-number">10000</span>)
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="elements-of-arrays"></a><a href="#elements-of-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elements of arrays</h3>
-<p>You reference an element of an interprocess, process or local array by using the curly braces(&quot;{ }&quot;). The element referenced is denoted by a numeric expression.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Addressing an element of an interprocess array</span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">&lt;&gt;asKeywords{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">&lt;&gt;atSubjects{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">&lt;&gt;aiBigArray{Size of array</span>(<span class="hljs-variable">&lt;&gt;aiBigArray</span>)}
-
-    <span class="hljs-comment">//Addressing an element of a process array</span><span class="hljs-keyword">
-If</span>(asKeywords{<span class="hljs-number">1</span>}=<span class="hljs-string">"Stop"</span>)
-atSubjects{<span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-function">aiBigArray{Size of array</span>(aiBigArray)}
-
-    <span class="hljs-comment">//Addressing an element of a local array</span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">$asKeywords{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">$atSubjects{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">$aiBigArray{Size of array</span>(<span class="hljs-variable">$aiBigArray</span>)}
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="elements-of-two-dimensional-arrays"></a><a href="#elements-of-two-dimensional-arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elements of two-dimensional arrays</h3>
-<p>You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Addressing an element of a two-dimensional interprocess array</span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">&lt;&gt;asKeywords{</span><span class="hljs-variable">$vlNextRow}{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">&lt;&gt;atSubjects{10}{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">&lt;&gt;aiBigArray{</span><span class="hljs-variable">$vlSet}{Size of array</span>(<span class="hljs-variable">&lt;&gt;aiBigArray{</span><span class="hljs-variable">$vlSet}</span>)}
-
-    <span class="hljs-comment">//Addressing an element of a two-dimensional process array</span><span class="hljs-keyword">
-If</span>(asKeywords{<span class="hljs-variable">$vlNextRow}{1}</span>=<span class="hljs-string">"Stop"</span>)
-atSubjects{<span class="hljs-number">10</span>}{<span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=aiBigArray{<span class="hljs-variable">$vlSet}{Size of array</span>(aiBigArray{<span class="hljs-variable">$vlSet}</span>)}
-
-    <span class="hljs-comment">//Addressing an element of a two-dimensional local array</span><span class="hljs-keyword">
-If</span>(<span class="hljs-variable">$asKeywords{</span><span class="hljs-variable">$vlNextRow}{1}</span>=<span class="hljs-string">"Stop"</span>)
-<span class="hljs-variable">$atSubjects{10}{</span><span class="hljs-variable">$vlElem}</span>:=[Topics]Subject
-<span class="hljs-variable">$viNextValue</span>:=<span class="hljs-variable">$aiBigArray{</span><span class="hljs-variable">$vlSet}{Size of array</span>(<span class="hljs-variable">$aiBigArray{</span><span class="hljs-variable">$vlSet}</span>)}
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="object-attributes"></a><a href="#object-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object attributes</h2>
-<p>When object notation is enabled, you designate an object attribute (also called object property) by placing a point (&quot;.&quot;) between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d">myObject.myAttribute:=<span class="hljs-string">"10"</span>
-<span class="hljs-variable">$value</span>:=<span class="hljs-variable">$clientObj</span>.data.address.city
-</code></pre>
-<p><strong>Note:</strong> Additional rules apply to object attribute names (they must conform to the ECMAScript specification). For more information, see <a href="/docs/es/Concepts/object.html#object-property-identifiers">Object property identifiers</a>.</p>
+<p><strong>Note:</strong> Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.</p>
 <h2><a class="anchor" aria-hidden="true" id="forms"></a><a href="#forms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forms</h2>
 <p>You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.</p>
 <p>Examples:</p>
@@ -205,12 +138,41 @@ If</span>(<span class="hljs-variable">$asKeywords{</span><span class="hljs-varia
 <span class="hljs-function">FORM SET OUTPUT</span>([People];<span class="hljs-string">"Output"</span>)
 <span class="hljs-function">DIALOG</span>([Storage];<span class="hljs-string">"Note box"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$vlStage</span>))
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="form-objects"></a><a href="#form-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form objects</h2>
-<p>You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.</p>
-<p>Example:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">OBJECT SET FONT</span>(*;<span class="hljs-string">"Binfo"</span>;<span class="hljs-string">"Times"</span>)
+<h2><a class="anchor" aria-hidden="true" id="named-selections"></a><a href="#named-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Named Selections</h2>
+<p>A named selection name can contain up to 255 characters, not including scope character(s).</p>
+<ul>
+<li>You denote a <strong>process</strong> named selection by using a string expression that represents its name (which cannot start with the &lt;&gt; symbols nor the dollar sign $).</li>
+<li>You denote an <strong>interprocess</strong> named selection if its name is preceded by the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">USE NAMED SELECTION</span>([Customers];<span class="hljs-string">"Closed"</span>)<span class="hljs-comment">//Process Named Selection</span>
+<span class="hljs-function">USE NAMED SELECTION</span>([Customers];<span class="hljs-string">"&lt;&gt;ByZipcode"</span>) <span class="hljs-comment">//Interprocess Named Selection</span>
 </code></pre>
-<p><strong>Note:</strong> Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.</p>
+<h2><a class="anchor" aria-hidden="true" id="object-attributes"></a><a href="#object-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object attributes</h2>
+<p>You designate an object attribute (also called object property) by placing a point (&quot;.&quot;) between the name of the object and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.</p>
+<p>Examples:</p>
+<pre><code class="hljs css language-4d">myObject.myAttribute:=<span class="hljs-string">"10"</span>
+<span class="hljs-variable">$value</span>:=<span class="hljs-variable">$clientObj</span>.data.address.city
+</code></pre>
+<p><strong>Note:</strong> Additional rules apply to object attribute names (they must comply with the ECMAScript specification). For more information, see [additional rules above](#additional-rules-for-object-property-and-ORDA names) and <a href="/docs/es/Concepts/object.html#object-property-identifiers">Object property identifiers</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="plug-in-commands"></a><a href="#plug-in-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plug-In Commands</h2>
+<p>You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.</p>
+<p>Examples:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$error</span>:=<span class="hljs-function">SMTP_From</span>(<span class="hljs-variable">$smtp_id</span>;<span class="hljs-string">"henry@gmail.com"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="processes"></a><a href="#processes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Processes</h2>
+<p>A process name can contain up to 255 characters, not including scope character.</p>
+<p>In the single-user version, or in Client/Server on the Client side, there are two process scopes: <strong>global</strong> or <strong>local</strong>.</p>
+<ul>
+<li>You denote a <strong>global</strong> process by using a string expression that represents its name (which cannot start with the dollar sign $).</li>
+<li>You denote a <strong>local</strong> process if the name of the process is preceded by a dollar ($) sign.</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Starting the global process "Add Customers"</span>
+<span class="hljs-variable">$vlProcessID</span>:=<span class="hljs-function">New process</span>(<span class="hljs-string">"P_ADD_CUSTOMERS"</span>;<span class="hljs-number">48</span>*<span class="hljs-number">1024</span>;<span class="hljs-string">"Add Customers"</span>)
+    <span class="hljs-comment">//Starting the local process "$Follow Mouse Moves"</span>
+<span class="hljs-variable">$vlProcessID</span>:=<span class="hljs-function">New process</span>(<span class="hljs-string">"P_MOUSE_SNIFFER"</span>;<span class="hljs-number">16</span>*<span class="hljs-number">1024</span>;<span class="hljs-string">"$Follow Mouse Moves"</span>)
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="project-methods"></a><a href="#project-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project methods</h2>
 <p>You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.</p>
 <p><strong>Note:</strong> A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.</p>
@@ -219,9 +181,8 @@ If</span>(<span class="hljs-variable">$asKeywords{</span><span class="hljs-varia
 DELETE DUPLICATED VALUES
 <span class="hljs-function">APPLY TO SELECTION</span>([Employees];INCREASE SALARIES)
 </code></pre>
-<p><strong>Tip:</strong> It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.</p>
-<p><strong>Note:</strong> When you call a method, you just type its name. However, some 4D built-in commands, such as <code>ON EVENT CALL</code>, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Example:</p>
-<p>Examples:</p>
+<p><strong>Tip:</strong> It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.</p>
+<p><strong>Note:</strong> When you call a method, you just type its name. However, some 4D built-in commands, such as <code>ON EVENT CALL</code>, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Examples:</p>
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">//This command expects a method (function) or formula</span>
 <span class="hljs-function">QUERY BY FORMULA</span>([aTable];Special query)
     <span class="hljs-comment">//This command expects a method (procedure) or statement</span>
@@ -249,77 +210,42 @@ DELETE DUPLICATED VALUES
     <span class="hljs-comment">//- The result value is assigned to $0</span>
 vtClone:=<span class="hljs-function">Dump</span>(<span class="hljs-string">"is"</span>;<span class="hljs-string">"the"</span>;<span class="hljs-string">"it"</span>)
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="plug-in-commands"></a><a href="#plug-in-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plug-In Commands</h2>
-<p>You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.</p>
-<p>Examples:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$error</span>:=<span class="hljs-function">SMTP_From</span>(<span class="hljs-variable">$smtp_id</span>;<span class="hljs-string">"henry@gmail.com"</span>)
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="sets"></a><a href="#sets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sets</h2>
-<p>From the scope point of view, there are two types of sets:</p>
+<p>A set name can contain up to 255 characters, not including scope character()s).</p>
 <ul>
-<li>Interprocess sets</li>
-<li>Process sets</li>
+<li>You denote a <strong>process</strong> set by using a string expression that represents its name (which cannot start with the &lt;&gt; symbols or the dollar sign $).</li>
+<li>You denote an <strong>interprocess</strong> set if the name of the set is preceded by the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</li>
+<li>On 4D Server, the name of a <strong>client</strong> set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.</li>
 </ul>
-<p>4D Server also includes:</p>
-<ul>
-<li>Client sets</li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="interprocess-sets"></a><a href="#interprocess-sets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interprocess Sets</h3>
-<p>A set is an interprocess set if the name of the set is preceded by the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</p>
-<p>An interprocess set name can contain up to 255 characters, not including the &lt;&gt; symbols.</p>
-<h3><a class="anchor" aria-hidden="true" id="process-sets"></a><a href="#process-sets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process Sets</h3>
-<p>You denote a process set by using a string expression that represents its name (which cannot start with the &lt;&gt; symbols or the dollar sign $). A set name can contain up to 255 characters.</p>
-<h3><a class="anchor" aria-hidden="true" id="client-sets"></a><a href="#client-sets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client Sets</h3>
-<p>The name of a client set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.</p>
-<p><strong>Note:</strong> Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.</p>
+<blockquote>
+<p>Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use client sets.</p>
+</blockquote>
 <p>Examples:</p>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Interprocess sets</span>
-<span class="hljs-function">USE SET</span>(<span class="hljs-string">"&lt;&gt;Deleted Records"</span>)
-<span class="hljs-function">CREATE SET</span>([Customers];<span class="hljs-string">"&lt;&gt;Customer Orders"</span>)<span class="hljs-keyword">
-If</span>(<span class="hljs-function">Records in set</span>(<span class="hljs-string">"&lt;&gt;Selection"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$i</span>))&gt;<span class="hljs-number">0</span>)
-    <span class="hljs-comment">//Process sets</span>
-<span class="hljs-function">USE SET</span>(<span class="hljs-string">"Deleted Records"</span>)
-<span class="hljs-function">CREATE SET</span>([Customers];<span class="hljs-string">"Customer Orders"</span>)<span class="hljs-keyword">
-If</span>(<span class="hljs-function">Records in set</span>(<span class="hljs-string">"&lt;&gt;Selection"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$i</span>))&gt;<span class="hljs-number">0</span>)
-    <span class="hljs-comment">//Client sets</span>
-<span class="hljs-function">USE SET</span>(<span class="hljs-string">"$Deleted Records"</span>)
-<span class="hljs-function">CREATE SET</span>([Customers];<span class="hljs-string">"$Customer Orders"</span>)<span class="hljs-keyword">
-If</span>(<span class="hljs-function">Records in set</span>(<span class="hljs-string">"$Selection"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$i</span>))&gt;<span class="hljs-number">0</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">CREATE SET</span>([Customers];<span class="hljs-string">"Customer Orders"</span>)<span class="hljs-comment">//Process set</span>
+<span class="hljs-function">USE SET</span>(<span class="hljs-string">"&lt;&gt;Deleted Records"</span>) <span class="hljs-comment">//Interprocess set</span><span class="hljs-keyword">
+If</span>(<span class="hljs-function">Records in set</span>(<span class="hljs-string">"$Selection"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$i</span>))&gt;<span class="hljs-number">0</span>) <span class="hljs-comment">//Client set</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="named-selections"></a><a href="#named-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Named Selections</h2>
-<p>From the scope point of view, there are two types of named selections:</p>
-<ul>
-<li>Interprocess named selections</li>
-<li>Process named selections.</li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="interprocess-named-selections"></a><a href="#interprocess-named-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interprocess Named Selections</h3>
-<p>A named selection is an interprocess named selection if its name is preceded by the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</p>
-<p>An interprocess named selection name can contain up to 255 characters, not including the &lt;&gt; symbols.</p>
-<h3><a class="anchor" aria-hidden="true" id="process-named-selections"></a><a href="#process-named-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process Named Selections</h3>
-<p>You denote a process named selection by using a string expression that represents its name (which cannot start with the &lt;&gt; symbols nor the dollar sign $). A named selection name can contain up to 255 characters.</p>
+<h2><a class="anchor" aria-hidden="true" id="tables"></a><a href="#tables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tables</h2>
+<p>You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.</p>
 <p>Examples:</p>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Interprocess Named Selection</span>
-<span class="hljs-function">USE NAMED SELECTION</span>([Customers];<span class="hljs-string">"&lt;&gt;ByZipcode"</span>)
-    <span class="hljs-comment">//Process Named Selection</span>
-<span class="hljs-function">USE NAMED SELECTION</span>([Customers];<span class="hljs-string">"&lt;&gt;ByZipcode"</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function">DEFAULT TABLE</span>([Orders])
+<span class="hljs-function">FORM SET INPUT</span>([Clients];<span class="hljs-string">"Entry"</span>)
+<span class="hljs-function">ADD RECORD</span>([Letters])
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="processes"></a><a href="#processes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Processes</h2>
-<p>In the single-user version, or in Client/Server on the Client side, there are two types of processes:</p>
+<h2><a class="anchor" aria-hidden="true" id="variables"></a><a href="#variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables</h2>
+<p>The name of a variable can be up to 31 characters, not including the scope symbols.</p>
 <ul>
-<li>Global processes</li>
-<li>Local processes.</li>
+<li>You designate a <strong>local</strong> variable by placing a dollar sign ($) before the variable name.</li>
+<li>You designate a <strong>process</strong> variable by using its name (which cannot start with the &lt;&gt; symbols nor the dollar sign $)</li>
+<li>You designate an <strong>interprocess</strong> variable by preceding the name of the variable with the symbols (&lt;&gt;) — a “less than” sign followed by a “greater than” sign.</li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="global-processes"></a><a href="#global-processes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Global Processes</h3>
-<p>You denote a global process by using a string expression that represents its name (which cannot start with the dollar sign $). A process name can contain up to 255 characters.</p>
-<h3><a class="anchor" aria-hidden="true" id="local-processes"></a><a href="#local-processes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Local Processes</h3>
-<p>You denote a local process if the name of the process is preceded by a dollar ($) sign. The process name can contain up to 255 characters, not including the dollar sign.</p>
 <p>Examples:</p>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">//Starting the global process "Add Customers"</span>
-<span class="hljs-variable">$vlProcessID</span>:=<span class="hljs-function">New process</span>(<span class="hljs-string">"P_ADD_CUSTOMERS"</span>;<span class="hljs-number">48</span>*<span class="hljs-number">1024</span>;<span class="hljs-string">"Add Customers"</span>)
-    <span class="hljs-comment">//Starting the local process "$Follow Mouse Moves"</span>
-<span class="hljs-variable">$vlProcessID</span>:=<span class="hljs-function">New process</span>(<span class="hljs-string">"P_MOUSE_SNIFFER"</span>;<span class="hljs-number">16</span>*<span class="hljs-number">1024</span>;<span class="hljs-string">"$Follow Mouse Moves"</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">For</span>(<span class="hljs-variable">$vlRecord</span>;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>) <span class="hljs-comment">//local variable</span>
+<span class="hljs-variable">$vsMyString</span>:=<span class="hljs-string">"Hello there"</span> <span class="hljs-comment">//local variable</span><span class="hljs-keyword">
+If</span>(bValidate=<span class="hljs-number">1</span>) <span class="hljs-comment">//process variable</span>
+<span class="hljs-variable">&lt;&gt;vlProcessID</span>:=Current process <span class="hljs-comment">//interprocess variable</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="summary-of-naming-conventions"></a><a href="#summary-of-naming-conventions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary of Naming Conventions</h2>
+<h2><a class="anchor" aria-hidden="true" id="summary-of-identifiers"></a><a href="#summary-of-identifiers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary of Identifiers</h2>
 <p>The following table summarizes 4D naming conventions.</p>
 <table>
 <thead>
@@ -348,7 +274,7 @@ If</span>(<span class="hljs-function">Records in set</span>(<span class="hljs-st
 </table>
 <p><strong>Note:</strong> If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.</p>
 <h2><a class="anchor" aria-hidden="true" id="resolving-naming-conflicts"></a><a href="#resolving-naming-conflicts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resolving Naming Conflicts</h2>
-<p>Be sure to use unique names for the different elements in your database. If a particular object has the same name as another object of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.</p>
+<p>Be sure to use unique names for the different elements in your project. If a particular element has the same name as another element of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.</p>
 <p>4D identifies names used in procedures in the following order:</p>
 <ol>
 <li>Fields</li>
@@ -359,7 +285,7 @@ If</span>(<span class="hljs-function">Records in set</span>(<span class="hljs-st
 <li>Variables.</li>
 </ol>
 <p>For example, 4D has a built-in command called <code>Date</code>. If you named a method <em>Date</em>, 4D would recognize it as the built-in <code>Date</code> command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the <code>Date</code> command.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/Concepts/plug-ins.html"><span class="arrow-prev">← </span><span>Plug-ins</span></a><a class="docs-next button" href="/docs/es/ORDA/overview.html"><span>Overview</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#basic-rules">Basic Rules</a><ul class="toc-headings"><li><a href="#additional-rules-for-object-property-and-orda-names">Additional rules for object property and ORDA names</a></li><li><a href="#additional-rules-for-sql">Additional rules for SQL</a></li></ul></li><li><a href="#tables">Tables</a></li><li><a href="#fields">Fields</a></li><li><a href="#interprocess-variables">Interprocess Variables</a></li><li><a href="#process-variables">Process Variables</a></li><li><a href="#local-variables">Local Variables</a></li><li><a href="#arrays">Arrays</a><ul class="toc-headings"><li><a href="#interprocess-arrays">Interprocess Arrays</a></li><li><a href="#process-arrays">Process Arrays</a></li><li><a href="#local-arrays">Local Arrays</a></li><li><a href="#elements-of-arrays">Elements of arrays</a></li><li><a href="#elements-of-two-dimensional-arrays">Elements of two-dimensional arrays</a></li></ul></li><li><a href="#object-attributes">Object attributes</a></li><li><a href="#forms">Forms</a></li><li><a href="#form-objects">Form objects</a></li><li><a href="#project-methods">Project methods</a></li><li><a href="#plug-in-commands">Plug-In Commands</a></li><li><a href="#sets">Sets</a><ul class="toc-headings"><li><a href="#interprocess-sets">Interprocess Sets</a></li><li><a href="#process-sets">Process Sets</a></li><li><a href="#client-sets">Client Sets</a></li></ul></li><li><a href="#named-selections">Named Selections</a><ul class="toc-headings"><li><a href="#interprocess-named-selections">Interprocess Named Selections</a></li><li><a href="#process-named-selections">Process Named Selections</a></li></ul></li><li><a href="#processes">Processes</a><ul class="toc-headings"><li><a href="#global-processes">Global Processes</a></li><li><a href="#local-processes">Local Processes</a></li></ul></li><li><a href="#summary-of-naming-conventions">Summary of Naming Conventions</a></li><li><a href="#resolving-naming-conflicts">Resolving Naming Conflicts</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/Concepts/plug-ins.html"><span class="arrow-prev">← </span><span>Plug-ins</span></a><a class="docs-next button" href="/docs/es/ORDA/overview.html"><span>Overview</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#basic-rules">Basic Rules</a><ul class="toc-headings"><li><a href="#additional-rules-for-object-property-and-orda-names">Additional rules for object property and ORDA names</a></li><li><a href="#additional-rules-for-sql">Additional rules for SQL</a></li></ul></li><li><a href="#arrays">Arrays</a><ul class="toc-headings"><li><a href="#elements-of-arrays">Elements of arrays</a></li><li><a href="#elements-of-two-dimensional-arrays">Elements of two-dimensional arrays</a></li></ul></li><li><a href="#fields">Fields</a></li><li><a href="#form-objects">Form objects</a></li><li><a href="#forms">Forms</a></li><li><a href="#named-selections">Named Selections</a></li><li><a href="#object-attributes">Object attributes</a></li><li><a href="#plug-in-commands">Plug-In Commands</a></li><li><a href="#processes">Processes</a></li><li><a href="#project-methods">Project methods</a></li><li><a href="#sets">Sets</a></li><li><a href="#tables">Tables</a></li><li><a href="#variables">Variables</a></li><li><a href="#summary-of-identifiers">Summary of Identifiers</a></li><li><a href="#resolving-naming-conflicts">Resolving Naming Conflicts</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

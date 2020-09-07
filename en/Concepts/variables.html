@@ -68,7 +68,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/Concepts/variables.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Variables</h1></header><article><div><span><p>Data in 4D is stored in two fundamentally different ways. <strong>Fields</strong> store data permanently on disk; <strong>variables</strong> store data temporarily in memory.</p>
 <p>When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see <a href="/docs/en/Concepts/data-types.html">Data types</a>).</p>
-<p>Once created, you can use a variable wherever you need it in your database. For example, you might need to store a text variable in a field of same type:</p>
+<p>Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:</p>
 <pre><code class="hljs css language-4d"> [MyTable]MyField:=MyText
 </code></pre>
 <p>Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.</p>
@@ -192,8 +192,8 @@ var</span> <span class="hljs-variable">$entity </span>: cs.EmployeeEntity
 <li>Reduce the number of process variables</li>
 </ul>
 <p>The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.</p>
-<p>When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.</p>
-<p>Frequently, in a database, small pieces of information are needed from the user. The <code>Request</code> command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:</p>
+<p>When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.</p>
+<p>Frequently, in an application, small pieces of information are needed from the user. The <code>Request</code> command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vsID</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Please enter your ID:"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
 <span class="hljs-function">    QUERY</span>([People];[People]ID =<span class="hljs-variable">$vsID</span>)<span class="hljs-keyword">
@@ -213,7 +213,7 @@ var</span> <span class="hljs-variable">$entity </span>: cs.EmployeeEntity
 </ul>
 <p>For more information, see the chapter <strong>Processes</strong> and the description of these commands.</p>
 <h3><a class="anchor" aria-hidden="true" id="interprocess-variables"></a><a href="#interprocess-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interprocess variables</h3>
-<p>Interprocess variables are available throughout the database and are shared across all cooperative processes. They are primarily used to share information between processes.</p>
+<p>Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes.</p>
 <blockquote>
 <p>Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.</p>
 </blockquote>

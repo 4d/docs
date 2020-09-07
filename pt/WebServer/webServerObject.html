@@ -67,19 +67,19 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/WebServer/webServerObject.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Web Server object</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
-<p>A 4D project can start and monitor a web server for the main (host) database as well as each hosted component.</p>
-<p>For example, if you installed two components in your main database, you can start and monitor up to three independant web servers from your application:</p>
+<p>A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.</p>
+<p>For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:</p>
 <ul>
-<li>one web server for the host database,</li>
+<li>one web server for the host application,</li>
 <li>one web server for the component #1,</li>
 <li>one web server for the component #2.</li>
 </ul>
-<p>Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D database project.</p>
-<p>Each 4D web server, including the main database's web server, is exposed as a specific <strong>object</strong>. Once instantiated, a web server object can be handled from the current database or from any component.</p>
+<p>Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.</p>
+<p>Each 4D web server, including the main application's web server, is exposed as a specific <strong>object</strong>. Once instantiated, a web server object can be handled from the current application or from any component.</p>
 <blockquote>
 <p>The legacy <a href="https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html">WEB commands</a> of the 4D language are supported but cannot select the web server to which they apply (see below).</p>
 </blockquote>
-<p>Each web server (host database or component) can be used in its own separate context, including:</p>
+<p>Each web server (host application or component) can be used in its own separate context, including:</p>
 <ul>
 <li><code>On Web Authentication</code> and <code>On Web Connection</code> database method calls</li>
 <li>4D tags processing and method calls,</li>
@@ -87,7 +87,7 @@
 </ul>
 <p>This feature allows you to develop independant components and features that come with their own web interfaces.</p>
 <h2><a class="anchor" aria-hidden="true" id="instantiating-a-web-server-object"></a><a href="#instantiating-a-web-server-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instantiating a web server object</h2>
-<p>The web server object of the host database (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created database:</p>
+<p>The web server object of the host application (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created project:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$nbSrv</span>:=WEB Server list.length   
 <span class="hljs-comment">//$nbSrv value is 1</span>
 </code></pre>
@@ -98,9 +98,9 @@ webServer:=WEB Server
     <span class="hljs-comment">//equivalent to</span>
 webServer:=<span class="hljs-function">WEB Server</span>(Web server database)
 </code></pre>
-<p>If the database uses components and you want to call:</p>
+<p>If the application uses components and you want to call:</p>
 <ul>
-<li>the host database's web server from a component or</li>
+<li>the host application's web server from a component or</li>
 <li>the server that received the request (whatever the server),</li>
 </ul>
 <p>you can also use:</p>
@@ -140,7 +140,7 @@ webServer.<span class="hljs-function">start</span>(<span class="hljs-variable">$
 </thead>
 <tbody>
 <tr><td>certificateFolder</td><td>text</td><td>Folder where the certificate files are located. The path is formatted in POSIX full path using filesystems. When using this property in the <code>settings</code> parameter, it can be a <code>Folder</code> object.</td></tr>
-<tr><td>characterSet</td><td>number or text</td><td>Character set that the 4D Web Server should use to communicate with browsers connecting to the database. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers <a href="http://www.iana.org/assignments/character-sets">defined by IANA</a> supported by the 4D Web Server: <li>4 = ISO-8859-1</li><li>12 = ISO-8859-9</li><li>13 = ISO-8859-10</li><li>17 = Shift-JIS</li><li>2024 = Windows-31J</li><li>2026 = Big5</li><li>38 = euc-kr</li><li>106 = UTF-8</li><li>2250 = Windows-1250</li><li>2251 = Windows-1251</li><li>2253 = Windows-1253</li><li>2255 = Windows-1255</li><li>2256 = Windows-1256</td></tr>
+<tr><td>characterSet</td><td>number or text</td><td>Character set that the 4D Web Server should use to communicate with browsers connecting to the application. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers <a href="http://www.iana.org/assignments/character-sets">defined by IANA</a> supported by the 4D Web Server: <li>4 = ISO-8859-1</li><li>12 = ISO-8859-9</li><li>13 = ISO-8859-10</li><li>17 = Shift-JIS</li><li>2024 = Windows-31J</li><li>2026 = Big5</li><li>38 = euc-kr</li><li>106 = UTF-8</li><li>2250 = Windows-1250</li><li>2251 = Windows-1251</li><li>2253 = Windows-1253</li><li>2255 = Windows-1255</li><li>2256 = Windows-1256</td></tr>
 <tr><td>cipherSuite</td><td>text</td><td>Cipher list used for the secure protocol. Sets the priority of ciphering algorithms implemented by the web server. Can be a sequence of strings separated by colons (for example &quot;ECDHE-RSA-AES128-...&quot;). See the <a href="https://www.openssl.org/docs/manmaster/man1/ciphers.html">ciphers page</a> on the OpenSSL site.</td></tr>
 <tr><td>CORSEnabled</td><td>boolean</td><td>CORS (Cross-origin resource sharing) service status for the Web server. For security reasons, &quot;cross-domain&quot; requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see <code>CORSSettings</code> below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a &quot;403 - forbidden&quot; error response.<p><p>Default: False (disabled)<p>For more information about CORS, please refer to the <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing page</a> on Wikipedia.</td></tr>
 <tr><td>CORSSettings</td><td>collection of objects</td><td>List of allowed hosts and methods for the CORS service (see <code>CORSEnabled</code> above). Each object must contain a <strong>host</strong> property and, optionnally, a <strong>methods</strong> property:<li><strong>host</strong> (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. If <em>host</em> is not present or empty, the object is ignored. Several syntaxes are supported:<br>192.168.5.17:8081<br>192.168.5.17<br>192.168.*<br>192.168.*:8081<br><a href="http://192.168.5.17:8081">http://192.168.5.17:8081</a><br>http://*.<a href="http://myDomain.com">myDomain.com</a><br><a href="http://myProject.myDomain.com">http://myProject.myDomain.com</a><br>*.myDomain.com<br>myProject.myDomain.com<br>*<li><strong>methods</strong> (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separate each method with a &quot;;&quot; (e,g,: &quot;post;get&quot;). If <em>methods</em> is empty, null, or undefined, all methods are enabled.</td></tr>
@@ -165,7 +165,7 @@ webServer.<span class="hljs-function">start</span>(<span class="hljs-variable">$
 <tr><td>maxRequestSize</td><td>number</td><td>Maximum size (in bytes) of incoming HTTP requests (POST) that the Web server is allowed to process. Passing the maximum value (2147483648) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it. <p><p>Possible values: 500000 - 2147483648</td></tr>
 <tr><td>maxSessions</td><td>number</td><td>Maximum number of simultaneous sessions. When you reach the limit, the oldest session is closed (and <code>On Web Close Process</code> database method is called) if the web server needs to create a new one. The number of simultaneous sessions cannot exceed the total number of web processes (<code>maxConcurrentProcesses</code> property, 100 by default)</td></tr>
 <tr><td>minTLSVersion</td><td>number</td><td>Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected. <p><p>Possible values:<li>1 = <code>TLSv1_0</code></li><li>2 = <code>TLSv1_1</code></li><li>3 = <code>TLSv1_2</code> (default)</li><p><p>If modified, the server must be restarted to use the new value.</td></tr>
-<tr><td><em>name</em></td><td>text</td><td>Name of the web server database</td></tr>
+<tr><td><em>name</em></td><td>text</td><td>Name of the web server application</td></tr>
 <tr><td><em>openSSLVersion</em></td><td>text</td><td>Version of the OpenSSL library used</td></tr>
 <tr><td><em>perfectForwardSecrecy</em></td><td>boolean</td><td>PFS availability on the server</td></tr>
 <tr><td>rootFolder</td><td>text</td><td>Path of web server root folder. The path is formatted in POSIX full path using filesystems. When using this property in the <code>settings</code> parameter, it can be a <code>Folder</code> object.</td></tr>
@@ -178,8 +178,8 @@ webServer.<span class="hljs-function">start</span>(<span class="hljs-variable">$
 <p>These properties are defined:</p>
 <ol>
 <li>using the <code>settings</code> parameter of the <code>webServer.start( )</code> method (except for read-only properties, see below),</li>
-<li>if not used, using the <code>WEB SET OPTION</code> command (host databases only),</li>
-<li>if not used, in the database settings of the host database or the component.</li>
+<li>if not used, using the <code>WEB SET OPTION</code> command (host applications only),</li>
+<li>if not used, in the settings of the host application or the component.</li>
 </ol>
 <ul>
 <li>If the web server is not started, the properties contain the values that will be used at the next web server startup.</li>
@@ -195,32 +195,32 @@ webServer.<span class="hljs-function">start</span>(<span class="hljs-variable">$
 <tr><th>Command</th><th>Scope</th></tr>
 </thead>
 <tbody>
-<tr><td><code>SET DATABASE PARAMETER</code></td><td>Host database web server</td></tr>
+<tr><td><code>SET DATABASE PARAMETER</code></td><td>Host application web server</td></tr>
 <tr><td><code>WEB CLOSE SESSION</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB GET BODY PART</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB Get body part count</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB Get Current Session ID</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB GET HTTP BODY</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB GET HTTP HEADER</code></td><td>Web server that received the request</td></tr>
-<tr><td><code>WEB GET OPTION</code></td><td>Host database web server</td></tr>
-<tr><td><code>WEB Get server info</code></td><td>Host database web server</td></tr>
+<tr><td><code>WEB GET OPTION</code></td><td>Host application web server</td></tr>
+<tr><td><code>WEB Get server info</code></td><td>Host application web server</td></tr>
 <tr><td><code>WEB GET SESSION EXPIRATION</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB Get session process count</code></td><td>Web server that received the request</td></tr>
-<tr><td><code>WEB GET STATISTICS</code></td><td>Host database web server</td></tr>
+<tr><td><code>WEB GET STATISTICS</code></td><td>Host application web server</td></tr>
 <tr><td><code>WEB GET VARIABLES</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB Is secured connection</code></td><td>Web server that received the request</td></tr>
-<tr><td><code>WEB Is server running</code></td><td>Host database web server</td></tr>
+<tr><td><code>WEB Is server running</code></td><td>Host application web server</td></tr>
 <tr><td><code>WEB SEND BLOB</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB SEND FILE</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB SEND HTTP REDIRECT</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB SEND RAW DATA</code></td><td>Web server that received the request</td></tr>
 <tr><td><code>WEB SEND TEXT</code></td><td>Web server that received the request</td></tr>
-<tr><td><code>WEB SET HOME PAGE</code></td><td>Host database web server</td></tr>
+<tr><td><code>WEB SET HOME PAGE</code></td><td>Host application web server</td></tr>
 <tr><td><code>WEB SET HTTP HEADER</code></td><td>Web server that received the request</td></tr>
-<tr><td><code>WEB SET OPTION</code></td><td>Host database web server</td></tr>
-<tr><td><code>WEB SET ROOT FOLDER</code></td><td>Host database web server</td></tr>
-<tr><td><code>WEB START SERVER</code></td><td>Host database web server</td></tr>
-<tr><td><code>WEB STOP SERVER</code></td><td>Host database web server</td></tr>
+<tr><td><code>WEB SET OPTION</code></td><td>Host application web server</td></tr>
+<tr><td><code>WEB SET ROOT FOLDER</code></td><td>Host application web server</td></tr>
+<tr><td><code>WEB START SERVER</code></td><td>Host application web server</td></tr>
+<tr><td><code>WEB STOP SERVER</code></td><td>Host application web server</td></tr>
 <tr><td><code>WEB Validate digest</code></td><td>Web server that received the request</td></tr>
 </tbody>
 </table>

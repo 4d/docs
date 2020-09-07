@@ -82,9 +82,9 @@ This page only checks the data integrity. If errors are found and repairs are ne
 <p>Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="open-log-file"></a><a href="#open-log-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open log file</h2>
-<p>Regardless of the verification requested, 4D generates a log file in the <code>Logs</code> folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: <em>DatabaseName</em><em>Verify_Log</em><em>yyyy-mm-dd hh-mm-ss</em>.xml where:</p>
+<p>Regardless of the verification requested, 4D generates a log file in the <code>Logs</code> folder of the application. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: <em>ApplicationName</em><em>Verify_Log</em><em>yyyy-mm-dd hh-mm-ss</em>.xml where:</p>
 <ul>
-<li><em>DatabaseName</em> is the name of the project file without any extension, for example &quot;Invoices&quot;,</li>
+<li><em>ApplicationName</em> is the name of the project file without any extension, for example &quot;Invoices&quot;,</li>
 <li><em>yyyy-mm-dd hh-mm-ss</em> is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example &quot;2019-02-11 15-20-45&quot;.</li>
 </ul>
 <p>When you click on the <strong>Open log file</strong> button, 4D displays the most recent log file in the default browser of the machine.</p>

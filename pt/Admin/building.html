@@ -69,9 +69,9 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/Admin/building.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Building a project package</h1></header><article><div><span><p>4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.</p>
 <p>The application builder allows you to:</p>
 <ul>
-<li>Build a compiled database, without interpreted code,</li>
+<li>Build a compiled structure, without interpreted code,</li>
 <li>Build a stand-alone, double-clickable application, <em>i.e.</em>, merged with 4D Volume Desktop, the 4D database engine,</li>
-<li>Build different applications from the same compiled database via an XML project,</li>
+<li>Build different applications from the same compiled structure via an XML project,</li>
 <li>Build homogeneous client-server applications,</li>
 <li>Build client-server applications with automatic updating of client and server parts.</li>
 <li>Save your build settings for future use (<em>Save settings</em> button).</li>
@@ -79,14 +79,14 @@
 <h2><a class="anchor" aria-hidden="true" id="build-application-overview"></a><a href="#build-application-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build application overview</h2>
 <p>Building a project package can be carried out using:</p>
 <ul>
-<li>either the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html">BUILD APPLICATION</a> command,</li>
+<li>either the <a href="https://doc.4d.com/4Dv18R4/4D/18-R4/BUILD-APPLICATION.301-4982852.en.html">BUILD APPLICATION</a> command,</li>
 <li>or the <a href="#application-builder">Build Application window</a>.</li>
 </ul>
 <p>To display the Build Application dialog, select <strong>Design</strong> &gt; <strong>Build Application...</strong> from the menu bar.</p>
 <p><img src="/docs/assets/en/Project/buildappProj.png" alt=""></p>
 <p>The Build Application dialog includes several pages that can be accessed using tabs:</p>
 <p><img src="/docs/assets/en/Project/appbuilderProj.png" alt=""></p>
-<p>Building can only be carried out once the database is compiled. If you select this command without having previously compiled the database, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the database must be (re)compiled.</p>
+<p>Building can only be carried out once the project is compiled. If you select this command without having previously compiled the project, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the project must be (re)compiled.</p>
 <h3><a class="anchor" aria-hidden="true" id="build-application-settings"></a><a href="#build-application-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build application settings</h3>
 <p>Each build application parameter is stored as an XML key in the application project file named &quot;buildApp.4DSettings&quot; XML file, located in the Settings folder of the project.</p>
 <p>Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click <strong>Build</strong> or <strong>Save settings</strong>. You can define several other XML settings file for the same project and employ them using the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html">BUILD APPLICATION</a> command.</p>
@@ -112,18 +112,19 @@
 <p>This tab allows you to build a standard compiled structure file and/or a compiled component:</p>
 <p><img src="/docs/assets/en/Project/appbuilderProj.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="build-compiled-structure"></a><a href="#build-compiled-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build compiled structure</h3>
-<p>Builds a database containing only compiled code.</p>
-<p>This feature creates a <em>.4dz</em> file within a <em>Compiled Database</em> folder. If you have named your application “MyProject”, 4D will create:</p>
-<p><em>&lt;destination&gt;/Compiled Database/&lt;database name&gt;/\MyProject.4dz</em></p>
+<p>Builds an application containing only compiled code.</p>
+<p>This feature creates a <em>.4dz</em> file within a <em>Compiled Database/&lt;project name&gt;</em> folder. For example, if you have named your application “MyProject”, 4D will create:</p>
+<p><em>&lt;destination&gt;/Compiled Database/MyProject/MyProject.4dz</em></p>
 <blockquote>
-<p>A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.</p>
+<p>A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer (4D). The compact and optimized size of .4dz files makes project packages easy to deploy.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="include-related-folders"></a><a href="#include-related-folders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Include related folders</h4>
-<p>When you check this option, any folders related to the database are copied into the Build folder as <em>Components</em> and <em>Resources</em> folders. For more information about these folders, refer to <a href="https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374">Database Architecture</a>.</p>
+<p>When you check this option, any folders related to the project are copied into the Build folder as <em>Components</em> and <em>Resources</em> folders. For more information about these folders, refer to the <a href="/docs/pt/Project/architecture.html">description of project architecture</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="build-component"></a><a href="#build-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build component</h3>
 <p>Builds a compiled component from the structure.</p>
-<p>A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components&quot; documentation.</p>
-<p>If you have named your application, <em>MyComponent</em>, 4D will create a Components folder containing <em>MyComponent.4dbase</em> folder: <em>&lt;destination&gt;/Components/name.4dbase/&lt;name&gt;.4DZ</em>.</p>
+<p>A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D project (the host application project), its functionalities are accessible from the host project.</p>
+<p>If you have named your application, <em>MyComponent</em>, 4D will create a <em>Components</em> folder containing <em>MyComponent.4dbase</em> folder:</p>
+<p><em>&lt;destination&gt;/Components/MyComponent.4dbase/MyComponent.4DZ</em>.</p>
 <p>The <em>MyComponent.4dbase</em> folder contains:</p>
 <ul>
 <li><em>MyComponent.4DZ</em> file</li>
@@ -133,7 +134,7 @@
 <p>This tab allows you can build a stand-alone, single-user version of your application:</p>
 <p><img src="/docs/assets/en/Project/standaloneProj.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="build-stand-alone-application"></a><a href="#build-stand-alone-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build stand-alone Application</h3>
-<p>Checking the <strong>Build stand-alone Application</strong> option and clicking <strong>Build</strong> will create a stand-alone (double-clickable) application directly from your database project.</p>
+<p>Checking the <strong>Build stand-alone Application</strong> option and clicking <strong>Build</strong> will create a stand-alone (double-clickable) application directly from your application project.</p>
 <p>The following elements are required for the build:</p>
 <ul>
 <li>4D Volume Desktop (the 4D database engine),</li>
@@ -169,15 +170,15 @@
 <ul>
 <li>MyProject.exe  - Your executable and a MyProject.rsr (the application resources)</li>
 <li>4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application</li>
-<li>Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the database as well as the database Resources folder. <strong>Note</strong>: This folder also contains the <em>Default Data</em> folder, if it has been defined (see <a href="#data-file-management-in-final-applicatons">Data file management in final applications</a>.</li>
-<li>(Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the database. For more information about this, refer to the <a href="#plugins-and-components">Plugins and components</a> section.</li>
+<li>Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder. <strong>Note</strong>: This folder also contains the <em>Default Data</em> folder, if it has been defined (see <a href="#data-file-management-in-final-applicatons">Data file management in final applications</a>.</li>
+<li>(Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the project. For more information about this, refer to the <a href="#plugins-and-components">Plugins and components</a> section.</li>
 <li>Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the <a href="#licenses-and-certificate">Licenses &amp; Certificate</a> section.</li>
 <li>Additional items added to the 4D Volume Desktop folder, if any (see <a href="#customizing-4d-volume-desktop-folder">Customizing the 4D Volume Desktop folder</a>).</li>
 </ul>
 <p>All these items must be kept in the same folder in order for the executable to operate.</p></li>
 <li><p><em>macOS</em></p>
 <ul>
-<li>A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the <a href="#plugins-and-components">Plugins and components</a> section. For more information about integrating licenses, refer to the <a href="#licenses-and-certificate">Licenses &amp; Certificate</a> section. <strong>Note</strong>: In macOS, the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html">Application file</a> command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).</li>
+<li>A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the <a href="#plugins-and-components">Plugins and components</a> section. For more information about integrating licenses, refer to the <a href="#licenses-and-certificate">Licenses &amp; Certificate</a> section. <strong>Note</strong>: In macOS, the <a href="https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html">Application file</a> command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).</li>
 </ul></li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="customizing-4d-volume-desktop-folder"></a><a href="#customizing-4d-volume-desktop-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customizing 4D Volume Desktop folder</h4>
@@ -193,7 +194,7 @@
 <h4><a class="anchor" aria-hidden="true" id="location-of-web-files"></a><a href="#location-of-web-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Location of Web files</h4>
 <p>If your stand-alone application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:</p>
 <ul>
-<li><em>cert.pem</em> and <em>key.pem</em> files (optional): These files are used for SSL connections and by data encryption commands,</li>
+<li><em>cert.pem</em> and <em>key.pem</em> files (optional): These files are used for TLS connections and by data encryption commands,</li>
 <li>default Web root folder.</li>
 </ul>
 <p>Items must be installed:</p>
@@ -207,15 +208,15 @@
 <h3><a class="anchor" aria-hidden="true" id="what-is-a-clientserver-application"></a><a href="#what-is-a-clientserver-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a Client/Server application?</h3>
 <p>A client/server application comes from the combination of three items:</p>
 <ul>
-<li>A compiled 4D database,</li>
+<li>A compiled 4D project,</li>
 <li>The 4D Server application,</li>
 <li>The 4D Volume Desktop application (macOS and/or Windows).</li>
 </ul>
 <p>Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine).</p>
 <p>Also, the client/server application is customized and its handling simplified:</p>
 <ul>
-<li>To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.</li>
-<li>To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a database in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the <code>IPAddress</code> XML key in the buildapp.4DSettings file. If the connection fails, <a href="#management-of-client-connections">specific alternative mechanisms can be implemented</a>. You can &quot;force&quot; the display of the standard connection dialog box by holding down the <strong>Option</strong> (macOS) or <strong>Alt</strong> (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.</li>
+<li>To launch the server portion, the user simply double-clicks on the server application. The project file does not need to be selected.</li>
+<li>To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a server in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the <code>IPAddress</code> XML key in the buildapp.4DSettings file. If the connection fails, <a href="#management-of-client-connections">specific alternative mechanisms can be implemented</a>. You can &quot;force&quot; the display of the standard connection dialog box by holding down the <strong>Option</strong> (macOS) or <strong>Alt</strong> (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.</li>
 <li>A client/server application can be set so that the client portion <a href="#copy-of-client-applications-in-the-server-application">can be updated automatically over the network</a>.</li>
 <li>It is also possible to automate the update of the server part through the use of a sequence of language commands (<a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html">SET UPDATE FOLDER</a> and <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html">RESTART 4D</a>).</li>
 </ul>
@@ -437,7 +438,7 @@
 </ul>
 <p>To define and use a default data file:</p>
 <ul>
-<li>You provide a default data file (named &quot;Default.4DD&quot;) and store it in a default folder (named &quot;Default Data&quot;) inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the &quot;Use Log File&quot; option in the original structure file before creating the data file.</li>
+<li>You provide a default data file (named &quot;Default.4DD&quot;) and store it in a default folder (named &quot;Default Data&quot;) inside the application project folder. This file must be provided along with all other necessary files, depending on the project configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the &quot;Use Log File&quot; option in the original structure file before creating the data file.</li>
 <li>When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.</li>
 </ul>
 <p>The following graphic illustrates this feature:</p>
