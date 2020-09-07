@@ -176,13 +176,13 @@ css ファイルにてクラスセレクターとして使用される、(複数
 
 *   オブジェクトのコレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各プロパティ値にアクセスすることが可能です。例: **This.\<propertyPath>**。
 *   エンティティセレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各属性値へとアクセスすることが可能です。例: **This.\<attributePath>**。
-> If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
+> (オブジェクトでない) スカラー値のコレクションを使用した場合、データソース式内で **This.value** を呼び出すことで各値にアクセスすることが可能です。 ただし、この場合は値を編集したり、"カレントの項目" オブジェクトにアクセスすることはできません (以下参照)。<br /> 注: エンティティセレクションについての詳細については、[ORDA](https://doc.4d.com/4Dv18/4D/18/ORDA.200-4575453.ja.html) の章を参照してください。
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                        |
-| ---------- | ------ | ------------------------------------------------------------ |
-| dataSource | string | Expression that returns a collection or an entity selection. |
+| 名          | データタイプ | とりうる値                      |
+| ---------- | ------ | -------------------------- |
+| dataSource | string | コレクションあるいはエンティティセレクションを返す式 |
 
 #### 対象オブジェクト
 
@@ -196,14 +196,14 @@ css ファイルにてクラスセレクターとして使用される、(複数
 ---
 ## データソース
 
-Specify the type of list box.
+リストボックスの種類を指定します。
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
 
-- **Arrays**(default): use array elements as the rows of the list box.
-- **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
-- **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
-- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
+- **配列** (デフォルト): リストボックスの各行に 配列要素を割り当てます。
+- **カレントセレクション**: 指定したテーブルのカレントセレクションの各レコードごとに式、フィールド、メソッドが評価されます。
+- **命名セレクション**: 指定した命名セレクションに含まれる各レコードごとに式、フィールド、メソッドが評価されます。
+- **コレクションまたはエンティティセレクション**: コレクション要素あるいはエンティティを使用してリストボックスの行の中身を定義します。 この場合 [コレクションまたはエンティティセレクション](properties_Object.md#コレクションまたはエンティティセレクション) プロパティを定義する必要があります。
 
 #### JSON 文法
 
@@ -223,14 +223,14 @@ Specify the type of list box.
 ---
 ## プラグインの種類
 
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
+オブジェクトに関連付ける [プラグイン](pluginArea_overview.md) の名称。 ここで指定するプラグイン名は、プラグインの manifest.json ファイルにて公開されています。
 
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                                                         |
-| -------------- | ------ | ------------------------------------------------------------- |
-| pluginAreaKind | string | Name of the plug-in external area (starts with a % character) |
+| 名              | データタイプ | とりうる値                 |
+| -------------- | ------ | --------------------- |
+| pluginAreaKind | string | プラグインの名称 (% 文字で始まります) |
 
 
 #### 対象オブジェクト
