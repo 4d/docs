@@ -67,7 +67,8 @@ Within the custom error method, you have access to several information that will
   
 (*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
 
-- the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application. 
+- the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application.
+- the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process. 
 
 
 #### Example
