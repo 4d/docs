@@ -251,14 +251,14 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 ---
 ## プラグインの種類
 
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
+オブジェクトに関連付ける [プラグイン](pluginArea_overview.md) の名称。 ここで指定するプラグイン名は、プラグインの manifest.json ファイルにて公開されています。
 
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                                                         |
-| -------------- | ------ | ------------------------------------------------------------- |
-| pluginAreaKind | string | Name of the plug-in external area (starts with a % character) |
+| 名              | データタイプ | とりうる値                 |
+| -------------- | ------ | --------------------- |
+| pluginAreaKind | string | プラグインの名称 (% 文字で始まります) |
 
 
 #### 対象オブジェクト
