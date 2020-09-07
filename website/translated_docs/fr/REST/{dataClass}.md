@@ -32,13 +32,13 @@ Lorsque vous appelez ce paramètre dans votre requête REST, les 100 premières 
 
 Voici une description des données retournées :
 
-| Propriété     | Type       | Description                                                                                                                                                                                                            |
-| ------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | Chaine     | Nom de la classe du datastore.                                                                                                                                                                                         |
-| __COUNT       | Nombre     | Nombre d'entités dans la classe du datastore.                                                                                                                                                                          |
-| __SENT        | Nombre     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                                                    |
-| __FIRST       | Nombre     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                           |
-| __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
+| Propriété     | Type       | Description                                                                                                                                                                                                             |
+| ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| __entityModel | Chaine     | Nom de la classe du datastore.                                                                                                                                                                                          |
+| __COUNT       | Nombre     | Nombre d'entités dans la classe du datastore.                                                                                                                                                                           |
+| __SENT        | Nombre     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                                                     |
+| __FIRST       | Nombre     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                            |
+| __ENTITIES    | Collection | Cette collection d'objets contient un objet pour chaque entité avec tous ses attributs. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
 
 Each entity contains the following properties:
 
@@ -134,7 +134,7 @@ Renvoie toutes les données d'une classe de datastore spécifique.
                 }
             }
         }
-.....//more entities here 
+.....//plus d'entités ici 
     ]
 }
 ````
@@ -214,7 +214,7 @@ La requête suivante retourne toutes les données publiques de l'employé nommé
  `GET  /rest/Employee:lastname(Jones)`
 
 
-## {dataClass}/{method} and {dataClass}({key})/{method}
+## {dataClass}/{method} et {dataClass}({key})/{method}
 
 Returns an object or a collection based on a project method.
 
@@ -227,7 +227,7 @@ Project methods are called through a dataclass (table) or an entity (record), an
 `POST  /rest/Employee(52)/getFullName`
 
 
-### 4D Configuration
+### Configuration 4D
 
 To be called in a REST request, a method must:
 

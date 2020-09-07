@@ -1,6 +1,6 @@
 ---
 id: propertiesDisplay
-title: Display
+title: Affichage
 ---
 
 ---
@@ -331,19 +331,19 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Commentaires                                                                                                                                     | Example for 04:30:25          |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 hours 30 minutes            |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                      |
-| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                    |
-| System time long             | systemLong   | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC               |
+| Format name                  | Chaine JSON  | Commentaires                                                                                                                                     | Exemple pour 04:30:25           |
+| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
+| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                        |
+| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                           |
+| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 heures 30 minutes 25 secondes |
+| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 heures 30 minutes             |
+| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                       |
+| MM SS                        | mm_ss        | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270:25                          |
+| Min Sec                      | MM_SS        | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270 Minutes 25 Secondes         |
+| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25             |
+| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                        |
+| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                      |
+| System time long             | systemLong   | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC                 |
 
 #### Grammaire JSON
 
@@ -400,7 +400,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 
@@ -481,7 +481,7 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 
 

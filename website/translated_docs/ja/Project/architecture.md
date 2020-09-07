@@ -18,7 +18,7 @@ title: 4D プロジェクトのアーキテクチャー
         - Trash
     - Resources
     - Settings
-    - userPreference.username
+    - userPreferences.username
     - WebFolder
 
 > バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
@@ -52,18 +52,18 @@ title: 4D プロジェクトのアーキテクチャー
 
 ### Sources フォルダー
 
-| 内容                      | 説明                                                                                             | 形式   |
-| ----------------------- | ---------------------------------------------------------------------------------------------- | ---- |
-| catalog.4DCatalog       | テーブルおよびフィールド定義                                                                                 | XML  |
-| folders.json            | 　エクスプローラーフォルダー定義                                                                               | JSON |
-| menus.json              | メニュー定義                                                                                         | JSON |
-| settings.4DSettings     | *ストラクチャー*データベース設定。 *ユーザー設定*が定義されている場合は、そちらの設定が優先されます。 *データファイル用のユーザー設定*が定義されている場合は、その設定が最優先です。 | XML  |
-| tips.json               | 定義されたヘルプTips                                                                                   | JSON |
-| lists.json              | 定義されたリスト                                                                                       | JSON |
-| filters.json            | 定義されたフィルター                                                                                     | JSON |
-| styleSheets.css         | CSS スタイルシート                                                                                    | CSS  |
-| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリデータベースより)                                                           | CSS  |
-| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリデータベースより)                                                       | CSS  |
+| 内容                      | 説明                                                                                                                                                                                                                                                                       | 形式   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---- |
+| catalog.4DCatalog       | テーブルおよびフィールド定義                                                                                                                                                                                                                                                           | XML  |
+| folders.json            | 　エクスプローラーフォルダー定義                                                                                                                                                                                                                                                         | JSON |
+| menus.json              | メニュー定義                                                                                                                                                                                                                                                                   | JSON |
+| settings.4DSettings     | *ストラクチャー*データベース設定。 *[ユーザー設定](#settings-フォルダー-1)* または *[データファイル用のユーザー設定](#settings-フォルダー)* が定義されている場合は、そちらの設定が優先されます。<p>**警告**: コンパイル済みアプリケーションの場合、ストラクチャー設定は読み取り専用の .4dz ファイルに格納されます。 運用時にカスタム設定を定義するには、*ユーザー設定* または *データファイル用のユーザー設定* を使う必要があります。 | XML  |
+| tips.json               | 定義されたヘルプTips                                                                                                                                                                                                                                                             | JSON |
+| lists.json              | 定義されたリスト                                                                                                                                                                                                                                                                 | JSON |
+| filters.json            | 定義されたフィルター                                                                                                                                                                                                                                                               | JSON |
+| styleSheets.css         | CSS スタイルシート                                                                                                                                                                                                                                                              | CSS  |
+| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                     | CSS  |
+| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                 | CSS  |
 
 
 #### DatabaseMethods フォルダー
@@ -193,6 +193,7 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 | directory.json      | 4D グループとユーザー、およびアクセス権の定義                                                                                                                                                                                                                                        | JSON |
 | BuildApp.4DSettings | アプリケーションビルダーのダイアログボックス、または `BUILD APPLICATION` コマンドを使ったときに自動的に作成されるビルド設定ファイル                                                                                                                                                                                    | XML  |
 | Backup.4DSettings   | バックアップ開始時に [バックアップオプション](Backup/settings.md) を指定するためのデータベースバックアップ設定です。 このファイルは、*バックアップジャーナル* に保存する情報量などの追加オプションの確認や設定にも使用することができます。 バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML  |
+| BuildApp.4DSettings | アプリケーションビルダーのダイアログボックス、または `BUILD APPLICATION` コマンドを使ったときに自動的に作成されるビルド設定ファイル                                                                                                                                                                                    | XML  |
 
 
 ## userPreferences.*userName* フォルダー
