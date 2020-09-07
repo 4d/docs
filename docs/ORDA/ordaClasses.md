@@ -3,6 +3,7 @@ id: ordaClasses
 title: Data Model Classes
 ---
 
+
 ## Overview
 
 ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions. 
@@ -26,12 +27,13 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 - if the physical structure evolves, you simply to adapt function code and client applications will continue to call them transparently. 
 
-- by default, all your data model class functions are set to **private** and cannot be called from remote requests. You must declare explicitly each public function using the `exposed` keyword.
+- by default, all your data model class functions are set to **private** and cannot be called from remote requests. You must declare explicitly each public function using the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](assets/en/ORDA/api.png)
 
 
 In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object. 
+
 
 ## Architecture
 
@@ -56,8 +58,12 @@ In addition, object instances from ORDA data model user classes benefit from the
 
 ## Class Description
 
+<details><summary>History</summary>
 
-> **Note**: Keep in mind that ORDA data model functions are always executed on the server. Thus, calling a function generates a request to the server. 
+|Version|Changes|
+|---|---|
+|v18 R5|Data model class functions are private by default. New `exposed` and `local` keywords.
+</details>
 
 
 ### DataStore Class
@@ -80,6 +86,7 @@ Class extends DataStoreImplementation
 Function getDesc
   $0:="Database exposing employees and their companies"
 ```
+
 
 This function can then be called:
 
@@ -234,21 +241,7 @@ If ($city.isBigCity())
 End if
 ```
 
-## Exposed vs non-exposed functions
-
-By default for security reasons, all your data model class functions are **not exposed**. A function that is not exposed cannot be called on its object instance from a remote request. Remote requests include:
-
-- requests sent by client applications working with remote datastores
-- REST requests
-
-An error is returned by 4D to the remote application if it tries to use a non-exposed function. 
-To allow 
-
-
-cannot be called from remote requests. You must declare explicitly each public function using the `exposed` keyword.
-
-
-## Class rules
+### Specific rules
 
 When creating or editing data model classes, you must pay attention to the rules described below.
 
@@ -260,7 +253,142 @@ When creating or editing data model classes, you must pay attention to the rules
 
 - You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular method as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
 
-- You cannot override a native ORDA class method from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
+- You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
+
+
+
+## Exposed vs non-exposed functions
+
+By default for security reasons, all your data model class functions are **not exposed** (i.e. private). 
+
+A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request (it can however be called from the application itself). Remote requests include:
+
+- requests sent by client 4D applications working with remote datastores
+- REST requests
+
+If a remote application tries to access a non-exposed function, the error "-10729 - Unknown member method" is returned. 
+
+To allow a data model class function to be called by a remote request, you must declare it explicitly using the `exposed` keyword. The formal syntax is:
+
+```4d  
+// declare an exposed function
+exposed Function <functionName>   
+```
+
+> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
+
+### Example 
+
+You want an exposed function to use a private function in a dataclass class:
+
+```4d
+Class extends DataClass
+
+//Public function
+exposed Function registerNewStudent($student : Object)->$status : Object
+
+var $entity : cs.StudentsEntity
+
+$entity:=ds.Students.new()
+$entity.fromObject($student)
+$entity.school:=This.query("name=:1"; $student.schoolName).first()
+$entity.serialNumber:=This.computeSerialNumber()
+$status:=$entity.save()
+
+//Not exposed (private) function
+Function computeSerialNumber()-> $serialNumber : Integer
+//compute a new serial number
+$serialNumber:=...
+
+```
+
+When the code is called:
+
+```4d
+var $remoteDS; $student; $status : Object
+var $serialNumber : Integer
+
+$remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
+$student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
+
+$status:=$remoteDS.Schools.registerNewStudent($student) // OK
+$serialNumber:=$remoteDS.Schools.computeSerialNumber() // Error "Unknown member method" 
+```
+
+
+## Local functions
+
+By default in client/server architecture, ORDA data model functions are executed **on the server**. It means that calling a function generates a request to the server. 
+
+However, it happens that a function could be executed on the client side, for example when it processes data that are already in the local cache. In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The function will then be executed on the client and will not generate requests to the server. The formal syntax is:
+
+```4d  
+// declare a function to execute locally in client/server
+local Function <functionName>   
+```
+
+Obviously, you need to make sure that the function is actually eligible to a local execution. In particular, you need to make sure that: 
+
+- required data are in loaded the ORDA cache and is not expired - otherwise, requests may be triggered to the server,
+- no part of the function code will send a request to the server (for example, `Current time(*)` will always call the server).
+
+> The `local` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
+
+
+### Examples
+
+#### Calculating age
+
+Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
+
+- On the StudentsEntity class
+
+```4d
+Class extends Entity
+
+local Function age() -> $age: Variant
+
+If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null
+End if
+```
+
+#### Checking attributes
+
+We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server for save.
+
+On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
+
+```4d
+Class extends Entity
+
+local Function checkData() -> $status : Object
+
+$status:=New object("success"; True)
+Case of
+    : (This.age()=Null)
+        $status.success:=False
+        $status.statusText:="The birthdate is missing" 
+
+    :((This.age() <15) | (This.age()>30) )
+        $status.success:=False
+        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
+End case
+```
+
+Calling code:
+
+```4d
+var $status : Object
+
+//Form.student is loaded with all its attributes and updated on a Form
+$status:=Form.student.checkData()
+If ($status.success)
+    $status:=Form.student.save() // call the server
+End if
+```
 
 
 
