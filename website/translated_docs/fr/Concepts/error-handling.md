@@ -12,9 +12,9 @@ La gestion des erreurs répond à deux besoins principaux :
 > > Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
 
 
-## Error or status
+## Erreur ou statut
 
-Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
+De nombreuses fonctions de classe 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
 
 Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method.
 
@@ -67,6 +67,7 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 (*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
 
 - La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
+- the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 
 #### Exemple
