@@ -67,6 +67,7 @@ ON ERR CALL("") // エラーの検知を中止します
 (*) 4D は、いくつかの **システム変数** と呼ばれる専用の変数を自動的に管理しています。 詳細については [4D ランゲージマニュアル](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.ja.html) を参照ください。
 
 - `GET LAST ERROR STACK` コマンドは、4Dアプリケーションの現在のエラースタックに関する情報を返します。
+- the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 
 #### 例題
