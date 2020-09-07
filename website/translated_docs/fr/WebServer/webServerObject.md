@@ -33,7 +33,7 @@ The web server object of the host application (default web server) is automatica
 
 ```4d
 $nbSrv:=WEB Server list.length   
-//$nbSrv value is 1
+//la valeur de $nbSrv est 1
 ```
 
 To instantiate a web server object, call the `WEB Server` command:
@@ -142,32 +142,32 @@ These properties are defined:
 
 The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
-| Commande                        | Portée                               |
-| ------------------------------- | ------------------------------------ |
-| `SET DATABASE PARAMETER`        | Host application web server          |
-| `WEB CLOSE SESSION`             | Web server that received the request |
-| `WEB GET BODY PART`             | Web server that received the request |
-| `WEB Get body part count`       | Web server that received the request |
-| `WEB Get Current Session ID`    | Web server that received the request |
-| `WEB GET HTTP BODY`             | Web server that received the request |
-| `WEB GET HTTP HEADER`           | Web server that received the request |
-| `WEB GET OPTION`                | Host application web server          |
-| `WEB Get server info`           | Host application web server          |
-| `WEB GET SESSION EXPIRATION`    | Web server that received the request |
-| `WEB Get session process count` | Web server that received the request |
-| `WEB GET STATISTICS`            | Host application web server          |
-| `WEB GET VARIABLES`             | Web server that received the request |
-| `WEB Is secured connection`     | Web server that received the request |
-| `WEB Is server running`         | Host application web server          |
-| `WEB SEND BLOB`                 | Web server that received the request |
-| `WEB SEND FILE`                 | Web server that received the request |
-| `WEB SEND HTTP REDIRECT`        | Web server that received the request |
-| `WEB SEND RAW DATA`             | Web server that received the request |
-| `WEB SEND TEXT`                 | Web server that received the request |
-| `WEB SET HOME PAGE`             | Host application web server          |
-| `WEB SET HTTP HEADER`           | Web server that received the request |
-| `WEB SET OPTION`                | Host application web server          |
-| `WEB SET ROOT FOLDER`           | Host application web server          |
-| `WEB START SERVER`              | Host application web server          |
-| `WEB STOP SERVER`               | Host application web server          |
-| `WEB Validate digest`           | Web server that received the request |
+| Commande                        | Portée                            |
+| ------------------------------- | --------------------------------- |
+| `SET DATABASE PARAMETER`        | Host application web server       |
+| `WEB CLOSE SESSION`             | Serveur Web ayant reçu la requête |
+| `WEB GET BODY PART`             | Serveur Web ayant reçu la requête |
+| `WEB Get body part count`       | Serveur Web ayant reçu la requête |
+| `WEB Get Current Session ID`    | Serveur Web ayant reçu la requête |
+| `WEB GET HTTP BODY`             | Serveur Web ayant reçu la requête |
+| `WEB GET HTTP HEADER`           | Serveur Web ayant reçu la requête |
+| `WEB GET OPTION`                | Host application web server       |
+| `WEB Get server info`           | Host application web server       |
+| `WEB GET SESSION EXPIRATION`    | Serveur Web ayant reçu la requête |
+| `WEB Get session process count` | Serveur Web ayant reçu la requête |
+| `WEB GET STATISTICS`            | Host application web server       |
+| `WEB GET VARIABLES`             | Serveur Web ayant reçu la requête |
+| `WEB Is secured connection`     | Serveur Web ayant reçu la requête |
+| `WEB Is server running`         | Host application web server       |
+| `WEB SEND BLOB`                 | Serveur Web ayant reçu la requête |
+| `WEB SEND FILE`                 | Serveur Web ayant reçu la requête |
+| `WEB SEND HTTP REDIRECT`        | Serveur Web ayant reçu la requête |
+| `WEB SEND RAW DATA`             | Serveur Web ayant reçu la requête |
+| `WEB SEND TEXT`                 | Serveur Web ayant reçu la requête |
+| `WEB SET HOME PAGE`             | Host application web server       |
+| `WEB SET HTTP HEADER`           | Serveur Web ayant reçu la requête |
+| `WEB SET OPTION`                | Host application web server       |
+| `WEB SET ROOT FOLDER`           | Host application web server       |
+| `WEB START SERVER`              | Host application web server       |
+| `WEB STOP SERVER`               | Host application web server       |
+| `WEB Validate digest`           | Serveur Web ayant reçu la requête |
