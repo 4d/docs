@@ -7,9 +7,10 @@ This section describes the conventions and rules for naming various elements in 
 
 
 ## Basic Rules
+
 The following rules apply for all 4D frameworks.
 
-- A name can begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
+- A name must begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
 - Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
 - Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
 - Commas, slashes, quotation marks, and colons are not allowed.

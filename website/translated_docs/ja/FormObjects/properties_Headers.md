@@ -1,12 +1,12 @@
 ---
 id: propertiesHeaders
-title: Headers
+title: ヘッダー
 ---
 
 ---
 ## ヘッダーを表示
 
-This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
+このプロパティは、[リストボックス列ヘッダー](listbox_overview.md#リストボックスヘッダー) の表示/非表示を指定します。 列ごとに 1つのヘッダーを表示できます。それぞれのヘッダーは個別に設定できます。
 
 #### JSON 文法
 
@@ -24,7 +24,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 ---
 ## 高さ
 
-This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). 同じリストボックス内で異なる単位を使用することもできます:
+このプロパティは、リストボックスヘッダーの高さを **行** または **ピクセル** 単位で指定します。 同じリストボックス内で異なる単位を使用することもできます:
 
 *   *ピクセル* - 指定された値は当該行に対し直接適用され、列が使用しているフォントサイズ等は考慮されません。 フォントが行の高さに対して大きい場合、テキストは切り取られます。 ピクチャーはフォーマットに基づき、切り取られるかリサイズされます。
 
@@ -32,7 +32,7 @@ This property is used to set the row height for a list box header in **pixels** 
     *   複数の異なるサイズが設定されている場合、4D はもっとも大きなものを使用します。 たとえば、行に "Verdana 18", "Geneva 12" そして "Arial 9" が設定されている場合、4D は行の高さの決定に "Verdana 18" を使用します。 複数行の場合はこの高さの倍数が使用されます。
     *   この計算にはピクチャーのサイズや、フォントに適用されるスタイルは考慮されません。
     *   macOS 環境下では、選択されたフォントで使用できない文字をユーザーが入力した場合、行の高さが正しくなくなる可能性があります。 この場合には代理フォントが使用され、その結果サイズにばらつきが出る可能性があります。
-> This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html) command.
+> ヘッダーの高さは [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HEADERS-HEIGHT.301-4505200.ja.html) コマンドを使用して設定することもできます。
 
 単位の変換: 単位を変更した場合、4D は自動で値を再計算し、結果をプロパティリストに表示します。 たとえば、使用されるフォントが "Lucida grande 24" で高さが "1 行" に設定されていれば "30 ピクセル" に、高さが "60 ピクセル" なら "2 行" になります。
 
@@ -55,9 +55,9 @@ This property is used to set the row height for a list box header in **pixels** 
 
 #### JSON 文法
 
-| 名            | データタイプ | とりうる値                           |
-| ------------ | ------ | ------------------------------- |
-| headerHeight | string | positive decimal+px &#124; em ) |
+| 名            | データタイプ | とりうる値                   |
+| ------------ | ------ | ----------------------- |
+| headerHeight | string | 正の10進数 + px &#124; em ) |
 
 #### 対象オブジェクト
 
@@ -66,4 +66,4 @@ This property is used to set the row height for a list box header in **pixels** 
 
 #### 参照
 
-[Footers](properties_Footers.md) - [List box headers](listbox_overview.md#list-box-headers)
+[フッター](properties_Footers.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)
