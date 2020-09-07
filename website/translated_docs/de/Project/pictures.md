@@ -15,19 +15,19 @@ title: Pictures
 The most common picture formats are supported of both platforms: .jpeg, .gif, .png, .tiff, .bmp, etc. On macOS, the .pdf format is also available for encoding and decoding.
 
 Die unterstützten Formate variieren unter Windows und auf macOS je nach Betriebssystem und den eigenen Codecs, die auf den Rechnern installiert sind. To find out which codecs are available, you must use the `PICTURE CODEC LIST` command. Beachten Sie, dass die Liste der verfügbaren Codecs zum Lesen und Schreiben unterschiedlich sein können, da für Codecs zum Codieren u. U. spezifische Lizenzen erforderlich sind.
-> WIC and ImageIO permit the use of metadata in pictures. Für diesen Zweck können Sie die beiden Befehle `SET PICTURE METADATA` und `GET PICTURE METADATA` einsetzen.
+> Mit WIC und ImageIO lassen sich auch Metadaten in Bildern verwenden. Dafür können Sie die beiden Befehle `SET PICTURE METADATA` und `GET PICTURE METADATA` einsetzen.
 
 
 ### Bild Codec Kennung
 
-Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs. Es gibt folgende Formen:
+Der Befehl `PICTURE CODEC LIST` gibt von 4D erkannte Bildformate als Codec ID für Bilder zurück. Es gibt folgende Formen:
 
 *   Als Endung (zum Beispiel “.gif”)
-*   As a MIME type (for example “image/jpeg”)
+*   Als Mime Typ (zum Beispiel “image/jpeg”)
 
 Die vom Befehl zurückgegebene Form richtet sich nach der Art, wie der Codec auf Ebene des Betriebssystems gespeichert ist.
 
-Most of the 4D picture management commands can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command.
+Most of the 4D picture management commands can receive a Codec ID as a parameter. Deshalb muss unbedingt die vom Befehl `PICTURE CODEC LIST` zurückgegebene ID des Systems verwendet werden.
 
 
 

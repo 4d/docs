@@ -1,21 +1,21 @@
 ---
 id: propertiesBackgroundAndBorder
-title: Background and Border
+title: Fond et bordure
 ---
 
 ---
 ## Couleur de fond alternée
 
-Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                         |
-| ------------- | --------------- | ----------------------------------------- |
-| alternateFill | string          | any css value; "transparent"; "automatic" |
+| Nom           | Type de données | Valeurs possibles                          |
+| ------------- | --------------- | ------------------------------------------ |
+| alternateFill | string          | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -29,13 +29,13 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 #### Grammaire JSON
 
 
-| Nom          | Type de données | Valeurs possibles                         |
-| ------------ | --------------- | ----------------------------------------- |
-| border-style | string          | any css value; "transparent"; "automatic" |
+| Nom          | Type de données | Valeurs possibles                          |
+| ------------ | --------------- | ------------------------------------------ |
+| border-style | string          | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Liste Hiérarchique](list_overview.md) - [List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns) - [Pied List Box](listbox_overview.md#list-box-footers) - [Ovale](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Zone de texte](text.md)
 
 #### Voir également
 [Transparent](#transparent)
@@ -58,7 +58,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 | rowFillSource | string          | An expression returning a RGB color value |
 
 #### Objets pris en charge
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -68,7 +68,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 ---
 ## Style de la bordure
 
-Allows setting a standard style for the object border.
+Permet de définir un style standard pour la bordure de l'objet.
 
 #### Grammaire JSON
 
@@ -78,7 +78,7 @@ Allows setting a standard style for the object border.
 
 #### Objets pris en charge
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[Zone 4D View Pro](viewProArea_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md) - [Boutons](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Case à cocher](list_overview.md#overview) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md#overview) - [Bouton image](pictureButton_overview.md) - [Pop up menu image](picturePopupMenu_overview.md) - [Zone de plug-in](pluginArea_overview.md#overview) - [Indicateur de progression](progressIndicator.md) - [Règle](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Sous-formulaire](subform_overview.md#overview) - [Onglet](text.md) - [Zone Web](webArea_overview.md#overview)
 
 
 
@@ -89,13 +89,13 @@ Describes dotted line type as a sequence of black and white points.
 
 #### Grammaire JSON
 
-| Nom             | Type de données        | Valeurs possibles                                                        |
-| --------------- | ---------------------- | ------------------------------------------------------------------------ |
-| strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| Nom             | Type de données        | Valeurs possibles                                                           |
+| --------------- | ---------------------- | --------------------------------------------------------------------------- |
+| strokeDashArray | number array or string | Ex : "6 1" ou \[6,1\] pour une séquence de points noirs et un point blanc |
 
 #### Objets pris en charge
 
-[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[Rectangle](shapes_overview.md#rectangle) - [Ovale](shapes_overview.md#oval) - [Ligne](shapes_overview.md#line)
 
 
 
@@ -145,7 +145,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### Objets pris en charge
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Ligne](shapes_overview.md#line) - [Ovale](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
 
@@ -156,13 +156,13 @@ Designates the thickness of a line.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                 |
-| ----------- | --------------- | ----------------------------------------------------------------- |
-| strokeWidth | number          | 0 for smallest width on a printed form, or any integer value < 20 |
+| Nom         | Type de données | Valeurs possibles                                                                       |
+| ----------- | --------------- | --------------------------------------------------------------------------------------- |
+| strokeWidth | number          | 0 pour la plus petite largeur dans un formulaire imprimé, ou toute valeur d'entier < 20 |
 
 #### Objets pris en charge
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Ligne](shapes_overview.md#line) - [Ovale](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
 
@@ -173,7 +173,7 @@ Designates the thickness of a line.
 ---
 ## Tableau couleurs de fond
 
-`Array type list boxes`
+`List box de type tableau`
 
 The name of an array to apply a custom background color to each row of the list box or column.
 

@@ -27,7 +27,7 @@ Two main locations can be used for static picture path:
 
 
 ---
-## Display
+## Affichage
 
 
 ### Scaled to fit

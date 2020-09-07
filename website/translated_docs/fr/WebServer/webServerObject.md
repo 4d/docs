@@ -5,21 +5,21 @@ title: Objet Serveur Web
 
 ## Aperçu
 
-A 4D project can start and monitor a web server for the main (host) database as well as each hosted component.
+Un projet 4D peut démarrer et surveiller un serveur Web pour la base de données principale (hôte) ainsi que chaque composant hébergé.
 
-For example, if you installed two components in your main database, you can start and monitor up to three independant web servers from your application:
+Par exemple, si vous avez installé deux composants dans votre base de données principale, vous pouvez démarrer et contrôler jusqu'à trois serveurs Web indépendants à partir de votre application :
 
-- one web server for the host database,
+- un serveur web pour la base hôte,
 - one web server for the component #1,
 - one web server for the component #2.
 
-Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D database project.
+En dehors de la mémoire, il n'y a pas de limite au nombre de composants et donc, de serveurs Web, pouvant être rattachés à un seul projet de base de données 4D.
 
-Each 4D web server, including the main database's web server, is exposed as a specific **object**. Once instantiated, a web server object can be handled from the current database or from any component.
+Chaque serveur web 4D, y compris le serveur web de la base de données principale, est exposé comme un **objet** spécifique. Une fois instancié, un objet serveur Web peut être géré à partir de la base de données courante ou de n'importe quel composant.
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot control the web server to which they apply (see below).
+> Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas contrôler le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
-Each web server (host database or component) can be used in its own separate context, including:
+Chaque serveur web (base hôte ou composant) peut être utilisé dans son propre contexte, notamment :
 - `On Web Authentication` and `On Web Connection` database method calls
 - 4D tags processing and method calls,
 - managing web sessions and TLS protocols.
@@ -29,7 +29,7 @@ This feature allows you to develop independant components and features that come
 
 ## Instancier un objet serveur web
 
-The web server object of the host database (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created database:
+L'objet serveur Web de la base de données hôte (serveur Web par défaut) est automatiquement chargé par 4D au démarrage. Ainsi, si vous écrivez dans une base de données nouvellement créée :
 
 ```4d
 $nbSrv:=WEB Server list.length   
@@ -115,7 +115,7 @@ Un objet serveur Web contient les propriétés suivantes.
 | maxRequestSize             | number             | Maximum size (in bytes) of incoming HTTP requests (POST) that the Web server is allowed to process. Passing the maximum value (2147483648) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it. <p><p>Possible values: 500000 - 2147483648                                                                                                                                                                                                                                                                                                             |
 | maxSessions                | number             | Maximum number of simultaneous sessions. When you reach the limit, the oldest session is closed (and `On Web Close Process` database method is called) if the web server needs to create a new one. The number of simultaneous sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)                                                                                                                                                                                                                                                                                                                                                                                                            |
 | minTLSVersion              | number             | Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected. <p><p>Possible values:<li>1 = `TLSv1_0`</li><li>2 = `TLSv1_1`</li><li>3 = `TLSv1_2` (default)</li><p><p>If modified, the server must be restarted to use the new value.                                                                                                                                                                                                                                                                                                                                  |
-| *name*                     | Texte              | Name of the web server database                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| *name*                     | Texte              | Nom de la base du serveur Web                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | *openSSLVersion*           | Texte              | Version of the OpenSSL library used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | *perfectForwardSecrecy*    | boolean            | PFS availability on the server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | rootFolder                 | Texte              | Path of web server root folder. Format POSIX du chemin d'accès complet à l'aide de filesystem. Peut être passé comme objet `Folder` dans le paramètre `settings`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -127,8 +127,8 @@ Un objet serveur Web contient les propriétés suivantes.
 These properties are defined:
 
 1. using the `settings` parameter of the `webServer.start( )` method (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host databases only),
-3. if not used, in the database settings of the host database or the component.
+2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (bases de données hôtes uniquement),
+3. si elles ne sont pas utilisées, dans les paramètres de la base hôte ou du composant.
 
 - If the web server is not started, the properties contain the values that will be used at the next web server startup.
 - If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the `webServer.start()` method.
@@ -142,30 +142,30 @@ The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-S
 
 | Commande                        | Portée                               |
 | ------------------------------- | ------------------------------------ |
-| `SET DATABASE PARAMETER`        | Host database web server             |
+| `SET DATABASE PARAMETER`        | Serveur Web de la base hôte          |
 | `WEB CLOSE SESSION`             | Web server that received the request |
 | `WEB GET BODY PART`             | Web server that received the request |
 | `WEB Get body part count`       | Web server that received the request |
 | `WEB Get Current Session ID`    | Web server that received the request |
 | `WEB GET HTTP BODY`             | Web server that received the request |
 | `WEB GET HTTP HEADER`           | Web server that received the request |
-| `WEB GET OPTION`                | Host database web server             |
-| `WEB Get server info`           | Host database web server             |
+| `WEB GET OPTION`                | Serveur Web de la base hôte          |
+| `WEB Get server info`           | Serveur Web de la base hôte          |
 | `WEB GET SESSION EXPIRATION`    | Web server that received the request |
 | `WEB Get session process count` | Web server that received the request |
-| `WEB GET STATISTICS`            | Host database web server             |
+| `WEB GET STATISTICS`            | Serveur Web de la base hôte          |
 | `WEB GET VARIABLES`             | Web server that received the request |
 | `WEB Is secured connection`     | Web server that received the request |
-| `WEB Is server running`         | Host database web server             |
+| `WEB Is server running`         | Serveur Web de la base hôte          |
 | `WEB SEND BLOB`                 | Web server that received the request |
 | `WEB SEND FILE`                 | Web server that received the request |
 | `WEB SEND HTTP REDIRECT`        | Web server that received the request |
 | `WEB SEND RAW DATA`             | Web server that received the request |
 | `WEB SEND TEXT`                 | Web server that received the request |
-| `WEB SET HOME PAGE`             | Host database web server             |
+| `WEB SET HOME PAGE`             | Serveur Web de la base hôte          |
 | `WEB SET HTTP HEADER`           | Web server that received the request |
-| `WEB SET OPTION`                | Host database web server             |
-| `WEB SET ROOT FOLDER`           | Host database web server             |
-| `WEB START SERVER`              | Host database web server             |
-| `WEB STOP SERVER`               | Host database web server             |
+| `WEB SET OPTION`                | Serveur Web de la base hôte          |
+| `WEB SET ROOT FOLDER`           | Serveur Web de la base hôte          |
+| `WEB START SERVER`              | Serveur Web de la base hôte          |
+| `WEB STOP SERVER`               | Serveur Web de la base hôte          |
 | `WEB Validate digest`           | Web server that received the request |

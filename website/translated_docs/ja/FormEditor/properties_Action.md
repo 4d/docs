@@ -10,7 +10,7 @@ Reference of a method attached to the form. フォームメソッドを使用し
 
 You do not call a form method—4D calls it automatically when an event involves the form to which the method is attached.
 
-Several types of method references are supported:
+メソッド参照にはいくつかのタイプが利用可能です:
 
 - a standard project method file path, i.e. that uses the following pattern:  
   `method.4dm`  

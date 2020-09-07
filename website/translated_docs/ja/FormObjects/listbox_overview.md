@@ -166,8 +166,8 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [行の移動可](properties_Action.md#行の移動可)                                 | ○         |               |                              |
 | [命名セレクション](properties_DataSource.md#命名セレクション)                       |           | ○             |                              |
 | [列数](properties_ListBox.md#列数)                                      | ○         | ○             | ○                            |
-| [スクロールしない列数](properties_ListBox.md#スクロールしない列数-ドラッグしない列数)            | ○         | ○             | ○                            |
-| [ドラッグしない列数](properties_ListBox.md#スクロールしない列数-ドラッグしない列数)             | ○         | ○             | ○                            |
+| [スクロールしない列数](properties_ListBox.md#スクロールしない列数)                      | ○         | ○             | ○                            |
+| [ドラッグしない列数](properties_ListBox.md#スクロールしない列数)                       | ○         | ○             | ○                            |
 | [オブジェクト名](properties_Object.md#オブジェクト名)                             | ○         | ○             | ○                            |
 | [右](properties_CoordinatesAndSizing.md#右)                           | ○         | ○             | ○                            |
 | [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列)                  | ○         |               |                              |

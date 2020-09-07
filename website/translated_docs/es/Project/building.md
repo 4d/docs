@@ -91,7 +91,7 @@ When you check this option, any folders related to the database are copied into 
 Builds a compiled component from the structure.
 
 A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components" documentation.
-If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*.
+If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder: <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*. </li> </ul>
 
 The *MyComponent.4dbase* folder contains:
 -   *MyComponent.4DZ* file
@@ -107,6 +107,12 @@ This tab allows you can build a stand-alone, single-user version of your applica
 ### Build stand-alone Application
 
 Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
+
+The following elements are required for the build:
+- 4D Volume Desktop (the 4D database engine),
+- an [appropriate license](#licenses)
+
+On Windows, this feature creates an executable file (.exe).
 
 The following elements are required for the build:
 - 4D Volume Desktop (the 4D database engine),
@@ -230,6 +236,10 @@ Once built, a client/server application is composed of two customized parts: the
 
 Also, the client/server application is customized and its handling simplified:
 
+- To launch the server portion, the user simply double-clicks on the server application. </p>
+
+Also, the client/server application is customized and its handling simplified:
+
 - To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
 - To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a database in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
 - A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
@@ -261,12 +271,26 @@ This option lets you choose the linking mode between the merged application and 
 
 *   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
 
+For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
+
+#### Data linking mode
+
+This option lets you choose the linking mode between the merged application and the local data file.
+
+#### Data linking mode
+
+This option lets you choose the linking mode between the merged application and the local data file. Otherwise, the last opened data file is opened (default mode).
+
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
 
 ### Build client application
 
 Checking this option generates the client part of your application during the building phase.
+
+#### 4D Volume Desktop
+
+You must designate the location on your disk of the 4D Volume Desktop application to be used.
 
 #### 4D Volume Desktop
 
@@ -307,6 +331,8 @@ On the client side, when the “old” client application tries to connect to th
 In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.
 
 To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. In this case, the update mechanism will not allow non-updated client applications to connect. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
+
+The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
 
 The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box.
 
@@ -383,6 +409,12 @@ The page lists the elements loaded by the current 4D application:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
+*    **Active** column - Indicates that the items will be integrated into the application package built.
+
+The page lists the elements loaded by the current 4D application:
+
+![](assets/en/Project/buildapppluginsProj.png)
+
 *    **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
 
 *   **Plugins and components** column - Displays the name of the plug-in/component.
@@ -419,6 +451,8 @@ To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of
 
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine.
 
+When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine.
+
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
 
 You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
@@ -431,6 +465,8 @@ Once you have selected a file, the list will indicate the characteristics of the
 *   **Path** -  Location on disk
 
 If a license is not valid, a message will warn you.
+
+You can designate as many valid files as you want.
 
 You can designate as many valid files as you want.
 

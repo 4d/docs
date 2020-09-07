@@ -55,7 +55,7 @@ Supported types depend on the form category:
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
 | List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
 | List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| None                     | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Aucun                    | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
 
 #### Grammaire JSON
@@ -102,7 +102,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 ## Published as Subform
 
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host database, it must have been explicitly shared. When this property is selected, the form will be published in the host database.
+Pour qu'un formulaire de composant soit sélectionné comme [sous-formulaire](FormObjects/subform_overview.md) dans une base de données hôte, il doit avoir été explicitement partagé. Lorsque cette propriété est sélectionnée, le formulaire sera publié dans la base de données hôte.
 
 Only project forms can be specified as published subforms.
 
@@ -123,7 +123,7 @@ When the option is used, if the window is opened using the `Open form window` co
 
 *   the current page,
 *   the position, size and visibility of each form object (including the size and visibility of list box columns).
-> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
 
 When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
 

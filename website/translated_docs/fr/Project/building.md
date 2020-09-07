@@ -91,7 +91,7 @@ Lorsque vous cochez cette option, tous les dossiers liés à la base de données
 Génère un composant compilé à partir de la structure.
 
 Un composant est un fichier de structure 4D standard dans lequel des fonctionnalités spécifiques ont été développées. Une fois le composant configuré et installé dans une autre base 4D (la base hôte), ses fonctionnalités sont accessibles depuis la base hôte. Pour plus d’informations sur les composants, reportez-vous au chapitre "Développer et installer des composants 4D".
-Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier Component contenant le dossier *MyComponent.4dbase* : <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*.
+Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier Component contenant le dossier *MyComponent.4dbase* : <p>*\<destination>/Components/name.4dbase/\<name>.4DZ*. </li> </ul>
 
 The *MyComponent.4dbase* folder contains:
 -   *MyComponent.4DZ* file
@@ -118,9 +118,15 @@ The following elements are required for the build:
 - 4D Volume Desktop (the 4D database engine),
 - an [appropriate license](#licenses)
 
-On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
+On Windows, this feature creates an executable file (.exe).
 
-The principle consists of merging a compiled structure file with 4D Volume Desktop. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
+Les éléments suivants sont requis pour la génération :
+- 4D Volume Desktop (le moteur de base de données 4D),
+- une [licence appropriée](#licenses)
+
+Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous Mac Os, cette fonction génère des progiciels (packages).
+
+Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
 You can define a default data file or allow users to create and use their own data file (see the [Data file management in final applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html) section).
 
@@ -230,6 +236,10 @@ Once built, a client/server application is composed of two customized parts: the
 
 Also, the client/server application is customized and its handling simplified:
 
+- To launch the server portion, the user simply double-clicks on the server application. </p>
+
+Also, the client/server application is customized and its handling simplified:
+
 - To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
 - To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. Il n’est pas nécessaire de choisir une base de données dans une boîte de dialogue de connexion. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Seule la partie cliente peut se connecter à la partie serveur correspondante. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
 - A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
@@ -253,13 +263,23 @@ Used to indicate the current version number for the application generated. Vous 
 
 This option lets you choose the linking mode between the merged application and the local data file.
 
-#### Data linking mode
+#### Mode de liaison des données
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+Cette option vous permet de choisir le mode de liaison entre l'application fusionnée et le fichier de données local. Two data linking modes are available:
 
 *   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Cela vous permet de déplacer librement le dossier de l'application sur le disque. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
-*   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Otherwise, the last opened data file is opened (default mode).
+*   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Sinon, le dernier fichier de données est ouvert (mode par défaut).
+
+Pour plus d'informations sur le mode de liaison de données, reportez-vous à la section [Dernier fichier de données ouvert](#last-data-file-opened). The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
+
+#### Data linking mode
+
+This option lets you choose the linking mode between the merged application and the local data file.
+
+#### Data linking mode
+
+This option lets you choose the linking mode between the merged application and the local data file. Otherwise, the last opened data file is opened (default mode).
 
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
@@ -270,7 +290,11 @@ Checking this option generates the client part of your application during the bu
 
 #### 4D Volume Desktop
 
-You must designate the location on your disk of the 4D Volume Desktop application to be used. Ce 4D Volume Desktop doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application cliente). Si vous souhaitez générer une version de l’application cliente pour la plate-forme “concurrente”, vous devez répéter l'opération en utilisant une application 4D tournant sur cette plate-forme. Cette étape est nécessaire uniquement pour la version initiale de l'application cliente car les mises à jour suivantes pourront être gérées directement depuis une seule plate-forme via le mécanisme des mises à jour automatiques. For more information about this point, see [Customizing 4D Server and/or 4D Client folders](#customizing-4d-server-and-or-4d-client-folders).
+You must designate the location on your disk of the 4D Volume Desktop application to be used.
+
+#### 4D Volume Desktop
+
+Vous devez désigner l'emplacement sur votre disque de l'application 4D Volume Desktop à utiliser. Ce 4D Volume Desktop doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application cliente). Si vous souhaitez générer une version de l’application cliente pour la plate-forme “concurrente”, vous devez répéter l'opération en utilisant une application 4D tournant sur cette plate-forme. Cette étape est nécessaire uniquement pour la version initiale de l'application cliente car les mises à jour suivantes pourront être gérées directement depuis une seule plate-forme via le mécanisme des mises à jour automatiques. For more information about this point, see [Customizing 4D Server and/or 4D Client folders](#customizing-4d-server-and-or-4d-client-folders).
 
 > The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v18, you must select a 4D Volume Desktop v18.
 
@@ -307,6 +331,8 @@ On the client side, when the “old” client application tries to connect to th
 In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.
 
 To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. Dans ce cas, le mécanisme de mise à jour n’autorisera pas la connexion des applications clientes non mises à jour. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
+
+The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.
 
 The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box.
 
@@ -383,6 +409,12 @@ The page lists the elements loaded by the current 4D application:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
+*    **Active** column - Indicates that the items will be integrated into the application package built.
+
+The page lists the elements loaded by the current 4D application:
+
+![](assets/en/Project/buildapppluginsProj.png)
+
 *    **Active** column - Indicates that the items will be integrated into the application package built. Par défaut, tous les éléments sont inclus. To exclude a plug-in or a component, deselect the check box next to it.
 
 *   **Plugins and components** column - Displays the name of the plug-in/component.
@@ -419,6 +451,8 @@ To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of
 
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine.
 
+When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine.
+
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
 
 You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
@@ -431,6 +465,8 @@ Once you have selected a file, the list will indicate the characteristics of the
 *   **Path** -  Location on disk
 
 If a license is not valid, a message will warn you.
+
+You can designate as many valid files as you want.
 
 You can designate as many valid files as you want.
 
@@ -536,25 +572,25 @@ Thanks to this architecture, when you provide an update of your application, the
 
 This mechanism is usually suitable for standard deployments.
 
-The location of the application's user preferences folder corresponds to the path returned by the following statement:
+L'emplacement du dossier des préférences utilisateur de l'application correspond au chemin retourné par l'instruction suivante :
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-The data file path is stored in a dedicated file, named *lastDataPath.xml*.
+Le chemin du fichier de données est stocké dans un fichier dédié, nommé *lastDataPath.xml*.
 
-Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
+Grâce à cette architecture, lorsque vous fournissez une mise à jour de votre application, le fichier de données utilisateur local (dernier fichier de données utilisé) s'ouvre automatiquement au premier lancement.
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+Ce mécanisme convient généralement aux déploiements standard. Cependant, dans des cas spécifiques, par exemple si vous dupliquez vos applications fusionnées, vous pouvez avoir besoin de modifier la manière dont le fichier de données est lié à l'application.
 
-#### Configuring the data linking mode
+#### Configurer le mode de liaison des données
 
-With your compiled applications, 4D automatically uses the last data file opened. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
+4D utilise automatiquement, avec vos applications compilées, le dernier fichier de données ouvert. Par défaut, lorsque la nouvelle architecture est activée, le chemin d'accès du fichier de données est stocké dans le dossier de préférences de l'utilisateur de l'application et est lié au **nom de l'application**.
 
-This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
+Ce fonctionnement peut s'avérer inadapté si vous souhaitez dupliquer une application fusionnée destinée à utiliser différents fichiers de données. En effet, les applications dupliquées vont en fait partager le même dossier de préférences de l'utilisateur et donc, toujours utiliser le même fichier de données -- même si le fichier de données est renommé, car l'application utilisera toujours le dernier fichier de données ouvert par l'application.
 
-4D therefore lets you link the data file path to the application path. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. You therefore link your data **by application path**. You therefore link your data **by application path**.
+4D vous permet donc de lier votre chemin de fichier de données au chemin de l'application. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. You therefore link your data **by application path**. You therefore link your data **by application path**.
 
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
@@ -571,7 +607,7 @@ You can select the data linking mode during the build application process. You c
 
 ### Defining a default data folder
 
-4D allows you to define a default data file at the application building stage. Au premier lancement de l'application, en l'absence de fichier local (cf. [séquence de lancement décrite ci-dessus](#opening-the-data-file)), le fichier de données par défaut est automatiquement ouvert silencieusement en mode lecture seule par 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
+4D allows you to define a default data file at the application building stage. Au premier lancement de l'application, en l'absence de fichier local (cf. [séquence de lancement décrite ci-dessus](#opening-the-data-file)), le fichier de données par défaut est automatiquement ouvert silencieusement en mode lecture seule par 4D. Cela vous donne un meilleur contrôle sur la création et/ou l'ouverture des fichiers de données lors du premier lancement d'une application fusionnée. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
 
 More specifically, the following cases are covered:
 

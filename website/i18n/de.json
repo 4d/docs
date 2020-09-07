@@ -78,7 +78,7 @@
         "title": "Variant"
       },
       "Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "Fehlerverwaltung"
       },
       "Concepts/control-flow": {
         "title": "Ablaufsteuerung Überblick"
@@ -415,7 +415,7 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "Objekte"
       },
       "FormObjects/propertiesPicture": {
         "title": "Bild"
@@ -678,7 +678,7 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
-      "4D Language Concepts": "4D Language Concepts",
+      "4D Language Concepts": "Konzepte der 4D Programmiersprache",
       "Project Databases": "Project Databases",
       "Forms": "Formulare",
       "Form Properties": "Form Properties",
