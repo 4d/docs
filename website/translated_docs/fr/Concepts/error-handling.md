@@ -58,7 +58,7 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 (*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
 
 - La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
-- the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+- la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
 
 
 #### Exemple
