@@ -125,7 +125,7 @@ You can assign a group privileges to any plug-ins installed in the project. Les 
 
 Répartir les accès aux plug-ins vous permet de contrôler l’utilisation des licences dont vous disposez pour ces plug-ins. Tout utilisateur n’appartenant pas au groupe d’accès à un plug-in ne pourra pas charger ce plug-in.
 
-> Used licenses remain attached to 4D user accounts in the group for the whole 4D session.
+> Les licences utilisées demeurent associées aux comptes utilisateurs 4D dans le groupe, durant toute la session 4D.
 
 La zone “Plug-ins” de la page Groupes de la boîte à outils liste tous les plug-ins chargés par l’application 4D. Pour affecter un groupe à un plug-in, il suffit de cocher l’option correspondante.
 
