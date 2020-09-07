@@ -224,14 +224,14 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 ---
 ## データソース
 
-Specify the type of list box.
+リストボックスの種類を指定します。
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
 
-- **Arrays**(default): use array elements as the rows of the list box.
-- **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
-- **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
-- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
+- **配列** (デフォルト): リストボックスの各行に 配列要素を割り当てます。
+- **カレントセレクション**: 指定したテーブルのカレントセレクションの各レコードごとに式、フィールド、メソッドが評価されます。
+- **命名セレクション**: 指定した命名セレクションに含まれる各レコードごとに式、フィールド、メソッドが評価されます。
+- **コレクションまたはエンティティセレクション**: コレクション要素あるいはエンティティを使用してリストボックスの行の中身を定義します。 この場合 [コレクションまたはエンティティセレクション](properties_Object.md#コレクションまたはエンティティセレクション) プロパティを定義する必要があります。
 
 #### JSON 文法
 
