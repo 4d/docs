@@ -118,7 +118,7 @@
 <h3><a class="anchor" aria-hidden="true" id="build-component"></a><a href="#build-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build component</h3>
 <p>Builds a compiled component from the structure.</p>
 <p>A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components&quot; documentation.
-If you have named your application, <em>MyComponent</em>, 4D will create a Components folder containing <em>MyComponent.4dbase</em> folder: <p><em>&lt;destination&gt;/Components/name.4dbase/&lt;name&gt;.4DZ</em>.</p>
+If you have named your application, <em>MyComponent</em>, 4D will create a Components folder containing <em>MyComponent.4dbase</em> folder: <p><em>&lt;destination&gt;/Components/name.4dbase/&lt;name&gt;.4DZ</em>. </li> </ul></p>
 <p>The <em>MyComponent.4dbase</em> folder contains:</p>
 <ul>
 <li><em>MyComponent.4DZ</em> file</li>
@@ -129,6 +129,12 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <p><img src="/docs/Rx/assets/en/Project/standaloneProj.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="build-stand-alone-application"></a><a href="#build-stand-alone-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build stand-alone Application</h3>
 <p>Checking the <strong>Build stand-alone Application</strong> option and clicking <strong>Build</strong> will create a stand-alone (double-clickable) application directly from your database project.</p>
+<p>The following elements are required for the build:</p>
+<ul>
+<li>4D Volume Desktop (the 4D database engine),</li>
+<li>an <a href="#licenses">appropriate license</a></li>
+</ul>
+<p>On Windows, this feature creates an executable file (.exe).</p>
 <p>The following elements are required for the build:</p>
 <ul>
 <li>4D Volume Desktop (the 4D database engine),</li>
@@ -228,6 +234,10 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <p>Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine).</p>
 <p>Also, the client/server application is customized and its handling simplified:</p>
 <ul>
+<li>To launch the server portion, the user simply double-clicks on the server application. </p></li>
+</ul>
+<p>Also, the client/server application is customized and its handling simplified:</p>
+<ul>
 <li>To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.</li>
 <li>To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a database in a connection dialog box. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the <code>IPAddress</code> XML key in the buildapp.4DSettings file. If the connection fails, <a href="#management-of-client-connections">specific alternative mechanisms can be implemented</a>. You can &quot;force&quot; the display of the standard connection dialog box by holding down the <strong>Option</strong> (macOS) or <strong>Alt</strong> (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.</li>
 <li>A client/server application can be set so that the client portion <a href="#copy-of-client-applications-in-the-server-application">can be updated automatically over the network</a>.</li>
@@ -247,10 +257,17 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <li><p><strong>By application name</strong> (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.</p></li>
 <li><p><strong>By application path</strong> - The merged 4D application will parse the application's <em>lastDataPath.xml</em> file and try to open the data file with an &quot;executablePath&quot; attribute that matches the application's full path. If such an entry is found, its corresponding data file (defined through its &quot;dataFilePath&quot; attribute) is opened. Otherwise, the last opened data file is opened (default mode).</p></li>
 </ul>
+<p>For more information about the data linking mode, refer to the <a href="#last-data-file-opened">Last data file opened</a> section. The interval of compatibility for client and server applications is set using specific <a href="#build-application-settings">XML keys</a>).</p>
+<h4><a class="anchor" aria-hidden="true" id="data-linking-mode-3"></a><a href="#data-linking-mode-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data linking mode</h4>
+<p>This option lets you choose the linking mode between the merged application and the local data file.</p>
+<h4><a class="anchor" aria-hidden="true" id="data-linking-mode-4"></a><a href="#data-linking-mode-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data linking mode</h4>
+<p>This option lets you choose the linking mode between the merged application and the local data file. Otherwise, the last opened data file is opened (default mode).</p>
 <p>For more information about the data linking mode, refer to the <a href="#last-data-file-opened">Last data file opened</a> section.</p>
 <h3><a class="anchor" aria-hidden="true" id="build-client-application"></a><a href="#build-client-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build client application</h3>
 <p>Checking this option generates the client part of your application during the building phase.</p>
 <h4><a class="anchor" aria-hidden="true" id="4d-volume-desktop"></a><a href="#4d-volume-desktop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D Volume Desktop</h4>
+<p>You must designate the location on your disk of the 4D Volume Desktop application to be used.</p>
+<h4><a class="anchor" aria-hidden="true" id="4d-volume-desktop-1"></a><a href="#4d-volume-desktop-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D Volume Desktop</h4>
 <p>You must designate the location on your disk of the 4D Volume Desktop application to be used. This 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform. This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism. For more information about this point, see <a href="#customizing-4d-server-and-or-4d-client-folders">Customizing 4D Server and/or 4D Client folders</a>.</p>
 <blockquote>
 <p>The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v18, you must select a 4D Volume Desktop v18.</p>
@@ -278,6 +295,7 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <h4><a class="anchor" aria-hidden="true" id="forcing-automatic-updates"></a><a href="#forcing-automatic-updates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forcing automatic updates</h4>
 <p>In some cases, you may want to prevent client applications from being able to cancel the update download. For example, if you used a new version of the 4D Server source application, the new version of the client application must absolutely be installed on each client machine.</p>
 <p>To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. In this case, the update mechanism will not allow non-updated client applications to connect. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.</p>
+<p>The <a href="build-server-application">current version number</a> is set on the Client/Server page of the Build Application dialog box. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect.</p>
 <p>The <a href="build-server-application">current version number</a> is set on the Client/Server page of the Build Application dialog box.</p>
 <p>The <a href="build-server-application">current version number</a> is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific <a href="#build-application-settings">XML keys</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="update-error"></a><a href="#update-error" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update Error</h4>
@@ -339,6 +357,11 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <p>The page lists the elements loaded by the current 4D application:</p>
 <p><img src="/docs/Rx/assets/en/Project/buildapppluginsProj.png" alt=""></p>
 <ul>
+<li><strong>Active</strong> column - Indicates that the items will be integrated into the application package built.</li>
+</ul>
+<p>The page lists the elements loaded by the current 4D application:</p>
+<p><img src="/docs/Rx/assets/en/Project/buildapppluginsProj.png" alt=""></p>
+<ul>
 <li><p><strong>Active</strong> column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.</p></li>
 <li><p><strong>Plugins and components</strong> column - Displays the name of the plug-in/component.</p></li>
 <li><p><strong>ID</strong> column - Displays the plug-in/component's identification number (if any).</p></li>
@@ -360,6 +383,7 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <p>This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your <em>4D Developer Professional</em> license as well as each <em>4D Desktop Volume</em> license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.</p>
 <p>To remove or add a license, use the <strong>[+]</strong> and <strong>[-]</strong> buttons at the bottom of the window.</p>
 <p>When you click on the [+] button, an open file dialog box appears displaying by default the contents of the <em>Licenses</em> folder of your machine.</p>
+<p>When you click on the [+] button, an open file dialog box appears displaying by default the contents of the <em>Licenses</em> folder of your machine.</p>
 <p>When you click on the [+] button, an open file dialog box appears displaying by default the contents of the <em>Licenses</em> folder of your machine. For more information about the location of this folder, refer to the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html">Get 4D folder</a> command.</p>
 <p>You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the <em>4D Developer Professional</em> license and the <em>4D Desktop Volume</em> licenses were purchased. These files were generated or updated when the <em>4D Developer Professional</em> license and the <em>4D Desktop Volume</em> licenses were purchased.</p>
 <p>Once you have selected a file, the list will indicate the characteristics of the license that it contains.</p>
@@ -370,6 +394,7 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <li><strong>Path</strong> -  Location on disk</li>
 </ul>
 <p>If a license is not valid, a message will warn you.</p>
+<p>You can designate as many valid files as you want.</p>
 <p>You can designate as many valid files as you want.</p>
 <p>You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.</p>
 <blockquote>

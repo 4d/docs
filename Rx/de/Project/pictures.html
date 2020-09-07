@@ -20,16 +20,16 @@
 <p>The most common picture formats are supported of both platforms: .jpeg, .gif, .png, .tiff, .bmp, etc. On macOS, the .pdf format is also available for encoding and decoding.</p>
 <p>Die unterstützten Formate variieren unter Windows und auf macOS je nach Betriebssystem und den eigenen Codecs, die auf den Rechnern installiert sind. To find out which codecs are available, you must use the <code>PICTURE CODEC LIST</code> command. Beachten Sie, dass die Liste der verfügbaren Codecs zum Lesen und Schreiben unterschiedlich sein können, da für Codecs zum Codieren u. U. spezifische Lizenzen erforderlich sind.</p>
 <blockquote>
-<p>WIC and ImageIO permit the use of metadata in pictures. Für diesen Zweck können Sie die beiden Befehle <code>SET PICTURE METADATA</code> und <code>GET PICTURE METADATA</code> einsetzen.</p>
+<p>Mit WIC und ImageIO lassen sich auch Metadaten in Bildern verwenden. Dafür können Sie die beiden Befehle <code>SET PICTURE METADATA</code> und <code>GET PICTURE METADATA</code> einsetzen.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="bild-codec-kennung"></a><a href="#bild-codec-kennung" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bild Codec Kennung</h3>
-<p>Picture formats recognized by 4D are returned by the <code>PICTURE CODEC LIST</code> command as picture Codec IDs. Es gibt folgende Formen:</p>
+<p>Der Befehl <code>PICTURE CODEC LIST</code> gibt von 4D erkannte Bildformate als Codec ID für Bilder zurück. Es gibt folgende Formen:</p>
 <ul>
 <li>Als Endung (zum Beispiel “.gif”)</li>
-<li>As a MIME type (for example “image/jpeg”)</li>
+<li>Als Mime Typ (zum Beispiel “image/jpeg”)</li>
 </ul>
 <p>Die vom Befehl zurückgegebene Form richtet sich nach der Art, wie der Codec auf Ebene des Betriebssystems gespeichert ist.</p>
-<p>Most of the 4D picture management commands can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the <code>PICTURE CODEC LIST</code> command.</p>
+<p>Most of the 4D picture management commands can receive a Codec ID as a parameter. Deshalb muss unbedingt die vom Befehl <code>PICTURE CODEC LIST</code> zurückgegebene ID des Systems verwendet werden.</p>
 <h3><a class="anchor" aria-hidden="true" id="nicht-verfügbares-bildformat"></a><a href="#nicht-verfügbares-bildformat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nicht verfügbares Bildformat</h3>
 <p>Für Bildformate, die auf dem verwendeten Rechner nicht verfügbar sind, erscheint ein spezifischer Icon. The extension of the missing format is shown at the bottom of the icon:</p>
 <p><img src="/docs/Rx/assets/en/Project/picNoFormat.png" alt=""></p>

@@ -86,7 +86,7 @@
 </ul></li>
 <li>Resources</li>
 <li>Settings</li>
-<li>userPreference.username</li>
+<li>userPreferences.username</li>
 <li>WebFolder</li>
 </ul></li>
 </ul>
@@ -125,7 +125,7 @@
 <tr><td>catalog.4DCatalog</td><td>Table and field definitions</td><td>XML</td></tr>
 <tr><td>folders.json</td><td>Explorer folder definitions</td><td>JSON</td></tr>
 <tr><td>menus.json</td><td>Menu definitions</td><td>JSON</td></tr>
-<tr><td>settings.4DSettings</td><td><em>Structure</em> database settings. If <em>user settings</em> are defined, they take priority over these settings. If <em>user settings for data</em> are defined, they take priority over user settings</td><td>XML</td></tr>
+<tr><td>settings.4DSettings</td><td><em>Structure</em> database settings. They are not taken into account if <em><a href="#settings-folder-1">user settings</a></em> or <em><a href="#settings-folder">user settings for data</a></em> are defined.<p><strong>Warning</strong>: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use <em>user settings</em> or <em>user settings for data</em> to define custom settings.</td><td>XML</td></tr>
 <tr><td>tips.json</td><td>Defined tips</td><td>JSON</td></tr>
 <tr><td>lists.json</td><td>Defined lists</td><td>JSON</td></tr>
 <tr><td>filters.json</td><td>Defined filters</td><td>JSON</td></tr>
@@ -236,18 +236,18 @@ The .4dm file extension is a text-based file format, containing the code of a 4D
 </table>
 <p>(*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.</p>
 <h3><a class="anchor" aria-hidden="true" id="settings-folder"></a><a href="#settings-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Settings folder</h3>
-<p>This folder contains <strong>user settings files for data</strong> used for database administration.</p>
+<p>This folder contains <strong>user settings files for data</strong> used for application administration.</p>
 <blockquote>
-<p>These settings take priority over <strong><a href="#settings-folder-1">user settings files</a></strong> and <strong>structure settings</strong> files.</p>
+<p>These settings take priority over <strong><a href="#settings-folder-1">user settings files</a></strong> and <strong><a href="#sources-folder">structure settings</a></strong> files.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Contents</th><th>Description</th><th>Format</th></tr>
 </thead>
 <tbody>
-<tr><td>Backup.4DSettings</td><td>Database backup settings, used to set the <a href="/docs/Rx/en/Backup/settings.html">backup options</a>) when the database is run with this data file. Keys concerning backup configuration are described in the <em>4D XML Keys Backup</em> manual.</td><td>XML</td></tr>
-<tr><td>settings.4DSettings</td><td>Custom database settings for this data file</td><td>XML</td></tr>
-<tr><td>directory.json</td><td>Description of 4D groups, users, and their access rights when the database is run with this data file.</td><td>JSON</td></tr>
+<tr><td>directory.json</td><td>Description of 4D groups, users, and their access rights when the application is run with this data file.</td><td>JSON</td></tr>
+<tr><td>Backup.4DSettings</td><td>Database backup settings, used to set the <a href="/docs/Rx/en/Backup/settings.html">backup options</a> when the database is run with this data file. Keys concerning backup configuration are described in the <em>4D XML Keys Backup</em> manual.</td><td>XML</td></tr>
+<tr><td>settings.4DSettings</td><td>Custom database settings for this data file.</td><td>XML</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="logs-folder"></a><a href="#logs-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logs folder</h3>
@@ -263,18 +263,18 @@ The .4dm file extension is a text-based file format, containing the code of a 4D
 <p>An additional Logs folder is available in the system user preferences folder (active 4D folder, see <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html">Get 4D folder</a> command) for maintenance log files and in cases where data folder is read-only.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="settings-folder-1"></a><a href="#settings-folder-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Settings folder</h2>
-<p>This folder contains <strong>user settings files</strong> used for database administration. File are added to the folder when necessary.</p>
+<p>This folder contains <strong>user settings files</strong> used for application administration.</p>
 <blockquote>
-<p>If a data settings file exists in a Settings folder <a href="#settings-folder">in the data folder</a>, it takes priority over user settings file.</p>
+<p>These settings take priority over <strong><a href="#sources-folder">structure settings</a></strong> files. However, if a <strong><a href="#settings-folder">user settings file for data</a></strong> exists, it takes priority over user settings file.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Contents</th><th>Description</th><th>Format</th></tr>
 </thead>
 <tbody>
-<tr><td>directory.json</td><td>Description of 4D groups and users for the database, as well as their access rights</td><td>JSON</td></tr>
-<tr><td>BuildApp.4DSettings</td><td>Build settings file, created automatically when using the application builder dialog box or the <code>BUILD APPLICATION</code> command</td><td>XML</td></tr>
+<tr><td>directory.json</td><td>Description of 4D groups and users for the application, as well as their access rights</td><td>JSON</td></tr>
 <tr><td>Backup.4DSettings</td><td>Database backup settings, used to set the <a href="/docs/Rx/en/Backup/settings.html">backup options</a>) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the <em>backup journal</em>. Keys concerning backup configuration are described in the <em>4D XML Keys Backup</em> manual.</td><td>XML</td></tr>
+<tr><td>BuildApp.4DSettings</td><td>Build settings file, created automatically when using the application builder dialog box or the <code>BUILD APPLICATION</code> command</td><td>XML</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="userpreferencesusername-folder"></a><a href="#userpreferencesusername-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>userPreferences.<em>userName</em> folder</h2>
