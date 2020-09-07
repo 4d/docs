@@ -1,71 +1,71 @@
 ---
 id: entities
-title: Working with data
+title: データ操作
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
+ORDA では、[エンティティ](dsMapping.md#entity) および [エンティティセレクション](dsMapping.md#エンティティセレクション) を介してデータにアクセスします。 これらのオブジェクトを使って、データストアのデータを作成・更新・クエリ・ソートすることができます。
 
 
-## Creating an entity
+## エンティティの作成
 
-There are two ways to create a new entity in a dataclass:
+データクラス内に新しいエンティティを作成する方法は二つあります:
 
-*   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-*   You can also create an entity using the `dataClass.new( )` method.
+*   エンティティはデータベースレコードへの参照であるため、"クラシックな" 4Dランゲージを使用してレコードを作成し、それを`entity.next( )` や `entitySelection.first( )` といった ORDAメソッドで参照することでエンティティを作成できます。
+*   また、`dataClass.new( )` メソッドを使用することでもエンティティも作成することができます。
 
-Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the `entity.save( )` method.
+エンティティはメモリ内にしか作成されないという点に注意してください。 データストアに追加したい場合、`entity.save( )` メソッドを呼ぶ必要があります。
 
-Entity attributes are directly available as properties of the entity object. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+エンティティ属性は、エンティティオブジェクトのプロパティとして直接利用可能です。 詳細な情報については、[エンティティ属性の使用](#エンティティ属性の使用) を参照してください。
 
-For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
+たとえば、カレントデータストア内の "Employee" データクラスに新しいエンティティを作成し、firstname と name 属性に "John" と "Dupont" を割り当てたい場合を考えます:
 
 ```4d
 var $myEntity : cs.EmployeeEntity
-$myEntity:=ds.Employee.new() //Create a new object of the entity type
-$myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
-$myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
-$myEntity.save() //save the entity
+$myEntity:=ds.Employee.new() // エンティティ型の新規オブジェクトを作成します
+$myEntity.name:="Dupont" // 'Dupont' を 'name' 属性に代入します
+$myEntity.firstname:="John" // 'John' を 'firstname' 属性に代入します
+$myEntity.save() // エンティティを保存します
 ```
-> An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
+> エンティティは、それが作成されたプロセス内でのみ定義されます。 そのため、たとえばエンティティへの参照を、インタープロセス変数内に保存して他のプロセスで使用する、といったことはできません。
 
-## Entities and references
+## エンティティと参照
 
-An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
+エンティティには、4Dレコードへの参照が格納されています。 異なるエンティティが同じ 4Dレコードを参照することもあり得ます。 また、エンティティは 4Dオブジェクト変数に保存可能であることから、異なる変数が同じエンティティへの参照を格納していることもあり得ます。
 
-If you execute the following code:
+以下のコードを実行した場合:
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ $e1:=ds.Employee.get(1) // ID 1をもつ社員にアクセスします
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //$e1 も $e2 も、どちらも同じエンティティへの参照を共有します
+  //$e2.name の中身も "Hammer" です
 ```
 
-This is illustrated by the following graphic:
+これは以下のように図解することができます:
 
 ![](assets/en/Orda/entityRef1.png)
 
-Now if you execute:
+次に、以下のコードを実行した場合:
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //変数 $e1 はエンティティへの参照を格納しています
+  //変数 $e2 は別のエンティティへの参照を格納しています
+  //$e2.name の中身は "smith" です
 ```
 
-This is illustrated by the following graphic:
+これは以下のように図解することができます:
 
 ![](assets/en/Orda/entityRef2.png)
 
-Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
+しかし、両方のエンティティが同じレコードを参照していることに注意してください。 どちらの場合でも、`entity.save( )` メソッドを呼び出した場合、レコードは更新されます (衝突が発生した場合を除きます。[エンティティロッキング](#エンティティロッキング) 参照)。
 
-In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. たとえば:
+実際には、`$e1` も `$e2` もエンティティそのものではなく、エンティティへの参照です。 これはつまり、どのような関数やメソッドにも直接受け渡すことができ、ポインターのように振る舞うということです。そしてこれは 4Dポインターよりもずっと高速です。 たとえば:
 
 ```4d
  For each($entity;$selection)
@@ -73,7 +73,7 @@ In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entit
  End for each
 ```
 
-And the method is:
+そして do_Capitalize メソッドが以下のような形であった場合:
 
 ```4d
  $entity:=$1
@@ -84,222 +84,222 @@ And the method is:
  $entity.lastname:=$name
 ```
 
-You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+他の 4D のオブジェクトと同様にエンティティを扱うことができ、[引数](Concepts/parameters.md) としてその参照を渡すことができます。
+> エンティティでは、クラシックな 4D言語のような "カレントレコード" という概念はありません。 エンティティは、いくつでも必要な数を同時に使用することができます。 また、エンティティには自動ロックの機構が備わっています ([エンティティロッキング](#エンティティロッキング) 参照)。 エンティティの読み込みには、[レイジーローディング](glossary.md#レイジーローディング) 機構が使用されます。これはつまり必要な分の情報だけが読み込まれるということです。 いずれにせよ、クライアント/サーバーでは必要であればエンティティを直接自動的に読み込むことも可能です。
 
 
-## Using entity attributes
+## エンティティ属性の使用
 
-Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
-> For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+エンティティ属性はデータを保存し、対応するテーブルの対応するフィールドをマップします。 ストレージ型のエンティティ属性はエンティティオブジェクトの単純なプロパティとして設定や取得ができますが、**リレートエンティティ (relatedEntity)** 型と **リレートエンティティズ (relatedEntities)** 型のエンティティ属性はエンティティあるいはエンティティセレクションを返します。
+> 属性の型についての詳細な情報については、[ストレージ属性とリレーション属性](dsMapping.md#ストレージ属性とリレーション属性) の段落を参照してください。
 
-For example, to set a storage attribute:
+たとえば、ストレージ属性を設定するためには:
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
+ $entity:=ds.Employee.get(1) // ID1 の社員エンティティを取得します
+ $name:=$entity.lastname // 社員のラストネームを取得します。例: "Smith"
+ $entity.lastname:="Jones" // 社員のラストネームを変更します
 ```
-> Pictures attributes cannot be assigned directly with a given path in an entity.
+> ピクチャー属性は、パスを指定してエンティティに直接代入することはできません。
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+リレート属性にアクセスできるかどうかは、属性の型によります。 たとえば、以下のようなストラクチャーがあるとき:
 
 ![](assets/en/Orda/entityAttributes.png)
 
-You can access data through the related object(s):
+リレートされたオブジェクトを通してデータにアクセスすることができます:
 
 ```4d
- $entity:=ds.Project.all().first().theClient //get the Company entity associated to the project
- $EntitySel:=ds.Company.all().first().companyProjects //get the selection of projects for the company
+ $entity:=ds.Project.all().first().theClient // 先頭プロジェクトに関連する Company エンティティを取得します
+ $EntitySel:=ds.Company.all().first().companyProjects // 先頭の会社に関連する Project エンティティセレクションを取得します
 ```
 
-Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
+上記の例において、*theClient* と *companyProjects* はどちらもプライマリーリレーション属性であり、二つのデータクラス間の直接的なリレーションを表すことに注意してください。 しかしながら、複数のレベルのリレーションを通したパスに基づいてリレーション属性をビルドすることも可能です(循環参照含む)。 たとえば、以下のようなストラクチャーの場合を考えます:
 
 ![](assets/en/Orda/entityAttributes2.png)
 
-Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
+社員はそれぞれマネージャーにもなりえますし、マネージャーを持つこともできます。 ある社員のマネージャーのマネージャーを取得したい場合、以下のように書くことができます:
 
 ```4d
  $myEmp:=ds.Employee.get(50)
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## リレーション属性への値の代入
 
-In the ORDA architecture, relation attributes directly contain data related to entities:
+ORDAアーキテクチャーでは、リレーション属性はエンティティにリレートされたデータを直接格納します:
 
-*   An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-*   A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+*   N対1型リレーション属性 (**リレートエンティティ (relatedEntity)** 型) は一つのエンティティを格納します。
+*   1対N型リレーション属性 (**リレートエンティティズ (relatedEntities)** 型) はエンティティセレクションを格納します。
 
-Let's look at the following (simplified) structure:
+以下の (単純化された) ストラクチャーを見てみましょう:
 
 ![](assets/en/Orda/entityAttributes3.png)
 
-In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
-> In ORDA, the Automatic or Manual property of relations has no effect.
+この例では、"Employee" データクラスに属するエンティティの "employer" 属性には、エンティティ型のオブジェクト (あるいは null値) が格納されます。 "Company" データクラスに属するエンティティの "staff" 属性には、エンティティセレクション型のオブジェクト (あるいは null値) が格納されます。
+> ORDAでは、リレーションの自動あるいは手動プロパティは何の効力も持ちません。
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. たとえば:
+"employer" 属性に直接値を代入したい場合には、"Company" データクラスの既存エンティティを渡す必要があります。 たとえば:
 
 ```4d
- $emp:=ds.Employee.new() // create an employee
- $emp.lastname:="Smith" // assign a value to an attribute
- $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //assign a company entity
+ $emp:=ds.Employee.new() // 新規の社員エンティティを作成します
+ $emp.lastname:="Smith" // 属性に値を代入します
+ $emp.employer:=ds.Company.query("name =:1";"4D")[0]  // リレーション属性に会社エンティティを代入します
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. たとえば:
+4D では、"1" エンティティにリレートされている N エンティティ側のリレーション属性への入力を容易にするための追加の手段が提供されています: リレーション属性に代入する際に、"1" エンティティのプライマリーキーを直接渡す方法です。 これが動作するためには、数値あるいはテキスト型のデータ (プライマリーキー値) をリレーション属性に渡します。 すると 4D はデータクラス内の該当するエンティティを自動的に検索してくれます。 たとえば:
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=2 // assign a primary key to the relation attribute
-  //4D looks for the company whose primary key (in this case, its ID) is 2
-  //and assigns it to the employee
+ $emp.employer:=2 // リレーション属性にプライマリーキーを代入します
+  // 4D はプライマリーキー (この場合、ID) の値が 2 である会社を検索し、
+  // それを社員に代入します
  $emp.save()
 ```
 
-This is particularly useful when you are importing large amounts of data from a relational database. This type of import usually contains an "ID" column, which references a primary key that you can then assign directly to a relation attribute.
+これはとくに、リレーショナルデータベースから大量のデータを読み込むときに有用です。 このような読み込みでは通常 "ID" カラムが含まれており、これはリレーション属性に直接割り当て可能なプライマリーキーを参照しています。
 
-This also means that you can assign primary keys in the N entities without corresponding entities having already been created in the 1 datastore class. If you assign a primary key that does not exist in the related datastore class, it is nevertheless stored and assigned by 4D as soon as this "1" entity is created.
+これはまた、1 データクラス側で対応するエンティティを事前に作成することなく N エンティティ側のプライマリーキーを割り当てることができるということです。 リレートされているデータクラスに存在しないプライマリーキーを割り当てた場合、それは保管され、"1" データクラス側でエンティティが作成されたときに 4D によって割り当てられます。
 
-You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
+"N" データクラス側のリレーション属性を通して、"1" リレートエンティティの属性値を、直接代入・変更することができます。 たとえば、Employee エンティティにリレートされている Company エンティティの name 属性を変更したい場合、以下のように書くことができます:
 
 ```code4d
- $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
+ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンティティを読み込みます
+ $emp.employer.name:="4D, Inc." // リレートされている Company の name 属性を変更します
+ $emp.employer.save() // リレーション属性の変更を保存します
+  // リレートされているエンティティも更新されます
 ```
 
-## Creating an entity selection
+## エンティティセレクションの作成
 
-You can create an object of type entity selection as follows:
+以下の方法で、エンティティセレクション型のオブジェクトを作成することができます:
 
-*   Querying the entities in a dataclass (see the `dataClass.query()` method);
-*   Using the `dataClass.all( )` method to select all the entities in a dataclass;
-*   Using the `Create entity selection` command or the `dataClass.newSelection()` method to create a blank entity collection object;
+*   データクラス内のエンティティをクエリする (`dataClass.query( )` メソッド参照)
+*   `dataClass.all( )` メソッドを使用して、データクラス内の全エンティティを選択する
+*   `Create entity selection` コマンドあるいは `dataClass.newSelection( )` メソッドを使用して空のエンティティコレクションオブジェクトを作成する
 
-*   Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
+*   **ORDA - エンティティセレクション** テーマ内の様々なメソッドの中から、`entitySelection.or( )` のように新しいエンティティセレクションを返すものを使用する
 
-*   Using a relation attribute of type "related entities" (see below).
+*   "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
-> An entity selection is only defined in the process where it was created. You cannot, for example, store a reference to an entity selection in an interprocess variable and use it in another process.
+データクラスに対して、異なるエンティティセレクションを好きなだけ同時に作成し、使用することができます。 エンティティセレクションは、エンティティへの参照を格納しているに過ぎないという点に注意してください。 異なるエンティティセレクションが同じエンティティへの参照を格納することも可能です。
+> エンティティセレクションは、それが作成されたプロセスにおいてのみ定義されます。 そのため、たとえばエンティティセレクションへの参照を、インタープロセス変数内に保存して他のプロセスで使用する、といったことはできません。
 
-## Entity selections and attributes
+## エンティティセレクションと属性
 
-### Entity selections and Storage attributes
+### エンティティセレクションとストレージ属性
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. たとえば:
+すべてのストレージ属性 (テキスト、数値、ブール、日付) はエンティティセレクションの、あるいはエンティティのプロパティとして利用可能です。 エンティティセレクションと組み合わせて使用した場合、スカラー属性はスカラー値のコレクションを返します。 たとえば:
 
 ```4d
- $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- $localEmails:=$locals.emailAddress //collection of email addresses (strings)
+ $locals:=ds.Person.query("city = :1";"San Jose") // 個人のエンティティセレクション
+ $localEmails:=$locals.emailAddress // メールアドレス (文字列) のコレクション
 ```
 
-This code returns in *$localEmails* a collection of email addresses as strings.
+このコードは *$localEmails* 内に文字列としてのメールアドレスのコレクションを返します。
 
-### Entity selections and Relation attributes
+### エンティティセレクションとリレーション属性
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
+様々なクエリの方法に加えて、リレーション属性をエンティティセレクションのプロパティとして使用することで新しいエンティティセレクションを得ることもできます。 たとえば、以下のようなストラクチャーの場合を考えます:
 
 ![](assets/en/Orda/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+ $myParts:=ds.Part.query("ID < 100") // ID が 100未満のパーツを返します
  $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  // $myParts 内のパーツにリレートされている請求項目を1行以上含んでいるすべての請求書
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
+最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、$myInvoices 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
 
 
-## Entity Locking
+## エンティティロッキング
 
-You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
+一般的に、複数のユーザーあるいはプロセスが同じエンティティを同時に読み込んで変更しようとした際にコンフリクトが発生する可能性を管理する必要があります。 レコードロックは、リレーショナルデータベースにおいてデータに矛盾した更新がなされないようにするための手段です。 読み込み時にレコードをロックして他のプロセスが更新できないようにする、あるいは逆に保存時に読み込んでからの間に他のプロセスがレコードを変更していないかどうかを検証する、というのが基本的な概念です。 前者は **ペシミスティック・レコードロック** と呼ばれ、他のユーザーに対してレコードをロックすることで、変更したいレコードを書き込むことができるようにするものです。 後者は **オプティミスティック・レコードロック** と呼ばれ、レコードが更新される必要がある場合にのみ書き込み権限を与えるという柔軟性があります。 ペシミスティック・レコードロックでは、更新される必要がないときでもレコードはロックされたままです。 オプティミスティック・レコードロックではレコードの書き込みの可能/不可能は更新時に判断されます。
 
-ORDA provides you with two entity locking modes:
+ORDA では、以下の二つのロックモードを提供しています:
 
-- an automatic "optimistic" mode, suitable for most applications,
-- a "pessimistic" mode allowing you to lock entities prior to their access.
+- 自動的な "オプティミスティック" モード。多くのアプリケーションに適しています。
+- "ペシミスティック" モード。エンティティをアクセスする前にロックすることができます。
 
-### Automatic optimistic lock
+### 自動オプティミスティック・ロック
 
-This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
+この自動機構は、"オプティミスティック・ロック" に基づいたもので、これは Webアプリケーションの場合にとくに適しています。 この概念は以下のような動作原理に基づいています:
 
-*   All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
-*   Each entity has an internal locking stamp that is incremented each time it is saved.
-*   When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
-    *   When the values match, the entity is saved and the internal stamp value is incremented.
-    *   When the values do not match, it means that another user has modified this entity in the meantime. The save is not performed and an error is returned.
+*   すべてのエンティティは必ず読み書き可能な状態でロードされます。エンティティの *事前* ロックというのはありません。
+*   各エンティティには保存されるたびにインクリメントされる内部的なロックスタンプを持っています。
+*   プロセスあるいはユーザーが `entity.save( )` メソッドでエンティティを保存しようとした場合、4D は保存しようとしているエンティティのスタンプの値とデータ内にあるエンティティのスタンプの値を比較します (データ編集の場合):
+    *   値が合致している場合、エンティティは保存され、内部スタンプの値はインクリメントされます。
+    *   値が合致しない場合、読み込みから保存までの間に他のユーザーがエンティティを編集したことになります。 保存は実行されず、エラーが返されます。
 
-The following diagram illustrates optimistic locking:
+オプティミスティック・ロックの動作は以下ように図解することができます:
 
-1. Two processes load the same entity.<br><br>![](assets/en/Orda/optimisticLock1.png)
+1. 二つのプロセスが同じエンティティを読み込んだとします。<br><br>![](assets/en/Orda/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/Orda/optimisticLock2.png)
+2. 最初のプロセスがエンティティを編集し、それを保存しようとします。 すると `entity.save( )` メソッドが呼び出されます。 4Dエンジンは、編集されたエンティティの内部スタンプ値とデータに保存されているエンティティの内部スタンプ値を自動的に比較します。 これは合致しますので、エンティティは保存され、その内部スタンプ値はインクリメントされます。<br><br>![](assets/en/Orda/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br>![](assets/en/Orda/optimisticLock3.png)
+3. 二つ目のプロセスも読み込んだエンティティを編集し、それを保存しようとします。 すると `entity.save( )` メソッドが呼び出されます。 編集されたエンティティの内部スタンプ値はデータに保存されているエンティティの内部スタンプ値と合致しないので、保存は実行されず、エラーが返されます。<br><br>![](assets/en/Orda/optimisticLock3.png)
 
 
-This can also be illustrated by the following code:
+この流れは以下のコードのように分解することもできます:
 
 ```4d
- $person1:=ds.Person.get(1) //Reference to entity
- $person2:=ds.Person.get(1) //Other reference to same entity
+ $person1:=ds.Person.get(1) // エンティティを参照
+ $person2:=ds.Person.get(1) // 同じエンティティへの別の参照
  $person1.name:="Bill"
- $result:=$person1.save() //$result.success=true, change saved
+ $result:=$person1.save() // $result.success=true, 変更は保存されます
  $person2.name:="William"
- $result:=$person2.save() //$result.success=false, change not saved
+ $result:=$person2.save() // $result.success=false, 変更は保存されません
 ```
 
-In this example, we assign to $person1 a reference to the person entity with a key of 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+この例では、$person1 に Person の、キーが 1 のエンティティを代入します。 次に、同じエンティティの別の参照を変数 $person2 に代入します。 $person1 を用いて、人物の名前を変更してエンティティを保存します。 同じことを $person2 を使用して実行しようとすると、4D はディスク上のエンティティをチェックし、変数 $person2 に代入されたものと同じかどうかを調べます。 結果としてこれは同じものでは無いので、success プロパティには false が返され、二つ目の変更は保存されません。
 
-When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload( )` method so that you can try to make the modification again. The `entity.save( )` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
+こういった状況が発生した場合には、たとえば `entity.reload( )` メソッドを使用してディスクからエンティティを再読込し、変更をもう一度おこなうことができます。 また `entity.save( )` メソッドは、異なるプロセスがそれぞれ異なる属性を変更していた場合には保存を実行する "automerge" オプションも提供しています。
 
-### Pessimistic lock
+### ペシミスティック・ロック
 
-You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+エンティティは、データアクセス時に任意にロックおよびアンロックすることができます。 エンティティがプロセスからロックされている場合、そのエンティティはプロセスに読み書き可能モードで読み込まれていますが、他のすべてのプロセスに対してロックされています。 ロックされたエンティティは、他のプロセスからは読み込みモードでのみ読み込むことができます。つまり、その値を編集・保存することはできません。
 
-This feature is based upon two methods of the `Entity` class:
+この機能は `Entity` クラスの 2つのメソッドに基づいています:
 
 *   `entity.lock()`
 *   `entity.unlock()`
 
-For more information, please refer to the descriptions for these methods.
+詳細な情報については、これらのメソッドの説明を参照してください。
 
 
-### Concurrent use of 4D classic locks and ORDA pessimistic locks
+### 4Dクラシック・ロックとORDAのペシミスティック・ロックの組み合わせ
 
-Using both classic and ORDA commands to lock records is based upon the following principles:
+クラシックコマンドと ORDA コマンドの両方を使用してレコードをロックする場合、以下の原則に注意する必要があります:
 
-*   A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
-*   A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
+*   クラシック4Dコマンドを使用してレコードをロックした場合、そのレコードに相当するエンティティを ORDA でロックすることはできません。
+*   ORDA を使用してエンティティをロックした場合、そのエンティティに相当するレコードをクラシック4Dコマンドでロックすることはできません。
 
-These principles are shown in the following diagram:
+これらの原理は以下のような図に表すことができます:
 
 ![](assets/en/Orda/concurrent1.png)
 
-**Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
+**トランザクションロック** はクラシックコマンドと ORDAコマンドの両方に適用されます。 マルチプロセスあるいはマルチユーザーアプリケーションにおいては、トランザクション内でクラシックコマンドを使用してレコードをロックした場合、そのトランザクションが OK あるいはキャンセルされるまで、他のプロセスからそのレコードに相当するエンティティをロックすることはできません (逆もまた然りです)。
 
-*   Example with a lock set by a classic command:<br><br>![](assets/en/Orda/concurrent2.png)
-*   Example with a lock set by an ORDA method:<br><br>![](assets/en/Orda/concurrent3.png)
+*   クラシックコマンドを使用してロックした場合:<br><br>![](assets/en/Orda/concurrent2.png)
+*   ORDAメソッドを使用してロックした場合:<br><br>![](assets/en/Orda/concurrent3.png)
 
 
 
-## Client/server optimization
+## クライアント/サーバーの最適化
 
-4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
+4Dは、クライアント/サーバー環境においてエンティティセレクションを使用、あるいはエンティティを読み込む ORDAリクエストについて自動的に最適化する機構を提供しています。 この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。
 
-The following optimization mechanisms are implemented:
+この機能には、以下の最適化機構が実装されています:
 
-*   When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
+*   クライアントがサーバーに対してエンティティセレクションのリクエストを送ると、4D はコード実行の途中で、エンティティセレクションのどの属性がクライアント側で実際に使用されているかを自動的に "学習" し、それに対応した "最適化コンテキスト" をビルドします。 このコンテキストはエンティティセレクションに付随し、使用された属性を保存していきます。 他の属性があとで使用された場合には自動的に情報を更新していきます。
 
-*   Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
+*   サーバー上の同じエンティティセレクションに対してその後に送られたリクエストは、最適化コンテキストを再利用して、サーバーから必要な属性のみを取得していくことで、処理を速くします。 たとえば、エンティティセレクション型のリストボックスにおいては、"学習" フェーズは最初の行を表示中におこなわれるため、次の行からは表示が最適化されています。
 
-*   An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#using-the-context-property) below).
+*   既存の最適化コンテキストは、同じデータクラスの他のエンティティセレクションであればプロパティとして渡すことができるので、学習フェーズを省略して、アプリケーションをより速く実行することができます (以下の [contextプロパティの使用](#contextプロパティの使用) を参照してください)。
 
-The following methods automatically associate the optimization context of the source entity selection to the returned entity selection:
+以下のメソッドは、ソースのエンティティセレクションの最適化コンテキストを、戻り値のエンティティセレクションに自動的に付与します:
 
 *   `entitySelection.and()`
 *   `entitySelection.minus()`
@@ -311,29 +311,29 @@ The following methods automatically associate the optimization context of the so
 
 **例題**
 
-Given the following code:
+以下のようなコードがあるとき:
 
 ```4d
  $sel:=$ds.Employee.query("firstname = ab@")
  For each($e;$sel)
-    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
+    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer は Company テーブルを参照します
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* after a learning phase.
+最適化機構のおかげで、このリクエストは学習フェーズ以降は、*$sel* の中で実際に使用されている属性 (firstname, lastname, employer, employer.name) のデータのみを取得するようになります。
 
 
 
-### Using the context property
+### contextプロパティの使用
 
-You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
+**context** プロパティを使用することで、最適化の利点をさらに増幅させることができます。 このプロパティは、あるエンティティセレクション用に "学習した" 最適化コンテキストを参照します。 これを新しいエンティティセレクションを返す ORDA メソッドに引数として渡すことで、その返されたエンティティセレクションでは学習フェーズを最初から省略して使用される属性をサーバーにリクエストできるようになります。
 
-A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
-> A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
+同じ最適化 context プロパティは、同じデータクラスのエンティティセレクションに対してであればどのエンティティセレクションにも渡すことができます。 エンティティセレクションを扱うすべての ORDAメソッドは、contextプロパティをサポートします (たとえば`dataClass.query( )` あるいは `dataClass.all( )` メソッドなど)。 ただし、 コードの他の部分で新しい属性が使用された際にはコンテキストは自動的に更新されるという点に注意してください。 同じコンテキストを異なるコードで再利用しすぎると、コンテキストを読み込み過ぎて、結果として効率が落ちる可能性があります。
+> 同様の機構は読み込まれたエンティティにも実装されており、それによって使用した属性のみがリクエストされるようになります (`dataClass.get( )` メソッド参照)。
 
 
 
-**Example with `dataClass.query( )` method:**
+**`dataClass.query( )` メソッドを使用した例:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
@@ -342,35 +342,35 @@ A same optimization context property can be passed to unlimited number of entity
  $querysettings2:=New object("context";"longList")
 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
+ $data:=extractData($sel1) // extractData メソッドにおいて、最適化はトリガーされており、"shortList" のコンテキストが割り当てられています。
 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
+ $data:=extractData($sel2) // extractData メソッドにおいて、"shortList" のコンテキストに割り当てられている最適化が適用されます。
 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
+ $data:=extractDetailedData($sel3) // extractDetailedData メソッドにおいて、最適化はトリガーされており、"longList" のコンテキストが割り当てられています。
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
+ $data:=extractDetailedData($sel4) // extractDetailedData メソッドにおいて、"longList" のコンテキストに割り当てられている最適化が適用されます。
 ```
 
-### Entity selection-based list box
+### エンティティセレクション型リストボックス
 
-Entity selection optimization is automatically applied to entity selection-based list boxes in client/server configurations, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
+クライアント/サーバー環境におけるエンティティセレクション型リストボックスにおいては、そのコンテンツを表示またはスクロールする際に、最適化が自動的に適用されます。つまり、リストボックスに表示されている属性のみがサーバーにリクエストされます。
 
-A specific "page mode" context is also provided when loading the current entity through the **Current item** property expression of the list box (see [Collection or entity selection type list boxes](FormObjects/listbox_overview.md#list-box-types)). This feature allows you to not overload the list box initial context in this case, especially if the "page" requests additional attributes. Note that only the use of **Current item** expression will create/use the page context (access through `entitySelection\[index]` will alter the entity selection context).
+また、リストボックスの **カレントの項目** プロパティ式 ([コレクション/エンティティセレクション型リストボックス](FormObjects/listbox_overview.md#リストボックスの型) 参照) を介してカレントエンティティをロードする場合には、専用の "ページモード" コンテキストが提供されます。 これによって、"ページ" が追加属性をリクエストしても、リストボックスのコンテキストのオーバーロードが避けられます。 なお、ページコンテキストの生成/使用は **カレントの項目** 式を使用した場合に限ります (たとえば、`entitySelection[index]` を介して同じエンティティにアクセスした場合は、エンティティセレクションコンテキストが変化します)。
 
-Subsequent requests to server sent by entity browsing methods will also support this optimization. The following methods automatically associate the optimization context of the source entity to the returned entity:
+その後、エンティティを走査するメソッドがサーバーに送信するリクエストにも、同じ最適化が適用されます。 以下のメソッドは、ソースエンティティの最適化コンテキストを、戻り値のエンティティに自動的に付与します:
 
 *   `entity.next( )`
 *   `entity.first( )`
 *   `entity.last( )`
 *   `entity.previous( )`
 
-For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
+たとえば、次のコードは選択したエンティティをロードし、所属しているエンティティセレクションを走査します。 エンティティは独自のコンテキストにロードされ、リストボックスのコンテキストは影響されません:
 
 ```4d
- $myEntity:=Form.currentElement //current item expression
-  //... do something
- $myEntity:=$myEntity.next() //loads the next entity using the same context
+ $myEntity:=Form.currentElement // カレントの項目式
+  //... なんらかの処理
+ $myEntity:=$myEntity.next() // 次のエンティティも同じコンテキストを使用してロードされます
 ```

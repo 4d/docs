@@ -388,7 +388,7 @@
         "title": "アピアランス"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
-        "title": "Background and Border"
+        "title": "背景色と境界線"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
         "title": "Coordinates & Sizing"
@@ -403,22 +403,22 @@
         "title": "表示フォーマット"
       },
       "FormObjects/propertiesEntry": {
-        "title": "Entry"
+        "title": "入力"
       },
       "FormObjects/propertiesFooters": {
-        "title": "Footers"
+        "title": "フッター"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "Gridlines"
+        "title": "グリッド線"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "ヘッダー"
       },
       "FormObjects/propertiesHelp": {
         "title": "ヘルプ"
       },
       "FormObjects/propertiesHierarchy": {
-        "title": "Hierarchy"
+        "title": "階層"
       },
       "FormObjects/propertiesListBox": {
         "title": "リストボックス"
@@ -490,13 +490,13 @@
         "title": "テキスト"
       },
       "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+        "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
         "title": "Web Area"
       },
       "FormObjects/writeProAreaOverview": {
-        "title": "4D Write Pro area"
+        "title": "4D Write Pro エリア"
       },
       "GettingStarted/installation": {
         "title": "インストール"
@@ -557,13 +557,13 @@
         "sidebar_label": "Verify Page"
       },
       "ORDA/dsmapping": {
-        "title": "Data Model Objects"
+        "title": "データモデルオブジェクト"
       },
       "ORDA/entities": {
-        "title": "Working with data"
+        "title": "データ操作"
       },
       "ORDA/glossary": {
-        "title": "Glossary"
+        "title": "用語集"
       },
       "ORDA/ordaClasses": {
         "title": "データモデルクラス"
@@ -575,7 +575,7 @@
         "title": "A Quick Tour in ORDA"
       },
       "ORDA/datastores": {
-        "title": "Using a remote datastore"
+        "title": "リモートデータストアの利用"
       },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"

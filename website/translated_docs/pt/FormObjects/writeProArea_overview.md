@@ -3,7 +3,7 @@ id: writeProAreaOverview
 title: 4D Write Pro area
 ---
 
-4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D database. Using 4D Write Pro, you can write pre-formatted emails and/or letters containing images, a scanned signature, formatted text and placeholders for dynamic variables. You can also create invoices or reports dynamically, including formatted text and images.
+4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D application. Using 4D Write Pro, you can write pre-formatted emails and/or letters containing images, a scanned signature, formatted text and placeholders for dynamic variables. You can also create invoices or reports dynamically, including formatted text and images.
 
 
 ![](assets/en/FormObjects/writePro2.png)

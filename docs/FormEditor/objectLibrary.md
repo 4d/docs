@@ -58,7 +58,7 @@ You can create as many libraries as desired per project. A library created and b
 
 ### Opening an object library  
 
-A given object library can only be opened by one database at a time. However, several different libraries can be opened in the same database. 
+A given object library can only be opened by one project at a time. However, several different libraries can be opened in the same project. 
 
 To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. A standard open file dialog box appears, which allows you to select the object library to open. You can select the following file types:
 - **.4dproject**

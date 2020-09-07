@@ -78,7 +78,7 @@ A l’exécution du formulaire, 4D gère automatiquement le pop up menu ou la co
 ![](assets/en/FormObjects/popupDropdown_choiceList.png)
 > Il n'est pas possible de mixer ce principe avec l'initialisation de l'objet à l'aide d'un tableau. Si vous saisissez un nom de champ dans la zone Nom de la variable, il est nécessaire d'utiliser une énumération.
 
-### Save as
+### Enregistrer comme
 Lorsque vous avez associé un objet pop-up/liste déroulante à une liste de choix (énumération) et à un champ, vous pouvez utiliser l'option [Enregistrer comme Valeur/Référence](properties_DataSource.md#save-as) dans le thème "Sources de données" de la Liste des propriétés. Cette option permet d'optimiser la taille des données stockées.
 
 ## Utiliser une action standard

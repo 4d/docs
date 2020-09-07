@@ -51,7 +51,7 @@ Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über ein
 Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht einem anderen zuweisen. Dafür müssen Sie den Befehl `COPY ARRAY` verwenden.
 
 
-## Element Null eines Array verwenden
+## Element 0 (Null)
 
 Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
@@ -84,6 +84,7 @@ Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisier
 Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
 ```4d
+
 
 
  ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
@@ -154,7 +155,7 @@ Dieses Vorgehen ist für Arrays undenkbar. Das hat folgende Gründe:
 
 - Zum Verwalten der drei Informationstypen (Landeskennzahl, Postleitzahl, Stadt) müssten Sie drei umfangreiche Arrays im Speicher halten.
 - Da ein Array immer vollständig im Speicher gehalten wird, müssten Sie alle Informationen dieser Arrays während der ganzen Arbeitssitzung im Speicher halten, auch wenn die Daten nicht ständig in Gebrauch sind.
-- Diese Arrays müssten bei jedem Starten der Datenbank komplett geladen und dann beim Beenden auf der Festplatte gesichert werden, selbst wenn die Daten während der ganzen Arbeitssitzung weder benutzt noch verändert wurden.
+- Diese Arrays müssten bei jedem Starten der Anwendung komplett geladen und dann beim Beenden auf der Festplatte gesichert werden, selbst wenn die Daten während der ganzen Arbeitssitzung weder benutzt noch verändert wurden.
 
 **Fazit:** In Arrays sollten überschaubare Datenmengen für eine kurze Zeitspanne gehalten werden. Andererseits sind Arrays, da sie im Hauptspeicher gehalten werden, sehr schnell und leicht zu verwalten.
 

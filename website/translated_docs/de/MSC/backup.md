@@ -10,8 +10,8 @@ Die Seite Backup des MSC zeigt die Backup-Einstellungen für die Datenbank. Hier
 
 Diese Seite ist in drei Bereiche unterteilt:
 
-- **Backup File Destination**: displays information about the location of the database backup file. sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte.
-- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the database.
+- **Backup File Destination**: displays information about the location of the application backup file. sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte.
+- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
 - **Contents of the backup file**: lists the files and folders included in the backup file.
 
 The **Backup** button is used to launch a manual backup.

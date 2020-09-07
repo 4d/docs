@@ -46,7 +46,7 @@ $poly:=cs.Polygon.new(4;3)
 $instance:=OB Instance of($poly;cs.Polygon)  
  // true
 $instance:=OB Instance of($poly;4D.Object)
- // true 
+ // true
 ```
 
 When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
@@ -109,7 +109,7 @@ A user class in 4D is defined by a specific method file (.4dm), stored in the `/
 
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
-- Database folder
+- Project folder
     + Project
         * Sources
             - Classes
@@ -200,7 +200,7 @@ Function getAge
 
 For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example `myObject.methodName("hello")`.
 - use of a "Function" class member methods
@@ -291,7 +291,7 @@ The `Class extends` keyword is used in class declaration to create a user class 
 Class extension must respect the following rules:
 
 - A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another database or component.
+- A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
@@ -305,7 +305,7 @@ This example creates a class called `Square` from a class called `Polygon`.
 
 ```4d
   //Class: Square
-  //path: Classes/Square.4dm 
+  //path: Classes/Square.4dm
 
  Class extends Polygon
 
@@ -458,7 +458,7 @@ Then you can write in a project method:
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
+In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
 
 When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
 
@@ -475,7 +475,7 @@ When a [class constructor](#class-constructor) function is used (with the `new()
 Class Constructor  
     // Create properties on This as
     // desired by assigning to them
-    This.a:=42 
+    This.a:=42
 ```
 
 ```4d
@@ -517,13 +517,6 @@ Several commands of the 4D language allows you to handle class features.
 #### OB Class ( object ) -> Object | Null
 
 `OB Class` returns the class of the object passed in parameter.
-
-
-### OB Instance of
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
 
 
 ### OB Instance of

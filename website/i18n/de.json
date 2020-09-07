@@ -87,7 +87,7 @@
         "title": "Variant"
       },
       "Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "Fehlerverwaltung"
       },
       "Concepts/control-flow": {
         "title": "Ablaufsteuerung Überblick"
@@ -424,7 +424,7 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "Objekte"
       },
       "FormObjects/propertiesPicture": {
         "title": "Bild"
@@ -706,7 +706,7 @@
     "categories": {
       "Getting Started": "Getting Started",
       "Project Management": "Project Management",
-      "4D Language Concepts": "4D Language Concepts",
+      "4D Language Concepts": "Konzepte der 4D Programmiersprache",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
       "Access Rights": "Access Rights",

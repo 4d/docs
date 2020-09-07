@@ -6,7 +6,7 @@ title: Aktion
 
 ## Method
 
-Reference of a method attached to the form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. See [Specialized methods](Concepts/methods.md#specialized-methods).
+Reference of a method attached to the form. Sie können eine Formularmethode zum Verwalten von Daten und Objekten verwenden. Für diese Zwecke ist es jedoch generell einfacher und effizienter, eine Objektmethode zu verwenden. See [Specialized methods](Concepts/methods.md#specialized-methods).
 
 You do not call a form method—4D calls it automatically when an event involves the form to which the method is attached.
 

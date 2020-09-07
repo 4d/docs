@@ -120,7 +120,7 @@ Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
  End for
 ```
 
-Die meisten der Schleifen `For...End for` in Ihrer Datenbank sehen wie in den oben aufgeführten Beispielen aus.
+Die meisten der Schleifen `For...End for` in Ihren Projekten sehen wie in den oben aufgeführten Beispielen aus.
 
 ### Variablenzähler verringern
 

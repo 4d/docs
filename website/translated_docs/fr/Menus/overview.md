@@ -3,13 +3,13 @@ id: overview
 title: Aperçu
 ---
 
-4D vous permet de créer des barres de menus et des menus pour vos bases de données et vos applications personnalisées. Comme les menus sont une fonctionnalité standard de toute application, leur présence dans votre base facilite son utilisation.
+You can create menu bars and menus for your 4D applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your applications easier to use and will make them feel familiar to users.
 
 ![](assets/en/Menus/menubar.png)
 
 Une **barre de menus** est un groupe de menus qui peuvent être affichés dans le même écran. Chaque **menu** d’une barre de menus peut posséder plusieurs commandes dont certaines peuvent faire appel à des sous-menus en cascade (on parle alors de sous-menus hiérarchiques). Lorsque l’utilisateur choisit une commande de menu ou de sous-menu, il appelle une méthode projet ou une action standard qui réalise une opération.
 
-Vous pouvez disposer de différentes barres de menus dans la même base de données. Par exemple, vous pouvez utiliser une barre de menus pour les opérations standard de votre base de données et une autre qui n’est active que pour la réalisation d’états. Une barre de menus peut contenir des commandes destinées à la saisie d’enregistrements. La barre de menus qui apparaît avec le formulaire de saisie peut contenir le même menu, mais ses commandes peuvent être désactivées car inutiles pour la saisie dans le formulaire.
+You can have many separate menu bars for each application. For example, you can use one menu bar that contains menus for standard operations on the database and another that becomes active only for reporting. Une barre de menus peut contenir des commandes destinées à la saisie d’enregistrements. La barre de menus qui apparaît avec le formulaire de saisie peut contenir le même menu, mais ses commandes peuvent être désactivées car inutiles pour la saisie dans le formulaire.
 
 Vous pouvez utiliser le même menu dans plusieurs barres de menus et menus, ou ne pas l’attacher et le gérer uniquement par programmation (on parle dans ce cas de menu indépendant).
 

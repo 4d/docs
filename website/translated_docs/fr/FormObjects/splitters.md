@@ -5,7 +5,7 @@ title: Séparateur
 
 ## Aperçu
 
-Un séparateur divise un formulaire en deux zones. Il permet à l’utilisateur d’agrandir ou de réduire chaque zone en le déplaçant. Un séparateur peut être horizontal ou vertical. Il tient compte des propriétés de redimensionnement des objets, ce qui permet de personnaliser entièrement l’interface. Un séparateur peut être “pousseur” ou non
+Un séparateur divise un formulaire en deux zones. Il permet à l’utilisateur d’agrandir ou de réduire chaque zone en le déplaçant. Un séparateur peut être horizontal ou vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your application's interface. Un séparateur peut être “pousseur” ou non
 
 L’utilisation type du séparateur est le formulaire de sortie dans lequel les colonnes peuvent être redimensionnées :
 
@@ -44,14 +44,15 @@ Dans un formulaire, les séparateurs interagissent sur les objets qui les entour
 
 | Options de redimensionnement du ou des objet(s) | Objet(s) au-dessus du séparateur horizontal ou à gauche du séparateur vertical (1)                         | Object(s) below an horizontal *non-Pusher* splitter or to the right of a vertical *non-Pusher* splitter                                                                                                         | Object(s) below an horizontal *Pusher* splitter or to the right of a vertical *Pusher* splitter                                          |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| None                                            | Restent tel que                                                                                            | Sont déplacés avec le séparateur (conservent leur position relative) jusqu’à la butée suivante. La butée du déplacement vers le bas ou vers la droite est soit le bord de la fenêtre, soit un autre séparateur. | Sont déplacés sans limites avec le séparateur (conservent leur position relative). Aucune butée n’est appliquée (cf. paragraphe suivant) |
+| Aucun                                           | Restent tel que                                                                                            | Sont déplacés avec le séparateur (conservent leur position relative) jusqu’à la butée suivante. La butée du déplacement vers le bas ou vers la droite est soit le bord de la fenêtre, soit un autre séparateur. | Sont déplacés sans limites avec le séparateur (conservent leur position relative). Aucune butée n’est appliquée (cf. paragraphe suivant) |
 | Redimensionnement                               | Gardent leur position d’origine mais sont redimensionnés en fonction de la nouvelle position du séparateur |                                                                                                                                                                                                                 |                                                                                                                                          |
-| Move                                            | Se déplacent avec le séparateur                                                                            |                                                                                                                                                                                                                 |                                                                                                                                          |
+| Déplacer                                        | Se déplacent avec le séparateur                                                                            |                                                                                                                                                                                                                 |                                                                                                                                          |
 
 *(1) Un objet situé à cet emplacement sert de butée en cas de déplacement vers le haut (séparateur horizontal) ou vers la gauche (séparateur vertical) s’il ne comporte aucune option de redimensionnement.*
 > Un objet entièrement contenu dans le rectangle définissant le séparateur est déplacé en même temps que le séparateur lui-même.
 
 ## Gestion programmée des séparateurs
+
 
 Vous pouvez associer une méthode objet à un séparateur. Cette méthode sera appelée avec l’événement `On Clicked` durant tout le déplacement.
 

@@ -3,27 +3,27 @@ id: picture
 title: Bild
 ---
 
-Datenfelder, Variablen oder Ausdrücke vom Typ Bild können im Windows- oder im Macintosh-Format sein. Dazu gehört jedes Bild, das Sie in die Zwischenablage legen oder mit 4D Befehlen wie `READ PICTURE FILE` von der Festplatte lesen können.
+Datenfelder, Variablen oder Ausdrücke vom Typ Bild können in gängigen Windows- oder MacOS-Formaten sein. Dazu gehört jedes Bild, das Sie in die Zwischenablage legen oder mit 4D Befehlen wie `READ PICTURE FILE` von der Festplatte lesen können.
 
 4D verwendet native APIs, um Felder und Variablen vom Typ Bild unter Windows und auf macOS zu codieren (schreiben) bzw. decodieren (lesen). Dies bietet Zugriff auf zahlreiche native Formate, inkl. RAW, dem gängigen Format für Digitalkameras.
 
 *   Unter Windows verwendet 4D WIC (Windows Imaging Component).
 *   Auf MacOS verwendet 4D ImageIO.
 
-WIC and ImageIO permit the use of metadata in pictures. Für diesen Zweck können Sie die beiden Befehle `SET PICTURE METADATA` und `GET PICTURE METADATA` einsetzen.
+Mit WIC und ImageIO lassen sich auch Metadaten in Bildern verwenden. Dafür können Sie die beiden Befehle `SET PICTURE METADATA` und `GET PICTURE METADATA` einsetzen.
 
 ## Bild Codec Kennung
 
 4D unterstützt nativ ein breites Spektrum an [Bildformaten](FormEditor/pictures.md#native-formats-supported), wie .jpeg, .png oder .svg.
 
-Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs.  Es gibt folgende Formen:
+Der Befehl `PICTURE CODEC LIST` gibt von 4D erkannte Bildformate als Codec ID für Bilder zurück.  Es gibt folgende Formen:
 
 *   Als Endung (zum Beispiel “.gif”)
-*   As a MIME type (for example “image/jpeg”)
+*   Als Mime Typ (zum Beispiel “image/jpeg”)
 
 Die vom Befehl zurückgegebene Form richtet sich nach der Art, wie der Codec auf Ebene des Betriebssystems gespeichert ist. Beachten Sie, dass die Liste der verfügbaren Codecs zum Lesen und Schreiben unterschiedlich sein können, da für Codecs zum Codieren u. U. spezifische Lizenzen erforderlich sind.
 
-Die meisten [4D Befehle zur Bildverwaltung](https://doc.4d.com/4Dv18/4D/18/Bilder.201-4504337.de.html) können eine Codec ID als Parameter empfangen. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command. Der Befehl `PICTURE CODEC LIST` gibt von 4D erkannte Bildformate zurück.
+Die meisten [4D Befehle zur Bildverwaltung](https://doc.4d.com/4Dv18/4D/18/Bilder.201-4504337.de.html) können eine Codec ID als Parameter empfangen. Deshalb muss unbedingt die vom Befehl `PICTURE CODEC LIST` zurückgegebene ID des Systems verwendet werden. Der Befehl `PICTURE CODEC LIST` gibt von 4D erkannte Bildformate zurück.
 
 
 

@@ -15,7 +15,7 @@ Shared objects and shared collections can be stored in variables declared with s
 
 In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
 
-A unique, global catalog returned by the `Storage` command is always available throughout the database and its components, and can be used to store all shared objects and collections. 
+A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections. 
 
 ## Using shared objects or collections
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.

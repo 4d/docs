@@ -13,7 +13,7 @@ However, in specific cases you could need to activate your licenses manually, fo
 No activation is required for the following uses:
 
 - 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- 4D used in local mode with an interpreted application project with no access to the Design environment.
 
 
 ## First activation
