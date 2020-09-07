@@ -38,15 +38,15 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:
 
-- The name of a **local** array is preceded by the dollar sign ($).
+- Le nom d'un tableau **local** est précédé du symbole dollar ($).
 - The name of a **process** array cannot start with the <> symbols nor the dollar sign $).
-- The name of an **interprocess** array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Le nom d’un tableau **interprocess** est précédé des symboles (<>), -- les caractères “inférieur à” suivi de “supérieur à”.
 
 Voici quelques exemples :
 ```4d
-ARRAY TEXT($atSubjects;Records in table([Topics])) //local array
-SORT ARRAY(asKeywords;>) //process array
-ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //interprocess array
+ARRAY TEXT($atSubjects;Records in table([Topics])) //tableau local
+SORT ARRAY(asKeywords;>) //tableau process
+ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //tableau interprocess
 ```
 
 
