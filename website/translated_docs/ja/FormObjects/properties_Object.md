@@ -165,9 +165,9 @@ Here is the list of objects whose value can be saved:
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
+| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                         |
+| ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**リストボックス列:** "boolean", "number", "picture", "text", date", (*配列/セレクションリストボックスのみ* "integer", "time", "object") |
 
 #### 対象オブジェクト
 
@@ -182,9 +182,9 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値                                                     |
-| ----- | ------ | --------------------------------------------------------- |
-| class | string | One string with CSS name(s) separated by space characters |
+| 名     | データタイプ | とりうる値                       |
+| ----- | ------ | --------------------------- |
+| class | string | (複数の場合は半角スペース区切りの) クラス名の文字列 |
 
 
 #### 対象オブジェクト
