@@ -132,14 +132,14 @@ title: オブジェクト
 
 - **[ダイナミック変数](#ダイナミック変数)**: このプロパティを使って、ダイナミック変数の型を宣言することができます。
 - **[リストボックス列](listbox_overview.md#リストボックス列)**: このプロパティは列データに表示フォーマットを関連づけるのに使用されます。 提供されるフォーマットは変数型 (配列型のリストボックス) またはデータ/フィールド型 (セレクションおよびコレクション型のリストボックス) により異なります。 使用できる標準の 4D フォーマットはテキスト、数値、整数、日付、時間、ピクチャー、そしてブールです。 テキストの場合は専用の表示フォーマットがありません。 標準フォーマットのほかに、定義したカスタムフォーマットも選択することができます。
-- **[ピクチャー変数](input_overview.md)**: このプロパティを使うと、インタープリタモードにおいてフォームロード前に変数を宣言することができます。 フォーム上のピクチャー変数にピクチャーを表示する際には特別なメカニズムが使用されます。 These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
+- **[ピクチャー変数](input_overview.md)**: このプロパティを使うと、インタープリタモードにおいてフォームロード前に変数を宣言することができます。 フォーム上のピクチャー変数にピクチャーを表示する際には特別なメカニズムが使用されます。 そのため、他の型の変数とは違って、ピクチャー変数の宣言は、フォームロード前 (`On Load` フォームイベントよりも先) におこなう必要があります。 このため、フォームを呼び出す前 (たとえば `DIALOG` コマンドを呼び出す前) に`C_PICTURE(varName)` を実行するか、あらかじめプロパティリストの式の型にピクチャーを選択しておく必要があります。 このいずれかをおこなわない場合、ピクチャー変数はピクチャーを正しく表示できません (インタープリターモードのみ)。
 
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
+| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                         |
+| ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**リストボックス列:** "boolean", "number", "picture", "text", date", (*配列/セレクションリストボックスのみ* "integer", "time", "object") |
 
 #### 対象オブジェクト
 
@@ -149,14 +149,14 @@ title: オブジェクト
 ---
 ## CSSクラス
 
-A list of space-separated words used as class selectors in css files.
+css ファイルにてクラスセレクターとして使用される、(複数の場合は半角スペース区切りの) クラス名のリスト。
 
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値                                                     |
-| ----- | ------ | --------------------------------------------------------- |
-| class | string | One string with CSS name(s) separated by space characters |
+| 名     | データタイプ | とりうる値                       |
+| ----- | ------ | --------------------------- |
+| class | string | (複数の場合は半角スペース区切りの) クラス名の文字列 |
 
 
 #### 対象オブジェクト
