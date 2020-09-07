@@ -168,14 +168,14 @@ css ファイルにてクラスセレクターとして使用される、(複数
 ---
 ## コレクションまたはエンティティセレクション
 
-To use collection elements or entities to define the row contents of the list box.
+コレクション要素あるいはエンティティを使用して、リストボックスの行の中身を定義することができます。
 
-Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
+コレクションあるいはエンティティセレクションを返す式を入力します。 一般的には、コレクションまたはエンティティセレクションを格納している変数名、コレクション要素、あるいはプロパティを入力します。
 
-The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command:
+コレクションおよびエンティティセレクションは、フォームロード時にフォームから利用可能でなければなりません。 コレクションの各要素、あるいはエンティティセレクションの各エンティティは、リストボックスの行へと割り当てられ、[This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドを通してオブジェクトとして利用可能です:
 
-*   if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example **This.\<propertyPath>**.
-*   if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
+*   オブジェクトのコレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各プロパティ値にアクセスすることが可能です。例: **This.\<propertyPath>**。
+*   エンティティセレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各属性値へとアクセスすることが可能です。例: **This.\<attributePath>**。
 > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
 #### JSON 文法
