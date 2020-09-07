@@ -166,8 +166,8 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [行の移動可](properties_Action.md#行の移動可)                                 | ○         |               |                              |
 | [命名セレクション](properties_DataSource.md#命名セレクション)                       |           | ○             |                              |
 | [列数](properties_ListBox.md#列数)                                      | ○         | ○             | ○                            |
-| [スクロールしない列数](properties_ListBox.md#スクロールしない列数-ドラッグしない列数)            | ○         | ○             | ○                            |
-| [ドラッグしない列数](properties_ListBox.md#スクロールしない列数-ドラッグしない列数)             | ○         | ○             | ○                            |
+| [スクロールしない列数](properties_ListBox.md#スクロールしない列数)                      | ○         | ○             | ○                            |
+| [ドラッグしない列数](properties_ListBox.md#スクロールしない列数)                       | ○         | ○             | ○                            |
 | [オブジェクト名](properties_Object.md#オブジェクト名)                             | ○         | ○             | ○                            |
 | [右](properties_CoordinatesAndSizing.md#右)                           | ○         | ○             | ○                            |
 | [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列)                  | ○         |               |                              |
@@ -271,12 +271,12 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 ![](assets/en/FormObjects/listbox_column.png)
 
 リストボックスの各列毎に標準のプロパティ (テキスト、背景色など) を設定できます。設定すると、リストボックスに対する設定よりもこちらが優先されます。
-> 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式タイプ) (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。
+> 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式の型-式タイプ) (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。
 
 
 ### 列特有のプロパティ
 
-[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式タイプ) - [CSSクラス](properties_Object.md#CSSクラス) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-(True時)-テキスト-(False時)) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_Text.md#背景色) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [行フォントカラー式](properties_Text.md#行フォントカラー式) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式の型-式タイプ) - [CSSクラス](properties_Object.md#CSSクラス) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-(True時)-テキスト-(False時)) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_Text.md#背景色) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [行フォントカラー式](properties_Text.md#行フォントカラー式) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
 
 ### フォームイベント
 
@@ -652,7 +652,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 #### "階層リストボックス" プロパティによる階層化
 
-このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、[*dataSource* プロパティの値が array であるときに](properties_Object.md#階層リストボックス)、この機能が利用可能になります。
+このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、[*dataSource* プロパティの値が配列であるとき](properties_Object.md#階層リストボックス)、この機能が利用可能になります。
 
 *階層リストボックス* オプションが選択されると、追加オプションである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース (*dataSource*) 配列を指定します。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
