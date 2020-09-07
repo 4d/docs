@@ -237,8 +237,8 @@ Function getArea
 C_OBJECT($o)  
 C_REAL($area)
 
-$o:=cs.Rectangle.new()  
-$area:=$o.getArea(50;100) //5000
+$o:=cs.Rectangle.new(50;100)  
+$area:=$o.getArea() //5000
 ```
 
 
