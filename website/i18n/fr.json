@@ -674,7 +674,7 @@
         "title": "Sessions et utilisateurs"
       },
       "REST/classFunctions": {
-        "title": "Calling ORDA class functions"
+        "title": "Appeler des fonctions de classe ORDA"
       },
       "REST/configuration": {
         "title": "Configuration du serveur"
