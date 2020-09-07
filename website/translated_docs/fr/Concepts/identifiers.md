@@ -55,7 +55,7 @@ Vous désignez un élément d’un tableau local, process ou interprocess à l�
 
 Voici quelques exemples :
 ```4d   
-    //Addressing an element of a local array
+    //Traiter un élément d'un tableau local
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
@@ -66,7 +66,7 @@ Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une 
 
 Voici quelques exemples :
 ```4d 
-    //Addressing an element of a two-dimensional process array
+    //Traiter un élément d'un tableau process bidimensionnel
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
@@ -107,7 +107,7 @@ FORM SET OUTPUT([Personnes];"Sortie")
 
 ## Sélections temporaires
 
-A named selection name can contain up to 255 characters, not including scope character(s).
+Le nom d'une sélection nommée peut contenir jusqu’à 255 caractères, symbole <> non compris).
 
 - You denote a **process** named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $).
 - You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
