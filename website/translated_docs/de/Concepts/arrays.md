@@ -51,7 +51,7 @@ Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über ein
 Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht einem anderen zuweisen. Dafür müssen Sie den Befehl `COPY ARRAY` verwenden.
 
 
-## Element Null eines Array verwenden
+## Element 0 (Null)
 
 Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
