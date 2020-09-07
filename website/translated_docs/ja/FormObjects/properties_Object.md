@@ -203,7 +203,7 @@ css ファイルにてクラスセレクターとして使用される、(複数
 - **配列** (デフォルト): リストボックスの各行に 配列要素を割り当てます。
 - **カレントセレクション**: 指定したテーブルのカレントセレクションの各レコードごとに式、フィールド、メソッドが評価されます。
 - **命名セレクション**: 指定した命名セレクションに含まれる各レコードごとに式、フィールド、メソッドが評価されます。
-- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
+- **コレクションまたはエンティティセレクション**: コレクション要素あるいはエンティティを使用してリストボックスの行の中身を定義します。 この場合 [コレクションまたはエンティティセレクション](properties_Object.md#コレクションまたはエンティティセレクション) プロパティを定義する必要があります。
 
 #### JSON 文法
 
@@ -223,7 +223,7 @@ css ファイルにてクラスセレクターとして使用される、(複数
 ---
 ## プラグインの種類
 
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
+オブジェクトに関連付ける [プラグイン](pluginArea_overview.md) の名称。 ここで指定するプラグイン名は、プラグインの manifest.json ファイルにて公開されています。
 
 
 #### JSON 文法
