@@ -109,19 +109,19 @@ FORM SET OUTPUT([Personnes];"Sortie")
 
 Le nom d'une sélection temporaire peut contenir jusqu’à 255 caractères, symbole <> non compris).
 
-- Déclarez une sélection **process** nommée en passant simplement une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $).
-- You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Déclarez une sélection temporaire **process** en passant une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $).
+- Désignez une sélection temporaire **interprocess** si son nom est précédé des caractères (<>) -- un symbole “inférieur à” suivi de “supérieur à”.
 
 Voici quelques exemples :
 ```4d
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
+USE NAMED SELECTION([Customers];"Closed")//Sélection temporaire process
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Sélection temporaire interprocess
 ```
 
 
 ## Propriétés (attributs) d'objets
 
-You designate an object attribute (also called object property) by placing a point (".") between the name of the object and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
+Désignez un attribut d'objet (également appelé propriété d'objet) en plaçant un point (".") entre le nom de l'objet et le nom de l'attribut. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
 Voici quelques exemples :
 ```4d
@@ -143,7 +143,7 @@ $erreur:=SMTP_From($smtp_id;"henry@gmail.com")
 
 ## Process
 
-A process name can contain up to 255 characters, not including scope character.
+Le nom d'un process peut contenir jusqu’à 255 caractères, symbole <> non compris.
 
 In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
 
