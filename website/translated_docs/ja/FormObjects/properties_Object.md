@@ -270,7 +270,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 ## ラジオグループ
 
-Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
+複数のラジオボタンを連動させるためのプロパティです。同じラジオグループに属している複数のラジオボタンは、一度にその内の一つのみを選択することができます。
 
 #### JSON 文法
 
@@ -320,10 +320,10 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 ---
 ## 変数の計算
 
-This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
-> The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
+このプロパティは、[リストボックスフッター](listbox_overview.md#リストボックスフッター) エリアに適用される計算タイプを設定します。
+> リストボックスのフッターに割り当てる自動計算は [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-FOOTER-CALCULATION.301-4505215.ja.html) 4D コマンドを使用しても設定できます。
 
-There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+様々な自動計算が利用可能です。 The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
 | Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
 | --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
