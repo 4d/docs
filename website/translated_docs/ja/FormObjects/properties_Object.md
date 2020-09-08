@@ -242,7 +242,7 @@ css ファイルにてクラスセレクターとして使用される、(複数
 
 ## ラジオグループ
 
-Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
+複数のラジオボタンを連動させるためのプロパティです。同じラジオグループに属している複数のラジオボタンは、一度にその内の一つのみを選択することができます。
 
 #### JSON 文法
 
@@ -292,7 +292,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 ---
 ## 変数の計算
 
-This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
+このプロパティは、[リストボックスフッター](listbox_overview.md#リストボックスフッター) エリアに適用される計算タイプを設定します。
 > The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
