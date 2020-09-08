@@ -323,7 +323,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 このプロパティは、[リストボックスフッター](listbox_overview.md#リストボックスフッター) エリアに適用される計算タイプを設定します。
 > リストボックスのフッターに割り当てる自動計算は [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-FOOTER-CALCULATION.301-4505215.ja.html) 4D コマンドを使用しても設定できます。
 
-様々な自動計算が利用可能です。 The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+様々な自動計算が利用可能です。 以下の表は、列のデータ型に応じて使用することのできる計算と、(コードで明示的に宣言されていないとき) フッター変数に自動で割り当てられる型を示しています:
 
 | Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
 | --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
