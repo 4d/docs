@@ -22,7 +22,7 @@ Lorsque cette propriété est activée, les commandes [OPEN FONT PICKER](https:/
 ---
 ## Gras
 
-Faire en sorte que le texte sélectionné soit plus foncé et plus épais.
+Le texte sélectionné est plus foncé et plus épais.
 
 Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 > Ceci est un texte normal.<br> **Ceci est un texte en gras.**
@@ -41,7 +41,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [**OB
 ---
 ## Italique
 
-Sets the selected text to slant slightly to the right.
+Le texte sélectionné est légèrement penché vers la droite.
 
 Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 > Ceci est un texte normal.<br> *Ceci est un texte en italique.*
@@ -61,7 +61,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [**OB
 
 ---
 ## Souligné
-Sets the text to have a line running beneath it.
+Une ligne est placée sous le texte.
 > Ceci est un texte normal.<br> <span style="text-decoration:underline">Ceci est un texte souligné.</span>.
 
 #### Grammaire JSON
@@ -531,7 +531,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a> (non-enterable) - <a href="text.md">Text Area</a>
+  <a href="input_overview.md">Zone de saisie</a> (non saisissable) - <a href="text.md">Zone de texte</a>
 </p>
 
 
