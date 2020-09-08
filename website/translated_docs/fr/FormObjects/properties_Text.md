@@ -224,9 +224,9 @@ Foreground color;Dark shadow color)
 
 `List box de type collection/sélection d'entité`
 
-Used to apply a custom character style to each row of the list box or each cell of the column.
+Utilisé pour appliquer un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 
-Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). Vous pouvez utiliser les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
+Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou variable sera évaluée pour chaque ligne affichée (si elle s'applique à la list box) ou chaque cellule affichée (si elle s'applique à la list box). Vous pouvez utiliser les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
 
 Exemple :
 
