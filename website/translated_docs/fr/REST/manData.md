@@ -3,7 +3,7 @@ id: manData
 title: Manipulation des données
 ---
 
-All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](classFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
+Tous [les attributs, dataclasses exposés](configuration.md#exposing-tables-and-fields) et toutes les [fonctions](classFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
 
 ## Rechercher des données
 
@@ -20,9 +20,9 @@ Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souh
 
 Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Avant d'enregistrer des données, vous pouvez également les valider au préalable en appelant [`$method=validate`]($method.md#methodvalidate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
+Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une [fonction de classe (class function)](classFunctions.md#function-calls) qui retourne une entity selection (ou une collection).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
 
 ## Navigating data
@@ -69,7 +69,7 @@ Pour calculer toutes les valeurs et retourner un objet JSON :
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Calling Data model class functions
+## Appeler les fonctions de classe du modèle de données
 
 You can call ORDA Data Model [user class functions](classFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
