@@ -33,4 +33,4 @@ title: 印刷
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)
+[入力](input_overview.md) - [サブフォーム](subform_overview.md) (リストサブフォームのみ) - [4D Write Pro エリア](writeProArea_overview.md)
