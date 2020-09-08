@@ -274,9 +274,9 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値            |
-| ---------- | ------ | ---------------- |
-| radioGroup | string | Radio group name |
+| 名          | データタイプ | とりうる値    |
+| ---------- | ------ | -------- |
+| radioGroup | string | ラジオグループ名 |
 
 
 #### 対象オブジェクト
