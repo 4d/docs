@@ -29,9 +29,9 @@ title: 値の範囲
 
 #### JSON 文法
 
-| 名            | データタイプ                              | とりうる値                                      |
-| ------------ | ----------------------------------- | ------------------------------------------ |
-| defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
+| 名            | データタイプ                              | とりうる値                          |
+| ------------ | ----------------------------------- | ------------------------------ |
+| defaultValue | string, number, date, time, boolean | 任意の値。次の記号を含む: "#D", "#H", "#N" |
 
 #### 対象オブジェクト
 
@@ -43,14 +43,14 @@ title: 値の範囲
 
 ## 除外リスト
 
-Allows setting a list whose values cannot be entered in the object. ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+除外リストを使用すると、当該リストの項目は入力できなくなります。 ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
+> 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
 
 #### JSON 文法
 
-| 名            | データタイプ | とりうる値                            |
-| ------------ | ------ | -------------------------------- |
-| excludedList | list   | A list of values to be excluded. |
+| 名            | データタイプ | とりうる値     |
+| ------------ | ------ | --------- |
+| excludedList | list   | 除外する値のリスト |
 
 #### 対象オブジェクト
 
@@ -65,7 +65,7 @@ Allows setting a list whose values cannot be entered in the object. ユーザー
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 
 Making a list required does not automatically display the list when the field is selected. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+> 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
 
 #### JSON 文法
 
