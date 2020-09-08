@@ -211,10 +211,10 @@
         "title": "プラグイン"
       },
       "FormObjects/propertiesPrint": {
-        "title": "Print"
+        "title": "印刷"
       },
       "FormObjects/propertiesRangeOfValues": {
-        "title": "Range of Values"
+        "title": "値の範囲"
       },
       "FormObjects/propertiesReference": {
         "title": "JSON property list"
