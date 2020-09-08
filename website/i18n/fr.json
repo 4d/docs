@@ -674,7 +674,7 @@
         "title": "Sessions et utilisateurs"
       },
       "REST/classFunctions": {
-        "title": "Calling ORDA class functions"
+        "title": "Appeler des fonctions de classe ORDA"
       },
       "REST/configuration": {
         "title": "Configuration du serveur"
@@ -708,11 +708,11 @@
     },
     "categories": {
       "Getting Started": "Prise en main",
-      "Project Management": "Project Management",
+      "Project Management": "Gestion de projet",
       "4D Language Concepts": "Concepts du langage 4D",
       "ORDA": "ORDA",
-      "Class API Reference": "Class API Reference",
-      "Access Rights": "Access Rights",
+      "Class API Reference": "Classes API",
+      "Access Rights": "Droits d'accès",
       "Administration": "Administration",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
@@ -730,9 +730,9 @@
     "Installation|in index page Getting started": "Installation",
     "Starting 4D|in index page Getting started": "Démarrer 4D",
     "Language Concepts|in index page Getting started": "Concepts du langage",
-    "Project Management|in index page Getting started": "Project Management",
+    "Project Management|in index page Getting started": "Gestion de projet",
     "Object Relational Data Access (ORDA)|in index page Getting started": "Object Relational Data Access (ORDA)",
-    "Class API Reference|no description given": "Class API Reference",
+    "Class API Reference|no description given": "Classes API",
     "Forms|no description given": "Formulaires",
     "Form Properties|no description given": "Propriétés des formulaires",
     "Form Events|no description given": "Evénements formulaire",
@@ -744,11 +744,11 @@
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "Gestion des licences",
-    "Build Application|no description given": "Build Application",
-    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
-    "Access Rights|no description given": "Access Rights",
+    "Build Application|no description given": "Générateur d'application",
+    "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
+    "Access Rights|no description given": "Droits d'accès",
     "Getting started|no description given": "Prise en main",
-    "Core Development|no description given": "Core Development",
+    "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",
     "Web applications|no description given": "Applications Web",
     "Mobile applications|no description given": "Applications Mobile",

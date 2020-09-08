@@ -270,13 +270,13 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 ## ラジオグループ
 
-Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
+複数のラジオボタンを連動させるためのプロパティです。同じラジオグループに属している複数のラジオボタンは、一度にその内の一つのみを選択することができます。
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値            |
-| ---------- | ------ | ---------------- |
-| radioGroup | string | Radio group name |
+| 名          | データタイプ | とりうる値    |
+| ---------- | ------ | -------- |
+| radioGroup | string | ラジオグループ名 |
 
 
 #### 対象オブジェクト
@@ -320,29 +320,29 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 ---
 ## 変数の計算
 
-This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
-> The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
+このプロパティは、[リストボックスフッター](listbox_overview.md#リストボックスフッター) エリアに適用される計算タイプを設定します。
+> リストボックスのフッターに割り当てる自動計算は [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-FOOTER-CALCULATION.301-4505215.ja.html) 4D コマンドを使用しても設定できます。
 
-There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+様々な自動計算が利用可能です。 以下の表は、列のデータ型に応じて使用することのできる計算と、(コードで明示的に宣言されていないとき) 4D によってフッター変数に自動で割り当てられる型を示しています:
 
-| Calculation           | Num | テキスト | 日付 | 時間 | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | -- | -- | ---- | ---- | ------------------- |
-| 最小                    | ○   |      | ○  | ○  | ○    |      | Same as column type |
-| 最大                    | ○   |      | ○  | ○  | ○    |      | Same as column type |
-| Sum                   | ○   |      | ○  |    | ○    |      | Same as column type |
-| Count                 | ○   | ○    | ○  | ○  | ○    | ○    | 倍長整数                |
-| Average               | ○   |      |    | ○  |      |      | 実数                  |
-| Standard deviation(*) | ○   |      |    | ○  |      |      | 実数                  |
-| Variance(*)           | ○   |      |    | ○  |      |      | 実数                  |
-| Sum squares(*)        | ○   |      |    | ○  |      |      | 実数                  |
-| Custom ("none")       | ○   | ○    | ○  | ○  | ○    | ○    | Any                 |
+| 計算タイプ                 | Num | テキスト | 日付 | 時間 | Bool | ピクチャー | フッター変数の型 |
+| --------------------- | --- | ---- | -- | -- | ---- | ----- | -------- |
+| 最小                    | ○   |      | ○  | ○  | ○    |       | 列の型と同じ   |
+| 最大                    | ○   |      | ○  | ○  | ○    |       | 列の型と同じ   |
+| 合計                    | ○   |      | ○  |    | ○    |       | 列の型と同じ   |
+| カウント                  | ○   | ○    | ○  | ○  | ○    | ○     | 倍長整数     |
+| 平均                    | ○   |      |    | ○  |      |       | 実数       |
+| 標準偏差(*)               | ○   |      |    | ○  |      |       | 実数       |
+| 分散(*)                 | ○   |      |    | ○  |      |       | 実数       |
+| 平方和(*)                | ○   |      |    | ○  |      |       | 実数       |
+| カスタム (JSON では "none") | ○   | ○    | ○  | ○  | ○    | ○     | 制限なし     |
 
-(*) Only for array type list boxes.
+(*) 配列型のリストボックスのみ
 
-When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+計算が選択されると、リストボックス列内のすべての値が自動計算の対象となります。 リストボックス行の表示/非表示状態は考慮されません。 表示行だけを計算対象にしたい場合、カスタムを選択してプログラムコードで計算しなくてはなりません。
 
-When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
-> Automatic calculations are not supported with: *  footers of columns based on formulas, *  footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. You need to use custom calculations.
+**カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
+> 以下のフッターに対しては自動計算を関連付けることができません:<br /> ・フォーミュラを割り当てた列のフッター<br /> ・[コレクションまたはエンティティセレクションリストボックス](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) のフッター これらの場合には、カスタム計算を使用する必要があります。
 
 #### JSON 文法
 

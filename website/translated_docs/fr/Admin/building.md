@@ -226,7 +226,7 @@ Also, the client/server application is customized and its handling simplified:
 
 ### Build server application
 
-Check this option to generate the server part of your application during the building phase. Vous devez désigner sur votre disque l’emplacement de l’application 4D Server à utiliser. This 4D Server must correspond to the current platform (which will also be the platform of the server application).
+Check this option to generate the server part of your application during the building phase. Vous devez désigner sur votre disque l’emplacement de l’application 4D Server à utiliser. Ce 4D Server doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application du serveur).
 
 #### 4D Server location
 
@@ -315,7 +315,7 @@ There are many possible causes for this error. When you get this message, it is 
 Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
 > These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
 
-The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. The *\<ApplicationName>Server* folder contains the server portion of the application.
+The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. Le dossier *\<ApplicationName>Server* contient la partie serveur de l'application.
 
 The contents of these folders vary depending on the current platform:
 
