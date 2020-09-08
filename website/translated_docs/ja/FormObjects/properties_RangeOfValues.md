@@ -6,11 +6,11 @@ title: 値の範囲
 ---
 ## デフォルト値
 
-入力オブジェクトにデフォルト値を割り当てることができます。 This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
+入力オブジェクトにデフォルト値を割り当てることができます。 このプロパティは、入力オブジェクトに設定されている [変数あるいは式](properties_Object.md#変数あるいは式) がフィールドであるときに便利です。新規レコードが作成され、初めて表示されるときにデフォルト値が代入されます。 エリアが [入力不可](properties_Entry.md#入力可) に設定されていなければ、デフォルト値を書き換えることができます。
 
-The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
-- text/string
-- number/integer
+デフォルト値を指定できるのは、[式の型](properties_Object.md#式の型) が次のいずれかの場合です:
+- テキスト/文字列
+- 数値/整数
 - date
 - time
 - boolean
