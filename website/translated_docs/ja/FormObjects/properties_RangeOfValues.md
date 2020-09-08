@@ -15,15 +15,15 @@ title: 値の範囲
 - time
 - boolean
 
-4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
+日付、時刻、シーケンス番号については、4D が提供する記号を使用することができます。 日付と時刻はシステムから取得されます。 シーケンス番号は 4D が自動で生成します。 自動で使用できるデフォルト値の記号は以下の通りです:
 
-| Stamp | Meaning         |
-| ----- | --------------- |
-| #D    | Current date    |
-| #H    | Current time    |
-| #N    | Sequence number |
+| 記号 | 意味      |
+| -- | ------- |
+| #D | 本日の日付   |
+| #H | 現在の時刻   |
+| #N | シーケンス番号 |
 
-You can use a sequence number to create a unique number for each record in the table for the current data file. A sequence number is a longint that is generated for each new record. The numbers start at one (1) and increase incrementally by one (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Each table has its own internal counter of sequence numbers. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph.
+カレントデータファイルの特定のテーブルにおいて、レコード毎のユニーク番号を生成するためにシーケンス番号を使用することができます。 シーケンス番号は倍長整数型で新規レコード毎に生成されます。 番号は 1 から始まり、1ずつ増加します。 シーケンス番号が割り当てられたレコードがテーブルから削除されても、その番号は再利用されません。 シーケンス番号は各テーブルが保有する内部カウンターが管理します。 詳細は [自動インクリメント](https://doc.4d.com/4Dv18/4D/18/Field-properties.300-4575567.ja.html#976029) の段落を参照してください。
 
 > Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
 
