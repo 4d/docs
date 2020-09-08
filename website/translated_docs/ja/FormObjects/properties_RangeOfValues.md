@@ -64,14 +64,14 @@ title: 値の範囲
 
 有効な入力値のリストを指定するために使用します。 たとえば、役職名のリストを指定リストとして設定できます。こうすると、事前に作成されたリスト中の役職名だけ有効な値となります。
 
-指定リストを指定しても、フィールドが選択されたときにリストは自動で表示されません。 指定リストを表示したい場合は、"データソース"テーマの [選択リスト](properties_DataSource.md#選択リスト) プロパティに同じリストを指定します。 However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+指定リストを指定しても、フィールドが選択されたときにリストは自動で表示されません。 指定リストを表示したい場合は、"データソース"テーマの [選択リスト](properties_DataSource.md#選択リスト) プロパティに同じリストを指定します。 ただし、[選択リスト](properties_DataSource.md#選択リスト) プロパティだけが指定されているときとは異なり、指定リストも設定されている場合にはキーボードによる入力はできません。ポップアップメニューでのリスト項目の選択だけが可能です。 [選択リスト](properties_DataSource.md#選択リスト) と指定リストにそれぞれ別のリストが指定されている場合、指定リストが優先されます。
 > 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
 
 #### JSON 文法
 
-| 名            | データタイプ | とりうる値                       |
-| ------------ | ------ | --------------------------- |
-| requiredList | list   | A list of mandatory values. |
+| 名            | データタイプ | とりうる値      |
+| ------------ | ------ | ---------- |
+| requiredList | list   | 有効な入力値のリスト |
 
 #### 対象オブジェクト
 
