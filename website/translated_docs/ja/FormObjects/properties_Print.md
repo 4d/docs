@@ -1,6 +1,6 @@
 ---
 id: propertiesPrint
-title: Print
+title: 印刷
 ---
 
 ---
