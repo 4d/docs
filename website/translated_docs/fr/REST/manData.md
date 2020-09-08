@@ -71,14 +71,14 @@ Pour calculer toutes les valeurs et retourner un objet JSON :
 
 ## Appeler les fonctions de classe du modèle de données
 
-You can call ORDA Data Model [user class functions](classFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Vous pouvez appeler des [fonctions de classe utilisateurs](classFunctions.md) ORDA du modèle de données via des requêtes POST, afin de pouvoir bénéficier de l'API de l'application ciblée. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
-with data in the body of the request: `["Paris"]`
+avec des données contenues dans le corps de la requête : `["Paris"]`
 
 
-> Calls to 4D project methods that are exposed as REST Service are still supported but are deprecated.
+> Les appels aux méthodes projet 4D exposées en tant que service REST sont toujours pris en charge mais sont obsolètes.
 
 
 ## Selecting Attributes to get
