@@ -54,7 +54,7 @@ title: 値の範囲
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
 
 
@@ -62,9 +62,9 @@ title: 値の範囲
 
 ## 指定リスト
 
-Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
+有効な入力値のリストを指定するために使用します。 たとえば、役職名のリストを指定リストとして設定できます。こうすると、事前に作成されたリスト中の役職名だけ有効な値となります。
 
-Making a list required does not automatically display the list when the field is selected. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+指定リストを指定しても、フィールドが選択されたときにリストは自動で表示されません。 指定リストを表示したい場合は、"データソース"テーマの [選択リスト](properties_DataSource.md#選択リスト) プロパティに同じリストを指定します。 However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
 > 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
 
 #### JSON 文法
@@ -75,7 +75,7 @@ Making a list required does not automatically display the list when the field is
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
 
 
