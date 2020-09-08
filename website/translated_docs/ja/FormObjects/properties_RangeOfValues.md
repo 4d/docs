@@ -25,13 +25,13 @@ title: 値の範囲
 
 カレントデータファイルの特定のテーブルにおいて、レコード毎のユニーク番号を生成するためにシーケンス番号を使用することができます。 シーケンス番号は倍長整数型で新規レコード毎に生成されます。 番号は 1 から始まり、1ずつ増加します。 シーケンス番号が割り当てられたレコードがテーブルから削除されても、その番号は再利用されません。 シーケンス番号は各テーブルが保有する内部カウンターが管理します。 詳細は [自動インクリメント](https://doc.4d.com/4Dv18/4D/18/Field-properties.300-4575567.ja.html#976029) の段落を参照してください。
 
-> Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
+> このプロパティと、リストボックス列に固定値を表示させるための "[デフォルト値](properties_DataSource.md#デフォルト値)" を混同しないようにしてください。
 
 #### JSON 文法
 
-| 名            | データタイプ                              | とりうる値                                      |
-| ------------ | ----------------------------------- | ------------------------------------------ |
-| defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
+| 名            | データタイプ                              | とりうる値                          |
+| ------------ | ----------------------------------- | ------------------------------ |
+| defaultValue | string, number, date, time, boolean | 任意の値。次の記号を含む: "#D", "#H", "#N" |
 
 #### 対象オブジェクト
 
@@ -43,14 +43,14 @@ title: 値の範囲
 
 ## 除外リスト
 
-Allows setting a list whose values cannot be entered in the object. ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+除外リストを使用すると、当該リストの項目は入力できなくなります。 ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
+> 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
 
 #### JSON 文法
 
-| 名            | データタイプ | とりうる値                            |
-| ------------ | ------ | -------------------------------- |
-| excludedList | list   | A list of values to be excluded. |
+| 名            | データタイプ | とりうる値     |
+| ------------ | ------ | --------- |
+| excludedList | list   | 除外する値のリスト |
 
 #### 対象オブジェクト
 
@@ -65,7 +65,7 @@ Allows setting a list whose values cannot be entered in the object. ユーザー
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 
 Making a list required does not automatically display the list when the field is selected. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+> 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
 
 #### JSON 文法
 
