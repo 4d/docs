@@ -14,17 +14,17 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 ||
 |---|
-|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptUnsecureConnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
+|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
 |[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->|
-|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
-|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
+|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
+|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
 |[<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.headerCharset.Summary -->|
 |[<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
 |[<!-- INCLUDE #smtpTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.keepAlive.Summary -->|
 |[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
 |[<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
-|[<!-- INCLUDE #smtpTransporterClass.send().Syntax -->](#send-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.send().Summary -->|
+|[<!-- INCLUDE #smtpTransporterClass.send().Syntax -->](#send)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #smtpTransporterClass.send().Summary -->|
 |[<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
@@ -42,7 +42,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 </details>
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
-**SMTP New transporter**( *server* ) -> object<!-- END REF -->
+**SMTP New transporter**( *server* : object ) -> object<!-- END REF -->
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Params -->
 |Parameter|Type||Description|
@@ -53,20 +53,21 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 
 #### Description
+
 The `SMTP New transporter` command <!-- REF #smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
 
 > This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send( )`](#send-) function is executed.  
 > 
 >The SMTP connection is automatically closed:
 > *	when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default),
-> *	after each  [`.send( )`](#send-) function execution if the [`keepAlive`](#keepalive) property is set to false.
+> *	after each  [`.send( )`](#send) function execution if the [`keepAlive`](#keepalive) property is set to false.
 
 
 
 
 In the *server* parameter, pass an object containing the following properties:
 
-|*server* property|Default value (if omitted)|
+|*server*|Default value (if omitted)|
 |---|---|
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
@@ -142,8 +143,8 @@ For information about SMTP status codes, please refer to [this page](https://www
 #### Example
 
 ```4d
- C_TEXT($pw)
- C_OBJECT($options)
+ var $pw : Text
+ var $options : Object
  $options:=New object
 
  $pw:=Request("Please enter your password:")
@@ -191,7 +192,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 </details>
 
 <!-- REF #smtpTransporterClass.keepAlive.Syntax -->
-**.keepAlive** -> boolean<!-- END REF -->
+**.keepAlive** : boolean<!-- END REF -->
 
 
 #### Description
@@ -218,37 +219,35 @@ The SMTP connection is automatically closed:
 
 ---
 
-## .send( )
+## .send()
 
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
+|v17 R5|Support of mime contents|
 |v17 R4|Added|
-|v17 R5|Modified|
 </details>
 
 <!-- REF #smtpTransporterClass.send().Syntax -->
-**.send**( *mail* ) -> object<!-- END REF -->
+**.send**( *mail* : object ) : object<!-- END REF -->
 
 <!-- REF #smtpTransporterClass.send().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|mail|object|Email to send|
+|mail|object|[Email](emailObjectClass.md#email-object) to send|
 |Result|object|<-|SMTP status|
 <!-- END REF -->
 
 
 #### Description
 
-The `.send( )` function  <!-- REF #smtpTransporterClass.send().Summary -->sends the mail object to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
+The `.send()` function  <!-- REF #smtpTransporterClass.send().Summary -->sends the [*mail* object](emailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
 
 >The `transporter` object must have already been created using the `SMTP New transporter` command.
 
-The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send( )`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the `SMTP New transporter` command description.
+The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the `SMTP New transporter` command description.
 
-In *mail*, pass a valid `Email` object to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
-
-For a description of the `Email` object, please refer to the [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html) section.
+In *mail*, pass a valid [`Email` object](emailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
 
 ---
 

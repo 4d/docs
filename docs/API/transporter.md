@@ -16,7 +16,7 @@ title: Transporter Class
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->
-**.acceptUnsecureConnection** -> boolean<!-- END REF -->
+**.acceptUnsecureConnection** : boolean<!-- END REF -->
 
 
 #### Description
@@ -52,7 +52,7 @@ Available secured ports are:
 </details>
 
 <!-- REF #transporter.authenticationMode.Syntax -->
-**.authenticationMode** -> text<!-- END REF -->
+**.authenticationMode** : text<!-- END REF -->
 
 #### Description
 
@@ -79,12 +79,12 @@ Possible values are:
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
+|v18|Support for UTF8 base64|
 |v17 R5|Added|
-|v18|Modified|
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->
-**.bodyCharset** -> text<!-- END REF -->
+**.bodyCharset** : text<!-- END REF -->
 
 
 #### Description
@@ -119,7 +119,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 </details>
 
 <!-- REF #transporter.connectionTimeOut.Syntax -->
-**.connectionTimeOut** -> integer<!-- END REF -->
+**.connectionTimeOut** : integer<!-- END REF -->
 
 
 
@@ -142,7 +142,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 </details>
 
 <!-- REF #transporter.headerCharset.Syntax -->
-**.headerCharset** -> text<!-- END REF -->
+**.headerCharset** : text<!-- END REF -->
 
 
 #### Description
@@ -177,7 +177,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 </details>
 
 <!-- REF #transporter.host.Syntax -->
-**.host** -> text<!-- END REF -->
+**.host** : text<!-- END REF -->
 
 
 #### Description
@@ -198,7 +198,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 </details>
 
 <!-- REF #transporter.logFile.Syntax -->
-**.logFile** -> text<!-- END REF -->
+**.logFile** : text<!-- END REF -->
 
 
 #### Description
@@ -229,7 +229,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 </details>
 
 <!-- REF #transporter.port.Syntax -->
-**.port** -> number<!-- END REF -->
+**.port** : number<!-- END REF -->
 
 
 #### Description
@@ -257,7 +257,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->
-**.sendTimeOut** -> number<!-- END REF -->
+**.sendTimeOut** : number<!-- END REF -->
 
 
 #### Description
@@ -278,7 +278,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 </details>
 
 <!-- REF #transporter.user.Syntax -->
-**.user** -> text<!-- END REF -->
+**.user** : text<!-- END REF -->
 
 
 #### Description
@@ -289,7 +289,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 ---
 
 <!-- REF transporter.checkConnection().Desc -->
-## .checkConnection( )
+## .checkConnection()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -298,7 +298,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 </details>
 
 <!-- REF #transporter.checkConnection().Syntax -->
-**.checkConnection( )** -> object<!-- END REF -->
+**.checkConnection()** : object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
 |Parameter|Type||Description|
@@ -309,7 +309,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 #### Description
 
-The `.checkConnection( )` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
+The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
 
 #### Returned object

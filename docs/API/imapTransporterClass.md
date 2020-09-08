@@ -12,21 +12,21 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 ||
 |---|
-|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptUnsecureConnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
+|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
-|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
+|[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
-|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.getDelimiter().Syntax -->](#getdelimiter-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getDelimiter().Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.getMail().Syntax -->](#getmail-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMail().Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.getMails().Syntax -->](#getmails-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMails().Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Summary -->|
+|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.getDelimiter().Syntax -->](#getdelimiter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getDelimiter().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.getMail().Syntax -->](#getmail)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMail().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.getMails().Syntax -->](#getmails)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMails().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Summary -->|
 |[<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
 |[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
 |[<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
 ---
@@ -40,7 +40,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 </details>
 
 <!-- REF imapTransporterClass.IMAP New transporter.Syntax -->
-**IMAP New transporter**( *server* ) -> object<!-- END REF -->
+**IMAP New transporter**( *server* : object ) : object<!-- END REF -->
 
 <!-- REF imapTransporterClass.IMAP New transporter.Params -->
 |Parameter|Type||Description|
@@ -55,7 +55,7 @@ The `IMAP New transporter` command <!-- REF imapTransporterClass.IMAP New transp
 
 In the *server* parameter, pass an object containing the following properties:
 
-|*server* property|Default value (if omitted)|
+|*server*|Default value (if omitted)|
 |---|---|
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
@@ -95,14 +95,14 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
  End if
 ```
 
+---
+
+<!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 ---
 
 <!-- INCLUDE transporter.authenticationMode.Desc -->
 
----
-
-<!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 ---
 
@@ -121,7 +121,7 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 </details>
 
 <!-- REF #imapTransporterClass.checkConnectionDelay.Syntax -->
-**.checkConnectionDelay** -> number<!-- END REF -->
+**.checkConnectionDelay** : number<!-- END REF -->
 
 
 #### Description
@@ -138,7 +138,7 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 ---
 
 <!-- REF imapTransporterClass.getBoxInfo().Desc -->
-## .getBoxInfo( )
+## .getBoxInfo()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -147,7 +147,7 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 </details>
 
 <!-- REF #imapTransporterClass.getBoxInfo().Syntax -->
-**.getBoxInfo**( *name* ) -> object<!-- END REF -->
+**.getBoxInfo**( *name* : text ) : object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxInfo().Params -->
 |Parameter|Type||Description|
@@ -159,9 +159,9 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 
 #### Description
 
-The `.getBoxInfo( )` function  <!-- REF #imapTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox *name*<!-- END REF -->. This function returns the same information as `.selectBox( )` without changing the current mailbox.
+The `.getBoxInfo()` function  <!-- REF #imapTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox *name*<!-- END REF -->. This function returns the same information as `.selectBox()` without changing the current mailbox.
 
-In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the `.getDelimiter( )` command. 
+In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) command. 
 
 
 **Returned object**
@@ -179,7 +179,7 @@ The `boxInfo` object returned contains the following properties:
 #### Example
 
 ```4d
-$transporter:=IMAP New transporter($server)
+ $transporter:=IMAP New transporter($server)
  
  $info:=$transporter.getBoxInfo("INBOX")
  ALERT("INBOX contains "+String($info.mailRecent)+" recent emails.")
@@ -191,7 +191,7 @@ $transporter:=IMAP New transporter($server)
 ---
 
 <!-- REF imapTransporterClass.getBoxList().Desc -->
-## .getBoxList( )
+## .getBoxList()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -200,7 +200,7 @@ $transporter:=IMAP New transporter($server)
 </details>
 
 <!-- REF #imapTransporterClass.getBoxList().Syntax -->
-**.getBoxList( )** -> collection<!-- END REF -->
+**.getBoxList()** : collection<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxList().Params -->
 |Parameter|Type||Description|
@@ -211,24 +211,23 @@ $transporter:=IMAP New transporter($server)
 
 #### Description
 
-The `.getBoxList( )` function  <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server. 
+The `.getBoxList()` function  <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server. 
 
 #### Result
 
 Each object of the returned collection contains the following properties:
  
-
 |Property| 	Type|Description |
 |---|---|---|
-|\[ ].name|text|Name of the mailbox |
-|\[ ].selectable |boolean |Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>|
-|\[ ].inferior |boolean |Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>|
-|\[ ].interesting |boolean  |Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>|
+|\[].name|text|Name of the mailbox |
+|\[].selectable |boolean |Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>|
+|\[].inferior |boolean |Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>|
+|\[].interesting |boolean  |Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>|
  
 
 If the account does not contain any mailboxes, an empty collection is returned.
 
->*	If there is no open connection, `.getBoxList( )` will open a connection.
+>*	If there is no open connection, `.getBoxList()` will open a connection.
 >*	If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the `.checkConnection( )` function is automatically called.
 
 
@@ -236,7 +235,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 
 ```4d
-$transporter:=IMAP New transporter($server)
+ $transporter:=IMAP New transporter($server)
  
  $boxList:=$transporter.getBoxList()
  
@@ -253,7 +252,7 @@ $transporter:=IMAP New transporter($server)
 ---
 
 <!-- REF imapTransporterClass.getDelimiter().Desc -->
-## .getDelimiter( )
+## .getDelimiter()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -262,7 +261,7 @@ $transporter:=IMAP New transporter($server)
 </details>
 
 <!-- REF #imapTransporterClass.getDelimiter().Syntax -->
-**.getDelimiter( )** -> text<!-- END REF -->
+**.getDelimiter()** : text<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getDelimiter().Params -->
 |Parameter|Type||Description|
@@ -287,7 +286,7 @@ Mailbox name delimiter character.
 
 
 >*	If there is no open connection, `.getDelimiter( )` will open a connection.
->*	If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection( )`](#checkconnection-) function is automatically called.
+>*	If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection( )`](#checkconnection) function is automatically called.
 
 
 #### Example
@@ -312,7 +311,7 @@ Mailbox name delimiter character.
 ---
 
 <!-- REF imapTransporterClass.getMail().Desc -->
-## .getMail( )
+## .getMail()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -321,25 +320,26 @@ Mailbox name delimiter character.
 </details>
 
 <!-- REF #imapTransporterClass.getMail().Syntax -->
-**.getMail**( *msgID* { ; *options* } ) -> object<!-- END REF -->
+**.getMail**( *msgNumber*: integer { ; *options* : object } ) : object<br>**.getMail**( *msgID*: text { ; *options* : object } ) : object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getMail().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgID|longint,text|->|Sequence number (longint) of the message<br>Unique ID (text) of the message|
+|msgNumber|integer|->|Sequence number of the message|
+|msgID|text|->|Unique ID of the message|
 |options|object|->|Message handling instructions|
-|Result|object|<-|Email object|
+|Result|object|<-|[Email object](emailObjectClass.md#email-object)|
 <!-- END REF -->
 
 
 #### Description
 
-The `.getMail( )` function  <!-- REF #imapTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. This function allows you to locally handle the email contents.
+The `.getMail()` function  <!-- REF #imapTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. This function allows you to locally handle the email contents.
 
-In *msgID*, pass either:
+In the first parameter, you can pass either:
 
-*	a *longint* value indicating the sequence number of the message to retrieve or  
-*	a *text* value indicating the unique ID of the message to retrieve. 
+*	*msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or  
+*	*msgID*, a *text* value indicating the unique ID of the message to retrieve. 
 
 The optional *options* parameter allows you pass an object defining additional instructions for handling the message. The following properties are available:
 
@@ -349,22 +349,21 @@ The optional *options* parameter allows you pass an object defining additional i
 |withBody|boolean |	Pass True to return the body of the message. If False, only the message header is returned. Default value: True|
 
 >*	The function generates an error and returns **Null** if *msgID* designates a non-existing message, 
->*	If no mailbox is selected with the `.selectBox( )` command, an error is generated,
->*	If there is no open connection, `.getMail( )` will open a connection the last mailbox specified with `.selectBox( )`.
+>*	If no mailbox is selected with the [`.selectBox()`](#selectbox) function, an error is generated,
+>*	If there is no open connection, `.getMail()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox)`.
  
 
 #### Result
 
-`.getMail( )` returns an `Email` object with the following additional IMAP properties: *id*, *receivedAt*, and *size*. For a comprehensive description of mail properties, please refer to the [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html) section. 
-
+`.getMail()` returns an [`Email` object](emailObjectClass.md#email-object) with the following specific IMAP properties: *id*, *receivedAt*, and *size*.
 
 #### Example
 
 You want to get the message with ID = 1: 
 
 ```4d
- C_OBJECT($server;$transporter)
- C_VARIANT($info;$mail;$boxInfo)
+ var $server; $transporter : Object
+ var $info; $mail; $boxInfo : Variant
  
  $server:=New object
  $server.host:="imap.gmail.com" //Mandatory
@@ -387,7 +386,7 @@ You want to get the message with ID = 1:
 ---
 
 <!-- REF imapTransporterClass.getMails().Desc -->
-## .getMails( )
+## .getMails()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -396,21 +395,22 @@ You want to get the message with ID = 1:
 </details>
 
 <!-- REF #imapTransporterClass.getMails().Syntax -->
-**.getMails**( *ids &#124; startMsg* { ; *endMsg* } { ; *options* } ) -> object<!-- END REF -->
+**.getMails**( *ids* : collection { ; *options* : object } ) : object<br>**.getMails**( *startMsg* : integer ; *endMsg* : integer { ; *options* : object } ) : object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getMails().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|ids &#124; startMsg|collection, longint|->|Collection of message ID or<br>Sequence number of the first message|
-|endMsg |longint|->|Sequence number of the last message (if startMsg passed)|
+|ids |collection|->|Collection of message ID|
+|startMsg|integer|->|Sequence number of the first message|
+|endMsg |integer|->|Sequence number of the last message|
 |options|object|->|Message handling instructions|
-|Result|object|<-|Object containing:<br><ul><li>a collection of Email objects and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|
+|Result|object|<-|Object containing:<br><ul><li>a collection of [Email objects](emailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|
 <!-- END REF -->
 
 
 #### Description
 
-The `.getMails( )` function <!-- REF #imapTransporterClass.getMails().Summary -->an object containing a collection of `Email` objects.<!-- END REF -->. 
+The `.getMails()` function <!-- REF #imapTransporterClass.getMails().Summary -->an object containing a collection of `Email` objects.<!-- END REF -->. 
 
 **First Syntax:**
 
@@ -418,9 +418,9 @@ The `.getMails( )` function <!-- REF #imapTransporterClass.getMails().Summary --
 
 The first syntax allows you to retrieve messages based on their IDs. 
 
-In the *ids* parameter, pass a collection of IDs for the messages to return. You can get the IDs with `.getMail( )`.
+In the *ids* parameter, pass a collection of IDs for the messages to return. You can get the IDs with [`.getMail()`](#getmail).
 
-The optional *options* parameter allows you to define the parts of the messages to be returned. If omitted, messages will be made up of the message ID, header, size, and received date. See the **Options** table below for a description of the available properties. 
+The optional *options* parameter allows you to define the parts of the messages to be returned. See the **Options** table below for a description of the available properties. 
 
 **Second syntax:**
 
@@ -428,11 +428,11 @@ The optional *options* parameter allows you to define the parts of the messages 
  
 The second syntax allows you to retrieve messages based on a sequential range. The values passed represent the position of the messages in the mailbox.
 
-In the *startMsg* parameter, pass a *longint* value corresponding to the number of the first message in a sequential range.
+In the *startMsg* parameter, pass an *integer* value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
 
-In the *endMsg* parameter, pass a *longint* value corresponding to the number of the last message to be included in a sequential range.
+In the *endMsg* parameter, pass an *integer* value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (*endMsg* <= 0), the last message of the mailbox will be used as the end of the sequence.
 
-The optional *options* parameter allows you to define the parts of the messages to be returned. If omitted, messages will be made up of the message ID, header, size, and received date. 
+The optional *options* parameter allows you to define the parts of the messages to be returned.
 
 **Options**
 
@@ -441,19 +441,19 @@ The optional *options* parameter allows you to define the parts of the messages 
 |updateSeen |	Boolean |	If True, the specified messages are marked as "seen" in the mailbox. If False, the messages are not marked as "seen". Default value: True |
 |withBody |	Boolean |	Pass True to return the body of the specified messages. If False, only the message headers are returned. Default value: True|
  
->*	If no mailbox is selected with the `.selectBox( )` command, an error is generated.
->*	If there is no open connection, `.getMails( )` will open a connection the last mailbox specified with `.selectBox( )`.
+>*	If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated.
+>*	If there is no open connection, `.getMails()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox).
  
 
 #### Result
 
-`.getMails( )` returns an object containing the following collections:
+`.getMails()` returns an object containing the following collections:
 
 
 |Property |	Type |	Description |
 |---|---|---|
-|list 	|collection	|Collection of `Email` objects. If no Email objects are found, an empty collection is returned. See [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html).|
-|notFound |collection| 	Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul><br>An empty collection is returned if all messages are found.|
+|list 	|collection	|Collection of [`Email` objects](emailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned.|
+|notFound |collection| Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul><br>An empty collection is returned if all messages are found.|
 
 
 #### Example
@@ -461,7 +461,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 You want to retrieve the 20 most recent emails without changing their "seen" status: 
 
 ```4d
-var $server,$transporter,$boxInfo,$result : Object
+ var $server,$transporter,$boxInfo,$result : Object
  
  $server:=New object
  $server.host:="imap.gmail.com" //Mandatory
@@ -475,20 +475,13 @@ var $server,$transporter,$boxInfo,$result : Object
   //select mailbox
  $boxInfo:=$transporter.selectBox("INBOX")
  
- If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
-    var $first Integer:
-    If($boxInfo.mailCount>20)
-       $first:=$boxInfo.mailCount-20
-    Else
-       $first:=1
-    End if
-    $result:=$transporter.getMails($first;$boxInfo.mailCount;New object("withBody";False;"updateSeen";False))
-    If(($result#Null)&($result.list#Null))
-       For each($mail;$result.list)
-  // ...
-       End for each
-    End if
+  If($boxInfo.mailCount>0)
+		// retrieve the headers of the last 20 messages without marking them as read
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+    	New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+  		// ...
+    End for each
  End if
 ```
 
@@ -498,7 +491,7 @@ var $server,$transporter,$boxInfo,$result : Object
 ---
 
 <!-- REF imapTransporterClass.getMIMEAsBlob().Desc -->
-## .getMIMEAsBlob( )
+## .getMIMEAsBlob()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -507,25 +500,27 @@ var $server,$transporter,$boxInfo,$result : Object
 </details>
 
 <!-- REF #imapTransporterClass.getMIMEAsBlob().Syntax -->
-**.getMIMEAsBlob**( *msgID* { ; *updateSeen* } ) -> blob<!-- END REF -->
+**.getMIMEAsBlob**( *msgNumber* : integer { ; *updateSeen* : boolean } ) : blob<br>**.getMIMEAsBlob**( *msgID* : text { ; *updateSeen* : boolean } ) : blob<!-- END REF -->
+
 
 <!-- REF #imapTransporterClass.getMIMEAsBlob().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgID|longint,text|-> |Sequence number (longint) of the message<br>Unique ID (text) of the message|
+|msgNumber|longint|-> |Sequence number of the message|
+|msgID|text|-> |Unique ID of the message|
 |updateSeen|boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
-|Result|blob|<-|Blob of the MIME string returned from the mail server|
+|Result|BLOB|<-|Blob of the MIME string returned from the mail server|
 <!-- END REF -->
 
 
 #### Description
 
-The `.getMIMEAsBlob( )` function  <!-- REF #imapTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. 
+The `.getMIMEAsBlob()` function <!-- REF #imapTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. 
 
-In *msgID*, pass either:
+In the first parameter, you can pass either:
 
-*	a *longint* value indicating the sequence number of the message to retrieve or 
-*	a *text* value indicating the unique ID of the message to retrieve. 
+*	*msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or  
+*	*msgID*, a *text* value indicating the unique ID of the message to retrieve. 
 
 The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. You can pass:
 
@@ -533,24 +528,23 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 *	**False** - to leave the message's "seen" status untouched
 
 
->*	The function returns an empty BLOB if *msgID* designates a non-existing message, 
->*	If no mailbox is selected with the `.selectBox( )` command, an error is generated,
->*	If there is no open connection, `.getMIMEAsBlob( )` will open a connection the last mailbox specified with `.selectBox( )`.
+>*	The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, 
+>*	If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
+>*	If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox( )`.
  
 
 #### Result
 
-`.getMIMEAsBlob( )` returns a `BLOB` which can be archived in a database or converted to an `Email` object with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](emailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
 
-For a comprehensive description of mail properties, please refer to the [`Email` object](https://doc.4d.com/4Dv18R4/4D/18-R4/Email-object.300-4981948.en.html) section. 
 
 #### Example
 
 
 ```4d
- C_OBJECT($server;$transporter)
- C_VARIANT($boxInfo)
- C_BLOB($blob)
+ var $server; $transporter : Object
+ var $boxInfo : Variant
+ var $blob : Blob
  
  $server:=New object
  $server.host:="imap.gmail.com"
@@ -589,7 +583,7 @@ For a comprehensive description of mail properties, please refer to the [`Email`
 ---
 
 <!-- REF imapTransporterClass.selectBox().Desc -->
-## .selectBox( )
+## .selectBox()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -598,27 +592,26 @@ For a comprehensive description of mail properties, please refer to the [`Email`
 </details>
 
 <!-- REF #imapTransporterClass.selectBox().Syntax -->
-**.selectBox**( *name* { ; *state* } ) -> object<!-- END REF -->
+**.selectBox**( *name* : text { ; *state* : integer } ) : object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.selectBox().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|text|-> |Name of the mailbox|
-|state|longint|->|Mailbox access status|
+|state|integer|->|Mailbox access status|
 |Result|object|<-|boxInfo object|
 <!-- END REF -->
 
 
 #### Description
 
-The `.selectBox( )` function <!-- REF #imapTransporterClass.selectBox().Summary -->selects the name mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+The `.selectBox()` function <!-- REF #imapTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
 
->To get the information from a mailbox without changing the current mailbox, use `.getBoxInfo( )`.
+>To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the `.getDelimiter( )` command.
+In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
 The optional *state* parameter defines the type of access to the mailbox. The possible values are: 
-
 
 |Constant|	Value|	Comment|
 |---|---|---|
@@ -627,13 +620,12 @@ The optional *state* parameter defines the type of access to the mailbox. The po
 
 
 >*	The function generates an error and returns **Null** if name designates a non-existing mailbox. 
->*	If there is no open connection, `.selectBox( )` will open a connection.
->*	If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the `.checkConnection( )` function is automatically called.
+>*	If there is no open connection, `.selectBox()` will open a connection.
+>*	If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
 **Returned object**
 
 The `boxInfo` object returned contains the following properties:
-
 
 |Property |	Type |	Description |
 |---|---|---|
@@ -646,7 +638,7 @@ The `boxInfo` object returned contains the following properties:
 
 
 ```4d
-C_OBJECT($server;$boxinfo)
+ var $server; $boxinfo : Object
  $server:=New object
  $server.host:="imap.gmail.com" //Mandatory
  $server.user:="4d@gmail.com"
