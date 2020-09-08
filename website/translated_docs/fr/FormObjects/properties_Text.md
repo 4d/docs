@@ -120,14 +120,14 @@ Trois thèmes de polices sont disponibles :
 
 
 
-### Font Family
+### Famille de police
 
 Il existe deux types de noms de familles de polices :
 
 * *family-name :* Le nom d'une famille de polices, comme "times", "courier", "arial", etc.
-* *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+* *generic-family *: Le nom d'une famille générique, comme "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Vous pouvez la définir à l'aide de la commande [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) .
 > <span style="font-family:Times New Roman; font-size:20pt"> Ceci est une police Times New Roman.</span><br> <span style="font-family:Calibri; font-size:20pt"> Ceci est une police Calibri.</span><br> <span style="font-family:Papyrus; font-size:20pt"> Ceci est une police Papyrus.</span>
 
 #### Grammaire JSON
@@ -135,7 +135,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 | Nom        | Type de données | Valeurs possibles               |
 | ---------- | --------------- | ------------------------------- |
 | fontFamily | string          | Nom d'une famille de police CSS |
-> 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
+> 4D recommande d'utiliser uniquement les polices de [sécurité Web](https://www.w3schools.com/cssref/css_websafe_fonts.asp).
 
 #### Objets pris en charge
 
@@ -191,11 +191,11 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Expression couleur police
 
-`Selection and collection/entity selection type list boxes`
+`List box de type collection/sélection d'entité`
 
-Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
+Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. Pour plus d'informations à ce sujet, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) dans le manuel Langage 4D.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
 
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
@@ -220,11 +220,11 @@ Foreground color;Dark shadow color)
 ---
 ## Expression style
 
-`Selection and collection/entity selection type list boxes`
+`List box de type collection/sélection d'entité`
 
 Used to apply a custom character style to each row of the list box or each cell of the column.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
 Exemple :
 
