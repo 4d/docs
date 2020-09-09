@@ -28,7 +28,7 @@ For example, a Contacts manager database might use a list subform to display all
 
 Although list subforms are generally associated with Many tables, a subform instance can display the records of any other database table.
 
-You can also allow the user to enter data in the List form. Depending on the configuration of the subform, the user may display the detail form by double-clicking on a subrecord or by using the commands for adding and editing subrecords.
+また、リストフォームに入力するようにもできます。 Depending on the configuration of the subform, the user may display the detail form by double-clicking on a subrecord or by using the commands for adding and editing subrecords.
 
 > 4D offers three standard actions to meet the basic needs for managing subrecords: `Edit Subrecord`, `Delete Subrecord`, and `Add Subrecord`. When the form includes several subform instances, the action will apply to the subform that has the focus.
 
