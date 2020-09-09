@@ -47,16 +47,16 @@ title: リサイズオプション
 ---
 ## 横方向サイズ変更
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+このプロパティは、ユーザーがフォームの幅をサイズ変更したときの、当該オブジェクトの挙動を指定します。 このプロパティは `OBJECT SET RESIZING OPTIONS` ランゲージコマンドによっても設定することができます。
 
-Three options are available:
+次の値が提供されています:
 
-| オプション | JSON 値  | 戻り値                                                                                                                    |
-| ----- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Grow  | "grow"  | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
-| 移動    | "move"  | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| なし    | "fixed" | The object remains stationary when the form is resized                                                                 |
-> This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
+| オプション | JSON 値  | 戻り値                                            |
+| ----- | ------- | ---------------------------------------------- |
+| 拡大    | "grow"  | ユーザーがウィンドウの幅を変更すると、オブジェクトの幅にも同じ割合を適用します。       |
+| 移動    | "move"  | ユーザーがウィンドウの幅を変更すると、幅の増加分と同じだけオブジェクトを左か右に移動します。 |
+| なし    | "fixed" | フォームサイズが変更されても、オブジェクトは固定されたままです。               |
+> このプロパティは [縦方向サイズ変更](#縦方向サイズ変更) プロパティと連携して機能します。
 
 #### JSON 文法
 
@@ -66,22 +66,22 @@ Three options are available:
 
 #### 対象オブジェクト
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [四角](shapes_overview.md#四角) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [Web エリア](webArea_overview.md)
 
 
 ---
 ## 縦方向サイズ変更
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+このプロパティは、ユーザーがフォームの高さをサイズ変更したときの、当該オブジェクトの挙動を指定します。 このプロパティは `OBJECT SET RESIZING OPTIONS` ランゲージコマンドによっても設定することができます。
 
-Three options are available:
+次の値が提供されています:
 
-| オプション | JSON 値  | 戻り値                                                                                                                  |
-| ----- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| Grow  | "grow"  | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| 移動    | "move"  | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| なし    | "fixed" | The object remains stationary when the form is resized                                                               |
-> This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
+| オプション | JSON 値  | 戻り値                                              |
+| ----- | ------- | ------------------------------------------------ |
+| 拡大    | "grow"  | ユーザーがウィンドウの高さを変更すると、オブジェクトの高さにも同じ割合を適用します。       |
+| 移動    | "move"  | ユーザーがウィンドウの高さを変更すると、高さの変更分と同じだけオブジェクトを上か下に移動します。 |
+| なし    | "fixed" | フォームサイズが変更されても、オブジェクトは固定されたままです。                 |
+> このプロパティは [横方向サイズ変更](#横方向サイズ変更) プロパティと連携して機能します。
 
 #### JSON 文法
 
@@ -91,29 +91,29 @@ Three options are available:
 
 #### 対象オブジェクト
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [線](shapes_overview.md#線) - [リストボックス列](listbox_overview.md#リストボックス列) - [楕円](shapes_overview.md#楕円) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [四角](shapes_overview.md#四角) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [Web エリア](webArea_overview.md)
 
 
 
 ---
 ## 以降のオブジェクトを移動する
 
-When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
+プロパティを適用するとスプリッターオブジェクトは "プッシャー" になり、そのオブジェクトの右側 (垂直スプリッター) または下側 (水平スプリッター) にある他のオブジェクトは、スプリッターと一緒に押し出されて移動します。
 
-Here is the result of a “pusher” splitter being moved: ![](assets/en/FormObjects/splitter_pusher1.png)
+"プッシャー" スプリッターを移動した場合の結果を次に示します: ![](assets/en/FormObjects/splitter_pusher1.png)
 
 ![](assets/en/FormObjects/splitter_pusher3.png)
 
-When this property is not applied to the splitter, the result is as follows:
+スプリッターに対してこのプロパティを指定しない場合、結果は次のようになります:
 
 ![](assets/en/FormObjects/splitter_pusher2.png)
 
 
 #### JSON 文法
 
-| 名            | データタイプ |                とりうる値                 |
-|:------------ |:------:|:------------------------------------:|
-| splitterMode | string | "move" (pusher), "resize" (standard) |
+| 名            | データタイプ |             とりうる値             |
+|:------------ |:------:|:-----------------------------:|
+| splitterMode | string | "move" (プッシャー), "resize" (標準) |
 
 #### 対象オブジェクト
 
@@ -125,7 +125,7 @@ When this property is not applied to the splitter, the result is as follows:
 ---
 ## サイズ変更可
 
-Designates if the size of the column can be modified by the user.
+このオプションが選択されていると、ユーザーはヘッダーエリアの右側をドラッグすることで列のサイズを変更できます。
 
 #### JSON 文法
 
