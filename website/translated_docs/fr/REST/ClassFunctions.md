@@ -26,7 +26,7 @@ Functions must always be called using REST **POST** requests (a GET request will
 
 Functions are called on the corresponding object on the server datastore.
 
-| Class function                                                     | Syntaxe                                                                     |
+| Fonction de classe                                                 | Syntaxe                                                                     |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/datastoreClassFunction`                                     |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
@@ -73,12 +73,12 @@ Entities passed in parameters are referenced on the server through their key (*i
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
-| Properties               | Type                                 | Description                                                                |
-| ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
-| Attributes of the entity | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS              | Chaine                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                 | Booléen                              | Mandatory - True to indicate to the server that the parameter is an entity |
-| __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
+| Propriétés            | Type                                 | Description                                                                |
+| --------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
+| Attributs de l'entité | mixed                                | Optional - Values to modify                                                |
+| __DATACLASS           | Chaine                               | Mandatory - Indicates the Dataclass of the entity                          |
+| __ENTITY              | Booléen                              | Mandatory - True to indicate to the server that the parameter is an entity |
+| __KEY                 | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
 - If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes
@@ -99,22 +99,22 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | Type    | Description                                                                          |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed   | Optional - Values to modify                                                          |
-| __DATASET                | Chaine  | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | Booléen | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Propriétés            | Type    | Description                                                                          |
+| --------------------- | ------- | ------------------------------------------------------------------------------------ |
+| Attributs de l'entité | mixed   | Optional - Values to modify                                                          |
+| __DATASET             | Chaine  | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES            | Booléen | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
 
-## Request examples
+## Exemples de requêtes
 
 This database is exposed as a remote datastore on localhost (port 8111):
 
 ![alt-text](assets/en/REST/ordastructure.png)
 
-### Using a datastore class function
+### Utiliser une fonction de classe de datastore
 
 The US_Cities `DataStore` class provides an API:
 
