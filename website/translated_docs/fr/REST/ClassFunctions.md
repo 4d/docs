@@ -68,9 +68,9 @@ Tous les types de données JSON sont pris en charge dans les paramètres, y comp
 
 ### Paramètre d'entité
 
-Les entités passées en paramètres sont référencées sur le serveur via leur clé (c'est-à-dire la propriété __KEY). Si le paramètre clé est omis dans une requête, une nouvelle entité est chargée en mémoire du serveur. Vous pouvez également transmettre des valeurs pour tous les attributs de l'entité. These values will automatically be used for the entity handled on the server.
+Les entités passées en paramètres sont référencées sur le serveur via leur clé (c'est-à-dire la propriété __KEY). Si le paramètre clé est omis dans une requête, une nouvelle entité est chargée en mémoire du serveur. Vous pouvez également transmettre des valeurs pour tous les attributs de l'entité. Ces valeurs seront automatiquement utilisées pour l'entité traitée sur le serveur.
 
-> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
+> Si la requête envoie des valeurs d'attribut modifiées pour une entité existante sur le serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec des valeurs modifiées. Cette fonctionnalité vous permet, par exemple, de vérifier le résultat d'une opération sur une entité, après avoir appliqué toutes les règles métier, depuis l'application cliente. Vous pouvez alors décider de sauvegarder ou non l'entité sur le serveur.
 
 
 | Propriétés            | Type                                              | Description                                                                 |
@@ -85,38 +85,38 @@ Les entités passées en paramètres sont référencées sur le serveur via leur
 
 Voir les exemple de [création](#creating-an-entity) ou de [mise à jour](#updating-an-entity) des entités.
 
-#### Related entity parameter
+#### Paramètre d'entité associé
 
-Same properties as for an [entity parameter](#entity-parameter). In addition, the related entity must exist and is referenced by __KEY containing its primary key.
+Mêmes propriétés que pour un [paramètre d'entité](#entity-parameter). De plus, l'entité associée doit exister et est référencée par __KEY, qui contient sa clé primaire.
 
-See examples for [creating](#creating-an-entity-with-a-related-entity) or [updating](#updating-an-entity-with-a-related-entity) entities with related entities.
-
-
-### Entity selection parameter
-
-The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset).
-
-> If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
+Reportez-vous aux exemples de [création](#creating-an-entity-with-a-related-entity) ou de [mise à jour](#updating-an-entity-with-a-related-entity) des entités avec des entités associées.
 
 
-| Propriétés            | Type    | Description                                                                          |
-| --------------------- | ------- | ------------------------------------------------------------------------------------ |
-| Attributs de l'entité | mixte   | Optionnelle - Valeurs à modifier                                                     |
-| __DATASET             | Chaine  | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES            | Booléen | Mandatory - True to indicate to the server that the parameter is an entity selection |
+### Paramètre de sélection d'entité
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
+La sélection d'entité doit avoir été définie au préalable à l'aide de [$method=entityset]($method.md#methodentityset).
+
+> Si la requête envoie une sélection d'entité modifiée au serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec la sélection d'entité modifiée.
+
+
+| Propriétés            | Type    | Description                                                                             |
+| --------------------- | ------- | --------------------------------------------------------------------------------------- |
+| Attributs de l'entité | mixte   | Optionnelle - Valeurs à modifier                                                        |
+| __DATASET             | Chaine  | Obligatoire - entitySetID (UUID) de la sélection d'entité                               |
+| __ENTITIES            | Booléen | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité |
+
+Reportez-vous aux exemples de [réception d'une sélection d'entité](#receiving-an-entity-selection-as-parameter).
 
 
 ## Exemples de requêtes
 
-This database is exposed as a remote datastore on localhost (port 8111):
+Cette base de données est exposée comme un datastore distant sur localhost (port 8111) :
 
 ![alt-text](assets/en/REST/ordastructure.png)
 
 ### Utiliser une fonction de classe de datastore
 
-The US_Cities `DataStore` class provides an API:
+La classe de `DataStore` US_Cities fournit une API :
 
 ```  
 // DataStore class
@@ -127,7 +127,7 @@ Function getName()
     $0:="US cities and zip codes manager" 
 ```
 
-You can then run this request:
+Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
@@ -141,7 +141,7 @@ You can then run this request:
 
 ### Utiliser une fonction de classe de dataclass
 
-The Dataclass class `City` provides an API that returns a city entity from a name passed in parameter:
+La classe de Dataclass `City` fournit une API qui retourne une entité de ville à partir du nom passé en paramètre :
 
 ```
 // City class
@@ -155,7 +155,7 @@ Fonction getCity()
     $0:=This.query("name = :1";$nameParam).first()
 ```
 
-You can then run this request:
+Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8111/rest/City/getCity`
 
@@ -190,7 +190,7 @@ Le résultat est une entité :
 
 ### Utiliser une fonction de classe d'une entité
 
-The Entity class `CityEntity` provides an API:
+La classe d'entité `CityEntity` fournit une API :
 
 ```
 // CityEntity class
@@ -201,7 +201,7 @@ Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
-You can then run this request:
+Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
@@ -214,9 +214,9 @@ You can then run this request:
 ```
 
 
-### Using an entitySelection class function
+### Utiliser une fonction de classe d'une sélection d'entité
 
-The EntitySelection class `CitySelection` provides an API:
+La classe de sélection d'entité `CityEntity` fournit une API :
 
 ```
 // CitySelection class
@@ -227,7 +227,7 @@ Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
-You can then run this request:
+Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
@@ -289,7 +289,7 @@ Function getLastSummary
     $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
-You can then run this request:
+Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
