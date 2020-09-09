@@ -22,13 +22,13 @@ title: サブフォーム
 ---
 ## 詳細フォーム
 
-このプロパティを使用して、サブフォームで使用する詳細フォームを割り当てます。 It can be:
+このプロパティを使用して、サブフォームで使用する詳細フォームを割り当てます。 以下のものを使用できます:
 
-- a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
-  You can select a component form name when it is published in the component.
-> You can generate [components](Concepts/components.md) providing additional functionalities through subforms.
+- ウィジェット (ページタイプのサブフォームで、特定の機能を実現するために作成されています)。 この場合、[リストフォーム](#リストフォーム) および [ソース](#ソース) プロパティは存在しないか、空でなくてはいけません。   
+  コンポーネントで公開されていれば、コンポーネントフォーム名を選べます。
+> サブフォームを介して追加の機能を提供する [コンポーネント](Concepts/components.md) を作成することが可能です。
 
-- the detail form to associate a with the [list subform](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
+- [リストサブフォーム](#リストフォーム) に関連づける詳細フォーム。 詳細フォームはサブレコードを入力したり表示したりするために使用します。 通常、詳細フォームにはリストサブフォームより多くの情報が含まれています。 詳細フォームは、サブフォームと同じテーブルに属していなければなりません。 典型的には、出力フォームをリストフォーム に、入力フォームを詳細フォームに指定します。 詳細フォームを指定しない場合、4Dは自動でテーブルのデフォルト入力フォームを使用します。
 
 
 #### JSON 文法
