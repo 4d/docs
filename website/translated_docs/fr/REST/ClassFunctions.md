@@ -239,9 +239,9 @@ Vous pouvez lancer cette requête :
 }
 ```
 
-### Using an entitySelection class function and an entitySet
+### Utiliser une fonction de classe de sélection d'entité et un ensemble d'entité
 
-The `StudentsSelection` class has a `getAgeAverage` function:
+La classe `StudentsSelection` a une fonction `getAgeAverage` :
 
 ```  
 // StudentsSelection Class
@@ -259,7 +259,7 @@ Function getAgeAverage
     $0:=$sum/This.length
 ```
 
-Once you have created an entityset, you can run this request:
+Une fois que vous avez créé un ensemble d'entité, vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
@@ -271,9 +271,9 @@ Once you have created an entityset, you can run this request:
 }
 ```
 
-### Using an entitySelection class function and an orderBy
+### Utiliser une fonction de classe de sélection d'entité et un "orderBy"
 
-The `StudentsSelection` class has a `getLastSummary` function:
+La classe `StudentsSelection` a une fonction `getLastSummary` :
 
 ```  
 // StudentsSelection Class
@@ -303,10 +303,10 @@ Vous pouvez lancer cette requête :
 ```
 
 
-### Using an entity to be created on the server
+### Utiliser une entité à créer sur le serveur
 
 
-The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. The `checkData()` method runs some controls. If they are OK, the entity is saved and returned.
+La classe de Dataclass `Students` possède la fonction `pushData()` qui reçoit une entité contenant les données du client. La méthode `checkData()` effectue quelques contrôles. Si elles sont valides, l'entité est sauvegardée et retournée.
 
 ```
 // Students Class
@@ -331,11 +331,11 @@ Function pushData
 
 ```
 
-You run this request:
+Lancez cette requête :
 
 **POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Corps de la requête :
 
 ```
 [{
@@ -346,7 +346,7 @@ Body of the request:
 }]
 ```
 
-Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
+Si aucune `__KEY` n'est donnée, une nouvelle entité Students est chargée sur le serveur **avec les attributs du client**. Parce que la fonction `pushData()` exécute une action `save()`, la nouvelle entité est créée.
 
 
 #### Résultat
@@ -366,15 +366,15 @@ Since no `__KEY` is given, a new Students entity is loaded on the server **with 
 }
 ```
 
-### Using an entity to be updated on the server
+### Utiliser une entité à mettre à jour sur le serveur
 
-Same as above but with a __KEY attribute
+Description semblable à la précédente, avec l'attribut _KEY
 
-You run this request:
+Lancez cette requête :
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Corps de la requête :
 ```
 [{
 "__DATACLASS":"Students",
@@ -407,11 +407,11 @@ Since `__KEY` is given, the Students entity with primary key 55 is loaded **with
 
 In this example, we create a new Students entity with the Schools entity having primary key 2.
 
-You run this request:
+Lancez cette requête :
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Corps de la requête :
 ```
 [{
 "__DATACLASS":"Students",
@@ -530,7 +530,7 @@ Then you can run this request:
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
-Body of the request:
+Corps de la requête :
 
 ```
 [
