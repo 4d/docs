@@ -1,6 +1,6 @@
 ---
 id: propertiesSubform
-title: Subform
+title: サブフォーム
 ---
 
 ---
@@ -16,7 +16,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 
 ---
@@ -39,7 +39,7 @@ You use this property to declare the detail form to use in the subform. It can b
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 ---
 ## 空行をダブルクリック
@@ -57,7 +57,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 #### 参照
 [Double click on row](#double-click-on-row)
@@ -85,7 +85,7 @@ Sets the action to be performed when a user double-clicks on a row in a list sub
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 
 #### 参照
@@ -108,7 +108,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 
 ---
@@ -128,7 +128,7 @@ You can also allow the user to enter data in the List form.
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 
 
@@ -145,7 +145,7 @@ Specifies the table that the list subform belongs to (if any).
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
 ---
 ## 選択モード
@@ -168,4 +168,4 @@ Specifies the table that the list subform belongs to (if any).
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
