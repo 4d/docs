@@ -220,13 +220,13 @@
         "title": "JSON property list"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "Resizing Options"
+        "title": "リサイズオプション"
       },
       "FormObjects/propertiesScale": {
         "title": "スケール"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "サブフォーム"
       },
       "FormObjects/propertiesText": {
         "title": "テキスト"
@@ -259,7 +259,7 @@
         "title": "ステッパー"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "サブフォーム"
       },
       "FormObjects/tabControl": {
         "title": "Tab Controls"
