@@ -72,16 +72,16 @@ title: リサイズオプション
 ---
 ## 縦方向サイズ変更
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. このプロパティは `OBJECT SET RESIZING OPTIONS` ランゲージコマンドによっても設定することができます。
+このプロパティは、ユーザーがフォームの高さをサイズ変更したときの、当該オブジェクトの挙動を指定します。 このプロパティは `OBJECT SET RESIZING OPTIONS` ランゲージコマンドによっても設定することができます。
 
 次の値が提供されています:
 
-| オプション | JSON 値  | 戻り値                                                                                                                  |
-| ----- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| 拡大    | "grow"  | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| 移動    | "move"  | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| なし    | "fixed" | フォームサイズが変更されても、オブジェクトは固定されたままです。                                                                                     |
-> This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
+| オプション | JSON 値  | 戻り値                                              |
+| ----- | ------- | ------------------------------------------------ |
+| 拡大    | "grow"  | ユーザーがウィンドウの高さを変更すると、オブジェクトの高さにも同じ割合を適用します。       |
+| 移動    | "move"  | ユーザーがウィンドウの高さを変更すると、高さの変更分と同じだけオブジェクトを上か下に移動します。 |
+| なし    | "fixed" | フォームサイズが変更されても、オブジェクトは固定されたままです。                 |
+> このプロパティは [横方向サイズ変更](#横方向サイズ変更) プロパティと連携して機能します。
 
 #### JSON 文法
 
