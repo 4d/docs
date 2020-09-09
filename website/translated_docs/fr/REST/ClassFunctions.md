@@ -318,7 +318,7 @@ Function pushData
 
     $entity:=$1
 
-    $status:=checkData($entity) // $status is an object with a success boolean property
+    $status:=checkData($entity) // $status est un objet avec une propriété avec une propriété booléenne "success"
 
     $0:=$status
 
