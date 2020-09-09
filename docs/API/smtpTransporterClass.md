@@ -56,7 +56,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 The `SMTP New transporter` command <!-- REF #smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
 
-> This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send( )`](#send-) function is executed.  
+> This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.  
 > 
 >The SMTP connection is automatically closed:
 > *	when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default),
@@ -234,7 +234,7 @@ The SMTP connection is automatically closed:
 <!-- REF #smtpTransporterClass.send().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|mail|object|[Email](emailObjectClass.md#email-object) to send|
+|mail|object|->|[Email](emailObjectClass.md#email-object) to send|
 |Result|object|<-|SMTP status|
 <!-- END REF -->
 

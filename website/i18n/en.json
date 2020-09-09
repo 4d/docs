@@ -35,8 +35,8 @@
       "API/document": {
         "title": "Document Class"
       },
-      "API/email": {
-        "title": "Email"
+      "API/emails": {
+        "title": "Emails"
       },
       "API/entityClass": {
         "title": "Entity"
