@@ -1,6 +1,6 @@
 ---
 id: subformOverview
-title: Subform
+title: サブフォーム
 ---
 
 ## 概要
