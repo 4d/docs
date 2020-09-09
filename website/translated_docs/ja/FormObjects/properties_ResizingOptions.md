@@ -98,22 +98,22 @@ title: リサイズオプション
 ---
 ## 以降のオブジェクトを移動する
 
-When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
+プロパティを適用するとスプリッターオブジェクトは "プッシャー" になり、そのオブジェクトの右側 (垂直スプリッター) または下側 (水平スプリッター) にある他のオブジェクトは、スプリッターと一緒に押し出されて移動します。
 
-Here is the result of a “pusher” splitter being moved: ![](assets/en/FormObjects/splitter_pusher1.png)
+"プッシャー" スプリッターを移動した場合の結果を次に示します: ![](assets/en/FormObjects/splitter_pusher1.png)
 
 ![](assets/en/FormObjects/splitter_pusher3.png)
 
-When this property is not applied to the splitter, the result is as follows:
+スプリッターに対してこのプロパティを指定しない場合、結果は次のようになります:
 
 ![](assets/en/FormObjects/splitter_pusher2.png)
 
 
 #### JSON 文法
 
-| 名            | データタイプ |                とりうる値                 |
-|:------------ |:------:|:------------------------------------:|
-| splitterMode | string | "move" (pusher), "resize" (standard) |
+| 名            | データタイプ |             とりうる値             |
+|:------------ |:------:|:-----------------------------:|
+| splitterMode | string | "move" (プッシャー), "resize" (標準) |
 
 #### 対象オブジェクト
 
@@ -125,7 +125,7 @@ When this property is not applied to the splitter, the result is as follows:
 ---
 ## サイズ変更可
 
-Designates if the size of the column can be modified by the user.
+このオプションが選択されていると、ユーザーはヘッダーエリアの右側をドラッグすることで列のサイズを変更できます。
 
 #### JSON 文法
 
