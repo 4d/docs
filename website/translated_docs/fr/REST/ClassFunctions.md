@@ -20,11 +20,11 @@ $city:=ds.City.getCity("Aguada")
 ```
 
 
-## Function calls
+## Appeler des fonctions
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+Les fonctions doivent toujours être appelées à l'aide des requêtes **POST** (une requête GET recevra une erreur).
 
-Functions are called on the corresponding object on the server datastore.
+Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 
 | Fonction de classe                                                 | Syntaxe                                                                     |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
@@ -38,28 +38,28 @@ Functions are called on the corresponding object on the server datastore.
 
 
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).   
-> The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
+> `/rest/{dataClass}/Function` peut être utilisé pour appeler une fonction de dataclass ou de sélection d'entité (`/rest/{dataClass}` retourne toutes les entités de la DataClass en tant que sélection d'entité).   
+> La fonction est d'abord recherchée dans la classe de sélection d'entité. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
 
 ## Paramètres
 
 
-You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
+Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres normaux $1, $2, etc.
 
-The following rules apply:
+Les règles suivantes s'appliquent :
 
-- Parameters must be passed in the **body of the POST request**
-- Parameters must be enclosed within a collection (JSON format)
-- All scalar data types supported in JSON collections can be passed as parameters.
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
+- Les paramètres doivent être passés dans le **corps de la requête POST**
+- Les paramètres doivent être inclus dans une collection (format JSON)
+- Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
+- La sélection d'entité et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour affecter des données aux objets ORDA correspondants : __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
+Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#request-receiving-an-entity-selection-as-parameter).
 
 
-### Scalar value parameter
+### Paramètre de valeur scalaire
 
-Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
 **Parameters in body:** ["Aguada","Paris"]
 
