@@ -16,7 +16,7 @@ title: Document Class
 </details>
 
 <!-- REF #document.creationDate.Syntax -->
-**.creationDate** -> Date<!-- END REF -->
+**.creationDate** : Date<!-- END REF -->
 
 
 #### Description
@@ -37,7 +37,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.creationTime.Syntax -->
-**.creationTime** -> Time<!-- END REF -->
+**.creationTime** : Time<!-- END REF -->
 
 
 #### Description
@@ -60,7 +60,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.exists.Syntax -->
-**.exists** -> boolean<!-- END REF -->
+**.exists** : boolean<!-- END REF -->
 
 
 #### Description
@@ -85,7 +85,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.extension.Syntax -->
-**.extension** -> text<!-- END REF -->
+**.extension** : text<!-- END REF -->
 
 #### Description
 The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
@@ -107,7 +107,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.fullName.Syntax -->
-**.fullName** -> Text<!-- END REF -->
+**.fullName** : Text<!-- END REF -->
 
 #### Description
 The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
@@ -129,7 +129,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.hidden.Syntax -->
-**.hidden** -> boolean<!-- END REF -->
+**.hidden** : boolean<!-- END REF -->
 
 
 #### Description
@@ -152,7 +152,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isAlias.Syntax -->
-**.isAlias** -> boolean<!-- END REF -->
+**.isAlias** : boolean<!-- END REF -->
 
 
 #### Description
@@ -174,7 +174,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isFile.Syntax -->
-**.isFile** -> boolean<!-- END REF -->
+**.isFile** : boolean<!-- END REF -->
 
 
 #### Description
@@ -196,7 +196,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isFolder.Syntax -->
-**.isFolder** -> boolean<!-- END REF -->
+**.isFolder** : boolean<!-- END REF -->
 
 
 #### Description
@@ -219,7 +219,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isWritable.Syntax -->
-**.isWritable** -> boolean<!-- END REF -->
+**.isWritable** : boolean<!-- END REF -->
 
 
 #### Description
@@ -253,7 +253,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.modificationDate.Syntax -->
-**.modificationDate** -> Date<!-- END REF -->
+**.modificationDate** : Date<!-- END REF -->
 
 
 #### Description
@@ -276,7 +276,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.modificationTime.Syntax -->
-**.modificationTime** -> Time<!-- END REF -->
+**.modificationTime** : Time<!-- END REF -->
 
 
 ##### Description
@@ -298,7 +298,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.name.Syntax -->
-**.name** -> Text<!-- END REF -->
+**.name** : Text<!-- END REF -->
 
 
 #### Description
@@ -319,7 +319,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.original.Syntax -->
-**.original** -> object<!-- END REF -->
+**.original** : object<!-- END REF -->
 
 
 #### Description
@@ -347,7 +347,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.parent.Syntax -->
-**.parent** -> object<!-- END REF -->
+**.parent** : object<!-- END REF -->
 
 
 #### Description
@@ -370,7 +370,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.path.Syntax -->
-**.path** -> Text<!-- END REF -->
+**.path** : Text<!-- END REF -->
 
 
 #### Description
@@ -392,7 +392,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.platformPath.Syntax -->
-**.platformPath** -> Text<!-- END REF -->
+**.platformPath** : Text<!-- END REF -->
 
 
 #### Description
@@ -415,7 +415,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.size.Syntax -->
-**.size** -> Number<!-- END REF -->
+**.size** : Number<!-- END REF -->
 
 
 #### Description
@@ -435,7 +435,7 @@ This property is **read-only**.
 
 
 <!-- REF document.copyTo().Desc -->
-## .copyTo( )
+## .copyTo()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -444,20 +444,21 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.copyTo().Syntax -->
-**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object<!-- END REF -->
+**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |destinationFolder | object |->|Destination folder|
 |newName|text|->|Name for the copy|
-|overwrite|longint|->|`fk overwrite` to replace existing elements|
+|overwrite|integer|->|`fk overwrite` to replace existing elements|
 |Result|object|<-|Copied file or folder|
 <!-- END REF -->
 
 
 #### Description
-The `.copyTo( )` function  <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
+
+The `.copyTo()` function  <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -479,7 +480,7 @@ The copied `File` object.
 You want to copy a picture *file* from the user's document folder to the database folder:
 
 ```4d
-C_OBJECT($source;$copy)
+var $source; $copy : Object
 $source:=Folder(fk documents folder).file("Pictures/photo.png")
 $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ```
@@ -489,7 +490,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF document.getContent().Desc -->
-## .getContent( )
+## .getContent()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -498,7 +499,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )**  -> BLOB<!-- END REF -->
+**.getContent()** : BLOB<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
 |Parameter|Type||Description|
@@ -508,7 +509,8 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 #### Description
-The `.getContent( )` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
+
+The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 **Returned value**
 
@@ -519,20 +521,19 @@ A `BLOB`.
 To save a document's contents in a `BLOB` field:
 
 ```4d
- C_TEXT($vPath)
+ var $vPath : Text
  $vPath:=Select document("";"*";"Select a document";0)
  If(OK=1) //If a document has been chosen
     [aTable]aBlobField:=File($vPath;fk platform path).getContent()
  End if
 ```
 
-
 <!-- END REF -->
 
 
 
 <!-- REF document.getIcon().Desc -->
-## .getIcon( )
+## .getIcon()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -541,18 +542,19 @@ To save a document's contents in a `BLOB` field:
 </details>
 
 <!-- REF #document.getIcon().Syntax -->
-**.getIcon**( { *size* } ) -> picture<!-- END REF -->
+**.getIcon**( { *size* : integer } ) : picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|longint|->|Side length for the returned picture (pixels)|
+|size|integer|->|Side length for the returned picture (pixels)|
 |Result|picture|<-|Icon|
 <!-- END REF -->
 
 
 #### Description
-The `.getIcon( )` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+
+The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
 
@@ -569,7 +571,7 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF document.getText().Desc -->
-## .getText( )
+## .getText()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -578,37 +580,43 @@ File icon [picture](../Concepts/picture.html).
 </details>
 
 <!-- REF #document.getText().Syntax -->
-**.getText**( { *charSet* } { ; } { *breakMode*} ) -> text<!-- END REF -->
+**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text<!-- END REF -->
+
 
 <!-- REF #document.getText().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|charSet |text, longint |-> |Name or number of character set|
-|breakMode|longint |-> |Processing mode for line breaks|
+|charSetName |text |-> |Name of character set|
+|charSetNum |integer |-> |Number of character set|
+|breakMode|integer |-> |Processing mode for line breaks|
 |Result |text  |<- |Text from the document|
 <!-- END REF -->
 
 
 #### Description
-The `.getText( )` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
-In *charSet*, pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
+Optionally, you can designate the character set to be used for reading the contents. You can pass either:
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in charSet (this parameter is then ignored).  
+- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
-If the document does not contain a BOM and if the *charSet* parameter is omitted, by default 4D uses the “UTF-8” character sets.
+> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
 
-In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
+If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSetName* or *charSetNum* (this parameter is then ignored). 
+If the document does not contain a BOM and if *charSetName* or *charSetNum* is omitted, by default 4D uses the "UTF-8" character set.
 
-|Constant |Type| Value| Comment|
-|---|---|---|---|
-|`Document unchanged`|Logint|0|No processing|
-|`Document with native format`|Logint|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows|
-|`Document with CRLF`|Logint|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|`Document with CR`|Logint|3|Line breaks are converted to OS X format: CR (carriage return)|
-|`Document with LF`|Logint|4|Line breaks are converted to Unix format: LF (line feed)|
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
 
-By default, when you omit the breakMode parameter, line breaks are processed in native mode (1).
+|Constant | Value| Comment|
+|---|---|---|
+|`Document unchanged`|0|No processing|
+|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows|
+|`Document with CRLF`|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
+|`Document with CR`|3|Line breaks are converted to OS X format: CR (carriage return)|
+|`Document with LF`|4|Line breaks are converted to Unix format: LF (line feed)|
+
+By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
 **Returned value**
 
@@ -630,8 +638,10 @@ When you execute this code:
 ```4d
  $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 by default
  $txt:=$myFile.getText()
+```
 ... you get:
 
+```4d
   // $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
   // \t = tab
   // \r = CR

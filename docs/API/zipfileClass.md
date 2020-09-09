@@ -39,15 +39,15 @@ The following properties and functions from the [File](fileClass.md) class are a
 
 ||
 |---|
-|[<!-- INCLUDE #document.copyTo().Syntax -->](fileClass.md#copyto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->|
+|[<!-- INCLUDE #document.copyTo().Syntax -->](fileClass.md#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->|
 |[<!-- INCLUDE #document.creationDate.Syntax -->](fileClass.md#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationDate.Summary -->|
 |[<!-- INCLUDE #document.creationTime.Syntax -->](fileClass.md#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationTime.Summary -->|
 |[<!-- INCLUDE #document.exists.Syntax -->](fileClass.md#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.exists.Summary -->|
 |[<!-- INCLUDE #document.extension.Syntax -->](fileClass.md#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
 |[<!-- INCLUDE #document.fullName.Syntax -->](fileClass.md#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
-|[<!-- INCLUDE #document.getContent().Syntax -->](fileClass.md#getcontent-)<p><!-- INCLUDE #document.getContent().Summary -->|
-|[<!-- INCLUDE #document.getIcon().Syntax -->](fileClass.md#geticon-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
-|[<!-- INCLUDE #document.getText().Syntax -->](fileClass.md#gettext-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
+|[<!-- INCLUDE #document.getContent().Syntax -->](fileClass.md#getcontent)<p><!-- INCLUDE #document.getContent().Summary -->|
+|[<!-- INCLUDE #document.getIcon().Syntax -->](fileClass.md#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
+|[<!-- INCLUDE #document.getText().Syntax -->](fileClass.md#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
 |[<!-- INCLUDE #document.hidden.Syntax -->](fileClass.md#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
 |[<!-- INCLUDE #document.isAlias.Syntax -->](fileClass.md#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->|
 |[<!-- INCLUDE #document.isFile.Syntax -->](fileClass.md#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
@@ -70,17 +70,17 @@ The following properties and functions from the [Folder](folderClass.md) class a
 
 ||
 |---|
-|[<!-- INCLUDE #directory.copyTo().Syntax -->](folderClass.md#copyto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
+|[<!-- INCLUDE #directory.copyTo().Syntax -->](folderClass.md#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
 |[<!-- INCLUDE #directory.creationDate.Syntax -->](folderClass.md#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary --><p>**Date may be different for the `root` folder from a folder within the archive**|
 |[<!-- INCLUDE #directory.creationTime.Syntax -->](folderClass.md#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary --><p>**Time may be different for the `root` folder from a folder within the archive**|
 |[<!-- INCLUDE #directory.exists.Syntax -->](folderClass.md#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
 |[<!-- INCLUDE #directory.extension.Syntax -->](folderClass.md#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->|
-|[<!-- INCLUDE #directory.file().Syntax -->](folderClass.md#file-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.file().Summary -->|
-|[<!-- INCLUDE #directory.files().Syntax -->](folderClass.md#files-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.files().Summary -->|
-|[<!-- INCLUDE #directory.folder().Syntax -->](folderClass.md#folder-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folder().Summary -->|
-|[<!-- INCLUDE #directory.folders().Syntax -->](folderClass.md#folders-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folders().Summary -->|
+|[<!-- INCLUDE #directory.file().Syntax -->](folderClass.md#file)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.file().Summary -->|
+|[<!-- INCLUDE #directory.files().Syntax -->](folderClass.md#files)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.files().Summary -->|
+|[<!-- INCLUDE #directory.folder().Syntax -->](folderClass.md#folder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folder().Summary -->|
+|[<!-- INCLUDE #directory.folders().Syntax -->](folderClass.md#folders)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folders().Summary -->|
 |[<!-- INCLUDE #directory.fullName.Syntax -->](folderClass.md#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->|
-|[<!-- INCLUDE #directory.getIcon().Syntax -->](folderClass.md#geticon-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.getIcon().Summary -->|
+|[<!-- INCLUDE #directory.getIcon().Syntax -->](folderClass.md#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.getIcon().Summary -->|
 |[<!-- INCLUDE #directory.hidden.Syntax -->](folderClass.md#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.hidden.Summary -->|
 |[<!-- INCLUDE #directory.isAlias.Syntax -->](folderClass.md#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isAlias.Summary -->|
 |[<!-- INCLUDE #directory.isFile.Syntax -->](folderClass.md#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFile.Summary -->|

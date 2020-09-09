@@ -19,40 +19,40 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ||
 |---|
-|[**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object](#copyto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `File` object into the specified *destinationFolder* |
+|[**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object](#copyto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `File` object into the specified *destinationFolder* |
 |[**.create( )** -> boolean ](#create-)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a file on disk according to the properties of the `File` object|
 |[**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object](#createalias-)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)|
-|[**.creationDate** -> Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the file|
-|[**.creationTime** -> Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation  time of the file|
+|[**.creationDate** : Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the file|
+|[**.creationTime** : Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation  time of the file|
 |[**.delete( )**](#delete-)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the file|
-|[**.exists** -> boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk|
-|[**.extension** -> text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;the extension of the file name (if any)|
-|[**.fullName** -> Text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;the full name of the file, including its extension (if any)|
-|[**.getContent( )**  -> BLOB](#getcontent-)<p>returns a `BLOB` containing the entire content of a file|
-|[**.getIcon**( { *size* } ) -> picture](#geticon-)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
-|[**.getText**( { *charSet* } { ; } { *breakMode*} ) -> text](#gettext-)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
-|[**.hidden** -> boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is set as "hidden" at the system level|
-|[**.isAlias** -> boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is an alias, a shortcut, or a symbolic link
-|[**.isFile** -> boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always true for a file|
-|[**.isFolder** -> boolean](#ifFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
-|[**.isWritable** -> boolean](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk and is writable|
-|[**.modificationDate** -> Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the date of the file's last modification|
-|[**.modificationTime** -> Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the file's last modification|
+|[**.exists** : boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk|
+|[**.extension** : text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;the extension of the file name (if any)|
+|[**.fullName** : Text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;the full name of the file, including its extension (if any)|
+|[**.getContent()** : BLOB](#getcontent-)<p>returns a `BLOB` containing the entire content of a file|
+|[**.getIcon**( { *size* : integer } ) : picture](#geticon-)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
+|[**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text](#gettext-)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
+|[**.hidden** : boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is set as "hidden" at the system level|
+|[**.isAlias** : boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is an alias, a shortcut, or a symbolic link
+|[**.isFile** : boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always true for a file|
+|[**.isFolder** : boolean](#ifFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
+|[**.isWritable** : boolean](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk and is writable|
+|[**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the date of the file's last modification|
+|[**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the file's last modification|
 |[**.moveTo**( *destinationFolder* { ; *newName*} )  -> object](#moveto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `File` object into the specified *destinationFolder*|
-|[**.name** -> Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;the name of the file without extension (if any)|
-|[**.original** -> object](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the target element for an alias, a shortcut, or a symbolic link file|
-|[**.parent** -> object](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the file|
-|[**.path** -> Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the file|
-|[**.platformPath** -> Text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the file expressed with the current platform syntax|
+|[**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;the name of the file without extension (if any)|
+|[**.original** : object](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the target element for an alias, a shortcut, or a symbolic link file|
+|[**.parent** : object](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the file|
+|[**.path** : Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the file|
+|[**.platformPath** : Text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the file expressed with the current platform syntax|
 |[**.rename**( *newName* ) -> object](#rename-)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the file with the name you passed in *newName* and returns the renamed `File` object|
 |[**.setContent** ( *content* ) ](#setcontent-)<p>&nbsp;&nbsp;&nbsp;&nbsp;rewrites the entire content of the file using the data stored in the *content* BLOB|
 |[**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) ](#settext-)<p>&nbsp;&nbsp;&nbsp;&nbsp;writes *text* as the new contents of the file|
-|[**.size** -> Number](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the file expressed in bytes|
+|[**.size** : Number](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the file expressed in bytes|
 
 
 ---
 
-## .copyTo( )
+## .copyTo()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -60,17 +60,18 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |v17 R5|Added
 </details>
 
-**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object
+**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |destinationFolder | object |->|Destination folder|
 |newName|text|->|Name for the copy|
-|overwrite|longint|->|`fk overwrite` to replace existing elements|
+|overwrite|integer|->|`fk overwrite` to replace existing elements|
 |Result|object|<-|Copied file or folder|
 
 
 #### Description
-The `.copyTo( )` function  copies the `File` object into the specified *destinationFolder* .
+
+The `.copyTo()` function  copies the `File` object into the specified *destinationFolder* .
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -92,7 +93,7 @@ The copied `File` object.
 You want to copy a picture *file* from the user's document folder to the database folder:
 
 ```4d
-C_OBJECT($source;$copy)
+var $source; $copy : Object
 $source:=Folder(fk documents folder).file("Pictures/photo.png")
 $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ```
@@ -197,7 +198,7 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-**.creationDate** -> Date
+**.creationDate** : Date
 
 #### Description
 The `.creationDate` property returns the creation date of the file.
@@ -217,7 +218,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.creationTime** -> Time
+**.creationTime** : Time
 
 #### Description
 The `.creationTime` property  returns the creation  time of the file (expressed as a number of seconds beginning at 00:00).
@@ -278,7 +279,7 @@ You want to delete a specific file in the database folder:
 |v17 R5|Added
 </details>
 
-**.exists** -> boolean
+**.exists** : boolean
 
 #### Description
 The `.exists` property returns true if the file exists on disk, and false otherwise.
@@ -299,7 +300,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.extension** -> text
+**.extension** : text
 #### Description
 The `.extension` property returns the extension of the file name (if any). An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
@@ -318,7 +319,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.fullName** -> Text
+**.fullName** : Text
 #### Description
 The `.fullName` property returns the full name of the file, including its extension (if any).
 
@@ -329,7 +330,7 @@ This property is **read-only**.
 ---
 
 
-## .getContent( )
+## .getContent()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -337,14 +338,15 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.getContent( )**  -> BLOB
+**.getContent()** : BLOB
 |Parameter|Type||Description|
 |---|----|---|---|
 |Result | BLOB |<-|File content|
 
 
 #### Description
-The `.getContent( )` function  returns a `BLOB` containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
+
+The `.getContent()` function  returns a `BLOB` containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](Concepts/blob.md) section.
 
 **Returned value**
 
@@ -355,7 +357,7 @@ A `BLOB`.
 To save a document's contents in a `BLOB` field:
 
 ```4d
- C_TEXT($vPath)
+ var $vPath : Text
  $vPath:=Select document("";"*";"Select a document";0)
  If(OK=1) //If a document has been chosen
     [aTable]aBlobField:=File($vPath;fk platform path).getContent()
@@ -364,11 +366,10 @@ To save a document's contents in a `BLOB` field:
 
 
 
-
 ---
 
 
-## .getIcon( )
+## .getIcon()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -376,15 +377,16 @@ To save a document's contents in a `BLOB` field:
 |v17 R5|Added
 </details>
 
-**.getIcon**( { *size* } ) -> picture
+**.getIcon**( { *size* : integer } ) : picture
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|longint|->|Side length for the returned picture (pixels)|
+|size|integer|->|Side length for the returned picture (pixels)|
 |Result|picture|<-|Icon|
 
 
 #### Description
-The `.getIcon( )` function returns the icon of the file.
+
+The `.getIcon()` function returns the icon of the file.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
 
@@ -401,7 +403,7 @@ File icon [picture](../Concepts/picture.html).
 ---
 
 
-## .getText( )
+## .getText()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -409,34 +411,40 @@ File icon [picture](../Concepts/picture.html).
 |v17 R5|Added
 </details>
 
-**.getText**( { *charSet* } { ; } { *breakMode*} ) -> text
+**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|charSet |text, longint |-> |Name or number of character set|
-|breakMode|longint |-> |Processing mode for line breaks|
+|charSetName |text |-> |Name of character set|
+|charSetNum |integer |-> |Number of character set|
+|breakMode|integer |-> |Processing mode for line breaks|
 |Result |text  |<- |Text from the document|
 
 
 #### Description
-The `.getText( )` function returns the contents of the file as text .
+The `.getText()` function returns the contents of the file as text .
 
-In *charSet*, pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
+Optionally, you can designate the character set to be used for reading the contents. You can pass either:
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in charSet (this parameter is then ignored).  
+- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
-If the document does not contain a BOM and if the *charSet* parameter is omitted, by default 4D uses the “UTF-8” character sets.
+> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
 
-In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
+If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSetName* or *charSetNum* (this parameter is then ignored). 
+If the document does not contain a BOM and if *charSetName* or *charSetNum* is omitted, by default 4D uses the "UTF-8" character set.
 
-|Constant |Type| Value| Comment|
-|---|---|---|---|
-|`Document unchanged`|Logint|0|No processing|
-|`Document with native format`|Logint|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows|
-|`Document with CRLF`|Logint|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|`Document with CR`|Logint|3|Line breaks are converted to OS X format: CR (carriage return)|
-|`Document with LF`|Logint|4|Line breaks are converted to Unix format: LF (line feed)|
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. The following constants of the "System Documents" theme are available:
 
-By default, when you omit the breakMode parameter, line breaks are processed in native mode (1).
+|Constant | Value| Comment|
+|---|---|---|
+|`Document unchanged`|0|No processing|
+|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows|
+|`Document with CRLF`|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
+|`Document with CR`|3|Line breaks are converted to OS X format: CR (carriage return)|
+|`Document with LF`|4|Line breaks are converted to Unix format: LF (line feed)|
+
+By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
 **Returned value**
 
@@ -458,8 +466,10 @@ When you execute this code:
 ```4d
  $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 by default
  $txt:=$myFile.getText()
+```
 ... you get:
 
+```4d
   // $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
   // \t = tab
   // \r = CR
@@ -479,7 +489,7 @@ When you execute this code:
 |v17 R5|Added
 </details>
 
-**.hidden** -> boolean
+**.hidden** : boolean
 
 #### Description
 The `.hidden` property returns true if the file is set as "hidden" at the system level, and false otherwise. 
@@ -499,7 +509,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isAlias** -> boolean
+**.isAlias** : boolean
 
 #### Description
 The `.isAlias` property returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise. 
@@ -519,7 +529,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFile** -> boolean
+**.isFile** : boolean
 
 #### Description
 The `.isFile` property returns always true for a file. 
@@ -539,7 +549,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFolder** -> boolean
+**.isFolder** : boolean
 
 #### Description
 The `.isFolder` property returns always false for a file. 
@@ -559,7 +569,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isWritable** -> boolean
+**.isWritable** : boolean
 
 #### Description
 The `.isWritable` property returns true if the file exists on disk and is writable. 
@@ -590,7 +600,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.modificationDate** -> Date
+**.modificationDate** : Date
 
 #### Description
 The `.modificationDate` property returns the date of the file's last modification. 
@@ -610,7 +620,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.modificationTime** -> Time
+**.modificationTime** : Time
 
 ##### Description
 The `.modificationTime` property returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). 
@@ -672,7 +682,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |v17 R5|Added
 </details>
 
-**.name** -> Text
+**.name** : Text
 
 #### Description
 The `.name` property returns the name of the file without extension (if any). 
@@ -692,7 +702,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.original** -> object
+**.original** : object
 
 #### Description
 The `.original` property returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:
@@ -717,7 +727,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.parent** -> object
+**.parent** : object
 
 #### Description
 The `.parent` property returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
@@ -737,7 +747,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.path** -> Text
+**.path** : Text
 
 #### Description
 The `.path` property returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
@@ -757,7 +767,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.platformPath** -> Text
+**.platformPath** : Text
 
 #### Description
 The `.platformPath` property returns the path of the file expressed with the current platform syntax.
@@ -900,7 +910,7 @@ $myFile.setText("Hello world")
 |v17 R5|Added
 </details>
 
-**.size** -> Number
+**.size** : Number
 
 #### Description
 The `.size` property returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0.
