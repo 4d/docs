@@ -59,31 +59,31 @@ Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#
 
 ### Paramètre de valeur scalaire
 
-Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. Par exemple, avec une fonction de dataclass `getCities()` qui reçoit des paramètres de type texte : `/rest/City/getCities`
 
-**Parameters in body:** ["Aguada","Paris"]
+**Parmaètres dans le corps :** ["Aguada","Paris"]
 
-All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
+Tous les types de données JSON sont pris en charge dans les paramètres, y compris les pointeurs JSON. Les dates peuvent être passées sous forme de chaînes au format de date ISO 8601 (par exemple, "2020-08-22T22:00:000Z").
 
 
-### Entity parameter
+### Paramètre d'entité
 
-Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
+Les entités passées en paramètres sont référencées sur le serveur via leur clé (c'est-à-dire la propriété __KEY). Si le paramètre clé est omis dans une requête, une nouvelle entité est chargée en mémoire du serveur. Vous pouvez également transmettre des valeurs pour tous les attributs de l'entité. These values will automatically be used for the entity handled on the server.
 
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
-| Propriétés            | Type                                 | Description                                                                |
-| --------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
-| Attributs de l'entité | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS           | Chaine                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY              | Booléen                              | Mandatory - True to indicate to the server that the parameter is an entity |
-| __KEY                 | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
+| Propriétés            | Type                                              | Description                                                                 |
+| --------------------- | ------------------------------------------------- | --------------------------------------------------------------------------- |
+| Attributs de l'entité | mixte                                             | Optionnelle - Valeurs à modifier                                            |
+| __DATACLASS           | Chaine                                            | Obligatoire - Indique la Dataclass de l'entité                              |
+| __ENTITY              | Booléen                                           | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
+| __KEY                 | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
-- If __KEY is not provided, a new entity is created on the server with the given attributes.
-- If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes
+- Si __KEY n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
+- Si __KEY est fourni, l'entité correspondant à _KEY est chargée sur le serveur avec les attributs donnés
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
+Voir les exemple de [création](#creating-an-entity) ou de [mise à jour](#updating-an-entity) des entités.
 
 #### Related entity parameter
 
@@ -101,7 +101,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 
 | Propriétés            | Type    | Description                                                                          |
 | --------------------- | ------- | ------------------------------------------------------------------------------------ |
-| Attributs de l'entité | mixed   | Optional - Values to modify                                                          |
+| Attributs de l'entité | mixte   | Optionnelle - Valeurs à modifier                                                     |
 | __DATASET             | Chaine  | Mandatory - entitySetID (UUID) of the entity selection                               |
 | __ENTITIES            | Booléen | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
@@ -450,16 +450,16 @@ Body of the request:
 In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
 
 ```
-// StudentsEntity class
+// classe StudentsEntity
 
 Class extends Entity
 
 Function putToSchool()
     var $1, $school , $0, $status : Object
 
-        //$1 is a Schools entity
+        //$1 est une entité Schools
     $school:=$1
-        //Associate the related entity school to the current Students entity
+        //Associe l'entité reliée "school" à l'entité courante "Students"
     This.school:=$school
 
     $status:=This.save()
