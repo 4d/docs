@@ -116,9 +116,9 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 このプロパティを使用して、サブフォームで使用するリストフォームを割り当てます。  リストサブフォームを使うことで、他のテーブルのデータを入力、表示、および更新することができます。
 
-List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. The input form is referred to as the Detail form.
+リストサブフォームをデータ入力に使用するには 2つの方法があります。一つはユーザーがサブフォームに直接データを入力する方法で、もう一つは [入力フォーム](#詳細フォーム) を開いてデータを入力する方法です。 後者の設定では、サブフォームとして使用されるフォームがリストフォーム、 入力のために使用されるフォームが詳細フォームとなります。
 
-You can also allow the user to enter data in the List form.
+また、リストフォームに入力するようにもできます。
 
 #### JSON 文法
 
