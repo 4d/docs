@@ -13,7 +13,7 @@ Les fonctions sont simplement appelées dans les requêtes POST sur l'interface 
 
 avec des données contenues dans le corps de la requête POST : `["Paris"]`
 
-In 4D language, this call is equivalent to, :
+Dans le langage 4D, cet appel équivaut à :
 
 ```4d
 $city:=ds.City.getCity("Aguada")
@@ -139,7 +139,7 @@ You can then run this request:
 }
 ```
 
-### Using a dataclass class function
+### Utiliser une fonction de classe de dataclass
 
 The Dataclass class `City` provides an API that returns a city entity from a name passed in parameter:
 
@@ -148,7 +148,7 @@ The Dataclass class `City` provides an API that returns a city entity from a nam
 
 Class extends DataClass
 
-Function getCity()
+Fonction getCity()
     var $0 : cs.CityEntity
     var $1,$nameParam : text
     $nameParam:=$1
@@ -159,11 +159,11 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/City/getCity`
 
-Body of the request: ["Aguada"]
+Requête : ["Paris"]
 
 #### Résultat
 
-The result is an entity:
+Le résultat est une entité :
 ```
 {
     "__entityModel": "City",
@@ -172,7 +172,7 @@ The result is an entity:
     "__TIMESTAMP": "2020-03-09T08:03:19.923Z",
     "__STAMP": 1,
     "ID": 1,
-    "name": "Aguada",
+    "name": "Paris",
     "countyFIPS": 72003,
     "county": {
         "__deferred": {
@@ -188,7 +188,7 @@ The result is an entity:
 }
 ```
 
-### Using an entity class function
+### Utiliser une fonction de classe d'une entité
 
 The Entity class `CityEntity` provides an API:
 
