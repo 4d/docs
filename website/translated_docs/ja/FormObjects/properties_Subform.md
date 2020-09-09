@@ -22,7 +22,7 @@ title: サブフォーム
 ---
 ## 詳細フォーム
 
-You use this property to declare the detail form to use in the subform. It can be:
+このプロパティを使用して、サブフォームで使用する詳細フォームを割り当てます。 It can be:
 
 - a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
   You can select a component form name when it is published in the component.
