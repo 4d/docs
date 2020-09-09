@@ -48,7 +48,7 @@ title: データソース
 
 #### 対象オブジェクト
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](comboBox_overview.md) - [階層リスト](list_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 
 

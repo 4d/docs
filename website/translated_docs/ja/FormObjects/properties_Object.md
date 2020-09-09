@@ -154,7 +154,7 @@ Here is the list of objects whose value can be saved:
 > セレクションおよびコレクション型のリストボックス列において、このプロパティは **データタイプ** と呼ばれています。
 
 
-オブジェクトに関連付けられた式または変数のデータ型を指定します。 この設定の主な目的は、プロパティリスト内で提供されるテーマとオプションが、データの型と対応するようにするためです。 つまり、実際に変数の型そのものを決めるわけではありません。 In view of project compilation, you must use the 4D language commands of the `Compiler` theme.
+オブジェクトに関連付けられた式または変数のデータ型を指定します。 この設定の主な目的は、プロパティリスト内で提供されるテーマとオプションが、データの型と対応するようにするためです。 つまり、実際に変数の型そのものを決めるわけではありません。 プロジェクトをコンパイルするためには、`コンパイラー` テーマの 4Dランゲージコマンドを別途使う必要があります。
 
 ただし、次の特定の場合には、このプロパティは型宣言の機能を持ちえます:
 
@@ -251,14 +251,14 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 ---
 ## プラグインの種類
 
-オブジェクトに関連付ける [プラグイン](pluginArea_overview.md) の名称。 ここで指定するプラグイン名は、プラグインの manifest.json ファイルにて公開されています。
+オブジェクトに関連付ける [プラグインが提供する外部エリア](pluginArea_overview.md) の名称。 ここで指定する名称は、プラグインの manifest.json ファイルにて公開されています。
 
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                 |
-| -------------- | ------ | --------------------- |
-| pluginAreaKind | string | プラグインの名称 (% 文字で始まります) |
+| 名              | データタイプ | とりうる値                                                         |
+| -------------- | ------ | ------------------------------------------------------------- |
+| pluginAreaKind | string | プラグインが提供する外部エリアの、% 文字で始まる名称 (プロパティリストの候補表示では、この % 文字は表示されません) |
 
 
 #### 対象オブジェクト
@@ -299,7 +299,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 デフォルトでラベルはオブジェクトの中央に置かれます。 またオブジェクトにアイコンも含まれている場合、[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置) プロパティを用いて、これら2 つの要素の相対位置を変更することができます。
 
-For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+インターフェースの翻訳の目的で、XLIFF 参照をボタンのタイトルエリアに入力することができます ([付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) 参照)。
 
 #### JSON 文法
 

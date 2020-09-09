@@ -210,9 +210,9 @@ title: リストボックス
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
- //sets row 6 as disabled AND not selectable
+ // 6行目を無効化し、かつ選択不可に設定します
  aLControlArr{6}:=lk row is disabled 
- //sets row 6 as disabled but selectable again
+ // 6行目を無効化するが、選択不可を再設定していないので選択が可能となります
 ```
 
 

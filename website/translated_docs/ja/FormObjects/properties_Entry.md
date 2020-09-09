@@ -380,7 +380,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ラジオボタン](radio_overview.md)
 
 
 
