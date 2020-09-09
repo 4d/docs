@@ -125,7 +125,7 @@ title: リサイズオプション
 ---
 ## サイズ変更可
 
-Designates if the size of the column can be modified by the user.
+このオプションが選択されていると、ユーザーはヘッダーエリアの右側をドラッグすることで列のサイズを変更できます。
 
 #### JSON 文法
 
