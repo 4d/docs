@@ -5,13 +5,13 @@ title: Appeler des fonctions de classe ORDA
 
 ## Aperçu
 
-You can call [user class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Vous pouvez appeler les [fonctions de classe utilisateur](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
 `/rest/City/getCity`
 
-with data in the body of the POST request: `["Aguada"]`
+avec des données contenues dans le corps de la requête POST : `["Paris"]`
 
 In 4D language, this call is equivalent to, :
 
