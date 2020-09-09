@@ -6,7 +6,7 @@ title: サブフォーム
 ---
 ## 削除を許可
 
-Specifies if the user can delete subrecords in a list subform.
+リストサブフォーム内でユーザーがサブレコードを削除できるかどうかを指定します。
 
 #### JSON 文法
 
