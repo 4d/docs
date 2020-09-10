@@ -260,7 +260,7 @@ When creating or editing data model classes, you must pay attention to the follo
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default. 
 
-A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request, however it can be called from the application itself. Remote requests include:
+A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request, it can only be called from the application itself. Remote requests include:
 
 - Requests sent by client 4D applications working with remote datastores
 - REST requests
