@@ -7,18 +7,18 @@ Beim Entwickeln einer 4D Anwendung entdecken Sie viele Fähigkeiten, die Sie bei
 
 ## Wofür wird ein Plug-In benötigt?
 
-Auch wenn 4D hunderte von integrierten Methoden zum Verwalten von Objekten, Datensätzen und Steuern von Benutzeroberflächen bietet, ist u.U. eine spezielle Verwendung oder Funktionalität (manchmal abhängig von der Plattform) erforderlich: Einer benötigt ODBC unter Windows, ein anderer Apple-Dienste auf MacOS, und weitere möchten spezielle Statistik-Tools, Zahlungsmodalitäten einbauen, Login für soziale Netzwerke oder Dateizugriff über das Netzwerk gewähren, eine branchenspezifische Benutzeroberfläche oder eine eigene Bildstruktur hinzufügen.
+Auch wenn 4D hunderte von Methoden zum Verwalten von Objekten, Datensätzen und Steuern von Benutzeroberflächen enthält, wird für manche Fälle eine spezielle Verwendung oder Funktionalität (abhängig von der Plattform) benötigt: Einer benötigt ODBC unter Windows, ein anderer Apple-Dienste auf MacOS, und weitere möchten spezielle Statistik-Tools, bestimmte Zahlungsmodalitäten einbauen, Login für soziale Netzwerke oder Dateizugriff über das Netzwerk gewähren, eine branchenspezifische Benutzeroberfläche oder eine eigene Bildstruktur hinzufügen.
 
-Würden all diese Bereiche für die beiden Betriebssysteme macOS und Windows über 4D Befehle abgedeckt, hätten wir als Effekt ein Produkt mit tausenden von Befehlen und gleichzeitig viele Benutzer, die solch einen Funktionsumfang gar nicht benötigen. Solch ein allumfassendes Tool würde die 4D Umgebung unglaublich komplex machen, so dass die meisten Benutzer erst ein paar Monate studieren müssten, bevor sie brauchbare Ergebnisse liefern könnten.
+Würden all diese Bereiche für die beiden Betriebssysteme macOS und Windows über 4D Befehle abgedeckt, hätten wir als Effekt ein Produkt mit tausenden von Befehlen und gleichzeitig viele Benutzer, die solch einen Funktionsumfang gar nicht benötigen. Solch ein allumfassendes Tool würde die 4D Umgebung unglaublich komplex machen, so dass die meisten Anwender erst ein paar Monate studieren müssten, bevor sie brauchbare Ergebnisse liefern könnten.
 
 Der modulare Aufbau der 4D Umgebung ermöglicht die Erstellung von Basisanwendungen, schließt aber die Entwicklung hochkomplexer Systeme nicht aus. Die 4D Plug-in Architektur öffnet die 4D Umgebung für jede Art von Anwendung oder Benutzer. 4D Plug-Ins vervielfachen die Leistung und Produktivität der Anwendung oder des Benutzers.
 
 ## Was ist ein Plug-In und was kann es leisten?
 
-A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
+Ein Plug-In ist ein Stück Code, den 4D beim Starten aufruft. Es rüstet 4D mit zusätzlichen Funktionalitäten aus und macht es leistungsstärker.
 
-Usually, a plug-in does things that:
-- 4D cannot do (ie, specific platform technology),
+In der Regel macht ein Plug-In Sachen die:
+- 4D nicht ausführen kann (z. B. spezifische Technologie einer Plattform)
 - will be very hard to write just using 4D,
 - are only available as Plug-in Entrypoint
 
