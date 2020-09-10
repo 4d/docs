@@ -8,26 +8,26 @@ title: データモデルクラス
 
 ORDA を使用して、データモデル上に高レベルクラス関数を作成することができます。 これによってビジネス指向のコードを書き、APIのように "公開" することができます。 データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。
 
-たとえば、選択中の社員より給与の高い社員一覧を返す `getNextWithHigherSalary()` 関数を `EmployeeEntity` クラスに作成したとします。 この関数は簡単に呼び出すことができます:
+たとえば、選択中の社員より給与の高い社員一覧を返す `getNextWithHigherSalary()` 関数を `EmployeeEntity` クラスに作成したとします。 It would be as simple as calling:
 
 ```4d
 $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
 ```
 
-これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます ([リモートデータストアの例](#リモートデータストアの例) を参照ください):
+Developers can not only use these functions in local datastores, but also in client/server and remote architectures (see the full example [below](#example-with-remote-datastore)):
 
 ```4d
  //$cityManager はリモートデータストアへの参照です
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
-Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained, reused, with a high level of security:
+Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained and reused with a high level of security:
 
-- わかりやすく使いやすい関数のみを公開し、その裏にある構造の複雑性を "隠す" ことができます。
+- You can "hide" the overall complexity of the underlying physical structure and only expose understandable and ready-to-use functions.
 
-- 構造が発展した場合には影響を受ける関数を適応させるだけで、クライアントアプリケーションは引き続き透過的にそれらを呼び出すことができます。
+- If the physical structure evolves, you can simply adapt function code and client applications will continue to call them transparently.
 
-- by default, all your data model class functions are set to **private** and cannot be called from remote requests. You must declare explicitly each public function using the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- By default, all of your data model class functions are set as **private** and cannot be called from remote requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](assets/en/ORDA/api.png)
 
@@ -52,7 +52,7 @@ ORDA データモデルクラスはすべて **`cs`** クラスストアのプ�
 
 > ORDA ユーザークラスは通常のクラスファイル (.4dm) としてプロジェクトの Classes サブフォルダーに保存されます [(後述参照)](#クラスファイル)。
 
-ORDA データモデルユーザークラスのオブジェクトインスタンスは、それだの親クラスのプロパティや関数を使うことができます。 たとえば、Entity クラスのオブジェクトは [ORDA の Entity 汎用クラス](https://doc.4d.com/4Dv18R4/4D/18-R4/ORDA-Entity.201-4981870.ja.html) の関数を呼び出すことができます。
+Also, object instances from ORDA data model user classes benefit from their parent's properties and functions. たとえば、Entity クラスのオブジェクトは [ORDA の Entity 汎用クラス](https://doc.4d.com/4Dv18R4/4D/18-R4/ORDA-Entity.201-4981870.ja.html) の関数を呼び出すことができます。
 
 
 
@@ -109,20 +109,20 @@ ORDA で公開されるテーブル毎に、DataClass クラスが `cs` クラ�
 #### 例題
 
 ```4D
-// cs.Company クラス
+// cs.Company class
 
 
 Class extends DataClass
 
-// 収益が平均以上の会社を返します
-// Company DataClass にリレートしているエンティティセレクションを返します 
+// Returns companies whose revenue is over the average
+// Returns an entity selection related to the Company DataClass
 
 Function GetBestOnes()
     $sel:=This.query("revenues >= :1";This.all().average("revenues"));
     $0:=$sel
 ```
 
-全会社データから平均以上の会社データをエンティティセレクションに抽出するには次を実行します:
+Then you can get an entity selection of the "best" companies by executing:
 
 ```4d
     var $best : cs.CompanySelection
@@ -183,12 +183,12 @@ ORDA で公開されるテーブル毎に、EntitySelection クラスが `cs` �
 #### 例題
 
 ```4d
-// cs.EmployeeSelection クラス
+// cs.EmployeeSelection class
 
 
 Class extends EntitySelection
 
-// 給与が平均以上の社員を当該エンティティセレクションから抽出します
+//Extract the employees with a salary greater than the average from this entity selection 
 
 Function withSalaryGreaterThanAverage
     C_OBJECT($0)
@@ -196,7 +196,7 @@ Function withSalaryGreaterThanAverage
 
 ```
 
-任意の社員エンティティセレクションより、給与が平均以上の社員を取得するには:
+Then you can get employees with a salary greater than the average in any entity selection by executing:
 
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
@@ -213,8 +213,7 @@ ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラス�
 #### 例題
 
 ```4d
-// cs.CityEntity クラス
-
+// cs.CityEntity class
 
 Class extends Entity
 
@@ -224,11 +223,11 @@ Function getPopulation()
 
 Function isBigCity
 C_BOOLEAN($0)
-// 関数 getPopulation() をクラス内で使用することができます
+// The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
 
-次のように関数を呼び出すことができます:
+Then you can call this code:
 
 ```4d
 var $cityManager; $city : Object
@@ -243,13 +242,13 @@ End if
 
 ### Specific rules
 
-データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません。
+When creating or editing data model classes, you must pay attention to the following rules:
 
-- 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に:
+- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. 特に:
     - 4D テーブルと [ユーザークラス名](Concepts/classes.md#クラス名) に同じ名前を使用してはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
-    - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
+    - Do not use a reserved name for a 4D table (e.g., "DataClass").
 
-- クラス定義の際、[`Class extends`](Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
+- When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement exactly matches the parent class name (remember that they're case sensitive). たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
 
 - データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 上述の ORDA クラステーブルに一覧化されている、通常の [インスタンス化の方法](#アーキテクチャー) を使う必要があります。
 
@@ -259,16 +258,16 @@ End if
 
 ## Exposed vs non-exposed functions
 
-By default for security reasons, all your data model class functions are **not exposed** (i.e. private).
+For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default.
 
-A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request (it can however be called from the application itself). Remote requests include:
+A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request, it can only be called from the application itself. Remote requests include:
 
-- requests sent by client 4D applications working with remote datastores
+- Requests sent by client 4D applications working with remote datastores
 - REST requests
 
-If a remote application tries to access a non-exposed function, the error "-10729 - Unknown member method" is returned.
+If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned.
 
-To allow a data model class function to be called by a remote request, you must declare it explicitly using the `exposed` keyword. The formal syntax is:
+To allow a data model class function to be called by a remote request, you must explicitly declare it using the `exposed` keyword. The formal syntax is:
 
 ```4d  
 // declare an exposed function
@@ -318,21 +317,21 @@ $serialNumber:=$remoteDS.Schools.computeSerialNumber() // Error "Unknown member 
 
 ## Local functions
 
-By default in client/server architecture, ORDA data model functions are executed **on the server**. It means that calling a function generates a request to the server.
+By default in client/server architecture, ORDA data model functions are executed **on the server**. This means that calling a function generates a request to the server.
 
-However, it happens that a function could be executed on the client side, for example when it processes data that are already in the local cache. In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The function will then be executed on the client and will not generate requests to the server. The formal syntax is:
+However, it could happen that a function is executed on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The function will then be executed on the client and will not generate requests to the server. The formal syntax is:
 
 ```4d  
 // declare a function to execute locally in client/server
 local Function <functionName>   
 ```
 
-Obviously, you need to make sure that the function is actually eligible to a local execution. In particular, you need to make sure that:
+Obviously, you need to make sure that the function is actually eligible for local execution. In particular, you need to make sure that:
 
-- required data are in loaded the ORDA cache and is not expired - otherwise, requests may be triggered to the server,
+- required data is loaded in the ORDA cache and not expired - otherwise, requests may be triggered to the server,
 - no part of the function code will send a request to the server (for example, `Current time(*)` will always call the server).
 
-> The `local` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
+> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
 
 
 ### 例題
@@ -341,7 +340,7 @@ Obviously, you need to make sure that the function is actually eligible to a loc
 
 Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
 
-- On the StudentsEntity class
+On the *StudentsEntity* class:
 
 ```4d
 Class extends Entity
@@ -357,7 +356,7 @@ End if
 
 #### Checking attributes
 
-We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server for save.
+We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
 
 On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
 
@@ -407,7 +406,7 @@ ORDA データモデルユーザークラスは、クラスと同じ名称の .4
 
 ![](assets/en/ORDA/ORDA_Classes-3.png)
 
-> 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](assets/en/ORDA/showClass.png)
+> 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 To show them you need to select **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
 
 ORDA ユーザークラスは通常のクラスとは異なるアイコンで表されます。 空のクラスは薄く表示されます:
 
@@ -424,7 +423,7 @@ Class extends Entity
 
 ### クラスの編集
 
-定義された ORDA クラスファイルを 4D メソッドエディターで開くには、ORDA クラス名を選択してエクスプローラーのオブションメニュー、またはコンテキストメニューの **編集...** を使用するか、ORDA クラス名をダブルクリックします (通常のクラスと同様):
+To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
 
 ![](assets/en/ORDA/classORDA4.png)
 
