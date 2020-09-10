@@ -44,9 +44,9 @@ title: サブフォーム
 ---
 ## 空行をダブルクリック
 
-Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
-- Do nothing: Ignores double-click.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
+Action to perform in case of a double-click on an empty line of a list subform. 次のオプションから選択することができます:
+- 何もしない: ダブルクリックを無視します。
+- レコード追加: サブフォーム中に新規レコードを作成し、編集モードにします。 "リスト更新可" オプションが選択されている場合、レコードは直接リスト内に作成されます。 選択されていない場合、レコードはサブフォームに割り当てられた [詳細フォーム](#詳細フォーム) 上に作成されます。
 
 
 #### JSON 文法
@@ -60,17 +60,17 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 [サブフォーム](subform_overview.md)
 
 #### 参照
-[Double click on row](#double-click-on-row)
+[行をダブルクリック](#double-click-on-row)
 
 ---
 ## 行をダブルクリック
 
-`List subform`
+`リストサブフォーム`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. 選択可能なオプションは以下の通りです:
+ユーザーがリストサブフォームの行をダブルクリックした際に実行されるアクションを指定します。 選択可能なオプションは以下の通りです:
 
 *   **何もしない** (デフォルト): 行をダブルクリックしても自動アクションは発動しません。
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). レコードは読み書き可能モードで開かれるので、編集が可能です。
+*   **レコード編集**: 行をダブルクリックすると、リストサブフォームに設定された [詳細フォーム](#詳細フォーム) に当該レコードが表示されます。 レコードは読み書き可能モードで開かれるので、編集が可能です。
 *   **レコード表示**: レコード編集と同様の挙動をしますが、レコードは読み取り専用モードで開かれるため、編集はできません。
 
 選択されているアクションに関わらず、`On Double Clicked` フォームイベントが生成されます。
@@ -89,14 +89,14 @@ Sets the action to be performed when a user double-clicks on a row in a list sub
 
 
 #### 参照
-[Double click on empty row](#double-click-on-empty-row)
+[空行をダブルクリック](#double-click-on-empty-row)
 
 ---
 ## リスト更新可
 
-When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
+リストサブフォームでこのプロパティが有効化されていると、ユーザーはリスト内で直接レコードデータを更新できます (この場合、関連づけられている [詳細フォーム](#詳細フォーム) は開きません)。
 
-> To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
+> これをおこなうには、更新するフィールド上で 2回クリックをおこない、編集モードにします (ダブルクリックにならないようクリックの間隔をあけなければなりません)。
 
 
 #### JSON 文法
@@ -114,11 +114,11 @@ When a list subform has this property enabled, the user can modify record data d
 ---
 ## リストフォーム
 
-You use this property to declare the list form to use in the subform.  A list subform lets you enter, view, and modify data in other tables.
+このプロパティを使用して、サブフォームで使用するリストフォームを割り当てます。  リストサブフォームを使うことで、他のテーブルのデータを入力、表示、および更新することができます。
 
-List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. The input form is referred to as the Detail form.
+リストサブフォームをデータ入力に使用するには 2つの方法があります。一つは [入力フォーム](#詳細フォーム) を開いてデータを入力する方法です。 この設定では、サブフォームとして使用されるフォームがリストフォーム、 入力のために使用されるフォームが詳細フォームとなります。
 
-You can also allow the user to enter data in the List form.
+また、ユーザーがリストサブフォームに直接データを入力するようにもできます。
 
 #### JSON 文法
 

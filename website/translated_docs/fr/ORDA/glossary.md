@@ -26,7 +26,7 @@ Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou 
 
 Code for the user class function(s).
 
-## Class function
+## Fonction de classe
 
 ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
 
