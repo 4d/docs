@@ -27,7 +27,7 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 - If the physical structure evolves, you can simply adapt function code and client applications will continue to call them transparently. 
 
-- By default, all of your data model class functions are set as **private** and cannot be called from remote requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- By default, all of your data model class functions are **not exposed** and cannot be called from remote requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](assets/en/ORDA/api.png)
 
@@ -260,7 +260,7 @@ When creating or editing data model classes, you must pay attention to the follo
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default. 
 
-A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request, it can only be called from the application itself. Remote requests include:
+A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request. It can only be called from the application itself. Remote requests include:
 
 - Requests sent by client 4D applications working with remote datastores
 - REST requests
@@ -274,7 +274,7 @@ To allow a data model class function to be called by a remote request, you must 
 exposed Function <functionName>   
 ```
 
-> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
+> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
 ### Example 
 
@@ -331,7 +331,7 @@ Obviously, you need to make sure that the function is actually eligible for loca
 - required data is loaded in the ORDA cache and not expired - otherwise, requests may be triggered to the server,
 - no part of the function code will send a request to the server (for example, `Current time(*)` will always call the server).
 
-> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
+> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
 
 ### Examples
