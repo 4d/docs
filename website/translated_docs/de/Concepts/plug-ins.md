@@ -47,14 +47,14 @@ Die Ordner "PluginName.bundle" (auf MacOS Paket) enthalten die Windows- und MacO
 
 Sie können den Ordner PlugIns an zwei verschiedene Stellen legen:
 
-- Auf dieselbe Ebene wie die ausführbare 4D Applikation, z.B.:
+- Auf dieselbe Ebene wie das ausführbare 4D Programm, z.B.:
   - Unter Windows neben die .exe Datei
-  - Under macOS: at the first level of the Contents folder inside the application package.   
-    In this case, plug-ins are available in every database opened by this application.
-- At the same level as the database structure file. In this case,  plug-ins are only available in this particular database.
+  - Auf macOS auf die oberste Ebene des Ordners Contents im Software-Paket   
+    In diesem Fall sind die Plug-Ins in jeder Anwendung verfügbar, die über dieses 4D Programm geöffnet wird.
+- Auf dieselbe Ebene wie die Strukturdatei der Anwendung. In diesem Fall sind die Plug-Ins nur in dieser spezifischen Anwendung verfügbar.
 
-The choice of location depends on how you want to use the plug-in.
+Ihre Wahl richtet sich danach, wie Sie das Plug-In einsetzen wollen.
 
-If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
+Liegt dasselbe Plug-In an beiden Stellen, lädt 4D nur das Plug-In, welches neben der Struktur liegt. Existieren in einer Anwendung mit einkompilierter 4D Volume Desktop mehrere Instanzen desselben Plug-In, lässt sich die Anwendung nicht öffnen.
 
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Then open your database with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Öffnen Sie dann Ihre Anwendung mit 4D. Erfordert ein Plug-In eine spezifische Benutzerlizenz, wird es geladen, jedoch nicht aktiviert.
