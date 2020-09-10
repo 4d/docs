@@ -319,7 +319,7 @@ $serialNumber:=$remoteDS.Schools.computeSerialNumber() // Error "Unknown member 
 
 By default in client/server architecture, ORDA data model functions are executed **on the server**. This means that calling a function generates a request to the server. 
 
-However, it could happen that a function is executed on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The function will then be executed on the client and will not generate requests to the server. The formal syntax is:
+However, it could happen that a function is executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The function will then be executed on the client and will not generate requests to the server. The formal syntax is:
 
 ```4d  
 // declare a function to execute locally in client/server
