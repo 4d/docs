@@ -71,9 +71,9 @@ Die formale Syntax der Abfragefolge `For..End for` lautet:
  End use
 ```
 
-The `Use...End use` structure defines a sequence of statements that will execute tasks on the *Shared_object_or_Shared_collection* parameter under the protection of an internal semaphore. *Shared_object_or_Shared_collection* can be any valid shared object or shared collection.
+Die Struktur `Use...End use` definiert eine Folge von Anweisungen, die unter dem Schutz einer internen Semaphore Aufgaben für den Parameter *Shared_object_or_Shared_collection* ausführen. *Shared_object_or_Shared_collection* kann jedes gültige shared object bzw. shared collection sein.
 
-Shared objects and shared collections are designed to allow communication between processes, in particular, **preemptive 4D processes**. They can be passed by reference as parameters from a process to another one. For detailed information on shared objects or shared collections, refer to the **Shared objects and shared collections** page. Surrounding modifications on shared objects or shared collections by the `Use...End use` keywords is mandatory to prevent concurrent access between processes.
+Shared objects und shared collections wurden zur Kommunikation zwischen Prozessen eingerichtet, insbesondere **preemptive 4D Prozesse**. Sie lassen sich per Referenz als Parameter von einem Prozess zu einem anderen übergeben. Weitere Informationen dazu finden Sie auf der Seite **Shared Objects und Shared Collections**. Änderungen in shared objects/collections müssen zwingend in die Struktur `Use...End use` eingebettet werden, um konkurrierenden Zugriff zwischen Prozessen zu verhindern.
 
 - Once the **Use** line is successfully executed, all _Shared_object_or_Shared_collection_ properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
 - The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
