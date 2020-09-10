@@ -447,7 +447,7 @@ Corps de la requête :
 
 ### Mettre à jour une entité avec une entité liée
 
-In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
+Dans cet exemple, nous associons une école existante à l'entité Students. La classe `StudentsEntity` possède une API :
 
 ```
 // classe StudentsEntity
@@ -487,30 +487,30 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 ```
 
 
-### Receiving an entity selection as parameter
+### Recevoir une sélection d'entité comme paramètre
 
-In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
+Dans la classe de Dataclass `Students`, la fonction `setFinalExam()` met à jour une sélection d'entité reçue ($1). Elle met à jour l'attribut *finalExam* avec la valeur reçue ($2). Elle retourne les clés primaires des entités mises à jour.
 
 ```
-// Students class
+// classe Students
 
 Class extends DataClass
 
-Function setFinalExam()
+Fonction setFinalExam()
 
     var $1, $es, $student, $status : Object
     var $2, $examResult : Text
 
     var $keys, $0 : Collection
 
-      //Entity selection
+      //Sélection d'entité
     $es:=$1
 
     $examResult:=$2
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      //Boucle sur la sélection d'entité
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -522,11 +522,11 @@ Function setFinalExam()
     $0:=$keys
 ```
 
-An entity set is first created with this request:
+Un ensemble d'entité est d'abord créé avec cette requête :
 
 `http://127.0.0.1:8044/rest/Students/?$filter="ID<3"&$method=entityset`
 
-Then you can run this request:
+Vous pouvez ensuite exécuter cette requête :
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
@@ -545,7 +545,7 @@ Corps de la requête :
 
 #### Résultat
 
-The entities with primary keys 1 and 2 have been updated.
+Les entités ayant les clés primaires sont 1 et 2 ont été mises à jour.
 
 ```
 {
@@ -556,9 +556,9 @@ The entities with primary keys 1 and 2 have been updated.
 }
 ```
 
-### Using an entity selection updated on the client
+### Utiliser une sélection d'entité mise à jour sur le client
 
-Using the `getAgeAverage()` function [defined above](#using-an-entityselection-class-function-and-an-entityset).
+A l'aide de la fonction `getAgeAverage()` [définie ci-dessus](#using-an-entityselection-class-function-and-an-entityset).
 
 ```4d
 var $remoteDS, $newStudent, $students : Object
@@ -566,13 +566,13 @@ var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 
-// $newStudent is a student entity to procees
+// $newStudent est une entité "student" à traiter
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// We add an entity to the $students entity selection on the client
+// Nous avons ajouté une entité à la sélection d'entité $students sur le client
 $students.add($newStudent) 
 
-// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
-// The function is executed on the server on the updated $students entity selection which included the student added from the client
+// Nous appelons une fonction sur la classe StudentsSelection qui retourne l'âge moyen des étudiants de la sélection d'entité
+// La fonction est utilisée sur le serveur sur la sélection d'entité $students mise à jour, qui inclut l'étudiant ajouté par le client
 $ageAverage:=$students.getAgeAverage()
 ```
