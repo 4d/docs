@@ -384,7 +384,7 @@ Corps de la requête :
 }]
 ```
 
-Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
+Si aucune `__KEY` n'est donnée, l'entité Students est chargée avec la clé primaire 55 **avec la valeur lastname reçue par le client**. Parce que la fonction exécute une action `save()`, la nouvelle entité est mise à jour.
 
 #### Résultat
 
@@ -403,9 +403,9 @@ Since `__KEY` is given, the Students entity with primary key 55 is loaded **with
 }
 ```
 
-### Creating an entity with a related entity
+### Créer une entité avec une entité liée
 
-In this example, we create a new Students entity with the Schools entity having primary key 2.
+Dans cet exemple, nous créons une nouvelle entité Students avec l'entité Schools ayant la clé primaire 2.
 
 Lancez cette requête :
 
@@ -445,7 +445,7 @@ Corps de la requête :
 ```
 
 
-### Updating an entity with a related entity
+### Mettre à jour une entité avec une entité liée
 
 In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
 
