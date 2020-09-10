@@ -44,14 +44,8 @@
       "API/entitySelectionClass": {
         "title": "Entity Selections"
       },
-      "API/file": {
-        "title": "File functions"
-      },
       "API/fileClass": {
         "title": "File"
-      },
-      "API/folder": {
-        "title": "Folder Functions"
       },
       "API/folderClass": {
         "title": "Folder"
@@ -75,7 +69,7 @@
         "title": "Transporter Class"
       },
       "API/zipClass": {
-        "title": "ZIP"
+        "title": "ZIP Archive"
       },
       "API/zipfolderClass": {
         "title": "ZIP Folder Archive"

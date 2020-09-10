@@ -14,7 +14,7 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-## Summary
+## Folder object
 
 ||
 |---|

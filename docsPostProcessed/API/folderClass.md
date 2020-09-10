@@ -14,40 +14,40 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-## Summary
+## Folder object
 
 ||
 |---|
-|[**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object](#copyto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `Folder` object into the specified *destinationFolder* |
-|[**.create( )** -> boolean](#create-)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a folder on disk according to the properties of the `Folder` object|
-|[**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object](#createalias-)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows) |
-|[**.creationDate** -> Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the folder|
-|[**.creationTime** -> Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation time of the folder|
-|[**.delete**( { *option* } )](#delete-)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the folder|
-|[**.exists** -> boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder exists on disk|
-|[**.extension** -> text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name (if any)|
-|[**.fullName** -> text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder, including its extension (if any)|
-|[**.getIcon**( { *size* } ) -> picture](#geticon-)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the folder|
-|[**.hidden** -> boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp; true if the folder is set as "hidden" at the system level|
-|[**.isAlias** -> boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a `Folder` object|
-|[**.isFile** -> boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a folder|
-|[**.isFolder** -> boolean](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **true** for a folder|
-|[**.isPackage** -> boolean](#ispackage)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder is a package on macOS  (and exists on disk)|
-|[**.modificationDate** -> Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp; the date of the folder's last modification|
-|[**.modificationTime** -> Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the folder's last modification|
-|[**.name** -> text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp; the name of the folder, without extension (if any)|
-|[**.original** -> object](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the same folder object as the folder|
-|[**.parent** -> object](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the folder|
-|[**.path** -> text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the folder|
-|[**.platformPath** -> text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the folder expressed with the current platform syntax|
-|[**.moveTo**( *destinationFolder* { ; *newName*} )  -> object](#moveto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `Folder` object (source folder) into the specified *destinationFolder*|
-|[**.rename**( *newName* ) -> object](#rename-)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the folder with the name you passed in *newName* and returns the renamed `Folder` object|
+|[**.copyTo**( *destinationFolder* : object { ; *newName* :text } { ; *overwrite* : integer } ) : object](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `Folder` object into the specified *destinationFolder*|
+|[**.create()** : boolean](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a folder on disk according to the properties of the `Folder` object|
+|[**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows) |
+|[**.creationDate** : Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the folder|
+|[**.creationTime** : Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation time of the folder|
+|[**.delete**( { *option* : integer } )](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the folder|
+|[**.exists** : boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder exists on disk|
+|[**.extension** : text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name (if any)|
+|[**.fullName** : text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder, including its extension (if any)|
+|[**.getIcon**( { *size* : integer } ) : picture](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the folder|
+|[**.hidden** : boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp; true if the folder is set as "hidden" at the system level|
+|[**.isAlias** : boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a `Folder` object|
+|[**.isFile** : boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a folder|
+|[**.isFolder** : boolean](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **true** for a folder|
+|[**.isPackage** : boolean](#ispackage)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder is a package on macOS  (and exists on disk)|
+|[**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp; the date of the folder's last modification|
+|[**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the folder's last modification|
+|[**.name** : text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp; the name of the folder, without extension (if any)|
+|[**.original** : object](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the same folder object as the folder|
+|[**.parent** : object](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the folder|
+|[**.path** : text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the folder|
+|[**.platformPath** : text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the folder expressed with the current platform syntax|
+|[**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `Folder` object (source folder) into the specified *destinationFolder*|
+|[**.rename**( *newName* : text ) : object](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the folder with the name you passed in *newName* and returns the renamed `Folder` object|
 
 
 ---
 
 
-## .copyTo( )
+## .copyTo()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -55,17 +55,18 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 |v17 R5|Added
 </details>
 
-**.copyTo**( *destinationFolder* { ; { *newName* } { ; *overwrite* } ) -> object
+**.copyTo**( *destinationFolder* : object { ; *newName* :text } { ; *overwrite* : integer } ) : object
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |destinationFolder |object |->|Destination folder|
 |newName|text|->|Name for the copy|
-|overwrite|longint|->|`fk overwrite` to replace existing elements|
+|overwrite|integer|->|`fk overwrite` to replace existing elements|
 |Result|object|<-|Copied file or folder|
 
 
 #### Description
-The `.copyTo( )` function  copies the `Folder` object into the specified *destinationFolder* .
+
+The `.copyTo()` function copies the `Folder` object into the specified *destinationFolder*.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -87,7 +88,7 @@ The copied `Folder` object.
 You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
 ```4d
-C_OBJECT($userImages;$copiedImages)
+var $userImages ; $copiedImages : Object
 $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
@@ -96,7 +97,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 ---
 
-## .create( )
+## .create()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -106,7 +107,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 
-**.create( )** -> boolean
+**.create()** : boolean
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|boolean|<-|True if the folder was created successfully, false otherwise|
@@ -115,7 +116,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 #### Description
 
-The `.create( )` function creates a folder on disk according to the properties of the `Folder` object.
+The `.create()` function creates a folder on disk according to the properties of the `Folder` object.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -151,7 +152,8 @@ End if
 
 ---
 
-## .createAlias( )
+
+## .createAlias()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -161,18 +163,19 @@ End if
 
 
 
-**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
+**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|object|->|Destination folder for the alias or shortcut|
 |aliasName|text|->|Name of the alias or shortcut|
-|aliasType|longint|->|Type of the alias link|
-|Result|object|<-|>Alias or shortcut folder reference|
+|aliasType|integer|->|Type of the alias link|
+|Result|object|<-|Alias or shortcut folder reference|
 
 
 #### Description
-The `.createAlias( )` function creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+
+The `.createAlias()` function creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -198,9 +201,7 @@ $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
 $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 
-
 ---
-
 ## .creationDate
 
 <details><summary>History</summary>
@@ -209,9 +210,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |v17 R5|Added
 </details>
 
-**.creationDate** -> Date
+**.creationDate** : Date
 
 #### Description
+
 The `.creationDate` property returns the creation date of the folder.
 
 This property is **read-only**. 
@@ -228,10 +230,11 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.creationTime** -> Time
+**.creationTime** : Time
 
 
 #### Description
+
 The `.creationTime` property returns the creation time of the folder (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**. 
@@ -240,7 +243,7 @@ This property is **read-only**.
 
 ---
 
-## .delete( )
+## .delete()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -250,16 +253,17 @@ This property is **read-only**.
 
 
 
-**.delete**( { *option* } )
+**.delete**( { *option* : integer } )
 
 |Parameter|Type||Description|
 |---|----|---|---|
-|option |longint|->|Folder deletion option|
+|option |integer|->|Folder deletion option|
 
 
 
 #### Description
-The `.delete( )` function deletes the folder.
+
+The `.delete()` function deletes the folder.
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
@@ -282,9 +286,8 @@ When `Delete with contents` is passed:
 (*) Windows: -54 (Attempt to open locked file for writing)
 macOS: -45 (The file is locked or the pathname is not correct)
 
-
-
----
+ 
+--- 
 
 ## .exists
 
@@ -294,9 +297,10 @@ macOS: -45 (The file is locked or the pathname is not correct)
 |v17 R5|Added
 </details>
 
-**.exists** -> boolean
+**.exists** : boolean
 
 #### Description
+
 The `.exists` property returns true if the folder exists on disk, and false otherwise.
 
 This property is **read-only**. 
@@ -313,9 +317,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.extension** -> text
+**.extension** : text
 
 #### Description
+
 The `.extension` property  returns the extension of the folder name (if any). An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
 
 This property is **read-only**. 
@@ -324,7 +329,7 @@ This property is **read-only**.
 
 ---
 
-## .file( )
+## .file()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -332,14 +337,15 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.file**( *path* ) -> object
+**.file**( *path* : text ) : object
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|text|->|Relative POSIX file pathname|
-|Result|object, null|<-|`File` object|
+|Result|object|<-|`File` object (null if invalid path)|
 
 #### Description
-The `.file( )` function creates a `File` object inside the `Folder` object and returns its reference.
+
+The `.file()` function creates a `File` object inside the `Folder` object and returns its reference.
 
 In *path*, pass a relative POSIX path to designate the file to return. The path will be evaluated from the parent folder as root.  
 
@@ -350,7 +356,7 @@ A `File` object or null if *path* is invalid.
 #### Example
 
 ```4d
-C_OBJECT($myPDF)
+var $myPDF : Object
 $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ```
 
@@ -358,7 +364,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 ---
 
-## .files( )
+## .files()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -366,14 +372,15 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 |v17 R5|Added
 </details>
 
-**.file**( { *options* } ) -> collection
+**.files**( { *options* : text } ) : collection
 |Parameter|Type||Description|
 |---|----|---|---|
-|options|text|->|File list options|
+|options|integer|->|File list options|
 |Result|collection|<-|Collection of children file objects|
 
 #### Description
-The `.files( )` function returns a collection of `File` objects contained in the folder.
+
+The `.files()` function returns a collection of `File` objects contained in the folder.
 
 >Aliases or symbolic links are not resolved. 
 
@@ -381,7 +388,7 @@ By default, if you omit the *options* parameter, only the files at the first lev
 
 |Constant|	Value|	Comment|
 |---|---|---|
-|`fk recursive`|	1|The collection contains files or folders of the specified folder and its subfolders|
+|`fk recursive`|1|The collection contains files or folders of the specified folder and its subfolders|
 |`fk ignore invisible`|	8|Invisible files or folders are not listed|
 
 **Returned value**
@@ -392,9 +399,8 @@ Collection of `File` objects.
 
 You want to know if there are invisible files in the Database folder:
 
-
 ```4d
- C_COLLECTION($all;$noInvisible)
+ var $all; $noInvisible : Collection
  $all:=Folder(fk database folder).files()
  $noInvisible:=Folder(fk database folder).files(fk ignore invisible)
  If($all.length#$noInvisible.length)
@@ -407,7 +413,7 @@ You want to know if there are invisible files in the Database folder:
 You want to get all files that are not invisible in the Documents folder:
 
 ```4d
- C_COLLECTION($recursive)
+ var $recursive : Collection
  $recursive:=Folder(fk documents folder).files(fk recursive+fk ignore invisible)
 ```
 
@@ -415,7 +421,7 @@ You want to get all files that are not invisible in the Documents folder:
 
 ---
 
-## .folder( )
+## .folder()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -423,14 +429,15 @@ You want to get all files that are not invisible in the Documents folder:
 |v17 R5|Added
 </details>
 
-**.file**( *path* ) -> object
+**.folder**( *path* : text ) : object
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|text|->|Relative POSIX file pathname|
-|Result|object, null|<-|`Folder` object|
+|Result|object|<-|`Folder` object (null if invalid *path*)|
 
 #### Description
-The `.folder( )` function creates a `Folder` object inside the parent `Folder` object and returns its reference.
+
+The `.folder()` function creates a `Folder` object inside the parent `Folder` object and returns its reference.
 
 In *path*, pass a relative POSIX path to designate the folder to return. The path will be evaluated from the parent folder as root.  
 
@@ -441,7 +448,7 @@ A `Folder` object or null if *path* is invalid.
 #### Example
 
 ```4d
- C_OBJECT($mypicts)
+ var $mypicts : Object
  $mypicts:=Folder(fk documents folder).folder("Pictures")
 ```
 
@@ -449,7 +456,7 @@ A `Folder` object or null if *path* is invalid.
 
 ---
 
-## .folders( )
+## .folders()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -457,14 +464,15 @@ A `Folder` object or null if *path* is invalid.
 |v17 R5|Added
 </details>
 
-**.file**( { *options* } ) -> collection
+**.folders**( { *options* : integer } ) : collection
 |Parameter|Type||Description|
 |---|----|---|---|
-|options|text|->|Folder list options|
+|options|integer|->|Folder list options|
 |Result|collection|<-|Collection of children folder objects|
 
 #### Description
-The `.folders( )` function returns a collection of `Folder` objects contained in the parent folder.
+
+The `.folders()` function returns a collection of `Folder` objects contained in the parent folder.
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
@@ -482,7 +490,7 @@ Collection of `Folder` objects.
 You want the collection of all folders and subfolders of the database folder:
 
 ```4d
- C_COLLECTION($allFolders)
+ var $allFolders : Collection
  $allFolders:=Folder("/PACKAGE").folders(fk recursive)
 ```
 
@@ -498,9 +506,10 @@ You want the collection of all folders and subfolders of the database folder:
 |v17 R5|Added
 </details>
 
-**.fullName** -> text
+**.fullName** : text
 
 #### Description
+
 The `.fullName` property returns the full name of the folder, including its extension (if any).
 
 This property is **read-only**. 
@@ -509,7 +518,7 @@ This property is **read-only**.
 
 ---
 
-## .getIcon( )
+## .getIcon()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -517,23 +526,24 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.getIcon**( { *size* } ) -> picture
+**.getIcon**( { *size* : integer } ) : picture
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|longint|->|Side length for the returned picture (pixels)|
+|size|integer|->|Side length for the returned picture (pixels)|
 |Result|picture|<-|Icon|
 
 
 #### Description
-The `.getIcon( )` function returns the icon of the folder.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
+The `.getIcon()` function returns the icon of the folder.
+
+The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels ("large icons") or 16x16 pixels ("small icons"). If you pass 0 or omit this parameter, the "large icon" version is returned.
 
 If the folder does not exist on disk, a default blank icon is returned.  
 
 **Returned value**
 
-Folder icon [picture](../Concepts/picture.html).
+Folder icon [picture](Concepts/dt_picture.md).
 
 
 
@@ -547,9 +557,10 @@ Folder icon [picture](../Concepts/picture.html).
 |v17 R5|Added
 </details>
 
-**.hidden** -> boolean
+**.hidden** : boolean
 
 #### Description
+
 The `.hidden` property returns  true if the folder is set as "hidden" at the system level, and false otherwise. 
 
 This property is **read-only**. 
@@ -567,10 +578,11 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isAlias** -> boolean
+**.isAlias** : boolean
 
 
 #### Description
+
 The `.isAlias` property returns always **false** for a `Folder` object. 
 
 This property is **read-only**. 
@@ -588,9 +600,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFile** -> boolean
+**.isFile** : boolean
 
 #### Description
+
 The `.isFile` property returns always **false** for a folder. 
 
 This property is **read-only**. 
@@ -608,9 +621,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFolder** -> boolean
+**.isFolder** : boolean
 
 #### Description
+
 The `.isFolder` property returns always **true** for a folder. 
 
 This property is **read-only**. 
@@ -628,9 +642,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isPackage** -> boolean
+**.isPackage** : boolean
 
 #### Description
+
 The `.isPackage` property returns true if the folder is a package on macOS  (and exists on disk). Otherwise, it returns false.
 
 On Windows, `.isPackage` always returns **false**.
@@ -650,9 +665,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.modificationDate** -> Date
+**.modificationDate** : Date
 
 #### Description
+
 The `.modificationDate` property returns  the date of the folder's last modification. 
 
 This property is **read-only**. 
@@ -670,9 +686,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.modificationTime** -> Time
+**.modificationTime** : Time
 
 #### Description
+
 The `.modificationTime` property returns the time of the folder's last modification (expressed as a number of seconds beginning at 00:00). 
 
 This property is **read-only**. 
@@ -682,7 +699,7 @@ This property is **read-only**.
 ---
 
 
-## .moveTo( )
+## .moveTo()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -691,7 +708,7 @@ This property is **read-only**.
 </details>
 
 
-**.moveTo**( *destinationFolder* { ; *newName*} )  -> object
+**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object
 |Parameter|Type||Description|
 |---|----|---|---|
 |destinationFolder|Object|->|Destination folder|
@@ -700,6 +717,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.moveTo( )` function moves or renames the `Folder` object (source folder) into the specified *destinationFolder*.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
@@ -715,15 +733,13 @@ The moved `Folder` object.
 You want to move and rename a folder:
 
 ```4d
-C_OBJECT($tomove;$moved)
+ var $tomove; $moved : Object
  $docs:=Folder(fk documents folder)
  $tomove:=$docs.folder("Pictures")
  $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")
 ```
 
-
 ---
-
 
 ## .name
 
@@ -733,9 +749,10 @@ C_OBJECT($tomove;$moved)
 |v17 R5|Added
 </details>
 
-**.name** -> text
+**.name** : text
 
 #### Description
+
 The `.name` property returns  the name of the folder, without extension (if any). 
 
 This property is **read-only**. 
@@ -753,9 +770,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.original** -> object
+**.original** : object
 
 #### Description
+
 The `.original` property returns the same folder object as the folder. 
 
 This property is **read-only**. 
@@ -775,9 +793,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.parent** -> object
+**.parent** : object
 
 #### Description
+
 The `.parent` property returns the parent folder object of the folder. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
 If the folder does not have a parent (root), the null value is returned. 
@@ -797,9 +816,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.path** -> text
+**.path** : text
 
 #### Description
+
 The `.path` property returns the POSIX path of the folder. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
 This property is **read-only**. 
@@ -817,9 +837,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.platformPath** -> text
+**.platformPath** : text
 
 #### Description
+
 The `.platformPath` property returns the path of the folder expressed with the current platform syntax.
 
 This property is **read-only**. 
@@ -830,7 +851,7 @@ This property is **read-only**.
 
 
  
-## .rename( )
+## .rename()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -838,7 +859,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.rename**( *newName* ) -> object
+**.rename**( *newName* : text ) : object
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|text|->|New full name for the folder|
@@ -848,7 +869,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.rename( )` function renames the folder with the name you passed in *newName* and returns the renamed `Folder` object.
+The `.rename()` function renames the folder with the name you passed in *newName* and returns the renamed `Folder` object.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -861,7 +882,7 @@ The renamed `Folder` object.
 
 
 ```4d
- C_OBJECT($toRename)
+ var $toRename : Object
  $toRename:=Folder("/RESOURCES/Pictures").rename("Images")
 ```
 

@@ -4,7 +4,7 @@ title: File
 ---
 
 
-`File` objects are created with the [`File`](https://doc.4d.com/4Dv18R4/4D/18-R4/File.301-4982190.en.html) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create-) function.
+`File` objects are created with the [`File`](https://doc.4d.com/4Dv18R4/4D/18-R4/File.301-4982190.en.html) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
 ### Example
 
@@ -15,38 +15,38 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-## Summary
+## File object
 
 ||
 |---|
-|[**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object](#copyto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `File` object into the specified *destinationFolder* |
-|[**.create( )** -> boolean ](#create-)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a file on disk according to the properties of the `File` object|
-|[**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object](#createalias-)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)|
+|[**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `File` object into the specified *destinationFolder* |
+|[**.create( )** : boolean ](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a file on disk according to the properties of the `File` object|
+|[**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)|
 |[**.creationDate** : Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the file|
 |[**.creationTime** : Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation  time of the file|
-|[**.delete( )**](#delete-)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the file|
+|[**.delete()**](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the file|
 |[**.exists** : boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk|
 |[**.extension** : text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;the extension of the file name (if any)|
 |[**.fullName** : Text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;the full name of the file, including its extension (if any)|
-|[**.getContent()** : BLOB](#getcontent-)<p>returns a `BLOB` containing the entire content of a file|
-|[**.getIcon**( { *size* : integer } ) : picture](#geticon-)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
-|[**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text](#gettext-)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
+|[**.getContent()** : BLOB](#getcontent)<p>returns a `BLOB` containing the entire content of a file|
+|[**.getIcon**( { *size* : integer } ) : picture](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
+|[**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
 |[**.hidden** : boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is set as "hidden" at the system level|
 |[**.isAlias** : boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is an alias, a shortcut, or a symbolic link
 |[**.isFile** : boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always true for a file|
-|[**.isFolder** : boolean](#ifFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
+|[**.isFolder** : boolean](#isFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
 |[**.isWritable** : boolean](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk and is writable|
 |[**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the date of the file's last modification|
 |[**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the file's last modification|
-|[**.moveTo**( *destinationFolder* { ; *newName*} )  -> object](#moveto-)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `File` object into the specified *destinationFolder*|
+|[**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `File` object into the specified *destinationFolder*|
 |[**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;the name of the file without extension (if any)|
 |[**.original** : object](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the target element for an alias, a shortcut, or a symbolic link file|
 |[**.parent** : object](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the file|
 |[**.path** : Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the file|
 |[**.platformPath** : Text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the file expressed with the current platform syntax|
-|[**.rename**( *newName* ) -> object](#rename-)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the file with the name you passed in *newName* and returns the renamed `File` object|
-|[**.setContent** ( *content* ) ](#setcontent-)<p>&nbsp;&nbsp;&nbsp;&nbsp;rewrites the entire content of the file using the data stored in the *content* BLOB|
-|[**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) ](#settext-)<p>&nbsp;&nbsp;&nbsp;&nbsp;writes *text* as the new contents of the file|
+|[**.rename**( *newName* : text ) : object](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the file with the name you passed in *newName* and returns the renamed `File` object|
+|[**.setContent** ( *content* : blob ) ](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;rewrites the entire content of the file using the data stored in the *content* BLOB|
+|[**.setText** ( *text* : text {; *charSetName* : text { ; *breakMode* : integer } } )<br>**.setText** ( *text* : text {; *charSetNum* : integer { ; *breakMode* : integer } } ) ](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;writes *text* as the new contents of the file|
 |[**.size** : Number](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the file expressed in bytes|
 
 
@@ -102,7 +102,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 ---
 
-## .create( )
+## .create()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -112,14 +112,14 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 **Not available for ZIP archives**
 
-**.create( )** -> boolean 
+**.create( )** : boolean 
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|boolean|<-|True if the file was created successfully, false otherwise|
 
 #### Description
 
-The `.create( )` function creates a file on disk according to the properties of the `File` object.
+The `.create()` function creates a file on disk according to the properties of the `File` object.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -133,7 +133,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 Creation of a preferences file in the database folder:
 
 ```4d
- C_BOOLEAN($created)
+ var $created : Boolean
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
@@ -141,7 +141,7 @@ Creation of a preferences file in the database folder:
 ---
 
 
-## .createAlias( )
+## .createAlias()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -149,17 +149,18 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
-**.createAlias**( *destinationFolder* ; *aliasName* { ; *aliasType* } ) -> object
+**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|object|->|Destination folder for the alias or shortcut|
 |aliasName|text|->|Name of the alias or shortcut|
-|aliasType|longint|->|Type of the alias link|
+|aliasType|integer|->|Type of the alias link|
 |Result|object|<-|>Alias or shortcut file reference|
 
 
 #### Description
-The `.createAlias( )` function creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+
+The `.createAlias()` function creates an alias (macOS) or a shortcut (Windows) to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -185,7 +186,6 @@ You want to create an alias to a file in your database folder:
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
  $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
 ```
-
 
 ---
 
@@ -230,7 +230,7 @@ This property is **read-only**.
 ---
 
 
-## .delete( )
+## .delete()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -239,7 +239,7 @@ This property is **read-only**.
 </details>
 
 
-**.delete( )**
+**.delete()**
 
 |Parameter|Type||Description|
 |---|----|---|---|
@@ -247,7 +247,8 @@ This property is **read-only**.
 
 
 #### Description
-The `.delete( )` function deletes the file.
+
+The `.delete()` function deletes the file.
 
 If the file is currently open, an error is generated.
 
@@ -260,13 +261,12 @@ If the file does not exist on disk, the function does nothing (no error is gener
 You want to delete a specific file in the database folder:
 
 ```4d
-  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
+ $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
  If($tempo.exists)
     $tempo.delete()
     ALERT("User preference file deleted.")
  End if
 ``` 
-
 
 ---
 
@@ -346,7 +346,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.getContent()` function  returns a `BLOB` containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](Concepts/blob.md) section.
+The `.getContent()` function  returns a `BLOB` containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 **Returned value**
 
@@ -632,7 +632,7 @@ This property is **read-only**.
 ---
 
 
-## .moveTo( )
+## .moveTo()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -641,7 +641,7 @@ This property is **read-only**.
 </details>
 
 
-**.moveTo**( *destinationFolder* { ; *newName*} )  -> object
+**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object
 |Parameter|Type||Description|
 |---|----|---|---|
 |destinationFolder|object|->|Destination folder|
@@ -650,7 +650,8 @@ This property is **read-only**.
 
 
 #### Description
-The `.moveTo( )` function moves or renames the `File` object into the specified *destinationFolder*.
+
+The `.moveTo()` function moves or renames the `File` object into the specified *destinationFolder*.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.  
 
@@ -780,7 +781,7 @@ This property is **read-only**.
 
 
  
-## .rename( )
+## .rename()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -789,7 +790,7 @@ This property is **read-only**.
 </details>
 
 
-**.rename**( *newName* ) -> object
+**.rename**( *newName* : text ) : object
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|text|->|New full name for the file|
@@ -797,7 +798,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.rename( )` function renames the file with the name you passed in *newName* and returns the renamed `File` object.
+The `.rename()` function renames the file with the name you passed in *newName* and returns the renamed `File` object.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -809,6 +810,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 The renamed `File` object.
 
 #### Example
+
 You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
@@ -821,7 +823,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
  
-## .setContent( )
+## .setContent()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -830,14 +832,15 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 </details>
 
 
-**.setContent** ( *content* ) 
+**.setContent** ( *content* : blob ) 
 |Parameter|Type||Description|
 |---|---|---|---|
 |content|BLOB|->|New contents for the file|
 
 
 #### Description
-The `.setContent( )` function rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](../Concepts/blob.html) section.
+
+The `.setContent( )` function rewrites the entire content of the file using the data stored in the *content* BLOB. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 
 #### Example
@@ -848,11 +851,12 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 ```
 
 
+
 ---
 
 
  
-## .setText( )
+## .setText()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -861,31 +865,40 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 </details>
 
 
-**.setText** ( *text* {; *charSet* { ; *breakMode* } } ) 
+**.setText** ( *text* : text {; *charSetName* : text { ; *breakMode* : integer } } )<br>**.setText** ( *text* : text {; *charSetNum* : integer { ; *breakMode* : integer } } ) 
+
 |Parameter|Type||Description|
 |---------|----|---|--------|
 |text|text|->|Text to store in the file|
-|charSet|text, longint|->|Name or number of character set|
-|breakMode|longint|->|Processing mode for line breaks|
+|charSetName|text|->|Name of character set|
+|charSetNum|integer|->|Number of character set|
+|breakMode|integer|->|Processing mode for line breaks|
 #### Description
 
-The `.setText( )` function writes *text* as the new contents of the file.
+The `.setText()` function writes *text* as the new contents of the file.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-In *charSet*, pass the character set to be used for writing the contents. You can pass a string containing the standard character set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.  If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM. 
+Optionally, you can designate the character set to be used for writing the contents. You can pass either:
 
-In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
+- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
-|Constant|Type|Value|Comment|
-|--------|----|-----|-------|
-|`Document unchanged`|Longint|0|No processing|
-|`Document with native format`|Longint|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows|
-|`Document with CRLF`|Longint|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|`Document with CR`|Longint|3|Line breaks are converted to OS X format: CR (carriage return)|
-|`Document with LF`|Longint|4|Line breaks are converted to Unix format: LF (line feed)|
+> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
+
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM. 
+
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
+
+|Constant|Value|Comment|
+|--------|-----|-------|
+|`Document unchanged`|0|No processing|
+|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows|
+|`Document with CRLF`|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
+|`Document with CR`|3|Line breaks are converted to OS X format: CR (carriage return)|
+|`Document with LF`|4|Line breaks are converted to Unix format: LF (line feed)|
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
@@ -897,6 +910,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)
 $myFile.setText("Hello world")
 ```
+
 
 
 ---

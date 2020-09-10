@@ -15,7 +15,7 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-## Summary
+## File object
 
 ||
 |---|

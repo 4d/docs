@@ -427,7 +427,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Description
 
-The `.getContent()` function  returns a `BLOB` containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](Concepts/blob.md) section.
+The `.getContent()` function  returns a `BLOB` containing the entire content of a file. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 **Returned value**
 
