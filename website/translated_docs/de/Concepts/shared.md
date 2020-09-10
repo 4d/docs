@@ -45,25 +45,25 @@ Shared objects/collections lassen sich auch Eigenschaften oder Elementen von and
 
 In Beispiel 2 sehen Sie die Anwendung der Regeln für shared groups.
 
-**Hinweis:** Shared groups werden über die interne Eigenschaft *locking identifier* verwaltet. For detailed information on this value, please refer to the 4D Developer's guide.
+**Hinweis:** Shared groups werden über die interne Eigenschaft *locking identifier* verwaltet. Weitere Informationen dazu finden Sie im 4D Developer Guide.
 
-### Read
-Reading properties or elements of a shared object/collection is allowed without having to call the `Use...End use` structure, even if the shared object/collection is in use by another process.
+### Lesen
+Eigenschaften oder Elemente von shared object/collection lassen sich ohne die Struktur `Use...End use` lesen, selbst wenn shared object/collection von einem anderen Prozess benutzt wird.
 
-However, it is necessary to read a shared object/collection within `Use...End use` when several values are linked together and must be read at once, for consistency reasons.
+Sind dagegen mehrere Werte logisch miteinander verbunden, sollte shared object/collection aus Konsistenzgründen in der Struktur `Use...End use` gelesen werden.
 
-### Duplication
-Calling `OB Copy` with a shared object (or with an object containing shared object(s) as properties) is possible, but will return a standard (not shared) object including its contained objects (if any).
+### Duplizieren
+Standardmäßig wird bei Aufruf von `OB Copy/collection. copy( `) mit shared object/collection (oder darin enthaltenen shared objects/collections) ein reguläres Objekt bzw. Collection (not shared) mit den enthaltenen Objekten (falls vorhanden) zurückgegeben.
 
 ### Storage
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the `Storage` command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
+**Storage** ist ein einmaliges shared object, das automatisch in jeder Anwendung und auf jedem Rechner verfügbar ist. Es wird vom Befehl `Storage` zurückgegeben. Sie können es verwenden, um auf alle während der Sitzung definierten shared objects/collections zu verweisen, die über jeden preemptive oder standardmäßige Prozesse verfügbar sein sollen.
 
-Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
+Beachten Sie, dass das `Storage` Objekt, im Gegensatz zu den standardmäßigen shared objects, keine shared group erstellt, wenn shared objects/collections als Eigenschaft hinzugefügt werden. Auf diese Weise lässt sich das **Storage** Objekt ohne Sperren aller verbundenen shared objects/collections verwenden.
 
-For more information, refer to the `Storage` command description.
+Weitere Informationen dazu finden Sie unter dem Befehl `Storage`.
 
 ## Use...End use
-The formal syntax of the `Use...End use` structure is:
+Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 ```4d
  Use(Shared_object_or_Shared_collection)
@@ -87,7 +87,7 @@ Shared objects and shared collections are designed to allow communication betwee
 
 ## Beispiel 1
 
-You want to launch several processes that perform an inventory task on different products and update the same shared object. The main process instantiates an empty shared object and then, launches the other processes, passing the shared object and the products to count as parameters:
+Sie wollen mehrere Prozesse starten, die eine Inventur von verschiedenen Produkten durchführen und das gleiche shared object aktualisieren. Der Hauptprozess erstellt eine Instanz von einem leeren shared object, startet dann die anderen Prozesse und übergibt das shared object und die zu zählenden Produkte als Parameter:
 
 ```4d
  ARRAY TEXT($_items;0)
@@ -106,7 +106,7 @@ You want to launch several processes that perform an inventory task on different
  End for
 ```
 
-In the "HowMany" method, inventory is done and the $inventory shared object is updated as soon as possible:
+In der Methode "HowMany" ist "inventory" ausgeführt und das shared object $inventory wird sobald wie möglich aktualisiert:
 
 ```4d
  C_TEXT($1)
@@ -124,7 +124,7 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
 
 ## Beispiel 2
 
-The following examples highlight specific rules when handling shared groups:
+Nachfolgende Beispiele zeigen spezifische Regeln beim Verwalten von shared groups:
 
 ```4d
  $ob1:=New shared object
