@@ -1,15 +1,15 @@
 ---
 id: shared
-title: Shared objects and collections
+title: Shared Objects und Shared Collections
 ---
 
 ## Overview
-**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
+**Shared objects** und **shared collections** sind spezifische [Objekte](Concepts/dt_object.md) und [Collections](Concepts/dt_collection.md), deren Inhalt zwischen Prozessen geteilt wird. Im Gegensatz zu [Interprozessvariablen](Concepts/variables.md#interprocess-variables) haben shared objects und shared collections den Vorteil, dass sie mit **Preemptive 4D Prozessen** kompatibel sind: Sie können per Referenz als Parameter an Befehle wie en Vorteil, dass sie mit Preemptive 4D Prozesse kompatibel sind: Sie können per Referenz als Parameter an Befehle wie `New process` oder `CALL WORKER` übergeben werden.
 
-Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
+"Shared objects/collections" lassen sich in Variablen speichern, die mit Standardbefehlen `C_OBJECT` und `C_COLLECTION` deklariert wurden, müssen aber über spezifische Befehle eine Instanz erhalten:
 
-- to create a shared object, use the `New shared object` command,
-- to create a shared collection, use the `New shared collection` command.
+- Ein "shared object" erstellen Sie mit dem Befehl `New shared object`
+- Eine "shared collection" erstellen Sie mit dem Befehl `New shared collection`
 
 **Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
