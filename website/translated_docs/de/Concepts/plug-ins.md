@@ -1,6 +1,6 @@
 ---
 id: plug-ins
-title: Plug-ins
+title: Plug-Ins
 ---
 
 Beim Entwickeln einer 4D Anwendung entdecken Sie viele Fähigkeiten, die Sie beim Starten nicht bemerkt haben. Sie können sogar die Standardversion von 4D ergänzen, wenn Sie in Ihrer 4D Entwicklungsumgebung **Plug-Ins** hinzufügen.
@@ -17,10 +17,10 @@ Der modulare Aufbau der 4D Umgebung ermöglicht die Erstellung von Basisanwendun
 
 Ein Plug-In ist ein Stück Code, den 4D beim Starten aufruft. Es rüstet 4D mit zusätzlichen Funktionalitäten aus und macht es leistungsstärker.
 
-In der Regel macht ein Plug-In Sachen die:
+In der Regel macht ein Plug-In Dinge, die:
 - 4D nicht ausführen kann (z. B. spezifische Technologie einer Plattform)
-- will be very hard to write just using 4D,
-- are only available as Plug-in Entrypoint
+- äußerst schwierig mit 4D zu bewerkstelligen wären
+- nur als Einstieg über Plug-In verfügbar sind
 
 A plug-in usually contains a set of routines given to the 4D Developer. It can handle an External Area and run an external process.
 
