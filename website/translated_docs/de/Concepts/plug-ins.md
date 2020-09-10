@@ -7,7 +7,7 @@ Beim Entwickeln einer 4D Anwendung entdecken Sie viele Fähigkeiten, die Sie bei
 
 ## Wofür wird ein Plug-In benötigt?
 
-Although 4D provides hundred of built-in methods used to manipulate objects, records and implement user interface, some special use or feature (sometimes platform dependant) may be needed: one may need ODBC under Windows, another may need Apple services under macOS, while yet another may want to implement specific statistics tools, social network login, payment platform, file access over the network, a special user interface, or a private picture structure.
+Auch wenn 4D hunderte von integrierten Methoden zum Verwalten von Objekten, Datensätzen und Steuern von Benutzeroberflächen bietet, ist u.U. eine spezielle Verwendung oder Funktionalität (manchmal abhängig von der Plattform) erforderlich: Einer benötigt ODBC unter Windows, ein anderer Apple-Dienste auf MacOS, und weitere möchten spezielle Statistik-Tools, Zahlungsmodalitäten einbauen, Login für soziale Netzwerke oder Dateizugriff über das Netzwerk gewähren, eine branchenspezifische Benutzeroberfläche oder eine eigene Bildstruktur hinzufügen.
 
 It is obvious that covering all areas of both the macOS and Windows operating systems by way of 4D commands would certainly lead to a product with thousands of commands, and at the same time, most users would have no need for such a large set of capabilities. Also, creating such an all-encompassing tool would make the 4D environment incredibly complex and would take most users months of study before useful results could be expected.
 
