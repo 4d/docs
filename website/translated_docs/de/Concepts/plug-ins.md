@@ -3,7 +3,7 @@ id: plug-ins
 title: Plug-ins
 ---
 
-As you develop a 4D application, you will discover many capabilities that you did not notice when you started. You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
+Beim Entwickeln einer 4D Anwendung entdecken Sie viele Fähigkeiten, die Sie beim Starten nicht bemerkt haben. You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
 
 ## Why the need for a plug-in?
 
@@ -54,6 +54,6 @@ You can put the Plugins folder in two different places:
 
 Ihre Wahl richtet sich danach, wie Sie das Plug-In einsetzen wollen.
 
-Liegt dasselbe Plug-In an beiden Stellen, lädt 4D nur das Plug-In, welches neben der Struktur liegt. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
+Liegt dasselbe Plug-In an beiden Stellen, lädt 4D nur das Plug-In, welches neben der Struktur liegt. Existieren in einer Anwendung mit einkompilierter 4D Volume Desktop mehrere Instanzen desselben Plug-In, lässt sich die Anwendung nicht öffnen.
 
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Then open your project with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Then open your project with 4D. Erfordert ein Plug-In eine spezifische Benutzerlizenz, wird es geladen, jedoch nicht aktiviert.
