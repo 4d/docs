@@ -11,9 +11,9 @@ Auch wenn 4D hunderte von integrierten Methoden zum Verwalten von Objekten, Date
 
 Würden all diese Bereiche für die beiden Betriebssysteme macOS und Windows über 4D Befehle abgedeckt, hätten wir als Effekt ein Produkt mit tausenden von Befehlen und gleichzeitig viele Benutzer, die solch einen Funktionsumfang gar nicht benötigen. Solch ein allumfassendes Tool würde die 4D Umgebung unglaublich komplex machen, so dass die meisten Benutzer erst ein paar Monate studieren müssten, bevor sie brauchbare Ergebnisse liefern könnten.
 
-The modular nature of the 4D environment allows the creation of basic applications but does not preclude the development of highly complex systems. The 4D Plug-in architecture opens the 4D environment to any type of application or user. 4D Plug-ins multiply that application or user's power and productivity.
+Der modulare Aufbau der 4D Umgebung ermöglicht die Erstellung von Basisanwendungen, schließt aber die Entwicklung hochkomplexer Systeme nicht aus. Die 4D Plug-in Architektur öffnet die 4D Umgebung für jede Art von Anwendung oder Benutzer. 4D Plug-Ins vervielfachen die Leistung und Produktivität der Anwendung oder des Benutzers.
 
-## What is a plug-in and what can it do?
+## Was ist ein Plug-In und was kann es leisten?
 
 A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
 
