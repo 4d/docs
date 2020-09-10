@@ -15,12 +15,12 @@ Der modulare Aufbau der 4D Umgebung ermöglicht die Erstellung von Basisanwendun
 
 ## Was ist ein Plug-In und was kann es leisten?
 
-A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
+Ein Plug-In ist ein Stück Code, den 4D beim Starten aufruft. Es rüstet 4D mit zusätzlichen Funktionalitäten aus und macht es leistungsstärker.
 
-Usually, a plug-in does things that:
-- 4D cannot do (ie, specific platform technology),
-- will be very hard to write just using 4D,
-- are only available as Plug-in Entrypoint
+In der Regel macht ein Plug-In Sachen die:
+- 4D nicht ausführen kann (z. B. spezifische Technologie einer Plattform)
+- äußerst schwierig mit 4D zu bewerkstelligen wären
+- nur als Einstieg über Plug-In verfügbar sind
 
 A plug-in usually contains a set of routines given to the 4D Developer. It can handle an External Area and run an external process.
 
