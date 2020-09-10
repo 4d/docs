@@ -39,16 +39,16 @@ A plug-in can be very simple, with just one routine performing a very small task
 - the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. 4D Plug-in API functions manage all the interactions between the 4D application and your plug-in.
 - The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. It writes the code 4D needs to correctly load and interact with a plug-in, allowing you to concentrate on your own code.
 
-## How to install a plug-in?
+## Ein Plug-In installieren
 
-You install plug-ins in the 4D environment by copying their files into the appropriate folder.
+Um Plug-Ins in der 4D Umgebung zu installieren, kopieren Sie seine Dateien in die passenden Ordner.
 
-“PluginName.bundle” folders contain both Windows and macOS versions of 4D plug-ins. Their specific internal architecture lets 4D Server load the appropriate version according to the platform where the client machine will be run. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **PlugIns** folder.
+Die Ordner "PluginName.bundle" (auf MacOS Paket) enthalten die Windows- und MacOS-Version der 4D Plug-Ins. Aufgrund ihrer spezifischen internen Architektur kann 4D Server, je nach der Plattform des Client-Rechners, die passende Version laden. Um ein Plug-In in Ihrer Umgebung zu installieren, legen Sie den Ordner "PluginName.bundle" oder das entsprechende Paket in den gewünschten Ordner **PlugIns**.
 
-You can put the PlugIns folder in two different places:
+Sie können den Ordner PlugIns an zwei verschiedene Stellen legen:
 
-- At the level of the 4D executable application, i.e.:
-  - Under Windows: next to the .exe file
+- Auf dieselbe Ebene wie die ausführbare 4D Applikation, z.B.:
+  - Unter Windows neben die .exe Datei
   - Under macOS: at the first level of the Contents folder inside the application package.   
     In this case, plug-ins are available in every database opened by this application.
 - At the same level as the database structure file. In this case,  plug-ins are only available in this particular database.
