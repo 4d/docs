@@ -10,21 +10,21 @@ A 4D project can start and monitor a web server for the main (host) application 
 For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
 
 - one web server for the host application,
-- one web server for the component #1,
-- one web server for the component #2.
+- un serveur web pour le composant n°1,
+- un serveur web pour le composant n°2.
 
 Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
 
 Each 4D web server, including the main application's web server, is exposed as a specific **object**. Once instantiated, a web server object can be handled from the current application or from any component.
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
 Each web server (host application or component) can be used in its own separate context, including:
-- `On Web Authentication` and `On Web Connection` database method calls
-- 4D tags processing and method calls,
-- managing web sessions and TLS protocols.
+- les appels vers la méthode base `On Web Authentication` et `On Web Connection`
+- le traitement des balises 4D et les appels de méthodes,
+- la gestion de sessions web et des protocoles TLS.
 
-This feature allows you to develop independant components and features that come with their own web interfaces.
+Cette fonctionnalité vous permet de développer des composants indépendants et des fonctionnalités qui accompagnent leurs propres interfaces Web.
 
 
 ## Instancier un objet serveur web
@@ -36,27 +36,27 @@ $nbSrv:=WEB Server list.length
 //la valeur de $nbSrv est 1
 ```
 
-To instantiate a web server object, call the `WEB Server` command:
+Pour instancier un objet serveur web, appelez la commande `WEB Server` :
 
 ```4d
 C_OBJECT(webServer)
-    //call the web server from the current context
+    //appeler le serveur web depuis le contexte courant
 webServer:=WEB Server  
-    //equivalent to
+    //équivalent à
 webServer:=WEB Server(Web server database)
 ```
 
 If the application uses components and you want to call:
 - the host application's web server from a component or
-- the server that received the request (whatever the server),
+- le serveur qui a reçu la requête (quel que soit le serveur)
 
-you can also use:
+vous pouvez également utiliser :
 
 ```4d
 C_OBJECT(webServer)  
-    //call the host web server from a component  
+    //appler le serveur web hôte depuis un composant  
 webServer:=WEB Server(Web server host database)  
-    //call the target web server
+    //appeler le serveur web cible
 webServer:=WEB Server(Web server receiving request)  
 ```
 
