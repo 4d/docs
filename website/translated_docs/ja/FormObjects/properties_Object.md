@@ -127,9 +127,9 @@ Here is the list of objects whose value can be saved:
 - また、メモリの利用を減少させることができます。 フォームオブジェクトでは、プロセス変数とインタープロセス変数しか使用できません。 しかしコンパイルモードでは、各プロセス変数のインスタンスが (サーバープロセスを含め) すべてのプロセスに対して作成されます。 このインスタンスは、セッション中にフォームが使用されない場合でもメモリを消費します。 フォームのロード時、4Dにダイナミック変数を作成させることで、メモリを節約できます。
 
 
-### 階層リストボックス
+### Array List Box
 
-配列型リストボックスの場合、列の *dataSource* 値として、配列名 (文字列) のコレクションを指定すると [階層リストボックス](listbox_overview.md#階層リストボックス) が定義されます。
+For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
 
 
