@@ -128,7 +128,7 @@ title: テキスト
 * *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
 このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
-> <span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br> <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br> <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
+> <span style="font-family:Times New Roman; font-size:20pt"> これは Times New Roman フォントです。</span><br> <span style="font-family:Calibri; font-size:20pt"> これは Calibri フォントです。</span><br> <span style="font-family:Papyrus; font-size:20pt"> これは Papyrus フォントです。</span>
 
 #### JSON 文法
 
