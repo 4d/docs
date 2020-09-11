@@ -230,8 +230,8 @@ icon: url("edit.png"); /* relative path to the form file */
 
 - For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
 
-	- css color name: `fill: red;`
-	- hexa value: `fill: #FF0000;`
+	- CSS color name: `fill: red;`
+	- Hexa value: `fill: #FF0000;`
 	- the `rgb()` function: `fill:rgb(255,0,0)`
 
 - If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
@@ -263,6 +263,7 @@ To override this behavior, the style value must be followed with an `!important`
 |---|---|---|
 |`"text": "Button",`|`text: Edit !important;`| `"Edit"`|
 
+>If an attribute with the `!important` declaration has been defined for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List. 
 
 
 ### Multiple Style Sheets
@@ -300,12 +301,6 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 > Filepaths can be relative or absolute.
 >*	Relative paths are resolved relative to the JSON form description file.
 >*	For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
-
-
-
-
-
-
 
 
 ## Creating or Editing Style Sheets

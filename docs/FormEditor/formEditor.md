@@ -3,6 +3,177 @@ id: formEditor
 title: Form Editor
 ---
 
+
+## Interface
+
+The Form editor interface displays each form in its own window, which has both an object and tool bar. You can have several forms open at the same time. The rulers on the side and bottom help you position objects in the form. You can change measurement units so that it displays inches, centimeters, or pixels.
+
+### Showing/hiding elements 
+
+You can show or hide most interface elements in the Form editor. This feature allows you to show only the elements that you need to create or view in a form, or only the tools that you want to use. This option is always applied to the Form editor’s current window. For example, it is useful to show the output control lines when you are working on an output form.
+
+To show or hide an element in the Form editor:
+
+1.	Choose **Display** from the Form menu.
+	OR
+	Use the **Display** command in the context menu that appears in the Form editor’s window (right-click in the window without clicking on an object).
+	A hierarchical submenu appears listing all the elements that you can show or hide:<p>![](assets/en/FormEditor/showHideElements.png)<p>A check mark placed next to the element indicates that it will be shown. To hide an element, select the element so that the check mark disappears.
+
+2.	Select the element that you want to show or hide.<p>Here is a description of the commands in this menu:
+	*	**Inherited form**: Shows or hides inherited form objects (if there is an inherited form) on the current page of the form. For more information, refer to Using inherited forms.
+	*	**Page 0**: Shows or hides the objects from page 0 on the form’s current page. This option allows you to distinguish between the objects on the form’s current page and those on page 0. For more information about pages in forms, refer to the Creating a multi-page form section.
+	*	**Paper**: Shows or hides the borders of the printing page, which are shown as gray lines. This option may have no apparent effect when the Limits (see below) option is selected. If the size of the form is smaller than the printing page, the page’s borders are shown outside of the form’s viewing area and therefore do not appear. Refer to Printing a form.
+	*	**Rulers**: Shows or hides the rulers in the Form editor’s window.
+Markers: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
+	*	**Marker Labels**: Shows or hides the marker labels, available only when the output control lines are displayed. For more information, refer to the Moving output control lines paragraph.
+	*	**Limits**: Shows or hides the form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
+
+	>The Size Based on, Hor margin and Vert margin settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change. For more information on form properties, refer to the Form properties section.
+
+
+
+
+
+### Using the toolbar
+
+The toolbar of the Form editor offers a set of tools to manipulate and modify the form. Each window has its own toolbar.
+
+![](assets/en/FormEditor/toolbar.png)
+
+The toolbar contains the following elements:
+
+|Icon |Name|Description |
+|---|---|---|
+|![](assets/en/FormEditor/execute.png)| Execute the form| Used to test the execution of the form. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.|
+|![](assets/en/FormEditor/selection.png)| Selection tool|Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.|
+|![](assets/en/FormEditor/zOrder.png)| Entry order| Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields now allow viewing the current entry order, while still working in the form. |
+|![](assets/en/FormEditor/moving.png)| Moving| Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. The cursor takes the shape of a hand. This navigation mode is particularly useful when zooming in the form.|
+|![](assets/en/FormEditor/zoom.png)| [Zoom](#zoom)| Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. This feature is detailed in previous section.|
+|![](assets/en/FormEditor/alignment.png)| Alignment| This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.|
+|![](assets/en/FormEditor/distribution.png)| Distribution| This button is linked to a menu that allows distributing objects in the form. It is enabled (or not) depending on the objects selected.|
+|![](assets/en/FormEditor/level.png)| Level| This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected. |
+|![](assets/en/FormEditor/group.png)| Group/Ungroup| This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected. |
+|![](assets/en/FormEditor/displyAndPage.png)| Display and page management| This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
+|![](assets/en/FormEditor/cssPreviewicon.png) |[CSS Preview](#css-preview)|This button is used to select the CSS Mode to use. |
+|![](assets/en/FormEditor/views.png)| [Managing views](#views)|This button displays or hides the views palette. This new function is detailed in Using object views .|
+|![](assets/en/FormEditor/shields2.png)| [Displaying shields](#shields)| Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display. |
+|![](assets/en/FormEditor/library.png)| Preconfigured object library| This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined. |
+|![](assets/en/FormEditor/listBoxBuilder1.png)|[List Box Builder](#list-box-builder)|This button creates new entity selection list boxes. |
+
+### Using the object bar  
+
+The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes (buttons, radio buttons, menus, etc.). Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
+
+|Button	|Group	|Key|
+|---|---|---|
+|![](assets/en/FormEditor/text.png)|	Text / Group Box|	T|
+|![](assets/en/FormEditor/input.png)|	Field / Variable|	F|
+|![](assets/en/FormEditor/listbox.png)|	Scrollable Area / Hierarchical List / List Box|	L|
+|![](assets/en/FormEditor/combo.png)|	Combo Box / Pop-up/Drop-down List / Hierarchical Pop-up Menu / Picture Pop-up Menu|	P|
+|![](assets/en/FormEditor/button.png)|	Button / 3D Button / Highlight Button / Invisible Button / Picture Button / Button Grid|	B|
+|![](assets/en/FormEditor/radio.png)|	Radio Button / 3D Radio Button / Picture Radio Button|	R|
+|![](assets/en/FormEditor/checkbox.png)|	Check Box / 3D Check Box|	C|
+|![](assets/en/FormEditor/indicator.png)|	Progress Indicator / Dial / Ruler	I
+|![](assets/en/FormEditor/rectangle.png)|	Rectangle / Line / Rounded Rectangle / Oval / Matrix	|S|
+|![](assets/en/FormEditor/splitter.png)|	Splitter / Tab Control	D|
+|![](assets/en/FormEditor/plugin.png)|	Plug-in Area / Subform / Web Area|	X|
+
+To draw an object type, select the corresponding button and then trace the object in the form. After creating an object, you can modify its type using the Property List. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
+
+The current variant of the theme is the object that will be inserted in the form. When you click the right side of a button, you access the variant menu:
+
+![](assets/en/FormEditor/objectBar.png)
+
+When a button is selected, you can scroll through its variants using the **Shift+Selection** key shortcut. Help tips display the currently selected variant and the associated selection key of the object.
+
+You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
+
+### Using the Property List  
+
+Both forms and form objects have properties that control access to the form, the appearance of the form, and the behavior of the form when it is used. Form properties include, for example, the form’s name, its menu bar, and its size. Object Properties include, for example, an object’s name, its dimensions, its background color, and its font. 
+
+You can display and modify form and object properties using the Property List. It displays either form or objects properties depending on what you select in the editor window.
+
+To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form. 
+
+#### Navigation shortcuts  
+
+You can navigate in the Property List using the following shortcuts:
+
+*	**Arrow key**s ↑ ↓: Used to go from one cell to another.
+*	**Arrow keys** ← →: Used to expand/collapse themes or menus.
+*	**PgUp** and *PgDn*: Used to select the first or last visible cell of the Property List.
+*	**Home** and **End**: Used to select the first or last cell of the Property List.
+*	**Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
+*	**Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+
+## CSS Preview
+
+The Form Editor provides two options for viewing styled objects:
+
+*	**Plain mode**<br>Only JSON form values defined in the Property List are applied and displayed in the Form Editor. 
+
+*	**CSS mode**<br>[Style sheet attributes](stylesheets.html) are applied and displayed in the Form Editor. 
+
+By default, forms (including inherited and subforms) are opened in the CSS Preview mode for your operating system.
+
+
+
+### View Modes
+
+|Toolbar Icon|CSS Mode |Description|
+|---|---|---|
+|![](assets/en/FormEditor/cssNo.png)|Plain|No CSS values or icons displayed|
+|![](assets/en/FormEditor/cssMac.png)|CSS|CSS values for macOS platform are displayed. CSS icon displayed in Property List.|
+|![](assets/en/FormEditor/cssWin.png)|CSS|CSS values for Windows platform are displayed. CSS icon displayed in Property List.|
+
+>When using CSS mode, only JSON values are used for:
+>*	Copy/Paste operations 
+>*	Macros
+
+
+### Style Sheets & the Property List
+
+In CSS mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a [CSS icon](#css-icon) displayed next to it in the Property List. For example, the attribute values set in this style sheet:
+
+```4d
+.myButton {
+font-family: comic sans;
+font-size: 24;
+stroke: #800080;
+}
+```
+
+The values are shown with a CSS icon in the Property List:
+
+![](assets/en/FormEditor/cssPpropList.png)
+
+>Attribute values that have been modified in JSON form appear in **bold** text in the Property List. You can reset a JSON form attribute value to its default value with the **Ctrl + click** (Windows) or **Command + click** (macOs) shortcuts.
+
+#### Property List CSS Icons
+
+|Icon|Description|
+|---|---|
+|![](assets/en/FormEditor/cssIcon.png)|Indicates that an attribute value has been defined in a style sheet|
+|![](assets/en/FormEditor/cssImportant.png)|Indicates that an attribute value has been defined in a style sheet with the `!important` declaration|
+|![](assets/en/FormEditor/cssIconMixed.png)|Displayed when at least one item in a group or selection of multiple objects has an attribute value defined in a style sheet that is different from the other objects|
+
+#### JSON vs Style Sheet Priority Order
+
+See the [Style sheets](stylesheets.html#json-vs-style-sheet) section.
+
+
+
+### Using CSS Preview
+
+1. In the Form Editor toolbar, click on the CSS Preview icon:<p>![](assets/en/FormEditor/cssPreview.png)
+
+2.	Select the mode from the list:<p> ![](assets/en/FormEditor/cssPreview_list.png)<p>Objects are automatically displayed with the styles defined in a style sheet (if any).
+
+
+>Existing style sheet files are listed below the **CSS Preview** options. Selecting one will open the style sheet in your default text editor.
+
+
 ## List Box Builder
 
 You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
@@ -53,6 +224,8 @@ The final list box:
 ![](assets/en/FormEditor/listboxBuilderListbox.png)
 
 
+
+
 ## Shields
 
 The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
@@ -84,6 +257,7 @@ Here is a description of each type of shield:
 |![](assets/en/FormEditor/resizing.png) |Resizing|For objects with at least one resizing property, indicates the combination of current properties |
 |![](assets/en/FormEditor/entryOrder.png)|Entry Order|For enterable objects, indicates the number of entry order |
 |![](assets/en/FormEditor/viewNumber.png) |Current View|For all objects in the current view |
+|![](assets/en/FormEditor/cssShield.png)|Style Sheet|For objects with attribute values defined in a style sheet|
 |![](assets/en/FormEditor/filter.png) |Filter|For enterable objects with an associated entry filter |
 |![](assets/en/FormEditor/helpTip.png) |Help Tip|For objects with an associated tip |
 |![](assets/en/FormEditor/localized.png)|Localized|For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
@@ -305,6 +479,20 @@ To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut
 >The [Current view](#before-you-begin) cannot be locked.
 
 To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
+
+### Zoom  
+
+You can zoom in the current form. Switch to “Zoom” mode by clicking on the magnifying glass icon or clicking directly on the desired percentage bar (50%, 100%, 200%, 400% and 800%):
+
+![](assets/en/FormEditor/zoom.png)
+
+*	When you click on the magnifying glass, the cursor changes into one. You can then click in the form to increase the display or hold down Shift and click to reduce the display percentage. 
+*	When you click on a percentage bar, the display is immediately modified.
+
+In Zoom mode, all Form editor functions remain available(*).
+
+(*) For technical reasons, it is not possible to select list box elements (headers, columns, footers) when the Form editor is in Zoom mode.
+
 
 
 
