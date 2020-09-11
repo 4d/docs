@@ -132,10 +132,10 @@ title: テキスト
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                |
-| ---------- | ------ | -------------------- |
-| fontFamily | string | CSS font family name |
-> 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
+| 名          | データタイプ | とりうる値          |
+| ---------- | ------ | -------------- |
+| fontFamily | string | CSS フォントファミリー名 |
+> 4D では [Webセーフ](https://www.w3schools.com/cssref/css_websafe_fonts.asp) フォントだけを使うことを推奨しています。
 
 #### 対象オブジェクト
 
