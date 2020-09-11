@@ -98,11 +98,11 @@ title: テキスト
 
 3つのフォントテーマが提供されています:
 - **normal**: フォームエディター内で作成された新規オブジェクトにデフォルトで適用される自動スタイルです。
-- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 Here are typical dialog boxes (macOS and Windows) using these font themes:
+- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します:
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> フォントテーマはフォントだけでなく、サイズやカラーも定めます。 フォントテーマが定めるプロパティを一つでも編集してしまうと、動的に機能しなくなります。 However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
 
 
