@@ -102,7 +102,7 @@ title: テキスト
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> フォントテーマはフォントだけでなく、サイズやカラーも定めます。 フォントテーマが定めるプロパティを一つでも編集してしまうと、動的に機能しなくなります。 However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> フォントテーマはフォントだけでなく、サイズやカラーも定めます。 フォントテーマが定めるプロパティを一つでも編集してしまうと、動的に機能しなくなります。 ただし、一部のカスタムスタイルプロパティ (太字、イタリック、下線) は動作に影響なく適用することができます。
 
 
 
@@ -120,14 +120,14 @@ title: テキスト
 
 
 
-### Font Family
+### フォントファミリー
 
-There are two types of font family names:
+次の 2種類のフォントファミリーが存在します:
 
-* *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
-* *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+* *フォントファミリー:* "times", "courier", "arial" などのフォントファミリーの名称。
+* *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
 > <span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br> <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br> <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
 
 #### JSON 文法
