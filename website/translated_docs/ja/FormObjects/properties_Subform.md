@@ -51,9 +51,9 @@ title: サブフォーム
 
 #### JSON 文法
 
-| 名                            | データタイプ | とりうる値                              |
-| ---------------------------- | ------ | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string | "addSubrecord" or "" to do nothing |
+| 名                            | データタイプ | とりうる値                       |
+| ---------------------------- | ------ | --------------------------- |
+| doubleClickInEmptyAreaAction | string | "addSubrecord", 何もしない場合は "" |
 
 #### 対象オブジェクト
 
