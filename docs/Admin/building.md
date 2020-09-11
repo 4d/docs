@@ -295,7 +295,7 @@ In some cases, you may want to prevent client applications from being able to ca
 
 To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. In this case, the update mechanism will not allow non-updated client applications to connect. For example, if the new version of the client-server application is 6, you can stipulate that any client application with a version number lower than 6 will not be allowed to connect. 
 
-The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
+The [current version number](#current_version) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
 
 
 #### Update Error  
@@ -343,7 +343,29 @@ Items must be installed:
 	*	**Client application** - next to the *\<ApplicationName>Client* software package.
 
 
+### Embedding a single-user client application
 
+4D allows you to embed a compiled structure in the Client application. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
+
+To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `DatabaseToEmbedInClientMacFolder` keys in the *buildApp* settings file. When one of these keys is present, the client application building process generates a single-user application: the compiled structure, instead of the *EnginedServer.4Dlink* file, is placed in the "Database" folder. 
+
+- If a default data folder exists in the single-user application, a licence is embedded.
+- If no default data folder exists in the single-user application, it will be executed without data file and without licence.
+
+The basic scenario is:
+
+1. In the Build application dialog box, select the "Build compiled structure" option to produce a .4DZ or .4DC for the application to be used in single-user mode.
+2. In the *buildApp.4DSettings* file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
+	- `DatabaseToEmbedInClientWinFolder` 
+	- `DatabaseToEmbedInClientMacFolder` 
+3. Build the client-server application. This will have following effects:
+	- the whole folder of the single user application is copied inside the "Database" folder of the merged client 
+	- the *EnginedServer.4Dlink* file of the "Database" folder is not generated
+	- the .4DC, .4DZ, .4DIndy files of the single user application copy are renamed using the name of the merged client
+	- the `PublishName` key is not copied in the *info.plist* of the merged client
+	- if the single-user application does not have a "Default data" folder, the merged client will run with no data.
+
+Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
 
 
 ## Plugins & components page
