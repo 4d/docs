@@ -539,13 +539,13 @@ The management of connections by client applications covers the mechanisms by wh
 
 ### Connection scenario
 
-The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
+The connection procedure for merged client applications supports cases where the dedicated server is not available. Le scénario du démarrage d'une application cliente 4D est le suivant :
 
-- The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
-  OR  
-  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
-- If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-- If this fails, the client application displays a connection error dialog box.
+- L'application cliente tente de se connecter au serveur via le service de découverte (basé sur le nom du serveur, publié sur le même sous-réseau que l'application cliente).  
+  OU  
+  Si des informations de connexion valides sont présentes dans le fichier "EnginedServer.4DLink" à l'intérieur de son dossier, l'application cliente tente de se connecter à l'adresse du serveur spécifiée dans ce fichier.
+- En cas d'échec, l'application cliente tente de se connecter au serveur à l'aide des informations présentes dans le dossier de préférences utilisateur de l'application (fichier "lastServer.xml").
+- En cas d'échec, l'application cliente affiche une boîte de dialogue d'erreur de connexion.
     - If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
     - If the user clicks on the **Quit** button, the client application quits.
 - If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
@@ -558,19 +558,19 @@ The last used and validated server path is automatically saved in a file named "
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-Ce mécanisme permet de prendre en charge le cas où le serveur cible primaire est temporairement indisponible pour une raison quelconque (par exemple pour une opération de maintenance). Lorsque ce cas se produit pour la première fois, la boîte de dialogue de sélection de serveur est affichée (si elle est autorisée, cf. ci-dessous) et l'utilisateur peut manuellement sélectionner un serveur alternatif, dont le chemin est alors sauvegardé si la connexion est établie et validée. Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
+Ce mécanisme permet de prendre en charge le cas où le serveur cible primaire est temporairement indisponible pour une raison quelconque (par exemple pour une opération de maintenance). Lorsque ce cas se produit pour la première fois, la boîte de dialogue de sélection de serveur est affichée (si elle est autorisée, cf. ci-dessous) et l'utilisateur peut manuellement sélectionner un serveur alternatif, dont le chemin est alors sauvegardé si la connexion est établie et validée. Toute indisponibilité ultérieure sera alors automatiquement prise en charge à l'aide des paramètres de connexion présents dans le fichier "lastServer.xml".
 
-> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. Le mécanisme de sauvegarde du chemin du dernier serveur est conçu pour les cas d'indisponibilité temporaire uniquement.  
-> - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
+> - Lorsque les applications clientes ne peuvent pas bénéficier du service de découverte, par exemple à cause de la configuration réseau, il reste recommandé que le développeur indique un nom d'hôte lors de la génération de l'application à l'aide de la clé [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) dans le fichier "BuildApp.xml". Le mécanisme de sauvegarde du chemin du dernier serveur est conçu pour les cas d'indisponibilité temporaire uniquement.  
+> - Dans tous les cas, il est possible de maintenir la touche **Alt/Option** au démarrage de l'application cliente afin d'afficher la boîte de dialogue de sélection du serveur.
 
 
 
-### Availability of the server selection dialog box in case of error
+### Accès à la boîte de dialogue de sélection de serveur en cas d'erreur
 
-You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
+Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélection de serveur sur les applications clientes fusionnées lorsque le serveur ne répond pas. La configuration dans ce cas dépend de l'option de la valeur de la clé XML [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) sur le poste qui génère l'application client/serveur. Vous disposez de trois possibilités :
 
-- **Display of an error message with no access possible to the server selection dialog box**. Fonctionnement par défaut. L'application peut uniquement quitter.  
+- **Affichage d'un message d'erreur sans accès possible à la boîte de dialogue de sélection de serveur**. Fonctionnement par défaut. L'application peut uniquement quitter.  
   `ServerSelectionAllowed` : **False** ou clé omise ![](assets/en/Project/connect1.png)
 
-- **Affichage d'un message d'erreur avec accès possible à la boîte de dialogue de sélection de serveur.**. The user can access the server selection window by clicking on the **Select...** button.   
-  `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
+- **Affichage d'un message d'erreur avec accès possible à la boîte de dialogue de sélection de serveur.**. L'utilisateur peut accéder à la fenêtre de sélection de serveur en cliquant sur le bouton **Sélectionner...**.   
+  `ServerSelectionAllowed` : **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
