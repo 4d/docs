@@ -496,16 +496,16 @@ With your compiled applications, 4D automatically uses the last data file opened
 
 This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
 
-4D therefore lets you link the data file path to the application path. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. You therefore link your data **by application path**.
+4D therefore lets you link the data file path to the application path. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. Vous liez donc vos données **via le chemin d'application**.
 
-This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
+Ce mode vous permet de dupliquer vos applications fusionnées sans rompre le lien relié au fichier de données. Cependant, avec cette option, si le package de l’application est déplacé sur le disque, un fichier de données est demandé à l’utilisateur, car le chemin de l’application ne correspond plus à l’attribut "executablePath" (après avoir sélectionné un fichier de données, le Le fichier *lastDataPath.xml* est mis à jour en conséquence).
 
 
-*Duplication when data linked by application name:* ![](assets/en/Project/datalinking1.png)
+*Duplication lorsque les données sont liées par le nom de l'application: * ![](assets/en/Project/datalinking1.png)
 
-*Duplication when data linked by application path:* ![](assets/en/Project/datalinking2.png)
+*Duplication lorsque les données sont liées par le chemin de l'application: * ![](assets/en/Project/datalinking2.png)
 
-You can select the data linking mode during the build application process. You can either:
+Vous pouvez sélectionner le mode de liaison de données pendant le processus d'application de génération. You can either:
 
 - Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
 - Use the **LastDataPathLookup** XML key (single-user application or server application).
@@ -513,46 +513,46 @@ You can select the data linking mode during the build application process. You c
 
 ### Defining a default data folder
 
-4D allows you to define a default data file at the application building stage. Au premier lancement de l'application, en l'absence de fichier local (cf. [séquence de lancement décrite ci-dessus](#opening-the-data-file)), le fichier de données par défaut est automatiquement ouvert silencieusement en mode lecture seule par 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
+4D allows you to define a default data file at the application building stage. Au premier lancement de l'application, en l'absence de fichier local (cf. [séquence de lancement décrite ci-dessus](#opening-the-data-file)), le fichier de données par défaut est automatiquement ouvert silencieusement en mode lecture seule par 4D. Ce principe vous permet de contrôler la création et/ou l'ouverture des fichiers de données lors du lancement initial d'une application fusionnée.
 
-More specifically, the following cases are covered:
+Plus particulièrement, il permet de répondre aux besoins suivants :
 
-- Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.
-- Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
+- Eviter l'affichage de la boîte de dialogue d'ouverture de fichier de données de 4D au lancement d'une nouvelle application fusionnée ou d'une mise à jour. Vous pouvez détecter, par exemple dans la , que le fichier de données par défaut a été ouvert et donc, exécuter votre propre code et/ou boîtes de dialogue permettant de créer ou de sélectionner un fichier de données local.
+- Permettre la distribution d'applications fusionnées comportant des données en lecture seulement (par exemple des applications de démonstration).
 
 
-To define and use a default data file:
+Pour définir et utiliser un fichier de données par défaut :
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. Ce fichier doit être accompagné de tous les fichiers nécessaires, en fonction de la configuration de la base : .4dIndx, blobs externes, journal, etc. Il est de votre responsabilité de livrer un fichier de données par défaut valide. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
-- When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
+- Vous devez fournir un fichier de données par défaut (nommé "Default.4DD") et le stocker dans un dossier spécifique (nommé "Default Data") à l'intérieur du package de la base (4dbase). Ce fichier doit être accompagné de tous les fichiers nécessaires, en fonction de la configuration de la base : .4dIndx, blobs externes, journal, etc. Il est de votre responsabilité de livrer un fichier de données par défaut valide. A noter cependant que, comme le fichier de données par défaut est ouvert en mode lecture seule, il est recommandé de désélectionner l'option "Utiliser le fichier d'historique" dans le fichier de structure original avant de créer le fichier de données.
+- Au moment de la génération de l'application, le dossier de données par défaut est intégré dans l'application fusionnée. Tous les fichiers présents dans ce dossier par défaut sont également embarqués.
 
-The following graphic illustrates this feature:
+Le schéma suivant illustre cette fonctionnalité :
 
 ![](assets/en/Project/DefaultData.png)
 
-When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
+Lorsque le fichier de données par défaut est détecté au premier lancement, il est silencieusement ouvert en mode lecture seulement, vous permettant ainsi d'exécuter toute opération personnalisée (à condition qu'elle ne modifie pas le fichier de données lui-même).
 
 
-## Management of client connection(s)
+## Gestion de la connexion des applications clientes
 
-The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
+La gestion des connexions des applications clientes recouvre les mécanismes par lesquels une application cliente fusionnée se connectera au serveur cible, une fois en environnement de production.
 
-### Connection scenario
+### Scénario de connexion
 
-The connection procedure for merged client applications supports cases where the dedicated server is not available. Le scénario du démarrage d'une application cliente 4D est le suivant :
+Le processus de connexion des applications clientes fusionnées prend en charge les cas où le serveur dédié n'est pas disponible. Le scénario du démarrage d'une application cliente 4D est le suivant :
 
 - L'application cliente tente de se connecter au serveur via le service de découverte (basé sur le nom du serveur, publié sur le même sous-réseau que l'application cliente).  
   OU  
   Si des informations de connexion valides sont présentes dans le fichier "EnginedServer.4DLink" à l'intérieur de son dossier, l'application cliente tente de se connecter à l'adresse du serveur spécifiée dans ce fichier.
 - En cas d'échec, l'application cliente tente de se connecter au serveur à l'aide des informations présentes dans le dossier de préférences utilisateur de l'application (fichier "lastServer.xml").
 - En cas d'échec, l'application cliente affiche une boîte de dialogue d'erreur de connexion.
-    - If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
-    - If the user clicks on the **Quit** button, the client application quits.
-- If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+    - Si l'utilisateur clique sur le bouton **Sélectionner...** (lorsque c'est autorisé par le développeur 4D à l'étape de création, voir ci-dessous), la boîte de dialogue standard "Connexion serveur" s'affiche.
+    - Si l'utilisateur clique sur le bouton **Quitter**, l'application cliente se ferme.
+- Si la connexion réussit, l'application cliente enregistre ces informations de connexion dans le dossier des préférences utilisateur de l'application pour une utilisation ultérieure.
 
-### Storing the last server path
+### Stockage du dernier chemin du serveur
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. Ce dossier est situé à l'emplacement suivant :
+Le dernier chemin d'accès au serveur utilisé et validé est automatiquement enregistré dans un fichier nommé "lastServer.xml" dans le dossier des préférences utilisateur de l'application. Ce dossier est situé à l'emplacement suivant :
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
