@@ -6,14 +6,14 @@ title: テキスト
 ---
 ## ピッカーの使用を許可
 
-When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
+このプロパティが有効化されていると、[OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.ja.html) または [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.ja.html) を使用してユーザーがフォントピッカー/カラーピッカーを呼び出すことを許可します。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
 
 
 #### JSON 文法
 
-| プロパティ                | データタイプ  | とりうる値                 |
-| -------------------- | ------- | --------------------- |
-| allowFontColorPicker | boolean | false (default), true |
+| プロパティ                | データタイプ  | とりうる値               |
+| -------------------- | ------- | ------------------- |
+| allowFontColorPicker | boolean | false (デフォルト), true |
 
 #### 対象オブジェクト
 
@@ -22,10 +22,10 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 ---
 ## 太字
 
-Sets the selected text to appear darker and heavier.
+選択テキストの線を太くし、濃く見えるようにします。
 
-You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
-> This is normal text.<br> **This is bold text.**
+このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+> これは通常のテキストです。<br> **これは太字のテキストです。**
 
 #### JSON 文法
 
@@ -35,16 +35,16 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 
 ---
 ## イタリック
 
-Sets the selected text to slant slightly to the right.
+選択テキストの線を右斜めに傾けます。
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
-> This is normal text.<br> *This is text in italics.*
+このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+> これは通常のテキストです。<br> *これはイタリックのテキストです。*
 
 #### JSON 文法
 
@@ -54,15 +54,15 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 
 
 
 ---
 ## 下線
-Sets the text to have a line running beneath it.
-> This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.
+選択テキストの下に線を引きます。
+> これは通常のテキストです。<br> <span style="text-decoration:underline">これは下線の付いたテキストです。</span>
 
 #### JSON 文法
 
@@ -72,7 +72,7 @@ Sets the text to have a line running beneath it.
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 
 
@@ -82,27 +82,27 @@ Sets the text to have a line running beneath it.
 ---
 ## フォント
 
-This property allows you to specify either the **font theme** or the **font family** used in the object.
-> **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
+このプロパティは、オブジェクトで使用される **フォントテーマ** または **フォントファミリー** を指定します。
+> **フォントテーマ** と **フォントファミリー** プロパティは、どちらか一方しか指定できません。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。
 
 
 ### フォントテーマ
 
-The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
+フォントテーマプロパティには、自動スタイルの名前を指定します。 自動スタイルは、オブジェクトに使われるフォントファミリー・フォントサイズ・フォントカラーをシステムパラメーターに応じて動的に定めます。 これらのパラメーターは次に依存します:
 
-- the platform,
-- the system language,
-- and the type of form object.
+- プラットフォーム
+- システム言語
+- フォームオブジェクトのタイプ
 
-With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
+フォントテーマを使うことで、システムの現インターフェース標準に沿うようにタイトルが表示されることが保証されます。 ただし、マシンごとにサイズが変わるかもしれません。
 
-Three font themes are available:
-- **normal**: automatic style, applied by default to any new object created in the Form editor.
-- **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
+3つのフォントテーマが提供されています:
+- **normal**: フォームエディター内で作成された新規オブジェクトにデフォルトで適用される自動スタイルです。
+- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します:
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> フォントテーマはフォントだけでなく、サイズやカラーも定めます。 You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
 
 
@@ -115,31 +115,31 @@ Three font themes are available:
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 
 
 
-### Font Family
+### フォントファミリー
 
-There are two types of font family names:
+次の 2種類のフォントファミリーが存在します:
 
-* *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
-* *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+* *フォントファミリー:* "times", "courier", "arial" などのフォントファミリーの名称。
+* *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
-> <span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br> <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br> <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
+このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
+> <span style="font-family:Times New Roman; font-size:20pt"> これは Times New Roman フォントです。</span><br> <span style="font-family:Calibri; font-size:20pt"> これは Calibri フォントです。</span><br> <span style="font-family:Papyrus; font-size:20pt"> これは Papyrus フォントです。</span>
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                |
-| ---------- | ------ | -------------------- |
-| fontFamily | string | CSS font family name |
-> 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
+| 名          | データタイプ | とりうる値          |
+| ---------- | ------ | -------------- |
+| fontFamily | string | CSS フォントファミリー名 |
+> 4D では [Webセーフ](https://www.w3schools.com/cssref/css_websafe_fonts.asp) フォントだけを使うことを推奨しています。
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 
 
@@ -156,7 +156,7 @@ Allows defining the object's font size in points.
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 
 ---

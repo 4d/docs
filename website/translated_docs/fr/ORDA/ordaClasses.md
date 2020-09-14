@@ -27,7 +27,7 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 - If the physical structure evolves, you can simply adapt function code and client applications will continue to call them transparently.
 
-- By default, all of your data model class functions are set as **private** and cannot be called from remote requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- By default, all of your data model class functions are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](assets/en/ORDA/api.png)
 
@@ -37,44 +37,44 @@ In addition, 4D [automatically pre-creates](#creating-classes) the classes for e
 
 ## Architecture
 
-ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) **`cs`** :
 
 ![](assets/en/ORDA/ClassDiagramImage.png)
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+Toutes les classes de modèle de données ORDA sont exposées en tant que propriétés du class store **`cs`**. Les classes ORDA suivantes sont disponibles :
 
-| Class                       | Example name         | Instanciée par                                                                                                                                                                                                                                                                                                                                                                    |
+| Class                       | Nom de l'exemple     | Instanciée par                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cs.DataStore                | cs.DataStore         | Commande `ds`                                                                                                                                                                                                                                                                                                                                                                     |
 | cs.*DataClassName*          | cs.Employee          | `dataStore.DataClassName`, `dataStore[DataClassName]`                                                                                                                                                                                                                                                                                                                             |
 | cs.*DataClassName*Entity    | cs.EmployeeEntity    | `dataClass.get()`, `dataClass.new()`, `entitySelection.first()`, `entitySelection.last()`, `entity.previous()`, `entity.next()`, `entity.first()`, `entity.last()`, `entity.clone()`                                                                                                                                                                                              |
 | cs.*DataClassName*Selection | cs.EmployeeSelection | `dataClass.query()`, `entitySelection.query()`, `dataClass.all()`, `dataClass.fromCollection()`, `dataClass.newSelection()`, `entitySelection.drop()`, `entity.getSelection()`, `entitySelection.and()`, `entitySelection.minus()`, `entitySelection.or()`, `entitySelection.orderBy()`, `entitySelection.orderByFormula()`, `entitySelection.slice()`, `Create entity selection` |
 
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#class-files).
+> Les classes utilisateur ORDA sont stockées sous forme de fichiers de classe standard (.4dm) dans le sous-dossier Classes du projet [(voir ci-dessous)](#class-files).
 
-Also, object instances from ORDA data model user classes benefit from their parent's properties and functions. For example, an Entity class object can call functions from the [ORDA Entity generic class](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
+Also, object instances from ORDA data model user classes benefit from their parent's properties and functions. Par exemple, un objet de classe Entity peut appeler des fonctions de la [classe générique d'entité ORDA](https://doc.4d.com/4Dv18R3/4D/18-R3/ORDA-Entity.201-4900374.en.html).
 
 
 
-## Class Description
+## Description de la classe
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                          |
-| ------- | -------------------------------------------------------------------------------------- |
-| v18 R5  | Data model class functions are private by default. New `exposed` and `local` keywords. |
+| Version | Modifications                                                                                      |
+| ------- | -------------------------------------------------------------------------------------------------- |
+| v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
 
 
-### DataStore Class
+### Classe DataStore
 
 
-A 4D database exposes its own DataStore class in the `cs` class store.
+Une base de données 4D expose sa propre classe DataStore dans le class store `cs`.
 
 - **Extends**: 4D.DataStoreImplementation
 - **Class name**: cs.DataStore
 
-You can create functions in the DataStore class that will be available through the `ds` object.
+Vous pouvez créer des fonctions dans la classe DataStore qui seront disponibles via l'objet `ds`.
 
 #### Exemple
 
@@ -88,7 +88,7 @@ Function getDesc
 ```
 
 
-This function can then be called:
+Cette foncton peut alors être appelée :
 
 ```4d
 $desc:=ds.getDesc() //"Database exposing..."
@@ -96,7 +96,7 @@ $desc:=ds.getDesc() //"Database exposing..."
 
 
 
-### DataClass Class
+### Classe DataClass
 
 Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
@@ -132,7 +132,7 @@ Then you can get an entity selection of the "best" companies by executing:
 
 #### Exemple avec un datastore distant
 
-The following *City* catalog is exposed in a remote datastore (partial view):
+Le catalogue *City* suivant est exposé dans un datastore distant (vue partielle) :
 
 ![](assets/en/ORDA/Orda_example.png)
 
@@ -258,14 +258,16 @@ When creating or editing data model classes, you must pay attention to the follo
 
 ## Exposed vs non-exposed functions
 
-For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default.
+For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
-A function that is not exposed is not available on remote applications and cannot be called on any object instance from a remote request, it can only be called from the application itself. Remote requests include:
+Remote requests include:
 
-- Requests sent by client 4D applications working with remote datastores
+- Requests sent by remote 4D applications connected through `Open datastore`
 - REST requests
 
-If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned.
+> Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture.
+
+A function that is not exposed is not available on remote applications and cannot be called on any object instance from a REST request. If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned.
 
 To allow a data model class function to be called by a remote request, you must explicitly declare it using the `exposed` keyword. The formal syntax is:
 
@@ -274,7 +276,7 @@ To allow a data model class function to be called by a remote request, you must 
 exposed Function <functionName>   
 ```
 
-> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
+> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
 ### Exemple
 
@@ -284,7 +286,7 @@ You want an exposed function to use a private function in a dataclass class:
 Class extends DataClass
 
 //Public function
-exposed Function registerNewStudent($student : Object)->$status : Object
+exposed Function registerNewStudent($student : Object) -> $status : Object
 
 var $entity : cs.StudentsEntity
 
@@ -295,9 +297,9 @@ $entity.serialNumber:=This.computeSerialNumber()
 $status:=$entity.save()
 
 //Not exposed (private) function
-Function computeSerialNumber()-> $serialNumber : Integer
-//compute a new serial number
-$serialNumber:=...
+Function computeIDNumber()-> $id : Integer
+//compute a new ID number
+$id:=...
 
 ```
 
@@ -305,33 +307,32 @@ When the code is called:
 
 ```4d
 var $remoteDS; $student; $status : Object
-var $serialNumber : Integer
+var $id : Integer
 
 $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$serialNumber:=$remoteDS.Schools.computeSerialNumber() // Error "Unknown member method" 
+$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
 ```
 
 
 ## Local functions
 
-By default in client/server architecture, ORDA data model functions are executed **on the server**. This means that calling a function generates a request to the server.
+By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
 
-However, it could happen that a function is executed on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The function will then be executed on the client and will not generate requests to the server. The formal syntax is:
+However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The formal syntax is:
 
 ```4d  
 // declare a function to execute locally in client/server
 local Function <functionName>   
 ```
 
-Obviously, you need to make sure that the function is actually eligible for local execution. In particular, you need to make sure that:
+With this keyword, the function will always be executed on the client side.
 
-- required data is loaded in the ORDA cache and not expired - otherwise, requests may be triggered to the server,
-- no part of the function code will send a request to the server (for example, `Current time(*)` will always call the server).
+Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. For example, consider a function calculating an average value for an entity selection. If the function is executed locally and requires to access the datastore for each entity, it will generate many requests to the server, whereras a function executed on the server would only return the resulting values.
 
-> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, an error is returned.
+> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
 
 ### Exemples

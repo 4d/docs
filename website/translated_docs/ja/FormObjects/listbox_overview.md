@@ -72,19 +72,19 @@ title: リストボックス
 
 配列リストボックスでは、それぞれの列に 4D の 1次元配列を割り当てなければなりません。ポインター配列を除きすべてのタイプの配列を使用できま す。 行数は配列の要素数により決定されます。
 
-デフォルトで 4D は各列に “ColumnX” という名前の配列変数を割り当てます。 この配列変数名は [列のプロパティ](listbox_overview.md#列特有のプロパティ) で変更できます (プロパティリストの [変数あるいは式](properties_Object.md#変数あるいは式) プロパティを使用します)。 列ごとの表示フォーマットを指定するには、`OBJECT SET FORMAT` コマンドも使用できます。
+By default, 4D assigns the name "ColumnX" to each column. この配列変数名は [列のプロパティ](listbox_overview.md#列特有のプロパティ) で変更できます (プロパティリストの [変数あるいは式](properties_Object.md#変数あるいは式) プロパティを使用します)。 The display format for each column can also be defined using the `OBJECT SET FORMAT` command.
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 
 配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。 リストボックスのハイレベルコマンド (`LISTBOX INSERT ROWS` や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
 
 ```4d
-ARRAY TEXT(ColumnName;size)
+ARRAY TEXT(varCol;size)
 ```
 
 リストを使用することもできます:
 
 ```4d
-LIST TO ARRAY("ListName";ColumnName)
+LIST TO ARRAY("ListName";varCol)
 ```
 > **警告**: 異なる配列サイズの列がリストボックスに含まれる場合、もっとも小さい配列サイズの数だけを表示します。 そのため、各配列の要素数は同じにしなければなりません。 リストボックスの列が一つでも空の場合 (ランゲージにより配列が正しく定義またはサイズ設定されなかったときに発生します)、リストボックスは何も表示しません。
 
@@ -315,6 +315,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 ![](assets/en/FormObjects/listbox_header.png)
 
 リストボックスの各列ヘッダー毎に標準のテキストプロパティを設定できます。設定すると、リストボックスや列に対する設定よりもこちらが優先されます。
+
 
 さらに、ヘッダー特有のプロパティを設定することができます。 [カスタマイズされた並び替え](#ソートの管理) などの用途に、ヘッダーの列タイトルの隣、あるいはタイトルの代わりにアイコンを表示することができます。
 

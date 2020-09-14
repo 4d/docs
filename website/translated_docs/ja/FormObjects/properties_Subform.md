@@ -44,16 +44,16 @@ title: サブフォーム
 ---
 ## 空行をダブルクリック
 
-Action to perform in case of a double-click on an empty line of a list subform. 次のオプションから選択することができます:
+リストサブフォームの空行がダブルクリックされた際に実行されるアクションを指定します。 次のオプションから選択することができます:
 - 何もしない: ダブルクリックを無視します。
 - レコード追加: サブフォーム中に新規レコードを作成し、編集モードにします。 "リスト更新可" オプションが選択されている場合、レコードは直接リスト内に作成されます。 選択されていない場合、レコードはサブフォームに割り当てられた [詳細フォーム](#詳細フォーム) 上に作成されます。
 
 
 #### JSON 文法
 
-| 名                            | データタイプ | とりうる値                              |
-| ---------------------------- | ------ | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string | "addSubrecord" or "" to do nothing |
+| 名                            | データタイプ | とりうる値                       |
+| ---------------------------- | ------ | --------------------------- |
+| doubleClickInEmptyAreaAction | string | "addSubrecord", 何もしない場合は "" |
 
 #### 対象オブジェクト
 
@@ -114,11 +114,9 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 ---
 ## リストフォーム
 
-このプロパティを使用して、サブフォームで使用するリストフォームを割り当てます。  リストサブフォームを使うことで、他のテーブルのデータを入力、表示、および更新することができます。
+このプロパティを使用して、サブフォームで使用するリストフォームを割り当てます。 リストサブフォームを使うことで、他のテーブルのデータを入力、表示、および更新することができます。
 
 リストサブフォームをデータ入力に使用するには 2つの方法があります。一つは [入力フォーム](#詳細フォーム) を開いてデータを入力する方法です。 この設定では、サブフォームとして使用されるフォームがリストフォーム、 入力のために使用されるフォームが詳細フォームとなります。
-
-また、ユーザーがリストサブフォームに直接データを入力するようにもできます。
 
 #### JSON 文法
 
@@ -135,13 +133,13 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 ---
 ## ソース
 
-Specifies the table that the list subform belongs to (if any).
+リストサブフォームが属するテーブル (あれば) を指定します。
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値                             |
-| ----- | ------ | --------------------------------- |
-| table | string | 4D table name, or "" if no table. |
+| 名     | データタイプ | とりうる値                   |
+| ----- | ------ | ----------------------- |
+| table | string | 4D テーブル名, テーブルなしの場合は "" |
 
 #### 対象オブジェクト
 
@@ -151,13 +149,13 @@ Specifies the table that the list subform belongs to (if any).
 ## 選択モード
 
 リストボックス行の選択モードを指定します:
-- **なし**: 行を選択することはできません。 Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
-- **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります  
+- **なし**: 行を選択することはできません。 [リスト更新可](properties_Entry.md#リスト更新可) オプションがチェックされている場合を除き、リストをクリックしても効果はありません。 ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
+- **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります。  
   上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 カレントの行が変更されるたびに、`On Selection Change` フォームイベントが生成されます。
 - **複数**: 標準のショートカットを使用して複数行を同時に選択できます。
-    - The selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command.
-    - Clicking on the record will select it, but it does not modify the current record.
-    - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. その他のナビゲーションキーはリストをスクロールします。 The `On Selection Change` form event is generated every time the selected record is changed.
+    - 選択されたサブレコードは `GET HIGHLIGHTED RECORDS` で取得できます。
+    - レコードはクリックにより選択されますが、カレントレコードは変更されません。
+    - **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象レコードの選択状態 (選択・非選択) が切り替わります。 上下キーを使うとリストの前後のレコードが選択されます。 その他のナビゲーションキーはリストをスクロールします。 選択レコードが変更されるたびに、`On Selection Change` フォームイベントが生成されます。
 
 
 #### JSON 文法

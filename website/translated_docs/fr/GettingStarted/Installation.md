@@ -32,17 +32,17 @@ Apparaît ensuite l'assistant de bienvenue :
 
 ![](assets/en/getStart/welcome2.png)
 
-- If you want to discover and explore 4D, click on the **free trial** link. Il vous sera demandé de vous connecter ou de créer un compte 4D.
+- Si vous souhaitez découvrir et explorer 4D, cliquez sur le lien **essai gratuit**. Il vous sera demandé de vous connecter ou de créer un compte 4D.
 
-- If you already have a 4D account, click on the **Sign in** link in the upper right side of the Welcome Wizard dialog and enter your account information. Any already registered 4D licenses are automatically updated (or additional expansion packs loaded) on your machine.
+- Si vous possédez déjà un compte 4D, cliquez sur le lien **Se connecter** sur le côté supérieur droit de l'assistant d'installation et saisissez les informations relatives à votre compte. Toute licence 4D préalablement enregistrée est automatiquement mise à jour (ou les packs d'extension supplémentaires sont chargés) sur votre machine.
 
-Expand the **Open or create project application** area and select the action you want to perform:
+Élargissez la zone **Ouvrir ou créer un projet d'application** et sélectionnez l'action que vous souhaitez exécuter :
 
-- **Connect to 4D Server** - use 4D as a remote client and connect to an application that is already loaded by 4D Server.
+- **Connectez-vous au 4D Server** - utilisez 4D en tant que client et connectez--vous à une application déjà chargée par 4D Server.
 
-- **Open a local application project** - load an existing application project stored on your disk.
+- **Ouvrez un projet d'application local** - chargez un projet d'application existant stocké sur votre disque.
 
-- **Create a new application project** - create a new, empty application project on your disk.
+- **Créez un nouveau projet d'application** - créez un nouveau projet d'application vide sur votre disque.
 
-On vous souhaite une excellente expérience 4D !
+Nous vous souhaitons une excellente expérience 4D !
 
