@@ -368,6 +368,31 @@ The basic scenario is:
 Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
 
 
+### Customizing client and/or server cache folder names
+
+Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and clients. Client/server applications use default pathnames for both client and server system cache folders. 
+
+In some specific cases, you might need to customize the names of these folders (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file. 
+
+
+
+In some contexts, it could be useful to customize the name of the server cache folder, the client cache folder, or both. 4D provides you with the `ClientServerSystemFolderName` and/or `ServerStructureFolderName` keys . 
+
+#### Client cache
+
+Customizing the client-side cache folder name can be required in the following context: your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple downloading of identical local resources, you can use the same custom local cache folder. 
+
+Default configuration (at each connection to a server, another cache folder will be downloaded/updated):
+
+![](assets/en/Admin/cachea.png)
+
+Using the [`ClientServerSystemFolderName`] key (a single cache folder is used for all servers):
+
+![](assets/en/Admin/cacheb.png)
+
+
+
+
 ## Plugins & components page
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application. 
