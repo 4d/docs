@@ -42,7 +42,7 @@ Apparaît ensuite l'assistant de bienvenue :
 
 - **Ouvrez un projet d'application local** - chargez un projet d'application existant stocké sur votre disque.
 
-- **Create a new application project** - create a new, empty application project on your disk.
+- **Créez un nouveau projet d'application** - créez un nouveau projet d'application vide sur votre disque.
 
 Nous vous souhaitons une excellente expérience 4D !
 
