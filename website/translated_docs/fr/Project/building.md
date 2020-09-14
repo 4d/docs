@@ -300,20 +300,20 @@ Les causes possibles de cette erreur sont multiples. Lorsque vous rencontrez ce 
 A l’issue du processus de génération d’une application client-serveur, vous devez trouver dans le dossier de destination un nouveau dossier nommé **Client Server executable**. Ce dossier contient deux sous-dossiers, *<NomApplication>Client* et *<NomApplication> Server*.
 > Ces dossiers ne sont pas générés si une erreur est survenue. Dans ce cas, ouvrez le [fichier d’historique](#log-file) pour connaître la cause de l’erreur.
 
-Le dossier *<NomApplication>Client* contient la partie cliente de l’application correspondant à la plate-forme d’exécution du générateur d’application. Ce dossier doit être installé sur chaque poste client. The *\<ApplicationName>Server* folder contains the server portion of the application.
+Le dossier *<NomApplication>Client* contient la partie cliente de l’application correspondant à la plate-forme d’exécution du générateur d’application. Ce dossier doit être installé sur chaque poste client. Le dossier *\<ApplicationName>Server* contient la partie serveur de l’application.
 
-The contents of these folders vary depending on the current platform:
+Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
 
-*   *Windows* - Each folder contains the application executable file, named *\<ApplicationName>Client.exe* for the client part and *\<ApplicationName>Server.exe* for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-*   *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Under macOS, launch a package by double-clicking it.
+*   *Windows* - Chaque dossier contient le fichier exécutable de l’application, nommé *\<ApplicationName>Client.exe* pour la partie cliente et *\<ApplicationName>Server.exe* pour la partie serveur, ainsi que les fichiers .rsr correspondants. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
+*   *macOS* - Chaque dossier contient uniquement le progiciel de l’application, nommé <ApplicationName> Client pour la partie cliente et <ApplicationName>Server pour la partie serveur. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
 
-    > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
+    > Les progiciels Mac Os générés contiennent les mêmes éléments que les sous-dossiers Windows. Vous pouvez afficher leur contenu (**Control+click** sur l'icône) pour pouvoir les modifier.
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. This file is used during the automatic client application update.
+Si vous avez coché l'option "Autoriser la mise à jour automatique de l'application cliente", un sous-dossier supplémentaire appelé *Upgrade4DClient* est ajouté dans le dossier/package *\<ApplicationName>Server*. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
 
-#### Customizing 4D Volume Desktop folder
+#### Personnaliser le dossier 4D Volume Desktop
 
-When building a double-clickable application, 4D copies the contents of the 4D Volume Desktop folder into the Final Application subfolder of the destination folder. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. You can, for instance:
+Lors de la construction d'une application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le sous-dossier Final Application du dossier de destination. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. You can, for instance:
 
 - Install a 4D Volume Desktop version corresponding to a specific language;
 - Add a custom PlugIns folder;
@@ -355,9 +355,9 @@ The page lists the elements loaded by the current 4D application:
 
 *   **Type** column - Indicates the type of item: plug-in or component.
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
+If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
 
-If there is a conflict between two different versions of the same plug-in (one loaded by 4D and the other located in the source application folder), priority goes to the plug-in installed in the 4D Volume Desktop/4D Server folder. However, if there are two instances of the same component, the application will not open.
+En cas de conflit entre deux versions différentes d’un même plug-in (l’une chargée par 4D et l’autre placée dans le dossier de l’application source), la priorité revient au plug-in installé dans le dossier de 4D Volume Desktop/4D Server. However, if there are two instances of the same component, the application will not open.
 > The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
 
 
@@ -372,18 +372,17 @@ The Licences & Certificate page can be used to:
 *   designate the license number(s) that you want to integrate into your single-user stand-alone application
 *   sign the application by means of a certificate in macOS.
 
-
-![](assets/en/Project/buildapplicenseProj.png)
+![](assets/en/Admin/buildappCertif.png)
 
 ### Licenses
 
-This tab displays the list of available deployment licenses that you can integrate into your application. Par défaut, la liste est vide. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+This tab displays the list of available deployment licenses that you can integrate into your application. Par défaut, la liste est vide. Vous devez explicitement ajouter votre licence *4D Developer Professional* ainsi que chaque licence* 4D Desktop Volume* liée à utiliser dans l’application générée. Vous pouvez ajouter un numéro 4D Developer Professional et ses licences associées autres que ceux en cours d’utilisation.
 
-To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
+Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre.
 
-When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
+Lorsque vous cliquez sur le bouton [+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *Licenses* de votre poste. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
 
-You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
+Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
 
 Once you have selected a file, the list will indicate the characteristics of the license that it contains.
 
@@ -394,15 +393,15 @@ Once you have selected a file, the list will indicate the characteristics of the
 
 If a license is not valid, a message will warn you.
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
-> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
+You can designate as many valid files as you want. Lors de la génération de l’application exécutable, 4D utilisera les licences les plus appropriées.
+> Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-4DDP").
 
-After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
+A l’issue de la génération, un nouveau fichier de licence de déploiement est automatiquement inclus dans un dossier Licences placé à côté de l’application exécutable (Windows) ou dans le progiciel (macOS).
 
 
-### OS X signing certificate
+### Certification des applications sous macOS
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
+Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, 4D Server et parties clientes sous macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
 
 - Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
 
