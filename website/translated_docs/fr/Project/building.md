@@ -95,39 +95,39 @@ Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier Comp
 
 Le dossier *MyComponent.4dbase</2> contient :</p>
 -   Le fichier *MyComponent.4DZ*
--   Un dossier *Resources* - toute ressource associée est automatiquement copiée dans ce dossier. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
+-   Un dossier *Resources* - toute ressource associée est automatiquement copiée dans ce dossier. Tous les autres dossiers de composants et/ou de plugins ne sont pas copiés (un composant ne peut pas utiliser de plug-ins ou d'autres composants).
 
 
-## Application page
+## Page d'application
 
-This tab allows you can build a stand-alone, single-user version of your application:
+Cet onglet vous permet de créer une version autonome et monoposte de votre application :
 
 ![](assets/en/Project/standaloneProj.png)
 
-### Build stand-alone Application
+### Créer une application autonome
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
+Cochez l'option **Créer une application autonome** et cliquez sur **Générer** pour créer une application autonome (double-cliquable) directement à partir de votre projet de votre projet de données.
 
-The following elements are required for the build:
-- 4D Volume Desktop (the 4D database engine),
-- an [appropriate license](#licenses)
+Les éléments suivants sont requis pour la génération :
+- 4D Volume Desktop (le moteur de base de données 4D),
+- une [licence appropriée](#licenses)
 
-On Windows, this feature creates an executable file (.exe). Sous Mac Os, cette fonction génère des progiciels (packages).
+Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous Mac Os, cette fonction génère des progiciels (packages).
 
-Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
+Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet [4D SAS (http://www.4d.com/)](http://www.4d.com/).
 
-You can define a default data file or allow users to create and use their own data file (see the [Data file management in final applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html) section).
+Vous pouvez définir un fichier de données par défaut ou permettre à l'utilisateur de créer et d'utiliser son propre fichier de données (cf. section [Gestion du fichier de données dans les applications finales](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html)).
 
-It is possible to automate the update of merged single-user applications by means of a sequence of language commands (see [Automatic updating of server or single-user applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
+Il est possible d'automatiser la mise à jour des applications monopostes fusionnées moyennant l'utilisation d'une séquence de commandes du langage (cf. section [Mise à jour auto des applications serveur ou monopostes](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html)).
 
-#### 4D Volume Desktop Location
+#### Emplacement de 4D Volume Desktop
 
-In order to build a stand-alone application, you must first designate the folder containing the 4D Volume Desktop file:
+Pour pouvoir générer une application autonome, vous devez d'abord désigner le dossier contenant le fichier 4D Volume Desktop :
 
-*   *Windows* - the folder contains the 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, as well as various files and folders required for its operation. These items must be placed at the same level as the selected folder.
-*   *macOS* - 4D Volume Desktop is provided in the form of a structured software package containing various generic files and folders.
+*   *Windows* - le dossier contient notamment les fichiers 4D Volume Desktop.4DE, 4D Volume Desktop.RSR ainsi que différents fichiers et dossiers nécessaires à son fonctionnement. Ces éléments doivent être placés au même niveau que le dossier sélectionné.
+*   *macOS* - 4D Volume Desktop est fourni sous la forme d’un progiciel structuré contenant divers fichiers et dossiers génériques.
 
-To select the 4D Volume Desktop folder, click on the **[...]** button. A dialog box appears allowing you to designate the 4D Volume Desktop folder (Windows) or package (macOS).
+Pour sélectionner le dossier de 4D Volume Desktop, cliquez sur le bouton**[...]**. A dialog box appears allowing you to designate the 4D Volume Desktop folder (Windows) or package (macOS).
 
 Once the folder is selected, its complete pathname is displayed and, if it actually contains 4D Volume Desktop, the option for building an executable application is activated.
 
@@ -569,8 +569,8 @@ This mechanism addresses the case where the primary targeted server is temporary
 
 You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
 
-- **Display of an error message with no access possible to the server selection dialog box**. Fonctionnement par défaut. The application can only quit.  
-  `ServerSelectionAllowed`: **False** or key omitted ![](assets/en/Project/connect1.png)
+- **Display of an error message with no access possible to the server selection dialog box**. Fonctionnement par défaut. L'application peut uniquement quitter.  
+  `ServerSelectionAllowed` : **False** ou clé omise ![](assets/en/Project/connect1.png)
 
-- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.   
+- **Affichage d'un message d'erreur avec accès possible à la boîte de dialogue de sélection de serveur.**. The user can access the server selection window by clicking on the **Select...** button.   
   `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
