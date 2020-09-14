@@ -127,17 +127,17 @@ Pour pouvoir générer une application autonome, vous devez d'abord désigner le
 *   *Windows* - le dossier contient notamment les fichiers 4D Volume Desktop.4DE, 4D Volume Desktop.RSR ainsi que différents fichiers et dossiers nécessaires à son fonctionnement. Ces éléments doivent être placés au même niveau que le dossier sélectionné.
 *   *macOS* - 4D Volume Desktop est fourni sous la forme d’un progiciel structuré contenant divers fichiers et dossiers génériques.
 
-Pour sélectionner le dossier de 4D Volume Desktop, cliquez sur le bouton**[...]**. A dialog box appears allowing you to designate the 4D Volume Desktop folder (Windows) or package (macOS).
+Pour sélectionner le dossier de 4D Volume Desktop, cliquez sur le bouton**[...]**. Une boîte de dialogue vous permettant de désigner le dossier (Windows) ou le progiciel (macOS) de 4D Volume Desktop apparaît.
 
-Once the folder is selected, its complete pathname is displayed and, if it actually contains 4D Volume Desktop, the option for building an executable application is activated.
+Une fois le dossier sélectionné, son chemin d’accès complet est affiché et, s’il contient effectivement 4D Volume Desktop, l’option de génération d’application exécutable est activée.
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v18, you must select a 4D Volume Desktop v18.
+> Le numéro de version de 4D Volume Desktop doit correspondre à celui de la version de 4D Developer Edition. Par exemple, si vous utilisez 4D Developer v18, vous devez sélectionner un 4D Volume Desktop v18.
 
-#### Data linking mode
+#### Mode de liaison des données
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+Cette option vous permet de sélectionner le mode de liaison entre l'application fusionnée et le fichier de données local. Deux modes de liaison sont disponibles, choisissez le mode qui correspond le mieux à vos besoins :
 
-*   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Cela vous permet de déplacer librement le dossier de l'application sur le disque. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
+*   **Nom de l'application** (défaut) - L'application 4D ouvre automatiquement le dernier fichier de données ouvert correspondant à la structure. Cela vous permet de déplacer librement le dossier de l'application sur le disque. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
 *   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Otherwise, the last opened data file is opened (default mode).
 
@@ -229,9 +229,9 @@ Used to indicate the current version number for the application generated. Vous 
 
 #### Data linking mode
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+This option lets you choose the linking mode between the merged application and the local data file. Deux modes de liaison sont disponibles, choisissez le mode qui correspond le mieux à vos besoins :
 
-*   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Cela vous permet de déplacer librement le dossier de l'application sur le disque. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
+*   **Nom de l'application** (défaut) - L'application 4D ouvre automatiquement le dernier fichier de données ouvert correspondant à la structure. Cela vous permet de déplacer librement le dossier de l'application sur le disque. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
 *   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Otherwise, the last opened data file is opened (default mode).
 
@@ -444,9 +444,9 @@ For more information on the notarization concept, please refer to [this page on 
 
 *   **Windows** - When building a double-clickable application, 4D handles the customizing of its icon. In order to do this, you must create an icon file (*.ico* extension), prior to building the application file, and place it next to the project folder.
 
-    Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
+    Your icon file must have the same name as the project file and include the *.ico* extension. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable.
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. The following keys are available:
+Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. The following keys are available:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -488,15 +488,15 @@ The data file path is stored in a dedicated file, named *lastDataPath.xml*.
 
 Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+This mechanism is usually suitable for standard deployments. Cependant, dans des cas spécifiques, par exemple si vous dupliquez vos applications fusionnées, vous pouvez avoir besoin de modifier la manière dont le fichier de données est lié à l'application.
 
-#### Configuring the data linking mode
+#### Configurer le mode de liaison des données
 
-With your compiled applications, 4D automatically uses the last data file opened. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
+4D utilise automatiquement, avec vos applications compilées, le dernier fichier de données ouvert. Par défaut, lorsque la nouvelle architecture est activée, le chemin d'accès du fichier de données est stocké dans le dossier de préférences de l'utilisateur de l'application et est lié au **nom de l'application**.
 
-This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
+Ce fonctionnement peut s'avérer inadapté si vous souhaitez dupliquer une application fusionnée destinée à utiliser différents fichiers de données. En effet, les applications dupliquées vont en fait partager le même dossier de préférences de l'utilisateur et donc, toujours utiliser le même fichier de données -- même si le fichier de données est renommé, car l'application utilisera toujours le dernier fichier de données ouvert par l'application.
 
-4D therefore lets you link the data file path to the application path. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. Vous liez donc vos données **via le chemin d'application**.
+4D vous permet donc de lier votre chemin de fichier de données au chemin de l'application. Dans ce cas, le fichier de données sera relié via un chemin spécifique et ne sera plus simplement le dernier fichier utilisé. Vous liez donc vos données **via le chemin d'application**.
 
 Ce mode vous permet de dupliquer vos applications fusionnées sans rompre le lien relié au fichier de données. Cependant, avec cette option, si le package de l’application est déplacé sur le disque, un fichier de données est demandé à l’utilisateur, car le chemin de l’application ne correspond plus à l’attribut "executablePath" (après avoir sélectionné un fichier de données, le Le fichier *lastDataPath.xml* est mis à jour en conséquence).
 
@@ -505,15 +505,15 @@ Ce mode vous permet de dupliquer vos applications fusionnées sans rompre le lie
 
 *Duplication lorsque les données sont liées par le chemin de l'application: * ![](assets/en/Project/datalinking2.png)
 
-Vous pouvez sélectionner le mode de liaison de données pendant le processus d'application de génération. You can either:
+Vous pouvez sélectionner le mode de liaison de données pendant le processus d'application de génération. Vous pouvez soit :
 
-- Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
-- Use the **LastDataPathLookup** XML key (single-user application or server application).
+- Utiliser la [page Application](#application) ou la [page Client/Serveur](#client-server) de la boîte de dialogue Générer une application.
+- Utiliser la clé XML **LastDataPathLookup** (application monoposte ou application serveur).
 
 
-### Defining a default data folder
+### Définition d'un dossier de données par défaut
 
-4D allows you to define a default data file at the application building stage. Au premier lancement de l'application, en l'absence de fichier local (cf. [séquence de lancement décrite ci-dessus](#opening-the-data-file)), le fichier de données par défaut est automatiquement ouvert silencieusement en mode lecture seule par 4D. Ce principe vous permet de contrôler la création et/ou l'ouverture des fichiers de données lors du lancement initial d'une application fusionnée.
+4D vous permet de définir un fichier de données par défaut lors de la génération de l'application. Au premier lancement de l'application, en l'absence de fichier local (cf. [séquence de lancement décrite ci-dessus](#opening-the-data-file)), le fichier de données par défaut est automatiquement ouvert silencieusement en mode lecture seule par 4D. Ce principe vous permet de contrôler la création et/ou l'ouverture des fichiers de données lors du lancement initial d'une application fusionnée.
 
 Plus particulièrement, il permet de répondre aux besoins suivants :
 
