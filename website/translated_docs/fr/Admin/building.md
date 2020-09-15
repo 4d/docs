@@ -41,7 +41,7 @@ Chaque paramètre de générateur d'application est stocké en tant que clé XML
 
 Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
 
-Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html).
+Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.en.html) manual.
 
 ### Fichier d'historique
 
@@ -369,6 +369,41 @@ The basic scenario is:
     - if the single-user application does not have a "Default data" folder, the merged client will run with no data.
 
 Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
+
+
+### Customizing client and/or server cache folder names
+
+Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and clients. Client/server applications use default pathnames for both client and server system cache folders.
+
+In some specific cases, you might need to customize the names of these folders (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file.
+
+
+#### Client cache folder
+
+Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder.
+
+Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
+
+![](assets/en/Admin/cachea.png)
+
+Using the [`ClientServerSystemFolderName`] key (*a single cache folder is used for all servers*):
+
+![](assets/en/Admin/cacheb.png)
+
+
+#### Server cache folder
+
+Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder.
+
+Default configuration (*same server applications share the same cache folder*):
+
+![](assets/en/Admin/cacheServera.png)
+
+Using the [`ServerStructureFolderName`] key (*a dedicated cache folder is used for each server*):
+
+![](assets/en/Admin/cacheServerb.png)
+
+
 
 
 ## Plugins & components page
