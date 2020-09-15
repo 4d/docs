@@ -41,7 +41,7 @@ Each build application parameter is stored as an XML key in the application proj
 
 Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
-XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) manual.
+XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.en.html) manual.
 
 ### Log file
 
@@ -375,20 +375,30 @@ Client and server cache folders are used to store shared elements such as resour
 In some specific cases, you might need to customize the names of these folders (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file. 
 
 
+#### Client cache folder
 
-In some contexts, it could be useful to customize the name of the server cache folder, the client cache folder, or both. 4D provides you with the `ClientServerSystemFolderName` and/or `ServerStructureFolderName` keys . 
+Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder. 
 
-#### Client cache
-
-Customizing the client-side cache folder name can be required in the following context: your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple downloading of identical local resources, you can use the same custom local cache folder. 
-
-Default configuration (at each connection to a server, another cache folder will be downloaded/updated):
+Default configuration (*for each connection to a server, a specific cache folder will be downloaded/updated*):
 
 ![](assets/en/Admin/cachea.png)
 
-Using the [`ClientServerSystemFolderName`] key (a single cache folder is used for all servers):
+Using the [`ClientServerSystemFolderName`] key (*a single cache folder is used for all servers*):
 
 ![](assets/en/Admin/cacheb.png)
+
+
+#### Server cache folder
+
+Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder. 
+
+Default configuration (*same server applications share the same cache folder*):
+
+![](assets/en/Admin/cacheServera.png)
+
+Using the [`ServerStructureFolderName`] key (*a dedicated cache folder is used for each server*):
+
+![](assets/en/Admin/cacheServerb.png)
 
 
 
