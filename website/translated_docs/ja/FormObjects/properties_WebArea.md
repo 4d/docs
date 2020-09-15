@@ -1,44 +1,44 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Webエリア
 ---
 
 ---
 ## 4Dメソッドコールを許可
 
-You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
+Webエリアで実行される JavaScripe コードから 4Dメソッドを呼び出して、戻り値を取得することができます。 4Dメソッドを Webエリアから呼び出せるようにするには、プロパティリストの "4Dメソッドコールを許可" にチェックをする必要があります。
 
-> This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みWebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
+このプロパティがチェックされている場合、特別な JavaScript オブジェクト `$4d` が Webエリア内にインスタンス化され、これを使用して[4Dプロジェクトメソッドの呼び出しを管理](webArea_overview.md#4dオブジェクトの使用) できるようになります。
 
 
 
 #### JSON 文法
 
-| 名                    | データタイプ | とりうる値                   |
-| -------------------- | ------ | ----------------------- |
-| methodsAccessibility | string | "none" (default), "all" |
+| 名                    | データタイプ | とりうる値                 |
+| -------------------- | ------ | --------------------- |
+| methodsAccessibility | string | "none" (デフォルト), "all" |
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
 
 
 ---
 ## 進捗状況変数
 
-Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
+倍長整数型変数の名前です。 この変数には 0 から 100 までの値が格納され、この数値は Webエリアに表示されるページのロードされたパーセンテージを表します。 この変数は 4D が自動で更新します。手動で変更することはできません。
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                      |
-| -------------- | ------ | -------------------------- |
-| progressSource | string | Name of a Longint variable |
+| 名              | データタイプ | とりうる値      |
+| -------------- | ------ | ---------- |
+| progressSource | string | 倍長整数型変数の名前 |
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
 
 
 
@@ -46,30 +46,30 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 ---
 ## URL
 
-A String type variable that designates the URL loaded or being loading by the associated Web area. The association between the variable and the Web area works in both directions:
+文字列型の変数で、Webエリアにロードされた URL またはロード中の URL が格納されます。 変数と Webエリア間の連携は双方向でおこなわれます。
 
-*   If the user assigns a new URL to the variable, this URL is automatically loaded by the Web area.
-*   Any browsing done within the Web area will automatically update the contents of the variable.
+*   ユーザーが新しい URL を変数に割り当てると、その URL は自動で Webエリアにロードされます。
+*   Webエリアでブラウズされると、自動で変数の内容が更新されます。
 
-Schematically, this variable functions like the address area of a Web browser. You can represent it via a text area above the Web area.
+このエリアは Webブラウザーのアドレスバーのように機能します。 Webエリアの上側にテキストエリアを置いて、内容を表示させることができます。
 
-### URL Variable and WA OPEN URL command
+### URL変数と WA OPEN URL コマンド
 
-The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command. The following differences should nevertheless be noted:
-- For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command accepts both notations.
-- If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドと同じ効果をもたらします。 しかしながら、以下の違いに注意してください。
+- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドは両方の記法を受け付けます。
+- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドはこの場合にエラーを生成します。
+- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加します。[WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドはこれを付加しません。
+- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドを実行しても効果はありません。一方、URL変数に値を代入すると、カレントURL が更新されます。
 
 #### JSON 文法
 
-| 名         | データタイプ | とりうる値  |
-| --------- | ------ | ------ |
-| urlSource | string | A URL. |
+| 名         | データタイプ | とりうる値 |
+| --------- | ------ | ----- |
+| urlSource | string | URL   |
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
 
 
 
@@ -79,10 +79,10 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 ---
 ## 埋め込みWebレンダリングエンジンを使用
 
-This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
+このオプションを使用して、Webエリアで使用する描画エンジンを 2つのうちから選択することができます:
 
-*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. On Windows, 4D automatically uses the most recent version of the browser found on the machine (IE11, MS Edge, etc.). On macOS, 4D uses the current version of WebKit (Safari). This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between Internet Explorer/Edge implementations and Web Kit ones.
-*   **checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google. Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, new versions of the engines are provided through 4D.
+*   **チェックなし** - `JSON値: system` (デフォルト): この場合、4Dはシステムの最適なエンジンを使用します。 Windows では、4Dはマシンにインストールされた最新のブラウザー (IE11、MS Edge、等) を自動的に使用します。 macOS では、カレントバージョンの WebKit (Safari) です。 この結果、HTML5 や JavaScript の最新 Web描画エンジンを自動的に利用できることになります。 しかし、Internet Explorer/Edge と Web Kit 間で若干描画に違いがでることがあります。
+*   **チェックあり** - `JSON値: embedded`: この場合、4Dは Google の Blink を使用します。 Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, new versions of the engines are provided through 4D.
 
     Note that the Blink engine has the following limitations:
     *   [WA SET PAGE CONTENT](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PAGE-CONTENT.301-4310783.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-OPEN-URL.301-4310772.en.html) or an assignment to the URL variable associated to the area).
@@ -100,4 +100,4 @@ This option allows choosing between two rendering engines for the Web area, depe
 
 #### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
