@@ -146,15 +146,15 @@ title: テキスト
 ---
 ## フォントサイズ
 
-> This property is only available when no [font theme](#font-theme) is selected.
+> このプロパティは [フォントテーマ](#フォントテーマ) を選択していないときに利用できます。
 
-Allows defining the object's font size in points.
+文字の大きさをポイントで指定します。
 
 #### JSON 文法
 
-| 名        | データタイプ  | とりうる値                       |
-| -------- | ------- | --------------------------- |
-| fontSize | integer | Font size in points. 最小値: 0 |
+| 名        | データタイプ  | とりうる値                   |
+| -------- | ------- | ----------------------- |
+| fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 |
 
 #### 対象オブジェクト
 
@@ -164,9 +164,9 @@ Allows defining the object's font size in points.
 ---
 ## フォントカラー
 
-Designates the font color.
+文字の色を指定します。
 
-> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
+> オブジェクトの [境界線スタイル](properties_backgrounandborder.md#境界線スタイル) に "標準" または "ドット" を選択している場合、このプロパティはその境界線の色も指定します。
 
 カラーは次の方法で指定できます:
 
