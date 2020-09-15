@@ -146,7 +146,7 @@ title: テキスト
 ---
 ## フォントサイズ
 
-フォントサイズをポイントで指定します。
+文字の大きさをポイントで指定します。
 
 #### JSON 文法
 
@@ -162,9 +162,9 @@ title: テキスト
 ---
 ## フォントカラー
 
-Designates the font color.
+文字の色を指定します。
 
-> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
+> オブジェクトの [境界線スタイル](properties_backgrounandborder.md#境界線スタイル) に "標準" または "ドット" を選択している場合、このプロパティはその境界線の色も指定します。
 
 カラーは次の方法で指定できます:
 
@@ -188,7 +188,7 @@ Designates the font color.
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 
 
@@ -200,7 +200,7 @@ Designates the font color.
 
 ## フォントカラー式
 
-`Selection and collection/entity selection type list boxes`
+`セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
 Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
@@ -243,7 +243,7 @@ Foreground color;Dark shadow color)
 
 ## スタイル式
 
-`Selection and collection/entity selection type list boxes`
+`セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
 Used to apply a custom character style to each row of the list box or each cell of the column.
 
