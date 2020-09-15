@@ -4,7 +4,7 @@ title: Créer ou ouvrir un projet
 ---
 
 
-## Creating a project
+## Créer un projet
 
 New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
 
