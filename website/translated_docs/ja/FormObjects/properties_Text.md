@@ -374,16 +374,16 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
 
-The following example uses the *Color* project method. 
+以下の例題では *Color* プロジェクトメソッドを使用する場合を考えます。 
 
-In the form method, write the following code:
+フォームメソッドには、以下のように書きます:
 
 
 
 ```4d
-//form method
+// フォームメソッド
 Case of
   :(Form event=On Load)
    Form.meta:=New object
@@ -391,15 +391,15 @@ End case
 ```
 
 
-In the *Color* method, write the following code:
+*Color* メソッドには、以下のコードを書きます:
 
 
 
 ```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+// Color メソッド
+// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
 C_OBJECT($0)
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -410,7 +410,7 @@ $0:=Form.meta
 
 
 
-> See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
+> [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドも参照してください。
 
 
 
@@ -418,9 +418,9 @@ $0:=Form.meta
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                            |
-| ---------- | ------ | ------------------------------------------------ |
-| metaSource | string | Object expression to evaluate for each row/cell. |
+| 名          | データタイプ | とりうる値                     |
+| ---------- | ------ | ------------------------- |
+| metaSource | string | 表示される行/セルごとに評価されるオブジェクト式。 |
 
 
 
