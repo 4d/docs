@@ -213,7 +213,7 @@ title: テキスト
 
 > このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
-The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
+以下の例は変数名を使用しています。**フォントカラー式** に *CompanyColor* を入力し、フォームメソッドに以下のコードを書きます:
 
 
 
@@ -227,9 +227,9 @@ Foreground color;Dark shadow color)
 
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                 |
-| --------------- | ------ | --------------------- |
-| rowStrokeSource | string | Font color expression |
+| 名               | データタイプ | とりうる値    |
+| --------------- | ------ | -------- |
+| rowStrokeSource | string | フォントカラー式 |
 
 
 
@@ -247,9 +247,9 @@ Foreground color;Dark shadow color)
 
 `セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
-Used to apply a custom character style to each row of the list box or each cell of the column.
+リストボックスの各行にカスタマイズされた文字スタイルを適用するために使用します。
 
-式または変数 (配列を除く) を入力します。 The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 ここでは [Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます。
 
 例: 
 
@@ -260,7 +260,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
+また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk font style expression` 定数を指定して設定することもできます。
 
 
 > このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
@@ -270,9 +270,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                                           |
-| -------------- | ------ | ----------------------------------------------- |
-| rowStyleSource | string | Style expression to evaluate for each row/cell. |
+| 名              | データタイプ | とりうる値                   |
+| -------------- | ------ | ----------------------- |
+| rowStyleSource | string | 表示される行/セルごとに評価されるスタイル式。 |
 
 
 
