@@ -390,6 +390,7 @@ Using the [`ClientServerSystemFolderName`] key (*a single cache folder is used f
 
 ![](assets/en/Admin/cacheb.png)
 
+> Using a custom cache folder name disables the automatic update of local resources. If you modify the application resources, you need to "force" the local cache folders to be updated, for example using the [**Current version**](#current-version) feature.
 
 #### Server cache folder
 
