@@ -24,9 +24,9 @@ When you validate the **Save** dialog, 4D closes the current project (if any), c
 You can then start developing your project.
 
 
-## Opening a local project
+## Ouvrir un projet local
 
-To open an existing project locally from 4D:
+Pour ouvrir un projet existant en local depuis 4D :
 
 1. Select **Open a local application project** in the Welcome Wizard dialog, <p>OU<p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> The standard Open dialog appears.
 
