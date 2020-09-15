@@ -36,5 +36,5 @@ Lorsque vous sélectionnez le projet à ouvrir, vous sélectionnez également le
 
 Les fichiers de projet peuvent être compilés et facilement déployés pour votre application Web, mobile ou de bureau (client-serveur ou monoposte).
 
-Final application deployment files are generated during the building process, using the [4D build manager](Admin/building.md). Applications can be opened by 4D Server, 4D, or merged with 4D Volume license.
+Les fichiers de déploiement de l'application finale sont générés lors du processus de génération, à l'aide du [gestionnaire de génération d'application 4D](Admin/building.md). Les applications peuvent s'ouvrir avec 4D Server, 4D, ou fusionnées avec une licence 4D Volume.
 
