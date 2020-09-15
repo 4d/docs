@@ -23,7 +23,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 |styleSheets_mac.css|For defining macOS only specific attribute styles|
 |styleSheets_windows.css|For defining Windows only specific attribute styles|
 
-These files are stored in the project's "/SOURCES" folder.
+These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar. 
 
 
 ### Style Sheet Architecture
@@ -256,14 +256,13 @@ To override this behavior, the style value must be followed with an `!important`
 |---|---|---|
 |`"text": "Button",`|`text: Edit;`| `"Button"`|
 
-
 **Example 2:**
 
 |JSON form description|Style Sheet|4D displays|
 |---|---|---|
 |`"text": "Button",`|`text: Edit !important;`| `"Edit"`|
 
->If an attribute with the `!important` declaration has been defined for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List. 
+>If an attribute has been defined with the `!important` declaration for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List. 
 
 
 ### Multiple Style Sheets
