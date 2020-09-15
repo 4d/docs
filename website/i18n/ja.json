@@ -217,7 +217,7 @@
         "title": "値の範囲"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "JSON プロパティリスト"
       },
       "FormObjects/propertiesResizingOptions": {
         "title": "リサイズオプション"
