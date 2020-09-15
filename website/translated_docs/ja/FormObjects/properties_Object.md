@@ -4,7 +4,7 @@ title: オブジェクト
 ---
 
 ---
-## 型
+## タイプ
 
  `必須設定です。`
 
@@ -352,7 +352,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 #### 対象オブジェクト
 
-[リストボックスフッター](listbox_overview.md#list-box-footers)
+[リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 
 
