@@ -443,7 +443,7 @@ $0:=Form.meta
 
 ## マルチスタイル
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
+このプロパティは、選択エリアでスタイルの利用を可能にするかどうかを指定するものです。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の \<SPAN> HTMLタグをスタイル属性として解釈します。 </p> 
 
 <p spaces-before="0">
   デフォルトでは、このオプションは有効化されていません。
