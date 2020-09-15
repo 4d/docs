@@ -5,12 +5,12 @@ title: サブフォーム
 
 ## 概要
 
-A subform is a form included in another form.
+サブフォームとは、他のフォームに組み込まれるフォームのことです。
 
 
-### Terminology
+### 用語
 
-In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
+サブフォームに実装されたコンセプトを明確に説明するために、いくつかの用語についてここで定義します:
 
 *   **Subform**: a form intended for inclusion in another form, itself called the parent form.
 *   **Parent form**: a form containing one or more subform(s).
