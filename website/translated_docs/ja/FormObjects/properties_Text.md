@@ -514,13 +514,13 @@ $0:=Form.meta
 </h2>
 
 <p spaces-before="0">
-  Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+  テキストエリアの角度 (回転) を変更します。 テキストエリアは、90°単位で回転させることができます。 それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
 </p>
 
 <table spaces-before="0" line-breaks-before="2">
   <tr>
     <th>
-      Orientation value
+      回転角度
     </th>
     
     <th>
@@ -530,7 +530,7 @@ $0:=Form.meta
   
   <tr>
     <td>
-      0 (default)
+      0 (デフォルト)
     </td>
     
     <td>
@@ -570,7 +570,7 @@ $0:=Form.meta
 </table>
 
 <p spaces-before="0">
-  In addition to <a href="text.md">static text areas</a>, <a href="input_overview.md">input</a> text objects can be rotated when they are non-<a href="properties_Entry.md#enterable">enterable</a>. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order. 
+  <a href="text.md">スタティックなテキストエリア</a> のほかに、<a href="properties_Entry.md#入力可">入力不可</a> に設定された <a href="input_overview.md">入力オブジェクト</a> も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。 
 </p>
 
 
@@ -619,7 +619,7 @@ $0:=Form.meta
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a> (non-enterable) - <a href="text.md">Text Area</a>
+  <a href="input_overview.md">入力</a> (入力不可) - <a href="text.md">テキストエリア</a>
 </p>
 
 
@@ -640,11 +640,11 @@ $0:=Form.meta
 </p>
 
 <p spaces-before="0">
-  Allows setting a custom font color to each row of the list box or cell of the column. 
+  リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。 
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは <a href="https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html">SET RGB COLORS</a> テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+  倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは <a href="https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html">SET RGB COLORS</a> テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 </p>
 
 
@@ -678,7 +678,7 @@ $0:=Form.meta
     </td>
     
     <td>
-      The name of a longint array
+      倍長整数型配列の名前
     </td>
   </tr>
 </table>
@@ -711,11 +711,11 @@ $0:=Form.meta
 </p>
 
 <p spaces-before="0">
-  Allows setting a custom font style to each row of the list box or each cell of the column.
+  リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+  倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
 </p>
 
 
