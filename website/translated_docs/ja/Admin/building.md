@@ -41,7 +41,7 @@ Building can only be carried out once the project is compiled. If you select thi
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドでそれらを使い分けることができます。
 
-また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 詳細は専用のドキュメント [アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-BuildApplication.100-4670981.ja.html) を参照してください。
+また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.en.html) manual.
 
 ### ログファイル
 
@@ -361,6 +361,41 @@ The basic scenario is:
     - if the single-user application does not have a "Default data" folder, the merged client will run with no data.
 
 Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
+
+
+### Customizing client and/or server cache folder names
+
+Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and clients. Client/server applications use default pathnames for both client and server system cache folders.
+
+In some specific cases, you might need to customize the names of these folders (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file.
+
+
+#### Client cache folder
+
+Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder.
+
+Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
+
+![](assets/en/Admin/cachea.png)
+
+Using the [`ClientServerSystemFolderName`] key (*a single cache folder is used for all servers*):
+
+![](assets/en/Admin/cacheb.png)
+
+
+#### Server cache folder
+
+Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder.
+
+Default configuration (*same server applications share the same cache folder*):
+
+![](assets/en/Admin/cacheServera.png)
+
+Using the [`ServerStructureFolderName`] key (*a dedicated cache folder is used for each server*):
+
+![](assets/en/Admin/cacheServerb.png)
+
+
 
 
 ## Plugins & components page
