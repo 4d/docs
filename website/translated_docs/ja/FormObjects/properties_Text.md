@@ -293,7 +293,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 ## 横揃え
 
-Horizontal location of text within the area that contains it.
+エリア中のテキストの横位置を指定します。
 
 
 
@@ -308,7 +308,7 @@ Horizontal location of text within the area that contains it.
 
 #### 対象オブジェクト
 
-[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [Text Area](text.md)
+[グループボックス](groupBox.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [テキストエリア](text.md)
 
 
 
@@ -318,14 +318,14 @@ Horizontal location of text within the area that contains it.
 
 ## 縦揃え
 
-Vertical location of text within the area that contains it.
+エリア中のテキストの縦位置を指定します。
 
-The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
+**デフォルト** オプション (JSON値: `automatic`) の場合は、各列のデータ型に基づき整列方向が決定されます:
 
-- `bottom` for all data (except pictures) and
-- `top` for picture type data.
+- ピクチャーを除き、すべて `下` です。
+- ピクチャーは `上` です。
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
+このプロパティは、[OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.ja.html) と [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.ja.html) コマンドを使用して設定することもできます。
 
 
 
@@ -341,7 +341,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)
 
 
 
@@ -358,14 +358,14 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 ## メタ情報式
 
-`Collection or entity selection type list boxes`
+`コレクションまたはエンティティセレクション型リストボックス`
 
-Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
+表示される行ごとに評価される式あるいは変数を指定します。 行テキスト属性全体を定義することができます。 **オブジェクト変数**、あるいは **オブジェクトを返す式** を指定する必要があります。 以下のオブジェクトプロパティがサポートされています:
 
-| Property name       | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                             |
+| プロパティ名              | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                             |
 | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                          |
-| fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                    |
+| stroke              | string  | フォントカラー。 任意の CSSカラー (例: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                 |
+| fill                | string  | 背景色。 任意の CSSカラー (例: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                     |
 | fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                              |
 | fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                |
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                           |
