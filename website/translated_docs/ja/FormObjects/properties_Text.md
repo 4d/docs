@@ -128,7 +128,7 @@ title: テキスト
 * *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
 このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
-> <span style="font-family:Times New Roman; font-size:20pt"> これは Times New Roman フォントです。</span><br> <span style="font-family:Calibri; font-size:20pt"> これは Calibri フォントです。</span><br> <span style="font-family:Papyrus; font-size:20pt"> これは Papyrus フォントです。</span>
+> <span style="font-family:YuGothic; font-size:20pt"> これは 游ゴシック フォントです。</span><br> <span style="font-family:YuMincho; font-size:20pt"> これは 游明朝 フォントです。</span>
 
 #### JSON 文法
 
@@ -362,7 +362,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | 型       | 説明                                                                                                                                                                                                                                                                                                                                             |
+| Property name       | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                             |
 | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                          |
 | fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                    |
