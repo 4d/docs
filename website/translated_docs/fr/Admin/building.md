@@ -382,11 +382,11 @@ In some specific cases, you might need to customize the names of these folders (
 
 Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder.
 
-Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
+- Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
 
 ![](assets/en/Admin/cachea.png)
 
-Using the [`ClientServerSystemFolderName`] key (*a single cache folder is used for all servers*):
+- Using the `ClientServerSystemFolderName` key (*a single cache folder is used for all servers*):
 
 ![](assets/en/Admin/cacheb.png)
 
@@ -396,11 +396,11 @@ Using the [`ClientServerSystemFolderName`] key (*a single cache folder is used f
 
 Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder.
 
-Default configuration (*same server applications share the same cache folder*):
+- Default configuration (*same server applications share the same cache folder*):
 
 ![](assets/en/Admin/cacheServera.png)
 
-Using the [`ServerStructureFolderName`] key (*a dedicated cache folder is used for each server*):
+- Using the `ServerStructureFolderName` key (*a dedicated cache folder is used for each server application*):
 
 ![](assets/en/Admin/cacheServerb.png)
 
