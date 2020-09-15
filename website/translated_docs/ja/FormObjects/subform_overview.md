@@ -5,22 +5,22 @@ title: サブフォーム
 
 ## 概要
 
-A subform is a form included in another form.
+サブフォームとは、他のフォームに組み込まれるフォームのことです。
 
 
-### Terminology
+### 用語
 
-In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
+サブフォームに実装されたコンセプトを明確に説明するために、いくつかの用語についてここで定義します:
 
-*   **Subform**: a form intended for inclusion in another form, itself called the parent form.
-*   **Parent form**: a form containing one or more subform(s).
-*   **Subform container**: an object included in the parent form, displaying an instance of the subform.
-*   **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
-*   **List form**: instance of subform displayed as a list.
-*   **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
+*   **サブフォーム**: 他のフォームに組み込まれることを意図したフォーム。
+*   **親フォーム**: 1つ以上のサブフォームを含むフォーム。
+*   **サブフォームコンテナー**: 親フォームに組み込まれた、サブフォームのインスタンスを表示するオブジェクト。
+*   **サブフォームインスタンス**: 親フォームに表示されたサブフォームの実体。 このコンセプトはとても重要です。親フォームには、同じサブフォームのインスタンスを複数表示することができるからです。
+*   **リストフォーム**: データをリストとして表示するサブフォームインスタンス。
+*   **詳細フォーム**: リストサブフォームをダブルクリックすることでアクセスすることができる、ページタイプの入力フォーム。
 
 
-## List subforms
+## リストサブフォーム
 
 リストサブフォームを使うことで、他のテーブルのデータを入力、表示、および更新することができます。 You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
 
