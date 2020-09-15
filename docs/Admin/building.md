@@ -379,7 +379,7 @@ In some specific cases, you might need to customize the names of these folders (
 
 Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder. 
 
-Default configuration (*for each connection to a server, a specific cache folder will be downloaded/updated*):
+Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
 
 ![](assets/en/Admin/cachea.png)
 
