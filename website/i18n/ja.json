@@ -460,7 +460,7 @@
         "title": "テキスト、ピクチャー"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "ラジオボタン"
@@ -496,7 +496,7 @@
         "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro エリア"
