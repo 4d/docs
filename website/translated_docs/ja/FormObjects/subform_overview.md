@@ -60,28 +60,28 @@ title: サブフォーム
 
 `On Bound Variable Change` フォームイベントは以下のときに生成されます:
 
-- as soon as a value is assigned to the variable of the parent form, even if the same value is reassigned,
-- if the subform belongs to the current form page or to page 0.
+- 親フォームの変数に値が割り当てられたとき (同じ値が再代入された場合でも) で、
+- サブフォームが 0ページまたはカレントフォームページに置かれているとき。
 
-Note that, as in the above example, it is preferable to use the `OBJECT Get pointer` command which returns a pointer to the subform container rather than its variable because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks). In this case, only a pointer lets you know which subform container is at the origin of the event.
+先の例のとおり、直接変数名を使用するのではなく、サブフォームコンテナーへのポインターを返す `OBJECT Get pointer` コマンドの利用が推奨されます。親フォームに同じサブフォームを複数配置することが可能だからです (たとえば、複数のタイムゾーンを表示するために時計を複数表示するウィンドウ)。 この場合ポインターを使用することでのみ、どのサブフォームコンテナーがイベントの生成元かを知ることができます。
 
-#### Updating parent form contents
+#### 親フォームの内容の更新
 
-Case 2: The contents of the subform are modified and this modification must be passed on to the parent form. In our example, imagine that the subform interface lets the user "manually" move the hands of the clock.
+ケース2: サブフォームの内容が更新され、その更新を親フォームに反映させる必要があります。 この例では、ユーザーが時計の針を手動で動かすことができるようなサブフォームを使ったケースです。
 
-In this case, from the subform, you must assign the object value to the variable of the parent subform container. As in the previous example, we recommend that you use the `OBJECT Get pointer` command with the `Object subform container` selector which returns a pointer to the subform container.
+この場合、サブフォームから、親サブフォームコンテナーの変数にオブジェクトの値を割り当てなければなりません。 先の例の通り、`OBJECT Get pointer` コマンドを `Object subform container` セレクターとともに使用し、サブフォームコンテナーのポインターを得る方法が推奨されます。
 
-Assigning the value to the variable generates the `On Data Change` form event in the object method of the parent subform container, which lets you perform any type of action. The event must be selected in the properties of the subform container.
+変数に値を割り当てると、親サブフォームコンテナーのオブジェクトメソッドで `On Data Change` フォームイベントが生成され、メソッドによるアクションを実行できます。 このイベントは、サブフォームコンテナーのプロパティリストで選択されていなければなりません。
 
 ![](assets/en/FormObjects/subforms3.png)
 
-> If you "manually" move the hands of the clock, this also generates the `On Data Change` form event in the object method of the *clockValue* variable in the subform.
+> 時計の針を手動で動かすと、サブフォーム中の *clockValue* 変数のオブジェクトメソッドで `On Data Change` フォームイベントが生成されます。
 
-### Using the subform bound object
+### サブフォームにバインドされたオブジェクトの使用
 
-4D automatically binds an object (`C_OBJECT`) to each subform. The contents of this object can be read and/or modified from within the context of the subform, allowing you to share values in a local context.
+4Dは自動的にオブジェクト (`C_OBJECT`) をそれぞれのサブフォームとバインドします。 このオブジェクトの中身はサブフォームのコンテキストから読み書き可能なため、ローカルなコンテキストにおいて値を共有することができます。
 
-The object can be created automatically or be the parent container variable, if explicitely named and typed as Object (see below). In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself.
+オブジェクトは自動的に作成することもできますし、明示的に命名しオブジェクトとして型指定された場合には、親コンテナーの変数として使用できます (以下参照)。 いずれの場合にも、オブジェクトは `Form` コマンドによって返され、サブフォームから直接呼び出すことが可能です (ポインターの使用は不要です)。 オブジェクトは常に参照によって渡されるため、ユーザーがサブフォーム内でプロパティ値を変更した場合には、その値は自動的にオブジェクト自身に保存されます。
 
 For example, in your subform, field labels are stored in the bound object so that you can display different languages:
 
