@@ -115,17 +115,17 @@ title: サブフォーム
 
 
 #### Object get pointer と Object get name コマンド
-In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
+`OBJECT Get pointer` コマンドは `Object subform container` セレクターを使う方法以外にも、第二引数に指定した名前を持つオブジェクトを検索する際に、どのサブフォーム内を検索するかを指定するための引数を渡す方法でも利用できます。 このシンタックスは `Object named` セレクターが渡された場合のみ使用できます。
 
-For example, the following statement:
+たとえば、以下の式は:
 
 ```4d
  $ptr:=OBJECT Get pointer(Object named;"MyButton";"MySubForm")
 ```
 
-... retrieves a pointer to the "MyButton" variable that is located in the "MySubForm" subform object. This syntax can be used to access from the parent form any object found in a subform. Also note the `OBJECT Get name` command which can be used to retrieve the name of the object that has the focus.
+"MySubForm" サブフォームオブジェクト中の "MyButton" オブジェクトに割り当てられた変数へのポインターを返します。 このシンタックスを使用すれば、親フォームからサブフォーム内のオブジェクトにアクセスできます。 また、`OBJECT Get name` コマンドを使用すればフォーカスを持つオブジェクトの名前を取得できます。
 
-#### CALL SUBFORM CONTAINER command
+#### CALL SUBFORM CONTAINER コマンド
 
 The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to the subform container object, which can then process it in the context of the parent form. The event is received in the container object method. It may be at the origin of any event detected by the subform (click, drag-and-drop, etc.).
 
