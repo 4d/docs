@@ -6,9 +6,9 @@ title: Parameters
 
 ## Overview
 
-You'll often find that you need to pass data to your methods. This is easily done with parameters.
+You'll often find that you need to pass data to your methods and functions. This is easily done with parameters.
 
-**Parameters** (or **arguments**) are pieces of data that a method needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
 
 ```4d
 ALERT("Hello")
@@ -26,19 +26,66 @@ Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The parameters are separated by semicolons (;). Their value is [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method, either in:
+The input parameters are separated by semicolons (;).
 
-- [named variables](#named-parameters-class-functions) (class functions only), or
-- [sequentially numbered variables](#sequential-parameters) (methods and class functions).
+The same principles are used when methods are executed through dedicated commands, for example:
+
+```4d
+EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
+//pass the !05/05/20! date as parameter to the SetCalendarDate  
+//in the context of a subform
+```
+
+Data can also be **returned** from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+
+```4d
+MyLength:=Length("How did I get here?")
+```
+
+Any subroutine can return a value. Only one single output parameter can be declared per method or class function.
+
+Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
+
+- [named variables](#named-parameters) (recommended in most cases) or
+- [sequentially numbered variables](#sequential-parameters).
+
+
+> Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. Beispiel:
+> 
+> ```4d
+Function add($x : Integer)
+  var $0;$2 : Integer
+  $0:=$x+$2
+```
 
 
 
 
-## Named parameters (class functions)
+## Named parameters
 
-Inside called class functions, parameter values are assigned to local variables. You can declare class function parameters using a **parameter name** along with a **parameter type**, separated by colon. Der Parametername muss mit den Schreibregeln für Eigenschaftsnamen [ konform sein](Concepts/dt_object.md#object-property-identifiers). Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
+Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
-> This syntax is not supported with methods. See [Sequential parameters](#sequential-parameters).
+- For class functions, parameters are declared along with the `Function` keyword.
+- For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
+
+Beispiele:
+
+```4d
+Function getArea($width : Integer; $height : Integer) -> $area : Integer
+```
+```4d  
+ //myProjectMethod
+#DECLARE ($i : Integer) -> $myResult : Object
+```
+
+
+The following rules apply:
+
+- The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
+- Parameter names must start with a `$` character and be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+- Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
+- Multiline syntaxes are supported (using "\\" character).
+
 
 For example, when you call a `getArea()` function with two parameters:
 
@@ -54,28 +101,52 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
 > If the type is not defined, the parameter will be defined as `Variant`.
-> [Sequential parameters syntax](#sequential-parameters) can be used to declare class function parameters. Beide Syntaxarten lassen sich miteinander mischen. Beispiel:
-> 
-> ```4d
-Function add($x : Integer)
-  var $0,$2 : Integer
-  $0:=$x+$2
+
+All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
+
+```4d    
+    // On Web Authentication database method
+#DECLARE ($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text) \
+  -> $RequestAccepted : Boolean
+$entitySelection:=ds.User.query("login=:1"; $user)
+// Check hash password...
 ```
+
+### Returned value
+
+You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Beispiel:
+
+```4d
+Function add($x : Variant; $y : Integer) -> $result : Integer
+```
+
+You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). Beispiel:
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+    $0:=$x+$y
+```
+
 
 ### Supported data types
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including for example:
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  Beispiel:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 ```
 
 
+
+
+
 ## Sequential parameters
 
-You can declare methods parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. The numbering of the local variables represents the order of the parameters.
+As an alternative to [named parameters](#named-parameters) syntax, you can declare parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. The numbering of the local variables represents the order of the parameters.
 
-> This syntax is supported for methods and class functions. However for class functions, it is recommended to use [named parameters](#named-parameters-class-functions) syntax.
+> Although this syntax is supported by class functions, it is recommended to use [named parameters](#named-parameters) syntax in this case.
 
 For example, when you call a `DO_SOMETHING` project method with three parameters:
 
@@ -95,22 +166,35 @@ In the method code, the value of each parameter is automatically copied into $1,
   //$3 contains the $ThisWay parameter
 ```
 
-The same principles are used when methods are executed through dedicated commands, for example:
+
+### Returned value
+
+The value to be returned is automatically put into the local variable `$0`.
+
+
+For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! date as parameter to the SetCalendarDate  
-// in the context of a subform
+$0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-**Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
+The following is an example that uses the Uppercase4 method:
 
+```4d
+$NewPhrase:=Uppercase4("This is good.")
+```
 
+In this example, the variable *$NewPhrase* gets “THIS is good.”
 
-### Input/Output variables
+The returned value, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, you can write:
 
-Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
+```4d
+// Do_something
+$0:=Uppercase($1)
+ALERT($0)
+```
 
+In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
 
 
 ### Supported data types
@@ -122,136 +206,11 @@ You can use any [expression](Concepts/quick-tour.md#expression-types) as sequent
 
 Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
-### Using objects properties as named parameters
-
-Using objects as parameters allow you to handle **named parameters**, even with methods. This programming style is simple, flexible, and easy to read.
-
-For example, using the `CreatePerson` method:
-
-```4d
-  //CreatePerson
- C_OBJECT($person)
- $person:=New object("Name";"Smith";"Age";40)
- ChangeAge($person)
- ALERT(String($person.Age))  
-```
-
-In the `ChangeAge` method you can write:
-
-```4d
-  //ChangeAge
- C_OBJECT($1;$para)
- $para:=$1  
- $para.Age:=$para.Age+10
- ALERT($para.Name+" is "+String($para.Age)+" years old.")
-```
-
-This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either:
-- check if all expected parameters are provided by comparing them to the `Null` value, or
-- preset parameter values, or
-- use them as empty values.
-
-In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
-
-```4d
-  //ChangeAge
- C_OBJECT($1;$para)
- $para:=$1  
- $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
-```
-Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
-
-Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
-
-```4d
-$person:=New object("Name";"Smith";"Age";40;"toAdd";10)
-ChangeAge($person)
-
-//ChangeAge
-C_OBJECT($1;$para)
-$para:=$1  
-If ($para.toAdd=Null)
-    $para.toAdd:=10
-End if
-$para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
-```
-The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
-
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
-
-
-### Declaring variables for sequential parameters
-
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each sequential variable in the called methods to prevent any trouble.
-
-In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
-
-```4d
-  // Capitalize Project Method
-  // Capitalize ( Text ) -> Text
-  // Capitalize ( Source string ) -> Capitalized string
-
- C_TEXT($0;$1)
- $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
-```
-
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. Beispiel:
-
-```4d
-C_TEXT($string)
-C_LONGINT($idProc;$int)
-C_OBJECT($obj)
-
-$idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
-```
-
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
-
-```4d
-//foo_method
-C_TEXT($1)
-C_LONGINT($2)
-C_OBJECT($3)
-...
-```
-
-> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
-```4d  
- // Compiler_method
- C_REAL(OneMethodAmongOthers;$1) 
-```
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
-
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
-
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
-
-```4d
-// On Web Connection
-C_TEXT($1;$2;$3;$4;$5;$6)
-```
-
-
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
-
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Beispiel:
-```4d
- C_LONGINT($0)
- If(Form event=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
-```
-
 ### Parameter indirection
 
 4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+
+> Parameter indirection can only be used with the [sequential](#sequential-parameters) syntax.
 
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
@@ -310,66 +269,153 @@ This command means that starting with the fourth  parameter (included), the meth
 > The number in the declaration has to be a constant and not a variable.
 
 
-## Returning values
+### Declaring parameters for compiled mode
 
-Data can be returned from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
 
-```4d
-MyLength:=Length("How did I get here?")
-```
-
-Any subroutine can return a value. Only one single return parameter can be declared per method or class function.
-
-Like for [input parameters](#named-parameters-class-functions), return parameters can be declared using:
-
-- the named syntax (class functions only), or
-- the sequential syntax (methods and class functions).
-
-
-### Named syntax (class functions)
-
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Beispiel:
+When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. Beispiel:
 
 ```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
-```
-
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#sequential-syntax)). Beispiel:
-
-```4d
-Function add($x : Variant; $y : Integer): Integer
-    $0:=$x+$y
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // all parameters are declared with their type
 ```
 
 
-### Sequential syntax
-
-The value to be returned is automatically put into the local variable `$0`.
-
-
-For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+When using the sequential variable syntax, you need to make sure all parameters are properly declared. In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
 
 ```4d
-$0:=Uppercase(Substring($1;1;4))+Substring($1;5)
+  // Capitalize Project Method
+  // Capitalize ( Text ) -> Text
+  // Capitalize ( Source string ) -> Capitalized string
+
+ C_TEXT($0;$1)
+ $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-The following is an example that uses the Uppercase4 method:
+Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. Beispiel:
 
 ```4d
-$NewPhrase:=Uppercase4("This is good.")
+C_TEXT($string)
+C_LONGINT($idProc;$int)
+C_OBJECT($obj)
+
+$idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
-In this example, the variable *$NewPhrase* gets “THIS is good.”
-
-The returned value, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, you can write:
+This code can be executed in compiled mode only if "foo_method" declares its parameters:
 
 ```4d
-// Do_something
-$0:=Uppercase($1)
-ALERT($0)
+//foo_method
+C_TEXT($1)
+C_LONGINT($2)
+C_OBJECT($3)
+...
 ```
 
-In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+```4d  
+ // Compiler_method
+ C_REAL(OneMethodAmongOthers;$1) 
+```
+See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+
+Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+
+- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+
+```4d
+// On Web Connection
+C_TEXT($1;$2;$3;$4;$5;$6)
+```
+
+> You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword.
+
+- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+
+- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. Beispiel:
+
+```4d
+ C_LONGINT($0)
+ If(Form event=On Drag Over)
+    $0:=0
+    ...
+    If($DataType=Is picture)
+       $0:=-1
+    End if
+    ...
+ End if
+```
+
+
+
+
+## Using object properties as named parameters
+
+Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
+
+For example, using the `CreatePerson` method:
+
+```4d
+  //CreatePerson
+ var $person : Object
+ $person:=New object("Name";"Smith";"Age";40)
+ ChangeAge($person)
+ ALERT(String($person.Age))  
+```
+
+In the `ChangeAge` method you can write:
+
+```4d
+  //ChangeAge
+ var $1; $para : Object
+ $para:=$1  
+ $para.Age:=$para.Age+10
+ ALERT($para.Name+" is "+String($para.Age)+" years old.")
+```
+
+This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either:
+- check if all expected parameters are provided by comparing them to the `Null` value, or
+- preset parameter values, or
+- use them as empty values.
+
+In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
+
+```4d
+  //ChangeAge
+ var $1; $para : Object
+ $para:=$1  
+ $para.Age:=Num($para.Age)+10
+ ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+```
+Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
+
+Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
+
+```4d
+$person:=New object("Name";"Smith";"Age";40;"toAdd";10)
+ChangeAge($person)
+
+//ChangeAge
+var $1;$para : Object
+$para:=$1  
+If ($para.toAdd=Null)
+    $para.toAdd:=10
+End if
+$para.Age:=Num($para.Age)+$para.toAdd
+ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+```
+
+The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
+
+With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
+
+
+
+
+## Input/Output variables
+
+Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
+
 
 
 
@@ -395,15 +441,14 @@ The following example displays a text message and can insert the text into a doc
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
 
- C_TEXT($1;$2)
- C_OBJECT($3)
+ Method($message : Text; $path : Text; $wpArea : Object)
 
- ALERT($1)
+ ALERT($message)
  If(Count parameters>=3)
-    WP SET TEXT($3;$1;wk append)
+    WP SET TEXT($wpArea;$1;wk append)
  Else
     If(Count parameters>=2)
-       TEXT TO DOCUMENT($2;$1)
+       TEXT TO DOCUMENT($path;$message)
     End if
  End if
 ```
@@ -475,7 +520,7 @@ For example, consider the `CreatePerson` method that creates an object and sends
 
 ```4d
   //CreatePerson
- C_OBJECT($person)
+ var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
  ALERT(String($person.Age))  
@@ -485,9 +530,9 @@ The `ChangeAge` method adds 10 to the Age attribute of the received object
 
 ```4d
   //ChangeAge
- C_OBJECT($1)
- $1.Age:=$1.Age+10
- ALERT(String($1.Age))
+ #DECLARE ($person : Object)
+ $person.Age:=$person.Age+10
+ ALERT(String($person.Age))
 ```
 
 When you execute the `CreatePerson` method, both alert boxes will read "50" since the same object reference is handled by both methods.
