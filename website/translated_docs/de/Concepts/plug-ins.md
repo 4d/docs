@@ -30,14 +30,14 @@ Ein Plug-In enthält in der Regel einen Satz Routinen für den 4D Entwickler. Es
 
 ### Wichtiger Hinweis:
 
-A plug-in can be very simple, with just one routine performing a very small task, or it can be very complex, involving hundred of routines and areas. There is virtually no limit to what a plug-in can do, however every plug-in developer should remember that a plug-in is a "sample" piece of code. It is the plug-in that runs within 4D, not the opposite. As a piece of code, it is the host of 4D; it is not a stand-alone application. It shares CPU time and memory with 4D and other plug-ins, thus, it should be a polite code, using just what is necessary to run. For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the database.
+Ein Plug-In kann sehr einfach sein, mit nur einer Routine zum Ausführen einer kleinen Aufgabe, oder sehr komplex mit hunderten von Routinen und Bereichen. Es gibt virtuell kein Limit, was ein Plug-In tun kann. Jeder Plug-in-Entwickler sollte jedoch bedenken, dass ein Plug-in ein Musterteil von Code ist. Es ist das Plug-In, das in 4D läuft, und nicht andersherum. Als ein Code-Teil ist es der Host von 4D und keine eigenständige Anwendung. Es nutzt CPU Zeit und Speicher gemeinsam mit 4D und anderen Plug-Ins. Es sollte also ein freundlicher Code sein, der nur das enthält, was zur Ausführung notwendig ist. Beispielsweise sollte ein Plug-In in langen Schleifen `PA_Yield()` aufrufen, um dem 4D Planungssystem Zeit zu geben, es sei denn, seine Aufgabe ist sowohl für dieses als auch für die Datenbank kritisch.
 
-## How to create a plug-in?
+## Ein Plug-In erstellen
 
-4D provides on GitHub an open-source [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), containing the 4D Plugin API and the 4D Plugin Wizard:
+4D bietet auf GitHub ein open-source [**Plug-In SDK**](https://github.com/4d/4D-Plugin-SDK) mit dem 4D Plugin API und dem 4D Plugin Wizard:
 
-- the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. 4D Plug-in API functions manage all the interactions between the 4D application and your plug-in.
-- The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. It writes the code 4D needs to correctly load and interact with a plug-in, allowing you to concentrate on your own code.
+- Das [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), geschrieben in C, fügt über 400 Funktionen hinzu, mit denen Sie leicht eigene Plug-Ins erstellen und den Funktionsumfang Ihrer 4D Anwendung ergänzen können. 4D Plug-In API Funktionen verwalten alle Interaktionen zwischen der 4D Applikation und Ihrem Plug-In.
+- Der [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) ist ein wichtiges Tool, das die Entwicklung von 4D Plug-Ins vereinfacht. Er schreibt den für 4D erforderlichen Code, um das Plug-In korrekt zu laden und damit zu interagieren. So können Sie sich auf Ihren eigenen Code konzentrieren.
 
 ## Ein Plug-In installieren
 
