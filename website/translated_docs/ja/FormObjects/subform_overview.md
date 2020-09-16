@@ -105,16 +105,16 @@ title: サブフォーム
 ![](assets/en/FormObjects/subforms5.png)
 
 ### 高度なフォーム間通信プログラム
-親フォームとサブフォームインスタンス間の通信では、バインドした変数を通して値を交換する以上のことをおこなう必要がある場合があります。 In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
+親フォームとサブフォームインスタンス間の通信では、バインドした変数を通して値を交換する以上のことをおこなう必要がある場合があります。 実際、親フォームでおこなわれたアクションに基づきサブフォーム中の変数を更新したり、その逆の処理をしたい場合があるでしょう。 先の "動的な時計" タイプのサブフォームの例で言えば、各時計ごとにアラーム時刻を複数設定したい場合が考えられます。
 
-4D has implemented the following mechanisms to meet these needs:
+このようなニーズにこたえるため、4Dは以下のメカニズムを実装しています:
 
-- Use of the "subform" parameter with the `OBJECT Get name` command to specify the subform object and the `OBJECT Get pointer` command.
-- Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
-- Execution of a method in the context of the subform via the `EXECUTE METHOD IN SUBFORM` command.
+- `OBJECT Get name` コマンドで "subform" 引数を使用してサブフォームオブジェクトを指定し、`OBJECT Get pointer` コマンドを使用する、
+- `CALL SUBFORM CONTAINER` コマンドを使用してサブフォームからコンテナーオブジェクトを呼び出す、
+- `EXECUTE METHOD IN SUBFORM` コマンドを使用してサブフォームのコンテキストでメソッドを実行する。
 
 
-#### Object get pointer and Object get name commands
+#### Object get pointer と Object get name コマンド
 In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
 
 For example, the following statement:
