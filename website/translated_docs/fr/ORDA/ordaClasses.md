@@ -72,7 +72,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 Une base de données 4D expose sa propre classe DataStore dans le class store `cs`.
 
 - **Extends**: 4D.DataStoreImplementation
-- **Class name**: cs.DataStore
+- **Nom de classe** : cs.DataStore
 
 Vous pouvez créer des fonctions dans la classe DataStore qui seront disponibles via l'objet `ds`.
 
@@ -98,11 +98,11 @@ $desc:=ds.getDesc() //"Database exposing..."
 
 ### Classe DataClass
 
-Each table exposed with ORDA offers a DataClass class in the `cs` class store.
+Chaque table exposée avec ORDA affiche une classe DataClass dans le class store `cs`.
 
-- **Extends**: 4D.DataClass
-- **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
-- **Example name**: cs.Employee
+- **Extends** : 4D.DataClass
+- **Nom de classe **: cs.*DataClassName* (où *DataClassName* est le nom de la table)
+- **Exemple ** : cs.Employee
 
 
 
@@ -157,13 +157,13 @@ Function getCityName()
     End if
 ```
 
-The client application opens a session on the remote datastore:
+L'application cliente ouvre une session sur le datastore distant :
 
 ```4d
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
 ```
 
-Then a client application can use the API to get the city matching a zip code (for example) from a form:
+Une application cliente peut alors utiliser l'API pour obtenir la ville correspondant au code postal (par exemple) à partir d'un formulaire :
 
 ```4d
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
@@ -171,13 +171,13 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
 
-### EntitySelection Class
+### Classe EntitySelection
 
-Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
+Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class store `cs`.
 
-- **Extends**: 4D.EntitySelection
-- **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
-- **Example name**: cs.EmployeeSelection
+- **Extends** : 4D.EntitySelection
+- **Nom de classe** : *DataClassName*Selection (où *DataClassName* est le nom de la table)
+- **Exemple ** : cs.EmployeeSelection
 
 
 #### Exemple
@@ -204,11 +204,11 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 ### Entity Class
 
-Each table exposed with ORDA offers an Entity class in the `cs` class store.
+Chaque table exposée avec ORDA affiche une classe Entity dans le class store `cs`.
 
-- **Extends**: 4D.Entity
-- **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
-- **Example name**: cs.CityEntity
+- **Extends** : 4D.Entity
+- **Nom de classe **: *DataClassName*Entity (où *DataClassName* est le nom de la table)
+- **Exemple ** : cs.CityEntity
 
 #### Exemple
 
