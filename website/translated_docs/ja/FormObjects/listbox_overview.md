@@ -72,7 +72,7 @@ title: リストボックス
 
 配列リストボックスでは、それぞれの列に 4D の 1次元配列を割り当てなければなりません。ポインター配列を除きすべてのタイプの配列を使用できま す。 行数は配列の要素数により決定されます。
 
-By default, 4D assigns the name "ColumnX" to each column. この配列変数名は [列のプロパティ](listbox_overview.md#列特有のプロパティ) で変更できます (プロパティリストの [変数あるいは式](properties_Object.md#変数あるいは式) プロパティを使用します)。 The display format for each column can also be defined using the `OBJECT SET FORMAT` command.
+デフォルトで 4D は各列に “ColumnX” という名前を割り当てます。 この配列変数名は [列のプロパティ](listbox_overview.md#列特有のプロパティ) で変更できます (プロパティリストの [変数あるいは式](properties_Object.md#変数あるいは式) プロパティを使用します)。 列ごとの表示フォーマットを指定するには、`OBJECT SET FORMAT` コマンドも使用できます。
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 
 配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。 リストボックスのハイレベルコマンド (`LISTBOX INSERT ROWS` や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
@@ -184,7 +184,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [スタイル式](properties_Text.md#スタイル式)                                   |           | ○             | ○                            |
 | [上](properties_CoordinatesAndSizing.md#上)                           | ○         | ○             | ○                            |
 | [透過](properties_BackgroundAndBorder.md#透過)                          | ○         | ○             | ○                            |
-| [型](properties_Object.md#タイプ)                                       | ○         | ○             | ○                            |
+| [タイプ](properties_Object.md#タイプ)                                     | ○         | ○             | ○                            |
 | [下線](properties_Text.md#下線)                                         | ○         | ○             | ○                            |
 | [変数あるいは式](properties_Object.md#変数あるいは式)                             | ○         | ○             |                              |
 | [縦揃え](properties_Text.md#縦揃え)                                       | ○         | ○             | ○                            |
@@ -241,7 +241,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
 
-| プロパティ            | 型       | 説明                                            |
+| プロパティ            | タイプ     | 説明                                            |
 | ---------------- | ------- | --------------------------------------------- |
 | area             | text    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
 | areaName         | text    | エリアの名称                                        |

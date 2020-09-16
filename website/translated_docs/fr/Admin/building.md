@@ -41,7 +41,7 @@ Chaque paramètre de générateur d'application est stocké en tant que clé XML
 
 Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
 
-Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html).
+Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.en.html) manual.
 
 ### Fichier d'historique
 
@@ -218,7 +218,7 @@ Once built, a client/server application is composed of two customized parts: the
 Also, the client/server application is customized and its handling simplified:
 
 - To launch the server portion, the user simply double-clicks on the server application. The project file does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a server in a connection dialog box. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Seule la partie cliente peut se connecter à la partie serveur correspondante. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
+- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a server in a connection dialog box. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). Il est également possible de “forcer” l’affichage de la boîte de dialogue de connexion standard en maintenant la touche **Option** (macOS) ou **Alt** (Windows) enfoncée lors du lancement de l’application cliente. Seule la partie cliente peut se connecter à la partie serveur correspondante. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
 - A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
 - It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) and [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
 
@@ -371,6 +371,42 @@ The basic scenario is:
 Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
 
 
+### Customizing client and/or server cache folder names
+
+Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and clients. Client/server applications use default pathnames for both client and server system cache folders.
+
+In some specific cases, you might need to customize the names of these folders (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file.
+
+
+#### Client cache folder
+
+Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder.
+
+- Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
+
+![](assets/en/Admin/cachea.png)
+
+- Using the `ClientServerSystemFolderName` key (*a single cache folder is used for all servers*):
+
+![](assets/en/Admin/cacheb.png)
+
+> Using a custom cache folder name disables the automatic update of local resources. If you modify the application resources, you need to "force" the local cache folders to be updated, for example using the [**Current version**](#current-version) feature.
+
+#### Server cache folder
+
+Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder.
+
+- Default configuration (*same server applications share the same cache folder*):
+
+![](assets/en/Admin/cacheServera.png)
+
+- Using the `ServerStructureFolderName` key (*a dedicated cache folder is used for each server application*):
+
+![](assets/en/Admin/cacheServerb.png)
+
+
+
+
 ## Plugins & components page
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
@@ -408,7 +444,7 @@ The Licences & Certificate page can be used to:
 
 ### Licenses
 
-This tab displays the list of available deployment licenses that you can integrate into your application. Par défaut, la liste est vide. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+This tab displays the list of available deployment licenses that you can integrate into your application. Par défaut, la liste est vide. Vous devez explicitement ajouter votre licence *4D Developer Professional* ainsi que chaque licence* 4D Desktop Volume* liée à utiliser dans l’application générée. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
 
