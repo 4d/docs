@@ -26,7 +26,7 @@ Les informations affichées permettent d’identifier la source et le contexte d
     - Début de transaction : transaction démarrée.
     - Validation de transaction : transaction validée.
     - Annulation de transaction : transaction annulée.
-    - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
+    - Contexte de mise à jour : modification des données supplémentaires (ex : un appel à `CHANGE CURRENT USER` ou `SET USER ALIAS`).
 
 - **Table** : table à laquelle appartient l’enregistrement ajouté/supprimé/modifié ou le BLOB.
 - **Clé primaire/BLOB** : contenu de la clé primaire de l'enregistrement (lorsque la clé primaire est composée de plusieurs champs, les valeurs sont séparées par des points-virgules), ou numéro de séquence du BLOB impliqué dans l’opération.
