@@ -81,13 +81,13 @@ title: サブフォーム
 
 4Dは自動的にオブジェクト (`C_OBJECT`) をそれぞれのサブフォームとバインドします。 このオブジェクトの中身はサブフォームのコンテキストから読み書き可能なため、ローカルなコンテキストにおいて値を共有することができます。
 
-オブジェクトは自動的に作成することもできますし、明示的に命名しオブジェクトとして型指定された場合には、親コンテナーの変数として使用できます (以下参照)。 In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself.
+オブジェクトは自動的に作成することもできますし、明示的に命名しオブジェクトとして型指定された場合には、親コンテナーの変数として使用できます (以下参照)。 いずれの場合にも、オブジェクトは `Form` コマンドによって返され、サブフォームから直接呼び出すことが可能です (ポインターの使用は不要です)。 オブジェクトは常に参照によって渡されるため、ユーザーがサブフォーム内でプロパティ値を変更した場合には、その値は自動的にオブジェクト自身に保存されます。
 
-For example, in your subform, field labels are stored in the bound object so that you can display different languages:
+たとえば、サブフォームにおいて異なる言語での表示を可能にするために、バインドされたオブジェクトにフィールドラベルが保存されている場合を考えます:
 
 ![](assets/en/FormObjects/subforms4.png)
 
-You can modify the labels from the subform by assigning values to the *InvoiceAddress* object:
+*InvoiceAddress* オブジェクトに値を割り当てることで、サブフォームのラベルを変更することができます:
 
 ```4d
  C_OBJECT($lang)
@@ -104,8 +104,8 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
 
 ![](assets/en/FormObjects/subforms5.png)
 
-### Advanced inter-form programming
-Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
+### 高度なフォーム間通信プログラム
+親フォームとサブフォームインスタンス間の通信では、バインドした変数を通して値を交換する以上のことをおこなう必要がある場合があります。 In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
 
 4D has implemented the following mechanisms to meet these needs:
 
