@@ -87,7 +87,7 @@ Once a connection to the server has been established, the remote project will be
 
 - via les options du menu :
     -   *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
-    -   *4D Tool bar* -  Select the project from the menu associated with the **Open** button
+    -   *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
 
-- via preferences:
+- via les préférences :
     -   Set the **At startup** general preference to **Open last used project**. 
