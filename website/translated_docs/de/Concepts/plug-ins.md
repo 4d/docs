@@ -26,11 +26,11 @@ Ein Plug-In enthält in der Regel einen Satz Routinen für den 4D Entwickler. Es
 
 - Eine **Plug-In Routine** ist eine Routine, die in native Programmiersprache (im allgemeinen C oder C++) geschrieben ist und die eine Aktion auslöst.
 - Ein **externer Bereich** ist Teil eines Formulars, der fast alles anzeigen und bei Bedarf mit dem Benutzer interagieren kann.
-- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. All process code belongs to the plug-in, 4D is simply present to receive/send events to the process.
+- Ein **externer Prozess** ist ein eigenständiger Prozess, der normalerweise in eíner Schleife läuft und so ziemlich alles Gewünschte ausführen kann. Der gesamte Prozess-Code gehört zum Plug-In. 4D dient nur dazu, Ereignisse vom Prozess zu empfangen und an ihn zu senden.
 
-### Important note
+### Wichtiger Hinweis:
 
-A plug-in can be very simple, with just one routine performing a very small task, or it can be very complex, involving hundred of routines and areas. There is virtually no limit to what a plug-in can do, however every plug-in developer should remember that a plug-in is a "sample" piece of code. It is the plug-in that runs within 4D, not the opposite. As a piece of code, it is the host of 4D; it is not a stand-alone application. It shares CPU time and memory with 4D and other plug-ins, thus, it should be a polite code, using just what is necessary to run. For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the application.
+Ein Plug-In kann sehr einfach sein, mit nur einer Routine zum Ausführen einer kleinen Aufgabe, oder sehr komplex mit hunderten von Routinen und Bereichen. Es gibt virtuell kein Limit, was ein Plug-In tun kann. Jeder Plug-in-Entwickler sollte jedoch bedenken, dass ein Plug-in ein Musterteil von Code ist. Es ist das Plug-In, das in 4D läuft, und nicht andersherum. Als ein Code-Teil ist es der Host von 4D und keine eigenständige Anwendung. It shares CPU time and memory with 4D and other plug-ins, thus, it should be a polite code, using just what is necessary to run. For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the application.
 
 ## How to create a plug-in?
 
