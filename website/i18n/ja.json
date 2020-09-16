@@ -217,7 +217,7 @@
         "title": "値の範囲"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "JSON プロパティリスト"
       },
       "FormObjects/propertiesResizingOptions": {
         "title": "リサイズオプション"
@@ -235,7 +235,7 @@
         "title": "テキスト、ピクチャー"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "ラジオボタン"
@@ -271,7 +271,7 @@
         "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro エリア"

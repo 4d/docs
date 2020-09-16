@@ -47,4 +47,4 @@ title: ヘルプ
 
 #### 参照
 
-[プレースホルダー](properties_Entry.md#placeholder)
+[プレースホルダー](properties_Entry.md#プレースホルダー)
