@@ -26,34 +26,34 @@ Ein Plug-In enthält in der Regel einen Satz Routinen für den 4D Entwickler. Es
 
 - Eine **Plug-In Routine** ist eine Routine, die in native Programmiersprache (im allgemeinen C oder C++) geschrieben ist und die eine Aktion auslöst.
 - Ein **externer Bereich** ist Teil eines Formulars, der fast alles anzeigen und bei Bedarf mit dem Benutzer interagieren kann.
-- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. All process code belongs to the plug-in, 4D is simply present to receive/send events to the process.
+- Ein **externer Prozess** ist ein eigenständiger Prozess, der normalerweise in eíner Schleife läuft und so ziemlich alles Gewünschte ausführen kann. Der gesamte Prozess-Code gehört zum Plug-In. 4D dient nur dazu, Ereignisse vom Prozess zu empfangen und an ihn zu senden.
 
-### Important note
+### Wichtiger Hinweis:
 
-A plug-in can be very simple, with just one routine performing a very small task, or it can be very complex, involving hundred of routines and areas. There is virtually no limit to what a plug-in can do, however every plug-in developer should remember that a plug-in is a "sample" piece of code. It is the plug-in that runs within 4D, not the opposite. As a piece of code, it is the host of 4D; it is not a stand-alone application. It shares CPU time and memory with 4D and other plug-ins, thus, it should be a polite code, using just what is necessary to run. For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the application.
+Ein Plug-In kann sehr einfach sein, mit nur einer Routine zum Ausführen einer kleinen Aufgabe, oder sehr komplex mit hunderten von Routinen und Bereichen. Es gibt virtuell kein Limit, was ein Plug-In tun kann. Jeder Plug-in-Entwickler sollte jedoch bedenken, dass ein Plug-in ein Musterteil von Code ist. Es ist das Plug-In, das in 4D läuft, und nicht andersherum. Als ein Code-Teil ist es der Host von 4D und keine eigenständige Anwendung. Es nutzt CPU Zeit und Speicher gemeinsam mit 4D und anderen Plug-Ins. Es sollte also ein freundlicher Code sein, der nur das enthält, was zur Ausführung notwendig ist. Beispielsweise sollte ein Plug-In in langen Schleifen `PA_Yield()` aufrufen, um dem 4D Planungssystem Zeit zu geben, es sei denn, seine Aufgabe ist sowohl für dieses als auch für die Datenbank kritisch.
 
-## How to create a plug-in?
+## Ein Plug-In erstellen
 
-4D provides on GitHub an open-source [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), containing the 4D Plugin API and the 4D Plugin Wizard:
+4D bietet auf GitHub ein open-source [**Plug-In SDK**](https://github.com/4d/4D-Plugin-SDK) mit dem 4D Plugin API und dem 4D Plugin Wizard:
 
-- the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. 4D Plug-in API functions manage all the interactions between the 4D application and your plug-in.
-- The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. It writes the code 4D needs to correctly load and interact with a plug-in, allowing you to concentrate on your own code.
+- Das [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), geschrieben in C, fügt über 400 Funktionen hinzu, mit denen Sie leicht eigene Plug-Ins erstellen und den Funktionsumfang Ihrer 4D Anwendung ergänzen können. 4D Plug-In API Funktionen verwalten alle Interaktionen zwischen der 4D Applikation und Ihrem Plug-In.
+- Der [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) ist ein wichtiges Tool, das die Entwicklung von 4D Plug-Ins vereinfacht. Er schreibt den für 4D erforderlichen Code, um das Plug-In korrekt zu laden und damit zu interagieren. So können Sie sich auf Ihren eigenen Code konzentrieren.
 
 ## Ein Plug-In installieren
 
 Um Plug-Ins in der 4D Umgebung zu installieren, kopieren Sie seine Dateien in die passenden Ordner.
 
-Die Ordner "PluginName.bundle" (auf MacOS Paket) enthalten die Windows- und MacOS-Version der 4D Plug-Ins. Aufgrund ihrer spezifischen internen Architektur kann 4D Server, je nach der Plattform des Client-Rechners, die passende Version laden. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **Plugins** folder.
+Die Ordner "PluginName.bundle" (auf MacOS Paket) enthalten die Windows- und MacOS-Version der 4D Plug-Ins. Aufgrund ihrer spezifischen internen Architektur kann 4D Server, je nach der Plattform des Client-Rechners, die passende Version laden. Um ein Plug-In in Ihrer Umgebung zu installieren, legen Sie den Ordner "PluginName.bundle" oder das entsprechende Paket in den gewünschten Ordner **PlugIns**.
 
-You can put the Plugins folder in two different places:
+Sie können den Ordner PlugIns an zwei verschiedene Stellen legen:
 
 - Auf dieselbe Ebene wie das ausführbare 4D Programm, z.B.:
   - Unter Windows neben die .exe Datei
-  - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
-- At the same level as the Project folder. In this case, plug-ins are only available in this particular project.
+  - Auf MacOS: auf die erste Ebene des Ordners Contents im Package der Anwendung. Dann sind die Plug-Ins in jedem Projekt verfügbar, das diese Anwendung öffnet.
+- Auf dieselbe Ebene wie den Ordner Project. In diesem Fall sind die Plug-Ins nur in diesem spezifischen Projekt verfügbar.
 
 Ihre Wahl richtet sich danach, wie Sie das Plug-In einsetzen wollen.
 
 Liegt dasselbe Plug-In an beiden Stellen, lädt 4D nur das Plug-In, welches neben der Struktur liegt. Existieren in einer Anwendung mit einkompilierter 4D Volume Desktop mehrere Instanzen desselben Plug-In, lässt sich die Anwendung nicht öffnen.
 
-4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Then open your project with 4D. Erfordert ein Plug-In eine spezifische Benutzerlizenz, wird es geladen, jedoch nicht aktiviert.
+4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Öffnen Sie dann Ihr Projekt mit 4D. Erfordert ein Plug-In eine spezifische Benutzerlizenz, wird es geladen, jedoch nicht aktiviert.

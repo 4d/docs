@@ -8,20 +8,20 @@ title: Créer ou ouvrir un projet
 
 New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
 
-To create a new project:
+Pour créer un nouveau projet :
 
-1. Launch 4D or 4D Server.
-2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>OU<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+1. Lancez 4D ou 4D Server.
+2. Sélectionnez **Nouveau> Projet...** depuis le menu **Fichier** : <p>![](assets/en/getStart/projectCreate1.png)<p>OU<p>(4D uniquement) Sélectionnez **Projet...** depuis le bouton de la barre d'outils **Nouveau** :<p>![](assets/en/getStart/projectCreate2.png)<p>Un dialogue standard **Sauvegarde** apparaît, de façon à ce que vous choisissiez le nom et l'emplacement du dossier principal du projet 4D.
 
 3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**.<p> Ce nom sera utilisé :
-    - as the name of the entire project folder,
+    - comme le nom du dossier du projet,
     - comme nom du fichier .4DProject au premier niveau du dossier "Project".
 
-    Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
+    Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. Toutefois, si votre projet est destiné à fonctionner sur d'autres systèmes ou à être enregistré via un outil de gestion de version, vous devez tenir compte de leurs recommandations de dénomination spécifiques.
 
 When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. Pour plus d'informations, voir [Architecture d'un projet 4D](Project/architecture.md).
 
-You can then start developing your project.
+Vous pouvez alors commencer à développer votre projet.
 
 
 ## Ouvrir un projet local
@@ -30,7 +30,7 @@ Pour ouvrir un projet existant en local depuis 4D :
 
 1. Sélectionnez **Ouvrir un projet d'application local** dans la boite de dialogue de l'Assistant de bienvenue <p>OU<p> Sélectionnez **Ouvrir > Projet local...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.<p> La boîte de dialogue standard d’ouverture de fichiers apparaît.
 
-2. Select the project's `.4dproject` file and click **Open**.<p> By default, the project is opened with its current data file. Other file types are suggested:
+2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> By default, the project is opened with its current data file. Other file types are suggested:
 
     - *Packed project files*: `.4dz` extension  - deployment projects
     - *Shortcut files*: `.4dlink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
@@ -81,12 +81,12 @@ Once a connection to the server has been established, the remote project will be
 
 
 
-## Project opening shortcuts
+## Raccourcis d’ouverture des projets
 
-4D offers two ways to let you open projects directly and bypass the Open dialog:
+4D propose deux façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
 
-- via menu options:
-    -   *Menu bar* - **File** > **Open Recent Projects / {project name}**
+- via les options du menu :
+    -   *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
     -   *4D Tool bar* -  Select the project from the menu associated with the **Open** button
 
 - via preferences:
