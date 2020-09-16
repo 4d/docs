@@ -102,7 +102,7 @@ title: テキスト
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> フォントテーマはフォントだけでなく、サイズやカラーも定めます。 You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> フォントテーマはフォントだけでなく、サイズやカラーも定めます。 一部のカスタムスタイルプロパティ (太字、イタリック、下線) は動作に影響なく適用することができます。
 
 
 
