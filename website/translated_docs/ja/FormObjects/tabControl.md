@@ -45,7 +45,7 @@ macOSの場合、タブコントロールを標準位置 (上) だけでなく�
 
 タブコントロールにラベルを設定するには、いくつかの方法があります:
 
-*   You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
+*   タブコントロールに [選択リスト](properties_DataSource.md#選択リスト-静的リスト) を関連付けることができます。これにはコレクション (静的リスト)、または json リストへの JSON ポインター ("$ref") を使用します。 リストエディターにてリスト項目に関連付けられたアイコンはタブコントロールに表示されます。
 *   フォームの各ページの名前を格納するテキスト配列を作成することができます。 このコードはユーザーにフォームを表示する前に実行しなければなりません。 たとえば、このコードをタブコントロールのオブジェクトメソッドに置いて、`On Load` イベントが生じたときにこのメソッドを実行します。
 
 ```4d
