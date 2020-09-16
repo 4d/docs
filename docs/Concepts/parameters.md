@@ -65,16 +65,17 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 
 Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.  
 
-- For class functions, you use the `Function` declaration keyword.
-- For methods (project methods, form object methods, database methods, and triggers), you use the `Method` declaration keyword.
+- For class functions, parameters are declared along with the `Function` keyword.
+- For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
 Examples:
 
 ```4d
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
-```4d
-Method($i : Integer) -> $myResult : Object
+```4d  
+ //myProjectMethod
+#DECLARE ($i : Integer) -> $myResult : Object
 ```
 
 
@@ -83,7 +84,7 @@ The following rules apply:
 - The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
 - Parameter names must start with a `$` character and be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
 - Multiple parameters (and types) are separated by semicolons (;). 
-- Multiline syntaxes are supported (using "\\" character)
+- Multiline syntaxes are supported (using "\\" character).
 
 
 For example, when you call a `getArea()` function with two parameters: 
@@ -102,14 +103,14 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 
 >If the type is not defined, the parameter will be defined as `Variant`.
 
-All 4D method kinds are supported, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
+All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
 
 ```4d    
 	// On Web Authentication database method
-Method($url : Text; $header : Text; \
+#DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
-  ->$RequestAccepted : Boolean
+  -> $RequestAccepted : Boolean
 $entitySelection:=ds.User.query("login=:1"; $user)
 // Check hash password...
 ```
@@ -208,7 +209,9 @@ Tables or array expressions can only be passed [as reference using a pointer](Co
 
 ### Parameter indirection
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax. 
+
+> Parameter indirection can only be used with the [sequential](#sequential-parameters) syntax.
 
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
@@ -271,7 +274,7 @@ This command means that starting with the fourth  parameter (included), the meth
 
 Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble. 
 
-When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `Method` or `Function` prototype. For example:
+When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. For example:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
@@ -326,7 +329,7 @@ Parameter declaration is also mandatory in the following contexts (these context
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-> You can also use named parameters with the `Method` keyword (see [Named parameters](#named-parameters)). 
+> You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword. 
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
@@ -519,7 +522,7 @@ For example, consider the `CreatePerson` method that creates an object and sends
 
 ```4d
   //CreatePerson
- C_OBJECT($person)
+ var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
  ALERT(String($person.Age))  
@@ -529,9 +532,9 @@ The `ChangeAge` method adds 10 to the Age attribute of the received object
 
 ```4d
   //ChangeAge
- C_OBJECT($1)
- $1.Age:=$1.Age+10
- ALERT(String($1.Age))
+ #DECLARE ($person : Object)
+ $person.Age:=$person.Age+10
+ ALERT(String($person.Age))
 ```
 
 When you execute the `CreatePerson` method, both alert boxes will read "50" since the same object reference is handled by both methods.
