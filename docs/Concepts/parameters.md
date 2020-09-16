@@ -65,6 +65,9 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 
 Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.  
 
+- For class functions, you use the `Function` declaration keyword.
+- For methods (project methods, form object methods, database methods, and triggers), you use the `Method` declaration keyword.
+
 Examples:
 
 ```4d
@@ -78,9 +81,6 @@ Method($i : Integer) -> $myResult : Object
 The following rules apply:
 
 - The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
-- Declaration keywords are:
-	- `Function` for class functions
-	- `Method` for methods (project methods, form object methods, database methods, and triggers). 
 - Parameter names must start with a `$` character and be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
 - Multiple parameters (and types) are separated by semicolons (;). 
 - Multiline syntaxes are supported (using "\\" character)
@@ -102,13 +102,24 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 
 >If the type is not defined, the parameter will be defined as `Variant`.
 
+All 4D method kinds are supported, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
+
+```4d    
+	// On Web Authentication database method
+Method($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text) \
+  ->$RequestAccepted : Boolean
+$entitySelection:=ds.User.query("login=:1"; $user)
+// Check hash password...
+```
 
 ### Returned value
 
 You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. For example:
 
 ```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
+Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
  
 You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). For example: 
@@ -260,7 +271,14 @@ This command means that starting with the fourth  parameter (included), the meth
 
 Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble. 
 
-When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `Method` or `Function` prototype. 
+When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `Method` or `Function` prototype. For example:
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+	// all parameters are declared with their type
+```
+
+
 When using the sequential variable syntax, you need to make sure all parameters are properly declared. In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
 
 ```4d
@@ -308,11 +326,13 @@ Parameter declaration is also mandatory in the following contexts (these context
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
+> You can also use named parameters with the `Method` keyword (see [Named parameters](#named-parameters)). 
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
 - Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method.
 **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+
 ```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
