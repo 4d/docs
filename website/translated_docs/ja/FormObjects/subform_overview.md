@@ -127,23 +127,23 @@ title: サブフォーム
 
 #### CALL SUBFORM CONTAINER コマンド
 
-The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to the subform container object, which can then process it in the context of the parent form. The event is received in the container object method. It may be at the origin of any event detected by the subform (click, drag-and-drop, etc.).
+`CALL SUBFORM CONTAINER` コマンドを使用すると、サブフォームインスタンスからサブフォームコンテナーオブジェクトにイベントを送信できます。その結果、親フォームのコンテキストで処理が可能となります。 イベントはコンテナーオブジェクトメソッドで受信されます。 (クリックやドラッグ＆ドロップなど) サブフォームにより検知されたすべてのイベントの発生元となりえます。
 
-The code of the event is unrestricted (for example, 20000 or -100). You can use a code that corresponds to an existing event (for example, 3 for `On Validate`), or use a custom code. In the first case, you can only use events that you have checked in the Property List for subform containers. In the second case, the code must not correspond to any existing form event. It is recommended to use a negative value to be sure that this code will not be used by 4D in future versions.
+送信するイベントコードに制限はありません (たとえば 20000 や -100 など)。 既存のイベントに対応するコード (たとえば `On Validate` に対応する 3) を使用することも、カスタムコードを使用することもできます。 前者のケースでは、サブフォームコンテナーのプロパティリストでチェックを入れたイベントのみを使用できます。 後者の場合、使用するコードは既存のフォームイベントに対応してはいけません。 将来の 4Dバージョンで番号が衝突しないようにするために、負数の使用が推奨されます。
 
-For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
+詳細は `CALL SUBFORM CONTAINER` コマンドの説明を参照してください。
 
-#### EXECUTE METHOD IN SUBFORM command
-The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters.
+#### EXECUTE METHOD IN SUBFORM コマンド
+`EXECUTE METHOD IN SUBFORM` コマンドを使用すると、親フォームやそのオブジェクトから、サブフォームインスタンスのコンテキストにおけるメソッド実行をリクエストできます。これにより、サブフォームの変数やオブジェクト等にアクセスすることができます。 このメソッドは引数も受け取れます。
 
-This mechanism is illustrated in the following diagram:
+このメカニズムを図示すると以下のようになります:
 
 ![](assets/en/FormObjects/subforms6.png)
 
-For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
+詳細は `EXECUTE METHOD IN SUBFORM` コマンドの説明を参照してください。
 
-#### GOTO OBJECT command
-The `GOTO OBJECT` command looks for the destination object in the parent form even if it is executed from a subform.
+#### GOTO OBJECT コマンド
+`GOTO OBJECT` はサブフォームから実行されても、親フォーム内にて目的のオブジェクトを検索します。
 
 
 
