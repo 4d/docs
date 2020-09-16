@@ -51,14 +51,14 @@ title: サブフォーム
 
 親フォームが実行されるとき、開発者は適切なフォームイベントを使用して変数の同期を処理しなければなりません。 2タイプの相互作用 (親フォーム → サブフォーム、サブフォーム → 親フォーム) が可能です。
 
-#### Updating subform contents
-Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform. In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example).
+#### サブフォームの内容の更新
+ケース1: 親フォームの変数の値が更新され、この更新をサブフォームに反映させる必要があります。 この例では ParisTime 変数の値がユーザー入力、あるいは動的に (たとえば `Current time` コマンドで) 12:15:00 に変更されました。
 
-In this case, you must use the On Bound Variable Change form event. This event must be selected in the subform properties; it is generated in the form method of the subform.
+この場合には、`On bound variable change` フォームイベントを使用します。 このイベントは、サブフォームプロパティ内で選択されていなければなりません。このイベントはサブフォームのフォームメソッドで生成されます。
 
 ![](assets/en/FormObjects/subforms2.png)
 
-The `On Bound Variable Change` form event is generated:
+`On Bound Variable Change` フォームイベントは以下のときに生成されます:
 
 - as soon as a value is assigned to the variable of the parent form, even if the same value is reassigned,
 - if the subform belongs to the current form page or to page 0.
