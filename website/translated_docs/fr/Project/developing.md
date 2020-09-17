@@ -5,18 +5,18 @@ title: Développer un projet
 
 ## Aperçu
 
-4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as an application runtime, allowing to develop, test, and debug the project.
+4D projects are developed using the **4D** application. Elle fournit un environnement de développement intégré (IDE) pour les projets 4D ainsi qu'une exécution d'application, permettant de développer, tester et déboguer le projet.
 
-> Because most of the 4D project files are text files, you can use any text editor to work in them. L'accès simultané aux fichiers est géré via un gestionnaire d'accès aux fichiers (voir ci-dessous).
+> La plupart des fichiers de projet 4D étant des fichiers texte, vous pouvez utiliser n'importe quel éditeur de texte pour y travailler. L'accès simultané aux fichiers est géré via un gestionnaire d'accès aux fichiers (voir ci-dessous).
 
-Multi-user development is managed via standard source control tools, which allow developers to work on different branches, and compare, merge, or revert modifications.
+Le développement multi-utilisateur est géré via des outils de contrôle de version standard, qui permettent aux développeurs de travailler sur différentes branches et de comparer, fusionner ou annuler des modifications.
 
 
-## Development configurations
+## Configurations de développement
 
 Interpreted projects (*applicationName.4DProject*, see [Architecture of a 4D project](architecture.md)) can be opened in the following configurations:
 
-- 4D opening **local project files** - in this case, all aspects of the project are available to the developer. Project files can be created, modified, compiled, etc. The result of the development can be tested at any moment by using the **Test application** menu command from 4D or using the [integrated web server](WebServer/webServerObject.md).
+- 4D opening **local project files** - in this case, all aspects of the project are available to the developer. Les fichiers projet peuvent être ouverts, modifiés, compilés, etc. The result of the development can be tested at any moment by using the **Test application** menu command from 4D or using the [integrated web server](WebServer/webServerObject.md).
 - 4D connection from the **same machine as 4D Server** - in this case, development is supported the same as local projects. This feature allows you to develop a client/server application in the same context as the deployment context ()[detailed below](#developing-projects-with-4d-server)).
 - 4D connection from a **remote machine** - in this case, 4D Server sends a .4dz version of the project ([compressed format](Admin/building.md#build-compiled-structure)) to 4D. As a consequence, all structure files are read-only. This feature is useful for testing purposes.
 
