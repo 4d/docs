@@ -36,15 +36,15 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //in the context of a subform
 ```
 
-Data can also be **returned** from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Daten können auch von Methoden und Class Functions **zurückgegeben** werden. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. Only one single output parameter can be declared per method or class function.
+Any subroutine can return a value. Pro Methode oder Class Function lässt sich nur ein einzelner Ausgabeparameter deklarieren.
 
-Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
+Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#values-or-references) und in lokale Variablen innerhalb der aufgerufenen Class Function oder Methode kopiert. Es gibt zwei Syntaxarten, um Variablenparameter im aufgerufenen Code zu deklarieren:
 
 - [named variables](#named-parameters) (recommended in most cases) or
 - [sequentially numbered variables](#sequential-parameters).
