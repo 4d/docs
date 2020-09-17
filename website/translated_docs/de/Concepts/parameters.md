@@ -6,27 +6,27 @@ title: Parameters
 
 ## Overview
 
-You'll often find that you need to pass data to your methods and functions. This is easily done with parameters.
+Sie werden öfters sehen, dass Sie Ihren Methoden und Funktionen Daten übergeben müssen. This is easily done with parameters.
 
-**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Parameter** (oder **Argumente**) sind Datenteile, die eine Methode oder eine Class Function zum Ausführen ihrer Aufgaben benötigen. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
 
 ```4d
 ALERT("Hello")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
+Parameter werden Methoden oder Class Functions auf diesselbe Weise übergeben. Erlaubt beispielsweise eine Class Function mit Namen `getArea()` zwei Parameter, könnte ein Aufruf der Class Function wie folgt aussehen:
 
 ```
 $area:=$o.getArea(50;100)
 ```
 
-Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to the method might look like this:
+Oder erlaubt beispielsweise eine Projektmethode mit Namen `DO_SOMETHING` drei Parameter, könnte ein Aufruf der Methode wie folgt aussehen:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The input parameters are separated by semicolons (;).
+Die Eingabeparameter werden durch Strichpunkte (;) voneinander getrennt.
 
 The same principles are used when methods are executed through dedicated commands, for example:
 
