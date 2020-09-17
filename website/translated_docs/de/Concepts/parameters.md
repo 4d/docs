@@ -148,13 +148,13 @@ Als Alternative zur Syntax [benannte Parameter](#named-parameters) können Sie P
 
 > Auch wenn Class Functions diese Syntax unterstützen, empfehlen wir hier, die Syntax [benannte Parameter](#named-parameters) zu verwenden.
 
-For example, when you call a `DO_SOMETHING` project method with three parameters:
+Sie können z. B. eine Projektmethode `DO_SOMETHING` mit drei Parametern aufrufen:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-In the method code, the value of each parameter is automatically copied into $1, $2, $3 variables:
+Im Code der Methode wird der Wert jedes Parameters automatisch in die Variablen $1, $2, $3 kopiert:
 
 ```4d
   //Code of the method DO_SOMETHING
@@ -169,7 +169,7 @@ In the method code, the value of each parameter is automatically copied into $1,
 
 ### Zurückgegebener Wert
 
-The value to be returned is automatically put into the local variable `$0`.
+Der zurückzugebende Wert wird automatisch in die lokale Variable `$0` gesetzt.
 
 
 For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
@@ -199,7 +199,7 @@ In this example, `$0` is first assigned the value of `$1`, then used as paramete
 
 ### Unterstützte Datentypen
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
+Sie können jeden [Ausdruck](Concepts/quick-tour.md#expression-types) als sequentiellen Parameter verwenden, außer:
 
 - tables
 - arrays
@@ -210,7 +210,7 @@ Tables or array expressions can only be passed [as reference using a pointer](Co
 
 4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
 
-> Parameter indirection can only be used with the [sequential](#sequential-parameters) syntax.
+> Die Parameter Indirektion lässt sich nur mit der[sequentiellen](#sequential-parameters) Syntax verwenden.
 
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
@@ -266,14 +266,14 @@ As with other local variables, it is not mandatory to declare generic parameters
 
 This command means that starting with the fourth  parameter (included), the method can receive a variable number of parameters of longint type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
 
-> The number in the declaration has to be a constant and not a variable.
+> Die Nummer in der Deklaration muss eine Konstante und keine Variable sein.
 
 
-### Declaring parameters for compiled mode
+### Parameter für kompilierten Modus deklarieren
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
+Auch wenn es im [interpretierten Modus](Concepts/interpreted.md) nicht zwingend ist, sollten Sie jeden Parameter in den aufgerufenen Methoden oder Functions deklarieren, um Probleme zu vermeiden.
 
-When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. Beispiel:
+Mit der Syntax [benannte Variable](#named-parameters), werden Parameter automatisch über das Schlüsselwort `#DECLARE` oderden Prototyp `Function` deklariert. Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
@@ -281,7 +281,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 ```
 
 
-When using the sequential variable syntax, you need to make sure all parameters are properly declared. In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+Bei der Syntax sequentielle Variable müssen Sie sicherstellen, dass alle Parameter sauber deklariert sind. In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
 
 ```4d
   // Capitalize Project Method
@@ -312,7 +312,7 @@ C_OBJECT($3)
 ...
 ```
 
-> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+> Für den kompilierten Modus können Sie alle Parameter von lokalen Variablen für Projektmethoden in einer spezifischen Methode gruppieren, deren Namen mit "Compiler" beginnt. Within this method, you can predeclare the parameters for each method, for example:
 ```4d  
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
@@ -328,7 +328,7 @@ Parameter declaration is also mandatory in the following contexts (these context
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-> You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword.
+> Sie können auch [benannte Parameter](#named-parameters) mit dem Schlüsselwort `#DECLARE` verwende.
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
@@ -349,7 +349,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 
 
-## Using object properties as named parameters
+## Objekteigenschaften als benannte Parameter verwenden
 
 Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
 
@@ -412,7 +412,7 @@ With named variables, any parameter can be optional. In the above example, all p
 
 
 
-## Input/Output variables
+## Eingabe- und Ausgabevariablen
 
 Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
 
