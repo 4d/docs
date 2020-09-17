@@ -82,9 +82,9 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 The following rules apply:
 
 - Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (nur Kommentare oder Zeilenumbrüchen können vor der Deklaration stehen).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
 - Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
-- Multiline syntaxes are supported (using "\\" character).
+- Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
 
 For example, when you call a `getArea()` function with two parameters:
