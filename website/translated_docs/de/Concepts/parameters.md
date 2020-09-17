@@ -81,7 +81,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 
 The following rules apply:
 
-- Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (nur Kommentare oder Zeilenumbrüchen können vor der Deklaration stehen).
+- Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (davor können nur Kommentare oder Zeilenumbrüche stehen).
 - Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
 - Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
@@ -93,16 +93,16 @@ Sie können z. B. eine Function `getArea()` mit zwei Parametern aufrufen:
 $area:=$o.getArea(50;100)
 ```
 
-In the class function code, the value of each parameter is copied into the corresponding declared parameter:
+Im Code der Class Function wird der Wert jedes Parameters in den entsprechenden deklarierten Parameter kopiert:
 
 ```4d    
 // Class: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
-> If the type is not defined, the parameter will be defined as `Variant`.
+> Ist kein Typ definiert, wird der Parameter als `Variant` definiert.
 
-All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
+Alle Arten von 4D Methoden unterstützen das Schlüsselwort `#DECLARE`, inkl. Datenbankmethoden. For example, in the `On Web Authentication` database method, you can declare named parameters:
 
 ```4d    
     // On Web Authentication database method
