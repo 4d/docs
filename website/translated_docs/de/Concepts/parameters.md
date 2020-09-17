@@ -132,7 +132,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 ### Unterstützte Datentypen
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  Beispiel:
+Mit benannten Parametern können Sie dieselben Datentypen wie für [ das Schlüsselwort `var` ](variables.md#using-the-var-keyword), verwenden, inkl. Objekte von Klassen.  Beispiel:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -142,11 +142,11 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 
 
-## Sequential parameters
+## Sequentielle Parameter
 
-As an alternative to [named parameters](#named-parameters) syntax, you can declare parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. The numbering of the local variables represents the order of the parameters.
+Als Alternative zur Syntax [benannte Parameter](#named-parameters) können Sie Parameter über fortlaufend nummerierte Variablen deklarieren: **$1**, **$2**, **$3**, usw. The numbering of the local variables represents the order of the parameters.
 
-> Although this syntax is supported by class functions, it is recommended to use [named parameters](#named-parameters) syntax in this case.
+> Auch wenn Class Functions diese Syntax unterstützen, empfehlen wir hier, die Syntax [benannte Parameter](#named-parameters) zu verwenden.
 
 For example, when you call a `DO_SOMETHING` project method with three parameters:
 
