@@ -87,7 +87,7 @@ The following rules apply:
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
 
-For example, when you call a `getArea()` function with two parameters:
+Sie können z. B. eine Function `getArea()` mit zwei Parametern aufrufen:
 
 ```
 $area:=$o.getArea(50;100)
