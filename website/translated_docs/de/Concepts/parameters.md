@@ -46,11 +46,11 @@ Any subroutine can return a value. Pro Methode oder Class Function lässt sich n
 
 Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#values-or-references) und in lokale Variablen innerhalb der aufgerufenen Class Function oder Methode kopiert. Es gibt zwei Syntaxarten, um Variablenparameter im aufgerufenen Code zu deklarieren:
 
-- [named variables](#named-parameters) (recommended in most cases) or
-- [sequentially numbered variables](#sequential-parameters).
+- [benannte Variablen](#named-parameters) (in den meisten Fällen empfohlen) oder
+- [sequentiell nummerierte Variablen](#sequential-parameters).
 
 
-> Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. Beispiel:
+> Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#named-parameters) und [sequentiell](#sequential-parameters) uneingeschränkt miteinander mischen. Beispiel:
 > 
 > ```4d
 Function add($x : Integer)
@@ -63,7 +63,7 @@ Function add($x : Integer)
 
 ## Named parameters
 
-Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+In den aufgerufenen Methoden oder Class Functions werden Parameterwerte lokalen Variablen zugewiesen. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
 - For class functions, parameters are declared along with the `Function` keyword.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
