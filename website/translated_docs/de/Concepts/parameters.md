@@ -63,10 +63,10 @@ Function add($x : Integer)
 
 ## Named parameters
 
-In den aufgerufenen Methoden oder Class Functions werden Parameterwerte lokalen Variablen zugewiesen. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+In den aufgerufenen Methoden oder Class Functions werden Parameterwerte lokalen Variablen zugewiesen. Sie deklarieren Parameter mit einem**Parameternamen** und mit einem **Parametertyp**, getrennt durch Strichpunkt.
 
-- For class functions, parameters are declared along with the `Function` keyword.
-- For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
+- Für Class Functions werden Parameter über das Schlüsselwort `Function` deklariert.
+- Für Methoden (Projektmethoden, Formularobjektmethoden, Datenbankmethoden und Trigger) werden Parameter über das Schlüsselwort `#DECLARE` zu Beginn des Methodencode deklariert.
 
 Beispiele:
 
