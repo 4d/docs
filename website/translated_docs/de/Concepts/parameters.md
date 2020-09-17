@@ -102,7 +102,7 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 ```
 > Ist kein Typ definiert, wird der Parameter als `Variant` definiert.
 
-Alle Arten von 4D Methoden unterstützen das Schlüsselwort `#DECLARE`, inkl. Datenbankmethoden. For example, in the `On Web Authentication` database method, you can declare named parameters:
+Alle Arten von 4D Methoden unterstützen das Schlüsselwort `#DECLARE`, inkl. Datenbankmethoden. Sie können z. B. in der Datenbankmethode `On Web Authentication` benannte Parameter deklarieren:
 
 ```4d    
     // On Web Authentication database method
@@ -114,15 +114,15 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 // Check hash password...
 ```
 
-### Returned value
+### Zurückgegebener Wert
 
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Beispiel:
+Sie deklarieren den Rückgabeparameter einer Funktion mit einem Pfeil (->) und der Definition des Parameters nach der Liste der Eingabeparameter. Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). Beispiel:
+Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Er ist dann automatisch über `$0` verfügbar ([siehe unten sequentielle Parameter](#returned-value-1)). Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -130,7 +130,7 @@ Function add($x : Variant; $y : Integer): Integer
 ```
 
 
-### Supported data types
+### Unterstützte Datentypen
 
 With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  Beispiel:
 
@@ -167,7 +167,7 @@ In the method code, the value of each parameter is automatically copied into $1,
 ```
 
 
-### Returned value
+### Zurückgegebener Wert
 
 The value to be returned is automatically put into the local variable `$0`.
 
@@ -197,7 +197,7 @@ ALERT($0)
 In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
 
 
-### Supported data types
+### Unterstützte Datentypen
 
 You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
 
