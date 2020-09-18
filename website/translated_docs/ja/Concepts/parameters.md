@@ -278,11 +278,11 @@ ALERT($0)
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
-    // all parameters are declared with their type
+    // すべての引数はデータ型とともに宣言されます
 ```
 
 
-When using the sequential variable syntax, you need to make sure all parameters are properly declared. 次の例では `Capitalize` プロジェクトメソッドは第1パラメーターにテキスト型の引数を受け取り、戻り値としてテキスト型の値を返します:
+受け渡し順シンタックスを利用している場合には、引数がそれぞれ適切に宣言されていることを確認する必要があります。 次の例では `Capitalize` プロジェクトメソッドは第1パラメーターにテキスト型の引数を受け取り、戻り値としてテキスト型の値を返します:
 
 ```4d
   // Capitalize プロジェクトメソッド
@@ -313,7 +313,7 @@ C_OBJECT($3)
 ...
 ```
 
-> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
+> プロジェクトメソッドのパラメーター宣言は、コンパイルモード用にまとめて、"Compiler" で始まる名称の専用メソッドにておこなうことができます。 専用メソッド内で各メソッドのパラメーターをあらかじめ宣言する場合は、次のように書きます:
 ```4d  
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
@@ -329,7 +329,7 @@ C_OBJECT($3)
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-> You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword.
+> `#DECLARE` キーワードを使用して、[名前付き引数](#名前付き引数) を使うこともできます。
 
 - トリガー - トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。
 
@@ -350,14 +350,14 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 
 
-## Using object properties as named parameters
+## オブジェクトプロパティを名前付き引数として使用する
 
 引数としてオブジェクトを渡すことによって **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
 
 たとえば、`CreatePerson` メソッドを例にとると:
 
 ```4d
-  //CreatePerson
+  // CreatePerson メソッド
  var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
@@ -367,11 +367,11 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 `ChangeAge` メソッドを次のように書けます:
 
 ```4d
-  //ChangeAge
+  // ChangeAge メソッド
  var $1; $para : Object
  $para:=$1  
  $para.Age:=$para.Age+10
- ALERT($para.Name+" is "+String($para.Age)+" years old.")
+ ALERT($para.Name+" は "+String($para.Age)+" 歳です。")
 ```
 
 これは [任意パラメーター](#任意パラメーター) を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:
@@ -382,11 +382,11 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 上述の `ChangeAge` メソッドの例では、Age およびName プロパティはどちらも必須であるため、引数オブジェクトに含まれていなければエラーが発生します。 これを避けるには、次のように記述することができます:
 
 ```4d
-  //ChangeAge
+  // ChangeAge メソッド
  var $1; $para : Object
  $para:=$1  
  $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ ALERT(String($para.Name)+" は "+String($para.Age)+"歳です。")
 ```
 すると、引数が不足してもエラーは生成されず、両方が欠落した場合の結果は " is 10 years old" となってしまうにせよ、いずれの引数も任意となります。
 
@@ -396,14 +396,14 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
 ChangeAge($person)
 
-//ChangeAge
+// ChangeAge メソッド
 var $1;$para : Object
 $para:=$1  
 If ($para.toAdd=Null)
     $para.toAdd:=10
 End if
 $para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
 このように、既存のコードを変える必要はありません。 変更後のコードは変更前と同じように動作しますが、引数によって加算年数に数値を指定することもできるようになりました。
@@ -413,7 +413,7 @@ ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 
 
 
-## Input/Output variables
+## 入力 / 出力変数
 
 これらの引数 ($1, $2...) はサブルーチン内で他のローカル変数と同様に使用できます。 しかしながら、引数として渡した変数の値を変更するコマンドをサブルーチン内で使用する場合 (例: `Find in field`)、$1, $2などを直接渡すことはできません。 まず標準のローカル変数等にコピーする必要があります (例: $myvar:=$1)。
 
@@ -431,16 +431,16 @@ ALERT("Time is over") // 1つの引数
 
 プロジェクトメソッドも同様に、同じ型の引数であれば、右側に不定数の引数を受け取ることができます。 任意パラメーターの問題は、それらが指定されない場合への対処が必要だということです。欠落がエラーに繋がってはいけません。 使用されなかったパラメーターにデフォルト値を代入するやり方が効果的です。
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> 任意パラメーターが必要な場合、[オブジェクトプロパティを名前付き引数として使用する](#オブジェクトプロパティを名前付き引数として使用する) と型の制限がなく、柔軟で便利です。
 
 `Count parameters` コマンドを使用すると、メソッドに渡された引数の数を確認することができるため、数に応じて異なる処理をおこなえます。
 
 次の例はテキストメッセージを表示し、2つの引数が渡されていればディスク上のドキュメントに、3つ以上の場合は 4D Write Pro エリアにそのテキストを書き出します。
 
 ```4d
-// APPEND TEXT Project Method
-// APPEND TEXT ( Text { ; Text { ; Object } } )
-// APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
+// APPEND TEXT プロジェクトメソッド
+// APPEND TEXT ( テキスト { ; テキスト { ; オブジェクト } } )
+// APPEND TEXT ( メッセージ { ; パス { ; 4DWPエリア } } )
 
  Method($message : Text; $path : Text; $wpArea : Object)
 
@@ -466,7 +466,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
 
 ## 引数の渡し方: 値か参照か
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. たとえば:
+引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、**結果の値** をクラス関数またはサブルーチンのローカル変数に格納します。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、クラス関数 / サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 たとえば:
 
 ```4d
     // MY_METHOD メソッド
@@ -508,7 +508,7 @@ ALERT([People]Name)
  ALERT($0)
 ```
 
-このようにサブルーチンの戻り値を使うことを "関数を使う" と言います。 This is described in the [Returning values](#returning-values) paragraph.
+このようにサブルーチンの戻り値を使うことを "関数を使う" と言います。 詳細については [戻り値](#戻り値) の章を参照ください。
 
 
 ### 特殊ケース: オブジェクトやコレクションの場合
@@ -520,7 +520,7 @@ ALERT([People]Name)
 次の例では、`CreatePerson` メソッドはオブジェクトを作成したのち、それを引数として `ChangeAge` に渡します:
 
 ```4d
-  //CreatePerson
+  // CreatePerson メソッド
  var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
@@ -530,7 +530,7 @@ ALERT([People]Name)
 `ChangeAge` メソッドは受け取ったオブジェクトの Age 属性に 10を加えます:
 
 ```4d
-  //ChangeAge
+  // ChangeAge メソッド
  #DECLARE ($person : Object)
  $person.Age:=$person.Age+10
  ALERT(String($person.Age))
