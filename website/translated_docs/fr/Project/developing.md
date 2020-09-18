@@ -18,14 +18,14 @@ Interpreted projects (*applicationName.4DProject*, see [Architecture of a 4D pro
 
 - 4D opening **local project files** - in this case, all aspects of the project are available to the developer. Les fichiers projet peuvent être ouverts, modifiés, compilés, etc. The result of the development can be tested at any moment by using the **Test application** menu command from 4D or using the [integrated web server](WebServer/webServerObject.md).
 - 4D connection from the **same machine as 4D Server** - in this case, development is supported the same as local projects. Cette fonctionnalité vous permet de développer une application client/serveur dans le même contexte que le contexte de déploiement ([détaillé ci-dessous](#developing-projects-with-4d-server)).
-- 4D connection from a **remote machine** - in this case, 4D Server sends a .4dz version of the project ([compressed format](Admin/building.md#build-compiled-structure)) to 4D. As a consequence, all structure files are read-only. This feature is useful for testing purposes.
+- Connexion 4D depuis une **machine distante** - dans ce cas, 4D Server envoie une version .4dz du projet ([format compressé](Admin/building.md#build-compiled-structure)) à 4D. Par conséquent, tous les fichiers de structure sont en lecture seule. Cette fonctionnalité est utile à des fins de test.
 
 
-## Developing projects with 4D Server
+## Développer des projets avec 4D Server
 
-### Updating project files on the server
+### Mise à jour des fichiers de projet sur le serveur
 
-Developing a 4D Server project is based upon the following principles:
+Le développement d'un projet 4D Server repose sur les principes suivants :
 
 - You create, test, and modify the project features in a local version of the files using 4D. To work directly with 4D Server, you can [use 4D on the same machine as 4D Server](#using-4d-on-the-same-machine).
 
@@ -61,7 +61,7 @@ However, you need to pay attention to the following behavior differences compare
 
 ## File saving
 
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
 Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
 
@@ -69,7 +69,7 @@ The 4D development framework includes a file access manager to control concurren
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:![](assets/en/Project/projectReload.png)
-    - **Yes**: discard editor changes and reload the modified version
+    - **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
     - **Non** : enregistrer les modifications et écraser l'autre version
     - **Annuler** : ne pas enregistrer
 
