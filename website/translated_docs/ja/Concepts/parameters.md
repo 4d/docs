@@ -6,9 +6,9 @@ title: 引数
 
 ## 概要
 
-You'll often find that you need to pass data to your methods and functions. これは引数によって容易にできます。
+メソッドや関数にデータを渡す必要がしばしば発生します。 これは引数によって容易にできます。
 
-**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. *引数* と *パラメーター* は厳密には違うものですが、このマニュアルでは同義語として使用されています。 引数は、ビルトインの 4Dコマンドにも渡されます。 以下の例は、“Hello” という文字列を引数としてビルトインの `ALERT` コマンドへ渡します:
+**引数** (または **パラメーター**) とは、メソッドや関数が処理に必要とするデータのことです。 *引数* と *パラメーター* は厳密には違うものですが、このマニュアルでは同義語として使用されています。 引数は、ビルトインの 4Dコマンドにも渡されます。 以下の例は、“Hello” という文字列を引数としてビルトインの `ALERT` コマンドへ渡します:
 
 ```4d
 ALERT("Hello")
@@ -26,25 +26,25 @@ $area:=$o.getArea(50;100)
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The input parameters are separated by semicolons (;).
+入力引数は、セミコロン (;) で区切ります。
 
 メソッドを実行する専用コマンドを利用するときも、同じ原則で引数を渡します。
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! date as parameter to the SetCalendarDate  
-//in the context of a subform
+// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し
+// その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
-Data can also be **returned** from methods and class functions. 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
+メソッドやクラス関数からデータを **返す** こともできます。 以下は、文字列のデータ長を返すビルトインの `Length` コマンドを用いたステートメントです。 このステートメントでは、`Length` 関数が *MyLength* という変数に値を返します。
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-どのようなサブルーチンでも値を返すことができます。 Only one single output parameter can be declared per method or class function.
+どのようなサブルーチンでも値を返すことができます。 各メソッドやクラス関数につき、定義できる戻り値は一つだけです。
 
-Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
+入力および出力値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内で、次のいずれかのローカル変数に格納されます。 Two syntaxes are proposed to declare variable parameters in the called code:
 
 - [named variables](#named-parameters) (recommended in most cases) or
 - [sequentially numbered variables](#sequential-parameters).
