@@ -490,20 +490,20 @@ Function getArea()
 
 #### 例題 2
 
-クラスメンバーメソッド内で `Super` を使う例です。 You created the `Rectangle` class with a function:
+クラスメンバーメソッド内で `Super` を使う例です。 メンバーメソッドを持つ `Rectangle` クラスを作成します:
 
 ```4d
-//Class: Rectangle
+// クラス: Rectangle
 
 Function nbSides()
     var $0 : Text
     $0:="I have 4 sides"
 ```
 
-You also created the `Square` class with a function calling the superclass function:
+`Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:
 
 ```4d
-//Class: Square
+// クラス: Square
 
 Class extends Rectangle
 
@@ -512,65 +512,65 @@ Function description()
     $0:=Super.nbSides()+" which are all equal"
 ```
 
-Then you can write in a project method:
+すると、プロジェクトメソッド内には次のように書けます:
 
 ```4d
 var $square : Object
 var $message : Text
 $square:=cs.Square.new()
-$message:=$square.description() //I have 4 sides which are all equal
+$message:=$square.description() // "I have 4 sides which are all equal"
 ```
 
 ### This
 
 #### This -> Object
 
-| Parameter | Type   |    | Description    |
-| --------- | ------ | -- | -------------- |
-| Result    | object | <- | Current object |
+| 引数  | 型      |    | 説明         |
+| --- | ------ | -- | ---------- |
+| 戻り値 | object | <- | カレントオブジェクト |
 
-The `This` keyword returns a reference to the currently processed object. `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) で使用することができます。
+`This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) で使用することができます。
 
 `This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 
-オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 For example:
+オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 たとえば:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+[クラスコンストラクター](#class-constructor) 関数が `new()` キーワードにより使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-//Class: ob
+// クラス: ob
 
 Class Constructor  
 
-    // Create properties on This as
-    // desired by assigning to them
+    // This のプロパティを
+    // 代入によって作成します
     This.a:=42 
 ```
 
 ```4d
-// in a 4D method  
+// 4Dメソッドにて
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` よりも先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。
 
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
 
 ```4d
-//Class: ob
+// クラス: ob
 
 Function f()
     $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+この場合、プロジェクトメソッドには次のように書けます:
 
 ```4d
 $o:=cs.ob.new()
@@ -578,7 +578,7 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. *f* は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
+この例では、変数 $o に代入されたオブジェクトは *f* プロパティを持たないため、これをクラスより継承します。 *f* は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
 
 
 ## クラスコマンド
