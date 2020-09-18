@@ -5,7 +5,7 @@ title: テキスト
 
 ## 概要
 
-A text object allows you to display static written content (*e.g.*, instructions, titles, labels, etc.) on a form. These static text areas can become dynamic when they include dynamic references. For more information, refer to [Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
+テキストオブジェクトを使って、指示・タイトル・ラベルなどの静的 (スタティック) なテキストをフォーム上に表示することができます。 これらのテキストは、参照を含むことで動的にもなります。 詳細については [スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) を参照ください。
 
 #### JSON 例:
 
@@ -18,13 +18,13 @@ A text object allows you to display static written content (*e.g.*, instructions
                 "top": 160, 
                 "width": 100,
                 "height": 20,
-                "stroke": "#ff0000"     //text color   
+                "stroke": "#ff0000"     // テキストカラー   
                 "fontWeight": "bold"
                 }
 ```
 
 
-## Rotation
+## 回転
 
 4D lets you rotate text areas in your forms using the [Orientation](properties_Text.md#orientation) property.
 
