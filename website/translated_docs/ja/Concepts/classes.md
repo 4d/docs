@@ -128,7 +128,7 @@ $instance:=cs.myClass.new()
 
 #### 例題
 
-You want to create a new key in the `CryptoKey` class:
+`CryptoKey` クラスに新規キーを作成するには、次のように書きます:
 
 ```4d
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
@@ -136,12 +136,12 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 
 
-## Using classes in your code
+## コード内のクラスの使用
 
 
 ### Class オブジェクト
 
-When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
+プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
 
 - `name` 文字列
 - `superclass` オブジェクト (任意。無ければ null)
@@ -163,21 +163,21 @@ Class オブジェクトは共有オブジェクトです。したがって、�
 | ----------- | ------ | -- | ------------------------------------- |
 | classObject | オブジェクト | <- | New object of the \<ClassName> class |
 
-The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
+`new()` メソッドは、呼び出し対象である `<ClassName>` クラスの新規インスタンスであるオブジェクトを作成して返します。 このメソッドは、`cs` [クラスストア](#クラスストア) の全クラスで自動的に利用可能です。
 
-If it is called on a non-existing class, an error is returned.
+存在しないクラスを対象に呼び出された場合、エラーが返されます。
 
 #### 例題
 
-To create a new instance of the Person class:
+Person クラスの新規インスタンスを作成するには、次のように書きます:
 
 ```4d
-var $person : cs.Person //for accurate autocompletion  
-$person:=cs.Person.new() //create the new instance  
-//$Person contains functions of the class
+var $person : cs.Person // 正確な自動補完のため  
+$person:=cs.Person.new() // 新規インスタンスの作成  
+//$Person はクラス関数を格納しています
 ```
 
-Note that you can instantiate empty objects. たとえば、次の `Empty.4dm` クラスファイルを作成します:
+空のオブジェクトをインスタンス化することも可能です。 たとえば、次の `Empty.4dm` クラスファイルを作成します:
 
 ```4d  
 // Empty.4dm クラスファイル
