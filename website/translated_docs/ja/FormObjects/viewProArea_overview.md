@@ -3,16 +3,16 @@ id: viewProAreaOverview
 title: 4D View Pro エリア
 ---
 
-4D View Pro allows you to insert and display a spreadsheet area in your 4D forms. A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures.
+4D View Pro を使用すると、4Dフォーム内にスプレッドシートエリアを挿入・表示できるようになります。 スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。
 
 ![](assets/en/FormObjects/viewPro2.png)
 
-Once you use 4D View Pro areas in your forms, you can import and export spreadsheets documents.
+フォーム内で 4D View Pro エリアを使用すると、スプレッドシートドキュメントを読み込んだり書き出したりすることができます。
 
 
-## Using 4D View Pro areas
+## 4D View Pro エリアの使用
 
-4D View Pro areas are documented in the [4D View Pro Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-View-Pro-Reference.100-4351323.en.html) manual.
+4D View Pro についての詳細は [4D View Pro リファレンス](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.ja.html) マニュアルを参照ください。
 
 
 ## プロパティ一覧
