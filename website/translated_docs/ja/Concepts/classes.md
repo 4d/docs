@@ -102,11 +102,11 @@ $o:=cs.Person.new("John";"Doe")
 
 #### cs -> classStore
 
-| 引数         | タイプ    |    | 説明                                            |
-| ---------- | ------ | -- | --------------------------------------------- |
-| classStore | オブジェクト | <- | User class store for the project or component |
+| 引数         | タイプ    |    | 説明                          |
+| ---------- | ------ | -- | --------------------------- |
+| classStore | オブジェクト | <- | プロジェクトまたはコンポーネントのユーザークラスストア |
 
-The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+`cs` コマンドは、カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します。 返されるのは、開かれているプロジェクトまたはコンポーネントにて [定義](#クラス定義) されているすべてのユーザークラスです。 By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
 #### 例題
 
