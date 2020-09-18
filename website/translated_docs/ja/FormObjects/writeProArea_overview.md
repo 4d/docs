@@ -3,15 +3,15 @@ id: writeProAreaOverview
 title: 4D Write Pro エリア
 ---
 
-4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D database. Using 4D Write Pro, you can write pre-formatted emails and/or letters containing images, a scanned signature, formatted text and placeholders for dynamic variables. You can also create invoices or reports dynamically, including formatted text and images.
+4D Write Pro は、4Dユーザーに対して、4Dデータベースに完全に統合した高度なワードプロセスツールを提供します。 4D Write Proを使用すれば、プリフォーマットされた Eメールや文章に画像、スキャン済みの署名、フォーマットされたテキストやダイナミック変数用のプレースホルダーなどを含めることができます。 また、請求書やレポートを動的に作成し、フォーマット済みのテキストや画像を含めることができます。
 
 
 ![](assets/en/FormObjects/writePro2.png)
 
 
-## Using 4D Write Pro areas
+## 4D Write Pro エリアの使用
 
-4D Write Pro areas are documented in the [4D Write Pro Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Write-Pro.100-4433851.fe.html) manual.
+4D Write Pro についての詳細は [4D Write Pro リファレンス](https://doc.4d.com/4Dv18/4D/18/4D-Write-Pro-Reference.100-4522983.ja.html) マニュアルを参照ください。
 
 ## プロパティ一覧
 
