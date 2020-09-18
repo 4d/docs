@@ -9,7 +9,7 @@ title: Sauvegarde
 Une sauvegarde peut être déclenchée de trois manières :
 
 - Manuellement, via la commande **Sauvegarde...** du menu **Fichier** de 4D ou le bouton **Sauvegarde** du [Centre de sécurité et de maintenance (CSM)](MSC/backup.md).
-- Automatically, using the scheduler that can be set in the Settings,
+- Automatiquement, via le programmateur paramétrable dans les Propriétés,
 - Par programmation, à l’aide de la commande `BACKUP`.
 
 > 4D Server : Il est possible de déclencher “manuellement” une sauvegarde depuis un poste distant, via une méthode appelant la commande `BACKUP`. Dans tous les cas, la commande sera exécutée sur le serveur.
@@ -21,21 +21,21 @@ Une sauvegarde peut être déclenchée de trois manières :
 
 - Vous pouvez également sélectionner [Centre de sécurité et de maintenance](MSC/overview.md) de 4D et afficher la [Page Sauvegarde](MSC/backup.md).
 
-The **Database properties...** button causes the Backup/Configuration page of the Structure Settings to be displayed.
+Le bouton **Propriétés de la base...** provoque l’affichage de la boîte de dialogue des Propriétés de structure.
 
  2. Cliquez sur le bouton **Sauvegarde** pour déclencher la sauvegarde avec les paramètres courants.
 
 
 ### Sauvegarde automatique périodique
 
-Les sauvegardes périodiques sont déclenchées automatiquement. They are configured in the **Backup/Scheduler** page of the **Settings**.
+Les sauvegardes périodiques sont déclenchées automatiquement. Elles sont configurées dans la Page **Sauvegarde/Périodicité** des **Propriétés**.
 
 Les sauvegardes s'effectuent automatiquement au moment défini, sans intervention de l’utilisateur. Pour plus d’informations sur le fonctionnement de cette boîte de dialogue, reportez-vous à la section [Définir des sauvegardes périodiques](settings.md#scheduler).
 
 
 ### Commande BACKUP
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. Vous pouvez utiliser la Méthode base `On Backup Startup` et `On Backup Shutdown` afin de contrôler le déroulement de la sauvegarde (cf. le manuel *Langage de 4D*).
+Lorsque la commande `BACKUP` est exécutée depuis une méthode, la sauvegarde est alors déclenchée avec les paramètres courants définis dans les propriétés. Vous pouvez utiliser la Méthode base `On Backup Startup` et `On Backup Shutdown` afin de contrôler le déroulement de la sauvegarde (cf. le manuel *Langage de 4D*).
 
 
 ## Déroulement de la sauvegarde
@@ -50,7 +50,7 @@ Le bouton **Arrêter** permet à l’utilisateur d’interrompre la sauvegarde �
 
 Le compte-rendu de la dernière sauvegarde (succès ou échec) est stocké dans la zone "Informations sur la dernière sauvegarde" dans la [Page Sauvegarde du CSM](MSC/backup.md) ou dans la **Page de maintenance** de 4D Server. Il est également enregistré dans le **Backup journal.txt**.
 
-### Accessing the application during backup
+### Accès à l'application durant la sauvegarde
 
 During a backup, access to the application is restricted by 4D according to the context. 4D verrouille les process liés aux types de fichiers inclus dans la sauvegarde : si seul le fichier de structure est sauvegardé, l’accès à la structure est impossible mais l’accès aux données est autorisé.
 
