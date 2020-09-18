@@ -23,24 +23,24 @@ Interpreted projects (*applicationName.4DProject*, see [Architecture of a 4D pro
 
 ## Développer des projets avec 4D Server
 
-### Mise à jour des fichiers de projet sur le serveur
+### Mettre à jour des fichiers de projet sur le serveur
 
 Le développement d'un projet 4D Server repose sur les principes suivants :
 
 - You create, test, and modify the project features in a local version of the files using 4D. To work directly with 4D Server, you can [use 4D on the same machine as 4D Server](#using-4d-on-the-same-machine).
 
-> It is recommended to use a standard source control tool (e.g. Git) in order to work with branches, to save projects at different steps, and/or to revert changes if necessary.
+> Il est recommandé d'utiliser un outil de gestion de version standard (par exemple Git) afin de travailler avec des branches, d'enregistrer des projets à différentes étapes et/ou d'annuler les modifications si nécessaire.
 
-- 4D Server can run the *.4DProject* project file (not compressed) in interpreted mode, so that remote 4D can connect and test the features. For this purpose, 4D Server automatically creates and sends the remote machines a [.4dz version](Admin/building.md#build-compiled-structure) of the project.
+- 4D Server peut exécuter le fichier projet *.4DProject* (non compressé) en mode interprété, afin que 4D distant puisse se connecter et tester les fonctionnalités. Pour cela, 4D Server crée et envoie automatiquement aux machines distantes une [version .4dz](Admin/building.md#build-compiled-structure) du projet.
 
-- An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. The project is reloaded:
+- Une version .4dz mise à jour du projet est automatiquement produite lorsque cela est nécessaire, c'est-à-dire lorsque le projet a été modifié et rechargé par 4D Server. Le projet est rechargé :
     - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
     - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 
 
-### Updating project files on remote machines
+### Mettre à jour des fichiers de projet sur les machines distantes
 
-When an updated .4dz version of the project has been produced on 4D Server, connected remote 4D machines must log out and reconnect to 4D Server in order to benefit from the updated version.
+Lorsqu'une version .4dz mise à jour du projet a été produite sur 4D Server, les machines 4D distantes connectées doivent se déconnecter et se reconnecter à 4D Server afin de bénéficier de la version mise à jour.
 
 
 
@@ -48,7 +48,7 @@ When an updated .4dz version of the project has been produced on 4D Server, conn
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 
-However, you need to pay attention to the following behavior differences compared to [standard project architecture](architecture.md):
+Veillez cependant aux différences de comportement suivantes, comparées à [l'architecture projet standard](architecture.md) :
 
 - the userPreferences.{username} folder used by 4D is not the same folder used by 4D Server in the project folder. Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
 - the folder used by 4D for derived data is not the folder named "DerivedData" in the project folder. Instead it is a dedicated folder named "DerivedDataRemote" located in the project system folder.
