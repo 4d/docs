@@ -102,27 +102,27 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 ```
 > パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
 
-データベースメソッドを含むすべての 4Dメソッドにおいて `#DECLARE` キーワードの使用がサポートされています。 For example, in the `On Web Authentication` database method, you can declare named parameters:
+データベースメソッドを含むすべての 4Dメソッドにおいて `#DECLARE` キーワードの使用がサポートされています。 たとえば、`On Web Authentication` データベースメソッドにおいて、次のように名前付き引数を宣言できます:
 
 ```4d    
-    // On Web Authentication database method
+    // On Web Authentication データベースメソッド
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
   -> $RequestAccepted : Boolean
 $entitySelection:=ds.User.query("login=:1"; $user)
-// Check hash password...
+// ハッシュパスワードを確認...
 ```
 
-### Returned value
+### 戻り値
 
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. たとえば:
+関数の戻り値は、入力パラメーターリストに矢印 (->) を追加し、それに続けて宣言します。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). たとえば:
+矢印と出力変数名を省略して、コロン (:) 記号の後に戻り値のデータ型だけを指定した場合は、自動的に `$0` が使用されます。([受け渡し順シンタックス](#戻り値-1) 参照)。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -130,9 +130,9 @@ Function add($x : Variant; $y : Integer): Integer
 ```
 
 
-### Supported data types
+### サポートされているデータ型
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  たとえば:
+名前付き引数の場合、[`var` キーワードでサポートされている](variables.md#var-キーワードによる宣言) データ型 (クラスオブジェクト含む) を使用できます。  たとえば:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -144,32 +144,32 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## 位置引数
 
-As an alternative to [named parameters](#named-parameters) syntax, you can declare parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. ローカル変数の番号は、引数の順序を表わします。
+[名前付き引数](#名前付き引数) シンタックスを使用するほかにも、引数は受け渡し順に番号が付けられた変数を使って宣言することができます: **$1**, **$2**, **$3**, ...。 ローカル変数の番号は、引数の順序を表わします。
 
-> Although this syntax is supported by class functions, it is recommended to use [named parameters](#named-parameters) syntax in this case.
+> このシンタックスはクラス関数の場合もサポートされていますが、[名前付き引数](#名前付き引数) を使ったシンタックスの方が推奨されます。
 
-For example, when you call a `DO_SOMETHING` project method with three parameters:
+たとえば、プロジェクトメソッド `DO SOMETHING` が3つの引数を受け取る場合、このメソッドを呼び出すには以下のように書きます:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-In the method code, the value of each parameter is automatically copied into $1, $2, $3 variables:
+呼び出されるメソッドにおいて、それぞれの引数の値は自動的に、順に番号が付けられたローカル変数 ($1, $2, $3...) に格納されます:
 
 ```4d
-  //Code of the method DO_SOMETHING
-  //Assuming all parameters are of the text type
+  // DO_SOMETHING メソッド
+  // すべての引数はテキスト型です
  C_TEXT($1;$2;$3)
- ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the $WithThis parameter
-  //$2 contains the $AndThat parameter
-  //$3 contains the $ThisWay parameter
+ ALERT($1+" と "+$2+" と "+$3+" を受け取りました。")
+  //$1 には $WithThis の値が代入されます
+  //$2 には $AndThat の値が代入されます
+  //$3 には $ThisWay の値が代入されます
 ```
 
 
-### Returned value
+### 戻り値
 
-The value to be returned is automatically put into the local variable `$0`.
+戻り値は自動的に、ローカル変数 `$0` に格納します。
 
 
 たとえば、`Uppercase4` という以下のメソッドは、始めの 4文字を大文字に変換した文字列を返します:
@@ -198,9 +198,9 @@ ALERT($0)
 この例において、`$0` は大文字に変換した引数 `$1` の値を割り当てられ、その後 `ALERT` コマンドに引数として渡されました。 このように、サブルーチン内の他のローカル変数と同じように `$0` を使うことができます。 サブルーチン終了時に、その時点での `$0` の値を呼び出し元のメソッドに戻すのは 4Dがおこないます。
 
 
-### Supported data types
+### サポートされているデータ型
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
+位置引数には、あらゆる [式](Concepts/quick-tour.md#式のタイプ) の形が使用できますが、例外があります:
 
 - テーブル
 - arrays
@@ -211,7 +211,7 @@ You can use any [expression](Concepts/quick-tour.md#expression-types) as sequent
 
 プロジェクトメソッドが受け取る引数は直接的に $1, $2, ... などと指定する以外にも、間接的に ${ 数値変数 } という形で指定することができます。 これを **引数の間接参照** といいます。 同じ型の不定数の引数を受け取るメソッドの場合、`Count parameters` コマンドと組み合わせることで、これらの引数を `For...End for` ループと引数関節参照シンタックスで操作することができます。
 
-> Parameter indirection can only be used with the [sequential](#sequential-parameters) syntax.
+> 引数の間接参照は [受け渡し順](#位置引数) シンタックスでのみ使用できます。
 
 次の例では `SEND PACKETS` プロジェクトメソッドは第1パラメーターに時間を受け取り、第2パラメーター以降は1以上のテキストを受け取ります:
 
@@ -267,14 +267,14 @@ You can use any [expression](Concepts/quick-tour.md#expression-types) as sequent
 
 このコマンドは、4番目以降に間接参照されるすべての引数のデータ型が倍長整数であることを意味します。 $1、$2、$3には、いかなるデータ型も使用できますが、 $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されれば倍長整数と見なされます。
 
-> The number in the declaration has to be a constant and not a variable.
+> 宣言に使用する数値は変数ではなく、定数でなくてはなりません。
 
 
-### Declaring parameters for compiled mode
+### コンパイルモード用のパラメーター宣言
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
+[インタープリターモード](Concepts/interpreted.md) では必須ではないものの、問題を避けるにはメソッドや関数の各パラメーターを宣言しておくべきでしょう。
 
-When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. たとえば:
+[名前付き引数シンタックス](#名前付き引数) を利用している場合には、それらの引数は `#DECLARE` キーワードまたは `Function` プロトタイプによって自動的に宣言されます。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
