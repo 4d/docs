@@ -66,7 +66,7 @@ Function add($x : Integer)
 呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。
 
 - クラス関数の場合、引数は `Function` キーワードとともに宣言されます。
-- For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
+- メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の `#DECLARE` キーワードを使って宣言されます。
 
 例:
 
@@ -74,35 +74,35 @@ Function add($x : Integer)
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
 ```4d  
- //myProjectMethod
+ // myProjectMethod
 #DECLARE ($i : Integer) -> $myResult : Object
 ```
 
 
 The following rules apply:
 
-- The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+- 宣言文はメソッドや関数のコードの先頭に位置していなければなりません。宣言文より前に置けるのはコメントと改行のみであり、それ以外の場合にはエラーが表示されます。
+- 引数名は必ず `$` 文字で始まり、[プロパティ名の命名規則](Concepts/dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。
 - 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
-- Multiline syntaxes are supported (using "\\" character).
+- 複数行シンタックスがサポートされています ("\\" 文字を使用)。
 
 
-For example, when you call a `getArea()` function with two parameters:
+たとえば、`getArea()` 関数に 2つの引数を渡して呼び出す場合:
 
 ```
 $area:=$o.getArea(50;100)
 ```
 
-In the class function code, the value of each parameter is copied into the corresponding declared parameter:
+クラス関数において、引数の値はそれぞれ対応するパラメーターに代入されます:
 
 ```4d    
-// Class: Polygon
+// クラス: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
 > パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
 
-All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
+データベースメソッドを含むすべての 4Dメソッドにおいて `#DECLARE` キーワードの使用がサポートされています。 For example, in the `On Web Authentication` database method, you can declare named parameters:
 
 ```4d    
     // On Web Authentication database method
