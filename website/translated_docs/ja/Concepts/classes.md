@@ -241,7 +241,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 > **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
 
-Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). たとえば:
+関数名のすぐ後に、名前とデータ型を指定して [引数](#引数) を宣言します (戻り値の宣言も可)。 たとえば:
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
