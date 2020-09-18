@@ -44,13 +44,13 @@ MyLength:=Length("How did I get here?")
 
 どのようなサブルーチンでも値を返すことができます。 各メソッドやクラス関数につき、定義できる戻り値は一つだけです。
 
-入力および出力値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内で、次のいずれかのローカル変数に格納されます。 Two syntaxes are proposed to declare variable parameters in the called code:
+入力および出力値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内のローカル変数に格納されます。 呼び出されるメソッドにおいて、これらのローカル変数を宣言するには次の 2つのシンタックスが利用できます:
 
-- [named variables](#named-parameters) (recommended in most cases) or
-- [sequentially numbered variables](#sequential-parameters).
+- [名前付き変数](#名前付き引数) (ほとんどの場合に推奨)
+- [受け渡し順に番号が付けられた変数](#位置引数) (位置引数)
 
 
-> Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. たとえば:
+> 引数の宣言にあたって、[名前付き引数](#名前付き引数) と [位置引数](#位置引数) のシンタックスは制限なく併用することができます。 たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -63,9 +63,9 @@ Function add($x : Integer)
 
 ## 名前付き引数
 
-Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言することができます。
 
-- For class functions, parameters are declared along with the `Function` keyword.
+- クラス関数の場合、引数は `Function` キーワードとともに宣言されます。
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
 例:
