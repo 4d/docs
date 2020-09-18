@@ -279,21 +279,21 @@ Function getFullname()->$fullname : Text
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
-> If the type is not stated, the parameter will be defined as `Variant`.
+> パラメーターの型が宣言されていない場合には、`バリアント型` として定義されます。
 
-You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
+関数の戻り値を宣言するには (任意)、入力パラメーターリストに矢印 (->) と戻り値の定義を追加します。 XPath: /ul[5]/li[2]/ClassName/ClassName/FunctionName/p[22] たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example:
+戻り値は、コロン (:) 記号の後に戻り値のデータ型だけを指定して宣言することもできます。その場合は、自動的に $0 が使用されます。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+> メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -305,22 +305,22 @@ Function add($x : Integer)
 
 
 
-#### Example
+#### 例題
 
 ```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
+// クラス: Rectangle
+Class Constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
 
-// Function definition
+// 関数定義
 Function getArea()->$result : Integer
     $result:=(This.height)*(This.width)
 ```
 
 ```4d
-// In a project method
+// プロジェクトメソッドにて
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -330,12 +330,12 @@ $area:=$rect.getArea(50;100) //5000
 
 
 
-### Class constructor
+### Class Constructor
 
-#### Syntax
+#### シンタックス
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
 ```
