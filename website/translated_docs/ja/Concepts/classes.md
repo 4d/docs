@@ -377,36 +377,36 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 The child class inherits all functions of the parent class.
+クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 この子クラスは、親クラスのすべての機能を継承します。
 
-Class extension must respect the following rules:
+クラス継承は次のルールに沿っている必要があります:
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- ユーザークラスはビルトインクラスを継承できません (例外は 4D.Object で、すべてのユーザークラスにデフォルトで継承されます)
+- ユーザークラスは、別のプロジェクトやコンポーネントのユーザークラスを継承できません。
+- ユーザークラスは、自身を継承することはできません。
+- 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
+コードエディターやインタープリターは、これらのルールが破られていても検知することはできません。コンパイラーおよび "シンタックスチェック" のみがエラーを生成します。
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+派生クラスは、[`Super`](#super) コマンドを使って親クラスのコンストラクターを呼び出すことができます。.
 
-#### Example
+#### 例題
 
-This example creates a class called `Square` from a class called `Polygon`.
+`Polygon` クラスを継承した `Square` クラスを作成します。
 
 ```4d
-//Class: Square
-//path: Classes/Square.4dm 
+// クラス: Square
+// パス: Classes/Square.4dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
-    // It calls the parent class's constructor with lengths
-    // provided for the Polygon's width and height
+    // 親クラスのコンストラクターを呼び出します
+    // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
     Super($side;$side)
-    // In derived classes, Super must be called before you
-    // can use 'This'
+	// 派生クラスにおいては、'This' を使用するより先に
+	// Super を呼び出しておく必要があります
     This.name:="Square"
 
     Function getArea()
@@ -419,41 +419,41 @@ Class constructor ($side : Integer)
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Type   |    | Description                                    |
-| --------- | ------ | -- | ---------------------------------------------- |
-| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
-| Result    | object | <- | Object's parent                                |
+| 引数    | 型      |    | 説明               |
+| ----- | ------ | -- | ---------------- |
+| param | mixed  | -> | 親コンストラクターに受け渡す引数 |
+| 戻り値   | object | <- | 親オブジェクト          |
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+`Super` キーワードによってスーパークラス (親クラス) を呼び出すことができます。
 
-`Super` serves two different purposes:
+`Super` は次の2つの目的のために使います:
 
-- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
-    - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
-    - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
+- [コンストラクターコード](#class-constructor) 内において、 `Super` はスーパークラスのコンストラクターを呼び出すコマンドです。 コンストラクター内で使用する際には、`Super` コマンドは単独で使用され、また `This` キーワードよりも先に使用される必要があります。
+    - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
+    - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
 
-    - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+    - `Super` を、オブジェクトのスコープ外で呼び出した場合、または、スーパークラスコンストラクターがすでに呼び出されたオブジェクトを対象に呼び出した場合には、エラー -10746 が生成されます。
 
 ```4d
-// inside myClass constructor
+// myClass コンストラクター
 var $text1; $text2 : Text
-Super($text1) //calls superclass constructor with a text param
-This.param:=$text2 // use second param
+Super($text1) // テキスト型引数をスーパークラスコンストラクターに渡します
+This.param:=$text2 // 2番目の引数を使用します
 ```
 
-- inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+- [クラスメンバー関数](#function) 内において、`Super` はスーパークラスのプロトタイプを指し、スーパークラス階層のメンバーメソッドの呼び出しを可能にします。
 
 ```4d
-Super.doSomething(42) //calls "doSomething" function  
-//declared in superclasses
+Super.doSomething(42) // スーパークラスにて宣言されている
+// "doSomething" メンバーメソッドを呼び出します
 ```
 
-#### Example 1
+#### 例題 1
 
-This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
+クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラス の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
 
 ```4d
-// Class: Rectangle
+// クラス: Rectangle
 Class constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
@@ -463,24 +463,24 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
     ALERT("Hi, I am a "+This.name+".")
 
-// Function definition
+// 関数定義
 Function getArea()
     var $0 : Integer
     $0:=(This.height)*(This.width)
 ```
 
 ```4d
-//Class: Square
+// クラス: Square
 
 Class extends Rectangle
 
 Class constructor ($side : Integer)
 
-    // It calls the parent class's constructor with lengths
-    // provided for the Rectangle's width and height
+    // 親クラスのコンストラクターを呼び出します
+    // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
     Super($side;$side)
-    // In derived classes, Super must be called before you
-    // can use 'This'
+    // 派生クラスにおいては、'This' を使用するより先に
+    // Super を呼び出しておく必要があります
     This.name:="Square"
 
 Function getArea()
@@ -488,9 +488,9 @@ Function getArea()
     $0:=This.height*This.width
 ```
 
-#### Example 2
+#### 例題 2
 
-This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
+クラスメンバーメソッド内で `Super` を使う例です。 You created the `Rectangle` class with a function:
 
 ```4d
 //Class: Rectangle
