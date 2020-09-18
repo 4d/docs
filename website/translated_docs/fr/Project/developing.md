@@ -73,4 +73,4 @@ The 4D development framework includes a file access manager to control concurren
     - **Non** : enregistrer les modifications et écraser l'autre version
     - **Annuler** : ne pas enregistrer
 
-This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
+Cette fonctionnalité est activée pour tous les éditeurs 4D intégrés (Structure, Formulaire, Méthode, Paramètres et Boite à outils).
