@@ -106,11 +106,11 @@ $o:=cs.Person.new("John";"Doe")
 | ---------- | ------ | -- | --------------------------- |
 | classStore | オブジェクト | <- | プロジェクトまたはコンポーネントのユーザークラスストア |
 
-`cs` コマンドは、カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します。 返されるのは、開かれているプロジェクトまたはコンポーネントにて [定義](#クラス定義) されているすべてのユーザークラスです。 By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+`cs` コマンドは、カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
 #### 例題
 
-You want to create a new instance of an object of `myClass`:
+`myClass` オブジェクトの新規インスタンスを作成するには、次のように書きます:
 
 ```4d
 $instance:=cs.myClass.new()
@@ -120,11 +120,11 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| 引数         | タイプ    |    | 説明             |
-| ---------- | ------ | -- | -------------- |
-| classStore | オブジェクト | <- | 4D class store |
+| 引数         | タイプ    |    | 説明       |
+| ---------- | ------ | -- | -------- |
+| classStore | オブジェクト | <- | 4Dクラスストア |
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
+`4D` コマンドは、ビルトイン 4Dクラスのクラスストアを返します。 [CryptoKey](API/CryptoKey.md) などの専用 API へのアクセスを提供します。
 
 #### 例題
 
