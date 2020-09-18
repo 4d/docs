@@ -337,29 +337,29 @@ $area:=$rect.getArea(50;100) //5000
 ```4d
 // クラス: MyClass
 Class Constructor({$parameterName : type; ...})
-// code
+// コード
 ```
 
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
+クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
+クラスコンストラクターが定義されていると、`new()` クラスメンバーメソッドを呼び出したときに、当該コンストラクターが呼び出されます (引数を指定している場合は `new()` 関数に渡します)。
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
+クラスコンストラクターメソッドの場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.constructor*"  (例: "MyClass.constructor")。
 
 
 
-#### Example:
+#### 例題:
 
 ```4d
-// Class: MyClass
-// Class constructor of MyClass
+// クラス: MyClass
+// MyClass のクラスコンストラクター
 Class Constructor ($name : Text)
     This.name:=$name
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// プロジェクトメソッドにて
+// オブジェクトをインスタンス化します
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -370,14 +370,14 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### Class extends \<ClassName>
 
-#### Syntax
+#### シンタックス
 
 ```4d
-// Class: ChildClass
+// クラス: ChildClass
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 The child class inherits all functions of the parent class.
 
 Class extension must respect the following rules:
 
