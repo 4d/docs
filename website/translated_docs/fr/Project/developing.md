@@ -52,14 +52,14 @@ Veillez cependant aux différences de comportement suivantes, comparées à [l'a
 
 - the userPreferences.{username} folder used by 4D is not the same folder used by 4D Server in the project folder. Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
 - the folder used by 4D for derived data is not the folder named "DerivedData" in the project folder. Instead it is a dedicated folder named "DerivedDataRemote" located in the project system folder.
-- the catalog.4DCatalog file is not edited by 4D but by 4D Server. Catalog information is synchronised using client/server requests
-- the directory.json file is not edited by 4D but by 4D Server. Directory information is synchronised using client/server requests
+- the catalog.4DCatalog file is not edited by 4D but by 4D Server. Les informations du catalogue sont synchronisées à l'aide des requêtes client/serveur
+- the directory.json file is not edited by 4D but by 4D Server. Les informations du répertoire sont synchronisées à l'aide des requêtes client/serveur
 - 4D uses its own internal components and plug-ins instead of those in 4D Server.
 
 > It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
 
 
-## File saving
+## Enregistrement des fichiers
 
 Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
