@@ -32,7 +32,7 @@ When you call this parameter in your REST request, the first 100 entities are re
 
 Here is a description of the data returned:
 
-| プロパティ         | 型      | 説明                                                                                                                                                                                              |
+| プロパティ         | タイプ    | 説明                                                                                                                                                                                              |
 | ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | String | Name of the datastore class.                                                                                                                                                                    |
 | __COUNT       | 数値     | Number of entities in the datastore class.                                                                                                                                                      |
@@ -42,7 +42,7 @@ Here is a description of the data returned:
 
 Each entity contains the following properties:
 
-| プロパティ       | 型      | 説明                                                                                                         |
+| プロパティ       | タイプ    | 説明                                                                                                         |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
 | __KEY       | String | Value of the primary key defined for the datastore class.                                                  |
 | __TIMESTAMP | 日付     | Timestamp of the last modification of the entity                                                           |
