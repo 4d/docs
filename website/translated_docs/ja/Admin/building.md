@@ -291,7 +291,7 @@ In some cases, you may want to prevent client applications from being able to ca
 
 To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. すると、未更新クライアントからの接続は更新メカニズムによって拒否されます。 たとえば、クライアントサーバーアプリケーションの新しいバージョン番号がの 6 の場合、バージョン番号が 5 以下のクライアントアプリケーションを許可しないようにできます。
 
-The [current version number](#current_version) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
+[現在のバージョン番号](#現在のバージョン) はアプリケーションビルドダイアログのクライアント/サーバーページで設定できます。 The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
 
 
 #### Update Error

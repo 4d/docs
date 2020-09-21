@@ -13,7 +13,7 @@ Cependant, dans des cas spécifiques, vous pourriez avoir besoin d'activer vos l
 Aucune activation n’est requise pour les usages suivants :
 
 - 4D utilisé en mode distant (connexion à un 4D Server)
-- 4D used in local mode with an interpreted application project with no access to the Design environment.
+- 4D utilisé en mode local avec un projet d'application interprété sans accès au mode Développement.
 
 
 ## Première activation
