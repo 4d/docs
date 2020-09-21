@@ -16,7 +16,7 @@ This event can be generated in different contexts.
 ### 4D View Pro
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| プロパティ         | 型      | 説明                             |
+| プロパティ         | タイプ    | 説明                             |
 | ------------- | ------ | ------------------------------ |
 | code          | 倍長整数   | 31                             |
 | description   | text   | "On Selection Change"          |
