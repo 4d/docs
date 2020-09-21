@@ -13,7 +13,7 @@ For more information about query paths, refer to [queryPlan and queryPath](genIn
 
 In the steps collection, there is an object with the following properties defining the query executed:
 
-| プロパティ         | 型      | 説明                                                                          |
+| プロパティ         | タイプ    | 説明                                                                          |
 | ------------- | ------ | --------------------------------------------------------------------------- |
 | description   | String | Actual query executed or "AND" when there are multiple steps                |
 | time          | 数値     | Number of milliseconds needed to execute the query                          |
