@@ -85,7 +85,7 @@ const siteConfig = {
 
   },
 
-  editUrl: 'https://github.com/4D/docs/edit/develop/docs/',
+  editUrl: 'https://github.com/4D/docs/edit/18/docs/',
 
   /* custom fonts for website */
   /*fonts: {
