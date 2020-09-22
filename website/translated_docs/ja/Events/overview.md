@@ -21,9 +21,9 @@ End if
 
 Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
 
-| プロパティ | 型 | 説明 |
-| ----- | - | -- |
-|       |   |    |
+| プロパティ | タイプ | 説明 |
+| ----- | --- | -- |
+|       |     |    |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
 
 `Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|

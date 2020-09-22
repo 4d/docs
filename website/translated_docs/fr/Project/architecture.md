@@ -52,18 +52,18 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 ### Dossier Sources
 
-| Contenu                 | Description                                                                                                                                                                                                                                                                                                                                                                                                             | Format |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                                                                                                                                                                                                        | XML    |
-| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                                                                                                                                                                                               | JSON   |
-| menus.json              | Définit les menus                                                                                                                                                                                                                                                                                                                                                                                                       | JSON   |
-| settings.4DSettings     | Propriétés de la base *Structure*. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML    |
-| tips.json               | Définit les messages d'aide                                                                                                                                                                                                                                                                                                                                                                                             | JSON   |
-| lists.json              | Listes définies                                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
-| filters.json            | Filtres définis                                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
-| styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                                                                                                                                                                                                   | CSS    |
-| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                   | CSS    |
-| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                               | CSS    |
+| Contenu                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Format |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML    |
+| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | JSON   |
+| menus.json              | Définit les menus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | JSON   |
+| settings.4DSettings     | Propriétés de la base *Structure*. Elles ne sont pas prises en compte si les *[paramètres utilisateur](#settings-folder-1)* ou les *[paramètres utilisateur des données](#settings-folder)* sont définis.<p>**Attention** : dans les applications compilées, les paramètres de structure sont stockés dans le fichier .4dz (lecture seule). Pour le déploiement, il est nécessaire d'utiliser les *paramètres utilisateur* ou les *paramètres utilisateur pour les données* afin de définir des paramètres personnalisés. | XML    |
+| tips.json               | Définit les messages d'aide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | JSON   |
+| lists.json              | Listes définies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | JSON   |
+| filters.json            | Filtres définis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | JSON   |
+| styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | CSS    |
+| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | CSS    |
+| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | CSS    |
 
 
 #### Dossier DatabaseMethods
@@ -87,25 +87,25 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier Forms
 
-| Contenu                                   | Description                                  | Format  |
-| ----------------------------------------- | -------------------------------------------- | ------- |
-| *formName*/form.4DForm                    | Description du formulaire projet             | json    |
-| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte   |
-| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | picture |
-| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte   |
+| Contenu                                   | Description                                  | Format |
+| ----------------------------------------- | -------------------------------------------- | ------ |
+| *formName*/form.4DForm                    | Description du formulaire projet             | json   |
+| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte  |
+| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | image  |
+| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte  |
 
 #### Dossier TableForms
 
-| Contenu                                              | Description                                                                  | Format  |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------- | ------- |
-| *n*/Input/*formName*/form.4DForm                     | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json    |
-| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | picture |
-| *n*/Input/*formName*/method.4dm                      | Méthode du formulaire d'entrée de la table                                   | Texte   |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte   |
-| *n*/Output/*formName*/form.4DForm                    | Description du formulaire de sortie de la table (n étant le numéro de table) | json    |
-| *n*/Output/*formName*/Images/*pictureName*           | Images statiques du formulaire de sortie de la table                         | picture |
-| *n*/Output/*formName*/method.4dm                     | Méthode du formulaire de sortie de la table                                  | Texte   |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte   |
+| Contenu                                              | Description                                                                  | Format |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------- | ------ |
+| *n*/Input/*formName*/form.4DForm                     | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json   |
+| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | image  |
+| *n*/Input/*formName*/method.4dm                      | Méthode du formulaire d'entrée de la table                                   | Texte  |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte  |
+| *n*/Output/*formName*/form.4DForm                    | Description du formulaire de sortie de la table (n étant le numéro de table) | json   |
+| *n*/Output/*formName*/Images/*pictureName*           | Images statiques du formulaire de sortie de la table                         | image  |
+| *n*/Output/*formName*/method.4dm                     | Méthode du formulaire de sortie de la table                                  | Texte  |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte  |
 
 #### Dossier Triggers
 
@@ -160,13 +160,13 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 
 This folder contains **user settings files for data** used for application administration.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **[structure settings](#sources-folder)** files.
+> Ces paramètres ont la priorité sur les **[fichiers de propriétés utilisateur](#settings-folder-1)** et les fichiers de **[propriétés structure](#sources-folder)**.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                                                                                                      | JSON   |
+| directory.json      | Description des groupes et utilisateurs 4D et de leurs droits d'accès lorsque l'application est lancée avec ce fichier de données.                                                                                                                                                             | JSON   |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
-| settings.4DSettings | Custom database settings for this data file.                                                                                                                                                                                                                                                   | XML    |
+| settings.4DSettings | Propriétés de la base personnalisées pour ce fichier de données.                                                                                                                                                                                                                               | XML    |
 
 
 ### Dossier Logs
@@ -183,9 +183,9 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 
 ## Dossier Settings
 
-This folder contains **user settings files** used for application administration.
+Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de l'application.
 
-> These settings take priority over **[structure settings](#sources-folder)** files. However, if a **[user settings file for data](#settings-folder)** exists, it takes priority over user settings file.
+> Ces paramètres ont la priorité sur les fichiers de **[propriétés structure](#sources-folder)**. Toutefois, si un **[fichier de paramètres utilisateur](#settings-folder)** existe, il est prioritaire par rapport au fichier des propriétés utilisateur.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -213,7 +213,7 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 
 This folder contains the components to be available in the application project only. Il doit être stocké au même niveau que le dossier Project.
 
-> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Admin/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - à des fins de déploiement : [créer le composant](Admin/building.md#build-component) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de l'application hôte.
 
 
 ## Dossier Plugins

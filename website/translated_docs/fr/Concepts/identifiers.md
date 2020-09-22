@@ -36,17 +36,17 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 ## Tableaux
 
-Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Arrays are variables, and like variables, the name of an array can be up to 31 characters, not including the scope symbols, and there are three different types of arrays:
+Vous désignez un tableau en écrivant simplement son nom, qui est celui que vous passez à une commande de déclaration de tableau (par exemple ARRAY LONGINT) lorsque vous créez le tableau. Les tableaux sont des variables, et tout comme les variables, le nom d'un tableau peut comporter jusqu'à 31 caractères, sans compter les symboles de portée, et il existe trois types de tableaux différents :
 
-- The name of a **local** array is preceded by the dollar sign ($).
-- The name of a **process** array cannot start with the <> symbols nor the dollar sign $).
-- The name of an **interprocess** array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Le nom d'un tableau **local** est précédé du symbole dollar ($).
+- Le nom d'un tableau **process** ne peut pas commencer par les symboles <> ni par le symbole dollar $).
+- Le nom d’un tableau **interprocess** est précédé des symboles (<>), -- les caractères “inférieur à” suivi de “supérieur à”.
 
 Voici quelques exemples :
 ```4d
-ARRAY TEXT($atSubjects;Records in table([Topics])) //local array
-SORT ARRAY(asKeywords;>) //process array
-ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //interprocess array
+ARRAY TEXT($atSubjects;Records in table([Topics])) //tableau local
+SORT ARRAY(asKeywords;>) //tableau process
+ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //tableau interprocess
 ```
 
 
@@ -55,7 +55,7 @@ Vous désignez un élément d’un tableau local, process ou interprocess à l�
 
 Voici quelques exemples :
 ```4d   
-    //Addressing an element of a local array
+    //Traiter un élément d'un tableau local
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
@@ -66,7 +66,7 @@ Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une 
 
 Voici quelques exemples :
 ```4d
-    //Addressing an element of a two-dimensional process array
+    //Traiter un élément d'un tableau process bidimensionnel
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
@@ -107,21 +107,21 @@ FORM SET OUTPUT([Personnes];"Sortie")
 
 ## Sélections temporaires
 
-A named selection name can contain up to 255 characters, not including scope character(s).
+Le nom d'une sélection temporaire peut contenir jusqu’à 255 caractères, symbole <> non compris).
 
-- You denote a **process** named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $).
-- You denote an **interprocess** named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
+- Déclarez une sélection temporaire **process** en passant une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $).
+- Désignez une sélection temporaire **interprocess** si son nom est précédé des caractères (<>) -- un symbole “inférieur à” suivi de “supérieur à”.
 
 Voici quelques exemples :
 ```4d
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
+USE NAMED SELECTION([Customers];"Closed")//Sélection temporaire process
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Sélection temporaire interprocess
 ```
 
 
 ## Propriétés (attributs) d'objets
 
-You designate an object attribute (also called object property) by placing a point (".") between the name of the object and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
+Désignez un attribut d'objet (également appelé propriété d'objet) en plaçant un point (".") entre le nom de l'objet et le nom de l'attribut. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
 Voici quelques exemples :
 ```4d
@@ -143,12 +143,12 @@ $erreur:=SMTP_From($smtp_id;"henry@gmail.com")
 
 ## Process
 
-A process name can contain up to 255 characters, not including scope character.
+Le nom d'un process peut contenir jusqu’à 255 caractères, symbole <> non compris.
 
 In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
 
-- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $).
-- You denote a **local** process if the name of the process is preceded by a dollar ($) sign.
+- Déclarez un process **global** en passant une expression de type chaîne qui représente son nom (qui ne doit pas commencer par le symbole $).
+- Déclarez un process **local** lorsque son nom est précédé du symbole dollar ($).
 
 Voici quelques exemples :
 ```4d
@@ -172,7 +172,7 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
 ```
 
-**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez un projet au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
 
 **Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Voici quelques exemples :
 ```4d
@@ -210,11 +210,11 @@ Voici quelques exemples :
 
 ## Ensembles
 
-A set name can contain up to 255 characters, not including scope character()s).
+Un nom d'ensemble peut contenir jusqu’à 255 caractères, symbole(s) <> non compri(s).
 
-- You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $).
-- You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
-- On 4D Server, the name of a **client** set is preceded by the dollar sign ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.
+- Déclarez un ensemble **process** en passant une expression de type chaîne qui représente son nom (et qui ne doit pas débuter par les symboles <> ou $).
+- Désignez un ensemble temporaire **interprocess** si son nom est précédé des caractères (<>) -- un symbole “inférieur à” suivi de “supérieur à”.
+- Sur 4D Server, le nom d'un ensemble **client** est précédé du symbole dollar ($). Ce nom peut comporter jusqu'à 255 caractères, symbole dollar non compris.
 
 > Sets are maintained on the Server machine. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. To do so, you use client sets.
 
@@ -241,9 +241,9 @@ ADD RECORD([Lettres])
 
 ## Variables
 
-The name of a variable can be up to 31 characters, not including the scope symbols.
+Le nom d’une variable peut contenir jusqu’à 31 caractères, symbole de portée non compris.
 
-- You designate a **local** variable by placing a dollar sign ($) before the variable name.
+- Désignez une variable **locale** en faisant précéder son nom du symbole dollar ($).
 - You designate a **process** variable by using its name (which cannot start with the <> symbols nor the dollar sign $)
 - You designate an **interprocess** variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
@@ -287,7 +287,7 @@ Le tableau suivant résume les principes de nommage des identifiants dans les m�
 
 ## Résoudre les conflits de noms
 
-Be sure to use unique names for the different elements in your project. If a particular element has the same name as another element of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
+Veillez à utiliser des noms uniques pour les différents éléments de votre projet. Si un élément particulier porte le même nom qu’un autre élément d’un autre type (par exemple, si un champ est nommé Personnes et qu’une variable est également nommée Personnes), 4D utilise un système de priorité.
 
 4D identifie les noms utilisés dans les méthodes en fonction de l’ordre de priorité suivant :
 

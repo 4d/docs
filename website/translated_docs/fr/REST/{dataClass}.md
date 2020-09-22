@@ -7,7 +7,7 @@ title:
 
 
 
-Dataclass names can be used directly in the REST requests to work with entities and entity selections, or class functions of the dataclass.
+Les noms de dataclass peuvent être utilisés directement dans les requêtes REST pour opérer avec des entités, des sélections d'entités (entity selections) ou des fonctions de classe (class functions) de la dataclass.
 
 ## Syntaxe
 
@@ -16,11 +16,11 @@ Dataclass names can be used directly in the REST requests to work with entities 
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
 | [**{dataClass}({clé})**](#dataclasskey)                                            | `/Employee(22)`                          | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
 | [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
-| [**{dataClass}/{dataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executes a dataclass class function                                                    |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executes an entity selection class function                                            |
-| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Executes an entity class function                                                      |
+| [**{dataClass}/{dataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Exécute une fonction de classe d'une dataclass                                         |
+| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Exécute une fonction de classe d'une sélection d'entité                                |
+| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Exécute une fonction de classe d'une entité                                            |
 
-> Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
+> Les appels de fonction sont détailles dans la section [Appeler des fonctions de classe ORDA](ClassFunctions.md).
 
 
 

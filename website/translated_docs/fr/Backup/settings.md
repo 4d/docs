@@ -3,7 +3,7 @@ id: settings
 title: Paramètres de sauvegarde
 ---
 
-Backup settings are defined through three pages in the Settings dialog box. Vous pouvez définir :
+Les paramètres de sauvegarde sont définis sur trois pages dans la boîte de dialogue des Propriétés. Vous pouvez définir :
 
 - la périodicité des sauvegardes automatiques
 - les fichiers à inclure dans chaque sauvegarde
@@ -13,15 +13,15 @@ Backup settings are defined through three pages in the Settings dialog box. Vous
 
 ## Sauvegardes périodiques
 
-You can automate the backup of applications opened with 4D or 4D Server (even when no client machines are connected). Le principe consiste à définir une fréquence de sauvegarde (en heures, jours, semaines ou mois) ; à chaque échéance, 4D déclenche automatiquement une sauvegarde en tenant compte des paramètres de sauvegarde courants.
+Vous pouvez automatiser les sauvegardes de vos applications ouvertes avec 4D ou 4D Server (même lorsqu’aucun poste distant n’est connecté). Le principe consiste à définir une fréquence de sauvegarde (en heures, jours, semaines ou mois) ; à chaque échéance, 4D déclenche automatiquement une sauvegarde en tenant compte des paramètres de sauvegarde courants.
 
-If this application was not launched at the theoretical moment of the backup, the next time 4D is launched, it considers the backup as having failed and proceeds as set in the Settings (refer to [Handling backup issues](backup.md#handling-backup-issues)).
+Si l’application n’était pas lancée au moment théorique de la sauvegarde, 4D considère au lancement suivant que la sauvegarde a échoué et applique les paramétrages adéquats, définis dans les Propriétés (cf. paragraphe [En cas de problème au cours de la sauvegarde](backup.md#handling-backup-issues)).
 
-The scheduler backup settings are defined on the **Backup/Scheduler** page of the Structure Settings:
+Les paramètres des sauvegardes périodiques sont définis dans la Page **Sauvegarde/Périodicité** des Propriétés :
 
 ![](assets/en/Backup/backup02.png)
 
-The options found on this tab let you set and configure scheduled automatic backups of the application. Vous pouvez choisir un paramétrage standard rapide ou personnaliser entièrement la périodicité. Diverses options apparaissent en fonction de la valeur définie dans le menu **Sauvegarde automatique** :
+Les options regroupées dans cet onglet permettent de définir et de paramétrer des sauvegardes périodiques automatiques de l'application. Vous pouvez choisir un paramétrage standard rapide ou personnaliser entièrement la périodicité. Diverses options apparaissent en fonction de la valeur définie dans le menu **Sauvegarde automatique** :
 
 - **Jamais** : la fonction de sauvegarde périodique est inactivée.
 - **Toutes les heures** : programme une sauvegarde automatique par heure, à partir de la prochaine heure.
@@ -36,7 +36,7 @@ The options found on this tab let you set and configure scheduled automatic back
 
 ## Configuration
 
-The Backup/Configuration page of the Structure Settings lets you set the backup files and their location, as well as that of the log file. These parameters are specific to each application opened by 4D or 4D Server.
+La Page Sauvegarde/Configuration des Propriétés permet de désigner les fichiers à sauvegarder, l’emplacement des fichiers de sauvegarde et le fichier d’historique. These parameters are specific to each application opened by 4D or 4D Server.
 
 ![](assets/en/Backup/backup03.png)
 
@@ -45,8 +45,8 @@ The Backup/Configuration page of the Structure Settings lets you set the backup 
 ### Contenu
 Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la prochaine sauvegarde.
 
-- **Data**: Application data file. Lorsque cette option est cochée, les éléments suivants sont automatiquement sauvegardés en même temps que les données :
-    - the current log file of the application (if it exists),
+- **Data** : fichier de données de l'application. Lorsque cette option est cochée, les éléments suivants sont automatiquement sauvegardés en même temps que les données :
+    - le fichier journal courant de l'application (le cas échéant),
     - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire *les paramètres utilisateur pour les données*.
 - **Structure**: Application project folders and files. In cases where projects are compiled, this option allows you to backup the .4dz file. Lorsque cette option est cochée, le dossier complet `Settings` situé [au même niveau que le dossier Project](Project/architecture.md#settings-folder-1), c'est-à-dire les *paramètres utilisateur*, est automatiquement sauvegardé.
 - **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*

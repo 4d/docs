@@ -127,14 +127,14 @@ $myClass.query("name = smith")
 
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Das gilt für:
 
-*   number
+*   Zahl
 *   Text
 *   Null
-*   boolean
-*   date
-*   object
-*   collection
-*   picture(\*)
+*   Boolean
+*   Datum
+*   Objekt
+*   Collection
+*   Bild (\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
@@ -196,6 +196,6 @@ Inactive sessions are automatically closed after a timeout. The default timeout 
 
 A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. See also Deep copy.
 
-## Stamp
+## Stempel
 
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.

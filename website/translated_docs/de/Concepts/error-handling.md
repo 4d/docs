@@ -67,6 +67,7 @@ In einer eigenen Fehlermethode erhalten Sie verschiedene Angaben, die zum Identi
 (*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.</p>
 
 - Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück.
+- Der Befehl `Get call chain` gibt eine Collection von Objekten zurück, die jeden Schritt der Aufruffolge der Methode im aktuellen Prozess beschreiben.
 
 
 #### Beispiel

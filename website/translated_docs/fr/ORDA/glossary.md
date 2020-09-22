@@ -102,7 +102,7 @@ An entity selection can also be empty.
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
+Built-in class for ORDA objects such as entities, or dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
 
 
 ## Lazy loading
@@ -115,9 +115,9 @@ The Datastore object matching the opened 4D database (standalone or client/serve
 
 ## Méthode
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
+ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. Ils fournissent des méthodes spécifiques pour interagir directement avec eux. Ces méthodes sont aussi appelées des fonctions membres (member functions). Ces méthodes sont utilisées en étant appelées sur une instance de l'objet.
 
-For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
+Par exemple, la méthode `query()` est une "member function" de dataclass. If you have stored a dataclass object in the `$myClass` variable, you can write:
 
 ```code4d
 $myClass.query("name = smith")
@@ -127,12 +127,12 @@ $myClass.query("name = smith")
 
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Par exemple :
 
-*   number
+*   numérique
 *   Texte
 *   null
-*   boolean
+*   booléen
 *   date
-*   object
+*   objet
 *   collection
 *   image(\*)
 
@@ -196,6 +196,6 @@ Inactive sessions are automatically closed after a timeout. The default timeout 
 
 A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. See also Deep copy.
 
-## Stamp
+## Marqueur (stamp)
 
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.

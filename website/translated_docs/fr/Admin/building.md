@@ -218,7 +218,7 @@ Once built, a client/server application is composed of two customized parts: the
 Also, the client/server application is customized and its handling simplified:
 
 - To launch the server portion, the user simply double-clicks on the server application. The project file does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a server in a connection dialog box. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Seule la partie cliente peut se connecter à la partie serveur correspondante. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
+- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a server in a connection dialog box. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). Il est également possible de “forcer” l’affichage de la boîte de dialogue de connexion standard en maintenant la touche **Option** (macOS) ou **Alt** (Windows) enfoncée lors du lancement de l’application cliente. Seule la partie cliente peut se connecter à la partie serveur correspondante. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
 - A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application).
 - It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) and [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
 
@@ -226,7 +226,7 @@ Also, the client/server application is customized and its handling simplified:
 
 ### Build server application
 
-Check this option to generate the server part of your application during the building phase. Vous devez désigner sur votre disque l’emplacement de l’application 4D Server à utiliser. This 4D Server must correspond to the current platform (which will also be the platform of the server application).
+Check this option to generate the server part of your application during the building phase. Vous devez désigner sur votre disque l’emplacement de l’application 4D Server à utiliser. Ce 4D Server doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application du serveur).
 
 #### 4D Server location
 
@@ -297,7 +297,7 @@ To force the update, simply exclude the current version number of client applica
 
 The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box.
 
-The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
+The [current version number](#current_version) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
 
 
 #### Update Error
@@ -315,7 +315,7 @@ There are many possible causes for this error. When you get this message, it is 
 Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
 > These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
 
-The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. The *\<ApplicationName>Server* folder contains the server portion of the application.
+The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. Le dossier *\<ApplicationName>Server* contient la partie serveur de l'application.
 
 The contents of these folders vary depending on the current platform:
 
@@ -346,7 +346,29 @@ Items must be installed:
     *   **Client application** - next to the *\<ApplicationName>Client* software package.
 
 
+### Embedding a single-user client application
 
+4D allows you to embed a compiled structure in the Client application. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
+
+To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `DatabaseToEmbedInClientMacFolder` keys in the *buildApp* settings file. When one of these keys is present, the client application building process generates a single-user application: the compiled structure, instead of the *EnginedServer.4Dlink* file, is placed in the "Database" folder.
+
+- If a default data folder exists in the single-user application, a licence is embedded.
+- If no default data folder exists in the single-user application, it will be executed without data file and without licence.
+
+The basic scenario is:
+
+1. In the Build application dialog box, select the "Build compiled structure" option to produce a .4DZ or .4DC for the application to be used in single-user mode.
+2. In the *buildApp.4DSettings* file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
+    - `DatabaseToEmbedInClientWinFolder`
+    - `DatabaseToEmbedInClientMacFolder`
+3. Build the client-server application. This will have following effects:
+    - the whole folder of the single user application is copied inside the "Database" folder of the merged client
+    - the *EnginedServer.4Dlink* file of the "Database" folder is not generated
+    - the .4DC, .4DZ, .4DIndy files of the single user application copy are renamed using the name of the merged client
+    - the `PublishName` key is not copied in the *info.plist* of the merged client
+    - if the single-user application does not have a "Default data" folder, the merged client will run with no data.
+
+Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
 
 
 ## Plugins & components page
@@ -386,7 +408,7 @@ The Licences & Certificate page can be used to:
 
 ### Licenses
 
-This tab displays the list of available deployment licenses that you can integrate into your application. Par défaut, la liste est vide. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+This tab displays the list of available deployment licenses that you can integrate into your application. Par défaut, la liste est vide. Vous devez explicitement ajouter votre licence *4D Developer Professional* ainsi que chaque licence* 4D Desktop Volume* liée à utiliser dans l’application générée. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
 

@@ -3,16 +3,16 @@ id: overview
 title: Aperçu
 ---
 
-A 4D project contains all of the source code of a 4D application, whatever its deployement type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. Un projet 4D est principalement constitué de fichiers texte.
+Un projet 4D contient l'intégralité du code source d'une application 4D, quel que soit son type de déploiement (web, mobile ou desktop), de la structure de la base de données à l'interface utilisateur, en passant par le code, les formulaires, les menus, les paramètres utilisateur ou n'importe quelle ressource requise. Un projet 4D est principalement constitué de fichiers texte.
 
 
 ## Fichiers du projet
 
-4D project files are open and edited using regular 4D platform applications (4D or 4D Server). With 4D, full-featured editors are available to manage files, including a structure editor, a method editor, a form editor, a menu editor...
+Les fichiers de projet 4D sont ouverts et édités à l'aide d'applications standard de la plate-forme 4D (4D ou 4D Server). Avec 4D, des éditeurs complets sont disponibles pour gérer les fichiers, y compris un éditeur de structure, un éditeur de méthode, un éditeur de formulaire, un éditeur de menu, etc...
 
-Since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
+Les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils peuvent être lus ou édités manuellement par les développeurs, à l’aide de n’importe quel éditeur de code.
 
-In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](Project/architecture.md).
+De plus, les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code. Les projets sont organisés en interne dans des [fichiers et dossiers](Project/architecture.md).
 
 La flexibilité du développement d'un projet 4D est particulièrement démontrée lorsque plusieurs développeurs doivent travailler simultanément sur la même partie d'une application. Les fichiers de projet 4D sont particulièrement bien adaptés pour être gérés par un système de **contrôle de version** (Perforce, Git, SVN, etc.), permettant aux équipes de développement de tirer parti de fonctionnalités telles que :
 
@@ -20,21 +20,21 @@ La flexibilité du développement d'un projet 4D est particulièrement démontr�
 - Comparaisons de révision
 - Retours en arrière (Rollbacks)
 
-## Development
+## Développement
 
-Your 4D application can open projects **locally** or **remotely**:
+Votre application 4D peut ouvrir des projets **en local** ou **à distance** :
 
-- **[locally](creating.md#opening-a-local-project)** - project files are stored on the same machine as the 4D application; they are executed and edited by a single 4D application.
-- **[remotely](creating.md#opening-a-remote-project)** - project files are stored on the 4D Server machine; 4D applications connect to the server and open the project in read-only mode, usually for testing purposes. However, a project opened by 4D Server is editable by 4D if [both applications are on the same machine](Project/developing.md#using-4d-developer-on-the-same-machine).
+- **[en loca](creating.md#opening-a-local-project)** - les fichiers de projet sont stockés sur le même poste que l'application 4D; ils sont exécutés et édités par une seule application 4D.
+- **[à distance](creating.md#opening-a-remote-project)** - les fichiers de projet sont stockés sur la machine 4D Server; Les applications 4D se connectent au serveur et ouvrent le projet en lecture seule, généralement à des fins de test. Cependant, un projet ouvert par 4D Server est modifiable par 4D si [les deux applications sont sur la même machine](Project/developing.md#using-4d-developer-on-the-same-machine).
 
 ![](assets/en/getStart/localremote.png)
 
-When you select the project to open, you also select the mode to be used.
+Lorsque vous sélectionnez le projet à ouvrir, vous sélectionnez également le mode à utiliser.
 
 
-## Deployment
+## Déploiement
 
-Project files can be compiled and easily deployed for your web, mobile, or desktop (client-server or single-user) application.
+Les fichiers de projet peuvent être compilés et facilement déployés pour votre application Web, mobile ou de bureau (client-serveur ou monoposte).
 
-Final application deployment files are generated during the building process, using the [4D build manager](Admin/building.md). Applications can be opened by 4D Server, 4D, or merged with 4D Volume license.
+Les fichiers de déploiement de l'application finale sont générés lors du processus de génération, à l'aide du [gestionnaire de génération d'application 4D](Admin/building.md). Les applications peuvent s'ouvrir avec 4D Server, 4D, ou fusionnées avec une licence 4D Volume.
 
