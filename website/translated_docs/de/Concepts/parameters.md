@@ -1,6 +1,6 @@
 ---
 id: parameters
-title: Parameters
+title: Parameter
 ---
 
 
@@ -92,7 +92,7 @@ $0:=Uppercase($1)
 ALERT($0)
 ```
 
-In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Parameter für den Befehl`ALERT` verwendet. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
 
 
 ## Declaring parameters

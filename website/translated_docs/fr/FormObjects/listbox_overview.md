@@ -72,19 +72,19 @@ The 4D Language includes a dedicated "List Box" theme for list box commands, but
 
 Dans une list box de type tableau, chaque colonne est associée à un tableau 4D à une dimension ; tous les types de tableaux peuvent être utilisés, à l’exception des tableaux de pointeurs. The number of rows is based on the number of array elements.
 
-By default, 4D assigns the name “ColumnX” to each column variable, and thus to each associated array. You can change it, as well as other column properties, in the [column properties](listbox_overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command
+By default, 4D assigns the name "ColumnX" to each column. You can change it, as well as other column properties, in the [column properties](listbox_overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command.
 > Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms.
 
 Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry. Les valeurs des colonnes sont gérées à l’aide des commandes de haut niveau du thème List box (telles que `LISTBOX INSERT ROWS` ou `LISTBOX INSERT COLUMN`) ainsi que des commandes de manipulation des tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
-ARRAY TEXT(ColumnName;size)
+ARRAY TEXT(varCol;size)
 ```
 
 Vous pouvez également utiliser une énumération :
 
 ```4d
-LIST TO ARRAY("ListName";ColumnName)
+LIST TO ARRAY("ListName";varCol)
 ```
 > **Attention :** Lorsqu’un objet List box contient plusieurs colonnes de tailles différentes, seul le nombre d’éléments correspondant au plus petit tableau est affiché. Il est donc conseillé de veiller à ce que chaque tableau ait le même nombre d’éléments que les autres. A noter également que si une colonne de la list box est “vide” (c'est le cas lorsque le tableau associé n'a pas été correctement déclaré ou dimensionné via le langage), la list box n'affiche aucun contenu.
 
@@ -315,6 +315,7 @@ Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans
 ![](assets/en/FormObjects/listbox_header.png)
 
 Vous pouvez définir, pour chaque en-tête de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box.
+
 
 Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
 

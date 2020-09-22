@@ -131,9 +131,9 @@ There are two advantages with this mechanism:
 - On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 
-### Hierarchical List Box
+### Array List Box
 
-Using a string array (collection of arrays names) as *dataSource* value for a list box column defines a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
+For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
 
 

@@ -13,6 +13,6 @@ title: On Validate
 This event is triggered when the record data entry has been validated, for example after a `SAVE RECORD` command call or an `accept` [standard action](FormObjects/properties_Action.md#standard-action).
 
 
-### Subform
+### サブフォーム
 
 The `On Validate` event is triggered when data entry is validated in the subform.

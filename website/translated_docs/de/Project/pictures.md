@@ -12,7 +12,7 @@ title: Pictures
 *   Windows, 4D uses WIC (Windows Imaging Component).
 *   macOS, 4D uses ImageIO.
 
-The most common picture formats are supported of both platforms: .jpeg, .gif, .png, .tiff, .bmp, etc. On macOS, the .pdf format is also available for encoding and decoding.
+Die gängigsten Bildformate werden auf beiden Plattformen unterstützt: .jpeg, .gif, .png, .tiff, .bmp, etc. Auf macOS ist auch das Format .pdf zum Codieren und Decodieren verfügbar.
 
 Die unterstützten Formate variieren unter Windows und auf macOS je nach Betriebssystem und den eigenen Codecs, die auf den Rechnern installiert sind. To find out which codecs are available, you must use the `PICTURE CODEC LIST` command. Beachten Sie, dass die Liste der verfügbaren Codecs zum Lesen und Schreiben unterschiedlich sein können, da für Codecs zum Codieren u. U. spezifische Lizenzen erforderlich sind.
 > Mit WIC und ImageIO lassen sich auch Metadaten in Bildern verwenden. Dafür können Sie die beiden Befehle `SET PICTURE METADATA` und `GET PICTURE METADATA` einsetzen.
@@ -34,7 +34,7 @@ Most of the 4D picture management commands can receive a Codec ID as a parameter
 
 ### Nicht verfügbares Bildformat
 
-Für Bildformate, die auf dem verwendeten Rechner nicht verfügbar sind, erscheint ein spezifischer Icon. The extension of the missing format is shown at the bottom of the icon:
+Für Bildformate, die auf dem verwendeten Rechner nicht verfügbar sind, erscheint ein spezifischer Icon. Die Endung des fehlenden Bildformats wird darunter angezeigt:
 
 ![](assets/en/Project/picNoFormat.png)
 
@@ -42,7 +42,7 @@ Dieser Icon erscheint automatisch beim Anzeigen der betroffenen Bilder:
 
 ![](assets/en/Project/picNoFormat2.png)
 
-Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lässt sich aber speichern und ggf. auf anderen Rechnern anzeigen. This is the case, for example, for PDF pictures on Windows, or for PICT format pictures.
+Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lässt sich aber speichern und ggf. auf anderen Rechnern anzeigen. Das ist z. B. bei PDF Bildern auf Windows oder Bildern im PICT-Format der Fall.
 
 
 
@@ -76,13 +76,13 @@ This resolution behavior is supported for project databases by all [4D form obje
 
 
 
-## Mouse Coordinates in a Picture
+## Mauskoordinaten für Klicks auf ein Bild
 
 4D lets you retrieve the local coordinates of the mouse in a picture field or variable in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. Dieser Vorgang ist ähnlich wie bei einem Bildmapping und lässt sich für scrollbare Schaltflächenleisten oder die Oberfläche bei kartografischer Software verwenden.
 
-The coordinates are returned in the *MouseX* and *MouseY* [System Variables](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). Sie werden in Pixel angegeben, ausgehend von der oberen linken Ecke des Bildes (0,0). If the mouse is outside of the picture coordinates system, -1 is returned in *MouseX* and *MouseY*.
+Die Koordinaten werden in den [Systemvariablen](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html) *MouseX* und *MouseY* zurückgegeben. Sie werden in Pixel angegeben, ausgehend von der oberen linken Ecke des Bildes (0,0). Ist die Maus außerhalb des Bildkoordinatensystems, wird -1 in *MouseX* und *MouseY* zurückgegeben.
 
-You can get the value of these variables as part of the `On Clicked`, `On Double Clicked`, `On Mouse up`, `On Mouse Enter`, or `On Mouse Move` form events.
+Sie erhalten den Wert dieser Variablen in den Formularereignissen `On Clicked`, `On Double Clicked`, `On Mouse Up,` `On Mouse Enter` oder `On Mouse Move`.
 
 ## Picture Operators
 

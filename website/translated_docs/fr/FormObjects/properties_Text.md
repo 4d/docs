@@ -22,7 +22,7 @@ Lorsque cette propriété est activée, les commandes [OPEN FONT PICKER](https:/
 ---
 ## Gras
 
-Faire en sorte que le texte sélectionné soit plus foncé et plus épais.
+Le texte sélectionné est plus foncé et plus épais.
 
 Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 > Ceci est un texte normal.<br> **Ceci est un texte en gras.**
@@ -41,7 +41,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [**OB
 ---
 ## Italique
 
-Sets the selected text to slant slightly to the right.
+Le texte sélectionné est légèrement penché vers la droite.
 
 Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 > Ceci est un texte normal.<br> *Ceci est un texte en italique.*
@@ -61,7 +61,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [**OB
 
 ---
 ## Souligné
-Sets the text to have a line running beneath it.
+Une ligne est placée sous le texte.
 > Ceci est un texte normal.<br> <span style="text-decoration:underline">Ceci est un texte souligné.</span>.
 
 #### Grammaire JSON
@@ -82,27 +82,27 @@ Sets the text to have a line running beneath it.
 ---
 ## Police
 
-This property allows you to specify either the **font theme** or the **font family** used in the object.
-> **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
+Cette propriété vous permet d'indiquer le **thème de la police** ou la **famille de police** utilisé(e) dans l'objet.
+> Les propriétés du **thème** et de la **famille** de police sont mutuellement exclusives. Un thème de police prend en charge les attributs de police, y compris la taille. Une famille de polices vous permet de définir le nom de la police, sa taille et sa couleur.
 
 
-### Font Theme
+### Thème de police
 
-The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
+La propriété de thème de police désigne un nom de style automatique. Les styles automatiques déterminent de manière dynamique la famille de police, la taille et la couleur de police à utiliser pour l'objet, en fonction des paramètres système. Ces paramètres dépendent de :
 
-- the platform,
-- the system language,
-- and the type of form object.
+- la plateforme,
+- la langue du système,
+- et le type d'objet de formulaire.
 
-With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
+Avec le thème de police, vous avez la garantie que les titres s'affichent toujours conformément aux normes de l'interface du système. Cependant, leur taille peut varier d'une machine à l'autre.
 
-Three font themes are available:
-- **normal**: automatic style, applied by default to any new object created in the Form editor.
-- **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
+Trois thèmes de polices sont disponibles :
+- **normal** : style automatique, appliqué par défaut à tout nouvel objet créé dans l'éditeur de formulaires.
+- Les thèmes de polices **principaux** et **supplémentaires** ne sont pris en charge uniquement par les [zones de texte](text.md) et les [zones de saisie](input_overview.md). Ces thèmes sont principalement destinés à la conception de boîtes de dialogue. Ils font référence aux styles de police utilisés respectivement pour le texte principal et les informations supplémentaires dans vos fenêtres d'interface. Voici les boîtes de dialogue typiques (macOS et Windows) utilisant ces thèmes de polices :
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> Les thèmes de polices gèrent la police ainsi que sa taille et sa couleur. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
 
 
@@ -120,14 +120,14 @@ Three font themes are available:
 
 
 
-### Font Family
+### Famille de police
 
-There are two types of font family names:
+Il existe deux types de noms de familles de polices :
 
-* *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
-* *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+* *family-name :* Le nom d'une famille de polices, comme "times", "courier", "arial", etc.
+* *generic-family *: Le nom d'une famille générique, comme "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Vous pouvez la définir à l'aide de la commande [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) .
 > <span style="font-family:Times New Roman; font-size:20pt"> Ceci est une police Times New Roman.</span><br> <span style="font-family:Calibri; font-size:20pt"> Ceci est une police Calibri.</span><br> <span style="font-family:Papyrus; font-size:20pt"> Ceci est une police Papyrus.</span>
 
 #### Grammaire JSON
@@ -135,7 +135,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 | Nom        | Type de données | Valeurs possibles               |
 | ---------- | --------------- | ------------------------------- |
 | fontFamily | string          | Nom d'une famille de police CSS |
-> 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
+> 4D recommande d'utiliser uniquement les polices de [sécurité Web](https://www.w3schools.com/cssref/css_websafe_fonts.asp).
 
 #### Objets pris en charge
 
@@ -191,16 +191,16 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Expression couleur police
 
-`Selection and collection/entity selection type list boxes`
+`List box de type collection/sélection d'entité`
 
-Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
+Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. Pour plus d'informations à ce sujet, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) dans le manuel Langage 4D.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+Vous pouvez également définir cette propriété à l'aide de la commande `LISTBOX SET PROPERTY` avec la constante `lk font color expression`.
+> Cette propriété peut également être définie à l'aide d'une [expression Meta Info](properties_Text.md#meta-info-expression).
 
-The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
+L'exemple suivant utilise un nom de variable : entrez *CompanyColor* pour l'**expression couleur police** et, dans la méthode formulaire, entrez le code suivant :
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
@@ -220,11 +220,11 @@ Foreground color;Dark shadow color)
 ---
 ## Expression style
 
-`Selection and collection/entity selection type list boxes`
+`List box de type collection/sélection d'entité`
 
-Used to apply a custom character style to each row of the list box or each cell of the column.
+Utilisé pour appliquer un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou variable sera évaluée pour chaque ligne affichée (si elle s'applique à la list box) ou chaque cellule affichée (si elle s'applique à la list box). Vous pouvez utiliser les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
 
 Exemple :
 
@@ -232,8 +232,8 @@ Exemple :
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+Vous pouvez également définir cette propriété à l'aide de la commande `LISTBOX SET PROPERTY` avec la constante `lk font style expression`.
+> Cette propriété peut également être définie à l'aide d'une [expression Meta Info](properties_Text.md#meta-info-expression).
 
 
 #### Grammaire JSON
@@ -531,7 +531,7 @@ This property enables the possibility of using specific styles in the selected a
 </h4>
 
 <p spaces-before="0">
-  <a href="input_overview.md">Input</a> (non-enterable) - <a href="text.md">Text Area</a>
+  <a href="input_overview.md">Zone de saisie</a> (non saisissable) - <a href="text.md">Zone de texte</a>
 </p>
 
 
