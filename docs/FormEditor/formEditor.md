@@ -43,7 +43,7 @@ The toolbar contains the following elements:
 |---|---|---|
 |![](assets/en/FormEditor/execute.png)| Execute the form| Used to test the execution of the form. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.|
 |![](assets/en/FormEditor/selection.png)| [Selection tool](#selecting-objects)|Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.|
-|![](assets/en/FormEditor/zOrder.png)| [Entry order](#data-entry-order)| Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields now allow viewing the current entry order, while still working in the form. |
+|![](assets/en/FormEditor/zOrder.png)| [Entry order](#data-entry-order)| Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form. |
 |![](assets/en/FormEditor/moving.png)| [Moving](#moving-objects)| Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. The cursor takes the shape of a hand. This navigation mode is particularly useful when zooming in the form.|
 |![](assets/en/FormEditor/zoom.png)| [Zoom](#zoom)| Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. This feature is detailed in previous section.|
 |![](assets/en/FormEditor/alignment.png)| [Alignment](#aligning-objects)| This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None|
@@ -52,14 +52,14 @@ The toolbar contains the following elements:
 |![](assets/en/FormEditor/group.png)| [Group/Ungroup](#grouping-objects)| This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected. |
 |![](assets/en/FormEditor/displyAndPage.png)| [Display and page management](forms.html#form-pages)| This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
 |![](assets/en/FormEditor/cssPreviewicon.png) |[CSS Preview](#css-preview)|This button is used to select the CSS Mode to use. |
-|![](assets/en/FormEditor/views.png)| [Managing views](#views)|This button displays or hides the views palette. This new function is detailed in Using object views .|
+|![](assets/en/FormEditor/views.png)| [Managing views](#views)|This button displays or hides the views palette. This function is detailed in Using object views .|
 |![](assets/en/FormEditor/shields2.png)| [Displaying shields](#shields)| Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display. |
 |![](assets/en/FormEditor/library.png)| [Preconfigured object library](objectLibrary.html)| This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined. |
 |![](assets/en/FormEditor/listBoxBuilder1.png)|[List Box Builder](#list-box-builder)|This button creates new entity selection list boxes. |
 
 ### Using the object bar  
 
-The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes (buttons, radio buttons, menus, etc.). Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
+The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
 
 |Button	|Group	|Key|
 |---|---|:---:|
@@ -81,8 +81,6 @@ The current variant of the theme is the object that will be inserted in the form
 
 ![](assets/en/FormEditor/objectBar.png)
 
-When a button is selected, you can scroll through its variants using the **Shift+Selection** key shortcut. Help tips display the currently selected variant and the associated selection key of the object.
-
 You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
 
 ### Using the Property List  
@@ -98,15 +96,33 @@ To display/hide the Property List, choose **Property List** from the **Form** me
 You can navigate in the Property List using the following shortcuts:
 
 *	**Arrow key**s ↑ ↓: Used to go from one cell to another.
-*	**Arrow keys** ← →: Used to expand/collapse themes or menus.
-*	**PgUp** and *PgDn*: Used to select the first or last visible cell of the Property List.
-*	**Home** and **End**: Used to select the first or last cell of the Property List.
+*	**Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
+*	**PgUp** and **PgDn**: Used to scroll the Property List contents.
+*	**Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
 *	**Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
 *	**Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
 
 
 
 ## Manipulating Form Objects
+
+### Adding objects
+
+You can add objects to forms in several ways:
+
+*	By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#using-the-object-bar))
+*	By dragging and dropping the object from the object bar
+*	By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
+*	By dragging and dropping an object from another form,
+*	By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
+
+Once the object is placed in the form, you can modify its characteristics using the Form editor.
+
+You can work with two types of objects in your forms:
+
+*	**Static objects** (lines, frames, background pictures, etc.): These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. They are available in the object bar of the Form editor. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. Static objects do not have associated variables like active objects. However, you can insert dynamic objects into static objects.
+
+*	**Active objects**: These objects perform tasks or functions in the interface and can take many forms: fields, buttons, scrollable lists, etc. Each active object is associated with either a field or a variable. 
 
 ### Selecting objects  
 
@@ -123,7 +139,7 @@ To select an object using the Property List:
 1.	Choose the object’s name from the Object List drop-down list located at the top of the Property List.<p>Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window.
 To deselect an object, click outside the object’s boundary or **Shift+click** the object. 
 
->It is also possible to select objects by double-clicking them in the result window of an overall search in the database.
+>It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selecting multiple objects  
 
@@ -145,9 +161,8 @@ To deselect an object that is part of a set of selected objects, hold down the *
 ### Duplicating objects  
 
 You can duplicate any object in the form, including active objects. Copies of active objects retain all the properties of the original, including name, type, standard action, display format, and object method.
-You can duplicate an object directly using the Duplicate tool in the Tools palette or use the Duplicate Many dialog box to duplicate an object more than once. Also, using this dialog box, you can set the distance between two copies.
 
-When duplicating a variable, you can use specific duplication features that allow you to include an automatic number in the copies’ names. For more information on this point, refer to **Duplicating on a matrix** in the *Design Reference*.
+You can duplicate an object directly using the Duplicate tool in the Tools palette or use the Duplicate Many dialog box to duplicate an object more than once. Also, using this dialog box, you can set the distance between two copies.
 
 To duplicate one or more objects:
 
@@ -179,36 +194,31 @@ You can move any graphic or active object in the form including fields and objec
 *	Move the object by dragging it,
 *	Move the object one pixel at a time using the arrow keys,
 *	Move the object by steps using the arrow keys (20-pixel steps by default),
-*	Manually enter the coordinates of the object in the Property List (this point is described in "Setting initial size of objects" paragraph below).
 
 As you begin dragging the selected object, its handles disappear. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Be careful not to drag a handle. Dragging a handle resizes the object. You can press the **Shift** key to carry out the move with a constraint.
 
-When the magnetic grid is on, objects are moved in stages indicating noticeable locations. For more information about this point, refer to **Using the magnetic grid** section. 
+When the [Magnetic Grid](#using-the-magnetic-grid) is on, objects are moved in stages indicating noticeable locations. 
 
 To move an object one pixel at a time:
 
-1.	Select the object or objects you want to move.
-2.	Use the arrow keys on the keyboard to move the object.<p>Each time you press an arrow key, the object moves one pixel in the direction of the arrow.
+*	Select the object or objects and use the arrow keys on the keyboard to move the object. Each time you press an arrow key, the object moves one pixel in the direction of the arrow.
 
 To move an object by steps:
 
-1.	Select the object or objects you want to move.
-2.	Hold down the **Shift** key and use the arrow keys to move the object.
-By default, steps are 20 pixels at a time. You can change this value on the Forms Page of the Preferences.
+*	Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. By default, steps are 20 pixels at a time. You can change this value on the Forms Page of the Preferences.
+
 
 ### Grouping objects  
 
-4D lets you group objects so that you can select, move, and modify the group as a single object. Objects that are grouped retain their position in relation to each other. You would typically group a field and its label, an invisible button and its icon, and so forth. Groups can be part of other groups (binary databases only).
+4D lets you group objects so that you can select, move, and modify the group as a single object. Objects that are grouped retain their position in relation to each other. You would typically group a field and its label, an invisible button and its icon, and so forth. 
 
 When you resize a group, all the objects in the group are resized proportionally (except text areas, which are resized in steps according to their font sizes.
-
-Groups of objects are necessary for the coordinated functioning of radio buttons (see [Radio Buttons](../FormObjects/radiobuttonOverview.html)).
 
 You can ungroup a group of objects to treat them as individual objects again.
 
 An active object that has been grouped must be ungrouped before you can access its properties or method. However, it is possible to select an object belonging to a group without degrouping the set: to do this, **Ctrl+click** (Windows) or **Command+click** (macOS) on the object (the group must be selected beforehand). 
 
-Grouping only affects objects in the Form editor. When the form is executed, all grouped objects (except for radio buttons in binary databases) act as if they were ungrouped.
+Grouping only affects objects in the Form editor. When the form is executed, all grouped objects act as if they were ungrouped.
 
 >It is not possible to group objects belonging to different views and only those objects belonging to the current view can be grouped (see [Views](#views) ).
 
@@ -252,14 +262,15 @@ The Alignment Assistant allows you to perform any type of alignment and/or distr
 
 To display this dialog box, select the objects you want to align then choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
 
-*	In the “Left/Right Alignment” and/or “Top/Bottom *Alignment”* areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.
-2.	To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**.<p>In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>OR:<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.
+*	In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.
+
+*	To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**.<p>In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>OR:<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.
 
 You can preview the results of the alignment by clicking the **Preview** button. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
 
 >This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
 
-#### Using the magnetic grid  
+#### Using the Magnetic Grid  
 
 The Form editor provides a virtual magnetic grid that can help you place and align objects in a form. Magnetic alignment of objects is based on their position in relation to each other. The magnetic grid can only be used when at least two objects are present in the form. 
 
@@ -276,15 +287,15 @@ Concerning the distribution of objects, 4D proposes a distance based on interfac
 
 ![](assets/en/FormEditor/magneticGrid2.png) 
 
-This operation applies to all types of form objects. The magnetic grid can be enabled or disabled at any time using the **Turn Magnetic Grid On** command in the **Form** menu or in the editor context menu. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms Page** of the application. You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
+This operation applies to all types of form objects. The Magnetic Grid can be enabled or disabled at any time using the **Magnetic Grid** command in the **Form** menu or in the editor context menu. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
 
->The magnetic grid also influences the manual resizing of objects.
+>The Magnetic Grid also influences the manual resizing of objects.
 
 ### Distributing objects  
 
 You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. The latter allows you to align and distribute objects in one operation. 
 
->When the magnetic grid is on, a visual guide is also provided for distribution when an object is moved manually. For more information, refer to the previous section.
+>When the [Magnetic Grid](#using-the-magnetic-grid) is on, a visual guide is also provided for distribution when an object is moved manually.
 
 To distribute objects with equal spacing:
 
@@ -332,9 +343,11 @@ When ordering different levels, 4D always goes from the background to the foregr
 
 The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys. 
 
-Every enterable area into which you can type a value is included in the data entry order. Boolean fields (shown as radio buttons or check boxes), subforms, combo boxes, and areas that accept pictures are also included in the data entry order.
+>*	You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands. 
 
-Thermometers, rulers, and dials can also be used to enter data. These objects, however, are not included in the data entry order. You select them by clicking on them.
+Every obeject that supports the focusable property is included in the data entry order by default. 
+
+Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
 
 If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form. 
 
@@ -363,22 +376,7 @@ To view or change the entry order:
 4.	When you are satisfied with the data entry order, click any unselected tool in the toolbar or choose **Entry Order** from the **Form** menu.<p>4D returns to normal operation of the Form editor.
 
 >*	Only the entry order of the current page of the form is displayed. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
->
->*	You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands. 
 
-#### Setting the first object in the data entry order  
-
-All enterable objects are part of the data entry order. To set the first object of the entry order, you must modify its location among the form levels. The Entry order mode must be disabled.
-
-To establish one of the objects as the first in the data entry order:
-
-1.	Select the object you want to be first in the entry order.
-
-2.	Choose **Move to Back** from the **Object** menu.<p>OR<p>Select **Move to Back** from the **Level** submenu of the context menu for the object.
-
-3.	Choose **Entry Order** from the **Form** menu or click the Entry Order button in the toolbar.<p>The selected object becomes the first object in the entry order and the object that was first becomes second. You can now drag from object to object in order to create the data entry order you want.
-
-4.	When you have finished, select **Entry Order** from the **Form** menu again or click any unselected tool in the toolbar.<p>The Form editor returns to normal operation.
 
 #### Using a data entry group  
 
@@ -391,44 +389,68 @@ To create a data entry group:
 
 When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. The data entry order for the remaining objects adjusts as necessary.
 
-#### Excluding a field from the entry order  
+#### Excluding an object from the entry order  
 
-By default, all the fields are included in the entry order. If you want to exclude a field from the entry order while keeping its “Enterable” property, you simply need to deselect the **Tabable** property for this field. 
+By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
+
+1. Select the Entry order mode, then 
+
+2.	**shift-click** on the object
+
+3.	**right-click** on the object and select **Remove from entry order** option from the context menu 
+
 
 
 ## CSS Preview
 
 The Form editor provides two options for viewing styled objects:
 
-*	**Plain mode**<br>Only JSON form values defined in the Property List are applied and displayed in the Form Editor. 
+*	**CSS Preview (None)**<br>CSS values are not applied, only JSON form values are applied and displayed in the Form Editor. 
 
-*	**CSS mode**<br>[Style sheet attributes](stylesheets.html) are applied and displayed in the Form Editor. 
+*	**CSS Preview Windows** / **CSS Preview macOS**<br>[Style sheet attributes](stylesheets.html) are applied and displayed in the Form Editor. 
 
-By default, forms (including inherited and subforms) are opened in the CSS Preview mode for your operating system.
+By default, forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system when [CSS files](createStylesheet.md) have been defined. 
 
 
 
-### Preview Modes
+### Selecting CSS Preview Mode
+
+The Form editor toolbar provides a CSS button for viewing styled objects:
+
+![](assets/en/FormEditor/cssToolbar.png)
+
+Select one of the following preview modes from the menu: 
 
 |Toolbar Icon|CSS Mode |Description|
 |---|---|---|
-|![](assets/en/FormEditor/cssNo.png)|Plain|No CSS values or icons displayed|
-|![](assets/en/FormEditor/cssMac.png)|CSS|CSS values for macOS platform are displayed. CSS icon displayed in Property List.|
-|![](assets/en/FormEditor/cssWin.png)|CSS|CSS values for Windows platform are displayed. CSS icon displayed in Property List.|
+|![](assets/en/FormEditor/cssNo.png)|CSS Preview None|No CSS values or icons displayed|
+|![](assets/en/FormEditor/cssWin.png)|CSS Preview Windows|CSS icons and CSS values for Windows platform are displayed in the Property List. CSS values applied in form preview area.|
+|![](assets/en/FormEditor/cssMac.png)|CSS Preview macOS|CSS icons and CSS values for macOS platform are displayed in the Property List. CSS values applied in form preview area.|
 
->When using CSS mode, only JSON values are used for:
->*	Copy/Paste operations 
->*	Macros
+The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
+
+Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
+
+>When copying or duplicating objects containing properties managed by style sheets, only the style sheet references are copied. Attribute values set by the style sheet are not copied to the JSON values.
 
 
-### Style Sheets & the Property List
 
-If the value of an attribute has been defined in a style sheet, the attribute's name will appear with a [CSS icon](#css-icon) displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
+### Viewing loaded style sheets
+
+Loaded style sheet files are listed below the CSS Preview options. Selecting one will open the style sheet in your default text editor.
+
+![](assets/en/FormEditor/cssInvalidSyntax.png)
+
+>If a style sheet cannot be loaded, it is displayed with a red X icon (as shown above).
+
+### CSS support in the Property List
+
+In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
 
 ```4d
 .myButton {
 font-family: comic sans;
-font-size: 24;
+font-size: 14;
 stroke: #800080;
 }
 ```
@@ -437,7 +459,9 @@ are displayed with a CSS icon in the Property List:
 
 ![](assets/en/FormEditor/cssPpropList.png)
 
->Attribute values that have been modified in a JSON form appear in **bold** text in the Property List. If a value has also been defined in a style sheet but does not include the `!important` declaration, the JSON form value (not the style sheet value) is shown in the Property List. These values can be reset to their default values with the **Ctrl + click** (Windows) or **Command + click** (macOs) shortcuts. 
+An attribute value defined in a style sheet can be overridden in the JSON form description (except if the CSS includes the `!important` declaration, see below). In this case, the Property List displays the JSON form value in **bold**. You can reset the value to its style sheet definition with the **Ctrl + click** (Windows) or **Command + click** (macOs) shortcuts. 
+
+>If an attribute has been defined with the `!important` declaration for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List. 
 
 #### Property List CSS Icons
 
@@ -447,20 +471,6 @@ are displayed with a CSS icon in the Property List:
 |![](assets/en/FormEditor/cssImportant.png)|Indicates that an attribute value has been defined in a style sheet with the `!important` declaration|
 |![](assets/en/FormEditor/cssIconMixed.png)|Displayed when an attribute value defined in a style sheet for at least one item in a group or a selection of multiple objects is different from the other objects|
 
-#### JSON vs Style Sheet Priority Order
-
-See the [Style sheets](stylesheets.html#json-vs-style-sheet) section.
-
-
-
-### Using CSS Preview
-
-1. In the Form Editor toolbar, click on the CSS Preview icon:<p>![](assets/en/FormEditor/cssPreview.png)
-
-2.	Select the mode from the list:<p> ![](assets/en/FormEditor/cssPreview_list.png)<p>Objects are automatically displayed with the styles defined in a style sheet (if any).
-
-
->Existing style sheet files are listed below the **CSS Preview** options. Selecting one will open the style sheet in your default text editor.
 
 
 ## List Box Builder
@@ -525,6 +535,7 @@ The final list box:
 The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
 
 ![](assets/en/FormEditor/shields.png) 
+
 
 
 

@@ -183,6 +183,7 @@ All objects of the text type with a text attribute whose value starts with "Hell
 text[text|=Hello]
 {
      stroke: yellow;
+
 }
 ```
 
@@ -262,7 +263,7 @@ To override this behavior, the style value must be followed with an `!important`
 |---|---|---|
 |`"text": "Button",`|`text: Edit !important;`| `"Edit"`|
 
->If an attribute has been defined with the `!important` declaration for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List. 
+
 
 
 ### Multiple Style Sheets
