@@ -211,22 +211,22 @@
         "title": "プラグイン"
       },
       "FormObjects/propertiesPrint": {
-        "title": "Print"
+        "title": "印刷"
       },
       "FormObjects/propertiesRangeOfValues": {
-        "title": "Range of Values"
+        "title": "値の範囲"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "JSON プロパティリスト"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "Resizing Options"
+        "title": "リサイズオプション"
       },
       "FormObjects/propertiesScale": {
         "title": "スケール"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "サブフォーム"
       },
       "FormObjects/propertiesText": {
         "title": "テキスト"
@@ -235,7 +235,7 @@
         "title": "テキスト、ピクチャー"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "ラジオボタン"
@@ -259,10 +259,10 @@
         "title": "ステッパー"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "サブフォーム"
       },
       "FormObjects/tabControl": {
-        "title": "Tab Controls"
+        "title": "タブコントロール"
       },
       "FormObjects/text": {
         "title": "テキスト"
@@ -271,7 +271,7 @@
         "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro エリア"

@@ -90,17 +90,17 @@
         "title": "Methoden"
       },
       "Concepts/parameters": {
-        "title": "Parameters"
+        "title": "Parameter"
       },
       "Concepts/plug-ins": {
-        "title": "Plug-ins"
+        "title": "Plug-Ins"
       },
       "Concepts/quick-tour": {
         "title": "Schnelle Tour",
         "sidebar_label": "Schnelle Tour"
       },
       "Concepts/shared": {
-        "title": "Shared objects and collections"
+        "title": "Shared Objects und Shared Collections"
       },
       "Concepts/variables": {
         "title": "Variablen"
@@ -208,7 +208,7 @@
         "title": "Bild"
       },
       "FormObjects/propertiesPlugIns": {
-        "title": "Plug-ins"
+        "title": "Plug-Ins"
       },
       "FormObjects/propertiesPrint": {
         "title": "Print"
