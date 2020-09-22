@@ -66,7 +66,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/develop/docs/Project/architecture.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Architecture d&#x27;un projet 4D</h1></header><article><div><span><p>Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base (dossier package). Par exemple:</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/Project/architecture.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Architecture d&#x27;un projet 4D</h1></header><article><div><span><p>Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base (dossier package). Par exemple:</p>
 <ul>
 <li>MonProjet
 <ul>
@@ -125,7 +125,7 @@
 <tr><td>catalog.4DCatalog</td><td>Définit des tables et des champs</td><td>XML</td></tr>
 <tr><td>folders.json</td><td>Définitions des dossiers de l'Explorateur</td><td>JSON</td></tr>
 <tr><td>menus.json</td><td>Définit les menus</td><td>JSON</td></tr>
-<tr><td>settings.4DSettings</td><td>Propriétés de la base <em>Structure</em>. They are not taken into account if <em><a href="#settings-folder-1">user settings</a></em> or <em><a href="#settings-folder">user settings for data</a></em> are defined.<p><strong>Warning</strong>: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use <em>user settings</em> or <em>user settings for data</em> to define custom settings.</td><td>XML</td></tr>
+<tr><td>settings.4DSettings</td><td>Propriétés de la base <em>Structure</em>. Elles ne sont pas prises en compte si les <em><a href="#settings-folder-1">paramètres utilisateur</a></em> ou les <em><a href="#settings-folder">paramètres utilisateur des données</a></em> sont définis.<p><strong>Attention</strong> : dans les applications compilées, les paramètres de structure sont stockés dans le fichier .4dz (lecture seule). Pour le déploiement, il est nécessaire d'utiliser les <em>paramètres utilisateur</em> ou les <em>paramètres utilisateur pour les données</em> afin de définir des paramètres personnalisés.</td><td>XML</td></tr>
 <tr><td>tips.json</td><td>Définit les messages d'aide</td><td>JSON</td></tr>
 <tr><td>lists.json</td><td>Listes définies</td><td>JSON</td></tr>
 <tr><td>filters.json</td><td>Filtres définis</td><td>JSON</td></tr>
@@ -237,16 +237,16 @@
 <h3><a class="anchor" aria-hidden="true" id="dossier-settings"></a><a href="#dossier-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Settings</h3>
 <p>This folder contains <strong>user settings files for data</strong> used for application administration.</p>
 <blockquote>
-<p>These settings take priority over <strong><a href="#settings-folder-1">user settings files</a></strong> and <strong><a href="#sources-folder">structure settings</a></strong> files.</p>
+<p>Ces paramètres ont la priorité sur les <strong><a href="#settings-folder-1">fichiers de propriétés utilisateur</a></strong> et les fichiers de <strong><a href="#sources-folder">propriétés structure</a></strong>.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Contenu</th><th>Description</th><th>Format</th></tr>
 </thead>
 <tbody>
-<tr><td>directory.json</td><td>Description of 4D groups, users, and their access rights when the application is run with this data file.</td><td>JSON</td></tr>
+<tr><td>directory.json</td><td>Description des groupes et utilisateurs 4D et de leurs droits d'accès lorsque l'application est lancée avec ce fichier de données.</td><td>JSON</td></tr>
 <tr><td>Backup.4DSettings</td><td>Paramètres de sauvegarde de la base de données, utilisés pour définir les <a href="/docs/Rx/fr/Backup/settings.html">options de sauvegarde</a>) lorsque la base est lancée avec ce fichier de données. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel <em>Sauvegarde des clés XML 4D</em>.</td><td>XML</td></tr>
-<tr><td>settings.4DSettings</td><td>Custom database settings for this data file.</td><td>XML</td></tr>
+<tr><td>settings.4DSettings</td><td>Propriétés de la base personnalisées pour ce fichier de données.</td><td>XML</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="dossier-logs"></a><a href="#dossier-logs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Logs</h3>
@@ -262,9 +262,9 @@
 <p>Un dossier Logs supplémentaire est disponible dans le dossier des préférences utilisateur du système (dossier 4D actif, voir la commande <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html">Lire dossier 4D</a>) pour les fichiers journaux de maintenance et dans les cas où le dossier de données est en lecture seule.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="dossier-settings-1"></a><a href="#dossier-settings-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dossier Settings</h2>
-<p>This folder contains <strong>user settings files</strong> used for application administration.</p>
+<p>Ce dossier contient des <strong>fichiers de propriétés utilisateur</strong> utilisés pour l'administration de l'application.</p>
 <blockquote>
-<p>These settings take priority over <strong><a href="#sources-folder">structure settings</a></strong> files. However, if a <strong><a href="#settings-folder">user settings file for data</a></strong> exists, it takes priority over user settings file.</p>
+<p>Ces paramètres ont la priorité sur les fichiers de <strong><a href="#sources-folder">propriétés structure</a></strong>. Toutefois, si un <strong><a href="#settings-folder">fichier de paramètres utilisateur</a></strong> existe, il est prioritaire par rapport au fichier des propriétés utilisateur.</p>
 </blockquote>
 <table>
 <thead>
