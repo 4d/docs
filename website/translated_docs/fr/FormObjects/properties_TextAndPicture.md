@@ -110,7 +110,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 
 ---
-## Number of States
+## Nombre d'états
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive.
 
