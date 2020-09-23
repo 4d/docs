@@ -89,7 +89,7 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database
 
 #### Inclure les dossiers associés
 
-Lorsque vous cochez cette option, tous les dossiers liés au projet sont recopiés dans le dossier Build en tant que dossiers *Components* et *Resources*. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
+Lorsque vous cochez cette option, tous les dossiers liés au projet sont recopiés dans le dossier Build en tant que dossiers *Components* et *Resources*. Pour plus d'informations sur ces dossiers, veuillez vous reporter à la [description de l'architecture du projet](Project/architecture.md).
 
 
 ### Générer un composant
@@ -107,7 +107,7 @@ The *MyComponent.4dbase* folder contains:
 -   A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 
 
-## Application page
+## Page Application
 
 This tab allows you can build a stand-alone, single-user version of your application:
 
@@ -199,13 +199,13 @@ Items must be installed:
 
 
 
-## Client/Server page
+## Page Client/Serveur
 
 On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option.
 
 ![](assets/en/Project/buildappCSProj.png)
 
-### What is a Client/Server application?
+### Qu'est-ce qu'une application Client/Serveur ?
 
 A client/server application comes from the combination of three items:
 

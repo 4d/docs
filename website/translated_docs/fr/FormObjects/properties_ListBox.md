@@ -6,13 +6,13 @@ title: List Box
 ---
 ## Columns
 
-Collection of columns of the list box.
+Collection de colonnes de la list box.
 
 #### Grammaire JSON
 
-| Nom     | Type de données              | Valeurs possibles                                |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| Nom     | Type de données             | Valeurs possibles                                |
+| ------- | --------------------------- | ------------------------------------------------ |
+| columns | collection d'objets colonne | Contient les propriétés des colonnes de list box |
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
@@ -22,9 +22,9 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 ---
 ## Nom formulaire détaillé
-`Selection type list box`
+`Liste box sélection`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+Indique le formulaire à utiliser pour modifier ou afficher les enregistrements individuels de la list box.
 
 The specified form is displayed:
 
@@ -48,7 +48,7 @@ The specified form is displayed:
 
 ---
 ## Double-clic sur ligne
-`Selection type list box`
+`Liste box sélection`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
 
@@ -77,7 +77,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 ---
 ## Ensemble surlignage
 
-`Selection type list box`
+`Liste box sélection`
 
 This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
 
