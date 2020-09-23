@@ -29,7 +29,7 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| プロパティ   | 型      | 説明                                                                                |
+| プロパティ   | タイプ    | 説明                                                                                |
 | ------- | ------ | --------------------------------------------------------------------------------- |
 | name    | String | Name of the dataclass.                                                            |
 | uri     | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
@@ -201,7 +201,7 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| プロパティ          | 型      | 説明                                                                                                 |
+| プロパティ          | タイプ    | 説明                                                                                                 |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------- |
 | name           | String | Name of the dataclass                                                                              |
 | collectionName | String | Name of an entity selection on the dataclass                                                       |
@@ -214,7 +214,7 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| プロパティ       | 型      | 説明                                                                                                                                                          |
+| プロパティ       | タイプ    | 説明                                                                                                                                                          |
 | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | String | Attribute name.                                                                                                                                             |
 | kind        | String | Attribute type (storage or relatedEntity).                                                                                                                  |
