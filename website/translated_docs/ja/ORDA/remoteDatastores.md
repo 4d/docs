@@ -25,7 +25,7 @@ title: リモートデータストアの利用
 
 これらの原則を下図に示します:
 
-![](assets/en/Orda/sessions.png)
+![](assets/en/ORDA/sessions.png)
 
 > REST リクエストによって開かれたセッションについては、[ユーザーとセッション](REST/authUsers.md) を参照ください。
 
@@ -39,7 +39,7 @@ title: リモートデータストアの利用
 
 次の例では、1つのセッション上で 2つのプロセスが実行中です:
 
-![](assets/en/Orda/sessionAdmin.png)
+![](assets/en/ORDA/sessionAdmin.png)
 
 ## ロッキングとトランザクション
 
