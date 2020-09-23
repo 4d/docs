@@ -96,7 +96,7 @@
   <span class="hljs-comment">//$e2.name contains "Hammer"</span>
 </code></pre>
 <p>This is illustrated by the following graphic:</p>
-<p><img src="/docs/assets/en/Orda/entityRef1.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/entityRef1.png" alt=""></p>
 <p>Now if you execute:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$e1</span>; <span class="hljs-variable">$e2 </span>: cs.EmployeeEntity
  <span class="hljs-variable">$e1</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>)
@@ -107,7 +107,7 @@
   <span class="hljs-comment">//$e2.name contains "smith"</span>
 </code></pre>
 <p>This is illustrated by the following graphic:</p>
-<p><img src="/docs/assets/en/Orda/entityRef2.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/entityRef2.png" alt=""></p>
 <p>Note however that entities refer to the same record. In all cases, if you call the <code>entity.save( )</code> method, the record will be updated (except in case of conflict, see <a href="#entity-locking">Entity locking</a>).</p>
 <p>In fact, <code>$e1</code> and <code>$e2</code> are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. For example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For each</span>(<span class="hljs-variable">$entity</span>;<span class="hljs-variable">$selection</span>)
@@ -140,13 +140,13 @@
 <p>Pictures attributes cannot be assigned directly with a given path in an entity.</p>
 </blockquote>
 <p>Accessing a related attribute depends on the attribute kind. For example, with the following structure:</p>
-<p><img src="/docs/assets/en/Orda/entityAttributes.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/entityAttributes.png" alt=""></p>
 <p>You can access data through the related object(s):</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds.Project.<span class="hljs-function">all</span>().<span class="hljs-function">first</span>().theClient <span class="hljs-comment">//get the Company entity associated to the project</span>
  <span class="hljs-variable">$EntitySel</span>:=ds.Company.<span class="hljs-function">all</span>().<span class="hljs-function">first</span>().companyProjects <span class="hljs-comment">//get the selection of projects for the company</span>
 </code></pre>
 <p>Note that both <em>theClient</em> and <em>companyProjects</em> in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:</p>
-<p><img src="/docs/assets/en/Orda/entityAttributes2.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/entityAttributes2.png" alt=""></p>
 <p>Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myEmp</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">50</span>)
  <span class="hljs-variable">$manLev2</span>:=<span class="hljs-variable">$myEmp</span>.manager.manager.lastname
@@ -158,7 +158,7 @@
 <li>A 1-&gt;N type relation attribute (<strong>relatedEntities</strong> kind) contains an entity selection</li>
 </ul>
 <p>Let's look at the following (simplified) structure:</p>
-<p><img src="/docs/assets/en/Orda/entityAttributes3.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/entityAttributes3.png" alt=""></p>
 <p>In this example, an entity in the &quot;Employee&quot; dataclass contains an object of type Entity in the &quot;employer&quot; attribute (or a null value). An entity in the &quot;Company&quot; dataclass contains an object of type EntitySelection in the &quot;staff&quot; attribute (or a null value).</p>
 <blockquote>
 <p>In ORDA, the Automatic or Manual property of relations has no effect.</p>
@@ -207,7 +207,7 @@
 <p>This code returns in <em>$localEmails</em> a collection of email addresses as strings.</p>
 <h3><a class="anchor" aria-hidden="true" id="entity-selections-and-relation-attributes"></a><a href="#entity-selections-and-relation-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity selections and Relation attributes</h3>
 <p>In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:</p>
-<p><img src="/docs/assets/en/Orda/entitySelectionRelationAttributes.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/entitySelectionRelationAttributes.png" alt=""></p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myParts</span>:=ds.Part.<span class="hljs-function">query</span>(<span class="hljs-string">"ID &lt; 100"</span>) <span class="hljs-comment">//Return parts with ID less than 100</span>
  <span class="hljs-variable">$myInvoices</span>:=<span class="hljs-variable">$myParts</span>.invoiceItems.invoice
   <span class="hljs-comment">//All invoices with at least one line item related to a part in $myParts</span>
@@ -233,9 +233,9 @@
 </ul>
 <p>The following diagram illustrates optimistic locking:</p>
 <ol>
-<li><p>Two processes load the same entity.<br><br><img src="/docs/assets/en/Orda/optimisticLock1.png" alt=""></p></li>
-<li><p>The first process modifies the entity and validates the change. The <code>entity.save( )</code> method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br><img src="/docs/assets/en/Orda/optimisticLock2.png" alt=""></p></li>
-<li><p>The second process also modifies the loaded entity and validates its changes. The <code>entity.save( )</code> method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br><img src="/docs/assets/en/Orda/optimisticLock3.png" alt=""></p></li>
+<li><p>Two processes load the same entity.<br><br><img src="/docs/assets/en/ORDA/optimisticLock1.png" alt=""></p></li>
+<li><p>The first process modifies the entity and validates the change. The <code>entity.save( )</code> method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br><img src="/docs/assets/en/ORDA/optimisticLock2.png" alt=""></p></li>
+<li><p>The second process also modifies the loaded entity and validates its changes. The <code>entity.save( )</code> method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br><img src="/docs/assets/en/ORDA/optimisticLock3.png" alt=""></p></li>
 </ol>
 <p>This can also be illustrated by the following code:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$person1</span>:=ds.Person.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//Reference to entity</span>
@@ -262,11 +262,11 @@
 <li>A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.</li>
 </ul>
 <p>These principles are shown in the following diagram:</p>
-<p><img src="/docs/assets/en/Orda/concurrent1.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/concurrent1.png" alt=""></p>
 <p><strong>Transaction locks</strong> also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.</p>
 <ul>
-<li>Example with a lock set by a classic command:<br><br><img src="/docs/assets/en/Orda/concurrent2.png" alt=""></li>
-<li>Example with a lock set by an ORDA method:<br><br><img src="/docs/assets/en/Orda/concurrent3.png" alt=""></li>
+<li>Example with a lock set by a classic command:<br><br><img src="/docs/assets/en/ORDA/concurrent2.png" alt=""></li>
+<li>Example with a lock set by an ORDA method:<br><br><img src="/docs/assets/en/ORDA/concurrent3.png" alt=""></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="clientserver-optimization"></a><a href="#clientserver-optimization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client/server optimization</h2>
 <p>4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.</p>

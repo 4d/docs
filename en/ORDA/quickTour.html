@@ -14,14 +14,14 @@
 <h2><a class="anchor" aria-hidden="true" id="exploring-the-datastore"></a><a href="#exploring-the-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exploring the datastore</h2>
 <p>The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the <a href="/docs/en/ORDA/overview.html#orda-prerequisites">ORDA prerequisites</a>.</p>
 <p>This example will use the following simple 4D database structure:</p>
-<p><img src="/docs/assets/en/Orda/struc.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/struc.png" alt=""></p>
 <p>To know what is exposed as the datastore, create a new project method, write the following line:</p>
 <pre><code class="hljs css language-code4d"><span class="hljs-attribute">TRACE</span>
 </code></pre>
 <p>Execute the method -- it simply calls the debugger window.
 In the Expression area, double-click to insert an expression and enter <code>ds</code>. It returns the datastore object.
 Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the <code>ds</code> object:</p>
-<p><img src="/docs/assets/en/Orda/debug1.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/debug1.png" alt=""></p>
 <p>It means for example that, whenever you need to refer to the city field of the [Company] table, in ORDA you just need to write:</p>
 <pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>city <span class="hljs-comment">//returns the name of the city</span>
 </code></pre>
@@ -32,7 +32,7 @@ Deploy the object, you can see that tables and fields are automatically exposed 
 <p>ORDA is case sensitive. <code>ds.company.city</code> will not refer to the ds.Company.city attribute.</p>
 </blockquote>
 <p>You have also noticed the extra <code>hires</code> property in the ds.Company dataclass. It does not correspond to a field. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
-<p><img src="/docs/assets/en/Orda/struc2s.png" alt="">
+<p><img src="/docs/assets/en/ORDA/struc2s.png" alt="">
 <em>Name of the relation as defined in the Inspector</em></p>
 <p>It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:</p>
 <pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>hires <span class="hljs-comment">//returns the list of employees</span>

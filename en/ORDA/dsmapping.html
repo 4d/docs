@@ -74,7 +74,7 @@
 <li>Fields are mapped to storage attributes.</li>
 <li>Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.</li>
 </ul>
-<p><img src="/docs/assets/en/Orda/datastoreMapping.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/datastoreMapping.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="general-rules"></a><a href="#general-rules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General rules</h3>
 <p>The following rules are applied for any conversions:</p>
 <ul>
@@ -97,7 +97,7 @@
 <h3><a class="anchor" aria-hidden="true" id="rules-for-remote-access-control"></a><a href="#rules-for-remote-access-control" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rules for remote access control</h3>
 <p>When accessing a remote datastore through the <code>Open datastore</code> command or <a href="/docs/en/REST/gettingStarted.html">REST requests</a>, only tables and fields with the <strong>Expose as REST resource</strong> property are available remotely.</p>
 <p>This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:</p>
-<p><img src="/docs/assets/en/Orda/ExposeDataclass.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/ExposeDataclass.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="data-model-update"></a><a href="#data-model-update" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data model update</h3>
 <p>Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:</p>
 <ul>
@@ -138,7 +138,7 @@
 <p>A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.</p>
 <p>All dataclasses in a 4D project are available as a property of the <code>ds</code> datastore. For remote datastores accessed through <code>Open datastore</code> or <a href="/docs/en/REST/gettingStarted.html">REST requests</a>, the <strong>Expose as REST resource</strong> option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.</p>
 <p>For example, consider the following table in the 4D structure:</p>
-<p><img src="/docs/assets/en/Orda/companyTable.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/companyTable.png" alt=""></p>
 <p>The <code>Company</code> table is automatically available as a dataclass in the <code>ds</code> datastore. You can write:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$compClass </span>: cs.Company <span class="hljs-comment">//declares a $compClass object variable of the Company class</span>
 <span class="hljs-variable">$compClass</span>:=ds.Company <span class="hljs-comment">//assigns the Company dataclass reference to $compClass</span>
@@ -171,7 +171,7 @@ OB GET PROPERTY <span class="hljs-constructor">NAMES(<span class="hljs-params">d
 <li>A <strong>relation attribute</strong> provides access to other entities. Relation attributes can result in either a single entity (or no entity) or an entity selection (0 to N entities). Relation attributes are built upon &quot;classic&quot; relations in the relational structure to provide direct access to related entity or related entities. Relation attributes are directy available in ORDA using their names.</li>
 </ul>
 <p>For example, consider the following partial database structure and the relation properties:</p>
-<p><img src="/docs/assets/en/Orda/relationProperties.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/relationProperties.png" alt=""></p>
 <p>All storage attributes will be automatically available:</p>
 <ul>
 <li>in the Project dataclass: &quot;ID&quot;, &quot;name&quot;, and &quot;companyID&quot;</li>
@@ -186,7 +186,7 @@ OB GET PROPERTY <span class="hljs-constructor">NAMES(<span class="hljs-params">d
 <p>The Manual or Automatic property of a database relation has no effect in ORDA.</p>
 </blockquote>
 <p>All dataclass attributes are exposed as properties of the dataclass:</p>
-<p><img src="/docs/assets/en/Orda/dataclassProperties.png" alt=""></p>
+<p><img src="/docs/assets/en/ORDA/dataclassProperties.png" alt=""></p>
 <p>Keep in mind that these objects describe attributes, but do not give access to data. Reading or writing data is done through <a href="/docs/en/ORDA/entities.html#using-entity-attributes">entity objects</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="entity"></a><a href="#entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity</h3>
 <p>An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a <a href="#dataclass">dataclass</a>, like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.</p>
