@@ -45,7 +45,7 @@ Si vous exécutez le code suivant :
 
 Ceci est illustré par le graphique suivant :
 
-![](assets/en/Orda/entityRef1.png)
+![](assets/en/ORDA/entityRef1.png)
 
 Maintenant, si vous exécutez :
 
@@ -61,7 +61,7 @@ Maintenant, si vous exécutez :
 
 Ceci est illustré par le graphique suivant :
 
-![](assets/en/Orda/entityRef2.png)
+![](assets/en/ORDA/entityRef2.png)
 
 A noter cependant que les entités font référence au même enregistrement. Dans tous les cas, si vous appelez la méthode `entity.save()`, l'enregistrement sera mis à jour (sauf en cas de conflit, voir [Verrouillage d'entité](#entity-locking)).
 
@@ -104,7 +104,7 @@ Par exemple, pour définir un attribut de stockage :
 
 L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
 
-![](assets/en/Orda/entityAttributes.png)
+![](assets/en/ORDA/entityAttributes.png)
 
 Vous pouvez accéder aux données via le ou les objets associé(s) :
 
@@ -115,7 +115,7 @@ Vous pouvez accéder aux données via le ou les objets associé(s) :
 
 Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des attributs de relation et représentent une relation directe entre les deux dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
 
-![](assets/en/Orda/entityAttributes2.png)
+![](assets/en/ORDA/entityAttributes2.png)
 
 Chaque employé peut être un manager et peut avoir un manager. Pour obtenir le manager du manager d'un employé, vous pouvez simplement écrire :
 
@@ -133,7 +133,7 @@ Dans l'architecture ORDA, les attributs de relation contiennent directement des 
 
 Regardons la structure (simplifiée) suivante :
 
-![](assets/en/Orda/entityAttributes3.png)
+![](assets/en/ORDA/entityAttributes3.png)
 
 Dans cet exemple, une entité de la dataclass "Employee" contient un objet de type Entité dans l'attribut "employer" (ou une valeur nulle). Une entité de la dataclass "Company" contient un objet de type EntitySelection dans l'attribut "staff" (ou une valeur nulle).
 > Dans ORDA, la propriété Automatic ou Manual des relations ne produit aucun effet.
@@ -203,7 +203,7 @@ This code returns in *$localEmails* a collection of email addresses as strings.
 
 Outre la variété de méthodes de recherche, vous pouvez également utiliser des attributs de relation comme propriétés des sélections d'entités pour retourner de nouvelles sélections d'entités. Par exemple, considérons la structure suivante :
 
-![](assets/en/Orda/entitySelectionRelationAttributes.png)
+![](assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
  $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
@@ -235,11 +235,11 @@ Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" q
 
 Le diagramme suivant illustre le verrouillage optimiste :
 
-1. Deux process chargent la même entité.<br><br>![](assets/en/Orda/optimisticLock1.png)
+1. Deux process chargent la même entité.<br><br>![](assets/en/ORDA/optimisticLock1.png)
 
-2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Puisqu'ils correspondent, l'entité est enregistrée et la valeur de son marqueur est incrémentée.<br><br>![](assets/en/Orda/optimisticLock2.png)
+2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Puisqu'ils correspondent, l'entité est enregistrée et la valeur de son marqueur est incrémentée.<br><br>![](assets/en/ORDA/optimisticLock2.png)
 
-3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Etant donné que la valeur de marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est retournée.<br><br>![](assets/en/Orda/optimisticLock3.png)
+3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Etant donné que la valeur de marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est retournée.<br><br>![](assets/en/ORDA/optimisticLock3.png)
 
 
 Cela peut également être illustré par le code suivant :
@@ -277,12 +277,12 @@ L'utilisation des commandes classiques et ORDA pour le verrouillage des enregist
 
 Ces principes sont illustrés dans le diagramme suivant :
 
-![](assets/en/Orda/concurrent1.png)
+![](assets/en/ORDA/concurrent1.png)
 
 Les **verrouillages de transaction** s'appliquent également aux commandes classiques et aux commandes ORDA. Dans une application multiprocess ou multi-utilisateurs, un verrouillage défini dans une transaction sur un enregistrement par une commande classique aura pour effet d'empêcher tout autre process de verrouiller les entités liées à cet enregistrement (ou inversement), jusqu'à ce que la transaction soit validée ou annulée.
 
-*   Exemple avec un verrouillage défini par une commande classique :<br><br>![](assets/en/Orda/concurrent2.png)
-*   Exemple avec un verrouillage défini par une méthode ORDA :<br><br>![](assets/en/Orda/concurrent3.png)
+*   Exemple avec un verrouillage défini par une commande classique :<br><br>![](assets/en/ORDA/concurrent2.png)
+*   Exemple avec un verrouillage défini par une méthode ORDA :<br><br>![](assets/en/ORDA/concurrent3.png)
 
 
 
