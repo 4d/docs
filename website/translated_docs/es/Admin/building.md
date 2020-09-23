@@ -373,9 +373,9 @@ Automatic update 4D Server features ([Current version](#current-version) number,
 
 ### Customizing client and/or server cache folder names
 
-Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and clients. Client/server applications use default pathnames for both client and server system cache folders.
+Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and remote clients. Client/server applications use default pathnames for both client and server system cache folders.
 
-In some specific cases, you might need to customize the names of these folders (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file.
+In some specific cases, you might need to customize the names of these folders to implement specific architectures (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file.
 
 
 #### Client cache folder
@@ -390,7 +390,6 @@ Customizing the client-side cache folder name can be useful when your client app
 
 ![](assets/en/Admin/cacheb.png)
 
-> Using a custom cache folder name disables the automatic update of local resources. If you modify the application resources, you need to "force" the local cache folders to be updated, for example using the [**Current version**](#current-version) feature.
 
 #### Server cache folder
 
