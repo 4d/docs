@@ -196,7 +196,7 @@ To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 For more information, refer to the description of the `WA SET PREFERENCE` command.
 
 ### Using the web inspector
-When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the web inspector window is displayed.
+Lorsque les paramétrages décrits ci-dessus sont effectués, vous disposez de nouvelles options telles que **Inspect Element** dans le menu contextuel de la zone. When you select this option, the web inspector window is displayed.
 
 > The web inspector is included in the embedded web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the web rendering engine.
 
