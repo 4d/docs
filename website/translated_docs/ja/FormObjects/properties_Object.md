@@ -55,12 +55,12 @@ title: オブジェクト
 
 「値」を保存できるオブジェクトは以下のとおりです:
 
-| オブジェクト                                 | 保存される値                                                                                 |
-| -------------------------------------- | -------------------------------------------------------------------------------------- |
-| [チェックボックス](checkbox_overview.md)       | 関連付けられた変数の値 (0, 1, 2)                                                                  |
-| [ドロップダウンリスト](dropdownList_Overview.md) | 選択されている項目の番号                                                                           |
-| [ラジオボタン](radio_overview.md)            | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Tab control](tabControl.md)           | Number of selected tab                                                                 |
+| オブジェクト                                 | 保存される値                                       |
+| -------------------------------------- | -------------------------------------------- |
+| [チェックボックス](checkbox_overview.md)       | 関連付けられた変数の値 (0, 1, 2)                        |
+| [ドロップダウンリスト](dropdownList_Overview.md) | 選択されている項目の番号                                 |
+| [ラジオボタン](radio_overview.md)            | 関連付けられた変数の値 (1、0、ボタンにおいては true/false など型による) |
+| [タブコントロール](tabControl.md)              | 選択されているタブの番号                                 |
 
 
 #### JSON 文法
@@ -71,7 +71,7 @@ title: オブジェクト
 
 #### 対象オブジェクト
 
-[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
+[チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [ラジオボタン](radio_overview.md) - [タブコントロール](tabControl.md)
 
 
 
@@ -177,7 +177,7 @@ title: オブジェクト
 ---
 ## CSSクラス
 
-A list of space-separated words used as class selectors in [css files](FormEditor/createStylesheet.md#style-sheet-files).
+[cssファイル](FormEditor/createStylesheet.md#スタイルシートファイル) にてクラスセレクターとして使用される、(複数の場合は半角スペース区切りの) クラス名のリスト。
 
 
 #### JSON 文法
