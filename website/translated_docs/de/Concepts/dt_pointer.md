@@ -68,7 +68,7 @@ $MyVar:="Goodbye"
 
 ## Zeigeroperatoren
 
-Mit:
+Es gilt folgendes:
 ```4d
   ` vPtrA and vPtrB point to the same object
  vPtrA:=->anObject
