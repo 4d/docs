@@ -5,7 +5,7 @@ title: Glossaire
 
 ## Aperçu des principaux concepts
 
-![](assets/en/Orda/mainConcepts.png)
+![](assets/en/ORDA/mainConcepts.png)
 
 
 
@@ -25,19 +25,6 @@ Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou 
 ## Class code
 
 Code for the user class function(s).
-
-## Fonction de classe
-
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific functions to directly interact with them, named class functions. Such functions are used by calling them on an instance of the object.
-
-These methods are also called **member functions**, or **member methods**.
-
-For example, the `query()` class function is a function of dataclasses. If you have stored a dataclass object in the `$myClass` variable, you can write:
-
-```code4d
-$myClass.query("name = smith")
-```
-
 
 ## Data model class
 
@@ -115,7 +102,7 @@ An entity selection can also be empty.
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in data model classes, e.g. `EmployeeEntity`.
+Built-in class for ORDA objects such as entities, or dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
 
 
 ## Lazy loading
@@ -128,7 +115,13 @@ The Datastore object matching the opened 4D database (standalone or client/serve
 
 ## Méthode
 
-See [class function](#class-function).
+ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. Ils fournissent des méthodes spécifiques pour interagir directement avec eux. Ces méthodes sont aussi appelées des fonctions membres (member functions). Ces méthodes sont utilisées en étant appelées sur une instance de l'objet.
+
+Par exemple, la méthode `query()` est une "member function" de dataclass. If you have stored a dataclass object in the `$myClass` variable, you can write:
+
+```code4d
+$myClass.query("name = smith")
+```
 
 ## Mixed data type
 

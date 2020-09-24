@@ -12,9 +12,9 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-| 名                       | データタイプ | とりうる値                                                                                                        |
-| ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| 名                       | データタイプ | とりうる値                                                       |
+| ----------------------- | ------ | ----------------------------------------------------------- |
+| customBackgroundPicture | string | POSIX シンタックスの相対パス。 style プロパティの "custom" オプションと併用する必要があります。 |
 
 
 #### 対象オブジェクト

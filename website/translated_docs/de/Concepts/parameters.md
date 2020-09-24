@@ -6,9 +6,9 @@ title: Parameter
 
 ## Overview
 
-Sie werden öfters sehen, dass Sie Ihren Methoden und Funktionen Daten übergeben müssen. This is easily done with parameters.
+Sie werden öfters sehen, dass Sie Ihren Methoden und Funktionen Daten übergeben müssen. Das lässt sich leicht mit Parametern durchführen.
 
-**Parameter** (oder **Argumente**) sind Datenteile, die eine Methode oder eine Class Function zum Ausführen ihrer Aufgaben benötigen. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Parameter** (oder **Argumente**) sind Datenteile, die eine Methode oder eine Class Function zum Ausführen ihrer Aufgaben benötigen. Die Begriffe *Parameter* und *Argument* werden in der Dokumentation ohne Unterscheidung verwendet. Parameter werden auch in den integrierten 4D Befehlen verwendet. In diesem Beispiel ist der String “Hello” ein Argument des 4D Befehls `ALERT`:
 
 ```4d
 ALERT("Hello")
@@ -28,7 +28,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 Die Eingabeparameter werden durch Strichpunkte (;) voneinander getrennt.
 
-The same principles are used when methods are executed through dedicated commands, for example:
+Dassselbe Prinzip gilt, wenn Methoden durch bestimmte Befehle ausgeführt werden, zum Beispiel:
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
@@ -36,13 +36,13 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //in the context of a subform
 ```
 
-Daten können auch von Methoden und Class Functions **zurückgegeben** werden. Folgende Zeile ist beispielsweise eine Anweisung mit dem integrierten Befehl `Length`, um die Länge eines String zurückzugeben. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Daten können auch von Methoden und Class Functions **zurückgegeben** werden. Folgende Zeile ist beispielsweise eine Anweisung mit dem integrierten Befehl `Length`, um die Länge eines String zurückzugeben. Die Anweisung setzt den von `Length` zurückgegebenen Wert in eine Variable mit Namen *MyLength*. Hier sehen Sie die Anweisung:
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. Pro Methode oder Class Function lässt sich nur ein einzelner Ausgabeparameter deklarieren.
+Jede Subroutine kann einen Wert zurückgeben. Pro Methode oder Class Function lässt sich nur ein einzelner Ausgabeparameter deklarieren.
 
 Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#values-or-references) und in lokale Variablen innerhalb der aufgerufenen Class Function oder Methode kopiert. Es gibt zwei Syntaxarten, um Variablenparameter im aufgerufenen Code zu deklarieren:
 
@@ -144,7 +144,7 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## Sequentielle Parameter
 
-Als Alternative zur Syntax [benannte Parameter](#named-parameters) können Sie Parameter über fortlaufend nummerierte Variablen deklarieren: **$1**, **$2**, **$3**, usw. The numbering of the local variables represents the order of the parameters.
+Als Alternative zur Syntax [benannte Parameter](#named-parameters) können Sie Parameter über fortlaufend nummerierte Variablen deklarieren: **$1**, **$2**, **$3**, usw. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter.
 
 > Auch wenn Class Functions diese Syntax unterstützen, empfehlen wir hier, die Syntax [benannte Parameter](#named-parameters) zu verwenden.
 
@@ -201,10 +201,10 @@ In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Pa
 
 Sie können jeden [Ausdruck](Concepts/quick-tour.md#expression-types) als sequentiellen Parameter verwenden, außer:
 
-- tables
+- Tabellen
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
 ### Parameter indirection
 
@@ -414,7 +414,7 @@ With named variables, any parameter can be optional. In the above example, all p
 
 ## Eingabe- und Ausgabevariablen
 
-Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
+Innerhalb der Unterroutine können Sie die Parameter $1, $2... auf dieselbe Weise wie jede andere lokale Variable verwenden. Dagegen lassen sich bei Befehlen, die den Wert der als Parameter übergebenen Variablen verändern, wie z. B. `Find in field` die Parameter $1, $2, usw. nicht direkt verwenden. Sie müssen sie erst in standardmäßige lokale Variablen kopieren, wie z. B. `$myvar=$1`.
 
 
 
