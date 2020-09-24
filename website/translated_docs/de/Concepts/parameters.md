@@ -258,13 +258,13 @@ Sie lässt sich auf unterschiedliche Weise aufrufen:
 ```
 
 
-As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. To declare these parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+Analog zu anderen lokalen Variablen müssen auch generische Parameter nicht zwingend über Compiler Direktive aufgerufen werden. Es wird jedoch empfohlen, um jegliche Zweideutigkeiten zu vermeiden. Zum Deklarieren dieser Parameter verwenden Sie eine Compiler Direktive, in der Sie ${N} als Parameter übergeben, wobei N den ersten generischen Parameter angibt.
 
 ```4d
  C_LONGINT(${4})
 ```
 
-This command means that starting with the fourth  parameter (included), the method can receive a variable number of parameters of longint type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type Longint, even if for you it was, for instance, of the data type Real.
+Dieser Befehl bedeutet, dass die Methode ab dem 4. Parameter (eingeschlossen) eine variable Anzahl an Parametern vom Typ Lange Ganzzahl empfangen kann. $1, $2 und $3 können einen beliebigen Datentyp haben. Nutzen Sie jedoch $2 per Indirektion, wird als Datentyp der generische Typ verwendet. Es wird also der Datentyp Lange Ganzzahl sein, auch wenn es für Sie z. B. der Datentyp Zahl war.
 
 > Die Nummer in der Deklaration muss eine Konstante und keine Variable sein.
 
