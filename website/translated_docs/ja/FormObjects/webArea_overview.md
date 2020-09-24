@@ -169,11 +169,11 @@ For reasons related to window redrawing mechanisms, the insertion of a web area 
 ### Webエリアと Webサーバーのコンフリクト (Windows)
 In Windows, it is not recommended to access, via a web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own web server.
 
-### Web plugins and Java applets
+### Webプラグインと Javaアプレット
 The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
-### Insertion of protocol (macOS)
-The URLs handled by programming in web areas in macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+### プロトコルの挿入 (macOS)
+The URLs handled by programming in web areas in macOS must begin with the protocol. つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
 
 
 ## Access to web inspector
