@@ -23,16 +23,16 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 
 ### Webレンダリングエンジン
 
-You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the Web area, depending on the specifics of your application.
+Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) うちから使用するものを選択することができます。
 
-Selecting the embedded web rendering engine allows you to call 4D methods from the Web area.
+"埋め込みWebレンダリングエンジンを使用" プロパティを選択している場合、"4Dメソッドコールを許可" プロパティが選択可能になります。
 
 ### 4Dメソッドコールを許可
-When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a Web area.
+[4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
 
 > この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みWebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
-### $4d object
+### $4dオブジェクトの使用
 
 The [4D embedded Web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
