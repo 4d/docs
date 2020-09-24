@@ -10,7 +10,7 @@ Webエリアは、静的および動的な HTMLページ、ファイル、ピク
 同じフォーム内に複数の Webエリアを配置できます。 しかしながら、Webエリアの挿入には [いくつかの制約](#webエリアのルール) がつく事に注意して下さい。
 
 いくつかの専用の [標準アクション](#標準アクション)、多数の [ランゲージコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.ja.html)、そして汎用および専用の [フォームイベント](#フォームイベント) を使用して、Webエリアの動作を制御することができます。 特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
-> Webエリアにおける Webプラグインおよび Javaアップレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
+> Webエリアにおける Webプラグインおよび Javaアプレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
 
 
 ## 特有のプロパティ
@@ -164,20 +164,20 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 
 
 ### Webエリアと Webサーバーのコンフリクト (Windows)
-Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。これをおこなうとコンフリクトが発生し、アプリケーションがフリーズすることがあります。 Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
+Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。これをおこなうとコンフリクトが発生し、アプリケーションがフリーズすることがあります。 もちろん、リモートの 4D から 4D Server の Webサーバーにアクセスすることはできます。自身の Webサーバーにアクセスできないということです。
 
-### Web plugins and Java applets
-Webエリアにおける Webプラグインおよび Javaアップレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
+### Webプラグインと Javaアプレット
+Webエリアにおける Webプラグインおよび Javaアプレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
 
-### Insertion of protocol (macOS)
-The URLs handled by programming in Web areas under macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+### プロトコルの挿入 (macOS)
+macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。 つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
 
 
-## Access to Web inspector
-You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
+## Webインスペクターへのアクセス
+フォームのWeb エリア内において、Webインスペクターを見たり使用したりすることができます。 Webインスペクターは、埋め込みWebエンジンによって提供されているデバッガーです。 Webページの情報の、コードとフローを解析します。
 
-### Displaying the Web inspector
-The following conditions must be met in order to view the Web inspector in a Web area:
+### Webインスペクターの表示
+Webエリア内に Webインスペクターを表示するには、次の条件を満たしていなければなりません:
 
 - You must [select the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the Web inspector is only available with this configuration).
 - You must enable the [context menu](properties_Entry.md#context-menu) for the area (this menu is used to call the inspector)
