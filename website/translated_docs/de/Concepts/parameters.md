@@ -194,7 +194,7 @@ $0:=Uppercase($1)
 ALERT($0)
 ```
 
-In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Parameter für den Befehl`ALERT` verwendet. Innerhalb der Unterroutine können Sie `$0` auf dieselbe Weise wie jede andere lokale Variable verwenden. Es ist 4D, das den Wert von`$0` (genauso wenn die Unterroutine endet) an die aufgerufene Methode zurückgibt.
+In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Parameter für den Befehl`ALERT` verwendet. Innerhalb der Unterroutine können Sie `$0` auf dieselbe Weise wie jede andere lokale Variable verwenden. Es ist 4D, das den Wert von `$0` (genauso wenn die Unterroutine endet) an die aufgerufene Methode zurückgibt.
 
 
 ### Unterstützte Datentypen
@@ -228,20 +228,20 @@ Im folgenden Beispiel akzeptiert die Projektmethode `SEND PACKETS` einen Paramet
  End for
 ```
 
-Die Indirektion von Parametern wird am besten gehandhabt, wenn Sie die folgende Regel beachten: Werden nur einige der Parameter durch Indirektion angesprochen, sollten sie nach den anderen übergeben werden. Innerhalb der Methode wird eine Indirektions-Adresse formatiert: ${$i}, wobei $i eine numerische Variable ist. ${$i} wird **generischer Parameter** genannt.
+Die Indirektion von Parametern funktioniert am besten, wenn Sie die folgende Regel beachten: Werden nur einige der Parameter durch Indirektion angesprochen, sollten sie nach den anderen übergeben werden. Innerhalb der Methode wird eine Indirektions-Adresse formatiert: ${$i}, wobei $i eine numerische Variable ist. ${$i} wird **generischer Parameter** genannt.
 
 Betrachten Sie beispielsweise eine Funktion, die Werte addiert und die Summe in einem Format zurückgibt, das als Parameter übergeben ist. Bei jedem Aufruf dieser Methode kann die Anzahl der zu addierenden Werte variieren. Wir müssen die Werte als Parameter an die Methode und das Format in Form einer Zeichenkette übergeben. Die Anzahl der Werte kann von Aufruf zu Aufruf variieren.
 
-Diese Funktion wird fogendermaßen aufgerufen:
+Diese Funktion wird folgendermaßen aufgerufen:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
 
 ```
 
-In this case, the calling method will get the string “182.70”, which is the sum of the numbers, formatted as specified. The function's parameters must be passed in the correct order: first the format and then the values.
+In diesem Fall erhält die aufrufende Methode den String “182.70”, das ist die Summe der Zahlen im angegebenen Format. Die Parameter der Funktion müssen in der richtigen Reihenfolge sein: erst das Format, dann die Werte.
 
-Here is the function, named `MySum`:
+Hier ist die Funktion, genannt `MySum`:
 ```4d
  $Sum:=0
  For($i;2;Count parameters)
@@ -250,7 +250,7 @@ Here is the function, named `MySum`:
  $0:=String($Sum;$1)
 ```
 
-This function can now be called in various ways:
+Sie lässt sich auf unterschiedliche Weise aufrufen:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
@@ -373,7 +373,7 @@ In der Methode `ChangeAge` schreiben Sie:
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
 
-Das ist ein leistungsstarker Weg zum Definieren von [optionale Parameter](#optional-parameters) (siehe auch unten). Fehlende Parameter können Sie wie folgt verwalten:
+Das ist eine leistungsstarke Möglichkeit zum Definieren von [optionale Parameter](#optional-parameters) (siehe auch unten). Fehlende Parameter können Sie wie folgt verwalten:
 - Sie prüfen, ob alle erwarteten Parameter geliefert werden, durch Vergleichen mit dem Wert `Null`, oder
 - Sie setzen Parameterwerte vorab, oder
 - Sie verwenden sie als leere Werte.
@@ -387,9 +387,9 @@ In der oberen Methode `ChangeAge` sind die beiden Eigenschaften Age und Name zwi
  $para.Age:=Num($para.Age)+10
  ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
-Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
+Dann sind beide Parameter optional; werden sie nicht gefüllt, ist das Ergebnis "is 10 years old" und es wird kein Fehler generiert.
 
-Letztendlich ist die Wartung und Umgestaltung von Anwendungen, die Parameter mit Namen verwenden, sehr einfach und sicher. Sie könnten beispielsweise später feststellen, dass 10 Jahre hinzufügen nicht immer geeignet ist. Sie benötigen einen anderen Parameter, um zu setzen, wieviel Jahre hinzugefügt werden sollen. Dazu schreiben Sie:
+Letztendlich ist die Wartung und Umgestaltung von Anwendungen, die Parameter mit Namen verwenden, sehr einfach und sicher. Sie könnten beispielsweise später feststellen, dass 10 Jahre hinzufügen nicht immer geeignet ist. Sie benötigen einen anderen Parameter zum festsetzen, wieviel Jahre hinzugefügt werden sollen. Dazu schreiben Sie:
 
 ```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
@@ -405,7 +405,7 @@ $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
 
-Hier ist die Leistungsstärke, dass sie Ihren vorhandenen Code nicht verändern müssen. Er wird immer wie in der vorigen Version funktionieren, aber bei Bedarf können Sie einen anderen Wert als 10 Jahre verwenden.
+Hier ist der Vorteil, dass sie Ihren vorhandenen Code nicht verändern müssen. Er wird immer wie in der vorigen Version funktionieren, aber bei Bedarf können Sie einen anderen Wert als 10 Jahre verwenden.
 
 Bei Variablen mit Namen kann jeder Parameter optional sein. Im oberen Beispiel sind alle Parameter optional und jeder kann gegeben sein, in beliebiger Reihenfolge.
 
@@ -434,7 +434,7 @@ Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von r
 
 Über den Befehl `Count parameters` in der aufgerufenen Methode können Sie die aktuelle Anzahl der Parameter abfragen und je nach dem, was Sie bekommen, unterschiedliche Operationen ausführen.
 
-Folgendes Beispiel zeigt eine Textmeldung und kann den Text in ein Dokument auf der Festplatte oder in einem 4D Write Pro Bereich einfügen:
+Folgendes Beispiel zeigt eine Textmeldung und kann den Text in ein Dokument auf der Festplatte oder in einen 4D Write Pro Bereich einfügen:
 
 ```4d
 // APPEND TEXT Project Method
@@ -512,7 +512,7 @@ Dieser zweite Weg (durch eine Unterroutine einen Wert zurückgeben) wird "eine F
 
 ### Sonderfälle: Objekte und Collections
 
-Sie müssen die Tatsache beachten, dass sich Daten vom Typ Objekt und Collection nur über eine Referenz verwalten lassen (z.B. ein interner *Zeiger*).
+Sie müssen im Blick behalten, dass sich Daten vom Typ Objekt und Collection nur über eine Referenz verwalten lassen (z.B. ein interner *Zeiger*).
 
 Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
 
