@@ -206,13 +206,13 @@ Sie können jeden [Ausdruck](Concepts/quick-tour.md#expression-types) als sequen
 
 Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
-### Parameter indirection
+### Parameter Indirektion
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+4D Projektmethoden akzeptieren eine variable Anzahl von Parametern desselben Typs, beginnend von rechts. Dieses Prinzip wird **Parameter Indirektion** genannt. Mit dem Befehl `Count parameters` können Sie dann solche Parameter mit einer `For...End for`-Schleife und der Syntax Parameter Indirektion ansprechen.
 
 > Die Parameter Indirektion lässt sich nur mit der [sequentiellen](#sequential-parameters) Syntax verwenden.
 
-In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
+Im folgenden Beispiel akzeptiert die Projektmethode `SEND PACKETS` einen Parameter Time mit einer variablen Anzahl von Textparametern:
 
 ```4d
   //SEND PACKETS Project Method
@@ -228,7 +228,7 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  End for
 ```
 
-Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**.
+Die Indirektion von Parametern wird am besten gehandhabt, wenn Sie die folgende Regel beachten: Werden nur einige der Parameter durch Indirektion angesprochen, sollten sie nach den anderen übergeben werden. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**.
 
 For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Each time this method is called, the number of values to be added may vary. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
 
@@ -432,9 +432,9 @@ Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von r
 
 > Werden optionale Parameter in Ihren Methoden benötigt, können Sie [Objekteigenschaften als benannte Parameter](#using-objects-properties-as-named-parameters) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
 
-Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
+Über den Befehl `Count parameters` in der aufgerufenen Methode können Sie die aktuelle Anzahl der Parameter abfragen und je nach dem, was Sie bekommen, unterschiedliche Operationen ausführen.
 
-The following example displays a text message and can insert the text into a document on disk or in a 4D Write Pro area:
+Folgendes Beispiel zeigt eine Textmeldung und kann den Text in ein Dokument auf der Festplatte oder in einem 4D Write Pro Bereich einfügen:
 
 ```4d
 // APPEND TEXT Project Method
@@ -452,7 +452,7 @@ The following example displays a text message and can insert the text into a doc
     End if
  End if
 ```
-After this project method has been added to your application, you can write:
+Nach Hinzufügen dieser Projektmethode in Ihrer Anwendung können Sie schreiben:
 
 ```4d  
 APPEND TEXT(vtSomeText) //Will only display the  message
