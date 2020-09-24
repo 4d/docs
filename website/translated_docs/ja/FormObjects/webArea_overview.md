@@ -157,7 +157,7 @@ When the form is executed, standard browser interface functions are available to
 - **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. コンテキストメニューの表示は、`WA SET PREFERENCE` コマンドを使用することで管理可能です。
 - **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the web area.
 
-### Subforms
+### サブフォーム
 For reasons related to window redrawing mechanisms, the insertion of a web area into a subform is subject to the following constraints:
 
 - The subform must not be able to scroll
