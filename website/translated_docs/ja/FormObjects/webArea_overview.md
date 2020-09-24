@@ -34,16 +34,16 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 
 ### $4dオブジェクトの使用
 
-The [4D embedded Web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+[4Dの埋め込みWebレンダリングエンジン](#埋め込みWebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
-For example, to call the `HelloWorld` 4D method, you just execute the following statement:
+たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
 ```codeJS
 $4d.HelloWorld();
 ```
-> JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+> JavaScript は大文字小文字を区別するため、オブジェクトの名前は $4d (dは小文字) であることに注意が必要です。
 
-The syntax of calls to 4D methods is as follows:
+4Dメソッドへの呼び出しのシンタックスは以下のようになります:
 
 ```codeJS
 $4d.4DMethodName(param1,paramN,function(result){})
