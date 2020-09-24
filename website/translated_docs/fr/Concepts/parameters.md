@@ -184,7 +184,7 @@ Voici un exemple qui utilise la méthode Uppercase4 :
 $NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *$NewPhrase* gets “THIS is good.”
+Dans cet exemple, la variable *$NewPhrase* prend la valeur “THIS is good.”
 
 La valeur retournée, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, vous pouvez écrire :
 

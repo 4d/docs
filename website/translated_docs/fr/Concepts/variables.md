@@ -16,12 +16,12 @@ Once created, you can use a variable wherever you need it in your application. F
 
 Les variables sont des objets du langage; vous pouvez créer et utiliser des variables qui n’apparaîtront jamais à l'écran. Dans vos formulaires, vous pouvez afficher des variables à l’écran (à l'exception des pointeurs et des BLOB), les utiliser pour saisir des données, et les imprimer dans des états. Dans ces cas, elles se comportent exactement comme des champs, et les mêmes contrôles intégrés sont disponibles lorsque vous les créez . Les variables peuvent également servir à contrôler des boutons, des list box, des zones de défilement, des boutons image, etc., ou à afficher les résultats de calculs ne devant pas être sauvegardés.
 
-## Declaring Variables
+## Déclaration des variables
 
-You create variables by declaring them. The 4D language offers two ways to declare variables:
+Vous créez des variables en les déclarant. Le langage 4D propose deux manières de déclarer des variables :
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only).
+- à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
+- à l'aide de l'une des commandes du langage 4D du thème "Compilateur" ou "Tableaux" (obsolète, langage classique uniquement).
 
 **Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 

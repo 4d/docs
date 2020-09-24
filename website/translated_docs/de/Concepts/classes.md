@@ -247,7 +247,7 @@ Beim Aufzählen der Eigenschaften eines Objekts wird der Prototyp seiner Klasse 
 In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:
 
 - `Function <Name>` zum Definieren von Member Methods der Objekte.
-- `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. prototype).
+- `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. Prototype).
 - `Class extends <ClassName>` zum Definieren der Vererbung.
 
 
@@ -267,7 +267,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 ```
 
 
-Class Functions sind Eigenschaften des Objekts prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function". 
+Class Functions sind Eigenschaften des Objekts Prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function". 
 
 In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
 
