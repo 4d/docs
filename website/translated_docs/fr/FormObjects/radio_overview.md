@@ -11,9 +11,9 @@ Un bouton radio apparaît sous la forme d’un texte suivi d’un cercle. Cepend
 
 ![](assets/en/FormObjects/radio1.png)
 
-A radio button is selected:
-- when the user clicks on it
-- when it has the focus and the user presses the **Space bar** key.
+Un bouton radio est sélectionné :
+- lorsque l'utilisateur clique dessus
+- lorsqu'il a le focus et que l'utilisateur appuie sur la touche **Espace**.
 
 
 

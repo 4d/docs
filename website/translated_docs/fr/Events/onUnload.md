@@ -18,7 +18,7 @@ All the objects of the form (from any page) whose `On Unload` object event prope
 
 
 
-### Subform
+### Sous-formulaire
 
 The `On Unload` event is generated when the subform is closing (this event must also have been activated at the parent form level in order to be taken into account). The event is generated before those of the parent form. The event is generated before those of the parent form.
 
