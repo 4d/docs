@@ -9,13 +9,13 @@ Web areas can display various types of web content within your forms: HTML pages
 
 It is possible to create several web areas in the same form. Note, however, that the use of web areas must follow [several rules](#web-areas-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Specific variables can be used to exchange information between the area and the 4D environment.
+Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. 特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
 > The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
 
-## Specific properties
+## 特有のプロパティ
 
-### Associated variables
+### 割り当てられる変数
 
 Two specific variables can be associated with each web area:
 - [`URL`](properties_WebArea.md#url) --to control the URL displayed by the web area
