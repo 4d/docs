@@ -3,7 +3,7 @@ id: propertiesReference
 title: JSON プロパティリスト
 ---
 
-You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description.
+この一覧は、すべてのオブジェクトプロパティを JSON名順に並べてまとめたものです。 プロパティ名をクリックすると、詳細説明に移動します。
 > In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes.
 
 
