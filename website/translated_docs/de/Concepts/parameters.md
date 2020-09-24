@@ -308,13 +308,13 @@ ALERT("Are you sure?";"Yes I am") //2 parameters
 ALERT("Time is over") //1 parameter
 ```
 
-Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von rechts. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von rechts. Das Problem bei optionalen Parametern ist, wie sie sich verwalten lassen, wenn welche in der aufgerufenen Methode fehlen - das sollte nie einen Fehler produzieren. Eine gute Praxis ist, den nicht-verwendeten Parametern Standardwerte zuzuweisen.
 
-> When optional parameters are needed in your methods, you might also consider using [Named parameters](#named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> Werden optionale Parameter in Ihren Methoden benötigt, können Sie Objekteigenschaften als [Parameter mit Namen](#named-parameters) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
 
-Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
+Über den Befehl `Count parameters` in der aufgerufenen Methode können Sie die aktuelle Anzahl der Parameter abfragen und je nach dem, was Sie bekommen, unterschiedliche Operationen ausführen.
 
-The following example displays a text message and can insert the text into a document on disk or in a 4D Write Pro area:
+Folgendes Beispiel zeigt eine Textmeldung und kann den Text in ein Dokument auf der Festplatte oder in einem 4D Write Pro Bereich einfügen:
 
 ```4d
 // APPEND TEXT Project Method
@@ -333,7 +333,7 @@ The following example displays a text message and can insert the text into a doc
     End if
  End if
 ```
-After this project method has been added to your application, you can write:
+Nach Hinzufügen dieser Projektmethode in Ihrer Anwendung können Sie schreiben:
 
 ```4d  
 APPEND TEXT(vtSomeText) //Will only display the  message
@@ -342,9 +342,9 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpA
 ```
 
 
-## Parameter indirection
+## Parameter Indirektion
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
+4D Projektmethoden akzeptieren eine variable Anzahl von Parametern desselben Typs, beginnend von rechts. Dieses Prinzip wird **Parameter Indirektion** genannt. Mit dem Befehl `Count parameters` können Sie dann solche Parameter mit einer `For...End for`-Schleife und der Syntax Parameter Indirektion ansprechen.
 
 In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
 
