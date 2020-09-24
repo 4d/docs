@@ -222,9 +222,9 @@ var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
+//équivalent à :  
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+//également équivalent à C_OBJECT($o)
 ```
 
 - To declare object variables of 4D class:
@@ -266,14 +266,14 @@ Voici quelques déclarations de variables simples :
 ARRAY LONGINT(alAnArray;10) //La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments
 ```
 
-**Note:** Arrays are a particular type of variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+**Note :** Les tableaux sont un type particulier de variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
 
 ## Assigner des valeurs
 
 Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle **assigner une valeur (ou affecter une valeur)** et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
 
-The assignment operator is a primary way to create a variable and to put data into it. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
+L’opérateur d’assignation est un premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
 
 ```4d
 MonNombre:=3
