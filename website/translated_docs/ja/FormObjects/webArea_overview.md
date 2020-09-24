@@ -5,39 +5,39 @@ title: Webエリア
 
 ## 概要
 
-Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
+Webエリアは、静的および動的な HTMLページ、ファイル、ピクチャー、JavaScript などの様々な Webコンテンツをフォーム中で表示することのできるオブジェクトです。 Webエリアの描画エンジンは、アプリケーションの実行プラットフォームおよび [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) オプションの設定状態により異なります。
 
-It is possible to create several web areas in the same form. Note, however, that the use of web areas must follow [several rules](#web-areas-rules).
+同じフォーム内に複数の Webエリアを配置できます。 しかしながら、Webエリアの挿入には [いくつかの制約](#webエリアのルール) がつく事に注意して下さい。
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. 特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
-> The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+いくつかの専用の [標準アクション](#標準アクション)、多数の [ランゲージコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.ja.html)、そして汎用および専用の [フォームイベント](#フォームイベント) を使用して、Webエリアの動作を制御することができます。 特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
+> Webエリアにおける Webプラグインおよび Javaアプレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
 
 
 ## 特有のプロパティ
 
 ### 割り当てられる変数
 
-Two specific variables can be associated with each web area:
-- [`URL`](properties_WebArea.md#url) --to control the URL displayed by the web area
-- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the web area.
+Webエリアには 2つの特別な変数が自動で割り当てられます:
+- [`URL`](properties_WebArea.md#url) -- Webエリアに表示されている URL の管理に使用します。
+- [`進捗状況変数`](properties_WebArea.md#進捗状況変数) -- Webエリアにロード中のページのパーセンテージを知るために使用します。
 
 ### Webレンダリングエンジン
 
-You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the web area, depending on the specifics of your application.
+Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) うちから使用するものを選択することができます。
 
-Selecting the embedded web rendering engine allows you to call 4D methods from the web area.
+"埋め込みWebレンダリングエンジンを使用" プロパティを選択している場合、"4Dメソッドコールを許可" プロパティが選択可能になります。
 
 ### 4Dメソッドコールを許可
-When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a web area.
+[4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
 
-> This property is only available if the web area [uses the embedded web rendering engine](#use-embedded-web-rendering-engine).
+> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みWebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
 ### $4dオブジェクトの使用
 
 
 
 
-The [4D embedded web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+[4Dの埋め込みWebレンダリングエンジン](#埋め込みWebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
@@ -69,13 +69,13 @@ $4d.4DMethodName(param1,paramN,function(result){})
  $0:=String(Current date;System date long)
 ```
 
-In the web area, the 4D method can be called with the following syntax:
+Webエリアでは、 4Dメソッドは以下のシンタックスで呼び出し可能です:
 
 ```js
 $4d.today()
 ```
 
-この 4Dメソッドは引数を受け取りませんが、メソッドの実行後に $0 の値を、4Dによって呼び出されるコールバック関数へと返します。 We want to display the date in the HTML page that is loaded by the web area.
+この 4Dメソッドは引数を受け取りませんが、メソッドの実行後に $0 の値を、4Dによって呼び出されるコールバック関数へと返します。 Webエリアによってロードされた HTMLページ内にこの日付を表示します。
 
 HTMLページのコードです:
 
@@ -112,7 +112,7 @@ $4d.today(function(dollarZero)
  End for
 ```
 
-The JavaScript code run in the web area is:
+Webエリア内で実行される JavaScript コードです:
 
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
@@ -124,12 +124,12 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 ## 標準アクション
 
-Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. これらのアクションについては [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) で説明しています。
+Webエリアを自動で管理するために、4つの特別な自動アクション (`openBackURL`、`openForwardURL`、`refreshCurrentURL`、そして `stopLoadingURL`) を使用できます。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションについては [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) で説明しています。
 
 
 ## フォームイベント
 
-Specific form events are intended for programmed management of web areas, more particularly concerning the activation of links:
+特定のフォームイベントは、Webエリアをプログラミングで管理するこを目的としています。すなわち、リンクの起動に関連しています:
 
 - `On Begin URL Loading`
 - `On URL Resource Loading`
@@ -139,7 +139,7 @@ Specific form events are intended for programmed management of web areas, more p
 - `On Open External Link`
 - `On Window Opening Denied`
 
-In addition, web areas support the following generic form events:
+更に、Webエリアは以下の汎用フォームイベントをサポートしています:
 
 - `On Load`
 - `On Unload`
@@ -151,32 +151,32 @@ In addition, web areas support the following generic form events:
 
 ### ユーザーインターフェース
 
-When the form is executed, standard browser interface functions are available to the user in the web area, which permit interaction with other form areas:
+フォームが実行されると、他のフォームエリアとの対話を可能にする、標準のブラウザーインタフェース機能が Web エリア内で利用可能になります。
 
-- **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. コンテキストメニューの表示は、`WA SET PREFERENCE` コマンドを使用することで管理可能です。
-- **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the web area.
+- **編集メニューコマンド**: Webエリアにフォーカスがあるとき、**編集** メニューコマンドを使用してコピーやペースト、すべてを選択などのアクションを選択に応じて実行できます。
+- **コンテキストメニュー**: Webエリアで、システム標準の [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) を使用できます。 コンテキストメニューの表示は、`WA SET PREFERENCE` コマンドを使用することで管理可能です。
+- **ドラッグ＆ドロップ**: 4D のオブジェクトプロパティに基づき、ユーザーは Webエリア内で、または Webエリアと 4Dフォームオブジェクト間で、テキストやピクチャー、ドキュメントをドラッグ＆ドロップできます。 セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。 この場合、カーソルは "禁止" アイコン ![](assets/en/FormObjects/forbidden.png) を表示します。 エリアへのファイルや URL のドロップを許可するには、`WA SET PREFERENCE` コマンドを使用して明示的にドロップを許可する必要があります。
 
 ### サブフォーム
-For reasons related to window redrawing mechanisms, the insertion of a web area into a subform is subject to the following constraints:
+ウィンドウの再描画機構に関わる理由から、サブフォームに Webエリアを挿入する場合には以下の制約がつきます:
 
 - サブフォームをスクロール可能にしてはいけません。
-- The limits of the web area must not exceed the size of the subform
+- Webエリアのサイズがサブフォームのサイズを超えてはいけません。
 
-> Superimposing a web area on top of or beneath other form objects is not supported.
+> 他のフォームオブジェクトの上や下に Webエリアを重ねることはサポートされていません。
 
 
 ### Webエリアと Webサーバーのコンフリクト (Windows)
-In Windows, it is not recommended to access, via a web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own web server.
+Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。これをおこなうとコンフリクトが発生し、アプリケーションがフリーズすることがあります。 もちろん、リモートの 4D から 4D Server の Webサーバーにアクセスすることはできます。自身の Webサーバーにアクセスできないということです。
 
 ### Webプラグインと Javaアプレット
-The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+Webエリアにおける Webプラグインおよび Javaアプレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
 
 ### プロトコルの挿入 (macOS)
-The URLs handled by programming in web areas in macOS must begin with the protocol. つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
+macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。 つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
 
 
-## Access to web inspector
+## Webインスペクターへのアクセス
 You can view and use a web inspector within web areas in your forms or in offscreen web areas. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
 
 ### Displaying the web inspector
