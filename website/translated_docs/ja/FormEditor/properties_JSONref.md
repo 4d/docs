@@ -3,7 +3,7 @@ id: jsonReference
 title: JSON プロパティリスト
 ---
 
-This page provides a comprehensive list of all form properties, sorted by their JSON name. Click on a property name to access its detailed description.
+This page provides a comprehensive list of all form properties, sorted by their JSON name. プロパティ名をクリックすると、詳細説明に移動します。
 > In the "Form Properties" chapter, properties are sorted according to their names and themes in the Property List.
 
 
