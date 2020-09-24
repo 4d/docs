@@ -292,7 +292,7 @@ Bei der Syntax sequentielle Variable müssen Sie sicherstellen, dass alle Parame
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. Beispiel:
+Auch wenn Sie Befehle wie `New process` mit Prozessmethoden verwenden, die Parameter akzeptieren, müssen Sie Parameter explizit in der aufgerufenen Methode deklarieren. Beispiel:
 
 ```4d
 C_TEXT($string)
@@ -302,7 +302,7 @@ C_OBJECT($obj)
 $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
+Diese Methode lässt sich im kompilierten Modus nur ausführen, wenn "foo_method" ihre Parameter deklariert:
 
 ```4d
 //foo_method
@@ -312,12 +312,12 @@ C_OBJECT($3)
 ...
 ```
 
-> Für den kompilierten Modus können Sie alle Parameter von lokalen Variablen für Projektmethoden in einer spezifischen Methode gruppieren, deren Namen mit "Compiler" beginnt. Within this method, you can predeclare the parameters for each method, for example:
+> Für den kompilierten Modus können Sie alle Parameter von lokalen Variablen für Projektmethoden in einer spezifischen Methode gruppieren, deren Namen mit "Compiler" beginnt. In dieser Methode können Sie die Parameter für jede Methode vorab deklarieren, zum Beispiel:
 ```4d  
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und komplierter Modus](Concepts/interpreted.md).
 
 Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
 
