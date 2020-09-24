@@ -51,18 +51,18 @@ $4d.HelloWorld();
 ```codeJS
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
-- `param1...paramN`: You can pass as many parameters as you need to the 4D method. These parameters can be of any type supported by JavaScript (string, number, array, object).
+- `param1...paramN`: 4Dメソッドに対して必要なだけ引数を渡すことができます。 これらの引数は、JavaScript にサポートされている型であればどんなものでも渡せます (文字列、数値、配列、オブジェクト)。
 
-- `function(result)`: Function to pass as last argument. This "callback" function is called synchronously once the 4D method finishes executing. It receives the `result` parameter.
+- `function(result)`: 最後の引数として渡される関数です。 この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。 この関数は `result` 引数を受け取ります:
 
-- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+- `result`: "$0" 式に返される、4Dメソッド実行の戻り値です。 戻り値は JavaScript でサポートされている型 (文字列、数値、配列、オブジェクト) のいずれかになります。 `C_OBJECT` コマンドを使用して、オブジェクトを返すことができます。
 
-> By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
+> デフォルトとして、4Dは UTF-8 文字コードで動作しています。 (アクセントが付いた文字などの) 拡張文字を含むテキストを返す場合には、Webエリアで表示されるページの文字コードが UTF-8 に宣言されていることを確認してください。文字コードが UTF-8 でない場合、文字が正しく表示されない可能性があります。 この場合、以下の 1行を HTMLページに追加して文字コードを宣言してください:<br /> `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### 例題 1
-Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
+`today` という名の 4Dプロジェクトメソッドがあり、そのメソッドは引数を受け付けず、カレントの日付を文字列として返す場合について考えてみます。
 
-4D code of `today` method:
+`today` メソッドの 4Dコードです:
 
 ```4d
  C_TEXT($0)
@@ -75,9 +75,9 @@ In the web area, the 4D method can be called with the following syntax:
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the web area.
+この 4Dメソッドは引数を受け取りませんが、メソッドの実行後に $0 の値を、4Dによって呼び出されるコールバック関数へと返します。 We want to display the date in the HTML page that is loaded by the web area.
 
-Here is the code of the HTML page:
+HTMLページのコードです:
 
 ```html
 <html>
@@ -91,20 +91,20 @@ $4d.today(function(dollarZero)
 });
 </script>
 </head>
-<body>Today is: <div id="mydiv"></div>
+<body>今日は: <div id="mydiv"></div>
 </body>
 </html>
 ```
 
 #### 例題 2
 
-The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
+`calcSum` という 4Dプロジェクトメソッドがあり、そのメソッドが (``$1...$n) という引数を受け取り、その合計を `$0` に返すという場合について考えます。
 
-4D code of `calcSum` method:
+`calcSum` メソッドの 4Dコードです:
 
 ```4d
- C_REAL(${1}) // receives n REAL type parameters
- C_REAL($0) // returns a Real
+ C_REAL(${1}) // n個の実数型引数を受け取ります
+ C_REAL($0) // 実数の値を返します
  C_LONGINT($i;$n)
  $n:=Count parameters
  For($i;1;$n)
@@ -117,17 +117,17 @@ The JavaScript code run in the web area is:
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
     {
-        var result = dollarZero // result is 262.5
+        var result = dollarZero // 結果は 262.5 です
     });
 ```
 
 
-## Standard actions
+## 標準アクション
 
-Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. これらのアクションについては [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) で説明しています。
 
 
-## Form events
+## フォームイベント
 
 Specific form events are intended for programmed management of web areas, more particularly concerning the activation of links:
 
