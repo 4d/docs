@@ -32,21 +32,21 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 > This property is only available if the web area [uses the embedded web rendering engine](#use-embedded-web-rendering-engine).
 
-### $4d object
+### $4dオブジェクトの使用
 
 
 
 
 The [4D embedded web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
-For example, to call the `HelloWorld` 4D method, you just execute the following statement:
+たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
 ```codeJS
 $4d.HelloWorld();
 ```
-> JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+> JavaScript は大文字小文字を区別するため、オブジェクトの名前は $4d (dは小文字) であることに注意が必要です。
 
-The syntax of calls to 4D methods is as follows:
+4Dメソッドへの呼び出しのシンタックスは以下のようになります:
 
 ```codeJS
 $4d.4DMethodName(param1,paramN,function(result){})
