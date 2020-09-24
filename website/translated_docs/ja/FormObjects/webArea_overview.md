@@ -9,19 +9,19 @@ Webエリアは、静的および動的な HTMLページ、ファイル、ピク
 
 同じフォーム内に複数の Webエリアを配置できます。 しかしながら、Webエリアの挿入には [いくつかの制約](#webエリアのルール) がつく事に注意して下さい。
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
-> The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+いくつかの専用の [標準アクション](#標準アクション)、多数の [ランゲージコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.ja.html)、そして汎用および専用の [フォームイベント](#フォームイベント) を使用して、Webエリアの動作を制御することができます。 特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
+> Webエリアにおける Webプラグインおよび Javaアップレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
 
 
-## Specific properties
+## 特有のプロパティ
 
-### Associated variables
+### 割り当てられる変数
 
-Two specific variables can be associated with each Web area:
-- [`URL`](properties_WebArea.md#url) --to control the URL displayed by the Web area
-- [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the Web area.
+Webエリアには 2つの特別な変数が自動で割り当てられます:
+- [`URL`](properties_WebArea.md#url) -- Webエリアに表示されている URL の管理に使用します。
+- [`進捗状況変数`](properties_WebArea.md#進捗状況変数) -- Webエリアにロード中のページのパーセンテージを知るために使用します。
 
-### Web rendering engine
+### Webレンダリングエンジン
 
 You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the Web area, depending on the specifics of your application.
 
@@ -167,7 +167,7 @@ For reasons related to window redrawing mechanisms, the insertion of a Web area 
 Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
 
 ### Web plugins and Java applets
-The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+Webエリアにおける Webプラグインおよび Javaアップレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
 
 ### Insertion of protocol (macOS)
 The URLs handled by programming in Web areas under macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
