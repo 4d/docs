@@ -264,12 +264,12 @@ In der Methode `ChangeAge` schreiben Sie:
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
 
-Das ist ein leistungsstarker Weg zum Definieren von [optionale Parameter](#optional-parameters) (siehe auch unten). Zum Verwalten fehlender Parameter können Sie folgendes tun:
-- Prüfen, ob alle erwarteten Parameter geliefert werden, durch Vergleichen mit dem Wert `Null`, oder
-- Parameterwerte vorab setzen, oder
-- sie als leere Werte verwenden.
+Das ist ein leistungsstarker Weg zum Definieren von [optionale Parameter](#optional-parameters) (siehe auch unten). Fehlende Parameter können Sie wie folgt verwalten:
+- Sie prüfen, ob alle erwarteten Parameter geliefert werden, durch Vergleichen mit dem Wert `Null`, oder
+- Sie setzen Parameterwerte vorab, oder
+- Sie verwenden sie als leere Werte.
 
-In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
+In der oberen Methode `ChangeAge` sind die beiden Eigenschaften Age und Name zwingend und würden Fehler produzieren, falls sie fehlen. Um das zu vermeiden, schreiben Sie einfach:
 
 ```4d
   //ChangeAge
@@ -280,7 +280,7 @@ In the `ChangeAge` method above, both Age and Name properties are mandatory and 
 ```
 Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
 
-Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
+Letztendlich ist die Wartung und Umgestaltung von Anwendungen, die Parameter mit Namen verwenden, sehr einfach und sicher. Sie könnten beispielsweise später feststellen, dass 10 Jahre hinzufügen nicht immer geeignet ist. Sie benötigen einen anderen Parameter, um zu setzen, wieviel Jahre hinzugefügt werden sollen. You write:
 
 ```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
