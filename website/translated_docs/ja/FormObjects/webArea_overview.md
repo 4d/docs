@@ -157,14 +157,14 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 ### サブフォーム
 ウィンドウの再描画機構に関わる理由から、サブフォームに Webエリアを挿入する場合には以下の制約がつきます:
 
-- The subform must not be able to scroll
-- The limits of the Web area must not exceed the size of the subform
+- サブフォームをスクロール可能にしてはいけません。
+- Webエリアのサイズがサブフォームのサイズを超えてはいけません。
 
-> Superimposing a Web area on top of or beneath other form objects is not supported.
+> 他のフォームオブジェクトの上や下に Webエリアを重ねることはサポートされていません。
 
 
-### Web Area and Web server conflict (Windows)
-Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
+### Webエリアと Webサーバーのコンフリクト (Windows)
+Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。これをおこなうとコンフリクトが発生し、アプリケーションがフリーズすることがあります。 Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
 
 ### Web plugins and Java applets
 Webエリアにおける Webプラグインおよび Javaアップレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
