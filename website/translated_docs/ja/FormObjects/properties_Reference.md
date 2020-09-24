@@ -4,7 +4,7 @@ title: JSON プロパティリスト
 ---
 
 この一覧は、すべてのオブジェクトプロパティを JSON名順に並べてまとめたものです。 プロパティ名をクリックすると、詳細説明に移動します。
-> In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes.
+> "フォームオブジェクトプロパティ" の章では、プロパティリストにおけるテーマと名称で各プロパティを紹介しています。
 
 
 [a](#a) - [b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [g](#g) - [h](#h) - [i](#i) - [j](#j) - [k](#k) - [l](#l) - [m](#m) - [n](#n) - [p](#p) - [r](#r) - [s](#s) - [t](#t) - [u](#u) - [v](#v) - [w](#w) - [z](#z)
