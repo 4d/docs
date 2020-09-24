@@ -150,12 +150,12 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 
 フォームが実行されると、他のフォームエリアとの対話を可能にする、標準のブラウザーインタフェース機能が Web エリア内で利用可能になります。
 
-- **Edit menu commands**: When the Web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the Web area. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
-- **Drag and drop**: The user can drag and drop text, pictures and documents within the Web area or between a Web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a Web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the mouse cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the area.
+- **編集メニューコマンド**: Webエリアにフォーカスがあるとき、**編集** メニューコマンドを使用してコピーやペースト、すべてを選択などのアクションを選択に応じて実行できます。
+- **コンテキストメニュー**: Webエリアで、システム標準の [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) を使用できます。 コンテキストメニューの表示は、`WA SET PREFERENCE` コマンドを使用することで管理可能です。
+- **ドラッグ＆ドロップ**: 4D のオブジェクトプロパティに基づき、ユーザーは Webエリア内で、または Webエリアと 4Dフォームオブジェクト間で、テキストやピクチャー、ドキュメントをドラッグ＆ドロップできます。 セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。 この場合、マウスカーソルは "禁止" アイコン ![](assets/en/FormObjects/forbidden.png) を表示します。 エリアへのファイルや URL のドロップを許可するには、`WA SET PREFERENCE` コマンドを使用して明示的にドロップを許可する必要があります。
 
-### Subforms
-For reasons related to window redrawing mechanisms, the insertion of a Web area into a subform is subject to the following constraints:
+### サブフォーム
+ウィンドウの再描画機構に関わる理由から、サブフォームに Webエリアを挿入する場合には以下の制約がつきます:
 
 - The subform must not be able to scroll
 - The limits of the Web area must not exceed the size of the subform
