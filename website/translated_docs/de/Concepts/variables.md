@@ -50,7 +50,7 @@ var $myVar //a variant variable
 ```
 
 `varName` ist der Variablenname, er muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.   
-Diese Syntax unterstützt nur [Deklarationen für lokale und Prozessvariablen](#local-process-and-interprocess-variables), d. h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
+Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#local-process-and-interprocess-variables), d. h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
 
 `varTyp` kann folgendes sein:
 
