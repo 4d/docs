@@ -226,7 +226,7 @@
         "title": "Echelle"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/propertiesText": {
         "title": "Texte"
@@ -259,7 +259,7 @@
         "title": "Stepper"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/tabControl": {
         "title": "Onglets"
