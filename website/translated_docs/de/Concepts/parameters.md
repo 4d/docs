@@ -186,7 +186,7 @@ $NewPhrase:=Uppercase4("This is good.")
 
 Die Variable *$NewPhrase* erhält “THIS is good.”
 
-Der zurückgegebene Wert `$0` ist eine lokale Variable innerhalb der Unterroutine. It can be used as such within the subroutine. For example, you can write:
+Der zurückgegebene Wert `$0` ist eine lokale Variable innerhalb der Unterroutine. Sie lässt sich als solche innerhalb der Unterroutine verwenden. For example, you can write:
 
 ```4d
 // Do_something
@@ -194,7 +194,7 @@ $0:=Uppercase($1)
 ALERT($0)
 ```
 
-In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Parameter für den Befehl`ALERT` verwendet. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Parameter für den Befehl`ALERT` verwendet. Innerhalb der Unterroutine können Sie `$0` auf dieselbe Weise wie jede andere lokale Variable verwenden. Es ist 4D, das den Wert von`$0` (genauso wenn die Unterroutine endet) an die aufgerufene Methode zurückgibt.
 
 
 ### Unterstützte Datentypen
@@ -281,7 +281,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 ```
 
 
-Bei der Syntax sequentielle Variable müssen Sie sicherstellen, dass alle Parameter sauber deklariert sind. In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+Bei der Syntax sequentielle Variable müssen Sie sicherstellen, dass alle Parameter sauber deklariert sind. Im folgenden Beispiel akzeptiert die Projektmethode `Capitalize` einen Textparameter und gibt ein Textergebnis zurück:
 
 ```4d
   // Capitalize Project Method
