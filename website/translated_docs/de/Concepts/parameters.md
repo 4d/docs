@@ -280,7 +280,7 @@ In der oberen Methode `ChangeAge` sind die beiden Eigenschaften Age und Name zwi
 ```
 Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
 
-Letztendlich ist die Wartung und Umgestaltung von Anwendungen, die Parameter mit Namen verwenden, sehr einfach und sicher. Sie könnten beispielsweise später feststellen, dass 10 Jahre hinzufügen nicht immer geeignet ist. Sie benötigen einen anderen Parameter, um zu setzen, wieviel Jahre hinzugefügt werden sollen. You write:
+Letztendlich ist die Wartung und Umgestaltung von Anwendungen, die Parameter mit Namen verwenden, sehr einfach und sicher. Sie könnten beispielsweise später feststellen, dass 10 Jahre hinzufügen nicht immer geeignet ist. Sie benötigen einen anderen Parameter, um zu setzen, wieviel Jahre hinzugefügt werden sollen. Dazu schreiben Sie:
 
 ```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
@@ -295,20 +295,20 @@ End if
 $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
-The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
+Hier ist die Leistungsstärke, dass sie Ihren vorhandenen Code nicht verändern müssen. Er wird immer wie in der vorigen Version funktionieren, aber bei Bedarf können Sie einen anderen Wert als 10 Jahre verwenden.
 
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
+Bei Variablen mit Namen kann jeder Parameter optional sein. Im oberen Beispiel sind alle Parameter optional und jeder kann gegeben sein, in beliebiger Reihenfolge.
 
 
-## Optional parameters
+## Optionale Parameter
 
-In the *4D Language Reference* manual, the { } characters (braces) indicate optional parameters. For example, `ALERT (message{; okButtonTitle})` means that the *okButtonTitle* parameter may be omitted when calling the command. You can call it in the following ways:
+Im Handbuch *4D Programmiersprache* geben geschweifte Klammern { } optionale Parameter an. So bedeutet `ALERT (message{; okButtonTitle})`, dass der Befehl ohne den Parameter *okButtonTitle* aufgerufen werden kann. Sie können ihn auf folgende Weise aufrufen:
 ```4d
 ALERT("Are you sure?";"Yes I am") //2 parameters
 ALERT("Time is over") //1 parameter
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von rechts. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
 
 > When optional parameters are needed in your methods, you might also consider using [Named parameters](#named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
