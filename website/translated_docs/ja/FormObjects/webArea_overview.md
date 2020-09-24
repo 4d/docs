@@ -177,28 +177,28 @@ macOS 上の Webエリアで、プログラムにより処理される URL は�
 
 
 ## Webインスペクターへのアクセス
-You can view and use a web inspector within web areas in your forms or in offscreen web areas. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
+オフスクリーンの Webエリアや、フォームのWeb エリア内において、Webインスペクターを見たり使用したりすることができます。 Webインスペクターは、埋め込みWebエンジンによって提供されているデバッガーです。 Webページの情報の、コードとフローを解析します。
 
-### Displaying the web inspector
-To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area.
+### Webインスペクターの表示
+Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コマンドを実行するか、 Webエリアのコンテキストメニューを使用します。
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br> This command can be used directly with onscreen (form object) and offscreen web areas. In the case of an onscreen web area, you must have [selected the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the web inspector is only available with this configuration).
+- **`WA OPEN WEB INSPECTOR` コマンドの実行**<br> このコマンドはスクリーン上 (フォームオブジェクト) の、またはオフスクリーンの Webエリアに対して直接使用することができます。 オフスクリーンの Webエリアの場合、そのエリアは [埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) を使用している必要があります (Webインスペクターはこの設定でのみ利用可能です)。
 
-- **Use the web area context menu**<br> This feature can only be used with onscreen web areas and requires that the following conditions are met:
-    - the embedded web rendering engine is selected for the area
-    - the [context menu](properties_Entry.md#context-menu) for the web area is enabled
-    - the use of the inspector is expressly enabled in the area by means of the following statement:
+- **Webエリアコンテキストメニューの使用**<br> この機能はオンスクリーンの Webエリアでのみ使用することができ、以下の条件を満たしている必要があります:
+    - エリアに対して "埋め込みWebレンダリングエンジンを使用" プロパティが選択されている。
+    - エリアに対して [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている。
+    - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:
 
 ```4d
     WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 
-For more information, refer to the description of the `WA SET PREFERENCE` command.
+詳細は `WA SET PREFERENCE` コマンドの説明を参照してください。
 
-### Using the web inspector
-上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: When you select this option, the web inspector window is displayed.
+### Webインスペクターの使用
+上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: この項目を選択すると、Webインスペクターウィンドウが表示されます。
 
-> The web inspector is included in the embedded web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the web rendering engine.
+> この Webインスペクターは、埋め込みWebレンダリングエンジンに含まれています。 このデバッガーの機能の詳細に関しては、Webレンダリングエンジンにより提供されているドキュメントを参照してください。
 
 
 
