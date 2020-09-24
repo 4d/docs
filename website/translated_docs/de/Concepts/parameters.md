@@ -346,7 +346,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpA
 
 4D Projektmethoden akzeptieren eine variable Anzahl von Parametern desselben Typs, beginnend von rechts. Dieses Prinzip wird **Parameter Indirektion** genannt. Mit dem Befehl `Count parameters` können Sie dann solche Parameter mit einer `For...End for`-Schleife und der Syntax Parameter Indirektion ansprechen.
 
-In the following example, the project method `SEND PACKETS` accepts a time parameter followed by a variable number of text parameters:
+Im folgenden Beispiel akzeptiert die Projektmethode `SEND PACKETS` einen Parameter Time mit einer variablen Anzahl von Textparametern:
 
 ```4d
   //SEND PACKETS Project Method
@@ -362,11 +362,11 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  End for
 ```
 
-Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**.
+Die Indirektion von Parametern wird am besten gehandhabt, wenn Sie die folgende Regel beachten: Werden nur einige der Parameter durch Indirektion angesprochen, sollten sie nach den anderen übergeben werden. Innerhalb der Methode wird eine Indirektions-Adresse formatiert: ${$i}, wobei $i eine numerische Variable ist. ${$i} wird **generischer Parameter** genannt.
 
-For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Each time this method is called, the number of values to be added may vary. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
+Betrachten Sie beispielsweise eine Funktion, die Werte addiert und die Summe in einem Format zurückgibt, das als Parameter übergeben ist. Bei jedem Aufruf dieser Methode kann die Anzahl der zu addierenden Werte variieren. Wir müssen die Werte als Parameter an die Methode und das Format in Form einer Zeichenkette übergeben. Die Anzahl der Werte kann von Aufruf zu Aufruf variieren.
 
-This function is called in the following manner:
+Diese Funktion wird fogendermaßen aufgerufen:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
