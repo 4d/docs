@@ -150,9 +150,9 @@ En outre, les zones Web prennent en charge les événements formulaire génériq
 
 Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’interface standard des navigateurs dans la zone Web, ce qui lui permet d’interagir avec les autres zones du formulaire :
 
-- **Edit menu commands**: When the Web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the Web area. L’affichage de ce menu peut également être contrôlé via la commande `WA SET PREFERENCE`.
-- **Drag and drop**: The user can drag and drop text, pictures and documents within the Web area or between a Web area and the 4D form objects, according to the 4D object properties. Pour des raisons de sécurité, le changement du contenu d'une zone Web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur de la souris affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). La possibilité de déposer des URL ou des fichiers dans la zone doit être explicitement autorisée à l'aide de la commande `WA SET PREFERENCE`.
+- **Commandes Edit menu** : lorsque la zone Web a le focus, les commandes du menu **Edit** permettent d’effectuer les actions de copier, coller, tout sélectionner, etc., en fonction de la sélection.
+- **Le menu contextuel** : il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone Web. L’affichage de ce menu peut également être contrôlé via la commande `WA SET PREFERENCE`.
+- **Glisser-déposer** : l’utilisateur peut effectuer des glisser-déposer de textes, d’images ou de documents à l’intérieur d’une zone Web ou entre une zone Web et les objets des formulaires 4D, en fonction des propriétés des objets 4D. Pour des raisons de sécurité, le changement du contenu d'une zone Web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur de la souris affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). La possibilité de déposer des URL ou des fichiers dans la zone doit être explicitement autorisée à l'aide de la commande `WA SET PREFERENCE`.
 
 ### Sous-formulaires
 Pour des raisons liées aux mécanismes de redessinement des fenêtres, l'insertion d'une zone Web dans un sous-formulaire est soumise aux contraintes suivantes :
@@ -188,7 +188,7 @@ Pour que vous puissiez afficher l’inspecteur Web dans une zone Web, les condit
 ```
 
 ### Utilisation de l’Inspecteur Web
-When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Lorsque vous sélectionnez cette option, le débogueur de la zone Web est alors affiché.
+Lorsque les paramétrages décrits ci-dessus sont effectués, vous disposez de nouvelles options telles que **Inspect Element** dans le menu contextuel de la zone. Lorsque vous sélectionnez cette option, le débogueur de la zone Web est alors affiché.
 
 > L’inspecteur Web est inclus dans le moteur de rendu intégré. Pour une description détaillée des fonctionnalités de ce débogueur, veuillez vous reporter à la documentation du moteur de rendu Web utilisé.
 
@@ -197,7 +197,7 @@ When you have done the settings as described above, you then have new options su
 
 ## Propriétés prises en charge
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [CSS Class](properties_Object.md#css-class) - [Menu contextuel](properties_Entry.md#context-menu) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Méthode](properties_Action.md#method) - [Nom](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Droite](properties_CoordinatesAndSizing.md#right) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - URL<13> - [Utiliser le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width) </p> 
 
 
 
