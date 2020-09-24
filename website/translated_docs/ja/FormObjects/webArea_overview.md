@@ -121,12 +121,12 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 ## 標準アクション
 
-Webエリアを自動で管理するために、4つの特別な自動アクション (`openBackURL`、`openForwardURL`、`refreshCurrentURL`、そして `stopLoadingURL`) を使用できます。 These actions can be associated with buttons or menu commands and allow quick implementation of basic Web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Webエリアを自動で管理するために、4つの特別な自動アクション (`openBackURL`、`openForwardURL`、`refreshCurrentURL`、そして `stopLoadingURL`) を使用できます。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションについては [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) で説明しています。
 
 
-## Form events
+## フォームイベント
 
-Specific form events are intended for programmed management of Web areas, more particularly concerning the activation of links:
+特定のフォームイベントは、Webエリアをプログラミングで管理するこを目的としています。すなわち、リンクの起動に関連しています:
 
 - `On Begin URL Loading`
 - `On URL Resource Loading`
@@ -136,7 +136,7 @@ Specific form events are intended for programmed management of Web areas, more p
 - `On Open External Link`
 - `On Window Opening Denied`
 
-In addition, Web areas support the following generic form events:
+更に、Webエリアは以下の汎用フォームイベントをサポートしています:
 
 - `On Load`
 - `On Unload`
@@ -144,11 +144,11 @@ In addition, Web areas support the following generic form events:
 - `On Losing Focus`
 
 
-## Web area rules
+## Webエリアのルール
 
-### User interface
+### ユーザーインターフェース
 
-When the form is executed, standard browser interface functions are available to the user in the Web area, which permit interaction with other form areas:
+フォームが実行されると、他のフォームエリアとの対話を可能にする、標準のブラウザーインタフェース機能が Web エリア内で利用可能になります。
 
 - **Edit menu commands**: When the Web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
 - **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the Web area. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
