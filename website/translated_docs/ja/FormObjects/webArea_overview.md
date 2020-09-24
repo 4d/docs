@@ -160,13 +160,13 @@ When the form is executed, standard browser interface functions are available to
 ### サブフォーム
 For reasons related to window redrawing mechanisms, the insertion of a web area into a subform is subject to the following constraints:
 
-- The subform must not be able to scroll
+- サブフォームをスクロール可能にしてはいけません。
 - The limits of the web area must not exceed the size of the subform
 
 > Superimposing a web area on top of or beneath other form objects is not supported.
 
 
-### Web Area and Web server conflict (Windows)
+### Webエリアと Webサーバーのコンフリクト (Windows)
 In Windows, it is not recommended to access, via a web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own web server.
 
 ### Web plugins and Java applets
