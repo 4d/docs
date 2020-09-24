@@ -49,16 +49,16 @@ title: オブジェクト
 ---
 ## 値を記憶
 
-This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
+このオプションは、フォームの [配置を記憶](FormEditor/properties_FormProperties.md#配置を記憶) プロパティがチェックされている場合に利用可能です。
 
-This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
+この機能は、フォームの全体的な配置に関係するオブジェクトに対してのみサポートされています。 たとえばチェックボックスは、ウィンドウ内の追加エリアを表示/非表示するのに使用することができるため、このオプションが存在します。
 
-Here is the list of objects whose value can be saved:
+「値」を保存できるオブジェクトは以下のとおりです:
 
-| オブジェクト                                 | Saved value                                                                            |
+| オブジェクト                                 | 保存される値                                                                                 |
 | -------------------------------------- | -------------------------------------------------------------------------------------- |
-| [チェックボックス](checkbox_overview.md)       | Value of associated variable (0, 1, 2)                                                 |
-| [ドロップダウンリスト](dropdownList_Overview.md) | Number of selected row                                                                 |
+| [チェックボックス](checkbox_overview.md)       | 関連付けられた変数の値 (0, 1, 2)                                                                  |
+| [ドロップダウンリスト](dropdownList_Overview.md) | 選択されている項目の番号                                                                           |
 | [ラジオボタン](radio_overview.md)            | Value of associated variable (1, 0, True or False for buttons according to their type) |
 | [Tab control](tabControl.md)           | Number of selected tab                                                                 |
 
