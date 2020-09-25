@@ -407,7 +407,7 @@ The Form editor provides two options for viewing styled objects:
 
 *	**CSS Preview (None)**<br>CSS values are not applied, only JSON form values are applied and displayed in the Form Editor. 
 
-*	**CSS Preview Windows** / **CSS Preview macOS**<br>[Style sheet attributes](stylesheets.html) are applied and displayed in the Form Editor. 
+*	**CSS Preview (Windows / macOS)**<br>[Style sheet attributes](stylesheets.html) are applied and displayed in the Form Editor. Note that if a font size too large for an object is defined in a style sheet or JSON, the object will automatically be resized to accommodate the font size.
 
 By default, forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system when [CSS files](createStylesheet.md) have been defined. 
 
@@ -421,11 +421,11 @@ The Form editor toolbar provides a CSS button for viewing styled objects:
 
 Select one of the following preview modes from the menu: 
 
-|Toolbar Icon|CSS Mode |Description|
+|Toolbar Icon|CSS Preview Mode |Description|
 |---|---|---|
-|![](assets/en/FormEditor/cssNo.png)|CSS Preview None|No CSS values or icons displayed|
-|![](assets/en/FormEditor/cssWin.png)|CSS Preview Windows|CSS icons and CSS values for Windows platform are displayed in the Property List. CSS values applied in form preview area.|
-|![](assets/en/FormEditor/cssMac.png)|CSS Preview macOS|CSS icons and CSS values for macOS platform are displayed in the Property List. CSS values applied in form preview area.|
+|![](assets/en/FormEditor/cssNo.png)|None|No CSS values or icons displayed|
+|![](assets/en/FormEditor/cssWin.png)|Windows|CSS icons and CSS values for Windows platform are displayed in the Property List. CSS values applied in form preview area.|
+|![](assets/en/FormEditor/cssMac.png)|macOS|CSS icons and CSS values for macOS platform are displayed in the Property List. CSS values applied in form preview area.|
 
 The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
 
@@ -433,15 +433,6 @@ Once a CSS preview mode is selected, objects are automatically displayed with th
 
 >When copying or duplicating objects containing properties managed by style sheets, only the style sheet references are copied. Attribute values set by the style sheet are not copied to the JSON values.
 
-
-
-### Viewing loaded style sheets
-
-Loaded style sheet files are listed below the CSS Preview options. Selecting one will open the style sheet in your default text editor.
-
-![](assets/en/FormEditor/cssInvalidSyntax.png)
-
->If a style sheet cannot be loaded, it is displayed with a red X icon (as shown above).
 
 ### CSS support in the Property List
 
