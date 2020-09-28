@@ -360,7 +360,7 @@ Items must be installed:
     - `PublishName` キーは、組み込みクライアントの *info.plist* にコピーされません。
     - シングルユーザーデータベースに "Default Data" フォルダーがない場合、組み込みクライアントはデータなしで実行されます。
 
-4D Server の自動アップデート機能 ([現在のバージョン](#現在のバージョン) 番号、`SET UPDATE FOLDER</a> コマンドなど...) は、シングルユーザーアプリケーションにおいても標準のリモートアプリケーションと同様に動きます。 接続時、シングルユーザーアプリケーションは <code>CurrentVers` キーを 4D Server バージョンレンジと比較します。 If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
+4D Server の自動アップデート機能 ([現在のバージョン](#現在のバージョン) 番号、`SET UPDATE FOLDER</a> コマンドなど...) は、シングルユーザーアプリケーションにおいても標準のリモートアプリケーションと同様に動きます。 接続時、シングルユーザーアプリケーションは <code>CurrentVers` キーを 4D Server バージョンレンジと比較します。 レンジ外だった場合、アップデートされているシングルユーザーアプリケーションがサーバーからダウンロードされ、アップデーターがローカルアップデートプロセスを実行します。
 
 
 ### Customizing client and/or server cache folder names
