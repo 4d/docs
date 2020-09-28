@@ -6,7 +6,7 @@ title: Classes
 
 ## Aperçu
 
-The 4D language supports the concept of **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
+Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
 Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`s'étendre`](#class-extends-classname) à une autre classe, puis hériter de ses [fonctions](#function).
 
@@ -33,7 +33,7 @@ $o:=cs.Person.new("John";"Doe")
 
 ## Gestion des classes
 
-### Class definition
+### Définition d'une classe
 
 A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
 
@@ -147,7 +147,7 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - un objet `superclass` (facultatif, nul s'il n'y en a aucun)
 - une méthode `new()` permettant d'instancier des objets de classe.
 
-In addition, a class object can reference:
+De plus, un objet de classe peut référencer :
 - un objet [`constructeur`](#class-constructor) (facultatif),
 - un objet `prototype`, contenant des objets de [fonction](#function) nommés (facultatif).
 
@@ -194,7 +194,7 @@ $cName:=OB Class($o).name //"Empty"
 
 ### Recherche et prototype des propriétés
 
-Tous les objets de 4D sont liés en interne à un objet de classe. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
+Tous les objets de 4D sont liés en interne à un objet de classe. Lorsque 4D ne trouve pas de propriété dans un objet, il effectue un recherche dans l'objet prototype de sa classe; s'il ne la trouve pas, 4D poursuit sa recherche dans l'objet prototype de sa classe mère (superclass), et ainsi de suite jusqu'à ce qu'il n'y ait plus de superclass.
 
 Tous les objets héritent de la classe "Object" comme classe supérieure d'arbre d'héritage.
 
@@ -213,7 +213,7 @@ Class constructor($width : Integer; $height : Integer)
     // vrai
 ```
 
-When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
+Lors de l'énumération des propriétés d'un objet, son prototype de classe n'est pas énuméré. Par conséquent, l'instruction `For each` et la commande `JSON Stringify` ne retournent pas les propriétés de l'objet du prototype de classe. The prototype object property of a class is an internal hidden property.
 
 
 
