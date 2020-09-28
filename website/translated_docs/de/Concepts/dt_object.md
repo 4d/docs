@@ -188,7 +188,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      End case
 ```
 
-- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
+- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
  - Objekt, Collection, Zeiger: Null
  - Bild: Leeres Bild
  - Boolean: Falsch
@@ -204,7 +204,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      $o.a:=$o.b //$o.a=0
 ```
 
-- Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen führt nichts aus.
+- Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, führt nichts aus.
 
 Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen, dass diese den korrekten Typ haben, selbst wenn sie als undefiniert bewertet werden. Dazu übergeben Sie die passenden 4D Befehle `String`, `Num`, `Date`, `Time`, `Bool`. Sie geben einen leeren Wert des angegebenen Typs zurück, wenn der Ausdruck als undefiniert bewertet wird. Beispiel:
 
@@ -261,7 +261,7 @@ Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekte
   //creates the phone property and sets its value to an object
 ```
 
-- Einen Wert in einem Unterobjekt erhalten ist mit Objektnotation ganz einfach:
+- Einen Wert in einem Unterobjekt erhalten, ist mit Objektnotation ganz einfach:
 
 ```4d
  $vCity:=$Emp.city //"Paris"
