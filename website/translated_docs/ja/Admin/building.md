@@ -365,14 +365,14 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 ### クライアントおよびサーバーキャッシュフォルダー名のカスタマイズ
 
-Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and remote clients. Client/server applications use default pathnames for both client and server system cache folders.
+クライアントおよびサーバーのキャッシュフォルダーは、リソースやコンポーネントなどの共有要素を格納するのにしようされます。 これらは、サーバーとリモートクライアント間の通信を管理するのに必要です。 クライアント/サーバーアプリケーションは、クライアントおよびサーバーシステム両方のキャッシュフォルダーにデフォルトパス名を使用します。
 
-In some specific cases, you might need to customize the names of these folders to implement specific architectures (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file.
+特殊な場合においては、特定のアーキテクチャーを実装するために、これらのフォルダー名をカスタマイズする必要があるかもしれません (後述参照)。 このため、4D は *buildApp* 設定ファイルにて使用可能な `ClientServerSystemFolderName` および `ServerStructureFolderName` キーを提供しています。
 
 
-#### Client cache folder
+#### クライアントキャッシュフォルダー
 
-Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder.
+それぞれ異なるデータセットを使用している以外は同様の複数の組み込みサーバーにクライアントアプリケーションが接続するような場合、クライアント側のキャッシュフォルダー名をカスタマイズすると便利かもしれません。 このような場合に、同じローカルリソースを複数回ダウンロードするのを避けるため、同一のローカルキャッシュフォルダーを使用することができます。
 
 - Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
 
@@ -383,7 +383,7 @@ Customizing the client-side cache folder name can be useful when your client app
 ![](assets/en/Admin/cacheb.png)
 
 
-#### Server cache folder
+#### サーバーキャッシュフォルダー
 
 Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder.
 
