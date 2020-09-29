@@ -78,50 +78,50 @@ title: プロジェクトパッケージのビルド
 
 ### コンパイル済みストラクチャーをビルド
 
-Builds an application containing only compiled code.
+インタープリターコードを含まないアプリケーションをビルドします。
 
-This feature creates a *.4dz* file within a *Compiled Database/\<project name>* folder. For example, if you have named your application “MyProject”, 4D will create:
+これにより、*Compiled Database/\<project name>* フォルダーの中に *.4dz* ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer (4D). 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
+> .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルを開けるのは 4D Server、4D Volume ライセンス (組み込みアプリケーション)、および 4D Developer (4D) です。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
 
 #### 関連するフォルダーを含む
 
-When you check this option, any folders related to the project are copied into the Build folder as *Components* and *Resources* folders. For more information about these folders, refer to the [description of project architecture](Project/architecture.md).
+このオプションを選択すると、プロジェクトに関連するフォルダーが、Build フォルダーの *Components* および *Resources* フォルダーにコピーされます。 これらのフォルダーの詳細については [プロジェクトアーキテクチャーの説明](Project/architecture.md) を参照ください。
 
 
 ### コンポーネントをビルド
 
 ストラクチャーからコンパイル済みコンポーネントをビルドします。
 
-コンポーネントは特定の機能を実装した標準の 4D プロジェクトです。 Once the component has been configured and installed in another 4D project (the host application project), its functionalities are accessible from the host project.
+コンポーネントは特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを他の 4Dプロジェクト (ホストアプリケーションプロジェクト) にインストールすると、ホストプロジェクトはその機能を利用できるようになります。
 
-If you have named your application, *MyComponent*, 4D will create a *Components* folder containing *MyComponent.4dbase* folder:
+アプリケーション名を *MyComponent* に指定した場合、4D は *Components* フォルダーを作成し、その中に *MyComponent.4dbase* フォルダーを生成します:
 
 *\<destination>/Components/MyComponent.4dbase/MyComponent.4DZ*.
 
-The *MyComponent.4dbase* folder contains:
--   *MyComponent.4DZ* file
--   A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
+*MyComponent.4dbase* フォルダーには次のファイルが含まれます:
+-   *MyComponent.4DZ* ファイル
+-   *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。 コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
 
 
-## Application page
+## アプリケーションページ
 
-This tab allows you can build a stand-alone, single-user version of your application:
+このタブでは、スタンドアロンのシングルユーザー版アプリケーションをビルドします:
 
 ![](assets/en/Project/standaloneProj.png)
 
-### Build stand-alone Application
+### スタンドアロンアプリケーションをビルド
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
+**スタンドアロンアプリケーションをビルド** オプションを選択して **ビルド** ボタンをクリックすると、スタンドアロンの (つまり、ダブルクリックで起動可能な) アプリケーションがアプリケーションプロジェクトをもとに作成されます。
 
-The following elements are required for the build:
-- 4D Volume Desktop (the 4D database engine),
-- an [appropriate license](#licenses)
+ビルドには次のものが必要です:
+- 4D Volume Desktop (4Dデータベースエンジン)
+- 適切な [ライセンス](#licenses)
 
-On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
+Windows においては、.exe 拡張子のついた実行ファイルが作成されます。 macOS においては、ソフトウェアパッケージが作成されます。
 
 The principle consists of merging a compiled structure file with 4D Volume Desktop. 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
