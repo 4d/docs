@@ -374,24 +374,24 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 それぞれ異なるデータセットを使用している以外は同様の複数の組み込みサーバーにクライアントアプリケーションが接続するような場合、クライアント側のキャッシュフォルダー名をカスタマイズすると便利かもしれません。 このような場合に、同じローカルリソースを複数回ダウンロードするのを避けるため、同一のローカルキャッシュフォルダーを使用することができます。
 
-- Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
+- デフォルトの設定 (*サーバーへの接続ごとに専用のキャッシュフォルダーがダウンロード/更新されます*):
 
 ![](assets/en/Admin/cachea.png)
 
-- Using the `ClientServerSystemFolderName` key (*a single cache folder is used for all servers*):
+- `ClientServerSystemFolderName` キーの使用 (*すべてのサーバーに対して同じキャッシュフォルダーが使用されます*):
 
 ![](assets/en/Admin/cacheb.png)
 
 
 #### サーバーキャッシュフォルダー
 
-Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder.
+それぞれ異なる 4Dのバージョンでビルドされた同じサーバーアプリケーションを同一のマシン上で実行する場合、サーバー側のキャッシュフォルダー名をカスタマイズすると便利です。 各サーバーで独自のリソースを使用するには、サーバーキャッシュフォルダーをカスタマイズする必要があります。
 
-- Default configuration (*same server applications share the same cache folder*):
+- デフォルトの設定 (*同じサーバーアプリケーションは同じキャッシュフォルダーを共有します*):
 
 ![](assets/en/Admin/cacheServera.png)
 
-- Using the `ServerStructureFolderName` key (*a dedicated cache folder is used for each server application*):
+- `ServerStructureFolderName` キーの使用 (*各サーバーアプリケーションに専用のキャッシュフォルダーが使用されます*):
 
 ![](assets/en/Admin/cacheServerb.png)
 
