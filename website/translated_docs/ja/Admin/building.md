@@ -7,9 +7,9 @@ title: プロジェクトパッケージのビルド
 
 アプリケーションビルダーでは以下のことを行えます:
 
-*   Build a compiled structure, without interpreted code,
+*   インタープリターコードを含まないコンパイル済みストラクチャーのビルド
 *   ダブルクリックで起動可能なスタンドアロンアプリケーションのビルド (4D のデータベースエンジンである 4D Volume Desktop を組み込んだ 4D アプリケーション)
-*   Build different applications from the same compiled structure via an XML project,
+*   XML形式のプロジェクトファイル定義を用いて、同じコンパイル済みストラクチャーから異なるアプリケーションのビルド
 *   クライアント/サーバーアプリケーションのビルド
 *   クライアントとサーバーの自動更新機能を備えたクライアント/サーバーアプリケーションのビルド
 *   ビルド設定の保存 (*設定保存* ボタン)
@@ -20,7 +20,7 @@ title: プロジェクトパッケージのビルド
 
 プロジェクトパッケージをビルドするには次の方法があります:
 
-- either the [BUILD APPLICATION](https://doc.4d.com/4Dv18R4/4D/18-R4/BUILD-APPLICATION.301-4982852.en.html) command,
+- [BUILD APPLICATION](https://doc.4d.com/4Dv18R4/4D/18-R4/BUILD-APPLICATION.301-4982852.ja.html) コマンドを使う
 - [アプリケーションビルド](#application-builder)ウィンドウを使う
 
 このウィンドウを開くには 4D の**デザイン**メニューから**アプリケーションビルド...**を選択します。
@@ -32,7 +32,7 @@ title: プロジェクトパッケージのビルド
 ![](assets/en/Project/appbuilderProj.png)
 
 
-Building can only be carried out once the project is compiled. If you select this command without having previously compiled the project, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the project must be (re)compiled.
+ビルドをおこなう前にプロジェクトはコンパイルされていなければなりません。 まだコンパイルされていないプロジェクトでこのメニューコマンドを選択する、あるいはコンパイル後にコードが変更されていると、プロジェクトを (再) コンパイルしなければならない旨の警告ダイアログが表示されます。
 
 
 ### アプリケーションビルド設定
@@ -41,7 +41,7 @@ Building can only be carried out once the project is compiled. If you select thi
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv18/4D/18/BUILD-APPLICATION.301-4505371.ja.html) コマンドでそれらを使い分けることができます。
 
-また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.en.html) manual.
+また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 詳細は専用のドキュメント [アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.ja.html) を参照してください。
 
 ### ログファイル
 
@@ -617,25 +617,25 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 ### 最後に使用したサーバーパスを保存する
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
+最後に使用され検証されたサーバーパスは、アプリケーションのユーザー設定フォルダー内の "lastServer.xml" ファイルに自動的に保存されます。 このフォルダーは次の場所に保存されています:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-This mechanism addresses the case where the primary targeted server is temporary unavailable for some reason (maintenance mode for example). こういった状態が初めて起こったときにはサーバー選択ダイアログボックスが表示され (ただし許可されていた場合に限ります、後述参照)、ほかのサーバーをユーザーが手動で選択すると、その接続が成功した場合にはそのパスが保存されます。 Any subsequent unavailability would be handled automatically through the "lastServer.xml" path information.
+このメカニズムは、最初に指定したサーバーが何らかの理由 (例えばメンテナンスモードなど) で一時的に使用できないケースに対応します。 こういった状態が初めて起こったときにはサーバー選択ダイアログボックスが表示され (ただし許可されていた場合に限ります、後述参照)、ほかのサーバーをユーザーが手動で選択すると、その接続が成功した場合にはそのパスが保存されます。 それ以降に接続ができなかった場合には、"lastServer.xml" のパス情報によって自動的に対処されます。
 
-> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.en.html) key in the "BuildApp.4DSettings" file. このメカニズムはあくまで一時的な接続不可状態の場合を想定しています。  
-> - Pressing the **Alt/Option** key at startup to display the server selection dialog box is still supported in all cases.
+> - ネットワークの設定などの影響で、クライアントアプリが恒久的に検索サービスを使ったサーバー接続ができない場合には、ビルド時にあらかじめ "BuildApp.4DSettings" ファイル内の [IPAddress](https://doc.4d.com/4Dv18/4D/18/IPAddress.300-4671089.ja.html) キーでホスト名を指定しておくことが推奨されます。 このメカニズムはあくまで一時的な接続不可状態の場合を想定しています。  
+> - スタートアップ時に **Alt/Option** キーを押しながら起動してサーバー接続ダイアログボックスを表示する方法は、すべての場合において可能です。
 
 
 
-### Availability of the server selection dialog box in case of error
+### エラー時のサーバー選択ダイアログボックス使用の可・不可
 
-You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
+組み込みクライアントアプリがサーバーに接続できない場合、標準のサーバー選択ダイアログボックスを表示するかどうかは設定しておくことができます。 この設定は、アプリケーションをビルドするマシン上の [ServerSelectionAllowedXML](https://doc.4d.com/4Dv18/4D/18/ServerSelectionAllowed.300-4671093.ja.html) キーの値によって制御されます:
 
-- **Display of an error message with no access possible to the server selection dialog box**. デフォルトの挙動です。 The application can only quit.  
-  `ServerSelectionAllowed`: **False** or key omitted ![](assets/en/Project/connect1.png)
+- **エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない**。 デフォルトの挙動です。 アプリケーションは終了する以外の選択肢がありません。  
+  `ServerSelectionAllowed`: **False** 値、またはキーを省略 ![](assets/en/Project/connect1.png)
 
-- **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.   
-  `ServerSelectionAllowed`: **True** ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
+- **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする**。 ユーザーは **選択...** ボタンをクリックする事によってサーバー選択ウィンドウにアクセスできます。   
+  `ServerSelectionAllowed`: **True**値 ![](assets/en/Project/connect2.png) ![](assets/en/Project/connect3.png)
