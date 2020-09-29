@@ -314,28 +314,28 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 これらのフォルダーの内容はカレントのプラットフォームにより異なります:
 
 *   *Windows* - 各フォルダーに*\<ApplicationName>Client.exe* (クライアント用) あるいは *\<ApplicationName>Server.exe* (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
-*   *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. 各パッケージには動作に必要なすべてのファイルが含まれます。 Under macOS, launch a package by double-clicking it.
+*   *macOS* - 各フォルダーは \<ApplicationName> Client (クライアント用) と \<ApplicationName> Server (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
 
-    > The macOS packages built contain the same items as the Windows subfolders. ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。
+    > ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示"を選択します。
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 This file is used during the automatic client application update.
+"クライアントの自動更新を有効にする" オプションを選択している場合、*\<ApplicationName>Server* フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
 
 
 #### Webファイルの場所
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. :
+サーバーやクライアントを Webサーバーとして使用する場合、Webサーバーが使用するファイルを特定の場所に配置しなければなりません :
 
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-- Default Web root folder (WebFolder).
+- *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
+- デフォルト Web ルートフォルダー (WebFolder)
 
 インストール場所:
-*   **on Windows**
-    *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
-    *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
+*   **Windows**
+    *   **サーバーアプリケーション** - *Client Server executable\ \<ApplicationName>Server\Server Database* サブフォルダー内にこれらの項目を配置します。
+    *   **クライアントアプリケーション** - *Client Server executable\ \<ApplicationName>Client* サブフォルダー内にこれらの項目を配置します。
 
-*   **on macOS**
-    *   **Server application** - next to the *\<ApplicationName>Server* software package.
-    *   **Client application** - next to the *\<ApplicationName>Client* software package.
+*   **macOS**
+    *   **サーバーアプリケーション** - *\<ApplicationName>Server* ソフトウェアパッケージと同階層にこれらの項目を配置します。
+    *   **クライアントアプリケーション** - *\<ApplicationName>Client* ソフトウェアパッケージと同階層にこれらの項目を配置します。
 
 
 ### シングルユーザークライアントアプリケーションの埋め込み
@@ -363,7 +363,7 @@ If the server and/or client part of your double-clickable application is used as
 4D Server の自動アップデート機能 ([現在のバージョン](#現在のバージョン) 番号、`SET UPDATE FOLDER</a> コマンドなど...) は、シングルユーザーアプリケーションにおいても標準のリモートアプリケーションと同様に動きます。 接続時、シングルユーザーアプリケーションは <code>CurrentVers` キーを 4D Server バージョンレンジと比較します。 レンジ外だった場合、アップデートされているシングルユーザーアプリケーションがサーバーからダウンロードされ、アップデーターがローカルアップデートプロセスを実行します。
 
 
-### Customizing client and/or server cache folder names
+### クライアントおよびサーバーキャッシュフォルダー名のカスタマイズ
 
 Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and remote clients. Client/server applications use default pathnames for both client and server system cache folders.
 
@@ -498,7 +498,7 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 [Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。 </p>
 
-## Customizing application icons
+## アプリケーションアイコンのカスタマイズ
 
 4Dは、ダブルクリックで実行可能なアプリケーションにデフォルトアイコンを割り当てますが、アプリケーションごとにこのアイコンをカスタマイズできます。
 
@@ -524,7 +524,7 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 
 
-## Management of data file(s)
+## データファイルの管理
 
 ### データファイルを開く
 
@@ -598,7 +598,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 デフォルトのデータファイルが初回起動時に検知された場合、データファイルは自動的に読み込み専用モードで開かれ、データファイルの変更を伴わないカスタムオペレーションを実行できるようになります。
 
 
-## Management of client connection(s)
+## クライアント接続の管理
 
 ここでは、組み込みクライアントアプリが運用環境において対象サーバーへと接続する際のメカニズムについて説明します。
 
