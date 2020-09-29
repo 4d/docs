@@ -400,19 +400,19 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 ## Plugins & components page
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
+このページでは、シングルユーザーまたはクライアント/サーバーアプリケーションに含める [プラグイン](Concepts/plug-ins.md) や [コンポーネント](Concepts/components.md) を設定できます。
 
-The page lists the elements loaded by the current 4D application:
+このページには、現在の 4Dアプリケーションにロードされている要素がリストされます:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-*    **Active** column - Indicates that the items will be integrated into the application package built. デフォルトですべての項目が選択されています。 To exclude a plug-in or a component, deselect the check box next to it.
+*    **アクティブ** 列 - ビルドするアプリケーションパッケージに項目を統合するかどうかを指定します。 デフォルトですべての項目が選択されています。 プラグインやコンポーネントを除外するには、チェックボックスの選択を外します。
 
-*   **Plugins and components** column - Displays the name of the plug-in/component.
+*   **プラグイン&コンポーネント** 列 - プラグイン/コンポーネントの名称を表示します。
 
-*   **ID** column - Displays the plug-in/component's identification number (if any).
+*   **ID** 列 - プラグイン/コンポーネントの ID (あれば) を表示します。
 
-*   **Type** column - Indicates the type of item: plug-in or component.
+*   **タイプ** 列 - その要素がプラグインであるかコンポーネントであるかが表示されます。
 
 If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
 
