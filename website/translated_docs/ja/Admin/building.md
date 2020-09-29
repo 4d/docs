@@ -532,63 +532,63 @@ Apple の公証サービスを利用するのに必要な条件を満たすた�
 
 組み込みアプリ起動時のオープニングシーケンスは以下のようになっています:
 
-1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
-2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
-3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+1. 4D は最後に開かれたデータファイルを開こうとします。詳しくは [後述の説明](#最後に開かれたデータファイル) を参照ください (これは初回起動時には適用されません)。
+2. 見つからない場合、4D は .4DZ ファイルと同階層の Default Data フォルダー内にあるデータファイルを、読み込み専用モードで開こうとします。
+3. これも見つからない場合、4D は標準のデフォルトデータファイルを開こうとします (.4DZ ファイルと同じ場所にある、同じ名前のファイル)。
+4. これも見つからない場合、4D は "データファイルを開く" ダイアログボックスを表示します。
 
 
-### Last data file opened
+### 最後に開かれたデータファイル
 
-#### Path of last data file
-Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder.
+#### 最後に開かれたファイルへのパス
+4D でビルドされたスタンドアロンまたはサーバーアプリケーションは、最後に開かれたデータファイルのパスをアプリケーションのユーザー設定フォルダー内に保存します。
 
-The location of the application's user preferences folder corresponds to the path returned by the following statement:
+アプリケーションのユーザー設定フォルダーの場所は、以下のコマンドで返されるパスに対応しています:
 
 ```4d
 userPrefs:=Get 4D folder(Active 4D Folder)
 ```
 
-The data file path is stored in a dedicated file, named *lastDataPath.xml*.
+データファイルパスは *lastDataPath.xml* という名前の専用ファイルに保存されます。
 
-Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
+これにより、アプリケーションのアップデートを提供したときにも、ローカルのユーザーデータファイル (最後に使用されたデータファイル) が初回の起動から自動的に開かれます。
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+このメカニズムは標準的な運用に適しています。 しかしながら特定の場合、たとえば組み込みアプリケーションを複製した場合などにおいて、データファイルとアプリケーションのリンクを変えたいことがあるかもしれません (次章参照)。
 
-#### Configuring the data linking mode
+#### データリンクモードの設定
 
-With your compiled applications, 4D automatically uses the last data file opened. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
+コンパイルされたアプリケーションでは、4D は最後に使用されたデータファイルを自動的に使用します。 デフォルトでは、データファイルのパスはアプリケーションのユーザー設定フォルダー内に保存され、 **アプリケーション名 ** でリンクされます。
 
-This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
+異なるデータファイルを使用するために組み込みアプリを複製する場合には、この方法は適さないかもしれません。 複製されたアプリは同じアプリケーションユーザー設定フォルダーを共有するため、同じデータファイルを使用することになります (最後に使用されたファイルが開かれるため、データファイル名を変更した場合でも結果は同じです)。
 
-4D therefore lets you link the data file path to the application path. このとき、データファイルは特定のパスを使用してリンクされるので、最後に開かれたファイルであるかは問われません。 この設定を使うには、データリンクモードの基準を **アプリケーションパス** に設定します。
+そのため 4D では、アプリケーションパスを使用してデータファイルとリンクすることも可能です。 このとき、データファイルは特定のパスを使用してリンクされるので、最後に開かれたファイルであるかは問われません。 この設定を使うには、データリンクモードの基準を **アプリケーションパス** に設定します。
 
-This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
-
-
-*Duplication when data linked by application name:* ![](assets/en/Project/datalinking1.png)
-
-*Duplication when data linked by application path:* ![](assets/en/Project/datalinking2.png)
-
-You can select the data linking mode during the build application process. オブジェクトにヘルプメッセージを関連付けるには:
-
-- Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
-- Use the **LastDataPathLookup** XML key (single-user application or server application).
+このモードを使えば、組み込みアプリがいくつあっても、それぞれが専用のデータファイルを使えます。 ただし、デメリットもあります: アプリケーションパッケージを移動させてしまうとアプリケーションパスが変わってしまうため、データファイルを見つけられなくなります。この場合、ユーザーは開くデータファイルを指定するダイアログを提示され、正しいファイルを選択しなくてはなりません。一度選択されれば、*lastDataPath.xml* ファイルが更新され、新しい "executablePath" 属性のエントリーが保存されます。
 
 
-### Defining a default data folder
+*データがアプリケーション名でリンクされている場合の複製:* ![](assets/en/Project/datalinking1.png)
 
-4D allows you to define a default data file at the application building stage. アプリケーションの初回起動時に、開くべきローカルデータファイルが見つからなかった場合 (前述の [オープニングシーケンス](#データファイルを開く)参照)、デフォルトのデータファイルが読み込み専用モードで自動的に開かれます。 この機能を使って、組み込みアプリを初回起動したときのデータファイル作成・選択の操作をより制御することができます。
+*データがアプリケーションパスでリンクされている場合の複製:* ![](assets/en/Project/datalinking2.png)
 
-More specifically, the following cases are covered:
+このデータリンクモードはアプリケーションビルドの際に選択することができます。 オブジェクトにヘルプメッセージを関連付けるには:
 
-- Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.
-- Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
+- アプリケーションビルダーの [アプリケーションページ](#アプリケーションページ) または [クライアント/サーバーページ](#クライアント-サーバーページ) を使用する。
+- シングルユーザーまたはサーバーアプリケーションの **LastDataPathLookup** XMLキーを使用する。
 
 
-To define and use a default data file:
+### デフォルトのデータフォルダーを定義する
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the application project folder. This file must be provided along with all other necessary files, depending on the project configuration: index (.4DIndx), external Blobs, journal, etc. 必ず、有効なデフォルトデータファイルを用意するようにしてください。 Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
+4D では、アプリケーションビルド時にデフォルトのデータファイルを指定することができます。 アプリケーションの初回起動時に、開くべきローカルデータファイルが見つからなかった場合 (前述の [オープニングシーケンス](#データファイルを開く)参照)、デフォルトのデータファイルが読み込み専用モードで自動的に開かれます。 この機能を使って、組み込みアプリを初回起動したときのデータファイル作成・選択の操作をより制御することができます。
+
+具体的には、次のような場合に対応できます:
+
+- 新しい、またはアップデートされた組み込みアプリを起動したときに、"データファイルを開く" ダイアログが表示されるのを防ぐことができます。 たとえば、デフォルトデータファイルが開かれたことを起動時に検知して、独自のコードやダイアログを実行して、ローカルデータファイルの作成や選択を促すことができます。
+- デモアプリなどの用途で、読み込み専用データしか持たない組み込みアプリを配布することができます。
+
+
+デフォルトのデータファイルを定義・使用するには:
+
+- デフォルトのデータファイル (名称は必ず "Default.4DD") を、データベースプロジェクトのデフォルトフォルダー (名称は必ず "Default Data") 内に保存します。 このデフォルトのデータファイルには、プロジェクト構成に応じて必要なファイルもすべて揃っている必要があります: インデックス (.4DIndx)、外部BLOB、ジャーナル、他。 必ず、有効なデフォルトデータファイルを用意するようにしてください。 Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 - When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
 
 The following graphic illustrates this feature:
