@@ -464,7 +464,7 @@
       "Menus": "Menus",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
+      "Users and Groups": "ユーザー＆グループ",
       "REST Server": "REST Server"
     }
   },
@@ -481,7 +481,7 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
-    "Users and Groups|no description given": "Users and Groups",
+    "Users and Groups|no description given": "ユーザー＆グループ",
     "Getting started|no description given": "はじめに",
     "Developing a Desktop application|no description given": "デスクトップアプリの開発",
     "Developing a Web application|no description given": "Web アプリの開発",
