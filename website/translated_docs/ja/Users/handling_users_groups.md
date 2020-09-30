@@ -11,13 +11,13 @@ title: 4Dユーザー＆グループの管理
 - access all application servers without restriction,
 - ユーザーやグループを作成する。
 - グループにアクセス権を割り当てる。
-- デザインモードを使用する。 In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+- デザインモードを使用する。 シングルユーザー環境では、常にデザイナーアクセス権が使用されます。 クライアント/サーバー環境にといては、デザイナーにパスワードを割り当てることで、4Dユーザーログインダイアログが表示されるようになります。  この環境では、デザインモードは読み取り専用です。
 
-After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
+デザイナーの次に強力なユーザーは **管理者 (Administrator)**であり、通常はパスワードアクセスシステムや管理機能を扱う役割を与えられています。
 
-The Administrator can:
+管理者は次のことができます:
 - ユーザーやグループを作成する。
-- access the 4D Server Administration window and monitor
+- 4D Server 管理画面とモニターにアクセスする。
 - access the MSC window to monitor backup, restore, or server.
 
 The Administrator cannot:
