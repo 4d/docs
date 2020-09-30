@@ -403,14 +403,9 @@ By default, all objects that support the focusable property are included in the 
 
 ## CSS Preview
 
-The Form editor provides two options for viewing styled objects:
+The Form editor allows you to view your form with or without applied CSS values. 
 
-*	**CSS Preview (None)**<br>CSS values are not applied, only JSON form values are applied and displayed in the Form Editor. 
-
-*	**CSS Preview (Windows / macOS)**<br>[Style sheet attributes](stylesheets.html) are applied and displayed in the Form Editor. Note that if a font size too large for an object is defined in a style sheet or JSON, the object will automatically be resized to accommodate the font size.
-
-By default, forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system when [CSS files](createStylesheet.md) have been defined. 
-
+When [style sheets](createStylesheet.md) have been defined, by default forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system. 
 
 
 ### Selecting CSS Preview Mode
@@ -426,6 +421,9 @@ Select one of the following preview modes from the menu:
 |![](assets/en/FormEditor/cssNo.png)|None|No CSS values or icons displayed|
 |![](assets/en/FormEditor/cssWin.png)|Windows|CSS icons and CSS values for Windows platform are displayed in the Property List. CSS values applied in form preview area.|
 |![](assets/en/FormEditor/cssMac.png)|macOS|CSS icons and CSS values for macOS platform are displayed in the Property List. CSS values applied in form preview area.|
+
+
+>If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be resized to accommodate the font size.
 
 The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
 
