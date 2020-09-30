@@ -403,9 +403,9 @@ By default, all objects that support the focusable property are included in the 
 
 ## CSS Preview
 
-The Form editor allows you to view your form with or without applied CSS values. 
+The Form editor allows you to view your forms with or without applied CSS values. 
 
-When [style sheets](createStylesheet.md) have been defined, by default forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system. 
+When [style sheets](createStylesheet.md) have been defined, forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system by default. 
 
 
 ### Selecting CSS Preview Mode
@@ -418,18 +418,18 @@ Select one of the following preview modes from the menu:
 
 |Toolbar Icon|CSS Preview Mode |Description|
 |---|---|---|
-|![](assets/en/FormEditor/cssNo.png)|None|No CSS values or icons displayed|
-|![](assets/en/FormEditor/cssWin.png)|Windows|CSS icons and CSS values for Windows platform are displayed in the Property List. CSS values applied in form preview area.|
-|![](assets/en/FormEditor/cssMac.png)|macOS|CSS icons and CSS values for macOS platform are displayed in the Property List. CSS values applied in form preview area.|
+|![](assets/en/FormEditor/cssNo.png)|None|No CSS values applied in the form and no CSS values or icons displayed in the Property List.|
+|![](assets/en/FormEditor/cssWin.png)|Windows|CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List.|
+|![](assets/en/FormEditor/cssMac.png)|macOS|CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.|
 
 
->If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be resized to accommodate the font size.
+>If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
 
 The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
 
 Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
 
->When copying or duplicating objects containing properties managed by style sheets, only the style sheet references are copied. Attribute values set by the style sheet are not copied to the JSON values.
+>When copying or duplicating objects only the JSON values are copied, even if a CSS has been applied. 
 
 
 ### CSS support in the Property List
