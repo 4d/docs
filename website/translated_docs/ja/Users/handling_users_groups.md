@@ -18,11 +18,11 @@ title: 4Dユーザー＆グループの管理
 管理者は次のことができます:
 - ユーザーやグループを作成する。
 - 4D Server 管理画面とモニターにアクセスする。
-- access the MSC window to monitor backup, restore, or server.
+- バックアップ、復元、サーバーの監視のため、MSC にアクセスする。
 
-The Administrator cannot:
-- edit the Designer user
-- by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+管理者は次のことができません:
+- デザイナーユーザーを編集する。
+- データベースの保護された領域にアクセスする。 In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
 Both the Designer and Administrator are available by default in all databases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
