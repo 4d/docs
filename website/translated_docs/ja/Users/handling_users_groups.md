@@ -26,8 +26,8 @@ title: 4Dユーザー＆グループの管理
 
 デザイナーと管理者は、すべてのデータベースにおいてデフォルトで利用可能です。 [ユーザー管理のダイアログボックス](#ユーザーエディター)において、デザイナーと管理者のアイコンは、それぞれ赤色と緑色で表示されます:
 
-- Designer icon: ![](assets/en/Users/IconDesigner.png)
-- Administrator icon: ![](assets/en/Users/IconAdmin.png)
+- デザイナーアイコン: ![](assets/en/Users/IconDesigner.png)
+- 管理者アイコン: ![](assets/en/Users/IconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
