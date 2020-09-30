@@ -121,7 +121,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 - **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). This method can be used for example to load the user preferences.
 
 
-## Groups editor
+## グループエディター
 
 The editor for groups is located in the Toolbox of 4D.
 
