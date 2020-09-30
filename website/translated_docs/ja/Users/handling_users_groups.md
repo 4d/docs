@@ -5,9 +5,9 @@ title: 4Dユーザー＆グループの管理
 
 ## デザイナーと管理者
 
-4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
+4Dは、ユーザーに対して標準的なアクセス権と特定の権限を与えます。 ユーザー＆グループシステムが起動されると、これらの標準的な権限が有効になります。
 
-The most powerful user is named **Designer**. No aspect of the database is closed to the Designer. The Designer can:
+最も強力なユーザーは **デザイナー (Designer)** です。 デザイナーは、データベースに関するあらゆる操作をおこなうことができます。 The Designer can:
 - access all database servers without restriction,
 - create users and groups,
 - assign access privileges to groups,
