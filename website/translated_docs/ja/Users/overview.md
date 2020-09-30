@@ -17,15 +17,15 @@ If more than one person uses an application, which is usually the case in client
 
 Groups can then be assigned access privileges to specific parts or features of the application (Design access, HTTP server, SQL server, etc.), or any custom part.
 
-The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+次の図は、デザインおよびランタイムエクスプローラーアクセス権を "Devs" グループに割り当てている様子を表しています (データベース設定の "セキュリティ" タブ):
 
 ![](assets/en/Users/Access1.png)
 
 
 
-## Activating access control
+## アクセスシステムを起動する
 
-You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
+クライアントサーバーにおいて、4D のパスワードアクセスシステムを起動するには、**デザイナー (Designer) にパスワードを割り当て** ます。
 
 Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have set up users and groups (when the application opens, no ID is required). Any part of the application can be opened.
 
