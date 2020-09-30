@@ -3,7 +3,7 @@ id: overview
 title: 概要
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
+If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. 機密性の高いデータを保護することは重要です。 You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
 
 > For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
