@@ -29,12 +29,12 @@ Groups can then be assigned access privileges to specific parts or features of t
 
 Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have set up users and groups (when the application opens, no ID is required). Any part of the application can be opened.
 
-When a password is assigned to the Designer, all the access privileges take effect. In order to connect to the application, remote users must enter a password.
+デザイナーにパスワードが指定されると、すべてのアクセス権が有効になります。 In order to connect to the application, remote users must enter a password.
 
-To disable the password access system, you just need to remove the Designer password.
+パスワードアクセスシステムを無効にするには、デザイナーのパスワードを削除します。
 
 
-## Users and groups in project architecture
+## プロジェクトアーキテクチャーにおけるユーザー＆グループ
 
 In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective with 4D Server. The following table lists the main users and groups features and their availability:
 
