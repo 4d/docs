@@ -3,19 +3,19 @@ id: overview
 title: 概要
 ---
 
-クライアントサーバーアーキテクチャーや Webインターフェースなど、複数のユーザーがデータベースを使用する場合は、アクセスを制御したり、接続ユーザーに応じて異なる機能を提供したりする必要が生じます。 機密性の高いデータを保護することも重要です。 ユーザーにパスワードを割り当て、データやデータベース操作へのアクセスレベルが異なるアクセスグループを作成することで、これらのデータを保護することができます。
+クライアントサーバーアーキテクチャーや Webインターフェースなど、複数のユーザーがデータベースを使用する場合は、アクセスを制御したり、接続ユーザーに応じて異なる機能を提供したりする必要が生じます。 機密性の高いデータを保護することは重要です。 ユーザーにパスワードを割り当て、データやデータベース操作へのアクセスレベルが異なるアクセスグループを作成することで、これらのデータを保護することができます。
 
-> For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
-
-
+> 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 
 
 
-## Assigning group access
 
-4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the database.
 
-Groups can then be assigned access privileges to specific parts or features of the database (Design access, HTTP server, SQL server, etc.), or any custom part.
+## 権限を割り当てる
+
+4D のパスワードアクセスシステムは、ユーザーとグループに基づいています。 ユーザーを作成してパスワードを割り当てたり、ユーザーをグループに入れて、各グループに対しデータベースの適切な部分へのアクセス権を割り当てます。
+
+グループには、アクセス可能なメソッドや、HTTPサーバー、SQLサーバーなど、任意の機能へのアクセス権が割り当てられます。
 
 The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
 
