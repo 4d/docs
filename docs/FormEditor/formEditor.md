@@ -418,7 +418,7 @@ Select one of the following preview modes from the menu:
 
 |Toolbar Icon|CSS Preview Mode |Description|
 |---|---|---|
-|![](assets/en/FormEditor/cssNo.png)|None|No CSS values applied in the form and no CSS values or icons displayed in the Property List.|
+|![](assets/en/FormEditor/cssNo.png)|None|No CSS values are applied in the form and no CSS values or icons displayed in the Property List.|
 |![](assets/en/FormEditor/cssWin.png)|Windows|CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List.|
 |![](assets/en/FormEditor/cssMac.png)|macOS|CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.|
 
@@ -429,7 +429,7 @@ The CSS preview mode reflects the priority order applied to style sheets vs JSON
 
 Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
 
->When copying or duplicating objects only the JSON values are copied, even if a CSS has been applied. 
+>When copying or duplicating objects, only the CSS references (if any) and the JSON values are copied.  
 
 
 ### CSS support in the Property List
