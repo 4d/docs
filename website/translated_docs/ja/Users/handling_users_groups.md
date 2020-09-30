@@ -29,7 +29,7 @@ title: 4Dユーザー＆グループの管理
 - デザイナーアイコン: ![](assets/en/Users/IconDesigner.png)
 - 管理者アイコン: ![](assets/en/Users/IconAdmin.png)
 
-You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
+デザイナーと管理者の名前は変更することができます。 In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
 The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
 
