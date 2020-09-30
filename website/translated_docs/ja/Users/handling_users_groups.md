@@ -5,18 +5,18 @@ title: 4Dユーザー＆グループの管理
 
 ## デザイナーと管理者
 
-4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
+4Dは、ユーザーに対して標準的なアクセス権と特定の権限を与えます。 ユーザー＆グループシステムが起動されると、これらの標準的な権限が有効になります。
 
-The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. The Designer can:
+最も強力なユーザーは **デザイナー (Designer)** です。 No aspect of the application is closed to the Designer. デザイナーは次のことができます:
 - access all application servers without restriction,
-- create users and groups,
-- assign access privileges to groups,
-- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+- ユーザーやグループを作成する。
+- グループにアクセス権を割り当てる。
+- デザインモードを使用する。 In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
 
 After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
 
 The Administrator can:
-- create users and groups,
+- ユーザーやグループを作成する。
 - access the 4D Server Administration window and monitor
 - access the MSC window to monitor backup, restore, or server.
 
