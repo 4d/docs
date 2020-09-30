@@ -5,15 +5,15 @@ title: 概要
 
 If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. 機密性の高いデータを保護することは重要です。 You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
 
-> For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 
 
 
 
 
-## Assigning group access
+## 権限を割り当てる
 
-4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the application.
+4D のパスワードアクセスシステムは、ユーザーとグループに基づいています。 You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the application.
 
 Groups can then be assigned access privileges to specific parts or features of the application (Design access, HTTP server, SQL server, etc.), or any custom part.
 
