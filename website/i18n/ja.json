@@ -394,7 +394,7 @@
         "title": "背景色と境界線"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "Coordinates & Sizing"
+        "title": "座標とサイズ"
       },
       "FormObjects/propertiesCrop": {
         "title": "行列数"
@@ -692,7 +692,7 @@
         "title": "About REST Requests"
       },
       "Users/editing": {
-        "title": "Managing 4D users and groups"
+        "title": "4Dユーザー＆グループの管理"
       },
       "Users/overview": {
         "title": "概要"
@@ -721,7 +721,7 @@
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
-      "Form Object Properties": "Form Object Properties",
+      "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "Form Events",
       "Menus": "Menus"
     }
@@ -737,7 +737,7 @@
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
-    "Form Object Properties|no description given": "Form Object Properties",
+    "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
