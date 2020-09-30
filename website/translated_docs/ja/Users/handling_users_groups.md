@@ -22,12 +22,12 @@ title: 4Dユーザー＆グループの管理
 
 管理者は次のことができません:
 - デザイナーユーザーを編集する。
-- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- by default, access to protected parts of the application. とくにデザインモードが制限されている場合には、管理者はアクセスすることができません。 The Administrator must be part of one or more groups to have access privileges in the application. 管理者はすべての新規グループに含まれますが、任意のグループから管理者の名前を取り除くことができます。
 
-Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Both the Designer and Administrator are available by default in all applications. [ユーザー管理のダイアログボックス](#ユーザーエディター)において、デザイナーと管理者のアイコンは、それぞれ赤色と緑色で表示されます:
 
-- Designer icon: ![](assets/en/Users/IconDesigner.png)
-- Administrator icon: ![](assets/en/Users/IconAdmin.png)
+- デザイナーアイコン: ![](assets/en/Users/IconDesigner.png)
+- 管理者アイコン: ![](assets/en/Users/IconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
@@ -35,7 +35,7 @@ The Designer and Administrator can each create up to 16,000 groups and 16,000 us
 
 
 
-## Users editor
+## ユーザーエディター
 
 The editor for users is located in the Toolbox of 4D.
 
@@ -80,7 +80,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 - **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). This method can be used for example to load the user preferences.
 
 
-## Groups editor
+## グループエディター
 
 The editor for groups is located in the Toolbox of 4D.
 
