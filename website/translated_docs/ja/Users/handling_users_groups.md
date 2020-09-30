@@ -1,9 +1,9 @@
 ---
 id: editing
-title: Managing 4D users and groups
+title: 4Dユーザー＆グループの管理
 ---
 
-## Designer and Administrator
+## デザイナーと管理者
 
 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
 
