@@ -27,14 +27,14 @@ title: 概要
 
 クライアントサーバーにおいて、4D のパスワードアクセスシステムを起動するには、**デザイナー (Designer) にパスワードを割り当て** ます。
 
-Until you give the Designer a password, all database access are done with the Designer's access rights, even if you have set up users and groups (when the database opens, no ID is required). Any part of the database can be opened.
+ユーザー＆グループを作成したとしても、デザイナーにパスワードが指定されるまでは、すべてのデータベースアクセスがデザイナーアクセス権でおこなわれます (データベースを開く際に ID を求められません)。 つまり、4Dデータベースのあらゆる部分を開くことができます。
 
-When a password is assigned to the Designer, all the access privileges take effect. In order to connect to the database, remote users must enter a password.
+デザイナーにパスワードが指定されると、すべてのアクセス権が有効になります。 リモートユーザーがデータベースを開くには、パスワードを入力しなければなりません。
 
-To disable the password access system, you just need to remove the Designer password.
+パスワードアクセスシステムを無効にするには、デザイナーのパスワードを削除します。
 
 
-## Users and groups in project architecture
+## プロジェクトアーキテクチャーにおけるユーザー＆グループ
 
 In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective in 4D Server databases. The following table lists the main users and groups features and their availability:
 
