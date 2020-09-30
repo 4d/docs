@@ -23,7 +23,7 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 | styleSheets_mac.css     | Pour définir des styles d'attributs spécifiques de macOS uniquement     |
 | styleSheets_windows.css | Pour définir des styles d'attributs spécifiques pour Windows uniquement |
 
-Ces fichiers sont stockés dans le dossier "/SOURCES" du projet.
+Ces fichiers sont stockés dans le dossier "/SOURCES" du projet. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
 ### Architecture des feuilles de style
@@ -183,6 +183,7 @@ Tous les objets de type texte ayant un attribut text dont la valeur commence par
 text[text|=Hello]
 {
      stroke: yellow;
+
 }
 ```
 
@@ -228,8 +229,8 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 
 - Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-    - nom de la couleur css : `fill: red;`
-    - valeur valeur hexadécimale : `fill: #FF0000;`
+    - CSS color name: `fill: red;`
+    - Hexa value: `fill: #FF0000;`
     - fonction `rgb()` : `fill:rgb(255,0,0)`
 
 - Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple:
@@ -254,12 +255,12 @@ Pour remplacer ce comportement, la valeur du style doit être suivie d'une décl
 | ------------------------------ | ---------------- | ---------- |
 | `"text": "Button",`            | `text: Edit;`    | `"Button"` |
 
-
 **Exemple 2 :**
 
 | Description du formulaire JSON | Feuille de style         | 4D affiche |
 | ------------------------------ | ------------------------ | ---------- |
 | `"text": "Button",`            | `text: Edit !important;` | `"Edit"`   |
+
 
 
 
@@ -296,12 +297,6 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
     ```
 
 > Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. * Pour des raisons de sécurité, seuls les chemins de système de fichiers (filesystem) sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
-
-
-
-
-
-
 
 
 ## Création ou modification d'une feuille de style
