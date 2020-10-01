@@ -78,7 +78,7 @@ A collection is initialized with:
 </details>
 
 <!-- REF collection.New collection.Syntax -->
-**New collection** {( *value* : Mixed {; *value2* ; ... ; *valueN*} )} : Collection<!-- END REF -->
+**New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF collection.New collection.Params -->
 |Parameter|Type||Description|
@@ -164,7 +164,7 @@ You create a new collection and then add a new element:
 </details>
 
 <!-- REF collection.New shared collection.Syntax -->
-**New shared collection** {( *value* : Mixed {; *value2* ; ... ; *valueN*} )} : Collection<!-- END REF -->
+**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF collection.New shared collection.Params -->
 |Parameter|Type||Description|
@@ -196,7 +196,7 @@ You can pass any number of values of the following supported types:
 
 *	number (real, longint...). Number values are always stored as reals.
 *	text
-*	booelan
+*	boolean
 *	date
 *	time (stored as number of milliseconds - real)
 *	null
@@ -331,7 +331,7 @@ $vSize:=$col.length //$vSize=0
 </details>
 
 <!-- REF #collection.combine().Syntax -->
-**.combine**( *col2* : Collection ) : Collection<br>**.combine**( *col2* : Collection ; *index* : Integer ) : Collection<!-- END REF -->
+**.combine**( *col2* : Collection {; *index* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.combine().Params -->
@@ -383,12 +383,12 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 </details>
 
 <!-- REF #collection.concat().Syntax -->
-**.concat**( *value* : Mixed {*;...;valueN* } ) : Collection<!-- END REF -->
+**.concat**( *value* : any {*;...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|value|number, text, object, collection, date, boolean, time, picture|->|Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection|
+|value|Number, Text, Object, Collection, Date, Time, Boolean, Picture|->|Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection|
 |Result|Collection|<-|New collection with value(s) added to the original collection|
 <!-- END REF -->
 
@@ -556,7 +556,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 </details>
 
 <!-- REF #collection.count().Syntax -->
-**.count**( {*propertyPath* : Text} ) : Real<!-- END REF -->
+**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 
 <!-- REF #collection.count().Params -->
@@ -604,7 +604,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 </details>
 
 <!-- REF #collection.countValues().Syntax -->
-**.countValues**( *value* : Mixed ) : Real<br>**.countValues**( *value* : Mixed ; *propertyPath* : Text } ) : Real<!-- END REF -->
+**.countValues**( *value* : any {; *propertyPath* : Text } ) : Real<!-- END REF -->
 
 
 <!-- REF #collection.countValues().Params -->
@@ -685,14 +685,14 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 </details>
 
 <!-- REF #collection.distinct().Syntax -->
-**.distinct**() : Collection<br>**.distinct**( *propertyPath* : Text) : Collection<br>**.distinct**( *option* : Integer ) : Collection<br>**.distinct**( *propertyPath* : Text ; *option* : Integer ) : Collection<!-- END REF -->
+**.distinct**( {*option* : Integer} ) : Collection<br>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.distinct().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Path of attribute whose distinct values you want to get|
 |option|Integer|->|`ck diacritical`: diacritical evaluation ("A" # "a" for example)|
+|propertyPath|Text|->|Path of attribute whose distinct values you want to get|
 |Result|Collection|<-|New collection with only distinct values|
 <!-- END REF -->
 
@@ -705,9 +705,10 @@ The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a 
 
 The returned collection is automatically sorted. **Null** values are not returned.
 
+By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the *option* parameter.
+
 If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the *option* parameter.
 
 
 #### Example
@@ -740,7 +741,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 </details>
 
 <!-- REF #collection.equal().Syntax -->
-**.equal**( *collection2* : Collection ) : Boolean<br>**.equal**( *collection2* : Collection ; *option* : Integer ) : Boolean<!-- END REF -->
+**.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.equal().Params -->
 |Parameter|Type||Description|
@@ -798,7 +799,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 </details>
 
 <!-- REF #collection.every().Syntax -->
-**.every**( *methodName* : Text ) : Boolean<br>**.every**( *methodName* : Text ; *param* : Mixed {;...;*paramN* } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text  ; *param* : Mixed {;...;*paramN* } ) : Boolean<!-- END REF -->
+**.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
 |Parameter|Type||Description|
@@ -894,7 +895,7 @@ End if
 </details>
 
 <!-- REF #collection.extract().Syntax -->
-**.extract**( *propertyPath* : Text {; *option* : Integer} ) : Collection<br>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  {;...;*propertyPathN*; *targetPathN*  } ) : Collection<!-- END REF -->
+**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -970,7 +971,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 </details>
 
 <!-- REF #collection.fill().Syntax -->
-**.fill**( *value* : Mixed ) : Collection<br>**.fill**( *value* : Mixed ;  *startFrom*  : Integer ) : Collection<br>**.fill**( *value* : Mixed ;  *startFrom*  : Integer ; *end* : Integer  ) : Collection<!-- END REF -->
+**.fill**( *value* : any ) : Collection<br>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 
 
@@ -1027,7 +1028,7 @@ In case of inconsistency, the following rules apply:
 </details>
 
 <!-- REF #collection.filter().Syntax -->
-**.filter**( *methodName* : Text  ) : Collection<br>**.filter**( *methodName* : Text ; *param* : Mixed { *;...; paramN* } ) : Collection<!-- END REF -->
+**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.filter().Params -->
@@ -1120,7 +1121,7 @@ The code for ***TypeLookUp*** is:
 </details>
 
 <!-- REF #collection.find().Syntax -->
-**.find**( *methodName* : Text ) -> value or undefined<br>**.find**( *methodName* : Text ; *param* : Mixed {;...;*paramN*} ) -> value or undefined<br>**.find**( *startFrom* : Integer ; *methodName* : Text ) -> value or undefined<br>**.find**( *startFrom* : Integer ; *methodName* : Text ; *param* : Mixed {;...;*paramN* } ) -> value or undefined<!-- END REF -->
+**.find**( *methodName* : Text { ; *...param* : any } ) -> value or undefined<br>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) -> value or undefined<!-- END REF -->
 
 
 <!-- REF #collection.find().Params -->
@@ -1128,7 +1129,7 @@ The code for ***TypeLookUp*** is:
 |---------|--- |:---:|------|
 |startFrom|Integer|->|Index to start the search at|
 |methodname|Text|->|Name of the function to call for the find|
-|param|Mixed|->|Parameter(s) to pass to *methodName*|
+|param|any|->|Parameter(s) to pass to *methodName*|
 |Result| |<-|First value found, or Undefined if not found|
 <!-- END REF -->
 
@@ -1220,7 +1221,7 @@ The code for ***FindCity*** is:
 
 
 <!-- REF #collection.findIndex().Syntax -->
-**.findIndex**( *methodName* : Text ) : Integer<br>**.findIndex**( *methodName* : Text ; *param* {;...;*paramN* } : Expression ) : Integer<br>**.findIndex**( *startFrom* : Integer ; *methodName* : Text ) : Integer<br>**.findIndex**( *startFrom* : Integer ; *methodName* : Text  ; *param* : Mixed {;...;*paramN* } ) : Integer<!-- END REF -->
+**.findIndex**( *methodName* : Text { ; *...param* : any } ) : Integer<br>**.findIndex**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
 
 
 
@@ -1229,7 +1230,7 @@ The code for ***FindCity*** is:
 |---------|--- |:---:|------|
 |startFrom|Integer|->|Index to start the search at|
 |methodname|Text|->|Name of the function to call for the find|
-|param|Mixed|->|Parameter(s) to pass to *methodName*|
+|param|any|->|Parameter(s) to pass to *methodName*|
 |Result|Integer |<-|Index of first value found, or -1 if not found|
 <!-- END REF -->
 
@@ -1364,14 +1365,14 @@ Optionally, you can pass the index of collection from which to start the search 
 </details>
 
 <!-- REF #collection.indices().Syntax -->
-**.indices**(  *queryString* : Text ) : Collection<br>**.indices**(  *queryString* : Text ; *value* : Mixed { ;...; *valueN* } ) : Collection <!-- END REF -->
+**.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.indices().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
-|value|Mixed|->|Value(s) to compare when using placeholder(s)|
+|value|any|->|Value(s) to compare when using placeholder(s)|
 |Result|Collection |<-|Element index(es) matching queryString in the collection|
 <!-- END REF -->
 
@@ -1420,13 +1421,13 @@ For a detailed description of the *queryString* and *value* parameters, please r
 </details>
 
 <!-- REF #collection.insert().Syntax -->
-**.insert**( *index* : Integer ; *element* : Mixed ) : Collection <!-- END REF -->
+**.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
 <!-- REF #collection.insert().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |index|Integer|->|Where to insert the element|
-|element|Mixed|->|Element to insert in the collection|
+|element|any|->|Element to insert in the collection|
 |Result|Collection |<-|Original collection containing inserted element|
 <!-- END REF -->
 
@@ -1450,7 +1451,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 #### Example 
 
 ```4d
-  C_COLLECTION($col)
+ var $col : Collection
  $col:=New collection("a";"b";"c";"d") //$col=["a","b","c","d"]
  $col.insert(2;"X") //$col=["a","b","X","c","d"]
  $col.insert(-2;"Y") //$col=["a","b","X","Y","c","d"]
@@ -1613,14 +1614,14 @@ The `.length` property is initialized when the collection is created. Adding or 
 </details>
 
 <!-- REF #collection.map().Syntax -->
-**.map**( *methodName* : Text ) : Collection<br>**.map**( *methodName* : Text ; *param* : Mixed { ;...; *paramN* } ) : Collection <!-- END REF -->
+**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.map().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |methodName|Text|->|Name of method used to transform the collection elements|
-|param|Mixed|->|Parameter(s) for the method|
+|param|any|->|Parameter(s) for the method|
 |Result|Collection |<-|Collection of transformed values|
 <!-- END REF -->
 
@@ -1679,7 +1680,7 @@ Here is the ***Percentage*** method:
 </details>
 
 <!-- REF #collection.max().Syntax -->
-**.max**( { *propertyPath* : Text} ) : Mixed <!-- END REF -->
+**.max**( { *propertyPath* : Text } ) : Mixed <!-- END REF -->
 
 <!-- REF #collection.max().Params -->
 |Parameter|Type||Description|
@@ -1730,7 +1731,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 </details>
 
 <!-- REF #collection.min().Syntax -->
-**.min**( { *propertyPath* : Text} ) : Mixed <!-- END REF -->
+**.min**( { *propertyPath* : Text } ) : Mixed <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
 |Parameter|Type||Description|
@@ -1920,7 +1921,7 @@ Ordering with a property path:
 </details>
 
 <!-- REF #collection.orderByMethod().Syntax -->
-**.orderByMethod**( *methodName* : Text ) : Collection<br>**.orderByMethod**( *methodName* : Text ; *extraParam* : Expression {;...;*extraParamN* } ) : Collection <!-- END REF -->
+**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : Expression } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.orderByMethod().Params -->
@@ -2006,12 +2007,12 @@ Here is the code for ***WordLength***:
 
 
 <!-- REF #collection.pop().Syntax -->
-**.pop()** : Mixed <!-- END REF -->
+**.pop()** : any <!-- END REF -->
 
 <!-- REF #collection.pop().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Mixed |<-|Last element of collection|
+|Result|any |<-|Last element of collection|
 <!-- END REF -->
 
 
@@ -2054,7 +2055,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 </details>
 
 <!-- REF #collection.push().Syntax -->
-**.push**( *element* : Mixed { ;...; *elementN* } ) : Collection <!-- END REF -->
+**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.push().Params -->
 |Parameter|Type||Description|
@@ -2114,7 +2115,7 @@ You want to sort the resutling collection:
 </details>
 
 <!-- REF #collection.query().Syntax -->
-**.query**( *queryString* : Text ; *value* : Mixed { ;...; *valueN* } ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.query().Params -->
@@ -2222,17 +2223,16 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 <!-- REF #collection.reduce().Syntax -->
 **.reduce**( *methodName* : Text ) : Mixed <br>
-**.reduce**( *methodName* : Text ; *initValue* : Mixed ) : Mixed <br>
-**.reduce**( *methodName* : Text ; *initValue* : Mixed ; *param* : Mixed { ;...;*paramN* } ) : Mixed <!-- END REF -->
+**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : Mixed <!-- END REF -->
 
 
 <!-- REF #collection.reduce().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |methodName |Text|->|Name of the function to call to process collection elements|
-|initValue |Text, Number, Object, Collection, Date, NBoolean|->|Value to use as the first argument to the first call of *methodName*|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *methodName*|
 |param |expression|->|Parameter(s) to pass to *methodName*|
-|Result|text, number, object, collection, date, boolean |<-|Result of the accumulator value|
+|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
 <!-- END REF -->
 
 
@@ -2375,7 +2375,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 
 <!-- REF #collection.resize().Syntax -->
-**.resize**( *size* : Integer { ; *defaultValue* : Mixed } ) : Collection <!-- END REF -->
+**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
 |Parameter|Type||Description|
@@ -2432,7 +2432,7 @@ By default, new elements are filled will **null** values. You can specify the va
 </details>
 
 <!-- REF #collection.reverse().Syntax -->
-**.reverse()** : Collection <!-- END REF -->
+**.reverse( )** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
 |Parameter|Type||Description|
@@ -2472,12 +2472,12 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 </details>
 
 <!-- REF #collection.shift().Syntax -->
-**.shift()** -> Mixed<!-- END REF -->
+**.shift( )** -> any<!-- END REF -->
 
 <!-- REF #collection.shift().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Mixed|<-|First element of collection|
+|Result|any|<-|First element of collection|
 <!-- END REF -->
 
 
@@ -2569,7 +2569,7 @@ The returned collection contains the element specified by *startFrom* and all su
 </details>
 
 <!-- REF #collection.some().Syntax -->
-**.some**( *methodName* : Text ) : boolean<br>**.some**( *methodName* : Text ; *param* : Mixed {;...;*paramN* } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text  ; *param* : Mixed {;...;*paramN* } ) : Boolean<!-- END REF -->
+**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
 
 
 <!-- REF #collection.some().Params -->
@@ -2650,14 +2650,14 @@ With the following *NumberGreaterThan0* method:
 </details>
 
 <!-- REF #collection.sort().Syntax -->
-**.sort**( *methodName* : Text ) : Collection<br>**.sort**( *methodName* : Text ; *extraParam* : Mixed {;...;*extraParamN* } ) : Collection <!-- END REF -->
+**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |methodName |Text |->|Name of method used to specify the sorting order|
-|extraParam |Mixed |->|Parameter(s) for the method|
+|extraParam |any |->|Parameter(s) for the method|
 |Result|Collection|<-|Original collection sorted|
 <!-- END REF -->
 
@@ -2801,7 +2801,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 </details>
 
 <!-- REF #collection.unshift().Syntax -->
-**.unshift**( *value* : Mixed { ;...; *valueN* } ) : Collection<!-- END REF -->
+**.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.unshift().Params -->
 |Parameter|Type||Description|
