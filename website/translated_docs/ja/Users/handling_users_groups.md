@@ -92,30 +92,30 @@ Both the Designer and Administrator are available by default in all applications
 
 グループを作成するには:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the application project.
+1. **デザイン** メニューから **ツールボックス＞ユーザーグループ** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックし、**グループ** ページを開きます。 4D はグループエディターウインドウを表示します: The list of groups displays all the groups of the application project.
 
-2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
-   OR  
-   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
+2. グループリストの下にある追加ボタン ![](assets/en/Users/PlussNew.png) をクリックします。  
+   または  
+   グループリスト上で右クリックし、コンテキストメニューから **追加** または **複製** を選択します。
 
-> The Duplicate command can be used to create several groups having the same characteristics quickly.
+> 複製コマンドを使用すると、同じ特性を持つ複数のグループを素早く作成することができます。
 
-4D adds a new group to the list, named "New groupX" by default.
+4D は新規グループをリストに追加し、デフォルトとして "新規グループX" という名前を設定します。
 
-3. Enter the name of the new group. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. 新しいグループの名前を入力します。 グループ名には 15桁までの文字を使用できます。 グループ名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
 
-### Placing users or groups into groups
+### ユーザーやグループをグループに入れる
 
-You can place any user or group into a group, and you can also place the group itself into several other groups. It is not mandatory to place a user in a group.
+任意のユーザーやグループをグループ内に配置することができます。さらに、そのグループ自体を他のいくつかのグループ内に入れることも可能です。 必ずしもユーザーをグループに入れる必要はありません。
 
-To place a user or group in a group, you simply need to check the "Member" option for each user or group in the member attribution area:
+ユーザーやグループをグループに配置するには、当該グループのユーザー/グループ一覧にてメンバーカラムにチェックを入れます:
 
 ![](assets/en/Users/groups.png)
 
-If you check the name of a user, this user is added to the group. If you check the name of a group, all the users of the group are added to the new group. The affiliated user or group will then have the same access privileges as those assigned to the new group.
+ユーザー名をチェックすると、そのユーザーがグループに追加されます。 グループ名をチェックした場合は、そのグループの全ユーザーがグループへ追加されます。 メンバーの一員となったユーザーやグループには、そのグループに割り当てられたものと同じアクセス権が与えられます。
 
-Placing groups into other groups lets you create a user hierarchy. The users of a group placed in another group will have the access privileges of both groups. See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
+グループを別のグループ内に入れることにより、ユーザーの階層構造が作成されます。 The users of a group placed in another group will have the access privileges of both groups. See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
 
 To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.
 
