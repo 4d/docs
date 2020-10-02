@@ -3,49 +3,77 @@ id: formulaClass
 title: Formulas
 ---
 
-## Overview
-
-4D's language includes a unique *tokenization* system for all object names of the language that are used in the code (constants, commands, tables, fields and keywords). 
-
-By default, the token mechanism is not implemented automatically in 4D formulas (as well as contexts where 4D code is expressed as raw text, see above). As a result, for named elements contains in expressions, 4D offers a special syntax you can use to reference the tokens directly: you just need to add a specific suffix after the element name to indicate its type (command, field, etc.), followed by its reference. The **token syntax** is detailed in this table:
-
-|Element|	Example (standard syntax)|	Suffix	|Example (token syntax)	|Comments|
-|---|---|---|---|---|
-|4D Command|	String(a)|	:Cxx|	String:C10(a)|	xx is the command number|
-|Table	|[Employees]|	:xx	|[Employees:1]|	xx is the table number|
-|Field|	[Employees]Name|	:xx|	[Employees:1]Name:2|	xx is the field number|
-|4D Plugin	|PV PRINT(area)|	:Pxx:yy	|PV PRINT:P13000:229(area)|	xx is the plug-in ID and yy is the index of the command|
-
->Uppercase letters (C, P) must be used in the suffixes; otherwise, they will not be interpreted correctly.
-
-When you use this syntax, you guarantee that your formulas will be interpreted correctly even in the case of renaming or when the database is executed in a different language.
-
->Constants are also tokenized in the language however in formulas you can just pass their value in order make them independent of the context. 
-
-This syntax is accepted in all 4D formulas (or 4D expressions) regardless of the calling context:
-
-*	4D formulas executed using the Formula editor or using commands such as `EXECUTE FORMULA`, `APPLY TO SELECTION`, `QUERY BY FORMULA`, `LISTBOX INSERT COLUMN FORMULA`, etc.
-*	expressions inserted in rich text areas (see `ST INSERT EXPRESSION` and **Supported tags**),
-*	expressions calculated in transformation tags (see **4D HTML Tags**),
-*	expressions inserted in plug-in areas,
-*	expressions inserted in 4D Write Pro areas.
-
-Where to find the element numbers:  
-
-*	**4D commands**<br>  
-Command numbers can be found in this Language Reference manual ("Properties" area) as well as on the Commands page of the Explorer.
-*	**Tables and fields**<br>  
-Table and field numbers can be obtained using the Table and Field commands. They are also displayed in the Inspector palette of the Structure editor.
-*	**4D plug-in commands** <br>
-To know what the tokens are for 4D plug-in commands, the trick is to enter the desired code in the Method editor and then restart 4D after disabling the plug-in (for example, by moving its folder). This means that only tokens will be displayed in the Method editor, and you can then copy the ones you need.
-
 ## Formula Object
 
-Formula objects are handled with the following commands:
+The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native Formula objects that you can encapsulate in object properties:
 
-*	[Formula](#formula) 
-*	[Formula from string](#formula-from-string) 
-*	[Parse formula](#parse-formula)
+```4d
+ C_OBJECT($f)
+ $f:=New object
+ $f.message:=Formula(ALERT("Hello world"))
+```
+
+Such properties are "object functions", i.e. functions which are bound to their parent object. To execute a function stored in an object property, use the **()** operator after the property name, such as:
+
+```4d
+ $f.message() //displays "Hello world"
+```
+
+Syntax with brackets is also supported:
+
+```4d
+ $f["message"]() //displays "Hello world"
+```
+
+
+Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
+
+```4d
+ $o:=$f.message //returns the formula object in $o 
+```
+
+### Passing parameters
+
+You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. For example, you can write:
+
+```4d
+ var $f : Object
+ $f:=New object
+ $f.message:=Formula(ALERT("Hello "+$1))
+ $f.message("John") //displays "Hello John"
+```
+
+Or using the [.call()](#call) function:
+
+```4d
+ var $f : Object
+ $f:=Formula($1+" "+$2)
+ $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2019" (for example)
+```
+
+### Parameters to a single method
+
+For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. For example:
+
+```4d
+ var $f : Object
+
+ $f:=Formula(myMethod)
+  //Writing Formula(myMethod($1;$2)) is not necessary
+ $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
+ $text:=$f.call() //returns "How are you?"
+ 
+  //myMethod
+ #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
+ If(Count parameters=2)
+    $return:=$param1+" "+$param2
+ Else
+    $return:="How are you?"
+ End if
+```
+
+Parameters are received within the method, in the order they are specified in the call.
 
 
 ## Summary
@@ -63,38 +91,37 @@ Formula objects are handled with the following commands:
 <!-- REF formulaClass.Formula.Desc -->
 ## Formula 
 
-Number: 1597
-
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v17 R6|Renamed|
+|v17 R6|Renamed (New formula -> Formula)|
 |v17 R3|Added|
 </details>
 
 <!-- REF formulaClass.Formula.Syntax -->
-**Formula** ( *expression* ) -> object<!-- END REF -->
+**Formula** ( *formulaExp* : Expression ) : Object<!-- END REF -->
 
 <!-- REF formulaClass.Formula.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|formulaExp|expression|->|Formula to be returned as object|
-|Result|object|<-|Native object encapsulating the formula|
+|formulaExp|Expression|->|Formula to be returned as object|
+|Result|Object|<-|Native object encapsulating the formula|
 <!-- END REF -->
 
 
 #### Description
+
 The `Formula` command <!-- REF formulaClass.Formula.Summary -->creates a `Formula` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
 
 Having a formula as an object allows it to be passed as a parameter (calculated attribute) to commands or methods or to be executed from various components without needing to declare them as "shared by components and host database". When called, the formula object is evaluated within the context of the database or component that created it.
 
-The returned formula can be called with the:
+The returned formula can be called with:
 
-*	`.call( )` or `.apply( )` methods, or the
-*	object notation syntax (see **Encapsulating methods in objects**).
+*	[`.call( )`](#call) or [`.apply( )`](#apply) methods, or
+*	object notation syntax (see [formula object](#formula-object)).
 
 ```4d
- C_OBJECT($f)
+ var $f : Object
  $f:=Formula(1+2)
  $o:=New object("myFormula";$f)
  
@@ -104,45 +131,13 @@ The returned formula can be called with the:
  $o.myFormula() //returns 3
 ```
 
-You can specify the object on which the formula is executed, as seen below in Example 5. The properties of the object can then be accessed via the `This` command.
+You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+
+You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
 
 If *formulaExp* uses local variables, their values are copied and stored in the returned formula object when it is created. When executed, the formula uses these copied values rather than the current value of the local variables. Note that using arrays as local variables is not supported.
 
 The object created by `Formula` can be saved, for example, in a database field or in a blob document.
-
-#### Passing parameters  
-
-You can pass parameters to the formula using the standard $1, $2...,$n mechanism. For example, you can write:
-
-```4d
- C_OBJECT($f)
- $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2019" (for example)
-```
-
-For more convenience, parameters can be omitted in the formula object initialization when the formula is made of a single project method. They can just be passed when the formula is called. For example:
-
-```4d
- C_OBJECT($f)
-
- $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2) is not necessary
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call() //returns "How are you?"
- 
-  //myMethod
- C_TEXT($0;$1;$2)
- If(Count parameters=2)
-    $0:=$1+" "+$2
- Else
-    $0:="How are you?"
- End if
-```
-
-Parameters are received in $1, $2... within the method, in the order they are specified in the call.
-
->Do not confuse the $n parameters used in the formula and $n parameters received in the method called in the formula.
 
 
 #### Example 1
@@ -150,10 +145,10 @@ Parameters are received in $1, $2... within the method, in the order they are sp
 A simple formula:
 
 ```4d
- C_OBJECT($f)
+ var $f : Object
  $f:=Formula(1+2)
  
- C_OBJECT($o)
+ var $o : Object
  $o:=New object("f";$f)
  
  $result:=$o.f() // returns 3
@@ -164,7 +159,7 @@ A simple formula:
 A formula using local variables:
 
 ```4d
-$value:=10
+ $value:=10
  $o:=New object("f";Formula($value))
  $value:=20
  
@@ -177,7 +172,7 @@ $value:=10
 A simple formula using parameters:
 
 ```4d
-$o:=New object("f";Formula($1+$2))
+ $o:=New object("f";Formula($1+$2))
  $result:=$o.f(10;20) //returns 30
 ```
 
@@ -197,8 +192,10 @@ A formula using a project method with parameters:
 Using `This`:
 
 ```4d
- $o:=New object("f";Formula(myMethod))
- $result:=$o.f("param1";"param2") // equivalent to $result:=myMethod("param1";"param2")
+ $o:=New object("fullName";Formula(This.firstName+" "+This.lastName))
+ $o.firstName:="John"
+ $o.lastName:="Smith"
+ $result:=$o.fullName() //returns "John Smith"
 ```
 
 #### Example 6
@@ -206,7 +203,7 @@ Using `This`:
 Calling a formula using object notation:
 
 ```4d
-C_OBJECT($calc;$feta;$robot)
+ var $calc; $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
  
@@ -229,41 +226,40 @@ C_OBJECT($calc;$feta;$robot)
 <!-- REF formulaClass.Formula from string.Desc -->
 ## Formula from string 
 
-Number: 1601
-
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v17 R6|Renamed|
+|v17 R6|Renamed New formula from string -> Formula from string|
 |v17 R3|Added|
 </details>
 
 <!-- REF formulaClass.Formula from string.Syntax -->
-**Formula from string**( *formulaString* ) -> object<!-- END REF -->
+**Formula from string**( *formulaString* : Text ) : Object<!-- END REF -->
 
 <!-- REF formulaClass.Formula from string.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|formulaExp|expression|->|Formula to be returned as object|
-|Result|object|<-|Native object encapsulating the formula|
+|formulaString|Text|->|Text formula to be returned as object|
+|Result|Object|<-|Native object encapsulating the formula|
 <!-- END REF -->
 
 
 #### Description
+
 The `Formula from string` command <!-- REF formulaClass.Formula from string.Summary -->creates a formula object based upon the *formulaString*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
 
-This command is similar to `Formula`, except that it handles a text-based formula. In most cases, it is recommended to use the `Formula` command. `Formula from string` should only be used when the original formula was expressed as text (e.g., stored externally in a JSON file). In this context, using token syntax is highly advised (see the [Overview](#overview) section and the Parse formula command).
+This command is similar to [`Formula`](#formula), except that it handles a text-based formula. In most cases, it is recommended to use the `Formula` command. `Formula from string` should only be used when the original formula was expressed as text (e.g., stored externally in a JSON file). In this context, using syntax with tokens is highly advised.
 
 >Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
 
 #### Example
 
-The following code:
+The following code will create a dialog accepting a formula in text format:
 
 ```4d
-C_TEXT($textFormula)
- C_OBJECT($f)
+ var $textFormula : Text
+ var $f : Object
  $textFormula:=Request("Please type a formula")
  If(ok=1)
     $f:=Formula from string($textFormula)
@@ -271,13 +267,10 @@ C_TEXT($textFormula)
  End if
 ```
 
-will create a dialog accepting a formula in text format,
-
-
 ![](/assets/en/API/formulaDialog.png)
 
 
-and execute the formula:
+...and execute the formula:
 
 
 ![](/assets/en/API/formulaAlert.png)
@@ -286,115 +279,6 @@ and execute the formula:
 
 <!-- END REF -->
 
----
-
-<!-- REF formulaClass.Parse formula.Desc -->
-## Parse formula  
-
-Number: 1576
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R2|Added|
-
-</details>
-
-<!-- REF formulaClass.Parse formula.Syntax -->
-**Parse formula**( *formula* { ; *options* } { ; *errorMessage* } ) -> text<!-- END REF -->
-
-<!-- REF formulaClass.Parse formula.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|formula|text|->|Plain text formula|
-|options|longint|->|Instructions for input / output|
-|errorMessage|text|->|Error message (empty string if no error)|
-|Result|text|<-|Transformed formula (plain text)|
-<!-- END REF -->
-
-
-#### Description
-The `Parse formula` command <!-- REF formulaClass.Parse formula.Summary -->analyzes the 4D formula, checks its syntax, and returns its normalized form<!-- END REF -->. This allows the formula to remain valid in the event that a 4D language or structure element (command, constant, table, field, or 4D Plugin) is renamed.
-
-`Parse formula` can be used to evaluate and translate formulas in the following manner:
-
-*	"Real" table/field names can be converted to "virtual" structure* names (custom names) or tokenized equivalents\**
-*	Tokenized table/field equivalents can be converted to virtual structure names or real table/field names
-*	Virtual structures can be converted to real table/field names or tokenized equivalents
-*	4D language elements can be converted to tokenized 4D language equivalents
-*	Tokenized 4D language equivalents can be converted to 4D language elements
-
-\* *Virtual structures are defined using the `SET TABLE TITLES` and `SET FIELD TITLES` commands (* parameter required).*
-
-\** *Tokenized equivalents are 4D language and structure elements in plain text expressed with token syntax as shown below:*
-
-```4d
-[Table:1]Field:1+String:C10(1)
-```
-
-In *formula*, pass a formula in plain text. It can use real or virtual structure names, as well as tokenized equivalents.
-
-No matter the name types used in *formula*, by default `Parse formula` returns the actual 4D language or structure element names without text tokens.
-
-The optional *options* parameter allows you to specify how *formula* is expressed and/or returned using the following constants from the **Formulas** theme. You can combine constants to designate both the input and output format of the returned formula.
-
-|Constant|	Value|	Comment|
-|---|---|---|
-|Formula in with virtual structure|	1	|Formula contains custom (virtual) names. By default, returned formula contains real names.|
-|Formula out with virtual structure|	2|	Returned formula must contain custom (virtual) names.|
-|Formula out with tokens|	4|	Returned formula must contain text tokens (e.g. :Cxx). |
-
-The optional *errorMessage* parameter will receive an error message if there is a syntax error in *formula*. If there is no error, an empty string will be returned.
-
-
-#### Example 1
-
-```4d
- ARRAY TEXT($t1;1)
- ARRAY LONGINT($t2;1)
- $t1{1}:="Virtual table"
- $t2{1}:=1
- SET TABLE TITLES($t1;$t2;*)
- 
- ARRAY TEXT($tf1;1)
- ARRAY LONGINT($tf2;1)
- $tf1{1}:="Virtual field"
- $tf2{1}:=2
- SET FIELD TITLES([Table_1];$tf1;$tf2;*)
- 
-  //Virtual structure to table and field name equivalent
- $parsedFormula:=Parse formula("[Virtual table]Virtual field";Formula in with virtual structure;$errorMessage)
-  //return [Table_1]Field_2
- 
-  //Table and field name to virtual structure equivalent
- $parsedFormula:=Parse formula("[Table_1]Field_2";Formula out with virtual structure;$errorMessage)
-  //return [Virtual table]Virtual field
- 
-  //Table and field name to the tokenized form equivalent
- $parsedFormula:=Parse formula("String([Table_1]Field_2)";Formula out with tokens;$errorMessage)
-  //return String:C10([Table_1:1]Field_2:2)
-```
-
-
-#### Example 2
-
-```4d
- //ask the user to type their favorite formula
- $formula:=""
- EDIT FORMULA([Table_1];$formula)
- 
-  //save user's formula for later use
- CREATE RECORD([users_preferences])
- $persistentFormula:=Parse formula($formula;Formula out with tokens)
- [users_preferences]formula:=$persistentFormula
- SAVE RECORD([users_preferences])
- 
-  //later: execute the previously saved formula
- CREATE RECORD([Table_1])
- EXECUTE FORMULA([users_preferences]formula)
-```
-
-<!-- END REF -->
 
 ---
 
@@ -408,31 +292,32 @@ The optional *errorMessage* parameter will receive an error message if there is 
 </details>
 
 <!-- REF #formulaClass.apply().Syntax -->
-**.apply**( { *thisObj* { ; *formulaParams* } } ) -> mixed<!-- END REF -->
+**.apply**( ) : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #formulaClass.apply().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|thisObj|object|->|Object to be returned by the This command in the formula|
-|formulaParams |collection|->|Collection of values to be passed as $1...$n when formula is executed|
-|Result|mixed|<-|Value from formula execution|
+|thisObj|Object|->|Object to be returned by the This command in the formula|
+|formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
+|Result|any|<-|Value from formula execution|
 <!-- END REF -->
 
 
 #### Description
-The `.apply( )` function <!-- REF #formulaClass.apply().Summary -->executes the formula object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
+
+The `.apply( )` function <!-- REF #formulaClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
 You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
 
-Note that `.apply( )` is similar to `.call( )` except that parameters are passed as a collection. This can be useful for passing calculated results.
+Note that `.apply()` is similar to [`.call()`](#call) except that parameters are passed as a collection. This can be useful for passing calculated results.
 
 
 #### Example 1
 
 ```4d
-$f:=Formula($1+$2+$3)
+ $f:=Formula($1+$2+$3)
  
  $c:=New collection(10;20;30)
  $result:=$f.apply(Null;$c) // returns 60
@@ -442,7 +327,7 @@ $f:=Formula($1+$2+$3)
 #### Example 2
 
 ```4d
-C_OBJECT($calc;$feta;$robot)
+ var $calc; $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
  
@@ -459,6 +344,7 @@ C_OBJECT($calc;$feta;$robot)
 <!-- REF formulaClass.call().Desc -->
 ## .call( )
 
+
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
@@ -466,24 +352,25 @@ C_OBJECT($calc;$feta;$robot)
 </details>
 
 <!-- REF #formulaClass.call().Syntax -->
-**.call**( { *thisObj* { ; *params* } { ; *params2* ; ... ; *paramsN* } } ) -> mixed <!-- END REF -->
+**.call**( ) : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) -> any <!-- END REF -->
 
 <!-- REF #formulaClass.call().Params -->
 |Parameter|ype||Description|
-|thisObj|object|->|Object to be returned by the This command in the formula|
-|params |mixed|->|Collection of values to be passed as $1...$n when formula is executed|
-|Result|mixed|<-|Value from formula execution|
+|thisObj|Object|->|Object to be returned by the This command in the formula|
+|params |any|->|Value(s) to be passed as $1...$n when formula is executed|
+|Result|any|<-|Value from formula execution|
 <!-- END REF -->
 
 
 #### Description
-The `.call( )` function <!-- REF #formulaClass.call().Summary -->executes the formula object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
+
+The `.call( )` function <!-- REF #formulaClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
 You can also pass values to be used as *$1...$n* parameters in the formula using the optional *params* parameter(s).
 
-Note that `.call( )` is similar to `.apply( )` except that parameters are passed directly.
+Note that `.call()` is similar to [`.apply()`](#apply) except that parameters are passed directly.
 
 #### Example 1
 
@@ -517,19 +404,20 @@ To stop the database web server:
 </details>
 
 <!-- REF #formulaClass.source.Syntax -->
-**.source** -> text <!-- END REF -->
+**.source** : Text <!-- END REF -->
 
 
 #### Description
-The `.source` property <!-- REF #formulaClass.source.Summary -->contains the source expression of the formula as text<!-- END REF -->. 
+
+The `.source` property <!-- REF #formulaClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->. 
 
 This property is **read-only**. 
 
 #### Example
 
 ```4d
- C_OBJECT($of)
- C_TEXT($tf)
+ var $of : Object
+ var $tf : Test
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"
 ``` 
