@@ -49,17 +49,17 @@ Both the Designer and Administrator are available by default in all applications
 
 1. **デザイン** メニューから **ツールボックス＞ユーザー** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックします。 4Dはユーザーエディターを表示します。
 
-The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
+ユーザーリストには、[デザイナーと管理者](#デザイナーと管理者) を含むすべてのユーザーが表示されます:
 
-2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of users. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. ユーザーリストの下にある追加ボタン ![](assets/en/Users/PlussNew.png) をクリックします。 または<br /> ユーザーリスト上で右クリックし、コンテキストメニューから **追加** または **複製** を選択する。
 
-> The **Duplicate** command can be used to create several users having the same characteristics quickly.
+> **複製** コマンドを使用すると、同じ特性を持つ複数のユーザーを素早く作成することができます。
 
-4D adds a new user to the list, named "New userX" by default.
+4D は新規ユーザーをリストに追加し、デフォルトとして "新規ユーザーX" という名前を設定します。
 
-3. Enter the user name. This name will be used by the user to open the application. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. 新しいユーザー名を入力します。 This name will be used by the user to open the application. ユーザー名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
+4. ユーザーのパスワードを設定するには、プロパティエリアで **編集...** ボタンをクリックして、ダイアログボックスの 2つのパスワード欄に同じパスワードをそれぞれ入力します。 パスワードには 15桁までの英数字を使用することができます。 パスワードでは文字の大小が区別されます。
 
 > Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
 
