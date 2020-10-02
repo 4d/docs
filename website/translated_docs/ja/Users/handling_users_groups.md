@@ -29,15 +29,15 @@ title: 4Dユーザー＆グループの管理
 - デザイナーアイコン: ![](assets/en/Users/IconDesigner.png)
 - 管理者アイコン: ![](assets/en/Users/IconAdmin.png)
 
-デザイナーと管理者の名前は変更することができます。 In the language, the Designer ID is always 1 and the Administrator ID is always 2.
+デザイナーと管理者の名前は変更することができます。 ランゲージにおいて、デザイナーと管理者の ID値は、常に 1 と 2 に設定されます。
 
-The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
+デザイナーと管理者は、それぞれ 16,000 のグループと 16,000 のユーザーを作成することができます。
 
 
 
 ## ユーザーエディター
 
-The editor for users is located in the Toolbox of 4D.
+ユーザーとグループのエディターは 4Dのツールボックスにあります。
 
 ![](assets/en/Users/editor.png)
 
