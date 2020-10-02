@@ -323,9 +323,10 @@ When ordering different levels, 4D always goes from the background to the foregr
 ### Data entry order
 
 The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys.
-> * You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands.
 
-Every obeject that supports the focusable property is included in the data entry order by default.
+> You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands.
+
+Every object that supports the focusable property is included in the data entry order by default.
 
 Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
 
@@ -354,7 +355,8 @@ To view or change the entry order:
 3.  Repeat step 2 as many times as necessary to set the data entry order you want.
 
 4.  When you are satisfied with the data entry order, click any unselected tool in the toolbar or choose **Entry Order** from the **Form** menu.<p>4D returns to normal operation of the Form editor.
-> * Only the entry order of the current page of the form is displayed. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
+
+> Only the entry order of the current page of the form is displayed. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
 
 
 #### Using a data entry group
