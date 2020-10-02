@@ -8,7 +8,7 @@ title: Formulas
 The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native Formula objects that you can encapsulate in object properties:
 
 ```4d
- C_OBJECT($f)
+ var $f : Object
  $f:=New object
  $f.message:=Formula(ALERT("Hello world"))
 ```
