@@ -59,9 +59,9 @@ title: 4Dユーザー＆グループの管理
 
 3. 新しいユーザー名を入力します。 この名前は、ユーザーがデータベースを開く際に使用されます。 ユーザー名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
+4. ユーザーのパスワードを設定するには、プロパティエリアで **編集...** ボタンをクリックして、ダイアログボックスの 2つのパスワード欄に同じパスワードをそれぞれ入力します。 パスワードには 15桁までの英数字を使用することができます。 パスワードでは文字の大小が区別されます。
 
-> Users can change their password at any time according to the options in the "Security" page of the database settings, or using the `CHANGE PASSWORD` command.
+> データベース設定の "セキュリティ" ページで許可されていれば、ユーザーは自分のパスワードを変更できます。また、パスワードは `CHANGE PASSWORD` コマンドを使って変更することもできます。
 
 5. Set the group(s) to which the user belongs using the "Member of Groups" table. You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
 
