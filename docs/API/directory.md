@@ -64,7 +64,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.exists.Syntax -->
-**.exists** : boolean<!-- END REF -->
+**.exists** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -89,7 +89,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.extension.Syntax -->
-**.extension** : text<!-- END REF -->
+**.extension** : Text<!-- END REF -->
 
 
 #### Description
@@ -113,7 +113,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.fullName.Syntax -->
-**.fullName** : text<!-- END REF -->
+**.fullName** : Text<!-- END REF -->
 
 
 #### Description
@@ -137,7 +137,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.hidden.Syntax -->
-**.hidden** : boolean<!-- END REF -->
+**.hidden** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -161,7 +161,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->
-**.isAlias** : boolean<!-- END REF -->
+**.isAlias** : Boolean<!-- END REF -->
 
 
 
@@ -185,7 +185,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isFile.Syntax -->
-**.isFile** : boolean<!-- END REF -->
+**.isFile** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -208,7 +208,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->
-**.isFolder** : boolean<!-- END REF -->
+**.isFolder** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -231,7 +231,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->
-**.isPackage** : boolean<!-- END REF -->
+**.isPackage** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -303,8 +303,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
+
 <!-- REF #directory.name.Syntax -->
-**.name** : text<!-- END REF -->
+**.name** : Text<!-- END REF -->
 
 
 #### Description
@@ -327,12 +328,12 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.original.Syntax -->
-**.original** : object<!-- END REF -->
+**.original** : 4D.Folder<!-- END REF -->
 
 
 #### Description
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same folder object as the folder<!-- END REF -->. 
+The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->. 
 
 This property is **read-only**. 
 
@@ -353,7 +354,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.parent.Syntax -->
-**.parent** : object<!-- END REF -->
+**.parent** : 4D.Folder<!-- END REF -->
 
 
 #### Description
@@ -379,7 +380,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.path.Syntax -->
-**.path** : text<!-- END REF -->
+**.path** : Text<!-- END REF -->
 
 
 #### Description
@@ -402,7 +403,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->
-**.platformPath** : text<!-- END REF -->
+**.platformPath** : Text<!-- END REF -->
 
 
 #### Description
@@ -430,15 +431,15 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->
-**.copyTo**( *destinationFolder* : object { ; *newName* :text } { ; *overwrite* : integer } ) : object<!-- END REF -->
+**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder |object |->|Destination folder|
-|newName|text|->|Name for the copy|
-|overwrite|integer|->|`fk overwrite` to replace existing elements|
-|Result|object|<-|Copied file or folder|
+|destinationFolder |4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.Folder|<-|Copied file or folder|
 <!-- END REF -->
 
 
@@ -466,7 +467,7 @@ The copied `Folder` object.
 You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
 ```4d
-var $userImages ; $copiedImages : Object
+var $userImages; $copiedImages : 4D.Folder
 $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
@@ -486,13 +487,13 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 </details>
 
 <!-- REF #directory.file().Syntax -->
-**.file**( *path* : text ) : object<!-- END REF -->
+**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|path|text|->|Relative POSIX file pathname|
-|Result|object|<-|`File` object (null if invalid path)|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.File|<-|`File` object (null if invalid path)|
 <!-- END REF -->
 
 #### Description
@@ -508,7 +509,7 @@ A `File` object or null if *path* is invalid.
 #### Example
 
 ```4d
-var $myPDF : Object
+var $myPDF : 4D.File
 $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ```
 
@@ -526,13 +527,13 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 </details>
 
 <!-- REF #directory.files().Syntax -->
-**.files**( { *options* : text } ) : collection<!-- END REF -->
+**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|options|integer|->|File list options|
-|Result|collection|<-|Collection of children file objects|
+|options|Integer|->|File list options|
+|Result|Collection|<-|Collection of children file objects|
 <!-- END REF -->
 
 #### Description
@@ -541,7 +542,7 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 >Aliases or symbolic links are not resolved. 
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 |Constant|	Value|	Comment|
 |---|---|---|
@@ -588,13 +589,13 @@ You want to get all files that are not invisible in the Documents folder:
 </details>
 
 <!-- REF #directory.folder().Syntax -->
-**.folder**( *path* : text ) : object<!-- END REF -->
+**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|path|text|->|Relative POSIX file pathname|
-|Result|object|<-|`Folder` object (null if invalid *path*)|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
 <!-- END REF -->
 
 #### Description
@@ -610,7 +611,7 @@ A `Folder` object or null if *path* is invalid.
 #### Example
 
 ```4d
- var $mypicts : Object
+ var $mypicts : 4D.Folder
  $mypicts:=Folder(fk documents folder).folder("Pictures")
 ```
 
@@ -628,13 +629,13 @@ A `Folder` object or null if *path* is invalid.
 </details>
 
 <!-- REF #directory.folders().Syntax -->
-**.folders**( { *options* : integer } ) : collection<!-- END REF -->
+**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|options|integer|->|Folder list options|
-|Result|collection|<-|Collection of children folder objects|
+|options|Integer|->|Folder list options|
+|Result|Collection|<-|Collection of children folder objects|
 <!-- END REF -->
 
 #### Description
@@ -675,13 +676,13 @@ You want the collection of all folders and subfolders of the database folder:
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->
-**.getIcon**( { *size* : integer } ) : picture<!-- END REF -->
+**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|integer|->|Side length for the returned picture (pixels)|
-|Result|picture|<-|Icon|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
 <!-- END REF -->
 
 

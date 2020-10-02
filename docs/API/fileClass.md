@@ -70,12 +70,12 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!--REF #fileClass.create().Syntax -->
-**.create( )** : boolean <!-- END REF -->
+**.create( )** : Boolean <!-- END REF -->
 
 <!--REF #fileClass.create().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|boolean|<-|True if the file was created successfully, false otherwise|
+|Result|Boolean|<-|True if the file was created successfully, false otherwise|
 <!-- END REF -->
 
 #### Description
@@ -113,15 +113,15 @@ Creation of a preferences file in the database folder:
 </details>
 
 <!--REF #fileClass.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object<!-- END REF -->
+**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #fileClass.createAlias().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|destinationFolder|object|->|Destination folder for the alias or shortcut|
-|aliasName|text|->|Name of the alias or shortcut|
-|aliasType|integer|->|Type of the alias link|
-|Result|object|<-|>Alias or shortcut file reference|
+|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
+|aliasName|Text|->|Name of the alias or shortcut|
+|aliasType|Integer|->|Type of the alias link|
+|Result|4D.File|<-|Alias or shortcut file reference|
 <!-- END REF -->
 
 
@@ -143,7 +143,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 **Returned object**
 
-A `File` object with the `isAlias` property set to true.
+A `File` object with the `isAlias` property set to **true**.
 
 #### Example
 
@@ -179,7 +179,7 @@ You want to create an alias to a file in your database folder:
 
 
 <!--REF #fileClass.delete().Syntax -->
-**.delete()**<!-- END REF -->
+**.delete( )**<!-- END REF -->
 
 
 <!-- REF #fileClass.delete().Params -->
@@ -291,14 +291,14 @@ You want to delete a specific file in the database folder:
 
 
 <!--REF #fileClass.moveTo().Syntax -->
-**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object<!-- END REF -->
+**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #fileClass.moveTo().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|destinationFolder|object|->|Destination folder|
-|newName|text|->|Full name for the moved file|
-|Result|object|<-|Moved file|
+|destinationFolder|4D.Folder|->|Destination folder|
+|newName|Text|->|Full name for the moved file|
+|Result|4D.File|<-|Moved file|
 <!-- END REF -->
 
 
@@ -365,13 +365,13 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #fileClass.rename().Syntax -->
-**.rename**( *newName* : text ) : object<!-- END REF -->
+**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #fileClass.rename().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|newName|text|->|New full name for the file|
-|Result|object|<-|Renamed file|
+|newName|Text|->|New full name for the file|
+|Result|4D.File|<-|Renamed file|
 <!-- END REF -->
 
 #### Description
@@ -412,7 +412,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 <!--REF #fileClass.setContent().Syntax -->
-**.setContent** ( *content* : blob ) <!-- END REF -->
+**.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #fileClass.setContent().Params -->
 |Parameter|Type||Description|
@@ -450,16 +450,16 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 
 <!--REF #fileClass.setText().Syntax -->
-**.setText** ( *text* : text {; *charSetName* : text { ; *breakMode* : integer } } )<br>**.setText** ( *text* : text {; *charSetNum* : integer { ; *breakMode* : integer } } ) <!-- END REF -->
+**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
 
 
 <!--REF #fileClass.setText().Params -->
 |Parameter|Type||Description|
 |---------|----|---|--------|
-|text|text|->|Text to store in the file|
-|charSetName|text|->|Name of character set|
-|charSetNum|integer|->|Number of character set|
-|breakMode|integer|->|Processing mode for line breaks|<!-- END REF -->
+|text|Text|->|Text to store in the file|
+|charSetName|Text|->|Name of character set|
+|charSetNum|Integer|->|Number of character set|
+|breakMode|Integer|->|Processing mode for line breaks|<!-- END REF -->
 
 #### Description
 

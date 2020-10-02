@@ -63,12 +63,12 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!--REF #folderClass.create().Syntax -->
-**.create()** : boolean<!-- END REF -->
+**.create()** : Boolean<!-- END REF -->
 
 <!--REF #folderClass.create().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|boolean|<-|True if the folder was created successfully, false otherwise|
+|Result|Boolean|<-|True if the folder was created successfully, false otherwise|
 <!-- END REF -->
 
 
@@ -89,7 +89,6 @@ If necessary, the function creates the folder hierachy as described in the [plat
 Create an empty folder in the database folder:
 
 ```4d
-var $prefs : Object
 var $created : Boolean
 $created:=Folder("/PACKAGE/SpecialPrefs").create()
 ```
@@ -125,16 +124,16 @@ End if
 
 
 <!--REF #folderClass.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object<!-- END REF -->
+**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.Folder<!-- END REF -->
 
 
 <!--REF #folderClass.createAlias().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|destinationFolder|object|->|Destination folder for the alias or shortcut|
-|aliasName|text|->|Name of the alias or shortcut|
-|aliasType|integer|->|Type of the alias link|
-|Result|object|<-|Alias or shortcut folder reference|
+|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
+|aliasName|Text|->|Name of the alias or shortcut|
+|aliasType|Integer|->|Type of the alias link|
+|Result|4D.Folder|<-|Alias or shortcut folder reference|
 <!-- END REF -->
 
 
@@ -188,13 +187,13 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!--REF #folderClass.delete().Syntax -->
-**.delete**( { *option* : integer } )<!-- END REF -->
+**.delete**( { *option* : Integer } )<!-- END REF -->
 
 
 <!-- REF #folderClass.delete().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|option |integer|->|Folder deletion option|
+|option |Integer|->|Folder deletion option|
 <!-- END REF -->
 
 
@@ -306,14 +305,14 @@ macOS: -45 (The file is locked or the pathname is not correct)
 
 
 <!--REF #folderClass.moveTo().Syntax -->
-**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object<!-- END REF -->
+**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #folderClass.moveTo().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|destinationFolder|Object|->|Destination folder|
-|newName|text|->|Full name for the moved folder|
-|Result|object|<-|Moved folder|
+|destinationFolder|4D.Folder|->|Destination folder|
+|newName|Text|->|Full name for the moved folder|
+|Result|4D.Folder|<-|Moved folder|
 <!-- END REF -->
 
 
@@ -378,13 +377,14 @@ You want to move and rename a folder:
 </details>
 
 <!--REF #folderClass.rename().Syntax -->
-**.rename**( *newName* : text ) : object<!-- END REF -->
+**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+
 
 <!--REF #folderClass.rename().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|newName|text|->|New full name for the folder|
-|Result|object|<-|Renamed folder|
+|newName|Text|->|New full name for the folder|
+|Result|4D.Folder|<-|Renamed folder|
 <!-- END REF -->
 
 
@@ -404,7 +404,7 @@ The renamed `Folder` object.
 
 
 ```4d
- var $toRename : Object
+ var $toRename : 4D.Folder
  $toRename:=Folder("/RESOURCES/Pictures").rename("Images")
 ```
 <!-- END REF -->
