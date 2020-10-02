@@ -127,11 +127,11 @@ title: 4Dユーザー＆グループの管理
 
 また、プラグインアクセスエリアを使用して、4D Client Webサーバーと SOAPサーバーの使用を制限することも可能です。
 
-ツールボックスのグループページにある "プラグイン" エリアには、4Dアプリケーションによりロードされたプラグインがすべて表示されます。 To give a group access to a plug-in, you simply need to check the corresponding option.
+ツールボックスのグループページにある "プラグイン" エリアには、4Dアプリケーションによりロードされたプラグインがすべて表示されます。 プラグインへのアクセス権をグループに与えるには、該当するオプションをチェックします。
 
 ![](assets/en/Users/plugins.png)
 
-The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
+**4D Client Web Server** や **4D Client SOAP Server** 項目を使用し、リモートモードの 4D がそれぞれ Web および SOAP (Webサービス) 公開をおこなえるかどうかを管理することができます。 これらのライセンスは 4D Server 側ではプラグインライセンスとしてみなされます。 したがって、プラグインと同じ方法で、これらのライセンスの使用権を特定のユーザーグループに限定することができます。
 
 
 ### アクセス権の階層構造
