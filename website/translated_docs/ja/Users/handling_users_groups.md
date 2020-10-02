@@ -86,7 +86,7 @@ title: 4Dユーザー＆グループの管理
 
 ### グループの設定
 
-You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
+グループエディターを使用して、各グループ内に納める要素 (ユーザーや他のグループ) を設定したり、プラグインへのアクセス権を割り当てることができます。
 
 Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
 
