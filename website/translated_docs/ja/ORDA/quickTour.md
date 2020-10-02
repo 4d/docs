@@ -78,17 +78,17 @@ $status:=$entity.save()
 
 
 
-The editor for users is located in the Toolbox of 4D.
+ユーザーとグループのエディターは 4Dのツールボックスにあります。
 
 ![](assets/en/Users/editor.png)
 
-### Adding and modifying users
+### ユーザーの追加と変更
 
-You use the users editor to create user accounts, set their properties and assign them to various groups.
+ユーザーエディターを使用して、ユーザーアカウントの作成やプロパティの設定、各グループへの割り当てをおこないます。
 
-To add a user from the Toolbox :
+ユーザーを追加するには:
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
+1. **デザイン** メニューから **ツールボックス＞ユーザー** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックします。 4Dはユーザーエディターを表示します。
 
 The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
