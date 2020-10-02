@@ -37,7 +37,7 @@ title: 4Dユーザー＆グループの管理
 
 ## ユーザーエディター
 
-ユーザーとグループのエディターは 4Dのツールボックスにあります。
+ユーザーのエディターは 4Dのツールボックスにあります。
 
 ![](assets/en/Users/editor.png)
 
@@ -65,26 +65,26 @@ title: 4Dユーザー＆グループの管理
 
 5. グループメンバー表を用いて、そのユーザーが所属するグループを設定します。 メンバーカラムの該当するオプションをチェックして、選択したユーザーをグループに対して追加・削除することができます。
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
+[グループページ](#グループの設定) を使用して、各グループの所属ユーザーを設定することもできます。
 
-### Deleting a user
+### ユーザーの削除
 
-To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](assets/en/Users/MinussNew.png)
+ユーザーを削除するには、そのユーザーを選択してから削除ボタンをクリックするか、またはコンテキストメニューの **削除** コマンドを使用します。 ![](assets/en/Users/MinussNew.png)
 
-Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
+削除されたユーザー名は、その後ユーザーエディターには表示されません。 削除されたユーザーの ID番号は、新規アカウント作成の際に再度割り当てられるという点に注意してください。
 
-### User properties
+### ユーザープロパティ
 
-- **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
+- **ユーザーの種類**: "デザイナー"、"管理者"、または (それ以外のすべてのユーザーの場合にあ) "ユーザー"
 
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). This method can be used for example to load the user preferences.
+- **開始メソッド**: ユーザーがデータベースを開いたときに自動実行されるメソッドの名称 (任意) このメソッドを使って、たとえばユーザー設定をロードできます。
 
 
 ## グループエディター
 
-The editor for groups is located in the Toolbox of 4D.
+グループのエディターは 4Dのツールボックスにあります。
 
-### Configuring groups
+### グループの設定
 
 You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
 
