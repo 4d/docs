@@ -343,9 +343,9 @@ When ordering different levels, 4D always goes from the background to the foregr
 
 The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys. 
 
->*	You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands. 
+>	You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands. 
 
-Every obeject that supports the focusable property is included in the data entry order by default. 
+Every object that supports the focusable property is included in the data entry order by default. 
 
 Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
 
