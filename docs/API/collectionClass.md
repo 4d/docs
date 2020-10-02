@@ -431,7 +431,6 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 <!-- REF #collection.copy().Syntax -->
 **.copy**() : Collection<br>**.copy**( *option* : Integer ) : Collection<br>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
 
-<!-- END REF -->
 
 <!-- REF #collection.copy().Params -->
 |Parameter|Type||Description|
@@ -2222,8 +2221,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 </details>
 
 <!-- REF #collection.reduce().Syntax -->
-**.reduce**( *methodName* : Text ) : Mixed <br>
-**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : Mixed <!-- END REF -->
+**.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any <!-- END REF -->
 
 
 <!-- REF #collection.reduce().Params -->
@@ -2327,6 +2325,7 @@ With the following ***Flatten*** method:
 
 
 #### Description
+
 The `.remove()` function <!-- REF #collection.remove().Summary --> removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
 
 >This function modifies the original collection.

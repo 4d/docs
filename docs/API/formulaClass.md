@@ -81,8 +81,8 @@ Parameters are received within the method, in the order they are specified in th
 
 ||
 |---|
-|[<!-- INCLUDE #formulaClass.apply().Syntax -->](#apply-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.apply().Summary -->|
-|[<!-- INCLUDE #formulaClass.call().Syntax -->](#call-)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.call().Summary --> |
+|[<!-- INCLUDE #formulaClass.apply().Syntax -->](#apply)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.apply().Summary -->|
+|[<!-- INCLUDE #formulaClass.call().Syntax -->](#call)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.call().Summary --> |
 |[<!-- INCLUDE #formulaClass.source.Syntax -->](#source)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.source.Summary --> |
 
 
@@ -267,13 +267,13 @@ The following code will create a dialog accepting a formula in text format:
  End if
 ```
 
-![](/assets/en/API/formulaDialog.png)
+![](assets/en/API/formulaDialog.png)
 
 
 ...and execute the formula:
 
 
-![](/assets/en/API/formulaAlert.png)
+![](assets/en/API/formulaAlert.png)
 
 
 
@@ -283,7 +283,7 @@ The following code will create a dialog accepting a formula in text format:
 ---
 
 <!-- REF formulaClass.apply().Desc -->
-## .apply( )
+## .apply()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -342,7 +342,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 ---
 
 <!-- REF formulaClass.call().Desc -->
-## .call( )
+## .call()
 
 
 <details><summary>History</summary>
