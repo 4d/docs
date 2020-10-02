@@ -86,11 +86,11 @@ Both the Designer and Administrator are available by default in all applications
 
 ### グループの設定
 
-You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
+グループエディターを使用して、各グループ内に納める要素 (ユーザーや他のグループ) を設定したり、プラグインへのアクセス権を割り当てることができます。
 
-Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
+グループは一旦作成されると、削除できないということに留意が必要です。 グループを使用したくない場合は、そのグループの所属ユーザーをすべて取り除きます。
 
-To create a group:
+グループを作成するには:
 
 1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the application project.
 
