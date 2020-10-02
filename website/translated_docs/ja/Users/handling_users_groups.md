@@ -29,25 +29,25 @@ Both the Designer and Administrator are available by default in all applications
 - デザイナーアイコン: ![](assets/en/Users/IconDesigner.png)
 - 管理者アイコン: ![](assets/en/Users/IconAdmin.png)
 
-デザイナーと管理者の名前は変更することができます。 In the language, the Designer ID is always 1 and the Administrator ID is always 2.
+デザイナーと管理者の名前は変更することができます。 ランゲージにおいて、デザイナーと管理者の ID値は、常に 1 と 2 に設定されます。
 
-The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
+デザイナーと管理者は、それぞれ 16,000 のグループと 16,000 のユーザーを作成することができます。
 
 
 
 ## ユーザーエディター
 
-The editor for users is located in the Toolbox of 4D.
+ユーザーとグループのエディターは 4Dのツールボックスにあります。
 
 ![](assets/en/Users/editor.png)
 
-### Adding and modifying users
+### ユーザーの追加と変更
 
-You use the users editor to create user accounts, set their properties and assign them to various groups.
+ユーザーエディターを使用して、ユーザーアカウントの作成やプロパティの設定、各グループへの割り当てをおこないます。
 
-To add a user from the Toolbox :
+ユーザーを追加するには:
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
+1. **デザイン** メニューから **ツールボックス＞ユーザー** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックします。 4Dはユーザーエディターを表示します。
 
 The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
