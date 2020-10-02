@@ -108,10 +108,11 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 ## .attachments
 
 <!-- REF #emailObjectClass.attachments.Syntax -->
-**.attachments** : collection<!-- END REF -->
+**.attachments** : Collection<!-- END REF -->
 
 
 #### Description
+
 
 The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->. 
 
@@ -123,7 +124,7 @@ Attachment objects are defined through the `MAIL New attachment` command.
 ## .bcc 
 
 <!-- REF #emailObjectClass.bcc.Syntax -->
-**.bcc** : text<br>**.bcc** : object<br>**.bcc** : collection<!-- END REF -->
+**.bcc** : Text<br>**.bcc** : Object<br>**.bcc** : Collection<!-- END REF -->
 
 
 #### Description
@@ -136,7 +137,7 @@ The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind
 ## .bodyStructure
 
 <!-- REF #emailObjectClass.bodyStructure.Syntax -->
-**.bodyStructure** : object<!-- END REF -->
+**.bodyStructure** : Object<!-- END REF -->
 
 
 #### Description
@@ -163,7 +164,7 @@ The `.bodyStructure` object contains the following properties:
 ## .bodyValues
 
 <!-- REF #emailObjectClass.bodyValues.Syntax -->
-**.bodyValues** : object<!-- END REF -->
+**.bodyValues** : Object<!-- END REF -->
 
 
 #### Description
@@ -174,8 +175,8 @@ The `.bodyValues` object contains the following properties:
 
 |Property|Type|Value|
 |---|---|---|
-|\<partID\>.value|text|Value of the body part|
-|\<partID\>.isEncodingProblem|boolean|True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default|
+|*partID*.value|text|Value of the body part|
+|*partID*.isEncodingProblem|boolean|True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default|
 
 ---
 
@@ -183,7 +184,7 @@ The `.bodyValues` object contains the following properties:
 ## .cc 
 
 <!-- REF #emailObjectClass.cc.Syntax -->
-**.cc** : text<br>**.cc** : object<br>**.cc** : collection<!-- END REF -->
+**.cc** : Text<br>**.cc** : Object<br>**.cc** : Collection<!-- END REF -->
 
 
 #### Description
@@ -198,7 +199,7 @@ The `.cc` property contains the <!-- REF #emailObjectClass.cc.Summary -->Carbon 
 ## .comments
 
 <!-- REF #emailObjectClass.comments.Syntax -->
-**.comments** : text<!-- END REF -->
+**.comments** : Text<!-- END REF -->
 
 
 #### Description
@@ -215,7 +216,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 ## .from 
 
 <!-- REF #emailObjectClass.from.Syntax -->
-**.from** : text<br>**.from** : object<br>**.from** : collection<!-- END REF -->
+**.from** : Text<br>**.from** : Object<br>**.from** : Collection<!-- END REF -->
 
 
 #### Description
@@ -236,7 +237,7 @@ For better deliverability, it is recommended to use the same from and sender add
 ## .headers
 
 <!-- REF #emailObjectClass.headers.Syntax -->
-**.headers** : collection<!-- END REF -->
+**.headers** : Collection<!-- END REF -->
 
 
 #### Description
@@ -261,7 +262,7 @@ Every object of the headers collection can contain the following properties:
 ## .htmlBody
 
 <!-- REF #emailObjectClass.htmlBody.Syntax -->
-**.htmlBody** : text<!-- END REF -->
+**.htmlBody** : Text<!-- END REF -->
 
 
 #### Description
@@ -278,7 +279,7 @@ The `.htmlBody` property contains the <!-- REF #emailObjectClass.htmlBody.Summar
 ## .id
 
 <!-- REF #emailObjectClass.id.Syntax -->
-**.id** : text<!-- END REF -->
+**.id** : Text<!-- END REF -->
 
 
 #### Description
@@ -295,7 +296,7 @@ The `.id` property contains the <!-- REF #emailObjectClass.id.Summary -->unique 
 ## .inReplyTo
 
 <!-- REF #emailObjectClass.inReplyTo.Syntax -->
-**.inReplyTo** : text<!-- END REF -->
+**.inReplyTo** : Text<!-- END REF -->
 
 
 #### Description
@@ -312,7 +313,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 ## .keywords
 
 <!-- REF #emailObjectClass.keywords.Syntax -->
-**.keywords** : object<!-- END REF -->
+**.keywords** : Object<!-- END REF -->
 
 
 #### Description
@@ -339,7 +340,7 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 ## .messageId
 
 <!-- REF #emailObjectClass.messageId.Syntax -->
-**.messageId** : text<!-- END REF -->
+**.messageId** : Text<!-- END REF -->
 
 
 #### Description
@@ -353,7 +354,7 @@ This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com
 ## .receivedAt 
 
 <!-- REF #emailObjectClass.receivedAt.Syntax -->
-**.receivedAt** : text<!-- END REF -->
+**.receivedAt** : Text<!-- END REF -->
 
 
 #### Description
@@ -370,7 +371,7 @@ The `.receivedAt` property contains the <!-- REF #emailObjectClass.receivedAt.Su
 ## .references
 
 <!-- REF #emailObjectClass.references.Syntax -->
-**.references** : collection<!-- END REF -->
+**.references** : Collection<!-- END REF -->
 
 
 #### Description
@@ -386,7 +387,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 ## .replyTo 
 
 <!-- REF #emailObjectClass.replyTo.Syntax -->
-**.replyTo** : text<br>**.replyTo** : object<br>**.replyTo** : collection<!-- END REF -->
+**.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection<!-- END REF -->
 
 
 #### Description
@@ -400,7 +401,7 @@ The `.replyTo` property contains the <!-- REF #emailObjectClass.replyTo.Summary 
 ## .sendAt
 
 <!-- REF #emailObjectClass.sendAt.Syntax -->
-**.sendAt** : text<!-- END REF -->
+**.sendAt** : Text<!-- END REF -->
 
 
 #### Description
@@ -413,7 +414,7 @@ The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary --
 ## .sender 
 
 <!-- REF #emailObjectClass.sender.Syntax -->
-**.sender** : text<br>**.sender** : object<br>**.sender** : collection<!-- END REF -->
+**.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection<!-- END REF -->
 
 
 #### Description
@@ -434,7 +435,7 @@ For better deliverability, it is recommended to use the same from and sender add
 ## .size 
 
 <!-- REF #emailObjectClass.size.Syntax -->
-**.size** : number<!-- END REF -->
+**.size** : Integer<!-- END REF -->
 
 
 #### Description
@@ -449,7 +450,7 @@ The `.size` property contains the <!-- REF #emailObjectClass.size.Summary -->siz
 ## .subject
 
 <!-- REF #emailObjectClass.subject.Syntax -->
-**.subject** : text<!-- END REF -->
+**.subject** : Text<!-- END REF -->
 
 
 #### Description
@@ -463,7 +464,7 @@ The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary 
 ## .textBody
 
 <!-- REF #emailObjectClass.textBody.Syntax -->
-**.textBody** : text<!-- END REF -->
+**.textBody** : Text<!-- END REF -->
 
 
 #### Description
@@ -475,7 +476,7 @@ The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summar
 ## .to 
 
 <!-- REF #emailObjectClass.to.Syntax -->
-**.to** : text<br>**.to** : object<br>**.to** : collection<!-- END REF -->
+**.to** : Text<br>**.to** : Object<br>**.to** : Collection<!-- END REF -->
 
 
 #### Description

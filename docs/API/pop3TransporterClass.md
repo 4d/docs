@@ -41,7 +41,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 </details>
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Syntax -->
-**POP3 New transporter**( *server* : object ) : object<!-- END REF -->
+**POP3 New transporter**( *server* : Object ) : Object<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
 |Parameter|Type||Description|
@@ -153,12 +153,12 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 </details>
 
 <!-- REF #pop3TransporterClass.delete().Syntax -->
-**.delete**( *msgNumber* : integer )<!-- END REF -->
+**.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.delete().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|integer|->|Number of the message to delete|
+|msgNumber|Integer|->|Number of the message to delete|
 <!-- END REF -->
 
 
@@ -201,12 +201,12 @@ Executing this method does not actually remove any email. The flagged email will
 </details>
 
 <!-- REF #pop3TransporterClass.getBoxInfo().Syntax -->
-**.getBoxInfo()** : object<!-- END REF -->
+**.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getBoxInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|object|<-|boxInfo object|
+|Result|Object|<-|boxInfo object|
 <!-- END REF -->
 
 
@@ -253,13 +253,13 @@ The `boxInfo` object returned contains the following properties:
 </details>
 
 <!-- REF #pop3TransporterClass.getMail().Syntax -->
-**.getMail**( *msgNumber* : integer ) : object<!-- END REF -->
+**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMail().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|integer|->|Number of the message in the list |
-|Result|object|<-|[Email object](emailObjectClass.md#email-object)|
+|msgNumber|Integer|->|Number of the message in the list |
+|Result|Object|<-|[Email object](emailObjectClass.md#email-object)|
 <!-- END REF -->
 
 
@@ -313,13 +313,13 @@ You want to know the sender of the first mail of the mailbox:
 </details>
 
 <!-- REF #pop3TransporterClass.getMailInfo().Syntax -->
-**.getMailInfo**( *msgNumber* : integer ) : object<!-- END REF -->
+**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMailInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|integer|->|Number of the message in the list |
-|Result|object|<-|mailInfo object|
+|msgNumber|Integer|->|Number of the message in the list |
+|Result|Object|<-|mailInfo object|
 <!-- END REF -->
 
 
@@ -375,12 +375,12 @@ The method returns **Null** if:
 </details>
 
 <!-- REF #pop3TransporterClass.getMailInfoList().Syntax -->
-**.getMailInfoList()** : collection<!-- END REF -->
+**.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMailInfoList().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|collection|<-|Collection of `mailInfo` objects|
+|Result|Collection|<-|Collection of `mailInfo` objects|
 <!-- END REF -->
 
 
@@ -444,13 +444,13 @@ You want to know the total number and size of emails in the mailbox:
 </details>
 
 <!-- REF #pop3TransporterClass.getMIMEAsBlob().Syntax -->
-**.getMIMEAsBlob**( *msgNumber* : integer ) : blob<!-- END REF -->
+**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMIMEAsBlob().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|integer|-> |Number of the message in the list|
-|Result|blob|<-|Blob of the MIME string returned from the mail server|
+|msgNumber|Integer|-> |Number of the message in the list|
+|Result|Blob|<-|Blob of the MIME string returned from the mail server|
 <!-- END REF -->
 
 

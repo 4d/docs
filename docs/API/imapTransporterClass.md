@@ -40,17 +40,18 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 </details>
 
 <!-- REF imapTransporterClass.IMAP New transporter.Syntax -->
-**IMAP New transporter**( *server* : object ) : object<!-- END REF -->
+**IMAP New transporter**( *server* : Object ) : Object<!-- END REF -->
 
 <!-- REF imapTransporterClass.IMAP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|server|object|->|Mail server information|
-|Result|object|<-|[IMAP transporter object](#imap-transporter-object)|
+|server|Object|->|Mail server information|
+|Result|Object|<-|[IMAP transporter object](#imap-transporter-object)|
 <!-- END REF -->
 
 
 #### Description
+
 The `IMAP New transporter` command <!-- REF imapTransporterClass.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
 In the *server* parameter, pass an object containing the following properties:
@@ -121,7 +122,7 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 </details>
 
 <!-- REF #imapTransporterClass.checkConnectionDelay.Syntax -->
-**.checkConnectionDelay** : number<!-- END REF -->
+**.checkConnectionDelay** : Integer<!-- END REF -->
 
 
 #### Description
@@ -147,13 +148,13 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 </details>
 
 <!-- REF #imapTransporterClass.getBoxInfo().Syntax -->
-**.getBoxInfo**( *name* : text ) : object<!-- END REF -->
+**.getBoxInfo**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|name|text|->|Name of the mailbox|
-|Result|object|<-|boxInfo object|
+|name|Text|->|Name of the mailbox|
+|Result|Object|<-|boxInfo object|
 <!-- END REF -->
 
 
@@ -200,12 +201,12 @@ The `boxInfo` object returned contains the following properties:
 </details>
 
 <!-- REF #imapTransporterClass.getBoxList().Syntax -->
-**.getBoxList()** : collection<!-- END REF -->
+**.getBoxList()** : Collection<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxList().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|collection|<-|Collection of mailbox objects|
+|Result|Collection|<-|Collection of mailbox objects|
 <!-- END REF -->
 
 
@@ -261,12 +262,12 @@ If the account does not contain any mailboxes, an empty collection is returned.
 </details>
 
 <!-- REF #imapTransporterClass.getDelimiter().Syntax -->
-**.getDelimiter()** : text<!-- END REF -->
+**.getDelimiter()** : Text<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getDelimiter().Params -->
 |Parameter|Type||Description|
 |-----|--- |:---:|------|
-|Result|text|<-|Hierarchy delimiter character|
+|Result|Text|<-|Hierarchy delimiter character|
 <!-- END REF -->
 
 
@@ -287,6 +288,7 @@ Mailbox name delimiter character.
 
 >*	If there is no open connection, `.getDelimiter( )` will open a connection.
 >*	If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection( )`](#checkconnection) function is automatically called.
+
 
 
 #### Example
@@ -320,15 +322,15 @@ Mailbox name delimiter character.
 </details>
 
 <!-- REF #imapTransporterClass.getMail().Syntax -->
-**.getMail**( *msgNumber*: integer { ; *options* : object } ) : object<br>**.getMail**( *msgID*: text { ; *options* : object } ) : object<!-- END REF -->
+**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getMail().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|integer|->|Sequence number of the message|
-|msgID|text|->|Unique ID of the message|
-|options|object|->|Message handling instructions|
-|Result|object|<-|[Email object](emailObjectClass.md#email-object)|
+|msgNumber|Integer|->|Sequence number of the message|
+|msgID|Text|->|Unique ID of the message|
+|options|Object|->|Message handling instructions|
+|Result|Object|<-|[Email object](emailObjectClass.md#email-object)|
 <!-- END REF -->
 
 
@@ -395,16 +397,16 @@ You want to get the message with ID = 1:
 </details>
 
 <!-- REF #imapTransporterClass.getMails().Syntax -->
-**.getMails**( *ids* : collection { ; *options* : object } ) : object<br>**.getMails**( *startMsg* : integer ; *endMsg* : integer { ; *options* : object } ) : object<!-- END REF -->
+**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getMails().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|ids |collection|->|Collection of message ID|
-|startMsg|integer|->|Sequence number of the first message|
-|endMsg |integer|->|Sequence number of the last message|
-|options|object|->|Message handling instructions|
-|Result|object|<-|Object containing:<br><ul><li>a collection of [Email objects](emailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|
+|ids |Collection|->|Collection of message ID|
+|startMsg|Integer|->|Sequence number of the first message|
+|endMsg |Integer|->|Sequence number of the last message|
+|options|Object|->|Message handling instructions|
+|Result|Object|<-|Object containing:<br><ul><li>a collection of [Email objects](emailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|
 <!-- END REF -->
 
 
@@ -452,8 +454,8 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 |Property |	Type |	Description |
 |---|---|---|
-|list 	|collection	|Collection of [`Email` objects](emailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned.|
-|notFound |collection| Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul><br>An empty collection is returned if all messages are found.|
+|list 	|Collection	|Collection of [`Email` objects](emailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned.|
+|notFound |Collection| Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul><br>An empty collection is returned if all messages are found.|
 
 
 #### Example
@@ -500,15 +502,15 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 </details>
 
 <!-- REF #imapTransporterClass.getMIMEAsBlob().Syntax -->
-**.getMIMEAsBlob**( *msgNumber* : integer { ; *updateSeen* : boolean } ) : blob<br>**.getMIMEAsBlob**( *msgID* : text { ; *updateSeen* : boolean } ) : blob<!-- END REF -->
+**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob<!-- END REF -->
 
 
 <!-- REF #imapTransporterClass.getMIMEAsBlob().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|longint|-> |Sequence number of the message|
-|msgID|text|-> |Unique ID of the message|
-|updateSeen|boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
+|msgNumber|Integer|-> |Sequence number of the message|
+|msgID|Text|-> |Unique ID of the message|
+|updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
 |Result|BLOB|<-|Blob of the MIME string returned from the mail server|
 <!-- END REF -->
 
@@ -592,14 +594,14 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 </details>
 
 <!-- REF #imapTransporterClass.selectBox().Syntax -->
-**.selectBox**( *name* : text { ; *state* : integer } ) : object<!-- END REF -->
+**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.selectBox().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|name|text|-> |Name of the mailbox|
-|state|integer|->|Mailbox access status|
-|Result|object|<-|boxInfo object|
+|name|Text|-> |Name of the mailbox|
+|state|Integer|->|Mailbox access status|
+|Result|Object|<-|boxInfo object|
 <!-- END REF -->
 
 

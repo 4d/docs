@@ -42,13 +42,13 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 </details>
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
-**SMTP New transporter**( *server* : object ) -> object<!-- END REF -->
+**SMTP New transporter**( *server* : Object ) : Object<!-- END REF -->
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|server|object|->|Mail server information|
-|Result|object|<-|[SMTP transporter object](#smtp-transporter-object)|
+|server|Object|->|Mail server information|
+|Result|Object|<-|[SMTP transporter object](#smtp-transporter-object)|
 <!-- END REF -->
 
 
@@ -192,7 +192,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 </details>
 
 <!-- REF #smtpTransporterClass.keepAlive.Syntax -->
-**.keepAlive** : boolean<!-- END REF -->
+**.keepAlive** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -229,13 +229,13 @@ The SMTP connection is automatically closed:
 </details>
 
 <!-- REF #smtpTransporterClass.send().Syntax -->
-**.send**( *mail* : object ) : object<!-- END REF -->
+**.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #smtpTransporterClass.send().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|mail|object|->|[Email](emailObjectClass.md#email-object) to send|
-|Result|object|<-|SMTP status|
+|mail|Object|->|[Email](emailObjectClass.md#email-object) to send|
+|Result|Object|<-|SMTP status|
 <!-- END REF -->
 
 
