@@ -7,8 +7,8 @@ title: 4Dユーザー＆グループの管理
 
 4Dは、ユーザーに対して標準的なアクセス権と特定の権限を与えます。 ユーザー＆グループシステムが起動されると、これらの標準的な権限が有効になります。
 
-最も強力なユーザーは **デザイナー (Designer)** です。 No aspect of the application is closed to the Designer. デザイナーは次のことができます:
-- access all application servers without restriction,
+最も強力なユーザーは **デザイナー (Designer)** です。 デザイナーは、アプリケーションに関するあらゆる操作をおこなうことができます。 デザイナーは次のことができます:
+- 制限なく、すべてのアプリケーションサーバーにアクセスする。
 - ユーザーやグループを作成する。
 - グループにアクセス権を割り当てる。
 - デザインモードを使用する。 シングルユーザー環境では、常にデザイナーアクセス権が使用されます。 クライアント/サーバー環境にといては、デザイナーにパスワードを割り当てることで、4Dユーザーログインダイアログが表示されるようになります。  この環境では、デザインモードは読み取り専用です。
@@ -22,9 +22,9 @@ title: 4Dユーザー＆グループの管理
 
 管理者は次のことができません:
 - デザイナーユーザーを編集する。
-- by default, access to protected parts of the application. とくにデザインモードが制限されている場合には、管理者はアクセスすることができません。 The Administrator must be part of one or more groups to have access privileges in the application. 管理者はすべての新規グループに含まれますが、任意のグループから管理者の名前を取り除くことができます。
+- アプリケーションの保護された領域にアクセスする。 とくにデザインモードが制限されている場合には、管理者はアクセスすることができません。 管理者がアプリケーション内でアクセス権を得るには、1つ以上のグループに属さなければなりません。 管理者はすべての新規グループに含まれますが、任意のグループから管理者の名前を取り除くことができます。
 
-Both the Designer and Administrator are available by default in all applications. [ユーザー管理のダイアログボックス](#ユーザーエディター)において、デザイナーと管理者のアイコンは、それぞれ赤色と緑色で表示されます:
+デザイナーと管理者は、すべてのアプリケーションにおいてデフォルトで利用可能です。 [ユーザー管理のダイアログボックス](#ユーザーエディター)において、デザイナーと管理者のアイコンは、それぞれ赤色と緑色で表示されます:
 
 - デザイナーアイコン: ![](assets/en/Users/IconDesigner.png)
 - 管理者アイコン: ![](assets/en/Users/IconAdmin.png)
@@ -57,11 +57,11 @@ Both the Designer and Administrator are available by default in all applications
 
 4D は新規ユーザーをリストに追加し、デフォルトとして "新規ユーザーX" という名前を設定します。
 
-3. 新しいユーザー名を入力します。 This name will be used by the user to open the application. ユーザー名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
+3. 新しいユーザー名を入力します。 この名前は、ユーザーがアプリケーションを開く際に使用されます。 ユーザー名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
 4. ユーザーのパスワードを設定するには、プロパティエリアで **編集...** ボタンをクリックして、ダイアログボックスの 2つのパスワード欄に同じパスワードをそれぞれ入力します。 パスワードには 15桁までの英数字を使用することができます。 パスワードでは文字の大小が区別されます。
 
-> Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
+> ストラクチャー設定の "セキュリティ" ページで許可されていれば、ユーザーは自分のパスワードを変更できます。また、パスワードは `CHANGE PASSWORD` コマンドを使って変更することもできます。
 
 5. グループメンバー表を用いて、そのユーザーが所属するグループを設定します。 メンバーカラムの該当するオプションをチェックして、選択したユーザーをグループに対して追加・削除することができます。
 
@@ -77,7 +77,7 @@ Both the Designer and Administrator are available by default in all applications
 
 - **ユーザーの種類**: "デザイナー"、"管理者"、または (それ以外のすべてのユーザーの場合にあ) "ユーザー"
 
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). このメソッドを使って、たとえばユーザー設定をロードできます。
+- **開始メソッド**: ユーザーがアプリケーションを開いたときに自動実行されるメソッドの名称 (任意) このメソッドを使って、たとえばユーザー設定をロードできます。
 
 
 ## グループエディター
@@ -92,7 +92,7 @@ Both the Designer and Administrator are available by default in all applications
 
 グループを作成するには:
 
-1. **デザイン** メニューから **ツールボックス＞ユーザーグループ** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックし、**グループ** ページを開きます。 4D はグループエディターウインドウを表示します: The list of groups displays all the groups of the application project.
+1. **デザイン** メニューから **ツールボックス＞ユーザーグループ** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックし、**グループ** ページを開きます。 4D はグループエディターウインドウを表示します: グループリストには、アプリケーションプロジェクトのすべてのグループが表示されます。
 
 2. グループリストの下にある追加ボタン ![](assets/en/Users/PlussNew.png) をクリックします。  
    または  
@@ -121,11 +121,11 @@ Both the Designer and Administrator are available by default in all applications
 
 ### プラグインやサーバーにグループを割り当てる
 
-You can assign a group privileges to any plug-ins installed in the project. これには 4D のプラグインと任意のサードパーティープラグインが含まれます。
+プロジェクトにインストールされたプラグインへのアクセス権をグループに割り当てることができます。 これには 4D のプラグインと任意のサードパーティープラグインが含まれます。
 
 プラグインへのアクセス権を割り当てると、所有するプラグインライセンスの使用を管理できるようになります。 プラグインのアクセスグループに属さないユーザーは、そのプラグインをロードすることができません。
 
-> Used licenses remain attached to 4D user accounts in the group for the whole 4D session.
+> 使用されたライセンスは 4Dセッションの間、当該グループに所属する 4Dユーザーアカウントに紐づけられます。
 
 ツールボックスのグループページにある "プラグイン" エリアには、4Dアプリケーションによりロードされたプラグインがすべて表示されます。 プラグインへのアクセス権をグループに与えるには、該当するオプションをチェックします。
 
