@@ -177,9 +177,9 @@ $status:=$entity.save()
 
 ### アクセス権の階層構造
 
-データベースのセキュリティを確保し、ユーザーに異なるアクセスレベルを提供する最も効果的な方法は、アクセス権の階層構造を利用することです。 ユーザーを適切なグループに割り振り、各グループをネストすることで、アクセス権の階層構造を形成できます。 This section discusses several approaches to such a scheme.
+データベースのセキュリティを確保し、ユーザーに異なるアクセスレベルを提供する最も効果的な方法は、アクセス権の階層構造を利用することです。 ユーザーを適切なグループに割り振り、各グループをネストすることで、アクセス権の階層構造を形成できます。 この節では、このような構造の取り扱い方について説明します。
 
-In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
+この例題では、ユーザーは担当業務に応じて 3つあるグループの 1つに割り振られます。 Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 
 The groups are then nested so that privileges are correctly distributed to the users of each group.
 
