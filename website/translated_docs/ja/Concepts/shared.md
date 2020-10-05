@@ -35,11 +35,11 @@ title: 共有オブジェクトと共有コレクション
  End Use
 ```
 
-一度に 1プロセスのみ、共有オブジェクト/コレクションを編集することができます。 `Use` は共有オブジェクト/コレクションを他のスレッドからアクセスできないようにロックする一方、`End use` はこのロックを解除します。 `Use...End use` を使わずに共有オブジェクト/コレクションを編集しようとすると、エラーが生成されます。 すでに他のプロセスによって使用されている共有オブジェクト/コレクションに対して、別のプロセスが `Use...End use` を呼び出した場合、先着プロセスが `End use` でロックを解除するまで、その呼び出しは待機状態になります (エラーは生成されません)。 したがって、`Use...End use` 構文内の処理は迅速に実行され、ロックは可及的速やかに解除される必要があります。 そのため、共有オブジェクト/コレクションをインターフェース(ダイアログボックスなど) から直接編集することは避けることが強く推奨されます。
+一度に 1プロセスのみ、共有オブジェクト/コレクションを編集することができます。 `Use` locks the shared object/collection from other threads, while `End use` unlocks the shared object/collection (if the locking counter is at 0, see below). . `Use...End use` を使わずに共有オブジェクト/コレクションを編集しようとすると、エラーが生成されます。 すでに他のプロセスによって使用されている共有オブジェクト/コレクションに対して、別のプロセスが `Use...End use` を呼び出した場合、先着プロセスが `End use` でロックを解除するまで、その呼び出しは待機状態になります (エラーは生成されません)。 したがって、`Use...End use` 構文内の処理は迅速に実行され、ロックは可及的速やかに解除される必要があります。 そのため、共有オブジェクト/コレクションをインターフェース(ダイアログボックスなど) から直接編集することは避けることが強く推奨されます。
 
 共有オブジェクト/コレクションを他の共有オブジェクト/コレクションのプロパティあるいは要素に割り当てることは可能で、このとき **共有グループ** が作成されます。 共有グループは、共有オブジェクト/コレクションのプロパティ値あるいは要素として他の共有オブジェクト/コレクションが設定されたときに自動的に作成されます。 共有グループを使用すると共有オブジェクトを入れ子にすることができますが、以下のルールに気をつける必要があります:
 
-- あるグループの共有オブジェクト/コレクションに対して `Use` を使うと、そのグループに所属するすべての共有オブジェクト/コレクションのプロパティ/要素がロックされます。
+- Calling `Use` on a shared object/collection belonging to a group locks properties/elements of all shared objects/collections of the group and increments its locking counter. Calling `End use` decrements the locking counter of the group and when the counter is at 0, all the linked shared objects/collections are unlocked.
 - 共有オブジェクト/コレクションは一つの共有グループにしか所属することができません。 すでにグループに所属している共有オブジェクト/コレクションを他のグループへと割り当てようとした場合、エラーが返されます。
 - 一旦グループ化された共有オブジェクト/コレクションについて、グループを解除することはできません。 一度共有グループに含まれた共有オブジェクト/コレクションは、セッション中はずっと同グループに所属することになります。 親オブジェクト/コレクションから子オブジェクト/コレクションへの参照をすべて削除したとしても、両者のリンクが解除されるわけではありません。
 
@@ -79,8 +79,8 @@ title: 共有オブジェクトと共有コレクション
 - _statement(s)_ で実行されるステートメントは、*Shared_object_or_Shared_collection* のプロパティ/要素に対して、競合アクセスのリスクなしに変更も実行することができます。
 - _Shared_object_or_Shared_collection_ に他の共有オブジェクトあるいはコレクションがプロパティとして追加された場合、それらも同じ共有グループとして連結されます (**共有オブジェクト/共有コレクションの使用** を参照してください)。
 - **Use...End use ** 内ステートメントの実行中に、他のプロセスが _Shared_object_or_Shared_collection_ のプロパティやリンクされたプロパティにアクセスしようとした場合、そのアクセスは自動的に保留され、実行中の処理が終了するまで待機します。
-- **End use** は、_Shared_object_or_Shared_collection_ プロパティおよび、同じロック識別子を共有するすべてのオブジェクトのロックを解除します。
-- 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 この場合、すべてのロックはスタックされ、プロパティ/要素は最後の **End use** が実行されたときに解除されます。</ul>
+- The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects of the same group.
+- 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 In the case of a group, each **Use** increments the locking counter of the group and each **End use** decrements it; all properties/elements will be released only when the last **End use** call sets the locking counter to 0.</ul>
 
 **注:** コレクションのメンバーメソッドが共有コレクションを変更する場合、そのメソッド実行中は、対象の共有コレクションに対して **Use** が内部的に自動で呼ばれます。
 
