@@ -23,7 +23,7 @@ title: スタイルシート
 | styleSheets_mac.css     | macOS 専用の属性スタイル定義用                   |
 | styleSheets_windows.css | Windows 専用の属性スタイル定義用                 |
 
-これらのファイルはプロジェクトの "/SOURCES" フォルダーに格納されます。
+これらのファイルはプロジェクトの "/SOURCES" フォルダーに格納されます。 They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
 ### スタイルシートアーキテクチャー
@@ -183,6 +183,7 @@ text[text=Hello]
 text[text|=Hello]
 {
      stroke: yellow;
+
 }
 ```
 
@@ -228,8 +229,8 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 
 - `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` および `verticalLineStroke` の属性は 3種類のシンタックスを受け付けます:
 
-    - css カラーネーム: `fill: red;`
-    - 16進数カラーコード: `fill: #FF0000;`
+    - CSS color name: `fill: red;`
+    - Hexa value: `fill: #FF0000;`
     - `rgb()` 関数: `fill:rgb(255,0,0)`
 
 - CSS では禁じられている文字を使用している文字列については、その文字列を単一引用符または二重引用符でくくることができます。 たとえば:
@@ -254,12 +255,12 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 | ------------------- | ------------- | ---------- |
 | `"text": "Button",` | `text: Edit;` | `"Button"` |
 
-
 **例 2:**
 
 | JSON 式記述            | スタイルシート                  | 4D の表示   |
 | ------------------- | ------------------------ | -------- |
 | `"text": "Button",` | `text: Edit !important;` | `"Edit"` |
+
 
 
 
@@ -296,12 +297,6 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
     ```
 
 > ファイルパスは相対パスと絶対パスが使えます。 *  相対パスの基準は JSON フォームファイルです。 *  セキュリティのため、絶対パスとして使用できるのはファイルシステムパスに限られます。 (*例*: "/RESOURCES", "/DATA")
-
-
-
-
-
-
 
 
 ## スタイルシートの作成と編集

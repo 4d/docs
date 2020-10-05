@@ -58,6 +58,7 @@ You can add or modify 4D forms using the following elements:
                 "action": "Cancel",
                 "left": 60,
                 "top": 160,
+
                 "width": 100,
                 "height": 20
                 }
@@ -92,7 +93,7 @@ You can create multiple pages for an input form. If you have more fields or vari
 
 - Place the most important information on the first page and less important information on other pages.
 - Organize each topic on its own page.
-- Reduce or eliminate scrolling during data entry.
+- Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
 - Provide space around the form elements for an attractive screen design.
 
 Multiple pages are a convenience used for input forms only. They are not for printed output. When a multi-page form is printed, only the first page is printed.
@@ -117,7 +118,7 @@ A l’exécution du formulaire, les objets sont chargés et combinés dans l’o
 3.  Page zéro du formulaire ouvert
 4.  Page courante du formulaire ouvert.
 
-Cet ordre détermine l’ordre de saisie des objets dans le formulaire.
+This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
 
 > Seules les pages 0 et 1 du formulaire hérité peuvent apparaître dans les autres formulaires.
 
