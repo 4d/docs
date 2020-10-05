@@ -36,9 +36,9 @@ title: 概要
 
 ## プロジェクトアーキテクチャーにおけるユーザー＆グループ
 
-In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective with 4D Server. 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
+プロジェクトアプリケーション (.4DProject および .4dz ファイル) では、シングルユーザーおよびクライアントサーバー環境の両方でユーザーとグループを設定することができます。 ただし、アクセスシステムは 4D Server でのみ有効です。 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
 
-|                              | 4D (single-user)     | 4D Server |
+|                              | 4D (シングルユーザー)        | 4D Server |
 | ---------------------------- | -------------------- | --------- |
 | ユーザーとグループの追加/編集              | ◯                    | ◯         |
 | ユーザー/グループにサーバーアクセスを割り振る      | ◯                    | ◯         |
@@ -61,12 +61,12 @@ In project applications (.4DProject or .4dz files), 4D users and groups can be c
 
 ## Directory.json ファイル
 
-Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
+ユーザー、グループ、およびそれらのアクセス権は、**directory.json** という名称の専用のプロジェクトファイルに保存されます。
 
 このフォルダーは次の場所に保存することができます:
 
-- in the user settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the application.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by an application upgrade.
+- ユーザー設定フォルダー (つまり "Project" フォルダーと同階層にある "Settings" フォルダー) 内。 これらの設定はアプリケーションによりデフォルトで使用されます。
+- データ設定フォルダー (つまり "Data" フォルダーの中の "Settings" フォルダー) 内。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 この機能により、カスタム/ローカルなユーザー＆グループ設定を定義することができます。 アプリケーションをアップグレードしても、カスタム設定はそのままです。
 
-> If users and groups management is not active, the **directory.json** is not created.
+> ユーザーとグループの管理が有効化されていない場合、**directory.json** ファイルは生成されません。
 
