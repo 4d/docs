@@ -140,13 +140,13 @@ title: 4Dユーザー＆グループの管理
 
 この例題では、ユーザーは担当業務に応じて 3つあるグループの 1つに割り振られます。 データ入力担当のユーザーは、Accounting (会計) グループに割り当てます。 レコードの更新や無効データの削除などデータ管理を担当するユーザーは、Finances (財務) グループに割り当てます。 検索の実行や分析レポートの印刷などデータ分析を担当するユーザーは、General Management (総合管理) グループに割り当てます。
 
-The groups are then nested so that privileges are correctly distributed to the users of each group.
+割り当て完了後は、各グループのユーザーに権限が正しく配分されるようにグループをネストします。
 
-- The General Management group contains only “high-level” users. ![](assets/en/Users/schema1.png)
+- General Managementグループには "高レベル" のユーザーだけが含まれます。 ![](assets/en/Users/schema1.png)
 
-- The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well. ![](assets/en/Users/schema2.png)
+- Financesグループには、データ管理ユーザーと General Managementグループが含まれます。したがって、General Managementグループのユーザーは Financesグループの権限も保持します。 ![](assets/en/Users/schema2.png)
 
-- The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](assets/en/Users/schema3.png)
+- Accountingグループには、データ入力をおこなうユーザーと Financesグループが含まれます。したがって、Financesグループのユーザーと General Managementグループのユーザーは Accountingグループの権限も利用できます。 ![](assets/en/Users/schema3.png)
 
 You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
 
