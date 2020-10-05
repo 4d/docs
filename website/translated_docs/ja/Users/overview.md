@@ -65,7 +65,7 @@ title: 概要
 
 このフォルダーは次の場所に保存することができます:
 
-- in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the database.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
+- ユーザーデータベース設定フォルダー (つまり "Project" フォルダーと同階層にある "Settings" フォルダー) 内。 これらの設定はデータベースによりデフォルトで使用されます。
+- データ設定フォルダー (つまり "Data" フォルダーの中の "Settings" フォルダー) 内。 directory.json ファイルがこの場所に保存されている場合、ユーザーデータベース設定フォルダーのファイルよりも優先されます。 この機能により、カスタム/ローカルなユーザー＆グループ設定を定義することができます。 データベースをアップグレードしても、カスタム設定はそのままです。
 
-> If users and groups management is not active, the directory.json is not created.
+> ユーザーとグループの管理が有効化されていない場合、directory.json ファイルは生成されません。
