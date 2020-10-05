@@ -36,14 +36,14 @@ title: 概要
 
 ## プロジェクトアーキテクチャーにおけるユーザー＆グループ
 
-In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective with 4D Server. The following table lists the main users and groups features and their availability:
+In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective with 4D Server. 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
 
-|                                                               | 4D (single-user)             | 4D Server |
-| ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+|                              | 4D (single-user)     | 4D Server |
+| ---------------------------- | -------------------- | --------- |
+| ユーザーとグループの追加/編集              | ◯                    | ◯         |
+| ユーザー/グループにサーバーアクセスを割り振る      | ◯                    | ◯         |
+| ユーザー認証                       | × (すべてのユーザーがデザイナーです) | ◯         |
+| デザイナーへのパスワード設定によるアクセスシステムの起動 | × (すべてのアクセスがデザイナーです) | ◯         |
 
 
 
@@ -51,19 +51,19 @@ In project applications (.4DProject or .4dz files), 4D users and groups can be c
 
 ## ツールボックス
 
-The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
+ユーザーとグループのエディターは 4Dのツールボックスにあります。 ユーザーとグループを作成し、ユーザーにパスワードを設定し、ユーザーをグループに所属させるといった操作はこのエディターにて可能です。
 
 ![](assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command. ユーザーとグループの設定は、アプリケーション実行中でも [Users and Groups](https://doc.4d.com/4Dv18R3/4D/18-R3/Users-and-Groups.201-4900438.ja.html) テーマの 4Dランゲージコマンドを使って編集することができます。
+> ランタイムにおいてユーザーとグループのエディターを表示させるには [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.ja.html) コマンドを使用します。 ユーザーとグループの設定は、アプリケーション実行中でも [Users and Groups](https://doc.4d.com/4Dv18R3/4D/18-R3/Users-and-Groups.201-4900438.ja.html) テーマの 4Dランゲージコマンドを使って編集することができます。
 
 
 
-## Directory.json file
+## Directory.json ファイル
 
 Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
 
-This file can be stored at the following locations:
+このフォルダーは次の場所に保存することができます:
 
 - in the user settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the application.
 - in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by an application upgrade.
