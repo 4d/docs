@@ -36,7 +36,7 @@ title: 概要
 
 ## プロジェクトアーキテクチャーにおけるユーザー＆グループ
 
-In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective in 4D Server databases. The following table lists the main users and groups features and their availability:
+プロジェクトデータベース (.4DProject および .4dz ファイル) では、シングルユーザーおよびクライアントサーバー環境の両方でユーザーとグループを設定することができます。 However, access control is only effective in 4D Server databases. The following table lists the main users and groups features and their availability:
 
 |                                                               | 4D Developer (single-user)   | 4D Server |
 | ------------------------------------------------------------- | ---------------------------- | --------- |
