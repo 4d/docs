@@ -38,12 +38,12 @@ title: 概要
 
 プロジェクトデータベース (.4DProject および .4dz ファイル) では、シングルユーザーおよびクライアントサーバー環境の両方でユーザーとグループを設定することができます。 ただし、アクセスシステムは 4D Server データベースにおいてのみ有効です。 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
 
-|                                                               | 4D Developer (シングルユーザー)      | 4D Server |
-| ------------------------------------------------------------- | ---------------------------- | --------- |
-| ユーザーとグループの追加/編集                                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+|                              | 4D Developer (シングルユーザー) | 4D Server |
+| ---------------------------- | ----------------------- | --------- |
+| ユーザーとグループの追加/編集              | ◯                       | ◯         |
+| ユーザー/グループにサーバーアクセスを割り振る      | ◯                       | ◯         |
+| ユーザー認証                       | × (すべてのユーザーがデザイナーです)    | ◯         |
+| デザイナーへのパスワード設定によるアクセスシステムの起動 | × (すべてのアクセスがデザイナーです)    | ◯         |
 
 
 
@@ -51,15 +51,15 @@ title: 概要
 
 ## ツールボックス
 
-The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
+ユーザーとグループのエディターは 4Dのツールボックスにあります。 ユーザーとグループを作成し、ユーザーにパスワードを設定し、ユーザーをグループに所属させるといった操作はこのエディターにて可能です。
 
 ![](assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command.
+> ランタイムにおいてユーザーとグループのエディターを表示させるには [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.ja.html) コマンドを使用します。
 
 
 
-## Directory.json file
+## Directory.json ファイル
 
 Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
 
