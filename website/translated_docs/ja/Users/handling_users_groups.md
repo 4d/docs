@@ -136,9 +136,9 @@ title: 4Dユーザー＆グループの管理
 
 ### アクセス権の階層構造
 
-The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. ユーザーを適切なグループに割り振り、各グループをネストすることで、アクセス権の階層構造を形成できます。 This section discusses several approaches to such a scheme.
+The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. ユーザーを適切なグループに割り振り、各グループをネストすることで、アクセス権の階層構造を形成できます。 この節では、このような構造の取り扱い方について説明します。
 
-In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
+この例題では、ユーザーは担当業務に応じて 3つあるグループの 1つに割り振られます。 Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 
 The groups are then nested so that privileges are correctly distributed to the users of each group.
 
