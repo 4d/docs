@@ -41,7 +41,7 @@ When restoring a backup and integrating the current log file in a encrypted data
 The following sequence illustrates the principles of a multi-key backup/restore operation:
 
 
-| 演算子                         | Generated files                                   | 説明                                                                                                                                                                                                                           |
+| 演算子                         | 生成されるファイル                                         | 説明                                                                                                                                                                                                                           |
 | --------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | New database                |                                                   |                                                                                                                                                                                                                              |
 | Add data (record # 1)       |                                                   |                                                                                                                                                                                                                              |
