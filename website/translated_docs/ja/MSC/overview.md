@@ -22,19 +22,19 @@ In maintenance mode, only the MSC window is displayed (the project is not opened
   ![](assets/en/MSC/mscicon.png)   
   When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. The project will not be opened by 4D.
 
-## Display in standard mode
+## 標準モードでの表示
 
-In standard mode, a project is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+In standard mode, a project is open. このモードでは、特定の保守機能を使用できません。 この場合に MSCウィンドウを開く方法は幾つかあります。
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- **ヘルプ＞メンテナンス＆セキュリティセンター (MSC)** メニュー、または、ツールバーの **MSC** ボタンの使用。  
   ![](assets/en/MSC/mscicon.png)
 - Use the “msc” standard action that it is possible to associate with a menu command or a form object.
-- Use the `OPEN SECURITY CENTER` language command.
+- `OPEN SECURITY CENTER` ランゲージコマンドを使用する。
 
-## Feature availability
+## アクセス権
 
-Certain MSC functions are not available depending on the MSC opening mode:
+特定の MSC機能は、MSC が開かれたモードによっては利用できません:
 
 - Backup function is only available when the project is open (the MSC must have been opened in standard mode).
-- Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
-- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible. 
+- データの圧縮、ロールバック、復元、修復、および暗号化の機能は、開いていないデータファイルでのみ使用できます (MSC はメインテナンスモードで開かれていなければなりません) 。 If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
+- 暗号化されたデータベースにおいては、暗号化されたデータまたは .journal ファイルへのアクセスには有効なデータキーが提供されている必要があります ([暗号化ページ](encrypt.md) 参照)。 提供されていない場合、暗号化されたデータは見ることができません。 
