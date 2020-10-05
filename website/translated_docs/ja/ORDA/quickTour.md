@@ -179,13 +179,13 @@ $status:=$entity.save()
 
 データベースのセキュリティを確保し、ユーザーに異なるアクセスレベルを提供する最も効果的な方法は、アクセス権の階層構造を利用することです。 ユーザーを適切なグループに割り振り、各グループをネストすることで、アクセス権の階層構造を形成できます。 この節では、このような構造の取り扱い方について説明します。
 
-この例題では、ユーザーは担当業務に応じて 3つあるグループの 1つに割り振られます。 Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
+この例題では、ユーザーは担当業務に応じて 3つあるグループの 1つに割り振られます。 データ入力担当のユーザーは、Accounting (会計) グループに割り当てます。 レコードの更新や無効データの削除などデータ管理を担当するユーザーは、Finances (財務) グループに割り当てます。 検索の実行や分析レポートの印刷などデータ分析を担当するユーザーは、General Management (総合管理) グループに割り当てます。
 
-The groups are then nested so that privileges are correctly distributed to the users of each group.
+割り当て完了後は、各グループのユーザーに権限が正しく配分されるようにグループをネストします。
 
-- The General Management group contains only “high-level” users. ![](assets/en/Users/schema1.png)
+- General Managementグループには "高レベル" のユーザーだけが含まれます。 ![](assets/en/Users/schema1.png)
 
-- The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well. ![](assets/en/Users/schema2.png)
+- Financesグループには、データ管理ユーザーと General Managementグループが含まれます。したがって、General Managementグループのユーザーは Financesグループの権限も保持します。 ![](assets/en/Users/schema2.png)
 
 - The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](assets/en/Users/schema3.png)
 
