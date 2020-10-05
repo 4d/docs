@@ -3,7 +3,7 @@ id: overview
 title: 概要
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. 機密性の高いデータを保護することは重要です。 You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
+クライアントサーバーアーキテクチャーや Webインターフェースなど、複数のユーザーがアプリケーションを使用する場合は、アクセスを制御したり、接続ユーザーに応じて異なる機能を提供したりする必要が生じます。 機密性の高いデータを保護することは重要です。 ユーザーにパスワードを割り当て、データやアプリケーション操作へのアクセスレベルが異なるアクセスグループを作成することで、これらのデータを保護することができます。
 
 > 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 
@@ -13,9 +13,9 @@ If more than one person uses an application, which is usually the case in client
 
 ## 権限を割り当てる
 
-4D のパスワードアクセスシステムは、ユーザーとグループに基づいています。 You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the application.
+4D のパスワードアクセスシステムは、ユーザーとグループに基づいています。 ユーザーを作成してパスワードを割り当てたり、ユーザーをグループに入れて、各グループに対しアプリケーションの適切な部分へのアクセス権を割り当てます。
 
-Groups can then be assigned access privileges to specific parts or features of the application (Design access, HTTP server, SQL server, etc.), or any custom part.
+グループには、アクセス可能なメソッドや、HTTPサーバー、SQLサーバーなど、任意の機能へのアクセス権が割り当てられます。
 
 次の図は、デザインおよびランタイムエクスプローラーアクセス権を "Devs" グループに割り当てている様子を表しています (データベース設定の "セキュリティ" タブ):
 
@@ -27,9 +27,9 @@ Groups can then be assigned access privileges to specific parts or features of t
 
 クライアントサーバーにおいて、4D のパスワードアクセスシステムを起動するには、**デザイナー (Designer) にパスワードを割り当て** ます。
 
-Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have set up users and groups (when the application opens, no ID is required). Any part of the application can be opened.
+ユーザー＆グループを作成したとしても、デザイナーにパスワードが指定されるまでは、すべてのアプリケーションアクセスがデザイナーアクセス権でおこなわれます (アプリケーションを開く際に ID を求められません)。 つまり、アプリケーションのあらゆる部分を開くことができます。
 
-デザイナーにパスワードが指定されると、すべてのアクセス権が有効になります。 In order to connect to the application, remote users must enter a password.
+デザイナーにパスワードが指定されると、すべてのアクセス権が有効になります。 リモートユーザーがアプリケーションを開くには、パスワードを入力しなければなりません。
 
 パスワードアクセスシステムを無効にするには、デザイナーのパスワードを削除します。
 
