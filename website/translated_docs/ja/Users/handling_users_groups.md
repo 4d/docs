@@ -148,6 +148,6 @@ title: 4Dユーザー＆グループの管理
 
 - Accountingグループには、データ入力をおこなうユーザーと Financesグループが含まれます。したがって、Financesグループのユーザーと General Managementグループのユーザーは Accountingグループの権限も利用できます。 ![](assets/en/Users/schema3.png)
 
-You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
+所属ユーザーの責務に基づいて、各グループに割り当てるアクセス権を決定します。
 
-Such a hierarchical system makes it easy to remember to which group a new user should be assigned. You only have to assign each user to one group and use the hierarchy of groups to determine access.
+このような階層システムを使用すると、新規ユーザーに割り当てるべきグループがわかりやすくなります。 各ユーザーを 1つのグループに割り当てるだけで、グループの階層を介してアクセス権を決定できます。
