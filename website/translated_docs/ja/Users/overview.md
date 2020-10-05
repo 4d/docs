@@ -61,9 +61,9 @@ title: 概要
 
 ## Directory.json ファイル
 
-Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
+ユーザー、グループ、およびそれらのアクセス権は、**directory.json** という名称の専用データベースファイルに保存されます。
 
-This file can be stored at the following locations:
+このフォルダーは次の場所に保存することができます:
 
 - in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the database.
 - in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
