@@ -342,16 +342,16 @@ local Function getYoungest
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 - `local` キーワードを **使わない** 場合、1つのリクエストで結果が得られます。
-- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is unappropriate.
+- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。
 
 
 ### 例題
 
-#### Calculating age
+#### 年齢の計算
 
-Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
+*birthDate* (生年月日) 属性を持つエンティティがある場合に、リストボックス内で呼び出すための `age()` 関数を定義します。 この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
 
-On the *StudentsEntity* class:
+*StudentsEntity* クラス:
 
 ```4d
 Class extends Entity
@@ -365,7 +365,7 @@ Else
 End if
 ```
 
-#### Checking attributes
+#### 属性の検証
 
 We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
 
