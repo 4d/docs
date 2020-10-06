@@ -276,16 +276,16 @@ End if
 exposed Function <functionName>   
 ```
 
-> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
+> `exposed` キーワードは、データモデルクラス関数に対してのみ利用可能です。 [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
 
 ### 例題
 
-You want an exposed function to use a private function in a dataclass class:
+公開された関数によって、DataClass クラスのプライベート関数を呼び出します:
 
 ```4d
 Class extends DataClass
 
-//Public function
+// 公開関数
 exposed Function registerNewStudent($student : Object) -> $status : Object
 
 var $entity : cs.StudentsEntity
@@ -296,14 +296,14 @@ $entity.school:=This.query("name=:1"; $student.schoolName).first()
 $entity.serialNumber:=This.computeSerialNumber()
 $status:=$entity.save()
 
-//Not exposed (private) function
+// 非公開 (プライベート) 関数
 Function computeIDNumber()-> $id : Integer
-//compute a new ID number
+// 新規ID番号を算出します
 $id:=...
 
 ```
 
-When the code is called:
+呼び出し元のコードは次の通りです:
 
 ```4d
 var $remoteDS; $student; $status : Object
@@ -313,13 +313,13 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
+$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です) 
 ```
 
 
-## Local functions
+## ローカル関数
 
-By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
+クライアント/サーバーアーキテクチャーではデフォルトで、ORDA データモデル関数は **サーバー上で** 実行されます。 It usually provides the best performance since only the function request and the result are sent over the network.
 
 However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. シンタックスは次の通りです:
 
@@ -330,7 +330,7 @@ local Function <functionName>
 
 With this keyword, the function will always be executed on the client side.
 
-> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
+> The `local` keyword can only be used with data model class functions. [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
 
 Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. For example, consider the following function on the Students dataclass class:
 
