@@ -60,9 +60,9 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                                                 |
-| ------ | -------------------------------------------------------------------------------------------------- |
-| v18 R5 | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| バージョン  | 内容                                                                   |
+| ------ | -------------------------------------------------------------------- |
+| v18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
 </details>
 
 
@@ -369,7 +369,7 @@ End if
 
 クライアントにロードされ、ユーザーによって更新されたエンティティの属性について、サーバーへ保存リクエストを出すまえに、それらの一貫性を検査します。
 
-On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
+*StudentsEntity* クラスのローカル関数 `checkData()` は生徒の年齢をチェックします:
 
 ```4d
 Class extends Entity
@@ -380,23 +380,23 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing" 
+        $status.statusText:="生年月日が入力されていません。" 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
-        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
+        $status.statusText:="生徒の年齢は 15 〜 30 の範囲で入力してください。この生徒の年齢は "+String(This.age()+"です。")
 End case
 ```
 
-Calling code:
+呼び出し元のコード:
 
 ```4d
 var $status : Object
 
-//Form.student is loaded with all its attributes and updated on a Form
+// Form.student は全属性とともにロードされており、フォーム上で更新されました
 $status:=Form.student.checkData()
 If ($status.success)
-    $status:=Form.student.save() // call the server
+    $status:=Form.student.save() // サーバーを呼び出します
 End if
 ```
 
