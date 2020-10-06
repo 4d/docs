@@ -365,9 +365,9 @@ Else
 End if
 ```
 
-#### 属性の検証
+#### 属性のチェック
 
-We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
+クライアントにロードされ、ユーザーによって更新されたエンティティの属性について、サーバーへ保存リクエストを出すまえに、それらの一貫性を検査します。
 
 On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
 
