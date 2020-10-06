@@ -27,12 +27,12 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 - 構造が発展した場合には影響を受ける関数を適応させるだけで、クライアントアプリケーションは引き続き透過的にそれらを呼び出すことができます。
 
-- デフォルトでは、データモデルクラス関数はすべて、リモートアプリケーションに対し **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- デフォルトでは、データモデルクラス関数はすべて、リモートアプリケーションに対し **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数は [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
 
 ![](assets/en/ORDA/api.png)
 
 
-In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object.
+各データモデルオブジェクトに関わるクラスは、4D によって [あらかじめ自動的に作成](#クラスの作成) されます。
 
 
 ## アーキテクチャー
@@ -52,7 +52,7 @@ ORDA データモデルクラスはすべて **`cs`** クラスストアのプ�
 
 > ORDA ユーザークラスは通常のクラスファイル (.4dm) としてプロジェクトの Classes サブフォルダーに保存されます [(後述参照)](#クラスファイル)。
 
-Also, object instances from ORDA data model user classes benefit from their parent's properties and functions. たとえば、Entity クラスのオブジェクトは [ORDA の Entity 汎用クラス](https://doc.4d.com/4Dv18R4/4D/18-R4/ORDA-Entity.201-4981870.ja.html) の関数を呼び出すことができます。
+ORDA データモデルユーザークラスのオブジェクトインスタンスは、それらの親クラスのプロパティや関数を使うことができます。 たとえば、Entity クラスのオブジェクトは [ORDA の Entity 汎用クラス](https://doc.4d.com/4Dv18R4/4D/18-R4/ORDA-Entity.201-4981870.ja.html) の関数を呼び出すことができます。
 
 
 
@@ -109,20 +109,20 @@ ORDA で公開されるテーブル毎に、DataClass クラスが `cs` クラ�
 #### 例題
 
 ```4D
-// cs.Company class
+// cs.Company クラス
 
 
 Class extends DataClass
 
-// Returns companies whose revenue is over the average
-// Returns an entity selection related to the Company DataClass
+// 収益が平均以上の会社を返します
+// Company DataClass にリレートしているエンティティセレクションを返します 
 
 Function GetBestOnes()
     $sel:=This.query("revenues >= :1";This.all().average("revenues"));
     $0:=$sel
 ```
 
-Then you can get an entity selection of the "best" companies by executing:
+全会社データから平均以上の会社データをエンティティセレクションに抽出するには次を実行します:
 
 ```4d
     var $best : cs.CompanySelection
@@ -183,12 +183,12 @@ ORDA で公開されるテーブル毎に、EntitySelection クラスが `cs` �
 #### 例題
 
 ```4d
-// cs.EmployeeSelection class
+// cs.EmployeeSelection クラス
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+// 給与が平均超えの社員を当該エンティティセレクションから抽出します
 
 Function withSalaryGreaterThanAverage
     C_OBJECT($0)
@@ -196,7 +196,7 @@ Function withSalaryGreaterThanAverage
 
 ```
 
-Then you can get employees with a salary greater than the average in any entity selection by executing:
+任意の社員エンティティセレクションより、給与が平均以上の社員を取得するには:
 
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
@@ -213,7 +213,7 @@ ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラス�
 #### 例題
 
 ```4d
-// cs.CityEntity class
+// cs.CityEntity クラス
 
 Class extends Entity
 
@@ -223,11 +223,11 @@ Function getPopulation()
 
 Function isBigCity
 C_BOOLEAN($0)
-// The getPopulation() function is usable inside the class
+// 関数 getPopulation() をクラス内で使用することができます
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+次のように関数を呼び出すことができます:
 
 ```4d
 var $cityManager; $city : Object
@@ -240,9 +240,9 @@ If ($city.isBigCity())
 End if
 ```
 
-### Specific rules
+### 定義規則
 
-When creating or editing data model classes, you must pay attention to the following rules:
+データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
 - Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. 特に:
     - 4D テーブルと [ユーザークラス名](Concepts/classes.md#クラス名) に同じ名前を使用してはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
