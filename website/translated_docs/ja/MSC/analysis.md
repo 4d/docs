@@ -28,16 +28,16 @@ sidebar_label: ログ解析ページ
     - トランザクションのキャンセル: トランザクションをキャンセルした
     - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
 
-- **Table**: Table to which the added/deleted/modified record or BLOB belongs.
-- **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
-- **Process**: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.
-- **Size**: Size (in bytes) of data processed by the operation.
-- **Date and Hour**: Date and hour when the operation was performed.
+- **テーブル**: 追加/削除/更新されたレコードまたは BLOB の所属テーブル
+- **プライマリーキー/BLOB**: 各レコードのプライマリーキーのコンテンツ (プライマリーキーが複数のフィールドから構成されているときには、値はセミコロンで区切られています)、またはオペレーションに関連した BLOB のシーケンス番号
+- **プロセス**: 処理が実行された内部プロセス番号。 この内部番号は処理のコンテキストに対応します。
+- **サイズ**: 操作により処理されたデータのサイズ (バイト単位)
+- **日付と時刻**: 処理が実行された日付と時刻
 - **System User**: System name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the session name of the user is displayed.
 - **4D User**: 4D user name of the user that performed the operation. If an alias is defined for the user, the alias is displayed instead of the 4D user name.
-- **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.  
-  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
-- **Records**: Record number.
+- **値**: レコードの追加や更新の場合、フィールドの値。 値はセミコロン “;” で区切られます。 文字形式に表現できる値のみを表示します。  
+  ***注**: データベースが暗号化されており、開かれたログファイルに対応する有効なデータキーが提供されていない場合、暗号化された値はこのカラムには表示されません。*
+- **レコード**: レコード番号
 
 Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. The **Export...** button can be used to export the contents of the file as text.
 
