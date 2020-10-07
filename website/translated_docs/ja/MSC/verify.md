@@ -1,13 +1,13 @@
 ---
 id: verify
-title: Verify Page
-sidebar_label: Verify Page
+title: 検証ページ
+sidebar_label: 検証ページ
 ---
 
-You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
+このページでは、データおよび構造上の整合性を検証できます。 検証は、レコードおよびインデックスについて実行できます。 この機能は検証のみをおこないます。 エラーが見つかり修復が必要な場合は [修復ページ](repair.md) を使用するよう表示されます。
 
 
-## Actions
+## アクション
 
 The page contains action buttons that provide direct access to the verification functions.
 > When the database is encrypted, verification includes validation of encrypted data consistency. If no valid data key has already been provided, a dialog requesting the passphrase or the data key is displayed.
