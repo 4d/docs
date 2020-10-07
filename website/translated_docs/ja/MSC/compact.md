@@ -13,7 +13,7 @@ sidebar_label: 圧縮ページ
 - **ファイルのサイズの削減と最適化**: ファイルには使っていないスペースがあるかもしれません。 実際、レコードを削除すると、それらがファイル上で占有していたスペースが空になります。 4D はできる限りこういったスペースを再利用しますが、データのサイズは可変なため、連続的に削除や変更をおこなうと、必然的にプログラムにとって使用不可のスペースが作り出されます。 大量のデータが削除された直後についても同じことが言えます: 空のスペースはそのままファイルに残ります。 データファイルのサイズと、実際にデータに使われているスペースの比率をデータの使用率と呼びます。 使用率が低すぎると、スペースが無駄なだけではなく、データベースパフォーマンスの低下につながります。 圧縮は空きスペースを取り除き、データのストレージを再編成、最適化するためにおこないます。 "情報" エリアには、フラグメンテーションに関するデータが要約され、必要な操作が表示されます。 MSC の情報ページの [データ](information.md#データ) タブには、カレントデータファイルのフラグメンテーション情報が表示されます。
 
 - **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
-> 圧縮はメンテナンスモードでのみ可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログボックスが表示され、データベースを終了してメンテナンスモードで再起動することを知らせます。 ただし、データベースが開いていないデータファイルを圧縮することは可能です ([レコードとインデックスを圧縮](#レコードとインデックスの圧縮) 参照)。
+> 圧縮はメンテナンスモードでのみ可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログボックスが表示され、データベースを終了してメンテナンスモードで再起動することを知らせます。 ただし、データベースが開いていないデータファイルを圧縮することは可能です ([レコードとインデックスを圧縮](#レコードとインデックスを圧縮) 参照)。
 
 ## 通常モード
 
@@ -45,15 +45,15 @@ sidebar_label: 圧縮ページ
 
 ### レコードとインデックスを圧縮
 
-The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window.
+**レコードとインデックスを圧縮** には、カレントデータファイルのパス名と、他のデータファイルを指定するのに使用する **[...]** ボタンが表示されます。 このボタンをクリックすると標準のファイルを開くダイアログが表示され、圧縮するデータファイルを選択することができます。 開かれているストラクチャーファイルと互換性のあるデータファイルを選択しなければなりません。 このダイアログボックスを受け入れると、圧縮するファイルのパス名が更新されます。
 
-The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. This option can be used more particularly when compacting voluminous files while using different disks.
+2つめの **[...]** ボタンを使用して、圧縮処理前に元ファイルをコピーする保存先を変更できます。 とくに大きなデータファイルを圧縮する際、コピー先を別のディスクに変更するためにこのオプションを使用します。
 
-### Force updating of the records
+### レコードの強制更新
 
-When this option is checked, 4D rewrites every record for each table during the compacting operation, according to its description in the structure. If this option is not checked, 4D just reorganizes the data storage on disk. This option is useful in the following cases:
+このオプションが選択されていると、4D は現在のストラクチャー定義に基づき、圧縮処理中に各テーブルのすべてのレコードを再保存します。 このオプションが選択されていないと、4D は単にディスク上のデータの並びを再構成するだけです。 このオプションは以下のケースで有用です:
 
-- When field types are changed in the application structure after data were entered. For example, you may have changed a Longint field to a Real type. 4D even allows changes between two very different types (with risks of data loss), for instance a Real field can be changed to Text and vice versa. In this case, 4D does not convert data already entered retroactively; data is converted only when records are loaded and then saved. This option forces all data to be converted.
+- アプリケーションストラクチャーのフィールド型がデータ入力後に変更された場合、 たとえば倍長整数型を実数型に変更したようなケースです。 4D では (データを失うリスクがあるにしても) まったく異なる型に変更することさえ可能です。たとえば、実数型をテキスト型にすることができます。 この場合、4Dは既に入力されたデータを遡及的に変換することはしません。データはレコードがロードされ保存される際に変換されます。 このオプションを使用すればデータの変換を強制できます。
 
 - When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
 
