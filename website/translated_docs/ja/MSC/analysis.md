@@ -4,14 +4,14 @@ title: ログ解析ページ
 sidebar_label: ログ解析ページ
 ---
 
-ログ解析ページを使用して、カレントログファイルに記録された内容を見ることができます。 This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.
-> It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
+ログ解析ページを使用して、カレントログファイルに記録された内容を見ることができます。 この機能はデータベース利用状況の解析、エラーや不具合の原因となった処理を探すなどの場合に役立ちます。 クライアント/サーバーモードの場合、各クライアントマシンごとの操作を検証することもできます。
+> データベースのデータに対しておこなわれた操作をロールバックさせることもできます。 詳細は [ロールバック](rollback.md) ページを参照してください。
 
 ![](assets/en/MSC/MSC_analysis.png)
 
-Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
+ログファイルに記録された操作は行として表示されます。 各操作の様々な情報が列に表示されます。 ヘッダーをドラッグすることによって列の並び順を変えることもできます。
 
-This information allows you to identify the source and context of each operation:
+この情報を使用して各操作のソースとコンテキストを識別できます:
 
 - **Operation**: Sequence number of operation in the log file.
 - **Action**: Type of operation performed on the data. This column can contain one of the following operations:
