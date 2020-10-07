@@ -1,37 +1,37 @@
 ---
 id: compact
-title: Compact Page
-sidebar_label: Compact Page
+title: 圧縮ページ
+sidebar_label: 圧縮ページ
 ---
 
-You use this page to access the data file compacting functions.
+このページは、データファイルの圧縮機能にアクセスするときに使用します。
 
-## Why compact your files?
+## ファイルを圧縮する理由
 
-Compacting files meets two types of needs:
+ファイルの圧縮は以下のニーズに応えるためにおこないます:
 
-- **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
+- **ファイルのサイズの削減と最適化**: ファイルには使っていないスペースがあるかもしれません。 実際、レコードを削除すると、それらがファイル上で占有していたスペースが空になります。 4D はできる限りこういったスペースを再利用しますが、データのサイズは可変なため、連続的に削除や変更をおこなうと、必然的にプログラムにとって使用不可のスペースが作り出されます。 大量のデータが削除された直後についても同じことが言えます: 空のスペースはそのままファイルに残ります。 データファイルのサイズと、実際にデータに使われているスペースの比率をデータの使用率と呼びます。 使用率が低すぎると、スペースが無駄なだけではなく、データベースパフォーマンスの低下につながります。 圧縮は空きスペースを取り除き、データのストレージを再編成、最適化するためにおこないます。 "情報" エリアには、フラグメンテーションに関するデータが要約され、必要な操作が表示されます。 MSC の情報ページの [データ](information.md#データ) タブには、カレントデータファイルのフラグメンテーション情報が表示されます。
 
 - **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
-> Compacting is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the application will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the application (see [Compact records and indexes](#compact-records-and-indexes) below).
+> 圧縮はメンテナンスモードでのみ可能です。 If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the application will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the application (see [Compact records and indexes](#compact-records-and-indexes) below).
 
-## Standard compacting
+## 通常モード
 
-To directly begin the compacting of the data file, click on the compacting button in the MSC window.
+データの圧縮を開始するには、MSC ウィンドウの圧縮ボタンをクリックします。
 
 ![](assets/en/MSC/MSC_compact.png)
-> Since compacting involves the duplication of the original file, the button is disabled when there is not adequate space available on the disk containing the file.
+> 圧縮はオリジナルファイルのコピーを伴うため、ファイルが格納されているディスクに十分な空きスペースがない場合、ボタンは使用不可になります。
 
-This operation compacts the main file as well as any index files. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. If you have carried out several compacting operations, a new folder is created each time. It will be named “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, and so on. You can modify the folder where the original files are saved using the advanced mode.
+この操作は、メインファイルの他、インデックスファイルもすべて圧縮します。 4D はオリジナルファイルをコピーし、オリジナルファイルの隣に作成された **Replaced Files (Compacting)** フォルダーにそれらを置きます。 圧縮操作を複数回実行すると、毎回新しいフォルダーが作成されます。 フォルダー名は、"Replaced Files (Compacting)_1", "Replaced Files (Compacting)_2" のようになります。 元のファイルのコピー先は、特殊モードを使って変更できます。
 
-When the operation is completed, the compacted files automatically replace the original files. The application is immediately operational without any further manipulation.
-> When the database is encrypted, compacting includes decryption and encryption steps and thus, requires the current data encryption key. If no valid data key has already been provided, a dialog box requesting the passphrase or the data key is displayed.
+操作が完了すると、圧縮ファイルは自動的にオリジナルファイルと置き換えられます。 The application is immediately operational without any further manipulation.
+> データベースが暗号化されている場合、復号化と暗号化のステップが圧縮過程に含まれるため、カレントデータの暗号化キーが必要になります。 有効なデータキーが未提供の場合には、パスフレーズまたはデータキーを要求するダイアログボックスが表示されます。
 
-**Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. It is important to take this into account (especially under macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful in order to keep the package size down.
+**警告**: 圧縮操作は毎回オリジナルファイルのコピーを伴うため、アプリケーションフォルダーのサイズが大きくなります。 アプリケーションのサイズが過剰に増加しな いよう、これを考慮することが大切です (とくに、4Dアプリケーションがパッケージとして表示される macOS の場合)。 パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除することも役立ちます。
 
 ## ログファイルを開く
 
-After compacting is completed, 4D generates a log file in the Logs folder of the project. This file allows you to view all the operations carried out. It is created in XML format and named:  *ApplicationName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+After compacting is completed, 4D generates a log file in the Logs folder of the project. このファイルを使用すると実行されたオペレーションをすべて閲覧することができます。 It is created in XML format and named:  *ApplicationName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
 - *ApplicationName* は拡張子を除いたプロジェクトファイルの名前です (例: "Invoices" 等)
 - *yyyy-mm-dd hh-mm-ss* はファイルのタイムスタンプです。これはローカルのシステム時間でメンテナンスオペレーションが開始された時刻に基づいています (例: "2019-02-11 15-20-45")。
@@ -41,11 +41,11 @@ After compacting is completed, 4D generates a log file in the Logs folder of the
 
 ## 詳細モード
 
-The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
+圧縮ページには、データファイル圧縮のオプションページにアクセスするための **特殊 >** ボタンがあります。
 
-### Compact records and indexes
+### レコードとインデックスを圧縮
 
-The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window.
+**レコードとインデックスを圧縮** には、カレントデータファイルのパス名と、他のデータファイルを指定するのに使用する **[...]** ボタンが表示されます。 このボタンをクリックすると標準のファイルを開くダイアログが表示され、圧縮するデータファイルを選択することができます。 開かれているストラクチャーファイルと互換性のあるデータファイルを選択しなければなりません。 このダイアログボックスを受け入れると、圧縮するファイルのパス名が更新されます。
 
 The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. This option can be used more particularly when compacting voluminous files while using different disks.
 
