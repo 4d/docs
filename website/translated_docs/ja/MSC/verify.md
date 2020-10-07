@@ -1,27 +1,27 @@
 ---
 id: verify
-title: 検証ページ
-sidebar_label: 検証ページ
+title: 検査ページ
+sidebar_label: 検査ページ
 ---
 
-このページでは、データおよび構造上の整合性を検証できます。 検証は、レコードおよびインデックスについて実行できます。 この機能は検証のみをおこないます。 エラーが見つかり修復が必要な場合は [修復ページ](repair.md) を使用するよう表示されます。
+このページでは、データおよび構造上の整合性を検証できます。 検査は、レコードおよびインデックスについて実行できます。 この機能は検査のみをおこないます。 エラーが見つかり修復が必要な場合は [修復ページ](repair.md) を使用するよう表示されます。
 
 
 ## アクション
 
-The page contains action buttons that provide direct access to the verification functions.
-> When the database is encrypted, verification includes validation of encrypted data consistency. If no valid data key has already been provided, a dialog requesting the passphrase or the data key is displayed.
+このページには、検査機能に直接アクセスするための、次のアクションボタンが置かれています。
+> データベースが暗号化されている場合、検査の中には暗号化されたデータの整合性の評価も含まれます。 有効なデータキーがまだ提供されていない場合、パスフレーズ、あるいはデータキーを要求するダイアログが表示されます。
 
 
-- **Verify the records and the indexes:** Starts the total data verification procedure.
-- **Verify the records only**: Starts the verification procedure for records only (indexes are not verified).
-- **Verify the indexes only**: Starts the verification procedure for indexes only (records are not verified).
-> Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+- **レコードとインデックスを検査**: 全体のデータ検査処理を開始します。
+- **レコードのみを検査**: レコードのみの検査処理を開始します (インデックスは検査されません)。
+- **インデックスのみを検査**: インデックスのみの検査処理を開始します (レコードは検査されません)。
+> レコードとインデックスの検査は、テーブルごとに検査する詳細モードでおこなうこともできます(後述の ”詳細” の章を参照してください)。
 
 
 ## Open log file
 
-Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml where:
+要求された検査に関係なく、4D はデータベースの `Logs` フォルダーにログファイルを生成します。 このファイルには実行された検証の内容が記録され、エラーがあればそれも示されます。問題がない場合は [OK] が表示されます。 このファイルは XML形式で、ファイル名は *DatabaseName*__Verify_Log__*yyyy-mm-dd hh-mm-ss*.xml となり、それぞれ以下の要素が入ります:
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
@@ -29,7 +29,7 @@ Regardless of the verification requested, 4D generates a log file in the `Logs` 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
 
 
-## Details
+## 詳細
 
 The **Table list** button displays a detailed page that can be used to view and select the actual records and indexes to be checked:
 
