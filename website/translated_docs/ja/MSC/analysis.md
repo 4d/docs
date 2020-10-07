@@ -4,7 +4,7 @@ title: ログ解析ページ
 sidebar_label: ログ解析ページ
 ---
 
-ログ解析ページを使用して、カレントログファイルに記録された内容を見ることができます。 This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
+ログ解析ページを使用して、カレントログファイルに記録された内容を見ることができます。 この機能はアプリケーション利用状況の解析、エラーや不具合の原因となった処理を探すなどの場合に役立ちます。 クライアント/サーバーモードの場合、各クライアントマシンごとの操作を検証することもできます。
 > データベースのデータに対しておこなわれた操作をロールバックさせることもできます。 詳細は [ロールバック](rollback.md) ページを参照してください。
 
 ![](assets/en/MSC/MSC_analysis.png)
@@ -39,5 +39,5 @@ sidebar_label: ログ解析ページ
   ***注**: データベースが暗号化されており、開かれたログファイルに対応する有効なデータキーが提供されていない場合、暗号化された値はこのカラムには表示されません。*
 - **レコード**: レコード番号
 
-Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. The **Export...** button can be used to export the contents of the file as text.
+選択したアプリケーションのカレントログファイル (デフォルトで "データファイル名.journal" というファイル名) の内容を更新するには **解析** をクリックします。 **ブラウズ**ボタンをクリックすると、アプリケーションの他のログファイルを選択できます。 **書き出し...** ボタンを使用してファイルの内容をテキストとして書き出せます。
 
