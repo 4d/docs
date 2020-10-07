@@ -5,27 +5,27 @@ sidebar_label: ログ解析ページ
 ---
 
 ログ解析ページを使用して、カレントログファイルに記録された内容を見ることができます。 This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
-> It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
+> データベースのデータに対しておこなわれた操作をロールバックさせることもできます。 詳細は [ロールバック](rollback.md) ページを参照してください。
 
 ![](assets/en/MSC/MSC_analysis.png)
 
-Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
+ログファイルに記録された操作は行として表示されます。 各操作の様々な情報が列に表示されます。 ヘッダーをドラッグすることによって列の並び順を変えることもできます。
 
-This information allows you to identify the source and context of each operation:
+この情報を使用して各操作のソースとコンテキストを識別できます:
 
-- **Operation**: Sequence number of operation in the log file.
-- **Action**: Type of operation performed on the data. This column can contain one of the following operations:
-    - Opening of Data File: Opening of a data file.
-    - Closing of Data File: Closing of an open data file.
-    - Creation of a Context: Creation of a process that specifies an execution context.
-    - Closing of a Context: Closing of process.
-    - Addition: Creation and storage of a record.
-    - Adding a BLOB: Storage of a BLOB in a BLOB field.
-    - Deletion: Deletion of a record.
-    - Modification: Modification of a record.
-    - Start of Transaction: Transaction started.
-    - Validation of Transaction: Transaction validated.
-    - Cancellation of Transaction: Transaction cancelled.
+- **操作**: ログファイル中での一連の操作番号
+- **アクション**: データに対しておこなわれた操作のタイプ。 この列には以下の操作のいずれかが記録されます:
+    - データファイルを開く: データファイルを開いた
+    - データファイルを閉じる: 開いたデータファイルを閉じた
+    - コンテキストの作成する: 実行コンテキストを指定するプロセスを作成した
+    - コンテキストを閉じる: プロセスを閉じた
+    - 追加: レコードを作成、格納した
+    - BLOB を追加: BLOBフィールドに BLOB を格納した
+    - 削除: レコードを削除した
+    - 更新: レコードを更新した
+    - トランザクションの開始: トランザクションを開始した
+    - トランザクションの受け入れ: トランザクションを受け入れた
+    - トランザクションのキャンセル: トランザクションをキャンセルした
     - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
 
 - **Table**: Table to which the added/deleted/modified record or BLOB belongs.
