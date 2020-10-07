@@ -331,8 +331,8 @@
         "sidebar_label": "Rollback Page"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "検証ページ",
+        "sidebar_label": "検証ページ"
       },
       "Project/architecture": {
         "title": "4D プロジェクトのアーキテクチャー"
