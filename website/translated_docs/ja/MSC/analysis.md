@@ -26,15 +26,15 @@ sidebar_label: ログ解析ページ
     - トランザクションの開始: トランザクションを開始した
     - トランザクションの受け入れ: トランザクションを受け入れた
     - トランザクションのキャンセル: トランザクションをキャンセルした
-    - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
+    - コンテキストの更新: 追加データを変更した (例: `CHANGE CURRENT USER` あるいは `SET USER ALIAS` の呼び出し)
 
 - **テーブル**: 追加/削除/更新されたレコードまたは BLOB の所属テーブル
 - **プライマリーキー/BLOB**: 各レコードのプライマリーキーのコンテンツ (プライマリーキーが複数のフィールドから構成されているときには、値はセミコロンで区切られています)、またはオペレーションに関連した BLOB のシーケンス番号
 - **プロセス**: 処理が実行された内部プロセス番号。 この内部番号は処理のコンテキストに対応します。
 - **サイズ**: 操作により処理されたデータのサイズ (バイト単位)
 - **日付と時刻**: 処理が実行された日付と時刻
-- **System User**: System name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the session name of the user is displayed.
-- **4D User**: 4D user name of the user that performed the operation. If an alias is defined for the user, the alias is displayed instead of the 4D user name.
+- **システムユーザー**: 操作を実行したユーザーのシステム名。 クライアント/サーバーモードでは、クライアントマシン名が表示されます。シングルユーザーモードでは、ユーザーのセッション名が表示されます。
+- **4Dユーザー**: 操作を実行したユーザーの 4Dユーザー名。 ユーザーに対してエイリアスが設定されていた場合、4Dユーザー名の代わりのそのエイリアスが表示されます。
 - **値**: レコードの追加や更新の場合、フィールドの値。 値はセミコロン “;” で区切られます。 文字形式に表現できる値のみを表示します。  
   ***注**: データベースが暗号化されており、開かれたログファイルに対応する有効なデータキーが提供されていない場合、暗号化された値はこのカラムには表示されません。*
 - **レコード**: レコード番号
