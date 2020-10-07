@@ -12,8 +12,8 @@ sidebar_label: 圧縮ページ
 
 - **ファイルのサイズの削減と最適化**: ファイルには使っていないスペースがあるかもしれません。 実際、レコードを削除すると、それらがファイル上で占有していたスペースが空になります。 4D はできる限りこういったスペースを再利用しますが、データのサイズは可変なため、連続的に削除や変更をおこなうと、必然的にプログラムにとって使用不可のスペースが作り出されます。 大量のデータが削除された直後についても同じことが言えます: 空のスペースはそのままファイルに残ります。 データファイルのサイズと、実際にデータに使われているスペースの比率をデータの使用率と呼びます。 使用率が低すぎると、スペースが無駄なだけではなく、データベースパフォーマンスの低下につながります。 圧縮は空きスペースを取り除き、データのストレージを再編成、最適化するためにおこないます。 "情報" エリアには、フラグメンテーションに関するデータが要約され、必要な操作が表示されます。 MSC の情報ページの [データ](information.md#データ) タブには、カレントデータファイルのフラグメンテーション情報が表示されます。
 
-- **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
-> 圧縮はメンテナンスモードでのみ可能です。 If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the application will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the application (see [Compact records and indexes](#compact-records-and-indexes) below).
+- **完全なデータ更新**: ストラクチャーファイルの現設定を全データに適用します。 同じテーブルのデータが異なる形式で保存されている場合 (たとえばデータベースストラクチャーに変更を加えたとき) に便利です。
+> 圧縮はメンテナンスモードでのみ可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログボックスが表示され、アプリケーションを終了してメンテナンスモードで再起動することを知らせます。 ただし、アプリケーションが開いていないデータファイルを圧縮することは可能です ([レコードとインデックスを圧縮](#レコードとインデックスを圧縮) 参照)。
 
 ## 通常モード
 
@@ -24,14 +24,14 @@ sidebar_label: 圧縮ページ
 
 この操作は、メインファイルの他、インデックスファイルもすべて圧縮します。 4D はオリジナルファイルをコピーし、オリジナルファイルの隣に作成された **Replaced Files (Compacting)** フォルダーにそれらを置きます。 圧縮操作を複数回実行すると、毎回新しいフォルダーが作成されます。 フォルダー名は、"Replaced Files (Compacting)_1", "Replaced Files (Compacting)_2" のようになります。 元のファイルのコピー先は、特殊モードを使って変更できます。
 
-操作が完了すると、圧縮ファイルは自動的にオリジナルファイルと置き換えられます。 The application is immediately operational without any further manipulation.
+操作が完了すると、圧縮ファイルは自動的にオリジナルファイルと置き換えられます。 アプリケーションは即座に操作可能になります。
 > データベースが暗号化されている場合、復号化と暗号化のステップが圧縮過程に含まれるため、カレントデータの暗号化キーが必要になります。 有効なデータキーが未提供の場合には、パスフレーズまたはデータキーを要求するダイアログボックスが表示されます。
 
 **警告**: 圧縮操作は毎回オリジナルファイルのコピーを伴うため、アプリケーションフォルダーのサイズが大きくなります。 アプリケーションのサイズが過剰に増加しな いよう、これを考慮することが大切です (とくに、4Dアプリケーションがパッケージとして表示される macOS の場合)。 パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除することも役立ちます。
 
 ## ログファイルを開く
 
-After compacting is completed, 4D generates a log file in the Logs folder of the project. このファイルを使用すると実行されたオペレーションをすべて閲覧することができます。 It is created in XML format and named:  *ApplicationName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+圧縮が完了すると、4D はプロジェクトの Logs フォルダーにログファイルを生成します。 このファイルを使用すると実行されたオペレーションをすべて閲覧することができます。 このファイルは XML形式で作成され、*ApplicationName_Compact_Log_yyyy-mm-dd hh-mm-ss.xml* というファイル名がつけられます。
 
 - *ApplicationName* は拡張子を除いたプロジェクトファイルの名前です (例: "Invoices" 等)
 - *yyyy-mm-dd hh-mm-ss* はファイルのタイムスタンプです。これはローカルのシステム時間でメンテナンスオペレーションが開始された時刻に基づいています (例: "2019-02-11 15-20-45")。
@@ -66,6 +66,6 @@ After compacting is completed, 4D generates a log file in the Logs folder of the
 このオプションを使用すると圧縮の際、レコードのアドレステーブルを完全に再構築します。 これによりアドレステーブルのサイズが最適化されます。このオプションは主に大量のデータを作成し、そして削除したような場合に使用します。 そうでない場合、最適化に明白な意味はありません。
 
 このオプションを使用した場合、圧縮処理に時間がかかるようになり、さらに `SAVE SET` コマンドを使用して保存したセットなど、レコード番号に依存するものが無効になる点に留意してください。 そのため、この場合には保存したセットはすべて削除するよう強く推奨します。そうでなければ不正なデータセットを使用することになります。
-> - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.
-> - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). It will be saved automatically and a new journal file will have to be created the next time the application is launched.
-> - You can decide if the address table needs to be compacted by comparing the total number of records and the address table size in the [Information](information.md) page of the MSC.
+> - 圧縮は、ゴミ箱に入れられたテーブルのレコードも対象とします。 ゴミ箱に大量のレコードがある場合、処理が遅くなる原因となります。
+> - このオプションを使用すると、アドレステーブルは (それに伴ってデータベースそのものも) カレントログファイルとの互換性を失います。 ログファイルは自動で保存され、次回アプリケーションを起動した際に新しいログファイルが作成されなければなりません。
+> - アドレステーブルの圧縮が必要かどうかは、総レコード数と MSC の [情報](information.md) ページ内にあるアドレステーブルサイズを比較することで判断することができます。
