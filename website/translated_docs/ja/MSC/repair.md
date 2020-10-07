@@ -63,7 +63,7 @@ Next select the table you want to assign to the group in the "Unassigned tables"
 
 ## ログファイルを開く
 
-After repair is completed, 4D generates a log file in the Logs folder of the project. This file allows you to view all the operations carried out. It is created in XML format and named: *ApplicationName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+After repair is completed, 4D generates a log file in the Logs folder of the project. このファイルを使用すると実行されたオペレーションをすべて閲覧することができます。 It is created in XML format and named: *ApplicationName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
 - *ApplicationName* は拡張子を除いたプロジェクトファイルの名前です (例: "Invoices" 等)
 - *yyyy-mm-dd hh-mm-ss* はファイルのタイムスタンプです。これはローカルのシステム時間でメンテナンスオペレーションが開始された時刻に基づいています (例: "2019-02-11 15-20-45")。
