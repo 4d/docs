@@ -47,13 +47,13 @@ After compacting is completed, 4D generates a log file in the Logs folder of the
 
 **レコードとインデックスを圧縮** には、カレントデータファイルのパス名と、他のデータファイルを指定するのに使用する **[...]** ボタンが表示されます。 このボタンをクリックすると標準のファイルを開くダイアログが表示され、圧縮するデータファイルを選択することができます。 開かれているストラクチャーファイルと互換性のあるデータファイルを選択しなければなりません。 このダイアログボックスを受け入れると、圧縮するファイルのパス名が更新されます。
 
-The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. This option can be used more particularly when compacting voluminous files while using different disks.
+2つめの **[...]** ボタンを使用して、圧縮処理前に元ファイルをコピーする保存先を変更できます。 とくに大きなデータファイルを圧縮する際、コピー先を別のディスクに変更するためにこのオプションを使用します。
 
-### Force updating of the records
+### レコードの強制更新
 
-When this option is checked, 4D rewrites every record for each table during the compacting operation, according to its description in the structure. If this option is not checked, 4D just reorganizes the data storage on disk. This option is useful in the following cases:
+このオプションが選択されていると、4D は現在のストラクチャー定義に基づき、圧縮処理中に各テーブルのすべてのレコードを再保存します。 このオプションが選択されていないと、4D は単にディスク上のデータの並びを再構成するだけです。 このオプションは以下のケースで有用です:
 
-- When field types are changed in the application structure after data were entered. For example, you may have changed a Longint field to a Real type. 4D even allows changes between two very different types (with risks of data loss), for instance a Real field can be changed to Text and vice versa. In this case, 4D does not convert data already entered retroactively; data is converted only when records are loaded and then saved. This option forces all data to be converted.
+- アプリケーションストラクチャーのフィールド型がデータ入力後に変更された場合、 たとえば倍長整数型を実数型に変更したようなケースです。 4D では (データを失うリスクがあるにしても) まったく異なる型に変更することさえ可能です。たとえば、実数型をテキスト型にすることができます。 この場合、4Dは既に入力されたデータを遡及的に変換することはしません。データはレコードがロードされ保存される際に変換されます。 このオプションを使用すればデータの変換を強制できます。
 
 - When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
 
