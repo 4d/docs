@@ -1,19 +1,19 @@
 ---
 id: information
-title: Information Page
-sidebar_label: Information Page
+title: 情報ページ
+sidebar_label: 情報ページ
 ---
 
-The Information page provides information about the 4D and system environments, as well as the database and application files. Each page can be displayed using tab controls at the top of the window.
+情報ページは 4D環境、システム環境、データベースおよびアプリケーションファイルについての情報を提供します。 各ページは、ウィンドウ上部にあるタブコントロールを使って切り替えできます。
 
-## Program
+## プログラム
 
-This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the *4D Language Reference* manual).
+このページにはアプリケーションならびにアクティブな 4Dフォルダーの名前、バージョンおよび場所を表示します (アクティブ4Dフォルダーについては *4Dランゲージリファレンス* の `Get 4D folder` コマンドを参照ください)。
 
-The central part of the window indicates the name and location of the database project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the database user when passwords have been activated (or Designer if this is not the case).
+ウィンドウの中央部は、データベースプロジェクトならびにデータファイルとログファイル (あれば) の名前および場所を表示します。 ウィンドウの下部は、4Dライセンスフォルダーの名前、ライセンスのタイプ、および、パスワードが有効化されている場合はデータベースユーザーの名前 (有効でない場合はDesigner) を表示します。
 
-- **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
-  ![](assets/en/MSC/MSC_popup.png) If you select a menu item (disk or folder), it is displayed in a new system window. The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
+- **パス名の表示と選択**: **プログラム** タブには、ディスク上の一連のフォルダーで構成されるポップアップメニューでパス名が表示されます:  
+  ![](assets/en/MSC/MSC_popup.png) メニュー項目 (ディスクまたはフォルダー) を選択した場合、そのパスが新しいシステムウィンドウで開かれます。 The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
 
 - **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. All the license files installed in your 4D environment are grouped together in this folder, on your hard disk. When they are opened with a Web browser, these files display information concerning the licenses they contain and their characteristics. The location of the "Licenses" folder can vary depending on the version of your operating system. For more information about the location of this folder, refer to the `Get 4D folder` command. ***Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu).*
 
