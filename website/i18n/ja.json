@@ -552,8 +552,8 @@
         "sidebar_label": "Restore Page"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "ロールバックページ",
+        "sidebar_label": "ロールバックページ"
       },
       "MSC/verify": {
         "title": "検査ページ",
@@ -741,7 +741,7 @@
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
-    "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
+    "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
