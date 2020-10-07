@@ -1,16 +1,16 @@
 ---
 id: backup
-title: Backup Page
-sidebar_label: Backup Page
+title: バックアップページ
+sidebar_label: バックアップページ
 ---
 
-You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
+MSC のバックアップページは、データベースのバックアップ設定を表示し、手動のバックアップ処理を開始するのに使用します:
 
 ![](assets/en/MSC/msc_Backup.png)
 
-This page consists of the following three areas:
+このページは以下の 3つのエリアで構成されています:
 
-- **Backup File Destination**: displays information about the location of the database backup file. It also indicates the free/used space on the backup disk.
+- **バックアップファイルの保存先**: データベースのバックアップファイルの場所に関する情報を表示します。 また、ここはバックアップディスクの空き/使用スペースも表示します。
 - **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the database.
 - **Contents of the backup file**: lists the files and folders included in the backup file.
 
