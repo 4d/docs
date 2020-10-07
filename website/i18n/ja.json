@@ -528,8 +528,8 @@
         "sidebar_label": "バックアップページ"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "圧縮ページ",
+        "sidebar_label": "圧縮ページ"
       },
       "MSC/encrypt": {
         "title": "Encrypt Page",
