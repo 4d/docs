@@ -10,7 +10,7 @@ sidebar_label: 情報ページ
 
 このページにはアプリケーションならびにアクティブな 4Dフォルダーの名前、バージョンおよび場所を表示します (アクティブ4Dフォルダーについては *4Dランゲージリファレンス* の `Get 4D folder` コマンドを参照ください)。
 
-The central part of the window indicates the name and location of the project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the current 4D user.
+ウィンドウの中央部は、プロジェクトならびにデータファイルとログファイル (あれば) の名前および場所を表示します。 ウィンドウの下部は、4Dライセンスフォルダーの名前、ライセンスのタイプ、および、カレント 4Dユーザーの名前を表示します。
 
 - **パス名の表示と選択**: **プログラム** タブでは、ディスク上の一連の親フォルダーを表示するポップアップメニューの形でパス名が示されます:  
   ![](assets/en/MSC/MSC_popup.png) メニュー項目 (ディスクまたはフォルダー) を選択した場合、そのパスが新しいシステムウィンドウで開かれます。 **パスをコピー** コマンドは、システムのディレクトリ区切り文字を使用して、完全なパス名をクリップボードにテキストとしてコピーします。
@@ -31,22 +31,22 @@ The central part of the window indicates the name and location of the project an
 - **レコード**: テーブル内の総レコード数。 レコードが破損していたり読み込めなかった場合には、数字の代わりに *Error* が表示されます。 この場合、検証と修復ツールの使用を検討してください。
 - **フィールド**: テーブル内のフィールド数。 非表示のフィールドはカウントされますが、削除されたフィールドはカウントされません。
 - **インデックス**: テーブル内のあらゆるインデックスの数
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
+- **暗号化可能**: チェックされていれば、ストラクチャーレベルにおいてこのテーブルは **暗号化可能** 属性が選択されています (デザインリファレンスマニュアルの [暗号化可能](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#4168557) の項目を参照ください)。
 - **暗号化済み**: チェックされていれば、テーブルのレコードはデータファイルにおいて暗号化されています。 ***Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC.*
-- **アドレステーブルサイズ**: 各テーブルのアドレステーブルのサイズ。 The address table is an internal table which stores one element per record created in the table. It actually links records to their physical address. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
+- **アドレステーブルサイズ**: 各テーブルのアドレステーブルのサイズ。 アドレステーブルとは、テーブル内で作成される各レコードにつき 1つの要素を保存する内部テーブルのことです。 これはレコードとその物理アドレスをつなげる働きをします。 パフォーマンス上の理由から、レコードが削除されてもリサイズはされず、そのためそのサイズはテーブル内のカレントレコード数とは異なる場合があります。 この差異が著しく大きい場合、"アドレステーブルを圧縮" オプションをチェックした状態でデータ圧縮を実行することで、アドレステーブルサイズを最適化することができます ([圧縮](compact.md) ページを参照してください)。 ***注**: アドレステーブルサイズとレコード数の差異は、キャッシュフラッシュの途中での事象によるものである可能性もあります。*
 
 
 
-## Data
+## データ
 
-The **Data** page provides information about the available and used storage space in the data file.
-> This page cannot be accessed in maintenance mode
+**データ** ページには、データファイルの空き/使用済み容量の情報が表示されます。
+> このページには、メンテナンスモードではアクセスできません。
 
-The information is provided in graph form:
+この情報はグラフ形式で提供されます:
 
 ![](assets/en/MSC/MSC_Data.png)
-> This page does not take into account any data that may be stored outside of the data file (see "External storage").
+> このページに表示される情報には、データファイル外に格納されたデータは反映されません ([データをデータファイル外に保存](https://doc.4d.com/4Dv18/4D/18/External-data-storage.300-4575564.ja.html) 参照)。
 
-Files that are too fragmented reduce disk, and thus, database performance. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](assets/en/MSC/MSC_infowarn.png)
+断片化があまりにも進んだファイルはディスク、そしてデータベースのパフォーマンスを低下させます。 使用率が低すぎる場合、4Dは警告アイコンを表示して (このアイコンは情報ページボタンと対応するファイルタイプのタブに表示されます)、圧縮が必要であることを警告します:![](assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page: ![](assets/en/MSC/MSC_compactwarn.png)
+警告アイコンは [圧縮](compact.md) ページボタンにも表示されます: ![](assets/en/MSC/MSC_compactwarn.png)
