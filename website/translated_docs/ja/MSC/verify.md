@@ -19,14 +19,14 @@ sidebar_label: 検査ページ
 > レコードとインデックスの検査は、テーブルごとに検査する詳細モードでおこなうこともできます(後述の ”詳細” の章を参照してください)。
 
 
-## Open log file
+## ログファイルを開く
 
 要求された検査に関係なく、4D はデータベースの `Logs` フォルダーにログファイルを生成します。 このファイルには実行された検査の内容が記録され、エラーがあればそれも示されます。問題がない場合は [OK] が表示されます。 このファイルは XML形式で、ファイル名は *DatabaseName*__Verify_Log__*yyyy-mm-dd hh-mm-ss*.xml となり、それぞれ以下の要素が入ります:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *DatabaseName* は拡張子を除いたプロジェクトファイルの名前です (例: "Invoices" 等)
+- *yyyy-mm-dd hh-mm-ss* はファイルのタイムスタンプです。これはローカルのシステム時間でメンテナンスオペレーションが開始された時刻に基づいています (例: "2019-02-11 15-20-45")。
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+**ログファイルを開く** ボタンをクリックすると、4Dはマシンのデフォルトブラウザーを使用して直近のログファイルを開きます。
 
 
 ## 詳細
@@ -50,7 +50,7 @@ When you click on the **Open log file** button, 4D displays the most recent log 
 | ![](assets/en/MSC/MSC_KO3.png) | 検査は部分的に実行された   |
 | ![](assets/en/MSC/MSC_KO.png)  | 検査は実行されなかった    |
 
-Click on **Verify** to begin the verification or on **Standard** to go back to the standard page.
+検査を開始するには **検査** ボタンをクリックします。標準ページに戻る時は **標準** ボタンをクリックします。
 
-The **Open log file** button can be used to display the log file in the default browser of the machine (see [Open log file](#open-log-file) above).
-> The standard page will not take any modifications made on the detailed page into account: when you click on a verification button on the standard page, all the items are verified. On the other hand, the settings made on the detailed page are kept from one session to another.
+**ログファイルを開く** ボタンをクリックすると、マシンのデフォルトブラウザーを使用してログファイルを表示します (上記の [ログファイルを開く](#ログファイルを開く) 参照)。
+> 標準ページは、詳細ページでおこなわれた変更はまったく考慮しません。標準ページの検査ボタンをクリックすると、すべての項目が検査されます。 逆に、詳細ページでおこなわれた設定は、セッションからセッションへと保持されます。
