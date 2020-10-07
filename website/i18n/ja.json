@@ -520,8 +520,8 @@
         "title": "SDI mode on Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "ログ解析ページ",
+        "sidebar_label": "ログ解析ページ"
       },
       "MSC/backup": {
         "title": "Backup Page",
