@@ -524,8 +524,8 @@
         "sidebar_label": "ログ解析ページ"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "バックアップページ",
+        "sidebar_label": "バックアップページ"
       },
       "MSC/compact": {
         "title": "Compact Page",
@@ -556,8 +556,8 @@
         "sidebar_label": "Rollback Page"
       },
       "MSC/verify": {
-        "title": "検証ページ",
-        "sidebar_label": "検証ページ"
+        "title": "検査ページ",
+        "sidebar_label": "検査ページ"
       },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
