@@ -1,10 +1,10 @@
 ---
 id: analysis
-title: Activity analysis Page
-sidebar_label: Activity analysis Page
+title: ログ解析ページ
+sidebar_label: ログ解析ページ
 ---
 
-The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
+ログ解析ページを使用して、カレントログファイルに記録された内容を見ることができます。 This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
 > It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
 
 ![](assets/en/MSC/MSC_analysis.png)
