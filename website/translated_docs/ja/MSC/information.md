@@ -12,27 +12,27 @@ sidebar_label: 情報ページ
 
 ウィンドウの中央部は、データベースプロジェクトならびにデータファイルとログファイル (あれば) の名前および場所を表示します。 ウィンドウの下部は、4Dライセンスフォルダーの名前、ライセンスのタイプ、および、パスワードが有効化されている場合はデータベースユーザーの名前 (有効でない場合はDesigner) を表示します。
 
-- **パス名の表示と選択**: **プログラム** タブには、ディスク上の一連のフォルダーで構成されるポップアップメニューでパス名が表示されます:  
-  ![](assets/en/MSC/MSC_popup.png) メニュー項目 (ディスクまたはフォルダー) を選択した場合、そのパスが新しいシステムウィンドウで開かれます。 The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
+- **パス名の表示と選択**: **プログラム** タブでは、ディスク上の一連の親フォルダーを表示するポップアップメニューの形でパス名が示されます:  
+  ![](assets/en/MSC/MSC_popup.png) メニュー項目 (ディスクまたはフォルダー) を選択した場合、そのパスが新しいシステムウィンドウで開かれます。 **パスをコピー** コマンドは、システムのディレクトリ区切り文字を使用して、完全なパス名をクリップボードにテキストとしてコピーします。
 
-- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. All the license files installed in your 4D environment are grouped together in this folder, on your hard disk. When they are opened with a Web browser, these files display information concerning the licenses they contain and their characteristics. The location of the "Licenses" folder can vary depending on the version of your operating system. For more information about the location of this folder, refer to the `Get 4D folder` command. ***Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu).*
+- **ライセンスフォルダー**: **ライセンスフォルダー** ボタンをクリックすると、新しいシステムウィンドウにアクティブなライセンスフォルダーの中身を表示します。 インストールされた 4D環境用のライセンスファイルはすべてこのフォルダーに格納されていなければなりません。 ファイルを Webブラウザーで開くと、ライセンスの情報が表示されます。 ライセンスフォルダーの場所はバージョンや OS により異なります。 このフォルダーの場所については `Get 4D folder` コマンドの説明を参照してください。 ***注**: 上部メニューの "ヘルプ ＞ ライセンスマネージャー..." からアクセスできるダイアログボックスにも同じボタンがあります。*
 
 ## テーブル
 
-This page provides an overview of the tables in your database:
+このページでは、データベース内のテーブルの概要を示します:
 
 ![](assets/en/MSC/MSC_Tables.png)
-> Information on this page is available in both standard and maintenance modes.
+> このページの情報は、標準モードおよびメンテナンスモードの両方で利用可能です。
 
-The page lists all the tables of the database (including invisible tables) as well as their characteristics:
+このページにはデータベースのすべてのテーブル (非表示のテーブルも含む) とそれらの特徴が表示されます:
 
-- **ID**: Internal number of the table.
-- **Tables**: Name of the table. Names of deleted tables are displayed with parenthesis (if they are still in the trash).
-- **Records**: Total number of records in the table. If a record is damaged or cannot be read, *Error* is displayed instead of the number. In this case, you can consider using the verify and repair tools.
-- **Fields**: Number of fields in the table. Invisible fields are counted, however, deleted fields are not counted.
-- **Indexes**: Number of indexes of any kind in the table
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see Encryptable paragraph in the Design Reference Manual).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file. ***Note:** Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the **Encrypt page** of the database. *
+- **ID**: テーブルの内部番号
+- **テーブル**: テーブル名。 削除されたテーブルの名前は括弧付きで表示されます (ゴミ箱の中に残っている場合)。
+- **レコード**: テーブル内の総レコード数。 レコードが破損していたり読み込めなかった場合には、数字の代わりに *Error* が表示されます。 この場合、検証と修復ツールの使用を検討してください。
+- **フィールド**: テーブル内のフィールド数。 非表示のフィールドはカウントされますが、削除されたフィールドはカウントされません。
+- **インデックス**: テーブル内のあらゆるインデックスの数
+- **暗号化可能**: チェックされていれば、ストラクチャーレベルにおいてこのテーブルは **暗号化可能** 属性が選択されています (デザインリファレンスマニュアルの [暗号化可能](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#4168557) の項目を参照ください)。
+- **暗号化済み**: チェックされていれば、テーブルのレコードはデータファイルにおいて暗号化されています。 ***Note:** Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the **Encrypt page** of the database. *
 - **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. It actually links records to their physical address. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
 
 
