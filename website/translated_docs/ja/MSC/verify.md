@@ -1,10 +1,10 @@
 ---
 id: verify
-title: Verify Page
-sidebar_label: Verify Page
+title: 検証ページ
+sidebar_label: 検証ページ
 ---
 
-You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
+このページでは、データおよび構造上の整合性を検証できます。 The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
 
 
 ## Actions
