@@ -47,6 +47,6 @@ sidebar_label: 情報ページ
 ![](assets/en/MSC/MSC_Data.png)
 > このページに表示される情報には、データファイル外に格納されたデータは反映されません ([データをデータファイル外に保存](https://doc.4d.com/4Dv18/4D/18/External-data-storage.300-4575564.ja.html) 参照)。
 
-断片化があまりにも進んだファイルはディスク、そしてデータベースのパフォーマンスを低下させます。 If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](assets/en/MSC/MSC_infowarn.png)
+断片化があまりにも進んだファイルはディスク、そしてデータベースのパフォーマンスを低下させます。 使用率が低すぎる場合、4Dは警告アイコンを表示して (このアイコンは情報ページボタンと対応するファイルタイプのタブに表示されます)、圧縮が必要であることを警告します:![](assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page: ![](assets/en/MSC/MSC_compactwarn.png)
+警告アイコンは [圧縮](compact.md) ページボタンにも表示されます: ![](assets/en/MSC/MSC_compactwarn.png)
