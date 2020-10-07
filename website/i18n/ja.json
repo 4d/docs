@@ -536,8 +536,8 @@
         "sidebar_label": "Encrypt Page"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "情報ページ",
+        "sidebar_label": "情報ページ"
       },
       "MSC/overview": {
         "title": "概要",
