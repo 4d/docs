@@ -19,14 +19,14 @@ sidebar_label: 検査ページ
 > レコードとインデックスの検査は、テーブルごとに検査する詳細モードでおこなうこともできます(後述の ”詳細” の章を参照してください)。
 
 
-## Open log file
+## ログファイルを開く
 
 要求された検査に関係なく、4D はアプリケーションの `Logs` フォルダーにログファイルを生成します。 このファイルには実行された検査の内容が記録され、エラーがあればそれも示されます。問題がない場合は [OK] が表示されます。 このファイルは XML形式で、ファイル名は *ApplicationName*__Verify_Log__*yyyy-mm-dd hh-mm-ss*.xml となり、それぞれ以下の要素が入ります:
 
-- *ApplicationName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *ApplicationName* は拡張子を除いたプロジェクトファイルの名前です (例: "Invoices" 等)
+- *yyyy-mm-dd hh-mm-ss* はファイルのタイムスタンプです。これはローカルのシステム時間でメンテナンスオペレーションが開始された時刻に基づいています (例: "2019-02-11 15-20-45")。
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+**ログファイルを開く** ボタンをクリックすると、4Dはマシンのデフォルトブラウザーを使用して直近のログファイルを開きます。
 
 
 ## 詳細
