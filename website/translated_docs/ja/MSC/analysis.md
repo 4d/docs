@@ -33,8 +33,8 @@ sidebar_label: ログ解析ページ
 - **サイズ**: 操作により処理されたデータのサイズ (バイト単位)
 - **日付と時刻**: 処理が実行された日付と時刻
 - **ユーザー**: 処理を実行したユーザー名。 クライアント/サーバーモードではクライアントマシン名が表示されます。 シングルユーザーモードではユーザーの ID が表示されます。 4Dパスワードが有効にされていない場合、この列にはなにも記録されません。
-- **値**: レコードの追加や更新の場合、フィールドの値。 The values are separated by “;”. Only values represented in alphanumeric form are displayed.  
-  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
-- **Records**: Record number.
+- **値**: レコードの追加や更新の場合、フィールドの値。 値はセミコロン “;” で区切られます。 文字形式に表現できる値のみを表示します。  
+  ***注**: データベースが暗号化されており、開かれたログファイルに対応する有効なデータキーが提供されていない場合、暗号化された値はこのカラムには表示されません。*
+- **レコード**: レコード番号
 
-Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). The Browse button can be used to select and open another log file for the database. The **Export...** button can be used to export the contents of the file as text.
+選択したデータベースのカレントログファイル (デフォルトで "データファイル名.journal" というファイル名) の内容を更新するには **解析** をクリックします。 **ブラウズ**ボタンをクリックすると、データベースの他のログファイルを選択できます。 **書き出し...** ボタンを使用してファイルの内容をテキストとして書き出せます。
