@@ -12,7 +12,7 @@ sidebar_label: 圧縮ページ
 
 - **ファイルのサイズの削減と最適化**: ファイルには使っていないスペースがあるかもしれません。 実際、レコードを削除すると、それらがファイル上で占有していたスペースが空になります。 4D はできる限りこういったスペースを再利用しますが、データのサイズは可変なため、連続的に削除や変更をおこなうと、必然的にプログラムにとって使用不可のスペースが作り出されます。 大量のデータが削除された直後についても同じことが言えます: 空のスペースはそのままファイルに残ります。 データファイルのサイズと、実際にデータに使われているスペースの比率をデータの使用率と呼びます。 使用率が低すぎると、スペースが無駄なだけではなく、データベースパフォーマンスの低下につながります。 圧縮は空きスペースを取り除き、データのストレージを再編成、最適化するためにおこないます。 "情報" エリアには、フラグメンテーションに関するデータが要約され、必要な操作が表示されます。 MSC の情報ページの [データ](information.md#データ) タブには、カレントデータファイルのフラグメンテーション情報が表示されます。
 
-- **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
+- **完全なデータ更新**: ストラクチャーファイルの現設定を全データに適用します。 This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
 > 圧縮はメンテナンスモードでのみ可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログボックスが表示され、データベースを終了してメンテナンスモードで再起動することを知らせます。 ただし、データベースが開いていないデータファイルを圧縮することは可能です ([レコードとインデックスを圧縮](#レコードとインデックスを圧縮) 参照)。
 
 ## 通常モード
@@ -63,9 +63,9 @@ sidebar_label: 圧縮ページ
 ### アドレステーブル圧縮
 (レコードの強制更新を選択した場合にのみ選択可能)
 
-This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.
+このオプションを使用すると圧縮の際、レコードのアドレステーブルを完全に再構築します。 これによりアドレステーブルのサイズが最適化されます。このオプションは主に大量のデータを作成し、そして削除したような場合に使用します。 そうでない場合、最適化に明白な意味はありません。
 
-Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data.
-> - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.
-> - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). It will be saved automatically and a new journal file will have to be created the next time the database is launched.
-> - You can decide if the address table needs to be compacted by comparing the total number of records and the address table size in the [Information](information.md) page of the MSC.
+このオプションを使用した場合、圧縮処理に時間がかかるようになり、さらに `SAVE SET` コマンドを使用して保存したセットなど、レコード番号に依存するものが無効になる点に留意してください。 そのため、この場合には保存したセットはすべて削除するよう強く推奨します。そうでなければ不正なデータセットを使用することになります。
+> - 圧縮は、ゴミ箱に入れられたテーブルのレコードも対象とします。 ゴミ箱に大量のレコードがある場合、処理が遅くなる原因となります。
+> - このオプションを使用すると、アドレステーブルは (それに伴ってデータベースそのものも) カレントログファイルとの互換性を失います。 ログファイルは自動で保存され、次回データベースを起動した際に新しいログファイルが作成されなければなりません。
+> - アドレステーブルの圧縮が必要かどうかは、総レコード数と MSC の [情報](information.md) ページ内にあるアドレステーブルサイズを比較することで判断することができます。
