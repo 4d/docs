@@ -7,7 +7,7 @@ title: プロジェクトのアーキテクチャー
 
 - MyProject
     - コンポーネント
-    - Data
+    - データ
         - Logs
         - Settings
     - Documentation
