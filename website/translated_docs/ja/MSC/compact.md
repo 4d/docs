@@ -55,17 +55,17 @@ After compacting is completed, 4D generates a log file in the Logs folder of the
 
 - アプリケーションストラクチャーのフィールド型がデータ入力後に変更された場合、 たとえば倍長整数型を実数型に変更したようなケースです。 4D では (データを失うリスクがあるにしても) まったく異なる型に変更することさえ可能です。たとえば、実数型をテキスト型にすることができます。 この場合、4Dは既に入力されたデータを遡及的に変換することはしません。データはレコードがロードされ保存される際に変換されます。 このオプションを使用すればデータの変換を強制できます。
 
-- When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
+- データが入力された後にテキスト、ピクチャー、または BLOB の外部保存オプションが変更された場合。 これはとくに v13以前からデータベースを変換した場合に発生します。 前述の型変更と同様、4Dはすでに入力されたデータを遡及的に変換しません。 入力済みデータに対して新しい保存設定を適用するために、このオプションを選択して圧縮をおこないます。
 
-- When tables or fields were deleted. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
-> All the indexes are updated when this option is selected.
+- テーブルやフィールドが削除された場合。 この場合、レコードの再保存をおこないながら圧縮することで、削除された領域を圧縮することができ、ファイルサイズを減らすことができます。
+> このオプションが選択されていると、すべてのインデックスが更新されます。
 
-### Compact address table
-(option only active when preceding option is checked)
+### アドレステーブル圧縮
+(レコードの強制更新を選択した場合にのみ選択可能)
 
-This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.
+このオプションを使用すると圧縮の際、レコードのアドレステーブルを完全に再構築します。 これによりアドレステーブルのサイズが最適化されます。このオプションは主に大量のデータを作成し、そして削除したような場合に使用します。 そうでない場合、最適化に明白な意味はありません。
 
-Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data.
+このオプションを使用した場合、圧縮処理に時間がかかるようになり、さらに `SAVE SET` コマンドを使用して保存したセットなど、レコード番号に依存するものが無効になる点に留意してください。 そのため、この場合には保存したセットはすべて削除するよう強く推奨します。そうでなければ不正なデータセットを使用することになります。
 > - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.
 > - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). It will be saved automatically and a new journal file will have to be created the next time the application is launched.
 > - You can decide if the address table needs to be compacted by comparing the total number of records and the address table size in the [Information](information.md) page of the MSC.
