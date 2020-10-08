@@ -1,10 +1,10 @@
 ---
 id: restore
-title: Restore Page
-sidebar_label: Restore Page
+title: 復元ページ
+sidebar_label: 復元ページ
 ---
 
-## Restoring a backup
+## 手動でバックアップから復元する
 
 You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
 
