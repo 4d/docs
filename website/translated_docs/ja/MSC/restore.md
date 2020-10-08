@@ -1,12 +1,12 @@
 ---
 id: restore
-title: Restore Page
-sidebar_label: Restore Page
+title: 復元ページ
+sidebar_label: 復元ページ
 ---
 
-## Restoring a backup
+## 手動でバックアップから復元する
 
-You can manually restore an archive of the current database using the **Restore** page. This page provides several options that can be used to control the database restoration:
+**復元**ページから、カレントデータベースのアーカイブを手動で復元できます。 このページでは、データベースの復元を制御するためのオプションをいくつか提供します:
 
 ![](assets/en/MSC/MSC_restore.png)
 
