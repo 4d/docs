@@ -544,12 +544,12 @@
         "sidebar_label": "概要"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "修復ページ",
+        "sidebar_label": "修復ページ"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "復元ページ",
+        "sidebar_label": "復元ページ"
       },
       "MSC/rollback": {
         "title": "ロールバックページ",
