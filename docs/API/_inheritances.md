@@ -18,8 +18,8 @@
 
 
 
-<!-- REF #file._inheritedFrom_-->Document<!-- END REF -->
-<!-- REF #folder._inheritedFrom_-->Directory<!-- END REF -->
+<!-- REF #File._inheritedFrom_-->Document<!-- END REF -->
+<!-- REF #Folder._inheritedFrom_-->Directory<!-- END REF -->
 <!-- REF #zipFile._inheritedFrom_-->Document<!-- END REF -->
 <!-- REF #zipFolder._inheritedFrom_-->Directory<!-- END REF -->
 <!-- REF #smtpTransporterClass._inheritedFrom_-->Transporter<!-- END REF -->
