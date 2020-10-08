@@ -1,7 +1,7 @@
 ---
 id: repair
-title: Repair Page
-sidebar_label: Repair Page
+title: 修復ページ
+sidebar_label: 修復ページ
 ---
 
 This page is used to repair the data file when it has been damaged. Generally, you will only use these functions at the request of 4D, when anomalies have been detected while opening the application or following a [verification](verify.md).
