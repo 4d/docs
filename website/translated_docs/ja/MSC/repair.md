@@ -54,11 +54,11 @@ sidebar_label: 修復ページ
 
 
 ### 手動による割り当て
-アドレステーブルが損傷を受けているため、テーブルに割り当てることのできないレコードグループがある場合、それらを手動で割り当てることができます。 これにはまず、左側のリストの中で割り当てられていないレコードグループを選択します。 "レコードの内容" エリアに、グループの先頭レコードの内容がプレビューされるため、それがどのテーブルのレコードか判断しやすくなります:
+アドレステーブルが損傷を受けているため、テーブルに割り当てることのできないレコードグループがある場合、それらを手動で割り当てることができます。 これにはまず、左側のリストの中で割り当てられていないレコードグループを選択します。 グループ先頭の複数レコードの内容が "レコードの内容" エリアにプレビューされるため、それがどのテーブルのレコードか判断しやすくなります:
 
 ![](assets/en/MSC/mscrepair3.png)
 
-Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. You can also assign a table using drag and drop. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+次に "割り当てられていないテーブル" リストから、グループを割り当てるテーブルを選択し、**テーブルを識別** ボタンをクリックします。 You can also assign a table using drag and drop. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
 
 
 ## ログファイルを開く
