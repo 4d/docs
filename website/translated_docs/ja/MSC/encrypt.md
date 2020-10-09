@@ -1,15 +1,15 @@
 ---
 id: encrypt
-title: Encrypt Page
-sidebar_label: Encrypt Page
+title: 暗号化ページ
+sidebar_label: 暗号化ページ
 ---
 
-You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.
+このページを使用して、データベースの各テーブルに対して定義された **暗号化可能** 属性に基づいて、データファイルを暗号化または *復号化* (つまりデータから暗号化を解除) することができます。 For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.
 
-A new folder is created each time you perform an encryption/decryption operation. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
-> Encryption is only available in [maintenance mode](overview.md#display-in-maintenance-mode). If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode
+暗号化/復号化操作をおこなうたびに、新しいフォルダーが作成されます。 そのフォルダーは "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*" あるいは "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*" と名前が付けられます。
+> 暗号化は [メンテナンスモード](overview.md#メンテナンスモードでの表示) でのみ利用可能です。 If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode
 
-**Warning:**
+**警告:**
 - Encrypting a data file is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that an application encryption operation always includes a compacting step.
 - Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.
 
