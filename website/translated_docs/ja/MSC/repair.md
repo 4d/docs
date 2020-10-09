@@ -4,10 +4,10 @@ title: 修復ページ
 sidebar_label: 修復ページ
 ---
 
-このページは、データファイルが損傷を受けたとき、それを修復するために使用します。 Generally, you will only use these functions at the request of 4D, when anomalies have been detected while opening the database or following a [verification](verify.md).
+このページは、データファイルが損傷を受けたとき、それを修復するために使用します。 一般的にこれらの機能は、4Dから要求を受けたときに実行します。4Dは起動時や MSC による検査 (検査ページ参照) の結果データベースに損傷を見つけたときに修復を促します。
 
-**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
-> Repairing is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the database will be closed and restarted in maintenance mode.
+**警告**: 修復操作は毎回オリジナルファイルのコピーを伴うため、アプリケーションフォルダーのサイズが大きくなります。 It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除することも役立ちます。
+> 修復はメンテナンスモードでのみ可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログが表示され、データベースを終了してメンテナンスモードで再起動することを知らせます。
 > When the database is encrypted, repairing data includes decryption and encryption steps and thus, requires the current data encryption key. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
 
 ## File overview
