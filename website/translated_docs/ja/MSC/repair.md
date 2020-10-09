@@ -16,17 +16,17 @@ sidebar_label: 修復ページ
 カレントデータファイルのパス名。 **[...]** ボタンを使って、他のデータファイルを指定することができます。 このボタンをクリックすると標準のファイルを開くダイアログが表示され、修復するデータファイルを選択することができます。 [標準の修復](#標準の修復) を実行する場合、開かれたストラクチャーに対応するデータファイルを選択しなければなりません。 [レコードヘッダーによる再生](#レコードヘッダーによる再生) を実行する場合、どのデータファイルでも選択できます。 このダイアログを受け入れると、ウィンドウには修復対象のファイルのパス名が表示されます。
 
 ### オリジナルをここに移動
-デフォルトで修復処理の前に元のデータファイルが複製されます。 It will be placed in a subfolder named “Replaced files (repairing)” in the application folder. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
+デフォルトで修復処理の前に元のデータファイルが複製されます。 It will be placed in a subfolder named “Replaced files (repairing)” in the application folder. 二つ目の **[...]** ボタンを使用して、複製ファイルの保存先を変更できます。 とくに大きなデータファイルを修復する際、コピー先を別のディスクに変更するためにこのオプションを使用します。
 
-### Repaired files
-4D creates a new blank data file at the location of the original file. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (application folder by default). The blank file is filled with the recovered data.
+### 修復済ファイル
+4Dは元のファイルの場所に空のデータファイルを新規作成します。 The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (application folder by default). 修復されたデータは、新規作成された空のファイルに格納されます。
 
 
 ## 標準の修復
 
-Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
+少数のレコードやインデックスが損傷を受けているケース (アドレステーブルは損傷を受けていない) では、標準の修復を選択します。 データは圧縮および修復されます。 このタイプの修復をおこなうには、データファイルとストラクチャーファイルが対応していなければなりません。
 
-When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. If so, you can open the application immediately. ![](assets/en/MSC/MSC_RepairOK.png)
+修復操作が完了すると、MSCの "修復" ページが表示され、修復の結果が表示されます。 修復に成功していれば、その旨のメッセージが表示されます。 If so, you can open the application immediately. ![](assets/en/MSC/MSC_RepairOK.png)
 
 ## レコードヘッダーによる再生
 Use this low-level repair option only when the data file is severely damaged and after all other solutions (restoring from a backup, standard repair) have proven to be ineffective.
