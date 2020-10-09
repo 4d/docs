@@ -17,21 +17,23 @@ sidebar_label: 暗号化ページ
 MSC でデータファイルを初めて暗号化する場合、以下のような手順を踏む必要があります:
 
 1. ストラクチャーエディターにおいて、データを暗号化したいテーブルに対して **暗号化可能** 属性にチェックを入れます。 詳細は "テーブルプロパティ" の章を参照してください。
-2. MSC の暗号化ページを開きます。 If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
-3. Click on the Encrypt picture button.  
+2. MSC の暗号化ページを開きます。 どのテーブルにも **暗号化可能** 属性を付けないでページを開こうとした場合、ページに以下のメッセージが表示されます:<br /> ![](assets/en/MSC/MSC_encrypt1.png)<br /> そうでない場合には、以下のメッセージが表示されます:<br /> ![](assets/en/MSC/MSC_encrypt2.png)<br /> このメッセージは、少なくとも 1つのテーブルに対して **暗号化可能** 属性のステータスが変更されていて、データファイルがまだ暗号化されていないことを意味します。 **注**: すでに暗号化されているデータファイル、または復号化されたデータファイルに対して、**暗号化可能** 属性のステータスが変更された場合にも同じメッセージが表示されます (以下参照)。
+3. 暗号化ピクチャーボタンをクリックします。  
    ![](assets/en/MSC/MSC_encrypt3.png)  
-   You will be prompted to enter a passphrase for your data file: ![](assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
-4. Enter to confirm your secured passphrase.
+   データファイル用のパスフレーズを入力するように聞かれます:  
+   ![](assets/en/MSC/MSC_encrypt4.png)  
+   パスフレーズはデータ暗号化キーを生成するのに使用されます。 パスフレーズはパスワードの強化版のようなもので、大量の文字を含めることができます。 たとえば、"We all came out to Montreux" あるいは "My 1st Great Passphrase!!" のようなパスフレーズを入力することが可能です。 パスフレーズの安全性は、セキュリティレベルインジケーターによって確認できます:![](assets/en/MSC/MSC_encrypt5.png) (濃い緑色がもっとも安全なレベルであることを示します)。
+4. Enter を押して安全なパスフレーズの入力を確定します。
 
-The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode.
+暗号化プロセスがスタートします。 MSC が標準モードで開かれていた場合、データベースはメンテナンスモードで再起動されます。
 
-4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). You can do it at this moment or later. You can also open the encryption log file.
+4D では暗号化キーを保存することができます (以下の [暗号化キーを保存する](#暗号化キーを保存する) の段落を参照してください)。 暗号化キーの保存は、このタイミングか、あるいは後でおこなうこともできます。 また暗号化ログファイルを開くこともできます。
 
-If the encryption process is successful, the Encrypt page displays Encryption maintenance operations buttons.
+暗号化プロセスが正常に完了した場合、暗号化ページは [暗号化メンテナンスオペレーション](#暗号化メンテナンスオペレーション) ボタンを表示します。
 
-**Warning:** During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Records belonging to "encryptable" tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.
+**警告**: 暗号化操作の最中、4D は新しい、空のデータファイルを作成したうえで、元のデータファイルからデータを注入します。 Records belonging to "encryptable" tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the database folder beforehand.
 
-## Encryption maintenance operations
+## 暗号化メンテナンスオペレーション
 When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/en/MSC/MSC_encrypt6.png)
 
 
@@ -75,7 +77,7 @@ This operation removes all encryption from the data file. If you no longer want 
 The data file is fully decrypted and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt10.png)
 > Once the data file is decrypted, the encryption status of tables do not match their Encryptable attributes. To restore a matching status, you must deselect all **Encryptable** attributes at the database structure level.
 
-## Saving the encryption key
+## 暗号化キーを保存する
 
 4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data.
 
