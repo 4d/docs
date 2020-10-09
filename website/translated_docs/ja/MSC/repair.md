@@ -35,16 +35,16 @@ sidebar_label: 修復ページ
 
 > If you have deselected the **Records definitively deleted** option in the properties of a table in the structure, performing a recovery by header markers may cause records that were previously deleted to reappear. 
 > 
-> ヘッダーによる再生において、整合性の制約は考慮されません。 More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
+> ヘッダーによる再生において、整合性の制約は考慮されません。 この処理をおこなった後、重複不可フィールドに重複する値が現れたり、**NULL値を許可しない** に定義したフィールドに NULL値が現れたりするかもしれません。
 
-When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
+**スキャンおよび修復...** ボタンをクリックすると、4Dはデータファイルを完全にスキャンします。 スキャンを完了すると、結果が以下のウィンドウに表示されます:
 
 ![](assets/en/MSC/mscrepair2.png)
-> If all the records and all the tables have been assigned, only the main area is displayed.
+> すべてのレコードおよびすべてのテーブルに割当先が見つかった場合は、メインエリアのみが表示されます。
 
-The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
+"データファイル中で見つかったレコード" エリアには 2つのリストがあり、データスキャン結果の概要が表示されます。
 
-- The first table lists the information from the data file scan. Each row shows a group of recoverable records in the data file:
+- 左のリストには、データファイルスキャンの情報が表示されます。 各行には、データファイル中の再生可能なレコードのグループが表示されます:
     - The **Order** column indicates the recovery order for the group of records.
     - The **Count** column indicates the number of the records in the table.
     - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. The names of tables assigned automatically appear in green. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
