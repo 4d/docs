@@ -35,10 +35,10 @@ sidebar_label: 修復ページ
 
 > データベースストラクチャーのテーブルプロパティで **レコードを完全に削除** オプションを解除していると、ヘッダーマーカーを使用した復旧によって削除したはずのレコードが復活する原因となります。 ヘッダーによる再生において、整合性の制約は考慮されません。 この処理をおこなった後、重複不可フィールドに重複する値が現れたり、**NULL値を許可しない** に定義したフィールドに NULL値が現れたりするかもしれません。
 
-**修復** ボタンをクリックすると、4Dはデータファイルを完全にスキャンします。 When the scan is complete, the results appear in the following window:
+**スキャンおよび修復...** ボタンをクリックすると、4Dはデータファイルを完全にスキャンします。 スキャンを完了すると、結果が以下のウィンドウに表示されます:
 
 ![](assets/en/MSC/mscrepair2.png)
-> If all the records and all the tables have been assigned, only the main area is displayed.
+> すべてのレコードおよびすべてのテーブルに割当先が見つかった場合、メインエリアのみが表示されます。
 
 The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
 
