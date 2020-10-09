@@ -38,14 +38,14 @@ sidebar_label: 修復ページ
 **スキャンおよび修復...** ボタンをクリックすると、4Dはデータファイルを完全にスキャンします。 スキャンを完了すると、結果が以下のウィンドウに表示されます:
 
 ![](assets/en/MSC/mscrepair2.png)
-> すべてのレコードおよびすべてのテーブルに割当先が見つかった場合、メインエリアのみが表示されます。
+> すべてのレコードおよびすべてのテーブルに割当先が見つかった場合は、メインエリアのみが表示されます。
 
-The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
+"データファイル中で見つかったレコード" エリアには 2つのリストがあり、データスキャン結果の概要が表示されます。
 
-- The first table lists the information from the data file scan. Each row shows a group of recoverable records in the data file:
-    - The **Order** column indicates the recovery order for the group of records.
-    - The **Count** column indicates the number of the records in the table.
-    - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. The names of tables assigned automatically appear in green. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
+- 左のリストには、データファイルスキャンの情報が表示されます。 各行には、データファイル中の再生可能なレコードのグループが表示されます:
+    - **順番** の列には、レコードグループの再生順が表示されます。
+    - **カウント** 列には、テーブルのレコード数が表示されます。
+    - **割当先テーブル** 列には、識別されたレコードのグループに割り当てられたテーブルの名前が表示されます。 The names of tables assigned automatically appear in green. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
     - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
 
 - The second table lists the tables of the project file.
