@@ -31,11 +31,11 @@ sidebar_label: 修復ページ
 ## レコードヘッダーによる再生
 このローレベルな修復オプションは、データファイルが大きく損傷していて、バックアップの復元や標準の修復など、他の手段では回復できなかった場合にのみ使用します。
 
-4Dのレコードはサイズが可変です。故に、そのレコードをロードするには、ディスク上のどこに格納されているか、その場所を "アドレステーブル" という専用テーブルに記録しておく必要があります。 プログラムは、インデックスやアドレステーブルを経由して、レコードのアドレスにアクセスします。 If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
+4Dのレコードはサイズが可変です。故に、そのレコードをロードするには、ディスク上のどこに格納されているか、その場所を "アドレステーブル" という専用テーブルに記録しておく必要があります。 プログラムは、インデックスやアドレステーブルを経由して、レコードのアドレスにアクセスします。 レコードやインデックスのみが損傷を受けている場合、標準の修復を使用すれば通常は問題が解決されます。 しかし、アドレステーブル自身が損傷を受けている場合には、これを再構築しなくてはならないため、より高度な修復作業が必要となります。 これをおこなうために、MSC は各レコードのヘッダーに位置するマーカーを使用します。 マーカーがレコード情報のサマリーと比較されることにより、アドレステーブルが再構築可能となります。
 
 > If you have deselected the **Records definitively deleted** option in the properties of a table in the structure, performing a recovery by header markers may cause records that were previously deleted to reappear. 
 > 
-> Recovery by headers does not take integrity constraints into account. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
+> ヘッダーによる再生において、整合性の制約は考慮されません。 More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
 
 When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
 
