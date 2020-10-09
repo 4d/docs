@@ -8,27 +8,27 @@ sidebar_label: 修復ページ
 
 **警告**: 修復操作は毎回オリジナルファイルのコピーを伴うため、アプリケーションフォルダーのサイズが大きくなります。 It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除することも役立ちます。
 > 修復はメンテナンスモードでのみ可能です。 If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode.
-> When the database is encrypted, repairing data includes decryption and encryption steps and thus, requires the current data encryption key. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
+> データベースが暗号化されている場合、復号化と暗号化のステップが修復過程に含まれるため、カレントデータの暗号化キーが必要になります。 有効な暗号化キーがまだ提供されていない場合、パスフレーズ、あるいは暗号化キーを要求するダイアログが表示されます (暗号化ページ参照)。
 
-## File overview
+## データファイル修復
 
-### Data file to be repaired
-Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. If you perform a [standard repair](#standard_repair), you must select a data file that is compatible with the open project file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
+### 修復するデータ
+カレントデータファイルのパス名。 **[...]** ボタンを使って、他のデータファイルを指定することができます。 このボタンをクリックすると標準のファイルを開くダイアログが表示され、修復するデータファイルを選択することができます。 [標準の修復](#標準の修復) を実行する場合、開かれたストラクチャーに対応するデータファイルを選択しなければなりません。 [レコードヘッダーによる再生](#レコードヘッダーによる再生) を実行する場合、どのデータファイルでも選択できます。 このダイアログを受け入れると、ウィンドウには修復対象のファイルのパス名が表示されます。
 
-### Original files backup folder
-By default, the original data file will be duplicated before the repair operation. It will be placed in a subfolder named “Replaced files (repairing)” in the application folder. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
+### オリジナルをここに移動
+デフォルトで修復処理の前に元のデータファイルが複製されます。 It will be placed in a subfolder named “Replaced files (repairing)” in the application folder. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
 
 ### Repaired files
 4D creates a new blank data file at the location of the original file. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (application folder by default). The blank file is filled with the recovered data.
 
 
-## Standard repair
+## 標準の修復
 
 Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
 
 When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. If so, you can open the application immediately. ![](assets/en/MSC/MSC_RepairOK.png)
 
-## Recover by record headers
+## レコードヘッダーによる再生
 Use this low-level repair option only when the data file is severely damaged and after all other solutions (restoring from a backup, standard repair) have proven to be ineffective.
 
 4D records vary in size, so it is necessary to keep the location where they are stored on disk in a specific table, named address table, in order to find them again. The program therefore accesses the address of the record via an index and the address table. If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
