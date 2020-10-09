@@ -45,14 +45,14 @@ sidebar_label: 修復ページ
 - 左のリストには、データファイルスキャンの情報が表示されます。 各行には、データファイル中の再生可能なレコードのグループが表示されます:
     - **順番** の列には、レコードグループの再生順が表示されます。
     - **カウント** 列には、グループに含まれるレコード数が表示されます。
-    - **割当先テーブル** 列には、識別されたレコードのグループに割り当てられたテーブルの名前が表示されます。 割り当てられたテーブルの名前は自動で緑色で表示されます。 Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
-    - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
+    - **割当先テーブル** 列には、識別されたレコードのグループに割り当てられたテーブルの名前が表示されます。 割り当てられたテーブルの名前は自動で緑色で表示されます。 割り当てされなかったグループ、つまりどのレコードにも関連づけることができなかったテーブルは赤色で表示されます。
+    - **再生** 列では、レコードを再生するかどうかを各グループごとに指定できます。 デフォルトで、テーブルに割り当てられるすべてのグループが選択されています。
 
-- The second table lists the tables of the project file.
+- 右側のリストには、プロジェクトファイルのテーブルが表示されます。
 
 
-### Manual assigning
-If several groups of records could not be assigned to tables due to a damaged address table, you can assign them manually. To do this, first select an unassigned group of records in the first table. The "Content of the records" area then displays a preview of the contents of the first records of the group to make it easier to assign them:
+### 手動による割り当て
+アドレステーブルが損傷を受けているため、テーブルに割り当てることのできないレコードグループがある場合、それらを手動で割り当てることができます。 これにはまず、左側のリストの中で割り当てられていないレコードグループを選択します。 "レコードの内容" エリアに、グループの先頭レコードの内容がプレビューされるため、それがどのテーブルのレコードか判断しやすくなります:
 
 ![](assets/en/MSC/mscrepair3.png)
 
