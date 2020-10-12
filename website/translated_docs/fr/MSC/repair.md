@@ -65,7 +65,7 @@ Sélectionnez ensuite la table à attribuer dans le tableau des "Tables non attr
 
 After repair is completed, 4D generates a log file in the Logs folder of the project. Ce fichier liste l’ensemble des opérations qui ont été menées. It is created in XML format and named: *ApplicationName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
-- *ApplicationName* is the name of the project file without any extension, for example "Invoices",
+- *ApplicationName* est le nom du fichier de structure sans extension, par exemple "Factures",
 - *aaaa-mm-jj hh-mm-ss* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
 
 Lorsque vous cliquez sur le bouton **Voir le compte rendu**, 4D affiche le fichier de compte-rendu le plus récent dans le navigateur par défaut de l’ordinateur.
