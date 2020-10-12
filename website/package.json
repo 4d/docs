@@ -4,8 +4,10 @@
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
-    "start": "docusaurus-start",
     "build": "doc_preprocess --path ../docs/ --syntax='./syntax/' --output ../docs/ && doc_preprocess --path 'translated_docs/*' --syntax='./syntax/' --output translated_docs/ && docusaurus-build",
+
+    "start": "doc_preprocess --path ../docs/ --output ../docsPostProcessed/ && docusaurus-start",
+	"doc": "doc_preprocess --path ../docs/ --output ../docsPostProcessed/",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",

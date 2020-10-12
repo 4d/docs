@@ -23,8 +23,26 @@
 	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 
-  "ORDA":["ORDA/overview","ORDA/dsmapping","ORDA/ordaClasses","ORDA/entities","ORDA/datastores","ORDA/glossary"],
-  "Class API Reference":["API/cryptoClass"],
+  "ORDA":["ORDA/ordaClasses"],
+  "Class API Reference":
+  ["API/cryptoClass",
+	{
+        "type": "subcategory",
+        "label": "Email",
+        "ids": [
+          "API/emails","API/smtpTransporterClass","API/pop3TransporterClass","API/imapTransporterClass"
+        ]
+      },
+	  {
+        "type": "subcategory",
+        "label": "Files and Folders",
+        "ids": [
+          "API/fileClass","API/folderClass","API/zipClass"
+        ]
+      },
+	  "API/collectionClass",
+	  "API/formulaClass",
+	  "API/signalClass"],
   "Access Rights":["Users/overview","Users/editing"],
   "Administration":["Admin/licenses","Admin/building"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
