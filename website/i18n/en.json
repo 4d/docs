@@ -20,15 +20,6 @@
       "API/cryptoClass": {
         "title": "CryptoKey"
       },
-      "API/dataclassAttributeClass": {
-        "title": "DataClassAttribute"
-      },
-      "API/dataclassClass": {
-        "title": "DataClass"
-      },
-      "API/datastoreClass": {
-        "title": "DataStore"
-      },
       "API/directory": {
         "title": "Directory Class"
       },
@@ -37,12 +28,6 @@
       },
       "API/emails": {
         "title": "Emails"
-      },
-      "API/entityClass": {
-        "title": "Entity"
-      },
-      "API/entitySelectionClass": {
-        "title": "Entity Selections"
       },
       "API/fileClass": {
         "title": "File"

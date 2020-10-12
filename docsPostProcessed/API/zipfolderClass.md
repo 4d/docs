@@ -1,47 +1,70 @@
 ---
-id: folderClass
-title: Folder
+id: zipfolderClass
+title: ZIP Folder Archive
 ---
 
-`Folder` objects are created with the [`Folder`](https://doc.4d.com/4Dv18R4/4D/18-R4/Folder.301-4982248.en.html) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
+A 4D ZIP folder archive is a `Folder` object containing one or more folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to:
 
-### Example
+*	Save disk space
+*	Store data on a removable media device
+*	Easily transfer files via mediums which may have size limitations (e.g., email or inter/intranet systems)
 
-The following example creates a "JohnSmith" folder:
+4D ZIP archives are created and handled with the following 4D commands:
 
-```code4d
-Form.curfolder:=Folder(fk database folder)
-Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
-```
+*	[ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html)
+*	[ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html)
 
-## Folder object
+## Summary
 
 ||
 |---|
-|[**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `Folder` object into the specified *destinationFolder*|
-|[**.create()** : Boolean](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a folder on disk according to the properties of the `Folder` object|
-|[**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.Folder](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows) |
-|[**.creationDate** : Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the folder|
-|[**.creationTime** : Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation time of the folder|
-|[**.delete**( { *option* : Integer } )](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the folder|
-|[**.exists** : Boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder exists on disk|
-|[**.extension** : Text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name (if any)|
-|[**.fullName** : Text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder, including its extension (if any)|
-|[**.getIcon**( { *size* : Integer } ) : Picture](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the folder|
-|[**.hidden** : Boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp; true if the folder is set as "hidden" at the system level|
-|[**.isAlias** : Boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a `Folder` object|
-|[**.isFile** : Boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a folder|
-|[**.isFolder** : Boolean](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always **true** for a folder|
-|[**.isPackage** : Boolean](#ispackage)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the folder is a package on macOS  (and exists on disk)|
-|[**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp; the date of the folder's last modification|
-|[**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the folder's last modification|
-|[**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp; the name of the folder, without extension (if any)|
-|[**.original** : 4D.Folder](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the same Folder object as the folder|
-|[**.parent** : 4D.Folder](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the folder|
-|[**.path** : Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the folder|
-|[**.platformPath** : Text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the folder expressed with the current platform syntax|
-|[**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `Folder` object (source folder) into the specified *destinationFolder*|
-|[**.rename**( *newName* : Text ) : 4D.Folder](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the folder with the name you passed in *newName* and returns the renamed `Folder` object|
+|[**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder](#copyto-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;copies the `Folder` object into the specified *destinationFolder*|
+|[**.creationDate** : Date](#creationdate)|
+|&nbsp;&nbsp;&nbsp;&nbsp;Date may be different for the root folder from a folder within the archive|
+|[**.creationTime** : Time](#creationtime)|
+|&nbsp;&nbsp;&nbsp;&nbsp;Time may be different for the root folder from a folder within the archive|
+|[**.exists** : Boolean](#exists)|
+|&nbsp;&nbsp;&nbsp;&nbsp;true if the folder exists on disk|
+|[**.extension** : Text](#extension)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the extension of the folder name (if any)|
+|[**.file**( *path* : Text ) : 4D.File](#file-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a `File` object inside the `Folder` object and returns its reference|
+|[**.files**( { *options* : Integer } ) : Collection](#files-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a collection of `File` objects contained in the folder|
+|[**.folder**( *path* : Text ) : 4D.Folder](#folder-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a `Folder` object inside the parent `Folder` object and returns its reference|
+|[**.folders**( { *options* : Integer } ) : Collection](#folders-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;a collection of `Folder` objects contained in the parent folder|
+|[**.fullName** : Text](#fullname)|
+|&nbsp;&nbsp;&nbsp;&nbsp;returns the full name of the folder, including its extension (if any)|
+|[**.getIcon**( { *size* : Integer } ) : Picture](#geticon-)|
+|&nbsp;&nbsp;&nbsp;&nbsp;the icon of the folder|
+|[**.hidden** : Boolean](#hidden)|
+|&nbsp;&nbsp;&nbsp;&nbsp; true if the folder is set as "hidden" at the system level|
+|[**.isAlias** : Boolean](#isalias)|
+|&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a `Folder` object|
+|[**.isFile** : Boolean](#isfile)|
+|&nbsp;&nbsp;&nbsp;&nbsp;always **false** for a folder|
+|[**.isFolder** : Boolean](#isfolder)|
+|&nbsp;&nbsp;&nbsp;&nbsp;always **true** for a folder|
+|[**.isPackage** : Boolean](#ispackage)|
+|&nbsp;&nbsp;&nbsp;&nbsp;true if the folder is a package on macOS  (and exists on disk)|
+|[**.modificationDate** : Date](#modificationdate)|
+|&nbsp;&nbsp;&nbsp;&nbsp;Date may be different for the root folder from a folder within the archive|
+|[**.modificationTime** : Time](#modificationtime)|
+|&nbsp;&nbsp;&nbsp;&nbsp;Time may be different for the root folder from a folder within the archive|
+|[**.name** : Text](#name)|
+|&nbsp;&nbsp;&nbsp;&nbsp; the name of the folder, without extension (if any)|
+|[**.original** : 4D.Folder](#original)|
+|&nbsp;&nbsp;&nbsp;&nbsp;the same Folder object as the folder|
+|[**.parent** : 4D.Folder](#parent)|
+|&nbsp;&nbsp;&nbsp;&nbsp;The archive's virtual root folder has no parent. However, the folders within the archive may have a parent other than the root.|
+|[**.path** : Text](#path)|
+|&nbsp;&nbsp;&nbsp;&nbsp;Returns a path relative to the archive|
+|[**.platformPath** : Text](#platformpath)|
+|&nbsp;&nbsp;&nbsp;&nbsp;the path of the folder expressed with the current platform syntax|
+
 
 
 ---
@@ -97,110 +120,6 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 ---
 
-## .create()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-
-
-**.create()** : Boolean
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Boolean|<-|True if the folder was created successfully, false otherwise|
-
-
-
-#### Description
-
-The `.create()` function creates a folder on disk according to the properties of the `Folder` object.
-
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
-
-**Returned value**
-
-*	**True** if the folder is created successfully;
-*	**False** if a folder with the same name already exists or if an error occured.
-
-#### Example 1
-
-Create an empty folder in the database folder:
-
-```4d
-var $created : Boolean
-$created:=Folder("/PACKAGE/SpecialPrefs").create()
-```
-
-#### Example 2
-
-Creation of the "/Archives2019/January/" folder in the database folder:
-
-```4d
-$newFolder:=Folder("/PACKAGE/Archives2019/January")
-If($newFolder.create())
-	ALERT("The "+$newFolder.name+" folder was created.")
-Else
-	ALERT("Impossible to create a "+$newFolder.name+" folder.")
-End if
-```
-
-
-
----
-
-
-## .createAlias()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-
-
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.Folder
-
-|Parameter|Type||Description|
-|---|---|---|---|
-|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
-|aliasName|Text|->|Name of the alias or shortcut|
-|aliasType|Integer|->|Type of the alias link|
-|Result|4D.Folder|<-|Alias or shortcut folder reference|
-
-
-#### Description
-
-The `.createAlias()` function creates an alias (macOS) or a shortcut (Windows) to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
-
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
-
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
-
-|Constant|Value|Comment|
-|--------|-----|-------|
-|`fk alias link`|0|Alias link (macOS only)(default)|
-|`fk symbolic link`|1|Symbolic link (macOS only)|
-
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
-
-**Returned object**
-
-A `Folder` object with the `isAlias` property set to true.
-
-#### Example
-
-You want to create an alias to an archive folder in your database folder:
-
-```4d
-$myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
-$aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
-```
-
----
 ## .creationDate
 
 <details><summary>History</summary>
@@ -240,53 +159,8 @@ This property is **read-only**.
 
 
 
+
 ---
-
-## .delete()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-
-
-**.delete**( { *option* : Integer } )
-
-|Parameter|Type||Description|
-|---|----|---|---|
-|option |Integer|->|Folder deletion option|
-
-
-
-#### Description
-
-The `.delete()` function deletes the folder.
-
-By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
-
-|Constant|	Value|	Comment|
-|---|---|---|
-|`Delete only if empty`|	0|	Deletes folder only when it is empty|
-|`Delete with contents`|	1|	Deletes folder along with everything it contains|
-
-When `Delete only if empty` is passed or if you omit the option parameter:
-
-*	The folder is only deleted if it is empty; otherwise, the command does nothing and an error -47 is generated.
-*	If the folder does not exist, the error -120 is generated.
-
-When `Delete with contents` is passed:
-
-*	The folder, along with all of its contents, is deleted.
-**Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-*	If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
-*	If the folder does not exist, the command does nothing and no error is returned.
-(*) Windows: -54 (Attempt to open locked file for writing)
-macOS: -45 (The file is locked or the pathname is not correct)
-
- 
---- 
 
 ## .exists
 
@@ -695,50 +569,9 @@ This property is **read-only**.
 
 
 
----
-
-
-## .moveTo()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder
-|Parameter|Type||Description|
-|---|----|---|---|
-|destinationFolder|4D.Folder|->|Destination folder|
-|newName|Text|->|Full name for the moved folder|
-|Result|4D.Folder|<-|Moved folder|
-
-
-#### Description
-
-The `.moveTo( )` function moves or renames the `Folder` object (source folder) into the specified *destinationFolder*.
-
-The *destinationFolder* must exist on disk, otherwise an error is generated.  
-
-By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
-
-**Returned object**
-
-The moved `Folder` object.
-
-#### Example
-
-You want to move and rename a folder:
-
-```4d
- var $tomove; $moved : Object
- $docs:=Folder(fk documents folder)
- $tomove:=$docs.folder("Pictures")
- $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")
-```
 
 ---
+
 
 ## .name
 
@@ -847,43 +680,9 @@ This property is **read-only**.
 
 
 
----
-
-
- 
-## .rename()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v17 R5|Added
-</details>
-
-**.rename**( *newName* : Text ) : 4D.Folder
-
-|Parameter|Type||Description|
-|---|---|---|---|
-|newName|Text|->|New full name for the folder|
-|Result|4D.Folder|<-|Renamed folder|
 
 
 
-#### Description
-
-The `.rename()` function renames the folder with the name you passed in *newName* and returns the renamed `Folder` object.
-
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
 
-**Returned object**
-
-The renamed `Folder` object.
-
-#### Example
-
-
-```4d
- var $toRename : 4D.Folder
- $toRename:=Folder("/RESOURCES/Pictures").rename("Images")
-```
 

@@ -28,16 +28,17 @@ ASSERT($status.success)
 ## Summary
 ||
 |---|
-|[**4D.CryptoKey.new**( *settings* : object ) : *cryptoKey* : object](#4dcryptokeynew-)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a new object encapsulating an encryption key pair|
-|[**.curve** : text](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;normalised curve name of the key.  |
-|[**.decrypt**( *message* : text ; *options* : object ) : object](#decrypt-)<p>&nbsp;&nbsp;&nbsp;&nbsp;decrypts the *message* parameter using the **private** key|
-|[**.encrypt**( *message* : text ; *options* : object ) -> text](#encrypt-)<p>&nbsp;&nbsp;&nbsp;&nbsp;encrypts the *message* parameter using the **public** key|
-|[**.getPrivateKey()** : text](#getprivatekey-)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the private key of the `cryptoKey` object|
-|[**.getPublicKey( )** : text](#getpublickey-)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the public key of the `cryptoKey` object|
-|[.**sign** (*message* : text ; *options* : text) -> text](#sign-)<p>&nbsp;&nbsp;&nbsp;&nbsp;signs the utf8 representation of a *message* string |
-|[**.size** : integer](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the key in bits |
-|[**.type** : text](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;Name of the key type |
-|[**.verify**( *message* : text ; *signature* : text ; *options* : object) : object](#verify-)<p>&nbsp;&nbsp;&nbsp;&nbsp;verifies the base64 signature against the utf8 representation of *message*|
+|[**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a new object encapsulating an encryption key pair|
+|[**.curve** : Text](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;normalised curve name of the key.  |
+|[**.decrypt**( *message* : Text ; *options* : Object ) : Object](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;decrypts the *message* parameter using the **private** key|
+|[**.encrypt**( *message* : Text ; *options* : Object ) : Text](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;encrypts the *message* parameter using the **public** key|
+|[**.getPrivateKey()** : Text](#getprivatekey)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the private key of the `cryptoKey` object|
+|[**.getPublicKey( )** : Text](#getpublickey)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the public key of the `cryptoKey` object|
+|[.**sign** (*message* : Text ; *options* : Text) : Text](#sign)<p>&nbsp;&nbsp;&nbsp;&nbsp;signs the utf8 representation of a *message* string |
+|[**.size** : Integer](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the key in bits |
+|[**.type** : Text](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;Name of the key type |
+|[**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object](#verify)<p>&nbsp;&nbsp;&nbsp;&nbsp;verifies the base64 signature against the utf8 representation of *message*|
+
 
 
 
@@ -53,11 +54,11 @@ ASSERT($status.success)
 </details>
 
 
-**4D.CryptoKey.new**( *settings* : object ) : *cryptoKey* : object
+**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object
 |Parameter|Type||Description|
 |---|---|----|---|
-|settings|object|->|Settings to generate or load a key pair|
-|cryptoKey|object|<-|Object encapsulating an encryption key pair|
+|settings|Object|->|Settings to generate or load a key pair|
+|cryptoKey|Object|<-|Object encapsulating an encryption key pair|
 
 
 The `4D.CryptoKey.new()` function  creates a new object encapsulating an encryption key pair, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
@@ -84,7 +85,8 @@ The returned `cryptoKey` object encapsulates an encryption key pair. It is a sha
 |v18 R4|Added
 </details>
 
-**.curve** : text
+**.curve** : Text
+
 
 Defined only for ECDSA keys: the normalised curve name of the key. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 
@@ -98,12 +100,12 @@ Defined only for ECDSA keys: the normalised curve name of the key. Usually "prim
 </details>
 
 
-**.decrypt**( *message* : text ; *options* : object ) : object
+**.decrypt**( *message* : Text ; *options* : Object ) : Object
 |Parameter|Type||Description|
 |---|---|----|---|
-|message|text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
-|options|object|->|Decoding options|
-|Result|object|<-|Status|
+|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
+|options|Object|->|Decoding options|
+|Result|Object|<-|Status|
 
 
 The `.decrypt()` function decrypts the *message* parameter using the **private** key. The algorithm used depends on the type of the key.
@@ -142,12 +144,12 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 </details>
 
 
-**.encrypt**( *message* : text ; *options* : object ) -> text
+**.encrypt**( *message* : Text ; *options* : Object ) : Text
 |Parameter|Type||Description|
 |---|---|----|---|
-|message|text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
-|options|object|->|Encoding options|
-|Result|text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
+|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
+|options|Object|->|Encoding options|
+|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 
 The `.encrypt()` function encrypts the *message* parameter using the **public** key. The algorithm used depends on the type of the key.
 
@@ -179,11 +181,11 @@ The returned value is an encrypted message.
 </details>
 
 
-**.getPrivateKey()** : text
+**.getPrivateKey()** : Text
 
 |Parameter|Type||Description|
 |---|---|----|---|
-|Result|text|<-|Private key in PEM format|
+|Result|Text|<-|Private key in PEM format|
 
 The `.getPrivateKey()` function  returns the private key of the `cryptoKey` object in PEM format, or an empty string if none is available.
 
@@ -202,10 +204,10 @@ The returned value is the private key.
 </details>
 
 
-**.getPublicKey( )** : text
+**.getPublicKey( )** : Text
 |Parameter|Type||Description|
 |---|----|---|---|
-|Result|text|<-|Public key in PEM format|
+|Result|Text|<-|Public key in PEM format|
 
 
 The `.getPublicKey()` function returns the public key of the `cryptoKey` object in PEM format, or an empty string if none is available.
@@ -224,7 +226,7 @@ The returned value is the public key.
 </details>
 
 
-**.pem** : text
+**.pem** : Text
 
 PEM definition of an encryption key to load
 
@@ -237,12 +239,12 @@ PEM definition of an encryption key to load
 |v18 R4|Added
 </details>
 
-.**sign** (*message* : text ; *options* : text) -> text
+.**sign** (*message* : Text ; *options* : Text) : Text
 |Parameter|Type||Description|
 |---|----|---|---|
-|message|text|->|Message string to sign|  
-|options|object|->|Signing options|
-|Result|text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+|message|Text|->|Message string to sign|  
+|options|Object|->|Signing options|
+|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 
 The `.sign()` function signs the utf8 representation of a *message* string using the `cryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
@@ -271,7 +273,7 @@ The utf8 representation of the *message* string.
 |v18 R4|Added
 </details>
 
-**.size** : integer
+**.size** : Integer
 
 Defined only for RSA keys: the size of the key in bits. Typically 2048 (default).
 
@@ -285,7 +287,7 @@ Defined only for RSA keys: the size of the key in bits. Typically 2048 (default)
 </details>
 
 
-**.type** : text
+**.type** : Text
 
 Name of the key type - "RSA", "ECDSA", or "PEM":
 
@@ -298,13 +300,13 @@ Name of the key type - "RSA", "ECDSA", or "PEM":
 |v18 R4|Added
 </details>
 
-**.verify**( *message* : text ; *signature* : text ; *options* : object) : object
+**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object
 |Parameter|Type||Description|
 |---|---|---|---|
-|message|text|->|Message string that was used to produce the signature|  
-|signature|text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
-|options|object|->|Signing options|
-|Result|object|<-|Status of the verification|
+|message|Text|->|Message string that was used to produce the signature|  
+|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
+|options|Object|->|Signing options|
+|Result|Object|<-|Status of the verification|
 
 The `.verify()` function verifies the base64 signature against the utf8 representation of *message* using the `cryptoKey` object keys and provided *options*.
 

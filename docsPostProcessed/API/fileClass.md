@@ -19,35 +19,35 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ||
 |---|
-|[**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `File` object into the specified *destinationFolder* |
-|[**.create( )** : boolean ](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a file on disk according to the properties of the `File` object|
-|[**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)|
+|[**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;copies the `File` object into the specified *destinationFolder* |
+|[**.create( )** : Boolean ](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates a file on disk according to the properties of the `File` object|
+|[**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;creates an alias (macOS) or a shortcut (Windows)|
 |[**.creationDate** : Date](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation date of the file|
 |[**.creationTime** : Time](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the creation  time of the file|
-|[**.delete()**](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the file|
-|[**.exists** : boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk|
-|[**.extension** : text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;the extension of the file name (if any)|
+|[**.delete( )**](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;deletes the file|
+|[**.exists** : Boolean](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk|
+|[**.extension** : Text](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;the extension of the file name (if any)|
 |[**.fullName** : Text](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;the full name of the file, including its extension (if any)|
-|[**.getContent()** : BLOB](#getcontent)<p>returns a `BLOB` containing the entire content of a file|
-|[**.getIcon**( { *size* : integer } ) : picture](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
-|[**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
-|[**.hidden** : boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is set as "hidden" at the system level|
-|[**.isAlias** : boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is an alias, a shortcut, or a symbolic link
-|[**.isFile** : boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always true for a file|
-|[**.isFolder** : boolean](#isFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
-|[**.isWritable** : boolean](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk and is writable|
+|[**.getContent( )** : BLOB](#getcontent)<p>returns a `BLOB` containing the entire content of a file|
+|[**.getIcon**( { *size* : Integer } ) : picture](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;the icon of the file|
+|[**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the file as text |
+|[**.hidden** : Boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is set as "hidden" at the system level|
+|[**.isAlias** : Boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is an alias, a shortcut, or a symbolic link
+|[**.isFile** : Boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always true for a file|
+|[**.isFolder** : Boolean](#isFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
+|[**.isWritable** : Boolean](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk and is writable|
 |[**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the date of the file's last modification|
 |[**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the file's last modification|
-|[**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `File` object into the specified *destinationFolder*|
+|[**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;moves or renames the `File` object into the specified *destinationFolder*|
 |[**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;the name of the file without extension (if any)|
-|[**.original** : object](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the target element for an alias, a shortcut, or a symbolic link file|
-|[**.parent** : object](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the file|
+|[**.original** : 4D.File<br>**.original** : 4D.Folder](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;the target element for an alias, a shortcut, or a symbolic link file|
+|[**.parent** : 4D.Folder](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;the parent folder object of the file|
 |[**.path** : Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the POSIX path of the file|
 |[**.platformPath** : Text](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;the path of the file expressed with the current platform syntax|
-|[**.rename**( *newName* : text ) : object](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the file with the name you passed in *newName* and returns the renamed `File` object|
-|[**.setContent** ( *content* : blob ) ](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;rewrites the entire content of the file using the data stored in the *content* BLOB|
-|[**.setText** ( *text* : text {; *charSetName* : text { ; *breakMode* : integer } } )<br>**.setText** ( *text* : text {; *charSetNum* : integer { ; *breakMode* : integer } } ) ](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;writes *text* as the new contents of the file|
-|[**.size** : Number](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the file expressed in bytes|
+|[**.rename**( *newName* : Text ) : 4D.File](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;renames the file with the name you passed in *newName* and returns the renamed `File` object|
+|[**.setContent** ( *content* : Blob ) ](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;rewrites the entire content of the file using the data stored in the *content* BLOB|
+|[**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) ](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;writes *text* as the new contents of the file|
+|[**.size** : Real](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;the size of the file expressed in bytes|
 
 
 ---
@@ -60,13 +60,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |v17 R5|Added
 </details>
 
-**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object
+**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder | object |->|Destination folder|
-|newName|text|->|Name for the copy|
-|overwrite|integer|->|`fk overwrite` to replace existing elements|
-|Result|object|<-|Copied file or folder|
+|destinationFolder | 4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.File|<-|Copied file|
 
 
 #### Description
@@ -90,7 +90,7 @@ The copied `File` object.
 
 #### Example
 
-You want to copy a picture *file* from the user's document folder to the database folder:
+You want to copy a picture *file* from the user's document folder to the application folder:
 
 ```4d
 var $source; $copy : Object
@@ -112,10 +112,10 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 **Not available for ZIP archives**
 
-**.create( )** : boolean 
+**.create( )** : Boolean 
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|boolean|<-|True if the file was created successfully, false otherwise|
+|Result|Boolean|<-|True if the file was created successfully, false otherwise|
 
 #### Description
 
@@ -149,13 +149,13 @@ Creation of a preferences file in the database folder:
 |v17 R5|Added
 </details>
 
-**.createAlias**( *destinationFolder* : object ; *aliasName* : text { ; *aliasType* : integer } ) : object
+**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File
 |Parameter|Type||Description|
 |---|---|---|---|
-|destinationFolder|object|->|Destination folder for the alias or shortcut|
-|aliasName|text|->|Name of the alias or shortcut|
-|aliasType|integer|->|Type of the alias link|
-|Result|object|<-|>Alias or shortcut file reference|
+|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
+|aliasName|Text|->|Name of the alias or shortcut|
+|aliasType|Integer|->|Type of the alias link|
+|Result|4D.File|<-|Alias or shortcut file reference|
 
 
 #### Description
@@ -176,7 +176,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 **Returned object**
 
-A `File` object with the `isAlias` property set to true.
+A `File` object with the `isAlias` property set to **true**.
 
 #### Example
 
@@ -201,6 +201,7 @@ You want to create an alias to a file in your database folder:
 **.creationDate** : Date
 
 #### Description
+
 The `.creationDate` property returns the creation date of the file.
 
 This property is **read-only**. 
@@ -221,6 +222,7 @@ This property is **read-only**.
 **.creationTime** : Time
 
 #### Description
+
 The `.creationTime` property  returns the creation  time of the file (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**. 
@@ -239,7 +241,7 @@ This property is **read-only**.
 </details>
 
 
-**.delete()**
+**.delete( )**
 
 |Parameter|Type||Description|
 |---|----|---|---|
@@ -279,9 +281,10 @@ You want to delete a specific file in the database folder:
 |v17 R5|Added
 </details>
 
-**.exists** : boolean
+**.exists** : Boolean
 
 #### Description
+
 The `.exists` property returns true if the file exists on disk, and false otherwise.
 
 This property is **read-only**. 
@@ -300,8 +303,9 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.extension** : text
+**.extension** : Text
 #### Description
+
 The `.extension` property returns the extension of the file name (if any). An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
 This property is **read-only**. 
@@ -321,6 +325,7 @@ This property is **read-only**.
 
 **.fullName** : Text
 #### Description
+
 The `.fullName` property returns the full name of the file, including its extension (if any).
 
 This property is **read-only**. 
@@ -338,7 +343,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.getContent()** : BLOB
+**.getContent( )** : BLOB
 |Parameter|Type||Description|
 |---|----|---|---|
 |Result | BLOB |<-|File content|
@@ -377,11 +382,11 @@ To save a document's contents in a `BLOB` field:
 |v17 R5|Added
 </details>
 
-**.getIcon**( { *size* : integer } ) : picture
+**.getIcon**( { *size* : Integer } ) : picture
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|integer|->|Side length for the returned picture (pixels)|
-|Result|picture|<-|Icon|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
 
 
 #### Description
@@ -411,14 +416,14 @@ File icon [picture](../Concepts/picture.html).
 |v17 R5|Added
 </details>
 
-**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text
+**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|charSetName |text |-> |Name of character set|
-|charSetNum |integer |-> |Number of character set|
-|breakMode|integer |-> |Processing mode for line breaks|
-|Result |text  |<- |Text from the document|
+|charSetName |Text |-> |Name of character set|
+|charSetNum |Integer |-> |Number of character set|
+|breakMode|Integer |-> |Processing mode for line breaks|
+|Result |Text  |<- |Text from the document|
 
 
 #### Description
@@ -489,9 +494,10 @@ When you execute this code:
 |v17 R5|Added
 </details>
 
-**.hidden** : boolean
+**.hidden** : Boolean
 
 #### Description
+
 The `.hidden` property returns true if the file is set as "hidden" at the system level, and false otherwise. 
 
 This property is **read-only**. 
@@ -509,9 +515,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isAlias** : boolean
+**.isAlias** : Boolean
 
 #### Description
+
 The `.isAlias` property returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise. 
 
 This property is **read-only**. 
@@ -529,9 +536,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFile** : boolean
+**.isFile** : Boolean
 
 #### Description
+
 The `.isFile` property returns always true for a file. 
 
 This property is **read-only**. 
@@ -549,9 +557,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFolder** : boolean
+**.isFolder** : Boolean
 
 #### Description
+
 The `.isFolder` property returns always false for a file. 
 
 This property is **read-only**. 
@@ -569,9 +578,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isWritable** : boolean
+**.isWritable** : Boolean
 
 #### Description
+
 The `.isWritable` property returns true if the file exists on disk and is writable. 
 
 >The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file. 
@@ -603,6 +613,7 @@ This property is **read-only**.
 **.modificationDate** : Date
 
 #### Description
+
 The `.modificationDate` property returns the date of the file's last modification. 
 
 This property is **read-only**. 
@@ -623,6 +634,7 @@ This property is **read-only**.
 **.modificationTime** : Time
 
 ##### Description
+
 The `.modificationTime` property returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). 
 
 This property is **read-only**. 
@@ -641,12 +653,12 @@ This property is **read-only**.
 </details>
 
 
-**.moveTo**( *destinationFolder* : object { ; *newName* : text } ) : object
+**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File
 |Parameter|Type||Description|
 |---|----|---|---|
-|destinationFolder|object|->|Destination folder|
-|newName|text|->|Full name for the moved file|
-|Result|object|<-|Moved file|
+|destinationFolder|4D.Folder|->|Destination folder|
+|newName|Text|->|Full name for the moved file|
+|Result|4D.File|<-|Moved file|
 
 
 #### Description
@@ -686,6 +698,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.name** : Text
 
 #### Description
+
 The `.name` property returns the name of the file without extension (if any). 
 
 This property is **read-only**. 
@@ -703,9 +716,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.original** : object
+**.original** : 4D.File<br>**.original** : 4D.Folder
 
 #### Description
+
 The `.original` property returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:
 
 *	a file object 
@@ -728,9 +742,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.parent** : object
+**.parent** : 4D.Folder
 
 #### Description
+
 The `.parent` property returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
 This property is **read-only**. 
@@ -751,6 +766,7 @@ This property is **read-only**.
 **.path** : Text
 
 #### Description
+
 The `.path` property returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
 This property is **read-only**. 
@@ -771,6 +787,7 @@ This property is **read-only**.
 **.platformPath** : Text
 
 #### Description
+
 The `.platformPath` property returns the path of the file expressed with the current platform syntax.
 
 This property is **read-only**. 
@@ -790,11 +807,11 @@ This property is **read-only**.
 </details>
 
 
-**.rename**( *newName* : text ) : object
+**.rename**( *newName* : Text ) : 4D.File
 |Parameter|Type||Description|
 |---|---|---|---|
-|newName|text|->|New full name for the file|
-|Result|object|<-|Renamed file|
+|newName|Text|->|New full name for the file|
+|Result|4D.File|<-|Renamed file|
 
 #### Description
 
@@ -832,7 +849,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 </details>
 
 
-**.setContent** ( *content* : blob ) 
+**.setContent** ( *content* : Blob ) 
 |Parameter|Type||Description|
 |---|---|---|---|
 |content|BLOB|->|New contents for the file|
@@ -865,14 +882,14 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 </details>
 
 
-**.setText** ( *text* : text {; *charSetName* : text { ; *breakMode* : integer } } )<br>**.setText** ( *text* : text {; *charSetNum* : integer { ; *breakMode* : integer } } ) 
+**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) 
 
 |Parameter|Type||Description|
 |---------|----|---|--------|
-|text|text|->|Text to store in the file|
-|charSetName|text|->|Name of character set|
-|charSetNum|integer|->|Number of character set|
-|breakMode|integer|->|Processing mode for line breaks|
+|text|Text|->|Text to store in the file|
+|charSetName|Text|->|Name of character set|
+|charSetNum|Integer|->|Number of character set|
+|breakMode|Integer|->|Processing mode for line breaks|
 #### Description
 
 The `.setText()` function writes *text* as the new contents of the file.
@@ -924,9 +941,10 @@ $myFile.setText("Hello world")
 |v17 R5|Added
 </details>
 
-**.size** : Number
+**.size** : Real
 
 #### Description
+
 The `.size` property returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0.
 
 This property is **read-only**. 

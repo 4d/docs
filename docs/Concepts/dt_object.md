@@ -120,6 +120,7 @@ Object notation is available on any language element that can contains or return
 ```
 
 ### Pointers
+
 **Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers. 
 
 Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.

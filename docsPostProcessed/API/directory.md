@@ -54,7 +54,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.exists** : boolean
+**.exists** : Boolean
 
 #### Description
 
@@ -75,7 +75,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.extension** : text
+**.extension** : Text
 
 #### Description
 
@@ -95,7 +95,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.fullName** : text
+**.fullName** : Text
 
 #### Description
 
@@ -115,7 +115,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.hidden** : boolean
+**.hidden** : Boolean
 
 #### Description
 
@@ -135,7 +135,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isAlias** : boolean
+**.isAlias** : Boolean
 
 
 #### Description
@@ -155,7 +155,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFile** : boolean
+**.isFile** : Boolean
 
 #### Description
 
@@ -174,7 +174,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFolder** : boolean
+**.isFolder** : Boolean
 
 #### Description
 
@@ -193,7 +193,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isPackage** : boolean
+**.isPackage** : Boolean
 
 #### Description
 
@@ -254,7 +254,8 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.name** : text
+
+**.name** : Text
 
 #### Description
 
@@ -273,11 +274,11 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.original** : object
+**.original** : 4D.Folder
 
 #### Description
 
-The `.original` property returns the same folder object as the folder. 
+The `.original` property returns the same Folder object as the folder. 
 
 This property is **read-only**. 
 
@@ -295,7 +296,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.parent** : object
+**.parent** : 4D.Folder
 
 #### Description
 
@@ -317,7 +318,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.path** : text
+**.path** : Text
 
 #### Description
 
@@ -336,7 +337,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.platformPath** : text
+**.platformPath** : Text
 
 #### Description
 
@@ -360,13 +361,13 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.copyTo**( *destinationFolder* : object { ; *newName* :text } { ; *overwrite* : integer } ) : object
+**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder |object |->|Destination folder|
-|newName|text|->|Name for the copy|
-|overwrite|integer|->|`fk overwrite` to replace existing elements|
-|Result|object|<-|Copied file or folder|
+|destinationFolder |4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.Folder|<-|Copied file or folder|
 
 
 #### Description
@@ -393,7 +394,7 @@ The copied `Folder` object.
 You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
 ```4d
-var $userImages ; $copiedImages : Object
+var $userImages; $copiedImages : 4D.Folder
 $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
@@ -410,11 +411,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 |v17 R5|Added
 </details>
 
-**.file**( *path* : text ) : object
+**.file**( *path* : Text ) : 4D.File
 |Parameter|Type||Description|
 |---|----|---|---|
-|path|text|->|Relative POSIX file pathname|
-|Result|object|<-|`File` object (null if invalid path)|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.File|<-|`File` object (null if invalid path)|
 
 #### Description
 
@@ -429,7 +430,7 @@ A `File` object or null if *path* is invalid.
 #### Example
 
 ```4d
-var $myPDF : Object
+var $myPDF : 4D.File
 $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ```
 
@@ -444,11 +445,11 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 |v17 R5|Added
 </details>
 
-**.files**( { *options* : text } ) : collection
+**.files**( { *options* : Integer } ) : Collection
 |Parameter|Type||Description|
 |---|----|---|---|
-|options|integer|->|File list options|
-|Result|collection|<-|Collection of children file objects|
+|options|Integer|->|File list options|
+|Result|Collection|<-|Collection of children file objects|
 
 #### Description
 
@@ -456,7 +457,7 @@ The `.files()` function returns a collection of `File` objects contained in the 
 
 >Aliases or symbolic links are not resolved. 
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 |Constant|	Value|	Comment|
 |---|---|---|
@@ -500,11 +501,11 @@ You want to get all files that are not invisible in the Documents folder:
 |v17 R5|Added
 </details>
 
-**.folder**( *path* : text ) : object
+**.folder**( *path* : Text ) : 4D.Folder
 |Parameter|Type||Description|
 |---|----|---|---|
-|path|text|->|Relative POSIX file pathname|
-|Result|object|<-|`Folder` object (null if invalid *path*)|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
 
 #### Description
 
@@ -519,7 +520,7 @@ A `Folder` object or null if *path* is invalid.
 #### Example
 
 ```4d
- var $mypicts : Object
+ var $mypicts : 4D.Folder
  $mypicts:=Folder(fk documents folder).folder("Pictures")
 ```
 
@@ -534,11 +535,11 @@ A `Folder` object or null if *path* is invalid.
 |v17 R5|Added
 </details>
 
-**.folders**( { *options* : integer } ) : collection
+**.folders**( { *options* : Integer } ) : Collection
 |Parameter|Type||Description|
 |---|----|---|---|
-|options|integer|->|Folder list options|
-|Result|collection|<-|Collection of children folder objects|
+|options|Integer|->|Folder list options|
+|Result|Collection|<-|Collection of children folder objects|
 
 #### Description
 
@@ -575,11 +576,11 @@ You want the collection of all folders and subfolders of the database folder:
 |v17 R5|Added
 </details>
 
-**.getIcon**( { *size* : integer } ) : picture
+**.getIcon**( { *size* : Integer } ) : Picture
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|integer|->|Side length for the returned picture (pixels)|
-|Result|picture|<-|Icon|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
 
 
 #### Description

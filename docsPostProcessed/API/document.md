@@ -17,6 +17,7 @@ title: Document Class
 **.creationDate** : Date
 
 #### Description
+
 The `.creationDate` property returns the creation date of the file.
 
 This property is **read-only**. 
@@ -34,6 +35,7 @@ This property is **read-only**.
 **.creationTime** : Time
 
 #### Description
+
 The `.creationTime` property  returns the creation  time of the file (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**. 
@@ -50,9 +52,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.exists** : boolean
+**.exists** : Boolean
 
 #### Description
+
 The `.exists` property returns true if the file exists on disk, and false otherwise.
 
 This property is **read-only**. 
@@ -71,11 +74,13 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.extension** : text
+**.extension** : Text
 #### Description
+
 The `.extension` property returns the extension of the file name (if any). An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
 This property is **read-only**. 
+
 
 
 
@@ -91,6 +96,7 @@ This property is **read-only**.
 
 **.fullName** : Text
 #### Description
+
 The `.fullName` property returns the full name of the file, including its extension (if any).
 
 This property is **read-only**. 
@@ -107,9 +113,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.hidden** : boolean
+**.hidden** : Boolean
 
 #### Description
+
 The `.hidden` property returns true if the file is set as "hidden" at the system level, and false otherwise. 
 
 This property is **read-only**. 
@@ -126,9 +133,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isAlias** : boolean
+**.isAlias** : Boolean
 
 #### Description
+
 The `.isAlias` property returns true if the file is an alias, a shortcut, or a symbolic link, and false otherwise. 
 
 This property is **read-only**. 
@@ -144,9 +152,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFile** : boolean
+**.isFile** : Boolean
 
 #### Description
+
 The `.isFile` property returns always true for a file. 
 
 This property is **read-only**. 
@@ -162,9 +171,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isFolder** : boolean
+**.isFolder** : Boolean
 
 #### Description
+
 The `.isFolder` property returns always false for a file. 
 
 This property is **read-only**. 
@@ -181,9 +191,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.isWritable** : boolean
+**.isWritable** : Boolean
 
 #### Description
+
 The `.isWritable` property returns true if the file exists on disk and is writable. 
 
 >The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file. 
@@ -214,6 +225,7 @@ This property is **read-only**.
 **.modificationDate** : Date
 
 #### Description
+
 The `.modificationDate` property returns the date of the file's last modification. 
 
 This property is **read-only**. 
@@ -233,6 +245,7 @@ This property is **read-only**.
 **.modificationTime** : Time
 
 ##### Description
+
 The `.modificationTime` property returns the time of the file's last modification (expressed as a number of seconds beginning at 00:00). 
 
 This property is **read-only**. 
@@ -251,6 +264,7 @@ This property is **read-only**.
 **.name** : Text
 
 #### Description
+
 The `.name` property returns the name of the file without extension (if any). 
 
 This property is **read-only**. 
@@ -265,9 +279,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.original** : object
+**.original** : 4D.File<br>**.original** : 4D.Folder
 
 #### Description
+
 The `.original` property returns the target element for an alias, a shortcut, or a symbolic link file. The target element can be:
 
 *	a file object 
@@ -289,9 +304,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.parent** : object
+**.parent** : 4D.Folder
 
 #### Description
+
 The `.parent` property returns the parent folder object of the file. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
 This property is **read-only**. 
@@ -311,6 +327,7 @@ This property is **read-only**.
 **.path** : Text
 
 #### Description
+
 The `.path` property returns the POSIX path of the file. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
 This property is **read-only**. 
@@ -329,6 +346,7 @@ This property is **read-only**.
 **.platformPath** : Text
 
 #### Description
+
 The `.platformPath` property returns the path of the file expressed with the current platform syntax.
 
 This property is **read-only**. 
@@ -345,9 +363,10 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.size** : Number
+**.size** : Real
 
 #### Description
+
 The `.size` property returns the size of the file expressed in bytes. If the file does not exist on disk, the size is 0.
 
 This property is **read-only**. 
@@ -370,13 +389,13 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-**.copyTo**( *destinationFolder* : object { ; *newName* : text } { ; *overwrite* : integer } ) : object
+**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder | object |->|Destination folder|
-|newName|text|->|Name for the copy|
-|overwrite|integer|->|`fk overwrite` to replace existing elements|
-|Result|object|<-|Copied file or folder|
+|destinationFolder | 4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.File|<-|Copied file|
 
 
 #### Description
@@ -400,7 +419,7 @@ The copied `File` object.
 
 #### Example
 
-You want to copy a picture *file* from the user's document folder to the database folder:
+You want to copy a picture *file* from the user's document folder to the application folder:
 
 ```4d
 var $source; $copy : Object
@@ -419,7 +438,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 |v17 R5|Added
 </details>
 
-**.getContent()** : BLOB
+**.getContent( )** : BLOB
 |Parameter|Type||Description|
 |---|----|---|---|
 |Result | BLOB |<-|File content|
@@ -456,11 +475,11 @@ To save a document's contents in a `BLOB` field:
 |v17 R5|Added
 </details>
 
-**.getIcon**( { *size* : integer } ) : picture
+**.getIcon**( { *size* : Integer } ) : picture
 |Parameter|Type||Description|
 |---|----|---|---|
-|size|integer|->|Side length for the returned picture (pixels)|
-|Result|picture|<-|Icon|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
 
 
 #### Description
@@ -488,14 +507,14 @@ File icon [picture](../Concepts/picture.html).
 |v17 R5|Added
 </details>
 
-**.getText**( { *charSetName* : text } { ; } { *breakMode* : integer} ) : text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : text
+**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|charSetName |text |-> |Name of character set|
-|charSetNum |integer |-> |Number of character set|
-|breakMode|integer |-> |Processing mode for line breaks|
-|Result |text  |<- |Text from the document|
+|charSetName |Text |-> |Name of character set|
+|charSetNum |Integer |-> |Number of character set|
+|breakMode|Integer |-> |Processing mode for line breaks|
+|Result |Text  |<- |Text from the document|
 
 
 #### Description
