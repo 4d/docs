@@ -520,44 +520,44 @@
         "title": "SDI mode on Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "ログ解析ページ",
+        "sidebar_label": "ログ解析ページ"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "バックアップページ",
+        "sidebar_label": "バックアップページ"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "圧縮ページ",
+        "sidebar_label": "圧縮ページ"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "暗号化ページ",
+        "sidebar_label": "暗号化ページ"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "情報ページ",
+        "sidebar_label": "情報ページ"
       },
       "MSC/overview": {
         "title": "概要",
         "sidebar_label": "概要"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "修復ページ",
+        "sidebar_label": "修復ページ"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "復元ページ",
+        "sidebar_label": "復元ページ"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "ロールバックページ",
+        "sidebar_label": "ロールバックページ"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "検査ページ",
+        "sidebar_label": "検査ページ"
       },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
@@ -741,7 +741,7 @@
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
-    "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
+    "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",

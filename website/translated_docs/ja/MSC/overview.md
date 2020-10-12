@@ -8,33 +8,33 @@ Maintenance & Security Center (MSC) は、データとストラクチャーフ�
 
 **注**: MSC は 4Dリモート接続ではご利用いただけません。
 
-MSCウィンドウを開く方法は幾つかあります。 The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. In standard mode, the project is opened by 4D.
+MSCウィンドウを開く方法は幾つかあります。 アクセスの方法により、"メンテナンス" モードまたは "標準" モードのいずれによってアプリケーションを開くかが決定されます。 メンテナンスモードの場合、4D はプロジェクトを開かず、その参照だけが MSC に供給されます。 標準モードの場合、4D はプロジェクトを開きます。
 
 
 ## メンテナンスモードでの表示
 
-In maintenance mode, only the MSC window is displayed (the project is not opened by the 4D application). This means that projects that are too damaged to be opened in standard mode by 4D can nevertheless be accessed. Moreover, certain operations (compacting, repair, and so on) require the project to be opened in maintenance mode (see [Feature availability](#feature-availability)).
+メンテナンスモードでは、MSCウィンドウだけが表示されます (4Dアプリケーションはプロジェクトを開きません)。 つまり、損傷が激しいため 4D が標準モードで開けないプロジェクトにもアクセスできるということです。 さらに、特定の操作 (圧縮、修復など) はプロジェクトをメンテナンスモードで開くことを要求します ([アクセス権](#アクセス権) 参照)。
 
 次の 2つの場所から、MSC をメインテナンスモードで開くことができます:
 
-- **From the standard project opening dialog box** The standard Open dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](assets/en/MSC/MSC_standardOpen.png)
-- **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (project not open)  
+- **標準の開くダイアログボックス**<br /> 標準のプロジェクトを開くダイアログボックスには **開く** ボタンに関連付けられているメニューに **Maintenance & Security Center** オプションが含まれます: ![](assets/en/MSC/MSC_standardOpen.png)
+- **ヘルプ＞メンテナンス＆セキュリティセンター (MSC)** メニュー、または、ツールバーの **MSC** ボタンの使用 (プロジェクトが開かれていない状態で)  
   ![](assets/en/MSC/mscicon.png)   
-  When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. The project will not be opened by 4D.
+  この機能を呼び出すと、標準のファイルを開くダイアログボックスが表示され、検査する *.4DProject* または *.4dz* ファイルを指定できます。 プロジェクトは開かれません。
 
-## Display in standard mode
+## 標準モードでの表示
 
-In standard mode, a project is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+標準モードではプロジェクトが開いています。 このモードでは、特定の保守機能を使用できません。 この場合に MSCウィンドウを開く方法は幾つかあります。
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- **ヘルプ＞メンテナンス＆セキュリティセンター (MSC)** メニュー、または、ツールバーの **MSC** ボタンの使用。  
   ![](assets/en/MSC/mscicon.png)
-- Use the “msc” standard action that it is possible to associate with a menu command or a form object.
-- Use the `OPEN SECURITY CENTER` language command.
+- メニューコマンドやフォームオブジェクトに割り当てることのできる "msc" 標準アクションを使用する。
+- `OPEN SECURITY CENTER` ランゲージコマンドを使用する。
 
-## Feature availability
+## アクセス権
 
-Certain MSC functions are not available depending on the MSC opening mode:
+特定の MSC機能は、MSC が開かれたモードによっては利用できません:
 
-- Backup function is only available when the project is open (the MSC must have been opened in standard mode).
-- Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
-- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible. 
+- バックアップ機能は、プロジェクトが開かれている状態でしか利用できません (MSC は標準モードで開かれている必要があります)。
+- データの圧縮、ロールバック、復元、修復、および暗号化の機能は、開いていないデータファイルでのみ使用できます (MSC はメインテナンスモードで開かれていなければなりません) 。 プロジェクトが標準モードで開かれている時にこれらの機能を試みた場合は、メインテナンスモードでアプリケーション再起動を促すダイアログボックスが表示されます。
+- 暗号化されたデータベースにおいては、暗号化されたデータまたは .journal ファイルへのアクセスには有効なデータキーが提供されている必要があります ([暗号化ページ](encrypt.md) 参照)。 提供されていない場合、暗号化されたデータは見ることができません。 
