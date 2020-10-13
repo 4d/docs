@@ -457,7 +457,7 @@ This property is **read-only**.
 
 
 #### Beschreibung
-The `.copyTo()` function  <!-- REF #document.copyTo().Summary -->copies the 
+The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the 
 
 `File` object into the specified *destinationFolder* <!-- END REF -->.
 
