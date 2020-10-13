@@ -41,13 +41,13 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 </details>
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Syntax -->
-**POP3 New transporter**( *server* : Object ) : Object<!-- END REF -->
+**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
-|Result|object|<-|[POP3 transporter object](#pop3-transporter-object)|
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
 <!-- END REF -->
 
 
@@ -88,6 +88,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
  $server.password:="XXXXXXXX"
  $server.logFile:="LogTest.txt" //log to save in the Logs folder
  
+ var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
  
  $status:=$transporter.checkConnection()
@@ -354,6 +355,7 @@ The method returns **Null** if:
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
  
+ var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
  
   //message info
@@ -419,6 +421,7 @@ You want to know the total number and size of emails in the mailbox:
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
  
+ var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
  
  C_COLLECTION($mailInfo)
@@ -476,9 +479,10 @@ The method returns an empty BLOB if:
 You want to know the total number and size of emails in the mailbox:
 
 ```4d
- var $server; $transporter : Object
+ var $server : Object
  var $mailInfo : Collection
  var $blob : Blob
+ var $transporter : 4D.POP3Transporter
  
  $server:=New object
  $server.host:="pop.gmail.com"

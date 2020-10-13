@@ -42,13 +42,13 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 </details>
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
-**SMTP New transporter**( *server* : Object ) : Object<!-- END REF -->
+**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|Object|<-|[SMTP transporter object](#smtp-transporter-object)|
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
 <!-- END REF -->
 
 
@@ -99,7 +99,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
  $server.password:="XXXX"
  $server.logFile:="LogTest.txt" //Extended log to save in the Logs folder
 
-
+ var $transporter : 4D.SMTPTransporter
  $transporter:=SMTP New transporter($server)
 
  $email:=New object
@@ -145,6 +145,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 ```4d
  var $pw : Text
  var $options : Object
+ var $transporter : 4D.SMTPTransporter
  $options:=New object
 
  $pw:=Request("Please enter your password:")
