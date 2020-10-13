@@ -14,6 +14,4 @@ website/yarn.lock
 website/node_modules
 !website/node_modules/highlight.js/lib/index.js
 !website/node_modules/highlight.js/lib/languages/code4d.js
-website/siteConfig.js
-website/siteConfig_Git.js
-website/siteConfig.js
+
