@@ -70,13 +70,13 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 </details>
 
 <!-- REF imapTransporterClass.IMAP New transporter.Syntax -->
-**IMAP New transporter**( *server* : Object ) : Object<!-- END REF -->
+**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF imapTransporterClass.IMAP New transporter.Params -->
-| Parameter | Typ    |    | Beschreibung                                        |
-| --------- | ------ |:--:| --------------------------------------------------- |
-| server    | Objekt | -> | Mail server information                             |
-| Ergebnis  | Objekt | <- | [IMAP transporter object](#imap-transporter-object) |
+| Parameter | Typ                |    | Beschreibung                                        |
+| --------- | ------------------ |:--:| --------------------------------------------------- |
+| server    | Objekt             | -> | Mail server information                             |
+| Ergebnis  | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object) |
 <!-- END REF -->
 
 
@@ -132,6 +132,7 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
  $server.password:="XXXXXXXX"
  $server.logFile:="LogTest.txt" //log to save in the Logs folder
 
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $status:=$transporter.checkConnection()
@@ -227,6 +228,7 @@ The `boxInfo` object returned contains the following properties:
 #### Beispiel
 
 ```4d
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $info:=$transporter.getBoxInfo("INBOX")
@@ -281,6 +283,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 
 ```4d
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $boxList:=$transporter.getBoxList()
@@ -337,6 +340,7 @@ Mailbox name delimiter character.
 
 
 ```4d
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $boxList:=$transporter.getBoxList()
@@ -406,8 +410,9 @@ The optional *options* parameter allows you pass an object defining additional i
 You want to get the message with ID = 1:
 
 ```4d
- var $server; $transporter : Object
+ var $server : Object
  var $info; $mail; $boxInfo : Variant
+ var $transporter : 4D.IMAPTransporter
 
  $server:=New object
  $server.host:="imap.gmail.com" //Mandatory
@@ -505,7 +510,8 @@ The optional *options* parameter allows you to define the parts of the messages 
 You want to retrieve the 20 most recent emails without changing their "seen" status:
 
 ```4d
- var $server,$transporter,$boxInfo,$result : Object
+ var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter 
 
  $server:=New object
  $server.host:="imap.gmail.com" //Mandatory
@@ -585,9 +591,10 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 
 ```4d
- var $server; $transporter : Object
+ var $server : Object
  var $boxInfo : Variant
  var $blob : Blob
+ var $transporter : 4D.IMAPTransporter
 
  $server:=New object
  $server.host:="imap.gmail.com"
@@ -685,6 +692,7 @@ The `boxInfo` object returned contains the following properties:
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
  $boxInfo:=$transporter.selectBox("INBOX")
 ```
