@@ -205,7 +205,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 
 ##### 説明
-The `.delete( )` function  <!-- REF #pop3TransporterClass.delete().Summary -->flags the 
+The `.delete( )` function <!-- REF #pop3TransporterClass.delete().Summary -->flags the 
 
 *msgNumber* email for deletion from the POP3 server<!-- END REF -->.
 
@@ -307,7 +307,7 @@ The `boxInfo` object returned contains the following properties:
 
 
 ##### 説明
-The `.getMail()` function  <!-- REF #pop3TransporterClass.getMail().Summary -->returns the 
+The `.getMail()` function <!-- REF #pop3TransporterClass.getMail().Summary -->returns the 
 
 `Email` object corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. This function allows you to locally handle the email contents.
 
@@ -584,7 +584,7 @@ You want to know the total number and size of emails in the mailbox:
 
 
 ##### 説明
-The `.undeleteAll()` function  <!-- REF #pop3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the 
+The `.undeleteAll()` function <!-- REF #pop3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the 
 
 [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->. 
 
