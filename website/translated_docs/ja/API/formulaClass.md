@@ -3,17 +3,19 @@ id: formulaClass
 title: Formulas
 ---
 
-## Formula Object
+## Formula Objects
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native Formula objects that you can encapsulate in object properties:
+The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4d-function-objects) to execute any 4D expression or code expressed as text.
+
+Such formula objects can be encapsulated in object properties:
 
 ```4d
- var $f : Object
+ var $f : 4D.Function
  $f:=New object
  $f.message:=Formula(ALERT("Hello world"))
 ```
 
-Such properties are "object functions", i.e. functions which are bound to their parent object. To execute a function stored in an object property, use the **()** operator after the property name, such as:
+This property is an "object function", i.e. a function which is bound to its parent object. To execute a function stored in an object property, use the **()** operator after the property name, such as:
 
 ```4d
  $f.message() //displays "Hello world"
@@ -25,11 +27,16 @@ Such properties are "object functions", i.e. functions which are bound to their 
  $f["message"]() //displays "Hello world"
 ```
 
-
 Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
 
 ```4d
  $o:=$f.message // $o にはフォーミュラオブジェクトが返されます 
+```
+
+You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:
+
+```4d
+ $f.message.apply() //displays "Hello world"
 ```
 
 ### Passing parameters
@@ -75,6 +82,15 @@ For more convenience, when the formula is made of a single project method, param
 
 Parameters are received within the method, in the order they are specified in the call.
 
+## About 4D.Function objects
+
+A `4D.Function` object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D proposes three kinds of Function objects:
+
+- native functions, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
+- user functions, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
+- formula functions, i.e. functions that can execute any 4D formula.
+
+
 
 ## Summary
 
@@ -103,20 +119,20 @@ Parameters are received within the method, in the order they are specified in th
 </details>
 
 <!-- REF formulaClass.Formula.Syntax -->
-**Formula** ( *formulaExp* : Expression ) : Object<!-- END REF -->
+**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF formulaClass.Formula.Params -->
-| 引数         | タイプ    |    | 説明                                      |
-| ---------- | ------ |:--:| --------------------------------------- |
-| formulaExp | 式      | -> | Formula to be returned as object        |
-| 戻り値        | オブジェクト | <- | Native object encapsulating the formula |
+| 引数         | タイプ         |    | 説明                                        |
+| ---------- | ----------- |:--:| ----------------------------------------- |
+| formulaExp | 式           | -> | Formula to be returned as object          |
+| 戻り値        | 4D.Function | <- | Native function encapsulating the formula |
 <!-- END REF -->
 
 
 #### 説明
 The `Formula` command <!-- REF formulaClass.Formula.Summary -->creates a 
 
-`Formula` object based upon the *formulaExp* expression<!-- END REF -->. 
+`4D Function` object based upon the *formulaExp* expression<!-- END REF -->. 
 
 *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
 
@@ -128,7 +144,7 @@ The returned formula can be called with:
 *   object notation syntax (see [formula object](#formula-object)).
 
 ```4d
- var $f : Object
+ var $f : 4D.Function
  $f:=Formula(1+2)
  $o:=New object("myFormula";$f)
 
@@ -152,7 +168,7 @@ The object created by `Formula` can be saved, for example, in a database field o
 A simple formula:
 
 ```4d
- var $f : Object
+ var $f : 4D.Function
  $f:=Formula(1+2)
 
  var $o : Object
@@ -210,7 +226,8 @@ Using `This`:
 Calling a formula using object notation:
 
 ```4d
- var $calc; $feta; $robot : Object
+ var $feta; $robot : Object
+ var $calc : 4D.Function
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
 
@@ -241,18 +258,18 @@ Calling a formula using object notation:
 </details>
 
 <!-- REF formulaClass.Formula from string.Syntax -->
-**Formula from string**( *formulaString* : Text ) : Object<!-- END REF -->
+**Formula from string**( *formulaString* : Text ) : 4D.Formula<!-- END REF -->
 
 <!-- REF formulaClass.Formula from string.Params -->
-| 引数            | タイプ    |    | 説明                                      |
-| ------------- | ------ |:--:| --------------------------------------- |
-| formulaString | テキスト   | -> | Text formula to be returned as object   |
-| 戻り値           | オブジェクト | <- | Native object encapsulating the formula |
+| 引数            | タイプ        |    | 説明                                      |
+| ------------- | ---------- |:--:| --------------------------------------- |
+| formulaString | テキスト       | -> | Text formula to be returned as object   |
+| 戻り値           | 4D.Formula | <- | Native object encapsulating the formula |
 <!-- END REF -->
 
 
 #### 説明
-The `Formula from string` command <!-- REF formulaClass.Formula from string.Summary -->creates a formula object based upon the 
+The `Formula from string` command <!-- REF formulaClass.Formula from string.Summary -->creates a 4D.Formula object based upon the 
 
 *formulaString*<!-- END REF -->.  
 
@@ -268,7 +285,7 @@ The following code will create a dialog accepting a formula in text format:
 
 ```4d
  var $textFormula : Text
- var $f : Object
+ var $f : 4D.Formula
  $textFormula:=Request("Please type a formula")
  If(ok=1)
     $f:=Formula from string($textFormula)
@@ -301,7 +318,7 @@ The following code will create a dialog accepting a formula in text format:
 </details>
 
 <!-- REF #formulaClass.apply().Syntax -->
-**.apply**( ) : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
+**.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #formulaClass.apply().Params -->
 | 引数            | タイプ    |    | 説明                                                                      |
@@ -313,7 +330,7 @@ The following code will create a dialog accepting a formula in text format:
 
 
 #### 説明
-The `.apply( )` function <!-- REF #formulaClass.apply().Summary -->executes the 
+The `.apply()` function <!-- REF #formulaClass.apply().Summary -->executes the 
 
 `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the 
 
@@ -329,6 +346,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 #### 例題 1
 
 ```4d
+ var $f : 4D.Formula
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
@@ -339,7 +357,8 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 #### 例題 2
 
 ```4d
- var $calc; $feta; $robot : Object
+ var $calc : 4D.Formula
+ var $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
 
@@ -364,7 +383,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 </details>
 
 <!-- REF #formulaClass.call().Syntax -->
-**.call**( ) : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) -> any 
+**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) -> any 
 <!-- END REF -->
 
 <!-- REF #formulaClass.call().Params -->
@@ -377,7 +396,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 
 #### 説明
-The `.call( )` function <!-- REF #formulaClass.call().Summary -->executes the 
+The `.call()` function <!-- REF #formulaClass.call().Summary -->executes the 
 
 `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the 
 
@@ -392,13 +411,12 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 #### 例題 1
 
 ```4d
+ var $f : 4D.Function
  $f:=Formula(Uppercase($1))
  $result:=$f.call(Null;"hello") // returns "HELLO"
 ```
 
 #### 例題 2
-
-To stop the database web server:
 
 ```4d
  $o:=New object("value";50)
@@ -434,8 +452,8 @@ This property is **read-only**.
 #### 例題
 
 ```4d
- var $of : Object
- var $tf : Test
+ var $of : 4D.Function
+ var $tf : Text
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"
 ``` 
