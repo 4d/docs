@@ -204,7 +204,7 @@ This property is **read-write**.
 
 #### Description
 
-The `.signaled` property <!-- REF #signalClass.signaled.Summary --> contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
 This property is **read-only**. 
 

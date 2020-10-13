@@ -118,6 +118,7 @@ You must pay attention to the following conversion issues:
 
 #### Example 1
 
+
 You want to create a new empty collection and assign it to a 4D collection variable:
 
 ```4d
@@ -985,6 +986,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 #### Description
+
 The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
 
 >This function modifies the original collection.
@@ -1640,6 +1642,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *	in *$N...* (any type): *paramN...*
 
 *methodName* sets the following parameter(s):
+
 
 *	*$1.result* (any type): new transformed value to add to the resulting collection
 *	*$1.stop* (boolean): **true** to stop the method callback. The returned value is the last calculated.
@@ -2326,7 +2329,7 @@ With the following ***Flatten*** method:
 
 #### Description
 
-The `.remove()` function <!-- REF #collection.remove().Summary --> removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
 
 >This function modifies the original collection.
 

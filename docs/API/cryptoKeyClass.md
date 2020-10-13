@@ -63,7 +63,7 @@ ASSERT($status.success)
 |cryptoKey|Object|<-|Object encapsulating an encryption key pair|
 
 
-The `4D.CryptoKey.new()` function  <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
@@ -90,6 +90,7 @@ The returned `cryptoKey` object encapsulates an encryption key pair. It is a sha
 </details>
 
 <!-- REF #cryptokey.curve.Syntax -->**.curve** : Text<!-- END REF -->
+
 
 
 
