@@ -211,7 +211,7 @@ This property is **read-write**.
 **.signaled** : Boolean<!-- END REF -->
 
 #### Beschreibung
-The `.signaled` property <!-- REF #signalClass.signaled.Summary --> contains the current state of the 
+The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the 
 
 `Signal` object<!-- END REF -->. When the signal is created, 
 
