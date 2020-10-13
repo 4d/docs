@@ -287,7 +287,7 @@ The SMTP connection is automatically closed:
 
 
 #### 説明
-The `.send()` function  <!-- REF #smtpTransporterClass.send().Summary -->sends the 
+The `.send()` function <!-- REF #smtpTransporterClass.send().Summary -->sends the 
 
 [*mail* object](emailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
 > The `transporter` object must have already been created using the `SMTP New transporter` command.
