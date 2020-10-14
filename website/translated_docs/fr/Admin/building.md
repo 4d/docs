@@ -96,7 +96,7 @@ Lorsque vous cochez cette option, tous les dossiers liés au projet sont recopi�
 
 Génère un composant compilé à partir de la structure.
 
-Un composant est un fichier de structure 4D standard dans lequel des fonctionnalités spécifiques ont été développées. Once the component has been configured and installed in another 4D project (the host application project), its functionalities are accessible from the host project.
+Un composant est un fichier de structure 4D standard dans lequel des fonctionnalités spécifiques ont été développées. Une fois le composant configuré et installé dans un autre projet 4D (le projet d'application hôte), ses fonctionnalités sont accessibles depuis le projet hôte.
 
 If you have named your application, *MyComponent*, 4D will create a *Components* folder containing *MyComponent.4dbase* folder:
 
