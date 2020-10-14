@@ -3,9 +3,9 @@ id: collectionClass
 title: Collections
 ---
 
-The Collection class manages [Collection](../Concepts/collection.html) type variables.
+La classe Collection gère les variables de type [Collection](../Concepts/collection.html).
 
-A collection is initialized with:
+Une collection est initialisée avec :
 
 
 
@@ -18,12 +18,11 @@ A collection is initialized with:
 ## Exemple
 
 ```4d
- var $colVar : Collection //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ var $colVar : Collection //création d'une variable 4D de type collection. $colVar:=New $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
 ```
 
 
-## Summary
+## Sommaire
 
 
 
@@ -159,10 +158,10 @@ A collection is initialized with:
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF collection.New collection.Params -->
-| Paramètres | Type                                                                    |    | Description           |
-| ---------- | ----------------------------------------------------------------------- |:--:| --------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
-| Résultat   | Collection                                                              | <- | New collection        |
+| Paramètres | Type                                                                       |    | Description             |
+| ---------- | -------------------------------------------------------------------------- |:--:| ----------------------- |
+| value      | Numérique, Texte, Date, Heure, Booléen, Objet, Collection, Image, Pointeur | -> | Valeur(s) de collection |
+| Résultat   | Collection                                                                 | <- | New collection          |
 <!-- END REF -->
 
 
@@ -2639,12 +2638,12 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 #### Description
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided 
+La fonction `.some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode 
 
-*methodName* method.
+*methodName* fournie.
 
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **True** for every element fulfilling the test.
+In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). Cette méthode reçoit un `objet` comme premier paramètre ($1) et doit définir *$1.result* sur **True** pour chaque élément du test.
 
 *methodName* receives the following parameters:
 
@@ -2654,15 +2653,15 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* sets the following parameter(s):
 
-*   *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
+*   *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
-In any case, at the point where `.some()` function encounters the first collection element returning true in *$1.result*, it stops calling *methodName* and returns **true**.
+Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de collection retournant true dans *$1.result*, elle arrête d'appeler *methodName* et retourne **true**.
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Par défaut, `.some()` teste toute la collection. Vous pouvez éventuellement passer l'index d'un élément à partir duquel vous pouvez démarrer le test dans *startFrom*.
 
-*   If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection.
+*   Si *startFrom* >= la longueur de la collection, **False** est retourné, ce qui signifie que la collection n'est pas testée.
+*   Si *startFrom* < 0, il est considéré comme le décalage depuis la fin de la collection.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
@@ -2715,17 +2714,17 @@ With the following *NumberGreaterThan0* method:
 | ---------- | ---------- |:--:| ------------------------------------------------ |
 | methodName | Texte      | -> | Name of method used to specify the sorting order |
 | extraParam | any        | -> | Parameter(s) for the method                      |
-| Résultat   | Collection | <- | Original collection sorted                       |
+| Résultat   | Collection | <- | Collection d'origine triée                       |
 <!-- END REF -->
 
 
 #### Description
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
+La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments de la collection d'origine<!-- END REF --> et retourne également la collection triée.
 > This function modifies the original collection.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Elements are sorted by default in ascending order, according to their type.
+Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
+Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir, dans *methodName*, une méthode de comparaison qui compare deux valeurs et retourne **true** dans *$1.result* si la première valeur est inférieure à la deuxième valeur. You can provide additional parameters to *methodName* if necessary.
 
 *   *methodName* will receive the following parameters:
     *   $1 (object), where:
@@ -2769,12 +2768,12 @@ If the collection contains elements of different types, they are first grouped b
 ```4d
  var $col; $col2; $col3 : Collection
  $col:=New collection(33;4;66;1111;222)
- $col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
- $col3:=$col.sort("numberOrder") //alphabetical sort: [1111,222,33,4,66]
+ $col2:=$col.sort() //tri numérique : [4,33,66,222,1111]
+ $col3:=$col.sort("numberOrder") //tri alphabétique : [1111,222,33,4,66]
 ```
 
 ```4d
-  //numberOrder project method
+  //méthode projet numberOrder
  var $1 : Object
  $1.result:=String($1.value)<String($1.value2)
 ``` 
@@ -2800,18 +2799,18 @@ If the collection contains elements of different types, they are first grouped b
 | Paramètres   | Type  |    | Description                                     |
 | ------------ | ----- |:--:| ----------------------------------------------- |
 | propertyPath | Texte | -> | Object property path to be used for calculation |
-| Résultat     | Réel  | <- | Sum of collection values                        |
+| Résultat     | Réel  | <- | Somme des valeurs de collection                 |
 <!-- END REF -->
 
 
 #### Description
-The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+La fonction `.sum()` <!-- REF #collection.sum().Summary -->retourne la somme de toutes les valeurs de l'instance de collection<!-- END REF -->.
 
 Only numerical elements are taken into account for the calculation (other element types are ignored).
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
 
-`.sum()` returns 0 if:
+`.sum()` retourne 0 si :
 
 *   the collection is empty,
 *   the collection does not contain numerical elements,
@@ -2858,20 +2857,20 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 **.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.unshift().Params -->
-| Paramètres | Type                                   |    | Description                                           |
-| ---------- | -------------------------------------- |:--:| ----------------------------------------------------- |
-| value      | Text, Number, Object, Collection, Date | -> | Value(s) to insert at the beginning of the collection |
-| Résultat   | Réel                                   | <- | Collection containing added element(s)                |
+| Paramètres | Type                                      |    | Description                                   |
+| ---------- | ----------------------------------------- |:--:| --------------------------------------------- |
+| value      | Texte, Numérique, Objet, Collection, Date | -> | Valeur(s) à insérer au début de la collection |
+| Résultat   | Réel                                      | <- | Collection contenant des éléments ajoutés     |
 <!-- END REF -->
 
 
 #### Description
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given 
+La fonction `.unshift()` <!-- REF #collection.unshift().Summary -->insère la ou les 
 
-*value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+*valeur(s)* données au début de la collection <!-- END REF -->et retourne la collection modifiée.
 > This function modifies the original collection.
 
-If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.
+Si plusieurs valeurs sont passées, elles sont insérées toutes en même temps, ce qui signifie qu'elles apparaissent dans la collection résultante dans le même ordre que dans la liste d'arguments.
 
 
 #### Exemple
