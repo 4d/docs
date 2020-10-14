@@ -2653,15 +2653,15 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* sets the following parameter(s):
 
-*   *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
+*   *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
-In any case, at the point where `.some()` function encounters the first collection element returning true in *$1.result*, it stops calling *methodName* and returns **true**.
+Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de collection retournant true dans *$1.result*, elle arrête d'appeler *methodName* et retourne **true**.
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Par défaut, `.some()` teste toute la collection. Vous pouvez éventuellement passer l'index d'un élément à partir duquel vous pouvez démarrer le test dans *startFrom*.
 
-*   If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection.
+*   Si *startFrom* >= la longueur de la collection, **False** est retourné, ce qui signifie que la collection n'est pas testée.
+*   Si *startFrom* < 0, il est considéré comme le décalage depuis la fin de la collection.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
