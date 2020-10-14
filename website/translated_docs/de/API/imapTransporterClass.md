@@ -48,6 +48,8 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 
 
+
+
 |                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
@@ -55,8 +57,8 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.copy.Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.copy.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.delete.Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.delete.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.copy().Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.copy().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.delete().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getDelimiter().Syntax -->](#getdelimiter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getDelimiter().Summary -->|
@@ -65,9 +67,10 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Summary -->|
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.move.Syntax -->](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.move.Summary -->|
-| [<!-- INCLUDE #transporter.numToID.Syntax -->](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.numToID.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.move().Syntax -->](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.move().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.numToID().Syntax -->](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.numToID().Summary -->|
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.searchMails().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.searchMails().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
@@ -1071,20 +1074,101 @@ SearchKey3 = FLAGGED DRAFT
 > Matching is usually not case-sensitive
 
 - If the *searchCriteria* is a null string, the search will be equivalent to a “select all”.
-- If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys. *searchCriteria = FLAGGED FROM "SMITH"* ... returns all messages with \Flagged flag set AND sent by Smith.
-- You can use the **OR** or **NOT** operators as follows: *searchCriteria = OR SEEN FLAGGED* ... returns all messages with \Seen flag set OR \Flagged flag set *searchCriteria = NOT SEEN* ... returns all messages with \Seen flag not set . *searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...* ... returns message whose content-type header contains “Mixed” and does not contain “Text”. *searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"* ... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+- If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
+
+```
+searchCriteria = FLAGGED FROM "SMITH"
+```
+... returns all messages with \Flagged flag set AND sent by Smith.
+- You can use the **OR** or **NOT** operators as follows:
+
+```
+searchCriteria = OR SEEN FLAGGED
+```
+... returns all messages with \Seen flag set OR \Flagged flag set
+
+```
+searchCriteria = NOT SEEN
+```
+... returns all messages with \Seen flag not set.
+
+```
+searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
+```
+... returns message whose content-type header contains “Mixed” and does not contain “Text”.
+
+```
+searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
+```
+... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
 
 As concerns the last two examples, notice that the result of the search is different when you remove the parentheses of the first search key list.
 
-- The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters. *searchCriteria = CHARSET "ISO-8859" BODY "Help"* ... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.
+- The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.
+
+```
+searchCriteria = CHARSET "ISO-8859" BODY "Help"
+```
+... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.
 
 
+#### Search value types
+
+Search-keys may request the value to search for:
+
+- **Search-keys with a date value**: the date is a string that must be formatted as follows: *date-day+"-"+date-month+"-"+date-year* where date-day indicates the number of the day of the month (max. 2 characters), date-month indicates the name of the month (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) and date-year indicates the year (4 characters). Example: `searchCriteria = SENTBEFORE 1-Feb-2020` (a date does not usually need to be quoted since it does not contain any special characters)
+
+- **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. Matching is not case-sensitive.
+
+- **Search-keys with a field-name value**: the field-name is the name of a header field. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+
+- **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
+
+- **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+
+
+#### Authorized search-keys
+
+**ALL**: All messages in the mailbox.  
+**ANSWERED**: Messages with the \Answered flag set.  
+**UNANSWERED**: Messages that do not have the \Answered flag set.  
+**DELETED**: Messages with the \Deleted flag set.  
+**UNDELETED**: Messages that do not have the \Deleted flag set.  
+**DRAFT**: Messages with the \Draft flag set.  
+**UNDRAFT**: Messages that do not have the \Draft flag set.  
+**FLAGGED**: Messages with the \Flagged flag set.  
+**UNFLAGGED**: Messages that do not have the \Flagged flag set.  
+**RECENT**: Messages that have the \Recent flag set.  
+**OLD**: Messages that do not have the \Recent flag set.  
+**SEEN**: Messages that have the \Seen flag set.  
+**UNSEEN**: Messages that do not have the \Seen flag set.  
+**NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.  
+**KEYWORD** <flag>: Messages with the specified keyword set.  
+**UNKEYWORD** <flag>: Messages that do not have the specified keyword set.  
+**BEFORE** <date>: Messages whose internal date is earlier than the specified date.  
+**ON** <date>: Messages whose internal date is within the specified date.  
+**SINCE** <date>: Messages whose internal date is within or later than the specified date.  
+**SENTBEFORE** <date>: Messages whose Date header is earlier than the specified date.  
+**SENTON** <date>: Messages whose Date header is within the specified date.  
+**SENTSINCE** <date>: Messages whose Date header is within or later than the specified date.  
+**TO** <string>: Messages that contain the specified string in the TO header.  
+**FROM** <string>: Messages that contain the specified string in the FROM header.  
+**CC** <string>: Messages that contain the specified string in the CC header.  
+**BCC** <string>: Messages that contain the specified string in the BCC header.  
+**SUBJECT** <string>: Messages that contain the specified string in the Subject header.  
+**BODY** <string>: Messages that contain the specified string in the message body.  
+**TEXT** <string>: Messages that contain the specified string in the header or in the message body.  
+**HEADER** <field-name> <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
+**UID** <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.  
+**LARGER** <n>: Messages with a size larger than the specified number of bytes.  
+**SMALLER** <n>: Messages with a size smaller than the specified number of bytes.  
+**NOT** <search-key>: Messages that do not match the specified search key.  
+**ODER** <search-key1> <search-key2>: Messages that match either search key.  
 
 
 <!-- END REF -->
 
 ---
-
 <!-- REF imapTransporterClass.selectBox().Desc -->
 ## .selectBox()
 
