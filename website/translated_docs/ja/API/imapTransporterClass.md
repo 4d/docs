@@ -40,13 +40,23 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 
 
-|                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+
+
+
+
+
+
+
+|                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
 | [<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.copy.Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.copy.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.delete.Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.delete.Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getDelimiter().Syntax -->](#getdelimiter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getDelimiter().Summary -->|
@@ -55,6 +65,8 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getMIMEAsBlob().Summary -->|
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.move.Syntax -->](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.move.Summary -->|
+| [<!-- INCLUDE #transporter.numToID.Syntax -->](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.numToID.Summary -->|
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
@@ -70,13 +82,13 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 </details>
 
 <!-- REF imapTransporterClass.IMAP New transporter.Syntax -->
-**IMAP New transporter**( *server* : Object ) : Object<!-- END REF -->
+**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF imapTransporterClass.IMAP New transporter.Params -->
-| 引数     | タイプ    |    | 説明                                                  |
-| ------ | ------ |:--:| --------------------------------------------------- |
-| server | オブジェクト | -> | Mail server information                             |
-| 戻り値    | オブジェクト | <- | [IMAP transporter object](#imap-transporter-object) |
+| 引数     | タイプ                |    | 説明                                                  |
+| ------ | ------------------ |:--:| --------------------------------------------------- |
+| server | オブジェクト             | -> | Mail server information                             |
+| 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object) |
 <!-- END REF -->
 
 
@@ -103,8 +115,8 @@ In the *server* parameter, pass an object containing the following properties:
 
 
 
-| *server*                                                                                                                                                                                                           | Default value (if omitted)                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                            | Default value (if omitted)                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->| 300                                                                 |
@@ -132,6 +144,7 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
  $server.password:="XXXXXXXX"
  $server.logFile:="LogTest.txt" //log to save in the Logs folder
 
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $status:=$transporter.checkConnection()
@@ -170,7 +183,7 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 
 
 #### 説明
-The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.checkConnectionDelay.Summary -->  the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the 
+The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the 
 
 *server* object, the value is 300.
 > **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
@@ -179,6 +192,218 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
+---
+
+<!-- REF imapTransporterClass.copy().Desc -->
+## .copy()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R5 | 追加 |
+</details>
+
+<!-- REF #imapTransporterClass.copy().Syntax -->
+**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.copy().Params -->
+| 引数             | タイプ    |    | 説明                                               |
+| -------------- | ------ |:--:| ------------------------------------------------ |
+| msgsIDs        | コレクション | -> | Collection of message unique IDs (strings)       |
+| allMsgs        | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
+| destinationBox | テキスト   | -> | Mailbox to receive copied messages               |
+| 戻り値            | オブジェクト | <- | Status of the copy operation                     |
+<!-- END REF -->
+
+
+#### 説明
+The `.copy()` function <!-- REF #imapTransporterClass.copy().Summary -->copies the messages defined by 
+
+*msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+
+You can pass:
+
+- in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
+- in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
+
+The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| プロパティ      |                         | タイプ    | 説明                                                                                       |
+| ---------- | ----------------------- | ------ | ---------------------------------------------------------------------------------------- |
+| success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
+| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
+| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
+| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+
+
+
+
+#### 例題 1
+
+To copy a selection of messages:
+
+
+```4d
+ var $server;$boxInfo;$status : Object
+ var $mailIds : Collection
+ var $transporter : 4D.IMAPTransporter
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("inbox")
+
+  //get collection of message unique IDs
+ $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
+
+  // copy found messages to the "documents" mailbox
+ $status:=$transporter.copy($mailIds;"documents")
+```
+
+#### 例題 2
+
+To copy all messages in the current mailbox:
+
+
+```4d
+ var $server;$boxInfo;$status : Object
+ var $transporter : 4D.IMAPTransporter
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("inbox")
+
+  // copy all messages to the "documents" mailbox
+ $status:=$transporter.copy(IMAP all;"documents")
+```
+
+<!-- END REF -->
+
+---
+
+<!-- REF imapTransporterClass.delete().Desc -->
+## .delete()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R5 | 追加 |
+</details>
+
+<!-- REF #imapTransporterClass.delete().Syntax -->
+**.delete**( *msgsIDs* : Collection ) : Object<br>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.delete().Params -->
+| 引数      | タイプ    |    | 説明                                               |
+| ------- | ------ |:--:| ------------------------------------------------ |
+| msgsIDs | コレクション | -> | Collection of message unique IDs (strings)       |
+| allMsgs | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
+| 戻り値     | オブジェクト | <- | Status of the delete operation                   |
+<!-- END REF -->
+
+
+#### 説明
+The `.delete()` function <!-- REF #imapTransporterClass.delete().Summary -->sets the "delete" flag for the messages defined in 
+
+`msgsIDs` or `allMsgs`<!-- END REF -->.
+
+You can pass:
+
+- in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
+- in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
+
+Executing this function does not actually remove messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages will be deleted from the IMAP server only by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| プロパティ      |                         | タイプ    | 説明                                                                                       |
+| ---------- | ----------------------- | ------ | ---------------------------------------------------------------------------------------- |
+| success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
+| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
+| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
+| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+
+
+
+
+#### 例題 1
+
+To delete a selection of messages:
+
+
+```4d
+ var $server;$boxInfo;$status : Object
+ var $mailIds : Collection
+ var $transporter : 4D.IMAPTransporter
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("Inbox")
+
+  //get collection of message unique IDs
+ $mailIds:=$transporter.searchMails("subject \"Reports\"")
+
+  // Delete selected messages
+ $status:=$transporter.delete($mailIds)
+```
+
+#### 例題 2
+
+To delete all messages in the current mailbox:
+
+
+```4d
+ var $server;$boxInfo;$status : Object
+ var $transporter : 4D.IMAPTransporter
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("Junk Email")
+
+  // delete all messages in the current mailbox
+ $status:=$transporter.delete(IMAP all)
+```
+
+<!-- END REF -->
 
 ---
 
@@ -186,13 +411,14 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 ## .getBoxInfo()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| バージョン  | 内容               |
+| ------ | ---------------- |
+| v18 R5 | name is optional |
+| v18 R4 | 追加               |
 </details>
 
 <!-- REF #imapTransporterClass.getBoxInfo().Syntax -->
-**.getBoxInfo**( *name* : Text ) : Object<!-- END REF -->
+**.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxInfo().Params -->
 | 引数   | タイプ    |    | 説明                  |
@@ -203,13 +429,13 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 
 
 #### 説明
-The `.getBoxInfo()` function  <!-- REF #imapTransporterClass.getBoxInfo().Summary -->returns a 
+The `.getBoxInfo()` function <!-- REF #imapTransporterClass.getBoxInfo().Summary -->returns a 
 
 `boxInfo` object corresponding to the mailbox *name*<!-- END REF -->. This function returns the same information as 
 
-`.selectBox()` without changing the current mailbox.
+[`.selectBox()`](#selectbox) without changing the current mailbox.
 
-In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) command.
+In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
 
 **Returned object**
@@ -227,6 +453,7 @@ The `boxInfo` object returned contains the following properties:
 #### 例題
 
 ```4d
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $info:=$transporter.getBoxInfo("INBOX")
@@ -258,7 +485,7 @@ The `boxInfo` object returned contains the following properties:
 
 
 #### 説明
-The `.getBoxList()` function  <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
+The `.getBoxList()` function <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
 
 #### 戻り値
 
@@ -281,6 +508,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 
 ```4d
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $boxList:=$transporter.getBoxList()
@@ -317,7 +545,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 
 #### 説明
-The `.getDelimiter( )` function  <!-- REF #imapTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
+The `.getDelimiter( )` function <!-- REF #imapTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
 
 The delimiter is a character which can be used to:
 
@@ -337,6 +565,7 @@ Mailbox name delimiter character.
 
 
 ```4d
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $boxList:=$transporter.getBoxList()
@@ -377,7 +606,7 @@ Mailbox name delimiter character.
 
 
 #### 説明
-The `.getMail()` function  <!-- REF #imapTransporterClass.getMail().Summary -->returns the 
+The `.getMail()` function <!-- REF #imapTransporterClass.getMail().Summary -->returns the 
 
 `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. This function allows you to locally handle the email contents.
 
@@ -406,8 +635,9 @@ The optional *options* parameter allows you pass an object defining additional i
 You want to get the message with ID = 1:
 
 ```4d
- var $server; $transporter : Object
+ var $server : Object
  var $info; $mail; $boxInfo : Variant
+ var $transporter : 4D.IMAPTransporter
 
  $server:=New object
  $server.host:="imap.gmail.com" //Mandatory
@@ -435,7 +665,7 @@ You want to get the message with ID = 1:
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
 | ------ | -- |
-| v18 R4 | 追加 |
+| v18 R5 | 追加 |
 </details>
 
 <!-- REF #imapTransporterClass.getMails().Syntax -->
@@ -453,13 +683,13 @@ You want to get the message with ID = 1:
 
 
 #### 説明
-The `.getMails()` function <!-- REF #imapTransporterClass.getMails().Summary -->an object containing a collection of 
+The `.getMails()` function <!-- REF #imapTransporterClass.getMails().Summary -->returns an object containing a collection of 
 
-`Email` objects.<!-- END REF -->.
+`Email` objects<!-- END REF -->.
 
 **First Syntax:**
 
-***.getMails(ids{;options}) -> result***
+***.getMails( ids { ; options } ) -> result***
 
 The first syntax allows you to retrieve messages based on their IDs.
 
@@ -469,7 +699,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 **Second syntax:**
 
- ***.getMails(startMsg;endMsg{;options}) -> result***
+ ***.getMails( startMsg ; endMsg { ; options } ) -> result***
 
 The second syntax allows you to retrieve messages based on a sequential range. The values passed represent the position of the messages in the mailbox.
 
@@ -497,7 +727,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 | プロパティ    | タイプ    | 説明                                                                                                                                 |
 | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 | list     | コレクション | Collection of [`Email` objects](emailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
-| notFound | コレクション | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul><br>An empty collection is returned if all messages are found.             |
+| notFound | コレクション | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                       |
 
 
 #### 例題
@@ -505,7 +735,8 @@ The optional *options* parameter allows you to define the parts of the messages 
 You want to retrieve the 20 most recent emails without changing their "seen" status:
 
 ```4d
- var $server,$transporter,$boxInfo,$result : Object
+ var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter 
 
  $server:=New object
  $server.host:="imap.gmail.com" //Mandatory
@@ -585,9 +816,10 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 
 ```4d
- var $server; $transporter : Object
+ var $server : Object
  var $boxInfo : Variant
  var $blob : Blob
+ var $transporter : 4D.IMAPTransporter
 
  $server:=New object
  $server.host:="imap.gmail.com"
@@ -620,8 +852,236 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 ---
 
+<!-- REF imapTransporterClass.move().Desc -->
+## .move()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R5 | 追加 |
+</details>
+
+<!-- REF #imapTransporterClass.move().Syntax -->
+**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.move().Params -->
+| 引数             | タイプ    |    | 説明                                               |
+| -------------- | ------ |:--:| ------------------------------------------------ |
+| msgsIDs        | コレクション | -> | Collection of message unique IDs (strings)       |
+| allMsgs        | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
+| destinationBox | テキスト   | -> | Mailbox to receive moved messages                |
+| 戻り値            | オブジェクト | <- | Status of the move operation                     |
+<!-- END REF -->
+
+
+#### 説明
+The `.move()` function <!-- REF #imapTransporterClass.move().Summary -->moves the messages defined by 
+
+*msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+
+You can pass:
+
+- in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
+- in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
+
+The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.
+
+> This function is only supported by IMAP servers compliant with RFC [8474](https://tools.ietf.org/html/rfc8474).
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| プロパティ      |                         | タイプ    | 説明                                                                                       |
+| ---------- | ----------------------- | ------ | ---------------------------------------------------------------------------------------- |
+| success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
+| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
+| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
+| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+
+
+
+
+#### 例題 1
+
+To move a selection of messages:
+
+```4d
+ var $server;$boxInfo;$status : Object
+ var $mailIds : Collection
+ var $transporter : 4D.IMAPTransporter
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("inbox")
+
+  //get collection of message unique IDs
+ $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
+
+  // Move found messages from the current mailbox to the "documents" mailbox
+ $status:=$transporter.move($mailIds;"documents")
+```
+
+#### 例題 2
+
+To move all messages in the current mailbox:
+
+
+```4d
+ var $server;$boxInfo;$status : Object
+ var $transporter : 4D.IMAPTransporter
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("inbox")
+
+  // move all messages in the current mailbox to the "documents" mailbox
+ $status:=$transporter.move(IMAP all;"documents")
+```
+
+<!-- END REF -->
+
+---
+
+<!-- REF imapTransporterClass.numToID().Desc -->
+## .numToID()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R5 | 追加 |
+</details>
+
+<!-- REF #imapTransporterClass.numToID().Syntax -->
+**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
+
+<!-- REF #imapTransporterClass.numToID().Params -->
+| 引数       | タイプ    |    | 説明                                   |
+| -------- | ------ |:--:| ------------------------------------ |
+| startMsg | 整数     | -> | Sequence number of the first message |
+| endMsg   | 整数     | -> | Sequence number of the last message  |
+| 戻り値      | コレクション | <- | Collection of unique IDs             |
+<!-- END REF -->
+
+
+#### 説明
+The `.numToID()` function <!-- REF #imapTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by 
+
+*startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
+
+In the *startMsg* parameter, pass an integer value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+
+In the *endMsg* parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (*endMsg* <= 0), the last message of the mailbox will be used as the end of the sequence.
+
+
+#### 戻り値
+
+The function returns a collection of strings (unique IDs).
+
+#### 例題
+
+
+```4d
+ var $transporter : 4D.IMAPTransporter
+ var $server;$boxInfo;$status : Object
+ var $mailIds : Collection
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("inbox")
+
+  //get IDs for 5 last messages received
+ $mailIds:=$transporter.numToID(($boxInfo.mailCount-5);$boxInfo.mailCount)
+
+  //delete the messages from the current mailbox
+ $status:=$transporter.delete($mailIds)
+```
+
+<!-- END REF -->
+
+
+---
+
 
 <!-- INCLUDE transporter.port.Desc -->
+
+---
+
+<!-- REF imapTransporterClass.searchMails().Desc -->
+## .searchMails()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R5 | 追加 |
+</details>
+
+<!-- REF #imapTransporterClass.searchMails().Syntax -->
+**.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
+
+<!-- REF #imapTransporterClass.searchMails().Params -->
+| 引数             | タイプ    |    | 説明                            |
+| -------------- | ------ |:--:| ----------------------------- |
+| searchCriteria | テキスト   | -> | Search criteria               |
+| 戻り値            | コレクション | <- | Collection of message numbers |
+<!-- END REF -->
+
+
+#### 説明
+
+> This function is based upon the specification for the [IMAP protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
+The `.searchMails()` function <!-- REF #imapTransporterClass.searchMails().Summary -->searches for messages that match the given 
+
+*searchCriteria* in the current mailbox<!-- END REF -->. 
+
+*searchCriteria* consists of one or more search keys.
+
+*searchCriteria* is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. A search key may be a single or multiple items. たとえば:
+
+```
+SearchKey1 = FLAGGED
+SearchKey2 = NOT FLAGGED
+SearchKey3 = FLAGGED DRAFT
+```
+
+> Matching is usually not case-sensitive
+
+- If the *searchCriteria* is a null string, the search will be equivalent to a “select all”.
+- If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys. *searchCriteria = FLAGGED FROM "SMITH"* ... returns all messages with \Flagged flag set AND sent by Smith.
+- You can use the **OR** or **NOT** operators as follows: *searchCriteria = OR SEEN FLAGGED* ... returns all messages with \Seen flag set OR \Flagged flag set *searchCriteria = NOT SEEN* ... returns all messages with \Seen flag not set . *searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...* ... returns message whose content-type header contains “Mixed” and does not contain “Text”. *searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"* ... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+
+As concerns the last two examples, notice that the result of the search is different when you remove the parentheses of the first search key list.
+
+- The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters. *searchCriteria = CHARSET "ISO-8859" BODY "Help"* ... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.
+
+
+
+
+<!-- END REF -->
 
 ---
 
@@ -685,6 +1145,7 @@ The `boxInfo` object returned contains the following properties:
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
  $boxInfo:=$transporter.selectBox("INBOX")
 ```

@@ -69,13 +69,13 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 </details>
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Syntax -->
-**POP3 New transporter**( *server* : Object ) : Object<!-- END REF -->
+**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
-| 引数     | タイプ    |    | 説明                                                  |
-| ------ | ------ |:--:| --------------------------------------------------- |
-| server | オブジェクト | -> | Mail server information                             |
-| 戻り値    | オブジェクト | <- | [POP3 transporter object](#pop3-transporter-object) |
+| 引数     | タイプ                |    | 説明                                                  |
+| ------ | ------------------ |:--:| --------------------------------------------------- |
+| server | オブジェクト             | -> | Mail server information                             |
+| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
 
@@ -129,6 +129,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
  $server.password:="XXXXXXXX"
  $server.logFile:="LogTest.txt" //log to save in the Logs folder
 
+ var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
 
  $status:=$transporter.checkConnection()
@@ -204,7 +205,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 
 ##### 説明
-The `.delete( )` function  <!-- REF #pop3TransporterClass.delete().Summary -->flags the 
+The `.delete( )` function <!-- REF #pop3TransporterClass.delete().Summary -->flags the 
 
 *msgNumber* email for deletion from the POP3 server<!-- END REF -->.
 
@@ -306,7 +307,7 @@ The `boxInfo` object returned contains the following properties:
 
 
 ##### 説明
-The `.getMail()` function  <!-- REF #pop3TransporterClass.getMail().Summary -->returns the 
+The `.getMail()` function <!-- REF #pop3TransporterClass.getMail().Summary -->returns the 
 
 `Email` object corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. This function allows you to locally handle the email contents.
 
@@ -398,6 +399,7 @@ The method returns **Null** if:
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
+ var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
 
   //message info
@@ -464,6 +466,7 @@ You want to know the total number and size of emails in the mailbox:
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
+ var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
 
  C_COLLECTION($mailInfo)
@@ -522,9 +525,10 @@ The method returns an empty BLOB if:
 You want to know the total number and size of emails in the mailbox:
 
 ```4d
- var $server; $transporter : Object
+ var $server : Object
  var $mailInfo : Collection
  var $blob : Blob
+ var $transporter : 4D.POP3Transporter
 
  $server:=New object
  $server.host:="pop.gmail.com"
@@ -580,7 +584,7 @@ You want to know the total number and size of emails in the mailbox:
 
 
 ##### 説明
-The `.undeleteAll()` function  <!-- REF #pop3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the 
+The `.undeleteAll()` function <!-- REF #pop3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the 
 
 [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->. 
 

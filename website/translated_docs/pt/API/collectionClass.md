@@ -194,6 +194,7 @@ You must pay attention to the following conversion issues:
 
 #### Example 1
 
+
 You want to create a new empty collection and assign it to a 4D collection variable:
 
 ```4d
@@ -1705,6 +1706,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* sets the following parameter(s):
 
+
 *   *$1.result* (any type): new transformed value to add to the resulting collection
 *   *$1.stop* (boolean): **true** to stop the method callback. The returned value is the last calculated.
 
@@ -2387,7 +2389,7 @@ With the following ***Flatten*** method:
 
 
 #### Description
-The `.remove()` function <!-- REF #collection.remove().Summary --> removes one or more element(s) from the specified 
+The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified 
 
 *index* position in the collection and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.

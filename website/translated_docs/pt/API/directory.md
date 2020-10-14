@@ -90,7 +90,7 @@ This property is **read-only**.
 
 
 #### Description
-The `.extension` property  <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
 
 This property is **read-only**. 
 
@@ -296,6 +296,7 @@ This property is **read-only**.
 | ------- | ------- |
 | v17 R5  | Added   |
 </details>
+
 
 
 <!-- REF #directory.name.Syntax -->
@@ -589,7 +590,7 @@ You want to get all files that are not invisible in the Documents folder:
 <!-- END REF -->
 
 #### Description
-The `.folder()` function creates <!-- REF #directory.folder().Summary -->a 
+The `.folder()` function <!-- REF #directory.folder().Summary -->creates a 
 
 `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
@@ -630,7 +631,7 @@ A `Folder` object or null if *path* is invalid.
 <!-- END REF -->
 
 #### Description
-The `.folders()` function returns <!-- REF #directory.folders().Summary -->a collection of 
+The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of 
 
 `Folder` objects contained in the parent folder<!-- END REF -->.
 
@@ -679,7 +680,7 @@ You want the collection of all folders and subfolders of the database folder:
 
 
 #### Description
-The `.getIcon()` function returns <!-- REF #directory.getIcon().Summary -->the icon of the folder<!-- END REF -->.
+The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels ("large icons") or 16x16 pixels ("small icons"). If you pass 0 or omit this parameter, the "large icon" version is returned.
 

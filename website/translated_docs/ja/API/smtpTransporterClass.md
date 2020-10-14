@@ -66,13 +66,13 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 </details>
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
-**SMTP New transporter**( *server* : Object ) : Object<!-- END REF -->
+**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Params -->
-| 引数     | タイプ    |    | 説明                                                  |
-| ------ | ------ |:--:| --------------------------------------------------- |
-| server | オブジェクト | -> | Mail server information                             |
-| 戻り値    | オブジェクト | <- | [SMTP transporter object](#smtp-transporter-object) |
+| 引数     | タイプ                |    | 説明                                                  |
+| ------ | ------------------ |:--:| --------------------------------------------------- |
+| server | オブジェクト             | -> | Mail server information                             |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
 
@@ -144,7 +144,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
  $server.password:="XXXX"
  $server.logFile:="LogTest.txt" //Extended log to save in the Logs folder
 
-
+ var $transporter : 4D.SMTPTransporter
  $transporter:=SMTP New transporter($server)
 
  $email:=New object
@@ -190,6 +190,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 ```4d
  var $pw : Text
  var $options : Object
+ var $transporter : 4D.SMTPTransporter
  $options:=New object
 
  $pw:=Request("Please enter your password:")
@@ -286,7 +287,7 @@ The SMTP connection is automatically closed:
 
 
 #### 説明
-The `.send()` function  <!-- REF #smtpTransporterClass.send().Summary -->sends the 
+The `.send()` function <!-- REF #smtpTransporterClass.send().Summary -->sends the 
 
 [*mail* object](emailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
 > The `transporter` object must have already been created using the `SMTP New transporter` command.
