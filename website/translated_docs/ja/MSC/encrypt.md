@@ -64,18 +64,18 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 ### パスフレーズを変更してデータを再暗号化する
 この操作は、カレントの暗号化データキーを変更したい場合に有用です。 たとえば、セキュリティ上のルール (3ヶ月ごとにパスプレーズを変更する必要があるなど) を遵守するために変更をおこないたいケースが考えられます。
 
-1. Click on **Change your passphrase and re-encrypt data**.
+1. **パスフレーズを変更してデータを再暗号化する** をクリックします。
 2. カレントのデータ暗号化キーを入力します。
-3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](assets/en/MSC/MSC_encrypt8.png)
+3. 新しいパスフレーズを入力します (セキュリティのため、2度入力します): ![](assets/en/MSC/MSC_encrypt9.png) データファイルは新しいキーで暗号化され、確認メッセージが表示されます: ![](assets/en/MSC/MSC_encrypt8.png)
 
-### Decrypt all data
-This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
+### 全データを復号化
+この操作は、データファイルからすべての暗号化を取り除きます。 データを暗号化しておきたくない場合、以下の手順に従ってください:
 
-1. Click on **Decrypt all data**.
-2. Enter the current data encryption key (see Providing the current data encryption key).
+1. **全データを復号化** をクリックします。
+2. カレントのデータ暗号化キーを入力します ([カレントの暗号化キーを入力する](#カレントの暗号化キーを入力する) 参照)。
 
-The data file is fully decrypted and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt10.png)
-> Once the data file is decrypted, the encryption status of tables do not match their Encryptable attributes. To restore a matching status, you must deselect all **Encryptable** attributes at the database structure level.
+データは完全に復号化され、確認メッセージが表示されます: ![](assets/en/MSC/MSC_encrypt10.png)
+> データファイルが復号化されると、テーブルの暗号化ステータスは暗号化可能属性と合致しなくなります。 ステータスを合致させるためには、データベースのストラクチャーレベルにおいてすべての **暗号化可能** 属性を選択解除しなければなりません。
 
 ## 暗号化キーを保存する
 
