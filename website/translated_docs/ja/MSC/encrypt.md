@@ -34,17 +34,17 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 **警告**: 暗号化操作の最中、4D は新しい、空のデータファイルを作成したうえで、元のデータファイルからデータを注入します。 "暗号化可能" テーブルに属しているレコードは暗号化後にコピーされ、他のレコードは単にコピーされるだけです (圧縮オペレーションも実行されます)。 操作が正常に完了した場合、もとのデータファイルは "Replaced Files (Encrypting)" フォルダーへ移動されます。 暗号化されたデータファイルを配布する場合、暗号化されていないデーファイルをデータベースフォルダーからすべて移動/削除しておくようにしてください。
 
 ## 暗号化メンテナンスオペレーション
-When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/en/MSC/MSC_encrypt6.png)
+データベースが暗号化されているとき (上記参照)、暗号化ページでは、標準のシナリオに対応した様々の暗号化メンテナンスオペレーションを提供します。 ![](assets/en/MSC/MSC_encrypt6.png)
 
 
-### Providing the current data encryption key
-For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
+### カレントの暗号化キーを入力する
+セキュリティ上の理由から、すべての暗号化メンテナンスオペレーションはカレントのデータ暗号化キーの入力を要求します。
 
-- If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
-- If the data encryption key is not found, you must provide it. The following dialog is displayed: ![](assets/en/MSC/MSC_encrypt7.png)
+- データ暗号化キーが既に 4Dキーチェーン (1) に読み込まれている場合、そのキーは 4D によって自動的に再利用されます。
+- データ暗号化キーが見つからない場合、それを入力する必要があります。 以下のようなダイアログが表示されます: ![](assets/en/MSC/MSC_encrypt7.png)
 
-At this step, you have two options:
-- enter the current passphrase(2) and click **OK**. OR
+この段階では 2つの選択肢があります:
+- カレントのパスフレーズ (2) を入力し、**OK** をクリックする。 OR
 - connect a device such as a USB key and click the **Scan devices** button.
 
 (1) The 4D keychain stores all valid data encrpytion keys entered during the application session.   
