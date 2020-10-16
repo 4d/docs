@@ -54,7 +54,7 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 ### カレントの暗号化キーでデータを再暗号化する
 
-This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
+この操作は、データを格納している 1つ以上のテーブルにおいて **暗号化可能** 属性が変更された場合に有用です。 この場合、データの整合性を保つために、4D はアプリケーション内のそのテーブルのレコードへの書き込みアクセスを禁止します。 有効な暗号化ステータスを得るために、データの再暗号化が必要になります。
 
 1. Click on **Re-encrypt data with the current encryption key**.
 2. Enter the current data encryption key.
