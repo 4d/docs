@@ -56,16 +56,16 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 この操作は、データを格納している 1つ以上のテーブルにおいて **暗号化可能** 属性が変更された場合に有用です。 この場合、データの整合性を保つために、4D はアプリケーション内のそのテーブルのレコードへの書き込みアクセスを禁止します。 有効な暗号化ステータスを得るために、データの再暗号化が必要になります。
 
-1. Click on **Re-encrypt data with the current encryption key**.
-2. Enter the current data encryption key.
+1. **カレントの暗号化キーでデータを再暗号化** をクリックします。
+2. カレントのデータ暗号化キーを入力します。
 
-The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](assets/en/MSC/MSC_encrypt8.png)
+データファイルはカレントのデータ暗号化キーで正常に再暗号化され、確認メッセージが表示されます: ![](assets/en/MSC/MSC_encrypt8.png)
 
-### Change your passphrase and re-encrypt data
-This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
+### パスフレーズを変更してデータを再暗号化する
+この操作は、カレントの暗号化データキーを変更したい場合に有用です。 たとえば、セキュリティ上のルール (3ヶ月ごとにパスプレーズを変更する必要があるなど) を遵守するために変更をおこないたいケースが考えられます。
 
 1. Click on **Change your passphrase and re-encrypt data**.
-2. Enter the current data encryption key.
+2. カレントのデータ暗号化キーを入力します。
 3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](assets/en/MSC/MSC_encrypt8.png)
 
 ### Decrypt all data
