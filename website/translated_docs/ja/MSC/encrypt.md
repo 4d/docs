@@ -93,4 +93,4 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 新しくログファイルが生成されるたび、MSCページに **ログファイルを開く** ボタンが表示されます。
 
-The log file lists all internal operations executed pertaining to the encryption/decryption process, as well as errors (if any).
+このログファイルには、暗号化/復号化プロセスの間に実行された内部オペレーションがすべて記録されているほか、エラー (あれば) が記録されています。
