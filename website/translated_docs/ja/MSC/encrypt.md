@@ -4,20 +4,20 @@ title: 暗号化ページ
 sidebar_label: 暗号化ページ
 ---
 
-このページを使用して、データベースの各テーブルに対して定義された **暗号化可能** 属性に基づいて、データファイルを暗号化または *復号化* (つまりデータから暗号化を解除) することができます。 For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.
+このページを使用して、データベースの各テーブルに対して定義された **暗号化可能** 属性に基づいて、データファイルを暗号化または *復号化* (つまりデータから暗号化を解除) することができます。 4D のデータ暗号化についての詳細な情報に関しては、*デザインリファレンス* マニュアルの [データの暗号化](https://doc.4d.com/4Dv18/4D/18/Encrypting-data.300-4575694.ja.html) の章を参照してください。
 
 暗号化/復号化操作をおこなうたびに、新しいフォルダーが作成されます。 そのフォルダーは "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*" あるいは "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*" と名前が付けられます。
-> 暗号化は [メンテナンスモード](overview.md#メンテナンスモードでの表示) でのみ利用可能です。 If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode
+> 暗号化は [メンテナンスモード](overview.md#メンテナンスモードでの表示) でのみ利用可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログが表示され、アプリケーションを終了してメンテナンスモードで再起動することを知らせます。
 
 **警告:**
-- Encrypting a data file is a lengthy operation. 実行中は (ユーザーによって割り込み可能な) 進捗インジケーターが表示されます。 Note also that an application encryption operation always includes a compacting step.
+- データファイルの暗号化は時間がかかる操作です。 実行中は (ユーザーによって割り込み可能な) 進捗インジケーターが表示されます。 また、アプリケーションの暗号化操作には必ず圧縮のステップが含まれるという点に注意してください。
 - 暗号化操作をおこなうたびに、その操作はデータファイルのコピーを作成し、その結果アプリケーションファイルのサイズは増大します。 アプリケーションのサイズが過剰に増加しな いよう、これを考慮することが大切です (とくに、4Dアプリケーションがパッケージとして表示される macOS の場合)。 パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除/移動することも役立ちます。
 
 ## データを初めて暗号化する場合
 MSC でデータファイルを初めて暗号化する場合、以下のような手順を踏む必要があります:
 
 1. ストラクチャーエディターにおいて、データを暗号化したいテーブルに対して **暗号化可能** 属性にチェックを入れます。 詳細は "テーブルプロパティ" の章を参照してください。
-2. MSC の暗号化ページを開きます。 If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](assets/en/MSC/MSC_encrypt2.png)<p> This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **注**: すでに暗号化されているデータファイル、または復号化されたデータファイルに対して、**暗号化可能** 属性のステータスが変更された場合にも同じメッセージが表示されます (以下参照)。
+2. MSC の暗号化ページを開きます。 どのテーブルにも **暗号化可能** 属性を付けないでページを開こうとした場合、ページに以下のメッセージが表示されます: ![](assets/en/MSC/MSC_encrypt1.png) そうでない場合には、以下のメッセージが表示されます: ![](assets/en/MSC/MSC_encrypt2.png)<p> このメッセージは、少なくとも 1つのテーブルに対して **暗号化可能** 属性のステータスが変更されていて、データファイルがまだ暗号化されていないことを意味します。 **注**: すでに暗号化されているデータファイル、または復号化されたデータファイルに対して、**暗号化可能** 属性のステータスが変更された場合にも同じメッセージが表示されます (以下参照)。
 3. 暗号化ピクチャーボタンをクリックします。  
    ![](assets/en/MSC/MSC_encrypt3.png)  
    データファイル用のパスフレーズを入力するように聞かれます:  
@@ -25,16 +25,16 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
    パスフレーズはデータ暗号化キーを生成するのに使用されます。 パスフレーズはパスワードの強化版のようなもので、大量の文字を含めることができます。 たとえば、"We all came out to Montreux" あるいは "My 1st Great Passphrase!!" のようなパスフレーズを入力することが可能です。 パスフレーズの安全性は、セキュリティレベルインジケーターによって確認できます:![](assets/en/MSC/MSC_encrypt5.png) (濃い緑色がもっとも安全なレベルであることを示します)。
 4. Enter を押して安全なパスフレーズの入力を確定します。
 
-暗号化プロセスがスタートします。 If the MSC was opened in standard mode, the application is reopened in maintenance mode.
+暗号化プロセスがスタートします。 MSC が標準モードで開かれていた場合、アプリケーションはメンテナンスモードで再起動されます。
 
 4D では暗号化キーを保存することができます (以下の [暗号化キーを保存する](#暗号化キーを保存する) の段落を参照してください)。 暗号化キーの保存は、このタイミングか、あるいは後でおこなうこともできます。 また暗号化ログファイルを開くこともできます。
 
 暗号化プロセスが正常に完了した場合、暗号化ページは [暗号化メンテナンスオペレーション](#暗号化メンテナンスオペレーション) ボタンを表示します。
 
-**警告**: 暗号化操作の最中、4D は新しい、空のデータファイルを作成したうえで、元のデータファイルからデータを注入します。 "暗号化可能" テーブルに属しているレコードは暗号化後にコピーされ、他のレコードは単にコピーされるだけです (圧縮オペレーションも実行されます)。 操作が正常に完了した場合、もとのデータファイルは "Replaced Files (Encrypting)" フォルダーへ移動されます。 If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the application folder beforehand.
+**警告**: 暗号化操作の最中、4D は新しい、空のデータファイルを作成したうえで、元のデータファイルからデータを注入します。 "暗号化可能" テーブルに属しているレコードは暗号化後にコピーされ、他のレコードは単にコピーされるだけです (圧縮オペレーションも実行されます)。 操作が正常に完了した場合、もとのデータファイルは "Replaced Files (Encrypting)" フォルダーへ移動されます。 暗号化されたデータファイルを配布する場合、暗号化されていないデーファイルをアプリケーションフォルダーからすべて移動/削除しておくようにしてください。
 
 ## 暗号化メンテナンスオペレーション
-When an application is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/en/MSC/MSC_encrypt6.png)
+アプリケーションが暗号化されているとき (上記参照)、暗号化ページでは、標準のシナリオに対応した様々の暗号化メンテナンスオペレーションを提供します。 ![](assets/en/MSC/MSC_encrypt6.png)
 
 
 ### カレントの暗号化キーを入力する
@@ -79,17 +79,17 @@ When an application is encrypted (see above), the Encrypt page provides several 
 
 ## 暗号化キーを保存する
 
-4D ではデータ暗号化キーを専用ファイルに保存しておくことができます。 Storing this file on an external device such a USB key will facilitate the use of an encrypted application, since the user would only need to connect the device to provide the key before opening the application in order to access encrypted data.
+4D ではデータ暗号化キーを専用ファイルに保存しておくことができます。 このファイルを USBキーなどの外部デバイスに保存しておくと、暗号化されたアプリケーションを使うのが簡単になります。なぜならユーザーは暗号化されたデータにアクセスするには、アプリケーションを開く前にデバイスを接続してキーを提供すればよいからです。
 
 新しいパスフレーズが提供されるたびに暗号化キーを保存することができます:
 
-- when the application is encrypted for the first time,
-- when the application is re-encrypted with a new passphrase.
+- アプリケーションが最初に暗号化されたとき
+- アプリケーションが新しいパスフレーズで再暗号化されたとき
 
 連続した暗号化キーを同じデバイスに保存することが可能です。
 
 ## ログファイル
-After an encryption operation has been completed, 4D generates a file in the Logs folder of the application. It is created in XML format and named "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
+暗号化オペレーションが完了すると、4D はアプリケーションの Logsフォルダー内にファイルを生成します。 このファイルは XML形式で作成され、"*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" または "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" という名前がつけられます。
 
 新しくログファイルが生成されるたび、MSCページに **ログファイルを開く** ボタンが表示されます。
 
