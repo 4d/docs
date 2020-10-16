@@ -45,14 +45,14 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 この段階では 2つの選択肢があります:
 - カレントのパスフレーズ (2) を入力し、**OK** をクリックする。 OR
-- connect a device such as a USB key and click the **Scan devices** button.
+- USBキーなどのデバイスを接続して、**デバイスをスキャン** ボタンをクリックする。
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.   
-(2) The current passphrase is the passphrase used to generate the current encryption key.
+(1) 4Dキーチェーンは、アプリケーションのセッション中に入力されたすべての有効なデータ暗号化キーを保管します。   
+(2) カレントのパスフレーズとは、カレントのデータ暗号化キーを生成するのに使用されたパスフレーズです。
 
-In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
+いずれの場合においても、有効なパスフレーズ/暗号化キーが提供されると、4D は (まだメンテナンスモードではなかった場合は) メンテナンスモードで再起動し、選択されたオペレーションを実行します。
 
-### Re-encrypt data with the current encryption key
+### カレントの暗号化キーでデータを再暗号化する
 
 This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
 
