@@ -240,9 +240,9 @@ Vous pouvez également définir cette propriété à l'aide de la commande `LIST
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles                               |
-| -------------- | --------------- | ----------------------------------------------- |
-| rowStyleSource | string          | Style expression to evaluate for each row/cell. |
+| Nom            | Type de données | Valeurs possibles                                        |
+| -------------- | --------------- | -------------------------------------------------------- |
+| rowStyleSource | string          | Expression de style à évaluer pour chaque ligne/cellule. |
 
 #### Objets pris en charge
 
@@ -256,7 +256,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande `LIST
 ---
 ## Alignement horizontal
 
-Horizontal location of text within the area that contains it.
+Emplacement horizontal du texte dans la zone qui le contient.
 
 #### Grammaire JSON
 
