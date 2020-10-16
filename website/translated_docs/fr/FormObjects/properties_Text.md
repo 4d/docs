@@ -238,9 +238,9 @@ Vous pouvez également définir cette propriété à l'aide de la commande `LIST
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles                               |
-| -------------- | --------------- | ----------------------------------------------- |
-| rowStyleSource | string          | Style expression to evaluate for each row/cell. |
+| Nom            | Type de données | Valeurs possibles                                        |
+| -------------- | --------------- | -------------------------------------------------------- |
+| rowStyleSource | string          | Expression de style à évaluer pour chaque ligne/cellule. |
 
 #### Objets pris en charge
 
@@ -254,7 +254,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande `LIST
 ---
 ## Alignement horizontal
 
-Horizontal location of text within the area that contains it.
+Emplacement horizontal du texte dans la zone où il apparait.
 
 #### Grammaire JSON
 
@@ -270,13 +270,13 @@ Horizontal location of text within the area that contains it.
 ---
 ## Alignement vertical
 
-Vertical location of text within the area that contains it.
+Emplacement vertical du texte dans la zone où il apparait.
 
-The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
-- `bottom` for all data (except pictures) and
-- `top` for picture type data.
+L'option **Default** (valeur JSON `automatique`) définit l'alignement en fonction du type de données identifiées dans chaque colonne :
+- `bas` pour toutes les données (sauf les images) et
+- `haut` pour les données de type image.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
+Cette propriété peut également être gérée par les commandes [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) et [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html).
 
 
 #### Grammaire JSON
@@ -287,7 +287,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns) - [Pied List Box](listbox_overview.md#list-box-footers) - [En-tête List Box](listbox_overview.md#list-box-headers)
 
 
 
@@ -299,20 +299,20 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 ---
 ## Meta Info expression
-`Collection or entity selection type list boxes`
+`List box de type collection ou entity selection (sélection d'entité)`
 
-Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
+Indique une expression ou une variable qui sera évaluée pour chaque ligne affichée. Elle permet de définir un ensemble d'attributs texte des lignes. Vous devez passer une **variable objet** ou une **expression qui retourne un objet**. Les propriétés suivantes sont prises en charge :
 
-| Nom de propriété    | Type    | Description                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
-| border-style        | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
-| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
-| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
-| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable        | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
-| disabled            | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
-| cell.\<columnName> | object  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
+| Nom de propriété    | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke              | string  | Couleur de la police. Toute couleur CSS (ex : "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                 |
+| border-style        | string  | Couleur de fond. Toute couleur CSS (ex : "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                      |
+| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| unselectable        | boolean | Désigne la ligne correspondante comme n'étant pas sélectionnable (c'est-à-dire que le surlignage n'est pas possible). Les zones saisissables ne sont plus saisissables si cette option est activée, à moins que l'option «Single-click Edit » ne soit également activée. Les contrôles tels que les cases à cocher et les listes restent fonctionnels. This setting is ignored if the list box selection mode is "None". Valeurs par défaut : False. |
+| disabled            | boolean | Désactive la ligne correspondante. Les zones saisissables ne sont plus saisissables si cette option est activée. Le texte et les contrôles (cases à cocher, listes, etc.) sont grisés. Valeurs par défaut : False.                                                                                                                                                                                                                                   |
+| cell.\<columnName> | object  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                                                                                                 |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
