@@ -31,13 +31,13 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 暗号化プロセスが正常に完了した場合、暗号化ページは [暗号化メンテナンスオペレーション](#暗号化メンテナンスオペレーション) ボタンを表示します。
 
-**警告**: 暗号化操作の最中、4D は新しい、空のデータファイルを作成したうえで、元のデータファイルからデータを注入します。 Records belonging to "encryptable" tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the application folder beforehand.
+**警告**: 暗号化操作の最中、4D は新しい、空のデータファイルを作成したうえで、元のデータファイルからデータを注入します。 "暗号化可能" テーブルに属しているレコードは暗号化後にコピーされ、他のレコードは単にコピーされるだけです (圧縮オペレーションも実行されます)。 操作が正常に完了した場合、もとのデータファイルは "Replaced Files (Encrypting)" フォルダーへ移動されます。 If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the application folder beforehand.
 
 ## 暗号化メンテナンスオペレーション
 When an application is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/en/MSC/MSC_encrypt6.png)
 
 
-### Providing the current data encryption key
+### カレントの暗号化キーを入力する
 For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
 
 - If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
