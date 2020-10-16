@@ -38,21 +38,21 @@ When an application is encrypted (see above), the Encrypt page provides several 
 
 
 ### カレントの暗号化キーを入力する
-For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
+セキュリティ上の理由から、すべての暗号化メンテナンスオペレーションはカレントのデータ暗号化キーの入力を要求します。
 
-- If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
-- If the data encryption key is not found, you must provide it. The following dialog is displayed: ![](assets/en/MSC/MSC_encrypt7.png)
+- データ暗号化キーが既に 4Dキーチェーン (1) に読み込まれている場合、そのキーは 4D によって自動的に再利用されます。
+- データ暗号化キーが見つからない場合、それを入力する必要があります。 以下のようなダイアログが表示されます: ![](assets/en/MSC/MSC_encrypt7.png)
 
-At this step, you have two options:
-- enter the current passphrase(2) and click **OK**. OR
-- connect a device such as a USB key and click the **Scan devices** button.
+この段階では 2つの選択肢があります:
+- カレントのパスフレーズ (2) を入力し、**OK** をクリックする。 OR
+- USBキーなどのデバイスを接続して、**デバイスをスキャン** ボタンをクリックする。
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.   
-(2) The current passphrase is the passphrase used to generate the current encryption key.
+(1) 4Dキーチェーンは、アプリケーションのセッション中に入力されたすべての有効なデータ暗号化キーを保管します。   
+(2) カレントのパスフレーズとは、カレントのデータ暗号化キーを生成するのに使用されたパスフレーズです。
 
-In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
+いずれの場合においても、有効なパスフレーズ/暗号化キーが提供されると、4D は (まだメンテナンスモードではなかった場合は) メンテナンスモードで再起動し、選択されたオペレーションを実行します。
 
-### Re-encrypt data with the current encryption key
+### カレントの暗号化キーでデータを再暗号化する
 
 This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
 
