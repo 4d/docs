@@ -3,9 +3,9 @@ id: コレクション
 title: コレクション
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
+コレクションとは、類似または混在した型 (テキスト、数値、日付、オブジェクト、ブール、コレクション、null) の値が順番に並べられたリストです。
 
-Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+コレクション型の変数を扱うには、オブジェクト記法を使用します ([オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) 参照)。
 
 コレクション要素にアクセスするには、大カッコ内に要素番号を渡します:
 
@@ -13,7 +13,7 @@ Collection type variables are managed using object notation (see [Syntax basics]
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in *expression*. 例:
+*expression* には正の整数を返す有効な 4D式であればどんなものでも渡すことができます。 例:
 
 ```4d
  myCollection[5]  // コレクションの6番目の要素にアクセス
@@ -22,7 +22,7 @@ You can pass any valid 4D expression which returns a positive integer in *expres
 
 **注:** コレクション要素は0 番から始まるということに注意してください。
 
-You can assign a value to a collection element or get a collection element value:
+コレクションの要素に値を代入したり、コレクション要素の値を取得したりすることができます:
 
 ```4d
  myCol[10]:="My new element"
@@ -55,14 +55,14 @@ You can assign a value to a collection element or get a collection element value
 
 二種類のコレクションを作成することができます:
 
-- regular (non-shared) collections, using the [`New collection`](API/collectionClass.md#new-collection) command. 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- shared collections, using the [`New shared collection`](API/collectionClass.md#new-shared-collection) command. 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- [`New collection`](API/collectionClass.md#new-collection) コマンドを使用して作成する通常 (非共有) コレクション。 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New shared collection`](API/collectionClass.md#new-shared-collection) コマンドを使用して作成する共有コレクション。 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
 
 詳細な情報については、[共有オブジェクトと共有コレクション](Concepts/shared.md) を参照ください。
 
-## Collection functions
+## コレクション関数
 
-4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](API/collectionClass.md) section.
+4D コレクションへの参照は、コレクションの *メンバー関数* と呼ばれる特別なクラス関数を利用することができます。 コレクション関数は [クラス API リファレンス](API/collectionClass.md) にまとめられています。
 
 たとえば:
 
@@ -71,7 +71,7 @@ $newCol:=$col.copy() // $col を $newCol にディープ・コピー
 $col.push(10;100) // 10 と 100 をコレクションに追加
 ```
 
-Some functions return the original collection after modification, so that you can run the calls in a sequence:
+一部の関数は元のコレクションを変更して返すので、つぎのように連続して呼び出すことが可能です:
 
 ```4d
  $col:=New collection(5;20)
@@ -82,12 +82,12 @@ Some functions return the original collection after modification, so that you ca
 ### propertyPath 引数
 
 
-Several functions accept a _propertyPath_ as parameter. この引数は以下のように用いることができます:
+いくつかのコレクション関数は引数として _propertyPath_ を受け入れます。 この引数は以下のように用いることができます:
 
 - オブジェクトプロパティ名、 例えば "lastName"
 - オブジェクトプロパティパス (ドット文字で繋げられたサブプロパティの階層シーケンスなど)。例: "employee.children.firstName"
 
-**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**警告:** 関数に propertyPath 引数を渡す場合、そのプロパティ名には "." (ドット)、"[ ]" (大カッコ)、あるいは " " (スペース) を使えません。これらを使用するとパスを正しく解析できなくなります:
 
 ```4d
  $vmin:=$col.min("My.special.property") // undefined

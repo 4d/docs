@@ -11,9 +11,6 @@
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
       },
-      "API/_inheritances": {
-        "title": "API/_inheritances"
-      },
       "API/collectionClass": {
         "title": "Collections"
       },
