@@ -4,7 +4,7 @@ title: File
 ---
 
 
-`File` objects are created with the [`File`](https://doc.4d.com/4Dv18R4/4D/18-R4/File.301-4982190.en.html) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+`File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
 ### Example
 
@@ -49,6 +49,80 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |[<!-- INCLUDE #fileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setText().Summary -->|
 |[<!-- INCLUDE #document.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
 
+---
+
+<!-- REF file.File.Desc -->
+## File
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added|
+</details>
+
+<!-- REF file.File.Syntax -->
+**File** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+
+
+<!-- REF file.File.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|path|Text|->|File path|
+|fileConstant|Integer|->|4D file constant|
+|pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
+|*||->|* to return file of host database|
+|Result|4D.File|<-|New file object|
+<!-- END REF -->
+
+
+#### Description
+
+The `File` command <!-- REF file.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+
+**File ( path { ; pathType } )**
+
+In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
+
+> Only absolute pathnames are supported with the `File` command. 
+
+By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+
+|Constant|Value|Comment|
+|---|---|---|
+|fk platform path|1|Path expressed with a platform-specific syntax (mandatory in case of platform pathname)|
+|fk posix path|0|Path expressed with POSIX syntax (default)
+
+**File ( fileConstant { ; \* } )**
+
+In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
+
+|Constant|Value|Comment|
+|---|---|---|
+|Backup history file|19|Backup history file (see Configuration and trace files). Stored in the backup destination folder. |
+|Backup log file|13|Current backup journal file. Stored in the Logs folder next to database structure file.|
+|Backup settings file|1|Default backup.4DSettings file (xml format), stored in the Settings folder of the database|
+|Backup settings file for data|17|backup.4DSettings file (xml format) for the data file, stored in the Settings folder of the data folder|
+|Build application log file|14|Current log file in xml format of the application builder. Stored in the Logs folder next to database structure file. |
+|Build application settings file|20|Default settings file of the application builder ("buildApp.4DSettings"). Stored in the Settings folder of the database.|
+|Compacting log file|6|Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Stored in the Logs folder next to database structure file.|
+|Current backup settings file|18|backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file|
+|Debug log file|12|Log file created by the SET DATABASE PARAMETER(Debug log recording) command. Stored in the Logs folder next to database structure file. |
+|Diagnostic log file|11|Log file created by the SET DATABASE PARAMETER(Diagnostic log recording) command. Stored in the Logs folder next to database structure file. |
+|Directory file|16|directory.json file, containing the description of users and groups (if any) for the project database. It can be located either in the user database settings folder (default, global to the project), or in the data settings folder (specific to a data file). |
+|HTTP debug log file|9|Log file created by the WEB SET OPTION(Web debug log) command. Stored in the Logs folder next to database structure file. |
+|HTTP log file|8|Log file created by the WEB SET OPTION(Web log recording) command. Stored in Logs folder next to database structure file.|
+|Last backup file|2|Last backup file, named <databaseName>[bkpNum].4BK, stored at a custom location.|
+|Repair log file|7|Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Stored in the Logs folder next to database structure file.|
+|Request log file|10|Standard client/server request log file (excluding Web requests) created by the SET DATABASE PARAMETER(4D Server log recording) or SET DATABASE PARAMETER(Client log recording) commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
+|SMTP log file|15|Log file created by the SET DATABASE PARAMETER(SMTP Log) command. Stored in the Logs folder next to database structure file. |
+|User settings file|3|settings.4DSettings file for all data files, stored in Preferences folder next to database structure file if enabled.|
+|User settings file for data|4|settings.4DSettings file for current data file, stored in Preferences folder next to the data file.|
+|Verification log file|5|Log files created by the VERIFY CURRENT DATA FILE and VERIFY DATA FILE commands or the Maintenance and Security Center (MSC). Stored in the Logs folder next to database structure file. |
+
+If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
+
+If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
+
 
 ---
 
@@ -70,7 +144,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!--REF #fileClass.create().Syntax -->
-**.create( )** : Boolean <!-- END REF -->
+**.create()** : Boolean <!-- END REF -->
 
 <!--REF #fileClass.create().Params -->
 |Parameter|Type||Description|

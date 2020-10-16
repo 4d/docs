@@ -3,7 +3,7 @@ id: folderClass
 title: Folder
 ---
 
-`Folder` objects are created with the [`Folder`](https://doc.4d.com/4Dv18R4/4D/18-R4/Folder.301-4982248.en.html) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
+`Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
 
 ### Example
 
@@ -43,6 +43,70 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 |[<!-- INCLUDE #folderClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.moveTo().Summary -->|
 |[<!-- INCLUDE #folderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.rename().Summary -->|
 
+
+---
+<!-- REF folder.Folder.Desc -->
+## Folder
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R5|Added|
+</details>
+
+<!-- REF folder.Folder.Syntax -->
+**Folder** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+
+
+<!-- REF folder.Folder.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|path|Text|->|Folder path|
+|folderConstant|Integer|->|4D folder constant|
+|pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
+|*||->|* to return folder of host database|
+|Result|4D.Folder|<-|New folder object|
+<!-- END REF -->
+
+
+#### Description
+
+The `Folder` command <!-- REF folder.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+
+**Folder ( path { ; pathType } )**
+
+In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
+
+> Only absolute pathnames are supported with the `Folder` command. 
+
+By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+
+|Constant|Value|Comment|
+|---|---|---|
+|fk platform path|1|Path expressed with a platform-specific syntax (mandatory in case of platform pathname)|
+|fk posix path|0|Path expressed with POSIX syntax (default)
+
+**Folder ( folderConstant { ; \* } )**
+
+In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
+
+|Constant|Value|Comment|
+|---|---|---|
+|fk applications folder|116||
+|fk data folder|9|Associated filesystem: "/DATA"|
+|fk database folder|4|Associated filesystem: "/PACKAGE"|
+|fk desktop folder|115||
+|fk documents folder|117|Document folder of the user|
+|fk licenses folder|1|Folder containing the machine's 4D license files|
+|fk logs folder|7|Associated filesystem: "/LOGS"|
+|fk mobileApps folder|10|Associated filesystem: "/DATA"|
+|fk remote database folder|3|4D database folder created on each 4D remote machine|
+|fk resources folder|6|Associated filesystem: "/RESOURCES"|
+|fk system folder|100||
+|fk user preferences folder|0|4D folder that stores user preference files within the \<userName> directory.|
+|fk web root folder|8|Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path|
+
+If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
 
 ---
 

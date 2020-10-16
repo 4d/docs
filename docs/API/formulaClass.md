@@ -64,7 +64,7 @@ Or using the [.call()](#call) function:
 For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. For example:
 
 ```4d
- var $f : Object
+ var $f : 4D.Function
 
  $f:=Formula(myMethod)
   //Writing Formula(myMethod($1;$2)) is not necessary
@@ -363,7 +363,6 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 <!-- REF formulaClass.call().Desc -->
 ## .call()
 
-
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
@@ -371,8 +370,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 </details>
 
 <!-- REF #formulaClass.call().Syntax -->
-**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) -> any 
-<!-- END REF -->
+**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) -> any<!-- END REF -->
 
 <!-- REF #formulaClass.call().Params -->
 |Parameter|Type||Description|
