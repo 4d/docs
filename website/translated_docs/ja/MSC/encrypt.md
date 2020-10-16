@@ -91,6 +91,6 @@ When an application is encrypted (see above), the Encrypt page provides several 
 ## ログファイル
 After an encryption operation has been completed, 4D generates a file in the Logs folder of the application. It is created in XML format and named "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
-An Open log file button is displayed on the MSC page each time a new log file has been generated.
+新しくログファイルが生成されるたび、MSCページに **ログファイルを開く** ボタンが表示されます。
 
-The log file lists all internal operations executed pertaining to the encryption/decryption process, as well as errors (if any).
+このログファイルには、暗号化/復号化プロセスの間に実行された内部オペレーションがすべて記録されているほか、エラー (あれば) が記録されています。
