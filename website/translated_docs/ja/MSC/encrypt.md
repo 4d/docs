@@ -79,18 +79,18 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 ## 暗号化キーを保存する
 
-4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted database, since the user would only need to connect the device to provide the key before opening the database in order to access encrypted data.
+4D ではデータ暗号化キーを専用ファイルに保存しておくことができます。 このファイルを USBキーなどの外部デバイスに保存しておくと、暗号化されたデータベースを使うのが簡単になります。なぜならユーザーは暗号化されたデータにアクセスするには、データベースを開く前にデバイスを接続してキーを提供すればよいからです。
 
-You can save the encryption key each time a new passphrase has been provided:
+新しいパスフレーズが提供されるたびに暗号化キーを保存することができます:
 
-- when the database is encrypted for the first time,
-- when the database is re-encrypted with a new passphrase.
+- データベースが最初に暗号化されたとき
+- データベースが新しいパスフレーズで再暗号化されたとき
 
-Successive encryption keys can be stored on the same device.
+連続した暗号化キーを同じデバイスに保存することが可能です。
 
 ## ログファイル
-After an encryption operation has been completed, 4D generates a file in the Logs folder of the database. It is created in XML format and named "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
+暗号化オペレーションが完了すると、4D はデータベースの Logsフォルダー内にファイルを生成します。 このファイルは XML形式で作成され、"*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" または "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" という名前がつけられます。
 
-An Open log file button is displayed on the MSC page each time a new log file has been generated.
+新しくログファイルが生成されるたび、MSCページに **ログファイルを開く** ボタンが表示されます。
 
 The log file lists all internal operations executed pertaining to the encryption/decryption process, as well as errors (if any).
