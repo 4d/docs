@@ -12,15 +12,16 @@ Signals are tools provided by the 4D language to manage interactions and avoid c
 
 A signal is a shared object that must be passed as a parameter to commands that call or create workers or processes.
 
-It contains the following built-in methods and properties:
+A `4D.Signal` object contains the following built-in methods and properties:
+
 - [`.wait()`](#wait) 
 - [`.trigger()`](#trigger)
 - [`.signaled`](#signaled) 
 - [`.description`](#description).
 
-Any worker/process calling the `.wait( )` method will suspend its execution until the `.signaled` property is true. While waiting for a signal, the calling process does not use any CPU. This can be very interesting for performance in multiprocess applications. The `.signaled` property becomes true when any worker/process calls the `.trigger( )` method.
+Any worker/process calling the `.wait()` method will suspend its execution until the `.signaled` property is true. While waiting for a signal, the calling process does not use any CPU. This can be very interesting for performance in multiprocess applications. The `.signaled` property becomes true when any worker/process calls the `.trigger()` method.
 
-Note that to avoid blocking situations, the `.wait( )` can also return after a defined timeout has been reached.
+Note that to avoid blocking situations, the `.wait()` can also return after a defined timeout has been reached.
 
 Signal objects are created with the [New signal](#new-signal) command.
 
@@ -41,7 +42,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 ## Example
 
 ```4d
- var $signal : Object
+ var $signal : 4D.Signal
  
   // Creation of a signal
  $signal:=New signal
@@ -60,7 +61,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 ***OpenForm*** method :
 
 ```4d
- #DECLARE ($signal : Object)  
+ #DECLARE ($signal : 4D.Signal)  
  var $form : Object
  $form:=New object("value";0)
  
@@ -102,19 +103,19 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 </details>
 
 <!-- REF signalClass.New signal.Syntax -->
-**New signal** { ( *description* : Text ) } : Object<!-- END REF -->
+**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF signalClass.New signal.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |description|Text|->|Description for the signal|
-|Result|Object|<-|Native object encapsulating the signal|
+|Result|4D.Signal|<-|Native object encapsulating the signal|
 <!-- END REF -->
 
 
 #### Description
 
-The `New signal` command <!-- REF signalClass.New signal.Summary -->creates a `Signal` object<!-- END REF -->. 
+The `New signal` command <!-- REF signalClass.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->. 
 
 A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
 
@@ -128,14 +129,14 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 **Returned value**
 
-A new [`Signal` object](#signal-object).
+A new [`4D.Signal` object](#signal-object).
 
 #### Example 
 
 Here is a typical example of a worker that sets a signal:
 
 ```4d
- var $signal : Object
+ var $signal : 4D.Signal
  $signal:=New signal("This is my first signal")
  
  CALL WORKER("myworker";"doSomething";$signal)
@@ -152,7 +153,7 @@ Here is a typical example of a worker that sets a signal:
 The ***doSomething*** method could be like:
 
 ```4d
- #DECLARE ($signal : Object)
+ #DECLARE ($signal : 4D.Signal)
   //any processing
   //...
  Use($signal)

@@ -251,19 +251,19 @@ Calling a formula using object notation:
 </details>
 
 <!-- REF formulaClass.Formula from string.Syntax -->
-**Formula from string**( *formulaString* : Text ) : 4D.Formula<!-- END REF -->
+**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF formulaClass.Formula from string.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaString|Text|->|Text formula to be returned as object|
-|Result|4D.Formula|<-|Native object encapsulating the formula|
+|Result|4D.Function|<-|Native object encapsulating the formula|
 <!-- END REF -->
 
 
 #### Description
 
-The `Formula from string` command <!-- REF formulaClass.Formula from string.Summary -->creates a 4D.Formula object based upon the *formulaString*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
+The `Formula from string` command <!-- REF formulaClass.Formula from string.Summary -->creates a 4D.Function object based upon the *formulaString*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
 
 This command is similar to [`Formula`](#formula), except that it handles a text-based formula. In most cases, it is recommended to use the `Formula` command. `Formula from string` should only be used when the original formula was expressed as text (e.g., stored externally in a JSON file). In this context, using syntax with tokens is highly advised.
 
@@ -276,7 +276,7 @@ The following code will create a dialog accepting a formula in text format:
 
 ```4d
  var $textFormula : Text
- var $f : 4D.Formula
+ var $f : 4D.Function
  $textFormula:=Request("Please type a formula")
  If(ok=1)
     $f:=Formula from string($textFormula)
@@ -334,7 +334,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 #### Example 1
 
 ```4d
- var $f : 4D.Formula
+ var $f : 4D.Function
  $f:=Formula($1+$2+$3)
  
  $c:=New collection(10;20;30)
@@ -345,7 +345,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 #### Example 2
 
 ```4d
- var $calc : 4D.Formula
+ var $calc : 4D.Function
  var $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
