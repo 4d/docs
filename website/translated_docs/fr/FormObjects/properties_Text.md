@@ -266,7 +266,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 
 #### Objets pris en charge
 
-[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Text Area](text.md)
+[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns) - [En-tête List Box](listbox_overview.md#list-box-headers) - [Pied List Box](listbox_overview.md#list-box-footers) - [Zone de texte](text.md)
 
 
 ---
@@ -314,13 +314,13 @@ Indique une expression ou une variable qui sera évaluée pour chaque ligne affi
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | unselectable        | boolean | Désigne la ligne correspondante comme n'étant pas sélectionnable (c'est-à-dire que le surlignage n'est pas possible). Les zones saisissables ne sont plus saisissables si cette option est activée, à moins que l'option «Single-click Edit » ne soit également activée. Les contrôles tels que les cases à cocher et les listes restent fonctionnels. This setting is ignored if the list box selection mode is "None". Valeurs par défaut : False. |
 | disabled            | boolean | Désactive la ligne correspondante. Les zones saisissables ne sont plus saisissables si cette option est activée. Le texte et les contrôles (cases à cocher, listes, etc.) sont grisés. Valeurs par défaut : False.                                                                                                                                                                                                                                   |
-| cell.\<columnName> | object  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                                                                                                 |
+| cell.\<columnName> | object  | Permet d'appliquer la propriété à une seule colonne. Passez dans \<columnName> le nom d'objet de la colonne de list box. **Note** : les propriétés "unselectable" et "disabled" ne peuvent être définies qu'au niveau de la ligne. Elles sont ignorées si elles sont passées dans l'objet "cell"                                                                                                                                                    |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Les paramètres de style définis avec cette propriété sont ignorés si d'autres paramètres de style sont déjà définis via des expressions (par exemple, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-The following example uses the *Color* project method.
+L'exemple suivant utilise la méthode projet *Color*.
 
-In the form method, write the following code:
+Dans la méthode formulaire, écrivez le code suivant :
 
 ```4d
 //méthode formulaire
@@ -331,13 +331,13 @@ End case
 ```
 
 
-In the *Color* method, write the following code:
+Dans la méthode *Color*, entrez le code suivant :
 
 ```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+//Méthode Color
+//Définit la couleur de police pour certaines lignes et la couleur de fond pour une colonne spécifique :
 C_OBJECT($0)
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) //ID est un attribut d'objets/entités d'une collection
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -345,15 +345,15 @@ Else
 End if
 $0:=Form.meta
 ```
-> See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
+> Voir également la commande [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).
 
 
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                                |
-| ---------- | --------------- | ------------------------------------------------ |
-| metaSource | string          | Object expression to evaluate for each row/cell. |
+| Nom        | Type de données | Valeurs possibles                                          |
+| ---------- | --------------- | ---------------------------------------------------------- |
+| metaSource | string          | Expression de l'objet à évaluer pour chaque ligne/cellule. |
 
 #### Objets pris en charge
 
@@ -369,10 +369,10 @@ $0:=Form.meta
 ---
 ## Multistyle
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
+Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. Lorsque cette option est cochée, 4D interprète toutes les balises \<SPAN> HTML présentes dans la zone.</p> 
 
 <p spaces-before="0">
-  By default, this option is not enabled.
+  Par défaut, cette option n'est pas activée.
 </p>
 
 
@@ -432,13 +432,13 @@ This property enables the possibility of using specific styles in the selected a
 </h2>
 
 <p spaces-before="0">
-  Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+  Modifie l'orientation (rotation) d'une zone de texte. Les zones de texte peuvent être pivotées par incréments de 90°. Chaque valeur d'orientation est appliquée tout en conservant le même point de départ inférieur gauche pour l'objet :
 </p>
 
 <table spaces-before="0" line-breaks-before="2">
   <tr>
     <th>
-      Orientation value
+      Valeur d'orientation
     </th>
     
     <th>
@@ -448,7 +448,7 @@ This property enables the possibility of using specific styles in the selected a
   
   <tr>
     <td>
-      0 (default)
+      0 (par défaut)
     </td>
     
     <td>
@@ -488,7 +488,7 @@ This property enables the possibility of using specific styles in the selected a
 </table>
 
 <p spaces-before="0">
-  In addition to <a href="text.md">static text areas</a>, <a href="input_overview.md">input</a> text objects can be rotated when they are non-<a href="properties_Entry.md#enterable">enterable</a>. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
+  En plus des <a href="text.md">zones de texte statiques</a>, les objets de texte des <a href="input_overview.md">zones de saisie</a> peuvent être pivotés lorsqu'ils ne sont pas <a href="properties_Entry.md#enterable">saisissables</a>. Lorsqu'une propriété de rotation est appliquée à un objet de saisie, la propriété saisissable est supprimée (le cas échéant). Cet objet est alors exclu de l'ordre de saisie.
 </p>
 
 
@@ -550,11 +550,11 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  Allows setting a custom font color to each row of the list box or cell of the column.
+  Permet de définir une couleur de police personnalisée à chaque ligne de list box ou de chaque cellule de la colonne.
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+  Le nom d'un tableau Entier Long doit être utilisé. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 </p>
 
 <h4 spaces-before="0">
@@ -617,7 +617,7 @@ This property enables the possibility of using specific styles in the selected a
 </p>
 
 <p spaces-before="0">
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Styles de caractères</a>. Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+  Le nom d'un tableau Entier Long doit être utilisé. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Styles de caractères</a>. Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 </p>
 
 
