@@ -101,7 +101,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 </details>
 
 <!-- REF folder.Folder.Syntax -->
-**Folder** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF folder.Folder.Params -->
@@ -120,7 +120,7 @@ The `Folder` command <!-- REF folder.Folder.Summary -->creates and returns a new
 
 `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
 
-**Folder ( path { ; pathType } )**
+**Folder ( path { ; pathType } { ; \* } )**
 
 In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
 
@@ -236,7 +236,7 @@ End if
 
 
 <!--REF #folderClass.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.Folder<!-- END REF -->
+**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 
 <!--REF #folderClass.createAlias().Params -->
@@ -245,7 +245,7 @@ End if
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Text      | -> | Name of the alias or shortcut                |
 | aliasType         | Ganzzahl  | -> | Type of the alias link                       |
-| Ergebnis          | 4D.Folder | <- | Alias or shortcut folder reference           |
+| Ergebnis          | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
 
@@ -258,16 +258,16 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Wert | Kommentar                        |
-| ------------------ | ---- | -------------------------------- |
-| `fk alias link`    | 0    | Alias link (macOS only)(default) |
-| `fk symbolic link` | 1    | Symbolic link (macOS only)       |
+| Constant           | Wert | Kommentar                  |
+| ------------------ | ---- | -------------------------- |
+| `fk alias link`    | 0    | Alias link (default)       |
+| `fk symbolic link` | 1    | Symbolic link (macOS only) |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 **Returned object**
 
-A `Folder` object with the `isAlias` property set to true.
+A `4D.File` object with the `isAlias` property set to **true**.
 
 #### Beispiel
 
