@@ -23,22 +23,22 @@ title: バックアップ
 
 The **Database properties...** button causes the Backup/Configuration page of the Structure Settings to be displayed.
 
- 2. Click **Backup** to start the backup using current parameters.
+ 2. **バックアップ** をクリックし、現在のパラメーターを用いてバックアップを開始します。
 
 
 ### 定期的な自動バックアップ
 
-Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Settings**.
+自動バックアップは指定されたスケジュールに基づいて自動的に実行されます。 They are configured in the **Backup/Scheduler** page of the **Settings**.
 
-Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
+ユーザーが一切操作しなくても、このページで指定された時間にバックアップが自動実行されます。 このダイアログボックスに関する詳細は、[バックアップ設定のスケジューラー](settings.md#スケジューラー) の項目を参照してください。
 
 
 ### BACKUP コマンド
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
+When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. バックアッププロセスを処理するため、`On Backup Startup` および `On Backup Shutdown` データベースメソッド使用することができます (詳細は、*4Dランゲージリファレンス* マニュアルを参照ください)。
 
 
-## Managing the backup processing
+## バックアップ処理の管理
 
 Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
 
