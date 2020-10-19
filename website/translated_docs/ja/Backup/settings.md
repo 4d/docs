@@ -3,17 +3,17 @@ id: settings
 title: バックアップ設定
 ---
 
-Backup settings are defined through three pages in the Settings dialog box. You can set:
+Backup settings are defined through three pages in the Settings dialog box. 次の設定がおこなえます:
 
-- the scheduler for automatic backups
-- the files to include in every backup
-- the advanced features allowing to execute automatic tasks
+- 自動バックアップ用のスケジューラー設定
+- 各バックアップに含めるファイル
+- 自動タスクの実行を可能にする高度な設定
 
-> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-folder).
+> このダイアログボックスで定義された設定は *Backup.4DSettings* ファイルに書き込まれ、[Settings フォルダー](Project/architecture.md#settings-フォルダー) に保存されます。
 
-## Scheduler
+## スケジューラー
 
-You can automate the backup of applications opened with 4D or 4D Server (even when no client machines are connected). This involves setting a backup frequency (in hours, days, weeks or months); for each session, 4D automatically starts a backup using the current backup settings.
+You can automate the backup of applications opened with 4D or 4D Server (even when no client machines are connected). これはバックアップ周期 (時間、日、週、月単位等) を設定することによりおこないます。現在のバックアップ設定に基づき、4D は自動でバックアップを実行します。
 
 If this application was not launched at the theoretical moment of the backup, the next time 4D is launched, it considers the backup as having failed and proceeds as set in the Settings (refer to [Handling backup issues](backup.md#handling-backup-issues)).
 
