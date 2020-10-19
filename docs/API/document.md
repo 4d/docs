@@ -518,12 +518,12 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )** : BLOB<!-- END REF -->
+**.getContent( )** : Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|Result | BLOB |<-|File content|
+|Result | Blob |<-|File content|
 <!-- END REF -->
 
 
@@ -533,7 +533,7 @@ The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns
 
 **Returned value**
 
-A `BLOB`.
+A `Blob`.
 
 #### Example
 
@@ -561,7 +561,7 @@ To save a document's contents in a `BLOB` field:
 </details>
 
 <!-- REF #document.getIcon().Syntax -->
-**.getIcon**( { *size* : Integer } ) : picture<!-- END REF -->
+**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
 |Parameter|Type||Description|

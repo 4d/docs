@@ -370,7 +370,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 </details>
 
 <!-- REF #formulaClass.call().Syntax -->
-**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) -> any<!-- END REF -->
+**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #formulaClass.call().Params -->
 |Parameter|Type||Description|

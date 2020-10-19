@@ -69,7 +69,7 @@ In the *server* parameter, pass an object containing the following properties:
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
 |[<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|*mandatory*
 |[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|none|
-|**password** -> text<p>User password for authentication on the server (not returned in *[IMAP transporter](#imap-transporter-object)* object)|none|
+|**password** : Text<p>User password for authentication on the server (not returned in *[IMAP transporter](#imap-transporter-object)* object)|none|
 |[<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|993|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|none|
 
@@ -153,6 +153,7 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 </details>
 
 <!-- REF #imapTransporterClass.copy().Syntax -->
+
 **.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.copy().Params -->
