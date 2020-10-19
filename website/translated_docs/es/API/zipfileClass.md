@@ -7,7 +7,7 @@ title: ZIP Archive
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
 - You create a 4D ZIP archive with the [ZIP Create archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Create-archive.301-4982187.en.html) command.
-- 4D ZIP file and folder instances are available through the `root` property (`ZIP Folder`) of the object returned by [ZIP Read archive](https://doc.4d.com/4Dv18R4/4D/18-R4/ZIP-Read-archive.301-4982192.en.html) command.
+- 4D ZIP file and folder instances are available through the `root` property (`ZIP Folder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
 
 
 ### Example
@@ -30,6 +30,93 @@ If($zipFile.extension=".txt")
 End if
 ```
 
+
+---
+<!-- REF zipArchive.ZIP Read archive.Desc -->
+## ZIP Read archive
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v18     | Added   |
+</details>
+
+<!-- REF zipArchive.ZIP Read archive.Syntax -->
+**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
+
+<!-- REF zipArchive.ZIP Read archive.Params -->
+| Parameter | Type          |    | Description                 |
+| --------- | ------------- |:--:| --------------------------- |
+| zipFile   | 4D.File       | -> | Zip archive file            |
+| password  | Text          | -> | ZIP archive password if any |
+| Result    | 4D.ZipArchive | <- | Archive object              |
+<!-- END REF -->
+
+
+#### Description
+The `ZIP Read archive` command <!-- REF zipArchive.ZIP Read archive.Summary -->retrieves the contents of 
+
+*zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+
+> This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](document.md#copyto) or [folder.copyTo()](directory.md#copyto).
+
+Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
+
+If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. If a password is required but not passed when trying to read the contents of the archive, an error is generated.
+
+
+**Archive object**
+
+The returned `4D.ZipArchive` object contains a single `root` property whose value is a `4D.Folder` object. This folder describes the whole contents of the ZIP archive:
+
+| Property | Type        | Description                                                  |
+| -------- | ----------- | ------------------------------------------------------------ |
+| `root`   | `4D.Folder` | A virtual folder containing the contents of the ZIP archive. |
+
+The `root` folder and its contents can be manipulated with the `File` and `Folder` methods and properties.
+
+
+#### Example
+
+To retrieve and view the contents of a ZIP file object:
+
+```4d
+ var $archive : 4D.ZipArchive
+ var $path : 4D.File
+
+ $path:=Folder(fk desktop folder).file("MyDocs/Archive.zip")
+ $archive:=ZIP Read archive($path)
+```
+
+To retrieve the list of the files and folders in the archive:
+
+```4d
+ $folders:=$archive.root.folders()
+ $files:=$archive.root.files()
+```
+
+To read the contents of a file without extracting it from the root folder:
+
+```4d
+
+ If($files[$i].extension=".txt")
+    $txt:=$files[$i].getText()
+ Else
+    $blob:=$files[$i].getContent()
+ End if
+```
+
+To extract from the root folder:
+
+```4d
+  //extract a file
+ $folderResult:=$files[$i].copyTo(Folder(fk desktop folder).folder("MyDocs"))
+
+  //extract all files
+ $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
+```
+
+---
 
 
 
