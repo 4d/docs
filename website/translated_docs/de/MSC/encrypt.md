@@ -4,35 +4,35 @@ title: Seite Verschlüsseln
 sidebar_label: Seite Verschlüsseln
 ---
 
-You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln".
+You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.
 
 Bei jeder Operation Verschlüsselung/Entschlüsselung wird ein neuer Ordner angelegt. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
-> Verschlüsselung ist nur im [Wartungsmodus](overview.md#display-in-maintenance-mode) verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erscheint eine Meldung, dass die Anwendung geschlossen und im Wartungsmodus geöffnet wird.
+> Verschlüsselung ist nur im [Wartungsmodus](overview.md#display-in-maintenance-mode) verfügbar. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode
 
 **Warnung:**
-- Das Verschlüsseln einer Anwendung ist eine längere Operation. Währenddessen erscheint ein Ablaufbalken (den der Benutzer unterbrechen kann). Beachten Sie auch, dass beim Verschlüsselungsprozess immer eine Komprimierung durchgeführt wird.
+- Encrypting a data file is a lengthy operation. Währenddessen erscheint ein Ablaufbalken (den der Benutzer unterbrechen kann). Note also that an application encryption operation always includes a compacting step.
 - Jeder Verschlüsselungsvorgang produziert eine Kopie der Datendatei, was den Anwendungsordner vergrößert. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
 
 ## Daten zum ersten Mal verschlüsseln
 Beim ersten Verschlüsseln Ihrer Daten über das MSC sind folgende Schritte erforderlich:
 
 1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. Weitere Informationen dazu finden Sie im Abschnitt "Tabelleneigenschaften".
-2. Öffnen Sie die Seite Verschlüsseln des MSC. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
+2. Öffnen Sie die Seite Verschlüsseln des MSC. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](assets/en/MSC/MSC_encrypt2.png)<p> This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
 3. Click on the Encrypt picture button.  
    ![](assets/en/MSC/MSC_encrypt3.png)  
    You will be prompted to enter a passphrase for your data file: ![](assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. Eine Passphrase ist eine sicherere Version als ein Kennwort, da sie eine größere Anzahl Zeichen enthalten kann. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
 4. Geben Sie zum Bestätigen Ihre gesicherte Passphrase ein.
 
-Dann wird der Prozess zum Verschlüsseln gestartet. Wurde das MSC im Standardmodus geöffnet, wird die Anwendung geschlossen und erneut im Wartungsmodus geöffnet.
+Dann wird der Prozess zum Verschlüsseln gestartet. If the MSC was opened in standard mode, the application is reopened in maintenance mode.
 
 4D bietet an, den Verschlüsselungscode zu sichern (siehe unten im Absatz [Verschlüsselungscode sichern](#verschlusselungscode-sichern)). Sie können das gleich oder später machen. Sie können auch das Logbuch zur Verschlüsselung öffnen.
 
 War der Prozess zum Verschlüsseln erfolgreich, zeigt die Seite Verschlüsseln Schaltflächen für Wartungsoperationen beim Verschlüsseln.
 
-**Warning:** During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Datensätze aus "verschlüsselbaren" Tabellen werden verschlüsselt und dann kopiert, andere Datensätze werden nur kopiert. (Außerdem wird eine Komprimierung durchgeführt). War die Operation erfolgreich, wird die ursprüngliche Datendatei in den Ordner "Replaced Files (Encrypting)" geschoben. Wollen Sie eine verschlüsselte Datendatei ausliefern, stellen Sie sicher, dass zuvor alle unverschlüsselten Datendateien aus dem Anwendungsordner verschoben/entfernt wurden.
+**Warning:** During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Datensätze aus "verschlüsselbaren" Tabellen werden verschlüsselt und dann kopiert, andere Datensätze werden nur kopiert. (Außerdem wird eine Komprimierung durchgeführt). War die Operation erfolgreich, wird die ursprüngliche Datendatei in den Ordner "Replaced Files (Encrypting)" geschoben. If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the application folder beforehand.
 
 ## Wartungsoperationen beim Verschlüsseln
-Beim Verschlüsseln einer Anwendung (siehe oben) bietet die Seite Verschlüsseln verschiedene Möglichkeiten für standardmäßige Operationen. ![](assets/en/MSC/MSC_encrypt6.png)
+When an application is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/en/MSC/MSC_encrypt6.png)
 
 
 ### Den aktuellen Verschlüsselungscode für Daten liefern
@@ -77,17 +77,17 @@ Die Datendatei wird komplett entschlüsselt und es erscheint eine Meldung als Be
 
 ## Verschlüsselungscode sichern
 
-In 4D können Sie den Verschlüsselungscode für Daten in einer spezifischen Datei speichern. Speichern Sie diese Datei auf einem externen Gerät, z. B. einem USB Key, vereinfacht das den Einsatz einer verschlüsselten Anwendung. Der Benutzer muss vor dem Öffnen der Anwendung lediglich das Gerät anschließen und kann dann auf verschlüsselte Daten zugreifen.
+In 4D können Sie den Verschlüsselungscode für Daten in einer spezifischen Datei speichern. Storing this file on an external device such a USB key will facilitate the use of an encrypted application, since the user would only need to connect the device to provide the key before opening the application in order to access encrypted data.
 
 Sie können den Verschlüsselungscode jedes Mal sichern, wenn eine neue Passphrase angelegt wird:
 
-- wenn die Anwendung zum ersten Mal verschlüsselt wird
-- wenn die Anwendung mit einer neuen Passphrase erneut verschlüsselt wird.
+- when the application is encrypted for the first time,
+- when the application is re-encrypted with a new passphrase.
 
 Aufeinanderfolgende Verschlüsselungscodes lassen sich auf dem gleichen Gerät speichern.
 
 ## Logbuch
-Ist das Komprimieren abgeschlossen, erzeugt 4D ein Logbuch im Ordner Logs der Datenbank. It is created in XML format and named "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
+After an encryption operation has been completed, 4D generates a file in the Logs folder of the application. It is created in XML format and named "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 Immer wenn ein neues Logbuch angelegt wurde, erscheint auf der Seite Verschlüsselt unten die Schaltfläche Logbuch anzeigen.
 

@@ -4,34 +4,43 @@ title: Méthodes
 ---
 
 
-Une méthode est un morceau de code qui exécute une ou plusieurs actions. Dans le langage 4D, il existe deux catégories de méthodes :
+## Aperçu
 
-- **Les méthodes intégrées**, fournies par 4D ou des développeurs tiers, qui peuvent être appelées uniquement par votre code. Les méthodes intégrées incluent :
-    - Les commandes et fonctions de 4D API, telles que `ALERT` ou `Current date`.
-    - Les méthodes associées à des collections ou à des objets natifs, telles que `collection.orderBy()` ou `entity.save()`.
-    - Les commandes issues de plug-ins ou de composants, fournies par 4D ou des développeurs tiers, telles que `SVG_New_arc`.
+Une méthode est un morceau de code qui exécute une ou plusieurs actions. Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions).
 
-    Les méthodes intégrées sont détaillées dans le manuel *4D Langage* ou dans les manuels consacrés aux plug-ins et aux composants.
+La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes de code.
 
-- Les **méthodes projets**, dans lesquelles vous pouvez écrire votre propre code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Une méthode projet est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions). La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes d’instructions.
+## Types de méthodes
 
-**Note :** 4D fournit également des méthodes spécifiques exécutées automatiquement en fonction de la base ou des événements formulaires. Voir [Méthodes spécialisées](#specialized-methods).
+Dans le langage 4D, il existe plusieurs catégories de méthodes : La catégorie dépend de la façon dont elle a été appelée : La catégorie dépend de la façon dont elle a été appelée : La catégorie dépend de la façon dont elle a été appelée :
+
+| Type                             | Contexte d'appel                                                                                                            | Accepte les paramètres | Description                                                                                                                                                                                                             |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Méthode**                      | À la demande, lorsque le nom de la méthode projet est appelé (voir [Appel de méthodes de projet](#calling-project-methods)) | Oui                    | Peut contenir du code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage du projet.                                                       |
+| **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                                            | Non                    | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                               |
+| **Méthode formulaire**           | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                                      | Non                    | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
+| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier)                  | Non                    | Propriété d'une table. Les triggers sont des méthodes qui peuvent éviter les opérations 'illégales' effectuées avec les enregistrements de votre base.                                                                  |
+| **Méthode base**                 | Automatique, lorsqu'un événement se produit sur la session de travail                                                       | Oui (prédéfini)        | Il existe 16 méthodes base dans 4D. Voir la section Méthodes bases                                                                                                                                                      |
+
+
+> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
 
 ## Méthodes projet
 
 Une méthode projet peut tenir les rôles suivants, en fonction de la manière dont elle est exécutée et utilisée :
 
-- Sous-routine et fonction
-- Méthode associée à un objet
+- Sous-routine
+- Objet formule
 - Méthode de menu
 - Méthode de gestion de process
 - Méthode de gestion d’événements et d'erreurs
 
-### Sous-routines et fonctions
+### Sous-routines
+
 Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
-Lorsque vous avez écrit une méthode projet, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes projets, ou à partir des [méthodes prédéfinies](#predefined-methods) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
+Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du prjoet dans lequel elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes (méthode projet, méthode objet, etc.) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
 
 L'utilisation de sous-routines procure les avantages suivants :
 
@@ -40,7 +49,7 @@ L'utilisation de sous-routines procure les avantages suivants :
 - Modification plus facile des méthodes,
 - Création de code modulaire
 
-Imaginons par exemple que vous travaillez avec une base de clients. A mesure que vous construisez la base, vous vous apercevez que vous répétez souvent certaines tâches, telles que la recherche d’un client et la modification de son enregistrement. Le code nécessaire à l’accomplissement de cette opération pourrait être :
+Imaginons par exemple que vous travaillez sur un projet de clients. A mesure que vous construisez le projet, vous vous apercevez que vous répétez souvent certaines tâches, telles que la recherche d’un client et la modification de son enregistrement. Le code nécessaire à l’accomplissement de cette opération pourrait être :
 
 ```4d
   // Recherche d'un client
@@ -51,30 +60,31 @@ Imaginons par exemple que vous travaillez avec une base de clients. A mesure que
  MODIFY RECORD([Clients])
 ```
 
-Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération peut être réalisée dans dix endroits différents de votre base, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
+Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération peut être réalisée dans dix endroits différents de votre projet, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
 
-Si le code ci-dessus était une méthode projet appelée `MODIFIER CLIENT`, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :
+Si le code ci-dessus était une méthode projet appelée `MODIFY_CUSTOMER`, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :
 
 ```4d
- MODIFY CUSTOMER
- PRINT SELECTION([Clients])
+ MODIFY_CUSTOMER
+ PRINT SELECTION([Customers])
 ```
 
-Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-dessus, il n’est pas nécessaire de savoir comment fonctionne la méthode `MODIFIER CLIENT`, mais uniquement ce qu’elle fait. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.
+Cette possibilité simplifie énormément vos méthodes. Dans l’exemple ci-dessus, il n’est pas nécessaire de savoir comment fonctionne la méthode `MODIFY_CUSTOMER`, mais uniquement ce qu’elle fait. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.
 
 Si vous devez modifier votre mode de recherche des clients, comme dans notre exemple, il vous suffit de modifier une seule méthode, et non dix. C’est un autre avantage des sous-routines : faciliter les modifications de votre code.
 
-Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’une base de gestion de comptes chèques :
+Avec les sous-routines, vous rendez votre code modulaire. Cela signifie simplement que vous dissociez votre code en modules (sous-routines), chacun d’entre eux effectuant une tâche logique. Examinez le code suivant, tiré d’un projet de gestion de compte courant :
 
 ```4d
- FIND CLEARED CHECKS // Rechercher les chèques émis
- RECONCILE ACCOUNT // Rapprocher le compte
-PRINT CHECK BOOK REPORT // Imprimer un relevé
+ FIND_CLEARED _CHECKS // Rechercher les chèques émis
+ RECONCILE_ACCOUNT // Rapprocher le compte
+PRINT_CHECK_BOOK_REPORT // Imprimer un relevé
 ```
 
-Même pour quelqu’un qui ne connaît pas la base, le code est clair. Il n’est pas nécessaire d’examiner chaque sous-routine. Elles peuvent contenir de nombreuses lignes d’instructions et effectuer des opérations complexes, mais l’important est ce qu’elles font. Nous vous conseillons de découper votre code en tâches logiques, ou modules, à chaque fois que c’est possible.
+Même pour quelqu’un qui ne connaît pas le projet, le code est clair. Il n’est pas nécessaire d’examiner chaque sous-routine. Elles peuvent contenir de nombreuses lignes d’instructions et effectuer des opérations complexes, mais l’important est ce qu’elles font. Nous vous conseillons de découper votre code en tâches logiques, ou modules, à chaque fois que c’est possible.
 
-### Méthodes associées à des objets
+
+### Objet formule
 
 Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les appeler à partir de vos objets.
 
@@ -86,7 +96,9 @@ To execute a method stored in an object property, use the **( )** operator after
 //myAlert
 ALERT("Hello world!")
 ```
+
 `myAlert` peut ensuite être encapsulé dans n'importe quel objet et peut être appelé :
+
 ```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";Formula(myAlert))
@@ -106,7 +118,9 @@ Vous pouvez appeler votre formule en lui [passant des paramètres](Concepts/para
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
+
 Vous pouvez encapsuler `fullName` dans un objet :
+
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
@@ -114,6 +128,7 @@ $result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // équivalent à $result:=fullName("param1";"param2")
 ```
+
 Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:
 
 ```4d
@@ -121,6 +136,7 @@ Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous pe
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
+
 La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajoutée aux autres attributs :
 
 ```4d
@@ -141,11 +157,11 @@ $o:=$f.message //retourne l'objet formule en $o
 ```
 
 ### Méthodes de menu
-Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu dans l’éditeur de menus de 4D. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. Ce fonctionnement est l’un des principaux aspects de la personnalisation d’une base de données. C’est en créant des menus qui appellent des méthodes de menu que vous personnalisez votre base.
+Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu dans l’éditeur de menus de 4D. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. En créant des menus personnalisés qui appellent des méthodes de menu qui exécutent des actions spécifiques, vous créez des interfaces personnalisées pour vos applications de bureau.
 
 Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu de saisie d’enregistrements peut appeler une méthode effectuant deux actions : afficher le formulaire entrée approprié et appeler la commande `AJOUTER ENREGISTREMENT` jusqu’à ce que l’utilisateur annule la saisie de nouveaux enregistrements.
 
-L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre base.
+L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre application.
 
 
 ### Méthodes de gestion de process
@@ -234,15 +250,3 @@ Dans 4D, la récursivité est typiquement utilisée pour :
 - Naviguer parmi les documents et les dossiers de votre disque à l'aide des commandes `LISTE DES DOSSIERS` et `LISTE DES DOCUMENTS`. Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.
 
 **Important :** Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
-
-
-## Méthodes spécialisées
-
-Outre les **méthodes projets**, 4D prend en charge plusieurs types de méthodes spécifiques, appelées automatiquement en fonction des événements :
-
-| Type                             | Contexte d'appel                                                                                           | Accepte les paramètres | Description                                                                                                                                                                                                             |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                           | Non                    | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                               |
-| **Méthode formulaire**           | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                     | Non                    | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
-| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier) | Non                    | Propriété d'une table. Les triggers sont des méthodes qui peuvent éviter les opérations 'illégales' effectuées avec les enregistrements de votre base.                                                                  |
-| **Méthode base**                 | Automatique, lorsqu'un événement se produit sur la session de travail                                      | Oui (prédéfini)        | Il existe 16 méthodes base dans 4D. Voir la section Méthodes bases                                                                                                                                                      |

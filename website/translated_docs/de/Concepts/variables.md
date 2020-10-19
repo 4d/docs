@@ -7,30 +7,117 @@ Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder**
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
+Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. Sie wollen z. B. eine Textvariable in einem Feld vom gleichen Typ speichern:
+
+```4d
+ [MyTable]MyField:=MyText
+```
+
+
 Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen und verwenden, die nie auf dem Bildschirm erscheinen. In Ihren Formularen können Sie Variablen (außer Zeiger und BLOB) auf dem Bildschirm anzeigen, Daten in sie eingeben und sie in Berichten drucken. Auf diese Weise verhalten sich eingebbare und nicht-eingebbare Variablenbereiche wie Felder und haben dieselben integrierten Kontrollen beim Erstellen. Variablen in Formularen können auch Schaltflächen, Listboxen, rollbare Bereiche, Bildschaltflächen, usw. steuern oder Ergebnisse von Berechnungen anzeigen, die nicht gesichert werden müssen.
 
 ## Variablen erstellen
 
-Sie erstellen Variablen durch Deklarieren über einen Befehl im Kapitel "Compiler" oder "Arrays".
+Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache bietet zwei Wege zum Deklarieren von Variablen:
 
-**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+- Über das Schlüsselwort `var` (empfohlen, besonders wenn Ihr Code Objekte und Klassen verwendet),
+- Über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (überholt, nur in der klassischen Programmiersprache).
+
+**Hinweis:** Auch wenn wir davon abraten, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht formell mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+
+```4d
+ MyDate:=Current date+30 //MyDate is created  
+ // 4D guesses it is of date type  
+ // and assigns the current date plus 30 days
+```
+
+
+### Das Schlüsselwort `var` verwenden
+
+Es wird empfohlen, Variablen mit dem Schlüsselwort `var` zu deklarieren, da sich mit dieser Syntax Objektvariablen mit Klassen verbinden lassen. Diese Syntax verbessert die Vorschläge und type-ahead Features im Code-Editor.
+
+Für eine Variable von beliebigem Typ verwenden Sie folgende Syntax:
+
+`var <varName>{; <varName2>;...}{ : <varType>}`
+
+Beispiel:
+
+```4d
+var $myText : Text  //a text variable
+var myDate1; myDate2 : Date  //several date variables
+var $myFile : 4D.File  //a file class object variable
+var $myVar //a variant variable
+```
+
+`varName` ist der Variablenname, er muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.   
+Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#local-process-and-interprocess-variables), d. h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
+
+`varTyp` kann folgendes sein:
+
+- [Datentyp](Concepts/data-types.md), dann enthält die Variable einen Wert vom deklarierten Typ
+- [Referenz auf eine Klasse](Concepts/classes.md) (4D Klasse oder Benutzerklasse), dann enthält die Variable die Referenz auf ein Objekt der definierten Klasse.
+
+Ist `varTyp` nicht übergeben, wird eine Variable vom Typ **variant** erstellt.
+
+Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
+
+| varTyp         | Contents                              |
+| -------------- | ------------------------------------- |
+| Text           | Textwert                              |
+| Datum          | Datumswert                            |
+| Zeit           | Zeitwert                              |
+| Boolean        | Boolean Wert                          |
+| Ganzzahl       | Wert Lange Ganzzahl                   |
+| Zahl           | Zahlenwert                            |
+| Zeiger         | Zeigerwert                            |
+| Bild           | Bildwert                              |
+| Blob           | BLOB Wert                             |
+| Collection     | Collection Wert                       |
+| Variant        | Variant Wert                          |
+| Objekt         | Objekt mit Standardklasse (4D.Objekt) |
+| 4D.*className* | Objekt des 4D Klassennamens           |
+| cs.*className* | Objekt des Benutzerklassennamens      |
+
+#### Beispiele
+
+- Einfache lokale Variable bzw. Prozessvariable deklarieren:
+
+```4d
+var $myText; myText; $vt : Text
+var myVar //variant
+
+var $o : Object    
+//equivalent to:  
+var $o : 4D.Object
+//also equivalent to C_OBJECT($o)
+```
+
+- Objektvariablen der 4D Klasse deklarieren:
+
+```4d
+var $myFolder : 4D.Folder
+var $myFile : 4D.File
+```
+
+- Objektvariablen der Benutzerklasse deklarieren:
+
+```4d
+var $myClass : cs.MyClass
+var $dataclass : cs.Employee
+var $entity : cs.EmployeeEntity
+```
+
+
+### Eine C_Direktive verwenden
+
+> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
+
+Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
 Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
 
 ```4d
  C_TEXT(myText)
-```
-
-**Hinweis:** Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht formell mit Typ definieren, wie es bei Feldern erforderlich ist. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
-
-```4d
- MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
-```
-
-Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. Sie wollen z.B. eine Textvariable in einem Feld vom gleichen Typ speichern:
-
-```4d
- [MyTable]MyField:=MyText
 ```
 
 Hier sehen Sie einige grundlegende Variablendeklarationen:
@@ -44,6 +131,9 @@ Hier sehen Sie einige grundlegende Variablendeklarationen:
  ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
 ```
 
+**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+
+
 ## Daten zuweisen
 
 Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Daten in eine Variable setzen heißt, **der Variablen die Daten zuweisen**. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
@@ -55,6 +145,8 @@ MyNumber:=3
 ```
 
 erstellt die Variable _ MyNumber_ und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
+
+> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#creating-variables) zu erstellen.
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie _ MyNumber_ auf die rechte Seite des Zuweisungsoperators:
 
@@ -119,7 +211,7 @@ Weitere Informationen dazu finden Sie im Kapitel **Prozesse** und in der Beschre
 
 ### Interprozessvariablen
 
-Interprozessvariablen sind in der gesamten Anwendung verfügbar und werden über alle kooperativen Prozesse gemeinsam genutzt. Sie dienen hauptsächlich dazu, Information in verschiedenen Prozessen gemeinsam zu nutzen.
+Interprozessvariablen sind im gesamten Projekt verfügbar und werden über alle kooperativen Prozesse gemeinsam genutzt. Sie dienen hauptsächlich dazu, Information in verschiedenen Prozessen gemeinsam zu nutzen.
 
 > Die Verwendung von Interprozessvariablen wird nicht empfohlen, da sie in preemptive Prozessen nicht verfügbar sind und u.U. die Verwaltung des Code erschweren können.
 

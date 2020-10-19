@@ -271,7 +271,7 @@ A list box is made of one or more column object(s) which have specific propertie
 ![](assets/en/FormObjects/listbox_column.png)
 
 You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
-> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). The use of object arrays requires a 4D View Pro licence (see [Using object arrays in columns (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
+> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object).
 
 
 ### Propriétés spécifiques des list box
@@ -817,14 +817,14 @@ Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués p
 
 
 
-## Tableaux objets dans les colonnes (4D View Pro)
+## Object arrays in columns
 
 Les colonnes de list box peuvent être associées à des tableaux d'objets. Comme les tableaux d'objets peuvent contenir des données de types différents, cette puissante fonctionnalité vous permet de saisir et d'afficher divers types de valeurs dans les lignes d'une même colonne, ainsi que d'utiliser divers objets d'interface (widgets). Par exemple, vous pouvez placer une zone de saisie de texte dans la première ligne, une case à cocher dans la seconde, et une liste déroulante dans la troisième. Les tableaux d'objets vous donnent également accès à des widgets supplémentaires, tels que des boutons ou des sélecteurs de couleurs (color picker).
 
 La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ![](assets/en/FormObjects/listbox_column_objectArray.png)
-> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. For more information, please refer to the 4D Web site.
+
 
 ### Configuring an object array column
 

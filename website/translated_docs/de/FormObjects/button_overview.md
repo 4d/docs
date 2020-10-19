@@ -9,8 +9,6 @@ A button is an active object that can be assigned an action (*e.g.*, a database 
 
 Buttons can fulfill a variety of roles, depending on their style and the action assigned to it. For example, buttons could lead a user through a questionnaire or form to complete, or to make choices. Depending on its settings, a button may be designed to be clicked only once and execute a command, while others may require the user to click more than once to receive the desired result.
 
-<p>
-
 ## Handling buttons
 
 The actions assigned to buttons can originate from predefined [standard actions](properties_Action.md#standard-action) or from custom object methods. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
@@ -48,6 +46,7 @@ By default, the Regular style has a light gray background with a label in the ce
 #### JSON Example:
 
 ```4d
+
     "myButton": {
         "type": "button",   //define the type of object
         "style":"regular",  //define the style of the button

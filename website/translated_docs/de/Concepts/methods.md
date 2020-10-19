@@ -4,34 +4,43 @@ title: Methoden
 ---
 
 
-Eine Methode ist in der Regel ein Stück Code, der eine oder mehrere Aktionen ausführt. In der 4D Programmiersprache gibt es zwei Kategorien von Methoden:
+## Overview
 
-- **Integrierte Methoden**, die 4D oder third-party Entwickler liefern und sich nur in Ihrem Code aufrufen lassen. Zu integrierten Methoden gehören:
-    - Befehle und Funktionen des 4D API (Application Programming Interface), wie z. B. `ALERT` oder `Current date`.
-    - Methoden, die Collections oder native Objekten zugewiesen sind, wie z.B. `collection.orderBy()` oder `entity.save()`.
-    - Befehle aus Plug-Ins oder Komponenten, die von 4D oder third-Party Entwicklern kommen, wie z. B. `SVG_New_arc`.
+Eine Methode ist in der Regel ein Stück Code, der eine oder mehrere Aktionen ausführt. Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. Eine Anweisung führt eine Aktion aus, die einfach oder komplex sein kann. Obwohl eine Anweisung immer in einer Zeile steht, kann diese Zeile so lang wie erforderlich sein (bis zu 32.000 Zeichen, was für die meisten Fälle ausreichen dürfte).
 
-    Weitere Informationen dazu finden Sie im Handbuch *4D Programmiersprache* oder spezifischen Handbüchern zu Plug-Ins oder Komponenten.
+Eine Methode kann max. 2 GB groß sein oder bis zu 32.000 Code-Zeilen enthalten.
 
-- **Projektmethoden**, wo Sie eigenen Code zum Ausführen beliebiger eigener Aktionen schreiben können. Eine einmal erstellte Projektmethode wird Teil der Programmierung der Anwendung, in der sie angelegt wurde. Eine Projektmethode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. Eine Anweisung führt eine Aktion aus, die einfach oder komplex sein kann. Obwohl eine Anweisung immer in einer Zeile steht, kann diese Zeile so lang wie erforderlich sein (bis zu 32.000 Zeichen, was für die meisten Fälle ausreichen dürfte). Eine Projektmethode kann max. 2 GB groß sein oder bis zu 32.000 Code-Zeilen enthalten.
+## Methodentypen
 
-**Hinweis:** 4D bietet auch spezifische Methoden, die bei bestimmten Datenbank- oder Formularereignissen automatisch ausgeführt werden. Weitere Informationen dazu finden Sie unter[ Spezialisierte Methoden](#specialized-methods).
+In der 4D Programmiersprache gibt es verschiedene Kategorien von Methoden. Die Kategorie richtet sich danach, wie die Methode aufgerufen wird:
+
+| Typ                                              | Kontext des Aufrufs                                                                                                         | Akzeptiert Parameter | Beschreibung                                                                                                                                                                                                     |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Projektmethode**                               | Bei Bedarf, wenn der Name einer Projektmethode aufgerufen wird (siehe [Projektmethoden aufrufen](#calling-project-methods)) | Ja                   | Kann beliebigen Code zum Ausführen eigener Aktionen enthalten. Eine einmal erstellte Projektmethode wird Teil der Programmierung des Projekts.                                                                   |
+| **Objekt (Widget) Methode**                      | Automatisch, wenn ein Ereignis das Objekt betrifft, dem die Methode zugeordnet ist                                          | Nein                 | Eigenschaft eines Formularobjekts (auch Widget genannt)                                                                                                                                                          |
+| **Formularmethode**                              | Automatisch, wenn ein Ereignis das Formular betrifft, dem die Methode zugeordnet ist                                        | Nein                 | Eigenschaft eines Formulars. Sie können eine Formularmethode zum Verwalten von Daten und Objekten verwenden. Für diese Zwecke ist es jedoch generell einfacher und effizienter, eine Objektmethode zu verwenden. |
+| **Trigger** (auch bekannt als *Tabellenmethode*) | Automatisch, jedes Mal wenn Sie die Datensätze einer Tabelle bearbeiten (Hinzufügen, Löschen, Ändern)                       | Nein                 | Eigenschaft einer Tabelle. Trigger sind Methoden, die “illegale” Operationen mit Datensätzen in Ihrer Datenbank verhindern.                                                                                      |
+| **Datenbankmethoden**                            | Automatisch, wenn ein Ereignis in der Arbeitssitzung eintritt                                                               | Ja (vordefiniert)    | Es gibt 16 Datenbankmethoden in 4D. Siehe Abschnitt zu Datenbankmethoden                                                                                                                                         |
+
+
+> Die 4D Programmiersprache unterstützt auch **Class functions**, die im Kontext der Instanz eines Objekts aufgerufen werden. Class Functions können integriert sein (*z.B.* `collection.orderBy()` oder `entity.save()`) oder vom 4D Entwickler [erstellt worden sein](classes.md#class-function).
 
 
 ## Projektmethoden aufrufen
 
 Eine Projektmethode kann je nach Ausführung und Verwendung folgende Rolle haben:
 
-- Unterroutine und Funktion
-- An Objekt gebundene Methode
+- Unterroutine
+- Objekt Formel
 - Menümethode
 - Prozessmethode
 - Auf Ereignis oder Fehler bezogene Methode
 
-### Unterroutine und Funktion
+### Unterroutinen
+
 Eine Unterroutine ist eine Projektmethode, die man sich als Diener vorstellen kann. Sie führt die Aufgaben (tasks) aus, deren Durchführung andere Methoden anfordern. Eine Funktion ist eine Unterroutine, die einen Wert an die Methode zurückgibt, die sie aufgerufen hat.
 
-Eine einmal erstellte Projektmethode wird Teil der Programmierung der Anwendung, in der sie angelegt wurde. Sie können die Projektmethode dann in anderen Projektmethoden oder [vordefinierten Methoden](#predefined-methods) genauso wie einen in 4D integrierten Befehl aufrufen. Eine so verwendete Projektmethode heißt Unterroutine.
+Eine einmal erstellte Projektmethode wird Teil der Programmierung des Projekts, in dem sie angelegt wurde. Sie können die Projektmethode dann in einer anderen Methode (Projektmethode, Objektmethode …) genauso wie einen in 4D integrierten Befehl aufrufen. Eine so verwendete Projektmethode heißt Unterroutine.
 
 Sie verwenden Unterroutinen, um:
 
@@ -40,7 +49,7 @@ Sie verwenden Unterroutinen, um:
 - Ihre Methoden schneller zu ändern
 - Ihren Code modular aufzuteilen
 
-Wir gehen beispielsweise von einer Datenbank Kunden aus. Bei der individuellen Gestaltung stellen Sie fest, dass sich einige Vorgänge wiederholen, wie einen Kunden finden oder einen Datensatz ändern. Der Code dafür könnte folgendermaßen aussehen:
+Wir gehen beispielsweise von einem Projekt Kunden aus. Bei der individuellen Gestaltung stellen Sie fest, dass sich einige Vorgänge wiederholen, wie einen Kunden finden oder einen Datensatz ändern. Der Code dafür könnte folgendermaßen aussehen:
 
 ```4d
   // Look for a customer
@@ -51,12 +60,12 @@ Wir gehen beispielsweise von einer Datenbank Kunden aus. Bei der individuellen G
  MODIFY RECORD([Customers])
 ```
 
-Arbeiten Sie ohne Unterroutinen, müssen Sie den Code jedes Mal schreiben, wenn Sie einen Kundendatensatz ändern wollen. Passiert das in Ihrer Anwendung an zehn Stellen, müssen Sie den Code zehnmal schreiben. Mit Unterroutinen schreiben Sie den Code nur einmal. Das ist der erste Vorteil von Unterroutinen - die Menge an Code reduzieren.
+Arbeiten Sie ohne Unterroutinen, müssen Sie den Code jedes Mal schreiben, wenn Sie einen Kundendatensatz ändern wollen. Passiert das in Ihrem Projekt an zehn Stellen, müssen Sie den Code zehnmal schreiben. Mit Unterroutinen schreiben Sie den Code nur einmal. Das ist der erste Vorteil von Unterroutinen - die Menge an Code reduzieren.
 
 Wir legen den oben beschriebenen Code in einer Methode mit Namen `MODIFY CUSTOMER` an. Soll diese Methode in einer anderen Methode ausgeführt werden, müssen Sie nur den Namen einsetzen. Wollen Sie beispielsweise einen Kundendatensatz ändern und dann den Datensatz drucken, schreiben Sie folgende Methode:
 
 ```4d
- MODIFY CUSTOMER
+ MODIFY_CUSTOMER
  PRINT SELECTION([Customers])
 ```
 
@@ -67,14 +76,15 @@ Wollen Sie in dieser Beispielanwendung die Methode zum Auffinden von Kunden änd
 Mit Unterroutinen machen Sie Ihren Code modular. Das bedeutet, Sie unterteilen Ihren Code in Module (Unterroutinen), die jeweils einen logischen Vorgang (task) ausführen. Betrachten Sie folgenden Code aus einer Anwendung für Kontoführung:
 
 ```4d
- FIND CLEARED CHECKS ` Find the cleared checks
- RECONCILE ACCOUNT ` Reconcile the account
- PRINT CHECK BOOK REPORT ` Print a checkbook report
+ FIND_CLEARED_CHECKS //Find the cleared checks
+ RECONCILE_ACCOUNT //Reconcile the account
+ PRINT_CHECK_BOOK_REPORT //Print a checkbook report
 ```
 
 Auch für jemanden, der die Anwendung nicht kennt, ist klar, was der Code ausführt. Er muss nicht jede Unterroutine untersuchen, die evtl. aus vielen Zeilen besteht und komplexe Operationen ausführt. Wichtig ist, dass die Tasks ausgeführt werden. Wir empfehlen, den Code möglichst in logische Vorgänge oder Module aufzuteilen.
 
-### An Objekt gebundene Methode
+
+### Objekt Formel
 
 Sie können Ihre Projektmethoden in **formula** Objekten einkapseln und von Ihren Objekten aus aufrufen.
 
@@ -86,7 +96,9 @@ Zum Ausführen einer Methode, die in einer Objekteigenschaft gespeichert ist, se
 //myAlert
 ALERT("Hello world!")
 ```
+
 Dann lässt sich `myAlert` in jedes Objekt einbinden und aufrufen:
+
 ```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";Formula(myAlert))
@@ -106,7 +118,9 @@ Sie können auch [Parameter](Concepts/parameters.md) in Ihrer Formel übergeben,
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
+
 Sie können `fullName` in ein Objekt einbinden:
+
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
@@ -114,6 +128,7 @@ $result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
+
 In Kombination mit der Funktion `This` können Sie mit solchen Objektmethoden leistungsstarken generischen Code schreiben. Beispiel:
 
 ```4d
@@ -121,6 +136,7 @@ In Kombination mit der Funktion `This` können Sie mit solchen Objektmethoden le
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
+
 Die Methode arbeitet dann wie ein neues berechnetes Attribut, dass sich in andere Attribute einfügen lässt:
 
 ```4d
@@ -141,7 +157,7 @@ $o:=$f.message //returns the formula object in $o
 ```
 
 ### Menümethode
-Eine Menümethode wird in der Anwendungsumgebung aufgerufen, wenn Sie den dazugehörigen eigenen Menübefehl auswählen. Sie weisen die Methode dem Menübefehl im Methodeneditor zu oder über einen Befehl aus dem Kapitel "Menüs". Die Methoden wird ausgeführt, wenn der Menübefehl ausgewählt wird. Dies ist einer der Hauptaspekte bei der eigenen Gestaltung von Anwendungen. Durch Einrichten eigener Menüs mit dazugehörigen Menümethoden, die bestimmte Aktionen ausführen, personalisieren Sie Ihre Anwendung.
+Eine Menümethode wird in der Anwendungsumgebung aufgerufen, wenn Sie den dazugehörigen eigenen Menübefehl auswählen. Sie weisen die Methode dem Menübefehl im Methodeneditor zu oder über einen Befehl aus dem Kapitel "Menüs". Die Methoden wird ausgeführt, wenn der Menübefehl ausgewählt wird. Durch Einrichten eigener Menüs mit dazugehörigen Menümethoden, die bestimmte Aktionen ausführen, erstellen Sie eigene Oberflächen für Ihre Desktop-Anwendungen.
 
 Mit eigenen Menübefehlen können eine oder mehrere Aktivitäten ausgelöst werden. Ein Menübefehl für die Eingabe von Datensätzen kann beispielsweise zwei Tasks ausführen: Das entsprechende Eingabeformular anzeigen und den Befehl `ADD RECORD` aufrufen, bis der Benutzer die Eingabe von Daten beendet.
 
@@ -232,15 +248,3 @@ Einige typische Verwendungen für Rekursion in 4D sind:
 - Dokumente und Ordner auf Ihrer Festplatte mit den Befehlen `FOLDER LIST` und `DOCUMENT LIST` durchlaufen. Ein Ordner kann Ordner und Dokumente enthalten, die Unterordner selbst können Ordner und Dokumente enthalten, usw.
 
 **Wichtig:** Rekursive Abfragen sollten immer an einem bestimmten Punkt enden. Im Beispiel ruft sich die Methode `Genealogy of` nicht mehr selbst auf, wenn die Suche keinen Datensatz zurückgibt. Ohne Abfragen dieser Bedingung würde sich die Methode endlos aufrufen; 4D gibt dann evtl. eine Fehlermeldung “Speicher voll” zurück, da es keinen Platz mehr hat zum Stapeln der Aufrufe (so wie bei den in der Methode verwendeten Parametern und lokalen Variablen).
-
-
-## Spezialisierte Methoden
-
-4D unterstützt, zusätzlich zu generischen **Projektmethoden**, verschiedene spezialisierte Methodentypen, die bei bestimmten Ereignissen automatisch aufgerufen werden:
-
-| Typ                                              | Kontext des Aufrufs                                                                                   | Akzeptiert Parameter | Beschreibung                                                                                                                                                                                                     |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Objekt (Widget) Methode**                      | Automatisch, wenn ein Ereignis das Objekt betrifft, dem die Methode zugeordnet ist                    | Nein                 | Eigenschaft eines Formularobjekts (auch Widget genannt)                                                                                                                                                          |
-| **Formularmethode**                              | Automatisch, wenn ein Ereignis das Formular betrifft, dem die Methode zugeordnet ist                  | Nein                 | Eigenschaft eines Formulars. Sie können eine Formularmethode zum Verwalten von Daten und Objekten verwenden. Für diese Zwecke ist es jedoch generell einfacher und effizienter, eine Objektmethode zu verwenden. |
-| **Trigger** (auch bekannt als *Tabellenmethode*) | Automatisch, jedes Mal wenn Sie die Datensätze einer Tabelle bearbeiten (Hinzufügen, Löschen, Ändern) | Nein                 | Eigenschaft einer Tabelle. Trigger sind Methoden, die “illegale” Operationen mit Datensätzen in Ihrer Datenbank verhindern.                                                                                      |
-| **Datenbankmethoden**                            | Automatisch, wenn ein Ereignis in der Arbeitssitzung eintritt                                         | Ja (vordefiniert)    | Es gibt 16 Datenbankmethoden in 4D. Siehe Abschnitt zu Datenbankmethoden                                                                                                                                         |

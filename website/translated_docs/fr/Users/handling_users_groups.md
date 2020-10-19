@@ -7,8 +7,8 @@ title: Gestion des groupes et utilisateurs 4D
 
 4D fournit à certains utilisateurs des privilèges d’accès standard ainsi que des prérogatives spécifiques. Une fois qu’un système d’utilisateurs et de groupes a été créé, ces privilèges standard prennent effet.
 
-L’utilisateur le plus puissant est le **Super_Utilisateur**. Aucune partie de la base de données n’est inaccessible au Super_Utilisateur. Le Super_Utilisateur peut :
-- accéder à tous les serveurs de la base sans restrictions,
+L’utilisateur le plus puissant est le **Super_Utilisateur**. No aspect of the application is closed to the Designer. Le Super_Utilisateur peut :
+- access all application servers without restriction,
 - créer des utilisateurs et des groupes,
 - affecter des privilèges d’accès aux groupes,
 - utiliser le mode Développement. En monoposte, les droits d'accès du Super_Utilisateur sont toujours utilisés. En mode client/serveur, l'affectation d'un mot de passe au Super_Utilisateur affiche la boîte de dialogue de connexion.  L'accès au mode Développement est en lecture seule.
@@ -22,9 +22,9 @@ L'Administrateur peut :
 
 L'Administrateur ne peut pas :
 - modifier l'utilisateur Super_Utilisateur
-- par défaut, accéder à des objets protégés de la base. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. L'Administrateur doit faire partie d'un ou plusieurs groupes pour avoir des privilèges d’accès dans la base. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
+- by default, access to protected parts of the application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. The Administrator must be part of one or more groups to have access privileges in the application. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
 
-Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les bases. Dans la [boîte de dialogue de gestion des utilisateurs](#users-and-groups-editor), les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :
+Both the Designer and Administrator are available by default in all applications. Dans la [boîte de dialogue de gestion des utilisateurs](#users-and-groups-editor), les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :
 
 - Icône du Super_Utilisateur : ![](assets/en/Users/IconDesigner.png)
 - Icône de l'Administrateur : ![](assets/en/Users/IconAdmin.png)
@@ -57,11 +57,11 @@ La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Uti
 
 4D ajoute un nouvel utilisateur à la liste, nommé par défaut "Nouvel utilisateurN".
 
-3. Saisissez le nom du nouvel utilisateur. Ce nom sera utilisé par l’utilisateur pour ouvrir la base. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+3. Saisissez le nom du nouvel utilisateur. This name will be used by the user to open the application. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
 
 4. Pour saisir le mot de passe de l’utilisateur, cliquez sur le bouton **Modifier...** dans la zone des propriétés de l’utilisateur et saisissez deux fois le mot de passe dans la boite de dialogue. Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).
 
-> Les utilisateurs peuvent modifier leur mot de passe à tout moment en fonction des options de la page Sécurité des propriétés de la base, ou à l'aide de la commande `CHANGE PASSWORD`.
+> Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
 
 5. Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”. Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.
 
@@ -77,7 +77,7 @@ Les utilisateurs supprimés n'apparaissent plus dans la liste de l'éditeur d'ut
 
 - Le champ **Type d’utilisateur** : le champ Type d’utilisateur contient "Super_Utilisateur", "Administrateur", ou (pour tous les autres utilisateurs) "Utilisateur".
 
-- **Méthodes de démarrage** : Nom d'une méthode associée qui sera automatiquement associée lorsque l'utilisateur ouvre la base (facultatif). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.
+- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.
 
 
 ## Éditeur de groupes
@@ -92,7 +92,7 @@ Attention, une fois créé, un groupe ne peut pas être supprimé. Si vous souha
 
 Pour créer un groupe :
 
-1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes de la base.
+1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**. 4D affiche la fenêtre d’édition des groupes. The list of groups displays all the groups of the application project.
 
 2. Cliquez sur le bouton ![](assets/en/Users/PlussNew.png) situé en-dessous de la liste des groupes.  
    OU  
@@ -121,11 +121,11 @@ Pour supprimer un utilisateur ou un groupe d’un autre groupe, il suffit de dé
 
 ### Affecter un groupe à un plug-in ou à un serveur
 
-Vous pouvez affecter un groupe d’accès à tout plug-in 4D installé dans votre base de données. Les plug-ins comprennent tous les plug-ins de 4D ainsi que tout plug-in développés par une société tierce.
+You can assign a group privileges to any plug-ins installed in the project. Les plug-ins comprennent tous les plug-ins de 4D ainsi que tout plug-in développés par une société tierce.
 
 Répartir les accès aux plug-ins vous permet de contrôler l’utilisation des licences dont vous disposez pour ces plug-ins. Tout utilisateur n’appartenant pas au groupe d’accès à un plug-in ne pourra pas charger ce plug-in.
 
-Vous pouvez également contrôler l’utilisation du serveur Web et du serveur SOAP de 4D en mode distant via la zone d’accès aux plug-ins.
+> Les licences utilisées demeurent associées aux comptes utilisateurs 4D dans le groupe, durant toute la session 4D.
 
 La zone “Plug-ins” de la page Groupes de la boîte à outils liste tous les plug-ins chargés par l’application 4D. Pour affecter un groupe à un plug-in, il suffit de cocher l’option correspondante.
 
@@ -136,7 +136,7 @@ Les lignes **4D Client Web Server** et **4D Client SOAP Server** permettent cont
 
 ### Un schéma d’accès hiérarchique
 
-Le meilleur moyen d’assurer la sécurité de votre base de données et de proposer différents niveaux d’accès aux utilisateurs est d’utiliser un schéma hiérarchique des accès. Les utilisateurs peuvent être affectés à différents groupes et les groupes peuvent être hiérarchisés pour créer des niveaux de droits d’accès. Cette section décrit différentes approches de ce thème.
+The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Les utilisateurs peuvent être affectés à différents groupes et les groupes peuvent être hiérarchisés pour créer des niveaux de droits d’accès. Cette section décrit différentes approches de ce thème.
 
 Dans cet exemple, un utilisateur appartient à l’un des trois groupes définis suivant son niveau de responsabilité. Les utilisateurs du groupe Comptabilité sont responsables de la saisie de données. Les utilisateurs du groupe Dir. finance sont responsables de la mise à jour des données, comme la mise à jour d’enregistrements ou la suppression d’enregistrements obsolètes. Les utilisateurs du groupe Direction générale sont responsables de l’analyse de données, ce qui inclut la réalisation de recherches et l’impression d’états.
 

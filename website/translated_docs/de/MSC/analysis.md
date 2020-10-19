@@ -4,7 +4,7 @@ title: Seite Aktivität Analyse
 sidebar_label: Seite Aktivität Analyse
 ---
 
-Auf der Seite Aktivität Analyse des MSC können Sie den Inhalt des aktuellen Logbuchs betrachten. Diese Funktion ist hilfreich, um die Verwendung der Datenbank zu analysieren oder die Operationen herauszufinden, die Fehler verursachen oder die Funktionsweise beeinträchtigen. Läuft die Anwendung im Client-/Server-Modus, können Sie auch die Operationen auf jedem Client-Rechner überprüfen.
+Auf der Seite Aktivität Analyse des MSC können Sie den Inhalt des aktuellen Logbuchs betrachten. This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
 > Sie können die in den Daten der Anwendung ausgeführten Operationen auch zurückfahren (rollback). Weitere Informationen dazu finden Sie auf der [Seite Zurückfahren](rollback.md).
 
 ![](assets/en/MSC/MSC_analysis.png)
@@ -39,6 +39,5 @@ Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten lie
   ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 - **Records**: Record number.
 
-Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. The **Export...** button can be used to export the contents of the file as text.
-
+Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. The **Export...** button can be used to export the contents of the file as text.
 

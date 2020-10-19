@@ -13,9 +13,9 @@ Vous pouvez combiner les deux fonctionnalités et utiliser les menus créés dan
 
 ## Barre de menu par défaut
 
-Une application personnalisée doit contenir au moins une barre de menu avec un menu. Par défaut, lorsque vous créez une nouvelle base, 4D crée automatiquement une barre de menu par défaut (Barre n°1) pour que l’utilisateur puisse accéder au mode Application. La barre de menus par défaut (Barre n°1) comporte des menus standard et une commande de retour au mode Développement.
+Une application personnalisée doit contenir au moins une barre de menu avec un menu. By default, when you create a new project, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. La barre de menus par défaut (Barre n°1) comporte des menus standard et une commande de retour au mode Développement.
 
-Ce mécanisme permet à l’utilisateur d’accéder au mode Application dès la création de la base. La barre de menus n°1 est automatiquement appelée lorsque la commande **Tester l’application** est sélectionnée dans le menu **Exécution**.
+This allows the user to access the Application environment as soon as the project is created. La barre de menus n°1 est automatiquement appelée lorsque la commande **Tester l’application** est sélectionnée dans le menu **Exécution**.
 
 La barre de menus par défaut contient trois menus : Fichier, Edition et Mode.
 

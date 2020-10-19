@@ -3,7 +3,7 @@ id: manData
 title: Manipulation des données
 ---
 
-Touts [les attributs, classes](configuration.md#exposing-tables-and-fields) et méthodes du datastore exposés sont accessibles via REST. Les noms de dataclass, d'attributs et de méthodes sont sensibles à la casse; contrairement aux données des requêtes.
+Tous [les attributs, dataclasses exposés](configuration.md#exposing-tables-and-fields) et toutes les [fonctions](classFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
 
 ## Rechercher des données
 
@@ -20,9 +20,9 @@ Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souh
 
 Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Avant d'enregistrer des données, vous pouvez également les valider au préalable en appelant [`$method=validate`]($method.md#methodvalidate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une méthode dans votre datastore class et l'appeler pour retourner une entity selection (ou une collection) à l'aide de [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une [fonction de classe (class function)](classFunctions.md#function-calls) qui retourne une entity selection (ou une collection).
 
-Avant de retourner la collection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
+Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
 
 ## Navigating data
@@ -69,40 +69,17 @@ Pour calculer toutes les valeurs et retourner un objet JSON :
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Getting data from methods
+## Appeler les fonctions de classe du modèle de données
 
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
+Vous pouvez appeler des [fonctions de classe utilisateurs](classFunctions.md) ORDA du modèle de données via des requêtes POST, afin de pouvoir bénéficier de l'API de l'application ciblée. Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
-- an object
-- a collection
+`/rest/City/getCity`
 
-The following example is a dataclass method that reveives parameters and returns an object:
+avec des données contenues dans le corps de la requête : `["Paris"]`
 
-```4d
-// 4D findPerson method
-C_TEXT($1;$firstname;$2;$lastname)
-$firstname:=$1
-$lastname:=$2
 
-$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
-```
+> Les appels aux méthodes projet 4D exposées en tant que service REST sont toujours pris en charge mais sont obsolètes.
 
-The method properties are configured accordingly on the 4D project side:
-
-![alt-text](assets/en/REST/methodProp_ex.png)
-
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
-
-```4d
-C_TEXT($content)
-C_OBJECT($response)
-
-$content:="[\"Toni\",\"Dickey\"]" 
-
-$statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
-```
-
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
 
 ## Selecting Attributes to get
 
@@ -198,6 +175,7 @@ Les requêtes suivantes retournent uniquement le prénom et le nom de la datasto
 
 
 #### Exemple d'entité
+
 La requête suivante retourne uniquement les attributs de prénom et nom à partir d'une entité spécifique de la dataclass People :
 
  `GET  /rest/People(3)/firstName,lastName/`
@@ -244,7 +222,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
 Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 
- `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
+ `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
 
 ## Affichage d'un attribut d'image

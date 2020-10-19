@@ -24,7 +24,7 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
 
 Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
 
-Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Ist Objektnotation in Ihrer Anwendung aktiviert (siehe unten), können Sie solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
+Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 
 - In 4D Code, entweder in den Methoden (Methodeneditor) oder extern geschrieben (Formeln, Dateien mit 4D Tags, die mit PROCESS 4D TAGS oder dem Web Server bearbeitet werden, Exportdateien, 4D Write Pro Dokumente...),
 - In den Bereichen Ausdruck des Debugger und des Runtime Explorer,
@@ -188,7 +188,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      End case
 ```
 
-- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
+- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
  - Objekt, Collection, Zeiger: Null
  - Bild: Leeres Bild
  - Boolean: Falsch
@@ -204,7 +204,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      $o.a:=$o.b //$o.a=0
 ```
 
-- Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen führt nichts aus.
+- Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, führt nichts aus.
 
 Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen, dass diese den korrekten Typ haben, selbst wenn sie als undefiniert bewertet werden. Dazu übergeben Sie die passenden 4D Befehle `String`, `Num`, `Date`, `Time`, `Bool`. Sie geben einen leeren Wert des angegebenen Typs zurück, wenn der Ausdruck als undefiniert bewertet wird. Beispiel:
 
@@ -261,7 +261,7 @@ Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekte
   //creates the phone property and sets its value to an object
 ```
 
-- Einen Wert in einem Unterobjekt erhalten ist mit Objektnotation ganz einfach:
+- Einen Wert in einem Unterobjekt erhalten, ist mit Objektnotation ganz einfach:
 
 ```4d
  $vCity:=$Emp.city //"Paris"

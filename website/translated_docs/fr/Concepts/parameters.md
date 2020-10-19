@@ -17,20 +17,20 @@ ALERT("Bonjour")
 Les paramètres sont passés de la même manière aux méthodes. Par exemple, si la méthode FAIRE QUELQUE CHOSE accepte trois paramètres, l'appel à cette méthode pourrait être de la forme suivante :
 
 ```4d
-FAIRE QUELQUE CHOSE(AvecCeci;EtCela;CommeCeci)
+FAIRE QUELQUE CHOSE($WithThis;$AndThat;$ThisWay)
 ```
-Les paramètres sont séparés par des points-virgules (;). Leur valeur est calculée lorsqu'ils sont appelés.
+Les paramètres sont séparés par des points-virgules (;). Leur [valeur est calculée](#values-or-references) au moment de l'appel.
 
 Dans la sous-routine (la méthode appelée), la valeur de chaque paramètre est automatiquement copiée séquentiellement dans des variables locales numérotées : $1, $2, $3, etc. La numérotation des variables locales représente l’ordre des paramètres.
 
 ```4d
-  //Code de la méthode FAIRE QUELQUE CHOSE
+  //Code de la méthode DO SOMETHING
   //Supposons que tous les paramètres sont de type texte
  C_TEXT($1;$2;$3)
  ALERT("J'ai reçu "+$1+" et "+$2+" et aussi "+$3)
-  //$1 contient le paramètre AvecCeci
-  //$2 contient le paramètre EtCela
-  //$3 contient le paramètre CommeCeci
+  //$1 contient le paramètre $WithThis
+  //$2 contient le paramètre $AndThat
+  //$3 contient le paramètre $ThisWay
 ```
 
 Dans une sous-méthode, vous pouvez utiliser les paramètres $1, $2... comme n'importe quelle autre variable locale. Toutefois, dans le cas où vous utilisez des commandes qui modifient la valeur de la variable passée en paramètre (par exemple `Trouver dans champ`), les paramètres $1, $2, etc. ne peuvent pas être utilisés directement. Vous devez d'abord les recopier dans des variables locales standard (par exemple `$mavar:=$1`).
@@ -56,13 +56,9 @@ Vous pouvez utiliser n'importe quelle [expression](Concepts/quick-tour.md#expres
 Les expressions de tables ou de tableaux peuvent être passées uniquement [comme une référence utilisant un pointeur](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
 
 
-## Fonctions
+## Valeurs retournées
 
-Les méthodes peuvent retourner des valeurs. Une méthode qui retourne une valeur est appelée une fonction.
-
-Les commandes de 4D ou de plug-ins qui retournent une valeur sont également appelées fonctions.
-
-Par exemple, la ligne d’instruction suivante utilise une fonction intégrée, `Longueur`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur*.
+Les méthodes peuvent retourner des valeurs. Par exemple, la ligne d’instruction suivante utilise une commande intégrée, `Longueur`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur*.
 
 ```4d
 MaLongueur:=Length("Comment suis-je arrivé là ?")
@@ -70,21 +66,21 @@ MaLongueur:=Length("Comment suis-je arrivé là ?")
 
 Toute sous-routine peut retourner une valeur. La valeur à retourner est placée dans la variable locale `$0`.
 
-Par exemple, la fonction suivante, appelée `Majuscules4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
+Par exemple, la méthode suivante, appelée `Uppercase4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-Voici un exemple qui utilise la fonction Majuscules4 :
+Voici un exemple qui utilise la méthode Uppercase4 :
 
 ```4d
-NouvellePhrase:=Majuscules4("Bien joué.")
+$NewPhrase:=Uppercase4("This is good.")
 ```
 
-Dans ce cas, la variable *NouvellePhrase* prend la valeur “BIEN joué.”
+Dans cet exemple, la variable *$NewPhrase* prend la valeur “THIS is good.”
 
-Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, vous pouvez écrire :
+La valeur retournée, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, vous pouvez écrire :
 
 ```4d
 // Faire_quelque chose
@@ -143,23 +139,25 @@ C_OBJECT($3)
 ```
 
 **Note :** En mode compilé, vous pouvez regrouper tous les paramètres de variables locales pour les méthodes projets dans un méthode spécifique avec un nom commençant par "Compiler". Dans cette méthode, vous pouvez prédéclarer les paramètres de chaque méthode, comme par exemple :
-```4d
+```4d  
+ // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
 Pour plus d'informations, consultez la page [Modes interprété et compilé](Concepts/interpreted.md).
 
 La déclaration des paramètres est également obligatoire dans les contextes suivants (ces contextes ne prennent pas en charge les déclarations dans une méthode "Compiler") :
 
-- Méthodes base Par exemple, la `méthode base Sur connexion Web` reçoit six paramètres, allant de $1 à $6, de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
+- Méthodes base - Par exemple, la `méthode base Sur connexion Web` reçoit six paramètres, allant de $1 à $6, de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
 ```4d
 // Sur connexion Web
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Triggers Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
-- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
+- Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
+
+- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` - Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple:
 ```4d
  C_LONGINT($0)
  If(Form event=On Drag Over)
@@ -172,140 +170,6 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Valeurs ou références
-
-Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2 etc. dans la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
-
-```4d
-    //Voici du code extrait de la méthode MY_METHOD
-DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
-ALERT([People]Name)
-
-    //Voici du code extrait de la méthode  DO_SOMETHING
- $1:=Uppercase($1)
- ALERT($1)
-```
-
-La boîte de dialogue d'alerte affichée par `FAIRE QUELQUE CHOSE` contiendra "WILLIAM" et celle affichée par `MA METHODE` contiendra "william". La méthode a modifié localement la valeur du paramètre $1, mais cela n'affecte pas la valeur du champ `[Personnes]Nom` passé en paramètre par la méthode `MA METHODE`.
-
-Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la valeur du champ, deux solutions s'offrent à vous :
-
-1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
-
-```4d
-  //Voici du code extrait de la méthode  MY_METHOD
- DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
- ALERT([People]Last Name)
-
-  //Voici du code extrait de la méthode  DO_SOMETHING
- $1->:=Uppercase($1->)
- ALERT($1->)
-```
-
-Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Ainsi, à l'intérieur de la méthode `FAIRE QUELQUE CHOSE`, $1 ne contient plus la valeur du champ mais un pointeur vers le champ. L'objet **référencé** par $1 ($1-> dans le code ci-dessus) est le champ lui-même. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAM".
-
-2. Plutôt que la méthode `FAIRE QUELQUE CHOSE` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur.
-
-```4d
-    //Voici du code extrait de la méthode MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
- ALERT([People]Name)
-
-    //Voici du code extrait de la méthode DO SOMETHING
- $0:=Uppercase($1)
- ALERT($0)
-```
-
-Cette deuxième technique de renvoi d'une valeur par une sous-routine est appelée «utilisation d'une fonction». Ceci est décrit dans le paragraphe [Fonctions](#functions).
-
-
-### Cas particuliers : objets et collections
-
-Veillez à ce que les types de données d'Objet et Collection ne puissent être gérés que via une référence (c'est-à-dire un* pointeur* interne).
-
-Par conséquent, lorsque vous utilisez des types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), à l'exception des paramètres `$1, $2 ...` n'ont pas besoin d'être déréférencés dans la sous-routine.
-
-Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
-
-```4d
-  //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
- C_OBJECT($person)
- $person:=New object("Name";"Smith";"Age";40)
- ChangeAge($person)
- ALERT(Chaine(OB Lire($person;"Age")))  
-```
-
-La méthode `ChangeAge` ajoute 10 à l'attribut Age de l'objet reçu
-
-```4d
-  //ChangeAge
- C_OBJECT($1)
-$1.Age:=$1.Age+10
- ALERT(String($1;Age))
-```
-
-Si vous exécutez la méthode `CreatePerson`, les deux messages d'alerte contiendront "50" car le même objet est traité par les deux méthodes.
-
-**4D Server :** Lorsque des paramètres sont passés entre des méthodes qui ne sont pas exécutées sur la même machine (lors de l'utilisation de l'option Exécuter sur serveur par exemple), il n'est pas possible d'utiliser des références. Dans ce cas, ce sont des copies des paramètres objet ou collection qui sont envoyées au lieu de références.
-
-
-## Paramètres nommés
-
-L'utilisation d'objets en tant que paramètres vous permet de gérer des **paramètres nommés**. Ce style de programmation est simple, souple et facile à lire.
-
-Par exemple, si vous utilisez la méthode `CreatePerson` :
-
-```4d
-  //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
- C_OBJECT($person)
- $person:=New object("Name";"Smith";"Age";40)
- ChangeAge($person)
- ALERT(Chaine(OB Lire($person;"Age")))  
-```
-Dans la méthode `ChangeAge`, vous pouvez écrire :
-
-```4d
-  //ChangeAge
- C_OBJECT($1;$para)
- $para:=$1  
- $para.Age:=$para.Age+10
- ALERT($para.Nom+" a "+String($para.Age)+" ans.")
-```
-
-C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). Pour gérer les paramètres manquants, vous pouvez :
-- vérifier si tous les paramètres attendus sont fournis en les comparant à la valeur `Null`, ou
-- prédéfinir les valeurs des paramètres, ou
-- les utiliser sous forme de valeurs vides.
-
-Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :
-
-```4d
-  //ChangeAge
- C_OBJECT($1;$para)
- $para:=$1  
- $para.Age:=Num($para.Age)+10
- ALERT(String($para.Nom+" a "+String($para.Age)+" ans.")
-```
-Les deux paramètres sont alors optionnels. S'ils ne sont pas renseignés, le résultat sera "a 10 ans", mais aucune erreur ne sera générée.
-
-Enfin, les paramètres nommés permettent de maintenir et de reproduire des applications en toutes simplicité et sécurité. Imaginez que vous réalisez, par la suite, qu'ajouter 10 ans n'est pas toujours approprié. Vous aurez besoin d'un autre paramètre pour définir le nombre d'années à ajouter. Vous pouvez écrire :
-
-```4d
-$person:=New object("Nom";"Smith";"Age";40;"àAjouter";10)
-ChangeAge($person)
-
-//ChangeAge
-C_OBJECT($1;$para)
-$para:=$1  
-If ($para.toAdd=Null)
-    $para.toAdd:=10
-End if
-$para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Nom)+" a "+String($para.Age)+" ans.")
-```
-Ici, toute la puissance réside dans le fait de ne pas avoir à changer votre code existant. Cela fonctionnera toujours dans l'ancienne version, mais le cas échéant, vous pouvez utiliser une autre valeur que 10 ans.
-
-Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dans l'exemple ci-dessus, tous les paramètres sont optionnels et peuvent être donnés, dans n'importe quel ordre.
 
 
 ## Paramètres optionnels
@@ -411,3 +275,139 @@ De même que pour les autres variables locales, la déclaration du paramètre g�
 La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type Entier long. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Il sera donc de type Entier long, même si pour vous, par exemple, il était de type Réel.
 
 **Note :** Le nombre, dans la déclaration, doit toujours être une constante et jamais une variable.
+
+
+## Valeurs ou références
+
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2 etc. dans la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
+
+```4d
+    //Voici du code extrait de la méthode MY_METHOD
+DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ALERT([People]Name)
+
+    //Voici du code extrait de la méthode  DO_SOMETHING
+ $1:=Uppercase($1)
+ ALERT($1)
+```
+
+La boîte de dialogue d'alerte affichée par `FAIRE QUELQUE CHOSE` contiendra "WILLIAM" et celle affichée par `MA METHODE` contiendra "william". La méthode a modifié localement la valeur du paramètre $1, mais cela n'affecte pas la valeur du champ `[Personnes]Nom` passé en paramètre par la méthode `MA METHODE`.
+
+Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la valeur du champ, deux solutions s'offrent à vous :
+
+1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
+
+```4d
+  //Voici du code extrait de la méthode  MY_METHOD
+ DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+ ALERT([People]Last Name)
+
+  //Voici du code extrait de la méthode  DO_SOMETHING
+ $1->:=Uppercase($1->)
+ ALERT($1->)
+```
+
+Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Ainsi, à l'intérieur de la méthode `FAIRE QUELQUE CHOSE`, $1 ne contient plus la valeur du champ mais un pointeur vers le champ. L'objet **référencé** par $1 ($1-> dans le code ci-dessus) est le champ lui-même. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAM".
+
+2. Plutôt que la méthode `FAIRE QUELQUE CHOSE` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur.
+
+```4d
+    //Voici du code extrait de la méthode MY METHOD
+ [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ ALERT([People]Name)
+
+    //Voici du code extrait de la méthode DO SOMETHING
+ $0:=Uppercase($1)
+ ALERT($0)
+```
+
+Cette deuxième technique de renvoi d'une valeur par une sous-routine est appelée «utilisation d'une fonction». Ceci est décrit dans le paragraphe [Fonctions](#functions).
+
+
+### Cas particuliers : objets et collections
+
+Veillez à ce que les types de données d'Objet et Collection ne puissent être gérés que via une référence (c'est-à-dire un* pointeur* interne).
+
+Par conséquent, lorsque vous utilisez des types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), à l'exception des paramètres `$1, $2 ...` n'ont pas besoin d'être déréférencés dans la sous-routine.
+
+Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
+
+```4d
+  //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
+ C_OBJECT($person)
+ $person:=New object("Name";"Smith";"Age";40)
+ ChangeAge($person)
+ ALERT(Chaine(OB Lire($person;"Age")))  
+```
+
+La méthode `ChangeAge` ajoute 10 à l'attribut Age de l'objet reçu
+
+```4d
+  //ChangeAge
+ C_OBJECT($1)
+$1.Age:=$1.Age+10
+ ALERT(String($1;Age))
+```
+
+Si vous exécutez la méthode `CreatePerson`, les deux messages d'alerte contiendront "50" car le même objet est traité par les deux méthodes.
+
+**4D Server :** Lorsque des paramètres sont passés entre des méthodes qui ne sont pas exécutées sur la même machine (lors de l'utilisation de l'option Exécuter sur serveur par exemple), il n'est pas possible d'utiliser des références. Dans ce cas, ce sont des copies des paramètres objet ou collection qui sont envoyées au lieu de références.
+
+
+### Paramètres nommés des objets
+
+L'utilisation d'objets en tant que paramètres vous permet de gérer des **paramètres nommés**. Ce style de programmation est simple, souple et facile à lire.
+
+Par exemple, si vous utilisez la méthode `CreatePerson` :
+
+```4d
+  //La méthode CreatePerson crée un objet et l'envoie en tant que paramètre
+ C_OBJECT($person)
+ $person:=New object("Name";"Smith";"Age";40)
+ ChangeAge($person)
+ ALERT(Chaine(OB Lire($person;"Age")))  
+```
+Dans la méthode `ChangeAge`, vous pouvez écrire :
+
+```4d
+  //ChangeAge
+ C_OBJECT($1;$para)
+ $para:=$1  
+ $para.Age:=$para.Age+10
+ ALERT($para.Nom+" a "+String($para.Age)+" ans.")
+```
+
+C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). Pour gérer les paramètres manquants, vous pouvez :
+- vérifier si tous les paramètres attendus sont fournis en les comparant à la valeur `Null`, ou
+- prédéfinir les valeurs des paramètres, ou
+- les utiliser sous forme de valeurs vides.
+
+Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :
+
+```4d
+  //ChangeAge
+ C_OBJECT($1;$para)
+ $para:=$1  
+ $para.Age:=Num($para.Age)+10
+ ALERT(String($para.Nom+" a "+String($para.Age)+" ans.")
+```
+Les deux paramètres sont alors optionnels. S'ils ne sont pas renseignés, le résultat sera "a 10 ans", mais aucune erreur ne sera générée.
+
+Enfin, les paramètres nommés permettent de maintenir et de reproduire des applications en toutes simplicité et sécurité. Imaginez que vous réalisez, par la suite, qu'ajouter 10 ans n'est pas toujours approprié. Vous aurez besoin d'un autre paramètre pour définir le nombre d'années à ajouter. Vous pouvez écrire :
+
+```4d
+$person:=New object("Nom";"Smith";"Age";40;"àAjouter";10)
+ChangeAge($person)
+
+//ChangeAge
+C_OBJECT($1;$para)
+$para:=$1  
+If ($para.toAdd=Null)
+    $para.toAdd:=10
+End if
+$para.Age:=Num($para.Age)+$para.toAdd
+ALERT(String($para.Nom)+" a "+String($para.Age)+" ans.")
+```
+Ici, toute la puissance réside dans le fait de ne pas avoir à changer votre code existant. Cela fonctionnera toujours dans l'ancienne version, mais le cas échéant, vous pouvez utiliser une autre valeur que 10 ans.
+
+Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dans l'exemple ci-dessus, tous les paramètres sont optionnels et peuvent être donnés, dans n'importe quel ordre. 

@@ -3,9 +3,9 @@ id: onOpenExternalLink
 title: On Open External Link
 ---
 
-| Code | Can be called by                            | Definition                                     |
-| ---- | ------------------------------------------- | ---------------------------------------------- |
-| 52   | [Web Area](FormObjects/webArea_overview.md) | An external URL has been opened in the browser |
+| Code | Can be called by                          | Definition                                     |
+| ---- | ----------------------------------------- | ---------------------------------------------- |
+| 52   | [Webエリア](FormObjects/webArea_overview.md) | An external URL has been opened in the browser |
 
 
 ## 説明

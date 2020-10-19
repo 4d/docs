@@ -5,7 +5,7 @@ title: Splitter
 
 ## Overview
 
-A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. A splitter can be either horizontal or vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your database’s interface. A splitter may or may not be a “pusher.”
+A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. A splitter can be either horizontal or vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your application's interface. A splitter may or may not be a “pusher.”
 
 Splitter are used for example in output forms so that columns can be resized:
 
@@ -53,6 +53,7 @@ In a form, splitters interact with the objects that are around them according to
 >An object completely contained in the rectangle that defines the splitter is moved at the same time as the splitter.
 
 ## Managing splitters programmatically  
+
 
 You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
 

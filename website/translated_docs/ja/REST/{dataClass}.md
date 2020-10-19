@@ -7,18 +7,20 @@ title:
 
 
 
-Dataclass names can be used directly in the REST requests to work with entities, entity selections, or methods of the dataclass.
+Dataclass names can be used directly in the REST requests to work with entities and entity selections, or class functions of the dataclass.
 
 ## Available syntaxes
 
-| シンタックス                                                                     | 例題                          | 説明                                                                                                   |
-| -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Returns all the data (by default the first 100 entities) for the dataclass                           |
-| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Returns the data for the specific entity defined by the dataclass's primary key                      |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Returns the data for one entity in which the attribute's value is defined                            |
-| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executes a project method and returns an object or a collection (the project method must be exposed) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Returns a value based on an entity method                                                            |
+| シンタックス                                                                             | 例題                                       | 説明                                                                              |
+| ---------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Returns all the data (by default the first 100 entities) for the dataclass      |
+| [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Returns the data for the specific entity defined by the dataclass's primary key |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Returns the data for one entity in which the attribute's value is defined       |
+| [**{dataClass}/{dataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executes a dataclass class function                                             |
+| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executes an entity selection class function                                     |
+| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Executes an entity class function                                               |
 
+> Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
 
 
 
@@ -212,133 +214,4 @@ If you want to use a relation attribute using [$attributes]($attributes.md), you
 The following request returns all the public data of the employee named "Jones".
 
  `GET  /rest/Employee:lastname(Jones)`
-
-
-## {dataClass}/{method} and {dataClass}({key})/{method}
-
-Returns an object or a collection based on a project method.
-
-### 説明
-
-Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
-
-`POST  /rest/Employee/getHighSalaries`
-
-`POST  /rest/Employee(52)/getFullName`
-
-
-### 4D Configuration
-
-To be called in a REST request, a method must:
-
-- have been declared as "Available through REST server" in 4D,
-- have its master table and scope defined accordingly:
-    -  **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
-    -  **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side.
-        - **Table** -for methods applied to the whole table (dataclass)
-        - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax.
-        - **Current selection** -for methods applied to the current selection
-
-![alt-text](assets/en/REST/MethodProp.png)
-
-
-### Passing Parameters to a Method
-
-You can also pass parameters to a method in a POST.
-
-`POST  /rest/Employee/addEmployee`
-
-You can POST data in the body part of the request, for example:
-
-["John","Smith"]
-
-
-
-
-### 例題
-
-#### Table scope
-
-Call of a `getAverage` method:
-- on [Employee] table
-- with **Table** scope
-
-
-```4d
-    //getAverage  
-ALL RECORDS([Employee])
-$0:=New object("ageAverage";Average([Employee]age))
-```
-
-`POST  /rest/Employee/getAverage`
-
-結果:
-```
-{
-    "result": {
-        "ageAverage": 44.125
-    }
-}
-```
-
-
-
-#### Current record scope
-
-Call of a `getFullName` method:
-- on [Employee] table
-- with **Current record** scope
-
-```4d
-    //getFullName  
-$0:=New object("fullName";[Employee]firstname+" "+[Employee]lastname)
-```
-
-`POST  /rest/Employee(3)/getFullName`
-
-結果:
-```
-{
-    "result": {
-        "fullName": "John Smith"
-    }
-}
-```
-
-
-
-#### Current selection scope
-
-Call of a `updateSalary` method:
-- on [Employee] table
-- with **Current selection** scope
-
-```4d
-    //updateSalary  
-C_REAL($1;$vCount)
-READ WRITE([Employee])
-$vCount:=0
-FIRST RECORD([Employee])
-While (Not(End selection([Employee]))  
-    [Employee]salary:=[Employee]salary * $1
-    SAVE RECORD([Employee])
-    $vCount:=$vCount+1
-    NEXT RECORD([Employee])
-End while 
-UNLOAD RECORD([Employee])
-$0:=New object("updates";$vCount)
-```
-
-`POST  /rest/Employee/updateSalary/?$filter="salary<1500"`
-
-POST data (in the request body): [1.5]
-
-結果:
-```
-{
-    "result": {
-        "updated": 42
-    }
-}
-```
 

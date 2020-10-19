@@ -9,8 +9,6 @@ Un bouton est un objet actif auquel une action peut être assignée (*ex :* une 
 
 Les boutons peuvent répondre à divers besoins qui dépendent du style et de l'action qui leur est affecté(e). Par exemple, les boutons peuvent amener l'utilisateur à faire des choix ou à compléter un questionnaire ou formulaire. En fonction de leurs propriétés, les bouton peuvent être destinés à être cliqués une fois seulement et à exécuter une commande, ou à être cliqués plusieurs fois pour obtenir le résultat escompté.
 
-<p>
-
 ## Gestion des boutons
 
 Les actions assignées aux boutons peuvent provenir d'[actons standard](properties_Action.md#standard-action) ou de méthodes objet personnalisées. Les actions typiques peuvent consister à laisser l'utilisateur accepter, annuler ou supprimer des enregistrements, à copier ou coller des données, à passer d'une page à l'autre dans un formulaire de plusieurs pages, à ouvrir, supprimer ou ajouter des enregistrements dans un sous-formulaire, à gérer les attributs de police dans les zones de texte , etc.
@@ -48,6 +46,7 @@ Par défaut, le style Classique a un fond gris clair avec un libellé au centre.
 #### Exemple JSON :
 
 ```4d
+
     "myButton": {
         "type": "button",   //définit le type d'objet
         "style":"regular",  //définit le style du bouton

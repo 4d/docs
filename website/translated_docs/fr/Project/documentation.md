@@ -6,7 +6,7 @@ title: Documenter un projet
 ## Aperçu
 
 
-Dans les bases projet, vous pouvez documenter vos méthodes ainsi que vos formulaires, vos tables ou vos champs. La création d'une documentation est particulièrement appropriée pour les bases de données développées par plusieurs programmeurs et constitue généralement une bonne pratique en matière de programmation. La documentation peut contenir une description d'un élément ainsi que toute information nécessaire à la compréhension du fonctionnement de cet élément d'une base de données.
+In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
 Les éléments de projet suivants acceptent la documentation :
 
@@ -108,9 +108,10 @@ Si un fichier nommé "\<MethodName>.md" existe dans le dossier "\<package>/docum
 
 - Tout texte saisi dans une balise de `commentaire` HTML (*\<!-- commande documentation -->*) en haut du fichier markdown.
 
-- Ou si aucune balise de `commentaire` HTML n'est utilisée, la première phrase après une balise `# Description` du fichier Markdown. Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par le parseur de code 4D.
+- Ou, si aucune balise de `commentaire` html n'est utilisée, la première phrase après une balise `# Description` du fichier markdown.  
+  Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par le parseur du code 4D.
 
-> Sinon, l'éditeur de code affiche [le bloc de commentaire en haut du code de la méthode](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
+    > Sinon, l'éditeur de code affiche [le bloc de commentaire en haut du code de la méthode](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
 
 
@@ -192,7 +193,7 @@ The [documentation](https://doc.4d.com) of the command ....
 ```
 [![logo blog 4D avec lien](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
-> Pour plus d'informations, consultez le [guide Markdown GitHub](https://guides.github.com/features/mastering-markdown/).
+> Pour plus d'informations, consultez le [guide Markdown GitHug](https://guides.github.com/features/mastering-markdown/).
 
 
 

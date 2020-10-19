@@ -11,6 +11,14 @@ La gestion des erreurs répond à deux besoins principaux :
 - détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
 > > Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
 
+
+## Erreur ou statut
+
+De nombreuses fonctions de classe 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
+
+D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être traitée par une méthode de gestion des erreurs.
+
+
 ## Installer une méthode de gestion des erreurs
 
 Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
@@ -26,13 +34,7 @@ Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la mét
 ON ERR CALL("") //redonne le contrôle à 4D
 ```
 
-### Portée et composants
-
-Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
-
-Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à la base de données en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de la base hôte n'est pas appelée, et inversement.
-
-La commande `Method called on error` permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le processus en cours. Cela est particulièrement utile dans le contexte des composants car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur de la base de données hôte :
+La commande `Method called on error` permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le processus en cours. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
 
 ```4d
  $methCurrent:=Method called on error
@@ -43,6 +45,13 @@ La commande `Method called on error` permet de connaître le nom de la méthode 
  ON ERR CALL($methCurrent)
 
 ```
+
+### Portée et composants
+
+Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
+
+Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à l'application en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de l'application hôte n'est pas appelée, et inversement.
+
 
 ### Gérer les erreurs dans une méthode
 

@@ -5,7 +5,6 @@ title: Coordonnées & dimensions
 
 ---
 ## Hauteur de ligne automatique
-`4D View Pro uniquement : cette fonctionnalité nécessite une licence 4D View Pro.`
 
 Cette propriété n'est disponible que pour les list box de type tableau, non hiérarchiques. Par défaut, cette option n'est pas sélectionnée.
 
@@ -248,7 +247,6 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 ---
 ## Tableau hauteurs des lignes
-`4D View Pro uniquement : cette fonctionnalité nécessite une licence 4D View Pro.`
 
 This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
 

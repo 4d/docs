@@ -36,19 +36,27 @@ Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er komb
 
 ## Variablen
 
-Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit einem `C_XXX` Befehl. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
+Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit dem Schlüsselwort `var`. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
 
 ```4d
-C_DATE(MyDate) //Date type for MyDate variable
+var MyDate : Date 
 ```
 
-Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht unbedingt mit Typ definieren, wie es bei Feldern erforderlich ist. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
+Mit dem Schlüsselwort `var` können Sie Variablen vom Typ Objekt einer definierten Klasse deklarieren, wie z. B:
+
+```4d
+var myPerson : cs.Person 
+//variable of the Person user class
+```
+
+
+Auch wenn es normalerweise nicht empfehlenswert ist, können Sie Variablen einfach über ihre Verwendung deklarieren; Sie müssen sie nicht unbedingt förmlich definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-Die Code-Zeile bedeutet "MyOtherDate erhält das aktuelle Datum plus 30 Tage." Diese Zeile erstellt die Variable, weist ihr den Datentyp (temporär) und einen Inhalt zu. Eine per Zuweisung erstellte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `C_XXX` typisierte Variable kann ihren Typ nicht ändern. Im kompilierten Modus lässt sich der Typ nie verändern, unabhängig wie die Variable erstellt wurde.
+Die Code-Zeile bedeutet "MyOtherDate erhält das aktuelle Datum plus 30 Tage." Diese Zeile erstellt die Variable, weist ihr den Datentyp (temporär) und einen Inhalt zu. Eine per Zuweisung deklarierte Variable wird als typlos interpretiert, d. h. sie kann mit anderen Typen in anderen Zeilen zugewiesen werden und ändert dann den Typ dynamisch. Eine mit `var` typisierte Variable kann ihren Typ nicht ändern. Im [kompilierten Modus](interpreted.md) lässt sich der Typ dagegen niemals ändern, unabhängig wie die Variable deklariert wurde.
 
 ## Befehle
 

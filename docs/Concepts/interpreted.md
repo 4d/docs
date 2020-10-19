@@ -10,10 +10,10 @@ title: Interpreted and Compiled modes
 
 The advantages of the compilation are:
 
-- **Speed**: Your database can run from 3 to 1,000 times faster.
-- **Code checking**: Your database application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
-- **Protection**: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
-- **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
+- **Speed**: Your application can run from 3 to 1,000 times faster.
+- **Code checking**: Your application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
+- **Protection**: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
+- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
 - **Preemptive mode**: only compiled code can be executed in preemptive processes. 
 
 ## Differences between interpreted and compiled code
@@ -32,9 +32,9 @@ Although application will work the same way in interpreted and compiled modes, t
 
 ## Using Compiler Directives with the Interpreter
 
-Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
+Compiler directives are not required for uncompiled applications. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
 
-Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes. 
+Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes. 
 
 For example, if you write:
 
@@ -42,7 +42,7 @@ For example, if you write:
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the database, you write:
+and elsewhere in the project, you write:
 ```4d
 MyInt:=3.1416
 ```
@@ -51,7 +51,7 @@ In this example, `MyInt` is assigned the same value (3) in both the interpreted 
 
 The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.
+The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.
 
 
 ## Using pointers to avoid retyping

@@ -5,6 +5,15 @@
     "previous": "Précédent",
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
+      "Admin/building": {
+        "title": "Générer un package projet"
+      },
+      "Admin/licenses": {
+        "title": "Gestion des licences 4D"
+      },
+      "API/cryptoClass": {
+        "title": "Classe CryptoKey"
+      },
       "Backup/backup": {
         "title": "Sauvegarde"
       },
@@ -439,7 +448,7 @@
         "title": "Echelle"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/propertiesText": {
         "title": "Texte"
@@ -472,7 +481,7 @@
         "title": "Stepper"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/tabControl": {
         "title": "Onglets"
@@ -490,7 +499,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation et activation"
+        "title": "Installation"
       },
       "Menus/bars": {
         "title": "Barres de menus"
@@ -547,14 +556,32 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
-      "Project/architecture": {
-        "title": "Architecture d'un projet 4D"
+      "ORDA/dsmapping": {
+        "title": "Data Model Objects"
       },
-      "Project/building": {
-        "title": "Générer un package projet"
+      "ORDA/entities": {
+        "title": "Travailler avec des données"
+      },
+      "ORDA/glossary": {
+        "title": "Glossaire"
+      },
+      "ORDA/ordaClasses": {
+        "title": "Classes du modèle de données"
+      },
+      "ORDA/overview": {
+        "title": "Aperçu"
+      },
+      "ORDA/quickTour": {
+        "title": "Tour d'horizon d'ORDA"
+      },
+      "ORDA/datastores": {
+        "title": "Utiliser un datastore distant"
+      },
+      "Project/architecture": {
+        "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Créer un projet 4D"
+        "title": "Créer ou ouvrir un projet"
       },
       "Project/developing": {
         "title": "Développer un projet"
@@ -564,9 +591,6 @@
       },
       "Project/overview": {
         "title": "Aperçu"
-      },
-      "Project/pictures": {
-        "title": "Images"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -646,6 +670,9 @@
       "REST/authUsers": {
         "title": "Sessions et utilisateurs"
       },
+      "REST/classFunctions": {
+        "title": "Appeler des fonctions de classe ORDA"
+      },
       "REST/configuration": {
         "title": "Configuration du serveur"
       },
@@ -672,31 +699,37 @@
       }
     },
     "links": {
-      "v18 R4 BETA": "v18 R4 BETA",
-      "v18 R3": "v18 R3",
+      "v18 R5 BETA": "v18 R5 BETA",
+      "v18 R4": "v18 R4",
       "v18": "v18"
     },
     "categories": {
       "Getting Started": "Prise en main",
+      "Project Management": "Gestion de projet",
       "4D Language Concepts": "Concepts du langage 4D",
-      "Project Databases": "Bases projet",
+      "ORDA": "ORDA",
+      "Class API Reference": "Classes API",
+      "Access Rights": "Droits d'accès",
+      "Administration": "Administration",
+      "MSC": "CSM",
+      "Backup and Restore": "Sauvegarde et restitution",
+      "Web Server": "Serveur Web",
+      "REST Server": "Serveur REST",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
-      "Menus": "Menus",
-      "MSC": "CSM",
-      "Backup and Restore": "Sauvegarde et restitution",
-      "Users and Groups": "Groupes et utilisateurs",
-      "Web Server": "Serveur Web",
-      "REST Server": "Serveur REST"
+      "Menus": "Menus"
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation et activation",
+    "Installation|in index page Getting started": "Installation",
+    "Starting 4D|in index page Getting started": "Démarrer 4D",
     "Language Concepts|in index page Getting started": "Concepts du langage",
-    "Project databases|in index page Getting started": "Bases projets",
+    "Project Management|in index page Getting started": "Gestion de projet",
+    "Object Relational Data Access (ORDA)|in index page Getting started": "Object Relational Data Access (ORDA)",
+    "Class API Reference|no description given": "Classes API",
     "Forms|no description given": "Formulaires",
     "Form Properties|no description given": "Propriétés des formulaires",
     "Form Events|no description given": "Evénements formulaire",
@@ -707,13 +740,16 @@
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
+    "License Management|no description given": "Gestion des licences",
+    "Build Application|no description given": "Générateur d'application",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
-    "Users and Groups|no description given": "Groupes et utilisateurs",
+    "Access Rights|no description given": "Droits d'accès",
     "Getting started|no description given": "Prise en main",
-    "Developing a Desktop application|no description given": "Développer une application Desktop",
-    "Developing a Web application|no description given": "Développer une application web",
-    "Developing a Mobile application|no description given": "Développer une application mobile",
+    "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",
+    "Web applications|no description given": "Applications Web",
+    "Mobile applications|no description given": "Applications Mobile",
+    "Desktop applications|no description given": "Applications Desktop",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"

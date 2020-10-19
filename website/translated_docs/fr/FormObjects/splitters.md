@@ -5,7 +5,7 @@ title: Séparateur
 
 ## Aperçu
 
-Un séparateur divise un formulaire en deux zones. Il permet à l’utilisateur d’agrandir ou de réduire chaque zone en le déplaçant. Un séparateur peut être horizontal ou vertical. Il tient compte des propriétés de redimensionnement des objets, ce qui permet de personnaliser entièrement l’interface. Un séparateur peut être “pousseur” ou non
+Un séparateur divise un formulaire en deux zones. Il permet à l’utilisateur d’agrandir ou de réduire chaque zone en le déplaçant. Un séparateur peut être horizontal ou vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your application's interface. Un séparateur peut être “pousseur” ou non
 
 L’utilisation type du séparateur est le formulaire de sortie dans lequel les colonnes peuvent être redimensionnées :
 
@@ -52,6 +52,7 @@ Dans un formulaire, les séparateurs interagissent sur les objets qui les entour
 > Un objet entièrement contenu dans le rectangle définissant le séparateur est déplacé en même temps que le séparateur lui-même.
 
 ## Gestion programmée des séparateurs
+
 
 Vous pouvez associer une méthode objet à un séparateur. Cette méthode sera appelée avec l’événement `On Clicked` durant tout le déplacement.
 

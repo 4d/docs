@@ -12,7 +12,8 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
+    "@gkotulski/doc_preprocessing": "^1.0.8",
     "docusaurus": "^1.14.4",
-    "highlightjs-4d": "^1.0.0"
+    "highlightjs-4d": "^1.0.3"
   }
 }

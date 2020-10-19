@@ -24,7 +24,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 Pour gérer les variables, champs ou expressions de type objet, vous pouvez utiliser la notation objet (cf. [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)) ou les commandes 4D du thème **Objets (Langage)**. A noter que des commandes spécifiques du thème Requêtes, telles que `CHERCHER PAR ATTRIBUT`, `CHERCHER PAR ATTRIBUT DANS SELECTION` ou `TRIER PAR ATTRIBUT` peuvent être utilisées pour traiter des champs objets.
 
-Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Lorsque la notation objet est activée dans votre base (voir ci-dessous), vous pouvez utiliser ces valeurs là où une expression 4D est attendue :
+Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. You can use such values wherever 4D expressions are expected:
 
 - Dans le code 4D, soit écrites dans les méthodes (éditeur de méthodes) soit externalisées (formules, fichiers d'étiquettes traités par la commande PROCESS 4D TAGS ou le Serveur Web, fichiers d'export, documents 4D Write Pro, etc.),
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,

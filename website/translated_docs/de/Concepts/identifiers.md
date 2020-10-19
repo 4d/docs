@@ -19,26 +19,57 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 - Leerzeichen am Anfang oder Ende werden ignoriert, können aber innerhalb des Namens verwendet werden.
 
 ### Zusätzliche Regeln für Namen von Objekteigenschaften und ORDA
+
 - Leerzeichen sind nicht erlaubt.
 - Klammern ("[ ]") sind nicht erlaubt.
 - <0>Wichtig:</0> Groß- und Kleinschreibung wird unterschieden.
 
 ### Zusätzliche Regeln für SQL
+
 - Nur die Zeichen _0123456789abcdefghijklmnopqrstuvwxyz werden akzeptiert.
 - Namen dürfen keine SQL Schlüsselwörter enthalten, wie command, attribute, etc.
 
 **Hinweis:** Der SQL-Bereich des Inspektors im Struktureditor zeigt automatisch alle nicht-zugelassenen Zeichen im Namen einer Tabelle oder eines Feldes an.
 
 
-## Tabellen
 
-Eine Tabelle kennzeichnen Sie durch eckige Klammern: [...]. Der Tabellenname kann max. 31 Zeichen lang sein.
+
+## Arrays
+
+Ein Array kennzeichnen Sie durch seinen Namen. Das ist der Name, den Sie beim Erstellen des Array übergeben haben, z. B. ARRAY LONGINT. Arrays sind Variablen. Der Name eines Array kann, wie bei Variablen, bis zu 31 Zeichen lang sein, ohne die Symbole für Reichweite. Es gibt drei Arten von Arrays:
+
+- Der Name eines **lokalen** Array beginnt mit dem Dollarzeichen ($)
+- Der Name eines **Prozess** Array darf weder mit den Symbolen <> noch mit dem Dollarzeichen ($) starten.
+- Der Name eines **Interprozess**-Array beginnt mit den Symbolen <> — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
 ```4d
-DEFAULT TABLE([Orders])
-FORM SET INPUT([Clients];"Entry")
-ADD RECORD([Letters])
+ARRAY TEXT($atSubjects;Records in table([Topics])) //local array
+SORT ARRAY(asKeywords;>) //process array
+ARRAY BOOLEAN(<>settings;Records in table([MySettings])) //interprocess array
+```
+
+
+### Elemente von Arrays
+Sie verweisen auf ein Element eines Interprozess-, Prozess- oder lokalen Array mit geschweiften Klammern ({…}). Das angesprochene Element ist ein numerischer Ausdruck.
+
+Beispiele:
+```4d   
+    //Addressing an element of a local array
+If($asKeywords{1}="Stop")
+$atSubjects{$vlElem}:=[Topics]Subject
+$viNextValue:=$aiBigArray{Size of array($aiBigArray)}
+```
+
+### Elemente von zweidimensionalen Arrays
+Sie verweisen auf ein Element eines zweidimensionalen Array mit doppelt geschweiften Klammern ({…}).   Das angesprochene Element besteht aus zwei numerischen Ausdrücken in zwei Sätzen geschweifter Klammern.
+
+Beispiele:
+```4d
+    //Addressing an element of a two-dimensional process array
+If(asKeywords{$vlNextRow}{1}="Stop")
+atSubjects{10}{$vlElem}:=[Topics]Subject
+$viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
 ## Felder
@@ -52,134 +83,16 @@ QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## Interprozessvariablen
+## Formularobjekte
 
-Eine Interprozessvariable kennzeichnen Sie mit den vorangestellten Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+Sie geben ein Formularobjekt über einen Namen als String mit vorangestelltem Parameter * an. Der Name eines Formularobjekts kann bis zu 255 Zeichen enthalten.
 
-Der Name einer Interprozessvariablen kann ohne die vorangestellten Symbole max. 31 Zeichen lang sein.
-
-Beispiele:
+Beispiel:
 ```4d
-<>vlProcessID:=Current process
-<>vsKey:=Char(KeyCode)
-If(<>vtName#"")
+OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-## Prozessvariablen
-
-Eine Prozessvariable kennzeichnen Sie durch ihren Namen (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
-
-Beispiele:
-```4d
-<>vrGrandTotal:=Sum([Accounts]Amount)
-If(bValidate=1)
-vsCurrentName:=""
-```
-
-## Lokale Variablen
-
-Eine lokale Variable kennzeichnen Sie durch das vorangestellte Dollarzeichen ($). Der Name einer lokalen Variable kann ohne Dollarzeichen max. 31 Zeichen lang sein.
-
-Beispiele:
-```4d
-For($vlRecord;1;100)
-If($vsTempVar="No")
-$vsMyString:="Hello there"
-```
-
-## Arrays
-
-Ein Array kennzeichnen Sie durch seinen Namen. Das ist der Name, den Sie beim Erstellen des Array übergeben haben, z. B. ARRAY LONGINT. Arrays sind Variablen, von daher gibt es in Bezug auf die Reichweite, wie bei Variablen auch drei Array-Typen:
-
-- Interprozess-Arrays
-- Prozess-Arrays
-- Lokale Arrays
-
-### Interprozess-Arrays
-Der Name eines Interprozess-Array beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
-
-Der Name des Interprozess-Array kann ohne die vorangestellten Symbole bis zu 31 Zeichen lang sein.
-
-Beispiele:
-```4d
-ARRAY TEXT(<>atSubjects;Records in table([Topics]))
-SORT ARRAY(<>asKeywords;>)
-ARRAY INTEGER(<>aiBigArray;10000)
-```
-
-### Prozess-Arrays
-Ein Prozess-Array kennzeichnen Sie durch seinen Namen. (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name des Prozess-Array kann bis zu 31 Zeichen lang sein.
-
-Beispiele:
-```4d
-ARRAY TEXT(atSubjects;Records in table([Topics]))
-SORT ARRAY(asKeywords;>)
-ARRAY INTEGER(aiBigArray;10000)
-```
-
-### Lokale Arrays
-Der Name eines lokalen Array beginnt mit dem Dollarzeichen ($) Der Name eines lokalen Array kann ohne Dollarzeichen max. 31 Zeichen lang sein.
-
-Beispiele:
-```4d
-ARRAY TEXT($atSubjects;Records in table([Topics]))
-SORT ARRAY($asKeywords;>)
-ARRAY INTEGER($aiBigArray;10000)
-```
-
-### Elemente von Arrays
-Sie verweisen auf ein Element eines Interprozess-, Prozess- oder lokalen Array mit geschweiften Klammern ({…}). Das angesprochene Element ist ein numerischer Ausdruck.
-
-Beispiele:
-```4d  
-    //Addressing an element of an interprocess array
-If(<>asKeywords{1}="Stop")
-<>atSubjects{$vlElem}:=[Topics]Subject
-$viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
-
-    //Addressing an element of a process array
-If(asKeywords{1}="Stop")
-atSubjects{$vlElem}:=[Topics]Subject
-$viNextValue:=aiBigArray{Size of array(aiBigArray)}
-
-    //Addressing an element of a local array
-If($asKeywords{1}="Stop")
-$atSubjects{$vlElem}:=[Topics]Subject
-$viNextValue:=$aiBigArray{Size of array($aiBigArray)}
-```
-
-### Elemente von zweidimensionalen Arrays
-Sie verweisen auf ein Element eines zweidimensionalen Array mit doppelt geschweiften Klammern ({…}).   Das angesprochene Element besteht aus zwei numerischen Ausdrücken in zwei Sätzen geschweifter Klammern.
-
-Beispiele:
-```4d
-    //Addressing an element of a two-dimensional interprocess array
-If(<>asKeywords{$vlNextRow}{1}="Stop")
-<>atSubjects{10}{$vlElem}:=[Topics]Subject
-$viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
-
-    //Addressing an element of a two-dimensional process array
-If(asKeywords{$vlNextRow}{1}="Stop")
-atSubjects{10}{$vlElem}:=[Topics]Subject
-$viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
-
-    //Addressing an element of a two-dimensional local array
-If($asKeywords{$vlNextRow}{1}="Stop")
-$atSubjects{10}{$vlElem}:=[Topics]Subject
-$viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
-```
-
-## Objektattribute
-
-Ist Objektnotation aktiviert, definieren Sie ein Objektattribut (auch Objekteigenschaft genannt) durch Setzen eines Punktes (".") zwischen dem Namen des Objekts (oder Attributs) und dem Namen des Attributs. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
-
-Beispiele:
-```4d
-myObject.myAttribute:="10"
-$value:=$clientObj.data.address.city
-```
-
-**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie unter [Identifier für Objekteigenschaft](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Verwechseln Sie nicht Formularobjekte (Schaltflächen, Listboxen, eingebbare Variablen, etc.) und Objekte in der 4D Programmiersprache. Objekte der 4D Programmiersprache werden über Objektnotation oder spezifische Befehle erstellt und verwaltet.
 
 ## Formulare
 
@@ -192,16 +105,59 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
-## Formularobjekte
+## Temporäre Auswahlen
 
-Sie geben ein Formularobjekt über einen Namen als String mit vorangestelltem Parameter * an. Der Name eines Formularobjekts kann bis zu 255 Zeichen enthalten.
+Der Name einer temporären Auswahl kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
 
-Beispiel:
+- Eine temporäre **Prozess**auswahl kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Der Name einer temporären **Interprozess**auswahl beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+
+Beispiele:
 ```4d
-OBJECT SET FONT(*;"Binfo";"Times")
+USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
 ```
 
-**Hinweis:** Verwechseln Sie nicht Formularobjekte (Schaltflächen, Listboxen, eingebbare Variablen, etc.) und Objekte in der 4D Programmiersprache. Objekte der 4D Programmiersprache werden über Objektnotation oder spezifische Befehle erstellt und verwaltet.
+
+## Objektattribute
+
+Ein Objektattribut (auch Objekteigenschaft genannt) definieren Sie durch Setzen eines Punktes (".") zwischen dem Namen des Objekts und dem Namen des Attributs. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
+
+Beispiele:
+```4d
+myObject.myAttribute:="10"
+$value:=$clientObj.data.address.city
+```
+
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie oben unter (#zusätzliche-Regeln-für-Namen-von-Objekteigenschaften-und-ORDA) und [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+
+
+## Plug-In Befehle
+
+Einen Plug-In Befehl kennzeichnen Sie durch den Namen, wie vom Plug-In definiert. Ein Plug-In Befehl kann max. 31 Zeichen lang sein.
+
+Beispiele:
+```4d
+$error:=SMTP_From($smtp_id;"henry@gmail.com")
+```
+
+## Prozesse
+
+Der Name des Prozesses kann ohne Symbol für Reichweite bis zu 255 Zeichen lang sein.
+
+In der Einzelplatzversion oder auf der Client-Seite in einer Client/Server-Umgebung gibt es zwei Reichweiten für Prozesse: **global** oder **lokal**.
+
+- Einen **globalen** Prozess kennzeichnen Sie durch einen String Ausdruck, der seinen Namen darstellt (Er darf nicht mit dem Dollarzeichen $ beginnen).
+- Einen **lokalen** Prozesses kennzeichnen Sie mit dem Dollarzeichen $.
+
+Beispiele:
+```4d
+    //Starting the global process "Add Customers"
+$vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
+    //Starting the local process "$Follow Mouse Moves"
+$vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
+```
+
 
 ## Projektmethoden
 
@@ -216,11 +172,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. Öffnen Sie dann eine Datenbank nach einigen Monaten für eine Wartung, erkennen Sie im Explorer Fenster bereits an der Schreibweise des Namens, ob die Methode ein Ergebnis zurückgibt.
+**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. Öffnen Sie dann ein Projekt nach einigen Monaten für eine Wartung, erkennen Sie im Explorer Fenster bereits an der Schreibweise des Namens, ob die Methode ein Ergebnis zurückgibt.
 
-**Hinweis:** Zum Aufrufen einer Methode tippen Sie einfach ihren Namen ein. Einige in 4D integrierte Befehle wie z. B. `ON EVENT CALL`, sowie alle Plug-In Befehle erwarten dagegen den Namen der Methode als String, wenn ein Parameter für die Methode übergeben wurde. Beispiel:
-
-Beispiele:
+**Hinweis:** Zum Aufrufen einer Methode tippen Sie einfach ihren Namen ein. Einige in 4D integrierte Befehle wie z. B. `ON EVENT CALL`, sowie alle Plug-In Befehle erwarten dagegen den Namen der Methode als String, wenn ein Parameter für die Methode übergeben wurde. Beispiele:
 ```4d
     //This command expects a method (function) or formula
 QUERY BY FORMULA([aTable];Special query)
@@ -254,100 +208,57 @@ $vsResult:=Calc creator(1;5;"Nice")
 vtClone:=Dump("is";"the";"it")
 ```
 
-## Plug-In Befehle
-
-Einen Plug-In Befehl kennzeichnen Sie durch den Namen, wie vom Plug-In definiert. Ein Plug-In Befehl kann max. 31 Zeichen lang sein.
-
-Beispiele:
-```4d
-$error:=SMTP_From($smtp_id;"henry@gmail.com")
-```
-
 ## Mengen
 
-In Bezug auf die Reichweite gibt es zwei Arten von Mengen:
+Ein Mengenname kann ohne Symbol für Reichweite bis zu 255 Zeichen lang sein.
 
-- Interprozessmengen
-- Prozessmengen
+- Eine **Prozess**menge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Eine **Interprozess**menge kennzeichnen Sie mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+- Auf 4D Server beginnt der Name einer **Client**-Menge mit dem Dollarzeichen ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
 
-4D Server enthält auch:
-
-- Client-Mengen
-
-### Interprozessmengen
-Der Name einer Interprozessmenge beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
-
-Der Name einer Interprozessmenge kann ohne die Symbole <> bis zu 255 Zeichen lang sein.
-
-### Prozessmengen
-Eine Prozessmenge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name der Prozessmenge kann bis zu 255 Zeichen lang sein.
-
-### Client-Mengen
-Der Name eines Client beginnt mit dem Dollarzeichen ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
-
-**Hinweis:** Mengen werden auf dem Server-Rechner gehalten. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. Dafür verwenden Sie Client-Mengen.
+> Mengen werden auf dem Server gehalten. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. Dafür verwenden Sie Client-Mengen.
 
 Beispiele:
 ```4d
-    //Interprocess sets
-USE SET("<>Deleted Records")
-CREATE SET([Customers];"<>Customer Orders")
-If(Records in set("<>Selection"+String($i))>0)
-    //Process sets
-USE SET("Deleted Records")
-CREATE SET([Customers];"Customer Orders")
-If(Records in set("<>Selection"+String($i))>0)
-    //Client sets
-USE SET("$Deleted Records")
-CREATE SET([Customers];"$Customer Orders")
-If(Records in set("$Selection"+String($i))>0)
+CREATE SET([Customers];"Customer Orders")//Process set
+USE SET("<>Deleted Records") //Interprocess set
+If(Records in set("$Selection"+String($i))>0) //Client set
 ```
 
-## Temporäre Auswahlen
 
-In Bezug auf die Reichweite gibt es zwei Arten von temporären Mengen:
 
-- Temporäre Interprozessauswahlen
-- Temporäre Prozessauswahlen
 
-### Temporäre Interprozessauswahlen
-Der Name einer temporären Interprozessauswahl beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+## Tabellen
 
-Der Name einer temporären Interprozessauswahl kann ohne die Symbole <> bis zu 255 Zeichen lang sein.
-
-### Temporäre Prozessauswahlen
-Eine temporäre Prozessauswahl kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name einer temporären Auswahl kann bis zu 255 Zeichen enthalten.
+Eine Tabelle kennzeichnen Sie durch eckige Klammern: [...]. Der Tabellenname kann max. 31 Zeichen lang sein.
 
 Beispiele:
 ```4d
-    //Interprocess Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode")
-    //Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode")
+DEFAULT TABLE([Orders])
+FORM SET INPUT([Clients];"Entry")
+ADD RECORD([Letters])
 ```
 
-## Prozesse
+## Variablen
 
-In der Einzelplatzversion bzw. im Client/Server-Betrieb auf der Client-Seite gibt es zwei Arten:
+Ein Variablenname kann ohne Symbol für Reichweite bis zu 31 Zeichen lang sein.
 
-- Globale Prozesse
-- Lokale Prozesse
-
-### Globale Prozesse
-Einen globalen Prozess kennzeichnen Sie durch einen String Ausdruck, der seinen Namen darstellt (Er darf nicht mit dem Dollarzeichen $ beginnen). Der Prozessname kann bis zu 255 Zeichen lang sein.
-
-### Lokale Prozesse
-Der Name eines lokalen Prozesses beginnt mit dem Dollarzeichen $. Der Name des Prozesses kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
+- Eine **lokale** Variable kennzeichnen Sie durch das vorangestellte Dollarzeichen ($).
+- Eine **Prozess**variable kennzeichnen Sie durch ihren Namen (Er darf nicht mit den Symbolen <> oder $ beginnen).
+- Eine **Interprozess**variable kennzeichnen Sie mit den vorangestellten Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
 
 Beispiele:
+
 ```4d
-    //Starting the global process "Add Customers"
-$vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
-    //Starting the local process "$Follow Mouse Moves"
-$vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
+For($vlRecord;1;100) //local variable
+$vsMyString:="Hello there" //local variable
+If(bValidate=1) //process variable
+<>vlProcessID:=Current process //interprocess variable
 ```
 
-## Zusammenfassung der Namenskonventionen
+
+
+## Übersicht der Namenskonventionen
 
 Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 
@@ -376,7 +287,7 @@ Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
 
 ## Namenskonflikte lösen
 
-Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrer Anwendung einmalig sind. Hat ein Element denselben Namen wie ein anderes Element (beispielsweise ein Datenfeld und eine Variable mit demselben Namen Person), arbeitet 4D mit einer Prioritätenliste.
+Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrem Projekt einmalig sind. Hat ein Element denselben Namen wie ein anderes Element (beispielsweise ein Datenfeld und eine Variable mit demselben Namen Person), arbeitet 4D mit einer Prioritätenliste.
 
 4D identifiziert Namen in Prozeduren in folgender Reihenfolge:
 
@@ -388,4 +299,3 @@ Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrer Anwen
 6. Variablen
 
 Beispiel: In 4D gibt es den Befehl mit Namen `Date`. Nennen Sie eine Methode *Date*, wertet 4D diese als den integrierten Befehl `Date` und nicht als Ihre Methode. Ihre Methode wird nicht aufgerufen. Haben Sie dagegen ein Datenfeld mit dem Namen “Date” angelegt, versucht 4D, dieses Datenfeld anstatt des Befehls `Date` zu benutzen.
-

@@ -104,7 +104,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 ## Published as Subform
 
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host database, it must have been explicitly shared. When this property is selected, the form will be published in the host database. 
+For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application. 
 
 Only project forms can be specified as published subforms. 
 

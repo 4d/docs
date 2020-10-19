@@ -6,32 +6,32 @@ sidebar_label: Restore Page
 
 ## Restoring a backup
 
-You can manually restore an archive of the current database using the **Restore** page. This page provides several options that can be used to control the database restoration:
+You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
 
 ![](assets/en/MSC/MSC_restore.png)
 
-> 4D automatic recovery systems restore databases and include data log file when necessary. 
+> 4D automatic recovery systems restore applications and include data log file when necessary. 
 
-The list found in the left part of the window displays any existing backups of the database. You can also click on the Browse... button found just under the area in order to open any other archive file from a different location. It is then added to the list of archives.
+The list found in the left part of the window displays any existing backups of the application. You can also click on the **Browse...** button found just under the area in order to open any other archive file from a different location. It is then added to the list of archives.
 
 When you select a backup in this list, the right part of the window displays the information concerning this particular backup:
 
 - **Path**: Complete pathname of the selected backup file. Clicking the Show button opens the backup file in a system window. 
 - **Date and Time**: Date and time of backup.
 - **Content**: Contents of the backup file. Each item in the list has a check box next to it which can be used to indicate whether or not you want to restore it. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored. 
-- **Destination folder of the restored files**: Folder where the restored files will be placed. By default, 4D restores the files in a folder named “Archivename” (no extension) that is placed next to the database structure file. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
+- **Destination folder of the restored files**: Folder where the restored files will be placed. By default, 4D restores the files in a folder named “Archivename” (no extension) that is placed next to the Project folder. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
 
 The **Restore** button launches the manual restoration of the selected element(s). 
 
 ## Successive integration of several data log files  
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into a database. If, for example, you have 4 journal file archives (.4BL) corresponding to 4 database backups, you can restore the first backup then integrate the journal (data log) archives one by one. This means that you can, for example, recover a data file even when the last backup files are missing. 
+The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. If, for example, you have 4 journal file archives (.4BL) corresponding to 4 backups, you can restore the first backup then integrate the journal (data log) archives one by one. This means that you can, for example, recover a data file even when the last backup files are missing. 
 
 When this option is checked, 4D displays the standard Open file dialog box after the restore, which can be used to select journal file to be integrated. The Open file dialog box is displayed again after each integration until it is cancelled.
 
 ## Restoring an encrypted database
 
-Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current database. Matching encryption keys must always be provided. 
+Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current application. Matching encryption keys must always be provided. 
 
 When restoring a backup and integrating the current log file in a encrypted database:
 
@@ -43,7 +43,7 @@ The following sequence illustrates the principles of a multi-key backup/restore 
 
 |Operation|Generated files|Comment|
 |---|----|----|
-|New database|||
+|New data file|||
 |Add data (record # 1)|||
 |Backup database|0000.4BL and 0001.4BK||
 |Add data (record # 2)|||

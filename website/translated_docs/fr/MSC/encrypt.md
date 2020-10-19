@@ -4,35 +4,35 @@ title: Page chiffrement
 sidebar_label: Page chiffrement
 ---
 
-Vous pouvez vous aider de cette page pour chiffrer ou *déchiffrer* (i.e. enlever le chiffrement) le fichier de données, en fonction du statut de l'attribut **Chiffrable** défini pour chaque table de la base. Pour des informations plus détaillées sur le chiffrement des données dans 4D, veuillez consulter la section "Chiffrer les données".
+Vous pouvez vous aider de cette page pour chiffrer ou *déchiffrer* (i.e. enlever le chiffrement) le fichier de données, en fonction du statut de l'attribut **Chiffrable** défini pour chaque table de la base. For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.
 
 Un nouveau dossier est créé à chaque opération de chiffrement/déchiffrement. Il est nommé "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*" ou "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
-> Le chiffrement est disponible uniquement en [mode maintenance](overview.md#display-in-maintenance-mode). Si vous tentez d'exécuter cette opération en mode standard, une fenêtre d'avertissement vous informera que la base sera fermée et redémarrée en mode maintenance.
+> Le chiffrement est disponible uniquement en [mode maintenance](overview.md#display-in-maintenance-mode). If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode
 
 **Attention :**
-- Le chiffrement d'une base est une opération de longue durée. Un indicateur de progression de l'opération s'affiche (et peut être interrompu par l'utilisateur). À noter également que le chiffrement d'une base comprend toujours une étape de compactage.
+- Encrypting a data file is a lengthy operation. Un indicateur de progression de l'opération s'affiche (et peut être interrompu par l'utilisateur). Note also that an application encryption operation always includes a compacting step.
 - Chaque opération de chiffrement génère une copie du fichier de données, ce qui augmente la taille du dossier de l'application. Il est important de prendre cela en considération (notamment sous macOS, où les applications 4D apparaissent sous forme de paquet) afin de ne pas augmenter excessivement la taille de l'application. Le déplacement ou la suppression manuels des copies du fichier original dans le paquet peut aider à réduire la taille du paquet.
 
 ## Chiffrer des données pour la première fois
 Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vos données à l'aide du CSM :
 
 1. Dans l'éditeur de structure, cochez l'attribut **Chiffrable** pour chaque table dont vous souhaitez chiffrer les données. Consultez la section "Propriétés des tables".
-2. Ouvrez la page Chiffrement du CSM. Si vous ouvrez la page sans paramétrer les tables comme étant **Chiffrables**, le message suivant s'affiche : ![](assets/en/MSC/MSC_encrypt1.png) Sinon, le message suivant s'affiche : ![](assets/en/MSC/MSC_encrypt2.png) Cela signifie que le statut **Chiffrable** défini pour au moins une table a été modifié et que le fichier de données n'a toujours pas été chiffré. **Note : **Le même message s'affiche lorsque le statut **Chiffrable** a été modifié dans un fichier de données déjà chiffré ou après le déchiffrement d'un fichier de données (voir ci-dessous).
+2. Ouvrez la page Chiffrement du CSM. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](assets/en/MSC/MSC_encrypt2.png)<p> This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note : **Le même message s'affiche lorsque le statut **Chiffrable** a été modifié dans un fichier de données déjà chiffré ou après le déchiffrement d'un fichier de données (voir ci-dessous).
 3. Cliquez sur le bouton de Chiffrement.  
    ![](assets/en/MSC/MSC_encrypt3.png)  
    Vous serez ensuite invité à saisir une phrase secrète pour votre fichier de données : ![](assets/fr/MSC/MSC_encrypt4.png) La phrase secrète est utilisée pour générer la clé de chiffrement des données. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
 4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée.
 
-Le processus de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, la base de données est rouverte en mode maintenance.
+Le processus de chiffrement est alors lancé. If the MSC was opened in standard mode, the application is reopened in maintenance mode.
 
 4D propose de sauvegarder la clé de chiffrement (voir le paragraphe [Sauvegarder la clé de chiffrement](#saving-the-encryption-key) ci-dessous). Vous pouvez la sauvegarder à ce moment précis ou bien ultérieurement. Vous pouvez également ouvrir le fichier d'historique du chiffrement.
 
 Si le processus de chiffrement est réussi, la page Chiffrement affiche les boutons Opérations de maintenance liées au chiffrement.
 
-**Attention :** Durant l'opération de chiffrement, 4D créé un nouveau fichier de données vide et y insère des données à partir du fichier de données original. Les enregistrements correspondant aux tables "chiffrées" sont chiffrés puis copiés ; les autres enregistrements sont uniquement copiés (une opération de compactage est également exécutée). Si l'opération est réussie, le fichier de données original est déplacé vers un dossier "Replaced Files (Encrypting)". Si vous souhaitez transmettre un fichier de données chiffré, assurez-vous d'avoir préalablement déplacé/retiré tout fichier de données non chiffrées du dossier de la base de données.
+**Attention :** Durant l'opération de chiffrement, 4D créé un nouveau fichier de données vide et y insère des données à partir du fichier de données original. Les enregistrements correspondant aux tables "chiffrées" sont chiffrés puis copiés ; les autres enregistrements sont uniquement copiés (une opération de compactage est également exécutée). Si l'opération est réussie, le fichier de données original est déplacé vers un dossier "Replaced Files (Encrypting)". If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the application folder beforehand.
 
 ## Opérations de maintenance liées au chiffrement
-Lorsqu'une base est chiffrée (voir ci-dessus), la page Chiffrement propose plusieurs opérations de maintenance liées au chiffrement, qui correspondent à des scénarios standard. ![](assets/fr/MSC/MSC_encrypt6.png)
+When an application is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/fr/MSC/MSC_encrypt6.png)
 
 
 ### Fournir la clé de chiffrement des données actuelle
@@ -77,17 +77,17 @@ Le fichier de données est entièrement déchiffré et un message de confirmatio
 
 ## Sauvegarder la clé de chiffrement
 
-4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. La sauvegarde de ce fichier sur un appareil externe tel qu'une clé USB facilitera l'utilisation d'une base chiffrée, étant donné que l'utilisateur connecterait cet appareil uniquement pour fournir la clé avant d'ouvrir la base et accéder aux données chiffrées.
+4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. Storing this file on an external device such a USB key will facilitate the use of an encrypted application, since the user would only need to connect the device to provide the key before opening the application in order to access encrypted data.
 
 Vous pouvez sauvegarder la clé de chiffrement chaque fois qu'une nouvelle phrase secrète est fournie :
 
-- lorsque la base est chiffrée pour la première fois,
-- lorsque la base est re-chiffrée avec une nouvelle phrase secrète.
+- when the application is encrypted for the first time,
+- when the application is re-encrypted with a new passphrase.
 
 Les clés de chiffrement successives peuvent être sauvegardées sur le même appareil.
 
 ## Fichier d'historique
-Une fois qu'une opération de chiffrement est terminée, 4D génère un fichier dans le dossier Logs de la base. Il est créé au format XML et nommé "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss>.xml*".
+After an encryption operation has been completed, 4D generates a file in the Logs folder of the application. It is created in XML format and named "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 Chaque fois qu'un nouveau fichier d'historique est généré, un bouton Voir le compte rendu s'affiche dans la page CSM.
 

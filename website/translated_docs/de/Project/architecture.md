@@ -1,9 +1,9 @@
 ---
 id: architecture
-title: Architecture of a 4D project
+title: Architecture of a project
 ---
 
-A 4D project is made of several folders and files, stored within a single parent database folder (package folder). Beispiel:
+A 4D project is made of several folders and files, stored within a single parent application folder (package folder). Beispiel:
 
 - MyProject
     - Komponenten
@@ -28,7 +28,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 The Project folder typically contains the following hierarchy:
 
-- *databaseName*.4DProject file
+- *applicationName*.4DProject file
 - Sources
     + Klassen
     + DatabaseMethods
@@ -40,14 +40,14 @@ The Project folder typically contains the following hierarchy:
 - Trash (if any)
 
 
-### *databaseName*.4DProject file
+### *applicationName*.4DProject file
 
 Project development file, used to designate and launch the project. This file can be opened by:
 
-- 4D Developer
+- 4D
 - 4D Server (read-only, see [Developing a project](developing.md))
 
-**Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
+> In 4D projects, development is done with 4D and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
 
 
 ### Sources folder
@@ -68,15 +68,15 @@ Project development file, used to designate and launch the project. This file ca
 
 #### DatabaseMethods folder
 
-| Contents                 | Beschreibung                                                           | Format |
-| ------------------------ | ---------------------------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | Database methods defined in the database. One file per database method | Text   |
+| Contents                 | Beschreibung                                                          | Format |
+| ------------------------ | --------------------------------------------------------------------- | ------ |
+| *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | Text   |
 
 #### Methods folder
 
-| Contents         | Beschreibung                                                 | Format |
-| ---------------- | ------------------------------------------------------------ | ------ |
-| *methodName*.4dm | Project methods defined in the database. One file per method | Text   |
+| Contents         | Beschreibung                                                | Format |
+| ---------------- | ----------------------------------------------------------- | ------ |
+| *methodName*.4dm | Project methods defined in the project. One file per method | Text   |
 
 #### Classes folder
 
@@ -109,9 +109,9 @@ Project development file, used to designate and launch the project. This file ca
 
 #### Triggers folder
 
-| Contents      | Beschreibung                                                                                | Format |
-| ------------- | ------------------------------------------------------------------------------------------- | ------ |
-| table_*n*.4dm | Trigger methods defined in the database. One trigger file per table (n is the table number) | Text   |
+| Contents      | Beschreibung                                                                               | Format |
+| ------------- | ------------------------------------------------------------------------------------------ | ------ |
+| table_*n*.4dm | Trigger methods defined in the project. One trigger file per table (n is the table number) | Text   |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
@@ -134,11 +134,11 @@ The DerivedData folder contains cached data used internally by 4D to optimize pr
 
 ## Resources folder
 
-The Resources folder contains any custom database resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
+The Resources folder contains any custom project resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
 | Contents              | Beschreibung                                                                                                                                          | Format  |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Database resource files and folders                                                                                                                   | various |
+| *item*                | Project resource files and folders                                                                                                                    | various |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.
@@ -179,7 +179,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 - command debugging,
 - 4D Server requests (generated on client machines and on the server).
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command) for maintenance log files and in cases where data folder is read-only.
+> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) command) for maintenance log files and in cases where data folder is read-only.
 
 ## Settings folder
 
@@ -211,14 +211,14 @@ This folder contains files that memorize user configurations, e.g. break point p
 
 ## Components folder
 
-This folder contains the components to be available in the project database only. It must be stored at the same level as the Project folder.
+This folder contains the components to be available in the application project only. It must be stored at the same level as the Project folder.
 
-> A project database can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host database. - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database.
+> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Admin/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## Plugins folder
 
-This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
+This folder contains the plug-ins to be available in the application project only. It must be stored at the same level as the Project folder.
 
 
 ## Documentation folder
@@ -229,4 +229,4 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 
 ## WebFolder
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 

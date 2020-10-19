@@ -46,7 +46,7 @@ $poly:=cs.Polygon.new(4;3)
 $instance:=OB Instance of($poly;cs.Polygon)  
  // true
 $instance:=OB Instance of($poly;4D.Object)
- // true 
+ // true
 ```
 
 Beim Aufzählen der Eigenschaften eines Objekts wird der Prototyp seiner Klasse nicht mitgezählt. Demzufolge geben die Anweisung `For each` und der Befehl `JSON Stringify` nicht Eigenschaften des Objekts prototype der Klasse zurück. Die Eigenschaft des Objekts prototype einer Klasse ist eine interne ausgeblendete Eigenschaft.
@@ -109,7 +109,7 @@ Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) defin
 
 Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Datei anlegen:
 
-- Ordner der Anwendung
+- Project folder
     + Project
         * Sources
             - Klassen
@@ -169,7 +169,7 @@ Um eine vorhandene Klasse zu löschen, können Sie:
 In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:
 
 - `Function <Name>` zum Definieren von Member Methods der Objekte.
-- `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. prototype).
+- `Class constructor` zum Definieren der Eigenschaften der Objekte (z.B. Prototype).
 - `Class extends <ClassName>` zum Definieren der Vererbung.
 
 
@@ -182,7 +182,7 @@ Function <name>
 // code
 ```
 
-Class Functions sind Eigenschaften des Objekts prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
+Class Functions sind Eigenschaften des Objekts Prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
 In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Name muss mit den Regeln von ECMAScript konform sein.
 
@@ -198,18 +198,18 @@ Function getAge
   $0:=(Current date-This.birthdate)/365.25
 ```
 
-Der Befehl `Current method name` gibt für eine Function zurück: "*\<ClassName>.\<FunctionName>*", z.B. "MyClass.myMethod".
+Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<ClassName>.\<FunctionName>*", z.B. "MyClass.myMethod".
 
-Im Code der Anwendung werden Functions der Klasse als Member Methods der Instanz des Objekts aufgerufen und können Parameter empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
+Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können Parameter empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- Verwendung des Operators `()` Zum Beispiel verwendet  `myObject.methodName("hello")`.
-- eine der Class member Methods "Function"
+- Verwendung des Operators `()` Zum Beispiel `myObject.methodName("hello")`.
+- Verwendung der Klasse "Function" als  Member Method
     - `apply()`
     - `call()`
 
 
 > **Thread-safety Warnung:** Ist eine Class Function nicht thread-safe und wird von einer Methode mit der Option "Als preemptive Prozess starten" aufgerufen:  
-> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden), - gibt 4D einen Fehler nur im laufenden Betrieb aus.
+> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - gibt 4D einen Fehler nur im laufenden Betrieb aus.
 
 
 #### Beispiel
@@ -286,18 +286,18 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-Das Schlüsselwort  `Class extends` dient beim Deklarieren der Klasse zum Erstellen einer Benutzerklasse, die ein Kind einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Funktionen von der übergeordneten Klasse.
+Das Schlüsselwort `Class extends` dient beim Deklarieren der Klasse zum Erstellen einer Benutzerklasse, die ein Kind einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Funktionen von der übergeordneten Klasse.
 
 Für Erweiterungen einer Klasse gelten folgende Regeln:
 
 - Eine Benutzerklasse kann keine vorgegebene Klasse erweitern (außer 4D.Object, die standardmäßig für Benutzerklassen erweitert wird.)
-- Eine Benutzerklasse kann keine Benutzerklasse aus einem anderen Projekt bzw. einer Komponente erweitern. .
+- Eine Benutzerklasse kann keine Benutzerklasse aus einem anderen Projekt bzw. Komponente erweitern.
 - Eine Benutzerklasse kann sich nicht selbst erweitern.
 - Klassen lassen sich nicht kreisförmig erweitern (z.B. "a" erweitert "b", das wieder "a" erweitert).
 
 Ein Verstoß gegen eine dieser Regeln wird weder vom Code-Editor noch vom Interpreter erkannt, in diesem Fall lösen nur der Compiler und `Syntaxprüfung` einen Fehler aus.
 
-Eine erweiterte Klasse kann den Constructor seiner übergeordneten Klasse über den Befehl [`Super`](#super) aufrufen.
+Eine erweiterte Klasse kann den Constructor seiner übergeordneten Klasse über den Befehl  [`Super`](#super) aufrufen.
 
 #### Beispiel
 
@@ -305,7 +305,7 @@ Dieses Beispiel erstellt eine Klasse mit Namen `Square` aus einer Klasse mit Nam
 
 ```4d
   //Class: Square
-  //path: Classes/Square.4dm 
+  //path: Classes/Square.4dm
 
  Class extends Polygon
 
@@ -333,7 +333,7 @@ $0:=This.height*This.width
 | param     | mixed  | -> | Parameter für den übergeordneten Constructor |
 | Ergebnis  | object | <- | Überordnung des Objekts                      |
 
-Mit dem Schlüsselwort  `Super` lassen sich Aufrufe zur  `superclass`, z.B. die übergeordnete Klasse.
+Mit dem Schlüsselwort `Super` lassen sich Aufrufe zur `Superklasse` machen, z.B. die übergeordnete Klasse.
 
 `Super` dient für zwei unterschiedliche Zwecke:
 
@@ -437,16 +437,16 @@ Dann können Sie in einer Projektmethode schreiben:
 
 Das Schlüsselwort  `This` gibt eine Referenz auf das zu bearbeitende Objekt zurück. In 4D lässt es sich in [verschiedenen Kontexten](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) verwenden.
 
-In den meisten Fällen bestimmt der Wert von `This`, wie eine Function aufgerufen wird. Es lässt sich während der Ausführung nicht per Zuweisung setzen und kann bei jedem Aufrufen der Funktion anders sein.
+In den meisten Fällen bestimmt der Wert von `This`, wie eine Function aufgerufen wird. Er lässt sich während der Ausführung nicht per Zuweisung setzen und ist u. U. bei jedem Aufruf der Funktion anders.
 
-Wird eine Formel als Member Method eines Objekts aufgerufen, wird das dazugehörige `This` auf das Objekt gesetzt, wo die Methode aufgerufen wird. Zum Beispiel:
+Wird eine Formel als Member Method eines Objekts aufgerufen, wird das dazugehörige `This` in das Objekt gesetzt, in dem die Methode aufgerufen wird. Zum Beispiel:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-Mit der Function [Class Constructor](#class-constructor) mit dem Schlüsselwort `new()` wird das dazugehörige `This` an das neue Objekt in Konstruktion gebunden.
+Mit der Function [Class Constructor](#class-constructor) (mit der Methode `new()`) wird das dazugehörige `This` an das neue Objekt in Konstruktion gebunden.
 
 ```4d
   //Class: ob
@@ -454,7 +454,7 @@ Mit der Function [Class Constructor](#class-constructor) mit dem Schlüsselwort 
 Class Constructor  
     // Create properties on This as
     // desired by assigning to them
-    This.a:=42 
+    This.a:=42
 ```
 
 ```4d
@@ -463,7 +463,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Rufen Sie den Superclass Constructor in einen Constructor mit [Super](#super) auf, darf `This` nicht vor dem Superclass Constructor aufgerufen werden, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
+> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
 
 
 In jedem Fall bezieht sich `This` auf das Objekt, in dem die Methode aufgerufen wurde, als ob die Methode im Objekt wäre.
@@ -483,7 +483,7 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
+In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Da *f* als eine Methode von $o aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
 
 
 ## Befehle für Klassen
@@ -502,4 +502,4 @@ Einige Befehle der 4D Programmiersprache eignen sich zum Verwalten von Features 
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` gibt `wahr` zurück, wenn `object` zu `class` gehört oder zu einer seiner geerbten Klassen, sonst `false`.
+`OB Instance of` gibt `wahr` zurück, wenn `object` zu `class` gehört oder zu einer seiner geerbten Klasse, sonst `falsch`.

@@ -49,12 +49,11 @@ Sie können den Ordner PlugIns an zwei verschiedene Stellen legen:
 
 - Auf dieselbe Ebene wie das ausführbare 4D Programm, z.B.:
   - Unter Windows neben die .exe Datei
-  - Auf macOS auf die oberste Ebene des Ordners Contents im Software-Paket   
-    In diesem Fall sind die Plug-Ins in jeder Anwendung verfügbar, die über dieses 4D Programm geöffnet wird.
-- Auf dieselbe Ebene wie die Strukturdatei der Anwendung. In diesem Fall sind die Plug-Ins nur in dieser spezifischen Anwendung verfügbar.
+  - Auf MacOS: auf die erste Ebene des Ordners Contents im Package der Anwendung. Dann sind die Plug-Ins in jedem Projekt verfügbar, das diese Anwendung öffnet.
+- Auf dieselbe Ebene wie den Ordner Project. In diesem Fall sind die Plug-Ins nur in diesem spezifischen Projekt verfügbar.
 
 Ihre Wahl richtet sich danach, wie Sie das Plug-In einsetzen wollen.
 
 Liegt dasselbe Plug-In an beiden Stellen, lädt 4D nur das Plug-In, welches neben der Struktur liegt. Existieren in einer Anwendung mit einkompilierter 4D Volume Desktop mehrere Instanzen desselben Plug-In, lässt sich die Anwendung nicht öffnen.
 
-4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Öffnen Sie dann Ihre Anwendung mit 4D. Erfordert ein Plug-In eine spezifische Benutzerlizenz, wird es geladen, jedoch nicht aktiviert.
+4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Öffnen Sie dann Ihr Projekt mit 4D. Erfordert ein Plug-In eine spezifische Benutzerlizenz, wird es geladen, jedoch nicht aktiviert.

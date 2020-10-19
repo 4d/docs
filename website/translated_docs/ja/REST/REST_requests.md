@@ -6,21 +6,14 @@ title: About REST Requests
 
 The following structures are supported for REST requests:
 
-| URI                              | Resource                                                                    | {Subresource}                                                              | {Querystring}                                                   |
-| -------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |                                                                 |
-|                                  | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ | [{method}](%7BdataClass%7D.html#dataclassmethod)                |
-|                                  |                                                                             |                                                                            | [$entityset/{entitySetID}](entityset.html#entitysetentitysetid) |
-|                                  |                                                                             |                                                                            | [?$filter]($filter.md)                                          |
-|                                  |                                                                             | [{attribute}](manData.html#selecting-attributes-to-get)/                   | [?$compute]($compute.md)                                        |
-|                                  | [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/                    | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |                                                                 |
-|                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D%7Battribute%7D_value.html) |                                                                            |                                                                 |
-|                                  | [$catalog]($catalog.md)                                                     |                                                                            |                                                                 |
-|                                  | [$directory]($directory.md)                                                 |                                                                            |                                                                 |
-|                                  | [$info]($info.md)                                                           |                                                                            |                                                                 |
+| URI                              | Resource (Input)                                                                                    | /? or &{filter} (Output)                                                                              |
+| -------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)                                                                 | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
+|                                  | [{dataClass}](%7BdataClass%7D.html)/[$entityset/{entitySetID}](entityset.html#entitysetentitysetid) | [$method=...]($method.md)                                                                             |
+|                                  | [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)                                             | [$attributes]($attributes.md)                                                                         |
+|                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D.html#dataclassattributevalue)                      |                                                                                                       |
 
-
-While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
+While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
 
 As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. たとえば:
 

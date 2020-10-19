@@ -6,9 +6,9 @@ title: Classes
 
 ## Aperçu
 
-The 4D language supports the concept of **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
+Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Once a class is defined, you can **instantiate** objects of this class anywhere in your code. Chaque objet est une instance de sa classe. Une classe peut `s'étendre` à une autre classe, puis hériter de ses fonctions.
+Une fois qu'une classe est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut `s'étendre` à une autre classe, puis hériter de ses fonctions.
 
 Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -20,7 +20,7 @@ Une classe est un objet de classe "Class". Un objet de classe a les propriétés
 - un objet `superclass` (facultatif, nul s'il n'y en a aucun)
 - une méthode `new()` permettant d'instancier des objets de classe.
 
-In addition, a class object can reference:
+De plus, un objet de classe peut référencer :
 - un objet `constructeur` (facultatif)
 - un objet `prototype`, contenant des objets de fonction nommés (facultatif).
 
@@ -29,7 +29,7 @@ Un objet de classe est un objet partagé et est donc accessible simultanément �
 
 ### Recherche et prototype des propriétés
 
-Tous les objets de 4D sont liés en interne à un objet de classe. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
+Tous les objets de 4D sont liés en interne à un objet de classe. Lorsque 4D ne trouve pas de propriété dans un objet, il effectue un recherche dans l'objet prototype de sa classe; s'il ne la trouve pas, 4D poursuit sa recherche dans l'objet prototype de sa classe mère (superclass), et ainsi de suite jusqu'à ce qu'il n'y ait plus de superclass.
 
 Tous les objets héritent de la classe "Object" comme classe supérieure d'arbre d'héritage.
 
@@ -46,12 +46,12 @@ $poly:=cs.Polygon.new(4;3)
 $instance:=OB Instance of($poly;cs.Polygon)  
  // true
 $instance:=OB Instance of($poly;4D.Object)
- // true 
+ // true
 ```
 
-When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
+Lors de l'énumération des propriétés d'un objet, son prototype de classe n'est pas énuméré. Par conséquent, l'instruction `For each` et la commande `JSON Stringify` ne retournent pas les propriétés de l'objet du prototype de classe. The prototype object property of a class is an internal hidden property.
 
-### Class definition
+### Définition d'une classe
 
 A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method. You will usually use specific [class keywords](#class-keywords) and [class commands](#class-commands) in the class file.
 
@@ -103,13 +103,13 @@ For example, you create a new instance of an object of myClass using the `cs.myC
 
 ## Handling user classes
 
-### Class files
+### Fichiers de classe (class files)
 
 A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
 
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
-- Database folder
+- Dossier Project
     + Project
         * Sources
             - Classes
@@ -200,7 +200,7 @@ Function getAge
 
 For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-In the database code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example `myObject.methodName("hello")`.
 - use of a "Function" class member methods
@@ -286,49 +286,12 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class.
-
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
-
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
-
-
-#### Example:
-
-```4d
-// Class: MyClass
-// Class constructor of MyClass
-Class Constructor
-C_TEXT($1)
-This.name:=$1
-```
-
-```4d
-// In a project method
-// You can instantiate an object
-C_OBJECT($o)
-$o:=cs.MyClass.new("HelloWorld")  
-// $o = {"name":"HelloWorld"}
-```
-
-
-
-
-### Class extends \<ClassName>
-
-#### Syntax
-
-```js
-// Class: ChildClass
-Class extends <ParentClass>
-```
-
 The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
 
 Class extension must respect the following rules:
 
 - A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another database or component.
+- A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
@@ -342,7 +305,7 @@ This example creates a class called `Square` from a class called `Polygon`.
 
 ```4d
   //Class: Square
-  //path: Classes/Square.4dm 
+  //path: Classes/Square.4dm
 
  Class extends Polygon
 
@@ -371,6 +334,10 @@ $0:=This.height*This.width
 | Result    | object | <- | Object's parent                                |
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+
+`Super` serves two different purposes:
+
+- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. the parent class.</p>
 
 `Super` serves two different purposes:
 
@@ -493,78 +460,70 @@ Then you can write in a project method:
 | --------- | ------ | -- | -------------- |
 | Result    | object | <- | Current object |
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+The `This` keyword returns a reference to the currently processed object. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
-
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
+Lorsqu'une formule est appelée en tant que méthode membre d'un objet, son `This` est défini sur l'objet sur lequel la méthode est appelée. Par exemple :
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+Lorsqu'une fonction de [class constructor](#class-constructor) est utilisée (avec le mot clé `new()`), son `This` est lié au nouvel objet en cours de construction..
 
 ```4d
-  //Class: ob
+  //Classe : ob
 
 Class Constructor  
-    // Create properties on This as
-    // desired by assigning to them
-    This.a:=42 
+    // Créer des propriétés sur This 
+    // en leur assignant
+    This.a:=42
 ```
 
 ```4d
-    // in a 4D method  
+    // dans une méthode 4D  
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
-
-
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
-
-```4d
-  //Class: ob
-
- Function f
-    $0:=This.a+This.b
-```
-
-Then you can write in a project method:
-
-```4d
-$o:=cs.ob.new()
-$o.a:=5
-$o.b:=3
-$val:=$o.f() //8
-```
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
-
-
-## Class commands
-
-Several commands of the 4D language allows you to handle class features.
-
-
-### OB Class
-
-#### OB Class ( object ) -> Object | Null
-
-`OB Class` returns the class of the object passed in parameter.
-
-
-### OB Instance of
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
-
-
-### OB Instance of
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+> Lorsque vous appelez le superclass constructor dans un constructeur à l'aide du mot clé [Super](#super), gardez à l'esprit que `This` ne doit pas être appelé avant le superclass constructor, sinon une erreur est générée. For example:
+> 
+> ```4d
+> $o:=New object("prop";42;"f";Formula(This.prop))
+> $val:=$o.f() //42
+> ```
+> 
+> When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+> 
+> ```4d
+>   //Class: ob
+> 
+> Class Constructor  
+>     // Create properties on This as
+>     // desired by assigning to them
+>     This.a:=42 
+> ```
+> 
+> ```4d
+>     // in a 4D method  
+> $o:=cs.ob.new()
+> $val:=$o.a //42
+> ```
+> 
+> > When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Puisque *f* est appelée comme une méthode de $o, son `This` fait référence à $o.
+> > 
+> > ## Commandes de classe
+> > 
+> > Plusieurs commandes du langage 4D permettent de gérer les fonctionnalités de classe.
+> > 
+> > ### OB Class
+> > 
+> > #### OB Class (objet) -> Objet | Null
+> > 
+> > `OB Class` renvoie la classe de l'objet passé en paramètre.
+> > 
+> > ### OB Instance of
+> > 
+> > #### OB Instance of (objet; classe) -> Booléen
+> > 
+> > `OB Instance of` renvoie `true` si `object` appartient à `class` ou à l'une de ses classes héritées, et `false` dans le cas contraire

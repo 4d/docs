@@ -1,6 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -22,10 +23,39 @@
 	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 
-	"Project Databases":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation","Project/building"],
-	"Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
+  "ORDA":["ORDA/overview","ORDA/dsmapping","ORDA/ordaClasses","ORDA/entities","ORDA/datastores","ORDA/glossary"],
+  "Class API Reference":["API/cryptoClass"],
+  "Access Rights":["Users/overview","Users/editing"],
+  "Administration":["Admin/licenses","Admin/building"],
+	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
+	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
+  "Web Server":["WebServer/webServerObject"],
+	"REST Server": [
+		{
+        "type": "subcategory",
+        "label": "Guides",
+        "ids": [
+          "REST/gettingStarted","REST/configuration","REST/authUsers","REST/genInfo","REST/manData","REST/classFunctions","REST/REST_requests"
+		  ]
+		},
+		{
+        "type": "subcategory",
+        "label": "API (general)",
+        "ids": [
+          "REST/catalog","REST/directory","REST/info","REST/upload"
+		  ]
+		},
+		{
+        "type": "subcategory",
+        "label": "API (dataClass)",
+        "ids": [
+          "REST/{dataClass}","REST/asArray","REST/atomic_$atonce","REST/attributes","REST/binary","REST/compute","REST/distinct","REST/entityset","REST/expand","REST/filter","REST/imageformat","REST/method","REST/orderby","REST/querypath","REST/queryplan","REST/savedfilter","REST/savedorderby","REST/skip","REST/timeout","REST/top_$limit","REST/version"
+		  ]
+		}
+	],
+  "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
-    "Form Objects":["FormObjects/formObjectsOverview",
+ "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
 		  "FormObjects/buttonGridOverview",
 		  "FormObjects/checkboxOverview",
@@ -63,7 +93,6 @@
 			"FormObjects/propertiesDisplay",
 			"FormObjects/propertiesEntry",
 			"FormObjects/propertiesFooters",
-			"FormObjects/propertiesForm",
 			"FormObjects/propertiesGridlines",
 			"FormObjects/propertiesHeaders",
 			"FormObjects/propertiesHelp",
@@ -140,33 +169,7 @@
 			"Events/onValidate",
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
-	"Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
-	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
-	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
-	"Users and Groups":["Users/overview","Users/editing"],
-	"Web Server":["WebServer/webServerObject"],
-	"REST Server": [
-		{
-        "type": "subcategory",
-        "label": "Guides",
-        "ids": [
-          "REST/gettingStarted","REST/configuration","REST/authUsers","REST/genInfo","REST/manData","REST/REST_requests"
-		  ]
-		},
-		{
-        "type": "subcategory",
-        "label": "API (general)",
-        "ids": [
-          "REST/catalog","REST/directory","REST/info","REST/upload"
-		  ]
-		},
-		{
-        "type": "subcategory",
-        "label": "API (dataClass)",
-        "ids": [
-          "REST/{dataClass}","REST/asArray","REST/atomic_$atonce","REST/attributes","REST/binary","REST/compute","REST/distinct","REST/entityset","REST/expand","REST/filter","REST/imageformat","REST/method","REST/orderby","REST/querypath","REST/queryplan","REST/savedfilter","REST/savedorderby","REST/skip","REST/timeout","REST/top_$limit","REST/version"
-		  ]
-		}
-	]
+  "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]
+
   }
 }

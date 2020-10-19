@@ -5,6 +5,15 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
+      "Admin/building": {
+        "title": "Building a project package"
+      },
+      "Admin/licenses": {
+        "title": "Managing 4D Licenses"
+      },
+      "API/cryptoClass": {
+        "title": "CryptoKey Class"
+      },
       "Backup/backup": {
         "title": "Backup"
       },
@@ -490,7 +499,7 @@
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "Installation"
       },
       "Menus/bars": {
         "title": "Menu bar features"
@@ -547,14 +556,32 @@
         "title": "Verify Page",
         "sidebar_label": "Verify Page"
       },
-      "Project/architecture": {
-        "title": "Architecture of a 4D project"
+      "ORDA/dsmapping": {
+        "title": "Data Model Objects"
       },
-      "Project/building": {
-        "title": "Building a project package"
+      "ORDA/entities": {
+        "title": "Working with data"
+      },
+      "ORDA/glossary": {
+        "title": "Glossary"
+      },
+      "ORDA/ordaClasses": {
+        "title": "Data Model Classes"
+      },
+      "ORDA/overview": {
+        "title": "Overview"
+      },
+      "ORDA/quickTour": {
+        "title": "A Quick Tour in ORDA"
+      },
+      "ORDA/datastores": {
+        "title": "Using a remote datastore"
+      },
+      "Project/architecture": {
+        "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Creating a 4D project"
+        "title": "Creating or opening a project"
       },
       "Project/developing": {
         "title": "Developing a project"
@@ -564,9 +591,6 @@
       },
       "Project/overview": {
         "title": "Overview"
-      },
-      "Project/pictures": {
-        "title": "Pictures"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -646,6 +670,9 @@
       "REST/authUsers": {
         "title": "Users and sessions"
       },
+      "REST/classFunctions": {
+        "title": "Calling ORDA class functions"
+      },
       "REST/configuration": {
         "title": "Server Configuration"
       },
@@ -672,31 +699,37 @@
       }
     },
     "links": {
-      "v18 R4 BETA": "v18 R4 BETA",
-      "v18 R3": "v18 R3",
+      "v18 R5 BETA": "v18 R5 BETA",
+      "v18 R4": "v18 R4",
       "v18": "v18"
     },
     "categories": {
       "Getting Started": "Getting Started",
+      "Project Management": "Project Management",
       "4D Language Concepts": "4D Language Concepts",
-      "Project Databases": "Project Databases",
+      "ORDA": "ORDA",
+      "Class API Reference": "Class API Reference",
+      "Access Rights": "Access Rights",
+      "Administration": "Administration",
+      "MSC": "MSC",
+      "Backup and Restore": "Backup and Restore",
+      "Web Server": "Web Server",
+      "REST Server": "REST Server",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
-      "Menus": "Menus",
-      "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server"
+      "Menus": "Menus"
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
+    "Installation|in index page Getting started": "Installation",
+    "Starting 4D|in index page Getting started": "Starting 4D",
     "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project databases|in index page Getting started": "Project databases",
+    "Project Management|in index page Getting started": "Project Management",
+    "Object Relational Data Access (ORDA)|in index page Getting started": "Object Relational Data Access (ORDA)",
+    "Class API Reference|no description given": "Class API Reference",
     "Forms|no description given": "Forms",
     "Form Properties|no description given": "Form Properties",
     "Form Events|no description given": "Form Events",
@@ -707,13 +740,16 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
+    "License Management|no description given": "License Management",
+    "Build Application|no description given": "Build Application",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
-    "Users and Groups|no description given": "Users and Groups",
+    "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",
-    "Developing a Desktop application|no description given": "Developing a Desktop application",
-    "Developing a Web application|no description given": "Developing a Web application",
-    "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",
+    "Web applications|no description given": "Web applications",
+    "Mobile applications|no description given": "Mobile applications",
+    "Desktop applications|no description given": "Desktop applications",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"

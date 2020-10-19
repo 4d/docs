@@ -4,34 +4,43 @@ title: Methods
 ---
 
 
-A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
+## Overview
 
-- **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
-    - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
-    - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
-    - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
+A method is basically a piece of code that executes one or several actions. A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
 
-    Built-in methods are detailed in the *4D Language reference* manual or dedicated manuals for plug-ins or components.
+The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
-- **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
+## Method Types
 
-**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods).
+In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+
+| Type                             | Calling context                                                                                             | Accepts parameters | Description                                                                                                                                                          |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Project method**               | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Yes                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
+| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached                                | No                 | Property of a form object (also called widget)                                                                                                                       |
+| **Form method**                  | Automatic, when an event involves the form to which the method is attached                                  | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
+| **Database method**              | Automatic, when a working session event occurs                                                              | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
+
+
+> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
 
 ## Calling Project Methods
 
 A project method can have one of the following roles, depending on how it is executed and used:
 
-- Subroutine and function
-- Method attached to object
+- Subroutine
+- Object formula
 - Menu method
 - Process method
 - Event or Error catching method
 
-### Subroutines and functions
+### Subroutines
+
 A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
 
-When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#predefined-methods) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
+When you create a project method, it becomes part of the language of the project in which you create it. You can then call the project method from another method (project method, object method...) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
 
 You use subroutines to:
 
@@ -40,7 +49,7 @@ You use subroutines to:
 - Facilitate changes to your methods
 - Modularize your code
 
-For example, let’s say you have a database of customers. As you customize the database, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:
+For example, let’s say you have a project of customers. As you customize the project, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:
 
 ```4d
   // Look for a customer
@@ -51,30 +60,31 @@ For example, let’s say you have a database of customers. As you customize the 
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your custom database where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your project where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
 
-If the previously described code was a method called `MODIFY CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
+If the previously described code was a method called `MODIFY_CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
 
 ```4d
- MODIFY CUSTOMER
+ MODIFY_CUSTOMER
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. In the example, you do not need to know how the `MODIFY CUSTOMER` method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+This capability simplifies your methods dramatically. In the example, you do not need to know how the `MODIFY_CUSTOMER` method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
 
-If you need to change your method of finding customers in this example database, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
+If you need to change your method of finding customers in this example project, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
 
-Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account database:
+Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account project:
 
 ```4d
- FIND CLEARED CHECKS ` Find the cleared checks
- RECONCILE ACCOUNT ` Reconcile the account
- PRINT CHECK BOOK REPORT ` Print a checkbook report
+ FIND_CLEARED_CHECKS //Find the cleared checks
+ RECONCILE_ACCOUNT //Reconcile the account
+ PRINT_CHECK_BOOK_REPORT //Print a checkbook report
 ```
 
-Even for someone who doesn’t know the database, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
+Even for someone who doesn’t know the project, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
 
-### Methods attached to objects
+
+### Object formulas
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
@@ -86,7 +96,9 @@ To execute a method stored in an object property, use the **( )** operator after
 //myAlert
 ALERT("Hello world!")
 ```
+
 Then `myAlert` can be encapsulated in any object and called:
+
 ```4d
 C_OBJECT($o)
 $o:=New object("custom_Alert";Formula(myAlert))
@@ -106,7 +118,9 @@ You can also [pass parameters](Concepts/parameters.md) to your formula when you 
 C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
+
 You can encapsulate `fullName` in an object:
+
 ```4d
 C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
@@ -114,6 +128,7 @@ $result:=$o.full_name("John";"Smith")
 //$result = "John Smith"
 // equivalent to $result:=fullName("param1";"param2")
 ```
+
 Combined with the `This`function, such object methods allow writing powerful generic code. For example:
 
 ```4d
@@ -121,6 +136,7 @@ Combined with the `This`function, such object methods allow writing powerful gen
 C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
+
 Then the method acts like a new, calculated attribute that can be added to other attributes:
 
 ```4d
@@ -141,11 +157,11 @@ $o:=$f.message //returns the formula object in $o
 ```
 
 ### Menu Methods
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. This process is one of the major aspects of customizing a database. By creating custom menus with menu methods that perform specific actions, you personalize your database.
+A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
-Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the database.
+Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the application.
 
 
 ### Process Methods
@@ -232,15 +248,3 @@ Some typical uses of recursion in 4D are:
 - Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.
 
 **Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
-
-
-## Specialized Methods
-
-In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
-
-| Type                             | Calling context                                                                          | Accepts parameters | Description                                                                                                                                                          |
-| -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Form method**                  | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
-| **Database method**              | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |

@@ -3,7 +3,7 @@ id: manData
 title: Manipulating Data
 ---
 
-All [exposed datastore classes, attributes](configuration.md#exposing-tables-and-fields) and methods can be accessed through REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
+All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](classFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
 
 ## Querying data
 
@@ -20,9 +20,9 @@ With the REST API, you can perform all the manipulations to data as you can in 4
 
 To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Before saving data, you can also validate it beforehand by calling [`$method=validate`]($method.md#methodvalidate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your datastore class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
 
-Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
 
 ## Navigating data
@@ -69,40 +69,17 @@ To compute all values and return a JSON object:
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Getting data from methods
+## Calling Data model class functions
 
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
+You can call ORDA Data Model [user class functions](classFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
-- an object
-- a collection
+`/rest/City/getCity`
 
-The following example is a dataclass method that reveives parameters and returns an object:
+with data in the body of the request: `["Paris"]`
 
-```4d
-// 4D findPerson method
-C_TEXT($1;$firstname;$2;$lastname)
-$firstname:=$1
-$lastname:=$2
 
-$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
-```
+> Calls to 4D project methods that are exposed as REST Service are still supported but are deprecated.
 
-The method properties are configured accordingly on the 4D project side:
-
-![alt-text](assets/en/REST/methodProp_ex.png)
-
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
-
-```4d
-C_TEXT($content)
-C_OBJECT($response)
-
-$content:="[\"Toni\",\"Dickey\"]" 
-
-$statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
-```
-
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
 
 ## Selecting Attributes to get
 
@@ -198,6 +175,7 @@ The following requests returns only the first name and last name from the People
 
 
 #### Entity Example
+
 The following request returns only the first name and last name attributes from a specific entity in the People dataclass:
 
  `GET  /rest/People(3)/firstName,lastName/`
@@ -244,7 +222,7 @@ The following request returns only the first name and last name attributes from 
 
 Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
 
- `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer
+ `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
 
 ## Viewing an image attribute
