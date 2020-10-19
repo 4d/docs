@@ -67,7 +67,7 @@ In all cases, keep in mind that the status of the last backup (successful or fai
 
 - **ユーザーによる中断**: 進捗ダイアログボックスの **中止** ボタンをクリックすると、いつでもバックアップを中断することができます。 この場合、各項目のコピーが中止されてエラー 1406 が生成されます。 このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
 - **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of application files and accessible attached files) and returns an error.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
+- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Settings. 再試行にも失敗した場合、システムの警告ダイアログボックスが表示されてエラーが生成されます。 このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
 
 ## バックアップジャーナル
 
