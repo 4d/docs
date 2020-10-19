@@ -30,9 +30,9 @@ The options found on this tab let you set and configure scheduled automatic back
 - **毎月**: 月に一回自動バックアップをおこないます。 バックアップを開始する日付と時刻を入力するエリアが表示されます。
 - **カスタマイズ**: 自動バックアップを詳細にスケジュールする場合に使用します。 このオプションを選択すると、複数の入力エリアが表示されます:
     + **X 時間ごと**: 時間単位でバックアップの間隔をスケジュールできます。 1から24までの値を設定できます。
-    - **Every X day(s) at x**: Allows programming backups on a daily basis. For example, enter 1 if you want to perform a daily backup. When this option is checked, you must enter the time when the backup should start.
-    - **Every X week(s) day at x**: Allows programming backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must enter the day(s) of the week and the time when the backup should start. You can select several days of the week, if desired. For example, you can use this option to set two weekly backups: one on Wednesday and one on Friday.
-    - **Every X month(s), Xth Day at x**: Allows programming backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup should start.
+    - **X 日ごと**: 日単位でバックアップの間隔をスケジュールできます。 たとえば、毎日バックアップをおこなうには 1 と設定します。 このオプションを選択した場合、バックアップが開始される時刻を設定しなければなりません。
+    - **X 週ごと**: 週単位でバックアップの間隔をスケジュールできます。 たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションを選択した場合、バックアップを開始する曜日と時刻を設定しなければなりません。 複数の曜日を選択することもできます。 たとえば、毎週水曜日と金曜日にバックアップをするようプログラムできます。
+    - **X 月ごと**: 月単位でバックアップの間隔をスケジュールできます。 たとえば、毎月バックアップをおこなうには 1 と設定します。 このオプションを選択した場合、バックアップを開始する日付と時刻を設定しなければなりません。
 
 ## Configuration
 
