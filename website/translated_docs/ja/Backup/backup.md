@@ -1,20 +1,20 @@
 ---
 id: backup
-title: Backup
+title: バックアップ
 ---
 
 
-## Starting a backup
+## バックアップの開始
 
-A backup can be started in three ways:
+4D では、次の 3つの方法でバックアップを開始することができます:
 
-- Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
+- 手動による方法: 4D の **ファイル** メニューから **バックアップ...** コマンドを使用します。または、[Maintenance & Security Center (MSC)](MSC/backup.md) の **バックアップ** ボタンをクリックします。
 - Automatically, using the scheduler that can be set in the Settings,
-- Programmatically, using the `BACKUP` command.
+- プログラムによる方法: `BACKUP` コマンドを使用します。
 
-> 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
+> 4D Server: リモートマシンから `BACKUP` を呼び出すメソッドを使用して、手動でバックアップを開始することができます。 いかなる場合でも、このコマンドはサーバー上で実行されます。
 
-### Manual backup
+### 手動バックアップ
 
 1. Select the **Backup...** command in the 4D **File** menu.   
    The backup window appears: ![](assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
@@ -26,14 +26,14 @@ The **Database properties...** button causes the Backup/Configuration page of th
  2. Click **Backup** to start the backup using current parameters.
 
 
-### Scheduled automatic backup
+### 定期的な自動バックアップ
 
 Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Settings**.
 
 Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
 
 
-### BACKUP command
+### BACKUP コマンド
 
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 
