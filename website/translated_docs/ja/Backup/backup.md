@@ -40,26 +40,26 @@ When the `BACKUP` 4D language command is executed from any method, the backup st
 
 ## バックアップ処理の管理
 
-Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
+バックアップが開始すると 4Dは、バックアップの進捗状況を知らせるサーモメーターのあるダイアログボックスを表示します:
 
 ![](assets/en/Backup/backupProgress.png)
 
-This thermometer is also displayed on the [Backup page of the MSC](MSC/backup.md) if you have used this dialog box.
+MSC を使用している場合、この進捗インジケーターは [MSC のバックアップページ](MSC/backup.md) に表示されます。
 
-The **Stop** button lets the user interrupt the backup at any time (refer to [Handling backup issues](backup.md#handling-backup-issues) below).
+**中止** ボタンをクリックすると、いつでもバックアップを中断することができます ([バックアップ中に問題が発生した場合](backup.md#バックアップ中に問題が発生した場合) 参照)。
 
-The status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server. It is also recorded in the database **Backup journal.txt**.
+前回のバックアップの結果 (成功または不成功) は、[MSC のバックアップページ](MSC/backup.md) の "前回のバックアップの情報" エリア、または 4D Server の **メンテナンスページ** で確認できます。 また、データベースの **バックアップジャーナル** (Backup Journal.txt) にも記録されます。
 
 ### Accessing the application during backup
 
-During a backup, access to the application is restricted by 4D according to the context. 4D locks any processes related to the types of files included in the backup: if only the project files are being backed up, access to the structure is not possible but access to the data will be allowed.
+During a backup, access to the application is restricted by 4D according to the context. 4D は、バックアップに含まれたファイルタイプに関連するプロセルはすべてロックします: プロジェクトファイルだけがバックアップされている場合、ストラクチャーにはアクセスできませんが、データにはアクセス可能です。
 
-Conversely, if only the data file is being backed up, access to the structure is still allowed. In this case, the application access possibilities are as follows:
+反対に、データだけがバックアップされているのであれば、ストラクチャーへのアクセスは許可されます。 In this case, the application access possibilities are as follows:
 
-- With the 4D single-user version, the application is locked for both read and write; all processes are frozen. No actions can be performed.
+- With the 4D single-user version, the application is locked for both read and write; all processes are frozen. 実行できるアクションはありません。
 - With 4D Server, the application is only write locked; client machines can view data. If a client machine sends an add, remove or change request to the server, a window appears asking the user to wait until the end of the backup. Once the application is saved, the window disappears and the action is performed. To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. However, if the action waiting to be executed comes from a method launched prior to the backup, you should not cancel it because only operations remaining to be performed are cancelled. Also, a partially executed method can cause logical inconsistencies in the data. > When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
 
-### Handling backup issues
+### バックアップ中に問題が発生した場合
 
 It may happen that a backup is not executed properly. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
 
