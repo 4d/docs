@@ -58,7 +58,7 @@ sidebar_label: 修復ページ
 
 ![](assets/en/MSC/mscrepair3.png)
 
-次に "割り当てられていないテーブル" リストから、グループを割り当てるテーブルを選択し、**テーブルを識別** ボタンをクリックします。 You can also assign a table using drag and drop. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+次に "割り当てられていないテーブル" リストから、グループを割り当てるテーブルを選択し、**テーブルを識別** ボタンをクリックします。 割り当てのためにドラッグ＆ドロップを使用することもできます。 結果そのレコードグループは選択したテーブルに割り当てられ、そのテーブルのレコードとして再生されます。 手動で割り当てられたテーブルはリスト中黒色で表示されます。 **レコードを無視する** ボタンをクリックすると、レコードグループに対するテーブルの割り当てを手動で解除できます。
 
 
 ## ログファイルを開く
