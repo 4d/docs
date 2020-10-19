@@ -5,7 +5,7 @@ title: 概要
 
 4D includes a full application backup and restore module.
 
-This module allows backing up an application currently in use without having to exit it. Each backup can include the project folder, the data file and any additional files or folders. These parameters are first set in the Settings.
+This module allows backing up an application currently in use without having to exit it. 各バックアップには、プロジェクトフォルダー、データファイルのほか、任意の追加ファイルやフォルダーを含められます。 These parameters are first set in the Settings.
 
 Backups can be started manually or automatically at regular intervals without any user intervention. Specific language commands, as well as specific database methods, allow integrating backup functions into a customized interface.
 
