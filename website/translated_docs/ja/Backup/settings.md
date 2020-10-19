@@ -13,19 +13,19 @@ title: バックアップ設定
 
 ## スケジューラー
 
-You can automate the backup of databases opened with 4D or 4D Server (even when no client machines are connected). This involves setting a backup frequency (in hours, days, weeks or months); for each session, 4D automatically starts a backup using the current backup settings.
+4D や 4D Server で開かれているデータベースのバックアップを自動化することができます (クライアントマシンが接続されている必要はありません)。 これはバックアップ周期 (時間、日、週、月単位等) を設定することによりおこないます。現在のバックアップ設定に基づき、4D は自動でバックアップを実行します。
 
-If this application was not launched at the theoretical moment of the backup, the next time 4D is launched, it considers the backup as having failed and proceeds as set in the Database Settings (refer to [Handling backup issues](backup.md#handling-backup-issues)).
+バックアップが実行されるべきときにアプリケーションが起動されていなかった場合には、次に起動されたとき 4D はバックアップが失敗したものと認識し、データベース設定の再試行設定を適用します ([バックアップ中に問題が発生した場合](backup.md#バックアップ中に問題が発生した場合) 参照)。
 
-The scheduler backup settings are defined on the **Backup/Scheduler** page of the Database Settings:
+バックアップのスケジュール設定は、データベース設定の **バックアップ/スケジューラー** ページでおこないます:
 
 ![](assets/en/Backup/backup02.png)
 
-The options found on this tab let you set and configure scheduled automatic backups of the database. You can choose a standard quick configuration or you can completely customize it. Various options appear depending on the choice made in the **Automatic Backup** menu:
+このページにあるオプションを使用して、データベースの自動バックアップのスケジュールを設定できます。 標準のクイック設定、または完全なカスタマイズを選択できます。 **自動バックアップ** メニューでの選択に基づき、さまざまなオプションが表示されます:
 
-- **Never**: The scheduled backup feature is disabled.
-- **Every Hour**: Programs an automatic backup every hour, starting with the next hour.
-- **Every Day**: Programs an automatic backup every day. You can then enter the time when the backup should start.
+- **しない**: スケジュールに基づくバックアップは無効となります。
+- **毎時**: 次の時間以降、毎時間ごとに自動バックアップをおこないます。
+- **毎日**: 日に一回自動バックアップをおこないます。 バックアップを何時に開始するかを設定します。
 - **Every Week**: Programs an automatic backup every week. Two additional entry areas let you indicate the day and time when the backup should start.
 - **Every Month**: Programs an automatic backup every month. Two additional entry areas let you indicate the day of the month and the time when the backup should start.
 - **Personalized**: Used to configure "tailormade" automatic backups. When you select this option, several additional entry areas appear:
