@@ -5,7 +5,7 @@ title: Glossary
 
 ## Main concepts at a glance
 
-![](assets/en/Orda/mainConcepts.png)
+![](assets/en/ORDA/mainConcepts.png)
 
 
 

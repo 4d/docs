@@ -3,12 +3,12 @@ id: picture
 title: Image
 ---
 
-Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D commands such as `READ PICTURE FILE`.
+Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D telles que `READ PICTURE FILE`.
 
 4D utilise des API natives pour encoder (écrire) et décoder (lire) les champs et les variables des images sous Windows et macOS. Ces implémentations donnent accès à de nombreux formats natifs, dont le format RAW, couramment utilisé par les appareils photo numériques.
 
-*   on Windows, 4D uses WIC (Windows Imaging Component).
-*   on macOS, 4D uses ImageIO.
+*   sous Windows, 4D utilise WIC (Windows Imaging Component).
+*   sous macOS, 4D utilise ImageIO.
 
 WIC et ImageIO permettent l’utilisation de métadonnées dans les images. Deux commandes, `SET PICTURE METADATA` et `GET PICTURE METADATA`, vous permettent d'en bénéficier dans vos développements.
 
@@ -16,14 +16,14 @@ WIC et ImageIO permettent l’utilisation de métadonnées dans les images. Deux
 
 4D supports natively a wide set of [picture formats](FormEditor/pictures.md#native-formats-supported), such as .jpeg, .png, or .svg.
 
-Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs.  Ces identifiants peuvent être :
+Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CODEC LIST` sous forme d'identifiants de codecs d'images.  Ces identifiants peuvent être :
 
 *   une extension (par exemple “.gif”)
-*   As a MIME type (for example “image/jpeg”)
+*   Un type Mime (par exemple “image/jpg”)
 
 La forme utilisée pour chaque format dépend du mode de déclaration du codec au niveau du système d’exploitation. Notez que les listes de codecs disponibles pour la lecture et pour l'écriture peuvent différer, étant donné que les codecs d'encodage peuvent nécessiter des licences spécifiques.
 
-Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command. Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command.
+Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) can receive a Codec ID as a parameter. Il est donc impératif d'utiliser l'identifiant système retourné par la commande `PICTURE CODEC LIST`. Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CODEC LIST`.
 
 
 

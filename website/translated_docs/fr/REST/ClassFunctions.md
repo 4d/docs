@@ -5,7 +5,7 @@ title: Appeler des fonctions de classe ORDA
 
 ## Aperçu
 
-Vous pouvez appeler les [fonctions de classe utilisateur](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
+You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
 Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
@@ -19,6 +19,7 @@ Dans le langage 4D, cet appel équivaut à :
 $city:=ds.City.getCity("Aguada")
 ```
 
+> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
 ## Appeler des fonctions
 
@@ -43,6 +44,7 @@ Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 
 
 ## Paramètres
+
 
 
 Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres normaux $1, $2, etc.
@@ -123,7 +125,7 @@ La classe de `DataStore` US_Cities fournit une API :
 
 Class extends DataStoreImplementation
 
-Function getName()
+exposed Function getName()
     $0:="US cities and zip codes manager" 
 ```
 
@@ -148,7 +150,7 @@ La classe de Dataclass `City` fournit une API qui retourne une entité de ville 
 
 Class extends DataClass
 
-Fonction getCity()
+exposed Function getCity()
     var $0 : cs.CityEntity
     var $1,$nameParam : text
     $nameParam:=$1
@@ -197,7 +199,7 @@ La classe d'entité `CityEntity` fournit une API :
 
 Class extends Entity
 
-Function getPopulation()
+exposed Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
@@ -223,7 +225,7 @@ La classe de sélection d'entité `CityEntity` fournit une API :
 
 Class extends EntitySelection
 
-Function getPopulation()
+exposed Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
@@ -248,7 +250,7 @@ La classe `StudentsSelection` a une fonction `getAgeAverage` :
 
 Class extends EntitySelection
 
-Function getAgeAverage
+exposed Function getAgeAverage
     C_LONGINT($sum;$0)
     C_OBJECT($s)
 
@@ -281,7 +283,7 @@ La classe `StudentsSelection` a une fonction `getLastSummary` :
 
 Class extends EntitySelection
 
-Function getLastSummary
+exposed Function getLastSummary
     C_TEXT($0)
     C_OBJECT($last)
 
@@ -313,12 +315,12 @@ La classe de Dataclass `Students` possède la fonction `pushData()` qui reçoit 
 
 Class extends DataClass
 
-Function pushData
+exposed Function pushData
     var $1, $entity, $status, $0 : Object
 
     $entity:=$1
 
-    $status:=checkData($entity) // $status est un objet avec une propriété avec une propriété booléenne "success"
+    $status:=checkData($entity) // $status is an object with a success boolean property
 
     $0:=$status
 
@@ -450,16 +452,16 @@ Corps de la requête :
 Dans cet exemple, nous associons une école existante à l'entité Students. La classe `StudentsEntity` possède une API :
 
 ```
-// classe StudentsEntity
+// StudentsEntity class
 
 Class extends Entity
 
-Function putToSchool()
+exposed Function putToSchool()
     var $1, $school , $0, $status : Object
 
-        //$1 est une entité Schools
+        //$1 is a Schools entity
     $school:=$1
-        //Associe l'entité reliée "school" à l'entité courante "Students"
+        //Associate the related entity school to the current Students entity
     This.school:=$school
 
     $status:=This.save()
@@ -492,25 +494,25 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 Dans la classe de Dataclass `Students`, la fonction `setFinalExam()` met à jour une sélection d'entité reçue ($1). Elle met à jour l'attribut *finalExam* avec la valeur reçue ($2). Elle retourne les clés primaires des entités mises à jour.
 
 ```
-// classe Students
+// Students class
 
 Class extends DataClass
 
-Fonction setFinalExam()
+exposed Function setFinalExam()
 
     var $1, $es, $student, $status : Object
     var $2, $examResult : Text
 
     var $keys, $0 : Collection
 
-      //Sélection d'entité
+      //Entity selection
     $es:=$1
 
     $examResult:=$2
 
     $keys:=New collection()
 
-      //Boucle sur la sélection d'entité
+      //Loop on the entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()

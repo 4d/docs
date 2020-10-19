@@ -107,6 +107,7 @@ The following table summarizes how object and form methods are called for each e
 | On End URL Loading       | Yes (Web Area)                      | Never       | Involved object only   |
 | On Open External Link    | Yes (Web Area)                      | Never       | Involved object only   |
 | On Window Opening Denied | Yes (Web Area)                      | Never       | Involved object only   |
+| On VP Range Changed      | Yes (4D View Pro Area)              | Never       | Involved object only   |
 | On VP Ready              | Yes (4D View Pro Area)              | Never       | Involved object only   |
 | On Row Resize            | Yes (4D View Pro Area)              | Never       | Involved object only   |
 

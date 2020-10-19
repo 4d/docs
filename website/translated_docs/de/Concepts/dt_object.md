@@ -188,7 +188,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      End case
 ```
 
-- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
+- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
  - Objekt, Collection, Zeiger: Null
  - Bild: Leeres Bild
  - Boolean: Falsch
@@ -204,7 +204,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      $o.a:=$o.b //$o.a=0
 ```
 
-- Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen führt nichts aus.
+- Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, führt nichts aus.
 
 Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen, dass diese den korrekten Typ haben, selbst wenn sie als undefiniert bewertet werden. Dazu übergeben Sie die passenden 4D Befehle `String`, `Num`, `Date`, `Time`, `Bool`. Sie geben einen leeren Wert des angegebenen Typs zurück, wenn der Ausdruck als undefiniert bewertet wird. Beispiel:
 
@@ -215,7 +215,7 @@ Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen
 
 ## Identifier für Objekteigenschaft
 
-Die Namensvergabe für Token, z.B. Namen von Objekteigenschaften, auf die über Objektnotation zugegriffen wird, ist restriktiver als für standardmäßige 4D Objektnamen. Sie müssen die Regeln für JavaScript Identifier berücksichtigen (siehe [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+Die Namensvergabe für Token, z.B. Namen von Objekteigenschaften, auf die über Objektnotation zugegriffen wird, ist restriktiver als für [ standardmäßige 4D Objektnamen](identifiers.md). Sie müssen die Regeln für JavaScript Identifier berücksichtigen (siehe [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - Das erste Zeichen muss ein Buchstabe, ein Unterstrich (_) oder ein Dollarzeichen sein ($),
 - Nachfolgende Zeichen können ein Buchstabe, Digit, Unterstrich oder Dollarzeichen sein. Leerzeichen sind NICHT erlaubt.
@@ -224,10 +224,11 @@ Die Namensvergabe für Token, z.B. Namen von Objekteigenschaften, auf die über 
 **Hinweis:**
 
 - Die Verwendung eines Tabellenfeldes als Collection Index, wie z.B. a.b[[Table1]Id], ist nicht erlaubt. Sie müssen eine Variable dazwischen setzen.
-- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut $o["My Att"] ist in 4D trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation verwenden.
+- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut `$o["My Att"]` ist in 4D trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation und Autocomplete Features verwenden.
 
 
 ## Beispiele
+
 Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekten. Beachten Sie, dass die Befehlsnotation weiterhin voll unterstützt wird.
 
 - Objekte schreiben und lesen (dieses Beispiel vergleicht Objektnotation und Befehlsnotation miteinander):
@@ -261,7 +262,7 @@ Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekte
   //creates the phone property and sets its value to an object
 ```
 
-- Einen Wert in einem Unterobjekt erhalten ist mit Objektnotation ganz einfach:
+- Einen Wert in einem Unterobjekt erhalten, ist mit Objektnotation ganz einfach:
 
 ```4d
  $vCity:=$Emp.city //"Paris"

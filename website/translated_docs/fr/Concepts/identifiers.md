@@ -65,7 +65,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
 
 Voici quelques exemples :
-```4d
+```4d 
     //Traiter un élément d'un tableau process bidimensionnel
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
@@ -299,3 +299,4 @@ Veillez à utiliser des noms uniques pour les différents éléments de votre pr
 6. Variables.
 
 Par exemple, 4D dispose d’une fonction interne appelée `Date`. Si vous appelez *Date* une de vos méthodes, 4D considérera `Date` comme étant la fonction interne et non votre méthode. Vous ne pourrez pas appeler votre méthode. En revanche, si vous nommez un champ “Date”, 4D considérera que vous souhaitez appeler votre champ et non la fonction intégrée.
+

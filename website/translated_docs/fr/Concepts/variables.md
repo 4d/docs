@@ -16,12 +16,12 @@ Once created, you can use a variable wherever you need it in your application. F
 
 Les variables sont des objets du langage; vous pouvez créer et utiliser des variables qui n’apparaîtront jamais à l'écran. Dans vos formulaires, vous pouvez afficher des variables à l’écran (à l'exception des pointeurs et des BLOB), les utiliser pour saisir des données, et les imprimer dans des états. Dans ces cas, elles se comportent exactement comme des champs, et les mêmes contrôles intégrés sont disponibles lorsque vous les créez . Les variables peuvent également servir à contrôler des boutons, des list box, des zones de défilement, des boutons image, etc., ou à afficher les résultats de calculs ne devant pas être sauvegardés.
 
-## Declaring Variables
+## Déclaration des variables
 
-You create variables by declaring them. The 4D language offers two ways to declare variables:
+Vous créez des variables en les déclarant. Le langage 4D propose deux manières de déclarer des variables :
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only).
+- à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
+- à l'aide de l'une des commandes du langage 4D du thème "Compilateur" ou "Tableaux" (obsolète, langage classique uniquement).
 
 **Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
@@ -222,9 +222,9 @@ var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
+//équivalent à :  
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+//également équivalent à C_OBJECT($o)
 ```
 
 - To declare object variables of 4D class:
@@ -266,14 +266,14 @@ Voici quelques déclarations de variables simples :
 ARRAY LONGINT(alAnArray;10) //La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments
 ```
 
-**Note:** Arrays are a particular type of variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+**Note :** Les tableaux sont un type particulier de variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
 
 ## Assigner des valeurs
 
 Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle **assigner une valeur (ou affecter une valeur)** et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
 
-The assignment operator is a primary way to create a variable and to put data into it. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
+L’opérateur d’assignation est un premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple:
 
 ```4d
 MonNombre:=3

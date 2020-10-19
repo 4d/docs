@@ -5,7 +5,7 @@ title: Glossaire
 
 ## Aperçu des principaux concepts
 
-![](assets/en/Orda/mainConcepts.png)
+![](assets/en/ORDA/mainConcepts.png)
 
 
 

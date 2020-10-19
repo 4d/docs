@@ -14,7 +14,7 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
 *   フィールドはストレージ属性へとマップされます。
 *   リレーションはリレーション属性へとマップされます。ストラクチャーエディター内で定義されたリレーション名はリレーション属性名として使用されます。
 
-![](assets/en/Orda/datastoreMapping.png)
+![](assets/en/ORDA/datastoreMapping.png)
 
 
 ### 変換のルール
@@ -37,7 +37,7 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
 
 このプロパティは、データストアにデータクラスおよび属性として公開したい各テーブルおよびフィールドについて 4D ストラクチャーのレベルで設定する必要があります:
 
-![](assets/en/Orda/ExposeDataclass.png)
+![](assets/en/ORDA/ExposeDataclass.png)
 
 
 ### データモデルのアップデート
@@ -102,7 +102,7 @@ $mydatastore:=OB Copy(ds) // null を返します
 
 たとえば、4D ストラクチャー内の以下のテーブルについて考えます。
 
-![](assets/en/Orda/companyTable.png)
+![](assets/en/ORDA/companyTable.png)
 
 `Company` テーブルは `ds` データストア内のデータクラスとして自動的に利用可能です。 以下のように書くことができます:
 
@@ -156,7 +156,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 たとえば、以下の部分的なデータベースストラクチャーと、そのリレーションプロパティについて考えます:
 
-![](assets/en/Orda/relationProperties.png)
+![](assets/en/ORDA/relationProperties.png)
 
 すべてのストレージ属性は自動的に利用可能です:
 
@@ -171,7 +171,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 すべてのデータクラス属性はデータクラスのプロパティとして公開されています:
 
-![](assets/en/Orda/dataclassProperties.png)
+![](assets/en/ORDA/dataclassProperties.png)
 
 これらのオブジェクトは属性を表しますが、データへのアクセスは与えないという点に注意してください。 データの読み書きは [エンティティオブジェクト](entities.md#エンティティ属性の使用) を通しておこなわれます。
 

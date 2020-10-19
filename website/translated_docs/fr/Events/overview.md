@@ -105,6 +105,7 @@ The following table summarizes how object and form methods are called for each e
 | On End URL Loading            | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
 | On Open External Link         | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
 | On Window Opening Denied      | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
+| On VP Range Changed           | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 | On VP Ready                   | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 | On Row Resize                 | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 

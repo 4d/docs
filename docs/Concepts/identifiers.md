@@ -2,7 +2,7 @@
 id: identifiers
 title: Identifiers
 ---
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.). 
 
 
 ## Basic Rules
@@ -27,7 +27,7 @@ The following rules apply for all 4D frameworks.
 
 - Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
 - Names must not include any SQL keywords (command, attribute, etc.).
-
+ 
 **Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.  
 
 
@@ -64,7 +64,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
 Examples:
-```4d
+```4d 
 	//Addressing an element of a two-dimensional process array
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
@@ -146,8 +146,8 @@ A process name can contain up to 255 characters, not including scope character.
 
 In the single-user version, or in Client/Server on the Client side, there are two process scopes: **global** or **local**.
 
-- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $).
-- You denote a **local** process if the name of the process is preceded by a dollar ($) sign.
+- You denote a **global** process by using a string expression that represents its name (which cannot start with the dollar sign $). 
+- You denote a **local** process if the name of the process is preceded by a dollar ($) sign. 
 
 Examples:
 ```4d
@@ -158,7 +158,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
 
-## Project methods
+## Project methods 
 
 You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
 
@@ -191,14 +191,14 @@ Examples:
 ```4d
 	//Within DROP SPACES $1 is a pointer to the field [People]Name
 DROP SPACES(->[People]Name)
-
+ 
 	//Within Calc creator:
 	//- $1 is numeric and equal to 1
 	//- $2 is numeric and equal to 5
 	//- $3 is text or string and equal to "Nice"
 	//- The result value is assigned to $0
 $vsResult:=Calc creator(1;5;"Nice")
-
+ 
 	//Within Dump:
 	//- The three parameters are text or string
 	//- They can be addressed as $1, $2 or $3
@@ -211,7 +211,7 @@ vtClone:=Dump("is";"the";"it")
 
 A set name can contain up to 255 characters, not including scope character()s).
 
-- You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $).
+- You denote a **process** set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). 
 - You denote an **interprocess** set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 - On 4D Server, the name of a **client** set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.
 
@@ -242,7 +242,7 @@ ADD RECORD([Letters])
 
 The name of a variable can be up to 31 characters, not including the scope symbols.
 
-- You designate a **local** variable by placing a dollar sign ($) before the variable name.
+- You designate a **local** variable by placing a dollar sign ($) before the variable name. 
 - You designate a **process** variable by using its name (which cannot start with the <> symbols nor the dollar sign $)
 - You designate an **interprocess** variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
@@ -298,3 +298,4 @@ Be sure to use unique names for the different elements in your project. If a par
 6. Variables.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
+

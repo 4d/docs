@@ -65,7 +65,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
 Examples:
-```4d
+```4d 
     //Addressing an element of a two-dimensional process array
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
@@ -299,3 +299,4 @@ Be sure to use unique names for the different elements in your project. If a par
 6. Variables.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
+

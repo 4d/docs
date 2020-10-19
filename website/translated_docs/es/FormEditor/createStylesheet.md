@@ -23,7 +23,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 | styleSheets_mac.css     | For defining macOS only specific attribute styles     |
 | styleSheets_windows.css | For defining Windows only specific attribute styles   |
 
-These files are stored in the project's "/SOURCES" folder.
+These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
 ### Style Sheet Architecture
@@ -183,6 +183,7 @@ All objects of the text type with a text attribute whose value starts with "Hell
 text[text|=Hello]
 {
      stroke: yellow;
+
 }
 ```
 
@@ -228,8 +229,8 @@ icon: url("edit.png"); /* relative path to the form file */
 
 - For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
 
-    - css color name: `fill: red;`
-    - hexa value: `fill: #FF0000;`
+    - CSS color name: `fill: red;`
+    - Hexa value: `fill: #FF0000;`
     - the `rgb()` function: `fill:rgb(255,0,0)`
 
 - If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
@@ -254,12 +255,12 @@ To override this behavior, the style value must be followed with an `!important`
 | --------------------- | ------------- | ----------- |
 | `"text": "Button",`   | `text: Edit;` | `"Button"`  |
 
-
 **Example 2:**
 
 | JSON form description | Style Sheet              | 4D displays |
 | --------------------- | ------------------------ | ----------- |
 | `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+
 
 
 
@@ -296,12 +297,6 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
     ```
 
 > Filepaths can be relative or absolute. *  Relative paths are resolved relative to the JSON form description file. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
-
-
-
-
-
-
 
 
 ## Creating or Editing Style Sheets

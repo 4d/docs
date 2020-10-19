@@ -15,6 +15,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |**d**|||
 |[destination](properties_FormProperties.md#form-type)|Form type|"detailScreen", "listScreen", "detailPrinter", "listPrinter"<a name="e"></a>|
 |**e**|||
+|[entryOrder](../FormEditor/formEditor.html#data-entry-order)|The order in which active objects are selected when the **Tab** or the **Carriage return** key is used in an input form |Collection of 4D Form object names |
 |[events](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].<a name="f"></a>|
 |**f**|||
 |[formSizeAnchor](properties_FormSize.md#form-size)|Name of the object whose position determines the size of the form. (minimum length: 1)|Name of a 4D object<a name="h"></a>|

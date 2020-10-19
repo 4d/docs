@@ -65,7 +65,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 Sie verweisen auf ein Element eines zweidimensionalen Array mit doppelt geschweiften Klammern ({…}).   Das angesprochene Element besteht aus zwei numerischen Ausdrücken in zwei Sätzen geschweifter Klammern.
 
 Beispiele:
-```4d
+```4d 
     //Addressing an element of a two-dimensional process array
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
@@ -299,3 +299,4 @@ Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrem Proje
 6. Variablen
 
 Beispiel: In 4D gibt es den Befehl mit Namen `Date`. Nennen Sie eine Methode *Date*, wertet 4D diese als den integrierten Befehl `Date` und nicht als Ihre Methode. Ihre Methode wird nicht aufgerufen. Haben Sie dagegen ein Datenfeld mit dem Namen “Date” angelegt, versucht 4D, dieses Datenfeld anstatt des Befehls `Date` zu benutzen.
+
