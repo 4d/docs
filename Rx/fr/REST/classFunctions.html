@@ -1,0 +1,515 @@
+<!DOCTYPE html><html lang="fr"><head><meta name="docsearch:version" content="18 R4"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Appeler des fonctions de classe ORDA · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Aperçu"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Appeler des fonctions de classe ORDA · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/Rx/index.html"/><meta property="og:description" content="## Aperçu"/><meta property="og:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><link rel="shortcut icon" href="/docs/Rx/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/Rx/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/Rx/css/main.css"/><script src="/docs/Rx/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/Rx/fr"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v18 R5 BETA</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/Rx" target="_self">v18 R4</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/Rx/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/Rx/en/REST/classFunctions.html">English</a></li><li><a href="/docs/Rx/ja/REST/classFunctions.html">日本語</a></li><li><a href="/docs/Rx/de/REST/classFunctions.html">Deutsch</a></li><li><a href="/docs/Rx/es/REST/classFunctions.html">Español</a></li><li><a href="/docs/Rx/pt/REST/classFunctions.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Prise en main<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/GettingStarted/installation.html">Installation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Gestion de projet<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/creating.html">Créer ou ouvrir un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/architecture.html">Architecture of a project</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/documentation.html">Documenter un projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/shared.html">Objets et collections partagés</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/classes.html">Classes</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORDA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/dsmapping.html">Data Model Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/ordaClasses.html">Classes du modèle de données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/entities.html">Travailler avec des données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/datastores.html">Utiliser un datastore distant</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/glossary.html">Glossaire</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Classes API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/cryptoClass.html">Classe CryptoKey</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Droits d&#x27;accès<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Users/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Users/editing.html">Gestion des groupes et utilisateurs 4D</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Administration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Admin/licenses.html">Gestion des licences 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Admin/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/backup.html">Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/settings.html">Paramètres de sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/log.html">Fichier d&#x27;historique (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/restore.html">Restitution</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Serveur Web<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/WebServer/webServerObject.html">Objet Serveur Web</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Serveur REST<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/gettingStarted.html">Prise en main</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/configuration.html">Configuration du serveur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/authUsers.html">Sessions et utilisateurs</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/genInfo.html">Obtenir des informations du serveur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/manData.html">Manipulation des données</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/Rx/fr/REST/classFunctions.html">Appeler des fonctions de classe ORDA</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/REST_requests.html">A propos des requêtes REST</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API (general)</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/catalog.html">$catalog</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/directory.html">$directory</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/info.html">$info</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/upload.html">$upload</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API (dataClass)</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/{dataClass}.html">{dataClass}</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/asArray.html">$asArray</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/atomic_$atonce.html">$atomic/$atonce</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/attributes.html">$attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/binary.html">$binary</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/compute.html">$compute</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/distinct.html">$distinct</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/entityset.html">$entityset</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/expand.html">$expand</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/filter.html">$filter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/imageformat.html">$imageformat</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/method.html">$method</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/orderby.html">$orderby</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/querypath.html">$querypath</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/queryplan.html">$queryplan</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/savedfilter.html">$savedfilter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/savedorderby.html">$savedorderby</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/skip.html">$skip</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/timeout.html">$timeout</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/top_$limit.html">$top/$limit</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/version.html">$version</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/forms.html">A propos des formulaires 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/formEditor.html">Éditeur de formulaire</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/stylesheets.html">Feuilles de style (style sheets)</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/pictures.html">Images</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Propriétés des formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/jsonReference.html">Liste de propriétés JSON</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/action.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/propertiesForm.html">Propriétés des formulaires</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/formSize.html">Form Size</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/markers.html">Markers</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/menu.html">Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/print.html">Imprimer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/windowSize.html">Window Size</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Objets formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/formObjectsOverview.html">A propos des objets formulaires 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/buttonOverview.html">Bouton</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/buttonGridOverview.html">Grille de boutons</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/checkboxOverview.html">Case à cocher</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/dropdownListOverview.html">Liste déroulante</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/groupBox.html">Zone de groupe</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/listOverview.html">Liste hiérarchique</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/pictureButtonOverview.html">Bouton image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/picturePopupMenuOverview.html">Pop-up menu image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/pluginAreaOverview.html">Zone de plug-in</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/progressIndicator.html">Indicateurs de progression</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/radiobuttonOverview.html">Bouton radio</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/ruler.html">Règle</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/shapesOverview.html">Formes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/splitters.html">Séparateur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/staticPicture.html">Image statique</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/subformOverview.html">Sous-formulaire</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/tabControl.html">Onglets</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/text.html">Texte</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/webAreaOverview.html">Zone Web</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/viewProAreaOverview.html">4D View Pro area</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/writeProAreaOverview.html">4D Write Pro area</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Propriétés des objets formulaire<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesReference.html">Liste de propriétés JSON</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesAppearance.html">Apparence</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesBackgroundAndBorder.html">Fond et bordure</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesCoordinatesAndSizing.html">Coordonnées et dimensions</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesCrop.html">Découpage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesDataSource.html">Source de données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesDisplay.html">Affichage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesEntry.html">Saisie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesFooters.html">Pieds</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesGridlines.html">Quadrillage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesHeaders.html">En-têtes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesHelp.html">Aide</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesHierarchy.html">Hiérarchie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesObject.html">Objets</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesPicture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesPrint.html">Imprimer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesRangeOfValues.html">Plage de valeurs</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesResizingOptions.html">Options de redimensionnement</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesScale.html">Echelle</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesSubform.html">Sous-formulaire</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesText.html">Texte</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesTextAndPicture.html">Texte et Image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesWebArea.html">Zone Web</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Evénements formulaire<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onActivate.html">Sur activation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAfterEdit.html">Sur après modification</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAfterKeystroke.html">Sue après frappe clavier</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAfterSort.html">Sur après tri</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAlternativeClick.html">Sur clic alternatif</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeforeDataEntry.html">Sur avant saisie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeforeKeystroke.html">Sue avant frappe clavier</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeginDragOver.html">Sur début survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeginUrlLoading.html">On Begin URL Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBoundVariableChange.html">On Bound Variable Change</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onClicked.html">Sur clic</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onCloseBox.html">On Close Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onCloseDetail.html">Sur fermeture corps</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onCollapse.html">Sur contracter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onColumnMoved.html">Sur déplacement colonne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onColumnResize.html">Sur redimensionnement colonne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDataChange.html">Sur données modifiées</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDeactivate.html">On Deactivate</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDeleteAction.html">Sur action suppression</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDisplayDetail.html">Sur affichage corps</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDoubleClicked.html">Sur double clic</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDragOver.html">Sur glisser</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDrop.html">Sur déposer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onEndUrlLoading.html">On End URL Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onExpand.html">Sur déployer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onFooterClick.html">Sur clic pied</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onGettingFocus.html">On getting focus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onHeader.html">Sur entête</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onHeaderClick.html">Sur clic entête</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLoad.html">On Load</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLoadRecord.html">Sur chargement ligne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLongClick.html">Sur clic long</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLosingFocus.html">Sur perte focus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMenuSelected.html">Sur menu sélectionné</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseEnter.html">Sur début survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseLeave.html">Sur fin survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseMove.html">Sur survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseUp.html">On Mouse Up</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onOpenDetail.html">Sur ouverture corps</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onOpenExternalLink.html">On Open External Link</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onOutsideCall.html">Sur appel extérieur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPageChange.html">Sur changement page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPlugInArea.html">Sur appel zone du plug in</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPrintingBreak.html">On Printing Break</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPrintingDetail.html">On Printing Detail</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPrintingFooter.html">On Printing Footer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onResize.html">Sur redimensionnement</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onRowMoved.html">Sur déplacement ligne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onRowResize.html">On Row Resize</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onScroll.html">Sur défilement</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onSelectionChange.html">Sur nouvelle sélection</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onTimer.html">Sur minuteur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUnload.html">On Unload</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUrlFiltering.html">On URL Filtering</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUrlLoadingError.html">On URL Loading Error</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUrlResourceLoading.html">On URL Resource Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onValidate.html">Sur validation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onVpReady.html">On VP Ready</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onWindowOpeningDenied.html">On Window Opening Denied</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/REST/ClassFunctions.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Appeler des fonctions de classe ORDA</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="aperçu"></a><a href="#aperçu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Aperçu</h2>
+<p>Vous pouvez appeler les <a href="/docs/Rx/fr/ORDA/ordaClasses.html">fonctions de classe utilisateur</a> définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.</p>
+<p>Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction <code>getCity()</code> dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :</p>
+<p><code>/rest/City/getCity</code></p>
+<p>avec des données contenues dans le corps de la requête POST : <code>[&quot;Paris&quot;]</code></p>
+<p>Dans le langage 4D, cet appel équivaut à :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$city</span>:=ds.City.<span class="hljs-function">getCity</span>(<span class="hljs-string">"Aguada"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="appeler-des-fonctions"></a><a href="#appeler-des-fonctions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Appeler des fonctions</h2>
+<p>Les fonctions doivent toujours être appelées à l'aide des requêtes <strong>POST</strong> (une requête GET recevra une erreur).</p>
+<p>Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.</p>
+<table>
+<thead>
+<tr><th>Fonction de classe</th><th>Syntaxe</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="/docs/Rx/fr/ORDA/ordaClasses.html#datastore-class">datastore class</a></td><td><code>/rest/$catalog/datastoreClassFunction</code></td></tr>
+<tr><td><a href="/docs/Rx/fr/ORDA/ordaClasses.html#dataclass-class">dataclass class</a></td><td><code>/rest/{dataClass}/dataClassClassFunction</code></td></tr>
+<tr><td><a href="/docs/Rx/fr/ORDA/ordaClasses.html#entityselection-class">entitySelection class</a></td><td><code>/rest/{dataClass}/EntitySelectionClassFunction</code></td></tr>
+<tr><td></td><td><code>/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber</code></td></tr>
+<tr><td></td><td><code>/rest/{dataClass}/EntitySelectionClassFunction/$filter</code></td></tr>
+<tr><td></td><td><code>/rest/{dataClass}/EntitySelectionClassFunction/$orderby</code></td></tr>
+<tr><td><a href="/docs/Rx/fr/ORDA/ordaClasses.html#entity-class">entity class</a></td><td><code>/rest/{dataClass}(key)/EntityClassFunction/</code></td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>/rest/{dataClass}/Function</code> peut être utilisé pour appeler une fonction de dataclass ou de sélection d'entité (<code>/rest/{dataClass}</code> retourne toutes les entités de la DataClass en tant que sélection d'entité).<br>
+La fonction est d'abord recherchée dans la classe de sélection d'entité. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="paramètres"></a><a href="#paramètres" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paramètres</h2>
+<p>Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les fonctions de classe dans les paramètres normaux $1, $2, etc.</p>
+<p>Les règles suivantes s'appliquent :</p>
+<ul>
+<li>Les paramètres doivent être passés dans le <strong>corps de la requête POST</strong></li>
+<li>Les paramètres doivent être inclus dans une collection (format JSON)</li>
+<li>Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.</li>
+<li>La sélection d'entité et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour affecter des données aux objets ORDA correspondants : __DATACLASS, __ENTITY, __ENTITIES, __DATASET.</li>
+</ul>
+<p>Voir <a href="#request-receiving-an-entity-as-parameter">cet exemple</a> et <a href="#request-receiving-an-entity-selection-as-parameter">cet exemple</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="paramètre-de-valeur-scalaire"></a><a href="#paramètre-de-valeur-scalaire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paramètre de valeur scalaire</h3>
+<p>Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. Par exemple, avec une fonction de dataclass <code>getCities()</code> qui reçoit des paramètres de type texte : <code>/rest/City/getCities</code></p>
+<p><strong>Parmaètres dans le corps :</strong> [&quot;Aguada&quot;,&quot;Paris&quot;]</p>
+<p>Tous les types de données JSON sont pris en charge dans les paramètres, y compris les pointeurs JSON. Les dates peuvent être passées sous forme de chaînes au format de date ISO 8601 (par exemple, &quot;2020-08-22T22:00:000Z&quot;).</p>
+<h3><a class="anchor" aria-hidden="true" id="paramètre-dentité"></a><a href="#paramètre-dentité" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paramètre d'entité</h3>
+<p>Les entités passées en paramètres sont référencées sur le serveur via leur clé (c'est-à-dire la propriété __KEY). Si le paramètre clé est omis dans une requête, une nouvelle entité est chargée en mémoire du serveur. Vous pouvez également transmettre des valeurs pour tous les attributs de l'entité. Ces valeurs seront automatiquement utilisées pour l'entité traitée sur le serveur.</p>
+<blockquote>
+<p>Si la requête envoie des valeurs d'attribut modifiées pour une entité existante sur le serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec des valeurs modifiées. Cette fonctionnalité vous permet, par exemple, de vérifier le résultat d'une opération sur une entité, après avoir appliqué toutes les règles métier, depuis l'application cliente. Vous pouvez alors décider de sauvegarder ou non l'entité sur le serveur.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Propriétés</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Attributs de l'entité</td><td>mixte</td><td>Optionnelle - Valeurs à modifier</td></tr>
+<tr><td>__DATACLASS</td><td>Chaine</td><td>Obligatoire - Indique la Dataclass de l'entité</td></tr>
+<tr><td>__ENTITY</td><td>Booléen</td><td>Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité</td></tr>
+<tr><td>__KEY</td><td>mixte (type identique à celui de la clé primaire)</td><td>Optionnel - clé primaire de l'entité</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Si __KEY n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.</li>
+<li>Si __KEY est fourni, l'entité correspondant à _KEY est chargée sur le serveur avec les attributs donnés</li>
+</ul>
+<p>Voir les exemple de <a href="#creating-an-entity">création</a> ou de <a href="#updating-an-entity">mise à jour</a> des entités.</p>
+<h4><a class="anchor" aria-hidden="true" id="paramètre-dentité-associé"></a><a href="#paramètre-dentité-associé" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paramètre d'entité associé</h4>
+<p>Mêmes propriétés que pour un <a href="#entity-parameter">paramètre d'entité</a>. De plus, l'entité associée doit exister et est référencée par __KEY, qui contient sa clé primaire.</p>
+<p>Reportez-vous aux exemples de <a href="#creating-an-entity-with-a-related-entity">création</a> ou de <a href="#updating-an-entity-with-a-related-entity">mise à jour</a> des entités avec des entités associées.</p>
+<h3><a class="anchor" aria-hidden="true" id="paramètre-de-sélection-dentité"></a><a href="#paramètre-de-sélection-dentité" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paramètre de sélection d'entité</h3>
+<p>La sélection d'entité doit avoir été définie au préalable à l'aide de <a href="/docs/Rx/fr/REST/method.html#methodentityset">$method=entityset</a>.</p>
+<blockquote>
+<p>Si la requête envoie une sélection d'entité modifiée au serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec la sélection d'entité modifiée.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Propriétés</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Attributs de l'entité</td><td>mixte</td><td>Optionnelle - Valeurs à modifier</td></tr>
+<tr><td>__DATASET</td><td>Chaine</td><td>Obligatoire - entitySetID (UUID) de la sélection d'entité</td></tr>
+<tr><td>__ENTITIES</td><td>Booléen</td><td>Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité</td></tr>
+</tbody>
+</table>
+<p>Reportez-vous aux exemples de <a href="#receiving-an-entity-selection-as-parameter">réception d'une sélection d'entité</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="exemples-de-requêtes"></a><a href="#exemples-de-requêtes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemples de requêtes</h2>
+<p>Cette base de données est exposée comme un datastore distant sur localhost (port 8111) :</p>
+<p><img src="/docs/Rx/assets/en/REST/ordastructure.png" alt="alt-text"></p>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-fonction-de-classe-de-datastore"></a><a href="#utiliser-une-fonction-de-classe-de-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une fonction de classe de datastore</h3>
+<p>La classe de <code>DataStore</code> US_Cities fournit une API :</p>
+<pre><code class="hljs">// DataStore <span class="hljs-class"><span class="hljs-keyword">class</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataStoreImplementation</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getName</span>(</span>)
+    <span class="hljs-number">$0</span>:=<span class="hljs-string">"US cities and zip codes manager"</span> 
+</code></pre>
+<p>Vous pouvez lancer cette requête :</p>
+<p><strong>POST</strong> <code>127.0.0.1:8111/rest/$catalog/getName</code></p>
+<h4><a class="anchor" aria-hidden="true" id="résultat"></a><a href="#résultat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+<span class="hljs-attr">"result"</span>: <span class="hljs-string">"US cities and zip codes manager"</span> 
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-fonction-de-classe-de-dataclass"></a><a href="#utiliser-une-fonction-de-classe-de-dataclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une fonction de classe de dataclass</h3>
+<p>La classe de Dataclass <code>City</code> fournit une API qui retourne une entité de ville à partir du nom passé en paramètre :</p>
+<pre><code class="hljs"><span class="hljs-comment">// City class</span><span class="hljs-keyword">
+
+Class extends</span> DataClass
+
+<span class="hljs-function">Fonction getCity</span>()<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$0 </span>: cs.CityEntity<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$1</span>,<span class="hljs-variable">$nameParam </span>: text
+    <span class="hljs-variable">$nameParam</span>:=<span class="hljs-variable">$1</span>
+    <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"name = :1"</span>;<span class="hljs-variable">$nameParam</span>).<span class="hljs-function">first</span>()
+</code></pre>
+<p>Vous pouvez lancer cette requête :</p>
+<p><strong>POST</strong> <code>127.0.0.1:8111/rest/City/getCity</code></p>
+<p>Requête : [&quot;Paris&quot;]</p>
+<h4><a class="anchor" aria-hidden="true" id="résultat-1"></a><a href="#résultat-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<p>Le résultat est une entité :</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"City"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"City"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-03-09T08:03:19.923Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Paris"</span>,
+    <span class="hljs-attr">"countyFIPS"</span>: <span class="hljs-number">72003</span>,
+    <span class="hljs-attr">"county"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/County(72003)"</span>,
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"72003"</span> 
+        }
+    },
+    <span class="hljs-attr">"zips"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/City(1)/zips?$expand=zips"</span> 
+        }
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-fonction-de-classe-dune-entité"></a><a href="#utiliser-une-fonction-de-classe-dune-entité" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une fonction de classe d'une entité</h3>
+<p>La classe d'entité <code>CityEntity</code> fournit une API :</p>
+<pre><code class="hljs">// CityEntity <span class="hljs-class"><span class="hljs-keyword">class</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Entity</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getPopulation</span>(</span>)
+    <span class="hljs-number">$0</span>:=This.zips.sum(<span class="hljs-string">"population"</span>)
+</code></pre>
+<p>Vous pouvez lancer cette requête :</p>
+<p><strong>POST</strong> <code>127.0.0.1:8111/rest/City(2)/getPopulation</code></p>
+<h4><a class="anchor" aria-hidden="true" id="résultat-2"></a><a href="#résultat-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"result"</span>: <span class="hljs-number">48814</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-fonction-de-classe-dune-sélection-dentité"></a><a href="#utiliser-une-fonction-de-classe-dune-sélection-dentité" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une fonction de classe d'une sélection d'entité</h3>
+<p>La classe de sélection d'entité <code>CityEntity</code> fournit une API :</p>
+<pre><code class="hljs">// CitySelection <span class="hljs-class"><span class="hljs-keyword">class</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">EntitySelection</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getPopulation</span>(</span>)
+    <span class="hljs-number">$0</span>:=This.zips.sum(<span class="hljs-string">"population"</span>)
+</code></pre>
+<p>Vous pouvez lancer cette requête :</p>
+<p><strong>POST</strong> <code>127.0.0.1:8111/rest/City/getPopulation/?$filter=&quot;ID&lt;3&quot;</code></p>
+<h4><a class="anchor" aria-hidden="true" id="résultat-3"></a><a href="#résultat-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"result"</span>: <span class="hljs-number">87256</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-fonction-de-classe-de-sélection-dentité-et-un-ensemble-dentité"></a><a href="#utiliser-une-fonction-de-classe-de-sélection-dentité-et-un-ensemble-dentité" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une fonction de classe de sélection d'entité et un ensemble d'entité</h3>
+<p>La classe <code>StudentsSelection</code> a une fonction <code>getAgeAverage</code> :</p>
+<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class</span><span class="hljs-keyword">
+
+Class extends</span> EntitySelection<span class="hljs-keyword">
+
+Function</span> getAgeAverage
+<span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$sum</span>;<span class="hljs-variable">$0</span>)
+<span class="hljs-function">    C_OBJECT</span>(<span class="hljs-variable">$s</span>)
+
+    <span class="hljs-variable">$sum</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
+    For each</span> (<span class="hljs-variable">$s</span>;<span class="hljs-literal">This</span>)
+        <span class="hljs-variable">$sum</span>:=<span class="hljs-variable">$sum</span>+<span class="hljs-variable">$s</span>.<span class="hljs-function">age</span>()<span class="hljs-keyword">
+    End for each</span> 
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$sum</span>/<span class="hljs-literal">This</span>.length
+</code></pre>
+<p>Une fois que vous avez créé un ensemble d'entité, vous pouvez lancer cette requête :</p>
+<p><strong>POST</strong> <code>127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532</code></p>
+<h4><a class="anchor" aria-hidden="true" id="résultat-4"></a><a href="#résultat-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"result"</span>: <span class="hljs-number">34</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-fonction-de-classe-de-sélection-dentité-et-un-orderby"></a><a href="#utiliser-une-fonction-de-classe-de-sélection-dentité-et-un-orderby" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une fonction de classe de sélection d'entité et un &quot;orderBy&quot;</h3>
+<p>La classe <code>StudentsSelection</code> a une fonction <code>getLastSummary</code> :</p>
+<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class</span><span class="hljs-keyword">
+
+
+Class extends</span> EntitySelection<span class="hljs-keyword">
+
+Function</span> getLastSummary
+<span class="hljs-function">    C_TEXT</span>(<span class="hljs-variable">$0</span>)
+<span class="hljs-function">    C_OBJECT</span>(<span class="hljs-variable">$last</span>)
+
+    <span class="hljs-variable">$last</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">last</span>()
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$last</span>.firstname+<span class="hljs-string">" - "</span>+<span class="hljs-variable">$last</span>.lastname+<span class="hljs-string">" is ... "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$last</span>.<span class="hljs-function">age</span>())
+</code></pre>
+<p>Vous pouvez lancer cette requête :</p>
+<p><strong>POST</strong> <code>127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter=&quot;lastname=b@&quot;&amp;$orderby=&quot;lastname&quot;</code></p>
+<h4><a class="anchor" aria-hidden="true" id="résultat-5"></a><a href="#résultat-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"result"</span>: <span class="hljs-string">"Wilbert - Bull is ... 21"</span> 
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-entité-à-créer-sur-le-serveur"></a><a href="#utiliser-une-entité-à-créer-sur-le-serveur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une entité à créer sur le serveur</h3>
+<p>La classe de Dataclass <code>Students</code> possède la fonction <code>pushData()</code> qui reçoit une entité contenant les données du client. La méthode <code>checkData()</code> effectue quelques contrôles. Si elles sont valides, l'entité est sauvegardée et retournée.</p>
+<pre><code class="hljs"><span class="hljs-comment">// Students Class</span><span class="hljs-keyword">
+
+Class extends</span> DataClass<span class="hljs-keyword">
+
+Function</span> pushData<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$entity</span>, <span class="hljs-variable">$status</span>, <span class="hljs-variable">$0 </span>: Object
+
+    <span class="hljs-variable">$entity</span>:=<span class="hljs-variable">$1</span>
+
+    <span class="hljs-variable">$status</span>:=<span class="hljs-function">checkData</span>(<span class="hljs-variable">$entity</span>) <span class="hljs-comment">// $status est un objet avec une propriété avec une propriété booléenne "success"</span>
+
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$status</span><span class="hljs-keyword">
+
+    If</span> (<span class="hljs-variable">$status</span>.success)
+        <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>()<span class="hljs-keyword">
+       If</span> (<span class="hljs-variable">$status</span>.success)
+           <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$entity</span><span class="hljs-keyword">
+      End if</span><span class="hljs-keyword"> 
+    End if</span>
+
+</code></pre>
+<p>Lancez cette requête :</p>
+<p><strong>POST</strong> <code>http://127.0.0.1:8044/rest/Students/pushData</code></p>
+<p>Corps de la requête :</p>
+<pre><code class="hljs">[{
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Students"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"firstname"</span>:<span class="hljs-string">"Ann"</span>,
+<span class="hljs-attr">"lastname"</span>:<span class="hljs-string">"Brown"</span> 
+}]
+</code></pre>
+<p>Si aucune <code>__KEY</code> n'est donnée, une nouvelle entité Students est chargée sur le serveur <strong>avec les attributs du client</strong>. Parce que la fonction <code>pushData()</code> exécute une action <code>save()</code>, la nouvelle entité est créée.</p>
+<h4><a class="anchor" aria-hidden="true" id="résultat-6"></a><a href="#résultat-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"55"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-06-16T10:54:41.805Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">55</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Ann"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"BROWN"</span>,
+    <span class="hljs-attr">"schoolID"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"school"</span>: <span class="hljs-literal">null</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-entité-à-mettre-à-jour-sur-le-serveur"></a><a href="#utiliser-une-entité-à-mettre-à-jour-sur-le-serveur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une entité à mettre à jour sur le serveur</h3>
+<p>Description semblable à la précédente, avec l'attribut _KEY</p>
+<p>Lancez cette requête :</p>
+<p><strong>POST:</strong><code>http://127.0.0.1:8044/rest/Students/pushData</code></p>
+<p>Corps de la requête :</p>
+<pre><code class="hljs">[{
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Students"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"lastname"</span>:<span class="hljs-string">"Brownie"</span>,
+<span class="hljs-attr">"__KEY"</span>:<span class="hljs-number">55</span>
+}]
+</code></pre>
+<p>Si aucune <code>__KEY</code> n'est donnée, l'entité Students est chargée avec la clé primaire 55 <strong>avec la valeur lastname reçue par le client</strong>. Parce que la fonction exécute une action <code>save()</code>, la nouvelle entité est mise à jour.</p>
+<h4><a class="anchor" aria-hidden="true" id="résultat-7"></a><a href="#résultat-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"55"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-06-16T11:10:21.679Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">55</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Ann"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"BROWNIE"</span>,
+    <span class="hljs-attr">"schoolID"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"school"</span>: <span class="hljs-literal">null</span> 
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="créer-une-entité-avec-une-entité-liée"></a><a href="#créer-une-entité-avec-une-entité-liée" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Créer une entité avec une entité liée</h3>
+<p>Dans cet exemple, nous créons une nouvelle entité Students avec l'entité Schools ayant la clé primaire 2.</p>
+<p>Lancez cette requête :</p>
+<p><strong>POST:</strong><code>http://127.0.0.1:8044/rest/Students/pushData</code></p>
+<p>Corps de la requête :</p>
+<pre><code class="hljs">[{
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Students"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"firstname"</span>:<span class="hljs-string">"John"</span>,
+<span class="hljs-attr">"lastname"</span>:<span class="hljs-string">"Smith"</span>,
+<span class="hljs-attr">"school"</span>:{<span class="hljs-attr">"__KEY"</span>:<span class="hljs-number">2</span>}
+}]
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="résultat-8"></a><a href="#résultat-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__DATACLASS"</span>: <span class="hljs-string">"Students"</span>,
+    <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"56"</span>,
+    <span class="hljs-attr">"__TIMESTAMP"</span>: <span class="hljs-string">"2020-06-16T11:16:47.601Z"</span>,
+    <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"ID"</span>: <span class="hljs-number">56</span>,
+    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"John"</span>,
+    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"SMITH"</span>,
+    <span class="hljs-attr">"schoolID"</span>: <span class="hljs-number">2</span>,
+       <span class="hljs-attr">"school"</span>: {
+        <span class="hljs-attr">"__deferred"</span>: {
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"/rest/Schools(2)"</span>,
+            <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span> 
+        }
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="mettre-à-jour-une-entité-avec-une-entité-liée"></a><a href="#mettre-à-jour-une-entité-avec-une-entité-liée" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mettre à jour une entité avec une entité liée</h3>
+<p>Dans cet exemple, nous associons une école existante à l'entité Students. La classe <code>StudentsEntity</code> possède une API :</p>
+<pre><code class="hljs"><span class="hljs-comment">// classe StudentsEntity</span><span class="hljs-keyword">
+
+Class extends</span> Entity<span class="hljs-keyword">
+
+Function</span><span class="hljs-function"> putToSchool</span>()<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$school </span>, <span class="hljs-variable">$0</span>, <span class="hljs-variable">$status </span>: Object
+
+        <span class="hljs-comment">//$1 est une entité Schools</span>
+    <span class="hljs-variable">$school</span>:=<span class="hljs-variable">$1</span>
+        <span class="hljs-comment">//Associe l'entité reliée "school" à l'entité courante "Students"</span>
+    <span class="hljs-literal">This</span>.school:=<span class="hljs-variable">$school</span>
+
+    <span class="hljs-variable">$status</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">save</span>()
+
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$status</span>
+</code></pre>
+<p>You run this request, called on a Students entity : <strong>POST</strong> <code>http://127.0.0.1:8044/rest/Students(1)/putToSchool</code> Body of the request:</p>
+<pre><code class="hljs">[{
+<span class="hljs-attr">"__DATACLASS"</span>:<span class="hljs-string">"Schools"</span>,
+<span class="hljs-attr">"__ENTITY"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"__KEY"</span>:<span class="hljs-number">2</span>
+}]
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="résultat-9"></a><a href="#résultat-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"result"</span>: {
+        <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="recevoir-une-sélection-dentité-comme-paramètre"></a><a href="#recevoir-une-sélection-dentité-comme-paramètre" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recevoir une sélection d'entité comme paramètre</h3>
+<p>Dans la classe de Dataclass <code>Students</code>, la fonction <code>setFinalExam()</code> met à jour une sélection d'entité reçue ($1). Elle met à jour l'attribut <em>finalExam</em> avec la valeur reçue ($2). Elle retourne les clés primaires des entités mises à jour.</p>
+<pre><code class="hljs"><span class="hljs-comment">// classe Students</span><span class="hljs-keyword">
+
+Class extends</span> DataClass
+
+<span class="hljs-function">Fonction setFinalExam</span>()<span class="hljs-keyword">
+
+    var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$es</span>, <span class="hljs-variable">$student</span>, <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$2</span>, <span class="hljs-variable">$examResult </span>: Text<span class="hljs-keyword">
+
+    var</span> <span class="hljs-variable">$keys</span>, <span class="hljs-variable">$0 </span>: Collection
+
+      <span class="hljs-comment">//Sélection d'entité</span>
+    <span class="hljs-variable">$es</span>:=<span class="hljs-variable">$1</span>
+
+    <span class="hljs-variable">$examResult</span>:=<span class="hljs-variable">$2</span>
+
+    <span class="hljs-variable">$keys</span>:=<span class="hljs-function">New collection</span>()
+
+      <span class="hljs-comment">//Boucle sur la sélection d'entité</span><span class="hljs-keyword">
+    For each</span> (<span class="hljs-variable">$student</span>;<span class="hljs-variable">$es</span>)
+        <span class="hljs-variable">$student</span>.finalExam:=<span class="hljs-variable">$examResult</span>
+        <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$student</span>.<span class="hljs-function">save</span>()<span class="hljs-keyword">
+        If</span> (<span class="hljs-variable">$status</span>.success)
+            <span class="hljs-variable">$keys</span>.<span class="hljs-function">push</span>(<span class="hljs-variable">$student</span>.ID)<span class="hljs-keyword">
+        End if</span><span class="hljs-keyword"> 
+    End for each</span> 
+
+    <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$keys</span>
+</code></pre>
+<p>Un ensemble d'entité est d'abord créé avec cette requête :</p>
+<p><code>http://127.0.0.1:8044/rest/Students/?$filter=&quot;ID&lt;3&quot;&amp;$method=entityset</code></p>
+<p>Vous pouvez ensuite exécuter cette requête :</p>
+<p><strong>POST</strong> <code>http://127.0.0.1:8044/rest/Students/setFinalExam</code></p>
+<p>Corps de la requête :</p>
+<pre><code class="hljs">[
+{
+<span class="hljs-attr">"__ENTITIES"</span>:<span class="hljs-literal">true</span>,
+<span class="hljs-attr">"__DATASET"</span>:<span class="hljs-string">"9B9C053A111E4A288E9C1E48965FE671"</span> 
+},
+<span class="hljs-string">"Passed"</span> 
+]
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="résultat-10"></a><a href="#résultat-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
+<p>Les entités ayant les clés primaires sont 1 et 2 ont été mises à jour.</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"result"</span>: [
+        <span class="hljs-number">1</span>,
+        <span class="hljs-number">2</span>
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="utiliser-une-sélection-dentité-mise-à-jour-sur-le-client"></a><a href="#utiliser-une-sélection-dentité-mise-à-jour-sur-le-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utiliser une sélection d'entité mise à jour sur le client</h3>
+<p>A l'aide de la fonction <code>getAgeAverage()</code> <a href="#using-an-entityselection-class-function-and-an-entityset">définie ci-dessus</a>.</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$remoteDS</span>, <span class="hljs-variable">$newStudent</span>, <span class="hljs-variable">$students </span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$ageAverage </span>: Integer
+
+<span class="hljs-variable">$remoteDS</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"127.0.0.1:8044"</span>);<span class="hljs-string">"students"</span>)
+
+<span class="hljs-comment">// $newStudent est une entité "student" à traiter</span>
+<span class="hljs-variable">$newStudent</span>:=...
+<span class="hljs-variable">$students</span>:=<span class="hljs-variable">$remoteDS</span>.Students.<span class="hljs-function">query</span>(<span class="hljs-string">"school.name = :1"</span>;<span class="hljs-string">"Math school"</span>)
+<span class="hljs-comment">// Nous avons ajouté une entité à la sélection d'entité $students sur le client</span>
+<span class="hljs-variable">$students</span>.<span class="hljs-function">add</span>(<span class="hljs-variable">$newStudent</span>) 
+
+<span class="hljs-comment">// Nous appelons une fonction sur la classe StudentsSelection qui retourne l'âge moyen des étudiants de la sélection d'entité</span>
+<span class="hljs-comment">// La fonction est utilisée sur le serveur sur la sélection d'entité $students mise à jour, qui inclut l'étudiant ajouté par le client</span>
+<span class="hljs-variable">$ageAverage</span>:=<span class="hljs-variable">$students</span>.<span class="hljs-function">getAgeAverage</span>()
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/REST/manData.html"><span class="arrow-prev">← </span><span>Manipulation des données</span></a><a class="docs-next button" href="/docs/Rx/fr/REST/REST_requests.html"><span>A propos des requêtes REST</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#aperçu">Aperçu</a></li><li><a href="#appeler-des-fonctions">Appeler des fonctions</a></li><li><a href="#paramètres">Paramètres</a><ul class="toc-headings"><li><a href="#paramètre-de-valeur-scalaire">Paramètre de valeur scalaire</a></li><li><a href="#paramètre-dentité">Paramètre d'entité</a></li><li><a href="#paramètre-de-sélection-dentité">Paramètre de sélection d'entité</a></li></ul></li><li><a href="#exemples-de-requêtes">Exemples de requêtes</a><ul class="toc-headings"><li><a href="#utiliser-une-fonction-de-classe-de-datastore">Utiliser une fonction de classe de datastore</a></li><li><a href="#utiliser-une-fonction-de-classe-de-dataclass">Utiliser une fonction de classe de dataclass</a></li><li><a href="#utiliser-une-fonction-de-classe-dune-entité">Utiliser une fonction de classe d'une entité</a></li><li><a href="#utiliser-une-fonction-de-classe-dune-sélection-dentité">Utiliser une fonction de classe d'une sélection d'entité</a></li><li><a href="#utiliser-une-fonction-de-classe-de-sélection-dentité-et-un-ensemble-dentité">Utiliser une fonction de classe de sélection d'entité et un ensemble d'entité</a></li><li><a href="#utiliser-une-fonction-de-classe-de-sélection-dentité-et-un-orderby">Utiliser une fonction de classe de sélection d'entité et un &quot;orderBy&quot;</a></li><li><a href="#utiliser-une-entité-à-créer-sur-le-serveur">Utiliser une entité à créer sur le serveur</a></li><li><a href="#utiliser-une-entité-à-mettre-à-jour-sur-le-serveur">Utiliser une entité à mettre à jour sur le serveur</a></li><li><a href="#créer-une-entité-avec-une-entité-liée">Créer une entité avec une entité liée</a></li><li><a href="#mettre-à-jour-une-entité-avec-une-entité-liée">Mettre à jour une entité avec une entité liée</a></li><li><a href="#recevoir-une-sélection-dentité-comme-paramètre">Recevoir une sélection d'entité comme paramètre</a></li><li><a href="#utiliser-une-sélection-dentité-mise-à-jour-sur-le-client">Utiliser une sélection d'entité mise à jour sur le client</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:fr"]}
+              });
+            </script></body></html>
