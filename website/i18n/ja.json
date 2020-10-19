@@ -6,7 +6,7 @@
     "tagline": " 4D 開発リファレンス",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "バックアップ"
       },
       "Backup/log": {
         "title": "Log file (.journal)"
