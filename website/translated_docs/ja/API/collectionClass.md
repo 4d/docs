@@ -195,6 +195,7 @@ You must pay attention to the following conversion issues:
 #### 例題 1
 
 
+
 You want to create a new empty collection and assign it to a 4D collection variable:
 
 ```4d
@@ -409,7 +410,7 @@ $vSize:=$col.length //$vSize=0
 | ----- | ------ |:--:| ----------------------------------------------------------------------------- |
 | col2  | コレクション | -> | Collection to combine                                                         |
 | index | 整数     | -> | Position to which insert elements to combine in collection (default=length+1) |
-| 戻り値   | コレクション | <- | Original collection with all elements removed                                 |
+| 戻り値   | コレクション | <- | Original collection containing combined element(s)                            |
 <!-- END REF -->
 
 
@@ -692,6 +693,7 @@ You can pass in *value*:
 
 *   a scalar value (text, number, boolean, date),
 *   an object or a collection reference.
+
 
 For an element to be found, the type of *value* must be equivalent to the type of the element; the method uses the equality operator.
 
@@ -1101,7 +1103,7 @@ In case of inconsistency, the following rules apply:
 <!-- REF #collection.filter().Params -->
 | 引数         | タイプ    |    | 説明                                                         |
 | ---------- | ------ |:--:| ---------------------------------------------------------- |
-| methodname | テキスト   | -> | Name of the function to call to filter the collection      |
+| methodName | テキスト   | -> | Name of the function to call to filter the collection      |
 | param      | Mixed  | -> | Parameter(s) to pass to *methodName*                       |
 | 戻り値        | コレクション | <- | New collection containing filtered elements (shallow copy) |
 <!-- END REF -->
@@ -1190,16 +1192,16 @@ The code for ***TypeLookUp*** is:
 </details>
 
 <!-- REF #collection.find().Syntax -->
-**.find**( *methodName* : Text { ; *...param* : any } ) -> value or undefined<br>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) -> value or undefined<!-- END REF -->
+**.find**( *methodName* : Text { ; *...param* : any } ) : any<br>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
 
 
 <!-- REF #collection.find().Params -->
 | 引数         | タイプ  |    | 説明                                           |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | startFrom  | 整数   | -> | Index to start the search at                 |
-| methodname | テキスト | -> | Name of the function to call for the find    |
+| methodName | テキスト | -> | Name of the function to call for the find    |
 | param      | any  | -> | Parameter(s) to pass to *methodName*         |
-| 戻り値        |      | <- | First value found, or Undefined if not found |
+| 戻り値        | any  | <- | First value found, or Undefined if not found |
 <!-- END REF -->
 
 
@@ -1297,7 +1299,7 @@ The code for ***FindCity*** is:
 | 引数         | タイプ  |    | 説明                                             |
 | ---------- | ---- |:--:| ---------------------------------------------- |
 | startFrom  | 整数   | -> | Index to start the search at                   |
-| methodname | テキスト | -> | Name of the function to call for the find      |
+| methodName | テキスト | -> | Name of the function to call for the find      |
 | param      | any  | -> | Parameter(s) to pass to *methodName*           |
 | 戻り値        | 整数   | <- | Index of first value found, or -1 if not found |
 <!-- END REF -->
@@ -1370,14 +1372,14 @@ The code for ***FindCity*** method is:
 </details>
 
 <!-- REF #collection.indexOf().Syntax -->
-**.indexOf**(  *toSearch* : Expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+**.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.indexOf().Params -->
-| 引数        | タイプ |    | 説明                                                                           |
-| --------- | --- |:--:| ---------------------------------------------------------------------------- |
-| toSearch  | 式   | -> | Expression to search in the collection                                       |
-| startFrom | 整数  | -> | Index to start the search at                                                 |
-| 戻り値       | 整数  | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
+| 引数        | タイプ        |    | 説明                                                                           |
+| --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
+| toSearch  | expression | -> | Expression to search in the collection                                       |
+| startFrom | 整数         | -> | Index to start the search at                                                 |
+| 戻り値       | 整数         | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1583,14 +1585,14 @@ By default, null or empty elements of the collection are returned in the resulti
 </details>
 
 <!-- REF #collection.lastIndexOf().Syntax -->
-**.lastIndexOf**( *toSearch* : Expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+**.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.lastIndexOf().Params -->
-| 引数        | タイプ |    | 説明                                                                      |
-| --------- | --- |:--:| ----------------------------------------------------------------------- |
-| toSearch  | 式   | -> | The element that is to be searched for within the collection            |
-| startFrom | 整数  | -> | Index to start the search at                                            |
-| 戻り値       | 整数  | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
+| 引数        | タイプ        |    | 説明                                                                      |
+| --------- | ---------- |:--:| ----------------------------------------------------------------------- |
+| toSearch  | expression | -> | The element that is to be searched for within the collection            |
+| startFrom | 整数         | -> | Index to start the search at                                            |
+| 戻り値       | 整数         | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
 
@@ -1745,7 +1747,7 @@ Here is the ***Percentage*** method:
 </details>
 
 <!-- REF #collection.max().Syntax -->
-**.max**( { *propertyPath* : Text } ) : Mixed <!-- END REF -->
+**.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.max().Params -->
 | 引数           | タイプ                                             |    | 説明                                             |
@@ -1796,7 +1798,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 </details>
 
 <!-- REF #collection.min().Syntax -->
-**.min**( { *propertyPath* : Text } ) : Mixed <!-- END REF -->
+**.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
 | 引数           | タイプ                                             |    | 説明                                             |
@@ -1872,15 +1874,12 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 *   *pathStrings* : Text (formula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. The order in which the properties are passed determines the sorting priority of the collection elements. By default, properties are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
 
-*   *pathObjects* : Collection. Each element of the collection contains an object structured in the following way:
+*   *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:
 
 ```4d
     {"*propertyPath*": string,
     "*descending*": boolean}  
 ```
-
-
-    By default, properties are sorted in ascending order ("descending" is false). You can add as many objects in the *pathObjects* collection as necessary.
 
 *   *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
 
@@ -1986,15 +1985,15 @@ Ordering with a property path:
 </details>
 
 <!-- REF #collection.orderByMethod().Syntax -->
-**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : Expression } ) : Collection <!-- END REF -->
+**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| 引数         | タイプ    |    | 説明                                               |
-| ---------- | ------ |:--:| ------------------------------------------------ |
-| methodName | テキスト   | -> | Name of method used to specify the sorting order |
-| extraParam | 式      | -> | Parameter(s) for the method                      |
-| 戻り値        | コレクション | <- | Sorted copy of the collection (shallow copy)     |
+| 引数         | タイプ        |    | 説明                                               |
+| ---------- | ---------- |:--:| ------------------------------------------------ |
+| methodName | テキスト       | -> | Name of method used to specify the sorting order |
+| extraParam | expression | -> | Parameter(s) for the method                      |
+| 戻り値        | コレクション     | <- | Sorted copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -2530,7 +2529,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 </details>
 
 <!-- REF #collection.shift().Syntax -->
-**.shift( )** -> any<!-- END REF -->
+**.shift()** : any<!-- END REF -->
 
 <!-- REF #collection.shift().Params -->
 | 引数  | タイプ |    | 説明                          |
