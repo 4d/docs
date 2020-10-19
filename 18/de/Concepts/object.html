@@ -223,7 +223,7 @@
      End case</span>
 </code></pre>
 <ul>
-<li>Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:</li>
+<li>Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:</li>
 <li>Objekt, Collection, Zeiger: Null</li>
 <li>Bild: Leeres Bild</li>
 <li>Boolean: Falsch</li>
@@ -238,7 +238,7 @@
      <span class="hljs-variable">$o</span>.a:=<span class="hljs-variable">$o</span>.b <span class="hljs-comment">//$o.a=0</span>
 </code></pre>
 <ul>
-<li>Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen führt nichts aus.</li>
+<li>Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, führt nichts aus.</li>
 </ul>
 <p>Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen, dass diese den korrekten Typ haben, selbst wenn sie als undefiniert bewertet werden. Dazu übergeben Sie die passenden 4D Befehle <code>String</code>, <code>Num</code>, <code>Date</code>, <code>Time</code>, <code>Bool</code>. Sie geben einen leeren Wert des angegebenen Typs zurück, wenn der Ausdruck als undefiniert bewertet wird. Beispiel:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myString</span>:=<span class="hljs-function">Lowercase</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$o</span>.a.b)) <span class="hljs-comment">//make sure you get a string value even if undefined</span>
@@ -288,7 +288,7 @@
   <span class="hljs-comment">//creates the phone property and sets its value to an object</span>
 </code></pre>
 <ul>
-<li>Einen Wert in einem Unterobjekt erhalten ist mit Objektnotation ganz einfach:</li>
+<li>Einen Wert in einem Unterobjekt erhalten, ist mit Objektnotation ganz einfach:</li>
 </ul>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vCity</span>:=<span class="hljs-variable">$Emp</span>.city <span class="hljs-comment">//"Paris"</span>
  <span class="hljs-variable">$vPhone</span>:=<span class="hljs-variable">$Emp</span>.phone.home <span class="hljs-comment">//"0011223344"</span>
