@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Backup Settings
+title: バックアップ設定
 ---
 
 Backup settings are defined through three pages in the Settings dialog box. You can set:
