@@ -21,21 +21,21 @@ title: バックアップ
 
 - 4D の [Maintenance & Security Center (MSC)](MSC/overview.md) を開いて、[バックアップページ](MSC/backup.md) から操作することもできます。
 
-The **Database properties...** button causes the Backup/Configuration page of the Database Settings to be displayed.
+**データベースプロパティ...** ボタンをクリックすると、データベース設定のバックアップ/設定ページが表示されます。
 
- 2. Click **Backup** to start the backup using current parameters.
+ 2. **バックアップ** をクリックし、現在のパラメーターを用いてバックアップを開始します。
 
 
 ### 定期的な自動バックアップ
 
-Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Database Settings**.
+自動バックアップは指定されたスケジュールに基づいて自動的に実行されます。 バックアップの周期は、**データベース設定** の **バックアップ/スケジューラー** ページにて設定します。
 
-Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
+ユーザーが一切操作しなくても、このページで指定された時間にバックアップが自動実行されます。 このダイアログボックスに関する詳細は、[バックアップ設定のスケジューラー](settings.md#スケジューラー) の項目を参照してください。
 
 
 ### BACKUP コマンド
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Database settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
+任意のメソッドにて `BACKUP` 4Dランゲージコマンドを実行すると、データベース設定に定義されている現在のパラメーターを用いてバックアップを開始します。 You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 
 
 ## Managing the backup processing
