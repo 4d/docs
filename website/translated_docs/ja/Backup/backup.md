@@ -66,7 +66,7 @@ MSC を使用している場合、この進捗インジケーターは [MSC の�
 すべての場合において、前回のバックアップのステータス (成功または不成功) は、[MSC のバックアップページ](MSC/backup.md) の "前回のバックアップの情報" エリア、4D Server の **メンテナンスページ**、およびデータベースの **バックアップジャーナル** (Backup Journal.txt) に表示されます。
 
 - **ユーザーによる中断**: 進捗ダイアログボックスの **中止** ボタンをクリックすると、いつでもバックアップを中断することができます。 この場合、各項目のコピーが中止されてエラー 1406 が生成されます。 このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
-- **同封ファイルが見つからない**: 同封ファイルが見つからない場合、4D はバックアップを部分的に実行し (データベースファイルおよびアクセス可能な同封ファイルのバックアップ)、エラーを返します。
+- **添付ファイルが見つからない**: 添付ファイルが見つからない場合、4D はバックアップを部分的に実行し (データベースファイルおよびアクセス可能な添付ファイルのバックアップ)、エラーを返します。
 - **バックアップ不可能** (ディスクフル、ディスクの書き込み保護、ディスクが見つからない、ディスク障害、不完全なトランザクション、定期的な自動バックアップ時にデータベースが起動されていない、など): 初回のエラーの場合、4D はもう一度バックアップの実行を試みます。 この 2回のバックアップ間の待機時間は、データベース設定の **バックアップ/バックアップ＆復旧** ページで指定します。 再試行にも失敗した場合、システムの警告ダイアログボックスが表示されてエラーが生成されます。 このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
 
 ## バックアップジャーナル
@@ -86,13 +86,13 @@ MSC を使用している場合、この進捗インジケーターは [MSC の�
 
 ## backupHistory.json
 
-最新のバックアップと復元処理についての情報はすべて、データベースの **backupHistory.json** ファイルに記録されます。 記録されるのは、保存されたファイル (添付含む) のパスのほか、回数、日付、時刻、所要時間、ステータスです。 To limit the size of the file, the number of logged operations is the same as the number of available backups ("Keep only the last X backup files") defined in the backup settings.
+最新のバックアップと復元処理についての情報はすべて、データベースの **backupHistory.json** ファイルに記録されます。 記録されるのは、保存されたファイル (添付含む) のパスのほか、回数、日付、時刻、所要時間、各処理のステータスです。 ファイルサイズを制限するため、バックアップ＆復旧ページの一般設定にある "最新のバックアップのみ保存 X バックアップファイル" に指定した数と同じ分だけ、処理のログを保持します。
 
-The **backupHistory.json** file is created in the current backup destination folder. You can get the actual path for this file using the following statement:
+**backupHistory.json** ファイルはカレントのバックアップ保存先フォルダーに作成されます。 以下のコードを実行することで、このファイルの実際のパスを取得することができます:
 
 ```4d
 $backupHistory:=Get 4D file(Backup history file)
 ```
-> **WARNING**  
-> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
-> The **backupHistory.json** file is formatted to be used by the 4D application. If you are looking for a human-readable report on backup operations, you might find the Backup journal more accurate. 
+> **警告**  
+> **backupHistory.json** ファイルを削除または移動した場合、次のバックアップ番号はリセットされるという点に注意してください。
+> **backupHistory.json** ファイルは 4D用にフォーマットされています。 バックアップ処理のレポートを直接読んで確認するには、バックアップジャーナルの方が適切です。 
