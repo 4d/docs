@@ -1,6 +1,6 @@
 ---
 id: propertiesSubform
-title: Subform
+title: Sous-formulaire
 ---
 
 ---
@@ -16,7 +16,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 
 ---
@@ -39,7 +39,7 @@ You use this property to declare the detail form to use in the subform. It can b
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 ---
 ## Double-click on empty row
@@ -57,7 +57,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 #### Voir également
 [Double click on row](#double-click-on-row)
@@ -85,7 +85,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 
 #### Voir également
@@ -108,7 +108,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 
 ---
@@ -128,7 +128,7 @@ You can also allow the user to enter data in the List form.
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 
 
@@ -145,7 +145,7 @@ Specifies the table that the list subform belongs to (if any).
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 ---
 ## Mode de sélection
@@ -168,4 +168,4 @@ Designates the option for allowing users to select rows:
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)

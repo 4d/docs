@@ -118,7 +118,7 @@ SAVE RECORD($tablepointer->)
 
 ## Reichweite der Befehle der Programmiersprache
 
-Eine Komponente kann jeden Befehl der 4D Programmiersprache verwenden, außer er gehört zur Liste der [ nicht erlaubten Befehle](#unusable-commands).
+Eine Komponente kann jeden Befehl der 4D Programmiersprache verwenden, außer er gehört zur Liste [nicht verwendbare Befehle](#unusable-commands).
 
 Von einer Komponente aufgerufene Befehle laufen im Kontext dieser Komponente, außer für den Befehl `EXECUTE METHOD`. Dieser verwendet den Kontext der durch den Befehl angegebenen Methode. Eine Komponente kann auch die Lesebefehle des Kapitels “Benutzer und Gruppen” verwenden. Die Befehle lesen jedoch die Benutzer und Gruppen der Host Datenbank, da eine Komponente keine eigenen Benutzer und Gruppen hat.
 
