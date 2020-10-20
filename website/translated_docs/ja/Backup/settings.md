@@ -34,19 +34,19 @@ title: バックアップ設定
     - **X 週ごと**: 週単位でバックアップの間隔をスケジュールできます。 たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションを選択した場合、バックアップを開始する曜日と時刻を設定しなければなりません。 複数の曜日を選択することもできます。 たとえば、毎週水曜日と金曜日にバックアップをするようプログラムできます。
     - **X 月ごと**: 月単位でバックアップの間隔をスケジュールできます。 たとえば、毎月バックアップをおこなうには 1 と設定します。 このオプションを選択した場合、バックアップを開始する日付と時刻を設定しなければなりません。
 
-## Configuration
+## バックアップ設定
 
-The Backup/Configuration page of the Database Settings lets you set the backup files and their location, as well as that of the log file. These parameters are specific to each database opened by the 4D application.
+データベース設定のバックアップ/設定ページではバックアップやログファイルの有効化/無効化、および保存先を設定できます。 これらのパラメーターは、4Dアプリケーションで開かれる各データベースごとに設定されます。
 
 ![](assets/en/Backup/backup03.png)
 
-> **4D Server:** These parameters can only be set from the 4D Server machine.
+> **4D Server**: これらのパラメーターは 4D Server マシン上でのみ設定できます。
 
-### Content
-This area allows you to set which files and/or folders to copy during the next backup.
+### 内容
+このエリアでは、次回のバックアップ時にコピー対象とするファイルやフォルダーを指定します。
 
-- **Data**: Database data file. When this option is checked, the current log file of the database, if it exists, is backed up at the same time as the data.
-- **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file.
+- **データ**: データベースのデータファイル。 このオプションが選択されている場合、(存在すれば) データベースのカレントログファイルもデータとともにバックアップされます。
+- **ストラクチャー**: データベースの Project フォルダーとファイル。 In cases where databases are compiled, this option allows you to backup the .4dz file.
 - **User Structure File (only for binary database)**: *deprecated feature*
 - **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area.
     - **Delete**: Removes the selected file from the list of attached files.
