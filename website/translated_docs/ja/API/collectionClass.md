@@ -1,6 +1,6 @@
 ---
 id: collectionClass
-title: Collections
+title: Collection
 ---
 
 The Collection class manages [Collection](../Concepts/collection.html) type variables.
