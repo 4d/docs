@@ -12,19 +12,19 @@
         "title": "4D ライセンスの管理"
       },
       "API/collectionClass": {
-        "title": "Collections"
+        "title": "Collection"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
       },
       "API/directory": {
-        "title": "Directory Class"
+        "title": "Directory クラス"
       },
       "API/document": {
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Emails"
+        "title": "Email"
       },
       "API/fileClass": {
         "title": "File"
@@ -33,7 +33,7 @@
         "title": "Folder"
       },
       "API/formulaClass": {
-        "title": "Formulas"
+        "title": "Formula"
       },
       "API/imapTransporterClass": {
         "title": "IMAP Transporter"
@@ -42,25 +42,22 @@
         "title": "POP3 Transporter"
       },
       "API/signalClass": {
-        "title": "Signals"
+        "title": "Signal"
       },
       "API/smtpTransporterClass": {
         "title": "SMTP Transporter"
       },
       "API/transporter": {
-        "title": "Transporter Class"
+        "title": "Transporter クラス"
       },
       "API/zipClass": {
-        "title": "ZIP Archive"
-      },
-      "API/zipfolderClass": {
-        "title": "ZIP Folder Archive"
+        "title": "ZIP アーカイブ"
       },
       "Backup/backup": {
-        "title": "Backup"
+        "title": "バックアップ"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "ログファイル (.journal)"
       },
       "Backup/overview": {
         "title": "概要"
@@ -69,7 +66,7 @@
         "title": "Restore"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "バックアップ設定"
       },
       "Concepts/about": {
         "title": "4D ランゲージについて"
@@ -757,7 +754,7 @@
       "Access Rights": "アクセス権限",
       "Administration": "データベース管理",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
+      "Backup and Restore": "バックアップと復元",
       "Web Server": "Web Server",
       "REST Server": "REST Server",
       "Forms": "Forms",
@@ -784,7 +781,7 @@
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
-    "Backup and Restore|no description given": "Backup and Restore",
+    "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",

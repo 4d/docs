@@ -1,6 +1,6 @@
 ---
 id: emails
-title: Emails
+title: Email
 ---
 
 
