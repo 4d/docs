@@ -24,38 +24,38 @@ As such, each operation performed by a user causes two simultaneous actions: the
 
 これらのアクションについての詳細は、MSC の [ログ解析](MSC/analysis.md) ページを参照ください。
 
-ログファイルは 4D により管理されます。 It takes into account all operations that affect the data file equally, regardless of any manipulations performed by a user, a 4D method, the SQL engine, plug-ins, or from a Web browser or a mobile applicaton.
+ログファイルは 4D により管理されます。 ログファイルは、データファイルに影響を与えるすべての操作を区別なく盛り込み、ユーザーがおこなった操作や 4Dメソッド、SQLエンジン、プラグイン、Webブラウザーやモバイルアプリなどによる処理など、あらゆる操作を記録します。
 
-The following illustration sums up how the log file works:
+ログファイルの機能をまとめた図を次に示します:
 
 ![](assets/en/Backup/backup05.png)
 
 
-The current log file is automatically saved with the current data file. This mechanism has two distinct advantages:
+カレントログファイルはカレントデータファイルと一緒に自動保存されます。 このメカニズムには、2つの際立った利点があります:
 
-- Its avoids saturating the disk volume where the log file is stored. Without a backup, the log file would get bigger and bigger with use, and would eventually use all available disk space. For each data file backup, 4D or 4D Server closes the current log file and immediately starts a new, empty file, thereby avoiding the risk of saturation. The old log file is then archived and eventually destroyed depending on the mechanism for managing the backup sets.
-- It keeps log files corresponding to backups in order to be able to parse or repair an application at a later point in time. The integration of a log file can only be done in the application to which it corresponds. It is important, in order to be able to properly integrate a log file into a backup, to have backups and log files archived simultaneously.
+- ログファイルが保存されるディスクの容量が一杯にならないようにします。 バックアップを実行しない場合、ログファイルは使用するにつれて徐々に大きくなり、 いずれはディスクの空き容量をすべて使い果たしてしまいます。 データファイルをバックアップするたびに、4D や 4D Server はカレントログファイルをクローズし、その直後に空ファイルを新たに開くため、ディスクフルになる危険を避けることができます。 この後、古いログファイルはアーカイブに保存され、バックアップのセット (世代) を管理するメカニズムに従って最終的には破棄されます。
+- It keeps log files corresponding to backups in order to be able to parse or repair an application at a later point in time. The integration of a log file can only be done in the application to which it corresponds. バックアップに正しくログファイルを統合するため、バックアップとアーカイブ化されたログファイルは一緒に保管することが重要です。
 
 
-## Creating the log file
+## ログファイルの作成
 
-By default, any application project created with 4D uses a log file (option set in the **General** page of the Preferences). ログファイルには *data.journal* のように名前が付けられ、Data フォルダーに置かれます。
+By default, any application project created with 4D uses a log file (option set in the **General** page of the Preferences). ログファイルには *data.journal* のように名前が付けられ、Data フォルダー内に置かれます。
 
 You can find out if your application uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Settings. If you deselected this option, or if you use an application without a log file and wish to set up a backup strategy with a log file, you will have to create one.
 
-To create a log file:
+ログファイルを作成するには、次の手順に従ってください:
 
-1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option. 標準の "ファイルを開く/新規作成" ダイアログボックスが表示されます。 ログファイルにはデフォルトで *data.journal* という名前が付けられます。
 
-2. Keep the default name or rename it, and then select the file location. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the application project. If the application hard drive is lost, you can still recall your log file.
+2. デフォルトの名前を使用するか、またはその名前を変更し、次にファイルの保管場所を選択します。 If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the application project. If the application hard drive is lost, you can still recall your log file.
 
-3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. **保存** をクリックします。 開いたログファイルのアクセスパスと名前がダイアログボックスの **ログを使用** エリアに表示されます。 このエリアをクリックすると、ポップアップメニューが表示され、ディスク上のフォルダーを確認できます。
 
 4. Validate the Settings dialog box.
 
 In order for you to be able to create a log file directly, the data must be in one of the following situations:
 
-- The data file is blank,
+- データファイルが空である。
 - You just performed a backup and no changes have yet been made to the data.
 
 In all other cases, when you validate the Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the application. This precaution is indispensable because, in order to restore an application after any incidents, you will need a copy of the application into which the operations recorded in the log file will be integrated.
