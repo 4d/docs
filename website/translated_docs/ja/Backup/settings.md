@@ -101,10 +101,10 @@ By default, any project created with 4D uses a log file (option **Use Log File**
 
 - **セグメントサイズ (MB)**: 4Dではアーカイブをセグメントに分割できます。 この振る舞いにより、たとえばバックアップファイルを複数の異なるディスク (DVDやUSBデバイス等) に格納できます。 復元時、4D はセグメントを自動的に統合します。 Each segment is called MyApplication[xxxx-yyyy].4BK, where xxxx is the backup number and yyyy is the segment number. For example, the three segments of the MyApplication backup are called MyApplication[0006-0001].4BK, MyApplication[0006-0002].4BK and MyApplication[0006-0003].4BK. **セグメントサイズ** はコンボボックスであり、各セグメントのサイズを MB単位で設定できます。 メニューから定義済み値を選択するか、0~2048 の値を入力できます。 0 を指定するとセグメント化はされません (**なし** を指定したのと同じ)。
 
-- **圧縮率**: デフォルトで 4D はバックアップファイルを圧縮し、ディスクスペースを節約します。 しかし大量のデータがある場合、ファイルの圧縮処理はバックアップにかかる時間を長くします。 The **Compression Rate** option allows you to adjust file compression:
-    - **None:** No file compression is applied. The backup is faster but the archive files are considerably larger.
-    - **Fast** (default): This option is a compromise between backup speed and archive size.
-- **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
+- **圧縮率**: デフォルトで 4D はバックアップファイルを圧縮し、ディスクスペースを節約します。 しかし大量のデータがある場合、ファイルの圧縮処理はバックアップにかかる時間を長くします。 **圧縮率** オプションを使用してファイルの圧縮モードを調整できます:
+    - **なし**: ファイルの圧縮はおこなわれません。 バックアップは早くおこなわれますが、ファイルサイズは大きくなります。
+    - **速度** (デフォルト): このオプションはバックアップの速度とアーカイブサイズのバランスが考慮されたものです。
+- **圧縮率**: アーカイブに最大の圧縮率が適用されます。 アーカイブファイルはディスク上で最小のサイズとなりますが、バックアップの速度は低下します。
 
 - **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. You can set these mechanisms according to your needs. The menus for these options contain rates of **Low**, **Medium**, **High** and **None** (default).
     - **Interlacing Rate**: Interlacing consists of storing data in non-adjacent sectors in order to limit risks in the case of sector damage. The higher the rate, the higher the security; however, data processing will use more memory.
