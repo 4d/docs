@@ -73,7 +73,7 @@ title: バックアップ設定
 
 ## バックアップ＆復旧
 
-Modifying backup and restore options is optional. Their default values correspond to a standard use of the function.
+バックアップ＆復旧の設定は必要に応じて変更します。 Their default values correspond to a standard use of the function.
 
 ![](assets/en/Backup/backup04.png)
 
