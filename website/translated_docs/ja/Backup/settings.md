@@ -119,7 +119,7 @@ By default, any project created with 4D uses a log file (option **Use Log File**
     - When opening an application, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. このようなケースは、ディスクに書き込まれていないデータがまだキャッシュ中に存在する状態で、電力の切断が起きた場合に発生します。
     - When restoring an application, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. そしてデータファイルに書き込まれていない処理が見つかれば、自動で統合処理がおこなわれます。
 
-ユーザーにダイアログボックスが提示されることはありません。 処理は完全に自動です。 The operation is logged in the backup journal.
+ユーザーにダイアログボックスが提示されることはありません。 処理は完全に自動です。 処理はバックアップジャーナルに記録されます。
 
 > In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
 > 
