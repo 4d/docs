@@ -46,9 +46,9 @@ title: バックアップ設定
 このエリアでは、次回のバックアップ時にコピー対象とするファイルやフォルダーを指定します。
 
 - **データ**: データベースのデータファイル。 このオプションが選択されている場合、(存在すれば) データベースのカレントログファイルもデータとともにバックアップされます。
-- **ストラクチャー**: データベースの Project フォルダーとファイル。 In cases where databases are compiled, this option allows you to backup the .4dz file.
-- **User Structure File (only for binary database)**: *deprecated feature*
-- **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. These files can be of any type (documents or plug-in templates, labels, reports, pictures, etc.). You can set either individual files or folders whose contents will be fully backed up. Each attached element is listed with its full access path in the “Attachments” area.
+- **ストラクチャー**: データベースの Project フォルダーとファイル。 データベースがコンパイルされている場合には、このオプションは .4dz ファイルをバックアップします。
+- **ユーザーストラクチャー(バイナリデータベースのみ)**: *廃止予定*
+- **添付**: このエリアでは、データベースと同時にバックアップの対象とするファイルやフォルダーを指定します。 ここではどのようなタイプのファイル (ドキュメントやプラグイン、テンプレート、ラベル、レポート、ピクチャーなど) でも指定できます。 個々のファイル、または丸ごとバックアップするフォルダーを個々に設定できます。 添付エリアには、設定されたファイルのパスが表示されます。
     - **Delete**: Removes the selected file from the list of attached files.
     - **Add folder...**: Displays a dialog box that allows selecting a folder to add to the backup. In the case of a restore, the folder will be recovered with its internal structure. You can select any folder or volume connected to the machine, with the exception of the folder containing the database files.
     - **Add file...**: Displays a dialog box that allows you to select a file to add to the backup.
