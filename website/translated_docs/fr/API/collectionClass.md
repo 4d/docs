@@ -195,6 +195,7 @@ You must pay attention to the following conversion issues:
 
 
 
+
 You want to create a new empty collection and assign it to a 4D collection variable:
 
 ```4d
@@ -454,7 +455,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 </details>
 
 <!-- REF #collection.concat().Syntax -->
-**.concat**( *value* : any {*;...valueN* } ) : Collection<!-- END REF -->
+**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 | Paramètres | Type                                                           |    | Description                                                                                                       |
@@ -1465,6 +1466,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
  $c:=New collection
  $c.push(New object("name";"Cleveland";"zc";35049))
  $c.push(New object("name";"Blountsville";"zc";35031))
+
  $c.push(New object("name";"Adger";"zc";35006))
  $c.push(New object("name";"Clanton";"zc";35046))
  $c.push(New object("name";"Clanton";"zc";35045))
