@@ -118,7 +118,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 </details>
 
 <!-- REF file.File.Syntax -->
-**File** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF file.File.Params -->
@@ -137,7 +137,7 @@ The `File` command <!-- REF file.File.Summary -->creates and returns a new objec
 
 `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
-**File ( path { ; pathType } )**
+**File ( path { ; pathType } { ; \* })**
 
 In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
 
@@ -267,17 +267,17 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Wert | Kommentar                        |
-| ------------------ | ---- | -------------------------------- |
-| `fk alias link`    | 0    | Alias link (macOS only)(default) |
-| `fk symbolic link` | 1    | Symbolic link (macOS only)       |
+| Constant           | Wert | Kommentar                  |
+| ------------------ | ---- | -------------------------- |
+| `fk alias link`    | 0    | Alias link (default)       |
+| `fk symbolic link` | 1    | Symbolic link (macOS only) |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 
 **Returned object**
 
-A `File` object with the `isAlias` property set to **true**.
+A `4D.File` object with the `isAlias` property set to **true**.
 
 #### Beispiel
 

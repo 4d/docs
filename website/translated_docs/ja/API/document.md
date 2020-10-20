@@ -500,7 +500,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )** : BLOB<!-- END REF -->
+**.getContent( )** : Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
 | 引数  | タイプ  |    | 説明           |
@@ -518,7 +518,7 @@ The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns
 
 **戻り値**
 
-A `BLOB`.
+A `Blob`.
 
 #### 例題
 
@@ -546,7 +546,7 @@ To save a document's contents in a `BLOB` field:
 </details>
 
 <!-- REF #document.getIcon().Syntax -->
-**.getIcon**( { *size* : Integer } ) : picture<!-- END REF -->
+**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
 | 引数   | タイプ   |    | 説明                                            |

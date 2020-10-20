@@ -12,19 +12,19 @@
         "title": "4D ライセンスの管理"
       },
       "API/collectionClass": {
-        "title": "Collections"
+        "title": "Collection"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
       },
       "API/directory": {
-        "title": "Directory Class"
+        "title": "Directory クラス"
       },
       "API/document": {
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Emails"
+        "title": "Email"
       },
       "API/fileClass": {
         "title": "File"
@@ -33,7 +33,7 @@
         "title": "Folder"
       },
       "API/formulaClass": {
-        "title": "Formulas"
+        "title": "Formula"
       },
       "API/imapTransporterClass": {
         "title": "IMAP Transporter"
@@ -42,25 +42,22 @@
         "title": "POP3 Transporter"
       },
       "API/signalClass": {
-        "title": "Signals"
+        "title": "Signal"
       },
       "API/smtpTransporterClass": {
         "title": "SMTP Transporter"
       },
       "API/transporter": {
-        "title": "Transporter Class"
+        "title": "Transporter クラス"
       },
       "API/zipClass": {
-        "title": "ZIP Archive"
-      },
-      "API/zipfolderClass": {
-        "title": "ZIP Folder Archive"
+        "title": "ZIP アーカイブ"
       },
       "Backup/backup": {
         "title": "バックアップ"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "ログファイル (.journal)"
       },
       "Backup/overview": {
         "title": "概要"
