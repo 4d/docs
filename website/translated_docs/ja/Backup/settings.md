@@ -97,12 +97,12 @@ title: バックアップ設定
 ### アーカイブ
 これらのオプションはメインのバックアップファイルとログバックアップファイルに適用されます。
 
-- **セグメントサイズ (MB)**: 4Dではアーカイブをセグメントに分割できます。 この振る舞いにより、たとえばバックアップファイルを複数の異なるディスク (DVDやUSBデバイス等) に格納できます。 復元時、4D はセグメントを自動的に統合します。 各セグメントには MyDatabase[xxxx-yyyy].4BK といった名称がつけられます (xxxx はバックアップ番号、yyyy はセグメント番号)。 たとえば、MyDatabase データベースのバックアップが 3つのセグメントに分割されると、次のような名前になります: MyDatabase[0006-0001].4BK、MyDatabase[0006-0002].4BK、MyDatabase[0006-0003].4BK The **Segment Size** menu is a combo box that allows you to set the size in MB for each segment of the backup. You can choose one of the preset sizes or enter a specific size between 0 and 2048. If you pass 0, no segmentation occurs (this is the equivalent of passing **None**).
+- **セグメントサイズ (MB)**: 4Dではアーカイブをセグメントに分割できます。 この振る舞いにより、たとえばバックアップファイルを複数の異なるディスク (DVDやUSBデバイス等) に格納できます。 復元時、4D はセグメントを自動的に統合します。 各セグメントには MyDatabase[xxxx-yyyy].4BK といった名称がつけられます (xxxx はバックアップ番号、yyyy はセグメント番号)。 たとえば、MyDatabase データベースのバックアップが 3つのセグメントに分割されると、次のような名前になります: MyDatabase[0006-0001].4BK、MyDatabase[0006-0002].4BK、MyDatabase[0006-0003].4BK **セグメントサイズ** はコンボボックスであり、各セグメントのサイズを MB単位で設定できます。 メニューから定義済み値を選択するか、0~2048 の値を入力できます。 0 を指定するとセグメント化はされません (**なし** を指定したのと同じ)。
 
-- **Compression Rate** By default, 4D compresses backups to help save disk space. However, the file compression phase can noticeably slow down backups when dealing with large volumes of data. The **Compression Rate** option allows you to adjust file compression:
-    - **None:** No file compression is applied. The backup is faster but the archive files are considerably larger.
-    - **Fast** (default): This option is a compromise between backup speed and archive size.
-- **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
+- **圧縮率**: デフォルトで 4D はバックアップファイルを圧縮し、ディスクスペースを節約します。 しかし大量のデータがある場合、ファイルの圧縮処理はバックアップにかかる時間を長くします。 **圧縮率** オプションを使用してファイルの圧縮モードを調整できます:
+    - **なし**: ファイルの圧縮はおこなわれません。 バックアップは早くおこなわれますが、ファイルサイズは大きくなります。
+    - **速度** (デフォルト): このオプションはバックアップの速度とアーカイブサイズのバランスが考慮されたものです。
+- **圧縮率**: アーカイブに最大の圧縮率が適用されます。 アーカイブファイルはディスク上で最小のサイズとなりますが、バックアップの速度は低下します。
 
 - **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. You can set these mechanisms according to your needs. The menus for these options contain rates of **Low**, **Medium**, **High** and **None** (default).
     - **Interlacing Rate**: Interlacing consists of storing data in non-adjacent sectors in order to limit risks in the case of sector damage. The higher the rate, the higher the security; however, data processing will use more memory.
