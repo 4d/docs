@@ -6,10 +6,10 @@
     "tagline": " 4D 開発リファレンス",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "バックアップ"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "ログファイル (.journal)"
       },
       "Backup/overview": {
         "title": "概要"
@@ -18,7 +18,7 @@
         "title": "Restore"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "バックアップ設定"
       },
       "Concepts/about": {
         "title": "4D ランゲージについて"
@@ -463,7 +463,7 @@
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Menus": "Menus",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
+      "Backup and Restore": "バックアップと復元",
       "Users and Groups": "ユーザー＆グループ",
       "REST Server": "REST Server"
     }
@@ -480,7 +480,7 @@
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
-    "Backup and Restore|no description given": "Backup and Restore",
+    "Backup and Restore|no description given": "バックアップと復元",
     "Users and Groups|no description given": "ユーザー＆グループ",
     "Getting started|no description given": "はじめに",
     "Developing a Desktop application|no description given": "デスクトップアプリの開発",
