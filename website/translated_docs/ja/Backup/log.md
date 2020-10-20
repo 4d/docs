@@ -1,6 +1,6 @@
 ---
 id: log
-title: Log file (.journal)
+title: ログファイル (.journal)
 ---
 
 A continuously-used application is always recording changes, additions or deletions. Performing regular backups of data is important but does not allow (in case of incident) restoring data entered since the last backup. To respond to this need, 4D now offers a specific tool: the log file. This file allows ensuring permanent security of data.
@@ -39,7 +39,7 @@ The current log file is automatically saved with the current data file. This mec
 
 ## Creating the log file
 
-By default, any application project created with 4D uses a log file (option set in the **General** page of the Preferences). The log file is named *data.journal* and is placed in the Data folder.
+By default, any application project created with 4D uses a log file (option set in the **General** page of the Preferences). ログファイルには *data.journal* のように名前が付けられ、Data フォルダーに置かれます。
 
 You can find out if your application uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Settings. If you deselected this option, or if you use an application without a log file and wish to set up a backup strategy with a log file, you will have to create one.
 
