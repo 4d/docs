@@ -336,7 +336,7 @@ Note that the function will work even if it eventually requires to access the se
 
 ```4d
 // Get the youngest students  
-// Unappropriate use of local keyword
+// Inappropriate use of local keyword
 local Function getYoungest
 	var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
@@ -401,7 +401,7 @@ End if
 ```
 
 
-#### Unappropriate use of local keyword
+#### Inappropriate use of local keyword
 
 This example illustrates the fact that 
 
