@@ -116,6 +116,6 @@ title: バックアップ設定
 
 - **データベースが完全でない場合、最新のログを統合する**: このオプションがチェックされると、プログラムはデータベースを開く際または復旧時に、自動でログファイルを統合します。
     - データベースを開く際に、データファイルに保存されていない処理がログファイル中に見つかった場合、4D は自動でカレントログファイルを統合します。 このようなケースは、ディスクに書き込まれていないデータがまだキャッシュ中に存在する状態で、電力の切断が起きた場合に発生します。
-    - When restoring a database, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.
+    - データベースの復元時、カレントログファイルや、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 そしてデータファイルに書き込まれていない処理が見つかれば、自動で統合処理がおこなわれます。
 
-The user does not see any dialog box; the operation is completely automatic. The goal is to make use as easy as possible. The operation is logged in the backup journal.
+ユーザーにダイアログボックスが提示されることはありません。 処理は完全に自動です。 処理はバックアップジャーナルに記録されます。
