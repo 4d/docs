@@ -87,9 +87,9 @@ title: バックアップ設定
 
 - **最も古いバックアップファイルを削除**: このオプションは "最新のバックアップのみ保存 X バックアップファイル" が有効になっている場合のみ使用されます。 このオプションを使用して、最も古いバックアップファイルを削除するタイミングを設定します。選択肢は **バックアップ前**、あるいは **バックアップ後** です。 このオプションが機能するには、バックアップファイルが名称変更されたり、移動されたりしていてはなりません。
 
-- **If backup fails**: This option allows setting the mechanism used to handle failed backups (backup impossible). When a backup cannot be performed, 4D lets you carry out a new attempt.
-    -  **Retry at the next scheduled date and time**: This option only makes sense when working with scheduled automatic backups. It amounts to cancelling the failed backup. An error is generated.
-    - **Retry after X second(s), minute(s) or hour(s)**: When this option is checked, a new backup attempt is executed after the wait period. This mechanism allows anticipating certain circumstances that may block the backup. You can set a wait period in seconds, minutes or hours using the corresponding menu. If the new attempt also fails, an error is generated and the failure is noted in the status area of the last backup and in the backup journal file.
+- **バックアップ失敗時**: このオプションを使用して、バックアップ失敗時の処理を設定できます。 バックアップが実行できなかった場合、4D では再試行することが可能です。
+    -  **次回の予定された日付と時刻に再試行する**: このオプションは、定期的な自動バックアップを設定されている場合にのみ意味があります。 失敗したバックアップはキャンセルされます。 エラーが生成されます。
+    - **指定時間経過後に再試行**: このオプションが選択されていると、設定された待ち時間経過後にバックアップを再試行します。 このメカニズムを使用すると、バックアップをブロックするような特定の状況に対応することが可能となります。 秒、分、あるいは時間単位で待ち時間を設定できます。 次のバックアップ試行にも失敗するとエラーが生成され、ステータスエリアに失敗状況が表示され、バックアップジャーナルにも記録されます。
     - **Cancel the operation after X attempts**: This parameter is used to set the maximum number of failed backup attempts. If the backup has not been carried out successfully after the maximum number of attempts set has been reached, it is cancelled and the error 1401 is generated ("The maximum number of backup attempts has been reached; automatic backup is temporarily disabled"). In this case, no new automatic backup will be attempted as long as the application has not been restarted, or a manual backup has been carried out successfully. This parameter is useful in order to avoid a case where an extended problem (requiring human intervention) that prevented a backup from being carried out would have led to the application repeatedly attempting the backup to the detriment of its overall performance. By default, this parameter is not checked.
 
 > 4D considers a backup as failed if the database was not launched at the time when the scheduled automatic backup was set to be carried out.
