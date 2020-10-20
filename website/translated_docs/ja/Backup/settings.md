@@ -106,14 +106,14 @@ By default, any project created with 4D uses a log file (option **Use Log File**
     - **速度** (デフォルト): このオプションはバックアップの速度とアーカイブサイズのバランスが考慮されたものです。
 - **圧縮率**: アーカイブに最大の圧縮率が適用されます。 アーカイブファイルはディスク上で最小のサイズとなりますが、バックアップの速度は低下します。
 
-- **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. You can set these mechanisms according to your needs. The menus for these options contain rates of **Low**, **Medium**, **High** and **None** (default).
-    - **Interlacing Rate**: Interlacing consists of storing data in non-adjacent sectors in order to limit risks in the case of sector damage. The higher the rate, the higher the security; however, data processing will use more memory.
-    - **Redundancy Rate**: Redundancy allows securing data present in a file by repeating the same information several times. The higher the redundancy rate, the better the file security; however, storage will be slower and the file size will increase accordingly.
+- **インターレース率と冗長率**: 4D は最適化 (インターレース) とセキュリティ (冗長) メカニズムに基づく特定のアルゴリズムを使用してアーカイブを生成します。 これらのメカニズムを必要に応じて設定できます。 これらのオプションのメニューには低・中・高・なし (デフォルト) の選択肢があります。
+    - **インターレース率**: インターレースとはデータを連続しない領域に書き込むことにより、セクター損傷の際のリスクを低減させるものです。 率を上げることでリスクがより低減されますが、データの処理により多くのメモリが必要となります。
+    - **冗長率**: 冗長は同じ情報を複数回繰り返すことで、ファイル中のデータを保護するものです。 冗長率を高くするとよりファイルが保護されます。しかし書き込みは遅くなり、ファイルサイズも増大します。
 
 
-### Automatic Restore
+### 自動復元
 
-- **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. No intervention is required on the part of the user; however, the operation is logged in the backup journal.
+- **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. ユーザーによる介入は必要ありませんが、処理はバックアップジャーナルに記録されます。
 
 - **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the application.
     - When opening an application, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.
