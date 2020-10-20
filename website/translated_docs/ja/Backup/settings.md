@@ -48,7 +48,7 @@ title: バックアップ設定
 - **データ**: アプリケーションのデータファイル。 このオプションが選択されている場合、次のものがデータとともにバックアップされます:
     - データベースのカレントログファイル (あれば)
     - [データファイルの隣に置かれた](Project/architecture.md#settings-フォルダー) `Settings` フォルダー (あれば)。これは *データファイル用のユーザー設定* を格納しています。
-- **ストラクチャー**: アプリケーションの Project フォルダーとファイル。 プロジェクトがコンパイルされている場合には、このオプションは .4dz ファイルをバックアップします。 When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up.
+- **ストラクチャー**: アプリケーションの Project フォルダーとファイル。 プロジェクトがコンパイルされている場合には、このオプションは .4dz ファイルをバックアップします。 このオプションがチェックされていると、[Project フォルダーと同階層に置かれた](Project/architecture.md#settings-フォルダー-1) `Settings` フォルダーが自動でバックアップされます。これは、*ユーザー設定* を格納しています。
 - **ユーザーストラクチャー(バイナリデータベースのみ)**: *廃止予定*
 - **添付**: このエリアでは、アプリケーションと同時にバックアップの対象とするファイルやフォルダーを指定します。 ここではどのようなタイプのファイル (ドキュメントやプラグイン、テンプレート、ラベル、レポート、ピクチャーなど) でも指定できます。 個々のファイル、または丸ごとバックアップするフォルダーを個々に設定できます。 添付エリアには、設定されたファイルのパスが表示されます。
     - **削除**: 選択したファイルを添付エリアから取り除きます。
@@ -68,7 +68,7 @@ title: バックアップ設定
 
 **ログを使用** オプションが選択されていると、アプリケーションはログファイルを使用します。 ログファイルの場所はオプションの下に表示されます。 このオプションが選択されている場合、ログファイルなしでアプリケーションを開くことはできません。
 
-デフォルトでは、4D で作成されたすべてのプロジェクトでログファイルが使用されます (**環境設定** の **一般ページ** 内でチェックされている **ログを使用** オプションです)。 The log file is named *data.journal* and is placed in the Data folder.
+デフォルトでは、4D で作成されたすべてのプロジェクトでログファイルが使用されます (**環境設定** の **一般ページ** 内でチェックされている **ログを使用** オプションです)。 ログファイルには *data.journal* のように名前が付けられ、Data フォルダーに置かれます。
 
 > 新しいログファイルを有効にするには、その前にアプリケーションのデータをバックアップしなければなりません。 このオプションをチェックすると、バックアップが必要である旨の警告メッセージが表示されます: ログファイルの作成は延期され、実際には次のバックアップの後にログファイルが作成されます。
 
@@ -121,6 +121,6 @@ title: バックアップ設定
 
 ユーザーにダイアログボックスが提示されることはありません。 処理は完全に自動です。 処理はバックアップジャーナルに記録されます。
 
-> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> 自動復元の場合、復元されるのは次の要素に限られます:<br /> - .4DD ファイル<br /> - .4DIndx ファイル<br /> - .4DSyncData ファイル<br /> - .4DSyncHeader ファイル<br /> - External Data フォルダー
 > 
-> If you wish to get the attached files or the project files, you must perform a [manual restore](restore.md#manually-restoring-a-backup-standard-dialog).
+> 添付ファイルやプロジェクトファイルを取得したい場合、[手動の復元](restore.md#手動でバックアップから復元する-標準ダイアログ) をおこなう必要があります。
