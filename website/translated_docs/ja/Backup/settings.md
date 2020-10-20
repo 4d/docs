@@ -116,10 +116,10 @@ By default, any project created with 4D uses a log file (option **Use Log File**
 - **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. ユーザーによる介入は必要ありませんが、処理はバックアップジャーナルに記録されます。
 
 - **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the application.
-    - When opening an application, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.
-    - When restoring an application, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.
+    - When opening an application, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. このようなケースは、ディスクに書き込まれていないデータがまだキャッシュ中に存在する状態で、電力の切断が起きた場合に発生します。
+    - When restoring an application, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. そしてデータファイルに書き込まれていない処理が見つかれば、自動で統合処理がおこなわれます。
 
-The user does not see any dialog box; the operation is completely automatic. The goal is to make use as easy as possible. The operation is logged in the backup journal.
+ユーザーにダイアログボックスが提示されることはありません。 処理は完全に自動です。 The operation is logged in the backup journal.
 
 > In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
 > 
