@@ -26,9 +26,15 @@
   "ORDA":["ORDA/overview","ORDA/dsmapping","ORDA/ordaClasses","ORDA/entities","ORDA/datastores","ORDA/glossary"],
   "Class API Reference":
   [
+	"API/overview",
 	"API/collectionClass",
 	"API/cryptoClass",
+	"API/dataclassClass",
+	"API/dataclassAttributeClass",
+	"API/datastoreClass",
 	"API/emails",
+	"API/entityClass",
+	"API/entitySelectionClass",
 	"API/fileClass",
 	"API/folderClass",
 	"API/formulaClass",
