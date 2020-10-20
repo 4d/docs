@@ -64,14 +64,14 @@ title: バックアップ設定
 
 ### ログ管理
 
-The **Use Log** option, when checked, indicates that the database uses a log file. Its pathname is specified below the option. When this option is checked, it is not possible to open the database without a log file.
+**ログを使用** オプションが選択されていると、データベースはログファイルを使用します。 ログファイルの場所はオプションの下に表示されます。 このオプションが選択されている場合、ログファイルなしでデータベースを開くことはできません。
 
-By default, any database created with 4D uses a log file (option checked in the **General Page** of the **Preferences**). The log file is named *data.journal* and is placed in the Data folder.
+デフォルトでは、4D で作成されたすべてのデータベースでログファイルが使用されます (**環境設定** の **一般ページ** 内でチェックされているオプションです)。 The log file is named *data.journal* and is placed in the Data folder.
 
-> Activating a new log file requires the data of the database to be backed up beforehand. When you check this option, a warning message informs you that a backup is necessary. The creation of the log file is postponed and it will actually be created only after the next backup of the database.
+> 新しいログファイルを有効にするには、その前にデータベースのデータをバックアップしなければなりません。 このオプションをチェックすると、バックアップが必要である旨の警告メッセージが表示されます: ログファイルの作成は延期され、実際には次のバックアップの後にログファイルが作成されます。
 
 
-## Backup & Restore
+## バックアップ＆復旧
 
 Modifying backup and restore options is optional. Their default values correspond to a standard use of the function.
 
