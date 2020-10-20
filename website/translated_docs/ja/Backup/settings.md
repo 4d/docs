@@ -49,20 +49,20 @@ title: バックアップ設定
 - **ストラクチャー**: データベースの Project フォルダーとファイル。 データベースがコンパイルされている場合には、このオプションは .4dz ファイルをバックアップします。
 - **ユーザーストラクチャー(バイナリデータベースのみ)**: *廃止予定*
 - **添付**: このエリアでは、データベースと同時にバックアップの対象とするファイルやフォルダーを指定します。 ここではどのようなタイプのファイル (ドキュメントやプラグイン、テンプレート、ラベル、レポート、ピクチャーなど) でも指定できます。 個々のファイル、または丸ごとバックアップするフォルダーを個々に設定できます。 添付エリアには、設定されたファイルのパスが表示されます。
-    - **Delete**: Removes the selected file from the list of attached files.
-    - **Add folder...**: Displays a dialog box that allows selecting a folder to add to the backup. In the case of a restore, the folder will be recovered with its internal structure. You can select any folder or volume connected to the machine, with the exception of the folder containing the database files.
-    - **Add file...**: Displays a dialog box that allows you to select a file to add to the backup.
+    - **削除**: 選択したファイルを添付エリアから取り除きます。
+    - **フォルダー追加...**: バックアップに追加するフォルダーを選択するダイアログボックスを表示します。 復元の場合、フォルダーがその内容物とともに復元されます。 データベースファイルを含むフォルダーを除き、すべてのフォルダーやマシンに接続されたボリュームを選択できます。
+    - **ファイル追加...**: バックアップに追加するファイルを選択するダイアログボックスを表示します。
 
 
-### Backup File Destination Folder
+### バックアップファイル保存先
 
-This area lets you view and change the location where backup files as well as log backup files (where applicable) will be stored.
+このエリアではバックアップファイルの格納場所を確認したり、変更したりできます。
 
-To view the location of the files, click in the area in order to display their pathname as a pop-up menu.
+エリアをクリックすると、ファイルの場所がポップアップで表示されます。
 
-To modify the location where these files are stored, click the **...** button. A selection dialog box appears, which allows you to select a folder or disk where the backups will be placed. The "Used Space" and "Free Space" areas are updated automatically and indicate the remaining space on the disk of the selected folder.
+バックアップファイルの格納場所を変更するには、**[...]** ボタンをクリックします。 選択ダイアログが表示され、バックアップファイルを配置するフォルダーやディスクを選択できます。 "使用状況" と "空き容量" エリアは、選択したフォルダーが存在するディスクの状態を自動で表示します。
 
-### Log management
+### ログ管理
 
 The **Use Log** option, when checked, indicates that the database uses a log file. Its pathname is specified below the option. When this option is checked, it is not possible to open the database without a log file.
 
