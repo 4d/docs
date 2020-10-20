@@ -11,7 +11,7 @@ A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 ||
 |---|
-|[<!-- INCLUDE dataclassClass.{attributeName}.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassClass.{attributeName}.Summary --> |
+|[<!-- INCLUDE dataclassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassClass.attributeName.Summary --> |
 |[<!-- INCLUDE #dataclassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.all().Summary -->|
 |[<!-- INCLUDE #dataclassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.fromCollection().Summary --> |
 |[<!-- INCLUDE #dataclassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.get().Summary --> |
@@ -24,8 +24,8 @@ A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 ---
 
-<!-- REF dataclassClass.{attributeName}.Desc -->
-## .{attributeName}
+<!-- REF dataclassClass.attributeName.Desc -->
+## .*attributeName*
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -33,13 +33,13 @@ A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 |v17|Added|
 </details>
 
-<!-- REF dataclassClass.{attributeName}.Syntax -->
-**.{attributeName}** -> DataClassAttribute<!-- END REF -->
+<!-- REF dataclassClass.attributeName.Syntax -->
+***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 
 #### Description
 
-The attributes of dataclasses are <!-- REF dataclassClass.{attributeName}.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+The attributes of dataclasses are <!-- REF dataclassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
 The returned objects are of the [`DataClassAttribute`](dataclassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes. 
 
@@ -607,7 +607,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 </details>
 
 <!-- REF #dataclassClass.newSelection().Syntax -->
-**.newSelection**( { *keepOrder* : Integer } ) -> 4D.EntitySelection <!-- END REF -->
+**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #dataclassClass.newSelection().Params -->
 |Parameter|Type||Description|
