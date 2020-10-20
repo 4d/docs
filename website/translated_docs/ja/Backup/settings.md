@@ -50,7 +50,7 @@ The Backup/Configuration page of the Structure Settings lets you set the backup 
     - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-folder) (if it exists), i.e. the *user settings for data*.
 - **Structure**: Application project folders and files. In cases where projects are compiled, this option allows you to backup the .4dz file. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-folder-1), i.e. the *user settings*, is automatically backed up.
 - **ユーザーストラクチャー(バイナリデータベースのみ)**: *廃止予定*
-- **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the application. ここではどのようなタイプのファイル (ドキュメントやプラグイン、テンプレート、ラベル、レポート、ピクチャーなど) でも指定できます。 個々のファイル、または丸ごとバックアップするフォルダーを個々に設定できます。 Each attached element is listed with its full access path in the “Attachments” area.
+- **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the application. ここではどのようなタイプのファイル (ドキュメントやプラグイン、テンプレート、ラベル、レポート、ピクチャーなど) でも指定できます。 個々のファイル、または丸ごとバックアップするフォルダーを個々に設定できます。 添付エリアには、設定されたファイルのパスが表示されます。
     - **Delete**: Removes the selected file from the list of attached files.
     - **Add folder...**: Displays a dialog box that allows selecting a folder to add to the backup. In the case of a restore, the folder will be recovered with its internal structure. You can select any folder or volume connected to the machine, with the exception of the folder containing the application files.
     - **Add file...**: Displays a dialog box that allows you to select a file to add to the backup.
