@@ -92,16 +92,16 @@ By default, any project created with 4D uses a log file (option **Use Log File**
 - **バックアップ失敗時**: このオプションを使用して、バックアップ失敗時の処理を設定できます。 バックアップが実行できなかった場合、4D では再試行することが可能です。
     -  **次回の予定された日付と時刻に再試行する**: このオプションは、定期的な自動バックアップを設定されている場合にのみ意味があります。 失敗したバックアップはキャンセルされます。 エラーが生成されます。
     - **指定時間経過後に再試行**: このオプションが選択されていると、設定された待ち時間経過後にバックアップを再試行します。 このメカニズムを使用すると、バックアップをブロックするような特定の状況に対応することが可能となります。 秒、分、あるいは時間単位で待ち時間を設定できます。 次のバックアップ試行にも失敗するとエラーが生成され、ステータスエリアに失敗状況が表示され、バックアップジャーナルにも記録されます。
-    - **操作をキャンセル X 試行後**: このパラメーターを使用して、バックアップ試行の失敗最大数を設定できます。 If the backup has not been carried out successfully after the maximum number of attempts set has been reached, it is cancelled and the error 1401 is generated ("The maximum number of backup attempts has been reached; automatic backup is temporarily disabled"). In this case, no new automatic backup will be attempted as long as the application has not been restarted, or a manual backup has been carried out successfully. This parameter is useful in order to avoid a case where an extended problem (requiring human intervention) that prevented a backup from being carried out would have led to the application repeatedly attempting the backup to the detriment of its overall performance. By default, this parameter is not checked.
+    - **操作をキャンセル X 試行後**: このパラメーターを使用して、バックアップ試行の失敗最大数を設定できます。 この最大数に達してもバックアップが正しく実行できなかった場合、バックアップはキャンセルされ、エラー 1401 ("バックアップ試行の最大数に達しました。自動バックアップは無効になります") が生成されます。 この場合、データベースを再起動するか、手動バックアップが成功するまで自動バックアップはおこなわれません。 このパラメーターは、人による介入が必要となるような問題があり、バックアップ試行が自動的に繰り返されることにより全体的なパフォーマンスに影響するようなケースで使用できます。 デフォルトでこのオプションは選択されていません。
 
 > 4D considers a backup as failed if the application was not launched at the time when the scheduled automatic backup was set to be carried out.
 
-### Archive
-These options apply to main backup files and to log backup files.
+### アーカイブ
+これらのオプションはメインのバックアップファイルとログバックアップファイルに適用されます。
 
-- **Segment Size (Mb)** 4D allows you to segment archives, i.e., to cut it up into smaller sizes. This behavior allows, for example, the storing of a backup on several different disks (DVDs, usb devices, etc.). During restore, 4D will automatically merge the segments. Each segment is called MyApplication[xxxx-yyyy].4BK, where xxxx is the backup number and yyyy is the segment number. For example, the three segments of the MyApplication backup are called MyApplication[0006-0001].4BK, MyApplication[0006-0002].4BK and MyApplication[0006-0003].4BK. The **Segment Size** menu is a combo box that allows you to set the size in MB for each segment of the backup. You can choose one of the preset sizes or enter a specific size between 0 and 2048. If you pass 0, no segmentation occurs (this is the equivalent of passing **None**).
+- **セグメントサイズ (MB)**: 4Dではアーカイブをセグメントに分割できます。 この振る舞いにより、たとえばバックアップファイルを複数の異なるディスク (DVDやUSBデバイス等) に格納できます。 復元時、4D はセグメントを自動的に統合します。 Each segment is called MyApplication[xxxx-yyyy].4BK, where xxxx is the backup number and yyyy is the segment number. For example, the three segments of the MyApplication backup are called MyApplication[0006-0001].4BK, MyApplication[0006-0002].4BK and MyApplication[0006-0003].4BK. **セグメントサイズ** はコンボボックスであり、各セグメントのサイズを MB単位で設定できます。 メニューから定義済み値を選択するか、0~2048 の値を入力できます。 0 を指定するとセグメント化はされません (**なし** を指定したのと同じ)。
 
-- **Compression Rate** By default, 4D compresses backups to help save disk space. However, the file compression phase can noticeably slow down backups when dealing with large volumes of data. The **Compression Rate** option allows you to adjust file compression:
+- **圧縮率**: デフォルトで 4D はバックアップファイルを圧縮し、ディスクスペースを節約します。 しかし大量のデータがある場合、ファイルの圧縮処理はバックアップにかかる時間を長くします。 The **Compression Rate** option allows you to adjust file compression:
     - **None:** No file compression is applied. The backup is faster but the archive files are considerably larger.
     - **Fast** (default): This option is a compromise between backup speed and archive size.
 - **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
