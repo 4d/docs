@@ -57,7 +57,7 @@
         "title": "バックアップ"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "ログファイル (.journal)"
       },
       "Backup/overview": {
         "title": "概要"
