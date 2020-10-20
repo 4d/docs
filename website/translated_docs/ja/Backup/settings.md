@@ -75,11 +75,11 @@ By default, any project created with 4D uses a log file (option **Use Log File**
 
 ## バックアップ＆復旧
 
-Modifying backup and restore options is optional. Their default values correspond to a standard use of the function.
+バックアップ＆復旧の設定は必要に応じて変更します。 デフォルトの設定は、標準的なバックアップ動作をおこないます。
 
 ![](assets/en/Backup/backup04.png)
 
-### General settings
+### 一般設定
 
 - **Keep only the last X backup files**: This parameter activates and configures the mechanism used to delete the oldest backup files, which avoids the risk of saturating the disk drive. This feature works as follows: Once the current backup is complete, 4D deletes the oldest archive if it is found in the same location as the archive being backed up and has the same name (you can request that the oldest archive be deleted before the backup in order to save space). If, for example, the number of sets is set to 3, the first three backups create the archives MyBase-0001, MyBase-0002, and MyBase-0003 respectively. During the fourth backup, the archive MyBase-0004 is created and MyBase-0001 is deleted. By default, the mechanism for deleting sets is enabled and 4D keeps 3 backup sets. To disable the mechanism, simply deselect the option.
 > This parameter concerns both application and log file backups.
