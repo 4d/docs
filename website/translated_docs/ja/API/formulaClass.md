@@ -1,6 +1,6 @@
 ---
 id: formulaClass
-title: Formulas
+title: Formula
 ---
 
 ## Formula Objects
