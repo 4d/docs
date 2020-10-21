@@ -194,7 +194,7 @@ By default, the object uses the current keyboard layout.
 
 Cette propriété est disponible pour les [objets de zone de saisie](input_overview.md) contenant les expressions de type texte et les champs de type alpha et texte. Elle peut prendre trois valeurs : Oui, Non, Automatique (par défaut).
 
-#### Automatic
+#### Automatique
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
 - Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques :  
   ![](assets/en/FormObjects/multilineAuto.png)
