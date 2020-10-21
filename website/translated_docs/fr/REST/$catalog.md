@@ -204,8 +204,8 @@ Les propriétés suivantes sont retournées pour une dataclass exposée :
 | Propriété      | Type   | Description                                                                                                                  |
 | -------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | name           | Chaine | Nom de la dataclass                                                                                                          |
-| collectionName | Chaine | Name of an entity selection on the dataclass                                                                                 |
-| tableNumber    | Nombre | Table number in the 4D database                                                                                              |
+| collectionName | Chaine | Nom d'une entity selection dans la dataclass                                                                                 |
+| tableNumber    | Nombre | Numéro de la table dans la base 4D                                                                                           |
 | scope          | Chaine | Étendue de la dataclass (à noter que seules les classes du datastore dont **l'étendue** (scope) est publique sont affichées) |
 | dataURI        | Chaine | Un URI aux données de la dataclass                                                                                           |
 
@@ -217,13 +217,13 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 | Propriété   | Type    | Description                                                                                                                                                                      |
 | ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | Chaine  | Le nom de l’attribut.                                                                                                                                                            |
-| kind        | Chaine  | Attribute type (storage or relatedEntity).                                                                                                                                       |
-| fieldPos    | Nombre  | Position of the field in the database table).                                                                                                                                    |
+| kind        | Chaine  | Type d'attribut (stockage ou relatedEntity).                                                                                                                                     |
+| fieldPos    | Nombre  | Position du champ dans la table de la base.                                                                                                                                      |
 | scope       | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                             |
 | indexed     | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                              |
 | type        | Chaine  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
-| identifying | Booléen | This property returns True if the attribute is the primary key. Sinon, cette propriété n'apparaîtra pas.                                                                         |
-| path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                            |
+| identifying | Booléen | Cette propriété retourne True si l'attribut est la clé primaire. Sinon, cette propriété n'apparaîtra pas.                                                                        |
+| path        | Chaine  | Nom du lien d'un attribut relatedEntity ou relateEntities.                                                                                                                       |
 | foreignKey  | Chaine  | Pour un attribut relatedEntity, nom de l'attribut associé.                                                                                                                       |
 | inverseName | Chaine  | Nom de la relation opposée pour un attribut relatedEntity ou relatedEntities.                                                                                                    |
 
