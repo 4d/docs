@@ -9,7 +9,7 @@ title: 概要
 
 **メニューバー** とは、スクリーン上にまとめて表示されるメニューのグループです。 メニューバー上の各 **メニュー** はメニューコマンドを持ちます。またメニューコマンドは階層メニューと呼ばれるサブメニューを持つこともできます。 メニューやサブメニューコマンドをユーザーが選択すると、プロジェクトメソッドまたは標準アクションが呼び出されます。
 
-各データベースに対し、異なるメニューバーを複数作成することもできます。 たとえば、あるメニューバーには標準的なデータベース処理用のメニューを納め、別のメニューバーはレポート作成時にのみアクティブにすることができます。 また別のメニューバーには、レコード入力用のメニューコマンドを含むメニューを格納することも可能です。 The menu bar appearing with the input form may contain the same menu, but the menu commands are disabled because the user doesn’t need them during data entry.
+各データベースに対し、異なるメニューバーを複数作成することもできます。 たとえば、あるメニューバーには標準的なデータベース処理用のメニューを納め、別のメニューバーはレポート作成時にのみアクティブにすることができます。 また別のメニューバーには、レコード入力用のメニューコマンドを含むメニューを格納することも可能です。 入力フォームと一緒に表示されるメニューバーには同じメニューを格納しながらも、データ入力中は不要になるメニューコマンドを選択不可にすることができます。
 
 You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
 
