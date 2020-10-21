@@ -244,7 +244,7 @@ To be called in a REST request, a method must:
 
 ### Passer des paramètres à une méthode
 
-You can also pass parameters to a method in a POST.
+Vous pouvez également passer des paramètres à une méthode dans un POST.
 
 `POST  /rest/Employee/addEmployee`
 
@@ -260,7 +260,7 @@ You can POST data in the body part of the request, for example:
 #### Portée de la table
 
 Appel d'une méthode `getAverage` :
-- on [Employee] table
+- sur la table [Employee]
 - avec la portée **Table**
 
 
@@ -286,7 +286,7 @@ Résultat :
 #### Portée enregistrement courant
 
 Appel d'une méthode `getFullName` :
-- on [Employee] table
+- sur la table [Employee]
 - avec la portée de **Enregistrement courant**
 
 ```4d
