@@ -257,11 +257,11 @@ You can POST data in the body part of the request, for example:
 
 ### Exemples
 
-#### Table scope
+#### Portée de la table
 
-Call of a `getAverage` method:
+Appel d'une méthode `getAverage` :
 - on [Employee] table
-- with **Table** scope
+- avec la portée **Table**
 
 
 ```4d
@@ -283,11 +283,11 @@ Résultat :
 
 
 
-#### Current record scope
+#### Portée enregistrement courant
 
-Call of a `getFullName` method:
+Appel d'une méthode `getFullName` :
 - on [Employee] table
-- with **Current record** scope
+- avec la portée de **Enregistrement courant**
 
 ```4d
     //getFullName  
@@ -307,11 +307,11 @@ Résultat :
 
 
 
-#### Current selection scope
+#### Portée de la sélection courante
 
-Call of a `updateSalary` method:
-- on [Employee] table
-- with **Current selection** scope
+Appel d'une méthode `updateSalary` :
+- sur la table [Employee]
+- avec la portée de **Sélection courante**
 
 ```4d
     //updateSalary  
@@ -331,7 +331,7 @@ $0:=New object("updates";$vCount)
 
 `POST  /rest/Employee/updateSalary/?$filter="salary<1500"`
 
-POST data (in the request body): [1.5]
+Données POST (dans le corps d'une requête) : [1.5]
 
 Résultat :
 ```
