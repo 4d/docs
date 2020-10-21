@@ -25,12 +25,12 @@ title: 復元
 標準ダイアログボックスを使用してデータベースを手動復元するには:
 
 1. 4Dアプリケーションを開始し、**ファイル** メニューから **復元...** を選択します。 データベースが開かれている必要はありません。 または<br /> 4Dメソッドから `RESTORE` コマンドを実行します。 標準のファイルを開くダイアログボックスが表示されます。
-2. 復元するバックアップファイル (.4bk) またはログバックアップファイル (.4bl) を選択し、**開く** をクリックします。 復元したファイルを配置する場所を指定するために、以下のダイアログボックスが表示されます: デフォルトで 4Dは アーカイブと同階層にアーカイブ名と同じ名前 (拡張子なし) のフォルダーを作成し、ファイルを復元します。 You can display the path:
+2. 復元するバックアップファイル (.4bk) またはログバックアップファイル (.4bl) を選択し、**開く** をクリックします。 復元したファイルを配置する場所を指定するために、以下のダイアログボックスが表示されます: デフォルトで 4Dは アーカイブと同階層にアーカイブ名と同じ名前 (拡張子なし) のフォルダーを作成し、ファイルを復元します。 場所が表示されているエリアをクリックして、パスを確認することができます:
 
 ![](assets/en/Backup/backup07.png)
 
-You can also click on the **[...]** button to specify a different location.
-3. Click on the **Restore** button. 4D extracts all backup files from the specified location. If the current log file or a log backup file with the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore)). 4.(Optional) Click **OK** to integrate the log file into the restored database. If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.
+**[...]** ボタンをクリックして異なる場所を指定することもできます。
+3. **復元** ボタンをクリックします。 4D は指定されたすべてのバックアップファイルを展開します。 カレントログファイル、または、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 データファイル中に無い処理がログファイルに含まれていれば、その処理を統合するかどうか 4D が尋ねてきます。 **データベースが完全でない場合、最新のログを統合する** オプションが選択されている場合、統合処理は自動でおこなわれます ([自動復元](settings.md#自動復元) 参照)。 4.(Optional) Click **OK** to integrate the log file into the restored database. If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.
 5. Click **OK**. The destination folder is displayed. During the restore, 4D places all backup files in this folder, regardless of the position of the original files on the disk when the backup starts. This way your files will be easier to find.
 
 ## Manually restoring a backup (MSC)
