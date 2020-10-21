@@ -17,6 +17,15 @@
       "API/cryptoClass": {
         "title": "CryptoKey"
       },
+      "API/dataclassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/dataclassClass": {
+        "title": "データクラス"
+      },
+      "API/datastoreClass": {
+        "title": "DataStore"
+      },
       "API/directory": {
         "title": "Directory クラス"
       },
@@ -25,6 +34,12 @@
       },
       "API/emails": {
         "title": "Email"
+      },
+      "API/entityClass": {
+        "title": "エンティティ"
+      },
+      "API/entitySelectionClass": {
+        "title": "Entity Selections"
       },
       "API/fileClass": {
         "title": "File"
@@ -37,6 +52,9 @@
       },
       "API/imapTransporterClass": {
         "title": "IMAP Transporter"
+      },
+      "API/overview": {
+        "title": "Class API Overview"
       },
       "API/pop3TransporterClass": {
         "title": "POP3 Transporter"
@@ -63,7 +81,7 @@
         "title": "概要"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "復元"
       },
       "Backup/settings": {
         "title": "バックアップ設定"
@@ -547,7 +565,7 @@
         "title": "Menu bar features"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "メニューとメニューバーの作成"
       },
       "Menus/overview": {
         "title": "概要"
@@ -762,7 +780,7 @@
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "Form Events",
-      "Menus": "Menus"
+      "Menus": "メニュー"
     }
   },
   "pages-strings": {
@@ -777,7 +795,7 @@
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
-    "Menus|no description given": "Menus",
+    "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",

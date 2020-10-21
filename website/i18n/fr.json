@@ -17,6 +17,15 @@
       "API/cryptoClass": {
         "title": "CryptoKey"
       },
+      "API/dataclassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/dataclassClass": {
+        "title": "Dataclass"
+      },
+      "API/datastoreClass": {
+        "title": "DataStore"
+      },
       "API/directory": {
         "title": "Directory Class"
       },
@@ -25,6 +34,12 @@
       },
       "API/emails": {
         "title": "Emails"
+      },
+      "API/entityClass": {
+        "title": "Entity"
+      },
+      "API/entitySelectionClass": {
+        "title": "Entity Selections"
       },
       "API/fileClass": {
         "title": "File"
@@ -37,6 +52,9 @@
       },
       "API/imapTransporterClass": {
         "title": "IMAP Transporter"
+      },
+      "API/overview": {
+        "title": "Class API Overview"
       },
       "API/pop3TransporterClass": {
         "title": "POP3 Transporter"
