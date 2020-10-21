@@ -220,7 +220,7 @@ Retourne un objet ou une collection basée sur une méthode projet.
 
 ### Description
 
-Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
+Les méthodes projet sont appelées via une dataclass (table) ou une entité (enregistrement) et doivent retourner un objet ou une collection.
 
 `POST  /rest/Employee/getHighSalaries`
 
