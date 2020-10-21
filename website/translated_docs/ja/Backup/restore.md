@@ -30,17 +30,17 @@ To restore an application manually via a standard dialog box:
 ![](assets/en/Backup/backup07.png)
 
 **[...]** ボタンをクリックして異なる場所を指定することもできます。
-3. **復元** ボタンをクリックします。 4D は指定されたすべてのバックアップファイルを展開します。 カレントログファイル、または、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 If it contains operations not present in the data file, the program asks you if you want to integrate these operations. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore)).
+3. **復元** ボタンをクリックします。 4D は指定されたすべてのバックアップファイルを展開します。 カレントログファイル、または、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 データファイル中に無い処理がログファイルに含まれていれば、その処理を統合するかどうか 4D が尋ねてきます。 **データベースが完全でない場合、最新のログを統合する** オプションが選択されている場合、統合処理は自動でおこなわれます ([自動復元](settings.md#自動復元) 参照)。
 
-4.(Optional) Click **OK** to integrate the log file into the restored application. If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.
-5. Click **OK**.
+4.(Optional) Click **OK** to integrate the log file into the restored application. 復元と統合が正しく実行されると、4D は処理が成功したことを通知するダイアログを表示します。
+5. **OK** をクリックします。
 
-The destination folder is displayed. During the restore, 4D places all backup files in this folder, regardless of the position of the original files on the disk when the backup starts. This way your files will be easier to find.
+保存先フォルダーが表示されます。 バックアップ時のファイルの位置にかかわらず、4D はすべてのバックアップファイルをこのフォルダーに配置します。 これにより、ファイルを探す手間が省けます。
 
 > Any content related to the data file (files and `Settings` folder) are automatically restored in a `Data` subfolder within the destination folder.
 
 
-## Manually restoring a backup (MSC)
+## 手動でバックアップから復元する (MSC)
 
 You can manually restore an archive of the current application using the [Restore page](MSC/restore.md) of the Maintenance and Security Center (MSC).
 
