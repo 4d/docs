@@ -1,9 +1,9 @@
 ---
 id: restore
-title: Restore
+title: 復元
 ---
 
-4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:
+問題が発生したときは、一連のデータベースファイル全体を復元することができます。 主に 2つのカテゴリの問題が発生する可能性があります:
 
 - The unexpected stoppage of a database while in use. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
     - If the cache was empty, the database opens normally. Any changes made in the database were recorded. This case does not require any particular operation.
