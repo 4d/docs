@@ -29,6 +29,6 @@ title: 概要
 
 ![](assets/en/Menus/editor1.png)
 
-Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Each menu can be attached to a menu bar or to another menu. In the second case, the menu becomes a sub-menu.
+メニューおよびメニューバーは両方ともエディター左の階層リスト中に表示されます。 各メニューは、メニューバーあるいは別のメニューに添付できます。 後者の場合、そのメニューはサブメニューとなります。
 
-4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. You can rename menu bars but you cannot change their numbers. These numbers are used by the language commands.
+4D はメニューバーに連番を割り当てます。Menu Bar #1 が一番上に表示されます。 メニューバーの名前を変更することができますが、番号は変更できません。 この番号はランゲージコマンドで使用されます。
