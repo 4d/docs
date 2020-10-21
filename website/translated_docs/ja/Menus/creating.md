@@ -15,16 +15,16 @@ title: メニューとメニューバーの作成
 
 カスタムアプリケーションには、少なくとも 1つのメニューを持つ 1つのメニューバーが必要です。 By default, when you create a new project, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. このデフォルトメニューバーには、標準のメニューとデザインモードに入るためのコマンドが用意されています。
 
-This allows the user to access the Application environment as soon as the project is created. **実行** メニューから **アプリケーションモード** コマンドを選択すると、自動で Menu Bar #1 が呼び出されます。
+This allows the user to access the Application environment as soon as the project is created. **実行** メニューから **アプリケーションモード** コマンドを選択すると、自動でメニューバー#1 が呼び出されます。
 
 デフォルトメニューバーには 3つメニューがあります:
 
 - **ファイル**: このメニューには **終了** コマンドだけが含まれています。 このコマンドには *quit* 標準アクションが割り当てられていて、選択されるとアプリケーションが終了します。
-- **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
-- **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
-> Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
+- **編集**: 編集メニューは標準であり、内容の変更が可能です。 編集メニューのコマンド (コピーやペーストなど) は標準アクションで指定できます。
+- **モード**: モードメニューにはデフォルトで、アプリケーションモードを終了するための **デザインモードに戻る** コマンドが含まれます。
+> メニュータイトルはハードコードされたテキストではなく、xliff 参照を使用しています。 この点については [タイトルプロパティ](properties.md#タイトル) を参照してください。
 
-You can modify this menu bar as desired or create additional ones.
+このメニューバーを必要に応じて変更したり、新しく追加したりできます。
 
 
 ## Creating menus
