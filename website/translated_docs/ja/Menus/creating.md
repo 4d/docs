@@ -37,30 +37,30 @@ This allows the user to access the Application environment as soon as the projec
 ### 4Dランゲージを使用する
 `Create menu` コマンドを使って、新規メニューバーまたはメニュー参照 (*MenuRef*) をメモリ上に作成します。
 
-メニューが *MenuRef* 参照を使用して処理される場合、メニューとメニューバーの間に違いはありません。 両方とも項目のリストから構成されます。 それらの利用方法のみが異なります。 In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+メニューが *MenuRef* 参照を使用して処理される場合、メニューとメニューバーの間に違いはありません。 両方とも項目のリストから構成されます。 それらの利用方法のみが異なります。 メニューバーの各項目は、それ自身が 1つのメニューであり、項目から構成されています。
 
-`Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
+`Create menu` で空のメニューを作成した場合には、`APPEND MENU ITEM` または `INSERT MENU ITEM` コマンドによって項目を追加していきます。また、同コマンドのソースメニューとして、メニューエディターで定義されたメニューを指定した場合には、そのコピーが新しいメニューとして作成されます。
 
-## Adding items
-For each of the menus, you must add the commands that appear when the menu drops down. You can insert items that will be associated with methods or standard actions, or attach other menus (submenus).
+## 項目の追加
+各メニューには、メニューがクリックされたときにドロップダウン表示されるメニュー項目を作成しなければなりません。 項目を追加してメソッドや標準アクションを割り当てたり、他のメニューをサブメニューとして添付したりできます。
 
 ### メニューエディターを使用する
-To add a menu item:
+メニュー項目を追加するには:
 
-1. In the list of source menus, select the menu to which you want to add a command. If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
-2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list). OR Click on the add ![](assets/en/Menus/PlussNew.png) button located below the central list. 4D adds a new item with the default name “Item X” where X is the number of items already created.
-3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. または<br /> ウィンドウ右の "タイトル" エリアに名前を入力します。 It may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see below).
+1. ソースメニューリスト中で、項目を追加するメニューを選択します。 メニューが既に項目を持っていれば、それが中央のリストに表示されます。 新しい項目を挿入するには、その上にくる項目を選択します。 ドラッグ＆ドロップ操作で、後から順番を変更することも可能です。
+2. メニューエディターのオプションメニュー、またはエディターのコンテキストメニュー (中央のリスト内で右クリック) から **メニューバー/メニュー "メニュー名" に項目を追加** を選択します。 または<br /> 中央のリストの下にある追加ボタン ![](assets/en/Menus/PlussNew.png) をクリックします。 項目が追加され、デフォルト名 "項目 X" が割り当てられます (X は項目の番号)。
+3. 項目名の上でダブルクリックすると、名前を編集できるモードになり、名前を変更することができます。 または<br /> ウィンドウ右の "タイトル" エリアに名前を入力します。 名前には 31文字までの文字列を指定できます。 メニューのタイトルには文字列リテラルのほかに、参照も使用できます (後述参照)。
 
 
 ### 4Dランゲージを使用する
 
-Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
+既存のメニュー参照にメニュー項目を挿入するには `INSERT MENU ITEM` または `APPEND MENU ITEM` コマンドを使います。
 
 
-## Deleting menus and items
+## メニューや項目の削除
 
 ### メニューエディターを使用する
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
+メニューエディターを使って、メニューバー、メニュー、メニュー項目をいつでも削除できます。 各メニューやメニューバーは 1つの参照しか持たない点に留意してください。 When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
 
 To delete a menu bar, menu or menu item:
 
