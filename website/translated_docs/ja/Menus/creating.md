@@ -8,18 +8,18 @@ title: メニューとメニューバーの作成
 - 4Dツールボックスウィンドウのメニューエディターを使用する。 この場合、メニューとメニューバーはアプリケーションのストラクチャーに保存されます。
 - "メニュー" テーマのランゲージコマンドを使用して動的におこなう。 この場合、メニューとメニューバーは保存されず、メモリ内にのみ存在します。
 
-You can combine both features and use menus created in structure as templates to define menus in memory.
+両方の機能を組み合わせて、メモリ内のメニューを定義するのに、ストラクチャーに作成したメニューをテンプレートとして使うこともできます。
 
 
-## Default menu bar
+## デフォルトメニューバー
 
-A custom application must contain at least one menu bar with one menu. By default, when you create a new project, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. The default menu bar includes standard menus and a command for returning to the Design mode.
+カスタムアプリケーションには、少なくとも 1つのメニューを持つ 1つのメニューバーが必要です。 By default, when you create a new project, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. このデフォルトメニューバーには、標準のメニューとデザインモードに入るためのコマンドが用意されています。
 
-This allows the user to access the Application environment as soon as the project is created. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
+This allows the user to access the Application environment as soon as the project is created. **実行** メニューから **アプリケーションモード** コマンドを選択すると、自動で Menu Bar #1 が呼び出されます。
 
-The default menu bar includes three menus:
+デフォルトメニューバーには 3つメニューがあります:
 
-- **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
+- **ファイル**: このメニューには **終了** コマンドだけが含まれています。 The *Quit* standard action is associated with the command, which causes the application to quit.
 - **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
 > Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
