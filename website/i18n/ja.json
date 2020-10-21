@@ -565,7 +565,7 @@
         "title": "Menu bar features"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "メニューとメニューバーの作成"
       },
       "Menus/overview": {
         "title": "概要"
@@ -780,7 +780,7 @@
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "Form Events",
-      "Menus": "Menus"
+      "Menus": "メニュー"
     }
   },
   "pages-strings": {
@@ -795,7 +795,7 @@
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
-    "Menus|no description given": "Menus",
+    "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
