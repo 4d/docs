@@ -248,9 +248,9 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 ---
 ## Tableau hauteurs des lignes
 
-This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
+Cette propriété est utilisée pour indiquer le nom d'un tableau de hauteur de ligne que vous souhaitez associer à la list box. Un tableau de hauteur de ligne doit être de type numérique (entier long par défaut).
 
-When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
+Lorsqu'un tableau de hauteur de ligne est défini, chacun de ses éléments dont la valeur est différente de 0 (zéro) est pris en compte pour déterminer la hauteur de la ligne correspondante dans la list box, en fonction de l'unité hauteur de ligne courante.
 
 Par exemple, vous pouvez écrire :
 
@@ -259,9 +259,9 @@ ARRAY LONGINT(RowHeights;20)
 RowHeights{5}:=3
 ```
 
-Assuming that the unit of the rows is "lines," then the fifth row of the list box will have a height of three lines, while every other row will keep its default height.
-> * The Row Height Array property is not taken into account for hierarchical list boxes.
-> * For array-based list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne de la list box aura une hauteur de trois lignes, tandis que chaque autre ligne conservera sa hauteur par défaut.
+> * La propriété Row Height Array n'est pas prise en compte pour les list box hiérarchiques.
+> * Pour les list box de type tableau, cette propriété n'est disponible que si l'option [Hauteur de ligne automatique](#automatic-row-height) n'est pas sélectionnée.
 
 #### Grammaire JSON
 
