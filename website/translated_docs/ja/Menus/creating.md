@@ -94,11 +94,11 @@ title: メニューとメニューバーの作成
 - メニューに他のメニューを添付するには: 左のリスト中でメニューを選択し、次に中央リストのメニュー項目上で右クリックし、**項目 "項目名" にサブメニューを添付 >** を選択、そしてサブメニューとして使用するメニューを選択します:  
   ![](assets/en/Menus/attach2.png) メニュー項目を選択してから、リストの下にあるオプションメニューをクリックする方法もあります。 添付されたメニューはサブメニューとなります。 項目のタイトルは保持されますが (元のサブメニュー名は無視されます)、このタイトルを変更することができます。
 
-#### Detaching menus
+#### メニューの分離
 
-You can detach a menu from a menu bar or a sub-menu from a menu at any time. The detached menu is then no longer available in the menu bar or sub-menu as the case may be, but it is still present in the list of menus.
+メニューバーからメニューを、あるいはメニューからサブメニューを分離できます。 分離されたメニューは、メニューバーやメニューから利用できなくなります。しかしメニューリストには残されます。
 
-To detach a menu, right-click with the right button on the menu or sub-menu that you want to detach in the central list, then choose the **Detach the menu(...)** or **Detach the sub-menu(...)**
+メニューを分離するには、中央リスト内の分離したいメニュー上で右クリックし、**メニュー "メニュー名" をメニューバー "メニューバー名" から分離** または **項目 "項目名" のサブメニューを分離** を選択します。
 
 ### 4Dランゲージを使用する
 
