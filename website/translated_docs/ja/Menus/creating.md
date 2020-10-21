@@ -19,7 +19,7 @@ This allows the user to access the Application environment as soon as the projec
 
 デフォルトメニューバーには 3つメニューがあります:
 
-- **ファイル**: このメニューには **終了** コマンドだけが含まれています。 The *Quit* standard action is associated with the command, which causes the application to quit.
+- **ファイル**: このメニューには **終了** コマンドだけが含まれています。 このコマンドには *quit* 標準アクションが割り当てられていて、選択されるとアプリケーションが終了します。
 - **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
 > Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
