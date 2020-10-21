@@ -60,26 +60,26 @@ This allows the user to access the Application environment as soon as the projec
 ## メニューや項目の削除
 
 ### メニューエディターを使用する
-メニューエディターを使って、メニューバー、メニュー、メニュー項目をいつでも削除できます。 各メニューやメニューバーは 1つの参照しか持たない点に留意してください。 When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
+メニューエディターを使って、メニューバー、メニュー、メニュー項目をいつでも削除できます。 各メニューやメニューバーは 1つの参照しか持たない点に留意してください。 あるメニューが、複数のメニューバーやメニューに添付されていた場合、そのメニューに対しておこわれた変更や削除はこのメニューのすべての他のオカレンスに対しても有効となります。 メニューを削除すると、参照だけが削除されます。 特定のメニューへの最後の参照を削除しようとすると、4Dはアラートを表示します。
 
-To delete a menu bar, menu or menu item:
+メニューバー、メニュー、メニューコマンドを削除するには:
 
-- Select the item to be deleted and click on the delete ![](assets/en/Menus/MinussNew.png) button located beneath the list.
-- or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
+- 削除する項目を選択し、リストの下にある削除ボタン ![](assets/en/Menus/MinussNew.png) をクリックします。
+- コンテキストメニューまたはエディターのオプションメニューから **〜 を削除** コマンドを選択します。
 
-> It is not possible to delete Menu Bar #1.
+> メニューバー#1 を削除することはできません。
 
 
 ### 4Dランゲージを使用する
 
-Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
+`DELETE MENU ITEM` コマンドを使ってメニュー参照から項目を削除します。 メニュー参照をメモリからアンロードするには `RELEASE MENU` コマンドを使います。
 
 
-## Attaching menus
+## メニューの添付
 
-Once you have created a menu, you can attach it to one or several other menus (sub-menu) or menu bar(s).
+メニューを作成したら、それをメニューバーや別のメニューに (サブメニューとして) 添付できます。
 
-Sub-menus can be used to group together functions organized according to subject within the same menu. Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
+サブメニューは、テーマに基づき機能をグループ化する目的で使用されます。 Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
 
 You can create sub-menus of sub-menus to a virtually unlimited depth. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
 
