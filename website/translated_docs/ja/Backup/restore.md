@@ -30,20 +30,20 @@ title: 復元
 ![](assets/en/Backup/backup07.png)
 
 **[...]** ボタンをクリックして異なる場所を指定することもできます。
-3. **復元** ボタンをクリックします。 4D は指定されたすべてのバックアップファイルを展開します。 カレントログファイル、または、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 データファイル中に無い処理がログファイルに含まれていれば、その処理を統合するかどうか 4D が尋ねてきます。 **データベースが完全でない場合、最新のログを統合する** オプションが選択されている場合、統合処理は自動でおこなわれます ([自動復元](settings.md#自動復元) 参照)。 4.(Optional) Click **OK** to integrate the log file into the restored database. If the restore and integration were carried out correctly, 4D displays a dialog box indicating that the operation was successful.
-5. Click **OK**. The destination folder is displayed. During the restore, 4D places all backup files in this folder, regardless of the position of the original files on the disk when the backup starts. This way your files will be easier to find.
+3. **復元** ボタンをクリックします。 4D は指定されたすべてのバックアップファイルを展開します。 カレントログファイル、または、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 データファイル中に無い処理がログファイルに含まれていれば、その処理を統合するかどうか 4D が尋ねてきます。 **データベースが完全でない場合、最新のログを統合する** オプションが選択されている場合、統合処理は自動でおこなわれます ([自動復元](settings.md#自動復元) 参照)。 4. (任意) **OK** をクリックして、復元したデータベースにログファイルを統合します。 復元と統合が正しく実行されると、4D は処理が成功したことを通知するダイアログを表示します。
+5. **OK** をクリックします。 保存先フォルダーが表示されます。 バックアップ時のファイルの位置にかかわらず、4D はすべてのバックアップファイルをこのフォルダーに配置します。 これにより、ファイルを探す手間が省けます。
 
-## Manually restoring a backup (MSC)
+## 手動でバックアップから復元する (MSC)
 
-You can manually restore an archive of the current database using the [Restore page](MSC/restore.md) of the Maintenance and Security Center (MSC).
+Maintenance and Security Center (MSC) の [復元](MSC/restore.md)ページから、カレントデータベースのアーカイブを手動で復元できます。
 
 
-## Manually integrating the log
+## 手動でログを統合する
 
-If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-intergration-of-several-data-log-files)), a warning dialog box appears during the opening of the database when 4D notices that the log file contains more operations than have been carried out in the database.
+MSC の復元ページでログファイルの自動統合を選択していない場合 ([複数のログファイルを連続して統合する](MSC/restore.md#successive-intergration-of-several-data-log-files) 参照)、データファイルに保存されていない処理がログファイル中に見つかると、4D はデータベースを開く際に警告ダイアログボックスを表示します。
 
 ![](assets/en/Backup/backup08.png)
 
-> In order for this mechanism to work, 4D must be able to access the log file in its current location.
+> このメカニズムを機能させるために、4D はカレントの場所にあるログファイルにアクセスできなければなりません。
 
-You can choose whether or not to integrate the current log file. Not integrating the current log file allows you to avoid reproducing errors made in the data.
+カレントログファイルを統合するかしないかを選択することができます。 カレントログファイルを統合しないことにより、データ中に作成されたエラーを再生成しないようにすることもできます。
