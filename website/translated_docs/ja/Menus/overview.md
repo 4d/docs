@@ -3,7 +3,7 @@ id: overview
 title: 概要
 ---
 
-You can create menu bars and menus for your 4D databases and custom applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your databases easier to use and will make them feel familiar to users.
+4Dデータベースやカスタムアプリケーション用にカスタムメニューを作成できます。 デスクトップアプリケーションではプルダウン形式のメニューが標準機能であるため、メニューを追加することでデータベースがより使いやすくなりユーザーに親しみやすいものになるでしょう。
 
 ![](assets/en/Menus/menubar.png)
 
