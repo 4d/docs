@@ -65,7 +65,7 @@ List of static values to use as labels for the tab control object.
 
 #### Objets pris en charge
 
-[Tab Control](tabControl.md)
+[Onglets](tabControl.md)
 
 
 ---
