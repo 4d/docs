@@ -3,9 +3,9 @@ id: restore
 title: 復元
 ---
 
-4D allows you to restore entire sets of application data in case of any incidents, regardless of the cause of the incident. 主に 2つのカテゴリの問題が発生する可能性があります:
+問題が発生したときは、一連のアプリケーションファイル全体を復元することができます。 主に 2つのカテゴリの問題が発生する可能性があります:
 
-- The unexpected stoppage of an application while in use. この問題は電力の切断、システムのエラー等により発生する可能性があります。 In this case, depending on the current state of the data cache at the moment of the incident, the restore of the application can require different operations:
+- アプリケーションが使用中に予期せず終了された。 この問題は電力の切断、システムのエラー等により発生する可能性があります。 この場合、問題が発生した瞬間のデータキャッシュの状態により、アプリケーションの復旧には異なる手順が必要となります:
     - If the cache was empty, the application opens normally. Any changes made in the application were recorded. この場合には、特別な手順は必要ありません。
     - キャッシュに未保存の処理が含まれている場合、データファイルは損傷していませんが、カレントのログファイルを統合する必要があります。
     - キャッシュの内容をデータファイルに書き込み中だった場合、データファイルはおそらく損傷しています。 最新のバックアップから復元をおこない、カレントのログファイルを統合する必要があります。
@@ -24,7 +24,7 @@ title: 復元
 
 To restore an application manually via a standard dialog box:
 
-1. 4Dアプリケーションを開始し、**ファイル** メニューから **復元...** を選択します。 It is not mandatory that an application project be open. OR Execute the `RESTORE` command from a 4D method. 標準のファイルを開くダイアログボックスが表示されます。
+1. 4Dアプリケーションを開始し、**ファイル** メニューから **復元...** を選択します。 It is not mandatory that an application project be open. または<br /> 4Dメソッドから `RESTORE` コマンドを実行します。 標準のファイルを開くダイアログボックスが表示されます。
 2. 復元するバックアップファイル (.4bk) またはログバックアップファイル (.4bl) を選択し、**開く** をクリックします。 復元したファイルを配置する場所を指定するために、以下のダイアログボックスが表示されます: デフォルトで 4Dは アーカイブと同階層にアーカイブ名と同じ名前 (拡張子なし) のフォルダーを作成し、ファイルを復元します。 場所が表示されているエリアをクリックして、パスを確認することができます:
 
 ![](assets/en/Backup/backup07.png)
@@ -37,7 +37,7 @@ To restore an application manually via a standard dialog box:
 
 保存先フォルダーが表示されます。 バックアップ時のファイルの位置にかかわらず、4D はすべてのバックアップファイルをこのフォルダーに配置します。 これにより、ファイルを探す手間が省けます。
 
-> Any content related to the data file (files and `Settings` folder) are automatically restored in a `Data` subfolder within the destination folder.
+> データファイルの関連要素 (ファイルや `Settings` フォルダー) は保存先フォルダー内の `Data` サブフォルダー内に自動的に復元されます。
 
 
 ## 手動でバックアップから復元する (MSC)
@@ -45,12 +45,12 @@ To restore an application manually via a standard dialog box:
 You can manually restore an archive of the current application using the [Restore page](MSC/restore.md) of the Maintenance and Security Center (MSC).
 
 
-## Manually integrating the log
+## 手動でログを統合する
 
 If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-intergration-of-several-data-log-files)), a warning dialog box appears during the opening of the application when 4D notices that the log file contains more operations than have been carried out in the data file.
 
 ![](assets/en/Backup/backup08.png)
 
-> In order for this mechanism to work, 4D must be able to access the log file in its current location.
+> このメカニズムを機能させるために、4D はカレントの場所にあるログファイルにアクセスできなければなりません。
 
-You can choose whether or not to integrate the current log file. Not integrating the current log file allows you to avoid reproducing errors made in the data.
+カレントログファイルを統合するかしないかを選択することができます。 カレントログファイルを統合しないことにより、データ中に作成されたエラーを再生成しないようにすることもできます。
