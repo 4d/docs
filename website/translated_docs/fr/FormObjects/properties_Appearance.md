@@ -4,17 +4,17 @@ title: Apparence
 ---
 
 ---
-## Default Button
+## Bouton par défaut
 
-The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
+La propriété de bouton par défaut désigne le bouton qui obtient le focus initial à l'exécution lorsqu'aucun bouton du formulaire ne possède la propriété [Focusable](properties_Entry.md#focusable).
 
-There can only be one default button per form page.
+Il ne peut y avoir qu'un seul bouton par défaut par page de formulaire.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. The default button can be different from the focused button. Default buttons have a specific blue appearance on macOS:
+De plus, sous macOS, la propriété du bouton par défaut modifie l'apparence du bouton afin d'indiquer un «choix recommandé» à l'utilisateur. Le bouton par défaut peut être différent du bouton sélectionné. Les boutons par défaut ont une apparence bleue spécifique sur macOS :
 
 ![](assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
-> Button must have a standard height to get the default button appearance.
+> Le bouton doit avoir une hauteur standard pour obtenir l'apparence du bouton par défaut.
 
 On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline:
 
@@ -26,11 +26,11 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 | Nom | Type de données | Valeurs possibles |
 | --- | --------------- | ----------------- |
 |     |                 |                   |
- defaultButton|boolean|true, false |
+ defaultButton|booléen|true, false |
 
 #### Objets pris en charge
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[Bouton](button_overview.md#regular) - [Bouton plat](button_overview.md#regular)
 
 
 
@@ -38,7 +38,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 ---
 ## Cacher rectangle de focus
 
-During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
+A l'exécution, un champ ou toute zone saisissable est délimité par un rectangle de sélection lorsqu'il a le focus (via la touche Tab ou un simple clic). Vous pouvez masquer ce rectangle en activant cette propriété. Masquer le rectangle de focus peut être utile dans le cas d'interfaces spécifiques.
 
 #### Grammaire JSON
 
@@ -48,19 +48,19 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### Objets pris en charge
 
-[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
+[Zones 4D Write Pro](writeProArea_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md) - [Sous-formulaire](subform_overview.md)
 
 
 
 ---
 ## Cacher surlignage sélection
-`Selection type list boxes`
+`List boxes de type sélection`
 
-This property is used to disable the selection highlight in list boxes.
+Cette propriété est utilisée pour désactiver la mise en évidence de la sélection dans les list box.
 
-When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+Lorsque cette option est activée, la surbrillance de la sélection n'est plus visible pour les sélections effectuées dans les list box. Les sélections elles-mêmes sont toujours valides et fonctionnent exactement de la même manière que précédemment; cependant, ils ne sont plus représentés graphiquement à l'écran et vous devrez [définir leur apparence par programmation](listbox_overview.md#customizing-appearance-of-selected-rows).
 
-By default, this option is not enabled.
+Par défaut, cette option n'est pas activée.
 
 
 #### Grammaire JSON
@@ -79,18 +79,18 @@ By default, this option is not enabled.
 ---
 ## Barre de défilement horizontale
 
-An interface tool allowing the user to move the viewing area to the left or right.
+Un outil d'interface permettant à l'utilisateur de déplacer la zone de visualisation vers la gauche ou la droite.
 
-Available values:
+Valeurs disponibles :
 
 | Liste de propriétés | Valeur JSON | Description                                                                                                                                                                       |
 | ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Oui                 | "visible"   | La barre de défilement est toujours visible, même lorsqu'elle n'est pas nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est inférieure à celle du cadre). |
-| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                                                    |
-| Automatique         | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                                                   |
+| Non                 | "hidden"    | La barre de défilement n'est jamais visible                                                                                                                                       |
+| Automatique         | "automatic" | La barre de défilement apparaît automatiquement chaque fois que nécessaire et l'utilisateur peut saisir du texte plus grand que la largeur de l'objet                             |
 
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> Les objets image peuvent avoir des barres de défilement lorsque le format d'affichage de l'image est défini sur "Tronqué (non centré)"
 
 
 #### Grammaire JSON
@@ -363,15 +363,15 @@ Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utili
 
 Un outil d'interface permettant à l'utilisateur de déplacer la zone de visualisation de haut en bas.
 
-Available values:
+Valeurs disponibles :
 
 | Liste de propriétés | Valeur JSON | Description                                                                                                                                                                       |
 | ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Oui                 | "visible"   | La barre de défilement est toujours visible, même lorsqu'elle n'est pas nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est inférieure à celle du cadre). |
-| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                                                    |
+| Non                 | "hidden"    | La barre de défilement n'est jamais visible                                                                                                                                       |
 | Automatique         | "automatic" | La barre de défilement apparaît automatiquement chaque fois que nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est supérieure à celle du cadre)          |
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> Les objets image peuvent avoir des barres de défilement lorsque le format d'affichage de l'image est défini sur "Tronqué (non centré)"
 
 
 > Si un objet de saisie de texte n'a pas de barre de défilement, l'utilisateur peut faire défiler les informations à l'aide des flèches du clavier.
