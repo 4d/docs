@@ -31,7 +31,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #datastoreClass.cancelTransaction().Syntax -->](#canceltransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.cancelTransaction().Summary -->|
-| [<!-- INCLUDE datastoreClass.{dataclassName}.Syntax -->](#dataclassname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE datastoreClass.{dataclassName}.Summary --> |
+| [<!-- INCLUDE datastoreClass.dataclassName.Syntax -->](#dataclassname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE datastoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #datastoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.encryptionStatus().Summary --> |
 | [<!-- INCLUDE #datastoreClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #datastoreClass.getRequestLog().Syntax -->](#getrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.getRequestLog().Summary --> |
@@ -235,7 +235,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 ---
 
 <!-- REF datastoreClass.{dataclassName}.Desc -->
-## .{dataclassName}
+## *.dataclassName*
 
 <details><summary>History</summary>
 | Version | Changes |
@@ -243,12 +243,12 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 | v17     | Added   |
 </details>
 
-<!-- REF datastoreClass.{dataclassName}.Syntax -->
-**.{dataclassName}** : 4D.DataClass<!-- END REF -->
+<!-- REF datastoreClass.dataclassName.Syntax -->
+***.dataclassName*** : 4D.DataClass<!-- END REF -->
 
 
 #### Beschreibung
-Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore). The returned object <!-- REF datastoreClass.{dataclassName}.Summary -->contains a description of the dataclass<!-- END REF -->.
+Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore)data. The returned object <!-- REF datastoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
 
 
 #### Beispiel
