@@ -35,9 +35,9 @@ title: メニューとメニューバーの作成
 2. (任意) メニューバー/メニューの名前の上でダブルクリックすると、名前を編集できるモードになり、名前を変更することができます。 または<br /> ウィンドウ右の "タイトル" エリアに名前を入力します。 メニューバー名はユニークでなければなりません。 名前には 31文字までの文字列を指定できます。 メニューのタイトルには文字列リテラルのほかに、参照も使用できます ([タイトルプロパティ](properties.md#タイトル) の説明を参照ください)。
 
 ### 4Dランゲージを使用する
-Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
+`Create menu` コマンドを使って、新規メニューバーまたはメニュー参照 (*MenuRef*) をメモリ上に作成します。
 
-When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. In both cases, it consists of a list of items. Only their use differs. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+メニューが *MenuRef* 参照を使用して処理される場合、メニューとメニューバーの間に違いはありません。 両方とも項目のリストから構成されます。 それらの利用方法のみが異なります。 In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
 
 `Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
 
