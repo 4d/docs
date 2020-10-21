@@ -102,4 +102,4 @@ title: メニューとメニューバーの作成
 
 ### 4Dランゲージを使用する
 
-Since there is no difference between menus and menu bars in the 4D language, attaching menus or sub-menus is done in the same manner: use the *subMenu* parameter of the `APPEND MENU ITEM` command to attach a menu to a menu bar or an menu.  
+4Dランゲージにおいてはメニューとメニューバーの違いはないため、メニューおよびサブメニューの添付は同じ手順でおこないます: `APPEND MENU ITEM` コマンドの *subMenu* パラメーターを指定して、メニューやメニューバーにメニューを添付します。  
