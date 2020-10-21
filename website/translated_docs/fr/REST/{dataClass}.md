@@ -11,13 +11,13 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 
 ## Syntaxe
 
-| Syntaxe                                                                    | Exemple                     | Description                                                                                          |
-| -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                    |
-| [**{dataClass}({clé})**](#dataclasskey)                                    | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass               |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                   |
-| [**{dataClass}/{méthode}**](#dataclassmethod-and-dataclasskeymethod)       | `/Employee/getHighSalaries` | Executes a project method and returns an object or a collection (the project method must be exposed) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Returns a value based on an entity method                                                            |
+| Syntaxe                                                                    | Exemple                     | Description                                                                                             |
+| -------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                       |
+| [**{dataClass}({clé})**](#dataclasskey)                                    | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass                  |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                      |
+| [**{dataClass}/{méthode}**](#dataclassmethod-and-dataclasskeymethod)       | `/Employee/getHighSalaries` | Exécute une méthode projet et retourne un objet ou une collection (la méthode projet doit être exposée) |
+| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Renvoie une valeur basée sur une méthode d'entité                                                       |
 
 
 
@@ -36,17 +36,17 @@ Voici une description des données retournées :
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | Chaine     | Nom de la classe du datastore.                                                                                                                                                                                          |
 | __COUNT       | Nombre     | Nombre d'entités dans la classe du datastore.                                                                                                                                                                           |
-| __SENT        | Nombre     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                                                     |
+| __SENT        | Nombre     | Nombre d'entités envoyées par la requête REST. Ce nombre peut être le nombre total d'entités s'il est inférieur à la valeur définie par `$top/$limit`.                                                                  |
 | __FIRST       | Nombre     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                            |
 | __ENTITIES    | Collection | Cette collection d'objets contient un objet pour chaque entité avec tous ses attributs. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
 
-Each entity contains the following properties:
+Chaque entité contient les propriétés suivantes :
 
-| Propriété   | Type   | Description                                                                                                |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | Chaine | Value of the primary key defined for the datastore class.                                                  |
-| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | Nombre | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| Propriété   | Type   | Description                                                                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| __KEY       | Chaine | Valeur de la clé primaire définie pour le datastore class.                                                                   |
+| __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
+| __STAMP     | Nombre | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
 Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
 
@@ -216,7 +216,7 @@ La requête suivante retourne toutes les données publiques de l'employé nommé
 
 ## {dataClass}/{method} et {dataClass}({key})/{method}
 
-Returns an object or a collection based on a project method.
+Retourne un objet ou une collection basée sur une méthode projet.
 
 ### Description
 
@@ -229,15 +229,15 @@ Project methods are called through a dataclass (table) or an entity (record), an
 
 ### Configuration 4D
 
-To be called in a REST request, a method must:
+Pour être appelée dans une requête REST, une méthode doit :
 
-- have been declared as "Available through REST server" in 4D,
-- have its master table and scope defined accordingly:
-    -  **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
-    -  **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side.
-        - **Table** -for methods applied to the whole table (dataclass)
-        - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax.
-        - **Current selection** -for methods applied to the current selection
+- avoir été déclarée "Disponible via le serveur REST" dans 4D,
+- avoir sa table principale et sa portée définies en conséquence :
+    -  **Table** : la table 4D (c'est-à-dire dataclass) sur laquelle la méthode est appelée. La table doit être [exposée à REST](configuration.md#exposing-tables-and-fields).
+    -  **Portée** : Ce paramètre est utile lorsque la méthode utilise le langage classique de 4D et doit donc avoir un contexte de base de données côté serveur.
+        - **Table ** - pour les méthodes appliquées à la table entière (dataclass)
+        - **Enregistrement courant** - pour les méthodes appliquées à l'enregistrement courant (entité) à l'aide de la syntaxe `{dataClass} (clé)/{méthode}`.
+        - **Sélection courante** - pour les méthodes appliquées à la sélection courante
 
 ![alt-text](assets/en/REST/MethodProp.png)
 
@@ -248,7 +248,7 @@ Vous pouvez également passer des paramètres à une méthode dans un POST.
 
 `POST  /rest/Employee/addEmployee`
 
-You can POST data in the body part of the request, for example:
+Vous pouvez POSTER des données dans le corps de la requête, par exemple :
 
 ["John","Smith"]
 
