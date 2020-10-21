@@ -83,16 +83,16 @@ title: メニューとメニューバーの作成
 
 サブメニューのサブメニューを作成することができ、階層化に制限はありません。 しかし、インターフェース標準に沿うには、2レベルを超えるサブメニューは推奨されません。
 
-ランタイムにおいてプログラミングによりメニューを変更した場合、そのメニューのすべてのインスタンスに変更が反映されます。
+ランタイムにおいてプログラミングによりメニューを変更した場合、そのメニューが添付されているすべてのインスタンスに変更が反映されます。
 
 
 ### メニューエディターを使用する
 
-A menu can be attached to a menu bar or to another menu.
+各メニューは、メニューバーあるいは別のメニューに添付できます。
 
-- To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
-- To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
-  ![](assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. The menu being attached thus becomes a sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
+- メニューバーにメニューを添付するには: メニューバーを右クリックし、**メニューバー "メニューバー名" にメニューを添付 >** を選択、そしてサブメニューから添付するメニューを選択します: ![](assets/en/Menus/attach.png) メニューバーを選択してから、リストの下にあるオプションメニューをクリックする方法もあります。
+- メニューに他のメニューを添付するには: 左のリスト中でメニューを選択し、次に中央リストのメニュー項目上で右クリックし、**項目 "項目名" にサブメニューを添付 >** を選択、そしてサブメニューとして使用するメニューを選択します:  
+  ![](assets/en/Menus/attach2.png) メニュー項目を選択してから、リストの下にあるオプションメニューをクリックする方法もあります。 添付されたメニューはサブメニューとなります。 項目のタイトルは保持されますが (元のサブメニュー名は無視されます)、このタイトルを変更することができます。
 
 #### Detaching menus
 
