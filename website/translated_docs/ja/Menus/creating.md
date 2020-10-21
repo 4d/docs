@@ -79,16 +79,16 @@ This allows the user to access the Application environment as soon as the projec
 
 メニューを作成したら、それをメニューバーや別のメニューに (サブメニューとして) 添付できます。
 
-サブメニューは、テーマに基づき機能をグループ化する目的で使用されます。 Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
+サブメニューは、テーマに基づき機能をグループ化する目的で使用されます。 サブメニューとその項目は、メニューと同じ属性 (アクション、メソッド、ショートカット、アイコン等) を持つことができます。 サブメニューの項目は元の特性やプロパティを保持し、サブメニューの動作は標準のメニューと同じです。
 
-You can create sub-menus of sub-menus to a virtually unlimited depth. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
+サブメニューのサブメニューを作成することができ、階層化に制限はありません。 しかし、インターフェース標準に沿うには、2レベルを超えるサブメニューは推奨されません。
 
-At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
+ランタイムにおいてプログラミングによりメニューを変更した場合、そのメニューが添付されているすべてのインスタンスに変更が反映されます。
 
 
 ### メニューエディターを使用する
 
-A menu can be attached to a menu bar or to another menu.
+各メニューは、メニューバーあるいは別のメニューに添付できます。
 
 - To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
 - To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
