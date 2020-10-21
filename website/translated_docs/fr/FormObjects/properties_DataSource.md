@@ -28,7 +28,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -40,10 +40,10 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### Grammaire JSON
 
-| Nom        | Type de données  | Valeurs possibles                                   |
-| ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                           |
-| list       | list, collection | A list of possible values (hierarchical lists only) |
+| Nom        | Type de données   | Valeurs possibles                                   |
+| ---------- | ----------------- | --------------------------------------------------- |
+| choiceList | liste, collection | A list of possible values                           |
+| liste      | liste, collection | A list of possible values (hierarchical lists only) |
 
 
 #### Objets pris en charge
@@ -59,9 +59,9 @@ List of static values to use as labels for the tab control object.
 
 #### Grammaire JSON
 
-| Nom    | Type de données  | Valeurs possibles                        |
-| ------ | ---------------- | ---------------------------------------- |
-| labels | list, collection | A list of values to fill the tab control |
+| Nom    | Type de données   | Valeurs possibles                        |
+| ------ | ----------------- | ---------------------------------------- |
+| labels | liste, collection | A list of values to fill the tab control |
 
 #### Objets pris en charge
 
@@ -77,9 +77,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### Grammaire JSON
 
-| Nom               | Type de données | Valeurs possibles |
-| ----------------- | --------------- | ----------------- |
-| currentItemSource | string          | Object expression |
+| Nom               | Type de données | Valeurs possibles  |
+| ----------------- | --------------- | ------------------ |
+| currentItemSource | string          | Expression d'objet |
 
 #### Objets pris en charge
 [List Box ](listbox_overview.md#overview)
