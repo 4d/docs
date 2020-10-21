@@ -72,18 +72,18 @@ title: メニューとメニューバーの作成
 
 ### 4Dランゲージを使用する
 
-Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
+`DELETE MENU ITEM` コマンドを使ってメニュー参照から項目を削除します。 メニュー参照をメモリからアンロードするには `RELEASE MENU` コマンドを使います。
 
 
-## Attaching menus
+## メニューの添付
 
-Once you have created a menu, you can attach it to one or several other menus (sub-menu) or menu bar(s).
+メニューを作成したら、それをメニューバーや別のメニューに (サブメニューとして) 添付できます。
 
-Sub-menus can be used to group together functions organized according to subject within the same menu. Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
+サブメニューは、テーマに基づき機能をグループ化する目的で使用されます。 サブメニューとその項目は、メニューと同じ属性 (アクション、メソッド、ショートカット、アイコン等) を持つことができます。 サブメニューの項目は元の特性やプロパティを保持し、サブメニューの動作は標準のメニューと同じです。
 
-You can create sub-menus of sub-menus to a virtually unlimited depth. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
+サブメニューのサブメニューを作成することができ、階層化に制限はありません。 しかし、インターフェース標準に沿うには、2レベルを超えるサブメニューは推奨されません。
 
-At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
+ランタイムにおいてプログラミングによりメニューを変更した場合、そのメニューのすべてのインスタンスに変更が反映されます。
 
 
 ### メニューエディターを使用する
