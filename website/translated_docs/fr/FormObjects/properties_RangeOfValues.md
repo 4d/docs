@@ -50,7 +50,7 @@ Allows setting a list whose values cannot be entered in the object. Si une valeu
 
 | Nom          | Type de données | Valeurs possibles                |
 | ------------ | --------------- | -------------------------------- |
-| excludedList | list            | A list of values to be excluded. |
+| excludedList | liste           | A list of values to be excluded. |
 
 #### Objets pris en charge
 
@@ -71,7 +71,7 @@ Making a list required does not automatically display the list when the field is
 
 | Nom          | Type de données | Valeurs possibles           |
 | ------------ | --------------- | --------------------------- |
-| requiredList | list            | A list of mandatory values. |
+| requiredList | liste           | A list of mandatory values. |
 
 #### Objets pris en charge
 
