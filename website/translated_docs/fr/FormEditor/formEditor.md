@@ -590,24 +590,24 @@ Here are a few important things to know before you start working with views:
 
 #### Créer des vues
 
-Tout objet créé dans un formulaire est placé dans la première vue ("Vue 1") du formulaire. The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (see [Renaming views](#renaming-views)), however it remains the default view.
+Tout objet créé dans un formulaire est placé dans la première vue ("Vue 1") du formulaire. La première vue 1 est **toujours** la vue par défaut, indiquée par (par défaut) après le nom. Le nom de la vue peut être modifié (voir [Renommer les vues](#renaming-views)), mais il demeure la vue par défaut.
 
 
 ![](assets/en/FormEditor/createView.png)
 
-There are two ways to add additional views:
+Il existe deux façons d'ajouter des vues supplémentaires :
 
-*   Click on the **Add a new view** button at the bottom of the View palette:
+*   Cliquez sur le bouton **Ajouter une nouvelle vue** en bas de la palette Vue :
 
 ![](assets/en/FormEditor/addView.png)
 
-*   Right-click on an existing view and select **Insert view**:
+*   Faites un clic droit sur une vue existante et sélectionnez **Insérer une vue** :
 
 ![](assets/en/FormEditor/addView2.png)
 
-There is no limitation on the number of views.
+Il n'y a pas de limitation du nombre de vues.
 
-#### Renaming views
+#### Renommer des vues
 
 By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
 
