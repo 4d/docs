@@ -15,20 +15,20 @@ You can have many separate menu bars for each application. For example, you can 
 
 メニューを設計する際には以下の 2つのルールを覚えておいてください:
 - メニューに適している機能に対しメニューを使用する: メニューコマンドは、レコードの追加や検索、レポートの印刷のような作業を実行しなければなりません。
-- Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
+- メニューコマンドを機能別にまとめる: たとえば、レポートの印刷をおこなうメニューコマンドはすべて同じメニュー内に置くべきです。 また別の例として、特定のテーブルに関するすべての操作を 1つのメニューに納めてもよいでしょう。
 
-To create menus and menu bars, you can use either:
+メニューやメニューバーを作成するには以下のいずれかを使用します:
 
-- the Menu editor from the Toolbox,
-- language commands for the "Menus" theme,
-- a combination of both.
+- ツールボックスのメニューエディター
+- "メニュー" テーマのランゲージコマンド
+- 上 2つの組み合わせ
 
 
-## Menu editor
-The Menu editor is accessed using the **Menus** button of the Toolbox.
+## メニューエディター
+ツールボックスの **メニュー** ページを開くと、メニューエディターにアクセスできます。
 
 ![](assets/en/Menus/editor1.png)
 
-Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Each menu can be attached to a menu bar or to another menu. In the second case, the menu becomes a sub-menu.
+メニューおよびメニューバーは両方ともエディター左の階層リスト中に表示されます。 各メニューは、メニューバーあるいは別のメニューに添付できます。 In the second case, the menu becomes a sub-menu.
 
 4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. You can rename menu bars but you cannot change their numbers. These numbers are used by the language commands.
