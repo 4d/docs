@@ -318,35 +318,35 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 
 ---
-## Tab Control Direction
+## Onglets
 
-You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
+Vous pouvez définir la direction des onglets dans vos formulaires. Cette propriété est disponible sur toutes les plateformes mais ne peut être affichée que sous macOS. Vous pouvez choisir de placer les onglets en haut (standard) ou en bas.
 
-When tab controls with a custom direction are displayed under Windows, they automatically return to the standard direction (top).
+Lorsque des onglets sont affichés avec une direction personnalisée sous Windows, ils retournent automatiquement à la direction standard (en haut).
 
 #### Grammaire JSON
 
 | Nom | Type de données | Valeurs possibles |
 | --- | --------------- | ----------------- |
 |     |                 |                   |
- labelsPlacement|boolean|"top", "bottom" |
+ labelsPlacement|booléen|"top", "bottom" |
 
 #### Objets pris en charge
 
-[Tab Control](tabControl.md)
+[Onglets](tabControl.md)
 
 
 ---
-## User Interface
+## Interface utilisateur
 
-You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
+Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utilisateurs finaux d'effectuer des modifications de base et des manipulations de données. 4D View Pro propose deux interfaces en option, le **ruban** et **la barre d'outils**.
 
 #### Grammaire JSON
 
 | Nom | Type de données | Valeurs possibles |
 | --- | --------------- | ----------------- |
 |     |                 |                   |
- userInterface|text|"none" (default), "ribbon", "toolbar" |
+ userInterface|texte|"none" (par défaut), "ribbon", "toolbar" |
 
 #### Objets pris en charge
 
@@ -355,25 +355,25 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Voir également
 
-[4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[guide de référence 4D View Pro](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 ---
 ## Barre de défilement verticale
 
-An interface tool allowing the user to move the viewing area up and down.
+Un outil d'interface permettant à l'utilisateur de déplacer la zone de visualisation de haut en bas.
 
 Available values:
 
-| Liste de propriétés | Valeur JSON | Description                                                                                                                                              |
-| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Oui                 | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic           | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| Liste de propriétés | Valeur JSON | Description                                                                                                                                                              |
+| ------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Oui                 | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame).                 |
+| Non                 | "hidden"    | The scrollbar is never visible                                                                                                                                           |
+| Automatic           | "automatic" | La barre de défilement apparaît automatiquement chaque fois que nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est supérieure à celle du cadre) |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
 
-> If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
+> Si un objet de saisie de texte n'a pas de barre de défilement, l'utilisateur peut faire défiler les informations à l'aide des flèches du clavier.
 
 
 #### Grammaire JSON
@@ -391,15 +391,15 @@ Available values:
 [Barre de défilement horizontale](#horizontal-scroll-bar)
 
 ---
-## View mode
+## Mode d'affichage
 
-Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
+Définit le mode d'affichage du document 4D Write Pro dans la zone de formulaire. Trois valeurs sont disponibles :
 
-- **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
-- **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **Page** : le mode d'affichage le plus complet, qui comprend les contours de page, l'orientation, les marges, les sauts de page, les en-têtes et pieds de page, etc.
+- **Brouillon** : mode brouillon avec propriétés de base du document
+- **Embedded** : mode d'affichage adapté aux zones intégrées; il n'affiche pas les marges, les pieds de page, les en-têtes, les cadres, etc. Ce mode peut également être utilisé pour produire un affichage de type Web (si vous sélectionnez également la [résolution de 96 dpi](#resolution) et les propriétés [Afficher HTML WYSIWYG](#show-html-wysiwyg)).
 
-> The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
+> La propriété Mode d'affichage est utilisée uniquement pour le rendu à l'écran. Concernant les paramètres d'impression, des règles de rendu spécifiques sont automatiquement utilisées.
 
 
 
@@ -417,7 +417,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 ---
 ## Zoom
 
-Sets the zoom percentage for displaying 4D Write Pro area contents.
+Définit le pourcentage de zoom pour l'affichage du contenu de la zone 4D Write Pro.
 
 
 #### Grammaire JSON
