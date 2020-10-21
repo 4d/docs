@@ -72,6 +72,11 @@ atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
+## Classes
+
+A class name must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names). They are case sensitive. Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+
+
 ## フィールド
 
 フィールドが属するテーブルを最初に指定することで、フィールドを表します。 フィールド名はテーブル名のすぐ後に続けます。 フィールド名は31文字以内で指定します。
@@ -105,6 +110,13 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
+## 関数
+
+Function names must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+> Tip: Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+
+
 ## 命名セレクション
 
 命名セレクション名は、スコープ記号を除いて255文字以内で指定します。
@@ -129,14 +141,27 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、\[上述の追加ルール\](#ORDA-に適用される追加ルール) および [オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
+**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 For more information, see [additional rules above](#additional-rules-for-object-property-and-orda-names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
+
+## 引数
+
+Parameter names must start with a `$` character and be compliant with [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+例:
+
+```4d
+Function getArea($width : Integer; $height : Integer)-> $area : Integer
+
+#DECLARE ($i : Integer ; $param : Date) -> $myResult : Object
+```
 
 ## プラグインコマンド
 
 プラグインにより定義された名前を使用して、プラグインコマンドを表します。 プラグインコマンド名は 31文字以内で指定します。
 
 例:
+
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
@@ -230,7 +255,7 @@ If(Records in set("$Selection"+String($i))>0) // クライアントセット
 
 ## テーブル
 
-大カッコ内 ([...]) に名前を入れることで、テーブルを表します。 テーブル名は、31文字以内で指定します。
+You designate a table by placing its name between brackets: \[...]. テーブル名は、31文字以内で指定します。 Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
 
 例:
 ```4d

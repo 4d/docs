@@ -72,6 +72,11 @@ atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
+## Klassen
+
+A class name must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names). They are case sensitive. Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+
+
 ## Felder
 
 Ein Datenfeld kennzeichnen Sie durch die vorangestellte Tabelle, zu der dieses Datenfeld gehört. Der Name des Datenfelds folgt unmittelbar auf den Tabellennamen. Der Datenfeldname kann max. 31 Zeichen lang sein.
@@ -105,6 +110,13 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
+## Funktionen
+
+Function names must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+> Tip: Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+
+
 ## Temporäre Auswahlen
 
 Der Name einer temporären Auswahl kann ohne die Symbole für Reichweite bis zu 255 Zeichen lang sein.
@@ -129,14 +141,27 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie oben unter (#zusätzliche-Regeln-für-Namen-von-Objekteigenschaften-und-ORDA) und [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). For more information, see [additional rules above](#additional-rules-for-object-property-and-orda-names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
+
+## Parameter
+
+Parameter names must start with a `$` character and be compliant with [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+Beispiele:
+
+```4d
+Function getArea($width : Integer; $height : Integer)-> $area : Integer
+
+#DECLARE ($i : Integer ; $param : Date) -> $myResult : Object
+```
 
 ## Plug-In Befehle
 
 Einen Plug-In Befehl kennzeichnen Sie durch den Namen, wie vom Plug-In definiert. Ein Plug-In Befehl kann max. 31 Zeichen lang sein.
 
-Beispiele:
+Beispiel:
+
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
@@ -230,7 +255,7 @@ If(Records in set("$Selection"+String($i))>0) //Client set
 
 ## Tabellen
 
-Eine Tabelle kennzeichnen Sie durch eckige Klammern: [...]. Der Tabellenname kann max. 31 Zeichen lang sein.
+You designate a table by placing its name between brackets: \[...]. Der Tabellenname kann max. 31 Zeichen lang sein. Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
 
 Beispiele:
 ```4d
