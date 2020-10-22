@@ -115,13 +115,13 @@ Coordonnées supérieures de l'objet dans le formulaire.
 ---
 ## Rayon d'arrondi
 
-Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+Définit l'arrondi des coins (en pixels) des objets de type [rectangle](shapes_overview.md#rectangle). Par défaut, la valeur du rayon des rectangles est de 0 pixel. Vous pouvez modifier cette propriété pour dessiner des rectangles arrondis avec des formes personnalisées :
 
 ![](assets/en/FormObjects/shape_rectangle.png)
 
-Minimum value is 0, in this case a standard non-rounded rectangle is drawn. Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
+La valeur minimale est 0, dans ce cas un rectangle standard non arrondi est dessiné. La valeur maximale dépend de la taille du rectangle (elle ne peut pas dépasser la moitié de la taille du côté le plus court du rectangle) et est calculée dynamiquement.
 
-You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-Get-corner-radius.301-4311357.en.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-CORNER-RADIUS.301-4311356.en.html) commands.
+Vous pouvez également définir cette propriété à l'aide des commandes [OBJECT Get corner radius](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-Get-corner-radius.301-4311357.en.html) et [OBJECT SET CORNER RADIUS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-CORNER-RADIUS.301-4311356.en.html).
 
 #### Grammaire JSON
 
@@ -139,8 +139,8 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 ---
 ## Hauteur
 
-This property designates an object's vertical size.
-> Some objects may have a predefined height that cannot be altered.
+Cette propriété désigne la taille verticale d'un objet.
+> Certains objets peuvent avoir une hauteur prédéfinie qui ne peut pas être modifiée.
 
 #### Grammaire JSON
 
@@ -156,10 +156,10 @@ This property designates an object's vertical size.
 ---
 ## Largeur
 
-This property designates an object's horizontal size.
-> * Some objects may have a predefined height that cannot be altered.
-> * If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
-> * When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+Cette propriété désigne la taille horizontale d'un objet.
+> * Certains objets peuvent avoir une hauteur prédéfinie qui ne peut pas être modifiée.
+> * Si la propriété [Resizable](properties_ResizingOptions.md#resizable) est utilisée pour une [colonne de list box](listbox_overview.md#list-box-columns), l'utilisateur peut également redimensionner manuellement la colonne.
+> * Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
 
 
 #### Grammaire JSON
@@ -183,8 +183,8 @@ This property designates an object's horizontal size.
 ---
 ## Largeur maxi
 
-The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut pas être augmentée au-delà de cette valeur lors du redimensionnement de la colonne ou du formulaire.
+> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
 
 
 #### Grammaire JSON
@@ -201,8 +201,8 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 ---
 ## Largeur mini
 
-The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+La largeur minimale de la colonne (en pixels). La largeur de la colonne ne peut pas être réduite en dessous de cette valeur lors du redimensionnement de la colonne ou du formulaire.
+> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
 
 
 #### Grammaire JSON
@@ -226,7 +226,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 ## Hauteur des lignes
 
 
-Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
+Définit la hauteur des lignes de list box (hors en-têtes et pieds de page). Par défaut, la hauteur de ligne est définie en fonction de la plate-forme et de la taille de la police.
 
 
 #### Grammaire JSON
