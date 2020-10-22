@@ -184,7 +184,7 @@ Cette propriété désigne la taille horizontale d'un objet.
 ---
 ## Largeur maxi
 
-The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
+La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut pas être augmentée au-delà de cette valeur lors du redimensionnement de la colonne ou du formulaire.
 > Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
 
 
@@ -202,7 +202,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 ---
 ## Largeur mini
 
-The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
+La largeur minimale de la colonne (en pixels). La largeur de la colonne ne peut pas être réduite en dessous de cette valeur lors du redimensionnement de la colonne ou du formulaire.
 > Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
 
 
