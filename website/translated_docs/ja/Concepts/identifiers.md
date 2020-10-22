@@ -18,7 +18,7 @@ title: 識別子の命名規則
 - 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (If, For 等)、そして定数が含まれます。
 - 名前の最後につけたスペースは無視されます。
 
-### ORDA に適用される追加ルール
+### ORDA やオブジェクトプロパティに適用される追加ルール
 
 - スペースは使えません。
 - ピリオド (".") および大カッコ ("[ ]") は使用できません。
@@ -74,7 +74,7 @@ $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
 ## Classes
 
-A class name must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names). They are case sensitive. Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+クラス名は標準的な [プロパティ名の命名規則](Concepts/dt_object.md#ORDA-やオブジェクトプロパティに適用される追加ルール) に準拠している必要があります。 大文字・小文字は区別されます。 競合防止のため、[データベーステーブル](#tables) と同じ名前のクラスを作成するのは推奨されないこと
 
 
 ## フィールド
@@ -112,9 +112,9 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## 関数
 
-Function names must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names).
+関数名は標準的な [プロパティ名の命名規則](Concepts/dt_object.md#ORDA-やオブジェクトプロパティに適用される追加ルール) に準拠している必要があります。
 
-> Tip: Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+> Tip: アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。
 
 
 ## 命名セレクション
@@ -141,12 +141,12 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 For more information, see [additional rules above](#additional-rules-for-object-property-and-orda-names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、[上述の追加ルール](#ORDA-やオブジェクトプロパティに適用される追加ルール) および [オブジェクトプロパティ識別子](Concepts/dt_object.md#オブジェクトプロパティ識別子) を参照ください。
 
 
 ## 引数
 
-Parameter names must start with a `$` character and be compliant with [property naming rules](#additional-rules-for-object-property-and-orda-names).
+引数名は必ず `$` 文字で始まり、[プロパティ名の命名規則](Concepts/dt_object.md#ORDA-やオブジェクトプロパティに適用される追加ルール) に準拠している必要があります。
 
 例:
 
@@ -255,7 +255,7 @@ If(Records in set("$Selection"+String($i))>0) // クライアントセット
 
 ## テーブル
 
-You designate a table by placing its name between brackets: \[...]. テーブル名は、31文字以内で指定します。 Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
+大カッコ内 (\[...]) に名前を入れることで、テーブルを表します。 テーブル名は、31文字以内で指定します。 競合防止のため、[クラス](#クラス) と同じ名前のテーブルを作成するのは推奨されません。
 
 例:
 ```4d
