@@ -4,7 +4,7 @@ title: Plage de valeurs
 ---
 
 ---
-## Default value
+## Valeur par défaut
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
 
