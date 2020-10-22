@@ -56,8 +56,8 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 - Datastore クラスオブジェクトは、[ORDA Datastore 汎用クラス](API/datastoreClass.md) の関数を呼び出すことができます。
 - Datastore クラスオブジェクトは、[ORDA Datastore 汎用クラス](API/datastoreClass.md) の関数を呼び出すことができます。
-- an Entity selection class object can call functions from the [ORDA Entity selection generic class](API/entitySelectionClass.md).
-- an Entity class object can call functions from the [ORDA Entity generic class](API/entityClass.md).
+- EntitySelection クラスオブジェクトは [ORDA EntitySelection 汎用クラス](API/entitySelectionClass.md) の関数を呼び出すことができます。
+- Entity クラスオブジェクトは [ORDA Entity 汎用クラス](API/entityClass.md) の関数を呼び出すことができます。
 
 
 
