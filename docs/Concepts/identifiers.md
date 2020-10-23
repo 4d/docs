@@ -71,6 +71,11 @@ atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
+## Classes
+
+A class name must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names). They are case sensitive. Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+
+
 ## Fields  
 
 You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
@@ -104,6 +109,13 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
+## Functions 
+
+Function names must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+> Tip: Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. 
+
+
 ## Named Selections  
 
 A named selection name can contain up to 255 characters, not including scope character(s).
@@ -128,14 +140,27 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Note:** Additional rules apply to object attribute names (they must comply with the ECMAScript specification). For more information, see [additional rules above](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Note:** Additional rules apply to object attribute names (they must comply with the ECMAScript specification). For more information, see [additional rules above](#additional-rules-for-object-property-and-orda-names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
+
+## Parameters
+
+Parameter names must start with a `$` character and be compliant with [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+Examples:
+
+```4d
+Function getArea($width : Integer; $height : Integer)-> $area : Integer
+
+#DECLARE ($i : Integer ; $param : Date) -> $myResult : Object
+```
 
 ## Plug-In Commands  
 
 You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
 
-Examples:
+Example:
+
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
@@ -229,7 +254,7 @@ If(Records in set("$Selection"+String($i))>0) //Client set
 
 ## Tables  
 
-You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
+You designate a table by placing its name between brackets: \[...]. A table name can contain up to 31 characters. Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
 
 Examples:
 ```4d

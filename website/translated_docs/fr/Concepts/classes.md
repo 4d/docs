@@ -49,13 +49,13 @@ $instance:=OB Instance of($poly;4D.Object)
  // true
 ```
 
-Lors de l'énumération des propriétés d'un objet, son prototype de classe n'est pas énuméré. Par conséquent, l'instruction `For each` et la commande `JSON Stringify` ne retournent pas les propriétés de l'objet du prototype de classe. The prototype object property of a class is an internal hidden property.
+Lors de l'énumération des propriétés d'un objet, son prototype de classe n'est pas énuméré. Par conséquent, l'instruction `For each` et la commande `JSON Stringify` ne retournent pas les propriétés de l'objet du prototype de classe. La propriété d'objet prototype d'une classe est une propriété cachée interne.
 
 ### Définition d'une classe
 
-A user class file defines a model of object that can be instantiated in the database code by calling the `new()` class member method. You will usually use specific [class keywords](#class-keywords) and [class commands](#class-commands) in the class file.
+Un fichier de classe utilisateur définit un modèle d'objet qui peut être instancié dans le code de la base de données en appelant la méthode membre de la classe `new()`. Vous utiliserez généralement des [mots-clés de classe](#class-keywords) et des [commandes de classe](#class-commands) spécifiques dans le fichier de classe.
 
-Par exemple:
+Par exemple :
 
 ```4d  
 //Class: Person.4dm
@@ -286,58 +286,58 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. La classe enfant hérite de toutes les fonctions de la classe parente.
 
-Class extension must respect the following rules:
+L'extension de classe doit respecter les règles suivantes :
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- Une classe utilisateurs ne peut pas étendre une classe intégrée (sauf 4D.Object qui est étendu par défaut pour les classes d'utilisateurs)
+- Une classe utilisateurs ne peut pas étendre une classe utilisateurs à partir d'un autre projet ou composant.
+- Une classe utilisateurs ne peut pas s'étendre.
+- Il n'est pas possible d'étendre les classes de manière circulaire (c'est-à-dire "a" étend "b" qui étend "a").
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
+Briser cette règle n'est pas détecté par l'éditeur de code ou l'interpréteur, seuls le compilateur et la `syntaxe de contrôle` généreront une erreur dans ce cas.
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+Une classe étendue peut appeler le constructeur de sa classe parente à l'aide de la commande [`Super`](#super).
 
-#### Example
+#### Exemple
 
-This example creates a class called `Square` from a class called `Polygon`.
+Cet exemple crée une classe appelée `Square` à partir d'une classe appelée `Polygon`.
 
 ```4d
-  //Class: Square
-  //path: Classes/Square.4dm
+ // Classe: Square
+  // chemin: Classes/Square.4dm
 
- Class extends Polygon
+ La classe étend Polygon
 
  Class constructor
- C_LONGINT($1)
+ C_LONGINT (1 $)
 
-  // It calls the parent class's constructor with lengths
-  // provided for the Polygon's width and height
+  // Il appelle le constructeur de la classe parente avec des longueurs
+  // fourni pour la largeur et la hauteur de Polygon
 Super($1;$1)
-  // In derived classes, Super must be called before you
-  // can use 'This'
- This.name:="Square"
+  // Dans les classes dérivées, Super doit être appelé avant que vous
+  // ne puissiez utiliser 'This'
+ This.name:="Square "
 
-Function getArea
+Fonction getArea
 C_LONGINT($0)
 $0:=This.height*This.width
 ```
 
 ### Super
 
-#### Super {( param{;...;paramN} )} {-> Object}
+#### Super {(param {; ...; paramN})} {-> Object}
 
-| Parameter | Type   |    | Description                                    |
-| --------- | ------ | -- | ---------------------------------------------- |
-| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
-| Result    | object | <- | Object's parent                                |
+| Paramètre | Type   |    | Description                                  |
+| --------- | ------ | -- | -------------------------------------------- |
+| param     | mixed  | -> | Paramètre(s) à passer au constructeur parent |
+| Résultat  | object | <  | Parent de l'objet                            |
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+Le mot-clé `Super` autorise les appels à la `superclasse`, c'est-à-dire la classe parente.
 
-`Super` serves two different purposes:
+`Super` a deux objectifs différents :
 
-- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. the parent class.</p>
+- à l'intérieur d'un [code constructeur](#class-constructor), `Super` est une commande qui permet d'appeler le constructeur de la superclasse. the parent class.</p>
 
 `Super` serves two different purposes:
 

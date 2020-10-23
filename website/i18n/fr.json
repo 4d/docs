@@ -490,13 +490,13 @@
         "title": "Texte"
       },
       "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+        "title": "Zone 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Zone Web"
       },
       "FormObjects/writeProAreaOverview": {
-        "title": "4D Write Pro area"
+        "title": "Zone 4D Write Pro"
       },
       "GettingStarted/installation": {
         "title": "Installation"

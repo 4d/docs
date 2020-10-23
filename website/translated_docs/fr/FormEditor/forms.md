@@ -92,7 +92,7 @@ You can create multiple pages for an input form. If you have more fields or vari
 
 - Place the most important information on the first page and less important information on other pages.
 - Organize each topic on its own page.
-- Reduce or eliminate scrolling during data entry.
+- Réduisez ou éliminez le défilement pendant la saisie des données.
 - Provide space around the form elements for an attractive screen design.
 
 Multiple pages are a convenience used for input forms only. They are not for printed output. When a multi-page form is printed, only the first page is printed.

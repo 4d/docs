@@ -3,90 +3,90 @@ id: formEditor
 title: Éditeur de formulaire
 ---
 
-## List Box Builder
+## Création de list box
 
-You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
+Vous pouvez créer rapidement de nouvelles list box de type sélection d'entités avec le **générateur de list box**. La nouvelle list box peut être utilisée immédiatement ou elle peut être modifiée via l'éditeur de formulaires.
 
-The List box builder lets you create and fill entity selection list boxes in a few simple operations.
-
-
-
-### Using the List Box Builder
+Le générateur de list box vous permet de créer et de remplir des list box de type sélection d'entités en quelques opérations simples.
 
 
-1.  In the Form Editor toolbar, click on the List box builder icon:
+
+### Utilisation du générateur de list box
+
+
+1.  Dans la barre d'outils de l'éditeur de formulaire, cliquez sur l'icône du générateur de zone de liste :
 
     ![](assets/en/FormEditor/listboxBuilderIcon.png)
 
-    The List box builder is displayed:
+    Le générateur de list box s'affiche :
 
     ![](assets/en/FormEditor/listboxBuilder.png)
 
-2.  Select a table from the **Table** dropdown list:
+2.  Sélectionnez une table dans la liste déroulante **Table** :
 
     ![](assets/en/FormEditor/listboxBuilderTable.png)
 
-3.  Select the fields for the list box in the **Fields** area:
+3.  Sélectionnez les champs de la list box dans la zone **Champs** :
 
     ![](assets/en/FormEditor/listboxBuilderFields.png)
 
-    By default, all fields are selected. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
+    Par défaut, tous les champs sont sélectionnés. Vous pouvez sélectionner ou désélectionner les champs individuellement ou utiliser **Ctrl+clic** (Windows) ou **Cmd+clic** (macOS) pour les sélectionner ou les désélectionner tous à la fois.
 
-    You can change the order of the fields by dragging them and dropping them.
+    Vous pouvez modifier l'ordre des champs via un glisser-déposer.
 
-4.  The expression to fill the list box's rows from the entity selection is prefilled:
+4.  L'expression qui permet de remplir les lignes de la list box à partir de la sélection d'entité est préremplie :
 
     ![](assets/en/FormEditor/listboxBuilderExpression.png)
 
-    This expression can be changed if necessary.
+    Cette expression peut être modifiée si nécessaire.
 
-5.  Clicking on the **Copy** button will copy the expression for loading all records into memory:
+5.  En cliquant sur le bouton **Copier**, l'expression sera copiée pour charger tous les enregistrements en mémoire :
 
     ![](assets/en/FormEditor/listboxBuilderCode.png)
 
-6.  Click the the **Build widget** button to create the list box.
+6.  Cliquez sur le bouton **Créer un widget** pour créer la list box.
 
     ![](assets/en/FormEditor/listboxBuilderBuild.png)
 
-The final list box:
+La list box finale :
 
 ![](assets/en/FormEditor/listboxBuilderListbox.png)
 
 
-## Shields
+## Badges
 
-The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
+L’éditeur de formulaires 4D permet d’utiliser des badges afin de faciliter la visualisation des propriétés des objets. You can find them on the form toolbar:
 
 ![](assets/en/FormEditor/shields.png)
 
 
-This function works as follows: Each shield is associated with a property (for example, **Views**, which means the object “is in the current view”). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
+Le principe de cette fonction est le suivant : chaque badge est associé à une propriété (par exemple **Vues**, signifiant que l'objet “est dans la vue courante”). Lorsque vous activez un badge, 4D affiche une petite icône (un badge) en haut à gauche de chaque objet du formulaire auquel s’applique la propriété.
 
 ![](assets/en/FormEditor/shield.png)
 
-### Using shields
+### Utilisation des badges
 
-To activate a shield, click the *Shield* icon from the toolbar until the desired shield is selected. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
+Pour activer un badge, cliquez sur l'icône *badge* jusqu’à ce que le badge souhaité soit sélectionné. Vous pouvez également cliquer sur la partie droite du bouton et sélectionner directement le type de badge à afficher dans le menu associé :
 
 
-If you don't want to display shields, select **No Shields** in the selection menu.
-> You can set which shields to display by default on the Forms Page of the application Preferences.
+Pour ne pas afficher de badges, choisissez la ligne **Pas de badges** dans le menu de sélection.
+> Vous pouvez définir les badges à afficher par défaut dans la Préférences de l’application.
 
-### Shield descriptions
+### Description du badge
 
-Here is a description of each type of shield:
+Voici la description de chaque type de badge :
 
-| Icon                                         | Nom               | Is displayed ...                                                                                                                     |
-| -------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/objectMethod.png)   | Object Method     | For objects with an associated object method                                                                                         |
-| ![](assets/en/FormEditor/standardAction.png) | Standard Action   | For objects with an associated standard action                                                                                       |
-| ![](assets/en/FormEditor/resizing.png)       | Redimensionnement | For objects with at least one resizing property, indicates the combination of current properties                                     |
-| ![](assets/en/FormEditor/entryOrder.png)     | Entry Order       | For enterable objects, indicates the number of entry order                                                                           |
-| ![](assets/en/FormEditor/viewNumber.png)     | Current View      | For all objects in the current view                                                                                                  |
-| ![](assets/en/FormEditor/filter.png)         | Filter            | For enterable objects with an associated entry filter                                                                                |
-| ![](assets/en/FormEditor/helpTip.png)        | Message d'aide    | For objects with an associated tip                                                                                                   |
-| ![](assets/en/FormEditor/localized.png)      | Localized         | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
-| ![](assets/en/FormEditor/noShields.png)      | No Shields        | No shields appear                                                                                                                    |
+| Icône                                        | Nom               | Est affiché...                                                                                                                                |
+| -------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](assets/en/FormEditor/objectMethod.png)   | Méthode objet     | Pour les objets auxquels une méthode objet est associée                                                                                       |
+| ![](assets/en/FormEditor/standardAction.png) | Action standard   | Pour les objets auxquels une action standard est associée                                                                                     |
+| ![](assets/en/FormEditor/resizing.png)       | Redimensionnement | Pour les objets disposant d’au moins une propriété de redimensionnement, indique la combinaison de propriétés courante                        |
+| ![](assets/en/FormEditor/entryOrder.png)     | Ordre de saisie   | Pour les objets saisissables, indique le numéro d’ordre de saisie                                                                             |
+| ![](assets/en/FormEditor/viewNumber.png)     | Vue courante      | Pour tous les objets de la vue courante                                                                                                       |
+| ![](assets/en/FormEditor/filter.png)         | Filtre            | Pour les objets saisissables auxquels un filtre de saisie est associé                                                                         |
+| ![](assets/en/FormEditor/helpTip.png)        | Infobulle         | Pour les objets auxquels une infobulle (message d’aide) est associée                                                                          |
+| ![](assets/en/FormEditor/localized.png)      | Localisé          | Pour les objets dont le libellé provient d’une référence (libellé débutant par “:”). La référence peut être de type ressource (STR#) ou XLIFF |
+| ![](assets/en/FormEditor/noShields.png)      | Pas de badge      | Aucun badge n’apparaît                                                                                                                        |
 
 ## Views
 
@@ -142,28 +142,28 @@ Here are a few important things to know before you start working with views:
 
 
 
-### Managing views
+### Gestion des vues
 
-#### Creating views
+#### Créer des vues
 
-Any object created in a form is placed in the first view ("View 1") of the form. The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (see [Renaming views](#renaming-views)), however it remains the default view.
+Tout objet créé dans un formulaire est placé dans la première vue ("Vue 1") du formulaire. La première vue 1 est **toujours** la vue par défaut, indiquée par (par défaut) après le nom. Le nom de la vue peut être modifié (voir [Renommer les vues](#renaming-views)), mais il demeure la vue par défaut.
 
 
 ![](assets/en/FormEditor/createView.png)
 
-There are two ways to add additional views:
+Il existe deux façons d'ajouter des vues supplémentaires :
 
-*   Click on the **Add a new view** button at the bottom of the View palette:
+*   Cliquez sur le bouton **Ajouter une nouvelle vue** en bas de la palette Vue :
 
 ![](assets/en/FormEditor/addView.png)
 
-*   Right-click on an existing view and select **Insert view**:
+*   Faites un clic droit sur une vue existante et sélectionnez **Insérer une vue** :
 
 ![](assets/en/FormEditor/addView2.png)
 
-There is no limitation on the number of views.
+Il n'y a pas de limitation du nombre de vues.
 
-#### Renaming views
+#### Renommer des vues
 
 By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
 

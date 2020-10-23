@@ -72,6 +72,11 @@ atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
+## Classes
+
+A class name must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names). They are case sensitive. Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+
+
 ## Champs
 
 Vous désignez un champ en spécifiant d’abord la table à laquelle il appartient. Le nom du champ se place immédiatement derrière celui de la table. Un nom de champ peut contenir jusqu’à 31 caractères.
@@ -105,6 +110,13 @@ FORM SET OUTPUT([Personnes];"Sortie")
  DIALOG([Stock];"Boîte de note"+String($vlStage))
 ```
 
+## Fonctions
+
+Function names must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+> Tip: Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+
+
 ## Sélections temporaires
 
 Le nom d'une sélection temporaire peut contenir jusqu’à 255 caractères, symbole <> non compris).
@@ -129,14 +141,27 @@ monObjet.monAttribut:="10"
  $valeur:=$clientObj.data.address.city
 ```
 
-**Note :** Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). For more information, see \[additional rules above\](#additional-rules-for-object-property-and-ORDA names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Note :** Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). For more information, see [additional rules above](#additional-rules-for-object-property-and-orda-names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
+
+## Paramètres
+
+Parameter names must start with a `$` character and be compliant with [property naming rules](#additional-rules-for-object-property-and-orda-names).
+
+Voici quelques exemples :
+
+```4d
+Function getArea($width : Integer; $height : Integer)-> $area : Integer
+
+#DECLARE ($i : Integer ; $param : Date) -> $myResult : Object
+```
 
 ## Commandes de plug-ins
 
 Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.
 
-Voici quelques exemples :
+Exemple :
+
 ```4d
 $erreur:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
@@ -230,7 +255,7 @@ If(Records in set("$Selection"+String($i))>0) //Client set
 
 ## Tables
 
-Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.
+You designate a table by placing its name between brackets: \[...]. Un nom de table peut contenir jusqu’à 31 caractères. Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
 
 Voici quelques exemples :
 ```4d
