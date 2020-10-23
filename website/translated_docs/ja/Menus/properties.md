@@ -38,11 +38,11 @@ title: メニュープロパティ
 
 各メニュー項目にカスタムパラメーターを関連付けることができます。 メニュー項目パラメーターは、その内容を自由に設定できる文字列です。 メニュエディターで設定するほかに、`SET MENU ITEM PARAMETER` コマンドを使う方法もあります。
 
-Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
+メニュー項目パラメーターは、とくに `Dynamic pop up menu`、`Get menu item parameter`、そして `Get selected menu item parameter` コマンドを使用する際など、メニューをプログラムで管理するのに便利です。
 
 ## 動作
 
-Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a **Monthly Report** menu command can call a project method that prepares a monthly report from a table containing financial data. The **Cut** menu command usually calls the `cut` standard action in order to move the selection to the clipboard and erase it from the window in the foreground.
+メニューにはプロジェクトメソッドや標準アクションを割り当てることができます。 メニュー項目が選択されると、4D は割り当てられた標準アクションまたはプロジェクトメソッドを実行します。 例えば、**月次報告書** メニューコマンドを設定し、財務データを格納したテーブルをもとに月次報告書を作成するプロジェクトメソッドを呼び出すことができます。 **カット** メニューコマンドは、`cut` 標準アクションを呼び出して、選択項目をクリップボードへ移動し、それを前面にあるウインドウから消去します。
 
 If you do not assign a method or a standard action to a menu command, choosing that menu command causes 4D to exit the Application environment and go to the Design environment. If only the Application environment is available, this means quitting to the Desktop.
 
