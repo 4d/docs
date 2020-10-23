@@ -108,7 +108,6 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ---
 
-<!-- REF file.File.Desc -->
 ## File
 
 <details><summary>履歴</summary>
@@ -117,12 +116,12 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF file.File.Syntax -->
+<!-- REF fileClass.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
-<!-- REF file.File.Params -->
-| 引数           | タイプ     |    | 説明                                              |
+<!-- REF #_command_.File.Params -->
+| 参照           | タイプ     |    | 説明                                              |
 | ------------ | ------- |:--:| ----------------------------------------------- |
 | path         | テキスト    | -> | File path                                       |
 | fileConstant | 整数      | -> | 4D file constant                                |
@@ -133,7 +132,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 #### 説明
-The `File` command <!-- REF file.File.Summary -->creates and returns a new object of the 
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the 
 
 `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
@@ -205,7 +204,7 @@ If the command is called from a component, pass the optional * parameter to get 
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #fileClass.create().Params -->
-| 引数  | タイプ |    | 説明                                                         |
+| 参照  | タイプ |    | 説明                                                         |
 | --- | --- | -- | ---------------------------------------------------------- |
 | 戻り値 | ブール | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
@@ -249,7 +248,7 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #fileClass.createAlias().Params -->
-| 引数                | タイプ       |    | 説明                                           |
+| 参照                | タイプ       |    | 説明                                           |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | テキスト      | -> | Name of the alias or shortcut                |
@@ -317,7 +316,7 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #fileClass.delete().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |  | ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->
@@ -426,7 +425,7 @@ You want to delete a specific file in the database folder:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #fileClass.moveTo().Params -->
-| 引数                | タイプ       |    | 説明                           |
+| 参照                | タイプ       |    | 説明                           |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
 | newName           | テキスト      | -> | Full name for the moved file |
@@ -501,7 +500,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #fileClass.rename().Params -->
-| 引数      | タイプ     |    | 説明                         |
+| 参照      | タイプ     |    | 説明                         |
 | ------- | ------- | -- | -------------------------- |
 | newName | テキスト    | -> | New full name for the file |
 | 戻り値     | 4D.File | <- | Renamed file               |
@@ -549,7 +548,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #fileClass.setContent().Params -->
-| 引数      | タイプ  |    | 説明                        |
+| 参照      | タイプ  |    | 説明                        |
 | ------- | ---- | -- | ------------------------- |
 | content | BLOB | -> | New contents for the file |
 <!-- END REF -->
@@ -591,7 +590,7 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 
 <!--REF #fileClass.setText().Params -->
-| 引数          | タイプ  |    | 説明                                               |
+| 参照          | タイプ  |    | 説明                                               |
 | ----------- | ---- | -- | ------------------------------------------------ |
 | text        | テキスト | -> | Text to store in the file                        |
 | charSetName | テキスト | -> | Name of character set                            |
