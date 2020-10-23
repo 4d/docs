@@ -107,7 +107,7 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[${subContents.webServer}](${siteConfig.baseUrl}${this.props.language}/WebServer/webServerObject.html)<br>[${subContents.restServer}](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
+                  content: `[${subContents.webServer}](${siteConfig.baseUrl}${this.props.language}/WebServer/webServer.html)<br>[${subContents.restServer}](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
