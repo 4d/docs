@@ -51,7 +51,6 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ---
 
-<!-- REF file.File.Desc -->
 ## File
 
 <details><summary>History</summary>
@@ -60,11 +59,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |v17 R5|Added|
 </details>
 
-<!-- REF file.File.Syntax -->
+<!-- REF fileClass.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
-<!-- REF file.File.Params -->
+<!-- REF #_command_.File.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |path|Text|->|File path|
@@ -77,7 +76,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### Description
 
-The `File` command <!-- REF file.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
 **File ( path { ; pathType } { ; \* })**
 

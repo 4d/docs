@@ -41,7 +41,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 |v17 R4|Added|
 </details>
 
-<!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
+<!-- REF #_command_.SMTP New transporter.Syntax -->
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Params -->
@@ -54,7 +54,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 #### Description
 
-The `SMTP New transporter` command <!-- REF #smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
+The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
 
 > This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.  
 > 
