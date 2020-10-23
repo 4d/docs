@@ -54,8 +54,8 @@ Standard actions can be used to carry out various current operations linked to s
 
 ### プロジェクトメソッドまたは標準アクションの割り当て
 
-You can assign a project method and/or a standard action to a selected menu command in the Menu editor:
-- **Method Name**: Select an existing project method name in the combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] button. 4D displays a project method creation dialog that is used to access the Method editor.
+メニューエディターにて、標準アクション/プロジェクトメソッドをメニューに割り当てることができます:
+- **メソッド名**: 既存のプロジェクトメソッドをコンボボックスで選択します。 プロジェクトメソッドがまだ存在しない場合、"メソッド名" コンボボックスにメソッド名を入力し、[...] ボタンをクリックします。 すると、4D はメソッド作成ダイアログボックスを表示し、メソッドエディターを開きます。
 - **Associated Standard Action**: Choose or write the action you want to assign in the "Associated Standard Action" combo box. You can enter any supported action and (optionally) parameter you want in the area. For a comprehensive list of standard actions, please refer to the **Standard actions** section in the *Design Reference*. **Note for macOS:** Under macOS, the custom menu commands associated with the *Quit* action are automatically placed in the application menu, in compliance with the platform interface standards.
 
 Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
