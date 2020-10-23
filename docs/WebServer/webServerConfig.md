@@ -15,6 +15,24 @@ There are different ways to configure the 4D web server settings, depending on t
 - using the properties of the [webServer object](webServerObject.md): settings for any web server, including component web servers, and the current session only. 
 
 
+
+
+## Cache  
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|Settings dialog box|Configuration page/Use the 4D Web cache||
+|Settings dialog box|Configuration page/Page Cache Size||
+
+Enables and configures the web page cache. 
+
+The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes. 
+
+You can modify the size of the cache in the **Pages Cache Size** area. The value you set depends on the number and size of your website’s static pages, as well as the resources that the host machines has at its disposal.
+
+>While using your web database, you can check the performance of the cache by using the `WEB GET STATISTICS` command. If, for example, you notice that the cache’s rate of use is close to 100%, you may want to consider increasing the size that has been allocated to it. The [/4DSTATS] and [/4DHTMLSTATS] URLs allow you to also obtain information about the cache’s state. 
+
+
 ## Certificate folder
 
 |Can be set with|Name|Comments|
@@ -28,8 +46,6 @@ By default with 4D or 4D Server, these files must be placed next to the [project
 With 4D in remote mode, these files must be located in the local resources folder of the database on the remote machine (see `4D Client Database Folder` paragraph of the `Get 4D folder` command). You must copy these files manually on the remote machine.
 
 > TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate). 
-
-
 
 
 ## Character Set
@@ -55,26 +71,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 > The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol. 
 
-
-## CORS
-
-### Enabling CORS Service
-
-|Can be set with|Name|Comments|
-|---|---|---|
-|webServer object|`CORSEnabled`|Boolean, true to enable the CORS (false by default)|
-|`WEB SET OPTION`|`Web CORS enabled`|0 (disabled, default) or 1 (enabled)|
-|Settings dialog box|Options (II) page/Enable CORS|Unchecked by default|
-
-The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
-
-When disabled (default), all cross site requests sent with CORS are ignored. 
-
-For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
-
-
-
-### CORS Settings
+## CORS Settings
 
 |Can be set with|Name|Comments|
 |---|---|---|
@@ -116,6 +113,9 @@ Accepted HTTP method(s) for the corresponding CORS host. The following HTTP meth
 Separate each method with a ";" (e,g,: "post;get"). If methods is empty, null, or undefined, all methods are enabled.
 
 
+
+
+
 ## Debug log
 
 |Can be set with|Name|Comments|
@@ -150,7 +150,7 @@ By default, when the web server is launched for the first time, 4D creates a hom
 
 You can designate another default home page by entering its pathname. 
 
-- The path is relative to the [default HTML root folder].
+- The path is relative to the [default HTML root folder](#root-folder).
 - The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
 - The path must neither start not end with a slash.
 
@@ -158,10 +158,44 @@ For example, if you want the default home page to be "MyHome.htm", and it is loc
 
 If you do not specify any default home page, the `On Web Connection` database method is called. It is up to you to process the request procedurally.
 
+## Enable CORS Service
 
-## HSTS
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`CORSEnabled`|Boolean, true to enable the CORS (false by default)|
+|`WEB SET OPTION`|`Web CORS enabled`|0 (disabled, default) or 1 (enabled)|
+|Settings dialog box|Options (II) page/Enable CORS|Unchecked by default|
 
-### Enabling HSTS
+The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
+
+When disabled (default), all cross site requests sent with CORS are ignored. 
+
+For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
+
+
+## Enable HTTP
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`HTTPEnabled`|boolean|
+|`WEB SET OPTION`|`Web HTTP enabled`||
+|Settings dialog box|Configuration page/Enable HTTP||
+
+Indicates whether or not the web server will accept non-secure connections. 
+
+
+## Enable HTTPS 
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`HTTPSEnabled`|boolean|
+|`WEB SET OPTION`|`Web HTTPS enabled`||
+|Settings dialog box|Configuration page/Enable HTTPS||
+
+Status for communication over HTTPS. This option is described in the [Connection Security](webServerConnectSecurity.md#managing-secured-connections-hsts) page.
+
+
+## Enable HSTS
 
 |Can be set with|Name|Comments|
 |---|---|---|
@@ -173,7 +207,7 @@ HTTP Strict Transport Security (HSTS) status. HSTS allows the 4D web server to d
 > HSTS requires that HTTPS is enabled on the server. HTTP must also be enabled to allow client initial connections.
 
 
-### HSTS Max Age
+## HSTS Max Age
 
 |Can be set with|Name|Comments|
 |---|---|---|
@@ -185,19 +219,34 @@ Default value is 63072000 (2 years)
 
 > **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.
 
-## HTTP
 
-### Enable HTTP
+
+
+
+## HTTP Compression Level
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPEnabled`|boolean|
-|`WEB SET OPTION`|`Web HTTP enabled`||
-|Settings dialog box|Configuration page/Enable HTTP||
+|webServer object|`HTTPCompressionLevel`||
+|`WEB SET OPTION`|`Web HTTP compression level`|Applies to Web and Web Service |
 
-Indicates whether or not the web server will accept non-secure connections. 
+Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged. 
 
-### HTTP Port
+Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. By default, the compression level is 1 (faster compression).
+
+## HTTP Compression Threshold
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`HTTPCompressionThreshold`||
+|`WEB SET OPTION`|`Web HTTP compression threshold`||
+
+In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.
+
+Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
+
+
+## HTTP Port
 
 |Can be set with|Name|Comments|
 |---|---|---|
@@ -216,30 +265,6 @@ From a web browser, you need to include the non-default HTTP port number into th
 If you specify 0, 4D will use the default HTTP port number 80. 
 
 
-## HTTP Compression
-
-### HTTP Compression Level
-
-|Can be set with|Name|Comments|
-|---|---|---|
-|webServer object|`HTTPCompressionLevel`||
-|`WEB SET OPTION`|`Web HTTP compression level`|Applies to Web and Web Service |
-
-Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged. 
-
-Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. By default, the compression level is 1 (faster compression).
-
-### HTTP Compression Threshold
-
-|Can be set with|Name|Comments|
-|---|---|---|
-|webServer object|`HTTPCompressionThreshold`||
-|`WEB SET OPTION`|`Web HTTP compression threshold`||
-
-In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.
-
-Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
-
 ## HTTP Trace
 
 |Can be set with|Name|Comments|
@@ -250,19 +275,9 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
 
 
-## HTTPS
 
-### Enable HTTPS 
 
-|Can be set with|Name|Comments|
-|---|---|---|
-|webServer object|`HTTPSEnabled`|boolean|
-|`WEB SET OPTION`|`Web HTTPS enabled`||
-|Settings dialog box|Configuration page/Enable HTTPS||
-
-Status for communication over HTTPS. This option is described in the [Connection Security](webServerConnectSecurity.md#managing-secured-connections-hsts) page.
-
-### HTTPS Port
+## HTTPS Port
 
 |Can be set with|Name|Comments|
 |---|---|---|
@@ -271,7 +286,6 @@ Status for communication over HTTPS. This option is described in the [Connection
 |Settings dialog box|Configuration page/HTTPS Port||
 
 Listening IP port number for HTTPS connections via TLS. By default, the value is 443 (standard value). See also [HTTP Port](#http-port) for information on port numbers. 
-
 
 
 ## Inactive Process Timeout
@@ -329,160 +343,198 @@ Default is true (enabled).
 > When this option is checked, the "Reuse Temporary Contexts" option is automatically checked (and locked).
 
 
+## Log Recording
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`logRecording`||
+|`WEB SET OPTION`|`Web log recording`||
+|Settings dialog box|Log (type) page/Log Format|Pop up menu|
+
+Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder. 
+
+This setting allows you to select the format of this file. Available values are:
+
+|Value|Format name|Description|
+|---|---|---| 
+|0|No Log File|Default|
+|1|Record in CLF format|Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence.|
+|2|Record in DLF format|Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.|
+|3|Record in ELF format|Extended Log Format - To be customized in the Settings dialog box|
+|4|Record in WLF format|WebStar Log Format - To be customized in the Settings dialog box|
+
+> Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
 
 
+## Maximum Concurrent Web Processes 
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`maxConcurrentProcesses`||
+|`WEB SET OPTION`|`Web max concurrent processes`||
+|Settings dialog box|Options (I) page/Maximum Concurrent Web Processes||
+
+Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
+
+By default, the value is 100. You can set the number anywhere between 10 and 32000.
 
 
+## Maximum Request Size 
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`maxRequestSize`||
+|`WEB SET OPTION`|`Web maximum requests size`||
+
+Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
+
+This limit is used to avoid web server saturation due to incoming requests that are too large. When a request reaches this limit, the 4D web server rejects it.
+
+Possible values: 500 000 to 2 147 483 648.
 
 
-## Configuration Settings
+## Maximum Session Number
 
-You can configure the operation of the 4D Web Server using the parameters set on the **Web** page of the Database Settings. This section describes the parameters of the **Configuration**, **Options (I)** and **(II)** tabs of this page.
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`maxSessions`||
+|`WEB SET OPTION`|`Web max sessions	`||
 
-*	The parameters of the **Log** pages are covered in the [Server Management](webServerMgmt.md#connection-log-file) section.
+Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default). 
 
-*	The parameters of the  **Web Services** page are covered in the *Design Reference* manual.
-
->**Compatibility note:** Certain web mechanisms found in previous versions of 4D are now considered obsolete (for example, "Do not remove “/” on unknown URLs"). For compatibility's sake, these mechanisms can still be used in converted databases. In this case, you can display them and if necessary disable them on the **Compatibility** page of the Database Settings.
-
-### Configuration page 
-
-![](assets/en/WebServer/config.png)
-
-#### Launch Web Server at Startup
-  
-Indicates whether the web server will be launched when the 4D application starts. This option is described in the [Starting the 4D Web Server](#starting-the-4d-web-server) section.
+Default value: 100 (pass 0 to restore the default value).
 
 
+## Minimum TLS Version
 
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`minTLSVersion`|number|
 
+Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.
 
+Possible values:
 
-#### Defining the IP Address for the HTTP Requests 
+- 1 = TLSv1_0
+- 2 = TLSv1_1
+- 3 = TLSv1_2 (default)
+
+If modified, the server must be restarted to use the new value.
+
+> The minimum TLS version used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server and client/server connections.
+
  
-You can define the IP address on which the web server must receive HTTP requests.
+## Name
 
->The HTTP server automatically supports IPv6 address notation when the All option is selected in the "IP Address" list. For more information, refer to [IPv6 Support](webServerConnect.md#ipv6-support).
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`name`||
 
-By default, the server responds to all IP addresses (**All** option).
+Name of the web server application. Useful when component web servers are started. 
 
-The drop-down list automatically lists all available IP addresses on the machine. When you select a specific address, the server only responds to requests sent to this address. This feature is for 4D Web Servers located on machines with multiple TCP/IP addresses. It is, for example, frequently the case of most host providers. Implementing such a MultiHoming system requires specific configurations on the web server machine:
+## OpenSSL Version
 
-##### Installing secondary IP addresses on Mac OS
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`openSSLVersion`|Read-only|
 
-To configure a MultiHoming system on macOS:
-
-1.	Open the **TCP/IP** Control Panel.
-
-2.	Select the **Manually** option from the **Configuration** popup menu.
-
-3.	Create a text file called "Secondary IP Addresses" and save it in the Preferences subfolder of your System folder.<p>
-Each line of the "Secondary IP Addresses" file should contain a secondary IP address and an optional subnet mask and router address for the secondary IP address.
-
-Please check the Apple documentation for more information.
-
-##### Installing secondary IP addresses on Windows
-
-To configure a MultiHoming system on Windows:
-
-1.	Select the following sequences of commands (or their equivalents according to your version of Windows):<p>**Start** menu > **Control Panel** **> Network and Internet Connections** > **Network connections** > **Local Area Connection** (Properties) > **Internet Protocol (TCP/IP)** > **Properties** button > **Advanced...** button. <p>The "Advanced TCP/IP Settings" dialog is displayed.
-
-2.	Click the **Add....** button in the "IP Addresses" area, and add additional IP addresses.
-	
-You can define up to 5 different IP addresses. You may need to consult your systems administrator in order to do so.
-
-#### Enable HTTPS  
-
-Indicates whether or not the Web server will accept secure connections. This option is described in the [Connection Security](webServerConnectSecurity.md#managing-secured-connections-hsts) page.
-
-#### HTTPS Port Number 
- 
-Allows you to modify the TCP/IP port number used by the web server for secured HTTP connections over TLS (HTTPS protocol). By default, the HTTPS port number is set to 443 (standard value).
-
-You may consider changing this port number for two main reasons:
-
-*	for security reasons — attacks against web servers are generally concentrated on standard TCP ports (80 and 443).
-*	in macOS, in order to allow “standard” users to launch the web server in a secured mode — in macOS, the use of TCP/IP ports reserved for web publications (0 to 1023) requires specific access privileges: only the root user can launch an application using these ports. In order for standard users to be able to launch the web server, one solution is to modify the TCP/IP port number.<p>
-You can pass any valid value (in order to avoid access restrictions in macOS, you should pass a value greater than 1023). For more information about TCP port numbers, refer to the [TCP port number](#tcp-port-number) paragraph above.
-
-#### Database Access through 4DSYNC URLs  
-
-This option controls support of HTTP synchronization requests containing */4DSYNC* URLs. It is covered in the [Connection Management](webServerConnect.md#connection-security) section.
-
-#### Default HTML Root  
-
-Allows you to define the default location of the website files and to indicate the hierarchical level on the disk above which the files will not be accessible. This option is described in the [Connection Management](webServerConnect.md#connection-security) section.
+Version of the OpenSSL library used.
 
 
-### Options (I) Page  
+## Perfect Forward Secrecy
 
-![](assets/en/WebServer/option1.png)
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`perfectForwardSecrecy`|Boolean, read-only|
 
-#### Cache for Static Pages  
+True if PFS is available on the web server (see TLS section).
 
-The 4D Web Server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested.
-Using the cache allows you to significantly increase the web server’s performance when sending static pages.
 
-The cache is shared between all the web processes. You can set the size of the cache in the Preferences. By default, the cache of the static pages is not enabled. To activate it, simply check the **Use the 4D Web cache** option.
+## Root Folder
 
-You can modify the size of the cache in the **Pages Cache Size** area. The value you set depends on the number and size of your website’s static pages, as well as the resources that the host machines has at its disposal.
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`rootFolder`|Text property but can be a [`4D.Folder`](API/folderClass.md) object when used with the settings parameter of the `start()` function|
+|`WEB SET ROOT FOLDER`|||
+|Settings dialog box|Configuration page/Default HTML Root||
 
->While using your web database, you can check the performance of the cache by using the routine `WEB GET STATISTICS`. If, for example, you notice that the cache’s rate of use is close to 100%, you may want to consider increasing the size that has been allocated to it.<p>
-The */4DSTATS* and */4DHTMLSTATS* URLs allow you to also obtain information about the cache’s state. Please refer to Information about the Web Site.
+Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path using [filesystems]. The web server will need to be restarted in order for the new root folder to be taken into account.
 
-Once the cache has been enabled, the 4D Web Server looks for the page requested by the browser first in the cache. If it finds the page, it sends it immediately. If not, 4D loads the page from disk and places it in the cache.
+Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. If a requested URL or a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.
 
-When the cache is full and additional space is required, 4D “unloads” the oldest pages first, among the least demanded ones.
+By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time. The root folder is created:
+- with 4D (local) and 4D Server, at the same level as the [Project folder](Project/architecture.md#project-folder). 
+- with 4D in remote mode, in the local resources folder.
 
-##### Clearing the Cache  
+You can designate another default HTML root folder by entering its pathname. 
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
+- The path is relative to the [Project folder](Project/architecture.md#project-folder) (4D local and 4D Server) or to the folder containing the 4D application or software package (4D in remote mode).
+- The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
+- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name
+- The path must  start not end with a slash (except if you want the HTML root folder to be the Project or 4D remote folder, see below).
 
-To do so, you just have to click on the **Clear Cache** button. The cache is then immediately cleared.
+For example, if you want the HTML root folder to be the "Web" subfolder in the "MyWebApp" folder, enter "MyWebApp/Web".
 
->You can also use the special URL */4DCACHECLEAR*.
+> When the HTML root folder is modified, the cache is cleared so as to not store files whose access is restricted. 
 
-#### Inactive Process Timeout  
 
-Allows you to set the maximum timeout before closing for inactive web processes on the server.
 
-#### Maximum Concurrent Web Processes 
- 
-This option indicates the strictly high limit of **Maximum Concurrent Web Processes** of any type (standard web processes or belonging to the“pool of processes”) that can be simultaneously open on the server. This parameter allows prevention of 4D Server saturation as the result of massive number of requests.
+## Session Cookie Domain
 
-By default, this value is 32000. You can set the number anywhere between 10 and 32000.
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`sessionCookieDomain`||
+|`WEB SET OPTION`|`Web session cookie domain`||
 
-When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the following *“Server unavailable”* message (status HTTP 503 – Service Unavailable) for each new request.
+Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
 
->You can also set the maximum number of web processes using the `WEB SET OPTION` command.
 
-##### About the Pool of Web Processes  
+## Session Cookie Name
 
-The “pool” of web processes allows increasing the reactivity of the web server. This reserve is sized by a minimum (0 by default) and a maximum (10 by default) of processes to recycle. These processes can be modified using the `SET DATABASE PARAMETER` command. Once the maximum number of web processes has been changed, if this number is inferior to the superior limit in the “pool”, this limit is lowered to the maximum number of Web processes.
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`sessionCookieName`||
+|`WEB SET OPTION`|`Web session cookie name`||
 
-##### How to determine the right value?  
+Name of the cookie used for saving the session ID. Default = "4DSID".
 
-In theory, the maximum number of web processes is the result of the following formula: **available memory / web process stack size**(\*)
 
-Another solution is to visualize the information on web processes displayed in the Runtime Explorer: the current number of web processes and the maximum number reached since the web server boot are indicated.
+## Session Cookie Path
 
-*(\*) The stack size allocated by 4D for a web process is around 512 KB (indicative value, ​​which may vary based on context).* 
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`sessionCookiePath`||
+|`WEB SET OPTION`|`Web session cookie path`||
 
-#### Automatic Session Management   
+"path" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
 
-Enables or disables the internal mechanism for automatic handling of user sessions by the 4D HTTP server. This mechanism is described in the [Session Management](webServerSessions.md) section.
 
-By default, this mechanism is enabled in databases created with 4D v13 and later versions. However, for compatibility reasons, it is disabled in databases converted from previous versions of 4D. You must enable it explicitly in order to benefit from this functionality.
+## Session IP Address Validation
 
-When this option is checked, the "Reuse Temporary Contexts" option is automatically checked (and locked).
+Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|`sessionIPAddressValidation`||
+|`WEB SET OPTION`|`Web session enable IP address validation`||
+
+IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application.
+
+When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
+
+Possible values: 0 (disabled) or 1 (enabled, default).
+
+
 
 
 ## Deprecated Settings
 
-The following settings are still supported but rely on deprecated feautures or technologies. It is usually recommended to keep default values. 
+The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values. 
+
+#### Allow database Access through 4DSYNC URLs
+
+This option controls support of HTTP synchronization requests containing deprecated */4DSYNC* URLs. 
 
 
-### Reuse temporary contexts (in remote mode)  
+#### Reuse temporary contexts (in remote mode)  
 
 Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
 
@@ -492,23 +544,14 @@ In return, you must make sure in this case to systematically initialize the vari
 
 >*	This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
 >
->*	This option only has an effect with a 4D Web Server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
+>*	This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
 
-#### “Passwords” area  
 
-Configuration of website access protection using passwords. This option is described in the [Server Security](webServerSecurity.md#password-management) section.
 
-### Options (II) Page  
+#### Send Extended Characters Directly  
 
-![](assets/en/WebServer/option2.png)
+When this option is checked, the web server sends extended characters “as is” in semi-dynamic pages, without converting them into HTML entities. This option has shown a speed increase on most foreign operating systems (especially the Japanese system).
 
-#### Directly Sending Extended Characters  
-
-By default, the 4D Web Server converts the extended characters in the dynamic and static web pages according to HTML standards before sending them. They are then interpreted by the browsers.
-
-You can set the web server so that the extended characters are sent “as is”, without converting them into HTML entities. This option has shown a speed increase on most foreign operating systems (especially the Japanese system).
-
-To do this, check the **Send Extended Characters Directly** option.
 
 #### Keep-Alive Connections  
 
@@ -528,11 +571,3 @@ The default value (100) can be increased or decreased depending on the resources
 *	**Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection.<p>
 If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. This operation is not visible for the user.
 
-
-### macOS HelperTool   
-
-In macOS, using TCP/IP ports reserved for web publishing (ports 0 to 1023) requires specific access privileges. In order for you to be able to use these ports, 4D provides a utility program named HelperTool. When this program is installed, it retrieves the appropriate access rights and automatically takes charge of opening the web ports. This mechanism functions with 4D (all modes), 4D Server and 4D Volume Desktop executable applications.
-
-The HelperTool application is included in the 4D software. Installation takes place automatically during the first opening of a port <1024 on the machine. The user is informed that a tool is going to be installed and is prompted to enter a name and an administrator password for the machine. This operation only takes place once.
-
-The application is renamed "com.4D.Helper" and is installed in the "/Library/PrivilegedHelperTools/" folder (with current macOS releases). After the initial sequence, the 4D Web Server can be started and stopped transparently, regardless of the 4D version used.
