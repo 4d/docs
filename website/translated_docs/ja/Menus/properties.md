@@ -30,13 +30,13 @@ title: メニュープロパティ
 | <I  | 小なりI             | イタリック                                         |
 | <U  | 小なりU             | 下線                                            |
 | !文字 | エクスクラメーションマーク+文字 | 文字をチェックマークとして追加 (macOS); チェックマークを追加 (Windows) |
-| /文字 | スラッシュ+文字         | Add character as shortcut                     |
+| /文字 | スラッシュ+文字         | 文字をショートカットとして追加                               |
 
 
 
-## 引数
+## 参照
 
-You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the `SET MENU ITEM PARAMETER` command.
+各メニュー項目にカスタムパラメーターを関連付けることができます。 A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the `SET MENU ITEM PARAMETER` command.
 
 Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
 
