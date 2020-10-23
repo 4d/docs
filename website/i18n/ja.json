@@ -15,19 +15,19 @@
         "title": "CryptoKey クラス"
       },
       "Backup/backup": {
-        "title": "Backup"
+        "title": "バックアップ"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "ログファイル (.journal)"
       },
       "Backup/overview": {
         "title": "概要"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "復元"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "バックアップ設定"
       },
       "Concepts/about": {
         "title": "4D ランゲージについて"
@@ -508,13 +508,13 @@
         "title": "Menu bar features"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "メニューとメニューバーの作成"
       },
       "Menus/overview": {
         "title": "概要"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "メニュープロパティ"
       },
       "Menus/sdi": {
         "title": "SDI mode on Windows"
@@ -715,7 +715,7 @@
       "Access Rights": "アクセス権限",
       "Administration": "データベース管理",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
+      "Backup and Restore": "バックアップと復元",
       "Web Server": "Web Server",
       "REST Server": "REST Server",
       "Forms": "Forms",
@@ -723,7 +723,7 @@
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "Form Events",
-      "Menus": "Menus"
+      "Menus": "メニュー"
     }
   },
   "pages-strings": {
@@ -738,11 +738,11 @@
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
-    "Menus|no description given": "Menus",
+    "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
-    "Backup and Restore|no description given": "Backup and Restore",
+    "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",

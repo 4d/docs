@@ -38,17 +38,17 @@ Voici une description des données retournées :
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | Chaine     | Nom de la classe du datastore.                                                                                                                                                                                          |
 | __COUNT       | Nombre     | Nombre d'entités dans la classe du datastore.                                                                                                                                                                           |
-| __SENT        | Nombre     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                                                     |
+| __SENT        | Nombre     | Nombre d'entités envoyées par la requête REST. Ce nombre peut être le nombre total d'entités s'il est inférieur à la valeur définie par `$top/$limit`.                                                                  |
 | __FIRST       | Nombre     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                            |
 | __ENTITIES    | Collection | Cette collection d'objets contient un objet pour chaque entité avec tous ses attributs. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
 
-Each entity contains the following properties:
+Chaque entité contient les propriétés suivantes :
 
-| Propriété   | Type   | Description                                                                                                |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | Chaine | Value of the primary key defined for the datastore class.                                                  |
-| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | Nombre | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| Propriété   | Type   | Description                                                                                                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| __KEY       | Chaine | Valeur de la clé primaire définie pour le datastore class.                                                                   |
+| __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
+| __STAMP     | Nombre | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
 Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
 

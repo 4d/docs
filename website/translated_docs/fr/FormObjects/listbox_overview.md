@@ -44,7 +44,7 @@ Il est possible d'ajouter une méthode objet à l'objet list box et/ou à chaque
 1. Méthode objet de chaque colonne
 2. Méthode objet de la list box
 
-The column object method gets events that occur in its [header](#list-box-headers) and [footer](#list-box-footers).
+La méthode objet de colonne obtient les événements qui se produisent dans son [en-tête](#list-box-headers) et son [pied](#list-box-footers).
 
 
 
@@ -940,11 +940,11 @@ Cell values are stored in the "value" attribute. This attribute is used for inpu
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
 > Null values are supported and result in an empty cell.
 
-#### min and max
+#### min et max
 
-When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
+Lorsque le "valueType" est "real" ou "integer", l'objet accepte également les attributs min et max avec les valeurs appropriées (les valeurs doivent être du même type que valueType).
 
-These attributes can be used to control the range of input values. When a cell is validated (when it loses the focus), if the input value is lower than the min value or greater than the max value, then it is rejected. In this case, the previous value is maintained and a tip displays an explanation.
+Ces attributs peuvent être utilisés pour contrôler la plage de valeurs d'entrée. Lorsqu'une cellule est validée (lorsqu'elle perd le focus), si la valeur de saisie est inférieure à la valeur minimale ou supérieure à la valeur maximale, elle est rejetée. Dans ce cas, la valeur précédente est conservée et une astuce affiche une explication.
 
 ````4d
  C_OBJECT($ob3)
@@ -1085,7 +1085,7 @@ Vous voulez afficher une combo box basée sur une énumération nommée "colors"
 
 #### unitsList, unitsListName, unitsListReference et unitReference
 
-You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). Pour définir une liste d'unités, vous pouvez utiliser l'un des attributs suivants :
+Vous pouvez utiliser des attributs spécifiques afin d'associer des unités aux valeurs des cellules (par exemple "10 cm", "20 pixels", etc.). Pour définir une liste d'unités, vous pouvez utiliser l'un des attributs suivants :
 
 *   "unitsList" : un tableau contenant les x éléments définissant les unités disponibles (ex : "cm", "pouces", "km", "miles", etc.). Utilisez cet attribut pour définir des unités dans l'objet.
 *   "unitsListReference" : une référence de liste 4D contenant les unités disponibles. Utilisez cet attribut pour définir des unités à l'aide d'une liste 4D créée avec la commande [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
@@ -1095,7 +1095,7 @@ Quel que soit son mode de définition, la liste d'unités peut être associée �
 
 *   "unitReference" : une valeur simple contenant l'indice (de 1 à x) de l'élément sélectionné dans la liste de valeurs "unitList", "unitsListReference" ou "unitsListName".
 
-The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
+L'unité courante est affichée sous forme de bouton affichant successivement les valeurs de "unitList", "unitsListReference" ou "unitsListName" à chaque clic (par exemple "pixels" -> "lignes" -> "cm" -> "pixels" -> etc.)
 
 Exemple :
 
@@ -1147,7 +1147,7 @@ L'attribut "valueType" de valeur "color" vous permet d'afficher soit une couleur
 ![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
 
-*   If the value is a text, then the text is displayed (*e.g.*: "value";"Automatic").
+*   Si la valeur est un texte, le texte est simplement affiché (par exemple : "value";"Automatic").
 
 
 #### valueType event
