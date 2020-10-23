@@ -65,11 +65,11 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 | v17 R4 | 追加                                           |
 </details>
 
-<!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
+<!-- REF #_command_.SMTP New transporter.Syntax -->
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Params -->
-| 引数     | タイプ                |    | 説明                                                  |
+| 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
 | server | オブジェクト             | -> | Mail server information                             |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
@@ -77,7 +77,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 
 #### 説明
-The `SMTP New transporter` command <!-- REF #smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the 
+The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the 
 
 *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
 
@@ -279,7 +279,7 @@ The SMTP connection is automatically closed:
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #smtpTransporterClass.send().Params -->
-| 引数   | タイプ    |    | 説明                                                |
+| 参照   | タイプ    |    | 説明                                                |
 | ---- | ------ |:--:| ------------------------------------------------- |
 | mail | オブジェクト | -> | [Email](emailObjectClass.md#email-object) to send |
 | 戻り値  | オブジェクト | <- | SMTP status                                       |
