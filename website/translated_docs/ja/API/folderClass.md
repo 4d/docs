@@ -91,7 +91,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 ---
-<!-- REF folder.Folder.Desc -->
+
 ## Folder
 
 <details><summary>履歴</summary>
@@ -100,12 +100,12 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF folder.Folder.Syntax -->
+<!-- REF #_command_.Folder.Syntax -->
 **Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 
-<!-- REF folder.Folder.Params -->
-| 引数             | タイプ       |    | 説明                                              |
+<!-- REF folderClass.Folder.Params -->
+| 参照             | タイプ       |    | 説明                                              |
 | -------------- | --------- |:--:| ----------------------------------------------- |
 | path           | テキスト      | -> | Folder path                                     |
 | folderConstant | 整数        | -> | 4D folder constant                              |
@@ -116,7 +116,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 #### 説明
-The `Folder` command <!-- REF folder.Folder.Summary -->creates and returns a new object of the 
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the 
 
 `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
 
@@ -177,7 +177,7 @@ If the command is called from a component, pass the optional * parameter to get 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #folderClass.create().Params -->
-| 引数  | タイプ |    | 説明                                                           |
+| 参照  | タイプ |    | 説明                                                           |
 | --- | --- | -- | ------------------------------------------------------------ |
 | 戻り値 | ブール | <- | True if the folder was created successfully, false otherwise |
 <!-- END REF -->
@@ -240,7 +240,7 @@ End if
 
 
 <!--REF #folderClass.createAlias().Params -->
-| 引数                | タイプ       |    | 説明                                           |
+| 参照                | タイプ       |    | 説明                                           |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | テキスト      | -> | Name of the alias or shortcut                |
@@ -304,7 +304,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #folderClass.delete().Params -->
-| 引数     | タイプ |    | 説明                     |
+| 参照     | タイプ |    | 説明                     |
 | ------ | --- | -- | ---------------------- |
 | option | 整数  | -> | Folder deletion option |
 <!-- END REF -->
@@ -417,7 +417,7 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #folderClass.moveTo().Params -->
-| 引数                | タイプ       |    | 説明                             |
+| 参照                | タイプ       |    | 説明                             |
 | ----------------- | --------- | -- | ------------------------------ |
 | destinationFolder | 4D.Folder | -> | Destination folder             |
 | newName           | テキスト      | -> | Full name for the moved folder |
@@ -491,7 +491,7 @@ You want to move and rename a folder:
 
 
 <!--REF #folderClass.rename().Params -->
-| 引数      | タイプ       |    | 説明                           |
+| 参照      | タイプ       |    | 説明                           |
 | ------- | --------- | -- | ---------------------------- |
 | newName | テキスト      | -> | New full name for the folder |
 | 戻り値     | 4D.Folder | <- | Renamed folder               |
