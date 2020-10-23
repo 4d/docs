@@ -21,7 +21,7 @@ Class constructor($firstname : Text; $lastname : Text)
     This.lastName:=$lastname
 ```
 
-In a method, creating a "Person":
+Dans une méthode, créons une "Personne" :
 
 ```
 var $o : cs.Person //object of Person class
