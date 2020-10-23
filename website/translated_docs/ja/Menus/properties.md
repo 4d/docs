@@ -1,14 +1,14 @@
 ---
 id: properties
-title: Menu item properties
+title: メニュープロパティ
 ---
 
-You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
+アクション、フォントスタイルや区切り線、キーボードショートカット、アイコンなど様々なメニュー項目プロパティを設定できます。
 
 
 ## タイトル
 
-The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
+**タイトル** プロパティには、アプリケーションインターフェースに表示されるメニュー/メニュー項目のラベルを指定します。
 
 In the Menu editor, you can directly enter the label as "hard coded". Or, you can enter a reference for a variable or an XLIFF element, which will facilitate the maintenance and translation of applications. You can use the following types of references:
 
