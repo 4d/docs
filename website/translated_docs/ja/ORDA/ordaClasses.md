@@ -52,12 +52,12 @@ ORDA データモデルクラスはすべて **`cs`** クラスストアのプ�
 
 > ORDA ユーザークラスは通常のクラスファイル (.4dm) としてプロジェクトの Classes サブフォルダーに保存されます [(後述参照)](#クラスファイル)。
 
-Also, object instances from ORDA data model user classes benefit from their parent's properties and functions:
+ORDA データモデルユーザークラスのオブジェクトインスタンスは、それらの親クラスのプロパティや関数を使うことができます:
 
-- a Datastore class object can call functions from the [ORDA Datastore generic class](API/datastoreClass.md).
-- a Dataclass class object can call functions from the [ORDA Dataclass generic class](API/dataclassClass.md).
-- an Entity selection class object can call functions from the [ORDA Entity selection generic class](API/entitySelectionClass.md).
-- an Entity class object can call functions from the [ORDA Entity generic class](API/entityClass.md).
+- Datastore クラスオブジェクトは、[ORDA Datastore 汎用クラス](API/datastoreClass.md) の関数を呼び出すことができます。
+- Datastore クラスオブジェクトは、[ORDA Datastore 汎用クラス](API/datastoreClass.md) の関数を呼び出すことができます。
+- EntitySelection クラスオブジェクトは [ORDA EntitySelection 汎用クラス](API/entitySelectionClass.md) の関数を呼び出すことができます。
+- Entity クラスオブジェクトは [ORDA Entity 汎用クラス](API/entityClass.md) の関数を呼び出すことができます。
 
 
 

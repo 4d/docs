@@ -16,7 +16,7 @@ De plus, sous macOS, la propriété du bouton par défaut modifie l'apparence du
 
 > Le bouton doit avoir une hauteur standard pour obtenir l'apparence du bouton par défaut.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline:
+Sous Windows, le concept de "choix recommandé" n'est pas pris en charge: seul le bouton focalisé a une apparence différente à l'exécution. Cependant, dans l'éditeur de formulaires 4D, le bouton par défaut est représenté par un contour bleu :
 
 ![](assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -276,17 +276,17 @@ Affiche/masque le cadre de la page lorsque le [mode d'affichage de la page](#vie
 ---
 ## Afficher les références
 
-Displays all 4D expressions inserted in the 4D Write Pro document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
+Affiche toutes les expressions 4D insérées dans le document 4D Write Pro comme *références*. Lorsque cette option est désactivée, les expressions 4D sont affichées sous forme de *valeurs*. Par défaut, lorsque vous insérez un champ ou une expression 4D, 4D Write Pro calcule et affiche sa valeur actuelle. Sélectionnez cette propriété si vous souhaitez savoir quel champ ou quelle expression est affiché(e). Les références de champ ou d'expression apparaissent alors dans votre document, sur fond gris.
 
-For example, you have inserted the current date along with a format, the date is displayed:
+Par exemple, vous avez inséré la date courante avec un format, la date s'affiche :
 
 ![](assets/en/FormObjects/writePro1.png)
 
-With the Show references property on, the reference is displayed:
+Lorsque la propriété Afficher les références est activée, la référence s'affiche :
 
 ![](assets/en/FormObjects/writeProExpr.png)
 
-> 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
+> Les expressions 4D peuvent être insérées à l'aide de la commande `ST INSERT EXPRESSION`.
 
 
 #### Grammaire JSON
