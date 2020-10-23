@@ -60,7 +60,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 **ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #datastoreClass.ds.Params -->
-| 引数      | タイプ          |    | 説明                                         |
+| 参照      | タイプ          |    | 説明                                         |
 | ------- | ------------ | -- | ------------------------------------------ |
 | localID | テキスト         | -> | Local ID of the remote datastore to return |
 | 戻り値     | cs.DataStore | <- | Reference to the datastore                 |
@@ -136,7 +136,7 @@ Using the main datastore on the 4D database:
 **Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #datastoreClass.Open datastore.Params -->
-| 引数             | タイプ          |    | 説明                                                                        |
+| 参照             | タイプ          |    | 説明                                                                        |
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
 | connectionInfo | オブジェクト       | -> | Connection properties used to reach the remote datastore                  |
 | localID        | テキスト         | -> | Id to assign to the opened datastore on the local application (mandatory) |
@@ -283,7 +283,7 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 **.cancelTransaction()**<!-- END REF -->
 
 <!-- REF #datastoreClass.cancelTransaction().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |::| ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->
@@ -322,7 +322,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 
 <!-- REF #datastoreClass.encryptionStatus().Params -->
-| 引数  | タイプ    |    | 説明                                                                          |
+| 参照  | タイプ    |    | 説明                                                                          |
 | --- | ------ |:--:| --------------------------------------------------------------------------- |
 | 戻り値 | オブジェクト | <- | Information about the encryption of the current datastore and of each table |
 <!-- END REF -->
@@ -397,7 +397,7 @@ You want to know the number of encrypted tables in the current data file:
 **.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #datastoreClass.getInfo().Params -->
-| 引数  | タイプ    |    | 説明                   |
+| 参照  | タイプ    |    | 説明                   |
 | --- | ------ |:--:| -------------------- |
 | 戻り値 | オブジェクト | <- | Datastore properties |
 <!-- END REF -->
@@ -466,7 +466,7 @@ On a remote datastore:
 **.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #datastoreClass.getRequestLog().Params -->
-| 引数  | タイプ    |    | 説明                                                           |
+| 参照  | タイプ    |    | 説明                                                           |
 | --- | ------ |:--:| ------------------------------------------------------------ |
 | 戻り値 | コレクション | <- | Collection of objects, where each object describes a request |
 <!-- END REF -->
@@ -508,7 +508,7 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #datastoreClass.provideDataKey().Params -->
-| 引数            | タイプ    |    | 説明                                    |
+| 参照            | タイプ    |    | 説明                                    |
 | ------------- | ------ | -- | ------------------------------------- |
 | curPassPhrase | テキスト   | -> | Current encryption passphrase         |
 | curDataKey    | オブジェクト | -> | Current data encryption key           |
@@ -586,7 +586,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 
 <!-- REF #datastoreClass.startRequestLog().Params -->
-| 引数     | タイプ     |    | 説明                                   |
+| 参照     | タイプ     |    | 説明                                   |
 | ------ | ------- | -- | ------------------------------------ |
 | file   | 4D.File | -> | File object                          |
 | reqNum | 整数      | -> | Number of requests to keep in memory |
@@ -662,7 +662,7 @@ You want to log ORDA client requests in memory:
 **.startTransaction()**<!-- END REF -->
 
 <!-- REF #datastoreClass.startTransaction().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |  | ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->
@@ -727,7 +727,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 **.stopRequestLog()**  <!-- END REF -->
 
 <!-- REF #datastoreClass.stopRequestLog().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |  | ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->
@@ -761,7 +761,7 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 **.validateTransaction()**  <!-- END REF -->
 
 <!-- REF #datastoreClass.validateTransaction().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |  | ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->
