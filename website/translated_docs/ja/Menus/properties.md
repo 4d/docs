@@ -25,10 +25,10 @@ title: メニュープロパティ
 
 | 文字          | 説明                          | 効果                                                            |
 | ----------- | --------------------------- | ------------------------------------------------------------- |
-| (           | open parenthese             | Disable item                                                  |
-| <B          | less than B                 | Bold font                                                     |
-| <I          | less than I                 | Italic font                                                   |
-| <U          | less than U                 | Underline font                                                |
+| (           | 開く括弧                        | 項目を使用不可にする                                                    |
+| <B          | 小なりB                        | 太字                                                            |
+| <I          | 小なりI                        | イタリック                                                         |
+| <U          | 小なりU                        | 下線                                                            |
 | !+character | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
 | /+character | slash+character             | Add character as shortcut                                     |
 
