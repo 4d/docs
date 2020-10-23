@@ -134,7 +134,7 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 **.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.clone().Params -->
-| 引数  | タイプ       |    | 説明                                |
+| 参照  | タイプ       |    | 説明                                |
 | --- | --------- |:--:| --------------------------------- |
 | 戻り値 | 4D.Entity | <- | New entity referencing the record |
 <!-- END REF -->
@@ -176,7 +176,7 @@ This function can only be used with entities already saved in the database. It c
 
 
 <!-- REF #entityClass.diff().Params -->
-| 引数                  | タイプ       |    | 説明                                             |
+| 参照                  | タイプ       |    | 説明                                             |
 | ------------------- | --------- |:--:| ---------------------------------------------- |
 | entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
 | attributesToCompare | コレクション    | -> | Name of attributes to be compared              |
@@ -379,7 +379,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.drop().Params -->
-| 引数   | タイプ    |    | 説明                                                                              |
+| 参照   | タイプ    |    | 説明                                                                              |
 | ---- | ------ |:--:| ------------------------------------------------------------------------------- |
 | mode | 整数     | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
 | 戻り値  | オブジェクト | <- | Result of drop operation                                                        |
@@ -486,7 +486,7 @@ Example with `dk force drop if stamp changed` option:
 **.first()**: 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.first().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
+| 参照  | タイプ       |    | 説明                                                                   |
 | --- | --------- |:--:| -------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
 <!-- END REF -->
@@ -525,7 +525,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #entityClass.fromObject().Params -->
-| 引数     | タイプ    |    | 説明                                   |
+| 参照     | タイプ    |    | 説明                                   |
 | ------ | ------ |:--:| ------------------------------------ |
 | filler | オブジェクト | -> | Object from which to fill the entity |
 <!-- END REF -->
@@ -615,7 +615,7 @@ You could also use a related entity given as an object:
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #entityClass.getDataClass().Params -->
-| 引数  | タイプ          |    | 説明                                           |
+| 参照  | タイプ          |    | 説明                                           |
 | --- | ------------ |:--:| -------------------------------------------- |
 | 戻り値 | 4D.DataClass | <- | DataClass object to which the entity belongs |
 <!-- END REF -->
@@ -661,7 +661,7 @@ The following generic code duplicates any entity:
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #entityClass.getKey().Params -->
-| 引数   | タイプ  |    | 説明                                                                                      |
+| 参照   | タイプ  |    | 説明                                                                                      |
 | ---- | ---- |:--:| --------------------------------------------------------------------------------------- |
 | mode | 整数   | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
 | 戻り値  | テキスト | <- | Value of the text primary key of the entity                                             |
@@ -704,7 +704,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entityClass.getSelection().Params -->
-| 引数  | タイプ                |    | 説明                                                               |
+| 参照  | タイプ                |    | 説明                                                               |
 | --- | ------------------ |:--:| ---------------------------------------------------------------- |
 | 戻り値 | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
 <!-- END REF -->
@@ -748,7 +748,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #entityClass.getStamp().Params -->
-| 引数  | タイプ |    | 説明                                                      |
+| 参照  | タイプ |    | 説明                                                      |
 | --- | --- |:--:| ------------------------------------------------------- |
 | 戻り値 | 整数  | <- | Stamp of the entity (0 if entity has just been created) |
 <!-- END REF -->
@@ -796,7 +796,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #entityClass.indexOf().Params -->
-| 引数              | タイプ                |    | 説明                                                                 |
+| 参照              | タイプ                |    | 説明                                                                 |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
 | entitySelection | 4D.EntitySelection | -> | Position of the entity is given according to this entity selection |
 | 戻り値             | 整数                 | <- | Position of the entity in an entity selection                      |
@@ -845,7 +845,7 @@ The resulting value is included between 0 and the length of the entity selection
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #entityClass.isNew().Params -->
-| 引数  | タイプ |    | 説明                                                                        |
+| 参照  | タイプ |    | 説明                                                                        |
 | --- | --- |:--:| ------------------------------------------------------------------------- |
 | 戻り値 | ブール | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
@@ -885,7 +885,7 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.last().Params -->
-| 引数  | タイプ       |    | 説明                                                                  |
+| 参照  | タイプ       |    | 説明                                                                  |
 | --- | --------- |:--:| ------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
 <!-- END REF -->
@@ -925,7 +925,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.lock().Params -->
-| 引数   | タイプ    |    | 説明                                                                   |
+| 参照   | タイプ    |    | 説明                                                                   |
 | ---- | ------ |:--:| -------------------------------------------------------------------- |
 | mode | 整数     | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
 | 戻り値  | オブジェクト | <- | Result of lock operation                                             |
@@ -1039,7 +1039,7 @@ Example with `dk reload if stamp changed` option:
 **.next()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.next().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
+| 参照  | タイプ       |    | 説明                                                                   |
 | --- | --------- |:--:| -------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
 <!-- END REF -->
@@ -1080,7 +1080,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 **.previous()**  : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.previous().Params -->
-| 引数  | タイプ       |    | 説明                                                                       |
+| 参照  | タイプ       |    | 説明                                                                       |
 | --- | --------- |:--:| ------------------------------------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
 <!-- END REF -->
@@ -1122,7 +1122,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #entityClass.reload().Params -->
-| 引数  | タイプ    |    | 説明            |
+| 参照  | タイプ    |    | 説明            |
 | --- | ------ |:--:| ------------- |
 | 戻り値 | オブジェクト | <- | Status object |
 <!-- END REF -->
@@ -1185,7 +1185,7 @@ The object returned by `.reload( )` contains the following properties:
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.save().Params -->
-| 引数   | タイプ    |    | 説明                                                |
+| 参照   | タイプ    |    | 説明                                                |
 | ---- | ------ |:--:| ------------------------------------------------- |
 | mode | 整数     | -> | `dk auto merge`: Enables the automatic merge mode |
 | 戻り値  | オブジェクト | <- | Result of save operation                          |
@@ -1309,7 +1309,7 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.toObject().Params -->
-| 引数           | タイプ    |    | 説明                                                                                                      |
+| 参照           | タイプ    |    | 説明                                                                                                      |
 | ------------ | ------ |:--:| ------------------------------------------------------------------------------------------------------- |
 | filterString | テキスト   | -> | Attribute(s) to extract (comma-separated string)                                                        |
 | filterCol    | コレクション | -> | Collection of attribute(s) to extract                                                                   |
@@ -1595,7 +1595,7 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #entityClass.touched().Params -->
-| 引数  | タイプ |    | 説明                                                                                    |
+| 参照  | タイプ |    | 説明                                                                                    |
 | --- | --- |:--:| ------------------------------------------------------------------------------------- |
 | 戻り値 | ブール | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
@@ -1640,7 +1640,7 @@ In this example, we check to see if it is necessary to save the entity:
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #entityClass.touchedAttributes().Params -->
-| 引数  | タイプ    |    | 説明                                               |
+| 参照  | タイプ    |    | 説明                                               |
 | --- | ------ |:--:| ------------------------------------------------ |
 | 戻り値 | コレクション | <- | Names of touched attributes, or empty collection |
 <!-- END REF -->
@@ -1716,7 +1716,7 @@ In this case:
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #entityClass.unlock().Params -->
-| 引数  | タイプ    |    | 説明            |
+| 参照  | タイプ    |    | 説明            |
 | --- | ------ |:--:| ------------- |
 | 戻り値 | オブジェクト | <- | Status object |
 <!-- END REF -->
