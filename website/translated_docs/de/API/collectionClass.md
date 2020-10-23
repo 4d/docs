@@ -3,7 +3,7 @@ id: collectionClass
 title: Collections
 ---
 
-The Collection class manages [Collection](../Concepts/collection.html) type variables.
+The Collection class manages [Collection](Concepts/collection.md) type variables.
 
 A collection is initialized with:
 
@@ -11,8 +11,8 @@ A collection is initialized with:
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE collection.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New collection.Summary -->|
-| [<!-- INCLUDE collection.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New shared collection.Summary -->|
+| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->|
+| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
 ## Beispiel
@@ -146,7 +146,6 @@ A collection is initialized with:
 
 ---
 
-<!-- REF collection.New collection.Desc -->
 ## New collection
 
 <details><summary>History</summary>
@@ -155,7 +154,7 @@ A collection is initialized with:
 | v16 R4  | Added   |
 </details>
 
-<!-- REF collection.New collection.Syntax -->
+<!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF collection.New collection.Params -->
@@ -167,7 +166,7 @@ A collection is initialized with:
 
 
 #### Beschreibung
-The `New collection` command <!-- REF collection.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
 
 If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
 
@@ -193,6 +192,7 @@ You must pay attention to the following conversion issues:
 *   If you pass a time, it is stored as a number of milliseconds (Real).
 
 #### Beispiel 1
+
 
 
 
@@ -226,14 +226,12 @@ You create a new collection and then add a new element:
  $coll[9]:="z" //add a 10th element with value "z"
  $vcolSize:=$coll.length //10
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
-``` 
+```
 
 
-<!-- END REF -->
 
 ---
 
-<!-- REF collection.New shared collection.Desc -->
 ## New shared collection
 
 <details><summary>History</summary>
@@ -242,7 +240,7 @@ You create a new collection and then add a new element:
 | v16 R6  | Added   |
 </details>
 
-<!-- REF collection.New shared collection.Syntax -->
+<!-- REF #_command_.New shared collection.Syntax -->
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF collection.New shared collection.Params -->
@@ -254,7 +252,7 @@ You create a new collection and then add a new element:
 
 
 #### Beschreibung
-The `New shared collection` command <!-- REF collection.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
 Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
 > For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
@@ -289,9 +287,7 @@ You can pass any number of values of the following supported types:
  Use($mySharedCol)
     $mySharedCol[1]:="beta"
  End use
-``` 
-
-<!-- END REF -->
+```
 
 ---
 
@@ -1939,6 +1935,7 @@ Ordering a collection of objects with a property path:
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
  $c.push(New object("name";"Blountsville";"phones";New object("p1";"00";"p2";"03")))
+
  $c2:=$c.orderBy("phones.p1 asc")
 ```
 
