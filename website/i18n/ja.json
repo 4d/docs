@@ -15,7 +15,7 @@
         "title": "概要"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "復元"
       },
       "Backup/settings": {
         "title": "バックアップ設定"
@@ -283,13 +283,13 @@
         "title": "Menu bar features"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "メニューとメニューバーの作成"
       },
       "Menus/overview": {
         "title": "概要"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "メニュープロパティ"
       },
       "Menus/sdi": {
         "title": "SDI mode on Windows"
@@ -461,7 +461,7 @@
       "Form Editor": "フォームエディター",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
-      "Menus": "Menus",
+      "Menus": "メニュー",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Users and Groups": "ユーザー＆グループ",
@@ -476,7 +476,7 @@
     "Form Events|no description given": "Form Events",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
-    "Menus|no description given": "Menus",
+    "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",

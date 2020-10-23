@@ -4,7 +4,7 @@ title: Plage de valeurs
 ---
 
 ---
-## Default value
+## Valeur par défaut
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
 
@@ -50,7 +50,7 @@ Allows setting a list whose values cannot be entered in the object. Si une valeu
 
 | Nom          | Type de données | Valeurs possibles                |
 | ------------ | --------------- | -------------------------------- |
-| excludedList | list            | A list of values to be excluded. |
+| excludedList | liste           | A list of values to be excluded. |
 
 #### Objets pris en charge
 
@@ -71,7 +71,7 @@ Making a list required does not automatically display the list when the field is
 
 | Nom          | Type de données | Valeurs possibles           |
 | ------------ | --------------- | --------------------------- |
-| requiredList | list            | A list of mandatory values. |
+| requiredList | liste           | A list of mandatory values. |
 
 #### Objets pris en charge
 
