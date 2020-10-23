@@ -68,7 +68,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | v18 R2  | Ajoutées      |
 </details>
 
-<!-- REF pop3TransporterClass.POP3 New transporter.Syntax -->
+<!-- REF #_command_.POP3 New transporter.Syntax -->
 **POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
@@ -80,7 +80,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 
 
 #### Description
-The `POP3 New transporter` command <!-- REF pop3TransporterClass.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the 
+The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the 
 
 *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. The returned transporter object will then usually be used to receive emails.
 
@@ -481,6 +481,7 @@ You want to know the total number and size of emails in the mailbox:
 
 
 
+
 ---
 
 ## .getMIMEAsBlob()
@@ -562,6 +563,7 @@ You want to know the total number and size of emails in the mailbox:
 
 
 ---
+
 
 
 <!-- REF pop3TransporterClass.undeleteAll().Desc -->
