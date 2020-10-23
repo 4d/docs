@@ -126,7 +126,7 @@ Considering the following table properties:
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #dataclassClass.all().Params -->
-| 引数       | タイプ                |    | 説明                                                  |
+| 参照       | タイプ                |    | 説明                                                  |
 | -------- | ------------------ |:--:| --------------------------------------------------- |
 | settings | オブジェクト             | -> | Build option: context                               |
 | 戻り値      | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
@@ -178,7 +178,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 
 <!-- REF #dataclassClass.fromCollection().Params -->
-| 引数        | タイプ                |    | 説明                                               |
+| 参照        | タイプ                |    | 説明                                               |
 | --------- | ------------------ |:--:| ------------------------------------------------ |
 | objectCol | コレクション             | -> | Collection of objects to be mapped with entities |
 | settings  | オブジェクト             | -> | Build option: context                            |
@@ -374,7 +374,7 @@ In this example, the first entity will be created and saved but the second will 
 
 
 <!-- REF #dataclassClass.get().Params -->
-| 引数         | タイプ             |    | 説明                                          |
+| 参照         | タイプ             |    | 説明                                          |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
 | settings   | オブジェクト          | -> | Build option: context                       |
@@ -453,7 +453,7 @@ This example illustrates the use of the *context* property:
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #dataclassClass.getDataStore().Params -->
-| 引数  | タイプ          |    | 説明                         |
+| 参照  | タイプ          |    | 説明                         |
 | --- | ------------ |:--:| -------------------------- |
 | 戻り値 | cs.DataStore | <- | Datastore of the dataclass |
 <!-- END REF -->
@@ -506,7 +506,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 **.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #dataclassClass.getInfo().Params -->
-| 引数  | タイプ    |    | 説明                           |
+| 参照  | タイプ    |    | 説明                           |
 | --- | ------ | -- | ---------------------------- |
 | 戻り値 | オブジェクト | <- | Information on the dataclass |
 <!-- END REF -->
@@ -578,7 +578,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 **.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #dataclassClass.new().Params -->
-| 引数  | タイプ       |    | 説明                                |
+| 参照  | タイプ       |    | 説明                                |
 | --- | --------- | -- | --------------------------------- |
 | 戻り値 | 4D.Entity | <- | New entity matching the Dataclass |
 <!-- END REF -->
@@ -620,7 +620,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #dataclassClass.newSelection().Params -->
-| 引数        | タイプ                |    | 説明                                                                                                                                            |
+| 参照        | タイプ                |    | 説明                                                                                                                                            |
 | --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder | 整数                 | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
 | 戻り値       | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
@@ -663,7 +663,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 **.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #dataclassClass.query().Params -->
-| 引数            | タイプ                |    | 説明                                                                                                                          |
+| 参照            | タイプ                |    | 説明                                                                                                                          |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | テキスト               | -> | Search criteria as string                                                                                                   |
 | formula       | オブジェクト             | -> | Search criteria as formula object                                                                                           |
