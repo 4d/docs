@@ -498,7 +498,7 @@ La list box finale :
 
 ## Badges
 
-L’éditeur de formulaires 4D permet d’utiliser des badges afin de faciliter la visualisation des propriétés des objets. You can find them on the form toolbar:
+L’éditeur de formulaires 4D permet d’utiliser des badges afin de faciliter la visualisation des propriétés des objets. Ils se trouvent dans la barre d'outils du formulaire :
 
 ![](assets/en/FormEditor/shields.png)
 
