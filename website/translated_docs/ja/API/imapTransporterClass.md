@@ -84,11 +84,11 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF imapTransporterClass.IMAP New transporter.Syntax -->
+<!-- REF #_command_.IMAP New transporter.Syntax -->
 **IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF imapTransporterClass.IMAP New transporter.Params -->
-| 引数     | タイプ                |    | 説明                                                  |
+| 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
 | server | オブジェクト             | -> | Mail server information                             |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object) |
@@ -96,7 +96,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 
 #### 説明
-The `IMAP New transporter` command <!-- REF imapTransporterClass.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the 
+The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the 
 
 *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
@@ -211,7 +211,7 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 **.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.copy().Params -->
-| 引数             | タイプ    |    | 説明                                               |
+| 参照             | タイプ    |    | 説明                                               |
 | -------------- | ------ |:--:| ------------------------------------------------ |
 | msgsIDs        | コレクション | -> | Collection of message unique IDs (strings)       |
 | allMsgs        | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
@@ -318,7 +318,7 @@ To copy all messages in the current mailbox:
 **.delete**( *msgsIDs* : Collection ) : Object<br>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.delete().Params -->
-| 引数      | タイプ    |    | 説明                                               |
+| 参照      | タイプ    |    | 説明                                               |
 | ------- | ------ |:--:| ------------------------------------------------ |
 | msgsIDs | コレクション | -> | Collection of message unique IDs (strings)       |
 | allMsgs | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
@@ -425,7 +425,7 @@ To delete all messages in the current mailbox:
 **.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxInfo().Params -->
-| 引数   | タイプ    |    | 説明                  |
+| 参照   | タイプ    |    | 説明                  |
 | ---- | ------ |:--:| ------------------- |
 | name | テキスト   | -> | Name of the mailbox |
 | 戻り値  | オブジェクト | <- | boxInfo object      |
@@ -482,7 +482,7 @@ The `boxInfo` object returned contains the following properties:
 **.getBoxList()** : Collection<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxList().Params -->
-| 引数  | タイプ    |    | 説明                            |
+| 参照  | タイプ    |    | 説明                            |
 | --- | ------ |:--:| ----------------------------- |
 | 戻り値 | コレクション | <- | Collection of mailbox objects |
 <!-- END REF -->
@@ -542,7 +542,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 **.getDelimiter()** : Text<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getDelimiter().Params -->
-| 引数  | タイプ  |    | 説明                            |
+| 参照  | タイプ  |    | 説明                            |
 | --- | ---- |:--:| ----------------------------- |
 | 戻り値 | テキスト | <- | Hierarchy delimiter character |
 <!-- END REF -->
@@ -600,7 +600,7 @@ Mailbox name delimiter character.
 **.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getMail().Params -->
-| 引数        | タイプ    |    | 説明                                               |
+| 参照        | タイプ    |    | 説明                                               |
 | --------- | ------ |:--:| ------------------------------------------------ |
 | msgNumber | 整数     | -> | Sequence number of the message                   |
 | msgID     | テキスト   | -> | Unique ID of the message                         |
@@ -676,7 +676,7 @@ You want to get the message with ID = 1:
 **.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getMails().Params -->
-| 引数       | タイプ    |    | 説明                                                     |
+| 参照       | タイプ    |    | 説明                                                     |
 | -------- | ------ |:--:| ------------------------------------------------------ |
 | ids      | コレクション | -> | Collection of message ID                               |
 | startMsg | 整数     | -> | Sequence number of the first message                   |
@@ -783,7 +783,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 
 <!-- REF #imapTransporterClass.getMIMEAsBlob().Params -->
-| 引数         | タイプ  |    | 説明                                                                                            |
+| 参照         | タイプ  |    | 説明                                                                                            |
 | ---------- | ---- |:--:| --------------------------------------------------------------------------------------------- |
 | msgNumber  | 整数   | -> | Sequence number of the message                                                                |
 | msgID      | テキスト | -> | Unique ID of the message                                                                      |
@@ -869,7 +869,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 **.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.move().Params -->
-| 引数             | タイプ    |    | 説明                                               |
+| 参照             | タイプ    |    | 説明                                               |
 | -------------- | ------ |:--:| ------------------------------------------------ |
 | msgsIDs        | コレクション | -> | Collection of message unique IDs (strings)       |
 | allMsgs        | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
@@ -977,7 +977,7 @@ To move all messages in the current mailbox:
 **.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
 
 <!-- REF #imapTransporterClass.numToID().Params -->
-| 引数       | タイプ    |    | 説明                                   |
+| 参照       | タイプ    |    | 説明                                   |
 | -------- | ------ |:--:| ------------------------------------ |
 | startMsg | 整数     | -> | Sequence number of the first message |
 | endMsg   | 整数     | -> | Sequence number of the last message  |
@@ -1048,7 +1048,7 @@ The function returns a collection of strings (unique IDs).
 **.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
 
 <!-- REF #imapTransporterClass.searchMails().Params -->
-| 引数             | タイプ    |    | 説明                            |
+| 参照             | タイプ    |    | 説明                            |
 | -------------- | ------ |:--:| ----------------------------- |
 | searchCriteria | テキスト   | -> | Search criteria               |
 | 戻り値            | コレクション | <- | Collection of message numbers |
@@ -1183,7 +1183,7 @@ Search-keys may request the value to search for:
 **.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.selectBox().Params -->
-| 引数    | タイプ    |    | 説明                    |
+| 参照    | タイプ    |    | 説明                    |
 | ----- | ------ |:--:| --------------------- |
 | name  | テキスト   | -> | Name of the mailbox   |
 | state | 整数     | -> | Mailbox access status |
