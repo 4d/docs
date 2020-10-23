@@ -84,7 +84,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | v18 R4  | Ajoutées      |
 </details>
 
-<!-- REF imapTransporterClass.IMAP New transporter.Syntax -->
+<!-- REF #_command_.IMAP New transporter.Syntax -->
 **IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF imapTransporterClass.IMAP New transporter.Params -->
@@ -96,7 +96,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 
 #### Description
-The `IMAP New transporter` command <!-- REF imapTransporterClass.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the 
+The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the 
 
 *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
