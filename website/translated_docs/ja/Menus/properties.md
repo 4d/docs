@@ -94,38 +94,38 @@ title: メニュープロパティ
 
 ### ショートカット
 
-You can add keyboard shortcuts to any menu command. If a menu command has one of these keyboard shortcuts, users will see it next to the menu command. For example, "Ctrl+C" (Windows) or "Command+C" (macOS) appears next to the **Copy** menu command in the **Edit** menu.
+メニューコマンドにはショートカットを割り当てることができます。 メニューコマンドにキーボードショートカットが割り当てられると、メニューを開いたときにそれがメニューコマンドの右に表示されます。 たとえば、編集メニューのコピーコマンドの右に "Ctrl+C" (Windows) または "Command+C" (macOS) と表示されます。
 
-You can also add the **Shift** key as well as the **Alt** key (Windows) or **Option** key (macOS) to the shortcut associated with a menu command. This multiplies the number of shortcuts that can be used. The following types of keyboard shortcuts can therefore be defined:
+ショートカットには **Shift** や **Alt** (Windows) または **Option** (macOS) キーを追加できます。 これにより使用できるショートカットの数を増やすことができます。 以下のタイプのショートカットを定義できます:
 
-- Under Windows:
-    - Ctrl+character
-    - Ctrl+Shift+character
-    - Ctrl+Alt+character
-    - Ctrl+Shift+Alt+character
+- Windows:
+    - Ctrl+文字
+    - Ctrl+Shift+文字
+    - Ctrl+Alt+文字
+    - Ctrl+Shift+Alt+文字
 
-- Under macOS:
-    - Command+character
-    - Command+Shift+character
-    - Command+Option+character
-    - Command+Shift+Option+character
+- macOS:
+    - Command+文字
+    - Command+Shift+文字
+    - Command+Option+文字
+    - Command+Shift+Option+文字
 
-> We recommend that you keep the default keyboard shortcuts that are associated with standard actions.
+> 標準アクションに割り当てられたデフォルトのキーボードショートカットは変更しないことをお勧めします。
 
-You can use any alphanumeric keys as a keyboard shortcut, except for the keys reserved by standard menu commands that appear in the **Edit** and **File** menus, and the keys reserved for 4D menu commands.
+**ファイル** や **編集** メニュー、および 4D のメニューコマンドに予約されている標準メニューのショートカットを除き、すべての英数字をキーボードショートカット文字として使用できます。
 
-These reserved key combinations are listed in the following table:
+予約されている組み合わせは以下の通りです:
 
-| Key (Windows)   | Key (macOS)        | 演算子         |
-| --------------- | ------------------ | ----------- |
-| Ctrl+C          | Command+C          | Copy        |
-| Ctrl+Q          | Command+Q          | Quit        |
-| Ctrl+V          | Command+V          | Paste       |
-| Ctrl+X          | Command+X          | Cut         |
-| Ctrl+Z          | Command+Z          | Undo        |
-| Ctrl+. (period) | Command+. (period) | Stop action |
+| キー (Windows)  | キー (macOS)       | 処理   |
+| ------------- | ---------------- | ---- |
+| Ctrl+C        | Command+C        | コピー  |
+| Ctrl+Q        | Command+Q        | 終了   |
+| Ctrl+V        | Command+V        | ペースト |
+| Ctrl+X        | Command+X        | カット  |
+| Ctrl+Z        | Command+Z        | 取り消し |
+| Ctrl+. (ピリオド) | Command+. (ピリオド) | 実行停止 |
 
-To assign a keyboard shortcut in the Menu editor:
+メニューエディターでキーボードショートカットを割り当てるには:
 
 Select the menu item to which you want to assign a keyboard shortcut. Click on the [...] button to the right of the "Shortcut" entry area. The following window appears:
 
