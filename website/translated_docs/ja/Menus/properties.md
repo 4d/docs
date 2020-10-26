@@ -70,10 +70,10 @@ Standard actions can be used to carry out various current operations linked to s
 ### イベントを発生させない
 標準アクションを割り当てたメニューの場合、**イベントを発生させない** オプションがメニューエディター内で利用可能です。
 
-このオプションを選択すると、4D は関連アクションを実行する前に、カーソルが置かれているフィールドの "確定 (バリデート)" をおこないません。 This option is mainly intended for **Edit** menu commands. By default, 4D processes and "validates" the contents of a field before executing a standard action (via a menu command or a shortcut), which has the effect of generating an `On Data Change` form event. This can disrupt the functioning of copy or paste type commands because when they are called, the `On Data Change` form event is generated unexpectedly. In this case, it is useful to check the **Execute without validating** option.
+このオプションを選択すると、4D は関連アクションを実行する前に、カーソルが置かれているフィールドの "確定 (バリデート)" をおこないません。 このオプションは主に **編集** メニューコマンドに使用されます。 デフォルトでは、4D はフィールド内容を処理し、"確定" してから、標準アクションを実行します (メニューコマンドやショートカットを使用)。これにより、`On Data Change` フォームイベントが発生します。 しかし、コピー＆ペーストタイプのコマンドの場合、コマンドを呼び出すたびに `On Data Change` フォームイベントが予想外に生成されてしまい、処理に差し支える可能性があります。 その場合は、**イベントを発生させない** オプションを選択するのが有効です。
 
 
-## Remote access privileges
+## アクセス権
 
 This Menu editor option allows defining a group to a menu command so that only users in that group can use the menu command from a 4D remote application (see Users and groups).
 
