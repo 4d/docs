@@ -17,9 +17,9 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値                                                                    |
-| ----- | ------ | ------------------------------------------------------------------------ |
-| pages | コレクション | Collection of pages (each page is an object, page 0 is the first element |
+| 名     | データタイプ     | とりうる値                                                                    |
+| ----- | ---------- | ------------------------------------------------------------------------ |
+| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
 
 ---
 
