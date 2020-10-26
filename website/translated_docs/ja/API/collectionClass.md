@@ -1046,7 +1046,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
 | startFrom | 整数                                              | -> | Start index (included)                 |
 | end       | 整数                                              | -> | End index (not included)               |
-| 戻り値       | コレクション                                          | <- | Original collection with filled values |
+| 戻り値       | collection                                      | <- | Original collection with filled values |
 <!-- END REF -->
 
 

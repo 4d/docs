@@ -27,7 +27,7 @@
         "title": "DataStore"
       },
       "API/directory": {
-        "title": "Directory Class"
+        "title": "Classe Directory"
       },
       "API/document": {
         "title": "Document Class"
@@ -60,13 +60,13 @@
         "title": "POP3 Transporter"
       },
       "API/signalClass": {
-        "title": "Signals"
+        "title": "Signaux"
       },
       "API/smtpTransporterClass": {
         "title": "SMTP Transporter"
       },
       "API/transporter": {
-        "title": "Transporter Class"
+        "title": "Classe Transporter"
       },
       "API/zipClass": {
         "title": "ZIP Archive"

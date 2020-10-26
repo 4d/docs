@@ -157,11 +157,11 @@ The `.decrypt()` function <!-- REF #cryptokey.decrypt().Summary -->decrypts the
 
 The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
 
-| プロパティ   | タイプ     | 説明                                                |
-| ------- | ------- | ------------------------------------------------- |
-| success | boolean | メッセージの復号に成功した場合は true                             |
-| result  | text    | options.encodingDecrypted を使って復号およびデコードされたメッセージ   |
-| errors  | コレクション  | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
+| プロパティ   | タイプ        | 説明                                                |
+| ------- | ---------- | ------------------------------------------------- |
+| success | boolean    | メッセージの復号に成功した場合は true                             |
+| result  | text       | options.encodingDecrypted を使って復号およびデコードされたメッセージ   |
+| errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 <!-- END REF -->
@@ -411,8 +411,8 @@ The function returns a status object with `success` property set to `true` if `m
 
 In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
-| プロパティ   | タイプ     | 説明                                                |
-| ------- | ------- | ------------------------------------------------- |
-| success | boolean | 署名がメッセージと合致すれば true                               |
-| errors  | コレクション  | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
+| プロパティ   | タイプ        | 説明                                                |
+| ------- | ---------- | ------------------------------------------------- |
+| success | boolean    | 署名がメッセージと合致すれば true                               |
+| errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
 <!-- END REF -->
