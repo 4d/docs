@@ -713,7 +713,7 @@ In the *endMsg* parameter, pass an *integer* value corresponding to the number o
 
 The optional *options* parameter allows you to define the parts of the messages to be returned.
 
-**Options**
+**オプション**
 
 | プロパティ      | タイプ | 説明                                                                                                                                        |
 | ---------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------- |
