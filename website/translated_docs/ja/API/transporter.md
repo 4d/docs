@@ -315,15 +315,15 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
-| プロパティ      |                          | タイプ     | 説明                                                                                                           |
-| ---------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------ |
-| success    |                          | boolean | True if the check is successful, False otherwise                                                             |
-| status     |                          | number  | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
-| statusText |                          | text    | Status message returned by the mail server, or last error returned in the 4D error stack                     |
-| errors     |                          | コレクション  | 4D error stack (not returned if a mail server response is received)                                          |
-|            | \[ ].errCode            | number  | 4D error code                                                                                                |
-|            | \[ ].message            | text    | Description of the 4D error                                                                                  |
-|            | \[ ].componentSignature | text    | Signature of the internal component which returned the error                                                 |
+| プロパティ      |                          | タイプ        | 説明                                                                                                           |
+| ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
+| success    |                          | boolean    | True if the check is successful, False otherwise                                                             |
+| status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
+| statusText |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
+| errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |
+|            | \[ ].errCode            | number     | 4D error code                                                                                                |
+|            | \[ ].message            | text       | Description of the 4D error                                                                                  |
+|            | \[ ].componentSignature | text       | Signature of the internal component which returned the error                                                 |
 
 
 
