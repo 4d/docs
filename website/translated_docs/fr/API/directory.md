@@ -1,6 +1,6 @@
 ---
 id: directory
-title: Directory Class
+title: Classe Directory
 ---
 
 ## Description
