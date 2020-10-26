@@ -447,7 +447,7 @@ This property is **read-only**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| 引数                | タイプ       |    | 説明                                          |
+| 参照                | タイプ       |    | 説明                                          |
 | ----------------- | --------- |:--:| ------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder                          |
 | newName           | テキスト      | -> | Name for the copy                           |
@@ -503,7 +503,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getContent( )** : Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| 引数  | タイプ  |    | 説明           |
+| 参照  | タイプ  |    | 説明           |
 | --- | ---- | -- | ------------ |
 | 戻り値 | BLOB | <- | File content |
 <!-- END REF -->
@@ -549,7 +549,7 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| 引数   | タイプ   |    | 説明                                            |
+| 参照   | タイプ   |    | 説明                                            |
 | ---- | ----- | -- | --------------------------------------------- |
 | size | 整数    | -> | Side length for the returned picture (pixels) |
 | 戻り値  | ピクチャー | <- | Icon                                          |
@@ -587,7 +587,7 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| 引数          | タイプ  |    | 説明                              |
+| 参照          | タイプ  |    | 説明                              |
 | ----------- | ---- | -- | ------------------------------- |
 | charSetName | テキスト | -> | Name of character set           |
 | charSetNum  | 整数   | -> | Number of character set         |

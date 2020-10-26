@@ -68,19 +68,19 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | v18 R2 | 追加 |
 </details>
 
-<!-- REF pop3TransporterClass.POP3 New transporter.Syntax -->
+<!-- REF #_command_.POP3 New transporter.Syntax -->
 **POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
-| 引数     | タイプ                |    | 説明                                                  |
+| 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
-| server | オブジェクト             | -> | Mail server information                             |
+| server | object             | -> | Mail server information                             |
 | 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
 <!-- END REF -->
 
 
 #### 説明
-The `POP3 New transporter` command <!-- REF pop3TransporterClass.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the 
+The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the 
 
 *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. The returned transporter object will then usually be used to receive emails.
 
@@ -198,7 +198,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 **.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.delete().Params -->
-| 引数        | タイプ |    | 説明                              |
+| 参照        | タイプ |    | 説明                              |
 | --------- | --- |:--:| ------------------------------- |
 | msgNumber | 整数  | -> | Number of the message to delete |
 <!-- END REF -->
@@ -246,7 +246,7 @@ Executing this method does not actually remove any email. The flagged email will
 **.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getBoxInfo().Params -->
-| 引数  | タイプ    |    | 説明             |
+| 参照  | タイプ    |    | 説明             |
 | --- | ------ |:--:| -------------- |
 | 戻り値 | オブジェクト | <- | boxInfo object |
 <!-- END REF -->
@@ -299,7 +299,7 @@ The `boxInfo` object returned contains the following properties:
 **.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMail().Params -->
-| 引数        | タイプ    |    | 説明                                               |
+| 参照        | タイプ    |    | 説明                                               |
 | --------- | ------ |:--:| ------------------------------------------------ |
 | msgNumber | 整数     | -> | Number of the message in the list                |
 | 戻り値       | オブジェクト | <- | [Email object](emailObjectClass.md#email-object) |
@@ -360,7 +360,7 @@ You want to know the sender of the first mail of the mailbox:
 **.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMailInfo().Params -->
-| 引数        | タイプ    |    | 説明                                |
+| 参照        | タイプ    |    | 説明                                |
 | --------- | ------ |:--:| --------------------------------- |
 | msgNumber | 整数     | -> | Number of the message in the list |
 | 戻り値       | オブジェクト | <- | mailInfo object                   |
@@ -424,7 +424,7 @@ The method returns **Null** if:
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMailInfoList().Params -->
-| 引数  | タイプ    |    | 説明                               |
+| 参照  | タイプ    |    | 説明                               |
 | --- | ------ |:--:| -------------------------------- |
 | 戻り値 | コレクション | <- | Collection of `mailInfo` objects |
 <!-- END REF -->
@@ -481,6 +481,7 @@ You want to know the total number and size of emails in the mailbox:
 
 
 
+
 ---
 
 ## .getMIMEAsBlob()
@@ -495,7 +496,7 @@ You want to know the total number and size of emails in the mailbox:
 **.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.getMIMEAsBlob().Params -->
-| 引数        | タイプ  |    | 説明                                                    |
+| 参照        | タイプ  |    | 説明                                                    |
 | --------- | ---- |:--:| ----------------------------------------------------- |
 | msgNumber | 整数   | -> | Number of the message in the list                     |
 | 戻り値       | BLOB | <- | Blob of the MIME string returned from the mail server |
@@ -564,6 +565,7 @@ You want to know the total number and size of emails in the mailbox:
 ---
 
 
+
 <!-- REF pop3TransporterClass.undeleteAll().Desc -->
 ## .undeleteAll()
 
@@ -577,7 +579,7 @@ You want to know the total number and size of emails in the mailbox:
 **.undeleteAll()**<!-- END REF -->
 
 <!-- REF #pop3TransporterClass.undeleteAll().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |::| ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->

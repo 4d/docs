@@ -91,7 +91,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 ---
-<!-- REF folder.Folder.Desc -->
+
 ## Folder
 
 <details><summary>History</summary>
@@ -100,11 +100,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | v17 R5  | Added   |
 </details>
 
-<!-- REF folder.Folder.Syntax -->
+<!-- REF #_command_.Folder.Syntax -->
 **Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 
-<!-- REF folder.Folder.Params -->
+<!-- REF folderClass.Folder.Params -->
 | Parameter      | Typ       |    | Beschreibung                                    |
 | -------------- | --------- |:--:| ----------------------------------------------- |
 | path           | Text      | -> | Folder path                                     |
@@ -116,7 +116,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 #### Beschreibung
-The `Folder` command <!-- REF folder.Folder.Summary -->creates and returns a new object of the 
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the 
 
 `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
 

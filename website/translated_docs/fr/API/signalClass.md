@@ -108,7 +108,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 | v17 R4  | Ajoutées      |
 </details>
 
-<!-- REF signalClass.New signal.Syntax -->
+<!-- REF #_command_.New signal.Syntax -->
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF signalClass.New signal.Params -->
@@ -120,7 +120,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 #### Description
-The `New signal` command <!-- REF signalClass.New signal.Summary -->creates a 
+The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a 
 
 `4D.Signal` object<!-- END REF -->.
 

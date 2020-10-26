@@ -301,7 +301,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| 引数  | タイプ    |    | 説明                                          |
+| 参照  | タイプ    |    | 説明                                          |
 | --- | ------ |:--:| ------------------------------------------- |
 | 戻り値 | オブジェクト | <- | Status of the transporter object connection |
 <!-- END REF -->

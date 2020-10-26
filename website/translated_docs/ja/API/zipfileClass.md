@@ -44,7 +44,7 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF zipArchive.ZIP Create archive.Params -->
-| 引数              | タイプ       |    | 説明                                                   |
+| 参照              | タイプ       |    | 説明                                                   |
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
@@ -271,7 +271,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF zipArchive.ZIP Read archive.Params -->
-| 引数       | タイプ           |    | 説明                          |
+| 参照       | タイプ           |    | 説明                          |
 | -------- | ------------- |:--:| --------------------------- |
 | zipFile  | 4D.File       | -> | Zip archive file            |
 | password | テキスト          | -> | ZIP archive password if any |

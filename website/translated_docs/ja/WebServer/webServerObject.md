@@ -65,7 +65,7 @@ webServer:=WEB Server(Web server receiving request)
 
 A web server object contains the following member methods:
 
-| メソッド      | 引数                | Return value    | 説明                    |
+| メソッド      | 参照                | Return value    | 説明                    |
 | --------- | ----------------- | --------------- | --------------------- |
 | `start()` | settings (object) | status (object) | Starts the web server |
 | `stop()`  | -                 | -               | Stops the web server  |

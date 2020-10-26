@@ -3,7 +3,7 @@ id: collectionClass
 title: Collection
 ---
 
-The Collection class manages [Collection](../Concepts/collection.html) type variables.
+The Collection class manages [Collection](Concepts/collection.md) type variables.
 
 A collection is initialized with:
 
@@ -11,8 +11,8 @@ A collection is initialized with:
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE collection.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New collection.Summary -->|
-| [<!-- INCLUDE collection.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New shared collection.Summary -->|
+| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->|
+| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
 ## 例題
@@ -146,7 +146,6 @@ A collection is initialized with:
 
 ---
 
-<!-- REF collection.New collection.Desc -->
 ## New collection
 
 <details><summary>履歴</summary>
@@ -155,11 +154,11 @@ A collection is initialized with:
 | v16 R4 | 追加 |
 </details>
 
-<!-- REF collection.New collection.Syntax -->
+<!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF collection.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明                    |
+| 参照    | タイプ                                                                     |    | 説明                    |
 | ----- | ----------------------------------------------------------------------- |:--:| --------------------- |
 | value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
 | 戻り値   | コレクション                                                                  | <- | New collection        |
@@ -167,7 +166,7 @@ A collection is initialized with:
 
 
 #### 説明
-The `New collection` command <!-- REF collection.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
 
 If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
 
@@ -193,6 +192,7 @@ You must pay attention to the following conversion issues:
 *   If you pass a time, it is stored as a number of milliseconds (Real).
 
 #### 例題 1
+
 
 
 
@@ -226,14 +226,12 @@ You create a new collection and then add a new element:
  $coll[9]:="z" //add a 10th element with value "z"
  $vcolSize:=$coll.length //10
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
-``` 
+```
 
 
-<!-- END REF -->
 
 ---
 
-<!-- REF collection.New shared collection.Desc -->
 ## New shared collection
 
 <details><summary>履歴</summary>
@@ -242,11 +240,11 @@ You create a new collection and then add a new element:
 | v16 R6 | 追加 |
 </details>
 
-<!-- REF collection.New shared collection.Syntax -->
+<!-- REF #_command_.New shared collection.Syntax -->
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF collection.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明                           |
+| 参照    | タイプ                                                                 |    | 説明                           |
 | ----- | ------------------------------------------------------------------- |:--:| ---------------------------- |
 | value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
 | 戻り値   | コレクション                                                              | <- | New shared collection        |
@@ -254,7 +252,7 @@ You create a new collection and then add a new element:
 
 
 #### 説明
-The `New shared collection` command <!-- REF collection.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
 Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
 > For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
@@ -289,9 +287,7 @@ You can pass any number of values of the following supported types:
  Use($mySharedCol)
     $mySharedCol[1]:="beta"
  End use
-``` 
-
-<!-- END REF -->
+```
 
 ---
 
@@ -309,7 +305,7 @@ You can pass any number of values of the following supported types:
 
 
 <!-- REF #collection.average().Params -->
-| 引数           | タイプ             |    | 説明                                              |
+| 参照           | タイプ             |    | 説明                                              |
 | ------------ | --------------- |:--:| ----------------------------------------------- |
 | propertyPath | テキスト            | -> | Object property path to be used for calculation |
 | 戻り値          | Real, Undefined | <- | Arithmetic mean (average) of collection values  |
@@ -368,7 +364,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 **.clear()** : Collection<!-- END REF -->
 
 <!-- REF #collection.clear().Params -->
-| 引数  | タイプ    |    | 説明                                            |
+| 参照  | タイプ    |    | 説明                                            |
 | --- | ------ |:--:| --------------------------------------------- |
 | 戻り値 | コレクション | <- | Original collection with all elements removed |
 <!-- END REF -->
@@ -407,7 +403,7 @@ $vSize:=$col.length //$vSize=0
 
 
 <!-- REF #collection.combine().Params -->
-| 引数    | タイプ    |    | 説明                                                                            |
+| 参照    | タイプ    |    | 説明                                                                            |
 | ----- | ------ |:--:| ----------------------------------------------------------------------------- |
 | col2  | コレクション | -> | Collection to combine                                                         |
 | index | 整数     | -> | Position to which insert elements to combine in collection (default=length+1) |
@@ -459,7 +455,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 **.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
-| 引数    | タイプ                                                            |    | 説明                                                                                                                |
+| 参照    | タイプ                                                            |    | 説明                                                                                                                |
 | ----- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
 | value | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection |
 | 戻り値   | コレクション                                                         | <- | New collection with value(s) added to the original collection                                                     |
@@ -506,7 +502,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 <!-- REF #collection.copy().Params -->
-| 引数           | タイプ    |    | 説明                                                                                                       |
+| 参照           | タイプ    |    | 説明                                                                                                       |
 | ------------ | ------ |:--:| -------------------------------------------------------------------------------------------------------- |
 | option       | 整数     | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
 | groupWithCol | コレクション | -> | Shared collection to be grouped with the resulting collection                                            |
@@ -632,7 +628,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 
 <!-- REF #collection.count().Params -->
-| 引数           | タイプ  |    | 説明                                              |
+| 参照           | タイプ  |    | 説明                                              |
 | ------------ | ---- |:--:| ----------------------------------------------- |
 | propertyPath | テキスト | -> | Object property path to be used for calculation |
 | 戻り値          | 実数   | <- | Number of elements in the collection            |
@@ -679,7 +675,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 
 <!-- REF #collection.countValues().Params -->
-| 引数           | タイプ                                             |    | 説明                                              |
+| 参照           | タイプ                                             |    | 説明                                              |
 | ------------ | ----------------------------------------------- |:--:| ----------------------------------------------- |
 | value        | Text, Number, Boolean, Date, Object, Collection | -> | Value to count                                  |
 | propertyPath | テキスト                                            | -> | Object property path to be used for calculation |
@@ -759,7 +755,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 <!-- REF #collection.distinct().Params -->
-| 引数           | タイプ    |    | 説明                                                               |
+| 参照           | タイプ    |    | 説明                                                               |
 | ------------ | ------ |:--:| ---------------------------------------------------------------- |
 | option       | 整数     | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
 | propertyPath | テキスト   | -> | Path of attribute whose distinct values you want to get          |
@@ -812,7 +808,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 **.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.equal().Params -->
-| 引数          | タイプ    |    | 説明                                                               |
+| 参照          | タイプ    |    | 説明                                                               |
 | ----------- | ------ |:--:| ---------------------------------------------------------------- |
 | collection2 | コレクション | -> | Collection to compare                                            |
 | option      | 整数     | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
@@ -870,7 +866,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 **.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
-| 引数         | タイプ   |    | 説明                                                |
+| 参照         | タイプ   |    | 説明                                                |
 | ---------- | ----- |:--:| ------------------------------------------------- |
 | startFrom  | 整数    | -> | Index to start the test at                        |
 | methodName | テキスト  | -> | Name of the method to call for the test           |
@@ -968,7 +964,7 @@ End if
 
 
 <!-- REF #collection.extract().Params -->
-| 引数           | タイプ    |    | 説明                                                                                                                                 |
+| 参照           | タイプ    |    | 説明                                                                                                                                 |
 | ------------ | ------ |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
 | propertyPath | テキスト   | -> | Object property path whose values must be extracted to the new collection                                                          |
 | targetpath   | テキスト   | -> | Target property path or property name                                                                                              |
@@ -1045,7 +1041,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| 引数        | タイプ                                             |    | 説明                                     |
+| 参照        | タイプ                                             |    | 説明                                     |
 | --------- | ----------------------------------------------- |:--:| -------------------------------------- |
 | value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
 | startFrom | 整数                                              | -> | Start index (included)                 |
@@ -1102,7 +1098,7 @@ In case of inconsistency, the following rules apply:
 
 
 <!-- REF #collection.filter().Params -->
-| 引数         | タイプ    |    | 説明                                                         |
+| 参照         | タイプ    |    | 説明                                                         |
 | ---------- | ------ |:--:| ---------------------------------------------------------- |
 | methodName | テキスト   | -> | Name of the function to call to filter the collection      |
 | param      | Mixed  | -> | Parameter(s) to pass to *methodName*                       |
@@ -1197,7 +1193,7 @@ The code for ***TypeLookUp*** is:
 
 
 <!-- REF #collection.find().Params -->
-| 引数         | タイプ  |    | 説明                                           |
+| 参照         | タイプ  |    | 説明                                           |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | startFrom  | 整数   | -> | Index to start the search at                 |
 | methodName | テキスト | -> | Name of the function to call for the find    |
@@ -1297,7 +1293,7 @@ The code for ***FindCity*** is:
 
 
 <!-- REF #collection.findIndex().Params -->
-| 引数         | タイプ  |    | 説明                                             |
+| 参照         | タイプ  |    | 説明                                             |
 | ---------- | ---- |:--:| ---------------------------------------------- |
 | startFrom  | 整数   | -> | Index to start the search at                   |
 | methodName | テキスト | -> | Name of the function to call for the find      |
@@ -1376,7 +1372,7 @@ The code for ***FindCity*** method is:
 **.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.indexOf().Params -->
-| 引数        | タイプ        |    | 説明                                                                           |
+| 参照        | タイプ        |    | 説明                                                                           |
 | --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
 | toSearch  | expression | -> | Expression to search in the collection                                       |
 | startFrom | 整数         | -> | Index to start the search at                                                 |
@@ -1437,7 +1433,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 <!-- REF #collection.indices().Params -->
-| 引数          | タイプ    |    | 説明                                                       |
+| 参照          | タイプ    |    | 説明                                                       |
 | ----------- | ------ |:--:| -------------------------------------------------------- |
 | queryString | テキスト   | -> | Search criteria                                          |
 | value       | any    | -> | Value(s) to compare when using placeholder(s)            |
@@ -1493,7 +1489,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 **.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
 <!-- REF #collection.insert().Params -->
-| 引数      | タイプ    |    | 説明                                              |
+| 参照      | タイプ    |    | 説明                                              |
 | ------- | ------ |:--:| ----------------------------------------------- |
 | index   | 整数     | -> | Where to insert the element                     |
 | element | any    | -> | Element to insert in the collection             |
@@ -1545,7 +1541,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 **.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
 <!-- REF #collection.join().Params -->
-| 引数        | タイプ  |    | 説明                                                                       |
+| 参照        | タイプ  |    | 説明                                                                       |
 | --------- | ---- |:--:| ------------------------------------------------------------------------ |
 | delimiter | テキスト | -> | Separator to use between elements                                        |
 | option    | 整数   | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
@@ -1590,7 +1586,7 @@ By default, null or empty elements of the collection are returned in the resulti
 **.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.lastIndexOf().Params -->
-| 引数        | タイプ        |    | 説明                                                                      |
+| 参照        | タイプ        |    | 説明                                                                      |
 | --------- | ---------- |:--:| ----------------------------------------------------------------------- |
 | toSearch  | expression | -> | The element that is to be searched for within the collection            |
 | startFrom | 整数         | -> | Index to start the search at                                            |
@@ -1684,7 +1680,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 
 <!-- REF #collection.map().Params -->
-| 引数         | タイプ    |    | 説明                                                       |
+| 参照         | タイプ    |    | 説明                                                       |
 | ---------- | ------ |:--:| -------------------------------------------------------- |
 | methodName | テキスト   | -> | Name of method used to transform the collection elements |
 | param      | any    | -> | Parameter(s) for the method                              |
@@ -1752,7 +1748,7 @@ Here is the ***Percentage*** method:
 **.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.max().Params -->
-| 引数           | タイプ                                             |    | 説明                                             |
+| 参照           | タイプ                                             |    | 説明                                             |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
 | propertyPath | テキスト                                            | -> | Object property path to be used for evaluation |
 | 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection                |
@@ -1803,7 +1799,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 **.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
-| 引数           | タイプ                                             |    | 説明                                             |
+| 参照           | タイプ                                             |    | 説明                                             |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
 | propertyPath | テキスト                                            | -> | Object property path to be used for evaluation |
 | 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection                |
@@ -1855,7 +1851,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
-| 引数          | タイプ    |    | 説明                                                |
+| 参照          | タイプ    |    | 説明                                                |
 | ----------- | ------ |:--:| ------------------------------------------------- |
 | pathStrings | テキスト   | -> | Property path(s) on which to order the collection |
 | pathObjects | コレクション | -> | Collection of criteria objects                    |
@@ -1939,6 +1935,7 @@ Ordering a collection of objects with a property path:
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
  $c.push(New object("name";"Blountsville";"phones";New object("p1";"00";"p2";"03")))
+
  $c2:=$c.orderBy("phones.p1 asc")
 ```
 
@@ -1991,7 +1988,7 @@ Ordering with a property path:
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| 引数         | タイプ        |    | 説明                                               |
+| 参照         | タイプ        |    | 説明                                               |
 | ---------- | ---------- |:--:| ------------------------------------------------ |
 | methodName | テキスト       | -> | Name of method used to specify the sorting order |
 | extraParam | expression | -> | Parameter(s) for the method                      |
@@ -2076,7 +2073,7 @@ Here is the code for ***WordLength***:
 **.pop()** : any <!-- END REF -->
 
 <!-- REF #collection.pop().Params -->
-| 引数  | タイプ |    | 説明                         |
+| 参照  | タイプ |    | 説明                         |
 | --- | --- |:--:| -------------------------- |
 | 戻り値 | any | <- | Last element of collection |
 <!-- END REF -->
@@ -2122,7 +2119,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 **.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.push().Params -->
-| 引数      | タイプ    |    | 説明                                            |
+| 参照      | タイプ    |    | 説明                                            |
 | ------- | ------ |:--:| --------------------------------------------- |
 | element | Mixed  | -> | Element(s) to add to the collection           |
 | 戻り値     | コレクション | <- | Original collection containing added elements |
@@ -2183,7 +2180,7 @@ You want to sort the resutling collection:
 
 
 <!-- REF #collection.query().Params -->
-| 引数            | タイプ    |    | 説明                                                |
+| 参照            | タイプ    |    | 説明                                                |
 | ------------- | ------ |:--:| ------------------------------------------------- |
 | queryString   | テキスト   | -> | Search criteria                                   |
 | value         | Mixed  | -> | Value(s) to compare when using placeholder(s)     |
@@ -2290,7 +2287,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 <!-- REF #collection.reduce().Params -->
-| 引数         | タイプ                                             |    | 説明                                                                   |
+| 参照         | タイプ                                             |    | 説明                                                                   |
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
 | methodName | テキスト                                            | -> | Name of the function to call to process collection elements          |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
@@ -2381,7 +2378,7 @@ With the following ***Flatten*** method:
 
 
 <!-- REF #collection.remove().Params -->
-| 引数      | タイプ    |    | 説明                                                    |
+| 参照      | タイプ    |    | 説明                                                    |
 | ------- | ------ |:--:| ----------------------------------------------------- |
 | index   | 整数     | -> | Element at which to start removal                     |
 | howMany | 整数     | -> | Number of elements to remove, or 1 element if omitted |
@@ -2441,7 +2438,7 @@ If you try to remove an element from an empty collection, the method does nothin
 **.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
-| 引数           | タイプ                                             |    | 説明                                 |
+| 参照           | タイプ                                             |    | 説明                                 |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
 | size         | 整数                                              | -> | New size of the collection         |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements |
@@ -2496,7 +2493,7 @@ By default, new elements are filled will **null** values. You can specify the va
 **.reverse( )** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
-| 引数  | タイプ    |    | 説明                              |
+| 参照  | タイプ    |    | 説明                              |
 | --- | ------ |:--:| ------------------------------- |
 | 戻り値 | コレクション | <- | Inverted copy of the collection |
 <!-- END REF -->
@@ -2534,7 +2531,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 **.shift()** : any<!-- END REF -->
 
 <!-- REF #collection.shift().Params -->
-| 引数  | タイプ |    | 説明                          |
+| 参照  | タイプ |    | 説明                          |
 | --- | --- |:--:| --------------------------- |
 | 戻り値 | any | <- | First element of collection |
 <!-- END REF -->
@@ -2577,7 +2574,7 @@ If the collection is empty, this method does nothing.
 **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.slice().Params -->
-| 引数        | タイプ    |    | 説明                                                       |
+| 参照        | タイプ    |    | 説明                                                       |
 | --------- | ------ |:--:| -------------------------------------------------------- |
 | startFrom | 整数     | -> | Index to start the search at (included)                  |
 | end       | 整数     | -> | End index (not included)                                 |
@@ -2630,7 +2627,7 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
-| 引数         | タイプ   |    | 説明                                                        |
+| 参照         | タイプ   |    | 説明                                                        |
 | ---------- | ----- |:--:| --------------------------------------------------------- |
 | startFrom  | 整数    | -> | Index to start the test at                                |
 | methodName | テキスト  | -> | Name of the method to call for the test                   |
@@ -2712,7 +2709,7 @@ With the following *NumberGreaterThan0* method:
 
 
 <!-- REF #collection.sort().Params -->
-| 引数         | タイプ    |    | 説明                                               |
+| 参照         | タイプ    |    | 説明                                               |
 | ---------- | ------ |:--:| ------------------------------------------------ |
 | methodName | テキスト   | -> | Name of method used to specify the sorting order |
 | extraParam | any    | -> | Parameter(s) for the method                      |
@@ -2798,7 +2795,7 @@ If the collection contains elements of different types, they are first grouped b
 **.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.sum().Params -->
-| 引数           | タイプ  |    | 説明                                              |
+| 参照           | タイプ  |    | 説明                                              |
 | ------------ | ---- |:--:| ----------------------------------------------- |
 | propertyPath | テキスト | -> | Object property path to be used for calculation |
 | 戻り値          | 実数   | <- | Sum of collection values                        |
@@ -2859,7 +2856,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 **.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.unshift().Params -->
-| 引数    | タイプ                                    |    | 説明                                                    |
+| 参照    | タイプ                                    |    | 説明                                                    |
 | ----- | -------------------------------------- |:--:| ----------------------------------------------------- |
 | value | Text, Number, Object, Collection, Date | -> | Value(s) to insert at the beginning of the collection |
 | 戻り値   | 実数                                     | <- | Collection containing added element(s)                |

@@ -247,7 +247,7 @@ The resulting object is an entity selection of Employee with duplications remove
 **.add**( *entity* : 4D.Entity )<!-- END REF -->
 
 <!-- REF #entitySelectionClass.add().Params -->
-| 引数     | タイプ       |    | 説明                                         |
+| 参照     | タイプ       |    | 説明                                         |
 | ------ | --------- |:--:| ------------------------------------------ |
 | entity | 4D.Entity | -> | Entity to be added to the entity selection |
 <!-- END REF -->
@@ -298,7 +298,7 @@ An error occurs if *entity* and the entity selection are not related to the same
 
 
 <!-- REF #entitySelectionClass.and().Params -->
-| 引数              | タイプ                |    | 説明                                                                             |
+| 参照              | タイプ                |    | 説明                                                                             |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | entity          | 4D.Entity          | -> | Entity to intersect with                                                       |
 | entitySelection | 4D.EntitySelection | -> | Entity selection to intersect with                                             |
@@ -366,7 +366,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 **.average**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #entitySelectionClass.average().Params -->
-| 引数            | タイプ  |    | 説明                                                                                    |
+| 参照            | タイプ  |    | 説明                                                                                    |
 | ------------- | ---- |:--:| ------------------------------------------------------------------------------------- |
 | attributePath | テキスト | -> | Attribute path to be used for calculation                                             |
 | 戻り値           | 実数   | <- | Arithmetic mean (average) of entity attribute values (Null if empty entity selection) |
@@ -420,7 +420,7 @@ We want to obtain a list of employees whose salary is higher than the average sa
 **.contains**( *entity* : 4D.Entity ) : Boolean<!-- END REF -->
 
 <!-- REF #entitySelectionClass.contains().Params -->
-| 引数     | タイプ       |    | 説明                                                             |
+| 参照     | タイプ       |    | 説明                                                             |
 | ------ | --------- |:--:| -------------------------------------------------------------- |
 | entity | 4D.Entity | -> | Entity to evaluate                                             |
 | 戻り値    | ブール       | <- | True if the entity belongs to the entity selection, else False |
@@ -468,7 +468,7 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 **.count**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #entitySelectionClass.count().Params -->
-| 引数            | タイプ  |    | 説明                                                                |
+| 参照            | タイプ  |    | 説明                                                                |
 | ------------- | ---- |:--:| ----------------------------------------------------------------- |
 | attributePath | テキスト | -> | Path of the attribute to be used for calculation                  |
 | 戻り値           | 実数   | <- | Number of non null *attributePath* values in the entity selection |
@@ -515,7 +515,7 @@ We want to find out the total number of employees for a company without counting
 **.copy**( { *option* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.copy().Params -->
-| 引数     | タイプ                |    | 説明                                               |
+| 参照     | タイプ                |    | 説明                                               |
 | ------ | ------------------ |:--:| ------------------------------------------------ |
 | option | 整数                 | -> | `ck shared`: return a shareable entity selection |
 | 戻り値    | 4D.EntitySelection | <- | Copy of the entity selection                     |
@@ -578,7 +578,7 @@ Then this entity selection is updated with products and you want to share the pr
 **.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.distinct().Params -->
-| 引数            | タイプ    |    | 説明                                                               |
+| 参照            | タイプ    |    | 説明                                                               |
 | ------------- | ------ |:--:| ---------------------------------------------------------------- |
 | attributePath | テキスト   | -> | Path of attribute whose distinct values you want to get          |
 | option        | 整数     | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
@@ -634,7 +634,7 @@ You want to get a collection containing a single element per country name:
 **.drop**( { *mode* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.drop().Params -->
-| 引数   | タイプ                |    | 説明                                                                                               |
+| 参照   | タイプ                |    | 説明                                                                                               |
 | ---- | ------------------ |:--:| ------------------------------------------------------------------------------------------------ |
 | mode | 整数                 | -> | `dk stop dropping on first error`: stops method execution on first non-droppable entity          |
 | 戻り値  | 4D.EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies) |
@@ -694,7 +694,7 @@ Example with the `dk stop dropping on first error` option:
 **.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.extract().Params -->
-| 引数            | タイプ    |    | 説明                                                                                      |
+| 参照            | タイプ    |    | 説明                                                                                      |
 | ------------- | ------ |:--:| --------------------------------------------------------------------------------------- |
 | attributePath | テキスト   | -> | Attribute path whose values must be extracted to the new collection                     |
 | targetPath    | テキスト   | -> | Target attribute path or attribute name                                                 |
@@ -797,7 +797,7 @@ Given the following table and relation:
 **.first()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entitySelectionClass.first().Params -->
-| 引数  | タイプ       |    | 説明                                                                                 |
+| 参照  | タイプ       |    | 説明                                                                                 |
 | --- | --------- |:--:| ---------------------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to the first entity of the entity selection (Null if selection is empty) |
 <!-- END REF -->
@@ -853,7 +853,7 @@ There is, however, a difference between both statements when the selection is em
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #entitySelectionClass.getDataClass().Params -->
-| 引数  | タイプ          |    | 説明                                                     |
+| 参照  | タイプ          |    | 説明                                                     |
 | --- | ------------ |:--:| ------------------------------------------------------ |
 | 戻り値 | 4D.DataClass | <- | Dataclass object to which the entity selection belongs |
 <!-- END REF -->
@@ -903,7 +903,7 @@ The following generic code duplicates all entities of the entity selection:
 **.isOrdered()** : Boolean<!-- END REF -->
 
 <!-- REF #entitySelectionClass.isOrdered().Params -->
-| 引数  | タイプ |    | 説明                                                       |
+| 参照  | タイプ |    | 説明                                                       |
 | --- | --- |:--:| -------------------------------------------------------- |
 | 戻り値 | ブール | <- | True if the entity selection is ordered, False otherwise |
 <!-- END REF -->
@@ -954,7 +954,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entitySelectionClass.last().Params -->
-| 引数  | タイプ       |    | 説明                                                                                    |
+| 参照  | タイプ       |    | 説明                                                                                    |
 | --- | --------- |:--:| ------------------------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to the last entity of the entity selection (Null if empty entity selection) |
 <!-- END REF -->
@@ -1034,7 +1034,7 @@ Entity selections always have a `.length` property.
 **.max**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #entitySelectionClass.max().Params -->
-| 引数            | タイプ  |    | 説明                                               |
+| 参照            | タイプ  |    | 説明                                               |
 | ------------- | ---- |:--:| ------------------------------------------------ |
 | attributePath | テキスト | -> | Path of the attribute to be used for calculation |
 | 戻り値           | any  | <- | Highest value of attribute                       |
@@ -1087,7 +1087,7 @@ We want to find the highest salary among all the female employees:
 **.min()** : any<!-- END REF -->
 
 <!-- REF #entitySelectionClass.min().Params -->
-| 引数            | タイプ  |    | 説明                                               |
+| 参照            | タイプ  |    | 説明                                               |
 | ------------- | ---- |:--:| ------------------------------------------------ |
 | attributePath | テキスト | -> | Path of the attribute to be used for calculation |
 | 戻り値           | any  | <- | Lowest value of attribute                        |
@@ -1138,7 +1138,7 @@ In this example, we want to find the lowest salary among all the female employee
 **.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.minus().Params -->
-| 引数              | タイプ                |    | 説明                                                                       |
+| 参照              | タイプ                |    | 説明                                                                       |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------------ |
 | entity          | 4D.Entity          | -> | Entity to substract                                                      |
 | entitySelection | 4D.EntitySelection | -> | Entity selection to substract                                            |
@@ -1206,7 +1206,7 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 **.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.or().Params -->
-| 引数              | タイプ                |    | 説明                                                                     |
+| 参照              | タイプ                |    | 説明                                                                     |
 | --------------- | ------------------ |:--:| ---------------------------------------------------------------------- |
 | entity          | 4D.Entity          | -> | Entity to intersect with                                               |
 | entitySelection | 4D.EntitySelection | -> | Entity selection to intersect with                                     |
@@ -1268,7 +1268,7 @@ If the original entity selection and the parameter are not related to the same d
 **.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.orderBy().Params -->
-| 引数          | タイプ                |    | 説明                                                                    |
+| 参照          | タイプ                |    | 説明                                                                    |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
 | pathString  | テキスト               | -> | Attribute path(s) and sorting instruction(s) for the entity selection |
 | pathObjects | コレクション             | -> | Collection of criteria objects                                        |
@@ -1345,7 +1345,7 @@ You can add as many objects in the criteria collection as necessary.
 **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.orderByFormula().Params -->
-| 引数            | タイプ                |    | 説明                                          |
+| 参照            | タイプ                |    | 説明                                          |
 | ------------- | ------------------ |:--:| ------------------------------------------- |
 | formulaString | テキスト               | -> | Formula string                              |
 | formulaObj    | オブジェクト             | -> | Formula object                              |
@@ -1470,7 +1470,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 **.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.query().Params -->
-| 引数            | タイプ                |    | 説明                                                                                                                                                  |
+| 参照            | タイプ                |    | 説明                                                                                                                                                  |
 | ------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | テキスト               | -> | Search criteria as string                                                                                                                           |
 | formula       | オブジェクト             | -> | Search criteria as formula object                                                                                                                   |
@@ -1577,7 +1577,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 **.refresh()**<!-- END REF -->
 
 <!-- REF #entitySelectionClass.refresh().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |::| ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->
@@ -1657,7 +1657,7 @@ A list box displays the Form.students entity selection and several clients work 
 **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.slice().Params -->
-| 引数        | タイプ                |    | 説明                                                             |
+| 参照        | タイプ                |    | 説明                                                             |
 | --------- | ------------------ |:--:| -------------------------------------------------------------- |
 | startFrom | 整数                 | -> | Index to start the operation at (included)                     |
 | end       | 整数                 | -> | End index (not included)                                       |
@@ -1718,7 +1718,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 **.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #entitySelectionClass.sum().Params -->
-| 引数            | タイプ  |    | 説明                                               |
+| 参照            | タイプ  |    | 説明                                               |
 | ------------- | ---- |:--:| ------------------------------------------------ |
 | attributePath | テキスト | -> | Path of the attribute to be used for calculation |
 | 戻り値           | 実数   | <- | Sum of entity selection values                   |
@@ -1769,7 +1769,7 @@ $sum:=$sel.sum("salary")
 **.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
 <!-- REF #entitySelectionClass.toCollection().Params -->
-| 引数           | タイプ    |    | 説明                                                                                   |
+| 参照           | タイプ    |    | 説明                                                                                   |
 | ------------ | ------ |:--:| ------------------------------------------------------------------------------------ |
 | filterString | テキスト   | -> | String with entity attribute path(s) to extract                                      |
 | filterCol    | コレクション | -> | Collection of entity attribute path(s) to extract                                    |

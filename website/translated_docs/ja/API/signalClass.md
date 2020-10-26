@@ -108,11 +108,11 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF signalClass.New signal.Syntax -->
+<!-- REF #_command_.New signal.Syntax -->
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF signalClass.New signal.Params -->
-| 引数          | タイプ       |    | 説明                                     |
+| 参照          | タイプ       |    | 説明                                     |
 | ----------- | --------- |:--:| -------------------------------------- |
 | description | テキスト      | -> | Description for the signal             |
 | 戻り値         | 4D.Signal | <- | Native object encapsulating the signal |
@@ -120,7 +120,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 #### 説明
-The `New signal` command <!-- REF signalClass.New signal.Summary -->creates a 
+The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a 
 
 `4D.Signal` object<!-- END REF -->.
 
@@ -237,7 +237,7 @@ This property is **read-only**.
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #signalClass.trigger().Params -->
-| 引数 | タイプ |  | 説明                              |
+| 参照 | タイプ |  | 説明                              |
 | -- | --- |::| ------------------------------- |
 |    |     |  | Does not require any parameters |
 <!-- END REF -->
@@ -267,7 +267,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #signalClass.wait().Params -->
-| 引数      | タイプ |    | 説明                                             |
+| 参照      | タイプ |    | 説明                                             |
 | ------- | --- | -- | ---------------------------------------------- |
 | timeout | 実数  | -> | Maximum waiting time for the signal in seconds |
 | 戻り値     | ブール | <- | State of the `.signaled` property              |

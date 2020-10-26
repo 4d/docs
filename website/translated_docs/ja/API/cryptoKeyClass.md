@@ -75,7 +75,7 @@ ASSERT($status.success)
 <!-- REF #cryptokey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
 
 <!-- REF #cryptokey.new().Params -->
-| 引数        | タイプ    |    | 説明                    |
+| 参照        | タイプ    |    | 説明                    |
 | --------- | ------ | -- | --------------------- |
 | settings  | オブジェクト | -> | キーペアを生成・ロードするための設定    |
 | cryptoKey | オブジェクト | <- | 暗号化キーペアをカプセル化したオブジェクト |
@@ -130,7 +130,7 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- REF #cryptokey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #cryptokey.decrypt().Params -->
-| 引数      | タイプ    |    | 説明                                                                            |
+| 参照      | タイプ    |    | 説明                                                                            |
 | ------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message | テキスト   | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
 | options | オブジェクト | -> | デコーディングオプション                                                                  |
@@ -181,7 +181,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 <!-- REF #cryptokey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #cryptokey.encrypt().Params -->
-| 引数      | タイプ    |    | 説明                                                                            |
+| 参照      | タイプ    |    | 説明                                                                            |
 | ------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message | テキスト   | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
 | options | オブジェクト | -> | エンコーディングオプション                                                                 |
@@ -226,7 +226,7 @@ The returned value is an encrypted message.
 
 
 <!-- REF #cryptokey.getPrivateKey().Params -->
-| 引数  | タイプ  |    | 説明         |
+| 参照  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
 | 戻り値 | テキスト | <- | PEM 形式の秘密鍵 |
 <!-- END REF -->
@@ -255,7 +255,7 @@ The returned value is the private key.
 <!-- REF #cryptokey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #cryptokey.getPublicKey().Params -->
-| 引数  | タイプ  |    | 説明         |
+| 参照  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
 | 戻り値 | テキスト | <- | PEM 形式の公開鍵 |
 <!-- END REF -->
@@ -303,7 +303,7 @@ The returned value is the public key.
 **sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #cryptokey.sign().Params -->
-| 引数      | タイプ    |    | 説明                                                                              |
+| 参照      | タイプ    |    | 説明                                                                              |
 | ------- | ------ | -- | ------------------------------------------------------------------------------- |
 | message | テキスト   | -> | 署名をするメッセージ                                                                      |
 | options | オブジェクト | -> | 署名オプション                                                                         |
@@ -379,7 +379,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 <!-- REF #cryptokey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #cryptokey.verify().Params -->
-| 引数        | タイプ    |    | 説明                                                                                                |
+| 参照        | タイプ    |    | 説明                                                                                                |
 | --------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
 | message   | テキスト   | -> | 署名生成時に使われたメッセージ文字列                                                                                |
 | signature | テキスト   | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |

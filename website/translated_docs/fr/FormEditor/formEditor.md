@@ -498,7 +498,7 @@ La list box finale :
 
 ## Badges
 
-L’éditeur de formulaires 4D permet d’utiliser des badges afin de faciliter la visualisation des propriétés des objets. You can find them on the form toolbar:
+L’éditeur de formulaires 4D permet d’utiliser des badges afin de faciliter la visualisation des propriétés des objets. Ils se trouvent dans la barre d'outils du formulaire :
 
 ![](assets/en/FormEditor/shields.png)
 
@@ -534,7 +534,7 @@ Voici la description de chaque type de badge :
 | ![](assets/en/FormEditor/localized.png)      | Localisé                             | Pour les objets dont le libellé provient d’une référence (libellé débutant par “:”). La référence peut être de type ressource (STR#) ou XLIFF |
 | ![](assets/en/FormEditor/noShields.png)      | Pas de badge                         | Aucun badge n’apparaît                                                                                                                        |
 
-## Views
+## Vues
 
 The 4D Form Editor enables you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed.
 
@@ -570,17 +570,17 @@ The current view is indicated with a check mark (*e.g.*, "Work Address" in the i
 ![](assets/en/FormEditor/formMenu.png)
 
 
-### Before you begin
+### Avant de commencer
 
-Here are a few important things to know before you start working with views:
+Voici quelques éléments importants à connaitre avant de commencer à travailler avec les vues :
 
-*   **Context of use**: Views are a purely graphic tool which can only be used in the Form Editor; you cannot access views programmatically or in the Application environment.
+*   **Contexte d’utilisation** : les vues sont un outil purement graphique, utilisable uniquement dans l’éditeur de formulaires ; il n’est pas possible d’accéder aux vues par programmation ou en mode Application.
 
-*   **Views and pages**: Objects of the same view can belong to different form pages; only objects of the current page (and of page 0 if it is visible) can be displayed, regardless of the view configuration.
+*   **Vues et pages** : Les objets d’une même vue peuvent appartenir à des pages différentes d’un formulaire ; seuls les objets de la page courante (et de la page 0 si elle est visible) peuvent être affichés, quelle que soit la configuration des vues.
 
-*   **Views and levels**: Views are independent of object levels; there is no display hierarchy among different views.
+*   **Vues et plans** : Les vues sont indépendantes des plans des objets, il n’y a pas de hiérarchie d’affichage entre les différentes vues.
 
-*   **Views and groups**: Only objects belonging to the current view can be grouped.
+*   **Vues et groupes** : Seuls les objets appartenant à la vue courante peuvent être groupés.
 
 *   **Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being edited and the name is displayed in bold text.
 
@@ -613,11 +613,11 @@ By default views are named as "View" + the view number, however you can change t
 
 To rename a view, you can use either:
 
-*   Double-click directly on the view name (the selected view in this case). The name then becomes editable:
+*   Double-cliquer directement sur le nom de la vue (dans ce cas, la vue est sélectionnée). Le nom devient alors éditable :
 
     ![](assets/en/FormEditor/rename.png)
 
-*   Right-click on the view name. The name then becomes editable:
+*   Clic droit sur le nom de la vue. Le nom devient alors éditable :
 
     ![](assets/en/FormEditor/rename2.png)
 
@@ -657,9 +657,9 @@ Once views are created, you can use the View palette to:
 *   Display or hide objects for each view,
 *   Lock the objects of a view.
 
-#### Adding objects to views
+#### Ajouter des objets aux vues
 
-An object can only belong to a single view.
+Un objet ne peut appartenir qu’à une seule vue.
 
 To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
 
@@ -693,11 +693,11 @@ You can also move an object to another view via the object's context menu. Right
 
 
 
-#### Select all objects of a view
+#### Sélectionner tous les objets d’une vue
 
-You can select all objects belong to the same view in the current page of the form. This function is useful for applying global changes to a set of objects.
+Vous pouvez sélectionner dans la page courante du formulaire tous les objets appartenant à une même vue. Cette fonction est utile pour appliquer des modifications globales à un ensemble d’objets.
 
-To do this, right-click on the view in which you wish to select all the objects, click on **Select All**:
+Pour cela, faites un clic droit sur la vue dans laquelle vous souhaitez sélectionner tous les objets et cliquez sur le bouton **Tout sélect. dans vue**:
 
 ![](assets/en/FormEditor/selectAll.png)
 
@@ -707,37 +707,37 @@ You can also use the button at the bottom of the View palette:
 ![](assets/en/FormEditor/selectAll2.png)
 
 
-#### Show or hide objects of a view
+#### Afficher ou masquer les objets d’une vue
 
-You can show or hide objects belonging to a view at any time in the form's current page. This way you can focus on certain objects when editing the form, for example.
+Vous pouvez à tout moment afficher ou masquer les objets d’une vue dans la page courante du formulaire. Cette fonction permet par exemple de se concentrer sur certains objets lors de la modification du formulaire.
 
-By default, all views are shown, as indicated by the *Show/Hide* icon:
+Par défaut, toutes les vues sont affichées, comme l’indique l’icône en regard de chaque vue dans la palette des vues:
 
 ![](assets/en/FormEditor/showHide.png)
 
-To hide a view, click the *Show/Hide* icon. It is then dimmed and objects of the corresponding view are no longer shown in the form:
+Pour masquer une vue, cliquez sur cette icône. Elle est alors grisée et les objets de la vue correspondante ne sont plus affichés dans le formulaire :
 
 ![](assets/en/FormEditor/hidden.png)
-> The [Current view](#before-you-begin) cannot be hidden.
+> Il n’est pas possible de masquer la [vue courante](#before-you-begin).
 
-To show a view that is hidden, simply select it or click on the *Show/Hide* icon for that view.
+Pour afficher une vue masquée, il suffit de la sélectionner ou de cliquer de nouveau sur l’icône de visualisation.
 
 
 
-#### Locking objects of a view
+#### Verrouiller les objets d’une vue
 
-You can lock the objects of a view. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. This function is useful for preventing handling errors.
+Vous pouvez verrouiller les objets d’une vue. Cela empêche leur sélection, leur modification ou leur suppression dans le formulaire. Une fois verrouillé, un objet ne peut pas être sélectionné par un clic, un rectangle de sélection ou la commande **Sélectionner objets de même type** du menu contextuel. Cette fonction est utile pour éviter les erreurs de manipulation.
 
-By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next to each view:
+Par défaut, toutes les vues sont déverrouillées, comme l’indique l’icône en regard de chaque vue dans la palette des vues:
 
 ![](assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut, which means that the view is now locked:
+Pour verrouiller les objets d’une vue, cliquez sur cette icône. Le cadenas est alors refermé, ce qui indique que la vue est verrouillée :
 
 ![](assets/en/FormEditor/locked.png)
-> The [Current view](#before-you-begin) cannot be locked.
+> Il n’est pas possible de verrouiller la [vue courante](#before-you-begin).
 
-To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
+Pour déverrouiller une vue, il suffit de la sélectionner ou de cliquer à nouveau sur l’icône de verrouillage.
 
 ## Zoom
 
