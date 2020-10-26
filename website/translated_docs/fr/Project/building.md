@@ -146,14 +146,14 @@ Pour plus d'informations sur le mode de liaison des données, reportez-vous au p
 
 #### Fichiers générés
 
-Lorsque vous cliquez sur le bouton **Construire**, crée automatiquement un dossier **Final Application** dans le **“Dossier de destination”**. Inside the Final Application folder is a subfolder with the name of the specified application in it.
+Lorsque vous cliquez sur le bouton **Construire**, crée automatiquement un dossier **Final Application** dans le **“Dossier de destination”**. Dans le dossier Final Application, se trouve un sous-dossier portant le nom de l'application spécifiée.
 
-If you have specified "MyProject" as the name of the application, you will find the following files in this subfolder (aka MyProject):
+Si vous avez spécifié "MyProject" comme nom d'application, vous trouverez les fichiers suivants dans ce sous-dossier (MyProject) :
 
 *   *Windows*
-    *   MyProject.exe  - Your executable and a MyProject.rsr (the application resources)
-    *   4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
-    *   Database folder  - Includes a Resources folder and  MyProject.4DZ file. Ils constituent la structure compilée de la base et son dossier Resources. **Note ** : Ce dossier contient également le dossier *Default Data*, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#data-file-management-in-final-applicatons)).
+    *   MyProject.exe - Votre exécutable et un MyProject.rsr (les ressources de l'application)
+    *   Dossier 4D Extensions, dossier Resources, diverses bibliothèques (DLL), dossier Native Components, dossier SASL Plugins - Fichiers nécessaires au fonctionnement de l'application
+    *   Dossier Database - Comprend un dossier Resources et un fichier MyProject.4DZ. Ils constituent la structure compilée de la base et son dossier Resources. **Note ** : Ce dossier contient également le dossier *Default Data*, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#data-file-management-in-final-applicatons)).
     *   (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans la base. Pour plus d’informations sur ce point, reportez-vous à la section Page [Plugins et composants](#plugins-and-components).
     *   Un dossier Licences contenant sous forme de fichier XML la liste des numéros de licence ayant été intégrés dans l’application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
     *   Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
