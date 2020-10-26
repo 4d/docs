@@ -465,7 +465,7 @@
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Users and Groups": "ユーザー＆グループ",
-      "REST Server": "REST Server"
+      "REST Server": "REST サーバー"
     }
   },
   "pages-strings": {
@@ -473,12 +473,12 @@
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project databases|in index page Getting started": "プロジェクトデータベース",
     "Form Editor|no description given": "フォームエディター",
-    "Form Events|no description given": "Form Events",
+    "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
-    "Web Server|no description given": "Web Server",
-    "REST Server|no description given": "REST Server",
+    "Web Server|no description given": "Web サーバー",
+    "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
     "Users and Groups|no description given": "ユーザー＆グループ",
