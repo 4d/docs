@@ -135,25 +135,25 @@ Standard actions can be used to carry out various current operations linked to s
 
 > Ctrl/Command キーの選択を解除することはできません。このキーは必須です。 内容を消去するには **クリア** をクリックします。 **OK** をクリックすると、内容を確定してウィンドウを閉じます。 指定したショートカットが "ショーとカット" 入力エリアに表示されます:
 
-To assign a keyboard shortcut using the 4D language, use the `SET ITEM SHORTCUT` command.
+4Dランゲージでキーボードショートカットを割り当てるには、`SET ITEM SHORTCUT` コマンドを使います。
 
-> An active object can also have a keyboard shortcut. If the **Ctrl/Command** key assignments conflict, the active object takes precedence.
+> アクティブオブジェクトにも、キーボードショートカットを割り当てることができます。 **Ctrl/Command** キーの割り当てが衝突した場合、アクティブオブジェクトが優先されます。
 
 
-### Enabled item
+### 選択可
 
 In the Menu editor, you can specify whether a menu item will appear enabled or disabled. An enabled menu command can be chosen by the user; a disabled menu command is dimmed and cannot be chosen. When the **Enabled Item** check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.
 
 Unless you specify otherwise, 4D automatically enables each menu item you add to a custom menu. You can disable an item in order, for example, to enable it only using programming with `ENABLE MENU ITEM` and `DISABLE MENU ITEM` commands.
 
 
-### Check mark
+### チェック
 
 This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands (`SET MENU ITEM MARK` and `Get menu item mark`).
 
 Check marks are generally used for continuous action menu items and indicate that the action is currently underway.
 
-### Font styles
+### フォントスタイル
 
 4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the `SET MENU ITEM STYLE` language command.
 
@@ -161,7 +161,7 @@ As a general rule, apply font styles sparingly to your menus — too many styles
 > You can also apply styles by inserting special characters in the menu title (see [Using control characters](properties.md#using-control-characters) above).
 
 
-### Item icon
+### 項目アイコン
 
 You can associate an icon with a menu item. It will displayed directly in the menu, next to the item:
 
