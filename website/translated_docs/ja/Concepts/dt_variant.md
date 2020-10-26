@@ -9,7 +9,7 @@ title: バリアント
 
 - BLOB
 - boolean
-- コレクション
+- collection
 - 日付
 - 倍長整数
 - object
