@@ -1,6 +1,6 @@
 ---
 id: transporter
-title: Transporter Class
+title: Classe Transporter
 ---
 
 ## Description
