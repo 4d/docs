@@ -89,10 +89,10 @@ Standard actions can be used to carry out various current operations linked to s
 
 メニューエディターでは、メニューのタイトルエリアにテキストを入力する代わりに、**区切り線** オプションを選択します。 すると、カレントメニューバーのエリアに線が表示されます。 このオプションが選択されると、ほかのプロパティは無効になります。 **注:** macOS ではメニュー項目タイトルの一文字目を "-" にすると、その行が区切り線になります。
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM` commands.
+4Dランゲージを使う場合は、`APPEND MENU ITEM`、`INSERT MENU ITEM`、または `SET MENU ITEM` コマンドの itemText パラメーターに `-` あるいは `(-` を受け渡します。
 
 
-### Keyboard shortcuts
+### ショートカット
 
 You can add keyboard shortcuts to any menu command. If a menu command has one of these keyboard shortcuts, users will see it next to the menu command. For example, "Ctrl+C" (Windows) or "Command+C" (macOS) appears next to the **Copy** menu command in the **Edit** menu.
 
