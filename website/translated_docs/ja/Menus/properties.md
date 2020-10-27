@@ -46,7 +46,7 @@ title: メニュープロパティ
 
 標準アクションやメソッドをメニューに割り当てていない場合、そのメニューを選択すると、4D はアプリケーション環境からデザインモードに戻ります。 デザインモードに移行できない場合は、4D を終了します。
 
-Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the database (add record, select all, etc.).
+標準アクションは、システム機能に関連した操作 (コピー、終了、等) や、データベースに関連した操作 (レコード追加、全選択、等) を実行するのに使用します。
 
 標準アクションとプロジェクトメソッドの両方をメニューに割り当てることも可能です。 この場合、標準アクションが実行されることはありません。しかし、4D はこのアクションを使用し、状況に合わせてメニューコマンドを使用可／使用不可に設定します。 メニューが使用不可の場合、割り当てられたプロジェクトメソッドは実行されません。
 
@@ -163,14 +163,14 @@ Standard actions can be used to carry out various current operations linked to s
 
 ### 項目アイコン
 
-メニュー項目にアイコンを関連付けることができます。 It will displayed directly in the menu, next to the item:
+メニュー項目にアイコンを関連付けることができます。 設定されたアイコンはメニューの左に表示されます:
 
 ![](assets/en/Menus/iconMenu.png)
 
-To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area:
+メニューエディターでアイコンを設定するには、"項目アイコン" エリアをクリックし、**開く** を選択してディスクからピクチャーを開きます。 プロジェクトの Resources フォルダーに格納されていないピクチャーファイルを選択した場合、そのファイルは自動的に Resources フォルダーにコピーされます。 項目アイコンを設定すると、プレビューエリアに表示されます:
 
 ![](assets/en/Menus/iconpreview.png)
 
-To remove the icon from the item, choose the **No Icon** option from the "Item Icon" area.
+項目からアイコンを取り除くには、"項目アイコン" エリアのメニューから **アイコンなし** を選択します。
 
-To define item icons using the 4D language, call the `SET MENU ITEM ICON` command. 
+4Dランゲージを使って項目アイコンを設定するには、`SET MENU ITEM ICON` コマンドを使います。 
