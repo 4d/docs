@@ -19,13 +19,13 @@ title: Menu bar features
 
 スプラッシュスクリーンピクチャーはメニューエディターでのみ設定できます: まず、カスタムスプラッシュスクリーンを割り当てたいメニューバーを選択します。 ウィンドウ右側に"背景画像"エリアが表示されます。 ディスクに保存されたピクチャーを直接開くには、**開く** ボタンをクリックするか、“背景画像” エリアをクリックします。 ポップアップメニューが表示されます:
 - クリップボードのピクチャーをペーストするには **ペースト** を選択します。
-- ディスクファイルとして保存された画像を開くには **開く** を選択します。 開くを選択すると、標準のファイルを開くダイアログボックスが表示されます。使用するピクチャーを選択します。 設定が完了すると、選択した画像がプレビューとして表示されます。 It is then associated with the menu bar.
+- ディスクファイルとして保存された画像を開くには **開く** を選択します。 開くを選択すると、標準のファイルを開くダイアログボックスが表示されます。使用するピクチャーを選択します。 設定が完了すると、選択した画像がプレビューとして表示されます。 これにより、メニューバーとの関連付けが確認できます。
 
 ![](assets/en/Menus/splash2.png)
 
-You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
+メニューバーをテストすると、設定の結果を見ることができます (後述参照)。 アプリケーションモードでは、ピクチャーはスプラッシュスクリーンに "トランケート (中央合わせ)" で表示されます。
 
-> You can choose whether to display or hide this window using the **Display toolbar** option in the Database Settings.
+> データベース設定では、インターフェース＞一般の **ウィンドウの表示** オプションを使用して、スプラッシュスクリーンの表示/非表示を設定できます。
 
 To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
 
