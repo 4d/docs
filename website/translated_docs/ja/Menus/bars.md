@@ -17,9 +17,9 @@ title: Menu bar features
 
 任意の画像編集アプリケーションで作成したピクチャーをスプラッシュスクリーンで使用できます。 クリップボードにコピーした画像、あるいはハードディスク上の画像を使用できます。 4D がサポートする標準のピクチャータイプの画像を使用できます。
 
-スプラッシュスクリーンピクチャーはメニューエディターでのみ設定できます: まず、カスタムスプラッシュスクリーンを割り当てたいメニューバーを選択します。 Note the "Background Image" area in the right-hand part of the window. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. A pop-up menu appears:
-- To paste a picture from the clipboard, choose **Paste**.
-- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Once set, the picture is displayed in miniature in the area. It is then associated with the menu bar.
+スプラッシュスクリーンピクチャーはメニューエディターでのみ設定できます: まず、カスタムスプラッシュスクリーンを割り当てたいメニューバーを選択します。 ウィンドウ右側に"背景画像"エリアが表示されます。 ディスクに保存されたピクチャーを直接開くには、**開く** ボタンをクリックするか、“背景画像” エリアをクリックします。 ポップアップメニューが表示されます:
+- クリップボードのピクチャーをペーストするには **ペースト** を選択します。
+- ディスクファイルとして保存された画像を開くには **開く** を選択します。 開くを選択すると、標準のファイルを開くダイアログボックスが表示されます。使用するピクチャーを選択します。 設定が完了すると、選択した画像がプレビューとして表示されます。 It is then associated with the menu bar.
 
 ![](assets/en/Menus/splash2.png)
 
