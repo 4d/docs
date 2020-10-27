@@ -536,29 +536,29 @@ Voici la description de chaque type de badge :
 
 ## Vues
 
-The 4D Form Editor enables you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed.
+L'éditeur de formulaires 4D vous permet de créer des formulaires complexes en distribuant des objets de formulaire entre des vues séparées qui peuvent ensuite être masquées ou affichées selon les besoins.
 
-For example, you can distribute objects according to type (fields, variables, static objects, etc.). Any type of form object, including subforms and plug-in areas, can be included in views.
+Par exemple, vous pouvez répartir les objets par type (champs, variables, objets statiques, etc.). Tout type d'objet formulaire, y compris les sous-formulaires et les zones de plug-in, peut être inclus dans les vues.
 
-There is no limit on the number of views per form. You can create as many different views as you need. Additionally, each view can be displayed, hidden, and/or locked.
+Il n'y a pas de limite au nombre de vues par formulaire. Vous pouvez créer autant de vues différentes que nécessaire. De plus, chaque vue peut être affichée, masquée et/ou verrouillée.
 
 
-View management is handled via the View palette.
+Les vues sont gérées via à la palette de vues.
 
 ![](assets/en/FormEditor/viewEditor.png)
 
 
-### Accessing the View palette
+### Accéder à la palette de vues
 
-There are three ways to access the View palette:
+Il existe trois façons d'accéder à la palette de vues :
 
-*   **Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when at least one object belongs to a view other than the default view.)
+*   **Barre d'outils** : cliquez sur l'icône de Vues dans la barre d'outils de l'éditeur de formulaires. (Cette icône apparaît en gris lorsqu'au moins un objet appartient à une vue autre que la vue par défaut.)
 
-    |                  Default view only                   |               With additional views                |
+    |              Vue par défaut uniquement               |           Avec des vues supplémentaires            |
     |:----------------------------------------------------:|:--------------------------------------------------:|
     | ![](assets/en/FormEditor/icon.png "No views in use") | ![](assets/en/FormEditor/icon2.png "Views in use") |
 
-*   **Context menu** (form or object): Right-click anywhere in the Form Editor or an object, and select **Current View**
+*   **Menu contextuel** (formulaire ou objet) : faites un clic droit n'importe où dans l'éditeur de formulaires ou sur un objet, puis sélectionnez **Vue courante**
 
     ![](assets/en/FormEditor/contextMenu.png)
 
@@ -623,39 +623,39 @@ To rename a view, you can use either:
 
 #### Réordonner les vues
 
-You can change the display order of views by dragging/dropping them within the View palette.
+Vous pouvez modifier l'ordre d'affichage des vues en les faisant glisser/déposer dans la palette des vues.
 
-Note that the Default view does not change:
+A noter que la vue par défaut ne change pas :
 
 ![](assets/en/FormEditor/reorderView.png)
 
 
-#### Deleting views
+#### Supprimer des vues
 
 To rename a view, you can use either:
 
-*   Click on the **Delete the selected view** button at the bottom of the View palette:
+*   Cliquer sur le bouton **Supprimer la vue sélectionnée** en bas de la palette des vues :
 
     ![](assets/en/FormEditor/deleteView.png)
 
 
-*   Right-click on the view name, and select **Delete View**:
+*   Faire un clic droit sur le nom de la vue et sélectionner **Supprimer la vue** :
 
     ![](assets/en/FormEditor/deleteView2.png)
-> If a view is deleted, any objects in it are automatically moved to the Default view.
+> Si une vue est supprimée, tous les objets qu'elle contient sont automatiquement déplacés vers la vue par défaut.
 
 
 
 
-### Using views
+### Utilisation des vues
 
-Once views are created, you can use the View palette to:
+Une fois que les vues sont créées, vous pouvez utiliser la palette des vues pour :
 
-*   Add object to views,
-*   Move objects from one view to another,
-*   Select all objects of the same view in a single click,
-*   Display or hide objects for each view,
-*   Lock the objects of a view.
+*   Ajouter un objet aux vues,
+*   Déplacer des objets d'une vue à une autre,
+*   Sélectionner tous les objets d'une même vue en un seul clic,
+*   Afficher ou masquer des objets pour chaque vue,
+*   Verrouiller les objets d'une vue.
 
 #### Ajouter des objets aux vues
 
