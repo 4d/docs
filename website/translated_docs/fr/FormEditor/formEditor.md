@@ -562,10 +562,10 @@ Il existe trois façons d'accéder à la palette de vues :
 
     ![](assets/en/FormEditor/contextMenu.png)
 
-The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
+La vue courante est indiquée par une coche (par exemple, "Adresse professionnelle" dans l'image ci-dessus)
 
 
-*   **Form menu**: Click on the **Form** menu and select **View List**
+*   **Menu Formulaire** : cliquez sur le menu **Formulaire** et sélectionnez **Afficher la liste**
 
 ![](assets/en/FormEditor/formMenu.png)
 
@@ -582,7 +582,7 @@ Voici quelques éléments importants à connaitre avant de commencer à travaill
 
 *   **Vues et groupes** : Seuls les objets appartenant à la vue courante peuvent être groupés.
 
-*   **Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being edited and the name is displayed in bold text.
+*   **Vues courantes et par défaut** : la vue par défaut est la première vue d'un formulaire et ne peut pas être supprimée; la vue courante est la vue en cours de modification et le nom est affiché en gras.
 
 
 
@@ -609,15 +609,15 @@ Il n'y a pas de limitation du nombre de vues.
 
 #### Renommer des vues
 
-By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
+Par défaut, les vues sont nommées "Vue" + le numéro de vue, mais vous pouvez modifier ces noms pour améliorer la lisibilité et mieux répondre à vos besoins.
 
-To rename a view, you can use either:
+Pour renommer une vue, vous pouvez soit :
 
 *   Double-cliquer directement sur le nom de la vue (dans ce cas, la vue est sélectionnée). Le nom devient alors éditable :
 
     ![](assets/en/FormEditor/rename.png)
 
-*   Clic droit sur le nom de la vue. Le nom devient alors éditable :
+*   Faire un clic droit sur le nom de la vue. Le nom devient alors éditable :
 
     ![](assets/en/FormEditor/rename2.png)
 
@@ -632,7 +632,7 @@ A noter que la vue par défaut ne change pas :
 
 #### Supprimer des vues
 
-To rename a view, you can use either:
+Pour renommer une vue, vous pouvez soit :
 
 *   Cliquer sur le bouton **Supprimer la vue sélectionnée** en bas de la palette des vues :
 
