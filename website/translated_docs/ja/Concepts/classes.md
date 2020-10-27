@@ -124,7 +124,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------- |
 | classStore | object | <- | 4Dクラスストア |
 
-`4D` コマンドは、ビルトイン 4Dクラスのクラスストアを返します。 [CryptoKey](API/CryptoKey.md) などの専用 API へのアクセスを提供します。
+`4D` コマンドは、ビルトイン 4Dクラスのクラスストアを返します。 It provides access to specific APIs such as [CryptoKey](API/cryptoKeyClass.md).
 
 #### 例題
 
@@ -141,56 +141,20 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ### Class オブジェクト
 
-プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 クラスとは、それ自身が "Class" クラスのオブジェクトです。 Class オブジェクトは次のプロパティやメソッドを持ちます:
+プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 A class is an object itself, of ["Class" class](API/classClass.md). A class object has the following properties and function:
 
-- `name` 文字列
-- `superclass` オブジェクト (任意。無ければ null)
-- `new()` メソッド: Class オブジェクトをインスタンス化します
+- [`name`](API/classClass.md#name) string
+- [`superclass`](API/classClass.md#superclass) object (null if none)
+- [`new()`](API/classClass.md#new) function, allowing to instantiate class objects.
 
 さらに、Class オブジェクトは次を参照できます:
+
 - [`constructor`](#class-constructor) オブジェクト (任意),
 - `prototype` オブジェクト: 名前付きの [関数](#function) オブジェクトを格納します (任意)
 
-Class オブジェクトは共有オブジェクトです。したがって、異なる 4D プロセスから同時にアクセスすることができます。
+A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
 
 
-
-### new() メソッド
-
-#### cs.\<ClassName>.new() -> classObject
-
-| 参照          | タイプ    |    | 説明                         |
-| ----------- | ------ | -- | -------------------------- |
-| classObject | object | <- | \<ClassName> クラスの新規オブジェクト |
-
-`new()` メソッドは、呼び出し対象である `<ClassName>` クラスの新規インスタンスであるオブジェクトを作成して返します。 このメソッドは、`cs` [クラスストア](#クラスストア) の全クラスで自動的に利用可能です。
-
-存在しないクラスを対象に呼び出された場合、エラーが返されます。
-
-#### 例題
-
-Person クラスの新規インスタンスを作成するには、次のように書きます:
-
-```4d
-var $person : cs.Person // 正確な自動補完のため  
-$person:=cs.Person.new() // 新規インスタンスの作成  
-//$Person はクラス関数を格納しています
-```
-
-空のオブジェクトをインスタンス化することも可能です。 たとえば、次の `Empty.4dm` クラスファイルを作成します:
-
-```4d  
-// Empty.4dm クラスファイル
-// 空です
-```
-
-メソッドでは次のように書けます:
-
-```4d
-$o:=cs.Empty.new()  
-// $o : {}
-$cName:=OB Class($o).name // "Empty"
-```
 
 ### プロパティ検索とプロトタイプ
 
