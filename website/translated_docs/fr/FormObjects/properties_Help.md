@@ -4,7 +4,7 @@ title: Aide
 ---
 
 ---
-## Message d'aide
+## Infobulle
 
 This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
 
@@ -31,9 +31,9 @@ You can either:
 [Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Liste déroulante](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Liste hiérarchique ](list_overview.md#overview) - [En-tête List Box](listbox_overview.md#list-box-headers) - [Pied List Box](listbox_overview.md#list-box-footers) - [Bouton image](pictureButton_overview.md) - [Pop-up menu image](picturePopupMenu_overview.md) - [Bouton Radio](radio_overview.md)
 
 
-#### Other help features
+#### Autres fonctionnalités d'aide
 
-You can also associate help messages with form objects in two other ways:
+Vous pouvez aussi associer des messages d'aides aux objets formulaire de deux autres façons :
 
 - at the level of the database structure (fields only). In this case, the help tip of the field is displayed in every form where it appears. For more information, refer to “Help Tips” in [Field properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
 - using the **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command, for the current process.
