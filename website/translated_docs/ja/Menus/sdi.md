@@ -40,23 +40,23 @@ SDIモードでは、同プロセス中に開かれたすべてのドキュメ�
 
 #### スプラッシュスクリーンについての注意:
 
-- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
-- If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
+- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. MDIモード同様、スプラッシュスクリーンを閉じるとアプリケーションを終了することになるという点に注意してください。
+- スプラッシュスクリーンオプションが選択されていなかった場合、メニューは開かれているウィンドウにおいて、プログラマーの選択に応じて表示されます。
 
-### Automatic quit
+### 自動終了
 
-When executed in MDI mode, a 4D application simply quits when the user closes the application window (MDI window). However, when executed in SDI mode, 4D applications do not have an application window and, on the other hand, closing the last opened window does not necessarily mean that the user wants the application to quit (faceless processes can be running, for example) -- although it could be what they want.
+MDIモードで実行時、ユーザーによってアプリケーションウィンドウ (MDIウィンドウ) が閉じられると、4Dアプリケーションが終了します。 しかしながら、SDIモードで実行時、4Dアプリケーションにはアプリケーションウィンドウがなく、また開いているウィンドウをすべて閉じたとしても、必ずしもユーザーがアプリケーションを終了したいと思っているとは限りません (たとえばフェイスレスプロセスが熟考中かもしれません) が、場合によっては終了したいという場合もあります。
 
-To handle this case, 4D applications executed in SDI mode include a mechanism to automatically quit (by calling the `QUIT 4D` command) when the following conditions are met:
+こういった場合を管理するため、SDIモードで実行されている 4Dアプリケーションには、以下の条件が満たされた場合に自動的に (`QUIT 4D` コマンドを呼び出して) 終了する機構が含まれています:
 
-- the user cannot interact anymore with the application
-- there are no live user processes
-- 4D processes or worker processes are waiting for an event
-- the Web server is not started.
+- ユーザーがこれ以上アプリケーションとやりとりすることができない
+- 生きているユーザープロセスがない
+- 4Dプロセスあるいはワーカープロセスはイベント待機中である
+- Webサーバーが開始されていない
 
-> When a menu with an associated *quit* standard action is called, the application quits and all windows are closed, wherever the menu was called from.
+> *quit* (終了) 標準アクションが割り当てられているメニューが呼び出された場合、そのメニューがどこから呼ばれたものであろうと、アプリケーションは終了し、すべてのウィンドウが閉じられます。
 
-## Language
+## ランゲージ
 
 Although it is transparently handled by 4D, the SDI mode introduces small variations in the application interface management. Specificities in the 4D language are listed below.
 
