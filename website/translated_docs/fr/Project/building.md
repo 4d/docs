@@ -155,23 +155,23 @@ Si vous avez spécifié "MyProject" comme nom d'application, vous trouverez les 
     *   Dossier 4D Extensions, dossier Resources, diverses bibliothèques (DLL), dossier Native Components, dossier SASL Plugins - Fichiers nécessaires au fonctionnement de l'application
     *   Dossier Database - Comprend un dossier Resources et un fichier MyProject.4DZ. Ils constituent la structure compilée de la base et son dossier Resources. **Note ** : Ce dossier contient également le dossier *Default Data*, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#data-file-management-in-final-applicatons)).
     *   (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans la base. Pour plus d’informations sur ce point, reportez-vous à la section Page [Plugins et composants](#plugins-and-components).
-    *   Un dossier Licences contenant sous forme de fichier XML la liste des numéros de licence ayant été intégrés dans l’application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
-    *   Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
+    *   Un dossier Licences contenant sous forme de fichier XML la liste des numéros de licence ayant été intégrés dans l’application. Pour plus d'informations, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
+    *   Eléments supplémentaires ajoutés au dossier 4D Volume Desktop, le cas échéant (voir [Personnalisation du dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
-    All these items must be kept in the same folder in order for the executable to operate.
+    Tous ces éléments doivent être conservés dans le même dossier pour que l'exécutable fonctionne.
 
 *   *macOS*
-    -   A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins-and-components). Pour plus d’informations sur l’intégration des licences, reportez-vous à la [Page Licences & Certificat](#licenses-and-certificate). **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
+    -   Un progiciel nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, les composants et les licences. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins-and-components). Pour plus d’informations sur l’intégration des licences, reportez-vous à la [Page Licences & Certificat](#licenses-and-certificate). **Note :** sous macOS, la commande [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) du langage 4D retourne le chemin du fichier ApplicationName (situé dans le dossier Contents: macOS du progiciel) et non celui du fichier .comp (Contents: Resources folder du progiciel).
 
 
-#### Customizing 4D Volume Desktop folder
+#### Personnalisation du dossier 4D Volume Desktop
 
-When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. You can, for example:
+Lors de la génération d'une application autonome, 4D copie le contenu du dossier 4D Volume Desktop dans le dossier Destination > *Final Application*. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez par exemple :
 
-*   Install a 4D Volume Desktop version corresponding to a specific language;
-*   Add a custom *PlugIns* folder;
-*   Customize the contents of the *Resources* folder.
-> In macOS, 4D Volume Desktop is provided in the form of a software package. Pour le modifier, vous devrez tout d’abord afficher son contenu (effectuez **Control+clic** sur son icône).
+*   Installer une version de 4D Volume Desktop correspondant à une langue spécifique;
+*   Ajoutez un dossier *PlugIns* personnalisé;
+*   Personnalisez le contenu du dossier *Resources*.
+> Sous macOS, 4D Volume Desktop est fourni sous la forme d'un progiciel. Pour le modifier, vous devrez tout d’abord afficher son contenu (effectuez **Control+clic** sur son icône).
 
 
 #### Emplacements des fichiers Web
