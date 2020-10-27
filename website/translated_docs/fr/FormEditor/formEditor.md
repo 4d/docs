@@ -621,7 +621,7 @@ To rename a view, you can use either:
 
     ![](assets/en/FormEditor/rename2.png)
 
-#### Reordering views
+#### Réordonner les vues
 
 You can change the display order of views by dragging/dropping them within the View palette.
 
@@ -661,35 +661,35 @@ Once views are created, you can use the View palette to:
 
 Un objet ne peut appartenir qu’à une seule vue.
 
-To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
+Pour créer un objet dans une autre vue, sélectionnez simplement la vue dans la palette des vues (avant de créer l'objet) en cliquant sur son nom (une icône Modifier est affichée pour la [Vue courante](#before-you-begin) et le nom apparaît en gras) :
 
 ![](assets/en/FormEditor/addObject.png)
 
-#### Moving objects between views
+#### Déplacer des objets entre les vues
 
-It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
+Il est également possible de déplacer un ou plusieurs objets d'une vue à une autre. Dans le formulaire, sélectionnez le ou les objets dont vous souhaitez modifier la vue. La liste des vues indique, à l'aide d'un symbole, la vue à laquelle appartient la sélection :
 
 ![](assets/en/FormEditor/symbol.png)
-> The selection can contain several objects belonging to different views.
+> La sélection peut contenir plusieurs objets appartenant à différentes vues.
 
-Simply select the destination view, right-click, and select **Move to**:
+Sélectionnez simplement la vue de destination, faites un clic droit puis sélectionnez **Déplacer vers** :
 
 ![](assets/en/FormEditor/moveObject.png)
 
 OU
 
-Select the destination view of the selection and click **Move to** button at the bottom of the View palette:
+Sélectionnez la vue de destination de la sélection et cliquez sur le bouton **Déplacer vers** en bas de la palette des vues :
 
 ![](assets/en/FormEditor/moveObject3.png)
 
-The selection is then placed in the new view:
+La sélection est ensuite placée dans la nouvelle vue :
 
 ![](assets/en/FormEditor/objNewView.png)
 
-You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
+Vous pouvez également déplacer un objet vers une autre vue via le menu contextuel de l'objet. Faites un clic droit sur l'objet, sélectionnez **Déplacer vers la vue** puis sélectionnez une vue dans la liste de vues disponibles :
 
 ![](assets/en/FormEditor/moveObject2.png)
-> The [Current view](#before-you-begin) is shown in bold text.
+> La [vue courante](#before-you-begin) est affichée en texte gras.
 
 
 
@@ -701,7 +701,7 @@ Pour cela, faites un clic droit sur la vue dans laquelle vous souhaitez sélecti
 
 ![](assets/en/FormEditor/selectAll.png)
 
-You can also use the button at the bottom of the View palette:
+Vous pouvez également utiliser le bouton situé en dessous de la palette des vues :
 
 
 ![](assets/en/FormEditor/selectAll2.png)
