@@ -53,7 +53,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 | Nom                          | Type de données | Valeurs possibles                  |
 | ---------------------------- | --------------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string          | "addSubrecord" or "" to do nothing |
+| doubleClickInEmptyAreaAction | string          | "addSubrecord" ou "" to do nothing |
 
 #### Objets pris en charge
 
