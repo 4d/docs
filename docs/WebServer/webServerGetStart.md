@@ -49,9 +49,149 @@ The `On Web Connection` database method can be used as a fallback: it is called 
 http://localhost/hello
 ```
 
-The web server handles the invalid request and executes the `On Web Connection` database method, which returns:
+The web server handles the request and calls the `On Web Connection` database method, which returns:
 
 ![](assets/en/WebServer/hello.png)
+
+
+## Getting data from the database
+
+Now we'll see how simple it is to get data from database. First, we will create a table and fill it with some data.
+
+Create a simple database with, for example, a single table containing some records:
+
+![](assets/en/WebServer/hello2.png)
+![](assets/en/WebServer/hello3.png)
+
+1. You will need to use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
+
+![](assets/en/WebServer/hello5.png)
+
+2. In the `WebFolder` of the project, create and save the "myPage.html" page which contains the following code:
+
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	</head>
+	<body>
+		<div align="center">
+			<table border="0" cellpadding="0" cellspacing="0" width="675">
+				<tr><td>
+	      		<h2 align="center">Getting started page</h2>
+				<form action="http://127.0.0.1/rest/$catalog" method="get">
+  					<div align="center">
+						<input type="submit" value="Send request">
+					</div>
+				</form>
+				</td></tr>
+			</table>
+		</div>
+	</body>
+</html>
+```
+
+3. Enter `/myPage.html` in the server root address. The page is served:
+
+![](assets/en/WebServer/hello4.png)
+
+4. Click the **Send request** button; it will generate the `/rest/$catalog` REST request and the server returns the result in JSON:
+
+```json
+{
+	"__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
+	"dataClasses": [
+		{
+			"name": "Friends",
+			"uri": "/rest/$catalog/Friends",
+			"dataURI": "/rest/Friends"
+		}
+	]
+}
+```
+
+You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore. 
+
+You can also get any data.
+
+5. Replace the <form action... line code with:
+
+```
+	<form action="http://127.0.0.1/rest/Friends" method="get">
+```
+
+4. Click the **Send request** button; it will generate the `/rest/Friends` REST request and the server returns the result in JSON:
+
+```json
+{
+	"__DATACLASS": "Friends",
+	"__entityModel": "Friends",
+	"__GlobalStamp": 0,
+	"__COUNT": 4,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-10-27T14:29:01.914Z",
+			"__STAMP": 1,
+			"ID": 1,
+			"lastName": "Smith",
+			"firstName": "John"
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-10-27T14:29:16.035Z",
+			"__STAMP": 1,
+			"ID": 2,
+			"lastName": "Brown",
+			"firstName": "Danny"
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-10-27T14:29:43.945Z",
+			"__STAMP": 1,
+			"ID": 3,
+			"lastName": "Purple",
+			"firstName": "Mark"
+		},
+		{
+			"__KEY": "4",
+			"__TIMESTAMP": "2020-10-27T14:34:58.457Z",
+			"__STAMP": 1,
+			"ID": 4,
+			"lastName": "Dupont",
+			"firstName": "Jenny"
+		}
+	],
+	"__SENT": 4
+}
+``` 
+
+This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed (see security below). In your web interfaces, you can easily bind the javascript or html code with returned data. XXXSee the "Datagrid" page to have an example of web interface bound to dataclasses through JSON.
+
+
+## Login and session
+
+In the world of web applications, data access security is the first concern. When connecting to the 4D web server, users can be identified and their navigation controlled.
+
+The most simple and secured way to log a user is to use the `On Web Authentication` database method.
+
+To enable the login access to the web server:
+
+1. In the "Settings" dialog box, select the "Web/Options (I)" page, and check the **Passwords with DIGEST protocol** radio button.
+
+![](assets/en/WebServer/hello6.png)
+
+When this option is enabled, any new access to the 4D web server will call the `On Web Authentication` database method and require that the user be identified, except for purely static and existing pages, such as the default home page.
+
+2. In the  
+
+enter credentials, that will be evaluated.    
+
+
+
 
 
 
