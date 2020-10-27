@@ -3,7 +3,7 @@ id: bars
 title: Menu bar features
 ---
 
-Menu bars provide the major interface for custom applications. For each custom application, you must create at least one menu bar with at least one menu. By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.
+メニューバーはカスタムアプリケーションにおいて主要なインターフェースを提供します。 各カスタムアプリケーションにおいて、最低1つのメニューを添付したメニューバーを1つ作成しなければなりません。 By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.
 
 4D lets you associate a custom splash screen picture with each menu bar and to preview this menu bar at any time.
 
