@@ -157,20 +157,20 @@ title: メニュープロパティ
 
 メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 メニューエディターのオプションを使用して、または `SET MENU ITEM STYLE` ランゲージコマンドを使って、メニューのスタイルを太字・イタリック・下線でカスタマイズすることができます。
 
-As a general rule, apply font styles sparingly to your menus — too many styles will be distracting to the user and give a cluttered look to your application.
-> You can also apply styles by inserting special characters in the menu title (see [Using control characters](properties.md#using-control-characters) above).
+一般的なルールとして、フォントスタイルの適用は慎重におこなってください。煩雑なスタイルの使用はユーザーの注意をそらし、アプリケーションの見た目を悪くします。
+> メニュータイトルに制御文字を挿入してスタイルを管理することもできます ([制御文字の使用](properties.md#制御文字の使用) 参照)。
 
 
 ### 項目アイコン
 
-You can associate an icon with a menu item. It will displayed directly in the menu, next to the item:
+メニュー項目にアイコンを関連付けることができます。 設定されたアイコンはメニューの左に表示されます:
 
 ![](assets/en/Menus/iconMenu.png)
 
-To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the database resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area:
+メニューエディターでアイコンを設定するには、"項目アイコン" エリアをクリックし、**開く** を選択してディスクからピクチャーを開きます。 データベースの Resources フォルダーに格納されていないピクチャーファイルを選択した場合、そのファイルは自動的に Resources フォルダーにコピーされます。 項目アイコンを設定すると、プレビューエリアに表示されます:
 
 ![](assets/en/Menus/iconpreview.png)
 
-To remove the icon from the item, choose the **No Icon** option from the "Item Icon" area.
+項目からアイコンを取り除くには、"項目アイコン" エリアのメニューから **アイコンなし** を選択します。
 
-To define item icons using the 4D language, call the `SET MENU ITEM ICON` command.
+4Dランゲージを使って項目アイコンを設定するには、`SET MENU ITEM ICON` コマンドを使います。
