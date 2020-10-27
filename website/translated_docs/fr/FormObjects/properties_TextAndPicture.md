@@ -140,19 +140,19 @@ Les états suivants sont représentés :
 
 
 ---
-## Chemin d'image
+## Chemin d'accès de l'image
 
 Définit le chemin d'accès de l'image qui sera utilisée comme icône de l'objet.
 
 Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'accès pour les images statiques](properties_Picture.md#pathname).
 
-> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
+> Lorsqu'elle est utilisée comme icône pour les objets actifs, l'image doit être conçue pour prendre en charge [un nombre d'états](#number-of-states) variable.
 
 #### Grammaire JSON
 
-| Nom  | Type de données | Valeurs possibles                            |
-| ---- | --------------- | -------------------------------------------- |
-| icon | picture         | Relative or filesystem path in POSIX syntax. |
+| Nom  | Type de données | Valeurs possibles                              |
+| ---- | --------------- | ---------------------------------------------- |
+| icon | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
 
 #### Objets pris en charge
 
@@ -168,13 +168,13 @@ Cette propriété permet de modifier l’emplacement relatif du titre par rappor
 
 Voici le résultat des différentes options de cette propriété :
 
-| Option       | Description                                                                                                                                      | Exemple                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Gauche**   | Le texte est placé à gauche de l’icône. Le contenu du bouton est aligné à droite.                                                                | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Haut**     | Le texte est placé au-dessus de l’icône. Le contenu du bouton est centré.                                                                        | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Droite**   | Le texte est placé à droite de l’icône. The contents of the button are aligned to the left.                                                      | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Bas**      | The text is placed below the icon. Le contenu du bouton est centré.                                                                              | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centered** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
+| Option     | Description                                                                                                                                              | Exemple                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Gauche** | Le texte est placé à gauche de l’icône. Le contenu du bouton est aligné à droite.                                                                        | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Haut**   | Le texte est placé au-dessus de l’icône. Le contenu du bouton est centré.                                                                                | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Droite** | Le texte est placé à droite de l’icône. Le contenu du bouton est aligné à gauche.                                                                        | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Bas**    | Le texte est placé en-dessous de l’icône. Le contenu du bouton est centré.                                                                               | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Centre** | Le texte de l’icône est centré verticalement et horizontalement dans le bouton. Ce paramétrage convient par exemple pour du texte inclus dans une icône. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Grammaire JSON
 
