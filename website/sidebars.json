@@ -27,6 +27,7 @@
   "Class API Reference":
   [
 	"API/overview",
+	"API/classClass",
 	"API/collectionClass",
 	"API/cryptoClass",
 	"API/dataclassClass",
