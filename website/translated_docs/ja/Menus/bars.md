@@ -1,6 +1,6 @@
 ---
 id: bars
-title: Menu bar features
+title: メニューバーの管理
 ---
 
 メニューバーはカスタムアプリケーションにおいて主要なインターフェースを提供します。 各カスタムアプリケーションにおいて、最低1つのメニューを添付したメニューバーを1つ作成しなければなりません。 デフォルトで、メニューバー#1 がアプリケーションモードで表示されます。 `SET MENU BAR` コマンドを使用して、メニューバーを変更することができます。
@@ -27,15 +27,15 @@ title: Menu bar features
 
 > データベース設定では、インターフェース＞一般の **ウィンドウの表示** オプションを使用して、スプラッシュスクリーンの表示/非表示を設定できます。
 
-To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
+カスタムピクチャーを削除してデフォルトに戻すには、**クリア** ボタンをクリックするか、エリアポップアップメニューから **クリア** を選択します。
 
 
-## Previewing menu bars
+## メニューバーのプレビュー
 
-The Menu Bar editor lets you view the custom menus and splash screen at any time, without closing the toolbox window.
+メニューバーエディターからカスタムメニューとスプラッシュスクリーンをプレビューできます。ツールボックスウィンドウを閉じる必要はありません。
 
-To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X"** in the context menu or the options menu of the editor.
+これをおこなうにはメニューバーを選択して、コンテキストメニューまたはエディターのオプションメニューから、**メニューバー “メニューバー #X” をテスト** を選択します。
 
 ![](assets/en/Menus/splash3.png)
 
-4D displays a preview of the menu bar as well as the splash screen. You can scroll down the menus and sub-menus to preview their contents. However, these menus are not active. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
+すると、メニューバーとスプラッシュスクリーンのプレビューが表示されます。 メニューや階層メニューを表示させることができます。 ただし、プレビュー状態のメニューを選択してもコマンドは実行されません。 メニューやツールバーの動作を確認するには、**実行** メニューから **アプリケーションモード** を選択します。
