@@ -177,14 +177,14 @@ $person:=cs.Person.new() //create the new instance
 //$Person contains functions of the class
 ```
 
-Note that you can instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
+Note that you can instantiate empty objects. Par exemple, si vous créez le fichier de classe `Empty.4dm suivant` :
 
 ```4d  
 //Fichier classe Empty.4dm
 //Rien
 ```
 
-You could write in a method:
+Vous pouvez saisir dans une méthode :
 
 ```4d
 $o:=cs.Empty.new()  
