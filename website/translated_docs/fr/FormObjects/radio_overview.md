@@ -104,11 +104,11 @@ Le style du bouton OS X Gradient est presque identique au style [Bevel](#bevel),
 
 ### OS X Texture
 
-The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
+Le style du bouton radio OS X Textured est presque identique au style [Barre d'outils](#toolbar), à l'exception de son apparence qui peut, en fonction du système d'exploitation, être différente et ne pas afficher le survol.
 
 Par défaut, le style OS X Textured apparaît comme :
 
- - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
+ - *Sous Windows* - un bouton en forme de barre d'outils avec une étiquette au centre et l'arrière-plan est toujours affiché.
 
  - *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
@@ -118,7 +118,7 @@ Par défaut, le style OS X Textured apparaît comme :
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
+Le style de bouton Office XP combine l'apparence du style [Classique](#regular) et du comportement du style [Barre outils](#toolbar).
 
 Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
@@ -132,7 +132,7 @@ Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont
 
 ### Contracter/Déployer
 
-This button style can be used to add a standard collapse/expand icon. Ces boutons sont utilisés nativement dans les listes hiérarchiques. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
+Ce style de bouton peut être utilisé pour ajouter une icône standard contracter/déployer. Ces boutons sont utilisés nativement dans les listes hiérarchiques. Sous Windows, le bouton ressemble à un [+] ou un [-]; sous macOS, cela ressemble à un triangle pointant vers la droite ou vers le bas.
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 
@@ -140,14 +140,14 @@ This button style can be used to add a standard collapse/expand icon. Ces bouton
 
 ### Bouton disclosure
 
-The disclosure radio button style displays the radio button as a standard disclosure button, usually used to show/hide additional information. The button symbol points downwards with value 0 and upwards with value 1.
+Le style de bouton radio disclosure affiche le bouton radio comme un bouton disclosure standard, généralement utilisé pour afficher/masquer des informations supplémentaires. Le symbole du bouton pointe vers le bas avec la valeur 0 et vers le haut avec la valeur 1.
 
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
 
 ### Personnalisé
 
-The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
+Le style de bouton radio Personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des paramètres supplémentaires tels que le [décalage de l'icône](properties_TextAndPicture.md#icon-offset) et les [marges](properties_TextAndPicture.md#horizontalMargin).
 
 
 ## Propriétés prises en charge
