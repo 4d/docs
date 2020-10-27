@@ -19,25 +19,25 @@ title: Menu bar features
 
 スプラッシュスクリーンピクチャーはメニューエディターでのみ設定できます: まず、カスタムスプラッシュスクリーンを割り当てたいメニューバーを選択します。 ウィンドウ右側に"背景画像"エリアが表示されます。 ディスクに保存されたピクチャーを直接開くには、**開く** ボタンをクリックするか、“背景画像” エリアをクリックします。 ポップアップメニューが表示されます:
 - クリップボードのピクチャーをペーストするには **ペースト** を選択します。
-- ディスクファイルとして保存された画像を開くには **開く** を選択します。 開くを選択すると、標準のファイルを開くダイアログボックスが表示されます。使用するピクチャーを選択します。 設定が完了すると、選択した画像がプレビューとして表示されます。 It is then associated with the menu bar.
+- ディスクファイルとして保存された画像を開くには **開く** を選択します。 開くを選択すると、標準のファイルを開くダイアログボックスが表示されます。使用するピクチャーを選択します。 設定が完了すると、選択した画像がプレビューとして表示されます。 これにより、メニューバーとの関連付けが確認できます。
 
 ![](assets/en/Menus/splash2.png)
 
-You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
+メニューバーをテストすると、設定の結果を見ることができます (後述参照)。 アプリケーションモードでは、ピクチャーはスプラッシュスクリーンに "トランケート (中央合わせ)" で表示されます。
 
 > You can choose whether to display or hide this window using the **Display toolbar** option in the Settings.
 
-To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
+カスタムピクチャーを削除してデフォルトに戻すには、**クリア** ボタンをクリックするか、エリアポップアップメニューから **クリア** を選択します。
 
 
-## Previewing menu bars
+## メニューバーのプレビュー
 
-The Menu Bar editor lets you view the custom menus and splash screen at any time, without closing the toolbox window.
+メニューバーエディターからカスタムメニューとスプラッシュスクリーンをプレビューできます。ツールボックスウィンドウを閉じる必要はありません。
 
-To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X"** in the context menu or the options menu of the editor.
+これをおこなうにはメニューバーを選択して、コンテキストメニューまたはエディターのオプションメニューから、**メニューバー “メニューバー #X” をテスト** を選択します。
 
 ![](assets/en/Menus/splash3.png)
 
-4D displays a preview of the menu bar as well as the splash screen. You can scroll down the menus and sub-menus to preview their contents. However, these menus are not active. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
+すると、メニューバーとスプラッシュスクリーンのプレビューが表示されます。 メニューや階層メニューを表示させることができます。 ただし、プレビュー状態のメニューを選択してもコマンドは実行されません。 To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
 
 
