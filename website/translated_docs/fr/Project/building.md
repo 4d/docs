@@ -112,7 +112,7 @@ Les éléments suivants sont requis pour la génération :
 - 4D Volume Desktop (le moteur de base de données 4D),
 - une [licence appropriée](#licenses)
 
-Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous Mac Os, cette fonction génère des progiciels (packages).
+Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous macOs, cette fonction génère des progiciels (packages).
 
 Le principe consiste à fusionner le fichier 4D Volume Desktop avec votre fichier de structure compilé. Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet [4D SAS (http://www.4d.com/)](http://www.4d.com/).
 
