@@ -17,28 +17,28 @@ SDIモードは以下の実行環境に限り利用可能です:
 
 ## SDIモードの有効化
 
-Enabling and using the SDI mode in your application require the following steps:
+アプリケーションにおいて SDIモードを有効化し使用する手順は次の通りです:
 
-1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Database Settings dialog box.
-2. Build a merged application (standalone and/or client application).
+1. データベース設定ダイアログボックスの "インターフェース" ページ内にある **WindowsでSDIモードを使用する** オプションをチェックします。
+2. 組み込みアプリケーションをビルドします (スタンドアロンまたはクライアントアプリケーション)。
 
-Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
+その後、サポートされているコンテキスト (上記参照) において実行されると、組み込みアプリケーションは自動的に SDIモードで実行されます。
 
-## Managing applications in SDI mode
+## SDIモードでのアプリケーションの管理
 
-Executing a 4D application in SDI mode does not require any specific implementation: existing menu bars are automatically moved in SDI windows themselves. However, you need to pay attention to specific principles that are listed below.
+4Dアプリケーションを SDIモードで実行するために、特別な実装は必要ありません。既存のメニューバーは自動的に SDIウィンドウへと移されます。 しかしながら、以下に挙げられている特定の原則に注意する必要があります。
 
-### Menus in Windows
+### ウィンドウ内のメニュー
 
-In SDI mode, the process menu bar is automatically displayed in every document type window opened during the process life (this excludes, for example, floating palettes). When the process menu bar is not visible, menu item shortcuts remain active however.
+SDIモードでは、同プロセス中に開かれたすべてのドキュメントタイプウィンドウ (たとえばフローティングパレットはこれに含まれません) には自動的にプロセスメニューバーが表示されます。 ただし、プロセスメニューバーが非表示の状態でも、メニュー項目のショートカットは有効です。
 
-Menus are added above windows without modifiying their contents size:
+メニューは、コンテンツのサイズを変更することなくウィンドウの上部に追加されます:
 
 ![](assets/en/Menus/sdi1.png)
 
-Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
+このため、ウィンドウは MDIモードあるいは SDIモードのどちらにおいてもオブジェクトの位置を再計算することなく使用することができます。
 
-#### About the splash screen
+#### スプラッシュスクリーンについての注意:
 
 - If the **Splash screen** interface option was selected in the Database Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
 - If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
