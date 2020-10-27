@@ -50,6 +50,7 @@
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServer",
 	"WebServer/webServerConfig",
+	"WebServer/webServerAdmin",
 	"WebServer/webServerSecurity",
 	"WebServer/webServerMgmt",
 	"WebServer/webServerConnect",

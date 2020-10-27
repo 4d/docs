@@ -6,16 +6,17 @@ title: Configuration
 The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.
 
 
-## How to configure settings?
+## Where to configure settings?
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-- using **Web** pages of the Settings dialog box: settings for the main web server. They are stored on disk and thus reused after application is restart. 
-- using the `WEB SET OPTION` or a `WEB` command: settings for the main web server and the current session only.  
-- using the properties of the [webServer object](webServerObject.md): settings for any web server, including component web servers, and the current session only. 
+|Setting location|Scope|Involved web server|
+|---|----|---|
+|[webServer object](webServerObject.md)|Current session|Any web server, including component web servers|
+|`WEB SET OPTION` or a `WEB XXX` command|Current session|Main server|
+|**Settings** dialog box (**Web** pages)|Reused for all sessions (stored on disk)|Main server|
 
-
-
+> Some settings are not available from all locations.  
 
 ## Cache  
 
@@ -37,7 +38,7 @@ You can modify the size of the cache in the **Pages Cache Size** area. The value
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`certificateFolder`|Text property but can be a [`4D.Folder`](API/folderClass.md) object when used with the settings parameter of the `start()` function.
+|webServer object|`certificateFolder`|Text property but can be a [`4D.Folder`](API/folderClass.md) object when used with the *settings* parameter of the `start()` function.
 
 Folder where the TLS certificate files for the web server are located. 
 
@@ -454,7 +455,7 @@ True if PFS is available on the web server (see TLS section).
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`rootFolder`|Text property but can be a [`4D.Folder`](API/folderClass.md) object when used with the settings parameter of the `start()` function|
+|webServer object|`rootFolder`|Text property but can be a [`4D.Folder`](API/folderClass.md) object when used with the *settings* parameter of the `start()` function|
 |`WEB SET ROOT FOLDER`|||
 |Settings dialog box|Configuration page/Default HTML Root||
 

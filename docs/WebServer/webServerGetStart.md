@@ -1,15 +1,63 @@
 ---
-id: webServerAdmin
-title: Web Server Administration
+id: webServerGetStart
+title: Getting Started
 ---
 
+This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
 
-> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. For more information, please refer to the [4D Web site](https://www.4d.com).
+
+## Hello World Example
+
+Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and call the On Web Connection database method.
+
+### Starting the web server
+
+To start the 4D web server, you first need to create a project:
+
+1. Launch your 4D application and create a new, empty 4D project. 
+2. In the **Run** menu, just select **Start Web Server**.
+
+That's all! The web server is started and ready to handle requests. To check it, we'll display the default home page. 
+
+### Displaying the default home page
+
+The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
+
+1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu. 
+
+The default home page is displayed:
+
+![](assets/en/WebServer/defaultHomePage.png)
+
+### Displaying Hello World
+
+1. Open the Explorer and double-click on the `On Web Connection` database method. 
+
+2. Enter the following line of code:
+
+```4d
+WEB SEND TEXT("Hello World!")
+```
+
+This very simple line only sends the text passed as parameter to the browser. 
+
+The `On Web Connection` database method can be used as a fallback: it is called when the server receives an invalid request. 
+
+3. Enter a non-existing page in the URL, for example:
+
+```
+http://localhost/hello
+```
+
+The web server handles the invalid request and executes the `On Web Connection` database method, which returns:
+
+![](assets/en/WebServer/hello.png)
 
 
-## Starting the 4D Web Server
 
-A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component. 
+
+
+ 4D project can start and monitor a web server for the main (host) application as well as for each hosted component. 
 
 The main 4D web server can be started in different ways:
 

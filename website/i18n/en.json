@@ -772,6 +772,9 @@
       "WebServer/webServerConnectSecurity": {
         "title": "Connection Security"
       },
+      "WebServer/webServerGetStart": {
+        "title": "Getting Started"
+      },
       "WebServer/webServerMgmt": {
         "title": "Server Management"
       },
