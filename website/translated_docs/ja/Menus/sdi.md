@@ -50,23 +50,23 @@ MDIモードで実行時、ユーザーによってアプリケーションウ�
 こういった場合を管理するため、SDIモードで実行されている 4Dアプリケーションには、以下の条件が満たされた場合に自動的に (`QUIT 4D` コマンドを呼び出して) 終了する機構が含まれています:
 
 - ユーザーがこれ以上アプリケーションとやりとりすることができない
-- there are no live user processes
-- 4D processes or worker processes are waiting for an event
-- the Web server is not started.
+- 生きているユーザープロセスがない
+- 4Dプロセスあるいはワーカープロセスはイベント待機中である
+- Webサーバーが開始されていない
 
-> When a menu with an associated *quit* standard action is called, the application quits and all windows are closed, wherever the menu was called from.
+> *quit* (終了) 標準アクションが割り当てられているメニューが呼び出された場合、そのメニューがどこから呼ばれたものであろうと、アプリケーションは終了し、すべてのウィンドウが閉じられます。
 
-## Language
+## ランゲージ
 
-Although it is transparently handled by 4D, the SDI mode introduces small variations in the application interface management. Specificities in the 4D language are listed below.
+4D によって透過的に管理されるとはいえ、SDIモードではアプリケーションインターフェースの管理に関してこれまでと若干の差異が存在します。 4Dランゲージにおける特異性は以下の表にある通りです。
 
-| Command/feature                   | Specificity in SDI mode on Windows                                                                                                                                                                                                                                                                              |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Open form window`                | Options to support floating windows in SDI (`Controller form window`) and to remove the menu bar (`Form has no menu bar`)                                                                                                                                                                                       |
-| `Menu bar height`                 | Returns the height in pixels of a single menu bar line even if the menu bar has been wrapped on two or more lines. Returns 0 when the command is called from a process without a form window                                                                                                                    |
-| `SHOW MENU BAR` / `HIDE MENU BAR` | Applied to the current form window only (from where the code is executed)                                                                                                                                                                                                                                       |
-| `MAXIMIZE WINDOW`                 | The window is maximized to the screen size                                                                                                                                                                                                                                                                      |
-| `CONVERT COORDINATES`             | `XY Screen` is the global coordinate system where the main screen is positioned at (0,0). Screens on its left side or on top of it can have negative coordinates and any screens on its right side or underneath it can have coordinates greater than the values returned by `Screen height` or `Screen width`. |
-| `GET MOUSE`                       | Global coordinates are relative to the screen                                                                                                                                                                                                                                                                   |
-| `GET WINDOW RECT`                 | When -1 is passed in window parameter, the command returns 0;0;0;0                                                                                                                                                                                                                                              |
-| `On Drop database method`         | Not supported                                                                                                                                                                                                                                                                                                   |
+| コマンド/機能                           | Windows での SDIモードの特徴                                                                                                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Open form window`                | SDIモードにおけるフローティングウィンドウのサポート (`Controller form window`) およびメニューバーの削除 (`Form has no menu bar`) のオプション                                                                      |
+| `Menu bar height`                 | メニューバーが 2行以上に折り返されている場合でも単一行のメニューバーのピクセル単位での高さを返します。 フォームウィンドウをともなわないプロセスからコマンドが呼ばれている場合には 0 を返します。                                                                      |
+| `SHOW MENU BAR` / `HIDE MENU BAR` | カレントの (コードが実行されている場所の) フォームウィンドウにのみ適用されます                                                                                                                                |
+| `MAXIMIZE WINDOW`                 | ウィンドウはスクリーンサイズいっぱいまで最大化されます                                                                                                                                              |
+| `CONVERT COORDINATES`             | `XY Screen` はメインスクリーンが (0,0) に位置するグローバルな座標系です。 座標系の左側、あるいは上側にあるスクリーンについては、負の値の座標を持つことができ、右側、あるいは下側にあるスクリーンについては `Screen height` や `Screen width` から返される値より大き値を持つことができます。 |
+| `GET MOUSE`                       | グローバル座標はスクリーンからの相対位置になります                                                                                                                                                |
+| `GET WINDOW RECT`                 | window パラメーターに -1 を渡した場合、コマンドは 0;0;0;0 を返します                                                                                                                             |
+| `On Drop database method`         | サポートされていません                                                                                                                                                              |
