@@ -11,6 +11,9 @@
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
       },
+      "API/classClass": {
+        "title": "クラス"
+      },
       "API/collectionClass": {
         "title": "Collection"
       },
@@ -344,6 +347,9 @@
       },
       "Events/onValidate": {
         "title": "On Validate"
+      },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
       },
       "Events/onVpReady": {
         "title": "On VP Ready"
