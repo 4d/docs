@@ -1,30 +1,30 @@
 ---
 id: sdi
-title: SDI mode on Windows
+title: Windows での SDIモード
 ---
 
 ## 概要
 
-On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar. SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window.
+Windows において、組みこみ 4Dアプリケーションを SDI (シングルドキュメントインターフェース) アプリケーションとして設定することができます。 SDIアプリケーションでは、それぞれのウィンドウが互いに独立し、それぞれが独自のメニューバーを持つことができます。 SDIアプリケーションは MDI (マルチドキュメントインターフェース) に対する概念で、MDI ではすべてのウィンドウが一つのメインウィンドウの中に含まれ、それに依存した作りになっています。
 
-> The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
+> SDI/MDI という概念は macOS には存在しません。 この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
 
-### SDI mode availabilty
-The SDI mode is available in the following execution environment only:
+### SDIモード利用条件
+SDIモードは以下の実行環境に限り利用可能です:
 
 - Windows
-- Merged stand-alone or client 4D application
+- 組み込みスタンドアロン4Dアプリケーション、またはクライアント4Dアプリケーション
 
-## Enabling the SDI mode
+## SDIモードの有効化
 
-Enabling and using the SDI mode in your application require the following steps:
+アプリケーションにおいて SDIモードを有効化し使用する手順は次の通りです:
 
 1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
-2. Build a merged application (standalone and/or client application).
+2. 組み込みアプリケーションをビルドします (スタンドアロンまたはクライアントアプリケーション)。
 
-Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
+その後、サポートされているコンテキスト (上記参照) において実行されると、組み込みアプリケーションは自動的に SDIモードで実行されます。
 
-## Managing applications in SDI mode
+## SDIモードでのアプリケーションの管理
 
 Executing a 4D application in SDI mode does not require any specific implementation: existing menu bars are automatically moved in SDI windows themselves. However, you need to pay attention to specific principles that are listed below.
 
