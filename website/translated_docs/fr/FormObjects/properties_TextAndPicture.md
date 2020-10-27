@@ -140,19 +140,19 @@ Les états suivants sont représentés :
 
 
 ---
-## Chemin d'image
+## Chemin d'accès de l'image
 
 Définit le chemin d'accès de l'image qui sera utilisée comme icône de l'objet.
 
 Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'accès pour les images statiques](properties_Picture.md#pathname).
 
-> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
+> Lorsqu'elle est utilisée comme icône pour les objets actifs, l'image doit être conçue pour prendre en charge [un nombre d'états](#number-of-states) variable.
 
 #### Grammaire JSON
 
-| Nom  | Type de données | Valeurs possibles                            |
-| ---- | --------------- | -------------------------------------------- |
-| icon | picture         | Relative or filesystem path in POSIX syntax. |
+| Nom  | Type de données | Valeurs possibles                              |
+| ---- | --------------- | ---------------------------------------------- |
+| icon | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
 
 #### Objets pris en charge
 
@@ -164,17 +164,17 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 ---
 ## Position Titre/Image
 
-This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a button contains a title and a picture, the text is placed below the picture.
+Cette propriété permet de modifier l’emplacement relatif du titre par rapport à l’icône associée. Cette propriété n’a pas d’effet lorsque le bouton contient uniquement un titre (pas d’image associée) ou une image (pas de titre). Par défaut, lorsqu’un bouton 3D contient un titre et une image, le texte est placé en-dessous de l’image.
 
-Here are the results using the various options for this property:
+Voici le résultat des différentes options de cette propriété :
 
-| Option       | Description                                                                                                                                      | Exemple                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Gauche**   | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Haut**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Droite**   | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Bas**      | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centered** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
+| Option     | Description                                                                                                                                              | Exemple                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Gauche** | Le texte est placé à gauche de l’icône. Le contenu du bouton est aligné à droite.                                                                        | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Haut**   | Le texte est placé au-dessus de l’icône. Le contenu du bouton est centré.                                                                                | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Droite** | Le texte est placé à droite de l’icône. Le contenu du bouton est aligné à gauche.                                                                        | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Bas**    | Le texte est placé en-dessous de l’icône. Le contenu du bouton est centré.                                                                               | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Centre** | Le texte de l’icône est centré verticalement et horizontalement dans le bouton. Ce paramétrage convient par exemple pour du texte inclus dans une icône. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Grammaire JSON
 
@@ -225,19 +225,19 @@ L’apparence et l’emplacement de ce symbole dépend du style de bouton et de 
 
 Pour associer un symbole de pop up menu à un bouton, vous disposez de deux options d’affichage :
 
-|                        Séparé                        |                        Separated                        |
+|                        Séparé                        |                         Et Lié                          |
 |:----------------------------------------------------:|:-------------------------------------------------------:|
 | ![](assets/en/FormObjects/property_popup_linked.png) | ![](assets/en/FormObjects/property_popup_separated.png) |
-> The actual availability of a "separated" mode depends on the style of the button and the platform.
+> La disponibilité effective d’un mode “Séparé” dépend du style de bouton et de la plate-forme.
 
-Each option specifies the relation between the button and the attached pop-up menu:
+Chaque option précise la relation entre le bouton et le pop up menu associé :
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button. <li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.
+<li>Lorsque le pop up menu est **séparé**, un clic sur la partie gauche du bouton exécute directement l’action courante du bouton ; cette action peut être modifiée via le pop up menu accessible dans la partie droite du bouton. <li>Lorsque le pop up menu est **lié**, un simple clic sur le bouton ne déclenche aucune autre action que l’affichage du pop up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.
 
 
-### Managing the pop-up menu
+### Gestion du pop up menu
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L’affichage du pop up menu et de ses valeurs doivent être entièrement gérés par le développeur, notamment à l’aide des `événements formulaire` et des commandes **[Pop up menu dynamique](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** et **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)**.
 
 
 #### Grammaire JSON
