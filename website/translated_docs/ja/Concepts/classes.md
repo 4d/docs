@@ -124,7 +124,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------- |
 | classStore | object | <- | 4Dクラスストア |
 
-`4D` コマンドは、ビルトイン 4Dクラスのクラスストアを返します。 It provides access to specific APIs such as [CryptoKey](API/cryptoKeyClass.md).
+`4D` コマンドは、ビルトイン 4Dクラスのクラスストアを返します。 [CryptoKey](API/cryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
 #### 例題
 
@@ -141,18 +141,18 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ### Class オブジェクト
 
-プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 A class is an object itself, of ["Class" class](API/classClass.md). A class object has the following properties and function:
+プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 クラスとは、それ自身が ["Class" クラス](API/classClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
 
-- [`name`](API/classClass.md#name) string
-- [`superclass`](API/classClass.md#superclass) object (null if none)
-- [`new()`](API/classClass.md#new) function, allowing to instantiate class objects.
+- [`name`](API/classClass.md#name) 文字列
+- [`superclass`](API/classClass.md#superclass) オブジェクト (無い場合は null)
+- [`new()`](API/classClass.md#new) 関数 (クラスオブジェクトをインスタンス化します)
 
 さらに、Class オブジェクトは次を参照できます:
 
 - [`constructor`](#class-constructor) オブジェクト (任意),
 - `prototype` オブジェクト: 名前付きの [関数](#function) オブジェクトを格納します (任意)
 
-A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
+Class オブジェクトは [共有オブジェクト](shared.md) です。したがって、異なる 4Dプロセスから同時にアクセスすることができます。
 
 
 
