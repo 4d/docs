@@ -28,7 +28,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
   Vous pouvez sélectionner un nom de formulaire de composant lorsqu'il est publié dans le composant.
 > Vous pouvez générer des [composants](Concepts/components.md) fournissant des fonctionnalités supplémentaires via des sous-formulaires.
 
-- the detail form to associate a with the [list subform](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
+- le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
 
 
 #### Grammaire JSON
