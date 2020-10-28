@@ -4,15 +4,15 @@ title: Sous-formulaire
 ---
 
 ---
-## Allow Deletion
+## Autoriser la suppression
 
-Specifies if the user can delete subrecords in a list subform.
+Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-formulaire liste.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles           |
-| --------------- | --------------- | --------------------------- |
-| deletableInList | boolean         | true, false (default: true) |
+| Nom             | Type de données | Valeurs possibles               |
+| --------------- | --------------- | ------------------------------- |
+| deletableInList | boolean         | true, false (par défaut : true) |
 
 #### Objets pris en charge
 
@@ -20,9 +20,9 @@ Specifies if the user can delete subrecords in a list subform.
 
 
 ---
-## Detail Form
+## Formulaire détaillé
 
-You use this property to declare the detail form to use in the subform. It can be:
+Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. It can be:
 
 - a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
   You can select a component form name when it is published in the component.
