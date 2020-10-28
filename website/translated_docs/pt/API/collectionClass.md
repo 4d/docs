@@ -157,7 +157,7 @@ A collection is initialized with:
 <!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
-<!-- REF collection.New collection.Params -->
+<!-- REF #_command_.New collection.Params -->
 | Parameter | Type                                                                    |    | Description           |
 | --------- | ----------------------------------------------------------------------- |:--:| --------------------- |
 | value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
@@ -243,7 +243,7 @@ You create a new collection and then add a new element:
 <!-- REF #_command_.New shared collection.Syntax -->
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
-<!-- REF collection.New shared collection.Params -->
+<!-- REF #_command_.New shared collection.Params -->
 | Parameter | Type                                                                |    | Description                  |
 | --------- | ------------------------------------------------------------------- |:--:| ---------------------------- |
 | value     | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
@@ -315,6 +315,7 @@ You can pass any number of values of the following supported types:
 
 #### Description
 The `.average()` function <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
+
 
 Only numerical elements are taken into account for the calculation (other element types are ignored).
 
@@ -1643,7 +1644,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 </details>
 
 <!-- REF #collection.length.Syntax -->
-**.length** -> Integer<!-- END REF -->
+**.length** : Integer<!-- END REF -->
 
 
 
@@ -2426,6 +2427,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 <!-- REF collection.resize().Desc -->
 ## .resize()
+
 
 <details><summary>History</summary>
 | Version | Changes |

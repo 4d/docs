@@ -11,6 +11,9 @@
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
       },
+      "API/classClass": {
+        "title": "クラス"
+      },
       "API/collectionClass": {
         "title": "Collection"
       },
@@ -345,6 +348,9 @@
       "Events/onValidate": {
         "title": "On Validate"
       },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
+      },
       "Events/onVpReady": {
         "title": "On VP Ready"
       },
@@ -562,7 +568,7 @@
         "title": "インストール"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "メニューバーの管理"
       },
       "Menus/creating": {
         "title": "メニューとメニューバーの作成"
@@ -574,7 +580,7 @@
         "title": "メニュープロパティ"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Windows での SDIモード"
       },
       "MSC/analysis": {
         "title": "ログ解析ページ",

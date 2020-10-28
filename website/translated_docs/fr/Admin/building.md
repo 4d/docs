@@ -576,7 +576,7 @@ This mode allows you to duplicate your merged applications without breaking the 
 
 *Duplication when data linked by application path:* ![](assets/en/Project/datalinking2.png)
 
-You can select the data linking mode during the build application process. You can either:
+You can select the data linking mode during the build application process. Vous pouvez :
 
 - Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
 - Use the **LastDataPathLookup** XML key (single-user application or server application).
