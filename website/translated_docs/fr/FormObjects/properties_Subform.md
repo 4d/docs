@@ -22,13 +22,13 @@ Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-
 ---
 ## Formulaire détaillé
 
-Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. It can be:
+Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
-- a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
-  You can select a component form name when it is published in the component.
-> You can generate [components](Concepts/components.md) providing additional functionalities through subforms.
+- un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. Dans ce cas, [le sous-formulaire de liste](#list-form) et les propriétés [Source](#source) doivent être vides ou non présents.   
+  Vous pouvez sélectionner un nom de formulaire de composant lorsqu'il est publié dans le composant.
+> Vous pouvez générer des [composants](Concepts/components.md) fournissant des fonctionnalités supplémentaires via des sous-formulaires.
 
-- the detail form to associate a with the [list subform](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
+- le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
 
 
 #### Grammaire JSON
