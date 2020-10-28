@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
+Collections sind sortierte Listen von Werten ähnlicher oder unterschiedlicher Typen (Text, Zahl, Datum, Objekt, Boolean, Collection oder Null).
 
-Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Zum Verwalten von Variablen von Typ Collection müssen Sie Objektnotation verwenden (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)).
 
 Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
@@ -13,7 +13,7 @@ Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in 
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in *expression*. Beispiele:
+Sie können jeden gültigen 4D Ausdruck übergeben, der in *Ausdruck* eine positive Ganzzahl zurückgibt. Beispiele:
 
 ```4d
  myCollection[5]  //access to 6th element of the collection
@@ -22,7 +22,7 @@ You can pass any valid 4D expression which returns a positive integer in *expres
 
 **Warnung:** Elemente in Collections werden ab 0 nummeriert.
 
-You can assign a value to a collection element or get a collection element value:
+Sie können einem Element der Collection einen Wert zuweisen oder einen Wert erhalten:
 
 ```4d
  myCol[10]:="My new element"
