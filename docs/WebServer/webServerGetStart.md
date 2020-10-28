@@ -236,7 +236,7 @@ Case of
 			$password:=$tVal{$posit}
 		End if 
 			
-			//example code 
+			//only for demo 
 		If ($username=$password)
 			WEB SEND TEXT("You're logged")
 		Else 
@@ -248,9 +248,9 @@ End case
 
 3. In your browser, connect to the web server, you should have a dialog similar to this one:
 
-![](assets/en/WebServer/hello4.png)
+![](assets/en/WebServer/hello6.png)
 
-4. Enter two similar values and click **Sign in**. 
+4. Enter two identical values and click **Sign in**. 
 Your web page now displays: 
 ```
 "You're logged"
@@ -258,33 +258,10 @@ Your web page now displays:
 
 Entering two different values would result in displaying "Wrong password".
 
-A realistic example would use a custom \[Users] table and a hash code challenge:
+A more realistic example would use a custom \[Users] table and a hash code challenge:
 
 ```4d
-C_BOOLEAN($0)
-C_TEXT($1; $2; $3; $4; $5)
-
-C_LONGINT($posit)
-C_TEXT($username; $password)
-
-ARRAY TEXT($tName; 0)
-ARRAY TEXT($tVal; 0)
-
-Case of 
-	: ($1="/login")
-		
-		WEB GET VARIABLES($tName; $tVal)
-		
-		$posit:=Find in array($tName; "username")
-		If ($posit>0)
-			$username:=$tVal{$posit}
-		End if 
-		
-		$posit:=Find in array($tName; "password")
-		If ($posit>0)
-			$password:=$tVal{$posit}
-		End if 
-		
+			// replace demo part with this one
 			// we use a custom user table
 		QUERY([WebUsers]; [WebUsers]User=$username)
 		
@@ -296,7 +273,6 @@ Case of
 			WEB SEND TEXT("Wrong username or password")
 		End if 
 		
-End case 
 ```
 
 In this example, the \[WebUsers] table could be encrypted for security. Note however that only the hash of the user password is stored and used for validation, not the password itself. The hash can be stored at user account creation using the following simple line of code:
