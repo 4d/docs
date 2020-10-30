@@ -39,7 +39,7 @@ REST接続は次の方法で制限することができます:
 
 データベース設定の "Web＞RESTリソース" ページにある **読み込み/書き出し** 設定は、RESTクエリを使って 4Dデータベースへのリンクを設立することのできる 4Dユーザーのグループを指定します。
 
-By default, the menu displays **<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
+デフォルトでは、メニューには **<Anyone>** が選択されています。これは、REST接続はすべてのユーザーに対してオープンであるという状態を示しています。 グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。 If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
 
 > In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Database Settings.
 
