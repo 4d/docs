@@ -24,7 +24,7 @@ REST機能を使い始めるまえに、まずは 4D REST サーバーの設定�
 このオプションが有効化されると、「警告: アクセス権が正しく設定されているか確認してください。」という警告メッセージが表示されます。これは REST接続の認証設定がされていない限り、デフォルトではデータベースオブジェクトに自由にアクセスできてしまうためです。
 
 
-## RESTアクセスの設定
+## アクセス権の設定
 
 By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
 
