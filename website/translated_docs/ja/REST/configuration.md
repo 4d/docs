@@ -13,7 +13,7 @@ To start using the REST features, you need to start and configure the 4D REST se
 
 
 
-## Starting the REST Server
+## RESTサーバーを開始する
 
 For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
 
