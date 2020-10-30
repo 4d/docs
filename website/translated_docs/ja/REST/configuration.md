@@ -30,14 +30,14 @@ REST機能を使い始めるまえに、まずは 4D REST サーバーの設定�
 
 REST接続は次の方法で制限することができます:
 - データベース設定の "Web＞RESTリソース" ページにて、RESTサービスに割り当てる **読み込み/書き出し** ユーザーグループを設定します;
-- writing an `On REST Authentication` database method to intercept and handle every initial REST request.
+- `On REST Authentication` データベースメソッドに、RESTの初期リクエストを処理するコードを書きます。
 
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Database Settings is ignored.
+> 上に挙げた 2つの方法を同時に使用することはできません。 `On REST Authentication` データベースメソッドを定義した場合、4D は RESTリクエストの処理を同メソッドに委ねます。つまり、データベース設定の "Web＞RESTリソース" ページにて指定した "読み込み/書き出し" の設定は無視されます。
 
 
-### Using the Database settings
+### データベース設定を使用する
 
-The **Read/Write** menu in the "Web/REST resource" page of the database settings specifies a group of 4D users that is authorized to establish the link to the 4D database using REST queries.
+データベース設定の "Web＞RESTリソース" ページにある **読み込み/書き出し** 設定は、RESTクエリを使って 4Dデータベースへのリンクを設立することのできる 4Dユーザーのグループを指定します。
 
 By default, the menu displays **<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
 
