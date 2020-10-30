@@ -15,20 +15,20 @@ RESTサーバーは 4D および 4D Server アプリケーションに含まれ�
 
 
 
-## Creating and configuring the 4D database
+## 4Dデータベースの作成と設定
 
-1. Launch your 4D or 4D Server application and create a new database. You can name it "Emp4D", for example.
+1. 4D または 4D Server アプリケーションを起動し、新規データベースを作成します。 名前は仮に "Emp4D" とします。
 
-2. In the Structure editor, create an [Employees] table and add the following fields to it:
-    - Lastname (Alpha)
-    - Firstname (Alpha)
-    - Salary (Longint)
+2. ストラクチャーエディターを開き、[Employees] テーブルを作成して、次のフィールドを追加します:
+    - Lastname (文字列)
+    - Firstname (文字列)
+    - Salary (倍長整数)
 
 ![](assets/en/REST/getstarted1.png)
 
-> The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
+> テーブルおよび各フィールドの "RESTリソースとして公開" オプションはデフォルトで選択されています。これを変更しないでください。
 
-3. Create forms, then create a few employees:
+3. フォームを作成し、何名かの社員レコードを作成します:
 
 ![](assets/en/REST/getstarted2.png)
 
