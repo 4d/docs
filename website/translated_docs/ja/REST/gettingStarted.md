@@ -7,21 +7,21 @@ title: はじめに
 
 The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
 
-This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
+この章では、簡単な例題を使用して REST機能を紹介します。 これから、実際に次のことをしてみましょう:
 - create and configure a basic 4D application project
 - access data from the 4D project through REST using a standard browser.
 
-To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Of course, you could also use a remote architecture.
+To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. もちろん、リモートアーキテクチャーを使うことも可能です。
 
 
 
 ## Creating and configuring the 4D project
 
-1. Launch your 4D or 4D Server application and create a new project. You can name it "Emp4D", for example.
+1. Launch your 4D or 4D Server application and create a new project. 名前は仮に "Emp4D" とします。
 
-2. In the Structure editor, create an [Employees] table and add the following fields to it:
-    - Lastname (Alpha)
-    - Firstname (Alpha)
+2. ストラクチャーエディターを開き、[Employees] テーブルを作成して、次のフィールドを追加します:
+    - Lastname (文字列)
+    - Firstname (文字列)
     - Salary (Longint)
 
 ![](assets/en/REST/getstarted1.png)
