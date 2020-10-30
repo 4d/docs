@@ -32,24 +32,24 @@ RESTサーバーは 4D および 4D Server アプリケーションに含まれ�
 
 ![](assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. データベース設定の **Web＞RESTリソース** ページを開き、[RESTサーバーとして公開](configuration.md#RESTサーバーを開始する) オプションを選択します。
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. 上部の **実行** メニューから、必要に応じて **Webサーバー開始** を選択し、次に同メニューから **Webサーバーテスト** を選択します。
 
-4D displays the default home page of the 4D Web Server.
+規定のブラウザーが開かれ、4D Webサーバーのデフォルトホームページが表示されます。
 
 
-## Accessing 4D data through the browser
+## ブラウザーから 4D データにアクセスする
 
-You can now read and edit data within 4D only through REST requests.
+これで、RESTリクエストを使った 4D のデータの読み込み・編集が可能になりました。
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
+4D の REST URL リクエストは必ず、`address:port` エリアの後に入る `/rest` から始まります。 たとえば、4Dデータストアの内容を確認するには、次のように書けます:
 
 ```
 http://127.0.0.1/rest/$catalog
 ```
 
-The REST server replies:
+RESTサーバーの応答です:
 
 ```
 {
@@ -64,19 +64,19 @@ The REST server replies:
 }
 ```
 
-It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:
+これは、データストアに Employees データクラスが格納されていることを意味します。 データクラス属性を確認するには、次のように書きます:
 
 ```
 /rest/$catalog/Employees
 ```
 
-If you want to get all entities of the Employee dataclass, you write:
+また、Employees データクラスの全エンティティを取得するには:
 
 ```
 /rest/Employees
 ```
 
-**Response:**
+**レスポンス:**
 
 ```
 {
@@ -117,13 +117,13 @@ If you want to get all entities of the Employee dataclass, you write:
 }
 ```
 
-You have many possibilities to filter data to receive. For example, to get only the "Lastname" attribute value from the 2nd entity, you can just write:
+取得するデータを様々な条件でフィルターすることも可能です。 たとえば、2番目のエンティティの "Lastname" 属性値のみを取得するには、次のように書きます:
 
 ```
 /rest/Employees(2)/Lastname
 ```
 
-**Response:**
+**レスポンス:**
 
 ```
 {
@@ -135,4 +135,4 @@ You have many possibilities to filter data to receive. For example, to get only 
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D database.  
+4D の [REST API](REST_requests.md) は、4Dデータベースを操作するためのコマンドを多数提供しています。  
