@@ -26,9 +26,9 @@ REST機能を使い始めるまえに、まずは 4D REST サーバーの設定�
 
 ## アクセス権の設定
 
-By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
+デフォルトでは、REST接続はすべてのユーザーに対してオープンですが、この状態はライセンス管理上もセキュリティ上も推奨されません。
 
-You can configuring REST accesses with one of the following means:
+RESTアクセスは次の方法で制限することができます:
 - assigning a **Read/Write** user group to REST services in the "Web/REST resource" page of the Structure Settings;
 - writing an `On REST Authentication` database method to intercept and handle every initial REST request.
 
