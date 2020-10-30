@@ -5,26 +5,26 @@ title: サーバー設定
 
 Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your application directly, *i.e.* to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
 
-To start using the REST features, you need to start and configure the 4D REST server.
+REST機能を使い始めるまえに、まずは 4D REST サーバーの設定をおこない、これを起動させる必要があります。
 
-> - On 4D Server, opening a REST session requires that a free 4D client licence is available.<br>
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.   
->     You need to manage the [session cookie](authUsers.md#session-cookie) to use the same session for your requesting application.
+> - 4D Server上では、開かれる RESTセッションにつき、4D Client ライセンスが1消費されます。<br>
+> - 4Dシングルユーザーにおいては、テスト用に 3つまでの REST セッションが開けます。   
+>     特定のセッションを継続利用するには [セッション cookie](authUsers.md#セッション-cookie) を管理する必要があります。
 
 
 
 ## RESTサーバーを開始する
 
-For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
+セキュリティ上の理由により、デフォルトでは、4D は RESTリクエストに応答しません。 If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
 
 ![alt-text](assets/en/REST/Settings.png)
 
-> REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.
+> RESTサービスは 4D の HTTPサーバーを使用するため、4D Webサーバーが開始されていることを確認してください。
 
-The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
+このオプションが有効化されると、「警告: アクセス権が正しく設定されているか確認してください。」という警告メッセージが表示されます。これは REST接続の認証設定がされていない限り、デフォルトではデータベースオブジェクトに自由にアクセスできてしまうためです。
 
 
-## Configuring REST access
+## アクセス権の設定
 
 By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
 
