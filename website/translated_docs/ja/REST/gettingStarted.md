@@ -3,15 +3,15 @@ id: gettingStarted
 title: はじめに
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
+4D は、4Dデータベースに格納されているデータへのダイレクトアクセスを可能にする強力な RESTサーバーを提供しています。
 
-The REST server is included in the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
+RESTサーバーは 4D および 4D Server アプリケーションに含まれており、[設定完了後は](configuration.md) 4Dデータベースにて自動的に利用可能となります。
 
-This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
-- create and configure a basic 4D database
-- access data from the 4D database through REST using a standard browser.
+この章では、簡単な例題を使用して REST機能を紹介します。 これから、実際に次のことをしてみましょう:
+- 簡単な 4Dデータベースを作成し、設定します。
+- 標準のブラウザーを開き、REST を介して 4Dデータベースのデータにアクセスします。
 
-To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Of course, you could also use a remote architecture.
+例題が複雑にならないよう、ここでは 4Dアプリケーションとブラウザーを同じマシン上で使用します。 もちろん、リモートアーキテクチャーを使うことも可能です。
 
 
 
