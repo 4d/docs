@@ -22,13 +22,13 @@ To keep the example simple, we’re going to use 4D and a browser that are runni
 2. ストラクチャーエディターを開き、[Employees] テーブルを作成して、次のフィールドを追加します:
     - Lastname (文字列)
     - Firstname (文字列)
-    - Salary (Longint)
+    - Salary (倍長整数)
 
 ![](assets/en/REST/getstarted1.png)
 
-> The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
+> テーブルおよび各フィールドの "RESTリソースとして公開" オプションはデフォルトで選択されています。これを変更しないでください。
 
-3. Create forms, then create a few employees:
+3. フォームを作成し、何名かの社員レコードを作成します:
 
 ![](assets/en/REST/getstarted2.png)
 
