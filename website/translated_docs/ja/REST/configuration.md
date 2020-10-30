@@ -28,8 +28,8 @@ REST機能を使い始めるまえに、まずは 4D REST サーバーの設定�
 
 デフォルトでは、REST接続はすべてのユーザーに対してオープンですが、この状態はライセンス管理上もセキュリティ上も推奨されません。
 
-RESTアクセスは次の方法で制限することができます:
-- assigning a **Read/Write** user group to REST services in the "Web/REST resource" page of the Database Settings;
+REST接続は次の方法で制限することができます:
+- データベース設定の "Web＞RESTリソース" ページにて、RESTサービスに割り当てる **読み込み/書き出し** ユーザーグループを設定します;
 - writing an `On REST Authentication` database method to intercept and handle every initial REST request.
 
 > You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Database Settings is ignored.
