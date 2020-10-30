@@ -39,16 +39,16 @@ REST接続は次の方法で制限することができます:
 
 データベース設定の "Web＞RESTリソース" ページにある **読み込み/書き出し** 設定は、RESTクエリを使って 4Dデータベースへのリンクを設立することのできる 4Dユーザーのグループを指定します。
 
-デフォルトでは、メニューには **<Anyone>** が選択されています。これは、REST接続はすべてのユーザーに対してオープンであるという状態を示しています。 グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。 If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
+デフォルトでは、メニューには **<Anyone>** が選択されています。これは、REST接続はすべてのユーザーに対してオープンであるという状態を示しています。 グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。 このグループに所属していないアカウントの場合、4D はリクエストの送信者に対して認証エラーを返します。
 
-> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Database Settings.
+> この設定を使用するには、`On REST Authentication` データベースメソッドを定義してはいけません。 これが定義されている場合は、データベース設定にて指定したアクセス設定は無視されます。
 
-### Using the On REST Authentication database method
-The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. This database method is automatically called when a new session is opened through a REST request. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. You can use the list of users for the 4D database or you can use your own table of identifiers. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
+### On REST Authentication データベースメソッドを使用する
+`On REST Authentication` データベースメソッド は 4D 上で RESTセッションの開始を管理するための方法を提供します。 RESTリクエストによって新規セッションが開始される際、このデータベースメソッドは自動的に呼び出されます。 [RESTセッション開始のリクエスト](authUsers.md) を受信すると、そのリクエストヘッダーには接続の識別子が含まれています。 これらの識別子を評価するために `On REST Authentication` データベースメソッドは呼び出されます。 評価にあたっては、4Dデータベースのユーザーリストを使用することもできますし、独自の識別子のテーブルを使用することもできます。 詳細については `On REST Authentication` データベースメソッドの [ドキュメンテーション](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.ja.html) を参照ください。
 
 
 
-## Exposing tables and fields
+## テーブルやフィールドの公開
 
 Once REST services are enabled in the 4D database, by default a REST session can access all tables and fields of the datastore, and thus use their data. For example, if your database contains an [Employee] table, it is possible to write:
 
