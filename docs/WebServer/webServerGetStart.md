@@ -12,10 +12,10 @@ Let's start by making the web server send "Hello World" to the browser. The most
 
 ### Starting the web server
 
-To start the 4D web server, you first need to create a project:
+To start the 4D web server:
 
 1. Launch your 4D application and create a new, empty 4D project. 
-2. In the **Run** menu, just select **Start Web Server**.
+2. In the **Run** menu, select **Start Web Server**.
 
 That's all! The web server is started and ready to handle requests. To check it, we'll display the default home page. 
 
@@ -246,11 +246,14 @@ Case of
 End case 
 ```
 
-3. In your browser, connect to the web server, you should have a dialog similar to this one:
+3. In the browser, enter the web server address. 
+
+You should have a dialog similar to this one:
 
 ![](assets/en/WebServer/hello6.png)
 
 4. Enter two identical values and click **Sign in**. 
+
 Your web page now displays: 
 ```
 "You're logged"
@@ -281,7 +284,7 @@ In this example, the \[WebUsers] table could be encrypted for security. Note how
 [WebUsers]hash:=Generate password hash($password) 
 ```  
 
-> To be secure from end to end, this authentication strategy requires that the connection is established via https.  
+> To be secure from end to end, it is recommended that the connection is established via https.  
 
 
 Once the user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. 
