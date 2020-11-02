@@ -74,7 +74,7 @@ $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
 ## Klassen
 
-A class name must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names). They are case sensitive. Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen ](#additional-rules-for-object-property-and-orda-names) konform sein. Groß- und Kleinschreibung wird berücksichtigt. Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine [Tabelle](#tables) in derselben Anwendung unterschiedliche Namen verwenden.
 
 
 ## Felder
@@ -112,9 +112,9 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## Funktionen
 
-Function names must be compliant with standard [property naming rules](#additional-rules-for-object-property-and-orda-names).
+Funktionsnamen müssen mit den [ Schreibregeln für Eigenschaftsnamen](#additional-rules-for-object-property-and-orda-names) konform sein.
 
-> Tip: Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+> Tipp: Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im 4D Code-Editor nicht berücksichtigt.
 
 
 ## Temporäre Auswahlen
@@ -141,12 +141,12 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). For more information, see [additional rules above](#additional-rules-for-object-property-and-orda-names) and [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
+**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie oben unter [ zusätzliche Regeln](#additional-rules-for-object-property-and-orda-names) und [Namensregeln für Objekteigenschaften](Concepts/dt_object.md#object-property-identifiers).
 
 
 ## Parameter
 
-Parameter names must start with a `$` character and be compliant with [property naming rules](#additional-rules-for-object-property-and-orda-names).
+Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](#additional-rules-for-object-property-and-orda-names) konform sein.
 
 Beispiele:
 
@@ -255,7 +255,7 @@ If(Records in set("$Selection"+String($i))>0) //Client set
 
 ## Tabellen
 
-You designate a table by placing its name between brackets: \[...]. Der Tabellenname kann max. 31 Zeichen lang sein. Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
+Eine Tabelle kennzeichnen Sie durch eckige Klammern um den Tabellennamen: \ [...]. Der Tabellenname kann max. 31 Zeichen lang sein. Um Konflikte zu vermeiden, sollten Sie für eine [Klasse](#classes) und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden.
 
 Beispiele:
 ```4d

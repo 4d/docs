@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
+Collections sind sortierte Listen von Werten ähnlicher oder unterschiedlicher Typen (Text, Zahl, Datum, Objekt, Boolean, Collection oder Null).
 
-Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Zum Verwalten von Variablen von Typ Collection müssen Sie Objektnotation verwenden (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)).
 
 Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
@@ -13,7 +13,7 @@ Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in 
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in *expression*. Beispiele:
+Sie können jeden gültigen 4D Ausdruck übergeben, der in *Ausdruck* eine positive Ganzzahl zurückgibt. Beispiele:
 
 ```4d
  myCollection[5]  //access to 6th element of the collection
@@ -22,7 +22,7 @@ You can pass any valid 4D expression which returns a positive integer in *expres
 
 **Warnung:** Elemente in Collections werden ab 0 nummeriert.
 
-You can assign a value to a collection element or get a collection element value:
+Sie können einem Element der Collection einen Wert zuweisen oder einen Wert erhalten:
 
 ```4d
  myCol[10]:="My new element"
@@ -55,14 +55,14 @@ Beispiel:
 
 Sie können zwei Arten von Collections erstellen:
 
-- regular (non-shared) collections, using the [`New collection`](API/collectionClass.md#new-collection) command. Diese Collection lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
-- shared collections, using the [`New shared collection`](API/collectionClass.md#new-shared-collection) command. Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- regular (non-shared) Collections mit dem Befehl [`New collection`](API/collectionClass.md#new-collection). Diese Collection lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
+- shared Collections mit dem Befehl [`New shared collection`](API/collectionClass.md#new-shared-collection). Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Collections wird über [`Use...End use`](Concepts/shared.md#useend-use) Strukturen gesteuert.
 
 Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
 
-## Collection functions
+## Collection Funktionen
 
-4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](API/collectionClass.md) section.
+Referenzen auf 4D Collection können spezifische Klassenfunktionen nutzen, manchmal auch *Member Functions* genannt. Collection-Funktionen sind im Abschnitt [Class API Reference](API/collectionClass.md) aufgelistet.
 
 Beispiel:
 
@@ -71,7 +71,7 @@ $newCol:=$col.copy() //deep copy of $col to $newCol
 $col.push(10;100) //add 10 and 100 to the collection
 ```
 
-Some functions return the original collection after modification, so that you can run the calls in a sequence:
+Einige Funktionen geben nach Änderung die ursprüngliche Collection zurück, so dass die Aufrufe in einer Sequenz ablaufen können:
 
 ```4d
  $col:=New collection(5;20)
@@ -82,12 +82,12 @@ Some functions return the original collection after modification, so that you ca
 ### Parameter propertyPath
 
 
-Several functions accept a _propertyPath_ as parameter. Dieser Parameter steht für:
+Einige Collection-Funktionen akzeptieren als Parameter einen _PropertyPath_. Dieser Parameter steht für:
 
 - Name der Objekteigenschaft, z. B. "lastName"
 - oder Pfad der Objekteigenschaft, z.B. eine Sequenz von Untereigenschaften, durch Punkte getrennt, z.B. "employee.children.firstName".
 
-**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Warnung:** Sie können bei Funktionen und Parametern PropertyPath in Eigenschaftsnamen keine Leerzeichen oder ".", "[ ]" verwenden, da 4D den Pfad dann nicht korrekt analysieren kann:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined

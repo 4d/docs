@@ -46,7 +46,6 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 ---
 
-<!-- REF datastoreClass.ds.Desc -->
 ## ds
 
 <details><summary>History</summary>
@@ -56,10 +55,10 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 | v17     | Added                        |
 </details>
 
-<!-- REF #datastoreClass.ds.Syntax -->
+<!-- REF #_command_.ds.Syntax -->
 **ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
-<!-- REF #datastoreClass.ds.Params -->
+<!-- REF #_command_.ds.Params -->
 | Parameter | Type         |    | Description                                |
 | --------- | ------------ | -- | ------------------------------------------ |
 | localID   | Text         | -> | Local ID of the remote datastore to return |
@@ -68,7 +67,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 
 #### Description
-The `ds` command <!-- REF #datastoreClass.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by 
+The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by 
 
 *localID*<!-- END REF -->.
 
@@ -98,6 +97,7 @@ Using the main datastore on the 4D database:
 
 ```4d 
  var $connectTo; $firstFrench; $firstForeign : Object
+
  var $frenchStudents; $foreignStudents : cs.DataStore
 
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
@@ -119,11 +119,9 @@ Using the main datastore on the 4D database:
  $0:=ds($localId)[$dataClassName].all().first()
 ```
 
-<!-- END REF -->
 
 ---
 
-<!-- REF datastoreClass.Open datastore.Desc -->
 ## Open datastore
 
 <details><summary>History</summary>
@@ -132,10 +130,10 @@ Using the main datastore on the 4D database:
 | v18     | Added   |
 </details>
 
-<!-- REF #datastoreClass.Open datastore.Syntax -->
+<!-- REF #_command_.Open datastore.Syntax -->
 **Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
-<!-- REF #datastoreClass.Open datastore.Params -->
+<!-- REF #_command_.Open datastore.Params -->
 | Parameter      | Type         |    | Description                                                               |
 | -------------- | ------------ | -- | ------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Connection properties used to reach the remote datastore                  |
@@ -145,7 +143,7 @@ Using the main datastore on the 4D database:
 
 
 #### Description
-The `Open datastore` command <!-- REF #datastoreClass.Open datastore.Summary -->connects the application to the 4D database identified by the 
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the 
 
 *connectionInfo* parameter<!-- END REF --> and returns a matching 
 
@@ -228,9 +226,8 @@ Working with several remote datastores:
 
 #### Error management
 
-In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`. 
+In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`.
 
-<!-- END REF -->
 
 ---
 
