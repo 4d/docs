@@ -17,10 +17,10 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
   // Get signature as base64
 $message:="hello world"
-$signature:=$key.sign($message;New object("hash";"HASH256"))
+$signature:=$key.sign($message;New object("hash";"SHA256"))
 
   // Verify signature
-$status:=$key.verify($message;$signature;New object("hash";"HASH256"))
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
 ASSERT($status.success)
 ```
 
@@ -148,7 +148,7 @@ The `.decrypt()` function <!-- REF #cryptokey.decrypt().Summary -->decrypts the
 
 | プロパティ             | タイプ  | 説明                                                                                         |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------ |
-| hash              | text | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。                                    |
+| hash              | text | 使用する Digest アルゴリズム。 For example: "SHA256", "SHA384", or "SHA512".                          |
 | encodingEncrypted | text | 復号するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"   |
 | encodingDecrypted | text | バイナリの復号メッセージを文字列に変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
@@ -198,7 +198,7 @@ The `.encrypt()` function <!-- REF #cryptokey.encrypt().Summary -->encrypts the
 
 | プロパティ             | タイプ  | 説明                                                                                                |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------------- |
-| hash              | text | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。                                           |
+| hash              | text | 使用する Digest アルゴリズム。 For example: "SHA256", "SHA384", or "SHA512".                                 |
 | encodingEncrypted | text | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"               |
 | encodingDecrypted | text | 暗号化するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
@@ -320,12 +320,12 @@ The `.sign()` function <!-- REF #cryptokey.sign().Summary -->signs the utf8 repr
 
 #### *options*
 
-| プロパティ             | タイプ     | 説明                                                                                                                              |
-| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text    | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
-| encodingEncrypted | text    | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                             |
-| pss               | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                              |
-| encoding          | text    | ERepresentation to be used for result signature. 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                               |
+| プロパティ             | タイプ     | 説明                                                                                                                                        |
+| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text    | 使用する Digest アルゴリズム。 For example: "SHA256", "SHA384", or "SHA512". JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
+| encodingEncrypted | text    | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                       |
+| pss               | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                                        |
+| encoding          | text    | ERepresentation to be used for result signature. 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                         |
 
 
 #### *戻り値*
@@ -398,11 +398,11 @@ The `.verify()` function <!-- REF #cryptokey.verify().Summary -->verifies the ba
 
 #### *options*
 
-| プロパティ    | タイプ     | 説明                                                                                                                              |
-| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| hash     | text    | 使用する Digest アルゴリズム。 例: "HASH256", "HASH384", "HASH512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
-| pss      | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                              |
-| encoding | text    | 署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                    |
+| プロパティ    | タイプ     | 説明                                                                                                                                        |
+| -------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| hash     | text    | 使用する Digest アルゴリズム。 For example: "SHA256", "SHA384", or "SHA512". JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
+| pss      | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                                        |
+| encoding | text    | 署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                              |
 
 
 #### *戻り値*
