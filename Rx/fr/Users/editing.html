@@ -68,9 +68,9 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/Users/handling_users_groups.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Gestion des groupes et utilisateurs 4D</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="super_utilisateur-et-administrateur"></a><a href="#super_utilisateur-et-administrateur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Super_Utilisateur et Administrateur</h2>
 <p>4D fournit à certains utilisateurs des privilèges d’accès standard ainsi que des prérogatives spécifiques. Une fois qu’un système d’utilisateurs et de groupes a été créé, ces privilèges standard prennent effet.</p>
-<p>L’utilisateur le plus puissant est le <strong>Super_Utilisateur</strong>. No aspect of the application is closed to the Designer. Le Super_Utilisateur peut :</p>
+<p>L’utilisateur le plus puissant est le <strong>Super_Utilisateur</strong>. Aucune partie de l'application n’est inaccessible au Super_Utilisateur. Le Super_Utilisateur peut :</p>
 <ul>
-<li>access all application servers without restriction,</li>
+<li>accéder à tous les serveurs de l'application sans restrictions,</li>
 <li>créer des utilisateurs et des groupes,</li>
 <li>affecter des privilèges d’accès aux groupes,</li>
 <li>utiliser le mode Développement. En monoposte, les droits d'accès du Super_Utilisateur sont toujours utilisés. En mode client/serveur, l'affectation d'un mot de passe au Super_Utilisateur affiche la boîte de dialogue de connexion.  L'accès au mode Développement est en lecture seule.</li>
@@ -85,9 +85,9 @@
 <p>L'Administrateur ne peut pas :</p>
 <ul>
 <li>modifier l'utilisateur Super_Utilisateur</li>
-<li>by default, access to protected parts of the application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. The Administrator must be part of one or more groups to have access privileges in the application. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.</li>
+<li>par défaut, accéder à des objets protégés de l'application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. L'Administrateur doit faire partie d'un ou plusieurs groupes pour avoir des privilèges d’accès dans l'application. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.</li>
 </ul>
-<p>Both the Designer and Administrator are available by default in all applications. Dans la <a href="#users-and-groups-editor">boîte de dialogue de gestion des utilisateurs</a>, les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :</p>
+<p>Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. Dans la <a href="#users-and-groups-editor">boîte de dialogue de gestion des utilisateurs</a>, les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :</p>
 <ul>
 <li>Icône du Super_Utilisateur : <img src="/docs/Rx/assets/en/Users/IconDesigner.png" alt=""></li>
 <li>Icône de l'Administrateur : <img src="/docs/Rx/assets/en/Users/IconAdmin.png" alt=""></li>
@@ -112,11 +112,11 @@
 </blockquote>
 <p>4D ajoute un nouvel utilisateur à la liste, nommé par défaut &quot;Nouvel utilisateurN&quot;.</p>
 <ol start="3">
-<li><p>Saisissez le nom du nouvel utilisateur. This name will be used by the user to open the application. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande <strong>Renommer</strong> du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.</p></li>
+<li><p>Saisissez le nom du nouvel utilisateur. Ce nom sera utilisé par l’utilisateur pour ouvrir l'application. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande <strong>Renommer</strong> du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.</p></li>
 <li><p>Pour saisir le mot de passe de l’utilisateur, cliquez sur le bouton <strong>Modifier...</strong> dans la zone des propriétés de l’utilisateur et saisissez deux fois le mot de passe dans la boite de dialogue. Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).</p></li>
 </ol>
 <blockquote>
-<p>Users can change their password at any time according to the options in the &quot;Security&quot; page of the structure settings, or using the <code>CHANGE PASSWORD</code> command.</p>
+<p>Les utilisateurs peuvent modifier leur mot de passe à tout moment en fonction des options de la page Sécurité des propriétés de la structure, ou à l'aide de la commande <code>CHANGE PASSWORD</code>.</p>
 </blockquote>
 <ol start="5">
 <li>Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”. Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.</li>
@@ -128,7 +128,7 @@
 <h3><a class="anchor" aria-hidden="true" id="propriétés-des-utilisateurs"></a><a href="#propriétés-des-utilisateurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés des utilisateurs</h3>
 <ul>
 <li><p>Le champ <strong>Type d’utilisateur</strong> : le champ Type d’utilisateur contient &quot;Super_Utilisateur&quot;, &quot;Administrateur&quot;, ou (pour tous les autres utilisateurs) &quot;Utilisateur&quot;.</p></li>
-<li><p><strong>Startup Method</strong>: Name of an associated method that will be automatically executed when the user opens the application (optional). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.</p></li>
+<li><p><strong>Méthodes de démarrage</strong> : Nom d'une méthode associée qui sera automatiquement associée lorsque l'utilisateur ouvre l'application (facultatif). Cette méthode peut être utilisée par exemple pour charger les préférences utilisateur.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="éditeur-de-groupes"></a><a href="#éditeur-de-groupes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Éditeur de groupes</h2>
 <p>L'éditeur de groupes se trouve dans la boîte à outils de 4D.</p>
@@ -137,7 +137,7 @@
 <p>Attention, une fois créé, un groupe ne peut pas être supprimé. Si vous souhaitez désactiver un groupe, il vous suffit de retirer tous les utilisateurs qu’il contient.</p>
 <p>Pour créer un groupe :</p>
 <ol>
-<li><p>Sélectionnez <strong>Boîte à outils &gt; Groupes</strong> dans le menu <strong>Développement</strong> ou cliquez sur le bouton <strong>Boîte outils</strong> de la barre d’outils de 4D puis cliquez sur le bouton <strong>Groupes</strong>. 4D affiche la fenêtre d’édition des groupes. The list of groups displays all the groups of the application project.</p></li>
+<li><p>Sélectionnez <strong>Boîte à outils &gt; Groupes</strong> dans le menu <strong>Développement</strong> ou cliquez sur le bouton <strong>Boîte outils</strong> de la barre d’outils de 4D puis cliquez sur le bouton <strong>Groupes</strong>. 4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes du projet d'application.</p></li>
 <li><p>Cliquez sur le bouton <img src="/docs/Rx/assets/en/Users/PlussNew.png" alt=""> situé en-dessous de la liste des groupes.<br>
 OU<br>
 Faites un clic droit sur la liste de groupes et sélectionnez la commande <strong>Ajouter</strong> ou <strong>Dupliquer</strong> dans le menu contextuel.</p></li>
@@ -157,7 +157,7 @@ Faites un clic droit sur la liste de groupes et sélectionnez la commande <stron
 <p>Placer des groupes dans d’autres groupes permet de créer une hiérarchie d’utilisateurs. Les utilisateurs d’un groupe placé dans un autre groupe disposent des autorisations d’accès des deux groupes. Reportez-vous au paragraphe <a href="#an-access-hierarchy-scheme">Un schéma d’accès hiérarchique</a> ci-dessous.</p>
 <p>Pour supprimer un utilisateur ou un groupe d’un autre groupe, il suffit de désélectionner l’option correspondante dans la liste des membres.</p>
 <h3><a class="anchor" aria-hidden="true" id="affecter-un-groupe-à-un-plug-in-ou-à-un-serveur"></a><a href="#affecter-un-groupe-à-un-plug-in-ou-à-un-serveur" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Affecter un groupe à un plug-in ou à un serveur</h3>
-<p>You can assign a group privileges to any plug-ins installed in the project. Les plug-ins comprennent tous les plug-ins de 4D ainsi que tout plug-in développés par une société tierce.</p>
+<p>Vous pouvez affecter un groupe d’accès à tout plug-in 4D installé dans votre projet. Les plug-ins comprennent tous les plug-ins de 4D ainsi que tout plug-in développés par une société tierce.</p>
 <p>Répartir les accès aux plug-ins vous permet de contrôler l’utilisation des licences dont vous disposez pour ces plug-ins. Tout utilisateur n’appartenant pas au groupe d’accès à un plug-in ne pourra pas charger ce plug-in.</p>
 <blockquote>
 <p>Les licences utilisées demeurent associées aux comptes utilisateurs 4D dans le groupe, durant toute la session 4D.</p>
@@ -166,7 +166,7 @@ Faites un clic droit sur la liste de groupes et sélectionnez la commande <stron
 <p><img src="/docs/Rx/assets/en/Users/plugins.png" alt=""></p>
 <p>Les lignes <strong>4D Client Web Server</strong> et <strong>4D Client SOAP Server</strong> permettent contrôler la possibilité de publication Web et SOAP (Web Services) de chaque 4D en mode distant. En effet, ces licences sont considérées par 4D Server comme des licences de plug-ins. Ainsi, comme pour un plug-in, vous pouvez restreindre le droit d’utiliser ces licences à un groupe d’utilisateurs spécifique.</p>
 <h3><a class="anchor" aria-hidden="true" id="un-schéma-daccès-hiérarchique"></a><a href="#un-schéma-daccès-hiérarchique" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Un schéma d’accès hiérarchique</h3>
-<p>The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Les utilisateurs peuvent être affectés à différents groupes et les groupes peuvent être hiérarchisés pour créer des niveaux de droits d’accès. Cette section décrit différentes approches de ce thème.</p>
+<p>Le meilleur moyen d’assurer la sécurité de votre application et de proposer différents niveaux d’accès aux utilisateurs est d’utiliser un schéma hiérarchique des accès. Les utilisateurs peuvent être affectés à différents groupes et les groupes peuvent être hiérarchisés pour créer des niveaux de droits d’accès. Cette section décrit différentes approches de ce thème.</p>
 <p>Dans cet exemple, un utilisateur appartient à l’un des trois groupes définis suivant son niveau de responsabilité. Les utilisateurs du groupe Comptabilité sont responsables de la saisie de données. Les utilisateurs du groupe Dir. finance sont responsables de la mise à jour des données, comme la mise à jour d’enregistrements ou la suppression d’enregistrements obsolètes. Les utilisateurs du groupe Direction générale sont responsables de l’analyse de données, ce qui inclut la réalisation de recherches et l’impression d’états.</p>
 <p>Les groupes sont hiérarchisés afin que les privilèges soient correctement affectés aux utilisateurs de chacun des groupes.</p>
 <ul>
