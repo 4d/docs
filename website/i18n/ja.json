@@ -740,7 +740,7 @@
         "title": "Calling ORDA class functions"
       },
       "REST/configuration": {
-        "title": "Server Configuration"
+        "title": "サーバー設定"
       },
       "REST/genInfo": {
         "title": "Getting Server Information"

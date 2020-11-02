@@ -1,54 +1,54 @@
 ---
 id: configuration
-title: Server Configuration
+title: サーバー設定
 ---
 
 Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your application directly, *i.e.* to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
 
-To start using the REST features, you need to start and configure the 4D REST server.
+REST機能を使い始めるまえに、まずは 4D REST サーバーの設定をおこない、これを起動させる必要があります。
 
-> - On 4D Server, opening a REST session requires that a free 4D client licence is available.<br>
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.   
->     You need to manage the [session cookie](authUsers.md#session-cookie) to use the same session for your requesting application.
+> - 4D Server上では、開かれる RESTセッションにつき、4D Client ライセンスが1消費されます。<br>
+> - 4Dシングルユーザーにおいては、テスト用に 3つまでの REST セッションが開けます。   
+>     特定のセッションを継続利用するには [セッション cookie](authUsers.md#セッション-cookie) を管理する必要があります。
 
 
 
-## Starting the REST Server
+## RESTサーバーを開始する
 
-For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
+セキュリティ上の理由により、デフォルトでは、4D は RESTリクエストに応答しません。 If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
 
 ![alt-text](assets/en/REST/Settings.png)
 
-> REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.
+> RESTサービスは 4D の HTTPサーバーを使用するため、4D Webサーバーが開始されていることを確認してください。
 
-The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
+このオプションが有効化されると、「警告: アクセス権が正しく設定されているか確認してください。」という警告メッセージが表示されます。これは REST接続の認証設定がされていない限り、デフォルトではデータベースオブジェクトに自由にアクセスできてしまうためです。
 
 
-## Configuring REST access
+## アクセス権の設定
 
-By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
+デフォルトでは、REST接続はすべてのユーザーに対してオープンですが、この状態はライセンス管理上もセキュリティ上も推奨されません。
 
-You can configuring REST accesses with one of the following means:
+REST接続は次の方法で制限することができます:
 - assigning a **Read/Write** user group to REST services in the "Web/REST resource" page of the Structure Settings;
-- writing an `On REST Authentication` database method to intercept and handle every initial REST request.
+- `On REST Authentication` データベースメソッドに、RESTの初期リクエストを処理するコードを書きます。
 
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Structure Settings is ignored.
+> 上に挙げた 2つの方法を同時に使用することはできません。 Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Structure Settings is ignored.
 
 
 ### Using the Structure Settings
 
 The **Read/Write** menu in the "Web/REST resource" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
 
-By default, the menu displays **\<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
+By default, the menu displays **\<Anyone>**, which means that REST accesses are open to all users. グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。 このグループに所属していないアカウントの場合、4D はリクエストの送信者に対して認証エラーを返します。
 
-> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Structure Settings.
+> この設定を使用するには、`On REST Authentication` データベースメソッドを定義してはいけません。 If it exists, 4D ignores access settings defined in the Structure Settings.
 
-### Using the On REST Authentication database method
-The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. This database method is automatically called when a new session is opened through a REST request. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. You can use the list of users for the 4D application or you can use your own table of identifiers. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
+### On REST Authentication データベースメソッドを使用する
+`On REST Authentication` データベースメソッド は 4D 上で RESTセッションの開始を管理するための方法を提供します。 RESTリクエストによって新規セッションが開始される際、このデータベースメソッドは自動的に呼び出されます。 [RESTセッション開始のリクエスト](authUsers.md) を受信すると、そのリクエストヘッダーには接続の識別子が含まれています。 これらの識別子を評価するために `On REST Authentication` データベースメソッドは呼び出されます。 You can use the list of users for the 4D application or you can use your own table of identifiers. 詳細については `On REST Authentication` データベースメソッドの [ドキュメンテーション](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.ja.html) を参照ください。
 
 
 
-## Exposing tables and fields
+## テーブルやフィールドの公開
 
 Once REST services are enabled in the 4D application, by default a REST session can access all tables and fields of the 4D database through the [datastore interface](ORDA/dsMapping.md#datastore). Thus, it can use their data. For example, if your database contains an [Employee] table, it is possible to write:
 
