@@ -148,7 +148,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      オブジェクト
+      object
     </td>
     
     <td>
@@ -168,7 +168,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      オブジェクト
+      object
     </td>
     
     <td>
@@ -262,7 +262,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| 引数     | タイプ    | 説明                                                       |
+| 参照     | タイプ    | 説明                                                       |
 | ------ | ------ | -------------------------------------------------------- |
 | $macro | オブジェクト | Macro declaration object (in the `formMacros.json` file) |
 
@@ -302,7 +302,7 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| 引数      | タイプ    | 説明                                               |
+| 参照      | タイプ    | 説明                                               |
 | ------- | ------ | ------------------------------------------------ |
 | $editor | オブジェクト | Form properties                                  |
 | $result | オブジェクト | Form properties modified by the macro (optional) |
@@ -393,7 +393,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
 
-| 引数           |                       | タイプ    | 説明                                       |
+| 参照           |                       | タイプ    | 説明                                       |
 | ------------ | --------------------- | ------ | ---------------------------------------- |
 | $editor      |                       | オブジェクト | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | オブジェクト | Object returned by [onInvoke](#oninvoke) |

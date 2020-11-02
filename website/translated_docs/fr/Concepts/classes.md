@@ -21,7 +21,7 @@ Class constructor($firstname : Text; $lastname : Text)
     This.lastName:=$lastname
 ```
 
-In a method, creating a "Person":
+Dans une méthode, créons une "Personne" :
 
 ```
 var $o : cs.Person //object of Person class
@@ -177,14 +177,14 @@ $person:=cs.Person.new() //create the new instance
 //$Person contains functions of the class
 ```
 
-Note that you can instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
+Note that you can instantiate empty objects. Par exemple, si vous créez le fichier de classe `Empty.4dm suivant` :
 
 ```4d  
 //Fichier classe Empty.4dm
 //Rien
 ```
 
-You could write in a method:
+Vous pouvez saisir dans une méthode :
 
 ```4d
 $o:=cs.Empty.new()  
@@ -260,9 +260,9 @@ Function getFullname()->$fullname : Text
 
 For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. Les syntaxes suivantes sont prises en charge :
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
+- utilisation de l'opérateur `()`. For example, `myObject.methodName("hello")`
 - use of a "Function" class member method:
     - `apply()`
     - `call()`

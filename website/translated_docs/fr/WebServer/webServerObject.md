@@ -5,17 +5,17 @@ title: Objet Serveur Web
 
 ## Aperçu
 
-A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
+Un projet 4D peut démarrer et surveiller un serveur Web pour l'application principale (hôte) ainsi que chaque composant hébergé.
 
-For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
+Par exemple, si vous avez installé deux composants dans votre application principale, vous pouvez démarrer et contrôler jusqu'à trois serveurs Web indépendants à partir de votre application :
 
-- one web server for the host application,
+- un serveur web pour l'application hôte,
 - un serveur web pour le composant n°1,
 - un serveur web pour le composant n°2.
 
-Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
+En dehors de la mémoire, il n'y a pas de limite au nombre de composants et donc, de serveurs Web, pouvant être rattachés à un seul projet d'application 4D.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object**. Once instantiated, a web server object can be handled from the current application or from any component.
+Chaque serveur web 4D, y compris le serveur web de l'application principale, est exposé comme un **objet** spécifique. Une fois instancié, un objet serveur Web peut être géré à partir de l'application courante ou de n'importe quel composant.
 
 > Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
@@ -29,7 +29,7 @@ Cette fonctionnalité vous permet de développer des composants indépendants et
 
 ## Instancier un objet serveur web
 
-The web server object of the host application (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created project:
+L'objet serveur Web de l'application hôte (serveur Web par défaut) est automatiquement chargé par 4D au démarrage. Ainsi, si vous écrivez dans un projet nouvellement créé :
 
 ```4d
 $nbSrv:=WEB Server list.length   
@@ -92,7 +92,7 @@ Un objet serveur Web contient les propriétés suivantes.
 | Propriété                  | Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | -------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | certificateFolder          | Texte               | Dossier dans lequel les fichiers de certificat sont sauvegardés. Format POSIX du chemin d'accès complet à l'aide de filesystem. Peut être passé comme objet `Folder` dans le paramètre `settings`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| characterSet               | Numérique ou texte  | Character set that the 4D Web Server should use to communicate with browsers connecting to the application. La valeur par défaut dépend de la langue du système d'exploitation. Peut être une chaîne MIBEnum longint ou Name, identifiants [définis par l'IANA](http://www.iana.org/assignments/character-sets) pris en charge par le serveur Web 4D : <li>4 = ISO-8859-1</li><li>12 = ISO-8859-9</li><li>13 = ISO-8859-10</li><li>17 = Shift-JIS</li><li>2024 = Windows-31J</li><li>2026 = Big5</li><li>38 = euc-kr</li><li>106 = UTF-8</li><li>2250 = Windows-1250</li><li>2251 = Windows-1251</li><li>2253 = Windows-1253</li><li>2255 = Windows-1255</li><li>2256 = Windows-1256                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| characterSet               | Numérique ou texte  | Jeu de caractères devant être utilisé par 4D Web Server pour communiquer avec les navigateurs connectés à l'application. La valeur par défaut dépend de la langue du système d'exploitation. Peut être une chaîne MIBEnum longint ou Name, identifiants [définis par l'IANA](http://www.iana.org/assignments/character-sets) pris en charge par le serveur Web 4D : <li>4 = ISO-8859-1</li><li>12 = ISO-8859-9</li><li>13 = ISO-8859-10</li><li>17 = Shift-JIS</li><li>2024 = Windows-31J</li><li>2026 = Big5</li><li>38 = euc-kr</li><li>106 = UTF-8</li><li>2250 = Windows-1250</li><li>2251 = Windows-1251</li><li>2253 = Windows-1253</li><li>2255 = Windows-1255</li><li>2256 = Windows-1256                                                                                                                                                                                                                                                                                                                                                                                                          |
 | cipherSuite                | Texte               | Liste de chiffrement utilisée pour le protocole sécurisé. Définit la priorité des algorithmes de chiffrement mis en œuvre par le serveur Web. Peut être une séquence de chaînes séparées par des deux-points (par exemple "ECDHE-RSA-AES128 -..."). Voir la [page des chiffrements](https://www.openssl.org/docs/manmaster/man1/ciphers.html) sur le site OpenSSL.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | CORSEnabled                | boolean             | Statut CORS (Cross-origin resource sharing) activé pour le serveur Web. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir `CORSSettings` ci-dessous). Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur «403 - forbidden».<p><p>Par défaut : False (désactivé)<p>Pour plus d'informations sur CORS, veuillez consulter la [page de partage de ressources cross-origin](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) sur Wikipedia.                                                          |
 | CORSSettings               | collection d'objets | Liste des hôtes et des méthodes autorisés pour le service CORS (voir `CORSEnabled` ci-dessus). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :<li>**host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont prises en charge :<br>192.168.5.17:8081<br>192.168.5.17<br>192.168.\*<br>192.168.\*:8081<br>http://192.168.5.17:8081<br>http://\*.myDomain.com<br>http://myProject.myDomain.com<br>\*.myDomain.com<br>myProject.myDomain.com<br>\*<li>**methods** (texte, facultatif) : méthode(s) HTTP acceptée(s) pour l'hôte CORS correspondant. Séparez chaque méthode par un ";" (ex : "post;get"). Si *methods* est vide, null ou non défini, toutes les méthodes sont activées. |
@@ -129,8 +129,8 @@ Un objet serveur Web contient les propriétés suivantes.
 Ces propriétés sont définies :
 
 1. à l'aide du paramètre `settings` de la méthode `webServer.start()` (sauf pour les propriétés en lecture seule, voir ci-dessous),
-2. if not used, using the `WEB SET OPTION` command (host applications only),
-3. if not used, in the settings of the host application or the component.
+2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
+3. si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.
 
 - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
 - Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la méthode `webServer.start()`.
@@ -144,30 +144,30 @@ Le langage 4D contient [plusieurs commandes](https://doc.4d.com/4Dv18/4D/18/Web-
 
 | Commande                        | Portée                            |
 | ------------------------------- | --------------------------------- |
-| `SET DATABASE PARAMETER`        | Host application web server       |
+| `SET DATABASE PARAMETER`        | Application hôte du serveur web   |
 | `WEB CLOSE SESSION`             | Serveur Web ayant reçu la requête |
 | `WEB GET BODY PART`             | Serveur Web ayant reçu la requête |
 | `WEB Get body part count`       | Serveur Web ayant reçu la requête |
 | `WEB Get Current Session ID`    | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP BODY`             | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP HEADER`           | Serveur Web ayant reçu la requête |
-| `WEB GET OPTION`                | Host application web server       |
-| `WEB Get server info`           | Host application web server       |
+| `WEB GET OPTION`                | Application hôte du serveur web   |
+| `WEB Get server info`           | Application hôte du serveur web   |
 | `WEB GET SESSION EXPIRATION`    | Serveur Web ayant reçu la requête |
 | `WEB Get session process count` | Serveur Web ayant reçu la requête |
-| `WEB GET STATISTICS`            | Host application web server       |
+| `WEB GET STATISTICS`            | Application hôte du serveur web   |
 | `WEB GET VARIABLES`             | Serveur Web ayant reçu la requête |
 | `WEB Is secured connection`     | Serveur Web ayant reçu la requête |
-| `WEB Is server running`         | Host application web server       |
+| `WEB Is server running`         | Application hôte du serveur web   |
 | `WEB SEND BLOB`                 | Serveur Web ayant reçu la requête |
 | `WEB SEND FILE`                 | Serveur Web ayant reçu la requête |
 | `WEB SEND HTTP REDIRECT`        | Serveur Web ayant reçu la requête |
 | `WEB SEND RAW DATA`             | Serveur Web ayant reçu la requête |
 | `WEB SEND TEXT`                 | Serveur Web ayant reçu la requête |
-| `WEB SET HOME PAGE`             | Host application web server       |
+| `WEB SET HOME PAGE`             | Application hôte du serveur web   |
 | `WEB SET HTTP HEADER`           | Serveur Web ayant reçu la requête |
-| `WEB SET OPTION`                | Host application web server       |
-| `WEB SET ROOT FOLDER`           | Host application web server       |
-| `WEB START SERVER`              | Host application web server       |
-| `WEB STOP SERVER`               | Host application web server       |
+| `WEB SET OPTION`                | Application hôte du serveur web   |
+| `WEB SET ROOT FOLDER`           | Application hôte du serveur web   |
+| `WEB START SERVER`              | Application hôte du serveur web   |
+| `WEB STOP SERVER`               | Application hôte du serveur web   |
 | `WEB Validate digest`           | Serveur Web ayant reçu la requête |

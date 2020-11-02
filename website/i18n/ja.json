@@ -505,7 +505,7 @@
         "title": "インストール"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "メニューバーの管理"
       },
       "Menus/creating": {
         "title": "メニューとメニューバーの作成"
@@ -517,7 +517,7 @@
         "title": "メニュープロパティ"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Windows での SDIモード"
       },
       "MSC/analysis": {
         "title": "ログ解析ページ",
@@ -677,7 +677,7 @@
         "title": "Calling ORDA class functions"
       },
       "REST/configuration": {
-        "title": "Server Configuration"
+        "title": "サーバー設定"
       },
       "REST/genInfo": {
         "title": "Getting Server Information"
@@ -716,13 +716,13 @@
       "Administration": "データベース管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server",
+      "Web Server": "Web サーバー",
+      "REST Server": "REST サーバー",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
-      "Form Events": "Form Events",
+      "Form Events": "フォームイベント",
       "Menus": "メニュー"
     }
   },
@@ -735,12 +735,12 @@
     "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "Forms",
     "Form Properties|no description given": "Form Properties",
-    "Form Events|no description given": "Form Events",
+    "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
-    "Web Server|no description given": "Web Server",
-    "REST Server|no description given": "REST Server",
+    "Web Server|no description given": "Web サーバー",
+    "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",

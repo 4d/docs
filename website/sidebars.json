@@ -167,6 +167,7 @@
 			"Events/onUrlLoadingError",
 			"Events/onUrlResourceLoading",
 			"Events/onValidate",
+			"Events/onVpRangeChanged",
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
   "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]

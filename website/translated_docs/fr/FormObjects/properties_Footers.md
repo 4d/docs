@@ -56,9 +56,9 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles             |
-| ------------ | --------------- | ----------------------------- |
-| footerHeight | string          | positive decimal+px &#124; em |
+| Nom          | Type de données | Valeurs possibles                 |
+| ------------ | --------------- | --------------------------------- |
+| footerHeight | string          | décimales positives +px &#124; em |
 
 #### Objets pris en charge
 
