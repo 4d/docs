@@ -21,7 +21,7 @@ If you pass the following query:
 
  `GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`
 
-#### Response:
+#### レスポンス:
 
 ```
 __queryPlan: {
