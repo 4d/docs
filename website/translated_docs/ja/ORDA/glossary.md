@@ -132,8 +132,8 @@ $myClass.query("name = smith")
 *   null
 *   boolean
 *   date
-*   オブジェクト
-*   コレクション
+*   object
+*   collection
 *   ピクチャー (\*)
 
 *(\*) ピクチャー型は* `entitySelection.max( )` *などの統計型メソッドではサポートされていません。*

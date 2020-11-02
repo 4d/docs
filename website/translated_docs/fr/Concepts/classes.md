@@ -66,7 +66,7 @@ Class constructor
   This.lastName:=$2
 ```
 
-In a method, creating a "Person":
+Dans une méthode, créons une "Personne" :
 
 ```
 C_OBJECT($o)
@@ -74,14 +74,14 @@ $o:=cs.Person.new("John";"Doe")
 // $o: {firstName: "John";lastName: "Doe" }
 ```
 
-Note that you could create an empty class file, and instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
+A noter que vous pouvez créer un fichier de classe vide et instancier des objets vides. Par exemple, si vous créez le fichier de classe `Empty.4dm suivant` :
 
 ```4d  
 //Fichier classe Empty.4dm
 //Rien
 ```
 
-You could write in a method:
+Vous pouvez saisir dans une méthode :
 
 
 ```4d
@@ -101,7 +101,7 @@ Available classes are accessible from their class stores. The following class st
 For example, you create a new instance of an object of myClass using the `cs.myClass.new()` statement (`cs` means *classtore*).
 
 
-## Handling user classes
+## Gestion des classes utilisateur
 
 ### Fichiers de classe (class files)
 
@@ -115,7 +115,7 @@ For example, if you want to define a class named "Polygon", you need to create t
             - Classes
                 + Polygon.4dm
 
-### Class names
+### Noms de classe
 
 When naming classes, you should keep in mind the following rules:
 
@@ -124,7 +124,7 @@ When naming classes, you should keep in mind the following rules:
 - Giving the same name to a class and a database table is not recommended, in order to prevent any conflict.
 
 
-### 4D Developer interface
+### Interface 4D Developer
 
 Class files are automatically stored at the appropriate location when created through the 4D Developer interface, either via the **File** menu or the Explorer.
 
@@ -173,12 +173,12 @@ Specific 4D keywords can be used in class definitions:
 - `Class extends <ClassName>` to define inheritance.
 
 
-### Class Function
+### Fonction de classe (class function)
 
 #### Syntaxe
 
 ```js
-Function <name>
+Fonction <name>
 // code
 ```
 
@@ -189,7 +189,7 @@ In the class definition file, function declarations use the `Function` keyword, 
 Within a class function, the `This` is used as the object instance. Par exemple:
 
 ```4d  
-Function getFullName
+Fonction getFullName
   C_TEXT($0)
   $0:=This.firstName+" "+Uppercase(This.lastName)
 
@@ -198,39 +198,39 @@ Function getAge
   $0:=(Current date-This.birthdate)/365.25
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+Pour une fonction de classe, la commande `Current method name` retourne: "*\<ClassName>.\<FunctionName>*", par exemple "MyClass.myMethod".
 
-In the application code, class functions are called as member methods of the object instance and can receive parameters if any. The following syntaxes are supported:
+Dans le code de l'application, les fonctions de classe sont appelées en tant que méthodes membres de l'instance d'objet et peuvent recevoir des paramètres le cas échéant. Les syntaxes suivantes sont prises en charge :
 
-- use of the `()` operator. For example `myObject.methodName("hello")`.
-- use of a "Function" class member methods
+- utilisation de l'opérateur `()`. Par exemple `myObject.methodName("hello")`.
+- utilisation des méthodes membres d'une classe "Function"
     - `apply()`
     - `call()`
 
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
-> - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **Avertissement lié au thread-safe :** Si une fonction de classe n'est pas thread-safe et est appelée par une méthode avec l'attribut "Peut être exécuté en mode préemptif" :  
+> - le compilateur ne génère aucune erreur (contrairement aux méthodes habituelles), - une erreur est générée par 4D uniquement à l'exécution.
 
 
-#### Example
+#### Exemple
 
 ```4d
-// Class: Rectangle
+// Classe : Rectangle
 Class Constructor
     C_LONGINT($1;$2)
     This.name:="Rectangle"
     This.height:=$1
     This.width:=$2
 
-// Function definition
-Function getArea
+// Définition de la fonction
+Fonction getArea
     C_LONGINT($0)
     $0:=(This.height)*(This.width)
 
 ```
 
 ```4d
-// In a project method
+// Dans une méthode projet
 C_OBJECT($o)  
 C_REAL($area)
 
@@ -241,34 +241,34 @@ $area:=$o.getArea(50;100) //5000
 
 ### Class constructor
 
-#### Syntax
+#### Syntaxe
 
 ```js
-// Class: MyClass
+// Classe : MyClass
 Class Constructor
 // code
 ```
 
-A class constructor function, which can accept parameters, can be used to define a user class.
+Une fonction de class constructor, qui peut accepter des paramètres, peut être utilisée pour définir une classe utilisateurs.
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
+Dans ce cas, lorsque vous appelez la méthode membre `new()` de la classe, le class constructor est appelé avec les paramètres  passés initialement à la fonction `new()`.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
+Pour une fonction de class constructor, la commande `Current method name` retourne : "*\<ClassName>.constructor*", par exemple "MyClass.constructor".
 
 
-#### Example:
+#### Exemple :
 
 ```4d
-// Class: MyClass
-// Class constructor of MyClass
+// Classe : MyClass
+// Class constructor de MyClass
 Class Constructor
 C_TEXT($1)
 This.name:=$1
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Dans une méthode projet
+// Vous pouvez instancier un objet
 C_OBJECT($o)
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -279,14 +279,14 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### Class extends \<ClassName>
 
-#### Syntax
+#### Syntaxe
 
 ```js
-// Class: ChildClass
+// Classe : ChildClass
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. La classe enfant hérite de toutes les fonctions de la classe parente.
+Le mot-clé de `Class extends` est utilisé dans une déclaration de classe pour créer une classe utilisateur qui est l'enfant d'une autre classe utilisateur. La classe enfant hérite de toutes les fonctions de la classe parente.
 
 L'extension de classe doit respecter les règles suivantes :
 
