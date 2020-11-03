@@ -206,9 +206,7 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.copy().Syntax -->
-
-**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
+<!-- REF #imapTransporterClass.copy().Syntax -->**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.copy().Params -->
 | 参照             | タイプ    |    | 説明                                               |
