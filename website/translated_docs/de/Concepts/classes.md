@@ -39,7 +39,7 @@ Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) defin
 
 Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
-- Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
+- Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#identifier-f%C3%BCr-objekteigenschaft) konform sein.
 - Es wird zwischen Groß- und Kleinschreibung unterschieden.
 - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden.
 
