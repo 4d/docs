@@ -10,12 +10,8 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 ## Summary
 
 
-
-
-
-
-|                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #classClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.name.Summary -->|
 | [<!-- INCLUDE #classClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.new().Summary --> |
 | [<!-- INCLUDE #classClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.superclass.Summary --> |
@@ -37,9 +33,7 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 **.name** : Text<!-- END REF -->
 
 #### Description
-The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the 
-
-`4D.Class` object<!-- END REF -->. Class names are case sensitive.
+The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Class names are case sensitive.
 
 This property is **read-only**. 
 
@@ -67,11 +61,7 @@ This property is **read-only**.
 
 
 #### Description
-The `.new()` function <!-- REF #classClass.new().Summary -->creates and returns a 
-
-`cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the 
-
-[`cs` class store](Concepts/classes.md#cs).
+The `.new()` function <!-- REF #classClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
 
 If it is called on a non-existing class, an error is returned.
 
@@ -104,9 +94,7 @@ $person:=cs.Person.new() //create the new instance
 **.superclass** : 4D.Class<!-- END REF -->
 
 #### Description
-The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a 
-
-`4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
+The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
 
 A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
 
