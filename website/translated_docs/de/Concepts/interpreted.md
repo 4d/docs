@@ -6,7 +6,7 @@ title: Interpreted and Compiled modes
 4D Anwendungen können im **interpretierten** oder **kompilierten** Modus laufen:
 
 - Im interpretierten Modus werden Anweisungen im Moment der Ausführung gelesen und in Maschinensprache übersetzt. Sie können den Code immer, wenn Sie es benötigen, ergänzen oder verändern, die Anwendung wird automatisch aktualisiert.
-- Im kompilierten Modus werden alle Methoden während dem Kompilieren auf einmal gelesen und übersetzt. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
+- Im kompilierten Modus werden alle Methoden während dem Kompilieren auf einmal gelesen und übersetzt. Das Ergebnis ist eine neue Datei mit einer Reihe von Anweisungen in Maschinensprache. Der Code lässt sich nicht mehr bearbeiten.
 
 Die Vorteile von Kompilieren sind:
 
@@ -16,8 +16,8 @@ Die Vorteile von Kompilieren sind:
 - **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
 - **Preemptive Modus**: Nur kompilierter Code lässt sich in preemptive Prozessen ausführen.
 
-## Differences between interpreted and compiled code
-Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler.
+## Unterschiede zwischen interpretiertem und kompiliertem Code
+Auch wenn Anwendungen im interpretierten und kompilierten Modus auf die gleiche Weise funktionieren, gibt es einige Unterschiede, die Sie kennen sollten, wenn Sie Code schreiben, der dann kompiliert wird. Der 4D Interpreter ist in der Regel flexibler als der Compiler.
 
 | Kompiliert                                                                                                                                                                                         | Interpretiert                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
