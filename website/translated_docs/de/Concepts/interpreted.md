@@ -8,23 +8,23 @@ title: Interpreted and Compiled modes
 - in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
 - in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
 
-The advantages of the compilation are:
+Die Vorteile von Kompilieren sind:
 
 - **Speed**: Your application can run from 3 to 1,000 times faster.
-- **Code checking**: Your application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
+- **Code checking**: Your application is scanned for the consistency of code. 4D Compiler findet sowohl logische als auch Syntaxfehler.
 - **Protection**: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
 - **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **Preemptive Modus**: Nur kompilierter Code lässt sich in preemptive Prozessen ausführen.
 
 ## Differences between interpreted and compiled code
 Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler.
 
 | Compiled                                                                                                                                                                               | Interpreted                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| You cannot have a method with the same name as a variable.                                                                                                                             | No error is generated, but priority is given to the method                     |
+| Sie können keine Methode mit demselben Name wie eine Variable haben.                                                                                                                   | No error is generated, but priority is given to the method                     |
 | All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.                                                            | Variables can be typed on-the-fly (not recommended)                            |
 | You cannot change the data type of any variable or array.                                                                                                                              | Changing the data type of a variable or an array is possible (not recommended) |
-| You cannot change a one-dimensional array to a two-dimensional array, or change a two-dimensional array to a one-dimensional array.                                                    | Possible                                                                       |
+| Sie können ein eindimensionales Array nicht in ein zweidimensionales Array umwandeln und umgekehrt.                                                                                    | Ist möglich                                                                    |
 | Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form. |                                                                                |
 | The `Undefined` function always returns False for variables. Variables are always defined.                                                                                             |                                                                                |
 | If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.                | Preemptive process properties are ignored                                      |
