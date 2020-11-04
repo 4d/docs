@@ -160,9 +160,7 @@ This property is **read-only**.
 
 
 #### 説明
-The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always 
-
-**false** for a `Folder` object<!-- END REF -->.
+The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
 
 This property is **read-only**. 
 
@@ -184,9 +182,7 @@ This property is **read-only**.
 
 
 #### 説明
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always 
-
-**false** for a folder<!-- END REF -->.
+The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
 
 This property is **read-only**. 
 
@@ -208,9 +204,7 @@ This property is **read-only**.
 
 
 #### 説明
-The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always 
-
-**true** for a folder<!-- END REF -->.
+The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
 
 This property is **read-only**. 
 
@@ -433,9 +427,7 @@ This property is **read-only**.
 
 
 #### 説明
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the 
-
-`Folder` object into the specified *destinationFolder*<!-- END REF -->.
+The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -487,9 +479,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- END REF -->
 
 #### 説明
-The `.file()` function creates <!-- REF #directory.file().Summary -->a 
-
-`File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
 
 In *path*, pass a relative POSIX path to designate the file to return. The path will be evaluated from the parent folder as root.
 
@@ -528,9 +518,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- END REF -->
 
 #### 説明
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of 
-
-`File` objects contained in the folder<!-- END REF -->.
+The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
 > Aliases or symbolic links are not resolved.
 
 By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
@@ -590,9 +578,7 @@ You want to get all files that are not invisible in the Documents folder:
 <!-- END REF -->
 
 #### 説明
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a 
-
-`Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
 In *path*, pass a relative POSIX path to designate the folder to return. The path will be evaluated from the parent folder as root.
 
@@ -631,9 +617,7 @@ A `Folder` object or null if *path* is invalid.
 <!-- END REF -->
 
 #### 説明
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of 
-
-`Folder` objects contained in the parent folder<!-- END REF -->.
+The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
