@@ -10,8 +10,8 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 ||
 |---|
-|[<!-- INCLUDE #entitySelectionClass.&#91;index&#93;.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.[index].Summary -->|
-|[<!-- INCLUDE entitySelectionClass.{attributeName}.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.{attributeName}.Summary -->|
+|[<!-- INCLUDE entitySelectionClass.&#91;index&#93;.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.[index].Summary -->|
+|[<!-- INCLUDE entitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.attributeName.Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.add().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.and().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.average().Summary -->|
@@ -60,7 +60,7 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 #### Description
 
-The `EntitySelection[*index*]` notation <!-- REF #entitySelectionClass.[index].Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
+The `EntitySelection[*index*]` notation <!-- REF entitySelectionClass.[index].Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
 
 Note that the corresponding entity is reloaded from the datastore.
 
@@ -99,8 +99,8 @@ Note that the corresponding entity is reloaded from the datastore.
 
 ---
 
-<!-- REF entitySelectionClass.{attributeName}.Desc -->
-## .{attributeName}
+<!-- REF entitySelectionClass.attributeName.Desc -->
+## .*attributeName*
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -108,13 +108,13 @@ Note that the corresponding entity is reloaded from the datastore.
 |v17|Added|
 </details>
 
-<!-- REF entitySelectionClass.{attributeName}.Syntax -->
-**.{attributeName}** : Collection<br>**.{attributeName}** : 4D.EntitySelection<!-- END REF -->
+<!-- REF entitySelectionClass.attributeName.Syntax -->
+***.attributeName*** : Collection<br>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
 
 
 #### Description
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF entitySelectionClass.{attributeName}.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](dataclassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
+Any dataclass attribute can be used as a property of an entity selection to return <!-- REF entitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](dataclassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
 
 *	If *attributeName* kind is `storage`:
 `.attributeName` returns a collection of values of the same type as *attributeName*.
@@ -127,6 +127,7 @@ Any dataclass attribute can be used as a property of an entity selection to retu
 When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. In this case, if no entities are returned, the result is an empty entity selection.
 
 If the attribute does not exist in the entity selection, an error is returned. 
+
 
 
 
@@ -702,6 +703,7 @@ Given the following table and relation:
   //
   //
   //$firstnames is a collection of Strings
+
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //

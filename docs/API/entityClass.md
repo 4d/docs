@@ -10,7 +10,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 ||
 |---|
-|[<!-- INCLUDE entityClass.{attributeName}.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.{attributeName}.Summary -->|
+|[<!-- INCLUDE entityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.attributeName.Summary -->|
 |[<!-- INCLUDE #entityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.clone().Summary -->|
 |[<!-- INCLUDE #entityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.diff().Summary -->|
 |[<!-- INCLUDE #entityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.drop().Summary -->|
@@ -39,8 +39,8 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 ---
 
-<!-- REF entityClass.{attributeName}.Desc -->
-## .{attributeName}
+<!-- REF entityClass.attributeName.Desc -->
+## .*attributeName*
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -48,13 +48,13 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 |v17|Added|
 </details>
 
-<!-- REF entityClass.{attributeName}.Syntax -->
-**.{attributeName}** : any<!-- END REF -->
+<!-- REF entityClass.attributeName.Syntax -->
+***.attributeName*** : any<!-- END REF -->
 
 
 #### Description
 
-Any dataclass attribute is available as a property of an entity, which <!-- REF entityClass.{attributeName}.Summary -->stores the attribute value for the entity<!-- END REF -->.
+Any dataclass attribute is available as a property of an entity, which <!-- REF entityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
 
 >Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
@@ -124,6 +124,7 @@ This function can only be used with entities already saved in the database. It c
 ```
 
 <!-- END REF -->
+
 
 
 ---
@@ -1266,6 +1267,7 @@ Updating an entity with `dk auto merge` option:
 
 ```4d
  var $status : Object
+
  var $employee : cs.EmployeeEntity
  var $employees : cs.EmployeeSelection
  

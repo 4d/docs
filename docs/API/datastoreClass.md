@@ -210,7 +210,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 
 ---
 
-<!-- REF datastoreClass.{dataclassName}.Desc -->
+<!-- REF datastoreClass.dataclassName.Desc -->
 ## *.dataclassName*
 
 <details><summary>History</summary>
