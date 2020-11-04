@@ -3,10 +3,10 @@ id: interpreted-compiled
 title: Interpreted and Compiled modes
 ---
 
-4D applications can work in **interpreted** or **compiled** mode:
+4D Anwendungen können im **interpretierten** oder **kompilierten** Modus laufen:
 
-- in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
-- in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
+- Im interpretierten Modus werden Anweisungen im Moment der Ausführung gelesen und in Maschinensprache übersetzt. Sie können den Code immer, wenn Sie es benötigen, ergänzen oder verändern, die Anwendung wird automatisch aktualisiert.
+- Im kompilierten Modus werden alle Methoden während dem Kompilieren auf einmal gelesen und übersetzt. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
 
 Die Vorteile von Kompilieren sind:
 
