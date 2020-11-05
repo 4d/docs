@@ -56,6 +56,7 @@ End if
 
 
 #### 説明
+
 The `ZIP Create archive` command <!-- REF zipArchive.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
 
 You can pass a 4D.File, a 4D.Folder, or a zip structure object as first parameter:
