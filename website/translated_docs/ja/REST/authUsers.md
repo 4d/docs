@@ -10,15 +10,15 @@ title: ユーザーとセッション
 
 アプリケーションにユーザーをログインするには、ユーザー名とパスワードを [`$directory/login`]($directory.md#directorylogin) に送信します。
 
-ユーザーのログインと同時にセッションが開かれます。 See below to know how to handle the session cookie in subsequent client requests, if necessary.
+ユーザーのログインと同時にセッションが開かれます。 以降のクライアントリクエストにおけるセッションcookie の扱い方については、後述を参照ください。
 
-The session will automatically be closed once the timeout is reached.
+セッションは、タイムアウトすると自動終了します。
 
-## Session cookie
+## セッションcookie
 
-Each REST request is handled through a specific session on the 4D server.
+4D Server上では、各 RESTリクエストは専用セッションを介して処理されます。
 
-When a first valid REST request is received, the server creates the session and sends a session cookie named `WASID4D` in the **"Set-Cookie" response header**, containing the session UUID, for example:
+最初の有効な RESTリクエストを受信すると、サーバーはセッションを生成し、**"Set-Cookie" レスポンスヘッダー** に、セッションUUID を格納した `WASID4D` という名前のセッションcookie を返します。例:
 
 ```
 WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
