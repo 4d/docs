@@ -83,8 +83,8 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 フィールドを非公開にするには:
 
-1. Display the Field Inspector in the Structure editor and select the field you want to modify.
+1. ストラクチャーエディターにて対象となるフィールドを選択し、右クリックでコンテキストメニューを開いてフィールドプロパティを選択します。
 
-2. Uncheck the **Expose as REST resource** for the field. ![alt-text](assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
+2. フィールドの **RESTリソースとして公開** オプションの選択を解除します: ![alt-text](assets/en/REST/field.png) 公開設定を変更する各フィールドに対して、この手順を繰り返します。
 
-> In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+> あるフィールドが REST を通してアクセス可能であるためには、その親テーブルも公開されている必要があります。 親テーブルが公開されていない場合、各フィールドの公開設定に関わらず、すべてのフィールドがアクセス不可になります。
