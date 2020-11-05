@@ -1,16 +1,16 @@
 ---
 id: authUsers
-title: Users and sessions
+title: ユーザーとセッション
 ---
 
 
-## Authenticating users
+## ユーザー認証
 
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+4D Server上で RESTセッションを開くには、まずリクエストを送信するユーザーが認証されなければなりません。
 
-You log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin).
+アプリケーションにユーザーをログインするには、ユーザー名とパスワードを [`$directory/login`]($directory.md#directorylogin) に送信します。
 
-Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
+ユーザーのログインと同時にセッションが開かれます。 See below to know how to handle the session cookie in subsequent client requests, if necessary.
 
 The session will automatically be closed once the timeout is reached.
 
