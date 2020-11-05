@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Klassen
+title: Classes
 ---
 
 
@@ -48,7 +48,7 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
 - Project folder
     + Project
         * Sources
-            - Klassen
+            - Classes
                 + Polygon.4dm
 
 ### Eine Klasse löschen
