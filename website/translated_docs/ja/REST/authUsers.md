@@ -60,7 +60,7 @@ $result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\
 ```
 
 ```4d
-// buildHeader project method  
+// buildHeader プロジェクトメソッド  
 
 C_POINTER($pointerNames;$1;$pointerValues;$2)
 ARRAY TEXT($headerNames;0)
