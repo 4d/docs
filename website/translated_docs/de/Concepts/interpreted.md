@@ -32,9 +32,9 @@ Auch wenn Anwendungen im interpretierten und kompilierten Modus auf die gleiche 
 
 ## Using Compiler Directives with the Interpreter
 
-Für nicht-kompilierte Anwendungen sind keine Compiler Direktiven erforderlich. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
+Für nicht-kompilierte Anwendungen sind keine Compiler Direktiven erforderlich. Der Interpreter typisiert automatisch jede Variable danach, wie sie in der Anweisung verwendet wird, und der Variablentyp lässt sich im Anwendungsprojekt frei verändern.
 
-Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes.
+Aufgrund dieser Flexibilität kann eine Anwendung im interpretierten Modus anders als im kompilierten Modus laufen.
 
 For example, if you write:
 
@@ -42,7 +42,7 @@ For example, if you write:
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the project, you write:
+und an anderer Stelle im Projekt schreiben Sie:
 ```4d
 MyInt:=3.1416
 ```
@@ -51,7 +51,7 @@ In this example, `MyInt` is assigned the same value (3) in both the interpreted 
 
 The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.
+Die Reihenfolge, in der zwei Anweisungen erscheinen, ist für den Compiler irrelevant, da er zuerst das gesamte Projekt für Compiler Direktiven scannt. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. Aus diesem Grund ist es wichtig, dass Sie Ihr Projekt so gestalten, dass Ihre Compiler Direktiven vor jeglicher Anweisung mit deklarierten Variablen ausgeführt werden.
 
 
 ## Using pointers to avoid retyping
