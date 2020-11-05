@@ -70,21 +70,21 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 テーブルを公開したくない場合は:
 
-1. Display the Table Inspector in the Structure editor and select the table you want to modify.
+1. ストラクチャーエディターにて対象となるテーブルを選択し、右クリックでコンテキストメニューを開いてテーブルプロパティを選択します。
 
-2. Uncheck the **Expose as REST resource** option: ![alt-text](assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
+2. **RESTリソースとして公開** オプションの選択を解除します: ![alt-text](assets/en/REST/table.png) 公開設定を変更する各テーブルに対して、この手順を繰り返します。
 
 
-### Exposing fields
+### フィールドの公開
 
-By default, all 4D database fields are exposed in REST.
+デフォルトでは、すべての 4Dデータベースフィールドが REST に公開されています。
 
-You may not want to expose certain fields of your tables to REST. For example, you may not want to expose the [Employees]Salary field.
+テーブルの一部のフィールドのみを非公開にしたい状況もあるでしょう。 たとえば、[Employees]Salary のようなフィールドは非公開の方がよいでしょう。
 
-To remove the REST exposure for a field:
+フィールドを非公開にするには:
 
-1. Display the Field Inspector in the Structure editor and select the field you want to modify.
+1. ストラクチャーエディターにて対象となるフィールドを選択し、右クリックでコンテキストメニューを開いてフィールドプロパティを選択します。
 
-2. Uncheck the **Expose as REST resource** for the field. ![alt-text](assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
+2. フィールドの **RESTリソースとして公開** オプションの選択を解除します: ![alt-text](assets/en/REST/field.png) 公開設定を変更する各フィールドに対して、この手順を繰り返します。
 
-> In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+> あるフィールドが REST を通してアクセス可能であるためには、その親テーブルも公開されている必要があります。 親テーブルが公開されていない場合、各フィールドの公開設定に関わらず、すべてのフィールドがアクセス不可になります。
