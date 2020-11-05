@@ -61,6 +61,8 @@ ASSERT($status.success)
 | ---------- | ----- | -- | ---------------------------------------------------- |
 | settings   | Objet | -> | Paramètres pour générer ou charger une paire de clés |
 | cryptoKey  | Objet | <- | Objet contenant une paire de clés de chiffrement     |
+
+
 The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
 
 #### *settings*
