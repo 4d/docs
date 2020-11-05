@@ -10,7 +10,7 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 ||
 |---|
-|[<!-- INCLUDE entitySelectionClass.&#91;index&#93;.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.[index].Summary -->|
+|[<!-- INCLUDE entitySelectionClass.index.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.index.Summary -->|
 |[<!-- INCLUDE entitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.attributeName.Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.add().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.and().Summary -->|
@@ -44,8 +44,8 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 ---
 
-<!-- REF entitySelectionClass.&#91;index&#93;.Desc -->
-## &#91;{index}&#93; 
+<!-- REF entitySelectionClass.index.Desc -->
+## &#91;*index*&#93; 
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -54,13 +54,13 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 </details>
 
-<!-- REF #entitySelectionClass.&#91;index&#93;.Syntax -->
-**&#91;{index}&#93;** : 4D.Entity<!-- END REF -->
+<!-- REF entitySelectionClass.index.Syntax -->
+***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
 
 
 #### Description
 
-The `EntitySelection[*index*]` notation <!-- REF entitySelectionClass.[index].Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
+The `EntitySelection[index]` notation <!-- REF entitySelectionClass.index.Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
 
 Note that the corresponding entity is reloaded from the datastore.
 
@@ -69,7 +69,7 @@ Note that the corresponding entity is reloaded from the datastore.
 *	If *index* is out of range, an error is returned.
 *	If *index* corresponds to a dropped entity, a Null value is returned.
 
->**Warning**: `EntitySelection[*index*]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](entityClass.md#lock) or [`.save()`](entityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Examples:
+>**Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](entityClass.md#lock) or [`.save()`](entityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Examples:
 
 ```4d
  $sel:=ds.Employee.all() //create the entity selection
@@ -214,7 +214,7 @@ The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the s
 *	If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
 *	If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
 
->For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+>For more information, please refer to the [Ordered or unordered entity selection](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
 
 An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
 
@@ -480,7 +480,7 @@ The `.copy()` function <!-- REF #entitySelectionClass.copy().Summary -->returns 
 
 By default, if the *option* parameter is omitted, the function returns a new, non-shareable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
 
-> For information on the shareable property of entity selections, please refer to the [Shareable vs Non-shareable entity selections] section. 
+> For information on the shareable property of entity selections, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section. 
 
 #### Example   
 
@@ -849,6 +849,7 @@ The following generic code duplicates all entities of the entity selection:
 ## .isOrdered()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
