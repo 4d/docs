@@ -136,13 +136,13 @@ Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effe
 
 ### Exemples
 
-| Opération             | Exemple                                     | Résultat   |
-| --------------------- | ------------------------------------------- | ---------- |
-| ET                    | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
-| OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
-| OU (exclusif)         | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
-| Décaler bits à gauche | 0x0000FFFF << 8                             | 0x00FFFF00 |
-| Décaler bits à droite | 0x0000FFFF >> 8                             | 0x000000FF |
-| Mettre bit à 1        | 0x00000000 ?+ 16                            | 0x00010000 |
-| Mettre bit à 0        | 0x00010000 ?- 16                            | 0x00000000 |
-| Tester bit            | 0x00010000 ?? 16                            | Vrai       |
+| Opération             | Exemple                         | Résultat   |
+| --------------------- | ------------------------------- | ---------- |
+| ET                    | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
+| OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
+| OU (exclusif)         | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
+| Décaler bits à gauche | 0x0000FFFF << 8                 | 0x00FFFF00 |
+| Décaler bits à droite | 0x0000FFFF >> 8                 | 0x000000FF |
+| Mettre bit à 1        | 0x00000000 ?+ 16                | 0x00010000 |
+| Mettre bit à 0        | 0x00010000 ?- 16                | 0x00000000 |
+| Tester bit            | 0x00010000 ?? 16                | Vrai       |
