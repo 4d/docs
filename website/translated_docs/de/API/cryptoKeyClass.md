@@ -61,6 +61,8 @@ ASSERT($status.success)
 | --------- | ------ | -- | ------------------------------------------- |
 | settings  | Objekt | -> | Settings to generate or load a key pair     |
 | cryptoKey | Objekt | <- | Object encapsulating an encryption key pair |
+
+
 The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
