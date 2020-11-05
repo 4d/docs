@@ -10,10 +10,10 @@ title: Interpreted and Compiled modes
 
 Die Vorteile von Kompilieren sind:
 
-- **Speed**: Your application can run from 3 to 1,000 times faster.
-- **Code checking**: Your application is scanned for the consistency of code. 4D Compiler findet sowohl logische als auch Syntaxfehler.
-- **Protection**: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
-- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
+- **Geschwindigkeit**: Ihre Anwendung läuft um den Faktor von 3 bis 1000 mal schneller.
+- **Überprüfung des Code**: Ihre Anwendung wird auf Übereinstimmung des Code geprüft. 4D Compiler findet sowohl logische als auch Syntaxfehler.
+- **Schutz**: Ist Ihre Anwendung kompiliert, können Sie den interpretierten Code löschen. Denn die kompilierte Anwendung hat dieselben Funktionalitäten wie ihr Original. Der Unterschied ist, dass Sie die Struktur und Methoden weder ansehen noch verändern können, sei es gewollt oder versehentlich.
+- **Eigenständige, doppelklickbare Anwendungen**; Kompilierte Anwendungen lassen sich in eigenständige Anwendungen (.EXE Dateien) mit ihren eigenen Icons umwandeln.
 - **Preemptive Modus**: Nur kompilierter Code lässt sich in preemptive Prozessen ausführen.
 
 ## Unterschiede zwischen interpretiertem und kompiliertem Code
@@ -32,7 +32,7 @@ Auch wenn Anwendungen im interpretierten und kompilierten Modus auf die gleiche 
 
 ## Using Compiler Directives with the Interpreter
 
-Compiler directives are not required for uncompiled applications. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
+Für nicht-kompilierte Anwendungen sind keine Compiler Direktiven erforderlich. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
 
 Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes.
 
