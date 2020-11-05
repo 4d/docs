@@ -50,21 +50,21 @@ REST接続は次の方法で制限することができます:
 
 ## テーブルやフィールドの公開
 
-Once REST services are enabled in the 4D database, by default a REST session can access all tables and fields of the datastore, and thus use their data. For example, if your database contains an [Employee] table, it is possible to write:
+4Dデータベースの RESTサービスが有効化されると、データストアのすべてのテーブルとフィールドおよび格納データが RESTセッションによってデフォルトでアクセス可能です。 たとえば、データベースに [Employee] テーブルが含まれている場合、次のように書くことができます:
 
 ```
 http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
 
 ```
-This request will return all employees whose salary field is higher than 10000.
+このリクエストで、salary (給与) フィールドが 10000以上の社員データが取得されます。
 
-> 4D tables and/or fields that have the "Invisible" attribute are also exposed in REST by default.
+> "非表示" 属性を選択されたテーブルやフィールドも、デフォルトで REST に公開されています。
 
-If you want to customize the datastore objects accessible through REST, you must disable the exposure of each table and/or field that you want to hide. When a REST request attempts to access an unauthorized resource, 4D returns an error.
+REST 経由でアクセス可能なデータストアオブジェクトを制限するには、アクセス不可にするテーブルやフィールドについて "RESTリソースとして公開" オプションを選択解除する必要があります。 許可されていないリソースへの RESTリクエストがあった場合、4Dはエラーを返します。
 
-### Exposing tables
+### テーブルの公開
 
-By default, all tables are exposed in REST.
+デフォルトでは、すべてのテーブルが REST に公開されています。
 
 For security reasons, you may want to only expose certain tables of your datastore to REST calls. For instance, if you created a [Users] table storing user names and passwords, it would be better not to expose it.
 
