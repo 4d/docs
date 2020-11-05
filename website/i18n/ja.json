@@ -425,7 +425,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
       },
       "REST/configuration": {
         "title": "サーバー設定"
