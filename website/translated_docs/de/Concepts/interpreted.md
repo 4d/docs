@@ -1,6 +1,6 @@
 ---
 id: interpreted-compiled
-title: Interpreted and Compiled modes
+title: Interpretierter und kompilierter Modus
 ---
 
 4D Anwendungen können im **interpretierten** oder **kompilierten** Modus laufen:
@@ -30,24 +30,24 @@ Auch wenn Anwendungen im interpretierten und kompilierten Modus auf die gleiche 
 | Ist für die Methode die Eigenschaft "Als preemptive Prozess starten" markiert, darf der Code weder thread-unsafe Befehle oder andere thread-unsafe Methoden aufrufen.                              | Preemptive Prozesseigenschaften werden ignoriert                                     |
 | Der Befehl `IDLE` ist notwendig, um 4D in spezifischen Schleifen aufzurufen                                                                                                                        | Es ist immer möglich, 4D zu unterbrechen                                             |
 
-## Using Compiler Directives with the Interpreter
+## Compiler-Direktiven mit dem Interpreter verwenden
 
-Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
+Für nicht-kompilierte Anwendungen sind keine Compiler-Direktiven erforderlich. Der Interpreter typisiert automatisch jede Variable danach, wie sie in der Anweisung verwendet wird, und der Variablentyp lässt sich im Anwendungsprojekt frei verändern.
 
-Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes.
+Aufgrund dieser Flexibilität kann eine Anwendung im interpretierten Modus anders als im kompilierten Modus laufen.
 
-For example, if you write:
+Sie schreiben zum Beispiel:
 
 ```4d
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the database, you write:
+und an anderer Stelle in der Anwendung:
 ```4d
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted *prior* to the assignment statement.
+In diesem Beispiel wird `MyInt` im interpretierten und kompilierten Modus derselbe Wert (3) zugewiesen, wenn die Compiler-Direktive *vor* Ausführen der Anweisung interpretiert wird.
 
 The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
 
