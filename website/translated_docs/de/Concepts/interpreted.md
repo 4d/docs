@@ -42,7 +42,7 @@ Sie schreiben zum Beispiel:
 C_LONGINT(MyInt)
 ```
 
-und an anderer Stelle im Projekt schreiben Sie:
+und an anderer Stelle im Projekt:
 ```4d
 MyInt:=3.1416
 ```
@@ -74,7 +74,7 @@ $p:=->$age
 $p->:=55 //assigns a number value
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+Stellen Sie sich eine Funktion vor, welche die Länge (Anzahl Zeichen) von Werten zurückgibt, die von beliebigem Typ sein können.
 
 ```4d
   // Calc_Length (how many characters)
@@ -87,7 +87,7 @@ $result:=String($1->)
 $0:=Length($result)
 ```
 
-Then this method can be called:
+Dann lässt sich diese Methode aufrufen:
 ```4d
 $var1:="my text"
 $var2:=5.3
