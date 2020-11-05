@@ -136,13 +136,13 @@ Folgende Tabelle zeigt die Bit Operatoren und ihre Auswirkung:
 
 ### Beispiele
 
-| Operation                 | Beispiel                                    | Ergebnis   |
-| ------------------------- | ------------------------------------------- | ---------- |
-| Bitweises UND             | 0x0000FFFF & 0xFF00FF00                     | 0x0000FF00 |
-| Bitweises ODER (inklusiv) | 0x0000FFFF &#124; 0xFF00FF00                | 0xFF00FFFF |
-| Bitweises ODER (exklusiv) | 0x0000FFFF \^&#124; 0xFF00FF00  0xFF0000FF |            |
-| Left Bit Shift            | 0x0000FFFF << 8                             | 0x00FFFF00 |
-| Right Bit Shift           | 0x0000FFFF >> 8                             | 0x000000FF |
-| Bit setzen                | 0x00000000 ?+ 16                            | 0x00010000 |
-| Bit löschen               | 0x00010000 ?- 16                            | 0x00000000 |
-| Bit Test                  | 0x00010000 ?? 16                            | Wahr       |
+| Operation                 | Beispiel                        | Ergebnis   |
+| ------------------------- | ------------------------------- | ---------- |
+| Bitweises UND             | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
+| Bitweises ODER (inklusiv) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
+| Bitweises ODER (exklusiv) | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
+| Left Bit Shift            | 0x0000FFFF << 8                 | 0x00FFFF00 |
+| Right Bit Shift           | 0x0000FFFF >> 8                 | 0x000000FF |
+| Bit setzen                | 0x00000000 ?+ 16                | 0x00010000 |
+| Bit löschen               | 0x00010000 ?- 16                | 0x00000000 |
+| Bit Test                  | 0x00010000 ?? 16                | Wahr       |
