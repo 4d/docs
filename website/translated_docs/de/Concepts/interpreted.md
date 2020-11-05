@@ -49,14 +49,14 @@ MyInt:=3.1416
 
 In diesem Beispiel wird `MyInt` im interpretierten und kompilierten Modus derselbe Wert (3) zugewiesen, wenn die Compiler-Direktive *vor* Ausführen der Anweisung interpretiert wird.
 
-The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
+Der 4D Interpreter verwendet Compiler-Direktiven zum Typisieren der Variablen. Findet der Interpreter eine Compiler-Direktive, typisiert er die Variable gemäß dieser Direktive. Versucht eine nachfolgende Anweisung, einen inkorrekten Wert zuzuweisen (z.B. einer numerischen Variablen einen alphanumerischen Wert), erfolgt keine Zuweisung und es wird ein Fehler generiert.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.
+Die Reihenfolge, in der zwei Anweisungen erscheinen, ist für den Compiler irrelevant, da er zuerst das gesamte Projekt für Compiler Direktiven scannt. Der Interpreter ist dagegen nicht systematisch. Er interpretiert Anweisungen der Reihe nach. Diese Reihenfolge kann natürlich von Sitzung zu Sitzung anders sein, je nachdem was der Benutzer macht. Aus diesem Grund ist es wichtig, dass Sie Ihr Projekt so gestalten, dass Ihre Compiler-Direktiven vor jeglicher Anweisung mit deklarierten Variablen ausgeführt werden.
 
 
-## Using pointers to avoid retyping
+## Mit Zeigern erneute Typisierung vermeiden
 
-A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Eine Variable kann nicht erneut typisiert werden. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
 
 ```4d
 C_POINTER($p)
