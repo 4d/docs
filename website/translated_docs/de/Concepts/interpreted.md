@@ -56,7 +56,7 @@ Die Reihenfolge, in der zwei Anweisungen erscheinen, ist für den Compiler irrel
 
 ## Mit Zeigern erneute Typisierung vermeiden
 
-Eine Variable kann nicht erneut typisiert werden. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Eine Variable kann nicht erneut typisiert werden. Sie können jedoch einen Zeiger verwenden, um auf Variablen mit unterschiedlichen Datentypen zu verweisen. Zum Beispiel ist folgender Code sowohl im interpretierten als auch im kompilierten Modus erlaubt:
 
 ```4d
 C_POINTER($p)
@@ -74,7 +74,7 @@ $p:=->$age
 $p->:=55 //assigns a number value
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+Stellen Sie sich eine Funktion vor, welche die Länge (Anzahl Zeichen) von Werten zurückgibt, die von beliebigem Typ sein können.
 
 ```4d
   // Calc_Length (how many characters)
@@ -87,7 +87,7 @@ $result:=String($1->)
 $0:=Length($result)
 ```
 
-Then this method can be called:
+Dann lässt sich diese Methode aufrufen:
 ```4d
 $var1:="my text"
 $var2:=5.3
