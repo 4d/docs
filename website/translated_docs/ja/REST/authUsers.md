@@ -18,17 +18,17 @@ title: ユーザーとセッション
 
 4D Server上では、各 RESTリクエストは専用セッションを介して処理されます。
 
-When a first valid REST request is received, the server creates the session and sends a session cookie named `WASID4D` in the **"Set-Cookie" response header**, containing the session UUID, for example:
+最初の有効な RESTリクエストを受信すると、サーバーはセッションを生成し、**"Set-Cookie" レスポンスヘッダー** に、セッションUUID を格納した `WASID4D` という名前のセッションcookie を返します。例:
 
 ```
 WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 ```
 
-In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Otherwise, a new session will be opened, and another license used.
+以降の RESTリクエストにおいては、**"Cookie" リクエストヘッダー** にこの cookie を含めるようにします。これにより、同じセッションを利用し続けることができます。 そうしない場合には新規セッションが開かれることとなり、したがってライセンスが別途消費されます。
 
 ### 例題
 
-The way to handle session cookies actually depends on your HTTP client. This example shows how to extract and resend the session cookie in the context of requests handled through the 4D `HTTP Request` command.
+実際のところ、セッションcookie の扱いは HTTPクライアントに寄ります。 この例題では、4D の `HTTP Request` コマンドを使ってリクエストを処理する場合に、セッションcookie を抽出し、再送信する方法を示します:
 
 ```4d
 // Creating headers
