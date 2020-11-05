@@ -31,7 +31,7 @@ WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 実際のところ、セッションcookie の扱いは HTTPクライアントに寄ります。 この例題では、4D の `HTTP Request` コマンドを使ってリクエストを処理する場合に、セッションcookie を抽出し、再送信する方法を示します:
 
 ```4d
-// Creating headers
+// ヘッダーを作成します
 ARRAY TEXT(headerNames;0)
 ARRAY TEXT(headerValues;0)
 
@@ -46,15 +46,15 @@ APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
 C_OBJECT($response)
 $response:=New object
 
-//This request opens a session for the user "kind user"
+// このリクエストは "kind user" というユーザーのセッションを開きます
 $result:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/$directory/login";"";\  
     $response;headerNames;headerValues;*)
 
 
-//Build new arrays for headers with only the cookie WASID4D
+// 以降のリクエストヘッダー用に cookie WASID4D のみを格納した配列を作成します
 buildHeader(->headerNames;->headerValues)
 
-//This other request will not open a new session
+// 次のリクエストは新規セッションを開きません
 $result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\  
     $response;headerNames;headerValues;*)
 ```
