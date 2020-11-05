@@ -16,7 +16,7 @@ title: ユーザーとセッション
 
 ## セッションcookie
 
-Each REST request is handled through a specific session on the 4D server.
+4D Server上では、各 RESTリクエストは専用セッションを介して処理されます。
 
 When a first valid REST request is received, the server creates the session and sends a session cookie named `WASID4D` in the **"Set-Cookie" response header**, containing the session UUID, for example:
 
