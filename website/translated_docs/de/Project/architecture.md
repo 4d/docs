@@ -30,14 +30,14 @@ The Project folder typically contains the following hierarchy:
 
 - *applicationName*.4DProject file
 - Sources
-    + Klassen
+    + Classes
     + DatabaseMethods
     + Methoden
     + Formulare
     + TableForms
-    + Triggers
+    + Trigger
 - DerivedData
-- Trash (if any)
+- Trash (falls vorhanden)
 
 
 ### *applicationName*.4DProject file
