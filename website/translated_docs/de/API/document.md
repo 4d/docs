@@ -457,9 +457,7 @@ This property is **read-only**.
 
 
 #### Beschreibung
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the 
-
-`File` object into the specified *destinationFolder* <!-- END REF -->.
+The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -510,11 +508,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 #### Beschreibung
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a 
-
-`BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the 
-
-[BLOB](Concepts/dt_blob.md) section.
+The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 **Zurückgegebener Wert**
 

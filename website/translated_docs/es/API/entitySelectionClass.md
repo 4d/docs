@@ -8,64 +8,10 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 ## Summary
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #entitySelectionClass.&#91;index&#93;.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.[index].Summary -->|
-| [<!-- INCLUDE entitySelectionClass.{attributeName}.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.{attributeName}.Summary -->|
+|                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE entitySelectionClass.&#91;index&#93;.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.[index].Summary -->|
+| [<!-- INCLUDE entitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.and().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.average().Summary -->|
@@ -113,9 +59,8 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 
 #### Description
-The `EntitySelection[*index*]` notation <!-- REF #entitySelectionClass.[index].Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the 
 
-*index* parameter.
+The `EntitySelection[*index*]` notation <!-- REF entitySelectionClass.[index].Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
 
 Note that the corresponding entity is reloaded from the datastore.
 
@@ -153,8 +98,8 @@ Note that the corresponding entity is reloaded from the datastore.
 
 ---
 
-<!-- REF entitySelectionClass.{attributeName}.Desc -->
-## .{attributeName}
+<!-- REF entitySelectionClass.attributeName.Desc -->
+## .*attributeName*
 
 <details><summary>History</summary>
 | Version | Changes |
@@ -162,14 +107,13 @@ Note that the corresponding entity is reloaded from the datastore.
 | v17     | Added   |
 </details>
 
-<!-- REF entitySelectionClass.{attributeName}.Syntax -->
-**.{attributeName}** : Collection<br>**.{attributeName}** : 4D.EntitySelection<!-- END REF -->
+<!-- REF entitySelectionClass.attributeName.Syntax -->
+***.attributeName*** : Collection<br>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
 
 
 #### Description
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF entitySelectionClass.{attributeName}.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the 
 
-[kind](dataclassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
+Any dataclass attribute can be used as a property of an entity selection to return <!-- REF entitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](dataclassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
 
 *   If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Duplications are removed (an unordered entity selection is returned).
@@ -179,6 +123,7 @@ Any dataclass attribute can be used as a property of an entity selection to retu
 When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. In this case, if no entities are returned, the result is an empty entity selection.
 
 If the attribute does not exist in the entity selection, an error is returned.
+
 
 
 
@@ -254,9 +199,8 @@ The resulting object is an entity selection of Employee with duplications remove
 
 
 #### Description
-The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified 
 
-*entity* to the entity selection<!-- END REF -->.
+The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection<!-- END REF -->.
 > This function modifies the original entity selection.
 
 **Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections] section.
@@ -307,9 +251,8 @@ An error occurs if *entity* and the entity selection are not related to the same
 
 
 #### Description
-The `.and()` function <!-- REF #entitySelectionClass.and().Summary -->combines the entity selection with an 
 
-*entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.
+The `.and()` function <!-- REF #entitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.
 
 *   If you pass *entity* as parameter, you combine this entity with the entity selection. If the entity belongs to the entity selection, a new entity selection containing only the entity is returned. Otherwise, an empty entity selection is returned.
 *   If you pass *entitySelection* as parameter, you combine both entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. If there is no intersecting entity, an empty entity selection is returned.
@@ -373,9 +316,8 @@ We want to have a selection of employees named "Jones" who live in New York:
 <!-- END REF -->
 
 #### Description
-The `.average()` function <!-- REF #entitySelectionClass.average().Summary -->returns the arithmetic mean (average) of all the non-null values of 
 
-*attributePath* in the entity selection<!-- END REF -->.
+The `.average()` function <!-- REF #entitySelectionClass.average().Summary -->returns the arithmetic mean (average) of all the non-null values of *attributePath* in the entity selection<!-- END REF -->.
 
 Pass in the *attributePath* parameter the attribute path to evaluate.
 
@@ -427,6 +369,7 @@ We want to obtain a list of employees whose salary is higher than the average sa
 <!-- END REF -->
 
 #### Description
+
 The `.contains()` function <!-- REF #entitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->, and false otherwise.
 
 In *entity*, specify the entity to search for in the entity selection. If entity is Null, the function will return false.
@@ -475,9 +418,8 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 <!-- END REF -->
 
 #### Description
-The `.count()` function <!-- REF #entitySelectionClass.count().Summary -->returns the number of entities in the entity selection with a non-null value in 
 
-*attributePath*<!-- END REF -->.
+The `.count()` function <!-- REF #entitySelectionClass.count().Summary -->returns the number of entities in the entity selection with a non-null value in *attributePath*<!-- END REF -->.
 > Only scalar values are taken into account. Object or collection type values are considered as null values.
 
 An error is returned if:
@@ -522,6 +464,7 @@ We want to find out the total number of employees for a company without counting
 <!-- END REF -->
 
 #### Description
+
 The `.copy()` function <!-- REF #entitySelectionClass.copy().Summary -->returns a copy of the original entity selection<!-- END REF -->.
 
 > This function does not modify the original entity selection.
@@ -586,9 +529,8 @@ Then this entity selection is updated with products and you want to share the pr
 <!-- END REF -->
 
 #### Description
-The `.distinct()` function <!-- REF #entitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the 
 
-*attributePath* in the entity selection<!-- END REF -->.
+The `.distinct()` function <!-- REF #entitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
 
 The returned collection is automatically sorted. **Null** values are not returned.
 
@@ -641,6 +583,7 @@ You want to get a collection containing a single element per country name:
 <!-- END REF -->
 
 #### Description
+
 The `.drop()` function <!-- REF #entitySelectionClass.drop().Summary -->removes the entities belonging to the entity selection from the table related to its dataclass within the datastore<!-- END REF -->. The entity selection remains in memory.
 > Removing entities is permanent and cannot be undone. It is recommended to call this action in a transaction in order to have a rollback option.
 
@@ -703,9 +646,8 @@ Example with the `dk stop dropping on first error` option:
 <!-- END REF -->
 
 #### Description
-The `.extract()` function <!-- REF #entitySelectionClass.extract().Summary -->returns a collection containing 
 
-*attributePath* values extracted from the entity selection<!-- END REF -->.
+The `.extract()` function <!-- REF #entitySelectionClass.extract().Summary -->returns a collection containing *attributePath* values extracted from the entity selection<!-- END REF -->.
 
 *attributePath* can refer to:
 
@@ -750,6 +692,7 @@ Given the following table and relation:
   //
   //
   //$firstnames is a collection of Strings
+
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
@@ -803,6 +746,7 @@ Given the following table and relation:
 <!-- END REF -->
 
 #### Description
+
 The `.first()` function <!-- REF #entitySelectionClass.first().Summary -->returns a reference to the entity in the first position of the entity selection<!-- END REF -->.
 
 The result of this function is similar to:
@@ -859,6 +803,7 @@ There is, however, a difference between both statements when the selection is em
 <!-- END REF -->
 
 #### Description
+
 The `.getDataClass()` function <!-- REF #entitySelectionClass.getDataClass().Summary -->returns the dataclass of the entity selection<!-- END REF -->.
 
 This function is mainly useful in the context of generic code.
@@ -909,6 +854,7 @@ The following generic code duplicates all entities of the entity selection:
 <!-- END REF -->
 
 #### Description
+
 The `.isOrdered()` function <!-- REF #entitySelectionClass.isOrdered().Summary -->returns True if the entity selection is ordered<!-- END REF -->, and False if it is unordered.
 > This function always returns True when the entity selection comes from a remote datastore.
 
@@ -960,6 +906,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 <!-- END REF -->
 
 #### Description
+
 The `.last()` function <!-- REF #entitySelectionClass.last().Summary -->returns a reference to the entity in last position of the entity selection<!-- END REF -->.
 
 The result of this function is similar to:
@@ -1003,6 +950,7 @@ If the entity selection is empty, the function returns Null.
 
 
 #### Description
+
 The `.length` property <!-- REF #entitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. If the entity selection is empty, it returns 0.
 
 Entity selections always have a `.length` property.
@@ -1041,11 +989,8 @@ Entity selections always have a `.length` property.
 <!-- END REF -->
 
 #### Description
-The `.max()` function <!-- REF #entitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of 
 
-*attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the 
-
-[`.orderBy()`](#orderby) function.
+The `.max()` function <!-- REF #entitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
 
 If you pass in *attributePath* a path to an object attribute containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.max()` returns **null**.
 
@@ -1094,9 +1039,8 @@ We want to find the highest salary among all the female employees:
 <!-- END REF -->
 
 #### Description
-The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the 
 
-[`.orderBy()`](#orderby) function.
+The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
 
 If you pass in *attributePath* a path to an object attribute containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.min()` returns **null**.
 
@@ -1146,9 +1090,8 @@ In this example, we want to find the lowest salary among all the female employee
 <!-- END REF -->
 
 #### Description
-The `.minus()` function <!-- REF #entitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the 
 
-*entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
+The `.minus()` function <!-- REF #entitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 *   If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
 *   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*.
@@ -1214,9 +1157,8 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 <!-- END REF -->
 
 #### Description
-The `.or()` function <!-- REF #entitySelectionClass.or().Summary -->combines the entity selection with the 
 
-*entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
+The `.or()` function <!-- REF #entitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
 
 *   If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
 *   If you pass *entitySelection* as parameter, you compare entity selections. A new entity selection containing the entities belonging to the original entity selection or *entitySelection* is returned (or is not exclusive, entities referenced in both selections are not duplicated in the resulting selection).
@@ -1276,9 +1218,8 @@ If the original entity selection and the parameter are not related to the same d
 <!-- END REF -->
 
 #### Description
-The `.orderBy()` function <!-- REF #entitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by 
 
-*pathString* or *pathObjects* criteria<!-- END REF -->.
+The `.orderBy()` function <!-- REF #entitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
 > * This method does not modify the original entity selection.
 *   For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
 
@@ -1355,9 +1296,8 @@ You can add as many objects in the criteria collection as necessary.
 <!-- END REF -->
 
 #### Description
-The `.orderByFormula()` function <!-- REF #entitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the 
 
-*formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
+The `.orderByFormula()` function <!-- REF #entitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
 > This function does not modify the original entity selection.
 
 You can use either a *formulaString* or a *formulaObj* parameter:
@@ -1470,22 +1410,19 @@ In this example, the "marks" object field in the **Students** dataClass contains
 **.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.query().Params -->
-| Parameter     | Type               |    | Description                                                                                                                                         |
-| ------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Search criteria as string                                                                                                                           |
-| formula       | Object             | -> | Search criteria as formula object                                                                                                                   |
-| value         | expression         | -> | Value(s) to use for indexed placeholder(s)                                                                                                          |
-| querySettings | Object             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                           |
+| Parameter     | Type               |    | Description                                                                                                                                                   |
+| ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Text               | -> | Search criteria as string                                                                                                                                     |
+| formula       | Object             | -> | Search criteria as formula object                                                                                                                             |
+| value         | expression         | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
+| querySettings | Object             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
 | Result        | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
 |
 
 #### Description
-The `.query()` function <!-- REF #entitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in 
 
-*queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type 
-
-`EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query()` function <!-- REF #entitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
 > This function does not modify the original entity selection.
 
 If no matching entities are found, an empty `EntitySelection` is returned.
@@ -1527,9 +1464,8 @@ More examples of queries can be found in the DataClass [`.query()`](dataclassCla
 
 
 #### Description
-The `.queryPath` property <!-- REF #entitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for 
 
-`EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPath` property <!-- REF #entitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
 For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](dataclassClass.html#query) page. 
 
@@ -1553,9 +1489,8 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 
 #### Description
-The `.queryPlan` property <!-- REF #entitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for 
 
-`EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPlan` property <!-- REF #entitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
 For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](dataclassClass.html#query) page. 
 
@@ -1584,6 +1519,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 #### Description
 > This function only works with a remote datastore (client / server or `Open datastore` connection).
+
 The `.refresh()` function <!-- REF #entitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
@@ -1665,9 +1601,8 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- END REF -->
 
 #### Description
-The `.slice()` function <!-- REF #entitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the 
 
-*startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
+The `.slice()` function <!-- REF #entitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
 > This function does not modify the original entity selection.
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
@@ -1725,9 +1660,8 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 <!-- END REF -->
 
 #### Description
-The `.sum()` function <!-- REF #entitySelectionClass.sum().Summary -->returns the sum for all 
 
-*attributePath* values in the entity selection<!-- END REF -->.
+The `.sum()` function <!-- REF #entitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
 
 `.sum()` returns 0 if the entity selection is empty.
 
@@ -1780,6 +1714,7 @@ $sum:=$sel.sum("salary")
 <!-- END REF -->
 
 #### Description
+
 The `.toCollection()` function <!-- REF #entitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
 
 If no filter parameter is passed or the first parameter contains an empty string or "*", all the attributes are extracted. Attributes with [kind](dataclassAttributeClass.md#kind) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Attributes with kind property as "relatedEntities" are not extracted.

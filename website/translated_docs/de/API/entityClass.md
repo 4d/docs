@@ -8,51 +8,9 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 ## Summary
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE entityClass.{attributeName}.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.{attributeName}.Summary -->|
+|                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE entityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.attributeName.Summary -->|
 | [<!-- INCLUDE #entityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.clone().Summary -->|
 | [<!-- INCLUDE #entityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.diff().Summary -->|
 | [<!-- INCLUDE #entityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.drop().Summary -->|
@@ -81,8 +39,8 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 ---
 
-<!-- REF entityClass.{attributeName}.Desc -->
-## .{attributeName}
+<!-- REF entityClass.attributeName.Desc -->
+## .*attributeName*
 
 <details><summary>History</summary>
 | Version | Changes |
@@ -90,12 +48,13 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 | v17     | Added   |
 </details>
 
-<!-- REF entityClass.{attributeName}.Syntax -->
-**.{attributeName}** : any<!-- END REF -->
+<!-- REF entityClass.attributeName.Syntax -->
+***.attributeName*** : any<!-- END REF -->
 
 
 #### Beschreibung
-Any dataclass attribute is available as a property of an entity, which <!-- REF entityClass.{attributeName}.Summary -->stores the attribute value for the entity<!-- END REF -->.
+
+Any dataclass attribute is available as a property of an entity, which <!-- REF entityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
 > Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
 The attribute value type depends on the attribute [kind](dataclassAttributeClass.md#kind) (relation or storage):
@@ -141,6 +100,7 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 
 
 #### Beschreibung
+
 The `.clone()` function <!-- REF #entityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
 > Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
 
@@ -158,6 +118,7 @@ This function can only be used with entities already saved in the database. It c
 ```
 
 <!-- END REF -->
+
 
 
 ---
@@ -185,6 +146,7 @@ This function can only be used with entities already saved in the database. It c
 
 
 #### Beschreibung
+
 The `.diff()` function <!-- REF #entityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
 In *entityToCompare*, pass the entity to be compared to the original entity.
@@ -386,6 +348,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.drop()` function <!-- REF #entityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note that the entity remains in memory.
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
@@ -492,6 +455,7 @@ Example with `dk force drop if stamp changed` option:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.first()` function <!-- REF #entityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
@@ -531,9 +495,8 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- END REF -->
 
 #### Beschreibung
-The `.fromObject()` function <!-- REF #entityClass.fromObject().Summary -->fills an entity with the 
 
-*filler* content<!-- END REF -->.
+The `.fromObject()` function <!-- REF #entityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
 > This function modifies the original entity.
 
 The mapping between the object and the entity is done on the attribute names:
@@ -621,6 +584,7 @@ You could also use a related entity given as an object:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.getDataClass()` function <!-- REF #entityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. This function is useful when writing generic code.
 
 
@@ -670,6 +634,7 @@ The following generic code duplicates any entity:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.getKey()` function <!-- REF #entityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
 
 Primary keys can be numbers (Integer) or strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
@@ -710,6 +675,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.getSelection()` function <!-- REF #entityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to an entity selection, the function returns Null.
@@ -754,6 +720,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.getStamp()` function <!-- REF #entityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
 
 The internal stamp is automatically incremented by 4D each time the entity is saved. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
@@ -803,6 +770,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.indexOf()` function <!-- REF #entityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified *entitySelection*.
@@ -851,6 +819,7 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Otherwise, it returns False.
 
 
@@ -891,6 +860,7 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.last()` function <!-- REF #entityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
@@ -932,9 +902,8 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- END REF -->
 
 #### Beschreibung
-The `.lock()` function <!-- REF #entityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The 
 
-[lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+The `.lock()` function <!-- REF #entityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Only functions executed in the "locking" session are allowed to edit and save the attributes of the entity. The entity can be loaded as read-only by other sessions, but they will not be able to enter and save values.
 
@@ -1045,6 +1014,7 @@ Example with `dk reload if stamp changed` option:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.next()` function <!-- REF #entityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
@@ -1086,6 +1056,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.previous()` function <!-- REF #entityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
@@ -1128,6 +1099,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.reload()` function <!-- REF #entityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
 
 **Ergebnis**
@@ -1192,6 +1164,7 @@ The object returned by `.reload( )` contains the following properties:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.save()` function <!-- REF #entityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
 
 The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Otherwise, the function does nothing (the trigger is not called).
@@ -1276,6 +1249,7 @@ Updating an entity with `dk auto merge` option:
 
 ```4d
  var $status : Object
+
  var $employee : cs.EmployeeEntity
  var $employees : cs.EmployeeSelection
 
@@ -1318,6 +1292,7 @@ Updating an entity with `dk auto merge` option:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.toObject()` function <!-- REF #entityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Property names in the object match attribute names of the entity.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
@@ -1601,6 +1576,7 @@ Returns:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.touched()` function <!-- REF #entityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
 
 If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.
@@ -1646,6 +1622,7 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.touchedAttributes()` function <!-- REF #entityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
 This applies for attributes of the [kind](dataclassAttributeClass.md#kind) `storage` or `relatedEntity`.
@@ -1722,6 +1699,7 @@ In this case:
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.unlock()` function <!-- REF #entityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
 
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.

@@ -18,50 +18,8 @@ Email objects provide the following properties:
 
 > 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the Email object.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #emailObjectClass.attachments.Syntax -->](#attachments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.attachments.Summary -->|
 | [<!-- INCLUDE #emailObjectClass.bcc.Syntax -->](#bcc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bcc.Summary -->|
 | [<!-- INCLUDE #emailObjectClass.bodyStructure.Syntax -->](#bodyStructure)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.bodyStructure.Summary -->|
@@ -154,9 +112,7 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 
 #### 説明
-The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of 
-
-*attachment* object(s)<!-- END REF -->.
+The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->.
 
 Attachment objects are defined through the `MAIL New attachment` command.
 
@@ -170,9 +126,7 @@ Attachment objects are defined through the `MAIL New attachment` command.
 
 
 #### 説明
-The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient 
-
-[addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
 ---
@@ -184,9 +138,7 @@ The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind
 
 
 #### 説明
-The `.bodyStructure` property contains the <!-- REF #emailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See 
-
-[Handling body part](#handling-body-part) section.
+The `.bodyStructure` property contains the <!-- REF #emailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyStructure` object contains the following properties:
 
@@ -212,9 +164,7 @@ The `.bodyStructure` object contains the following properties:
 
 
 #### 説明
-The `.bodyValues` property contains the <!-- REF #emailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See 
-
-[Handling body part](#handling-body-part) section.
+The `.bodyValues` property contains the <!-- REF #emailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyValues` object contains the following properties:
 
@@ -233,9 +183,7 @@ The `.bodyValues` object contains the following properties:
 
 
 #### 説明
-The `.cc` property contains the <!-- REF #emailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient 
-
-[addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.cc` property contains the <!-- REF #emailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
 
@@ -265,9 +213,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 
 #### 説明
-The `.from` property contains the <!-- REF #emailObjectClass.from.Summary -->Originating 
-
-[address(es)](#email-addresses) of the email<!-- END REF -->.
+The `.from` property contains the <!-- REF #emailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
 
 
 Each email you send out has both the [sender](#sender) and **from** addresses:
@@ -287,9 +233,7 @@ For better deliverability, it is recommended to use the same from and sender add
 
 
 #### 説明
-The `.headers` property contains a <!-- REF #emailObjectClass.headers.Summary -->collection of 
-
-`EmailHeader` objects, in the order they appear in the message<!-- END REF -->. This property allows users to add extended (registered) headers or user-defined (not registered, starting with "X") headers.
+The `.headers` property contains a <!-- REF #emailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. This property allows users to add extended (registered) headers or user-defined (not registered, starting with "X") headers.
 
 > If an `EmailHeader` object property defines a header such as "from" or "cc" which is already set as a property at the mail level, the `EmailHeader` property is ignored.
 
@@ -313,9 +257,7 @@ Every object of the headers collection can contain the following properties:
 
 
 #### 説明
-The `.htmlBody` property contains the <!-- REF #emailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See 
-
-[Handling body part](#handling-body-part) section.
+The `.htmlBody` property contains the <!-- REF #emailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 
 
@@ -484,9 +426,7 @@ The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary --
 
 
 #### 説明
-The `.sender` property contains the <!-- REF #emailObjectClass.sender.Summary -->email source 
-
-[addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.sender` property contains the <!-- REF #emailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
 Each email you send out has both the **sender** and **[from](#from)** addresses:
@@ -533,9 +473,7 @@ The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary 
 
 
 #### 説明
-The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See 
-
-[Handling body part](#handling-body-part) section.
+The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 ---
 
@@ -546,9 +484,7 @@ The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summar
 
 
 #### 説明
-The `.to` property contains the <!-- REF #emailObjectClass.to.Summary -->primary recipient 
-
-[addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.to` property contains the <!-- REF #emailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 ---
 

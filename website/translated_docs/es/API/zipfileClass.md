@@ -281,9 +281,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 #### Description
 
-The `ZIP Read archive` command <!-- REF zipArchive.ZIP Read archive.Summary -->retrieves the contents of 
-
-*zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+The `ZIP Read archive` command <!-- REF zipArchive.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
 
 
@@ -371,50 +369,8 @@ To extract from the root folder:
 
 The following properties and functions from the [File](fileClass.md) class are available to 4D ZIP file objects:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Available [File](fileClass.md) APIs for ZIP files                                   | Comment                                |
-| ----------------------------------------------------------------------------------- | -------------------------------------- |
+| Available [File](fileClass.md) APIs for ZIP files                                             | Comment                                |
+| --------------------------------------------------------------------------------------------- | -------------------------------------- |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](fileClass.md#copyto)                   |                                        |
 | [<!-- INCLUDE #document.creationDate.Syntax -->](fileClass.md#creationdate)         |                                        |
 | [<!-- INCLUDE #document.creationTime.Syntax -->](fileClass.md#creationtime)         |                                        |
@@ -446,54 +402,8 @@ The following properties and functions from the [File](fileClass.md) class are a
 
 The following properties and functions from the [Folder](folderClass.md) class are available to 4D ZIP folder objects:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Available [Folder](folderClass.md) APIs for ZIP folder                                 | Comment                                                                                                                           |
-| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Available [Folder](folderClass.md) APIs for ZIP folder                                           | Comment                                                                                                                           |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](folderClass.md#copyto)                   |                                                                                                                                   |
 | [<!-- INCLUDE #directory.creationDate.Syntax -->](folderClass.md#creationdate)         | Date may be different for the `root` folder from a folder within the archive                                                      |
 | [<!-- INCLUDE #directory.creationTime.Syntax -->](folderClass.md#creationtime)         | Time may be different for the `root` folder from a folder within the archive                                                      |

@@ -734,7 +734,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
         "title": "Calling ORDA class functions"
