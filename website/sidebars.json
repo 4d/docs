@@ -41,6 +41,7 @@
 	"API/formulaClass",
 	"API/imapTransporterClass",
 	"API/pop3TransporterClass",
+	"API/sessionClass",
 	"API/signalClass",
 	"API/smtpTransporterClass",
 	"API/zipClass"

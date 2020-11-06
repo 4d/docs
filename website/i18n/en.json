@@ -62,6 +62,9 @@
       "API/pop3TransporterClass": {
         "title": "POP3 Transporter"
       },
+      "API/sessionClass": {
+        "title": "Session"
+      },
       "API/signalClass": {
         "title": "Signals"
       },

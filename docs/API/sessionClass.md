@@ -11,9 +11,13 @@ Session objects are returned by the `Session` command, when scalable sessions ar
 
 ||
 |---|
-|[<!-- INCLUDE #classClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.name.Summary -->|
-|[<!-- INCLUDE #classClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.new().Summary --> |
-|[<!-- INCLUDE #classClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.superclass.Summary --> |
+|[<!-- INCLUDE #sessionClass.clearPrivileges().Syntax -->](#clearprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.clearPrivileges().Summary -->|
+|[<!-- INCLUDE #sessionClass.expirationDate.Syntax -->](#expirationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.expirationDate.Summary -->|
+|[<!-- INCLUDE #sessionClass.hasPrivilege().Syntax -->](#hasprivilege)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.hasPrivilege().Summary -->|
+|[<!-- INCLUDE #sessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.isGuest().Summary -->|
+|[<!-- INCLUDE #sessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.setPrivileges().Summary -->|
+|[<!-- INCLUDE #sessionClass.timeout.Syntax -->](#timeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.timeout.Summary -->|
+|[<!-- INCLUDE #sessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.userName.Summary -->|
 
 
 
@@ -30,40 +34,29 @@ Session objects are returned by the `Session` command, when scalable sessions ar
 </details>
 
 <!-- REF #sessionClass.clearPrivileges().Syntax -->
-**.clearPrivileges()**♠<!-- END REF -->
+**.clearPrivileges()**<!-- END REF -->
 
-<!-- REF #classClass.new().Params -->
+<!-- REF #sessionClass.clearPrivileges().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Class|<-|New object of the class|
+||||Does not require any parameters|
 <!-- END REF -->
 
 
-
-<!-- REF #sessionClass.clearPrivileges().Syntax -->
-**.superclass** : 4D.Class<!-- END REF -->
-
 #### Description
 
-The `.superclass` property <!-- REF #sessionClass.clearPrivileges().Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**. 
+The `.clearPrivileges()` function <!-- REF #sessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. As a result, the session automatically becomes a Guest session.
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
 
-This property is **read-only**. 
-
-#### Examples
+#### Example
 
 ```4d
-$sup:=4D.File.superclass //Document
-$sup:=4D.Document.superclass //Object
-$sup:=4D.Object.superclass //null
+//Invalidate a session
+var $isGuest : Boolean  
 
-// If you created a MyFile class  
-// with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
-
+Session.clearPrivileges()
+$isGuest:=Session.isGuest() //$isGuest is True
 ```
-
 
 <!-- END REF -->
 
@@ -75,32 +68,24 @@ $sup:=cs.MyFile.superclass //File
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added|
+|v18 R6|Added|
 
 </details>
 
-<!-- REF #classClass.superclass.Syntax -->
-**.superclass** : 4D.Class<!-- END REF -->
+<!-- REF #sessionClass.expirationDate.Syntax -->
+**.expirationDate** : Text<!-- END REF -->
 
 #### Description
 
-The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**. 
+The `.expirationDate` property contains <!-- REF #sessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
+This property is **read-only**. It is automatically recomputed if the [`.timeout`](#timeout) property value is modified. 
 
-This property is **read-only**. 
-
-#### Examples
+#### Example
 
 ```4d
-$sup:=4D.File.superclass //Document
-$sup:=4D.Document.superclass //Object
-$sup:=4D.Object.superclass //null
-
-// If you created a MyFile class  
-// with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
-
+var $expiration : Text
+$expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 ```
 
 <!-- END REF -->
@@ -114,34 +99,35 @@ $sup:=cs.MyFile.superclass //File
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added|
+|v18 R6|Added|
 </details>
 
-<!-- REF #classClass.new().Syntax -->
-**.new()** : 4D.Class<!-- END REF -->
+<!-- REF #sessionClass.hasPrivilege().Syntax -->
+**.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
-<!-- REF #classClass.new().Params -->
+<!-- REF #sessionClass.hasPrivilege().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Class|<-|New object of the class|
+|privilege|Text|<-|Name of the privilege to verify|
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|
 <!-- END REF -->
 
 
 #### Description
 
-The `.new()` function <!-- REF #classClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs). 
-
-If it is called on a non-existing class, an error is returned.
+The `.hasPrivilege()` function <!-- REF #sessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->. 
 
 
 #### Example
 
-To create a new instance of the Person class:
+In the `On Web Connection` database method, you want to check if the "WebAdmin" privilege is associated to the session:
 
 ```4d
-var $person : cs.Person  
-$person:=cs.Person.new() //create the new instance  
-//$Person contains functions of the class
+If (Session.hasPrivilege("WebAdmin"))
+	//Access is granted, do nothing
+Else
+	//Display an authentication page
+End if
 ```
 
 <!-- END REF -->
@@ -154,32 +140,32 @@ $person:=cs.Person.new() //create the new instance
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added|
+|v18 R6|Added|
 
 </details>
 
-<!-- REF #classClass.superclass.Syntax -->
-**.superclass** : 4D.Class<!-- END REF -->
+<!-- REF #sessionClass.isGuest().Syntax -->
+**.isGuest()** : Boolean<!-- END REF -->
+
+<!-- REF #sessionClass.isGuest().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+<!-- END REF -->
 
 #### Description
 
-The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**. 
+The `.isGuest` function <!-- REF #sessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
 
-This property is **read-only**. 
+#### Example
 
-#### Examples
+In the `On Web Connection` database method:
 
 ```4d
-$sup:=4D.File.superclass //Document
-$sup:=4D.Document.superclass //Object
-$sup:=4D.Object.superclass //null
-
-// If you created a MyFile class  
-// with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
-
+If (Session.isGuest())
+	//Do something for Guest user
+End if
 ```
 
 
@@ -193,18 +179,63 @@ $sup:=cs.MyFile.superclass //File
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added|
+|v18 R6|Added|
 
 </details>
 
-<!-- REF #classClass.name.Syntax -->
-**.name** : Text<!-- END REF -->
+<!-- REF #sessionClass.setPrivileges().Syntax -->
+**.setPrivileges**( *settings* : Object )<!-- END REF -->
+
+<!-- REF #sessionClass.setPrivileges().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|settings|Object|->|Object with a "privileges" property (string or collection)|
+<!-- END REF -->
 
 #### Description
 
-The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Class names are case sensitive.  
+The `.setPrivileges` function <!-- REF #sessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the *settings* parameter to the session<!-- END REF -->.
 
-This property is **read-only**. 
+In the *settings* parameter, pass an object containing the following property:
+
+|Property|Type|Description|
+|---|---|---|
+|privileges|Text or Collection|<li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li>|
+
+If the `privileges` property contains an invalid privilege name, it is ignored.
+
+> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
+
+By default when no privilege is associated to the session, the session is a Guest session. 
+
+#### Example
+
+In the `On Web Authentication` database method:
+
+```4d
+var $clientIP; $3 : Text
+var $userOK : Boolean
+
+$clientIP:=$3
+
+... //Authenticate the user
+
+If ($userOK) //The user has been approved
+  var $info : Object
+  $info:=New object
+  $info.privileges:=New collection("WebAdmin")
+  Session.setPrivileges($info)
+
+  Use (Session.storage)
+     Session.storage.clientIP:=New shared object("value"; $clientIP)
+  End use
+
+ $0:=True
+
+End if
+
+```
+
 
 <!-- END REF -->
 
@@ -216,31 +247,36 @@ This property is **read-only**.
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added|
+|v18 R6|Added|
 
 </details>
 
-<!-- REF #classClass.superclass.Syntax -->
-**.superclass** : 4D.Class<!-- END REF -->
+<!-- REF #sessionClass.timeout.Syntax -->
+**.timeout** : Integer<!-- END REF -->
 
 #### Description
 
-The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**. 
+The `.timeout` property contains <!-- REF #sessionClass.timeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->. 
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
+If this property is not set, the default value is 60 (1h). 
 
-This property is **read-only**. 
+When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly. 
 
-#### Examples
+> The value cannot be less than 60: if a lower value is set, the timeout is raised up to 60.
+
+ 
+This property is **read write**. 
+
+#### Example
 
 ```4d
-$sup:=4D.File.superclass //Document
-$sup:=4D.Document.superclass //Object
-$sup:=4D.Object.superclass //null
-
-// If you created a MyFile class  
-// with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
+If (Session.isGuest())
+		// A Guest session will close after 60 minutes of inactivity
+	Session.timeout:=60
+Else
+		// Other sessions will close after 120 minutes of inactivity
+	Session.timeout:=120
+End if
 
 ```
 
@@ -254,32 +290,36 @@ $sup:=cs.MyFile.superclass //File
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added|
+|v18 R6|Added|
 
 </details>
 
-<!-- REF #classClass.superclass.Syntax -->
-**.superclass** : 4D.Class<!-- END REF -->
+<!-- REF #sessionClass.userName.Syntax -->
+**.userName** : Text<!-- END REF -->
 
 #### Description
 
-The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**. 
+The `.userName` property contains <!-- REF #sessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. 
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
+This property is empty by default. You can use it to identify the user within your code.
 
-This property is **read-only**. 
+This property is **read write**. 
 
-#### Examples
+#### Example
+
+In the `On Web Authentication` database method:
 
 ```4d
-$sup:=4D.File.superclass //Document
-$sup:=4D.Document.superclass //Object
-$sup:=4D.Object.superclass //null
+var $clientName; $5 : Text
 
-// If you created a MyFile class  
-// with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
+$clientName:=$5
+
+... //Authenticate the user
+
+Session.userName:=$clientName
 
 ```
+
+
 
 <!-- END REF -->
