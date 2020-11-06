@@ -3,7 +3,7 @@ id: sessionClass
 title: Session
 ---
 
-Session objects are returned by the `Session` command, when scalable sessions are enabled in your project. A Session object is automatically created and maintained by the 4D web server to control the browsing session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between user sessions, and launch session-related preemptive processes.
+Session objects are returned by the [`Session`](#session) command, when scalable sessions are enabled in your project. A Session object is automatically created and maintained by the 4D web server to control the browsing session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between user sessions, and launch session-related preemptive processes.
 
 
 ## Summary
@@ -20,6 +20,62 @@ Session objects are returned by the `Session` command, when scalable sessions ar
 |[<!-- INCLUDE #sessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.userName.Summary -->|
 
 
+---
+
+## Session
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R6|Added|
+</details>
+
+<!-- REF #_command_.Session.Syntax -->
+**Session** : 4D.Session<!-- END REF -->
+
+
+<!-- REF #_command_.Session.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Session|<-|Session object|
+<!-- END REF -->
+
+
+#### Description
+
+The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->. 
+
+This command only works when scalable sessions are enabled (see XXX). It returns Null when sessions are disabled or when legacy sessions are used. 
+
+When scalable sessions are enabled, the `Session` object is available from any web processes in the following contexts:
+
+- `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
+- ORDA [Data Model Class functions](ORDA/ordaClasses.md) called with REST requests,
+- code processed through 4D tags in semi-dynamic pages (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
+- project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls.
+
+
+#### Example
+
+You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". You call the method by entering the following URL in your browser:
+
+```
+IP:port/4DACTION/action_Session
+```
+
+```4d
+  //action_Session method
+ Case of
+    :(Session#Null)
+       If(Session.hasPrivilege("WebAdmin")) //calling the hasPrivilege function
+          WEB SEND TEXT("4DACTION --> Session is WebAdmin")
+       Else
+          WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
+       End if
+    Else
+       WEB SEND TEXT("4DACTION --> Sesion is null")
+ End case
+```
 
 ---
 
