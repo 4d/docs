@@ -26,7 +26,10 @@ Each event is returned as an object by the `FORM Event` command. By default, it 
 |           |      |             |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the
 
-Additional properties are returned when the event occurs on specific objects. For example, the [On After Edit](onAfterEdit.md) event object returned by a [4D View Pro area](FormObjects/viewProArea_overview.md) contains `sheetName` or `action` properties.
+Additional properties are returned when the event occurs on specific objects. En particulier :
+
+- [list boxes](FormObjects/listbox_overview.md#supported-form-events) and [list box columns](FormObjects/listbox_overview.md#supported-form-events-1) return [additional properties](FormObjects/listbox_overview.md#additional-properties) such as `columnName` or `isRowSelected`.
+- [4D View Pro areas](FormObjects/viewProArea_overview.md) return for example `sheetName` or `action` properties in the [On After Edit](onAfterEdit.md) event object.
 
 
 ## Events and Methods

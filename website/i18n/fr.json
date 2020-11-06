@@ -11,8 +11,68 @@
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
       },
+      "API/classClass": {
+        "title": "Class"
+      },
+      "API/collectionClass": {
+        "title": "Collections"
+      },
       "API/cryptoClass": {
-        "title": "Classe CryptoKey"
+        "title": "CryptoKey"
+      },
+      "API/dataclassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/dataclassClass": {
+        "title": "Dataclass"
+      },
+      "API/datastoreClass": {
+        "title": "DataStore"
+      },
+      "API/directory": {
+        "title": "Classe Directory"
+      },
+      "API/document": {
+        "title": "Document Class"
+      },
+      "API/emails": {
+        "title": "Emails"
+      },
+      "API/entityClass": {
+        "title": "Entity"
+      },
+      "API/entitySelectionClass": {
+        "title": "Entity Selections"
+      },
+      "API/fileClass": {
+        "title": "File"
+      },
+      "API/folderClass": {
+        "title": "Folder"
+      },
+      "API/formulaClass": {
+        "title": "Formulas"
+      },
+      "API/imapTransporterClass": {
+        "title": "IMAP Transporter"
+      },
+      "API/overview": {
+        "title": "Class API Overview"
+      },
+      "API/pop3TransporterClass": {
+        "title": "POP3 Transporter"
+      },
+      "API/signalClass": {
+        "title": "Signaux"
+      },
+      "API/smtpTransporterClass": {
+        "title": "SMTP Transporter"
+      },
+      "API/transporter": {
+        "title": "Classe Transporter"
+      },
+      "API/zipClass": {
+        "title": "ZIP Archive"
       },
       "Backup/backup": {
         "title": "Sauvegarde"
@@ -287,6 +347,9 @@
       },
       "Events/onValidate": {
         "title": "Sur validation"
+      },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
       },
       "Events/onVpReady": {
         "title": "On VP Ready"
@@ -702,8 +765,8 @@
       }
     },
     "links": {
-      "v18 R4 BETA": "v18 R4 BETA",
-      "v18 R3": "v18 R3",
+      "v18 R5 BETA": "v18 R5 BETA",
+      "v18 R4": "v18 R4",
       "v18": "v18"
     },
     "categories": {

@@ -87,25 +87,25 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier Forms
 
-| Contenu                                   | Description                                  | Format |
-| ----------------------------------------- | -------------------------------------------- | ------ |
-| *formName*/form.4DForm                    | Description du formulaire projet             | json   |
-| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte  |
-| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | image  |
-| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte  |
+| Contenu                                   | Description                                  | Format  |
+| ----------------------------------------- | -------------------------------------------- | ------- |
+| *formName*/form.4DForm                    | Description du formulaire projet             | json    |
+| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte   |
+| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | picture |
+| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte   |
 
 #### Dossier TableForms
 
-| Contenu                                              | Description                                                                  | Format |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------- | ------ |
-| *n*/Input/*formName*/form.4DForm                     | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json   |
-| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | image  |
-| *n*/Input/*formName*/method.4dm                      | Méthode du formulaire d'entrée de la table                                   | Texte  |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte  |
-| *n*/Output/*formName*/form.4DForm                    | Description du formulaire de sortie de la table (n étant le numéro de table) | json   |
-| *n*/Output/*formName*/Images/*pictureName*           | Images statiques du formulaire de sortie de la table                         | image  |
-| *n*/Output/*formName*/method.4dm                     | Méthode du formulaire de sortie de la table                                  | Texte  |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte  |
+| Contenu                                              | Description                                                                  | Format  |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------- | ------- |
+| *n*/Input/*formName*/form.4DForm                     | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json    |
+| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | picture |
+| *n*/Input/*formName*/method.4dm                      | Méthode du formulaire d'entrée de la table                                   | Texte   |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte   |
+| *n*/Output/*formName*/form.4DForm                    | Description du formulaire de sortie de la table (n étant le numéro de table) | json    |
+| *n*/Output/*formName*/Images/*pictureName*           | Images statiques du formulaire de sortie de la table                         | picture |
+| *n*/Output/*formName*/method.4dm                     | Méthode du formulaire de sortie de la table                                  | Texte   |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Méthodes objet du formulaire de sortie. Un fichier par méthode objet         | Texte   |
 
 #### Dossier Triggers
 

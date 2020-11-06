@@ -125,11 +125,9 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
 
 ![](assets/en/Project/comments-explo4.png)
 
-
-
 | Ligne                                                 | Description                                                                                                                                                                                         |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \<!-- Type your summary here -->| Commentaire HTML. Utilisé en priorité comme description de méthode dans les [astuces de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |
+| "\<!-- Type your summary here -->"         | Commentaire HTML. Utilisé en priorité comme description de méthode dans les [astuces de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |
 | ## Description                                       | Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les astuces de l'éditeur de code si le commentaire HTML n'est pas utilisé |
 | ## Example                                           | Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code                                                                                                                 |
 | \``` 4D <br>Insérez votre exemple ici \` `` | Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)                                                                                                                |
@@ -169,6 +167,7 @@ $txt:="Hello world!"
 | wpArea    | String |Write pro area|
 | toolbar   | String |Toolbar name  |
 ```
+
 
 - La balise de lien est prise en charge :
 

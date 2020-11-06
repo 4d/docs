@@ -68,7 +68,7 @@ Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
     </th>
     
     <th>
-      Contents
+      Inhalt
     </th>
   </tr>
   

@@ -14,8 +14,6 @@ title: On Header Click
 
 This event is generated when a click occurs on the header of a column in the list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
 
-> The [`On Clicked`](onClicked.md) event is generated when a right click (Windows) or Ctrl+click (macOS) occurs on a column or column header. You can test the number of clicks made by the user by means of the `Clickcount` command.
-
 If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
 
 - If `$0` equals 0, a standard sort is performed.

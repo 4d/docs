@@ -124,7 +124,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | 4D class store |
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoKeyClass.md).
 
 #### Example
 
@@ -141,56 +141,20 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ### Class object
 
-When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of "Class" class. A class object has the following properties and methods:
+When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/classClass.md). A class object has the following properties and function:
 
-- `name` string
-- `superclass` object (optional, null if none)
-- `new()` method, allowing to instantiate class objects.
+- [`name`](API/classClass.md#name) string
+- [`superclass`](API/classClass.md#superclass) object (null if none)
+- [`new()`](API/classClass.md#new) function, allowing to instantiate class objects.
 
 In addition, a class object can reference:
+
 - a [`constructor`](#class-constructor) object (optional),
 - a `prototype` object, containing named [function](#function) objects (optional).
 
-A class object is a shared object and can therefore be accessed from different 4D processes simultaneously.
+A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
 
 
-
-### new() method
-
-#### cs.\<ClassName>.new() -> classObject
-
-| Parameter   | Type   |    | Description                           |
-| ----------- | ------ | -- | ------------------------------------- |
-| classObject | object | <- | New object of the \<ClassName> class |
-
-The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
-
-If it is called on a non-existing class, an error is returned.
-
-#### Example
-
-To create a new instance of the Person class:
-
-```4d
-var $person : cs.Person //for accurate autocompletion  
-$person:=cs.Person.new() //create the new instance  
-//$Person contains functions of the class
-```
-
-Note that you can instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
-
-```4d  
-//Empty.4dm class file
-//Nothing
-```
-
-You could write in a method:
-
-```4d
-$o:=cs.Empty.new()  
-//$o : {}
-$cName:=OB Class($o).name //"Empty"
-```
 
 ### Property lookup and prototype
 
