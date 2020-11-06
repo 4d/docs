@@ -502,8 +502,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Description
 
-The `.fromObject()` function <!-- REF #entityClass.fromObject().Summary -->fills an entity with the 
-*filler* content<!-- END REF -->. 
+The `.fromObject()` function <!-- REF #entityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->. 
 
 >This function modifies the original entity.
 
