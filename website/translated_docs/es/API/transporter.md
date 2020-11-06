@@ -20,6 +20,7 @@ title: Transporter Class
 
 
 #### Description
+
 The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
 
 It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
@@ -54,6 +55,7 @@ Available secured ports are:
 **.authenticationMode** : Text<!-- END REF -->
 
 #### Description
+
 The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
 
 By default, the most secured mode supported by the server is used.
@@ -86,6 +88,7 @@ Possible values are:
 
 
 #### Description
+
 The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
 
 *   subject,
@@ -121,6 +124,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 
 #### Description
+
 The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
 
 <!-- END REF -->
@@ -142,6 +146,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 
 #### Description
+
 The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email:
 
 *   subject,
@@ -176,6 +181,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 
 #### Description
+
 The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
 
 <!-- END REF -->
@@ -196,6 +202,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 
 #### Description
+
 The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. It can be relative (to the current Logs folder) or absolute.
 
 Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:
@@ -226,6 +233,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 
 #### Description
+
 The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
 *   **SMTP** - 587
@@ -300,6 +308,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 
 #### Description
+
 The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
 

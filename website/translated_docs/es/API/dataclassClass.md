@@ -38,6 +38,7 @@ A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 
 #### Description
+
 The attributes of dataclasses are <!-- REF dataclassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
 The returned objects are of the [`DataClassAttribute`](dataclassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
@@ -118,6 +119,7 @@ Considering the following table properties:
 
 
 #### Description
+
 The `.all( )` function <!-- REF #dataclassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
 
 The entities are returned in the default order, which is initially the order in which they were created. Note however that, if entities have been deleted and new ones added, the default order does not reflect the creation order anymore.
@@ -171,6 +173,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 
 #### Description
+
 The `.fromCollection()` function <!-- REF #dataclassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
 
 In the *objectCol* parameter, pass a collection of objects to create new or update existing entities of the dataclass. The property names must be the same as attribute names in the dataclass. If a property name does not exist in the dataclass, it is ignored. If an attribute value is not defined in the collection, its value is null.
@@ -364,6 +367,7 @@ In this example, the first entity will be created and saved but the second will 
 <!-- END REF -->
 
 #### Description
+
 The `.get()` function <!-- REF #dataclassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
 
 In *primaryKey*, pass the primary key value of the entity to retrieve. The value type must match the primary key type set in the datastore (Integer or Text). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](entityClass.md#getkey) function with the `dk key as string` parameter.
@@ -440,6 +444,7 @@ This example illustrates the use of the *context* property:
 
 
 #### Description
+
 The `.getDataStore( )` function <!-- REF #dataclassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
 
 The datastore can be:
@@ -493,6 +498,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 
 #### Description
+
 The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
 
 **Returned object**
@@ -565,6 +571,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 
 #### Description
+
 The `.new( )` function <!-- REF #dataclassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
 
 The entity object is created in memory and is not saved in the database until the [`.save( )`](entityClass.md#save) function is called. If the entity is deleted before being saved, it cannot be recovered.
@@ -608,6 +615,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 
 #### Description
+
 The `.newSelection( )` function <!-- REF #dataclassClass.newSelection().Summary -->creates a new, blank, , non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
 
 > For more information, see [Shareable vs Non-shareable entity selections] section.
@@ -654,6 +662,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 
 #### Description
+
 The `.query( )` function <!-- REF #dataclassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
 
 If no matching entities are found, an empty `EntitySelection` is returned.

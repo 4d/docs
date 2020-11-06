@@ -114,6 +114,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 #### Beschreibung
+
 The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
 
 A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
@@ -178,6 +179,7 @@ The ***doSomething*** method could be like:
 **.description** : Text<!-- END REF -->
 
 #### Beschreibung
+
 The `.description` property <!-- REF #signalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
@@ -202,6 +204,7 @@ This property is **read-write**.
 **.signaled** : Boolean<!-- END REF -->
 
 #### Beschreibung
+
 The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
 This property is **read-only**. 
@@ -230,6 +233,7 @@ This property is **read-only**.
 
 
 #### Beschreibung
+
 The `.trigger( )` function <!-- REF #signalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
 
 If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
@@ -259,6 +263,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 
 #### Beschreibung
+
 The `.wait( )` function <!-- REF #signalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
 
 To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).

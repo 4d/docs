@@ -20,6 +20,7 @@ title: Document Class
 
 
 #### Description
+
 The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
 
 This property is **read-only**. 
@@ -41,6 +42,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**. 
@@ -64,6 +66,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
 
 This property is **read-only**. 
@@ -88,6 +91,7 @@ This property is **read-only**.
 **.extension** : Text<!-- END REF -->
 
 #### Description
+
 The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
 This property is **read-only**. 
@@ -111,6 +115,7 @@ This property is **read-only**.
 **.fullName** : Text<!-- END REF -->
 
 #### Description
+
 The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
 This property is **read-only**. 
@@ -134,6 +139,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
 This property is **read-only**. 
@@ -157,6 +163,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
 This property is **read-only**. 
@@ -179,6 +186,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
 
 This property is **read-only**. 
@@ -201,6 +209,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
 
 This property is **read-only**. 
@@ -224,6 +233,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
 
@@ -257,6 +267,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
 
 This property is **read-only**. 
@@ -280,6 +291,7 @@ This property is **read-only**.
 
 
 ##### Description
+
 The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**. 
@@ -302,6 +314,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
 This property is **read-only**. 
@@ -323,6 +336,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
 
 *   a file object
@@ -351,6 +365,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
 This property is **read-only**. 
@@ -374,6 +389,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
 This property is **read-only**. 
@@ -396,6 +412,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
 
 This property is **read-only**. 
@@ -419,6 +436,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
 
 This property is **read-only**. 
@@ -457,6 +475,7 @@ This property is **read-only**.
 
 
 #### Description
+
 The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
@@ -508,6 +527,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 #### Description
+
 The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 **Returned value**
@@ -551,6 +571,7 @@ To save a document's contents in a `BLOB` field:
 
 
 #### Description
+
 The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.

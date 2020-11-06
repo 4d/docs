@@ -42,21 +42,21 @@ Sie schreiben zum Beispiel:
 C_LONGINT(MyInt)
 ```
 
-und an anderer Stelle im Projekt schreiben Sie:
+und an anderer Stelle im Projekt:
 ```4d
 MyInt:=3.1416
 ```
 
 In diesem Beispiel wird `MyInt` im interpretierten und kompilierten Modus derselbe Wert (3) zugewiesen, wenn die Compiler-Direktive *vor* Ausführen der Anweisung interpretiert wird.
 
-The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
+Der 4D Interpreter verwendet Compiler-Direktiven zum Typisieren der Variablen. Findet der Interpreter eine Compiler-Direktive, typisiert er die Variable gemäß dieser Direktive. Versucht eine nachfolgende Anweisung, einen inkorrekten Wert zuzuweisen (z.B. einer numerischen Variablen einen alphanumerischen Wert), erfolgt keine Zuweisung und es wird ein Fehler generiert.
 
-Die Reihenfolge, in der zwei Anweisungen erscheinen, ist für den Compiler irrelevant, da er zuerst das gesamte Projekt für Compiler Direktiven scannt. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. Aus diesem Grund ist es wichtig, dass Sie Ihr Projekt so gestalten, dass Ihre Compiler-Direktiven vor jeglicher Anweisung mit deklarierten Variablen ausgeführt werden.
+Die Reihenfolge, in der zwei Anweisungen erscheinen, ist für den Compiler irrelevant, da er zuerst das gesamte Projekt für Compiler Direktiven scannt. Der Interpreter ist dagegen nicht systematisch. Er interpretiert Anweisungen der Reihe nach. Diese Reihenfolge kann natürlich von Sitzung zu Sitzung anders sein, je nachdem was der Benutzer macht. Aus diesem Grund ist es wichtig, dass Sie Ihr Projekt so gestalten, dass Ihre Compiler-Direktiven vor jeglicher Anweisung mit deklarierten Variablen ausgeführt werden.
 
 
-## Using pointers to avoid retyping
+## Mit Zeigern erneute Typisierung vermeiden
 
-A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Eine Variable kann nicht erneut typisiert werden. Sie können jedoch einen Zeiger verwenden, um auf Variablen mit unterschiedlichen Datentypen zu verweisen. Zum Beispiel ist folgender Code sowohl im interpretierten als auch im kompilierten Modus erlaubt:
 
 ```4d
 C_POINTER($p)
@@ -74,7 +74,7 @@ $p:=->$age
 $p->:=55 //assigns a number value
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+Stellen Sie sich eine Funktion vor, welche die Länge (Anzahl Zeichen) von Werten zurückgibt, die von beliebigem Typ sein können.
 
 ```4d
   // Calc_Length (how many characters)
@@ -87,7 +87,7 @@ $result:=String($1->)
 $0:=Length($result)
 ```
 
-Then this method can be called:
+Dann lässt sich diese Methode aufrufen:
 ```4d
 $var1:="my text"
 $var2:=5.3

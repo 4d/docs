@@ -76,6 +76,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 #### Beschreibung
+
 The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
 **File ( path { ; pathType } { ; \* })**
@@ -152,6 +153,7 @@ If the command is called from a component, pass the optional * parameter to get 
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.create()` function <!-- REF #fileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
@@ -198,6 +200,7 @@ Creation of a preferences file in the database folder:
 
 
 #### Beschreibung
+
 The `.createAlias()` function <!-- REF #fileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
@@ -261,6 +264,7 @@ You want to create an alias to a file in your database folder:
 
 
 #### Beschreibung
+
 The `.delete()` function <!-- REF #fileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
 If the file is currently open, an error is generated.
@@ -372,6 +376,7 @@ You want to delete a specific file in the database folder:
 
 
 #### Beschreibung
+
 The `.moveTo()` function <!-- REF #fileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
@@ -443,6 +448,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!-- END REF -->
 
 #### Beschreibung
+
 The `.rename()` function <!-- REF #fileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
@@ -489,6 +495,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 #### Beschreibung
+
 The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 
@@ -530,6 +537,7 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 |
 
 #### Beschreibung
+
 The `.setText()` function <!-- REF #fileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.

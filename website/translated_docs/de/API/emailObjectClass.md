@@ -112,6 +112,8 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 
 #### Beschreibung
+
+
 The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->.
 
 Attachment objects are defined through the `MAIL New attachment` command.
@@ -126,6 +128,7 @@ Attachment objects are defined through the `MAIL New attachment` command.
 
 
 #### Beschreibung
+
 The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
@@ -138,6 +141,7 @@ The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind
 
 
 #### Beschreibung
+
 The `.bodyStructure` property contains the <!-- REF #emailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyStructure` object contains the following properties:
@@ -164,6 +168,7 @@ The `.bodyStructure` object contains the following properties:
 
 
 #### Beschreibung
+
 The `.bodyValues` property contains the <!-- REF #emailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 The `.bodyValues` object contains the following properties:
@@ -183,6 +188,7 @@ The `.bodyValues` object contains the following properties:
 
 
 #### Beschreibung
+
 The `.cc` property contains the <!-- REF #emailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
@@ -197,6 +203,7 @@ The `.cc` property contains the <!-- REF #emailObjectClass.cc.Summary -->Carbon 
 
 
 #### Beschreibung
+
 The `.comments` property contains an <!-- REF #emailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
 
 Comments only appear within the header section of the message (keeping the message's body untouched).
@@ -213,6 +220,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 
 #### Beschreibung
+
 The `.from` property contains the <!-- REF #emailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
 
 
@@ -233,6 +241,7 @@ For better deliverability, it is recommended to use the same from and sender add
 
 
 #### Beschreibung
+
 The `.headers` property contains a <!-- REF #emailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. This property allows users to add extended (registered) headers or user-defined (not registered, starting with "X") headers.
 
 > If an `EmailHeader` object property defines a header such as "from" or "cc" which is already set as a property at the mail level, the `EmailHeader` property is ignored.
@@ -257,6 +266,7 @@ Every object of the headers collection can contain the following properties:
 
 
 #### Beschreibung
+
 The `.htmlBody` property contains the <!-- REF #emailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 
@@ -275,6 +285,7 @@ The `.htmlBody` property contains the <!-- REF #emailObjectClass.htmlBody.Summar
 #### Beschreibung
 
 [IMAP transporter](imapTransporterClass.md) only.
+
 The `.id` property contains the <!-- REF #emailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
 
 
@@ -289,6 +300,7 @@ The `.id` property contains the <!-- REF #emailObjectClass.id.Summary -->unique 
 
 
 #### Beschreibung
+
 The `.inReplyTo` property contains the <!-- REF #emailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->.
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
@@ -305,6 +317,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 
 #### Beschreibung
+
 The `.keywords` property contains a <!-- REF #emailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
@@ -357,6 +370,7 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 
 
 #### Beschreibung
+
 The `.messageId` property contains a <!-- REF #emailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
 
 This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com". This unique ID is used in particular on forums or public mailing lists. In general, mail servers automatically add this header to the messages they send.
@@ -372,6 +386,7 @@ This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com
 #### Beschreibung
 
 [IMAP transporter](imapTransporterClass.md) only.
+
 The `.receivedAt` property contains the <!-- REF #emailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->.
 
 
@@ -386,6 +401,7 @@ The `.receivedAt` property contains the <!-- REF #emailObjectClass.receivedAt.Su
 
 
 #### Beschreibung
+
 The `.references` property contains the <!-- REF #emailObjectClass.references.Summary -->Collection of all message-ids of messages in the preceding reply chain<!-- END REF -->.
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
@@ -401,6 +417,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 
 #### Beschreibung
+
 The `.replyTo` property contains the <!-- REF #emailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->.
 
 ---
@@ -414,6 +431,7 @@ The `.replyTo` property contains the <!-- REF #emailObjectClass.replyTo.Summary 
 
 
 #### Beschreibung
+
 The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->.
 
 
@@ -426,6 +444,7 @@ The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary --
 
 
 #### Beschreibung
+
 The `.sender` property contains the <!-- REF #emailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 
@@ -448,6 +467,7 @@ For better deliverability, it is recommended to use the same from and sender add
 #### Beschreibung
 
 [IMAP transporter](imapTransporterClass.md) only.
+
 The `.size` property contains the <!-- REF #emailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->.
 
 ---
@@ -460,6 +480,7 @@ The `.size` property contains the <!-- REF #emailObjectClass.size.Summary -->siz
 
 
 #### Beschreibung
+
 The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary -->description of topic<!-- END REF -->.
 
 
@@ -473,6 +494,7 @@ The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary 
 
 
 #### Beschreibung
+
 The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 ---
@@ -484,6 +506,7 @@ The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summar
 
 
 #### Beschreibung
+
 The `.to` property contains the <!-- REF #emailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 ---

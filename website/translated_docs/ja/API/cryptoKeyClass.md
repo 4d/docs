@@ -61,6 +61,8 @@ ASSERT($status.success)
 | --------- | ------ | -- | --------------------- |
 | settings  | オブジェクト | -> | キーペアを生成・ロードするための設定    |
 | cryptoKey | オブジェクト | <- | 暗号化キーペアをカプセル化したオブジェクト |
+
+
 The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
 
 #### *settings*

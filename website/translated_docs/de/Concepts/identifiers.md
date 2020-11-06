@@ -72,7 +72,7 @@ atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
-## Klassen
+## Classes
 
 Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen ](#additional-rules-for-object-property-and-orda-names) konform sein. Groß- und Kleinschreibung wird berücksichtigt. Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine [Tabelle](#tables) in derselben Anwendung unterschiedliche Namen verwenden.
 
