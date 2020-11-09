@@ -193,32 +193,35 @@ The resulting object is an entity selection of Employee with duplications remove
 
 
 <!-- REF #entitySelectionClass.add().Syntax -->
-**.add**( *entity* : 4D.Entity )<!-- END REF -->
+**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.add().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to be added to the entity selection|
+|Result|4D.EntitySelection|->|Entity selection including the added *entity*|
 <!-- END REF -->
 
 
 #### Description
 
-The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection<!-- END REF -->. 
+The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->. 
 
 >This function modifies the original entity selection.
 
-**Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections] section. 
+**Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section. 
 
 
 *	If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
 *	If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
 
->For more information, please refer to the [Ordered or unordered entity selection](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
+>For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsmapping.md#ordered-or-unordered-entity-selection) section.
+
+The modified entity selection is returned by the function, so that function calls can be chained. 
 
 An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
 
-#### Example 
+#### Example 1
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -228,6 +231,21 @@ An error occurs if *entity* and the entity selection are not related to the same
  $employee.lastName:="Smith"
  $employee.save()
  $employees.add($employee) //The $employee entity is added to the $employees entity selection
+```
+
+#### Example 2
+
+Calls to the function can be chained:
+
+```4d
+ var $sel : cs.ProductSelection
+ var $p1;$p2;$p3 : cs.ProductEntity
+
+ $p1:=ds.Product.get(10)
+ $p2:=ds.Product.get(11)
+ $p3:=ds.Product.get(12)
+ $sel:=ds.Product.query("ID > 50")
+ $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
 <!-- END REF -->
@@ -767,6 +785,7 @@ The result of this function is similar to:
 ```
 
 There is, however, a difference between both statements when the selection is empty:
+
 
 ```4d
  var $entitySel : cs.EmpSelection
