@@ -24,7 +24,21 @@ text-decoration: none; /* Les liens ne seront plus soulignés */
 color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
 }
 
+summary {
 
+	color:grey
+	font-size: 12px;
+
+}
+
+details {
+		font-size: 12px;
+	 font-color:grey;
+
+}
+summary::-webkit-details-marker {
+	color:grey;
+}
 
 
 .copyright{
