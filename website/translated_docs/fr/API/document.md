@@ -566,7 +566,7 @@ To save a document's contents in a `BLOB` field:
 | Paramètres | Type        |    | Description                                   |
 | ---------- | ----------- | -- | --------------------------------------------- |
 | size       | Entier long | -> | Side length for the returned picture (pixels) |
-| Résultat   | Image       | <- | Icon                                          |
+| Résultat   | Image       | <- | Icône                                         |
 <!-- END REF -->
 
 
