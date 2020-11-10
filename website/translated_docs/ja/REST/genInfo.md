@@ -23,13 +23,13 @@ RESTサーバーの次の情報を取得することができます:
 
 ## queryPath と queryPlan
 
-Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
+クエリによって生成されたエンティティセレクションは、`queryPlan` と `queryPath` という 2つのプロパティを持ちえます。 これらのプロパティを算出・取得するには、RESTリクエストに [`$queryPlan`]($queryplan.md) および [`$queryPath`]($querypath.md) を追加します。
 
 たとえば:
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
-These properties are objects that contain information about how the server performs composite queries internally through dataclasses and relations:
+これらのプロパティは、データクラスやリレーションに対する複合クエリをサーバーが内部的にどのようにおこなっているかの情報を格納するオブジェクトです:
 - **queryPlan**: object containing the detailed description of the query just before it was executed (i.e., the planned query).
 - **queryPath**: object containing the detailed description of the query as it was actually performed.
 
