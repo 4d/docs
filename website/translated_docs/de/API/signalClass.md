@@ -3,12 +3,13 @@ id: signalClass
 title: Signals
 ---
 
+<style> h2 { background: #d9ebff;}</style>
 Signals are tools provided by the 4D language to manage interactions and avoid conflicts between processes in a multiprocess application. Signals allow you to make sure one or more process(es) will wait for a specific task to be completed before continuing execution. Any process can wait and/or release a signal.
 
 > Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Only the process that sets the semaphore can remove it.
 
 
-## Signal Object
+### Signal Object
 
 A signal is a shared object that must be passed as a parameter to commands that call or create workers or processes.
 
@@ -39,7 +40,7 @@ Once a signal has been released using a `signal.trigger()` call, it cannot be re
 
 Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
 
-## Beispiel
+### Beispiel
 
 ```4d
  var $signal : 4D.Signal
@@ -79,7 +80,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $signal.trigger()
 ```
 
-## Summary
+### Summary
 
 
 |                                                                                                                                                                                         |
@@ -90,7 +91,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 | [<!-- INCLUDE #signalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.wait().Summary --> |
 
 
----
+
 
 <!-- REF signalClass.New signal.Desc -->
 ## New signal
@@ -164,7 +165,6 @@ The ***doSomething*** method could be like:
 
 <!-- END REF -->
 
----
 
 <!-- REF signalClass.description.Desc -->
 ## .description
@@ -188,7 +188,7 @@ This property is **read-write**.
 
 <!-- END REF -->
 
----
+
 
 <!-- REF signalClass.signaled.Desc -->
 ## .signaled
@@ -211,7 +211,7 @@ This property is **read-only**.
 
 <!-- END REF -->
 
----
+
 
 <!-- REF signalClass.trigger().Desc -->
 ## .trigger()
@@ -240,7 +240,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 <!-- END REF -->
 
----
+
 
 <!-- REF signalClass.wait().Desc -->
 ## .wait()
