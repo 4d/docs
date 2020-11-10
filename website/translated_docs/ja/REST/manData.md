@@ -18,9 +18,9 @@ REST によって、すべての [公開されているデータクラス、属�
 
 REST API を使って、4D内と同等のデータ操作をおこなうことができます。
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Before saving data, you can also validate it beforehand by calling [`$method=validate`]($method.md#methodvalidate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 データを保存する前に、[`$method=validate`]($method.md#methodvalidate) を呼び出して確定することもできます。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
 
-Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your datastore class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+[{dataClass}({key})](%7BdataClass%7D.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、DataClassクラスにメソッドを書いて [{dataClass}/{method}](%7BdataClass%7D.md#dataclassmethod) のように使い、エンティティセレクションやコレクションを返すようにすることができます。
 
 Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
