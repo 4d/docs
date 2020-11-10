@@ -173,20 +173,97 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 ## エンティティセレクションの作成
 
-以下の方法で、エンティティセレクション型のオブジェクトを作成することができます:
+以下の方法で、[エンティティセレクション](dsMapping.md#エンティティセレクション) 型のオブジェクトを作成することができます:
 
-*   データクラス内のエンティティをクエリする (`dataClass.query( )` メソッド参照)
-*   `dataClass.all( )` メソッドを使用して、データクラス内の全エンティティを選択する
-*   `Create entity selection` コマンドあるいは `dataClass.newSelection( )` メソッドを使用して空のエンティティコレクションオブジェクトを作成する
-
-*   **ORDA - エンティティセレクション** テーマ内の様々なメソッドの中から、`entitySelection.or( )` のように新しいエンティティセレクションを返すものを使用する
-
+*   [データクラス](API/dataclassClass.md#query) または [既存のエンティティセレクション](API/entitySelectionClass.md#query) のエンティティに対してクエリを実行する;
+*   [`.all( )`](API/dataclassClass.md#all) DataClass クラスの関数を使用して、データクラス内の全エンティティを選択する;
+*   `Create entity selection` コマンドあるいは [`.newSelection( )`](API/dataclassClass.md#newselection) DataClass クラスの関数を使用して空のエンティティコレクションオブジェクトを作成する;
+*   [`.copy( )`](API/entitySelectionClass.md#copy) DataClass クラスの関数を使用して、既存のエンティティセレクションを複製する;
+*   [EntitySelection クラス](API/entitySelectionClass.md) の様々な関数の中から、[`.or( )`](API/entitySelectionClass.md#or) のように新しいエンティティセレクションを返すものを使用する;
 *   "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
 
 データクラスに対して、異なるエンティティセレクションを好きなだけ同時に作成し、使用することができます。 エンティティセレクションは、エンティティへの参照を格納しているに過ぎないという点に注意してください。 異なるエンティティセレクションが同じエンティティへの参照を格納することも可能です。
-> エンティティセレクションは、それが作成されたプロセスにおいてのみ定義されます。 そのため、たとえばエンティティセレクションへの参照を、インタープロセス変数内に保存して他のプロセスで使用する、といったことはできません。
 
-## エンティティセレクションと属性
+### 共有可能な/共有不可のエンティティセレクション
+
+エンティティセレクションには 2種類あります: **共有可能** (複数のプロセスで読み込み可能、ただし編集不可) のものと、**共有不可** (カレントプロセスでのみ利用可能、ただし編集可能) のものです:
+
+- **共有可能** なエンティティセレクションは以下のような特徴を持ちます:
+    - 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で共有することができます。
+    - 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、*ロック識別子* を持っていないということです)。
+    - 新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、[`.add( )`](API/entitySelectionClass.md#add) 関数を呼び出す前に、[`.copy( )`](API/entitySelectionClass.md#copy) 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。
+
+- **共有不可** のエンティティセレクションは以下のような特徴を持ちます:
+    + プロセス間での共有はできません。また共有オブジェクト/コレクションへの保存もできません。 共有不可のエンティティセレクションを共有オブジェクト/コレクションに保存しようとした場合、エラーがトリガーされます (エラー -10721 - 共有オブジェクトまたはコレクションにおいてサポートされる値の型ではありません)。
+    + 新たにエンティティを追加することができます。
+
+多くの場合において、新規のエンティティセレクションは **共有可能** です。たとえば:
+
+- 様々な ORDA クラス関数 ([`entitySelection.query( )`](API/entitySelectionClass.md#query)、[`dataClass.query( )`](API/dataclassClass.md#query) など) の結果として返されるエンティティセレクション。
+- リレーションに基づいたエンティティセレクション (例: `company.employee`)
+- 値の "投影" の結果のエンティティセレクション (例: `ds.Employee.all().employer`)
+- [`.copy( )`](API/entitySelectionClass.md#copy) または `OB Copy` を使用して、明示的に共有可能としてコピーされたエンティティセレクション
+
+ただし、以下の場合には新規エンティティセレクションは **共有不可** となります:
+
+- [`.newSelection( )`](API/dataclassClass.md#newselection) 関数または`Create entity selection` コマンドを使用して作成された空のエンティティセレクション
+- [`.copy( )`](API/entitySelectionClass.md#copy) または `OB Copy` を使用して、明示的に共有不可としてコピーされたエンティティセレクション
+
+#### 例題
+
+二つのエンティティセレクションを使用し、それらをワーカープロセスに渡して適切な相手にメールを送信したい場合を考えます:
+
+```4d
+ If(Storage.info=Null)
+    Use(Storage)
+       Storage.info:=New shared object()
+    End use
+ End if
+
+ Use(Storage.info)
+  // エンティティセレクションを共有オブジェクトへと保存します
+    Storage.info.paid:=ds.Invoices.query("status=:1";"Paid")
+    Storage.info.unpaid:=ds.Invoices.query("status=:1";"Unpaid")
+ End use
+
+ CALL WORKER("mailing";"sendMails";Storage.info)
+
+sendMails メソッド:
+
+ var $info: ;$1Object
+ var $paid;$unpaid : cs.InvoicesSelection
+ var $invoice : cs.InvoicesEntity
+
+ var $server;$transporter;$email;$status : Object
+
+  // Eメールを準備します
+ $server:=New object
+ $server.host:="exchange.company.com"
+ $server.user:="myName@company.com"
+ $server.password:="my!!password"
+ $transporter:=SMTP New transporter($server)
+ $email:=New object
+ $email.from:="myName@company.com"
+
+  // エンティティセレクションを取得します
+ $info:=$1
+ $paid:=$info.paid
+ $unpaid:=$info.unpaid
+
+  //  エンティティセレクション内をループします
+ For each($invoice;$paid)
+    $email.to:=$invoice.customer.address // 顧客のメールアドレス
+    $email.subject:="請求書 # "+String($invoice.number)+” の入金を確認しました。”
+    $status:=$transporter.send($email)
+ End for each
+
+ For each($invoice;$unpaid)
+    $email.to:=$invoice.customer.address // 顧客のメールアドレス
+    $email.subject:="請求書 # "+String($invoice.number)+" が未入金となっています。"
+    $status:=$transporter.send($email)
+ End for each
+```
+
 
 ### エンティティセレクションとストレージ属性
 
