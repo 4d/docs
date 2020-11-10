@@ -23,14 +23,14 @@ RESTサーバーの次の情報を取得することができます:
 
 ## queryPath と queryPlan
 
-Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
+クエリによって生成されたエンティティセレクションは、`queryPlan` と `queryPath` という 2つのプロパティを持ちえます。 これらのプロパティを算出・取得するには、RESTリクエストに [`$queryPlan`]($queryplan.md) および [`$queryPath`]($querypath.md) を追加します。
 
 たとえば:
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
-These properties are objects that contain information about how the server performs composite queries internally through dataclasses and relations:
-- **queryPlan**: object containing the detailed description of the query just before it was executed (i.e., the planned query).
-- **queryPath**: object containing the detailed description of the query as it was actually performed.
+これらのプロパティは、データクラスやリレーションに対する複合クエリをサーバーが内部的にどのようにおこなっているかの情報を格納するオブジェクトです:
+- **queryPlan**: 実行前のクエリについての詳細な情報 (クエリプラン) を格納するオブジェクト。
+- **queryPath**: 実際に実行されたクエリ処理の詳細な情報 (クエリパス) を格納するオブジェクト。
 
-The information recorded includes the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application. Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+情報には、クエリの種類 (インデックスあるいはシーケンシャル)、必要なサブクエリおよびその連結演算子が含まれます。 クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 You may find it useful to analyze this information while developing your application. Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
