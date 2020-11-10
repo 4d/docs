@@ -52,7 +52,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 ### Centre / Tronquée (non centrée)
 
-`Grammaire JSON : "truncatedCenter" / "truncatedTopLeft"`
+`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
 
 Le format **Centre** permet à 4D de centrer l'image dans la zone et de rogner toute partie qui ne rentre pas dans la zone. 4D crops equally from each edge and from the top and bottom.
 
