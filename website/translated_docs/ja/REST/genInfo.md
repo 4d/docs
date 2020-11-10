@@ -19,9 +19,9 @@ RESTサーバーの次の情報を取得することができます:
 
 ## キャッシュ情報
 
-Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
+4D Server のキャッシュに保存されているエンティティセレクション、および実行中のユーザーセッションの情報を取得するには [`$info`]($info.md) パラメーターを使います。
 
-## queryPath and queryPlan
+## queryPath と queryPlan
 
 Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
 
