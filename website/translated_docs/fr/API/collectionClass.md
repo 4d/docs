@@ -3,6 +3,8 @@ id: collectionClass
 title: Collections
 ---
 
+<style> h2 { background: #d9ebff;}</style>
+
 The Collection class manages [Collection](Concepts/collection.md) type variables.
 
 Une collection est initialisée avec :
@@ -13,14 +15,14 @@ Une collection est initialisée avec :
 | [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
-## Exemple
+### Exemple
 
 ```4d
  var $colVar : Collection //création d'une variable 4D de type collection. $colVar:=New $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
 ```
 
 
-## Summary
+### Summary
 
 
 |                                                                                                                                                                                                  |
@@ -65,7 +67,7 @@ Une collection est initialisée avec :
 | [<!-- INCLUDE #collection.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->|
 | [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->|
 
----
+
 
 ## New collection
 
@@ -117,8 +119,6 @@ You must pay attention to the following conversion issues:
 
 
 
-
-
 You want to create a new empty collection and assign it to a 4D collection variable:
 
 ```4d
@@ -152,7 +152,6 @@ You create a new collection and then add a new element:
 
 
 
----
 
 ## New shared collection
 
@@ -210,9 +209,9 @@ You can pass any number of values of the following supported types:
  Use($mySharedCol)
     $mySharedCol[1]:="beta"
  End use
-```
+``` 
 
----
+
 
 <!-- REF collection.average().Desc -->
 ## .average()
@@ -239,6 +238,7 @@ You can pass any number of values of the following supported types:
 #### Description
 
 The `.average()` function <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
+
 
 
 Only numerical elements are taken into account for the calculation (other element types are ignored).
@@ -273,7 +273,6 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <!-- END REF -->
 
----
 
 
 <!-- REF collection.clear().Desc -->
@@ -312,7 +311,7 @@ $vSize:=$col.length //$vSize=0
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.combine().Desc -->
@@ -362,7 +361,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.concat().Desc -->
@@ -406,7 +405,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.copy().Desc -->
@@ -532,7 +531,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.count().Desc -->
@@ -580,7 +579,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.countValues().Desc -->
@@ -661,7 +660,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.distinct().Desc -->
@@ -716,7 +715,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.equal().Desc -->
@@ -773,7 +772,6 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 <!-- END REF -->
 
 
----
 
 
 <!-- REF collection.every().Desc -->
@@ -869,7 +867,7 @@ End if
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.extract().Desc -->
@@ -944,7 +942,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.fill().Desc -->
@@ -1001,7 +999,7 @@ In case of inconsistency, the following rules apply:
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.filter().Desc -->
@@ -1093,7 +1091,7 @@ The code for ***TypeLookUp*** is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.find().Desc -->
@@ -1190,7 +1188,7 @@ The code for ***FindCity*** is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.findIndex().Desc -->
@@ -1271,7 +1269,7 @@ The code for ***FindCity*** method is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.indexOf().Desc -->
@@ -1330,7 +1328,7 @@ Optionally, you can pass the index of collection from which to start the search 
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.indices().Desc -->
@@ -1386,7 +1384,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.insert().Desc -->
@@ -1437,7 +1435,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.join().Desc -->
@@ -1481,7 +1479,7 @@ By default, null or empty elements of the collection are returned in the resulti
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.lastIndexOf().Desc -->
@@ -1540,7 +1538,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 <!-- END REF -->
 
---- 
+ 
 
 
 <!-- REF collection.length.Desc -->
@@ -1574,7 +1572,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.map().Desc -->
@@ -1640,7 +1638,7 @@ Here is the ***Percentage*** method:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.max().Desc -->
@@ -1690,7 +1688,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.min().Desc -->
@@ -1740,7 +1738,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -1878,7 +1876,7 @@ Ordering with a property path:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.orderByMethod().Desc -->
@@ -1962,7 +1960,7 @@ Here is the code for ***WordLength***:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.pop().Desc -->
@@ -2010,7 +2008,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.push().Desc -->
@@ -2068,7 +2066,7 @@ You want to sort the resutling collection:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.query().Desc -->
@@ -2175,7 +2173,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.reduce().Desc -->
@@ -2265,7 +2263,6 @@ With the following ***Flatten*** method:
 <!-- END REF -->
 
 
----
 
 
 <!-- REF collection.remove().Desc -->
@@ -2324,7 +2321,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 
 
----
+
 
 
 <!-- REF collection.resize().Desc -->
@@ -2381,7 +2378,7 @@ By default, new elements are filled will **null** values. You can specify the va
 <!-- END REF -->
 
 
----
+
 
 
 
@@ -2421,7 +2418,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.shift().Desc -->
@@ -2465,7 +2462,7 @@ If the collection is empty, this method does nothing.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.slice().Desc -->
@@ -2516,7 +2513,7 @@ The returned collection contains the element specified by *startFrom* and all su
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.some().Desc -->
@@ -2597,7 +2594,7 @@ With the following *NumberGreaterThan0* method:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.sort().Desc -->
@@ -2685,7 +2682,7 @@ If the collection contains elements of different types, they are first grouped b
  
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.sum().Desc -->
@@ -2747,7 +2744,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.unshift().Desc -->
