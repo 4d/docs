@@ -2,7 +2,7 @@
 id: dataclassAttributeClass
 title: DataClassAttribute
 ---
-
+<style> h2 { background: #d9ebff;}</style>
 Dataclass attributes are available as properties of their respective classes. For example:
 
 ```4d
@@ -16,7 +16,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
-## Summary
+### Summary
 
 ||
 |---|
@@ -33,7 +33,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 |[<!-- INCLUDE dataclassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.type.Summary --> |
 |[<!-- INCLUDE dataclassAttributeClass.unique.Syntax -->](#unique)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.unique.Summary --> |
 
----
+
 
 <!-- REF dataclassAttributeClass.autoFilled.Desc -->
 ## .autoFilled 
@@ -64,7 +64,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.fieldNumber.Desc -->
 ## .fieldNumber 
@@ -92,7 +92,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.fieldType.Desc -->
 ## .fieldType  
@@ -123,7 +123,6 @@ The `.fieldType` property <!-- REF dataclassAttributeClass.fieldType.Summary -->
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassAttributeClass.indexed.Desc -->
 ## .indexed  
@@ -150,7 +149,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.inverseName.Desc -->
 ## .inverseName  
@@ -178,7 +177,6 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 
 
 
----
 
 <!-- REF dataclassAttributeClass.keyWordIndexed.Desc -->
 ## .keyWordIndexed  
@@ -204,7 +202,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassAttributeClass.kind.Desc -->
 ## .kind  
@@ -246,7 +244,7 @@ Given the following table and relation:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.mandatory.Desc -->
 ## .mandatory  
@@ -275,7 +273,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.name.Desc -->
 ## .name  
@@ -305,7 +303,6 @@ The `.name` property <!-- REF dataclassAttributeClass.name.Summary -->returns th
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass  
@@ -346,7 +343,6 @@ Given the following tables and relations:
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassAttributeClass.type.Desc -->
 ## .type  
@@ -379,7 +375,7 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.unique.Desc -->
 ## .unique  

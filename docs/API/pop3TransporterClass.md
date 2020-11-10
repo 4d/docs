@@ -2,11 +2,11 @@
 id: pop3TransporterClass
 title: POP3 Transporter 
 ---
-
+<style> h2 { background: #d9ebff;}</style>
 The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
 
 
-## POP3 Transporter object
+### POP3 Transporter object
 
 POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. They provide the following properties and functions:
 
@@ -29,7 +29,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 |[<!-- INCLUDE #pop3TransporterClass.undeleteAll().Syntax -->](#undeleteall)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.undeleteAll().Summary -->|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
----
+
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Desc -->
 ## POP3 New transporter
@@ -99,16 +99,14 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 <!-- END REF -->
 
----
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 
----
+
 
 <!-- INCLUDE transporter.authenticationMode.Desc -->
 
----
 
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
@@ -138,11 +136,10 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
  End if
 ```
 
----
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
----
+
 
 
 ## .delete()
@@ -191,7 +188,7 @@ Executing this method does not actually remove any email. The flagged email will
 ```
 
 
----
+
 
 ## .getBoxInfo()
 
@@ -243,7 +240,7 @@ The `boxInfo` object returned contains the following properties:
 ```
 
 
----
+
 
 ## .getMail()
 
@@ -303,7 +300,7 @@ You want to know the sender of the first mail of the mailbox:
 ```
 
 
----
+
 
 ## .getMailInfo()
 
@@ -366,7 +363,7 @@ The method returns **Null** if:
 ```
 
 
----
+
 
 ## .getMailInfoList()
 
@@ -437,8 +434,6 @@ You want to know the total number and size of emails in the mailbox:
 
 
 
----
-
 ## .getMIMEAsBlob()
 
 <details><summary>History</summary>
@@ -497,26 +492,22 @@ You want to know the total number and size of emails in the mailbox:
  $blob:=$transporter.getMIMEAsBlob($mailInfo[0].number)
 ```
 
----
-
 
 
 <!-- INCLUDE transporter.host.Desc -->
 
 
----
+
 
 
 
 <!-- INCLUDE transporter.logFile.Desc -->
 
----
 
 
 <!-- INCLUDE transporter.port.Desc -->
 
 
----
 
 
 
@@ -546,7 +537,6 @@ The `.undeleteAll()` function <!-- REF #pop3TransporterClass.undeleteAll().Summa
 <!-- END REF -->
 
 
----
 
 <!-- INCLUDE transporter.user.Desc -->
 
