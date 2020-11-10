@@ -1,6 +1,6 @@
 ---
 id: manData
-title: Manipulating Data
+title: データ操作
 ---
 
 All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](classFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
