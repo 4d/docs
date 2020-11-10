@@ -3,7 +3,9 @@ id: formulaClass
 title: Formulas
 ---
 
-## Formula Objects
+<style> h2 { background: #d9ebff;}</style>
+
+### Formula Objects
 
 The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
@@ -39,7 +41,7 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
  $f.message.apply() //displays "Hello world"
 ```
 
-### Passing parameters
+#### Passing parameters
 
 You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. For example, you can write:
 
@@ -59,7 +61,7 @@ Or using the [.call()](#call) function:
  $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2019" (for example)
 ```
 
-### Parameters to a single method
+#### Parameters to a single method
 
 For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. For example:
 
@@ -82,7 +84,7 @@ For more convenience, when the formula is made of a single project method, param
 
 Parameters are received within the method, in the order they are specified in the call.
 
-## About 4D.Function objects
+### About 4D.Function objects
 
 A `4D.Function` object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D proposes three kinds of Function objects:
 
@@ -92,7 +94,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 
 
-## Summary
+### Summary
 
 
 |                                                                                                                                                                             |
@@ -102,7 +104,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 | [<!-- INCLUDE #formulaClass.source.Syntax -->](#source)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.source.Summary --> |
 
 
----
+
 
 <!-- REF formulaClass.Formula.Desc -->
 ## Formula
@@ -175,6 +177,7 @@ A simple formula:
 A formula using local variables:
 
 ```4d
+
  $value:=10
  $o:=New object("f";Formula($value))
  $value:=20
@@ -238,7 +241,7 @@ Calling a formula using object notation:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF formulaClass.Formula from string.Desc -->
 ## Formula from string
@@ -296,7 +299,6 @@ The following code will create a dialog accepting a formula in text format:
 <!-- END REF -->
 
 
----
 
 <!-- REF formulaClass.apply().Desc -->
 ## .apply()
@@ -357,7 +359,6 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 <!-- END REF -->
 
----
 
 <!-- REF formulaClass.call().Desc -->
 ## .call()
@@ -409,7 +410,6 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 <!-- END REF -->
 
 
----
 
 <!-- REF formulaClass.source.Desc -->
 ## .source
