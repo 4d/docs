@@ -3,10 +3,12 @@ id: entitySelectionClass
 title: Entity Selections
 ---
 
+<style>h2 { background: #d9ebff;}</style>
+
 An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
 
-## Summary
+### Summary
 
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,7 +44,6 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 
 
----
 
 <!-- REF entitySelectionClass.index.Desc -->
 ## &#91;*index*&#93;
@@ -96,7 +97,6 @@ Note that the corresponding entity is reloaded from the datastore.
 
 
 
----
 
 <!-- REF entitySelectionClass.attributeName.Desc -->
 ## .*attributeName*
@@ -175,7 +175,7 @@ The resulting object is an entity selection of Employee with duplications remove
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entitySelectionClass.add().Desc -->
 ## .add()
@@ -244,7 +244,6 @@ Calls to the function can be chained:
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.and().Desc -->
 ## .and()
@@ -311,7 +310,6 @@ We want to have a selection of employees named "Jones" who live in New York:
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.average().Desc -->
 ## .average()
@@ -364,7 +362,6 @@ We want to obtain a list of employees whose salary is higher than the average sa
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.contains().Desc -->
 ## .contains()
@@ -413,7 +410,6 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.count().Desc -->
 ## .count()
@@ -459,7 +455,6 @@ We want to find out the total number of employees for a company without counting
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.copy().Desc -->
 ## .copy()
@@ -523,7 +518,6 @@ Then this entity selection is updated with products and you want to share the pr
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.distinct().Desc -->
 ## .distinct()
@@ -578,7 +572,6 @@ You want to get a collection containing a single element per country name:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.drop().Desc -->
 ## .drop()
@@ -639,7 +632,6 @@ Example with the `dk stop dropping on first error` option:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.extract().Desc -->
 ## .extract()
@@ -651,8 +643,9 @@ Example with the `dk stop dropping on first error` option:
 
 </details>
 
-<!-- REF #entitySelectionClass.extract().Syntax -->
-**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+
+<!-- REF #entitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+
 
 <!-- REF #entitySelectionClass.extract().Params -->
 | Paramètres    | Type        |    | Description                                                                             |
@@ -742,7 +735,6 @@ Given the following table and relation:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.first().Desc -->
 ## .first()
@@ -800,7 +792,6 @@ There is, however, a difference between both statements when the selection is em
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.getDataClass().Desc -->
 ## .getDataClass()
@@ -851,7 +842,6 @@ The following generic code duplicates all entities of the entity selection:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.isOrdered().Desc -->
 ## .isOrdered()
@@ -904,7 +894,6 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.last().Desc -->
 ## .last()
@@ -953,7 +942,6 @@ If the entity selection is empty, the function returns Null.
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.length.Desc -->
 ## .length
@@ -986,7 +974,6 @@ Entity selections always have a `.length` property.
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.max().Desc -->
 ## .max()
@@ -1036,7 +1023,6 @@ We want to find the highest salary among all the female employees:
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.min().Desc -->
 ## .min()
@@ -1085,8 +1071,6 @@ In this example, we want to find the lowest salary among all the female employee
 
 <!-- END REF -->
 
-
----
 
 <!-- REF entitySelectionClass.minus().Desc -->
 ## .minus()
@@ -1153,7 +1137,6 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.or().Desc -->
 ## .or()
@@ -1214,7 +1197,6 @@ If the original entity selection and the parameter are not related to the same d
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.orderBy().Desc -->
 ## .orderBy()
@@ -1290,7 +1272,6 @@ You can add as many objects in the criteria collection as necessary.
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.orderByFormula().Desc -->
 ## .orderByFormula( )
@@ -1412,7 +1393,6 @@ In this example, the "marks" object field in the **Students** dataClass contains
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.query().Desc -->
 ## .query()
@@ -1467,7 +1447,6 @@ More examples of queries can be found in the DataClass [`.query()`](dataclassCla
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.queryPath.Desc -->
 ## .queryPath
@@ -1492,7 +1471,6 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.queryPlan.Desc -->
 ## .queryPlan
@@ -1516,7 +1494,6 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.refresh().Desc -->
 ## .refresh()
@@ -1597,7 +1574,6 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.slice().Desc -->
 ## .slice()
@@ -1657,7 +1633,6 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.sum().Desc -->
 ## .sum( )
@@ -1666,6 +1641,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 | Version | Modifications |
 | ------- | ------------- |
 | v17     | Ajoutées      |
+
 
 </details>
 
@@ -1707,7 +1683,6 @@ $sum:=$sel.sum("salary")
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.toCollection().Desc -->
 ## .toCollection( )
