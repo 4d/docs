@@ -351,7 +351,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 次の表は、4Dの命名規則についてまとめています。
 
-| 識別子              | 最大 長     | 例                          |
+| 識別子              | 最大 長     | 例題                         |
 | ---------------- | -------- | -------------------------- |
 | テーブル             | 31       | [Invoices]                 |
 | フィールド            | 31       | [Employees]Last Name       |
