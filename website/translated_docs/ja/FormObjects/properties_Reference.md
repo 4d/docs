@@ -551,7 +551,7 @@ title: JSON プロパティリスト
   
   <tr>
     <td>
-      <a href="properties_Action.md#ドロップ有効">dropping</a>
+      <a href="properties_Action.md#ドラッグ有効">dropping</a>
     </td>
     
     <td>
