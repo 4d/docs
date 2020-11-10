@@ -1,6 +1,6 @@
 ---
 id: dataclassClass
-title: データクラス
+title: DataClass
 ---
 
 A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
