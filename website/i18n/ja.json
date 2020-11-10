@@ -42,7 +42,7 @@
         "title": "エンティティ"
       },
       "API/entitySelectionClass": {
-        "title": "Entity Selections"
+        "title": "EntitySelection"
       },
       "API/fileClass": {
         "title": "File"
