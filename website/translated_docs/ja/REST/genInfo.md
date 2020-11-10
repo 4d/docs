@@ -5,12 +5,12 @@ title: サーバー情報の取得
 
 RESTサーバーの次の情報を取得することができます:
 
-- the exposed datastores and their attributes
-- the REST server cache contents, including user sessions.
+- 公開されているデータクラスとデータクラス属性
+- RESTサーバーのキャッシュの中身 (ユーザーセッションを含む)
 
-## Catalog
+## カタログ
 
-Use the [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed datastore classes and their attributes](configuration.md#exposing-tables-and-fields).
+[公開されているデータクラスとデータクラス属性](configuration.md#テーブルやフィールドの公開) のリストを取得するには [`$catalog`]($catalog.md)、[`$catalog/{dataClass}`]($catalog.md#catalogdataclass)、または [`$catalog/$all`]($catalog.md#catalogall) パラメーターを使います。
 
 To get the collection of all exposed dataclasses along with their attributes:
 
