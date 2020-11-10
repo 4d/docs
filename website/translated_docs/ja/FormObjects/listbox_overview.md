@@ -140,7 +140,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [フッターを表示](properties_Headers.md#フッターを表示)                            | ○         | ○             | ○                            |
 | [行をダブルクリック](properties_ListBox.md#行をダブルクリック)                        |           | ○             |                              |
 | [ドラッグ有効](properties_Action.md#ドラッグ有効)                               | ○         | ○             | ○                            |
-| [ドロップ有効](properties_Action.md#ドロップ有効)                               | ○         | ○             | ○                            |
+| [ドロップ有効](properties_Action.md#ドラッグ有効)                               | ○         | ○             | ○                            |
 | [フォーカス可](properties_Entry.md#フォーカス可)                                | ○         | ○             | ○                            |
 | [フォント](properties_Text.md#フォント)                                     | ○         | ○             | ○                            |
 | [フォントカラー](properties_Text.md#フォントカラー)                               | ○         | ○             | ○                            |
