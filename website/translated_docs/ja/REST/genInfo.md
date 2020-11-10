@@ -8,16 +8,16 @@ RESTサーバーの次の情報を取得することができます:
 - 公開されているデータクラスとデータクラス属性
 - RESTサーバーのキャッシュの中身 (ユーザーセッションを含む)
 
-## Catalog
+## カタログ
 
-Use the [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed datastore classes and their attributes](configuration.md#exposing-tables-and-fields).
+[公開されているデータクラスとデータクラス属性](configuration.md#テーブルやフィールドの公開) のリストを取得するには [`$catalog`]($catalog.md)、[`$catalog/{dataClass}`]($catalog.md#catalogdataclass)、または [`$catalog/$all`]($catalog.md#catalogall) パラメーターを使います。
 
-To get the collection of all exposed dataclasses along with their attributes:
+公開されている全データクラスとデータクラス属性のコレクションを取得するには:
 
 `GET /rest/$catalog/$all`
 
 
-## Cache info
+## キャッシュ情報
 
 Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
 
