@@ -3,7 +3,7 @@ id: classFunctions
 title: Calling ORDA class functions
 ---
 
-## Overview
+## Überblick
 
 You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
