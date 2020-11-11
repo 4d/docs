@@ -4,7 +4,7 @@ title: Parameter
 ---
 
 
-## Overview
+## Überblick
 
 Sie werden öfters sehen, dass Sie Ihren Methoden und Funktionen Daten übergeben müssen. Das lässt sich leicht mit Parametern durchführen.
 
