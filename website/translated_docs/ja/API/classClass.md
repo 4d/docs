@@ -1,6 +1,6 @@
 ---
 id: classClass
-title: クラス
+title: Class
 ---
 
 <style> h2 { background: #d9ebff;}</style>
