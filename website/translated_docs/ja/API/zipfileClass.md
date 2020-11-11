@@ -1,6 +1,6 @@
 ---
 id: zipClass
-title: ZIP アーカイブ
+title: ZIP Archive
 ---
 
 <style> h2 { background: #d9ebff;}</style>
