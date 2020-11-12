@@ -3,7 +3,7 @@ id: webServerObject
 title: Web Server object
 ---
 
-## Overview
+## Überblick
 
 A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
 

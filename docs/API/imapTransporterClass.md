@@ -18,7 +18,8 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 |[<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.copy().Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.copy().Summary -->|
-|[<!-- INCLUDE #imapTransporterClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.delete().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.expunge().Summary -->|
+|[<!-- INCLUDE #imapTransporterClass.expunge().Syntax -->](#expunge)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.delete().Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.getDelimiter().Syntax -->](#getdelimiter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getDelimiter().Summary -->|
@@ -350,6 +351,64 @@ To delete all messages in the current mailbox:
 
 <!-- END REF -->
 
+<!-- REF imapTransporterClass.expunge().Desc -->
+## .expunge()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R6|Added|
+</details>
+
+<!-- REF #imapTransporterClass.expunge().Syntax -->
+**.delete( )** : Object<!-- END REF -->
+
+
+#### Description
+
+The `.expunge()` function <!-- REF #imapTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete( )`](#delete) or [`.addFlags( )`](#addflags) methods.
+
+**Returned object**
+
+The function returns an object describing the IMAP status: 
+
+|Property||	Type|	Description|
+|---|---|---|---|
+|success||Boolean|True if the operation is successful, False otherwise
+|statusText ||	Text|Status message returned by the IMAP server, or last error returned in the 4D error stack  |
+|errors ||Collection|4D error stack (not returned if a IMAP server response is received)|
+|errors |\[].errcode|Number|	4D error code|
+|errors |\[].message|Text|Description of the 4D error |
+|errors |\[].componentSignature|Text|Signature of the internal component which returned the error|
+
+
+#### Example 1 
+
+```4d
+var $options;$transporter;$boxInfo;$status : Object
+var $ids : Collection
+ 
+$options:=New object
+$options.host:="imap.gmail.com"
+$options.port:=993
+$options.user:="4d@gmail.com"
+$options.password:="xxxxx"
+ 
+// Create transporter
+$transporter:=IMAP New transporter($options)
+ 
+// Select mailbox
+$boxInfo:=$transporter.selectBox("INBOX")
+ 
+// Find and delete all seen messages in INBOX
+$ids:=$transporter.searchMails("SEEN")
+$status:=$transporter.delete($ids)
+ 
+// Purge all messages flagged as deleted
+$status:=$transporter.expunge()
+```
+
+<!-- END REF -->
 
 
 <!-- REF imapTransporterClass.getBoxInfo().Desc -->
