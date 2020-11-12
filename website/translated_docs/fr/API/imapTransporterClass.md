@@ -15,6 +15,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
 | [<!-- INCLUDE #transporter.addFlags.Syntax -->](#addflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.addFlags.Summary -->|
+| [<!-- INCLUDE #transporter.append.Syntax -->](#append)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.append.Summary -->|
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
 | [<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
@@ -152,8 +153,8 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 | $flagged   | Booléen | True to add the "flagged" flag to the message  |
 | $answered  | Booléen | True to add the "answered" flag to the message |
 | $deleted   | Booléen | True to add the "deleted" flag to the message  |
-
-Note that False values are ignored.
+> * False values are ignored.
+> * The interpretation of keyword flags may vary per mail client.
 
 
 **Returned object**
@@ -194,6 +195,100 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 ```
 
 <!-- END REF -->
+
+
+<!-- REF imapTransporterClass.append().Desc -->
+## .append()
+
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R6  | Ajoutées      |
+</details>
+
+<!-- REF #imapTransporterClass.append().Syntax -->
+**.append**( *mailObj* : Object; *destinationBox* : Text; *options* : Object ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.append().Params -->
+| Paramètres     | Type  |    | Description                     |
+| -------------- | ----- |:--:| ------------------------------- |
+| mailObj        | Objet | -> | Email object                    |
+| destinationBox | Texte | -> | Mailbox to receive Email object |
+| options        | Objet | -> | Object containing charset info  |
+| Résultat       | Objet | <- | Status of the delete operation  |
+<!-- END REF -->
+
+
+#### Description
+
+The `.append()` function <!-- REF #imapTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
+
+In the `mailObj` parameter, pass an Email object. For a comprehensive description of mail properties, see [Email object](emails.html#email-object).  The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
+
+The optional `destinationBox` parameter lets you pass the name of a mailbox where the `mailObj` will be appended. If omitted, the current mailbox is used.
+
+In the optional `options` parameter, you can pass an object to define the charset and encoding for specific parts of the email. Available properties:
+
+| Propriété     | Type  | Description                                                                                                                                                                    |
+| ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| headerCharset | Texte | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values: See possible charsets table below |
+| bodyCharset   | Texte | Charset and encoding used for the html and text body contents of the email. Possible values: See possible charsets table below                                                 |
+
+Possible charsets:
+
+| Constant                 | Valeur                         | Commentaire                                                                                               |
+| ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>bodyCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                 |
+| mail mode ISO88591       | ISO-8859-1                     | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                 |
+| mail mode UTF8           | US-ASCII_UTF8_QP             | headerCharset & bodyCharset: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**) |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | headerCharset & bodyCharset: US-ASCII if possible, otherwise UTF-8 & base64                               |
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| Propriété  |                         | Type       | Description                                                                              |
+| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| success    |                         | Booléen    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | Texte      | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
+| errors     | \[].errcode            | Nombre     | 4D error code                                                                            |
+| errors     | \[].message            | Texte      | Description of the 4D error                                                              |
+| errors     | \[].componentSignature | Texte      | Signature of the internal component which returned the error                             |
+
+
+
+
+#### Exemple
+
+To save an email in the Drafts mailbox:
+
+```4d
+var $settings; $status; $msg; $imap: Object
+
+$settings:=New object("host"; "domain.com"; "user"; "xxxx"; "password"; "xxxx"; "port"; 993)
+
+$imap:=IMAP New transporter($settings)
+
+$msg:=New object
+$msg.from:="xxxx@domain.com"
+$msg.subject:="Lorem Ipsum"
+$msg.textBody:="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+$msg.keywords:=New object
+$msg.keywords["$seen"]:=True//flag the message as read
+$msg.keywords["$draft"]:=True//flag the message as a draft
+
+$status:=$imap.append($msg; "Drafts")
+```
+
+<!-- END REF -->
+
+
+
+
+
+
 
 
 
@@ -358,7 +453,7 @@ To copy all messages in the current mailbox:
 
 #### Description
 
-The `.delete()` function <!-- REF #imapTransporterClass.delete().Summary -->sets the "delete" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
+The `.delete()` function <!-- REF #imapTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
 
 You can pass:
 
@@ -581,12 +676,12 @@ The `.getBoxList()` function <!-- REF #imapTransporterClass.getBoxList().Summary
 
 Each object of the returned collection contains the following properties:
 
-| Propriété        | Type    | Description                                                                                                         |
-| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | Texte   | Name of the mailbox                                                                                                 |
+| Propriété        | Type    | Description                                                                                                          |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| \[].name        | Texte   | Name of the mailbox                                                                                                  |
 | \[].selectable  | boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>               |
 | \[].inferior    | boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul> |
-| \[].interesting | boolean | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>                     |
+| \[].interesting | boolean | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>                      |
 
 
 If the account does not contain any mailboxes, an empty collection is returned.
