@@ -10,14 +10,14 @@ title: バリアント
 - BLOB
 - boolean
 - collection
-- 日付
+- date
 - 倍長整数
 - object
 - ピクチャー
-- ポインター
+- pointer
 - 実数
 - text
-- 時間
+- time
 - null
 - 未定義
 

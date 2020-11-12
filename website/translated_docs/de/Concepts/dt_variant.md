@@ -10,14 +10,14 @@ Eine Variable vom Typ Variant kann einen Wert in folgenden Datentypen enthalten:
 - BLOB
 - boolean
 - collection
-- Datum
+- date
 - Lange Ganzzahl
 - object
-- Bild
-- Zeiger
+- picture
+- pointer
 - Zahl
 - Text
-- Zeit
+- time
 - Null
 - Undefiniert
 
