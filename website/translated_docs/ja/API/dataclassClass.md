@@ -1,13 +1,15 @@
 ---
 id: dataclassClass
-title: データクラス
+title: DataClass
 ---
+
+<style> h2 { background: #d9ebff;}</style>
 
 A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
 
 
 
-## Summary
+### Summary
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +24,6 @@ A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 | [<!-- INCLUDE #dataclassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.query().Summary --> |
 
 
----
 
 <!-- REF dataclassClass.attributeName.Desc -->
 ## .*attributeName*
@@ -94,7 +95,6 @@ Considering the following table properties:
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassClass.all().Desc -->
 ## .all()
@@ -147,7 +147,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -342,7 +342,6 @@ In this example, the first entity will be created and saved but the second will 
 
 <!-- END REF -->
 
----
 
 <!-- REF dataclassClass.get().Desc -->
 ## .get()
@@ -422,7 +421,6 @@ This example illustrates the use of the *context* property:
 
 <!-- END REF -->
 
----
 
 <!-- REF dataclassClass.getDataStore().Desc -->
 ## .getDataStore()
@@ -476,7 +474,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.getInfo().Desc -->
 ## .getInfo()
@@ -549,7 +547,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.new().Desc -->
 ## .new()
@@ -592,7 +590,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassClass.newSelection().Desc -->
 ## .newSelection()
@@ -616,13 +614,15 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 #### 説明
 
-The `.newSelection( )` function <!-- REF #dataclassClass.newSelection().Summary -->creates a new, blank, , non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+The `.newSelection( )` function <!-- REF #dataclassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
 
-> For more information, see [Shareable vs Non-shareable entity selections] section.
+> For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+
 
 If you want to create an ordered entity selection, pass the `dk keep ordered` selector in the *keepOrder* parameter. By default if you omit this parameter, or if you pass the `dk non ordered` selector, the method creates an unordered entity selection. Unordered entity selections are faster but you cannot rely on entity positions. For more information, please see [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](entitySelectionClass.md#add) function.
+
 
 #### 例題
 
@@ -636,7 +636,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.query().Desc -->
 ## .query()
@@ -851,7 +851,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 
 **About queryPlan and queryPath**
 
-The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 You may find it useful to analyze this information while developing your application(s). 一般的には、クエリプランとクエリパスの詳細は同一になるはずですが、4D はパフォーマンスの向上のために、動的な最適化をクエリ実行時に実装することがあるからです。 たとえば、その方が早いと判断した場合には、4Dエンジンはインデックス付きクエリをシーケンシャルなものへと動的に変換することがあります。 これは検索されているエンティティの数が少ないときに起こりえます。
 
 For example, if you execute the following query:
 
@@ -995,6 +995,7 @@ $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"
 ```
 
 Query with indexed placeholders for attributes and values:
+
 
 ```4d
 var $es : cs.EmployeeSelection

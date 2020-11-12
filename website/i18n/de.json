@@ -81,7 +81,7 @@
         "title": "Log file (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -358,7 +358,7 @@
         "title": "On Window Opening Denied"
       },
       "Events/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -574,7 +574,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -603,8 +603,8 @@
         "sidebar_label": "Seite Information"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Überblick",
+        "sidebar_label": "Überblick"
       },
       "MSC/repair": {
         "title": "Seite Reparieren",
@@ -635,7 +635,7 @@
         "title": "Data Model Classes"
       },
       "ORDA/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"
@@ -656,7 +656,7 @@
         "title": "Documenting a project"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -758,7 +758,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"

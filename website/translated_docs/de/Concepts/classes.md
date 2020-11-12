@@ -1,10 +1,10 @@
 ---
 id: classes
-title: Classes
+title: Klassen
 ---
 
 
-## Overview
+## Überblick
 
 Die 4D Programmiersprache unterstützt das Konzept **Klassen**. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.
 
@@ -45,7 +45,7 @@ Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
 Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Datei anlegen:
 
-- Project folder
+- Ordner Project
     + Project
         * Sources
             - Classes
@@ -201,7 +201,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Class Functions sind Eigenschaften des Objekts Prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
-In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object. md#identifier-f%C3%BCr-objekteigenschaft) konform sein.
 
 > **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im 4D Code-Editor nicht berücksichtigt. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `"cs.MyClass` eingeben.
 

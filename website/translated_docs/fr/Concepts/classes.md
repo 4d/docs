@@ -92,7 +92,7 @@ In the various 4D Developer windows (code editor, compiler, debugger, runtime ex
 
 ## Class stores
 
-Available classes are accessible from their class stores. Two class stores are available:
+Les classes disponibles sont accessibles depuis leurs class stores. Two class stores are available:
 
 - `cs` for user class store
 - `4D` for built-in class store

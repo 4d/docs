@@ -3,6 +3,7 @@ id: fileClass
 title: File
 ---
 
+<style> h2 { background: #d9ebff;}</style>
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
@@ -15,7 +16,7 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-## File object
+### File object
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -50,7 +51,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #fileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setText().Summary -->|
 | [<!-- INCLUDE #document.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
 
----
+
 
 ## File
 
@@ -121,14 +122,14 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 
 If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
 
-If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
+If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
 
 
----
+
 
 <!-- INCLUDE document.copyTo().Desc -->
 
----
+
 
 <!-- REF file.create().Desc -->
 ## .create()
@@ -174,7 +175,7 @@ Creation of a preferences file in the database folder:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF file.createAlias().Desc -->
@@ -229,17 +230,16 @@ You want to create an alias to a file in your database folder:
 ```
 <!-- END REF -->
 
----
+
 
 
 <!-- INCLUDE document.creationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.creationTime.Desc -->
 
----
 
 
 <!-- REF file.delete().Desc -->
@@ -285,72 +285,68 @@ You want to delete a specific file in the database folder:
 ``` 
 <!-- END REF -->
 
----
+
 
 
 <!-- INCLUDE document.exists.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.extension.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.fullName.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.getContent().Desc -->
 
----
+
 
 
 <!-- INCLUDE document.getIcon().Desc -->
 
----
-
 
 <!-- INCLUDE document.getText().Desc -->
 
----
+
 
 
 <!-- INCLUDE document.hidden.Desc -->
 
----
 
 
 <!-- INCLUDE document.isAlias.Desc -->
 
----
 
 
 <!-- INCLUDE document.isFile.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.isFolder.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.isWritable.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.modificationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.modificationTime.Desc -->
 
----
+
 
 
 <!-- REF file.moveTo().Desc -->
@@ -399,32 +395,26 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!-- END REF -->
 
 
----
 
 
 <!-- INCLUDE document.name.Desc -->
 
----
 
 
 <!-- INCLUDE document.original.Desc -->
 
----
 
 
 <!-- INCLUDE document.parent.Desc -->
 
----
 
 
 <!-- INCLUDE document.path.Desc -->
 
----
 
 
 <!-- INCLUDE document.platformPath.Desc -->
 
----
 
 
 <!-- REF file.rename().Desc --> 
@@ -471,8 +461,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!-- END REF -->
 
 
----
-
 
 <!-- REF file.setContent().Desc --> 
 ## .setContent()
@@ -509,7 +497,6 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 
 
----
 
 
 <!-- REF file.setText().Desc --> 
@@ -577,7 +564,6 @@ $myFile.setText("Hello world")
 
 
 
----
 
 
 <!-- INCLUDE document.size.Desc -->

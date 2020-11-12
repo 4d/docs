@@ -3,12 +3,14 @@ id: datastoreClass
 title: DataStore
 ---
 
+<style> h2 { background: #d9ebff;}</style>
+
 A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
 
 *   [ds](#ds): a shortcut to the main datastore
 *   [Open datastore](#open-datastore): to open any remote datastore
 
-## Summary
+### Summary
 
 |                                                                                                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,7 +28,6 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 
 
----
 
 ## ds
 
@@ -101,7 +102,7 @@ Using the main datastore on the 4D database:
 ```
 
 
----
+
 
 ## Open datastore
 
@@ -204,10 +205,9 @@ Working with several remote datastores:
 
 #### Error management
 
-In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`.
+In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`. 
 
 
----
 
 <!-- REF datastoreClass.dataclassName.Desc -->
 ## *.dataclassName*
@@ -243,7 +243,6 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 <!-- END REF -->
 
 
----
 
 <!-- REF datastoreClass.cancelTransaction().Desc -->
 ## .cancelTransaction()
@@ -281,7 +280,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 <!-- END REF -->
 
----
+
 
 <!-- REF datastoreClass.encryptionStatus().Desc -->
 ## .encryptionStatus()
@@ -355,7 +354,7 @@ You want to know the number of encrypted tables in the current data file:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF datastoreClass.getInfo().Desc -->
 ## .getInfo()
@@ -426,7 +425,7 @@ On a remote datastore:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF datastoreClass.getRequestLog().Desc -->
 ## .getRequestLog()
@@ -466,7 +465,7 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
 
----
+
 
 <!-- REF datastoreClass.provideDataKey().Desc -->
 ## .provideDataKey()
@@ -545,7 +544,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 <!-- END REF -->
 
----
+
 
 <!-- REF datastoreClass.startRequestLog().Desc -->
 ## .startRequestLog()
@@ -623,7 +622,7 @@ You want to log ORDA client requests in memory:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF datastoreClass.startTransaction().Desc -->
 ## .startTransaction()
@@ -689,7 +688,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 <!-- END REF -->
 
----
+
 
 <!-- REF datastoreClass.stopRequestLog().Desc -->
 ## .stopRequestLog()
@@ -724,7 +723,7 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
----
+
 
 <!-- REF datastoreClass.validateTransaction().Desc -->
 ## .validateTransaction()

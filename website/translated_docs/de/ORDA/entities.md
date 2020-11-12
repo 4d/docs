@@ -173,20 +173,96 @@ You can assign or modify the value of a "1" related entity attribute from the "N
 
 ## Creating an entity selection
 
-You can create an object of type entity selection as follows:
+You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
 
-*   Querying the entities in a dataclass (see the `dataClass.query()` method);
-*   Using the `dataClass.all( )` method to select all the entities in a dataclass;
-*   Using the `Create entity selection` command or the `dataClass.newSelection()` method to create a blank entity collection object;
-
-*   Using one of the various methods from the **ORDA - EntitySelection** theme that returns a new entity selection, such as `entitySelection.or()`;
-
+*   Querying the entities [in a dataclass](API/dataclassClass.md#query) or in an [existing entity selection](API/entitySelectionClass.md#query);
+*   Using the [`.all()`](API/dataclassClass.md#all) dataclass function to select all the entities in a dataclass;
+*   Using the `Create entity selection` command or the [`.newSelection()`](API/dataclassClass.md#newselection) dataclass function to create a blank entity selection;
+*   Using the [`.copy()`](API/entitySelectionClass.md#copy) function to duplicate an existing entity selection;
+*   Using one of the various functions from the [Entity selection class](API/entitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/entitySelectionClass.md#or);
 *   Using a relation attribute of type "related entities" (see below).
 
 You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
-> An entity selection is only defined in the process where it was created. You cannot, for example, store a reference to an entity selection in an interprocess variable and use it in another process.
 
-## Entity selections and attributes
+### Shareable or non-shareable entity selections
+
+An entity selection can be **shareable** (readable by multiple processes, but not modifiable after creation) or **non-shareable** (only usable by the current process, but modifiable afterwards):
+
+- a **shareable** entity selection has the following characteristics:
+    - it can be stored in a shared object or shared collection, and can be shared between several processes or workers;
+    - it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
+    - it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/entitySelectionClass.md#copy) function, before calling [`.add()`](API/entitySelectionClass.md#add).
+
+- a **non-shareable** entity selection has the following characteristics:
+    + it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
+    + it accepts the addition of new entities.
+
+In most cases, new entity selections are **shareable**, including:
+
+- entity selections resulting from various ORDA class functions ([`.query()`](API/entitySelectionClass.md#query), [`.query()`](API/dataclassClass.md#query), etc.),
+- entity selections based upon relations (e.g. `company.employee`),
+- entity selections resulting from projections of values (e.g. `ds.Employee.all().employer`),
+- entity selections explicitely copied as shareable with [`.copy()`](API/entitySelectionClass.md#copy) or `OB Copy`.
+
+New entity selections are **non-shareable** in the following cases:
+
+- blank entity selections created using the [`.newSelection()`](API/dataclassClass.md#newselection) function or `Create entity selection` command,
+- entity selections explicitely copied as non-shareable with [`.copy()`](API/entitySelectionClass.md#copy) or `OB Copy`.
+
+#### Beispiel
+
+You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
+
+```4d
+ If(Storage.info=Null)
+    Use(Storage)
+       Storage.info:=New shared object()
+    End use
+ End if
+
+ Use(Storage.info)
+  //Put entity selections in a shared object
+    Storage.info.paid:=ds.Invoices.query("status=:1";"Paid")
+    Storage.info.unpaid:=ds.Invoices.query("status=:1";"Unpaid")
+ End use
+
+ CALL WORKER("mailing";"sendMails";Storage.info)
+The sendMails method:
+
+ var $info: ;$1Object
+ var $paid;$unpaid : cs.InvoicesSelection
+ var $invoice : cs.InvoicesEntity
+
+ var $server;$transporter;$email;$status : Object
+
+  //Prepare emails
+ $server:=New object
+ $server.host:="exchange.company.com"
+ $server.user:="myName@company.com"
+ $server.password:="my!!password"
+ $transporter:=SMTP New transporter($server)
+ $email:=New object
+ $email.from:="myName@company.com"
+
+  //Get entity selections
+ $info:=$1
+ $paid:=$info.paid
+ $unpaid:=$info.unpaid
+
+  //Loops on entity selections
+ For each($invoice;$paid)
+    $email.to:=$invoice.customer.address // email address of the customer
+    $email.subject:="Payment OK for invoice # "+String($invoice.number)
+    $status:=$transporter.send($email)
+ End for each
+
+ For each($invoice;$unpaid)
+    $email.to:=$invoice.customer.address // email address of the customer
+    $email.subject:="Please pay invoice # "+String($invoice.number)
+    $status:=$transporter.send($email)
+ End for each
+```
+
 
 ### Entity selections and Storage attributes
 

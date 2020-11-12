@@ -3,10 +3,11 @@ id: entityClass
 title: Entity
 ---
 
+<style> h2 { background: #d9ebff;}</style>
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
-## Summary
+### Summary
 
 |                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +38,6 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 
 
----
 
 <!-- REF entityClass.attributeName.Desc -->
 ## .*attributeName*
@@ -77,7 +77,7 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.clone().Desc -->
 ## .clone()
@@ -121,7 +121,7 @@ This function can only be used with entities already saved in the database. It c
 
 
 
----
+
 
 <!-- REF entityClass.diff().Desc -->
 ## .diff()
@@ -325,7 +325,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.drop().Desc -->
 ## .drop()
@@ -433,7 +433,7 @@ Example with `dk force drop if stamp changed` option:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.first().Desc -->
 ## .first()
@@ -473,7 +473,6 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- END REF -->
 
 
----
 
 <!-- REF entityClass.fromObject().Desc -->
 ## .fromObject()
@@ -562,7 +561,7 @@ You could also use a related entity given as an object:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.getDataClass().Desc -->
 ## .getDataClass()
@@ -609,7 +608,7 @@ The following generic code duplicates any entity:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.getKey().Desc -->
 ## .getKey()
@@ -653,7 +652,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.getSelection().Desc -->
 ## .getSelection()
@@ -698,7 +697,6 @@ If the entity does not belong to an entity selection, the function returns Null.
 <!-- END REF -->
 
 
----
 
 <!-- REF entityClass.getStamp().Desc -->
 ## .getStamp()
@@ -747,7 +745,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.indexOf().Desc -->
 ## .indexOf()
@@ -797,7 +795,7 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.isNew().Desc -->
 ## .isNew()
@@ -838,7 +836,7 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.last().Desc -->
 ## .last()
@@ -879,7 +877,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.lock().Desc -->
 ## .lock()
@@ -992,7 +990,7 @@ Example with `dk reload if stamp changed` option:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.next().Desc -->
 ## .next()
@@ -1034,7 +1032,6 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 
 <!-- END REF -->
 
----
 
 <!-- REF entityClass.previous().Desc -->
 ## .previous()
@@ -1077,7 +1074,6 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- END REF -->
 
 
----
 
 <!-- REF entityClass.reload().Desc -->
 ## .reload( )
@@ -1141,7 +1137,6 @@ The object returned by `.reload( )` contains the following properties:
 
 <!-- END REF -->
 
----
 
 <!-- REF entityClass.save().Desc -->
 ## .save()
@@ -1267,7 +1262,7 @@ Updating an entity with `dk auto merge` option:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.toObject().Desc -->
 ## .toObject()
@@ -1554,7 +1549,7 @@ Returns:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.touched().Desc -->
 ## .touched( )
@@ -1599,8 +1594,6 @@ In this example, we check to see if it is necessary to save the entity:
 
 <!-- END REF -->
 
-
----
 
 <!-- REF entityClass.touchedAttributes().Desc -->
 ## .touchedAttributes( )
@@ -1677,7 +1670,6 @@ In this case:
 
 <!-- END REF -->
 
----
 
 <!-- REF entityClass.unlock().Desc -->
 ## .unlock()
