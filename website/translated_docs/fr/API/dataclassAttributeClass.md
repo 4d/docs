@@ -7,8 +7,8 @@ title: DataClassAttribute
 Dataclass attributes are available as properties of their respective classes. Par exemple:
 
 ```4d
- nameAttribute:=ds.Company.name //reference to class attribute
- revenuesAttribute:=ds.Company["revenues"] //alternate way
+ nameAttribute:=ds.Company.name //référence à un attribut de classe
+ revenuesAttribute:=ds.Company["revenues"] //méthode alternative
 ```
 
 This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [**Entities**](entityClass.md).
@@ -357,11 +357,11 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 **Valeurs possibles :**
 
-| dataClassAttribute.kind | type                                                             | Commentaire                                                                                                              |
-| ----------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| storage                 | "number", "date", "object", "bool", "image", "blob", or "string" | "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types |
-| relatedEntity           | related dataClass name                                           | Ex: "Companies"                                                                                                          |
-| relatedEntities         | related dataClass name + "Selection" suffix                      | Ex: "EmployeeSelection"                                                                                                  |
+| dataClassAttribute.kind | type                                                             | Commentaire                                                                                                                                   |
+| ----------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "number", "date", "object", "bool", "image", "blob", or "string" | "nombre" est rertourné pour tous les types numériques, y compris la durée. "string" est retourné pour les types de champs uuid, alpha et text |
+| relatedEntity           | nom de dataClass associé                                         | Ex : "Companies"                                                                                                                              |
+| relatedEntities         | nom de dataClass associé + suffixe "Selection"                   | Ex : "EmployeeSelection"                                                                                                                      |
 
 <!-- END REF -->
 
@@ -379,14 +379,14 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 
 <!-- REF dataclassAttributeClass.unique.Syntax -->
-**.unique** : Boolean<!-- END REF -->
+**.unique** : Booléen<!-- END REF -->
 
 
 #### Description
 
-The `.unique` property <!-- REF dataclassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. This property corresponds to the "Unique" 4D field property.
+La propriété `.unique` <!-- REF dataclassAttributeClass.unique.Summary -->contient True si la valeur d'attribut doit être unique<!-- END REF -->. Cette propriété correspond à la propriété de champ 4D "Unique".
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.unique) to get a valid value (false) even if `.unique` is not returned. 
+> Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.unique) pour obtenir une valeur valide (false) même si `.unique` n'est pas retourné. 
 
 <!-- END REF -->
