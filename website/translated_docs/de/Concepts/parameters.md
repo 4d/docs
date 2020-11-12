@@ -50,12 +50,12 @@ Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#values-or-ref
 - [sequentiell nummerierte Variablen](#sequentielle-parameter).
 
 
-> Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#named-parameters) und [sequentiell](#sequential-parameters) uneingeschränkt miteinander mischen. Beispiel:
-> 
-> ```4d
+Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#named-parameters) und [sequentiell](#sequential-parameters) uneingeschränkt miteinander mischen. Beispiel:
+
+```4d
 Function add($x : Integer)
-  var $0;$2 : Integer
-  $0:=$x+$2
+    var $0;$2 : Integer
+    $0:=$x+$2
 ```
 
 
