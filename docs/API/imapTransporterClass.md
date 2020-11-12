@@ -13,6 +13,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 ||
 |---|
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
+|[<!-- INCLUDE #transporter.addFlags.Syntax -->](#addflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.addFlags.Summary -->|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
 |[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
 |[<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
@@ -106,6 +107,94 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
+
+
+<!-- REF imapTransporterClass.addFlags().Desc -->
+## .addFlags()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R6|Added|
+</details>
+
+<!-- REF #imapTransporterClass.addFlags().Syntax -->
+**.addFlags**( *msgsIDs* : Collection &#124; Text &#124; Longint ; *keywords* :  Object ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.addFlags().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgsIDs|Collection|->|Collection of strings: Message unique IDs (text)<br>Text: Unique ID of a message<br>Longint (IMAP all): All messages in the selected mailbox|
+|keywords|Object|->|Keyword flags to add|
+|Result|Object|<-|Status of the addFlags operation|
+<!-- END REF -->
+
+
+#### Description
+
+The `.addFlags()` function <!-- REF #imapTransporterClass.addFlags().Summary -->adds flags to the `msgsIDs` for the specified `keywords`<!-- END REF -->. 
+
+In the `msgsIDs` parameter, you can pass either:
+
+*	a collection containing the unique IDs of specific messages or 
+*	the unique ID (text) of a single message or
+*	the following constant (longint) for all messages in the selected mailbox:
+
+	|Constant	|Value	|Comment|
+	|---|---|---|
+	|IMAP all	|1	|Select all messages in the selected mailbox|
+
+The `keywords` parameter lets you pass an object with keyword values for specific flags to add to msgIDs. You can pass any of the following keywords:
+
+|Parameter|Type|Description|
+|---|---|---|
+|$draft |Boolean |True to add the "draft" flag to the message |
+|$seen |Boolean  |True to add the "seen" flag to the message|
+|$flagged |Boolean  |True to add the "flagged" flag to the message|
+|$answered |Boolean  |True to add the "answered" flag to the message|
+|$delete |Boolean | True to add the "deleted" flag to the message|
+
+Note that False values are ignored.
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status: 
+
+|Property||	Type|	Description|
+|---|---|---|---|
+|success||Boolean|True if the operation is successful, False otherwise
+|statusText ||	Text|Status message returned by the IMAP server, or last error returned in the 4D error stack  |
+|errors ||Collection|4D error stack (not returned if a IMAP server response is received)|
+|errors |\[].errcode|Number|	4D error code|
+|errors |\[].message|Text|Description of the 4D error |
+|errors |\[].componentSignature|Text|Signature of the internal component which returned the error|
+
+
+#### Example 
+
+```4d
+var $options;$transporter;$boxInfo;$status : Object
+ 
+$options:=New object
+$options.host:="imap.gmail.com"
+$options.port:=993
+$options.user:="4d@gmail.com"
+$options.password:="xxxxx"
+ 
+// Create transporter
+$transporter:=IMAP New transporter($options)
+ 
+// Select mailbox
+$boxInfo:=$transporter.selectBox("INBOX")
+ 
+// Mark all messages from INBOX as read/seen
+$flags:=New object
+$flags["$seen"]:=True
+$status:=$transporter.addFlags(IMAP all;$flags)
+```
+
+<!-- END REF -->
 
 
 
@@ -351,6 +440,7 @@ To delete all messages in the current mailbox:
 
 <!-- END REF -->
 
+
 <!-- REF imapTransporterClass.expunge().Desc -->
 ## .expunge()
 
@@ -382,7 +472,7 @@ The function returns an object describing the IMAP status:
 |errors |\[].componentSignature|Text|Signature of the internal component which returned the error|
 
 
-#### Example 1 
+#### Example 
 
 ```4d
 var $options;$transporter;$boxInfo;$status : Object
