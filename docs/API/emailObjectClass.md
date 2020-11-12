@@ -330,6 +330,7 @@ Reserved keywords:
 * $seen - Indicates a message has been read
 * $flagged - Indicates a message has been marked for special attention (e.g., Urgent)
 * $answered - Indicates a message has been replied to
+* $deleted - Indicates a message to delete
 
 #### Example
 
