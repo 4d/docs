@@ -544,7 +544,7 @@ To delete all messages in the current mailbox:
 </details>
 
 <!-- REF #imapTransporterClass.expunge().Syntax -->
-**.delete( )** : Object<!-- END REF -->
+**.expunge( )** : Object<!-- END REF -->
 
 
 #### Description
