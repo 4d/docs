@@ -246,7 +246,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande `LIST
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -596,7 +596,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 </p>
 
 
@@ -650,7 +650,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
     </td>
     
     <td>
-      The name of a longint array.
+      Nom d'un tableau entier long.
     </td>
   </tr>
 </table>
