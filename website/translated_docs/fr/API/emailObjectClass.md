@@ -482,7 +482,7 @@ The `.size` property contains the <!-- REF #emailObjectClass.size.Summary -->siz
 ## .subject
 
 <!-- REF #emailObjectClass.subject.Syntax -->
-**.subject** : Text<!-- END REF -->
+**.subject** : Texte<!-- END REF -->
 
 
 #### Description
@@ -496,12 +496,12 @@ The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary 
 ## .textBody
 
 <!-- REF #emailObjectClass.textBody.Syntax -->
-**.textBody** : Text<!-- END REF -->
+**.textBody** : Texte<!-- END REF -->
 
 
 #### Description
 
-The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+La propriété `.textBody` contient la <!-- REF #emailObjectClass.textBody.Summary -->représentation en texte brut du message électronique (le jeu de caractères par défaut est UTF-8) (facultatif, SMTP uniquement)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 
 
