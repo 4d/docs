@@ -168,13 +168,13 @@ Désigne la couleur de la police.
 
 > Cette propriété définit également la couleur de [bordure](#border-line-style-dotted-line-type) (le cas échéant) de l'objet lorsque le style "plein" ou "pointillé" est utilisé.
 
-The color can be specified by:
+La couleur peut être spécifiée par :
 
-* a color name - like "red"
-* a HEX value - like "#ff0000"
-* an RGB value - like "rgb(255,0,0)"
+* un nom de couleur - comme "red"
+* une valeur HEX - comme "# ff0000"
+* une valeur RVB - comme "rgb (255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
 
 
 #### Grammaire JSON
