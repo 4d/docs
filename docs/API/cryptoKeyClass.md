@@ -30,7 +30,7 @@ ASSERT($status.success)
 ### Summary
 ||
 |---|
-|[<!-- INCLUDE #cryptokey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
+|[<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
 |[<!-- INCLUDE #cryptokey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.curve.Summary --> |
 |[<!-- INCLUDE #cryptokey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.decrypt().Summary -->|
 |[<!-- INCLUDE #cryptokey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.encrypt().Summary -->|
@@ -55,16 +55,16 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #cryptokey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
 
-<!-- REF #cryptokey.new().Params -->
+<!-- REF #4D.CryptoKey.new().Params -->
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Settings to generate or load a key pair|
-|cryptoKey|Object|<-|Object encapsulating an encryption key pair|
+|cryptoKey|Object|<-|Object encapsulating an encryption key pair|<!-- END REF -->
 
 
-The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
@@ -143,6 +143,7 @@ The function returns a status object with `success` property set to `true` if th
 |success|boolean|True if the message has been successfully decrypted|
 |result|text|Message decrypted and decoded using the `options.encodingDecrypted`|
 |errors|collection|If `success` is `false`, may contain a collection of errors|
+
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 <!-- END REF -->
