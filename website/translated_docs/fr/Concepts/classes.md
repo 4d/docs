@@ -35,15 +35,15 @@ $o:=cs.Person.new("John";"Doe")
 
 ### Définition d'une classe
 
-A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
+Une classe utilisateur dans 4D est définie par un fichier de méthode spécifique (.4dm), stocké dans le dossier `/Project/Sources/Classes/`. Le nom du fichier est le nom de la classe.
 
-When naming classes, you should keep in mind the following rules:
+Lorsque vous nommez des classes, gardez à l'esprit les règles suivantes :
 
 - A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
-- Class names are case sensitive.
-- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict.
+- Les noms de classe sont sensibles à la casse.
+- Il n'est pas recommandé de donner le même nom à une classe et à une table de base de données, afin d'éviter tout conflit.
 
-For example, if you want to define a class named "Polygon", you need to create the following file:
+Par exemple, si vous souhaitez définir une classe nommée "Polygon", vous devez créer le fichier suivant :
 
 - Dossier Project
     + Project
@@ -51,11 +51,11 @@ For example, if you want to define a class named "Polygon", you need to create t
             - Classes
                 + Polygon.4dm
 
-### Deleting a class
+### Supprimer une classe
 
-To delete an existing class, you can:
+Pour supprimer une classe existante, vous pouvez :
 
-- on your disk, remove the .4dm class file from the "Classes" folder,
+- sur votre disque, supprimer le fichier de classe .4dm du dossier "Classes",
 - in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 
@@ -63,32 +63,32 @@ To delete an existing class, you can:
 
 Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
 
-#### File menu and toolbar
+#### Menu Fichier et barre d'outils
 
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+Vous pouvez créer un nouveau fichier de classe pour le projet en sélectionnant **Nouveau> Classe...** dans le menu **Fichier** de 4D Developer ou dans la barre d'outils.
 
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
+Vous pouvez également utiliser le raccourci **Ctrl+Maj+Alt+k**.
 
-#### Explorer
+#### Explorateur
 
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+Dans la page **Méthodes** de l'Explorateur, les classes sont regroupées dans la catégorie **Classes**.
 
-To create a new class, you can:
+Pour créer une nouvelle classe, vous pouvez :
 
-- select the **Classes** category and click on the ![](assets/en/Users/PlussNew.png) button.
-- select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. ![](assets/en/Concepts/newClass.png)
-- select **New > Class...** from the contexual menu of the Explorer's Home page.
+- sélectionnez la catégorie **Classes** et cliquez sur le bouton ![](assets/en/Users/PlussNew.png).
+- sélectionnez **Nouvelle classe...** dans le menu d'actions en bas de la fenêtre de l'Explorateur ou dans le menu contextuel du groupe Classes. ![](assets/en/Concepts/newClass.png)
+- sélectionnez **Nouveau> Classe...** dans le menu contextuel de la page d'accueil de l'Explorateur.
 
-#### Class code support
+#### Prise en charge du code de classe
 
-In the various 4D Developer windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+Dans les différentes fenêtres de 4D Developer (éditeur de code, compilateur, débogueur, explorateur d'exécution), le code de classe est essentiellement géré comme une méthode projet avec quelques spécificités :
 
-- In the code editor:
-    - a class cannot be run
-    - a class function is a code block
-    - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
-    - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format.
+- Dans l'éditeur de code :
+    - une classe ne peut pas être exécutée
+    - une fonction de classe est un bloc de code
+    - **Goto definition** sur un objet membre recherche des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Fonction f".
+    - **Search references** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Fonction f" donnera comme résultat "$o.f()".
+- Dans l'explorateur d'exécution et le Débogueur, les fonctions de classe sont affichées avec le format \<ClassName> constructor ou \<ClassName>. \<FunctionName> .
 
 ## Class stores
 
@@ -181,13 +181,13 @@ Lors de l'énumération des propriétés d'un objet, son prototype de classe n'e
 
 
 
-## Class keywords
+## Mots-clés de classe
 
-Specific 4D keywords can be used in class definitions:
+Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de classe :
 
-- `Function <Name>` to define member methods of the objects.
-- `Class constructor` to define the properties of the objects (i.e. the prototype).
-- `Class extends <ClassName>` to define inheritance.
+- `Fonction <Name>` pour définir les méthodes membres des objets.
+- `Class constructor` (constructeur de classe) pour définir les propriétés des objets (c'est-à-dire le prototype).
+- `Class extends <ClassName>` pour définir l'héritage.
 
 
 ### Fonction
@@ -199,9 +199,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
+Les fonctions de classe sont des propriétés de l'objet prototype de la classe propriétaire. Ce sont des objets de la classe "Function".
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers).
+Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers).
 
 > **Astuce :** préfixer le nom de la fonction par un trait de soulignement ("_") exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 

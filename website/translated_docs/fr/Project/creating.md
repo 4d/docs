@@ -6,7 +6,7 @@ title: Créer ou ouvrir un projet
 
 ## Créer un projet
 
-New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
+De nouveaux projets d'application 4D peuvent être créés à partir de **4D** ou de **4D Server** (voir [Développer un projet](Project/developing.md)). Dans tous les cas, les fichiers de projet sont stockés sur la machine locale.
 
 Pour créer un nouveau projet :
 
@@ -19,7 +19,7 @@ Pour créer un nouveau projet :
 
     Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. Toutefois, si votre projet est destiné à fonctionner sur d'autres systèmes ou à être enregistré via un outil de gestion de version, vous devez tenir compte de leurs recommandations de dénomination spécifiques.
 
-When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. Pour plus d'informations, voir [Architecture d'un projet 4D](Project/architecture.md).
+Lorsque vous validez la boîte de dialogue **Enregistrer**, 4D ferme le projet en cours (le cas échéant), crée un dossier de projet à l'emplacement indiqué et y place tous les fichiers nécessaires au projet. Pour plus d'informations, voir [Architecture d'un projet 4D](Project/architecture.md).
 
 Vous pouvez alors commencer à développer votre projet.
 
