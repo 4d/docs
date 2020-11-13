@@ -187,7 +187,7 @@ Par exemple, considérons une list box où les lignes ont une couleur alternée 
 ```
 ![](assets/en/FormObjects/listbox_styles1.png)
 
-Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple <>_BgndColor_1, <>_BgndColor_2 et <>_BgndColor_3. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // orange foncé
@@ -197,7 +197,7 @@ Next you want to color the cells with negative values in dark orange. To do this
 ```
 ![](assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+Vous pouvez obtenir le même résultat en utilisant les commandes `LISTBOX SET ROW FONT STYLE` et `LISTBOX SET ROW COLOR`. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont plutôt créés dynamiquement par les commandes.
 
 
 #### Grammaire JSON
