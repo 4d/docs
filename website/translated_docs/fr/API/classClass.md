@@ -35,7 +35,7 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 #### Description
 
-The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Class names are case sensitive.
+The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Les noms de classe sont sensibles à la casse.
 
 This property is **read-only**. 
 
