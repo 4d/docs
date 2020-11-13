@@ -6,7 +6,7 @@ title: Fond et bordure
 ---
 ## Couleur de fond alternée
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
 
 #### Grammaire JSON
 
@@ -20,11 +20,11 @@ Permet de définir une couleur d'arrière-plan différente pour les lignes / col
 
 
 ---
-## Background Color / Fill Color
+## Couleur de fond / Couleur de remplissage
 
-Defines the background color of an object.
+Définit la couleur de fond d'un objet.
 
-In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
+Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
 
 #### Grammaire JSON
 
@@ -44,7 +44,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 ---
 ## Expression couleur de fond
 
-`Selection and collection type list boxes`
+`List box de type collection et de type sélection d'entité`
 
 An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
 
@@ -53,9 +53,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles                         |
-| ------------- | --------------- | ----------------------------------------- |
-| rowFillSource | string          | An expression returning a RGB color value |
+| Nom           | Type de données | Valeurs possibles                                   |
+| ------------- | --------------- | --------------------------------------------------- |
+| rowFillSource | string          | Une expression retournant une valeur de couleur RGB |
 
 #### Objets pris en charge
 [List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
@@ -183,14 +183,14 @@ For example, given a list box where the rows have an alternating gray/light gray
 
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
+ <>_BgndColors{$i}:=-255 // valeur par défaut
 ```
 ![](assets/en/FormObjects/listbox_styles1.png)
 
 Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // orange foncé
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
@@ -202,12 +202,12 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles            |
-| ------------- | --------------- | ---------------------------- |
-| rowFillSource | string          | The name of a longint array. |
+| Nom           | Type de données | Valeurs possibles             |
+| ------------- | --------------- | ----------------------------- |
+| rowFillSource | string          | Nom d'un tableau entier long. |
 
 #### Objets pris en charge
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -216,7 +216,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 ---
 ## Transparent
 
-Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
+Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est définie, toute [autre couleur d'arrière-plan](#alternate-background-color) ou [couleur d'arrière-plan](#background-color-fill-color) définie pour la colonne est ignorée.
 
 #### Grammaire JSON
 
@@ -228,4 +228,4 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 [List Box](listbox_overview.md#overview)
 
 #### Voir également
-[Background Color / Fill Color](#background-color-fill-color)
+[Couleur de fond / Couleur de remplissage](#background-color-fill-color)
