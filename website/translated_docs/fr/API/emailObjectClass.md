@@ -339,7 +339,7 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
   
   <tr>
     <td>
-      .\<keyword\>
+      . \<keyword\>
     </td>
     
     <td>
