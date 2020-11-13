@@ -46,10 +46,10 @@ Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la col
 
 `List box de type collection et de type sélection d'entité`
 
-An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
+Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. Pour plus d'informations, reportez-vous à la description de la commande `OBJECT SET RGB COLORS` dans le *manuel de langage 4D*.
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
-> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+Vous pouvez également définir cette propriété à l'aide de la commande `LISTBOX SET PROPERTY` avec la constante `lk background color expression`.
+> Avec les list box de type collection ou sélection d'entité, cette propriété peut également être définie à l'aide d'une [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### Grammaire JSON
 
@@ -85,7 +85,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 ---
 ## Dotted Line Type
 
-Describes dotted line type as a sequence of black and white points.
+Décrit le type de ligne en pointillé comme une séquence de points noirs et blancs.
 
 #### Grammaire JSON
 
@@ -103,11 +103,11 @@ Describes dotted line type as a sequence of black and white points.
 ---
 ## Masquer lignes vides finales
 
-Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
+Contrôle l'affichage des lignes vides supplémentaires ajoutées au bas d'un objet list box. Par défaut, 4D ajoute ces lignes supplémentaires pour remplir la zone vide :
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
+Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de l'objet list box est alors laissé vide :
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
@@ -127,13 +127,13 @@ You can remove these empty rows by selecting this option. The bottom of the list
 ---
 ## Line Color
 
-Designates the color of the object's lines. The color can be specified by:
+Désigne la couleur des lignes de l'objet. La couleur peut être spécifiée par :
 
-* a color name - like "red"
-* a HEX value - like "#ff0000"
-* an RGB value - like "rgb(255,0,0)"
+* un nom de couleur - comme "red"
+* une valeur HEX - comme "# ff0000"
+* une valeur RVB - comme "rgb (255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
 
 #### Grammaire JSON
 
@@ -187,7 +187,7 @@ Par exemple, considérons une list box où les lignes ont une couleur alternée 
 ```
 ![](assets/en/FormObjects/listbox_styles1.png)
 
-Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple <>_BgndColor_1, <>_BgndColor_2 et <>_BgndColor_3. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // orange foncé
@@ -197,7 +197,7 @@ Next you want to color the cells with negative values in dark orange. To do this
 ```
 ![](assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+Vous pouvez obtenir le même résultat en utilisant les commandes `LISTBOX SET ROW FONT STYLE` et `LISTBOX SET ROW COLOR`. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont plutôt créés dynamiquement par les commandes.
 
 
 #### Grammaire JSON
