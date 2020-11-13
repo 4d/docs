@@ -552,7 +552,6 @@ To delete all messages in the current mailbox:
 <!-- REF imapTransporterClass.expunge().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
 |Result|Object|<-|Status of the expunge operation |
 <!-- END REF -->
 
