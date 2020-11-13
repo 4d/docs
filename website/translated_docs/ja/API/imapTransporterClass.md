@@ -14,8 +14,8 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 |                                                                                                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.addFlags.Syntax -->](#addflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.addFlags.Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.append.Syntax -->](#append)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.append.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.addFlags().Syntax -->](#addflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.addFlags().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.append().Syntax -->](#append)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.append().Summary -->|
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|
 | [<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.checkConnection().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
@@ -33,7 +33,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.move().Syntax -->](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.move().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.numToID().Syntax -->](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.numToID().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.removeFlags.Syntax -->](#removeflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.removeFlags.Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.removeFlags().Syntax -->](#removeflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.removeFlags().Summary -->|
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.searchMails().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.searchMails().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
@@ -103,7 +103,7 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
     ALERT("An error occurred: "+$status.statusText)
  End if
 ```
-
+<!-- END REF -->
 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
@@ -119,7 +119,7 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 </details>
 
 <!-- REF #imapTransporterClass.addFlags().Syntax -->
-**.addFlags**( *msgIDs* : Collection &#124; Text &#124; Longint ; *keywords* :  Object ) : Object<!-- END REF -->
+**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.addFlags().Params -->
 | 参照       | タイプ    |    | 説明                                                                                                                                                       |
@@ -166,9 +166,9 @@ The function returns an object describing the IMAP status:
 | success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
 | statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
 | errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
-| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
-| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
-| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+|            | \[].errcode            | 数値     | 4D error code                                                                            |
+|            | \[].message            | テキスト   | Description of the 4D error                                                              |
+|            | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
 
 
 #### 例題
@@ -207,7 +207,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 </details>
 
 <!-- REF #imapTransporterClass.append().Syntax -->
-**.append**( *mailObj* : Object; *destinationBox* : Text; *options* : Object ) : Object<!-- END REF -->
+**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.append().Params -->
 | 参照             | タイプ    |    | 説明                              |
@@ -253,11 +253,9 @@ The function returns an object describing the IMAP status:
 | success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
 | statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
 | errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
-| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
-| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
-| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
-
-
+|            | \[].errcode            | 数値     | 4D error code                                                                            |
+|            | \[].message            | テキスト   | Description of the 4D error                                                              |
+|            | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
 
 
 #### 例題
@@ -334,7 +332,8 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 | v18 R5 | 追加 |
 </details>
 
-<!-- REF #imapTransporterClass.copy().Syntax -->**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
+<!-- REF #imapTransporterClass.copy().Syntax -->
+**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.copy().Params -->
 | 参照             | タイプ    |    | 説明                                               |
@@ -367,9 +366,9 @@ The function returns an object describing the IMAP status:
 | success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
 | statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
 | errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
-| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
-| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
-| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+|            | \[].errcode            | 数値     | 4D error code                                                                            |
+|            | \[].message            | テキスト   | Description of the 4D error                                                              |
+|            | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
 
 
 
@@ -472,9 +471,9 @@ The function returns an object describing the IMAP status:
 | success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
 | statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
 | errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
-| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
-| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
-| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+|            | \[].errcode            | 数値     | 4D error code                                                                            |
+|            | \[].message            | テキスト   | Description of the 4D error                                                              |
+|            | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
 
 
 
@@ -544,12 +543,18 @@ To delete all messages in the current mailbox:
 </details>
 
 <!-- REF #imapTransporterClass.expunge().Syntax -->
-**.expunge( )** : Object<!-- END REF -->
+**.expunge()** : Object<!-- END REF -->
 
+<!-- REF imapTransporterClass.expunge().Params -->
+| 参照     | タイプ    |    | 説明                              |
+| ------ | ------ |:--:| ------------------------------- |
+| server | オブジェクト | -> | Mail server information         |
+| 戻り値    | オブジェクト | <- | Status of the expunge operation |
+<!-- END REF -->
 
 #### 説明
 
-The `.expunge()` function <!-- REF #imapTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete( )`](#delete) or [`.addFlags( )`](#addflags) methods.
+The `.expunge()` function <!-- REF #imapTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
 
 **Returned object**
 
@@ -560,9 +565,9 @@ The function returns an object describing the IMAP status:
 | success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
 | statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
 | errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
-| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
-| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
-| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+|            | \[].errcode            | 数値     | 4D error code                                                                            |
+|            | \[].message            | テキスト   | Description of the 4D error                                                              |
+|            | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
 
 
 #### 例題
@@ -731,7 +736,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 #### 説明
 
-The `.getDelimiter( )` function <!-- REF #imapTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
+The `.getDelimiter()` function <!-- REF #imapTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
 
 The delimiter is a character which can be used to:
 
@@ -742,8 +747,8 @@ The delimiter is a character which can be used to:
 #### 戻り値
 
 Mailbox name delimiter character.
-> * If there is no open connection, `.getDelimiter( )` will open a connection.
-> * If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection( )`](#checkconnection) function is automatically called.
+> * If there is no open connection, `.getDelimiter()` will open a connection.
+> * If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
 
 
@@ -985,7 +990,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 *   **False** - to leave the message's "seen" status untouched
 > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
-> * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox( )`.
+> * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 
 
 #### 戻り値
@@ -1076,9 +1081,9 @@ The function returns an object describing the IMAP status:
 | success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
 | statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
 | errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
-| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
-| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
-| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+|            | \[].errcode            | 数値     | 4D error code                                                                            |
+|            | \[].message            | テキスト   | Description of the 4D error                                                              |
+|            | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
 
 
 
@@ -1210,9 +1215,9 @@ The function returns a collection of strings (unique IDs).
 </details>
 
 <!-- REF #imapTransporterClass.removeFlags().Syntax -->
-**.removeFlags**( *msgIDs* : Collection &#124; Text &#124; Longint ; *keywords* :  Object ) : Object<!-- END REF -->
+**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
 
-<!-- REF #imapTransporterClass.addFlags().Params -->
+<!-- REF #imapTransporterClass.removeFlags().Params -->
 | 参照       | タイプ    |    | 説明                                                                                                                                                       |
 | -------- | ------ |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs   | コレクション | -> | Collection of strings: Message unique IDs (text)<br>Text: Unique ID of a message<br>Longint (IMAP all): All messages in the selected mailbox |
@@ -1223,7 +1228,7 @@ The function returns a collection of strings (unique IDs).
 
 #### 説明
 
-The `.removeFlags()` function <!-- REF #imapTransporterClass.addFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
+The `.removeFlags()` function <!-- REF #imapTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
 In the `msgIDs` parameter, you can pass either:
 
@@ -1257,9 +1262,9 @@ The function returns an object describing the IMAP status:
 | success    |                         | ブール    | True if the operation is successful, False otherwise                                     |
 | statusText |                         | テキスト   | Status message returned by the IMAP server, or last error returned in the 4D error stack |
 | errors     |                         | コレクション | 4D error stack (not returned if a IMAP server response is received)                      |
-| errors     | \[].errcode            | 数値     | 4D error code                                                                            |
-| errors     | \[].message            | テキスト   | Description of the 4D error                                                              |
-| errors     | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
+|            | \[].errcode            | 数値     | 4D error code                                                                            |
+|            | \[].message            | テキスト   | Description of the 4D error                                                              |
+|            | \[].componentSignature | テキスト   | Signature of the internal component which returned the error                             |
 
 
 #### 例題
