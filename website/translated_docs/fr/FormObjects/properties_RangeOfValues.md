@@ -48,9 +48,9 @@ Allows setting a list whose values cannot be entered in the object. Si une valeu
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                |
-| ------------ | --------------- | -------------------------------- |
-| excludedList | liste           | A list of values to be excluded. |
+| Nom          | Type de données | Valeurs possibles               |
+| ------------ | --------------- | ------------------------------- |
+| excludedList | liste           | Une liste de valeurs à exclure. |
 
 #### Objets pris en charge
 
