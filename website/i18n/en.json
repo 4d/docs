@@ -765,6 +765,9 @@
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"
+      },
+      "WebServer/webServerSessions": {
+        "title": "User sessions"
       }
     },
     "links": {

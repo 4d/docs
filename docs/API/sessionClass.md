@@ -14,9 +14,9 @@ Session objects are returned by the [`Session`](#session) command, when scalable
 |[<!-- INCLUDE #sessionClass.clearPrivileges().Syntax -->](#clearprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.clearPrivileges().Summary -->|
 |[<!-- INCLUDE #sessionClass.expirationDate.Syntax -->](#expirationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.expirationDate.Summary -->|
 |[<!-- INCLUDE #sessionClass.hasPrivilege().Syntax -->](#hasprivilege)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.hasPrivilege().Summary -->|
+|[<!-- INCLUDE #sessionClass.idleTimeout.Syntax -->](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.idleTimeout.Summary -->|
 |[<!-- INCLUDE #sessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.isGuest().Summary -->|
 |[<!-- INCLUDE #sessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.setPrivileges().Summary -->|
-|[<!-- INCLUDE #sessionClass.timeout.Syntax -->](#timeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.timeout.Summary -->|
 |[<!-- INCLUDE #sessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.userName.Summary -->|
 
 
@@ -189,6 +189,48 @@ End if
 <!-- END REF -->
 
 ---
+<!-- REF sessionClass.idleTimeout.Desc -->
+## .idleTimeout
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R6|Added|
+
+</details>
+
+<!-- REF #sessionClass.idleTimeout.Syntax -->
+**.idleTimeout** : Integer<!-- END REF -->
+
+#### Description
+
+The `.idleTimeout` property contains <!-- REF #sessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->. 
+
+If this property is not set, the default value is 60 (1h). 
+
+When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly. 
+
+> The value cannot be less than 60: if a lower value is set, the timeout is raised up to 60.
+
+ 
+This property is **read write**. 
+
+#### Example
+
+```4d
+If (Session.isGuest())
+		// A Guest session will close after 60 minutes of inactivity
+	Session.idleTimeout:=60
+Else
+		// Other sessions will close after 120 minutes of inactivity
+	Session.idleTimeout:=120
+End if
+
+```
+
+<!-- END REF -->
+
+---
 
 <!-- REF sessionClass.isGuest().Desc -->
 ## .isGuest()
@@ -211,7 +253,7 @@ End if
 
 #### Description
 
-The `.isGuest` function <!-- REF #sessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
+The `.isGuest()` function <!-- REF #sessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
 
 
 #### Example
@@ -250,7 +292,7 @@ End if
 
 #### Description
 
-The `.setPrivileges` function <!-- REF #sessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the *settings* parameter to the session<!-- END REF -->.
+The `.setPrivileges()` function <!-- REF #sessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the *settings* parameter to the session<!-- END REF -->.
 
 In the *settings* parameter, pass an object containing the following property:
 
@@ -296,9 +338,8 @@ End if
 <!-- END REF -->
 
 ---
-
-<!-- REF sessionClass.timeout.Desc -->
-## .timeout
+<!-- REF sessionClass.storage.Desc -->
+## .storage
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -307,38 +348,35 @@ End if
 
 </details>
 
-<!-- REF #sessionClass.timeout.Syntax -->
-**.timeout** : Integer<!-- END REF -->
+<!-- REF #sessionClass.storage.Syntax -->
+**.storage** : Object<!-- END REF -->
 
 #### Description
 
-The `.timeout` property contains <!-- REF #sessionClass.timeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->. 
+The `.storage` property contains <!-- REF #sessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->. 
 
-If this property is not set, the default value is 60 (1h). 
+When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server. 
 
-When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly. 
-
-> The value cannot be less than 60: if a lower value is set, the timeout is raised up to 60.
-
- 
 This property is **read write**. 
 
 #### Example
 
+You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
+
 ```4d
-If (Session.isGuest())
-		// A Guest session will close after 60 minutes of inactivity
-	Session.timeout:=60
-Else
-		// Other sessions will close after 120 minutes of inactivity
-	Session.timeout:=120
-End if
+If (Session.storage.clientIP=Null) //first access
+    Use (Session.storage)
+        Session.storage.clientIP:=New shared object("value"; $clientIP)
+    End use 
+End if 
 
 ```
 
 <!-- END REF -->
 
 ---
+
+
 
 <!-- REF sessionClass.userName.Desc -->
 ## .userName
