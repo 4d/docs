@@ -394,7 +394,7 @@ Cet en-tête est généralement "desChiffresOuDesLettres@nomdededomaine", par ex
 
 [IMAP transporter](imapTransporterClass.md) only.
 
-The `.receivedAt` property contains the <!-- REF #emailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->.
+La propriété `.receivedAt` contient <!-- REF #emailObjectClass.receivedAt.Summary -->l'horodatage de l'arrivée de l'e-mail sur le serveur IMAP au format ISO 8601 UTC (ex : 2020-09-13T16:11:53Z)<!-- END REF -->.
 
 
 
@@ -409,7 +409,7 @@ The `.receivedAt` property contains the <!-- REF #emailObjectClass.receivedAt.Su
 
 #### Description
 
-The `.references` property contains the <!-- REF #emailObjectClass.references.Summary -->Collection of all message-ids of messages in the preceding reply chain<!-- END REF -->.
+La propriété `.references` contient la <!-- REF #emailObjectClass.references.Summary -->collection de tous les identifiants de messages de la chaîne de réponses précédente<!-- END REF -->.
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
@@ -419,7 +419,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 ## .replyTo 
 
 <!-- REF #emailObjectClass.replyTo.Syntax -->
-**.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection<!-- END REF -->
+**.replyTo** : Texte<br>**.replyTo** : Objet<br>**.replyTo** : Collection<!-- END REF -->
 
 
 #### Description
@@ -433,7 +433,7 @@ The `.replyTo` property contains the <!-- REF #emailObjectClass.replyTo.Summary 
 ## .sendAt
 
 <!-- REF #emailObjectClass.sendAt.Syntax -->
-**.sendAt** : Text<!-- END REF -->
+**.sendAt** : Texte<!-- END REF -->
 
 
 #### Description
@@ -446,7 +446,7 @@ The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary --
 ## .sender 
 
 <!-- REF #emailObjectClass.sender.Syntax -->
-**.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection<!-- END REF -->
+**.sender** : Texte<br>**.sender** : Objet<br>**.sender** : Collection<!-- END REF -->
 
 
 #### Description
@@ -508,12 +508,12 @@ The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summar
 ## .to 
 
 <!-- REF #emailObjectClass.to.Syntax -->
-**.to** : Text<br>**.to** : Object<br>**.to** : Collection<!-- END REF -->
+**.to** : Texte<br>**.to** : Objet<br>**.to** : Collection<!-- END REF -->
 
 
 #### Description
 
-The `.to` property contains the <!-- REF #emailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->. 
+La propriété `.to` contient <!-- REF #emailObjectClass.to.Summary -->le ou les [destinataires](#email-addresses) principaux de l'e-mail<!-- END REF -->. 
 
 
 
