@@ -373,21 +373,21 @@ Reserved keywords:
 ## .messageId
 
 <!-- REF #emailObjectClass.messageId.Syntax -->
-**.messageId** : Text<!-- END REF -->
+**.messageId** : Texte<!-- END REF -->
 
 
 #### Description
 
-The `.messageId` property contains a <!-- REF #emailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
+La propriété `.messageId` contient un <!-- REF #emailObjectClass.messageId.Summary -->en-tête d'identificateur de message ("message-id")<!-- END REF -->.
 
-This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com". This unique ID is used in particular on forums or public mailing lists. In general, mail servers automatically add this header to the messages they send.
+Cet en-tête est généralement "desChiffresOuDesLettres@nomdededomaine", par exemple "abcdef.123456@4d.com". Cet identifiant unique est notamment utilisé sur les forums ou les listes de diffusion publiques. En général, les serveurs de messagerie ajoutent automatiquement cet en-tête aux messages qu'ils envoient.
 
 
 
 ## .receivedAt 
 
 <!-- REF #emailObjectClass.receivedAt.Syntax -->
-**.receivedAt** : Text<!-- END REF -->
+**.receivedAt** : Texte<!-- END REF -->
 
 
 #### Description
