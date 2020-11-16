@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt"><head><meta name="docsearch:version" content="18 R5 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Collections · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Collection class manages [Collection](Concepts/collection.md) type variables."/><meta name="docsearch:language" content="pt"/><meta property="og:title" content="Collections · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="The Collection class manages [Collection](Concepts/collection.md) type variables."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/pt"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v18 R5 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v18 R4</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/API/collectionClass.html">English</a></li><li><a href="/docs/ja/API/collectionClass.html">日本語</a></li><li><a href="/docs/de/API/collectionClass.html">Deutsch</a></li><li><a href="/docs/es/API/collectionClass.html">Español</a></li><li><a href="/docs/fr/API/collectionClass.html">Français</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="pt"><head><meta name="docsearch:version" content="18 R5 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Collections · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;style&gt; h2 { background: #d9ebff;}&lt;/style&gt;"/><meta name="docsearch:language" content="pt"/><meta property="og:title" content="Collections · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="&lt;style&gt; h2 { background: #d9ebff;}&lt;/style&gt;"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/pt"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v18 R5 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v18 R4</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/API/collectionClass.html">English</a></li><li><a href="/docs/ja/API/collectionClass.html">日本語</a></li><li><a href="/docs/de/API/collectionClass.html">Deutsch</a></li><li><a href="/docs/es/API/collectionClass.html">Español</a></li><li><a href="/docs/fr/API/collectionClass.html">Français</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,7 +66,8 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/API/collectionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Collections</h1></header><article><div><span><p>The Collection class manages <a href="Concepts/collection.md">Collection</a> type variables.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/API/collectionClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Collections</h1></header><article><div><span><style> h2 { background: #d9ebff;}</style>
+<p>The Collection class manages <a href="Concepts/collection.md">Collection</a> type variables.</p>
 <p>A collection is initialized with:</p>
 <table>
 <thead>
@@ -77,11 +78,11 @@
 <tr><td><a href="#new-shared-collection"><strong>New shared collection</strong> {( <em>...value</em> : any )} : Collection</a><p>     creates a new empty or prefilled shared collection</td></tr>
 </tbody>
 </table>
-<h2><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h2>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$colVar </span>: Collection <span class="hljs-comment">//creation of collection type 4D variable</span>
  <span class="hljs-variable">$colVar</span>:=New collection <span class="hljs-comment">//initialization of the collection and assignment to the 4D variable</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<h3><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h3>
 <table>
 <thead>
 <tr><th></th></tr>
@@ -128,7 +129,6 @@
 <tr><td><a href="#unshift"><strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</a><p>    inserts the given <em>value</em>(s) at the beginning of the collection</td></tr>
 </tbody>
 </table>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="new-collection"></a><a href="#new-collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New collection</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -190,7 +190,6 @@
  <span class="hljs-variable">$vcolSize</span>:=<span class="hljs-variable">$coll</span>.length <span class="hljs-comment">//10</span>
   <span class="hljs-comment">//$coll=["a","b","c",null,null,null,null,null,null,"z"]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="new-shared-collection"></a><a href="#new-shared-collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New shared collection</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -246,7 +245,6 @@
     <span class="hljs-variable">$mySharedCol</span>[<span class="hljs-number">1</span>]:=<span class="hljs-string">"beta"</span><span class="hljs-keyword">
  End use</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="average"></a><a href="#average" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.average()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -291,7 +289,6 @@
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Gross"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">10500</span>))
  <span class="hljs-variable">$vAvg</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">average</span>(<span class="hljs-string">"salary"</span>) <span class="hljs-comment">//23500</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="clear"></a><a href="#clear" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.clear()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -323,7 +320,6 @@
 <span class="hljs-variable">$col</span>.<span class="hljs-function">clear</span>()
 <span class="hljs-variable">$vSize</span>:=<span class="hljs-variable">$col</span>.length <span class="hljs-comment">//$vSize=0</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="combine"></a><a href="#combine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.combine()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -366,7 +362,6 @@
 <span class="hljs-variable">$fruits</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"Orange"</span>;<span class="hljs-string">"Banana"</span>;<span class="hljs-string">"Apple"</span>;<span class="hljs-string">"Grape"</span>)
 <span class="hljs-variable">$c</span>.<span class="hljs-function">combine</span>(<span class="hljs-variable">$fruits</span>;<span class="hljs-number">3</span>) <span class="hljs-comment">//[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="concat"></a><a href="#concat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.concat()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -402,7 +397,6 @@
 <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">concat</span>(<span class="hljs-variable">$fruits</span>) <span class="hljs-comment">//[1,2,3,4,5,"Orange","Banana","Apple","Grape",{"Intruder":"Tomato"}]</span>
 <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">concat</span>(<span class="hljs-number">6</span>;<span class="hljs-number">7</span>;<span class="hljs-number">8</span>) <span class="hljs-comment">//[1,2,3,4,5,6,7,8]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="copy"></a><a href="#copy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.copy()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -506,7 +500,6 @@ End use</span>
  <span class="hljs-variable">$col3</span>:=<span class="hljs-variable">$col2</span>.<span class="hljs-function">copy</span>(ck resolve pointers)
 <span class="hljs-function"> ALERT</span>(<span class="hljs-variable">$col3</span>[<span class="hljs-number">0</span>].alpha+<span class="hljs-string">" "</span>+<span class="hljs-variable">$col3</span>[<span class="hljs-number">1</span>].what) <span class="hljs-comment">//displays "Hello You!"</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="count"></a><a href="#count" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.count()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -543,7 +536,6 @@ End use</span>
  <span class="hljs-variable">$count2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">count</span>(<span class="hljs-string">"name"</span>) <span class="hljs-comment">//$count2=3</span>
 
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="countvalues"></a><a href="#countvalues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.countValues()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -604,7 +596,6 @@ End use</span>
 
  <span class="hljs-variable">$vCount</span>:=<span class="hljs-variable">$numbers</span>.<span class="hljs-function">countValues</span>(<span class="hljs-variable">$letters</span>) <span class="hljs-comment">//$vCount=1</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="distinct"></a><a href="#distinct" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.distinct()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -646,7 +637,6 @@ End use</span>
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">distinct</span>(ck diacritical) <span class="hljs-comment">//$c2=["a","A","b","B","c",{"size":1},{"size":3},{"size":1}]</span>
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">distinct</span>(<span class="hljs-string">"size"</span>) <span class="hljs-comment">//$c2=[1,3]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="equal"></a><a href="#equal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.equal()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -695,7 +685,6 @@ End use</span>
  <span class="hljs-variable">$c2</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"a"</span>;<span class="hljs-number">1</span>;<span class="hljs-string">"b"</span>;<span class="hljs-string">"ORange"</span>);<span class="hljs-number">2</span>;<span class="hljs-number">3</span>)
  <span class="hljs-variable">$b</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">equal</span>(<span class="hljs-variable">$c2</span>;ck diacritical) <span class="hljs-comment">//false</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="every"></a><a href="#every" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.every()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -769,7 +758,6 @@ If</span>(<span class="hljs-function">Value type</span>(<span class="hljs-variab
     <span class="hljs-variable">$toEval</span>.result:=<span class="hljs-literal">True</span><span class="hljs-keyword">
 End if</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="extract"></a><a href="#extract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.extract()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -829,7 +817,6 @@ End if</span>
 <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">extract</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"City"</span>) <span class="hljs-comment">//$c2=[{City:null},{City:Cleveland},{City:Blountsville},{City:Adger},{City:Clanton},{City:Clanton}]</span>
 <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">extract</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"City"</span>;<span class="hljs-string">"zc"</span>;<span class="hljs-string">"Zip"</span>) <span class="hljs-comment">//$c2=[{Zip:35060},{City:null,Zip:35049},{City:Cleveland,Zip:35049},{City:Blountsville,Zip:35031},{City:Adger,Zip:35006},{City:Clanton,Zip:35046},{City:Clanton,Zip:35045}]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="fill"></a><a href="#fill" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.fill()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -877,7 +864,6 @@ End if</span>
  <span class="hljs-variable">$c</span>.<span class="hljs-function">fill</span>(<span class="hljs-number">0</span>;<span class="hljs-number">1</span>;<span class="hljs-number">5</span>) <span class="hljs-comment">// $c=[2,0,0,0,0,Hello,Hello,Hello]</span>
  <span class="hljs-variable">$c</span>.<span class="hljs-function">fill</span>(<span class="hljs-string">"world"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">-5</span>) <span class="hljs-comment">//-5+8=3 -&gt; $c=[2,"world","world",0,0,Hello,Hello,Hello]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="filter"></a><a href="#filter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.filter()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -948,7 +934,6 @@ End if</span>
     <span class="hljs-variable">$1</span>.result:=<span class="hljs-literal">True</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="find"></a><a href="#find" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.find()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1024,7 +1009,6 @@ End if</span>
  var</span> <span class="hljs-variable">$2 </span>: Text
  <span class="hljs-variable">$1</span>.result:=<span class="hljs-variable">$1</span>.value.name=<span class="hljs-variable">$2 </span><span class="hljs-comment">//name is a property name of objects in the collection</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="findindex"></a><a href="#findindex" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.findIndex()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1089,7 +1073,6 @@ End if</span>
  var</span> <span class="hljs-variable">$2 </span>: Text
  <span class="hljs-variable">$1</span>.result:=<span class="hljs-variable">$1</span>.value.name=<span class="hljs-variable">$2</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="indexof"></a><a href="#indexof" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.indexOf()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1139,7 +1122,6 @@ End if</span>
  <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">indexOf</span>(<span class="hljs-string">"al@"</span>) <span class="hljs-comment">//$i=5</span>
  <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">indexOf</span>(<span class="hljs-string">"Hello"</span>) <span class="hljs-comment">//$i=-1</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="indices"></a><a href="#indices" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.indices()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1183,7 +1165,6 @@ End if</span>
  <span class="hljs-variable">$icol</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">indices</span>(<span class="hljs-string">"name = :1"</span>;<span class="hljs-string">"Cleveland"</span>) <span class="hljs-comment">// $icol=[0]</span>
  <span class="hljs-variable">$icol</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">indices</span>(<span class="hljs-string">"zc &gt; 35040"</span>) <span class="hljs-comment">// $icol=[0,3,4]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="insert"></a><a href="#insert" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.insert()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1228,7 +1209,6 @@ End if</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">insert</span>(<span class="hljs-number">-2</span>;<span class="hljs-string">"Y"</span>) <span class="hljs-comment">//$col=["a","b","X","Y","c","d"]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">insert</span>(<span class="hljs-number">-10</span>;<span class="hljs-string">"Hi"</span>) <span class="hljs-comment">//$col=["Hi","a","b","X","Y","c","d"]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="join"></a><a href="#join" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.join()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1264,7 +1244,6 @@ End if</span>
  <span class="hljs-variable">$t1</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">join</span>(<span class="hljs-string">"|"</span>) <span class="hljs-comment">//1|2|3|Paris|null||4|5</span>
  <span class="hljs-variable">$t2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">join</span>(<span class="hljs-string">"|"</span>;ck ignore null or empty) <span class="hljs-comment">//1|2|3|Paris|4|5</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="lastindexof"></a><a href="#lastindexof" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.lastIndexOf()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1315,7 +1294,6 @@ End if</span>
  <span class="hljs-variable">$pos4</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">lastIndexOf</span>(<span class="hljs-string">"e"</span>;<span class="hljs-number">-2</span>) <span class="hljs-comment">//returns 10</span>
  <span class="hljs-variable">$pos5</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">lastIndexOf</span>(<span class="hljs-string">"x"</span>) <span class="hljs-comment">//returns -1</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="length"></a><a href="#length" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.length</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1337,7 +1315,6 @@ End if</span>
  <span class="hljs-variable">$col</span>[<span class="hljs-number">4</span>]:=<span class="hljs-string">"five"</span> <span class="hljs-comment">//$col.length updated to 5</span>
  <span class="hljs-variable">$vSize</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">0</span>;<span class="hljs-number">3</span>).length <span class="hljs-comment">//$vSize=2</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="map"></a><a href="#map" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.map()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1388,7 +1365,6 @@ End if</span>
  var</span> <span class="hljs-variable">$2 </span>: Real
  <span class="hljs-variable">$1</span>.result:=<span class="hljs-function">Round</span>((<span class="hljs-variable">$1</span>.value/<span class="hljs-variable">$2</span>)*<span class="hljs-number">100</span>;<span class="hljs-number">2</span>)
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="max"></a><a href="#max" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.max()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1428,7 +1404,6 @@ End if</span>
  <span class="hljs-variable">$maxSal</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">max</span>(<span class="hljs-string">"salary"</span>) <span class="hljs-comment">//50000</span>
  <span class="hljs-variable">$maxName</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">max</span>(<span class="hljs-string">"name"</span>) <span class="hljs-comment">//"Wesson"</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="min"></a><a href="#min" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.min()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1468,7 +1443,6 @@ End if</span>
  <span class="hljs-variable">$minSal</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">min</span>(<span class="hljs-string">"salary"</span>) <span class="hljs-comment">//10000</span>
  <span class="hljs-variable">$minName</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">min</span>(<span class="hljs-string">"name"</span>) <span class="hljs-comment">//"Alabama"</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="orderby"></a><a href="#orderby" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.orderBy()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1579,7 +1553,6 @@ End if</span>
  <span class="hljs-variable">$crit</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"propertyPath"</span>;<span class="hljs-string">"phones.p2"</span>;<span class="hljs-string">"descending"</span>;<span class="hljs-literal">True</span>))
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderBy</span>(<span class="hljs-variable">$crit</span>)
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="orderbymethod"></a><a href="#orderbymethod" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.orderByMethod()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1645,7 +1618,6 @@ End if</span>
 <p>Here is the code for <strong><em>WordLength</em></strong>:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$1</span>.result:=<span class="hljs-function">Length</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value))&gt;<span class="hljs-function">Length</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value2))
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="pop"></a><a href="#pop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.pop()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1682,7 +1654,6 @@ End if</span>
  <span class="hljs-variable">$stack</span>.<span class="hljs-function">pop</span>() <span class="hljs-comment">//$stack=[1]  Returns [4,5]</span>
  <span class="hljs-variable">$stack</span>.<span class="hljs-function">pop</span>() <span class="hljs-comment">//$stack=[]  Returns 1</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="push"></a><a href="#push" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.push()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1724,7 +1695,6 @@ End if</span>
   <span class="hljs-comment">//$col=[5,3,9,7,50]</span>
   <span class="hljs-comment">//$sortedCol=[3,5,7,9,50]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="query"></a><a href="#query" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.query()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1797,7 +1767,6 @@ End if</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-3-4"></a><a href="#example-3-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h4>
 <p>More examples of queries can be found in the <code>dataClass.query()</code> page.</p>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="reduce"></a><a href="#reduce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.reduce()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1865,7 +1834,6 @@ End if</span>
  End if</span>
  <span class="hljs-variable">$1</span>.accumulator.<span class="hljs-function">combine</span>(<span class="hljs-variable">$1</span>.value)
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="remove"></a><a href="#remove" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.remove()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1912,7 +1880,6 @@ End if</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">-8</span>;<span class="hljs-number">1</span>) <span class="hljs-comment">// $col=["b","c","g","h"]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">-3</span>;<span class="hljs-number">1</span>) <span class="hljs-comment">// $col=["b","g","h"]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="resize"></a><a href="#resize" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.resize()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1959,7 +1926,6 @@ End if</span>
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)
  <span class="hljs-variable">$c</span>.<span class="hljs-function">resize</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">//$c=[1,2]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="reverse"></a><a href="#reverse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.reverse()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -1990,7 +1956,6 @@ End if</span>
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>)
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">reverse</span>() <span class="hljs-comment">//$c2=[6,4,2,5,3,1]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="shift"></a><a href="#shift" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.shift()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -2025,7 +1990,6 @@ End if</span>
   <span class="hljs-comment">// $val=1</span>
   <span class="hljs-comment">// $c=[2,4,5,6,7,8]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="slice"></a><a href="#slice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.slice()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -2068,7 +2032,6 @@ End if</span>
  <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">1</span>;<span class="hljs-number">-1</span>) <span class="hljs-comment">//$nc=[2,3,4]</span>
  <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">-3</span>;<span class="hljs-number">-2</span>) <span class="hljs-comment">//$nc=[3]</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="some"></a><a href="#some" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.some()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -2130,7 +2093,6 @@ End if</span>
 <p>With the following <em>NumberGreaterThan0</em> method:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$1</span>.result:=<span class="hljs-variable">$1</span>.value&gt;<span class="hljs-number">0</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="sort"></a><a href="#sort" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sort()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -2204,7 +2166,6 @@ End if</span>
  var</span> <span class="hljs-variable">$1 </span>: Object
  <span class="hljs-variable">$1</span>.result:=<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value2)
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="sum"></a><a href="#sum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sum()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -2251,7 +2212,6 @@ End if</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Gross"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">10500</span>,<span class="hljs-number">5</span>))
  <span class="hljs-variable">$vSum</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sum</span>(<span class="hljs-string">"salary"</span>) <span class="hljs-comment">//$vSum=70500,5</span>
 </code></pre>
-<hr>
 <h2><a class="anchor" aria-hidden="true" id="unshift"></a><a href="#unshift" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.unshift()</h2>
 <p><details><summary>History</summary></p>
 <table>
@@ -2286,7 +2246,7 @@ End if</span>
  <span class="hljs-variable">$c</span>.<span class="hljs-function">unshift</span>(<span class="hljs-number">5</span>) <span class="hljs-comment">//$c=[5,4,1,2]</span>
  <span class="hljs-variable">$c</span>.<span class="hljs-function">unshift</span>(<span class="hljs-number">6</span>;<span class="hljs-number">7</span>) <span class="hljs-comment">// $c=[6,7,5,4,1,2]</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/API/classClass.html"><span class="arrow-prev">← </span><span>Class</span></a><a class="docs-next button" href="/docs/pt/API/cryptoClass.html"><span class="function-name-prevnext">CryptoKey</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#example">Example</a></li><li><a href="#summary">Summary</a></li><li><a href="#new-collection">New collection</a></li><li><a href="#new-shared-collection">New shared collection</a></li><li><a href="#average">.average()</a></li><li><a href="#clear">.clear()</a></li><li><a href="#combine">.combine()</a></li><li><a href="#concat">.concat()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#count">.count()</a></li><li><a href="#countvalues">.countValues()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#equal">.equal()</a></li><li><a href="#every">.every()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#fill">.fill()</a></li><li><a href="#filter">.filter()</a></li><li><a href="#find">.find()</a></li><li><a href="#findindex">.findIndex()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#indices">.indices()</a></li><li><a href="#insert">.insert()</a></li><li><a href="#join">.join()</a></li><li><a href="#lastindexof">.lastIndexOf()</a></li><li><a href="#length">.length</a></li><li><a href="#map">.map()</a></li><li><a href="#max">.max()</a></li><li><a href="#min">.min()</a></li><li><a href="#orderby">.orderBy()</a></li><li><a href="#orderbymethod">.orderByMethod()</a></li><li><a href="#pop">.pop()</a></li><li><a href="#push">.push()</a></li><li><a href="#query">.query()</a></li><li><a href="#reduce">.reduce()</a></li><li><a href="#remove">.remove()</a></li><li><a href="#resize">.resize()</a></li><li><a href="#reverse">.reverse()</a></li><li><a href="#shift">.shift()</a></li><li><a href="#slice">.slice()</a></li><li><a href="#some">.some()</a></li><li><a href="#sort">.sort()</a></li><li><a href="#sum">.sum()</a></li><li><a href="#unshift">.unshift()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/API/classClass.html"><span class="arrow-prev">← </span><span>Class</span></a><a class="docs-next button" href="/docs/pt/API/cryptoClass.html"><span class="function-name-prevnext">CryptoKey</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#new-collection">New collection</a></li><li><a href="#new-shared-collection">New shared collection</a></li><li><a href="#average">.average()</a></li><li><a href="#clear">.clear()</a></li><li><a href="#combine">.combine()</a></li><li><a href="#concat">.concat()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#count">.count()</a></li><li><a href="#countvalues">.countValues()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#equal">.equal()</a></li><li><a href="#every">.every()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#fill">.fill()</a></li><li><a href="#filter">.filter()</a></li><li><a href="#find">.find()</a></li><li><a href="#findindex">.findIndex()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#indices">.indices()</a></li><li><a href="#insert">.insert()</a></li><li><a href="#join">.join()</a></li><li><a href="#lastindexof">.lastIndexOf()</a></li><li><a href="#length">.length</a></li><li><a href="#map">.map()</a></li><li><a href="#max">.max()</a></li><li><a href="#min">.min()</a></li><li><a href="#orderby">.orderBy()</a></li><li><a href="#orderbymethod">.orderByMethod()</a></li><li><a href="#pop">.pop()</a></li><li><a href="#push">.push()</a></li><li><a href="#query">.query()</a></li><li><a href="#reduce">.reduce()</a></li><li><a href="#remove">.remove()</a></li><li><a href="#resize">.resize()</a></li><li><a href="#reverse">.reverse()</a></li><li><a href="#shift">.shift()</a></li><li><a href="#slice">.slice()</a></li><li><a href="#some">.some()</a></li><li><a href="#sort">.sort()</a></li><li><a href="#sum">.sum()</a></li><li><a href="#unshift">.unshift()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

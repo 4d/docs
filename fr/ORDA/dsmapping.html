@@ -203,7 +203,12 @@ OB GET PROPERTY <span class="hljs-constructor">NAMES(<span class="hljs-params">d
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$e </span>: cs.EmployeeSelection <span class="hljs-comment">//declares a $e object variable of the EmployeeSelection class type</span>
 <span class="hljs-variable">$e</span>:=ds.Employee.<span class="hljs-function">all</span>() <span class="hljs-comment">//assigns the resulting entity selection reference to the $e variable</span>
 </code></pre>
-<p>Entity selections can be &quot;ordered&quot; or &quot;unordered&quot; (this point is discussed in below).</p>
+<p>Entity selections can be:</p>
+<ul>
+<li>&quot;shareable&quot; or &quot;non-shareable&quot;,</li>
+<li>&quot;sorted&quot; or &quot;unsorted&quot;.</li>
+</ul>
+<p>These points are discussed below.</p>
 <p>The entity selection object itself cannot be copied as an object:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myentitysel</span>:=<span class="hljs-function">OB Copy</span>(ds.Employee.<span class="hljs-function">all</span>()) <span class="hljs-comment">//returns null</span>
 </code></pre>

@@ -211,20 +211,20 @@
 <blockquote>
 <p>Cette propriété définit également la couleur de <a href="#border-line-style-dotted-line-type">bordure</a> (le cas échéant) de l'objet lorsque le style &quot;plein&quot; ou &quot;pointillé&quot; est utilisé.</p>
 </blockquote>
-<p>The color can be specified by:</p>
+<p>La couleur peut être spécifiée par :</p>
 <ul>
-<li>a color name - like &quot;red&quot;</li>
-<li>a HEX value - like &quot;#ff0000&quot;</li>
-<li>an RGB value - like &quot;rgb(255,0,0)&quot;</li>
+<li>un nom de couleur - comme &quot;red&quot;</li>
+<li>une valeur HEX - comme &quot;# ff0000&quot;</li>
+<li>une valeur RVB - comme &quot;rgb (255,0,0)&quot;</li>
 </ul>
-<p>You can also set this property using the <a href="https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html"><strong>OBJECT SET RGB COLORS</strong></a> command.</p>
+<p>Vous pouvez également définir cette propriété à l'aide de la commande <a href="https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html"><strong>OBJECT SET RGB COLORS</strong></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="grammaire-json-7"></a><a href="#grammaire-json-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Grammaire JSON</h4>
 <table>
 <thead>
 <tr><th>Nom</th><th>Type de données</th><th>Valeurs possibles</th></tr>
 </thead>
 <tbody>
-<tr><td>stroke</td><td>string</td><td>any css value, &quot;transparent&quot;, &quot;automatic&quot;</td></tr>
+<tr><td>stroke</td><td>string</td><td>une valeur css; &quot;transparent&quot;; &quot;automatic&quot;</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="objets-pris-en-charge-7"></a><a href="#objets-pris-en-charge-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objets pris en charge</h4>
@@ -233,7 +233,7 @@
 <h2><a class="anchor" aria-hidden="true" id="expression-couleur-police"></a><a href="#expression-couleur-police" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expression couleur police</h2>
 <p><code>List box de type collection/sélection d'entité</code></p>
 <p>Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. Pour plus d'informations à ce sujet, reportez-vous à la description de la commande <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html">OBJECT SET RGB COLORS</a> dans le manuel Langage 4D.</p>
-<p>Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme.</p>
+<p>Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. Vous pouvez utiliser les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a>.</p>
 <p>Vous pouvez également définir cette propriété à l'aide de la commande <code>LISTBOX SET PROPERTY</code> avec la constante <code>lk font color expression</code>.</p>
 <blockquote>
 <p>Cette propriété peut également être définie à l'aide d'une <a href="/docs/fr/FormObjects/propertiesText.html#meta-info-expression">expression Meta Info</a>.</p>
@@ -275,7 +275,7 @@ Foreground color;Dark shadow color)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="objets-pris-en-charge-9"></a><a href="#objets-pris-en-charge-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objets pris en charge</h4>
-<p><a href="/docs/fr/FormObjects/listboxOverview.html">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a></p>
+<p><a href="/docs/fr/FormObjects/listboxOverview.html">List Box</a> - <a href="/docs/fr/FormObjects/listboxOverview.html#list-box-columns">Colonne List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="alignement-horizontal"></a><a href="#alignement-horizontal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Alignement horizontal</h2>
 <p>Emplacement horizontal du texte dans la zone où il apparait.</p>
@@ -514,7 +514,7 @@ Objets pris en charge
   Permet de définir une couleur de police personnalisée à chaque ligne de list box ou de chaque cellule de la colonne.
 </p>
 <p spaces-before="0">
-  Le nom d'un tableau Entier Long doit être utilisé. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+  Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a>. Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 </p>
 <p><h4 spaces-before="0">
 Grammaire JSON
@@ -551,7 +551,7 @@ Grammaire JSON
 Objets pris en charge
 </h4></p>
 <p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 </p>
 <hr />
 <h2 spaces-before="0">
@@ -564,7 +564,7 @@ Objets pris en charge
   Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 </p>
 <p spaces-before="0">
-  Le nom d'un tableau Entier Long doit être utilisé. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Styles de caractères</a>. Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+  Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Styles de caractères</a>. Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 </p>
 <p><h4 spaces-before="0">
 Grammaire JSON
@@ -592,7 +592,7 @@ Grammaire JSON
 &lt;/td&gt;
 
 &lt;td&gt;
-  The name of a longint array.
+  Nom d'un tableau entier long.
 &lt;/td&gt;
 </code></pre>
   </tr>

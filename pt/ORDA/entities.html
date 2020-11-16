@@ -186,19 +186,93 @@
   <span class="hljs-comment">//the related entity is updated</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="creating-an-entity-selection"></a><a href="#creating-an-entity-selection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating an entity selection</h2>
-<p>You can create an object of type entity selection as follows:</p>
+<p>You can create an object of type <a href="/docs/pt/ORDA/dsmapping.html#entity-selection">entity selection</a> as follows:</p>
 <ul>
-<li><p>Querying the entities in a dataclass (see the <code>dataClass.query()</code> method);</p></li>
-<li><p>Using the <code>dataClass.all( )</code> method to select all the entities in a dataclass;</p></li>
-<li><p>Using the <code>Create entity selection</code> command or the <code>dataClass.newSelection()</code> method to create a blank entity collection object;</p></li>
-<li><p>Using one of the various methods from the <strong>ORDA - EntitySelection</strong> theme that returns a new entity selection, such as <code>entitySelection.or()</code>;</p></li>
-<li><p>Using a relation attribute of type &quot;related entities&quot; (see below).</p></li>
+<li>Querying the entities <a href="/docs/pt/API/dataclassClass.html#query">in a dataclass</a> or in an <a href="/docs/pt/API/entitySelectionClass.html#query">existing entity selection</a>;</li>
+<li>Using the <a href="/docs/pt/API/dataclassClass.html#all"><code>.all()</code></a> dataclass function to select all the entities in a dataclass;</li>
+<li>Using the <code>Create entity selection</code> command or the <a href="/docs/pt/API/dataclassClass.html#newselection"><code>.newSelection()</code></a> dataclass function to create a blank entity selection;</li>
+<li>Using the <a href="/docs/pt/API/entitySelectionClass.html#copy"><code>.copy()</code></a> function to duplicate an existing entity selection;</li>
+<li>Using one of the various functions from the <a href="/docs/pt/API/entitySelectionClass.html">Entity selection class</a> that returns a new entity selection, such as <a href="/docs/pt/API/entitySelectionClass.html#or"><code>.or()</code></a>;</li>
+<li>Using a relation attribute of type &quot;related entities&quot; (see below).</li>
 </ul>
 <p>You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.</p>
-<blockquote>
-<p>An entity selection is only defined in the process where it was created. You cannot, for example, store a reference to an entity selection in an interprocess variable and use it in another process.</p>
-</blockquote>
-<h2><a class="anchor" aria-hidden="true" id="entity-selections-and-attributes"></a><a href="#entity-selections-and-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity selections and attributes</h2>
+<h3><a class="anchor" aria-hidden="true" id="shareable-or-non-shareable-entity-selections"></a><a href="#shareable-or-non-shareable-entity-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shareable or non-shareable entity selections</h3>
+<p>An entity selection can be <strong>shareable</strong> (readable by multiple processes, but not modifiable after creation) or <strong>non-shareable</strong> (only usable by the current process, but modifiable afterwards):</p>
+<ul>
+<li><p>a <strong>shareable</strong> entity selection has the following characteristics:</p>
+<ul>
+<li>it can be stored in a shared object or shared collection, and can be shared between several processes or workers;</li>
+<li>it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a <em>locking identifier</em>);</li>
+<li>it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the <a href="/docs/pt/API/entitySelectionClass.html#copy"><code>.copy()</code></a> function, before calling <a href="/docs/pt/API/entitySelectionClass.html#add"><code>.add()</code></a>.</li>
+</ul></li>
+<li><p>a <strong>non-shareable</strong> entity selection has the following characteristics:</p>
+<ul>
+<li>it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);</li>
+<li>it accepts the addition of new entities.</li>
+</ul></li>
+</ul>
+<p>In most cases, new entity selections are <strong>shareable</strong>, including:</p>
+<ul>
+<li>entity selections resulting from various ORDA class functions (<a href="/docs/pt/API/entitySelectionClass.html#query"><code>.query()</code></a>, <a href="/docs/pt/API/dataclassClass.html#query"><code>.query()</code></a>, etc.),</li>
+<li>entity selections based upon relations (e.g. <code>company.employee</code>),</li>
+<li>entity selections resulting from projections of values (e.g. <code>ds.Employee.all().employer</code>),</li>
+<li>entity selections explicitely copied as shareable with <a href="/docs/pt/API/entitySelectionClass.html#copy"><code>.copy()</code></a> or <code>OB Copy</code>.</li>
+</ul>
+<p>New entity selections are <strong>non-shareable</strong> in the following cases:</p>
+<ul>
+<li>blank entity selections created using the <a href="/docs/pt/API/dataclassClass.html#newselection"><code>.newSelection()</code></a> function or <code>Create entity selection</code> command,</li>
+<li>entity selections explicitely copied as non-shareable with <a href="/docs/pt/API/entitySelectionClass.html#copy"><code>.copy()</code></a> or <code>OB Copy</code>.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(Storage.info=<span class="hljs-literal">Null</span>)<span class="hljs-keyword">
+    Use</span>(Storage)
+       Storage.info:=<span class="hljs-function">New shared object</span>()<span class="hljs-keyword">
+    End use</span><span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
+
+ Use</span>(Storage.info)
+  <span class="hljs-comment">//Put entity selections in a shared object</span>
+    Storage.info.paid:=ds.Invoices.<span class="hljs-function">query</span>(<span class="hljs-string">"status=:1"</span>;<span class="hljs-string">"Paid"</span>)
+    Storage.info.unpaid:=ds.Invoices.<span class="hljs-function">query</span>(<span class="hljs-string">"status=:1"</span>;<span class="hljs-string">"Unpaid"</span>)<span class="hljs-keyword">
+ End use</span>
+
+<span class="hljs-function"> CALL WORKER</span>(<span class="hljs-string">"mailing"</span>;<span class="hljs-string">"sendMails"</span>;Storage.info)
+The sendMails method:<span class="hljs-keyword">
+
+ var</span> <span class="hljs-variable">$info</span>: ;<span class="hljs-variable">$1Object</span><span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$paid</span>;<span class="hljs-variable">$unpaid </span>: cs.InvoicesSelection<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$invoice </span>: cs.InvoicesEntity<span class="hljs-keyword">
+
+ var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$email</span>;<span class="hljs-variable">$status </span>: Object
+
+  <span class="hljs-comment">//Prepare emails</span>
+ <span class="hljs-variable">$server</span>:=New object
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"exchange.company.com"</span>
+ <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"myName@company.com"</span>
+ <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"my!!password"</span>
+ <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">SMTP New transporter</span>(<span class="hljs-variable">$server</span>)
+ <span class="hljs-variable">$email</span>:=New object
+ <span class="hljs-variable">$email</span>.from:=<span class="hljs-string">"myName@company.com"</span>
+
+  <span class="hljs-comment">//Get entity selections</span>
+ <span class="hljs-variable">$info</span>:=<span class="hljs-variable">$1</span>
+ <span class="hljs-variable">$paid</span>:=<span class="hljs-variable">$info</span>.paid
+ <span class="hljs-variable">$unpaid</span>:=<span class="hljs-variable">$info</span>.unpaid
+
+  <span class="hljs-comment">//Loops on entity selections</span><span class="hljs-keyword">
+ For each</span>(<span class="hljs-variable">$invoice</span>;<span class="hljs-variable">$paid</span>)
+    <span class="hljs-variable">$email</span>.to:=<span class="hljs-variable">$invoice</span>.customer.address <span class="hljs-comment">// email address of the customer</span>
+    <span class="hljs-variable">$email</span>.subject:=<span class="hljs-string">"Payment OK for invoice # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$invoice</span>.number)
+    <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">send</span>(<span class="hljs-variable">$email</span>)<span class="hljs-keyword">
+ End for each</span><span class="hljs-keyword">
+
+ For each</span>(<span class="hljs-variable">$invoice</span>;<span class="hljs-variable">$unpaid</span>)
+    <span class="hljs-variable">$email</span>.to:=<span class="hljs-variable">$invoice</span>.customer.address <span class="hljs-comment">// email address of the customer</span>
+    <span class="hljs-variable">$email</span>.subject:=<span class="hljs-string">"Please pay invoice # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$invoice</span>.number)
+    <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">send</span>(<span class="hljs-variable">$email</span>)<span class="hljs-keyword">
+ End for each</span>
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="entity-selections-and-storage-attributes"></a><a href="#entity-selections-and-storage-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity selections and Storage attributes</h3>
 <p>All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. For example:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$locals</span>:=ds.Person.<span class="hljs-function">query</span>(<span class="hljs-string">"city = :1"</span>;<span class="hljs-string">"San Jose"</span>) <span class="hljs-comment">//entity selection of people</span>
@@ -332,7 +406,7 @@
   <span class="hljs-comment">//... do something</span>
  <span class="hljs-variable">$myEntity</span>:=<span class="hljs-variable">$myEntity</span>.<span class="hljs-function">next</span>() <span class="hljs-comment">//loads the next entity using the same context</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/ORDA/ordaClasses.html"><span class="arrow-prev">← </span><span>Data Model Classes</span></a><a class="docs-next button" href="/docs/pt/ORDA/datastores.html"><span>Using a remote datastore</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-an-entity">Creating an entity</a></li><li><a href="#entities-and-references">Entities and references</a></li><li><a href="#using-entity-attributes">Using entity attributes</a></li><li><a href="#assigning-values-to-relation-attributes">Assigning values to relation attributes</a></li><li><a href="#creating-an-entity-selection">Creating an entity selection</a></li><li><a href="#entity-selections-and-attributes">Entity selections and attributes</a><ul class="toc-headings"><li><a href="#entity-selections-and-storage-attributes">Entity selections and Storage attributes</a></li><li><a href="#entity-selections-and-relation-attributes">Entity selections and Relation attributes</a></li></ul></li><li><a href="#entity-locking">Entity Locking</a><ul class="toc-headings"><li><a href="#automatic-optimistic-lock">Automatic optimistic lock</a></li><li><a href="#pessimistic-lock">Pessimistic lock</a></li><li><a href="#concurrent-use-of-4d-classic-locks-and-orda-pessimistic-locks">Concurrent use of 4D classic locks and ORDA pessimistic locks</a></li></ul></li><li><a href="#clientserver-optimization">Client/server optimization</a><ul class="toc-headings"><li><a href="#using-the-context-property">Using the context property</a></li><li><a href="#entity-selection-based-list-box">Entity selection-based list box</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/ORDA/ordaClasses.html"><span class="arrow-prev">← </span><span>Data Model Classes</span></a><a class="docs-next button" href="/docs/pt/ORDA/datastores.html"><span>Using a remote datastore</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-an-entity">Creating an entity</a></li><li><a href="#entities-and-references">Entities and references</a></li><li><a href="#using-entity-attributes">Using entity attributes</a></li><li><a href="#assigning-values-to-relation-attributes">Assigning values to relation attributes</a></li><li><a href="#creating-an-entity-selection">Creating an entity selection</a><ul class="toc-headings"><li><a href="#shareable-or-non-shareable-entity-selections">Shareable or non-shareable entity selections</a></li><li><a href="#entity-selections-and-storage-attributes">Entity selections and Storage attributes</a></li><li><a href="#entity-selections-and-relation-attributes">Entity selections and Relation attributes</a></li></ul></li><li><a href="#entity-locking">Entity Locking</a><ul class="toc-headings"><li><a href="#automatic-optimistic-lock">Automatic optimistic lock</a></li><li><a href="#pessimistic-lock">Pessimistic lock</a></li><li><a href="#concurrent-use-of-4d-classic-locks-and-orda-pessimistic-locks">Concurrent use of 4D classic locks and ORDA pessimistic locks</a></li></ul></li><li><a href="#clientserver-optimization">Client/server optimization</a><ul class="toc-headings"><li><a href="#using-the-context-property">Using the context property</a></li><li><a href="#entity-selection-based-list-box">Entity selection-based list box</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
