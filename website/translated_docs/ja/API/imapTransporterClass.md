@@ -103,7 +103,6 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
     ALERT("An error occurred: "+$status.statusText)
  End if
 ```
-<!-- END REF -->
 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
@@ -546,10 +545,9 @@ To delete all messages in the current mailbox:
 **.expunge()** : Object<!-- END REF -->
 
 <!-- REF imapTransporterClass.expunge().Params -->
-| 参照     | タイプ    |    | 説明                              |
-| ------ | ------ |:--:| ------------------------------- |
-| server | オブジェクト | -> | Mail server information         |
-| 戻り値    | オブジェクト | <- | Status of the expunge operation |
+| 参照  | タイプ    |    | 説明                              |
+| --- | ------ |:--:| ------------------------------- |
+| 戻り値 | オブジェクト | <- | Status of the expunge operation |
 <!-- END REF -->
 
 #### 説明
