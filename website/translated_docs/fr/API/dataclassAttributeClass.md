@@ -357,11 +357,11 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 **Valeurs possibles :**
 
-| dataClassAttribute.kind | type                                                             | Commentaire                                                                                                                                   |
-| ----------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| storage                 | "number", "date", "object", "bool", "image", "blob", or "string" | "nombre" est rertourné pour tous les types numériques, y compris la durée. "string" est retourné pour les types de champs uuid, alpha et text |
-| relatedEntity           | nom de dataClass associé                                         | Ex : "Companies"                                                                                                                              |
-| relatedEntities         | nom de dataClass associé + suffixe "Selection"                   | Ex : "EmployeeSelection"                                                                                                                      |
+| dataClassAttribute.kind | type                                                     | Commentaire                                                                                                                                   |
+| ----------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "number", "date", "object", "bool", "image", or "string" | "nombre" est rertourné pour tous les types numériques, y compris la durée. "string" est retourné pour les types de champs uuid, alpha et text |
+| relatedEntity           | nom de dataClass associé                                 | Ex : "Companies"                                                                                                                              |
+| relatedEntities         | nom de dataClass associé + suffixe "Selection"           | Ex : "EmployeeSelection"                                                                                                                      |
 
 <!-- END REF -->
 
