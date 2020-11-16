@@ -30,7 +30,7 @@ ASSERT($status.success)
 ### Summary
 |                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #cryptokey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
+| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
 | [<!-- INCLUDE #cryptokey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.curve.Summary --> |
 | [<!-- INCLUDE #cryptokey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.decrypt().Summary -->|
 | [<!-- INCLUDE #cryptokey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.encrypt().Summary -->|
@@ -55,16 +55,19 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #cryptokey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
 
-<!-- REF #cryptokey.new().Params -->
-| 参照        | タイプ    |    | 説明                    |
-| --------- | ------ | -- | --------------------- |
-| settings  | オブジェクト | -> | キーペアを生成・ロードするための設定    |
-| cryptoKey | オブジェクト | <- | 暗号化キーペアをカプセル化したオブジェクト |
+<!-- REF #4D.CryptoKey.new().Params -->
+| 参照        | タイプ    |    | 説明                                                                     |
+| --------- | ------ | -- | ---------------------------------------------------------------------- |
+| settings  | オブジェクト | -> | キーペアを生成・ロードするための設定                                                     |
+| cryptoKey | オブジェクト | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
-The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
+|
+
+
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
 
 #### *settings*
 
@@ -143,6 +146,7 @@ The function returns a status object with `success` property set to `true` if th
 | success | boolean    | メッセージの復号に成功した場合は true                             |
 | result  | text       | options.encodingDecrypted を使って復号およびデコードされたメッセージ   |
 | errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
+
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 <!-- END REF -->
