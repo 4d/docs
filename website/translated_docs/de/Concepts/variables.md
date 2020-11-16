@@ -61,157 +61,22 @@ Ist `varTyp` nicht übergeben, wird eine Variable vom Typ **variant** erstellt.
 
 Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 
-<table spaces-before="0" line-breaks-before="2">
-  <tr>
-    <th>
-      varTyp
-    </th>
-    
-    <th>
-      Inhalt
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      Text
-    </td>
-    
-    <td>
-      Textwert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Datum
-    </td>
-    
-    <td>
-      Datumswert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Zeit
-    </td>
-    
-    <td>
-      Zeitwert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Boolean
-    </td>
-    
-    <td>
-      Boolean Wert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Ganzzahl
-    </td>
-    
-    <td>
-      Wert Lange Ganzzahl
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Zahl
-    </td>
-    
-    <td>
-      Zahlenwert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Zeiger
-    </td>
-    
-    <td>
-      Zeigerwert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Bild
-    </td>
-    
-    <td>
-      Bildwert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Blob
-    </td>
-    
-    <td>
-      BLOB Wert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Collection
-    </td>
-    
-    <td>
-      Collection Wert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Variant
-    </td>
-    
-    <td>
-      Variant Wert
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Objekt
-    </td>
-    
-    <td>
-      Objekt mit Standardklasse (4D.Objekt)
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      4D.\<className>
-    </td>
-    
-    <td>
-      Objekt des 4D Klassennamens
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      cs.\<className>
-    </td>
-    
-    <td>
-      Objekt des Benutzerklassennamens
-    </td>
-  </tr>
-</table>
+| varTyp         | Inhalt                                |
+| -------------- | ------------------------------------- |
+| Text           | Textwert                              |
+| Datum          | Datumswert                            |
+| Zeit           | Zeitwert                              |
+| Boolean        | Boolean Wert                          |
+| Ganzzahl       | Wert Lange Ganzzahl                   |
+| Zahl           | Zahlenwert                            |
+| Zeiger         | Zeigerwert                            |
+| Bild           | Bildwert                              |
+| Blob           | BLOB Wert                             |
+| Collection     | Collection Wert                       |
+| Variant        | Variant Wert                          |
+| Objekt         | Objekt mit Standardklasse (4D.Objekt) |
+| 4D.*className* | Objekt des 4D Klassennamens           |
+| cs.*className* | Objekt des Benutzerklassennamens      |
 
 #### Beispiele
 

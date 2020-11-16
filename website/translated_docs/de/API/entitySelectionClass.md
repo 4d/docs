@@ -3,14 +3,16 @@ id: entitySelectionClass
 title: Entity Selections
 ---
 
+<style>h2 { background: #d9ebff;}</style>
+
 An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
 
-## Summary
+### Summary
 
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE entitySelectionClass.&#91;index&#93;.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.[index].Summary -->|
+| [<!-- INCLUDE entitySelectionClass.index.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.index.Summary -->|
 | [<!-- INCLUDE entitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.and().Summary -->|
@@ -42,10 +44,9 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 
 
----
 
-<!-- REF entitySelectionClass.&#91;index&#93;.Desc -->
-## &#91;{index}&#93;
+<!-- REF entitySelectionClass.index.Desc -->
+## &#91;*index*&#93;
 
 <details><summary>History</summary>
 | Version | Changes |
@@ -54,13 +55,13 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 </details>
 
-<!-- REF #entitySelectionClass.&#91;index&#93;.Syntax -->
-**&#91;{index}&#93;** : 4D.Entity<!-- END REF -->
+<!-- REF entitySelectionClass.index.Syntax -->
+***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
 
 
 #### Beschreibung
 
-The `EntitySelection[*index*]` notation <!-- REF entitySelectionClass.[index].Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
+The `EntitySelection[index]` notation <!-- REF entitySelectionClass.index.Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
 
 Note that the corresponding entity is reloaded from the datastore.
 
@@ -68,7 +69,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 *   If *index* is out of range, an error is returned.
 *   If *index* corresponds to a dropped entity, a Null value is returned.
-> **Warning**: `EntitySelection[*index*]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](entityClass.md#lock) or [`.save()`](entityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Beispiele:
+> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](entityClass.md#lock) or [`.save()`](entityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Beispiele:
 
 ```4d
  $sel:=ds.Employee.all() //create the entity selection
@@ -96,7 +97,6 @@ Note that the corresponding entity is reloaded from the datastore.
 
 
 
----
 
 <!-- REF entitySelectionClass.attributeName.Desc -->
 ## .*attributeName*
@@ -175,7 +175,7 @@ The resulting object is an entity selection of Employee with duplications remove
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entitySelectionClass.add().Desc -->
 ## .add()
@@ -189,30 +189,33 @@ The resulting object is an entity selection of Employee with duplications remove
 
 
 <!-- REF #entitySelectionClass.add().Syntax -->
-**.add**( *entity* : 4D.Entity )<!-- END REF -->
+**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.add().Params -->
-| Parameter | Typ       |    | Beschreibung                               |
-| --------- | --------- |:--:| ------------------------------------------ |
-| entity    | 4D.Entity | -> | Entity to be added to the entity selection |
+| Parameter | Typ                |    | Beschreibung                                  |
+| --------- | ------------------ |:--:| --------------------------------------------- |
+| entity    | 4D.Entity          | -> | Entity to be added to the entity selection    |
+| Ergebnis  | 4D.EntitySelection | -> | Entity selection including the added *entity* |
 <!-- END REF -->
 
 
 #### Beschreibung
 
-The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection<!-- END REF -->.
+The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
 > This function modifies the original entity selection.
 
-**Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections] section.
+**Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
 
 
 *   If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
 *   If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
-> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsmapping.md#ordered-or-unordered-entity-selection) section.
+
+The modified entity selection is returned by the function, so that function calls can be chained.
 
 An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
 
-#### Beispiel
+#### Beispiel 1
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -224,9 +227,23 @@ An error occurs if *entity* and the entity selection are not related to the same
  $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
+#### Beispiel 2
+
+Calls to the function can be chained:
+
+```4d
+ var $sel : cs.ProductSelection
+ var $p1;$p2;$p3 : cs.ProductEntity
+
+ $p1:=ds.Product.get(10)
+ $p2:=ds.Product.get(11)
+ $p3:=ds.Product.get(12)
+ $sel:=ds.Product.query("ID > 50")
+ $sel:=$sel.add($p1).add($p2).add($p3)
+```
+
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.and().Desc -->
 ## .and()
@@ -293,7 +310,6 @@ We want to have a selection of employees named "Jones" who live in New York:
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.average().Desc -->
 ## .average()
@@ -346,7 +362,6 @@ We want to obtain a list of employees whose salary is higher than the average sa
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.contains().Desc -->
 ## .contains()
@@ -395,7 +410,6 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.count().Desc -->
 ## .count()
@@ -441,7 +455,6 @@ We want to find out the total number of employees for a company without counting
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.copy().Desc -->
 ## .copy()
@@ -471,7 +484,7 @@ The `.copy()` function <!-- REF #entitySelectionClass.copy().Summary -->returns 
 
 By default, if the *option* parameter is omitted, the function returns a new, non-shareable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
 
-> For information on the shareable property of entity selections, please refer to the [Shareable vs Non-shareable entity selections] section.
+> For information on the shareable property of entity selections, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
 
 #### Beispiel
 
@@ -505,7 +518,6 @@ Then this entity selection is updated with products and you want to share the pr
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.distinct().Desc -->
 ## .distinct()
@@ -560,7 +572,6 @@ You want to get a collection containing a single element per country name:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.drop().Desc -->
 ## .drop()
@@ -621,7 +632,6 @@ Example with the `dk stop dropping on first error` option:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.extract().Desc -->
 ## .extract()
@@ -633,8 +643,9 @@ Example with the `dk stop dropping on first error` option:
 
 </details>
 
-<!-- REF #entitySelectionClass.extract().Syntax -->
-**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+
+<!-- REF #entitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
+
 
 <!-- REF #entitySelectionClass.extract().Params -->
 | Parameter     | Typ        |    | Beschreibung                                                                            |
@@ -724,7 +735,6 @@ Given the following table and relation:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.first().Desc -->
 ## .first()
@@ -757,6 +767,7 @@ The result of this function is similar to:
 
 There is, however, a difference between both statements when the selection is empty:
 
+
 ```4d
  var $entitySel : cs.EmpSelection
  var $entity : cs.EmpEntity
@@ -781,7 +792,6 @@ There is, however, a difference between both statements when the selection is em
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.getDataClass().Desc -->
 ## .getDataClass()
@@ -832,12 +842,12 @@ The following generic code duplicates all entities of the entity selection:
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.isOrdered().Desc -->
 ## .isOrdered()
 
 <details><summary>History</summary>
+
 | Version | Changes |
 | ------- | ------- |
 | v17     | Added   |
@@ -884,7 +894,6 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.last().Desc -->
 ## .last()
@@ -933,7 +942,6 @@ If the entity selection is empty, the function returns Null.
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.length.Desc -->
 ## .length
@@ -966,7 +974,6 @@ Entity selections always have a `.length` property.
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.max().Desc -->
 ## .max()
@@ -1016,7 +1023,6 @@ We want to find the highest salary among all the female employees:
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.min().Desc -->
 ## .min()
@@ -1065,8 +1071,6 @@ In this example, we want to find the lowest salary among all the female employee
 
 <!-- END REF -->
 
-
----
 
 <!-- REF entitySelectionClass.minus().Desc -->
 ## .minus()
@@ -1133,7 +1137,6 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.or().Desc -->
 ## .or()
@@ -1194,7 +1197,6 @@ If the original entity selection and the parameter are not related to the same d
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.orderBy().Desc -->
 ## .orderBy()
@@ -1270,7 +1272,6 @@ You can add as many objects in the criteria collection as necessary.
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.orderByFormula().Desc -->
 ## .orderByFormula( )
@@ -1392,7 +1393,6 @@ In this example, the "marks" object field in the **Students** dataClass contains
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.query().Desc -->
 ## .query()
@@ -1447,7 +1447,6 @@ More examples of queries can be found in the DataClass [`.query()`](dataclassCla
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.queryPath.Desc -->
 ## .queryPath
@@ -1472,7 +1471,6 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.queryPlan.Desc -->
 ## .queryPlan
@@ -1496,7 +1494,6 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.refresh().Desc -->
 ## .refresh()
@@ -1577,7 +1574,6 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- END REF -->
 
 
----
 
 <!-- REF entitySelectionClass.slice().Desc -->
 ## .slice()
@@ -1637,7 +1633,6 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.sum().Desc -->
 ## .sum( )
@@ -1646,6 +1641,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 | Version | Changes |
 | ------- | ------- |
 | v17     | Added   |
+
 
 </details>
 
@@ -1687,7 +1683,6 @@ $sum:=$sel.sum("salary")
 
 <!-- END REF -->
 
----
 
 <!-- REF entitySelectionClass.toCollection().Desc -->
 ## .toCollection( )

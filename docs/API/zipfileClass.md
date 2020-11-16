@@ -3,7 +3,7 @@ id: zipClass
 title: ZIP Archive
 ---
 
-
+<style> h2 { background: #d9ebff;}</style>
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
 - You create a 4D ZIP archive with the [ZIP Create archive](#zip-create-archive) command.
@@ -170,7 +170,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
  
 
 
----
+
 <!-- REF zipArchive.ZIP Read archive.Desc -->
 ## ZIP Read archive
 

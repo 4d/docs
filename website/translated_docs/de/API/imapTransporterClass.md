@@ -3,10 +3,11 @@ id: imapTransporterClass
 title: IMAP Transporter
 ---
 
+<style> h2 { background: #d9ebff;}</style>
 The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.
 
 
-## IMAP Transporter object
+### IMAP Transporter object
 
 IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-new-transporter) command. They provide the following properties and functions:
 
@@ -34,7 +35,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
----
+
 
 ## IMAP New transporter
 
@@ -99,21 +100,20 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
  End if
 ```
 
----
+
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
----
+
 
 <!-- INCLUDE transporter.authenticationMode.Desc -->
 
 
----
+
 
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
----
 
 
 ## .checkConnectionDelay
@@ -131,13 +131,13 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 #### Beschreibung
 
 The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the *server* object, the value is 300.
-> **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
+> **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless. 
 
----
+
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
----
+
 
 <!-- REF imapTransporterClass.copy().Desc -->
 ## .copy()
@@ -242,7 +242,7 @@ To copy all messages in the current mailbox:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF imapTransporterClass.delete().Desc -->
 ## .delete()
@@ -347,7 +347,7 @@ To delete all messages in the current mailbox:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF imapTransporterClass.getBoxInfo().Desc -->
 ## .getBoxInfo()
@@ -402,7 +402,7 @@ The `boxInfo` object returned contains the following properties:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF imapTransporterClass.getBoxList().Desc -->
 ## .getBoxList()
@@ -463,7 +463,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 <!-- END REF -->
 
----
+
 
 <!-- REF imapTransporterClass.getDelimiter().Desc -->
 ## .getDelimiter()
@@ -522,7 +522,6 @@ Mailbox name delimiter character.
 <!-- END REF -->
 
 
----
 
 <!-- REF imapTransporterClass.getMail().Desc -->
 ## .getMail()
@@ -597,7 +596,7 @@ You want to get the message with ID = 1:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF imapTransporterClass.getMails().Desc -->
 ## .getMails()
@@ -702,7 +701,6 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 <!-- END REF -->
 
 
----
 
 <!-- REF imapTransporterClass.getMIMEAsBlob().Desc -->
 ## .getMIMEAsBlob()
@@ -777,18 +775,16 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 <!-- END REF -->
 
----
 
 
 <!-- INCLUDE transporter.host.Desc -->
 
 
----
 
 
 <!-- INCLUDE transporter.logFile.Desc -->
 
----
+
 
 <!-- REF imapTransporterClass.move().Desc -->
 ## .move()
@@ -895,7 +891,6 @@ To move all messages in the current mailbox:
 
 <!-- END REF -->
 
----
 
 <!-- REF imapTransporterClass.numToID().Desc -->
 ## .numToID()
@@ -960,12 +955,9 @@ The function returns a collection of strings (unique IDs).
 <!-- END REF -->
 
 
----
-
 
 <!-- INCLUDE transporter.port.Desc -->
 
----
 
 <!-- REF imapTransporterClass.searchMails().Desc -->
 ## .searchMails()
@@ -1098,7 +1090,7 @@ Search-keys may request the value to search for:
 
 <!-- END REF -->
 
----
+
 <!-- REF imapTransporterClass.selectBox().Desc -->
 ## .selectBox()
 
@@ -1167,7 +1159,6 @@ The `boxInfo` object returned contains the following properties:
 
 
 
----
 
 <!-- INCLUDE transporter.user.Desc -->
 

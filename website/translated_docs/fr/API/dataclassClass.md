@@ -3,11 +3,13 @@ id: dataclassClass
 title: Dataclass
 ---
 
+<style> h2 { background: #d9ebff;}</style>
+
 A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
 
 
 
-## Summary
+### Summary
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +24,6 @@ A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 | [<!-- INCLUDE #dataclassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.query().Summary --> |
 
 
----
 
 <!-- REF dataclassClass.attributeName.Desc -->
 ## .*attributeName*
@@ -94,7 +95,6 @@ Considering the following table properties:
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassClass.all().Desc -->
 ## .all()
@@ -147,7 +147,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -342,7 +342,6 @@ In this example, the first entity will be created and saved but the second will 
 
 <!-- END REF -->
 
----
 
 <!-- REF dataclassClass.get().Desc -->
 ## .get()
@@ -422,7 +421,6 @@ This example illustrates the use of the *context* property:
 
 <!-- END REF -->
 
----
 
 <!-- REF dataclassClass.getDataStore().Desc -->
 ## .getDataStore()
@@ -476,7 +474,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.getInfo().Desc -->
 ## .getInfo()
@@ -549,7 +547,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.new().Desc -->
 ## .new()
@@ -592,7 +590,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassClass.newSelection().Desc -->
 ## .newSelection()
@@ -616,13 +614,15 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 #### Description
 
-The `.newSelection( )` function <!-- REF #dataclassClass.newSelection().Summary -->creates a new, blank, , non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+La fonction `.newSelection()` <!-- REF #dataclassClass.newSelection().Summary -->crée une nouvelle sélection d'entité vide, non partageable, liée à la dataclass, en mémoire<!-- END REF -->.
 
-> For more information, see [Shareable vs Non-shareable entity selections] section.
+> Pour plus d'informations sur les sélections d'entités non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+
 
 If you want to create an ordered entity selection, pass the `dk keep ordered` selector in the *keepOrder* parameter. By default if you omit this parameter, or if you pass the `dk non ordered` selector, the method creates an unordered entity selection. Unordered entity selections are faster but you cannot rely on entity positions. For more information, please see [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](entitySelectionClass.md#add) function.
+
 
 #### Exemple
 
@@ -636,7 +636,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassClass.query().Desc -->
 ## .query()
@@ -995,6 +995,7 @@ $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"
 ```
 
 Query with indexed placeholders for attributes and values:
+
 
 ```4d
 var $es : cs.EmployeeSelection

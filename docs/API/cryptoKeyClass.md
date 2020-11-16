@@ -3,6 +3,8 @@ id: cryptoClass
 title: CryptoKey
 ---
 
+<style> h2 { background: #d9ebff;}</style>
+
 The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair.
 
 This class is available from the `4D` class store.
@@ -25,7 +27,7 @@ ASSERT($status.success)
 ```
 
 
-## Summary
+### Summary
 ||
 |---|
 |[<!-- INCLUDE #cryptokey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
@@ -44,7 +46,6 @@ ASSERT($status.success)
 
 
 
----
 ## 4D.CryptoKey.new( )
 
 <details><summary>History</summary>
@@ -79,7 +80,7 @@ The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a
 The returned `cryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
 <!-- END REF -->
 
----
+
 <!-- REF cryptokey.curve -->
 ## .curve
 
@@ -98,7 +99,7 @@ Defined only for ECDSA keys: the <!-- REF #cryptokey.curve.Summary -->normalised
 Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
 
----
+
 <!-- REF cryptokey.decrypt().Desc -->
 ## .decrypt()
 
@@ -147,7 +148,6 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 <!-- END REF -->
 
 
----
 <!-- REF cryptokey.encrypt().Desc -->
 ## .encrypt()
 
@@ -189,7 +189,6 @@ The returned value is an encrypted message.
 
 
 
----
 <!-- REF cryptokey.getPrivateKey().Desc -->
 ## .getPrivateKey()
 
@@ -217,7 +216,7 @@ The returned value is the private key.
 <!-- END REF -->
 
 
----
+
 <!-- REF cryptokey.getPublicKey().Desc -->
 ## .getPublicKey()
 
@@ -262,7 +261,7 @@ The returned value is the public key.
 <!-- END REF -->
 
 
----
+
 <!-- REF cryptokey.sign().Desc -->
 ## .sign()
 
@@ -301,7 +300,7 @@ The `cryptoKey` must contain a valid **private** key.
 The utf8 representation of the *message* string.
 <!-- END REF -->
 
----
+
 <!-- REF cryptokey.size -->
 ## .size
 <!-- END REF -->
@@ -317,7 +316,7 @@ The utf8 representation of the *message* string.
 
 Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the key in bits<!-- END REF -->. Typically 2048 (default).
 
----
+
 <!-- REF cryptokey.type -->
 ## .type
 <!-- END REF -->
@@ -334,7 +333,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 
 <!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", or "PEM":
 
----
+
 <!-- REF cryptokey.verify().Desc -->
 ## .verify()
 

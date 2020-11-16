@@ -42,7 +42,7 @@
         "title": "エンティティ"
       },
       "API/entitySelectionClass": {
-        "title": "Entity Selections"
+        "title": "EntitySelection"
       },
       "API/fileClass": {
         "title": "File"
@@ -72,7 +72,7 @@
         "title": "Transporter クラス"
       },
       "API/zipClass": {
-        "title": "ZIP アーカイブ"
+        "title": "ZIP Archive"
       },
       "Backup/backup": {
         "title": "バックアップ"
@@ -743,13 +743,13 @@
         "title": "サーバー設定"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "サーバー情報の取得"
       },
       "REST/gettingStarted": {
         "title": "はじめに"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "データ操作"
       },
       "REST/REST_requests": {
         "title": "About REST Requests"

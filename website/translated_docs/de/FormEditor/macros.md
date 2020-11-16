@@ -3,7 +3,7 @@ id: macros
 title: Form Editor Macros
 ---
 
-## Overview
+## Überblick
 
 The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
 

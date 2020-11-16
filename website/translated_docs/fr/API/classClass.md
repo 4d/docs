@@ -3,11 +3,13 @@ id: classClass
 title: Class
 ---
 
+<style> h2 { background: #d9ebff;}</style>
+
 When a user class is [defined](Concepts/classes.md#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of "Class" class, which has properties and a function.
 
 
 
-## Summary
+### Summary
 
 
 |                                                                                                                                                                                    |
@@ -17,7 +19,6 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 | [<!-- INCLUDE #classClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.superclass.Summary --> |
 
 
----
 
 <!-- REF classClass.name.Desc -->
 ## .name
@@ -34,13 +35,13 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 #### Description
 
-The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Class names are case sensitive.
+The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Les noms de classe sont sensibles à la casse.
 
 This property is **read-only**. 
 
 <!-- END REF -->
 
----
+
 
 <!-- REF classClass.new().Desc -->
 ## .new()
@@ -80,7 +81,7 @@ $person:=cs.Person.new() //create the new instance
 
 <!-- END REF -->
 
----
+
 
 <!-- REF classClass.superclass.Desc -->
 ## .superclass
