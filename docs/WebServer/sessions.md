@@ -1,20 +1,19 @@
 ---
-id: webServerSessions
+id: sessions
 title: User sessions
 ---
 
 ## Overview
 
-The 4D web server provides built-in features for managing user sessions. Creating and maintaining user sessions allows you to control and improve the user experience on your web application.
+The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, successive Web clients can reuse the same server context from one request to another. 
 
 Web server user sessions allow to:
 
-- handle simultaneously multiple requests from the same web client through several preemptive processes --web server sessions are **scalable**,
+- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
 - share data between the processes of a web client,
-- share private data between all web processes,
 - associate privileges to user sessions.
 
-## Enabling session mechanism
+## Enabling sessions
 
 The session management feature can be enabled and disabled on your 4D web server. There are two ways to enable session management:
 
@@ -23,7 +22,7 @@ The session management feature can be enabled and disabled on your 4D web server
 
 This option is selected by default in new projects. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
-- Using the `WEB SET OPTION(Web scalable session;1)` statement. In this case, this setting "overrides" the option defined in the Settings dialog box and is applied only during the working session (it is not stored on disk).
+- Using the `WEB SET OPTION(Web scalable session;1)` statement. In this case, this setting overrides the option defined in the Settings dialog box and is applied only during the working session (it is not stored on disk).
 
 In both cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 
@@ -32,11 +31,13 @@ In both cases, the setting is local to the machine; so it can be different on th
 
 ## Session implementation
 
-### How it works
+When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID". This cookie references the current web session. 
 
-When [sessions are enabled](#enabling-session-mechanism), automatic mechanisms are implemented: in each web client request, 4D checks for the presence and the value of the private "4DSID" cookie. This cookie references the web session.  
+1. In each web client request, the Web server checks for the presence and the value of the private "4DSID" cookie. 
 
-When the Web server receives a client request that does not correspond to an already opened session:
+2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
+
+2. If the client request does not correspond to an already opened session:
 
 - a new session with a private "4DSID" cookie is created on the web server
 - a new Guest `Session` object is created and is dedicated to the scalable web session.
@@ -46,6 +47,9 @@ The current `Session` object can then be accessed through the [`Session`](API/se
 ![alt-text](assets/en/WebServer/schemaSession.png)
 
 ### Example
+
+XXX
+
 
 ## Sharing information
 

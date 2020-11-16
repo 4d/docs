@@ -3,8 +3,9 @@ id: sessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](#session) command, when scalable sessions are enabled in your project. A Session object is automatically created and maintained by the 4D web server to control the browsing session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between user sessions, and launch session-related preemptive processes.
+Session objects are returned by the [`Session`](#session) command, when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). A Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-relat(WebServer/sessions.mded preemptive processes.
 
+For detailed information about the session implementation, please refer to the [web server Sessions](WebServer/sessions.md) section.
 
 ## Summary
 
@@ -45,7 +46,7 @@ Session objects are returned by the [`Session`](#session) command, when scalable
 
 The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->. 
 
-This command only works when scalable sessions are enabled (see XXX). It returns Null when sessions are disabled or when legacy sessions are used. 
+This command only works when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions). It returns *Null* when sessions are disabled or when legacy sessions are used. 
 
 When scalable sessions are enabled, the `Session` object is available from any web processes in the following contexts:
 
@@ -183,6 +184,7 @@ If (Session.hasPrivilege("WebAdmin"))
 	//Access is granted, do nothing
 Else
 	//Display an authentication page
+
 End if
 ```
 

@@ -763,11 +763,11 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
       "WebServer/webServerObject": {
         "title": "Web Server object"
-      },
-      "WebServer/webServerSessions": {
-        "title": "User sessions"
       }
     },
     "links": {
