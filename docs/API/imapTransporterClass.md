@@ -105,7 +105,6 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
     ALERT("An error occurred: "+$status.statusText)
  End if
 ```
-<!-- END REF -->
 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
