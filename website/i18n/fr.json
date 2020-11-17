@@ -71,6 +71,9 @@
       "API/transporter": {
         "title": "Classe Transporter"
       },
+      "API/webServerClass": {
+        "title": "Serveur Web"
+      },
       "API/zipClass": {
         "title": "ZIP Archive"
       },
