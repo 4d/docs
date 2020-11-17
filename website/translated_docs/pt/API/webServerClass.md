@@ -1,11 +1,12 @@
 ---
 id: webServerClass
-title: Web Server
+title: WebServer
 ---
 
 <style> h2 { background: #d9ebff;}</style>
 
-The `WebServer` class in the 4D language allows you to start and monitor a web server for the main (host) application as well as each hosted component.
+The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). This class is available from the `4D` class store.
+
 
 
 ### Web Server object
@@ -70,10 +71,10 @@ They provide the following properties and functions:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parameter | Type         |    | Description                                                 |
-| --------- | ------------ | -- | ----------------------------------------------------------- |
-| option    | Integer      | -> | Web server to get (default if omitted = default Web server) |
-| Result    | 4D.WebServer | <- | Web server object                                           |
+| Parameter | Type         |    | Description                                                    |
+| --------- | ------------ | -- | -------------------------------------------------------------- |
+| option    | Integer      | -> | Web server to get (default if omitted = `Web server database`) |
+| Result    | 4D.WebServer | <- | Web server object                                              |
 
 <!-- END REF -->
 
@@ -81,11 +82,11 @@ The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the d
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
-| Constant                     | Value | Comment                                                  |
-| ---------------------------- | ----- | -------------------------------------------------------- |
-| Web server database          | 1     | Current database Web server (default if omitted)         |
-| Web server host database     | 2     | Web server of the host database of a component           |
-| Web server receiving request | 3     | Web server that received the request (target Web server) |
+| Constant                       | Value | Comment                                                  |
+| ------------------------------ | ----- | -------------------------------------------------------- |
+| `Web server database`          | 1     | Current database Web server (default if omitted)         |
+| `Web server host database`     | 2     | Web server of the host database of a component           |
+| `Web server receiving request` | 3     | Web server that received the request (target Web server) |
 
 The returned Web server object contains the current values of the Web server properties.
 
@@ -126,8 +127,8 @@ The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->ret
 
 A 4D application can contain anywhere from one to several Web servers:
 
-- 1 Web server for the host database (default Web server)
-- 1 Web server for each component.
+- one Web server for the host database (default Web server)
+- one Web server for each component.
 
 All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
 
