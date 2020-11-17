@@ -46,7 +46,7 @@ ASSERT($status.success)
 
 
 
-## 4D.CryptoKey.new( )
+## 4D.CryptoKey.new()
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -81,7 +81,7 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 #### *cryptoKey*
 
 The returned `cryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
-<!-- END REF -->
+
 
 
 <!-- REF cryptokey.curve -->
