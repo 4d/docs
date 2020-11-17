@@ -209,7 +209,7 @@ The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the s
 
 *   If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
 *   If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
-> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsmapping.md#ordered-or-unordered-entity-selection) section.
+> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
 
 The modified entity selection is returned by the function, so that function calls can be chained.
 
@@ -891,6 +891,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
     ALERT("The entity selection is ordered and contains "+String($employees.length)+" employees")
  End if
 ```
+
 
 <!-- END REF -->
 
@@ -2174,6 +2175,7 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
                 "salary": 71600,
                 "birthDate": "1968-08-09T00:00:00.000Z",
                 "woman": false,
+
                 "managerID": 425,
                 "employerID": 21,
                 "photo": "[object Picture]",
