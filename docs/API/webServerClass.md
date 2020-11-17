@@ -61,16 +61,12 @@ They provide the following properties and functions:
 
 ## .certificateFolder
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-| | | 
-</details>
 
 <!-- REF #webServerClass.certificateFolder.Syntax -->
 **.certificateFolder** : Text<!-- END REF -->
 
-The <!-- REF #webServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.
+
+Path of the <!-- REF #webServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter of the [`.start()`](#start) function, it can be a [`Folder` object](folderClass.md).
 
 <!-- END REF -->
 
@@ -79,17 +75,12 @@ The <!-- REF #webServerClass.certificateFolder.Summary -->folder where the certi
 
 ## .characterSet
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-| | | 
-</details>
-
 
 <!-- REF #webServerClass.characterSet.Syntax -->
 **.characterSet** : Number<br>**.characterSet** : Text<!-- END REF -->
 
-The <!-- REF #webServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers<!-- END REF --> connecting to the application. The default value actually depends on the language of the OS. Can be a MIBEnum longint or Name string, identifiers defined by IANA supported by the 4D Web Server:
+
+The <!-- REF #webServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. The default value actually depends on the language of the OS. Can be a MIBEnum integer or a Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Here is the list of identifiers corresponding to the character sets supported by the 4D Web Server:
 
 *	4 = ISO-8859-1
 *	12 = ISO-8859-9
@@ -112,17 +103,12 @@ The <!-- REF #webServerClass.characterSet.Summary -->character set that the 4D W
 
 ## .cipherSuite
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-| | | 
-</details>
 
 <!-- REF #webServerClass.cipherSuite.Syntax -->
 **.cipherSuite** : Text<!-- END REF -->
 
 
-The <!-- REF #webServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Sets the priority of ciphering algorithms implemented by the web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
+The <!-- REF #webServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Sets the priority of ciphering algorithms implemented by the 4D web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
 
 <!-- END REF -->
 
@@ -131,16 +117,10 @@ The <!-- REF #webServerClass.cipherSuite.Summary -->cipher list used for the sec
 
 ## .CORSEnabled
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-| | | 
-</details>
-
 <!-- REF #webServerClass.CORSEnabled.Syntax -->
 **.CORSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #webServerClass.CORSEnabled.Summary -->CORS (Cross-origin resource sharing) service status for the web server<!-- END REF -->. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
+The <!-- REF #webServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
 Default: False (disabled)
 
@@ -602,7 +582,7 @@ The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneo
 <!-- REF #webServerClass.minTLSVersion.Syntax -->
 **.minTLSVersion** : Number<!-- END REF -->
 
-The <!-- REF #webServerClass.minTLSVersion.Summary -->maximum number of simultaneous sessions<!-- END REF -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
+The <!-- REF #webServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
 
 Possible values:
 

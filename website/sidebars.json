@@ -43,6 +43,7 @@
 	"API/pop3TransporterClass",
 	"API/signalClass",
 	"API/smtpTransporterClass",
+	"API/webServerClass",
 	"API/zipClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
