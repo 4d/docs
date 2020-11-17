@@ -5,6 +5,8 @@ title: Web Server
 
 <style> h2 { background: #d9ebff;}</style>
 
+4D applications include a powerful and highly configurable [built-in Web server].  
+
 The `WebServer` class in the 4D language allows you to start and monitor a web server for the main (host) application as well as each hosted component.
 
 
