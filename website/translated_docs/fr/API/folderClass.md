@@ -107,8 +107,25 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | fk user preferences folder | 0      | 4D folder that stores user preference files within the \<userName> directory.                      |
 | fk web root folder         | 8      | Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path |
 
-If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
+If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
+
+## 4D.Folder.new()
+
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R6  | Ajoutées      |
+</details>
+
+<!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+
+
+#### Description
+
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+
+> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
 
 
 <!-- INCLUDE directory.copyTo().Desc -->

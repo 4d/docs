@@ -122,9 +122,25 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 
 If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
 
-If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
+If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
 
+## 4D.File.new()
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v18 R6  | Added   |
+</details>
+
+<!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+
+
+#### Beschreibung
+
+The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -501,6 +517,7 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 <!-- REF file.setText().Desc --> 
 ## .setText()
+
 
 <details><summary>History</summary>
 | Version | Changes |
