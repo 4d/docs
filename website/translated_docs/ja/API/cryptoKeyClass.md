@@ -3,7 +3,6 @@ id: cryptoClass
 title: CryptoKey
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
 4D ランゲージの `CryptoKey` クラスは、非対称の暗号化キーペアをカプセル化します。
 
@@ -383,3 +382,5 @@ In case the signature couldn't be verified because it was not signed with the sa
 | success | boolean    | 署名がメッセージと合致すれば true                               |
 | errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>
