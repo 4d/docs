@@ -3,6 +3,9 @@ id: branching
 title: 分岐構造
 ---
 
+A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+
+
 ## If...Else...End if
 
 `If...Else...End if` による制御フロー構造の正式な構文は以下のようになります:
