@@ -3,6 +3,9 @@ id: branching
 title: Abfragestrukturen
 ---
 
+A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+
+
 ## If...Else...End if
 
 Die formale Syntax der Abfragefolge `If...Else...End if` lautet:
