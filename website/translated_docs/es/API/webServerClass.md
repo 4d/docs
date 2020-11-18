@@ -3,7 +3,6 @@ id: webServerClass
 title: WebServer
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
 The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). This class is available from the `4D` class store.
 
@@ -470,6 +469,7 @@ The <!-- REF #webServerClass.IPAddressToListen.Summary -->IP address on which th
 
 <!-- REF webServerClass.isRunning.Desc -->
 
+
 ## .isRunning
 
 
@@ -807,3 +807,4 @@ To stop the database Web server:
 ```
 
 <!-- END REF -->
+<style> h2 { background: #d9ebff;}</style>
