@@ -3,7 +3,6 @@ id: listOverview
 title: Liste hiérarchique
 ---
 
-## Aperçu
 
 Les listes hiérarchiques sont des objets de formulaire permettant d'afficher des données sous forme de listes comportant un ou plusieurs niveaux qu'il est possible de déployer ou de contracter.
 
