@@ -3,13 +3,12 @@ id: progressIndicator
 title: Indicateurs de progression
 ---
 
-## Aperçu
 
 Un indicateur de progression (également appelé "thermomètre") est conçu pour afficher ou définir graphiquement des valeurs numériques ou date/heure.
 
 ![](assets/en/FormObjects/progress1.png)
 
-### Utiliser des indicateurs
+## Utiliser des indicateurs
 
 Vous pouvez utiliser les jauges pour afficher ou définir des valeurs. Par exemple, si un indicateur de progression se voit affecter une valeur par une méthode, il affiche la valeur. Si l’utilisateur modifie manuellement la valeur indiquée par la jauge, la valeur contenue par l’objet est modifiée. Cette valeur peut être utilisée pour un autre objet tel qu’un champ, un objet saisissable ou un objet non saisissable.
 
