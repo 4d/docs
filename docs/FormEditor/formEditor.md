@@ -3,6 +3,8 @@ id: formEditor
 title: Form Editor
 ---
 
+4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+
 
 ## Interface
 

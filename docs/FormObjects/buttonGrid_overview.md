@@ -2,7 +2,6 @@
 id: buttonGridOverview
 title: Button Grid
 ---
-## Overview
 
 A button grid is a transparent object that is placed on top of a graphic. The graphic should depict a row-by-column array. When one of the graphics is clicked on, it will have a sunken or pressed appearance:
 
