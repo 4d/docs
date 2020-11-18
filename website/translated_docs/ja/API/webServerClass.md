@@ -57,7 +57,7 @@ They provide the following properties and functions:
 | [<!-- INCLUDE #webServerClass.stop().Syntax -->](#stop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.stop().Summary -->|
 
 
-## Web サーバー
+## WEB Server
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -103,7 +103,7 @@ From your component, you want to know if the Web server of the host database is 
  End if
 ```
 
-## Web Server list
+## WEB Server list
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
