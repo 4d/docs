@@ -3,6 +3,8 @@ id: null-undefined
 title: Null et Indefinie
 ---
 
+Null and Undefined are data types that handle cases where the value of an expression is not known.
+
 ## Null
 
 Null est un type de données particulier avec une seule valeur possible : **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur.
