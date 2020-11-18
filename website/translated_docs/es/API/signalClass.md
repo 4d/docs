@@ -3,7 +3,6 @@ id: signalClass
 title: Signals
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 Signals are tools provided by the 4D language to manage interactions and avoid conflicts between processes in a multiprocess application. Signals allow you to make sure one or more process(es) will wait for a specific task to be completed before continuing execution. Any process can wait and/or release a signal.
 
 > Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Only the process that sets the semaphore can remove it.
@@ -277,3 +276,4 @@ The function returns the value of the `.signaled` property. Evaluating this valu
 
 <!-- END REF -->
 
+<style> h2 { background: #d9ebff;}</style>
