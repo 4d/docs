@@ -3,7 +3,6 @@ id: pop3TransporterClass
 title: POP3 Transporter
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
 
 
@@ -540,12 +539,4 @@ The `.undeleteAll()` function <!-- REF #pop3TransporterClass.undeleteAll().Summa
 
 
 
-
-
-
-
-
-
-
-
-
+<style> h2 { background: #d9ebff;}</style>
