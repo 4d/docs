@@ -3,8 +3,6 @@ id: datastoreClass
 title: DataStore
 ---
 
-<style> h2 { background: #d9ebff;}</style>
-
 A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
 
 *   [ds](#ds): a shortcut to the main datastore
@@ -245,6 +243,7 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 
 <!-- REF datastoreClass.cancelTransaction().Desc -->
+
 ## .cancelTransaction()
 
 <details><summary>Historique</summary>
@@ -759,3 +758,4 @@ See example for [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
+<style> h2 { background: #d9ebff;}</style>
