@@ -3,7 +3,6 @@ id: webServerObject
 title: Web Server object
 ---
 
-## 概要
 
 A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
 
@@ -43,6 +42,7 @@ To instantiate a web server object, call the [`WEB Server`](API/webServerClass.m
 var webServer : 4D.WebServer 
     //call the web server from the current context
 webServer:=WEB Server  
+
     //equivalent to
 webServer:=WEB Server(Web server database)
 ```
