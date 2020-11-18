@@ -3,7 +3,6 @@ id: imapTransporterClass
 title: IMAP Transporter
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.
 
 
@@ -1140,6 +1139,7 @@ To move all messages in the current mailbox:
 <!-- END REF -->
 
 
+
 <!-- REF imapTransporterClass.numToID().Desc -->
 ## .numToID()
 
@@ -1501,6 +1501,7 @@ The `boxInfo` object returned contains the following properties:
 
 
 
+<style> h2 { background: #d9ebff;}</style>
 
 
 
