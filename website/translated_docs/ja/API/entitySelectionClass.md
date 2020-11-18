@@ -3,7 +3,6 @@ id: entitySelectionClass
 title: EntitySelection
 ---
 
-<style>h2 { background: #d9ebff;}</style>
 
 An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。
 
@@ -891,6 +890,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
     ALERT("The entity selection is ordered and contains "+String($employees.length)+" employees")
  End if
 ```
+
 
 
 <!-- END REF -->
@@ -2216,3 +2216,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 
 
 
+<style> h2 { background: #d9ebff;}</style>
