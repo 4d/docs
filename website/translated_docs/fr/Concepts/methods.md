@@ -4,8 +4,6 @@ title: Méthodes
 ---
 
 
-## Aperçu
-
 Une méthode est un morceau de code qui exécute une ou plusieurs actions. Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions).
 
 La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes de code.
