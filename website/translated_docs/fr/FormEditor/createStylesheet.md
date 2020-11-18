@@ -3,7 +3,6 @@ id: stylesheets
 title: Feuilles de style (style sheets)
 ---
 
-## Aperçu
 
 Une feuille de style regroupe une combinaison d’attributs d'objets formulaire —  allant des attributs de texte à quasiment tous les attributs d'objet disponibles.
 
@@ -13,7 +12,7 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 *   Facilité de maintenance : les feuilles de styles ont la propriété de modifier l’apparence de tous les objets qui les utilisent. Changer, par exemple, la taille de la police dans une feuille de style changera la taille de la police pour tous les objets qui utilisent cette feuille de style.
 *   Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée.
 
-### Fichiers feuilles de style
+## Fichiers feuilles de style
 
 4D accepte trois fichiers feuilles de style spécifiques :
 
@@ -26,7 +25,7 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 Ces fichiers sont stockés dans le dossier "/SOURCES" du projet. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
-### Architecture des feuilles de style
+## Architecture des feuilles de style
 
 While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
@@ -183,6 +182,7 @@ Tous les objets de type texte ayant un attribut text dont la valeur commence par
 text[text|=Hello]
 {
      stroke: yellow;
+
 
 }
 ```
