@@ -1,5 +1,5 @@
 ---
-id: zipClass
+id: zipArchiveClass
 title: ZIP Archive
 ---
 
@@ -29,7 +29,13 @@ If($zipFile.extension=".txt")
 End if
 ```
 
----
+### Summary
+
+||
+|---|
+|[<!-- INCLUDE #zipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #zipArchiveClass.root.Summary -->|
+
+
 ## ZIP Create archive
 
 <details><summary>History</summary>
@@ -202,13 +208,8 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 **Archive object**
 
-The returned `4D.ZipArchive` object contains a single `root` property whose value is a `4D.Folder` object. This folder describes the whole contents of the ZIP archive:
+The returned `4D.ZipArchive` object contains a single [`root`](#root) property whose value is a `4D.Folder` object. This folder describes the whole contents of the ZIP archive. 
 
-|Property|Type|Description|
-|---|---|---|
-|`root`|`4D.Folder`|A virtual folder containing the contents of the ZIP archive.
-
-The `root` folder and its contents can be manipulated with the `File` and `Folder` methods and properties.
 
 
 #### Example
@@ -251,11 +252,25 @@ To extract from the root folder:
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ``` 
 
----
+
+
+## .root
+
+<!-- REF #zipArchiveClass.root.Syntax -->
+**.root** : 4D.Folder<!-- END REF -->
+
+
+#### Description
+
+The `.root` property contains <!-- REF #zipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+
+The `root` folder and its contents can be manipulated with the [File](fileClass.md) and [Folder](folderClass.md) functions and properties.
+
+This property is **read-only**. 
 
 
 
-## Zip File object
+## ZipFile object
 
 The following properties and functions from the [File](fileClass.md) class are available to 4D ZIP file objects:
 
@@ -285,7 +300,7 @@ The following properties and functions from the [File](fileClass.md) class are a
 
 
 
-## Zip Folder object
+## ZipFolder object
 
 The following properties and functions from the [Folder](folderClass.md) class are available to 4D ZIP folder objects:
 
