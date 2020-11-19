@@ -3,13 +3,14 @@ id: formulaClass
 title: Formula
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
-### Formula Objects
 
 The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
-Such formula objects can be encapsulated in object properties:
+
+### Formula Objects
+
+Formula objects can be encapsulated in object properties:
 
 ```4d
  var $f : 4D.Function
@@ -176,6 +177,7 @@ A simple formula:
 A formula using local variables:
 
 ```4d
+
 
  $value:=10
  $o:=New object("f";Formula($value))
@@ -437,3 +439,5 @@ This property is **read-only**.
 
 
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

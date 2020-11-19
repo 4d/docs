@@ -3,6 +3,9 @@ id: branching
 title: Structures conditionnelles
 ---
 
+A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+
+
 ## If...Else...End if
 
 La syntaxe de la structure conditionnelle `If...Else...End if` est la suivante :

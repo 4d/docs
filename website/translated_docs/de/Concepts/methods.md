@@ -4,8 +4,6 @@ title: Methoden
 ---
 
 
-## Überblick
-
 Eine Methode ist in der Regel ein Stück Code, der eine oder mehrere Aktionen ausführt. Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. Eine Anweisung führt eine Aktion aus, die einfach oder komplex sein kann. Obwohl eine Anweisung immer in einer Zeile steht, kann diese Zeile so lang wie erforderlich sein (bis zu 32.000 Zeichen, was für die meisten Fälle ausreichen dürfte).
 
 Eine Methode kann max. 2 GB groß sein oder bis zu 32.000 Code-Zeilen enthalten.

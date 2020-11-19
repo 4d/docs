@@ -3,7 +3,6 @@ id: dataclassAttributeClass
 title: DataClassAttribute
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 Dataclass attributes are available as properties of their respective classes. Par exemple:
 
 ```4d
@@ -390,3 +389,5 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 > Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.unique) pour obtenir une valeur valide (false) même si `.unique` n'est pas retourné. 
 
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

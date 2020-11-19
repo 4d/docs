@@ -3,8 +3,9 @@ id: date
 title: Datum
 ---
 
-- Datenfelder, Variablen oder Ausdrücke vom Typ Datum umfassen den Bereich 1.1.100 bis 31.12.32767. Das Datum wird in der deutschen Version von 4D im Format Tag/Monat/Jahr dargestellt, in der internationalen Version im Format Monat/Tag/Jahr.
-- Auch wenn die Datumsdarstellung über C_DATE bis zum Jahr 32767 funktioniert, können über das Betriebssystem laufende Operationen eine niedrigere Grenze vorschreiben.
+Datenfelder, Variablen oder Ausdrücke vom Typ Datum umfassen den Bereich 1.1.100 bis 31.12.32767. Das Datum wird in der deutschen Version von 4D im Format Tag/Monat/Jahr dargestellt, in der internationalen Version im Format Monat/Tag/Jahr.
+
+Auch wenn die Datumsdarstellung über C_DATE bis zum Jahr 32767 funktioniert, können über das Betriebssystem laufende Operationen eine niedrigere Grenze vorschreiben.
 
 **Hinweis:** Bei der Beschreibung von Befehlen im Handbuch 4D Programmiersprache werden Datumsparameter als Datum bezeichnet, wenn nichts anderes angegeben ist.
 

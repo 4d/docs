@@ -3,7 +3,6 @@ id: shared
 title: Objets et collections partagés
 ---
 
-## Aperçu
 **Les objets partagés** et **les collections partagées** sont des [objets](Concepts/dt_object.md) et des [collections](Concepts/dt_collection.md) spécifiques dont le contenu est partagé entre les process. Comparés aux [Variables interprocess](Concepts/variables.md#interprocess-variables), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les **Process 4D préemptifs** : il peuvent être passés en paramètres (par référence) aux commandes telles que `New process` ou `CALL WORKER`.
 
 Les objets partagés et les collections partagées peuvent être stockés dans des variables déclarées à l'aide des commandes standard `C_OBJECT` et `C_COLLECTION`, mais doivent être instanciées à l'aide de commandes spécifiques :
@@ -18,9 +17,11 @@ Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l
 Un catalogue unique et global, retourné par la commande `Storage`, est disponible à tout moment et depuis tout process de l'application et de ses composants.
 
 ## Utilisation des objets et collections partagés
+
 Une fois instanciés à l'aide des commandes `Creer objet partage` ou `Creer collection partagee`, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process.
 
 ### Modification
+
 Les modifications suivantes peuvent être effectuées sur les objets partagés et les collections partagées :
 
 - ajout ou suppression de propriétés d'objets,
@@ -48,14 +49,17 @@ Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partag�
 **Note :** Les groupes partagés sont gérés via une propriété interne nommée *locking identifier*. Si vous avez besoin de plus d'informations sur les mécanismes utilisés, reportez-vous au Guide du développeur de 4D.
 
 ### Lecture
+
 La lecture de propriétés ou d'éléments d'un objet ou d'une collection partagé(e) est possible sans appel de la structure `Use...End use`, même si l'objet ou la collection partagé(e) est "utilisé(e)" par un autre process.
 
 Cependant, lorsque plusieurs valeurs sont interdépendantes et doivent être lues simultanément, il est nécessaire d'encadrer l'accès en lecture par une structure `Use...End use` pour des raisons de cohérence.
 
 ### Duplication
+
 Appeler `OB Copier` avec un objet partagé (ou avec un objet dont des propriétés sont des objets partagés) est possible, mais dans ce cas un objet standard (non partagé) est retourné.
 
 ### Storage
+
 **Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est retourné par la commande `Storage`. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e) s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e) s connecté(e) s.
@@ -63,6 +67,7 @@ A noter que, à la différence de objets partagés standard, l'objet `Storage` n
 Pour plus d'informations, reportez-vous à la description de la commande `Storage`.
 
 ## Utiliser...Fin utiliser
+
 La syntaxe de la structure `Use...End use` est la suivante :
 
 ```4d

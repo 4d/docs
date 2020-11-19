@@ -3,8 +3,6 @@ id: comboBoxOverview
 title: コンボボックス
 ---
 
-## 概要
-
 コンボボックスは [ドロップダウンリスト](dropdownList_Overview.md#概要) と似ていますが、キーボードから入力されたテキストを受けいれる点と、二つの追加オプションがついている点が異なります。
 
 ![](assets/en/FormObjects/combo_box.png)

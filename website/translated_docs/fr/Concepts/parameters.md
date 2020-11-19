@@ -4,9 +4,9 @@ title: Paramètres
 ---
 
 
-## Aperçu
-
 You'll often find that you need to pass data to your methods and functions. Vous pouvez facilement effectuer cette opération grâce aux paramètres.
+
+## Aperçu
 
 **Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. Le terme *paramètres* ou *arguments* est utilisé indifféremment dans ce manuel. Des paramètres sont également passés aux commandes intégrées de 4D. Dans l’exemple ci-dessous, la chaîne “Bonjour” est un paramètre de la commande `ALERTE` :
 

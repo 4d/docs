@@ -3,7 +3,6 @@ id: zipClass
 title: ZIP Archive
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
 - You create a 4D ZIP archive with the [ZIP Create archive](#zip-create-archive) command.
@@ -426,3 +425,5 @@ The following properties and functions from the [Folder](folderClass.md) class a
 | [<!-- INCLUDE #directory.parent.Syntax -->](folderClass.md#parent)                     | The archive's virtual `root` folder has no parent. However, the folders within the archive may have a parent other than the root. |
 | [<!-- INCLUDE #directory.path.Syntax -->](folderClass.md#path)                         | Returns a path relative to the archive                                                                                            |
 | [<!-- INCLUDE #directory.platformPath.Syntax -->](folderClass.md#platformpath)         |                                                                                                                                   |
+
+<style> h2 { background: #d9ebff;}</style>

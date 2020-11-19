@@ -3,9 +3,8 @@ id: collectionClass
 title: Collections
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
-The Collection class manages [Collection](Concepts/collection.md) type variables.
+The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
 
 A collection is initialized with:
 
@@ -2202,6 +2201,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 #### Description
 
+
 The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *methodName* callback method against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
 > This function does not modify the original collection.
 
@@ -2788,3 +2788,6 @@ If several values are passed, they are inserted all at once, which means that th
 ```
 
 <!-- END REF -->
+
+
+<style> h2 { background: #d9ebff;}</style>

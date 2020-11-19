@@ -3,7 +3,6 @@ id: cryptoClass
 title: CryptoKey
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
 La classe `CryptoKey` du langage 4D contient une paire de clés de chiffrement asymétrique.
 
@@ -383,3 +382,5 @@ In case the signature couldn't be verified because it was not signed with the sa
 | success   | boolean    | True si la signature correspond au message                                  |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>
