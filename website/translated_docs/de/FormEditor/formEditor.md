@@ -3,6 +3,8 @@ id: formEditor
 title: Form Editor
 ---
 
+4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+
 
 ## Interface
 
@@ -316,7 +318,7 @@ To move an object to another level, select it and choose:
 *   One of the commands associated with the level management button of the toolbar.
 
 ![](assets/en/FormEditor/level2.png)
-> When several objects are superimposed, the **Ctrl+click** / **Command+click** shortcut can be used to select each object successively by going down a layer with each click.
+> When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
 
 When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
 

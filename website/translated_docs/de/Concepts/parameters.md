@@ -4,9 +4,9 @@ title: Parameter
 ---
 
 
-## Overview
-
 Sie werden öfters sehen, dass Sie Ihren Methoden und Funktionen Daten übergeben müssen. Das lässt sich leicht mit Parametern durchführen.
+
+## Überblick
 
 **Parameter** (oder **Argumente**) sind Datenteile, die eine Methode oder eine Class Function zum Ausführen ihrer Aufgaben benötigen. Die Begriffe *Parameter* und *Argument* werden in der Dokumentation ohne Unterscheidung verwendet. Parameter werden auch in den integrierten 4D Befehlen verwendet. In diesem Beispiel ist der String “Hello” ein Argument des 4D Befehls `ALERT`:
 
@@ -47,15 +47,15 @@ Jede Subroutine kann einen Wert zurückgeben. Pro Methode oder Class Function l�
 Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#values-or-references) und in lokale Variablen innerhalb der aufgerufenen Class Function oder Methode kopiert. Es gibt zwei Syntaxarten, um Variablenparameter im aufgerufenen Code zu deklarieren:
 
 - [benannte Variablen](#named-parameters) (in den meisten Fällen empfohlen) oder
-- [sequentiell nummerierte Variablen](#sequential-parameters).
+- [sequentiell nummerierte Variablen](#sequentielle-parameter).
 
 
-> Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#named-parameters) und [sequentiell](#sequential-parameters) uneingeschränkt miteinander mischen. Beispiel:
-> 
-> ```4d
+Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#named-parameters) und [sequentiell](#sequential-parameters) uneingeschränkt miteinander mischen. Beispiel:
+
+```4d
 Function add($x : Integer)
-  var $0;$2 : Integer
-  $0:=$x+$2
+    var $0;$2 : Integer
+    $0:=$x+$2
 ```
 
 
@@ -63,7 +63,7 @@ Function add($x : Integer)
 
 ## Parameter mit Namen
 
-In den aufgerufenen Methoden oder Class Functions werden Parameterwerte lokalen Variablen zugewiesen. Sie deklarieren Parameter mit einem**Parameternamen** und mit einem **Parametertyp**, getrennt durch Strichpunkt.
+In den aufgerufenen Methoden oder Class Functions werden Parameterwerte lokalen Variablen zugewiesen. Sie deklarieren Parameter mit einem **Parameternamen** und mit einem **Parametertyp**, getrennt durch Strichpunkt.
 
 - Für Class Functions werden Parameter über das Schlüsselwort `Function` deklariert.
 - Für Methoden (Projektmethoden, Formularobjektmethoden, Datenbankmethoden und Trigger) werden Parameter über das Schlüsselwort `#DECLARE` zu Beginn des Methodencode deklariert.
@@ -79,7 +79,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
 
 
-The following rules apply:
+Es gelten folgende Regeln:
 
 - Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (davor können nur Kommentare oder Zeilenumbrüche stehen).
 - Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
@@ -132,7 +132,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 ### Unterstützte Datentypen
 
-Mit benannten Parametern können Sie dieselben Datentypen wie für [ das Schlüsselwort `var` ](variables.md#using-the-var-keyword), verwenden, inkl. Objekte von Klassen.  Beispiel:
+Mit benannten Parametern können Sie dieselben Datentypen wie für [ das Schlüsselwort `var` ](variables.md#using-the-var-keyword) verwenden, inkl. Objekte von Klassen.  Beispiel:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)

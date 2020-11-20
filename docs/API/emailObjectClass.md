@@ -3,7 +3,6 @@ id: emails
 title: Emails
 ---
 
-
 Creating, sending or receiving emails in 4D is done by handling an `Email` object. This object is used by the following commands and methods:
 
 - SMTP - [`.send()`](smtpTransporterClass.md#send) function to send an email through SMTP
@@ -12,7 +11,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 - `MAIL Convert from MIME` and `MAIL Convert to MIME` commands to convert emails
 
 
-## Email Object
+### Email Object
 
 Email objects provide the following properties:
 
@@ -44,7 +43,7 @@ Email objects provide the following properties:
 |[<!-- INCLUDE #emailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #emailObjectClass.to.Summary -->|
 
 
-## Email Addresses
+### Email Addresses
 
 All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) accept a value of text, object, or collection type.
 
@@ -102,7 +101,6 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 
 
----
 
 
 ## .attachments
@@ -114,11 +112,12 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 #### Description
 
 
+
 The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->. 
 
 Attachment objects are defined through the `MAIL New attachment` command.
 
----
+
 
 
 ## .bcc 
@@ -132,7 +131,7 @@ Attachment objects are defined through the `MAIL New attachment` command.
 The `.bcc` property contains the <!-- REF #emailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->. 
 
 
----
+
 
 ## .bodyStructure
 
@@ -159,7 +158,7 @@ The `.bodyStructure` object contains the following properties:
 |headers|Collection of objects|List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property)|
 
  
-----
+
 
 ## .bodyValues
 
@@ -178,7 +177,7 @@ The `.bodyValues` object contains the following properties:
 |*partID*.value|text|Value of the body part|
 |*partID*.isEncodingProblem|boolean|True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default|
 
----
+
 
 
 ## .cc 
@@ -194,7 +193,7 @@ The `.cc` property contains the <!-- REF #emailObjectClass.cc.Summary -->Carbon 
 
 
 
----
+
 
 ## .comments
 
@@ -210,7 +209,7 @@ Comments only appear within the header section of the message (keeping the messa
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
----
+
 
 
 ## .from 
@@ -232,7 +231,7 @@ Each email you send out has both the [sender](#sender) and **from** addresses:
 For better deliverability, it is recommended to use the same from and sender addresses.
 
 
----
+
 
 ## .headers
 
@@ -256,7 +255,7 @@ Every object of the headers collection can contain the following properties:
 
 
 
----
+
 
 
 ## .htmlBody
@@ -272,7 +271,6 @@ The `.htmlBody` property contains the <!-- REF #emailObjectClass.htmlBody.Summar
 
 
 
----
 
 
 
@@ -290,7 +288,7 @@ The `.id` property contains the <!-- REF #emailObjectClass.id.Summary -->unique 
 
 
 
----
+
 
 
 ## .inReplyTo
@@ -307,7 +305,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 
 
----
+
 
 
 ## .keywords
@@ -326,6 +324,13 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 |---|---|---|
 |.\<keyword\>|boolean|Keyword to set (value must be true)|
 
+Reserved keywords:
+* $draft - Indicates a message is a draft
+* $seen - Indicates a message has been read
+* $flagged - Indicates a message needs special attention (e.g., Urgent)
+* $answered - Indicates a message has been replied to
+* $deleted - Indicates a message to delete
+
 #### Example
 
 ```
@@ -334,7 +339,7 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
  $mail.keywords["4d"]:=True
 ```
 
----
+
 
 
 ## .messageId
@@ -349,7 +354,7 @@ The `.messageId` property contains a <!-- REF #emailObjectClass.messageId.Summar
 
 This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com". This unique ID is used in particular on forums or public mailing lists. In general, mail servers automatically add this header to the messages they send. 
 
---- 
+ 
  
 ## .receivedAt 
 
@@ -365,7 +370,7 @@ The `.receivedAt` property contains the <!-- REF #emailObjectClass.receivedAt.Su
 
 
 
----
+
 
 
 ## .references
@@ -381,7 +386,6 @@ The `.references` property contains the <!-- REF #emailObjectClass.references.Su
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
 
----
 
 
 ## .replyTo 
@@ -394,7 +398,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 The `.replyTo` property contains the <!-- REF #emailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->. 
 
----
+
 
 
 
@@ -409,7 +413,7 @@ The `.replyTo` property contains the <!-- REF #emailObjectClass.replyTo.Summary 
 The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->. 
 
 
----
+
 
 ## .sender 
 
@@ -430,7 +434,7 @@ Each email you send out has both the **sender** and **[from](#from)** addresses:
 For better deliverability, it is recommended to use the same from and sender addresses.
 
 
----
+
 
 ## .size 
 
@@ -444,7 +448,7 @@ For better deliverability, it is recommended to use the same from and sender add
 
 The `.size` property contains the <!-- REF #emailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->. 
 
----
+
 
 
 ## .subject
@@ -459,7 +463,7 @@ The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary 
 
 
 
----
+
 
 ## .textBody
 
@@ -471,7 +475,7 @@ The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary 
 
 The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
----
+
 
 ## .to 
 
@@ -483,6 +487,7 @@ The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summar
 
 The `.to` property contains the <!-- REF #emailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->. 
 
----
 
 
+
+<style> h2 { background: #d9ebff;}</style>

@@ -3,6 +3,8 @@ id: folderClass
 title: Folder
 ---
 
+
+
 `Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
 
 ### 例題
@@ -14,56 +16,10 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-## Folder object
+### Folder object
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
 | [<!-- INCLUDE #folderClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.create().Summary -->|
 | [<!-- INCLUDE #folderClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.createAlias().Summary --> |
@@ -90,7 +46,6 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | [<!-- INCLUDE #folderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.rename().Summary -->|
 
 
----
 
 ## Folder
 
@@ -116,9 +71,8 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 #### 説明
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the 
 
-`4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -155,12 +109,28 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
----
+
+## 4D.Folder.new()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R6 | 追加 |
+</details>
+
+<!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+
+
+#### 説明
+
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+
+> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
 
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
----
+
 
 <!-- REF folder.create().Desc -->
 ## .create()
@@ -185,9 +155,8 @@ If the command is called from a component, pass the optional * parameter to get 
 
 
 #### 説明
-The `.create()` function <!-- REF #folderClass.create().Summary -->creates a folder on disk according to the properties of the 
 
-`Folder` object<!-- END REF -->.
+The `.create()` function <!-- REF #folderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -221,7 +190,6 @@ End if
 <!-- END REF -->
 
 
----
 
 
 <!-- REF folder.createAlias().Desc -->
@@ -250,9 +218,8 @@ End if
 
 
 #### 説明
-The `.createAlias()` function <!-- REF #folderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified 
 
-*aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias()` function <!-- REF #folderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -279,14 +246,13 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 <!-- END REF -->
 
----
+
 <!-- INCLUDE directory.creationDate.Desc -->
 
----
 
 <!-- INCLUDE directory.creationTime.Desc -->
 
----
+
 
 <!-- REF folder.delete().Desc -->
 ## .delete()
@@ -312,6 +278,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 #### 説明
+
 The `.delete()` function <!-- REF #folderClass.delete().Summary -->deletes the folder<!-- END REF -->.
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
@@ -334,73 +301,73 @@ When `Delete with contents` is passed:
 
 <!-- END REF -->
  
---- 
+ 
 
 <!-- INCLUDE directory.exists.Desc -->
 
----
+
 
 <!-- INCLUDE directory.extension.Desc -->
 
----
+
 
 <!-- INCLUDE directory.file().Desc -->
 
----
+
 
 <!-- INCLUDE directory.files().Desc -->
 
----
+
 
 <!-- INCLUDE directory.folder().Desc -->
 
----
+
 
 <!-- INCLUDE directory.folders().Desc -->
 
----
+
 
 <!-- INCLUDE directory.fullName.Desc -->
 
----
+
 
 <!-- INCLUDE directory.getIcon().Desc -->
 
----
+
 
 <!-- INCLUDE directory.hidden.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isAlias.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isFile.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isFolder.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isPackage.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.modificationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.modificationTime.Desc -->
 
----
+
 
 
 <!-- REF folder.moveTo().Desc -->
@@ -426,9 +393,8 @@ When `Delete with contents` is passed:
 
 
 #### 説明
-The `.moveTo( )` function <!-- REF #folderClass.moveTo().Summary -->moves or renames the 
 
-`Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo( )` function <!-- REF #folderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -450,31 +416,28 @@ You want to move and rename a folder:
 ```
 <!-- END REF -->
 
----
 
 <!-- INCLUDE directory.name.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.original.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.parent.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.path.Desc -->
 
----
 
 
 <!-- INCLUDE directory.platformPath.Desc -->
 
----
 
 
 <!-- REF folder.rename().Desc --> 
@@ -500,9 +463,8 @@ You want to move and rename a folder:
 
 
 #### 説明
-The `.rename()` function <!-- REF #folderClass.rename().Summary -->renames the folder with the name you passed in 
 
-*newName* and returns the renamed `Folder` object<!-- END REF -->.
+The `.rename()` function <!-- REF #folderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -520,3 +482,4 @@ The renamed `Folder` object.
 ```
 <!-- END REF -->
 
+<style> h2 { background: #d9ebff;}</style>

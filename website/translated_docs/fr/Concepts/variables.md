@@ -61,157 +61,22 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 
-<table spaces-before="0" line-breaks-before="2">
-  <tr>
-    <th>
-      varType
-    </th>
-    
-    <th>
-      Contenu
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      Texte
-    </td>
-    
-    <td>
-      Valeur texte
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Date
-    </td>
-    
-    <td>
-      Valeur date
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Heure
-    </td>
-    
-    <td>
-      Valeur Heure
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Booléen
-    </td>
-    
-    <td>
-      Valeur booléen
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Entier long
-    </td>
-    
-    <td>
-      Valeur entier long
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Réel
-    </td>
-    
-    <td>
-      Valeur réel
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Pointeur
-    </td>
-    
-    <td>
-      Valeur pointeur
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Image
-    </td>
-    
-    <td>
-      Valeur image
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Blob
-    </td>
-    
-    <td>
-      Valeur BLOB
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Collection
-    </td>
-    
-    <td>
-      Valeur collection
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Variant
-    </td>
-    
-    <td>
-      Valeur variant
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Objet
-    </td>
-    
-    <td>
-      Objet avec classe par défaut (4D.object)
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      4D.\<className>
-    </td>
-    
-    <td>
-      Objet du nom de la classe 4D
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      cs.\<className>
-    </td>
-    
-    <td>
-      Objet du nom de la classe utilisateur
-    </td>
-  </tr>
-</table>
+| varType        | Contenu                                  |
+| -------------- | ---------------------------------------- |
+| Texte          | Valeur texte                             |
+| Date           | Valeur date                              |
+| Heure          | Valeur Heure                             |
+| Booléen        | Valeur booléen                           |
+| Entier long    | Valeur entier long                       |
+| Réel           | Valeur réel                              |
+| Pointeur       | Valeur pointeur                          |
+| Image          | Valeur image                             |
+| Blob           | Valeur BLOB                              |
+| Collection     | Valeur collection                        |
+| Variant        | Valeur variant                           |
+| Objet          | Objet avec classe par défaut (4D.object) |
+| 4D.*className* | Objet du nom de la classe 4D             |
+| cs.*className* | Objet du nom de la classe utilisateur    |
 
 #### Exemples
 

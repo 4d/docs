@@ -3,7 +3,6 @@ id: documentation
 title: Documenting a project
 ---
 
-## Overview
 
 
 In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
@@ -39,7 +38,7 @@ All documentation files are stored in the `Documentation` folder, located at the
 The `Documentation` folder architecture is the following:
 
 - **Documentation**
-    + **Klassen**
+    + **Classes**
         * myClass.md
     + **DatabaseMethods**
         * onStartup.md
@@ -55,7 +54,7 @@ The `Documentation` folder architecture is the following:
             - input.md
             - ...
         * ...
-    + **Triggers**
+    + **Trigger**
         * table1.md
         * ...
 
@@ -125,11 +124,9 @@ New documentation files are created with the following default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
-
-
 | Line                                               | Beschreibung                                                                                                                                         |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \<!-- Type your summary here -->| HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
+| "\<!-- Type your summary here -->"      | HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
 | ## Description                                    | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
 | ## Example                                        | Heading level 2, you can use this area to show sample code                                                                                           |
 | \``` 4D <br>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
@@ -169,6 +166,7 @@ _italic_
 | wpArea    | String |Write pro area|
 | toolbar   | String |Toolbar name  |
 ```
+
 
 - The link tag is supported:
 

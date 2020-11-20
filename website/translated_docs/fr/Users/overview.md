@@ -3,7 +3,7 @@ id: overview
 title: Aperçu
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. Il peut être également essentiel de protéger des données importantes. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
+Si plusieurs personnes utilisent une application, ce qui est souvent le cas dans une architecture client-serveur ou d'interfaces Web, vous devez contrôler ses accès ou proposer différentes fonctionnalités selon les utilisateurs connectés. Il peut être également essentiel de protéger des données importantes. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 

@@ -3,9 +3,6 @@ id: backup
 title: Backup
 ---
 
-
-## Starting a backup
-
 A backup can be started in three ways:
 
 - Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
@@ -14,7 +11,7 @@ A backup can be started in three ways:
 
 > 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
 
-### Manual backup
+## Manual backup
 
 1. Select the **Backup...** command in the 4D **File** menu.   
    The backup window appears: ![](assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
@@ -26,14 +23,14 @@ The **Database properties...** button causes the Backup/Configuration page of th
  2. Click **Backup** to start the backup using current parameters.
 
 
-### Scheduled automatic backup
+## Scheduled automatic backup
 
 Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Settings**.
 
 Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
 
 
-### BACKUP command
+## BACKUP command
 
 When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
 

@@ -3,9 +3,11 @@ id: editing
 title: Gestion des groupes et utilisateurs 4D
 ---
 
-## Super_Utilisateur et Administrateur
 
 4D fournit à certains utilisateurs des privilèges d’accès standard ainsi que des prérogatives spécifiques. Une fois qu’un système d’utilisateurs et de groupes a été créé, ces privilèges standard prennent effet.
+
+
+## Super_Utilisateur et Administrateur
 
 L’utilisateur le plus puissant est le **Super_Utilisateur**. Aucune partie de l'application n’est inaccessible au Super_Utilisateur. Le Super_Utilisateur peut :
 - accéder à tous les serveurs de l'application sans restrictions,
@@ -68,6 +70,7 @@ La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Uti
 L’appartenance des utilisateurs aux groupes peut également être définie par groupe dans la [page Groupes](#configuring-access-groups).
 
 ### Supprimer un utilisateur
+
 
 Pour supprimer un utilisateur, sélectionnez-le puis cliquez sur le bouton de suppression ou utilisez la commande **Supprimer** du menu contextuel. ![](assets/en/Users/MinussNew.png)
 

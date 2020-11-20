@@ -42,7 +42,7 @@
         "title": "エンティティ"
       },
       "API/entitySelectionClass": {
-        "title": "Entity Selections"
+        "title": "EntitySelection"
       },
       "API/fileClass": {
         "title": "File"
@@ -71,8 +71,11 @@
       "API/transporter": {
         "title": "Transporter クラス"
       },
+      "API/webServerClass": {
+        "title": "WebServer"
+      },
       "API/zipClass": {
-        "title": "ZIP アーカイブ"
+        "title": "ZIP Archive"
       },
       "Backup/backup": {
         "title": "バックアップ"
@@ -635,7 +638,7 @@
         "title": "データモデルクラス"
       },
       "ORDA/overview": {
-        "title": "概要"
+        "title": "ORDAとは何か"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"
@@ -734,7 +737,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
         "title": "Calling ORDA class functions"
@@ -743,13 +746,13 @@
         "title": "サーバー設定"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "サーバー情報の取得"
       },
       "REST/gettingStarted": {
         "title": "はじめに"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "データ操作"
       },
       "REST/REST_requests": {
         "title": "About REST Requests"

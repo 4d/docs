@@ -3,6 +3,8 @@ id: folderClass
 title: Folder
 ---
 
+
+
 `Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
 
 ### Example
@@ -14,7 +16,7 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-## Folder object
+### Folder object
 
 ||
 |---|
@@ -44,7 +46,6 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 |[<!-- INCLUDE #folderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.rename().Summary -->|
 
 
----
 
 ## Folder
 
@@ -108,12 +109,28 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
 
----
+
+## 4D.Folder.new()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R6|Added
+</details>
+
+<!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+
+
+#### Description
+
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+
+> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
 
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
----
+
 
 <!-- REF folder.create().Desc -->
 ## .create()
@@ -173,7 +190,6 @@ End if
 <!-- END REF -->
 
 
----
 
 
 <!-- REF folder.createAlias().Desc -->
@@ -230,14 +246,13 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
 <!-- END REF -->
 
----
+
 <!-- INCLUDE directory.creationDate.Desc -->
 
----
 
 <!-- INCLUDE directory.creationTime.Desc -->
 
----
+
 
 <!-- REF folder.delete().Desc -->
 ## .delete()
@@ -289,73 +304,73 @@ macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
  
---- 
+ 
 
 <!-- INCLUDE directory.exists.Desc -->
 
----
+
 
 <!-- INCLUDE directory.extension.Desc -->
 
----
+
 
 <!-- INCLUDE directory.file().Desc -->
 
----
+
 
 <!-- INCLUDE directory.files().Desc -->
 
----
+
 
 <!-- INCLUDE directory.folder().Desc -->
 
----
+
 
 <!-- INCLUDE directory.folders().Desc -->
 
----
+
 
 <!-- INCLUDE directory.fullName.Desc -->
 
----
+
 
 <!-- INCLUDE directory.getIcon().Desc -->
 
----
+
 
 <!-- INCLUDE directory.hidden.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isAlias.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isFile.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isFolder.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.isPackage.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.modificationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.modificationTime.Desc -->
 
----
+
 
 
 <!-- REF folder.moveTo().Desc -->
@@ -404,31 +419,28 @@ You want to move and rename a folder:
 ```
 <!-- END REF -->
 
----
 
 <!-- INCLUDE directory.name.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.original.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.parent.Desc -->
 
----
+
 
 
 <!-- INCLUDE directory.path.Desc -->
 
----
 
 
 <!-- INCLUDE directory.platformPath.Desc -->
 
----
 
 
 <!-- REF folder.rename().Desc --> 
@@ -473,3 +485,4 @@ The renamed `Folder` object.
 ```
 <!-- END REF -->
 
+<style> h2 { background: #d9ebff;}</style>

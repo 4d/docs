@@ -1,27 +1,23 @@
 ---
 id: classClass
-title: クラス
+title: Class
 ---
+
 
 When a user class is [defined](Concepts/classes.md#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of "Class" class, which has properties and a function.
 
 
 
-## Summary
+### Summary
 
 
-
-
-
-
-|                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #classClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.name.Summary -->|
 | [<!-- INCLUDE #classClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.new().Summary --> |
 | [<!-- INCLUDE #classClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.superclass.Summary --> |
 
 
----
 
 <!-- REF classClass.name.Desc -->
 ## .name
@@ -37,15 +33,14 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 **.name** : Text<!-- END REF -->
 
 #### 説明
-The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the 
 
-`4D.Class` object<!-- END REF -->. 大文字と小文字が区別されること
+The `.name` property <!-- REF #classClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. 大文字と小文字が区別されること
 
 This property is **read-only**. 
 
 <!-- END REF -->
 
----
+
 
 <!-- REF classClass.new().Desc -->
 ## .new()
@@ -67,11 +62,8 @@ This property is **read-only**.
 
 
 #### 説明
-The `.new()` function <!-- REF #classClass.new().Summary -->creates and returns a 
 
-`cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the 
-
-[`cs` class store](Concepts/classes.md#cs).
+The `.new()` function <!-- REF #classClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
 
 存在しないクラスを対象に呼び出された場合、エラーが返されます。
 
@@ -88,7 +80,7 @@ $person:=cs.Person.new() //create the new instance
 
 <!-- END REF -->
 
----
+
 
 <!-- REF classClass.superclass.Desc -->
 ## .superclass
@@ -104,9 +96,8 @@ $person:=cs.Person.new() //create the new instance
 **.superclass** : 4D.Class<!-- END REF -->
 
 #### 説明
-The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a 
 
-`4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
+The `.superclass` property <!-- REF #classClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
 
 A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
 
@@ -129,3 +120,5 @@ $sup:=cs.MyFile.superclass //File
 
 **See also:** [Super](Concepts/classes.md#super)
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

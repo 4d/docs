@@ -8,7 +8,7 @@ Signals are tools provided by the 4D language to manage interactions and avoid c
 > Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Only the process that sets the semaphore can remove it.
 
 
-## Signal Object
+### Signal Object
 
 A signal is a shared object that must be passed as a parameter to commands that call or create workers or processes.
 
@@ -39,7 +39,7 @@ Once a signal has been released using a `signal.trigger()` call, it cannot be re
 
 Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
 
-## 例題
+### 例題
 
 ```4d
  var $signal : 4D.Signal
@@ -79,24 +79,18 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $signal.trigger()
 ```
 
-## Summary
+### Summary
 
 
-
-
-
-
-
-
-|                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #signalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.description.Summary -->|
 | [<!-- INCLUDE #signalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.signaled.Summary --> |
 | [<!-- INCLUDE #signalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.trigger().Summary --> |
 | [<!-- INCLUDE #signalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.wait().Summary --> |
 
 
----
+
 
 <!-- REF signalClass.New signal.Desc -->
 ## New signal
@@ -120,9 +114,8 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 #### 説明
-The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a 
 
-`4D.Signal` object<!-- END REF -->.
+The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
 
 A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
 
@@ -171,7 +164,6 @@ The ***doSomething*** method could be like:
 
 <!-- END REF -->
 
----
 
 <!-- REF signalClass.description.Desc -->
 ## .description
@@ -186,9 +178,8 @@ The ***doSomething*** method could be like:
 **.description** : Text<!-- END REF -->
 
 #### 説明
-The `.description` property <!-- REF #signalClass.description.Summary -->contains a custom description for the 
 
-`Signal` object.<!-- END REF -->.
+The `.description` property <!-- REF #signalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
@@ -196,7 +187,7 @@ This property is **read-write**.
 
 <!-- END REF -->
 
----
+
 
 <!-- REF signalClass.signaled.Desc -->
 ## .signaled
@@ -212,17 +203,14 @@ This property is **read-write**.
 **.signaled** : Boolean<!-- END REF -->
 
 #### 説明
-The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the 
 
-`Signal` object<!-- END REF -->. When the signal is created, 
-
-`.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
 This property is **read-only**. 
 
 <!-- END REF -->
 
----
+
 
 <!-- REF signalClass.trigger().Desc -->
 ## .trigger()
@@ -244,15 +232,14 @@ This property is **read-only**.
 
 
 #### 説明
-The `.trigger( )` function <!-- REF #signalClass.trigger().Summary -->sets the 
 
-`signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
+The `.trigger( )` function <!-- REF #signalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
 
 If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
 
 <!-- END REF -->
 
----
+
 
 <!-- REF signalClass.wait().Desc -->
 ## .wait()
@@ -275,9 +262,8 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 
 #### 説明
-The `.wait( )` function <!-- REF #signalClass.wait().Summary -->makes the current process wait until the 
 
-`.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
+The `.wait( )` function <!-- REF #signalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
 
 To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
 > **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
@@ -290,3 +276,4 @@ The function returns the value of the `.signaled` property. Evaluating this valu
 
 <!-- END REF -->
 
+<style> h2 { background: #d9ebff;}</style>

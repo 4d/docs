@@ -3,6 +3,9 @@ id: pictures
 title: Pictures
 ---
 
+4D includes specific support for pictures used in your forms. 
+
+
 ## Native Formats Supported  
 
 4D integrates native management of picture formats. This means that pictures will be displayed and stored in their original format, without any interpretation in 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. This native support is valid for all pictures stored in 4D forms: [static pictures](FormObjects/staticPicture.md) pasted in Design mode, pictures pasted into [inputs objects](FormObjects/input_overview.md) at runtime, etc.

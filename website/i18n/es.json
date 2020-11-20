@@ -71,6 +71,9 @@
       "API/transporter": {
         "title": "Transporter Class"
       },
+      "API/webServerClass": {
+        "title": "WebServer"
+      },
       "API/zipClass": {
         "title": "ZIP Archive"
       },
@@ -635,7 +638,7 @@
         "title": "Data Model Classes"
       },
       "ORDA/overview": {
-        "title": "Overview"
+        "title": "What is ORDA?"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"

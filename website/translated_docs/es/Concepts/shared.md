@@ -3,7 +3,6 @@ id: shared
 title: Shared objects and collections
 ---
 
-## Overview
 **Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
 
 Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
@@ -18,9 +17,11 @@ In order to modify a shared object/collection, the **Use...End use** structure m
 A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
 ## Using shared objects or collections
+
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
 
 ### Modification
+
 Modifications can be applied to shared objects and shared collections:
 
 - adding or removing object properties,
@@ -48,14 +49,17 @@ Please refer to example 2 for an illustration of shared group rules.
 **Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
 
 ### Read
+
 Reading properties or elements of a shared object/collection is allowed without having to call the `Use...End use` structure, even if the shared object/collection is in use by another process.
 
 However, it is necessary to read a shared object/collection within `Use...End use` when several values are linked together and must be read at once, for consistency reasons.
 
 ### Duplication
+
 Calling `OB Copy` with a shared object (or with an object containing shared object(s) as properties) is possible, but will return a standard (not shared) object including its contained objects (if any).
 
 ### Storage
+
 **Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the `Storage` command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
 
 Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
@@ -63,6 +67,7 @@ Note that, unlike standard shared objects, the `storage` object does not create 
 For more information, refer to the `Storage` command description.
 
 ## Use...End use
+
 The formal syntax of the `Use...End use` structure is:
 
 ```4d

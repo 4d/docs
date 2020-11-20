@@ -3,19 +3,18 @@ id: collectionClass
 title: Collection
 ---
 
-The Collection class manages [Collection](Concepts/collection.md) type variables.
+
+The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
 
 A collection is initialized with:
 
-
-
-|                                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->|
 | [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
-## 例題
+### 例題
 
 ```4d
  var $colVar : Collection //creation of collection type 4D variable
@@ -23,87 +22,11 @@ A collection is initialized with:
 ```
 
 
-## Summary
+### Summary
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [<!-- INCLUDE #collection.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.average().Summary -->|
 | [<!-- INCLUDE #collection.clear().Syntax -->](#clear)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.clear().Summary --> |
 | [<!-- INCLUDE #collection.combine().Syntax -->](#combine)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.combine().Summary --> |
@@ -144,7 +67,7 @@ A collection is initialized with:
 | [<!-- INCLUDE #collection.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->|
 | [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->|
 
----
+
 
 ## New collection
 
@@ -166,6 +89,7 @@ A collection is initialized with:
 
 
 #### 説明
+
 The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
 
 If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
@@ -192,8 +116,6 @@ You must pay attention to the following conversion issues:
 *   If you pass a time, it is stored as a number of milliseconds (Real).
 
 #### 例題 1
-
-
 
 
 
@@ -230,7 +152,6 @@ You create a new collection and then add a new element:
 
 
 
----
 
 ## New shared collection
 
@@ -252,6 +173,7 @@ You create a new collection and then add a new element:
 
 
 #### 説明
+
 The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
 Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
@@ -287,9 +209,9 @@ You can pass any number of values of the following supported types:
  Use($mySharedCol)
     $mySharedCol[1]:="beta"
  End use
-```
+``` 
 
----
+
 
 <!-- REF collection.average().Desc -->
 ## .average()
@@ -314,7 +236,9 @@ You can pass any number of values of the following supported types:
 
 
 #### 説明
+
 The `.average()` function <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
+
 
 
 Only numerical elements are taken into account for the calculation (other element types are ignored).
@@ -349,7 +273,6 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <!-- END REF -->
 
----
 
 
 <!-- REF collection.clear().Desc -->
@@ -372,6 +295,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 
 #### 説明
+
 The `.clear()` function <!-- REF #collection.clear().Summary -->removes all elements from the collection instance and returns an empty collection<!-- END REF -->.
 > This function modifies the original collection.
 
@@ -387,7 +311,7 @@ $vSize:=$col.length //$vSize=0
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.combine().Desc -->
@@ -413,11 +337,8 @@ $vSize:=$col.length //$vSize=0
 
 
 #### 説明
-The `.combine()` function <!-- REF #collection.combine().Summary -->inserts 
 
-*col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. Unlike the 
-
-`.insert()` function, `.combine()` adds each value of *col2* in the original collection, and not as a single collection element.
+The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. Unlike the `.insert()` function, `.combine()` adds each value of *col2* in the original collection, and not as a single collection element.
 > This function modifies the original collection.
 
 By default, *col2* elements are added at the end of the orginal collection. You can pass in *index* the position where you want the *col2* elements to be inserted in the collection.
@@ -440,7 +361,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.concat().Desc -->
@@ -464,9 +385,8 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 
 #### 説明
-The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new collection containing the elements of the original collection with all elements of the 
 
-*value* parameter added to the end<!-- END REF -->.
+The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new collection containing the elements of the original collection with all elements of the *value* parameter added to the end<!-- END REF -->.
 > This function does not modify the original collection.
 
 If *value* is a collection, all its elements are added as new elements at the end of the original collection. If *value* is not a collection, it is added itself as a new element.
@@ -485,7 +405,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.copy().Desc -->
@@ -513,9 +433,8 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 #### 説明
-The `.copy()` function <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.
 
-***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
+The `.copy()` function <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
 > This function does not modify the original collection.
 
 If passed, the *option* parameter can contain one of the following constants (or both):
@@ -612,7 +531,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.count().Desc -->
@@ -637,6 +556,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 
 #### 説明
+
 The `.count()` function <!-- REF #collection.count().Summary -->returns the number of non-null elements in the collection<!-- END REF -->.
 
 If the collection contains objects, you can pass the *propertyPath* parameter. In this case, only elements that contain the *propertyPath* are taken into account.
@@ -659,7 +579,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.countValues().Desc -->
@@ -685,6 +605,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 
 #### 説明
+
 The `.countValues()` function <!-- REF #collection.countValues().Summary -->returns the number of times value is found in the collection<!-- END REF -->.
 
 You can pass in *value*:
@@ -739,7 +660,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.distinct().Desc -->
@@ -765,6 +686,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 #### 説明
+
 The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
 > This function does not modify the original collection.
 
@@ -793,7 +715,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.equal().Desc -->
@@ -818,9 +740,8 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 
 #### 説明
-The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns 
 
-**true** if they are identical (deep comparison).
+The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
 
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 > Elements with **Null** values are not equal to Undefined elements.
@@ -851,7 +772,6 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 <!-- END REF -->
 
 
----
 
 
 <!-- REF collection.every().Desc -->
@@ -877,9 +797,8 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 
 
 #### 説明
-The `.every()` function <!-- REF #collection.every().Summary -->returns 
 
-**true** if all elements in the collection successfully passed a test implemented in the provided *methodName* method<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *methodName* method<!-- END REF -->.
 
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to true for every element fulfilling the test.
@@ -948,7 +867,7 @@ End if
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.extract().Desc -->
@@ -975,9 +894,8 @@ End if
 
 
 #### 説明
-The `.extract()` function <!-- REF #collection.extract().Summary -->creates and returns a new collection containing 
 
-*propertyPath* values extracted from the original collection of objects<!-- END REF -->.
+The `.extract()` function <!-- REF #collection.extract().Summary -->creates and returns a new collection containing *propertyPath* values extracted from the original collection of objects<!-- END REF -->.
 > This function does not modify the original collection.
 
 The contents of the returned collection depends on the *targetPath* parameter:
@@ -1024,7 +942,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.fill().Desc -->
@@ -1052,9 +970,8 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 #### 説明
-The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified 
 
-*value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
+The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
 > This function modifies the original collection.
 
 *   If the *startFrom* parameter is omitted, *value* is set to all collection elements (*startFrom*=0).
@@ -1082,7 +999,7 @@ In case of inconsistency, the following rules apply:
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.filter().Desc -->
@@ -1108,11 +1025,8 @@ In case of inconsistency, the following rules apply:
 
 
 #### 説明
-The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which 
 
-*methodName* method result is **true**<!-- END REF -->. This function returns a 
-
-***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which *methodName* method result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
@@ -1177,7 +1091,7 @@ The code for ***TypeLookUp*** is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.find().Desc -->
@@ -1204,9 +1118,8 @@ The code for ***TypeLookUp*** is:
 
 
 #### 説明
-The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which 
 
-*methodName*, applied on each element, returns **true**<!-- END REF -->.
+The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
@@ -1275,7 +1188,7 @@ The code for ***FindCity*** is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.findIndex().Desc -->
@@ -1304,9 +1217,8 @@ The code for ***FindCity*** is:
 
 
 #### 説明
-The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which 
 
-*methodName*, applied on each element, returns **true**<!-- END REF -->.
+The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
@@ -1357,7 +1269,7 @@ The code for ***FindCity*** method is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.indexOf().Desc -->
@@ -1382,9 +1294,8 @@ The code for ***FindCity*** method is:
 
 
 #### 説明
-The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the 
 
-*toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
+The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
 > This function does not modify the original collection.
 
 In *toSearch*, pass the expression to find in the collection. You can pass:
@@ -1417,7 +1328,7 @@ Optionally, you can pass the index of collection from which to start the search 
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.indices().Desc -->
@@ -1443,9 +1354,8 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 #### 説明
-The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the 
 
-*queryString* search conditions<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
+The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
 > This function does not modify the original collection.
 
 The *queryString* parameter uses the following syntax:
@@ -1474,7 +1384,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.insert().Desc -->
@@ -1499,9 +1409,8 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 
 #### 説明
-The `.insert()` function <!-- REF #collection.insert().Summary --> inserts 
 
-*element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
+The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
 
 In *index*, pass the position where you want the element to be inserted in the collection.
@@ -1526,7 +1435,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.join().Desc -->
@@ -1551,9 +1460,8 @@ Any type of element accepted by a collection can be inserted, even another colle
 
 
 #### 説明
-The `.join()` function <!-- REF #collection.join().Summary -->converts all elements of the collection to strings and concatenates them using the specified 
 
-*delimiter* string as separator<!-- END REF -->.The function returns the resulting string.
+The `.join()` function <!-- REF #collection.join().Summary -->converts all elements of the collection to strings and concatenates them using the specified *delimiter* string as separator<!-- END REF -->.The function returns the resulting string.
 > This function does not modify the original collection.
 
 By default, null or empty elements of the collection are returned in the resulting string. Pass the `ck ignore null or empty` constant in the *option* parameter if you want to remove them from the resulting string.
@@ -1571,7 +1479,7 @@ By default, null or empty elements of the collection are returned in the resulti
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.lastIndexOf().Desc -->
@@ -1596,9 +1504,8 @@ By default, null or empty elements of the collection are returned in the resulti
 
 
 #### 説明
-The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the 
 
-*toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
+The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
 > This function does not modify the original collection.
 
 In *toSearch*, pass the expression to find in the collection. You can pass:
@@ -1631,7 +1538,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 <!-- END REF -->
 
---- 
+ 
 
 
 <!-- REF collection.length.Desc -->
@@ -1649,6 +1556,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 
 #### 説明
+
 The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
 
 The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
@@ -1664,7 +1572,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.map().Desc -->
@@ -1690,11 +1598,8 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 
 #### 説明
-The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the 
 
-*methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to 
-
-*methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
+The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
 > This function does not modify the original collection.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
@@ -1733,7 +1638,7 @@ Here is the ***Percentage*** method:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.max().Desc -->
@@ -1757,9 +1662,8 @@ Here is the ***Percentage*** method:
 
 
 #### 説明
-The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the 
 
-[`.sort()`](#sort) function).
+The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
 > This function does not modify the original collection.
 
 If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
@@ -1784,7 +1688,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.min().Desc -->
@@ -1808,9 +1712,8 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 
 #### 説明
-The `.min()` function <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the 
 
-[`.sort()`](#sort) function).
+The `.min()` function <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
 > This function does not modify the original collection.
 
 If the collection contains different types of values, the `.min()` function will return the minimum value within the first element type in the type list order (see [`.sort()`](#sort) description).
@@ -1835,7 +1738,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -1862,6 +1765,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 
 #### 説明
+
 The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
 
 This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
@@ -1972,7 +1876,7 @@ Ordering with a property path:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.orderByMethod().Desc -->
@@ -1998,9 +1902,8 @@ Ordering with a property path:
 
 
 #### 説明
-The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the 
 
-*methodName* method<!-- END REF -->.
+The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *methodName* method<!-- END REF -->.
 
 This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
@@ -2057,7 +1960,7 @@ Here is the code for ***WordLength***:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.pop().Desc -->
@@ -2081,6 +1984,7 @@ Here is the code for ***WordLength***:
 
 
 #### 説明
+
 The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
 > This function modifies the original collection.
 
@@ -2104,7 +2008,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.push().Desc -->
@@ -2128,9 +2032,8 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 
 
 #### 説明
-The `.push()` function <!-- REF #collection.push().Summary -->appends one or more 
 
-*element*(s) to the end of the collection instance and returns the edited collection<!-- END REF -->.
+The `.push()` function <!-- REF #collection.push().Summary -->appends one or more *element*(s) to the end of the collection instance and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
 
 
@@ -2163,7 +2066,7 @@ You want to sort the resutling collection:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.query().Desc -->
@@ -2191,9 +2094,8 @@ You want to sort the resutling collection:
 
 
 #### 説明
-The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by 
 
-*queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
 The *queryString* parameter uses the following syntax:
@@ -2271,7 +2173,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.reduce().Desc -->
@@ -2298,9 +2200,9 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 #### 説明
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the 
 
-*methodName* callback method against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+
+The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *methodName* callback method against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
 > This function does not modify the original collection.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in param (optional). *methodName* takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
@@ -2362,7 +2264,6 @@ With the following ***Flatten*** method:
 <!-- END REF -->
 
 
----
 
 
 <!-- REF collection.remove().Desc -->
@@ -2388,9 +2289,8 @@ With the following ***Flatten*** method:
 
 
 #### 説明
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified 
 
-*index* position in the collection and returns the edited collection<!-- END REF -->.
+The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
 
 In *index*, pass the position where you want the element to be removed from the collection.
@@ -2422,7 +2322,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 
 
----
+
 
 
 <!-- REF collection.resize().Desc -->
@@ -2449,6 +2349,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 
 #### 説明
+
 The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
 > This function modifies the original collection.
 
@@ -2478,7 +2379,7 @@ By default, new elements are filled will **null** values. You can specify the va
 <!-- END REF -->
 
 
----
+
 
 
 
@@ -2502,6 +2403,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 
 #### 説明
+
 The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
@@ -2517,7 +2419,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.shift().Desc -->
@@ -2540,6 +2442,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 
 #### 説明
+
 The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
 > This function modifies the original collection.
 
@@ -2560,7 +2463,7 @@ If the collection is empty, this method does nothing.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.slice().Desc -->
@@ -2585,9 +2488,8 @@ If the collection is empty, this method does nothing.
 
 
 #### 説明
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from 
 
-*startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
@@ -2612,7 +2514,7 @@ The returned collection contains the element specified by *startFrom* and all su
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.some().Desc -->
@@ -2639,9 +2541,8 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 #### 説明
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided 
 
-*methodName* method.
+The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
 
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **True** for every element fulfilling the test.
@@ -2694,7 +2595,7 @@ With the following *NumberGreaterThan0* method:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.sort().Desc -->
@@ -2720,6 +2621,7 @@ With the following *NumberGreaterThan0* method:
 
 
 #### 説明
+
 The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
 > This function modifies the original collection.
 
@@ -2781,7 +2683,7 @@ If the collection contains elements of different types, they are first grouped b
  
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.sum().Desc -->
@@ -2805,6 +2707,7 @@ If the collection contains elements of different types, they are first grouped b
 
 
 #### 説明
+
 The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
 
 Only numerical elements are taken into account for the calculation (other element types are ignored).
@@ -2842,7 +2745,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.unshift().Desc -->
@@ -2866,9 +2769,8 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 
 #### 説明
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given 
 
-*value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
 > This function modifies the original collection.
 
 If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.
@@ -2886,3 +2788,6 @@ If several values are passed, they are inserted all at once, which means that th
 ```
 
 <!-- END REF -->
+
+
+<style> h2 { background: #d9ebff;}</style>
