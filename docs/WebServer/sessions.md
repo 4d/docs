@@ -31,15 +31,17 @@ In both cases, the setting is local to the machine; so it can be different on th
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID". This cookie references the current web session. 
+When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*". This cookie references the current web session for the application. 
 
-1. In each web client request, the Web server checks for the presence and the value of the private "4DSID" cookie. 
+> The default cookie name can be customized using the [`.sessionCookieName`](API/webServerClass.md#sessioncookiename) property. 
+
+1. In each web client request, the Web server checks for the presence and the value of the private "4DSID_*AppName*" cookie. 
 
 2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
 
 2. If the client request does not correspond to an already opened session:
 
-- a new session with a private "4DSID" cookie is created on the web server
+- a new session with a private "4DSID_*AppName*" cookie is created on the web server
 - a new Guest `Session` object is created and is dedicated to the scalable web session.
 
 The current `Session` object can then be accessed through the [`Session`](API/sessionClass.md#session) command in the code of any web processes.
