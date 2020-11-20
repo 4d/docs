@@ -107,6 +107,26 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 ```
 
 
+## 4D.IMAPTransporter.new()
+
+
+<!-- REF #4D.IMAPTransporter.new().Syntax -->
+**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+
+<!-- REF #4D.IMAPTransporter.new().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|
+<!-- END REF -->
+
+#### Description
+
+The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->. It is identical to the [`IMAP New transporter`](#imap-new-transporter) command (shortcut).
+
+> It is recommended to use the [`IMAP New transporter`](#imap-new-transporter) shortcut command instead of `4D.IMAPTransporter.new()`.
+
+ 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 
