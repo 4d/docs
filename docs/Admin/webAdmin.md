@@ -76,6 +76,8 @@ When this option is checked, you will be able to connect to the WebAdmin web ser
 
 By default, this option is checked.
 
+
+
 #### HTTPS Port 
 
 Port number to use for connections through HTTPS to the Admin web server. Default value is 8443. This option is only used:
@@ -108,135 +110,44 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 Access key definition. Once an access key is defined for a WebAdmin server, web clients must provide this access key to be allowed to connect to the WebAdmin page. 
 
 
-## Headless Configuration
+## WebAdmin Headless Configuration
 
-When running a 4D application headless, you can set and designate a custom .4DSettings file.
+All WebAdmin settings are stored in a `settings.4DSettings` file (except the access key, which must be [defined separatly](#defining-the-access-key)). There is one default `settings.4DSettings` file per 4D or 4D Server application, so that it is possible to deploy multiple applications on the same host machine.
 
+When running a 4D or 4D Server application headless, you can set and use the default `settings.4DSettings` file, or designate a custom `.4DSettings` file. 
 
+To set the file contents, you can use the [WebAdmin settings dialog](#webadmin-settings) of the 4D application with interface and run it headless afterwards. The default `settings.4DSettings` file is then used.  
 
+Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the *Command Line Interface* to support this feature:  
 
+|Argument|Value|Description|
+|---|---|---|
+|--webadmin-settings-file|File path|Path of the custom WebAdmin `.4DSettings` file for the WebAdmin web server|
+|--webadmin-access-key|String|Access key for the WebAdmin web server|
+|--webadmin-auto-start|Boolean|Status of the automatic startup for the WebAdmin web server|
+|--webadmin-store-settings||Store the access key and automatic starting parameters in the currently used settings file (i.e. the default `settings.4DSettings` file or a custom file designated with the `--webadmin-settings-path` parameter). By default for security reasons, the access key and automatic starting parameters are not stored in the `.4DSettings` file. Use the `--webadmin-store-settings` argument to save these settings if necessary|
 
+> The access key is never stored in the `.4DSettings` file, but a hash. 
 
-
-
-To do this, you need to edit the [`4DSettings` file for the component](#declaring-the-webadmin-4dsettings-file) and make sure at least one of the following keys are set to true:
-
-- `allowHttp`
-- `allow_ssl`
-
-> If only `allowHttp` is set to true, you need to add `allow_http_on_local="true"` to enable the local access for the WebAdmin.
-
-For example:
-
-```
-<standalone_server>
-	<configuration https_port_number="9998" port_number="8081" allow_http_on_local="true" allowHttp="true" allow_ssl="true" 
-</standalone_server>
-```
-
-
-## WebAdmin configuration
-
-You can configure the WebAdmin using the following elements to add to its [`4DSettings` file](#declaring-the-webadmin-4dsettings-file):
-
-### Debug log
-
-#### Syntax
+Example:
 
 ```
-<configuration ... 
-/>
-<log debug_log="1"/> 
-```
-
-#### Description
-
-Status of the HTTP request log file (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). Values:
-
-- 0 = disabled
-- 1 = enabled without body parts (body size is provided in this case)
-- 3 = enabled with body parts in response only
-- 5 = enabled with body parts in request only
-- 7 = enabled with body parts in response and request
-
-
-### Certificate folder
-
-#### Syntax
+"%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key "my Fabulous AccessKey" --webadmin-auto-start true --webadmin-store-settings
 
 ```
-<configuration ... 
-	certificate_folder="file:///Users/imac/" 
-/>
-```
-
-#### Description 
-
-Folder where the certificate files are located. The path is formatted in POSIX full path using filesystems.
 
 
-### Instances
+## Authentication and Session
 
-#### Syntax
+As soon as an access key [is defined](#access-key) in the settings, any connection to the WebAdmin must be authenticated. 
 
-```
-<instances>
-	<instance_4d path="file:///Users/imac/4D/Apps/4D Server.app/"  admin_settings_path="file:///Users/imac/mySettings.4DSettings" />
-	<instance_4d path="file:///4D_2/4D.app/"  admin_settings_path="file:///Users/imac/mySettings_2.4DSettings" />
-</instances>
-```
+> If no access key has been defined (empty string), a warning message is displayed by the WebAdmin.
 
-#### Definition
+When the WebAdmin web server is accessed without prior identification, an authentication is required. 
 
-Allow 4D Server administrator to specify a WebAdmin `4DSettings` for each 4D Server application, so that it is possible to deploy multiple 4D Server applications on the same host machine.
+- By default, the WebAdmin web server displays an authentication dialog box, allowing the user to enter the access key.
+- You can also implement a custom authentication interface and validate the entered access key using the [`.validateAccessKey()`] function of the WebAdmin Web server.
 
-## Declaring the WebAdmin 4DSettings file
+If the user provides the access key, a session with the "WebAdmin" privilege is created on the 4D application. As long as the current session has "WebAdmin" privilege, the WebAdmin component delivers requested pages.
 
-The WebAdmin web server is entirely configured through a dedicated `4DSettings` file. 
-
-> Using a `4DSettings` file is necessary because the WebAdmin must be executed before any structure file is opened and thus, before any 4D code could be executed. 
-
-By default, no active settings file is provided. You need to override the default settings in order to configure the WebAdmin server.
-
-To use a custom `settings.4DSettings` file for the WebAdmin web server, you can either:
-
-- designate a `settings.4DSettings` file path with `--admin-settings-file` key when opening 4D Server using the Command Line Interface:
-
-```
-"%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --admin-settings-file %HOMEPATH%\Web\mySettings.4DSettings
-```
-
-- or,  designate a `4DSettings` file path with a `\<administration admin_settings_path>` element in the 4D Server preferences (`4D Preferences v18.4DPreference` file):
-
-```
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="30">
-	<com.4d>
-		<general>
-			<automatisms licence_autorenew_trycount="0" licence_autorenew_sentcount="0"/>  
-			<administration admin_settings_path="file:///Users/imac/mySettings.4DSettings"/>
-		</general>
-	</com.4d>
-</preferences>
-```
-
-> You can define specific settings for each 4D Server application on the computer using the `instance_4d` element. 
-
-## Launching the WebAdmin web server
-
-By default, the `WebAdmin` web server is not launched at 4D Server startup. To launch it, you must enable the HTTP and/or HTTPS protocol(s) in the component's web server. 
-
-To do this, you need to edit the [`4DSettings` file for the component](#declaring-the-webadmin-4dsettings-file) and make sure at least one of the following keys are set to true:
-
-- `allowHttp`
-- `allow_ssl`
-
-> If only `allowHttp` is set to true, you need to add `allow_http_on_local="true"` to enable the local access for the WebAdmin.
-
-For example:
-
-```
-<standalone_server>
-	<configuration https_port_number="9998" port_number="8081" allow_http_on_local="true" allowHttp="true" allow_ssl="true" 
-</standalone_server>
-```
 

@@ -3,7 +3,6 @@ id: webServerClass
 title: WebServer
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
 The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). This class is available from the `4D` class store.
 
@@ -19,6 +18,7 @@ They provide the following properties and functions:
 ### Summary
 ||
 |---|
+|[<!-- INCLUDE #webServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.accessKeyDefined.Summary -->|
 |[<!-- INCLUDE #webServerClass.certificateFolder.Syntax -->](#certificatefolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.certificateFolder.Summary -->|
 |[<!-- INCLUDE #webServerClass.characterSet.Syntax -->](#characterset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.characterSet.Summary -->|
 |[<!-- INCLUDE #webServerClass.cipherSuite.Syntax -->](#ciphersuite)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.cipherSuite.Summary -->|
@@ -55,6 +55,7 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Summary -->|
 |[<!-- INCLUDE #webServerClass.start().Syntax -->](#start)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.start().Summary -->|
 |[<!-- INCLUDE #webServerClass.stop().Syntax -->](#stop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.stop().Summary -->|
+|[<!-- INCLUDE #webServerClass.validateAccessKey().Syntax -->](#validateaccesskey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.validateAccessKey().Summary -->|
 
 
 ## WEB Server
@@ -151,6 +152,17 @@ We want to know how many running web servers are available:
 
 ```
 
+
+
+
+## .accessKeyDefined
+
+
+<!-- REF #webServerClass.accessKeyDefined.Syntax -->
+**.accessKeyDefined** : Boolean<!-- END REF -->
+
+
+The **.accessKeyDefined** property contains <!-- REF #webServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. This property is used by the WebAdmin web server to validate the security configuration of the administration interface. 
 
 
 <!-- REF webServerClass.certificateFolder.Desc -->
@@ -469,6 +481,7 @@ The <!-- REF #webServerClass.IPAddressToListen.Summary -->IP address on which th
 
 
 <!-- REF webServerClass.isRunning.Desc -->
+
 
 ## .isRunning
 
@@ -810,3 +823,37 @@ To stop the database Web server:
 ```
 
 <!-- END REF -->
+
+
+
+<!-- REF webServerClass.validateAccessKey().Desc -->
+
+## .validateAccessKey()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R7|Added
+</details>
+
+<!-- REF #webServerClass.validateAccessKey().Syntax -->
+**.validateAccessKey**( *accessKey* : Text ) : Boolean<!-- END REF -->
+
+
+
+<!-- REF #webServerClass.validateAccessKey().Params -->
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|accessKey|Text|->|Text value|  
+|Result|Boolean|<-|True is the `accessKey` value correspond to the WebAdmin access key|
+
+<!-- END REF -->
+
+The `.validateAccessKey()` function <!-- REF #webServerClass.validateAccessKey().Summary --> returns True if the string passed in *accessKey* corresponds to the defined WebAdmin access key<!-- END REF -->, and False otherwise. 
+
+
+
+<!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>
