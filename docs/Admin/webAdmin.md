@@ -95,32 +95,29 @@ Path of the folder where the TLS certificate files are located. By default, the 
 
 #### Debug log mode
 
-Status and format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). The following options are available:
+Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). The following options are available:
 
-- disable (default)
-- with all body parts
-- without body parts
-- with request body
-- with response body
+- **disable** (default)
+- **with all body parts** - enabled with body parts in response and request
+- **without body parts** - enabled without body parts (body size is provided)
+- **with request body** - enabled with body part in request only
+- **with response body** - enabled with body part in response only
 
-The access key (default value is an empty string meaning there's none).
-The user shall have a mean to know if the access key is defined or not.
-The user shall have a mean to set the access key.
-The access key shall not be readable by default while it's being typed.
-The user shall have a mean to see the access key while it's being typed.
-The user shall have a mean to cancel the access key he is setting, so that the access key is not changed.
+#### Access Key
+
+Access key definition. Once an access key is defined for a WebAdmin server, web clients must provide this access key to be allowed to connect to the WebAdmin page. 
 
 
-To configure  we
+## Headless Configuration
 
-The WebAdmin settings are stored in the `4D web admin settings file`. 
+When running a 4D application headless, you can set and designate a custom .4DSettings file.
 
-To define the WebAdmin settings, you can either:
 
-- use the (application with interface) 
-- use 
 
-you must enable the HTTP and/or HTTPS protocol(s) in the component's web server. 
+
+
+
+
 
 To do this, you need to edit the [`4DSettings` file for the component](#declaring-the-webadmin-4dsettings-file) and make sure at least one of the following keys are set to true:
 
