@@ -77,7 +77,7 @@ They provide the following properties and functions:
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the option parameter<!-- END REF -->. 
+The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the option parameter<!-- END REF -->.
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
@@ -122,28 +122,28 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- END REF -->
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->. 
+The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
 
-A 4D application can contain anywhere from one to several Web servers: 
+A 4D application can contain anywhere from one to several Web servers:
 
 - one Web server for the host database (default Web server)
-- one Web server for each component. 
+- one Web server for each component.
 
-All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not. 
+All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
 
-> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command. 
+> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
 
-You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached. 
+You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
 
 #### Example  
 
-We want to know how many running web servers are available: 
+We want to know how many running web servers are available:
 
 ```4d
  var $wSList : Collection
  var $vRun : Integer
- 
+
  $wSList:=WEB Server list
  $vRun:=$wSList.countValues(True;"isRunning")
  ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
@@ -360,7 +360,7 @@ Default compression threshold = 1024 bytes
 **.HTTPEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #webServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -375,7 +375,7 @@ The <!-- REF #webServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END 
 **.HTTPPort** : Number<!-- END REF -->
 
 
-The <!-- REF #webServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
 
 Default = 80
 
@@ -403,7 +403,7 @@ The <!-- REF #webServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!--
 <!-- REF #webServerClass.HTTPSEnabled.Syntax -->
 **.HTTPSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #webServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -416,7 +416,7 @@ The <!-- REF #webServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- EN
 <!-- REF #webServerClass.HTTPSPort.Syntax -->
 **.HTTPSPort** : Number<!-- END REF -->
 
-The <!-- REF #webServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
 
 Default = 443
 
@@ -479,7 +479,7 @@ The <!-- REF #webServerClass.IPAddressToListen.Summary -->IP address on which th
 
 *Read-only property*
 
-The <!-- REF #webServerClass.isRunning.Summary -->web server running state<!-- END REF -->. 
+The <!-- REF #webServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -492,7 +492,7 @@ The <!-- REF #webServerClass.isRunning.Summary -->web server running state<!-- E
 **.keepSession** : Boolean<!-- END REF -->
 
 
-The <!-- REF #webServerClass.keepSession.Summary -->session management enabling status<!-- END REF -->. 
+The <!-- REF #webServerClass.keepSession.Summary -->session management enabling status<!-- END REF -->.
 
 Default = true
 
@@ -508,7 +508,7 @@ Default = true
 **.logRecording** : Number<!-- END REF -->
 
 
-The <!-- REF #webServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->. 
+The <!-- REF #webServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
 
 *	0 = Do not record (default)
 *	1 = Record in CLF format
@@ -598,7 +598,7 @@ If modified, the server must be restarted to use the new value.
 
 *Read-only property*
 
-The <!-- REF #webServerClass.name.Summary -->name of the web server application<!-- END REF -->. 
+The <!-- REF #webServerClass.name.Summary -->name of the web server application<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -614,7 +614,7 @@ The <!-- REF #webServerClass.name.Summary -->name of the web server application<
 
 *Read-only property*
 
-The <!-- REF #webServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->. 
+The <!-- REF #webServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -630,7 +630,7 @@ The <!-- REF #webServerClass.openSSLVersion.Summary -->version of the OpenSSL li
 
 *Read-only property*
 
-The <!-- REF #webServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->. 
+The <!-- REF #webServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -671,7 +671,7 @@ The <!-- REF #webServerClass.sessionCookieDomain.Summary -->"domain" field of th
 **.sessionCookieName** : Text<!-- END REF -->
 
 
-The <!-- REF #webServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->. 
+The <!-- REF #webServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
 
 Default = "4DSID"
 
@@ -730,12 +730,12 @@ The <!-- REF #webServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #webServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter. 
+The `.start()` function <!-- REF #webServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session. 
+The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), and [.perfectForwardSecrecy](#perfectforwardsecrecy)).
 
-Customized session settings will be reset when the [`.stop()`](#stop) function is called. 
+Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
 
 #### Returned object
@@ -750,16 +750,16 @@ The function returns an object describing the Web server launch status. This obj
 ||\[].message|Text|Description of the 4D error |
 ||\[].componentSignature|Text|Signature of the internal component which returned the error|
 
->If the Web server was already launched, an error is returned. 
+>If the Web server was already launched, an error is returned.
 
-#### Example 
+#### Example
 
 ```4d
  var $settings;$result : Object
  var $webServer : 4D.WebServer
-  
+
  $settings:=New object("HTTPPort";8080;"defaultHomepage";"myAdminHomepage.html")
- 
+
  $webServer:=WEB Server
  $result:=$webServer.start($settings)
  If($result.success)
@@ -791,20 +791,20 @@ The function returns an object describing the Web server launch status. This obj
 
  <!-- END REF -->
 
-The `.stop()` function <!-- REF #webServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->. 
+The `.stop()` function <!-- REF #webServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
 If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
 
->This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any. 
+>This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 
-#### Example 
+#### Example
 
 To stop the database Web server:
 
 ```4d
  var $webServer : 4D.WebServer
- 
+
  $webServer:=WEB Server(Web server database)
  $webServer.stop()
 ```
