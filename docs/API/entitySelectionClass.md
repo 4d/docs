@@ -1,6 +1,6 @@
 ---
 id: entitySelectionClass
-title: Entity Selections
+title: EntitySelection
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 id: smtpTransporterClass
-title: SMTP Transporter
+title: SMTPTransporter
 ---
 The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
 

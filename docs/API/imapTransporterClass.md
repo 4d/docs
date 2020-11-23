@@ -1,6 +1,6 @@
 ---
 id: imapTransporterClass
-title: IMAP Transporter 
+title: IMAPTransporter 
 ---
 
 The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.

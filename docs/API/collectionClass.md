@@ -1,6 +1,6 @@
 ---
 id: collectionClass
-title: Collections
+title: Collection
 ---
 
 
@@ -82,6 +82,7 @@ A collection is initialized with:
 
 <!-- REF #_command_.New collection.Params -->
 |Parameter|Type||Description|
+
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
 |Result|Collection|<-|New collection|

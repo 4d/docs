@@ -1,6 +1,6 @@
 ---
 id: pop3TransporterClass
-title: POP3 Transporter 
+title: POP3Transporter 
 ---
 
 The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.

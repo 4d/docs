@@ -1,6 +1,6 @@
 ---
 id: formulaClass
-title: Formulas
+title: Formula
 ---
 
 
@@ -322,6 +322,7 @@ The following code will create a dialog accepting a formula in text format:
 #### Description
 
 The `.apply()` function <!-- REF #formulaClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
+
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
