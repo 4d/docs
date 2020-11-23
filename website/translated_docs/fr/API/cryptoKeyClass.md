@@ -3,6 +3,7 @@ id: cryptoClass
 title: CryptoKey
 ---
 
+
 La classe `CryptoKey` du langage 4D contient une paire de clés de chiffrement asymétrique.
 
 Cette classe est disponible depuis le "class store" de `4D`.
@@ -17,36 +18,18 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
   // Get signature as base64
 $message:="hello world"
-$signature:=$key.sign($message;New object("hash";"HASH256"))
+$signature:=$key.sign($message;New object("hash";"SHA256"))
 
   // Verify signature
-$status:=$key.verify($message;$signature;New object("hash";"HASH256"))
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
 ASSERT($status.success)
 ```
 
 
-## Summary
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #cryptokey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
+### Summary
+|                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
 | [<!-- INCLUDE #cryptokey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.curve.Summary --> |
 | [<!-- INCLUDE #cryptokey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.decrypt().Summary -->|
 | [<!-- INCLUDE #cryptokey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.encrypt().Summary -->|
@@ -62,8 +45,7 @@ ASSERT($status.success)
 
 
 
----
-## 4D.CryptoKey.new( )
+## 4D.CryptoKey.new()
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -72,16 +54,19 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #cryptokey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
 
-<!-- REF #cryptokey.new().Params -->
-| Paramètres | Type  |    | Description                                          |
-| ---------- | ----- | -- | ---------------------------------------------------- |
-| settings   | Objet | -> | Paramètres pour générer ou charger une paire de clés |
-| cryptoKey  | Objet | <- | Objet contenant une paire de clés de chiffrement     |
-The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the 
+<!-- REF #4D.CryptoKey.new().Params -->
+| Paramètres | Type  |    | Description                                                            |
+| ---------- | ----- | -- | ---------------------------------------------------------------------- |
+| settings   | Objet | -> | Paramètres pour générer ou charger une paire de clés                   |
+| cryptoKey  | Objet | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
-*settings* object parameter. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
+
+|
+
+
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
 
 #### *settings*
 
@@ -95,9 +80,9 @@ The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a
 #### *cryptoKey*
 
 The returned `cryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
-<!-- END REF -->
 
----
+
+
 <!-- REF cryptokey.curve -->
 ## .curve
 
@@ -116,7 +101,7 @@ Defined only for ECDSA keys: the <!-- REF #cryptokey.curve.Summary -->normalised
 Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
 
----
+
 <!-- REF cryptokey.decrypt().Desc -->
 ## .decrypt()
 
@@ -138,9 +123,7 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- END REF -->
 
 
-The `.decrypt()` function <!-- REF #cryptokey.decrypt().Summary -->decrypts the 
-
-*message* parameter using the **private** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
+The `.decrypt()` function <!-- REF #cryptokey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -148,7 +131,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 | Propriété         | Type  | Description                                                                                                                                                             |
 | ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | Texte | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                                     |
+| hash              | Texte | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512".                                                                                         |
 | encodingEncrypted | Texte | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
 | encodingDecrypted | Texte | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
 
@@ -163,11 +146,11 @@ The function returns a status object with `success` property set to `true` if th
 | result    | Texte      | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`         |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 
+
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 <!-- END REF -->
 
 
----
 <!-- REF cryptokey.encrypt().Desc -->
 ## .encrypt()
 
@@ -188,9 +171,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 | Résultat   | Texte | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`             |
 <!-- END REF -->
 
-The `.encrypt()` function <!-- REF #cryptokey.encrypt().Summary -->encrypts the 
-
-*message* parameter using the **public** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
+The `.encrypt()` function <!-- REF #cryptokey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -198,7 +179,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 | Propriété         | Type  | Description                                                                                                                                                                   |
 | ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | Texte | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512".                                                                                           |
+| hash              | Texte | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512".                                                                                               |
 | encodingEncrypted | Texte | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
 | encodingDecrypted | Texte | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
 
@@ -211,7 +192,6 @@ The returned value is an encrypted message.
 
 
 
----
 <!-- REF cryptokey.getPrivateKey().Desc -->
 ## .getPrivateKey()
 
@@ -231,9 +211,7 @@ The returned value is an encrypted message.
 | Résultat   | Texte | <- | Clé primaire au format PEM |
 <!-- END REF -->
 
-The `.getPrivateKey()` function  <!-- REF #cryptokey.getPrivateKey().Summary -->returns the private key of the 
-
-`cryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+The `.getPrivateKey()` function  <!-- REF #cryptokey.getPrivateKey().Summary -->returns the private key of the `cryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
 #### *Résultat*
 
@@ -241,7 +219,7 @@ The returned value is the private key.
 <!-- END REF -->
 
 
----
+
 <!-- REF cryptokey.getPublicKey().Desc -->
 ## .getPublicKey()
 
@@ -261,9 +239,7 @@ The returned value is the private key.
 <!-- END REF -->
 
 
-The `.getPublicKey()` function <!-- REF #cryptokey.getPublicKey().Summary -->returns the public key of the 
-
-`cryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+The `.getPublicKey()` function <!-- REF #cryptokey.getPublicKey().Summary -->returns the public key of the `cryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
 #### *Résultat*
 
@@ -288,7 +264,7 @@ The returned value is the public key.
 <!-- END REF -->
 
 
----
+
 <!-- REF cryptokey.sign().Desc -->
 ## .sign()
 
@@ -298,9 +274,7 @@ The returned value is the public key.
 | v18 R4  | Ajoutées      |
 </details>
 
-<!-- REF #cryptokey.sign().Syntax -->.
-
-**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #cryptokey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #cryptokey.sign().Params -->
 | Paramètres | Type  |    | Description                                                                     |
@@ -310,22 +284,18 @@ The returned value is the public key.
 | Résultat   | Texte | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
-The `.sign()` function <!-- REF #cryptokey.sign().Summary -->signs the utf8 representation of a 
-
-*message* string<!-- END REF --> using the 
-
-`cryptoKey` object keys and provided *options*. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
+The `.sign()` function <!-- REF #cryptokey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `cryptoKey` object keys and provided *options*. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
 La `cryptoKey` doit contenir une clé **privée** valide.
 
 #### *options*
 
-| Propriété         | Type    | Description                                                                                                                                                                                                                |
-| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | Texte   | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
-| encodingEncrypted | Texte   | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                 |
-| pss               | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                                |
-| encoding          | Texte   | ERepresentation to be used for result signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                           |
+| Propriété         | Type    | Description                                                                                                                                                                                                            |
+| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | Texte   | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
+| encodingEncrypted | Texte   | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                             |
+| pss               | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                            |
+| encoding          | Texte   | ERepresentation to be used for result signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                       |
 
 
 #### *Résultat*
@@ -333,7 +303,7 @@ La `cryptoKey` doit contenir une clé **privée** valide.
 The utf8 representation of the *message* string.
 <!-- END REF -->
 
----
+
 <!-- REF cryptokey.size -->
 ## .size
 <!-- END REF -->
@@ -349,7 +319,7 @@ The utf8 representation of the *message* string.
 
 Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the key in bits<!-- END REF -->. Typically 2048 (default).
 
----
+
 <!-- REF cryptokey.type -->
 ## .type
 <!-- END REF -->
@@ -366,7 +336,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 
 <!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", ou "PEM":
 
----
+
 <!-- REF cryptokey.verify().Desc -->
 ## .verify()
 
@@ -387,22 +357,18 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 | Résultat   | Objet | <- | Status of the verification                                                                        |
 <!-- END REF -->
 
-The `.verify()` function <!-- REF #cryptokey.verify().Summary -->verifies the base64 signature against the utf8 representation of 
-
-*message*<!-- END REF --> using the 
-
-`cryptoKey` object keys and provided *options*.
+The `.verify()` function <!-- REF #cryptokey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `cryptoKey` object keys and provided *options*.
 
 La `cryptoKey` doit contenir une clé **publique** valide.
 
 
 #### *options*
 
-| Propriété | Type    | Description                                                                                                                                                                                                                |
-| --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash      | Texte   | Algorithme de hachage à utiliser. Par example : "HASH256", "HASH384", ou "HASH512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
-| pss       | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la vérification d'un JWT pour l'algorithme PS@                                                              |
-| encoding  | Texte   | Représentation de la signature fournie. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                    |
+| Propriété | Type    | Description                                                                                                                                                                                                            |
+| --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash      | Texte   | Algorithme de hachage à utiliser. For example: "SHA256", "SHA384", or "SHA512". Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@ |
+| pss       | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la vérification d'un JWT pour l'algorithme PS@                                                          |
+| encoding  | Texte   | Représentation de la signature fournie. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                |
 
 
 #### *Résultat*
@@ -416,3 +382,5 @@ In case the signature couldn't be verified because it was not signed with the sa
 | success   | boolean    | True si la signature correspond au message                                  |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

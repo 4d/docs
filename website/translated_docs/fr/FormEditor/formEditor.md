@@ -3,6 +3,8 @@ id: formEditor
 title: Éditeur de formulaire
 ---
 
+4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+
 
 ## Interface
 
@@ -34,7 +36,7 @@ The toolbar of the Form editor offers a set of tools to manipulate and modify th
 
 The toolbar contains the following elements:
 
-| Icon                                          | Nom                                                  | Description                                                                                                                                                                                                                                                                                                                  |
+| Icône                                         | Nom                                                  | Description                                                                                                                                                                                                                                                                                                                  |
 | --------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](assets/en/FormEditor/execute.png)         | Execute the form                                     | Used to test the execution of the form. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.                                                                     |
 | ![](assets/en/FormEditor/selection.png)       | [Selection tool](#selecting-objects)                 | Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                 |
@@ -47,10 +49,10 @@ The toolbar contains the following elements:
 | ![](assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                             |
 | ![](assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
 | ![](assets/en/FormEditor/cssPreviewicon.png)  | [CSS Preview](#css-preview)                          | This button is used to select the CSS Mode to use.                                                                                                                                                                                                                                                                           |
-| ![](assets/en/FormEditor/views.png)           | [Managing views](#views)                             | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                           |
+| ![](assets/en/FormEditor/views.png)           | [Gestion des vues](#views)                           | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                           |
 | ![](assets/en/FormEditor/shields2.png)        | [Displaying shields](#shields)                       | Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                       |
 | ![](assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)   | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                      |
-| ![](assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                         |
+| ![](assets/en/FormEditor/listBoxBuilder1.png) | [Création de list box](#list-box-builder)            | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                         |
 
 ### Using the object bar
 
@@ -316,7 +318,7 @@ To move an object to another level, select it and choose:
 *   One of the commands associated with the level management button of the toolbar.
 
 ![](assets/en/FormEditor/level2.png)
-> When several objects are superimposed, the **Ctrl+click** / **Command+click** shortcut can be used to select each object successively by going down a layer with each click.
+> When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
 
 When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
 
@@ -431,7 +433,7 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 #### Property List CSS Icons
 
-| Icon                                       | Description                                                                                                                                                        |
+| Icône                                      | Description                                                                                                                                                        |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](assets/en/FormEditor/cssIcon.png)      | Indicates that an attribute value has been defined in a style sheet                                                                                                |
 | ![](assets/en/FormEditor/cssImportant.png) | Indicates that an attribute value has been defined in a style sheet with the `!important` declaration                                                              |
@@ -439,52 +441,52 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 
 
-## List Box Builder
+## Création de list box
 
-You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
+Vous pouvez créer rapidement de nouvelles list box de type sélection d'entités avec le **générateur de list box**. La nouvelle list box peut être utilisée immédiatement ou elle peut être modifiée via l'éditeur de formulaires.
 
-The List box builder lets you create and fill entity selection list boxes in a few simple operations.
-
-
-
-### Using the List Box Builder
+Le générateur de list box vous permet de créer et de remplir des list box de type sélection d'entités en quelques opérations simples.
 
 
-1.  In the Form Editor toolbar, click on the List box builder icon:
+
+### Utilisation du générateur de list box
+
+
+1.  Dans la barre d'outils de l'éditeur de formulaire, cliquez sur l'icône du générateur de zone de liste :
 
     ![](assets/en/FormEditor/listboxBuilderIcon.png)
 
-    The List box builder is displayed:
+    Le générateur de list box s'affiche :
 
     ![](assets/en/FormEditor/listboxBuilder.png)
 
-2.  Select a table from the **Table** dropdown list:
+2.  Sélectionnez une table dans la liste déroulante **Table** :
 
     ![](assets/en/FormEditor/listboxBuilderTable.png)
 
-3.  Select the fields for the list box in the **Fields** area:
+3.  Sélectionnez les champs de la list box dans la zone **Champs** :
 
     ![](assets/en/FormEditor/listboxBuilderFields.png)
 
-    By default, all fields are selected. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
+    Par défaut, tous les champs sont sélectionnés. Vous pouvez sélectionner ou désélectionner les champs individuellement ou utiliser **Ctrl+clic** (Windows) ou **Cmd+clic** (macOS) pour les sélectionner ou les désélectionner tous à la fois.
 
-    You can change the order of the fields by dragging them and dropping them.
+    Vous pouvez modifier l'ordre des champs via un glisser-déposer.
 
-4.  The expression to fill the list box's rows from the entity selection is prefilled:
+4.  L'expression qui permet de remplir les lignes de la list box à partir de la sélection d'entité est préremplie :
 
     ![](assets/en/FormEditor/listboxBuilderExpression.png)
 
-    This expression can be changed if necessary.
+    Cette expression peut être modifiée si nécessaire.
 
-5.  Clicking on the **Copy** button will copy the expression for loading all records into memory:
+5.  En cliquant sur le bouton **Copier**, l'expression sera copiée pour charger tous les enregistrements en mémoire :
 
     ![](assets/en/FormEditor/listboxBuilderCode.png)
 
-6.  Click the the **Build widget** button to create the list box.
+6.  Cliquez sur le bouton **Créer un widget** pour créer la list box.
 
     ![](assets/en/FormEditor/listboxBuilderBuild.png)
 
-The final list box:
+La list box finale :
 
 ![](assets/en/FormEditor/listboxBuilderListbox.png)
 
@@ -496,248 +498,248 @@ The final list box:
 
 
 
-## Shields
+## Badges
 
-The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
+L’éditeur de formulaires 4D permet d’utiliser des badges afin de faciliter la visualisation des propriétés des objets. Ils se trouvent dans la barre d'outils du formulaire :
 
 ![](assets/en/FormEditor/shields.png)
 
 
 
 
-This function works as follows: Each shield is associated with a property (for example, **Views**, which means the object “is in the current view”). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
+Le principe de cette fonction est le suivant : chaque badge est associé à une propriété (par exemple **Vues**, signifiant que l'objet “est dans la vue courante”). Lorsque vous activez un badge, 4D affiche une petite icône (un badge) en haut à gauche de chaque objet du formulaire auquel s’applique la propriété.
 
 ![](assets/en/FormEditor/shield.png)
 
-### Using shields
+### Utilisation des badges
 
-To activate a shield, click the *Shield* icon from the toolbar until the desired shield is selected. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
-
-
-If you don't want to display shields, select **No Shields** in the selection menu.
-> You can set which shields to display by default on the Forms Page of the application Preferences.
-
-### Shield descriptions
-
-Here is a description of each type of shield:
-
-| Icon                                         | Nom                                  | Is displayed ...                                                                                                                     |
-| -------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/objectMethod.png)   | Object Method                        | For objects with an associated object method                                                                                         |
-| ![](assets/en/FormEditor/standardAction.png) | Standard Action                      | For objects with an associated standard action                                                                                       |
-| ![](assets/en/FormEditor/resizing.png)       | Redimensionnement                    | For objects with at least one resizing property, indicates the combination of current properties                                     |
-| ![](assets/en/FormEditor/entryOrder.png)     | Entry Order                          | For enterable objects, indicates the number of entry order                                                                           |
-| ![](assets/en/FormEditor/viewNumber.png)     | Current View                         | For all objects in the current view                                                                                                  |
-| ![](assets/en/FormEditor/cssShield.png)      | [Feuille de style](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
-| ![](assets/en/FormEditor/filter.png)         | Filter                               | For enterable objects with an associated entry filter                                                                                |
-| ![](assets/en/FormEditor/helpTip.png)        | Message d'aide                       | For objects with an associated tip                                                                                                   |
-| ![](assets/en/FormEditor/localized.png)      | Localized                            | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
-| ![](assets/en/FormEditor/noShields.png)      | No Shields                           | No shields appear                                                                                                                    |
-
-## Views
-
-The 4D Form Editor enables you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed.
-
-For example, you can distribute objects according to type (fields, variables, static objects, etc.). Any type of form object, including subforms and plug-in areas, can be included in views.
-
-There is no limit on the number of views per form. You can create as many different views as you need. Additionally, each view can be displayed, hidden, and/or locked.
+Pour activer un badge, cliquez sur l'icône *badge* jusqu’à ce que le badge souhaité soit sélectionné. Vous pouvez également cliquer sur la partie droite du bouton et sélectionner directement le type de badge à afficher dans le menu associé :
 
 
-View management is handled via the View palette.
+Pour ne pas afficher de badges, choisissez la ligne **Pas de badges** dans le menu de sélection.
+> Vous pouvez définir les badges à afficher par défaut dans la Préférences de l’application.
+
+### Description du badge
+
+Voici la description de chaque type de badge :
+
+| Icône                                        | Nom                                  | Est affiché...                                                                                                                                |
+| -------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](assets/en/FormEditor/objectMethod.png)   | Méthode objet                        | Pour les objets auxquels une méthode objet est associée                                                                                       |
+| ![](assets/en/FormEditor/standardAction.png) | Action standard                      | Pour les objets auxquels une action standard est associée                                                                                     |
+| ![](assets/en/FormEditor/resizing.png)       | Redimensionnement                    | Pour les objets disposant d’au moins une propriété de redimensionnement, indique la combinaison de propriétés courante                        |
+| ![](assets/en/FormEditor/entryOrder.png)     | Ordre de saisie                      | Pour les objets saisissables, indique le numéro d’ordre de saisie                                                                             |
+| ![](assets/en/FormEditor/viewNumber.png)     | Vue courante                         | Pour tous les objets de la vue courante                                                                                                       |
+| ![](assets/en/FormEditor/cssShield.png)      | [Feuille de style](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                                    |
+| ![](assets/en/FormEditor/filter.png)         | Filtre                               | Pour les objets saisissables auxquels un filtre de saisie est associé                                                                         |
+| ![](assets/en/FormEditor/helpTip.png)        | Infobulle                            | Pour les objets auxquels une infobulle (message d’aide) est associée                                                                          |
+| ![](assets/en/FormEditor/localized.png)      | Localisé                             | Pour les objets dont le libellé provient d’une référence (libellé débutant par “:”). La référence peut être de type ressource (STR#) ou XLIFF |
+| ![](assets/en/FormEditor/noShields.png)      | Pas de badge                         | Aucun badge n’apparaît                                                                                                                        |
+
+## Vues
+
+L'éditeur de formulaires 4D vous permet de créer des formulaires complexes en distribuant des objets de formulaire entre des vues séparées qui peuvent ensuite être masquées ou affichées selon les besoins.
+
+Par exemple, vous pouvez répartir les objets par type (champs, variables, objets statiques, etc.). Tout type d'objet formulaire, y compris les sous-formulaires et les zones de plug-in, peut être inclus dans les vues.
+
+Il n'y a pas de limite au nombre de vues par formulaire. Vous pouvez créer autant de vues différentes que nécessaire. De plus, chaque vue peut être affichée, masquée et/ou verrouillée.
+
+
+Les vues sont gérées via à la palette de vues.
 
 ![](assets/en/FormEditor/viewEditor.png)
 
 
-### Accessing the View palette
+### Accéder à la palette de vues
 
-There are three ways to access the View palette:
+Il existe trois façons d'accéder à la palette de vues :
 
-*   **Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when at least one object belongs to a view other than the default view.)
+*   **Barre d'outils** : cliquez sur l'icône de Vues dans la barre d'outils de l'éditeur de formulaires. (Cette icône apparaît en gris lorsqu'au moins un objet appartient à une vue autre que la vue par défaut.)
 
-    |                  Default view only                   |               With additional views                |
+    |              Vue par défaut uniquement               |           Avec des vues supplémentaires            |
     |:----------------------------------------------------:|:--------------------------------------------------:|
     | ![](assets/en/FormEditor/icon.png "No views in use") | ![](assets/en/FormEditor/icon2.png "Views in use") |
 
-*   **Context menu** (form or object): Right-click anywhere in the Form Editor or an object, and select **Current View**
+*   **Menu contextuel** (formulaire ou objet) : faites un clic droit n'importe où dans l'éditeur de formulaires ou sur un objet, puis sélectionnez **Vue courante**
 
     ![](assets/en/FormEditor/contextMenu.png)
 
-The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
+La vue courante est indiquée par une coche (par exemple, "Adresse professionnelle" dans l'image ci-dessus)
 
 
-*   **Form menu**: Click on the **Form** menu and select **View List**
+*   **Menu Formulaire** : cliquez sur le menu **Formulaire** et sélectionnez **Afficher la liste**
 
 ![](assets/en/FormEditor/formMenu.png)
 
 
-### Before you begin
+### Avant de commencer
 
-Here are a few important things to know before you start working with views:
+Voici quelques éléments importants à connaitre avant de commencer à travailler avec les vues :
 
-*   **Context of use**: Views are a purely graphic tool which can only be used in the Form Editor; you cannot access views programmatically or in the Application environment.
+*   **Contexte d’utilisation** : les vues sont un outil purement graphique, utilisable uniquement dans l’éditeur de formulaires ; il n’est pas possible d’accéder aux vues par programmation ou en mode Application.
 
-*   **Views and pages**: Objects of the same view can belong to different form pages; only objects of the current page (and of page 0 if it is visible) can be displayed, regardless of the view configuration.
+*   **Vues et pages** : Les objets d’une même vue peuvent appartenir à des pages différentes d’un formulaire ; seuls les objets de la page courante (et de la page 0 si elle est visible) peuvent être affichés, quelle que soit la configuration des vues.
 
-*   **Views and levels**: Views are independent of object levels; there is no display hierarchy among different views.
+*   **Vues et plans** : Les vues sont indépendantes des plans des objets, il n’y a pas de hiérarchie d’affichage entre les différentes vues.
 
-*   **Views and groups**: Only objects belonging to the current view can be grouped.
+*   **Vues et groupes** : Seuls les objets appartenant à la vue courante peuvent être groupés.
 
-*   **Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being edited and the name is displayed in bold text.
+*   **Vues courantes et par défaut** : la vue par défaut est la première vue d'un formulaire et ne peut pas être supprimée; la vue courante est la vue en cours de modification et le nom est affiché en gras.
 
 
 
-### Managing views
+### Gestion des vues
 
-#### Creating views
+#### Créer des vues
 
-Any object created in a form is placed in the first view ("View 1") of the form. The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (see [Renaming views](#renaming-views)), however it remains the default view.
+Tout objet créé dans un formulaire est placé dans la première vue ("Vue 1") du formulaire. La première vue 1 est **toujours** la vue par défaut, indiquée par (par défaut) après le nom. Le nom de la vue peut être modifié (voir [Renommer les vues](#renaming-views)), mais il demeure la vue par défaut.
 
 
 ![](assets/en/FormEditor/createView.png)
 
-There are two ways to add additional views:
+Il existe deux façons d'ajouter des vues supplémentaires :
 
-*   Click on the **Add a new view** button at the bottom of the View palette:
+*   Cliquez sur le bouton **Ajouter une nouvelle vue** en bas de la palette Vue :
 
 ![](assets/en/FormEditor/addView.png)
 
-*   Right-click on an existing view and select **Insert view**:
+*   Faites un clic droit sur une vue existante et sélectionnez **Insérer une vue** :
 
 ![](assets/en/FormEditor/addView2.png)
 
-There is no limitation on the number of views.
+Il n'y a pas de limitation du nombre de vues.
 
-#### Renaming views
+#### Renommer des vues
 
-By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
+Par défaut, les vues sont nommées "Vue" + le numéro de vue, mais vous pouvez modifier ces noms pour améliorer la lisibilité et mieux répondre à vos besoins.
 
-To rename a view, you can use either:
+Pour renommer une vue, vous pouvez soit :
 
-*   Double-click directly on the view name (the selected view in this case). The name then becomes editable:
+*   Double-cliquer directement sur le nom de la vue (dans ce cas, la vue est sélectionnée). Le nom devient alors éditable :
 
     ![](assets/en/FormEditor/rename.png)
 
-*   Right-click on the view name. The name then becomes editable:
+*   Faire un clic droit sur le nom de la vue. Le nom devient alors éditable :
 
     ![](assets/en/FormEditor/rename2.png)
 
-#### Reordering views
+#### Réordonner les vues
 
-You can change the display order of views by dragging/dropping them within the View palette.
+Vous pouvez modifier l'ordre d'affichage des vues en les faisant glisser/déposer dans la palette des vues.
 
-Note that the Default view does not change:
+A noter que la vue par défaut ne change pas :
 
 ![](assets/en/FormEditor/reorderView.png)
 
 
-#### Deleting views
+#### Supprimer des vues
 
-To rename a view, you can use either:
+Pour renommer une vue, vous pouvez soit :
 
-*   Click on the **Delete the selected view** button at the bottom of the View palette:
+*   Cliquer sur le bouton **Supprimer la vue sélectionnée** en bas de la palette des vues :
 
     ![](assets/en/FormEditor/deleteView.png)
 
 
-*   Right-click on the view name, and select **Delete View**:
+*   Faire un clic droit sur le nom de la vue et sélectionner **Supprimer la vue** :
 
     ![](assets/en/FormEditor/deleteView2.png)
-> If a view is deleted, any objects in it are automatically moved to the Default view.
+> Si une vue est supprimée, tous les objets qu'elle contient sont automatiquement déplacés vers la vue par défaut.
 
 
 
 
-### Using views
+### Utilisation des vues
 
-Once views are created, you can use the View palette to:
+Une fois que les vues sont créées, vous pouvez utiliser la palette des vues pour :
 
-*   Add object to views,
-*   Move objects from one view to another,
-*   Select all objects of the same view in a single click,
-*   Display or hide objects for each view,
-*   Lock the objects of a view.
+*   Ajouter un objet aux vues,
+*   Déplacer des objets d'une vue à une autre,
+*   Sélectionner tous les objets d'une même vue en un seul clic,
+*   Afficher ou masquer des objets pour chaque vue,
+*   Verrouiller les objets d'une vue.
 
-#### Adding objects to views
+#### Ajouter des objets aux vues
 
-An object can only belong to a single view.
+Un objet ne peut appartenir qu’à une seule vue.
 
-To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
+Pour créer un objet dans une autre vue, sélectionnez simplement la vue dans la palette des vues (avant de créer l'objet) en cliquant sur son nom (une icône Modifier est affichée pour la [Vue courante](#before-you-begin) et le nom apparaît en gras) :
 
 ![](assets/en/FormEditor/addObject.png)
 
-#### Moving objects between views
+#### Déplacer des objets entre les vues
 
-It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
+Il est également possible de déplacer un ou plusieurs objets d'une vue à une autre. Dans le formulaire, sélectionnez le ou les objets dont vous souhaitez modifier la vue. La liste des vues indique, à l'aide d'un symbole, la vue à laquelle appartient la sélection :
 
 ![](assets/en/FormEditor/symbol.png)
-> The selection can contain several objects belonging to different views.
+> La sélection peut contenir plusieurs objets appartenant à différentes vues.
 
-Simply select the destination view, right-click, and select **Move to**:
+Sélectionnez simplement la vue de destination, faites un clic droit puis sélectionnez **Déplacer vers** :
 
 ![](assets/en/FormEditor/moveObject.png)
 
 OU
 
-Select the destination view of the selection and click **Move to** button at the bottom of the View palette:
+Sélectionnez la vue de destination de la sélection et cliquez sur le bouton **Déplacer vers** en bas de la palette des vues :
 
 ![](assets/en/FormEditor/moveObject3.png)
 
-The selection is then placed in the new view:
+La sélection est ensuite placée dans la nouvelle vue :
 
 ![](assets/en/FormEditor/objNewView.png)
 
-You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
+Vous pouvez également déplacer un objet vers une autre vue via le menu contextuel de l'objet. Faites un clic droit sur l'objet, sélectionnez **Déplacer vers la vue** puis sélectionnez une vue dans la liste de vues disponibles :
 
 ![](assets/en/FormEditor/moveObject2.png)
-> The [Current view](#before-you-begin) is shown in bold text.
+> La [vue courante](#before-you-begin) est affichée en texte gras.
 
 
 
-#### Select all objects of a view
+#### Sélectionner tous les objets d’une vue
 
-You can select all objects belong to the same view in the current page of the form. This function is useful for applying global changes to a set of objects.
+Vous pouvez sélectionner dans la page courante du formulaire tous les objets appartenant à une même vue. Cette fonction est utile pour appliquer des modifications globales à un ensemble d’objets.
 
-To do this, right-click on the view in which you wish to select all the objects, click on **Select All**:
+Pour cela, faites un clic droit sur la vue dans laquelle vous souhaitez sélectionner tous les objets et cliquez sur le bouton **Tout sélect. dans vue**:
 
 ![](assets/en/FormEditor/selectAll.png)
 
-You can also use the button at the bottom of the View palette:
+Vous pouvez également utiliser le bouton situé en dessous de la palette des vues :
 
 
 ![](assets/en/FormEditor/selectAll2.png)
 
 
-#### Show or hide objects of a view
+#### Afficher ou masquer les objets d’une vue
 
-You can show or hide objects belonging to a view at any time in the form's current page. This way you can focus on certain objects when editing the form, for example.
+Vous pouvez à tout moment afficher ou masquer les objets d’une vue dans la page courante du formulaire. Cette fonction permet par exemple de se concentrer sur certains objets lors de la modification du formulaire.
 
-By default, all views are shown, as indicated by the *Show/Hide* icon:
+Par défaut, toutes les vues sont affichées, comme l’indique l’icône en regard de chaque vue dans la palette des vues:
 
 ![](assets/en/FormEditor/showHide.png)
 
-To hide a view, click the *Show/Hide* icon. It is then dimmed and objects of the corresponding view are no longer shown in the form:
+Pour masquer une vue, cliquez sur cette icône. Elle est alors grisée et les objets de la vue correspondante ne sont plus affichés dans le formulaire :
 
 ![](assets/en/FormEditor/hidden.png)
-> The [Current view](#before-you-begin) cannot be hidden.
+> Il n’est pas possible de masquer la [vue courante](#before-you-begin).
 
-To show a view that is hidden, simply select it or click on the *Show/Hide* icon for that view.
+Pour afficher une vue masquée, il suffit de la sélectionner ou de cliquer de nouveau sur l’icône de visualisation.
 
 
 
-#### Locking objects of a view
+#### Verrouiller les objets d’une vue
 
-You can lock the objects of a view. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. This function is useful for preventing handling errors.
+Vous pouvez verrouiller les objets d’une vue. Cela empêche leur sélection, leur modification ou leur suppression dans le formulaire. Une fois verrouillé, un objet ne peut pas être sélectionné par un clic, un rectangle de sélection ou la commande **Sélectionner objets de même type** du menu contextuel. Cette fonction est utile pour éviter les erreurs de manipulation.
 
-By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next to each view:
+Par défaut, toutes les vues sont déverrouillées, comme l’indique l’icône en regard de chaque vue dans la palette des vues:
 
 ![](assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut, which means that the view is now locked:
+Pour verrouiller les objets d’une vue, cliquez sur cette icône. Le cadenas est alors refermé, ce qui indique que la vue est verrouillée :
 
 ![](assets/en/FormEditor/locked.png)
-> The [Current view](#before-you-begin) cannot be locked.
+> Il n’est pas possible de verrouiller la [vue courante](#before-you-begin).
 
-To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
+Pour déverrouiller une vue, il suffit de la sélectionner ou de cliquer à nouveau sur l’icône de verrouillage.
 
 ## Zoom
 

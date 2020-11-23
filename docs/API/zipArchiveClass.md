@@ -1,8 +1,7 @@
 ---
-id: zipClass
+id: zipArchiveClass
 title: ZIP Archive
 ---
-
 
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
@@ -30,8 +29,13 @@ If($zipFile.extension=".txt")
 End if
 ```
 
----
-<!-- REF zipArchive.ZIP Create archive.Desc -->
+### Summary
+
+||
+|---|
+|[<!-- INCLUDE #zipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #zipArchiveClass.root.Summary -->|
+
+
 ## ZIP Create archive
 
 <details><summary>History</summary>
@@ -40,10 +44,10 @@ End if
 |v18|Added|
 </details>
 
-<!-- REF zipArchive.ZIP Create archive.Syntax -->
+<!-- REF #_command_.ZIP Create archive.Syntax -->
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
-<!-- REF zipArchive.ZIP Create archive.Params -->
+<!-- REF #_command_.ZIP Create archive.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |fileToZip|4D.File|->|File or Folder object to compress|
@@ -57,7 +61,7 @@ End if
 
 #### Description
 
-The `ZIP Create archive` command <!-- REF zipArchive.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
 
 You can pass a 4D.File, a 4D.Folder, or a zip structure object as first parameter:
 
@@ -170,8 +174,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
  
 
 
----
-<!-- REF zipArchive.ZIP Read archive.Desc -->
+
 ## ZIP Read archive
 
 <details><summary>History</summary>
@@ -180,10 +183,10 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 |v18|Added|
 </details>
 
-<!-- REF zipArchive.ZIP Read archive.Syntax -->
+<!-- REF #_command_.ZIP Read archive.Syntax -->
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
-<!-- REF zipArchive.ZIP Read archive.Params -->
+<!-- REF #_command_.ZIP Read archive.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |zipFile|4D.File|->|Zip archive file|
@@ -194,7 +197,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 #### Description
 
-The `ZIP Read archive` command <!-- REF zipArchive.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
 > This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](document.md#copyto) or [folder.copyTo()](directory.md#copyto).
 
@@ -205,13 +208,8 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 **Archive object**
 
-The returned `4D.ZipArchive` object contains a single `root` property whose value is a `4D.Folder` object. This folder describes the whole contents of the ZIP archive:
+The returned `4D.ZipArchive` object contains a single [`root`](#root) property whose value is a `4D.ZipFolder` object. This folder describes the whole contents of the ZIP archive. 
 
-|Property|Type|Description|
-|---|---|---|
-|`root`|`4D.Folder`|A virtual folder containing the contents of the ZIP archive.
-
-The `root` folder and its contents can be manipulated with the `File` and `Folder` methods and properties.
 
 
 #### Example
@@ -254,11 +252,25 @@ To extract from the root folder:
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ``` 
 
----
+
+
+## .root
+
+<!-- REF #zipArchiveClass.root.Syntax -->
+**.root** : 4D.ZipFolder<!-- END REF -->
+
+
+#### Description
+
+The `.root` property contains <!-- REF #zipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+
+The `root` folder and its contents can be manipulated with the [File](fileClass.md) and [Folder](folderClass.md) functions and properties.
+
+This property is **read-only**. 
 
 
 
-## Zip File object
+## ZipFile object
 
 The following properties and functions from the [File](fileClass.md) class are available to 4D ZIP file objects:
 
@@ -288,7 +300,7 @@ The following properties and functions from the [File](fileClass.md) class are a
 
 
 
-## Zip Folder object
+## ZipFolder object
 
 The following properties and functions from the [Folder](folderClass.md) class are available to 4D ZIP folder objects:
 
@@ -318,3 +330,6 @@ The following properties and functions from the [Folder](folderClass.md) class a
 |[<!-- INCLUDE #directory.parent.Syntax -->](folderClass.md#parent)|The archive's virtual `root` folder has no parent. However, the folders within the archive may have a parent other than the root.|
 |[<!-- INCLUDE #directory.path.Syntax -->](folderClass.md#path)|Returns a path relative to the archive|
 |[<!-- INCLUDE #directory.platformPath.Syntax -->](folderClass.md#platformpath)||
+
+
+<style> h2 { background: #d9ebff;}</style>

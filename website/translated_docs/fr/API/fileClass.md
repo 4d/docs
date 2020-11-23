@@ -3,7 +3,6 @@ id: fileClass
 title: File
 ---
 
-
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
 ### Exemple
@@ -15,66 +14,10 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-## File object
+### File object
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->|
 | [<!-- INCLUDE #fileClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.create().Summary -->|
 | [<!-- INCLUDE #fileClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.createAlias().Summary -->|
@@ -106,9 +49,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #fileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setText().Summary -->|
 | [<!-- INCLUDE #document.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
 
----
 
-<!-- REF file.File.Desc -->
+
 ## File
 
 <details><summary>Historique</summary>
@@ -117,11 +59,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF file.File.Syntax -->
+<!-- REF fileClass.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
-<!-- REF file.File.Params -->
+<!-- REF #_command_.File.Params -->
 | Paramètres   | Type        |    | Description                                     |
 | ------------ | ----------- |:--:| ----------------------------------------------- |
 | path         | Texte       | -> | File path                                       |
@@ -133,9 +75,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 #### Description
-The `File` command <!-- REF file.File.Summary -->creates and returns a new object of the 
 
-`4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -182,11 +123,27 @@ If the target *fileConstant* does not exist, a null object is returned. No error
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
 
----
+## 4D.File.new()
+
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R6  | Ajoutées      |
+</details>
+
+<!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+
+
+#### Description
+
+The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
+
 
 <!-- INCLUDE document.copyTo().Desc -->
 
----
+
 
 <!-- REF file.create().Desc -->
 ## .create()
@@ -211,9 +168,8 @@ If the command is called from a component, pass the optional * parameter to get 
 <!-- END REF -->
 
 #### Description
-The `.create()` function <!-- REF #fileClass.create().Summary -->creates a file on disk according to the properties of the 
 
-`File` object<!-- END REF -->.
+The `.create()` function <!-- REF #fileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -233,7 +189,7 @@ Creation of a preferences file in the database folder:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF file.createAlias().Desc -->
@@ -259,9 +215,8 @@ Creation of a preferences file in the database folder:
 
 
 #### Description
-The `.createAlias()` function <!-- REF #fileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified 
 
-*aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias()` function <!-- REF #fileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -289,17 +244,16 @@ You want to create an alias to a file in your database folder:
 ```
 <!-- END REF -->
 
----
+
 
 
 <!-- INCLUDE document.creationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.creationTime.Desc -->
 
----
 
 
 <!-- REF file.delete().Desc -->
@@ -324,6 +278,7 @@ You want to create an alias to a file in your database folder:
 
 
 #### Description
+
 The `.delete()` function <!-- REF #fileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
 If the file is currently open, an error is generated.
@@ -344,72 +299,68 @@ You want to delete a specific file in the database folder:
 ``` 
 <!-- END REF -->
 
----
+
 
 
 <!-- INCLUDE document.exists.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.extension.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.fullName.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.getContent().Desc -->
 
----
+
 
 
 <!-- INCLUDE document.getIcon().Desc -->
 
----
-
 
 <!-- INCLUDE document.getText().Desc -->
 
----
+
 
 
 <!-- INCLUDE document.hidden.Desc -->
 
----
 
 
 <!-- INCLUDE document.isAlias.Desc -->
 
----
 
 
 <!-- INCLUDE document.isFile.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.isFolder.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.isWritable.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.modificationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.modificationTime.Desc -->
 
----
+
 
 
 <!-- REF file.moveTo().Desc -->
@@ -435,9 +386,8 @@ You want to delete a specific file in the database folder:
 
 
 #### Description
-The `.moveTo()` function <!-- REF #fileClass.moveTo().Summary -->moves or renames the 
 
-`File` object into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo()` function <!-- REF #fileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -459,32 +409,26 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!-- END REF -->
 
 
----
 
 
 <!-- INCLUDE document.name.Desc -->
 
----
 
 
 <!-- INCLUDE document.original.Desc -->
 
----
 
 
 <!-- INCLUDE document.parent.Desc -->
 
----
 
 
 <!-- INCLUDE document.path.Desc -->
 
----
 
 
 <!-- INCLUDE document.platformPath.Desc -->
 
----
 
 
 <!-- REF file.rename().Desc --> 
@@ -508,9 +452,8 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!-- END REF -->
 
 #### Description
-The `.rename()` function <!-- REF #fileClass.rename().Summary -->renames the file with the name you passed in 
 
-*newName* and returns the renamed `File` object<!-- END REF -->.
+The `.rename()` function <!-- REF #fileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -531,8 +474,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 ```
 <!-- END REF -->
 
-
----
 
 
 <!-- REF file.setContent().Desc --> 
@@ -556,11 +497,8 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 #### Description
-The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the 
 
-*content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the 
-
-[BLOB](Concepts/dt_blob.md) section.
+The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 
 #### Exemple
@@ -573,11 +511,11 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 
 
----
 
 
 <!-- REF file.setText().Desc --> 
 ## .setText()
+
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -591,19 +529,18 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 
 <!--REF #fileClass.setText().Params -->
-| Paramètres  | Type        |    | Description                                      |
-| ----------- | ----------- | -- | ------------------------------------------------ |
-| Texte       | Texte       | -> | Text to store in the file                        |
-| charSetName | Texte       | -> | Name of character set                            |
-| charSetNum  | Entier long | -> | Number of character set                          |
+| Paramètres  | Type        |    | Description                                                |
+| ----------- | ----------- | -- | ---------------------------------------------------------- |
+| Texte       | Texte       | -> | Text to store in the file                                  |
+| charSetName | Texte       | -> | Name of character set                                      |
+| charSetNum  | Entier long | -> | Number of character set                                    |
 | breakMode   | Entier long | -> | Processing mode for line breaks|<!-- END REF -->
 
 |
 
 #### Description
-The `.setText()` function <!-- REF #fileClass.setText().Summary -->writes 
 
-*text* as the new contents of the file<!-- END REF -->.
+The `.setText()` function <!-- REF #fileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
@@ -642,10 +579,10 @@ $myFile.setText("Hello world")
 
 
 
----
 
 
 <!-- INCLUDE document.size.Desc -->
 
 
 
+<style> h2 { background: #d9ebff;}</style>

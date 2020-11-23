@@ -1,8 +1,7 @@
 ---
 id: zipClass
-title: ZIP アーカイブ
+title: ZIP Archive
 ---
-
 
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
@@ -31,7 +30,6 @@ End if
 ```
 
 ---
-<!-- REF zipArchive.ZIP Create archive.Desc -->
 ## ZIP Create archive
 
 <details><summary>履歴</summary>
@@ -40,11 +38,11 @@ End if
 | v18   | 追加 |
 </details>
 
-<!-- REF zipArchive.ZIP Create archive.Syntax -->
+<!-- REF #_command_.ZIP Create archive.Syntax -->
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
-<!-- REF zipArchive.ZIP Create archive.Params -->
-| 引数              | タイプ       |    | 説明                                                   |
+<!-- REF #_command_.ZIP Create archive.Params -->
+| 参照              | タイプ       |    | 説明                                                   |
 | --------------- | --------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
 | folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
@@ -56,7 +54,8 @@ End if
 
 
 #### 説明
-The `ZIP Create archive` command <!-- REF zipArchive.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+
+The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
 
 You can pass a 4D.File, a 4D.Folder, or a zip structure object as first parameter:
 
@@ -257,8 +256,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 
 
----
-<!-- REF zipArchive.ZIP Read archive.Desc -->
+
 ## ZIP Read archive
 
 <details><summary>履歴</summary>
@@ -267,11 +265,11 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 | v18   | 追加 |
 </details>
 
-<!-- REF zipArchive.ZIP Read archive.Syntax -->
+<!-- REF #_command_.ZIP Read archive.Syntax -->
 **ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
-<!-- REF zipArchive.ZIP Read archive.Params -->
-| 引数       | タイプ           |    | 説明                          |
+<!-- REF #_command_.ZIP Read archive.Params -->
+| 参照       | タイプ           |    | 説明                          |
 | -------- | ------------- |:--:| --------------------------- |
 | zipFile  | 4D.File       | -> | Zip archive file            |
 | password | テキスト          | -> | ZIP archive password if any |
@@ -281,9 +279,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 #### 説明
 
-The `ZIP Read archive` command <!-- REF zipArchive.ZIP Read archive.Summary -->retrieves the contents of 
-
-*zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
 
 
@@ -371,50 +367,8 @@ To extract from the root folder:
 
 The following properties and functions from the [File](fileClass.md) class are available to 4D ZIP file objects:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Available [File](fileClass.md) APIs for ZIP files                                   | 説明                                     |
-| ----------------------------------------------------------------------------------- | -------------------------------------- |
+| Available [File](fileClass.md) APIs for ZIP files                                             | 説明                                     |
+| --------------------------------------------------------------------------------------------- | -------------------------------------- |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](fileClass.md#copyto)                   |                                        |
 | [<!-- INCLUDE #document.creationDate.Syntax -->](fileClass.md#creationdate)         |                                        |
 | [<!-- INCLUDE #document.creationTime.Syntax -->](fileClass.md#creationtime)         |                                        |
@@ -446,54 +400,8 @@ The following properties and functions from the [File](fileClass.md) class are a
 
 The following properties and functions from the [Folder](folderClass.md) class are available to 4D ZIP folder objects:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| Available [Folder](folderClass.md) APIs for ZIP folder                                 | 説明                                                                                                                                |
-| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Available [Folder](folderClass.md) APIs for ZIP folder                                           | 説明                                                                                                                                |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](folderClass.md#copyto)                   |                                                                                                                                   |
 | [<!-- INCLUDE #directory.creationDate.Syntax -->](folderClass.md#creationdate)         | Date may be different for the `root` folder from a folder within the archive                                                      |
 | [<!-- INCLUDE #directory.creationTime.Syntax -->](folderClass.md#creationtime)         | Time may be different for the `root` folder from a folder within the archive                                                      |
@@ -517,3 +425,5 @@ The following properties and functions from the [Folder](folderClass.md) class a
 | [<!-- INCLUDE #directory.parent.Syntax -->](folderClass.md#parent)                     | The archive's virtual `root` folder has no parent. However, the folders within the archive may have a parent other than the root. |
 | [<!-- INCLUDE #directory.path.Syntax -->](folderClass.md#path)                         | Returns a path relative to the archive                                                                                            |
 | [<!-- INCLUDE #directory.platformPath.Syntax -->](folderClass.md#platformpath)         |                                                                                                                                   |
+
+<style> h2 { background: #d9ebff;}</style>

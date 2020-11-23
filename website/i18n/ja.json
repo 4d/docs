@@ -11,6 +11,9 @@
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
       },
+      "API/classClass": {
+        "title": "クラス"
+      },
       "API/collectionClass": {
         "title": "Collection"
       },
@@ -39,7 +42,7 @@
         "title": "エンティティ"
       },
       "API/entitySelectionClass": {
-        "title": "Entity Selections"
+        "title": "EntitySelection"
       },
       "API/fileClass": {
         "title": "File"
@@ -68,8 +71,11 @@
       "API/transporter": {
         "title": "Transporter クラス"
       },
+      "API/webServerClass": {
+        "title": "WebServer"
+      },
       "API/zipClass": {
-        "title": "ZIP アーカイブ"
+        "title": "ZIP Archive"
       },
       "Backup/backup": {
         "title": "バックアップ"
@@ -345,6 +351,9 @@
       "Events/onValidate": {
         "title": "On Validate"
       },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
+      },
       "Events/onVpReady": {
         "title": "On VP Ready"
       },
@@ -562,7 +571,7 @@
         "title": "インストール"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "メニューバーの管理"
       },
       "Menus/creating": {
         "title": "メニューとメニューバーの作成"
@@ -571,10 +580,10 @@
         "title": "概要"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "メニュープロパティ"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Windows での SDIモード"
       },
       "MSC/analysis": {
         "title": "ログ解析ページ",
@@ -629,7 +638,7 @@
         "title": "データモデルクラス"
       },
       "ORDA/overview": {
-        "title": "概要"
+        "title": "ORDAとは何か"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"
@@ -728,22 +737,22 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
         "title": "Calling ORDA class functions"
       },
       "REST/configuration": {
-        "title": "Server Configuration"
+        "title": "サーバー設定"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "サーバー情報の取得"
       },
       "REST/gettingStarted": {
         "title": "はじめに"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "データ操作"
       },
       "REST/REST_requests": {
         "title": "About REST Requests"
@@ -773,13 +782,13 @@
       "Administration": "データベース管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server",
+      "Web Server": "Web サーバー",
+      "REST Server": "REST サーバー",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
-      "Form Events": "Form Events",
+      "Form Events": "フォームイベント",
       "Menus": "メニュー"
     }
   },
@@ -792,12 +801,12 @@
     "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "Forms",
     "Form Properties|no description given": "Form Properties",
-    "Form Events|no description given": "Form Events",
+    "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
-    "Web Server|no description given": "Web Server",
-    "REST Server|no description given": "REST Server",
+    "Web Server|no description given": "Web サーバー",
+    "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",

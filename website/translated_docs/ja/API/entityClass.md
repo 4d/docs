@@ -1,58 +1,16 @@
 ---
 id: entityClass
-title: エンティティ
+title: Entity
 ---
 
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
-## Summary
+### Summary
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE entityClass.{attributeName}.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.{attributeName}.Summary -->|
+|                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE entityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.attributeName.Summary -->|
 | [<!-- INCLUDE #entityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.clone().Summary -->|
 | [<!-- INCLUDE #entityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.diff().Summary -->|
 | [<!-- INCLUDE #entityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.drop().Summary -->|
@@ -79,10 +37,9 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 
 
----
 
-<!-- REF entityClass.{attributeName}.Desc -->
-## .{attributeName}
+<!-- REF entityClass.attributeName.Desc -->
+## .*attributeName*
 
 <details><summary>履歴</summary>
 | バージョン | 内容 |
@@ -90,12 +47,13 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 | v17   | 追加 |
 </details>
 
-<!-- REF entityClass.{attributeName}.Syntax -->
-**.{attributeName}** : any<!-- END REF -->
+<!-- REF entityClass.attributeName.Syntax -->
+***.attributeName*** : any<!-- END REF -->
 
 
 #### 説明
-Any dataclass attribute is available as a property of an entity, which <!-- REF entityClass.{attributeName}.Summary -->stores the attribute value for the entity<!-- END REF -->.
+
+Any dataclass attribute is available as a property of an entity, which <!-- REF entityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
 > Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
 The attribute value type depends on the attribute [kind](dataclassAttributeClass.md#kind) (relation or storage):
@@ -118,7 +76,7 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.clone().Desc -->
 ## .clone()
@@ -134,13 +92,14 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 **.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.clone().Params -->
-| 引数  | タイプ       |    | 説明                                |
+| 参照  | タイプ       |    | 説明                                |
 | --- | --------- |:--:| --------------------------------- |
 | 戻り値 | 4D.Entity | <- | New entity referencing the record |
 <!-- END REF -->
 
 
 #### 説明
+
 The `.clone()` function <!-- REF #entityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
 > Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
 
@@ -155,12 +114,14 @@ This function can only be used with entities already saved in the database. It c
  $empCloned:=$emp.clone()
 
  $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
+
 ```
 
 <!-- END REF -->
 
 
----
+
+
 
 <!-- REF entityClass.diff().Desc -->
 ## .diff()
@@ -176,7 +137,7 @@ This function can only be used with entities already saved in the database. It c
 
 
 <!-- REF #entityClass.diff().Params -->
-| 引数                  | タイプ       |    | 説明                                             |
+| 参照                  | タイプ       |    | 説明                                             |
 | ------------------- | --------- |:--:| ---------------------------------------------- |
 | entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
 | attributesToCompare | コレクション    | -> | Name of attributes to be compared              |
@@ -185,6 +146,7 @@ This function can only be used with entities already saved in the database. It c
 
 
 #### 説明
+
 The `.diff()` function <!-- REF #entityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
 In *entityToCompare*, pass the entity to be compared to the original entity.
@@ -363,7 +325,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.drop().Desc -->
 ## .drop()
@@ -379,13 +341,14 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.drop().Params -->
-| 引数   | タイプ    |    | 説明                                                                              |
+| 参照   | タイプ    |    | 説明                                                                              |
 | ---- | ------ |:--:| ------------------------------------------------------------------------------- |
 | mode | 整数     | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
 | 戻り値  | オブジェクト | <- | Result of drop operation                                                        |
 <!-- END REF -->
 
 #### 説明
+
 The `.drop()` function <!-- REF #entityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note that the entity remains in memory.
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
@@ -406,7 +369,7 @@ The object returned by `.drop( )` contains the following properties:
 | statusText(*) |                     | text                  | Description of the error, see below                                                                                   |
 |               |                     |                       | ***Available only in case of pessimistic lock error:***                                                               |
 | LockKindText  |                     | text                  | "Locked by record"                                                                                                    |
-| lockInfo      |                     | オブジェクト                | Information about the lock origin                                                                                     |
+| lockInfo      |                     | object                | Information about the lock origin                                                                                     |
 |               | task_id             | number                | Process id                                                                                                            |
 |               | user_name           | text                  | Session user name on the machine                                                                                      |
 |               | user4d_id           | text                  | User name in the 4D database directory                                                                                |
@@ -470,7 +433,7 @@ Example with `dk force drop if stamp changed` option:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.first().Desc -->
 ## .first()
@@ -486,12 +449,13 @@ Example with `dk force drop if stamp changed` option:
 **.first()**: 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.first().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
+| 参照  | タイプ       |    | 説明                                                                   |
 | --- | --------- |:--:| -------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
 #### 説明
+
 The `.first()` function <!-- REF #entityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
@@ -509,7 +473,6 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- END REF -->
 
 
----
 
 <!-- REF entityClass.fromObject().Desc -->
 ## .fromObject()
@@ -525,15 +488,14 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #entityClass.fromObject().Params -->
-| 引数     | タイプ    |    | 説明                                   |
+| 参照     | タイプ    |    | 説明                                   |
 | ------ | ------ |:--:| ------------------------------------ |
 | filler | オブジェクト | -> | Object from which to fill the entity |
 <!-- END REF -->
 
 #### 説明
-The `.fromObject()` function <!-- REF #entityClass.fromObject().Summary -->fills an entity with the 
 
-*filler* content<!-- END REF -->.
+The `.fromObject()` function <!-- REF #entityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
 > This function modifies the original entity.
 
 The mapping between the object and the entity is done on the attribute names:
@@ -599,7 +561,7 @@ You could also use a related entity given as an object:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.getDataClass().Desc -->
 ## .getDataClass()
@@ -615,12 +577,13 @@ You could also use a related entity given as an object:
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #entityClass.getDataClass().Params -->
-| 引数  | タイプ          |    | 説明                                           |
+| 参照  | タイプ          |    | 説明                                           |
 | --- | ------------ |:--:| -------------------------------------------- |
 | 戻り値 | 4D.DataClass | <- | DataClass object to which the entity belongs |
 <!-- END REF -->
 
 #### 説明
+
 The `.getDataClass()` function <!-- REF #entityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. This function is useful when writing generic code.
 
 
@@ -645,7 +608,7 @@ The following generic code duplicates any entity:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.getKey().Desc -->
 ## .getKey()
@@ -661,7 +624,7 @@ The following generic code duplicates any entity:
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #entityClass.getKey().Params -->
-| 引数   | タイプ  |    | 説明                                                                                      |
+| 参照   | タイプ  |    | 説明                                                                                      |
 | ---- | ---- |:--:| --------------------------------------------------------------------------------------- |
 | mode | 整数   | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
 | 戻り値  | テキスト | <- | Value of the text primary key of the entity                                             |
@@ -670,6 +633,7 @@ The following generic code duplicates any entity:
 <!-- END REF -->
 
 #### 説明
+
 The `.getKey()` function <!-- REF #entityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
 
 Primary keys can be numbers (Integer) or strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
@@ -688,7 +652,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.getSelection().Desc -->
 ## .getSelection()
@@ -704,12 +668,13 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entityClass.getSelection().Params -->
-| 引数  | タイプ                |    | 説明                                                               |
+| 参照  | タイプ                |    | 説明                                                               |
 | --- | ------------------ |:--:| ---------------------------------------------------------------- |
 | 戻り値 | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
 <!-- END REF -->
 
 #### 説明
+
 The `.getSelection()` function <!-- REF #entityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to an entity selection, the function returns Null.
@@ -732,7 +697,6 @@ If the entity does not belong to an entity selection, the function returns Null.
 <!-- END REF -->
 
 
----
 
 <!-- REF entityClass.getStamp().Desc -->
 ## .getStamp()
@@ -748,12 +712,13 @@ If the entity does not belong to an entity selection, the function returns Null.
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #entityClass.getStamp().Params -->
-| 引数  | タイプ |    | 説明                                                      |
+| 参照  | タイプ |    | 説明                                                      |
 | --- | --- |:--:| ------------------------------------------------------- |
 | 戻り値 | 整数  | <- | Stamp of the entity (0 if entity has just been created) |
 <!-- END REF -->
 
 #### 説明
+
 The `.getStamp()` function <!-- REF #entityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
 
 The internal stamp is automatically incremented by 4D each time the entity is saved. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
@@ -780,7 +745,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.indexOf().Desc -->
 ## .indexOf()
@@ -796,13 +761,14 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #entityClass.indexOf().Params -->
-| 引数              | タイプ                |    | 説明                                                                 |
+| 参照              | タイプ                |    | 説明                                                                 |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
 | entitySelection | 4D.EntitySelection | -> | Position of the entity is given according to this entity selection |
 | 戻り値             | 整数                 | <- | Position of the entity in an entity selection                      |
 <!-- END REF -->
 
 #### 説明
+
 The `.indexOf()` function <!-- REF #entityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified *entitySelection*.
@@ -829,7 +795,7 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- END REF -->
 
 
----
+
 
 <!-- REF entityClass.isNew().Desc -->
 ## .isNew()
@@ -845,12 +811,13 @@ The resulting value is included between 0 and the length of the entity selection
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #entityClass.isNew().Params -->
-| 引数  | タイプ |    | 説明                                                                        |
+| 参照  | タイプ |    | 説明                                                                        |
 | --- | --- |:--:| ------------------------------------------------------------------------- |
 | 戻り値 | ブール | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
 
 #### 説明
+
 The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Otherwise, it returns False.
 
 
@@ -869,7 +836,7 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.last().Desc -->
 ## .last()
@@ -885,12 +852,13 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.last().Params -->
-| 引数  | タイプ       |    | 説明                                                                  |
+| 参照  | タイプ       |    | 説明                                                                  |
 | --- | --------- |:--:| ------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
 #### 説明
+
 The `.last()` function <!-- REF #entityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
@@ -909,7 +877,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.lock().Desc -->
 ## .lock()
@@ -925,16 +893,15 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.lock().Params -->
-| 引数   | タイプ    |    | 説明                                                                   |
+| 参照   | タイプ    |    | 説明                                                                   |
 | ---- | ------ |:--:| -------------------------------------------------------------------- |
 | mode | 整数     | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
 | 戻り値  | オブジェクト | <- | Result of lock operation                                             |
 <!-- END REF -->
 
 #### 説明
-The `.lock()` function <!-- REF #entityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The 
 
-[lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+The `.lock()` function <!-- REF #entityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Only functions executed in the "locking" session are allowed to edit and save the attributes of the entity. The entity can be loaded as read-only by other sessions, but they will not be able to enter and save values.
 
@@ -961,7 +928,7 @@ The object returned by `.lock( )` contains the following properties:
 | statusText(\*) |                     | text                  | Description of the error, see below                                                                                 |
 |                  |                     |                       | ***Available only in case of pessimistic lock error:***                                                             |
 | lockKindText     |                     | text                  | "Locked by record"                                                                                                  |
-| lockInfo         |                     | オブジェクト                | Information about the lock origin                                                                                   |
+| lockInfo         |                     | object                | Information about the lock origin                                                                                   |
 |                  | task_id             | number                | Process ID                                                                                                          |
 |                  | user_name           | text                  | Session user name on the machine                                                                                    |
 |                  | user4d_alias        | text                  | Name or alias of the 4D user                                                                                        |
@@ -1023,7 +990,7 @@ Example with `dk reload if stamp changed` option:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.next().Desc -->
 ## .next()
@@ -1039,12 +1006,13 @@ Example with `dk reload if stamp changed` option:
 **.next()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.next().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
+| 参照  | タイプ       |    | 説明                                                                   |
 | --- | --------- |:--:| -------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
 #### 説明
+
 The `.next()` function <!-- REF #entityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
@@ -1060,11 +1028,11 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
  $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[0]
  $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+
 ```
 
 <!-- END REF -->
 
----
 
 <!-- REF entityClass.previous().Desc -->
 ## .previous()
@@ -1080,12 +1048,13 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 **.previous()**  : 4D.Entity<!-- END REF -->
 
 <!-- REF #entityClass.previous().Params -->
-| 引数  | タイプ       |    | 説明                                                                       |
+| 参照  | タイプ       |    | 説明                                                                       |
 | --- | --------- |:--:| ------------------------------------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
 #### 説明
+
 The `.previous()` function <!-- REF #entityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
@@ -1106,7 +1075,6 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- END REF -->
 
 
----
 
 <!-- REF entityClass.reload().Desc -->
 ## .reload( )
@@ -1122,12 +1090,13 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #entityClass.reload().Params -->
-| 引数  | タイプ    |    | 説明            |
+| 参照  | タイプ    |    | 説明            |
 | --- | ------ |:--:| ------------- |
 | 戻り値 | オブジェクト | <- | Status object |
 <!-- END REF -->
 
 #### 説明
+
 The `.reload()` function <!-- REF #entityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
 
 **戻り値**
@@ -1169,7 +1138,6 @@ The object returned by `.reload( )` contains the following properties:
 
 <!-- END REF -->
 
----
 
 <!-- REF entityClass.save().Desc -->
 ## .save()
@@ -1185,13 +1153,14 @@ The object returned by `.reload( )` contains the following properties:
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.save().Params -->
-| 引数   | タイプ    |    | 説明                                                |
+| 参照   | タイプ    |    | 説明                                                |
 | ---- | ------ |:--:| ------------------------------------------------- |
 | mode | 整数     | -> | `dk auto merge`: Enables the automatic merge mode |
 | 戻り値  | オブジェクト | <- | Result of save operation                          |
 <!-- END REF -->
 
 #### 説明
+
 The `.save()` function <!-- REF #entityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
 
 The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Otherwise, the function does nothing (the trigger is not called).
@@ -1217,7 +1186,7 @@ The object returned by `.save()` contains the following properties:
 | statusText(\*) |  | text    | Description of the error, see below                     |
 |                  |  |         | ***Available only in case of pessimistic lock error***: |
 | lockKindText     |  | text    | "Locked by record"                                      |
-| lockInfo         |  | オブジェクト  | Information about the lock                              |
+| lockInfo         |  | object  | Information about the lock                              |
  origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on the machine| ||user4d_id|    text|   User name in the 4D database directory| ||host_name |text   |Machine name| ||task_name|    text|   Process name| ||client_version|   text||
 
   
@@ -1276,6 +1245,7 @@ Updating an entity with `dk auto merge` option:
 
 ```4d
  var $status : Object
+
  var $employee : cs.EmployeeEntity
  var $employees : cs.EmployeeSelection
 
@@ -1293,7 +1263,7 @@ Updating an entity with `dk auto merge` option:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.toObject().Desc -->
 ## .toObject()
@@ -1309,7 +1279,7 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #entityClass.toObject().Params -->
-| 引数           | タイプ    |    | 説明                                                                                                      |
+| 参照           | タイプ    |    | 説明                                                                                                      |
 | ------------ | ------ |:--:| ------------------------------------------------------------------------------------------------------- |
 | filterString | テキスト   | -> | Attribute(s) to extract (comma-separated string)                                                        |
 | filterCol    | コレクション | -> | Collection of attribute(s) to extract                                                                   |
@@ -1318,6 +1288,7 @@ Updating an entity with `dk auto merge` option:
 <!-- END REF -->
 
 #### 説明
+
 The `.toObject()` function <!-- REF #entityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Property names in the object match attribute names of the entity.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
@@ -1579,7 +1550,7 @@ Returns:
 
 <!-- END REF -->
 
----
+
 
 <!-- REF entityClass.touched().Desc -->
 ## .touched( )
@@ -1595,12 +1566,13 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #entityClass.touched().Params -->
-| 引数  | タイプ |    | 説明                                                                                    |
+| 参照  | タイプ |    | 説明                                                                                    |
 | --- | --- |:--:| ------------------------------------------------------------------------------------- |
 | 戻り値 | ブール | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
 
 #### 説明
+
 The `.touched()` function <!-- REF #entityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
 
 If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.
@@ -1624,8 +1596,6 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- END REF -->
 
 
----
-
 <!-- REF entityClass.touchedAttributes().Desc -->
 ## .touchedAttributes( )
 
@@ -1640,12 +1610,13 @@ In this example, we check to see if it is necessary to save the entity:
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #entityClass.touchedAttributes().Params -->
-| 引数  | タイプ    |    | 説明                                               |
+| 参照  | タイプ    |    | 説明                                               |
 | --- | ------ |:--:| ------------------------------------------------ |
 | 戻り値 | コレクション | <- | Names of touched attributes, or empty collection |
 <!-- END REF -->
 
 #### 説明
+
 The `.touchedAttributes()` function <!-- REF #entityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
 This applies for attributes of the [kind](dataclassAttributeClass.md#kind) `storage` or `relatedEntity`.
@@ -1700,7 +1671,6 @@ In this case:
 
 <!-- END REF -->
 
----
 
 <!-- REF entityClass.unlock().Desc -->
 ## .unlock()
@@ -1716,12 +1686,13 @@ In this case:
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #entityClass.unlock().Params -->
-| 引数  | タイプ    |    | 説明            |
+| 参照  | タイプ    |    | 説明            |
 | --- | ------ |:--:| ------------- |
 | 戻り値 | オブジェクト | <- | Status object |
 <!-- END REF -->
 
 #### 説明
+
 The `.unlock()` function <!-- REF #entityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
 
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
@@ -1764,3 +1735,4 @@ The object returned by `.unlock()` contains the following property:
 
 
 
+<style> h2 { background: #d9ebff;}</style>

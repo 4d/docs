@@ -6,7 +6,7 @@ title: POP3 Transporter
 The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
 
 
-## POP3 Transporter object
+### POP3 Transporter object
 
 POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. They provide the following properties and functions:
 
@@ -29,7 +29,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 |[<!-- INCLUDE #pop3TransporterClass.undeleteAll().Syntax -->](#undeleteall)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #pop3TransporterClass.undeleteAll().Summary -->|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
----
+
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Desc -->
 ## POP3 New transporter
@@ -40,7 +40,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 |v18 R2|Added|
 </details>
 
-<!-- REF pop3TransporterClass.POP3 New transporter.Syntax -->
+<!-- REF #_command_.POP3 New transporter.Syntax -->
 **POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
@@ -53,7 +53,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 
 #### Description
 
-The `POP3 New transporter` command <!-- REF pop3TransporterClass.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. The returned transporter object will then usually be used to receive emails.
+The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. The returned transporter object will then usually be used to receive emails.
 
 In the *server* parameter, pass an object containing the following properties:
 
@@ -99,16 +99,32 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 <!-- END REF -->
 
----
+## 4D.POP3Transporter.new()
+
+
+<!-- REF #4D.POP3Transporter.new().Syntax -->
+**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
+
+<!-- REF #4D.POP3Transporter.new().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+<!-- END REF -->
+
+#### Description
+
+The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](#pop3-new-transporter) command (shortcut).
+
+> It is recommended to use the [`POP3 New transporter`](#pop3-new-transporter) shortcut command instead of `4D.POP3Transporter.new()`. 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 
----
+
 
 <!-- INCLUDE transporter.authenticationMode.Desc -->
 
----
 
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
@@ -138,11 +154,10 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
  End if
 ```
 
----
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
----
+
 
 
 ## .delete()
@@ -191,7 +206,7 @@ Executing this method does not actually remove any email. The flagged email will
 ```
 
 
----
+
 
 ## .getBoxInfo()
 
@@ -243,7 +258,7 @@ The `boxInfo` object returned contains the following properties:
 ```
 
 
----
+
 
 ## .getMail()
 
@@ -303,7 +318,7 @@ You want to know the sender of the first mail of the mailbox:
 ```
 
 
----
+
 
 ## .getMailInfo()
 
@@ -366,7 +381,7 @@ The method returns **Null** if:
 ```
 
 
----
+
 
 ## .getMailInfoList()
 
@@ -436,7 +451,6 @@ You want to know the total number and size of emails in the mailbox:
 
 
 
----
 
 ## .getMIMEAsBlob()
 
@@ -496,26 +510,23 @@ You want to know the total number and size of emails in the mailbox:
  $blob:=$transporter.getMIMEAsBlob($mailInfo[0].number)
 ```
 
----
-
 
 
 <!-- INCLUDE transporter.host.Desc -->
 
 
----
+
 
 
 
 <!-- INCLUDE transporter.logFile.Desc -->
 
----
 
 
 <!-- INCLUDE transporter.port.Desc -->
 
 
----
+
 
 
 <!-- REF pop3TransporterClass.undeleteAll().Desc -->
@@ -544,18 +555,9 @@ The `.undeleteAll()` function <!-- REF #pop3TransporterClass.undeleteAll().Summa
 <!-- END REF -->
 
 
----
 
 <!-- INCLUDE transporter.user.Desc -->
 
 
 
-
-
-
-
-
-
-
-
-
+<style> h2 { background: #d9ebff;}</style>

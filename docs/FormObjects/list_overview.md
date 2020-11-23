@@ -3,7 +3,6 @@ id: listOverview
 title: Hierarchical List
 ---
 
-## Overview
 
 Hierarchical lists are form objects that can be used to display data as lists with one or more levels that can be expanded or collapsed.
 

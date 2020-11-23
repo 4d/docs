@@ -3,7 +3,6 @@ id: fileClass
 title: File 
 ---
 
-
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
 ### Example
@@ -15,7 +14,7 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-## File object
+### File object
 
 ||
 |---|
@@ -49,9 +48,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |[<!-- INCLUDE #fileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setText().Summary -->|
 |[<!-- INCLUDE #document.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
 
----
 
-<!-- REF file.File.Desc -->
+
 ## File
 
 <details><summary>History</summary>
@@ -60,11 +58,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |v17 R5|Added|
 </details>
 
-<!-- REF file.File.Syntax -->
+<!-- REF fileClass.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
-<!-- REF file.File.Params -->
+<!-- REF #_command_.File.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |path|Text|->|File path|
@@ -77,7 +75,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### Description
 
-The `File` command <!-- REF file.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -124,11 +122,27 @@ If the target *fileConstant* does not exist, a null object is returned. No error
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
 
 
----
+## 4D.File.new()
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v18 R6|Added
+</details>
+
+<!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+
+
+#### Description
+
+The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
+
 
 <!-- INCLUDE document.copyTo().Desc -->
 
----
+
 
 <!-- REF file.create().Desc -->
 ## .create()
@@ -174,7 +188,7 @@ Creation of a preferences file in the database folder:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF file.createAlias().Desc -->
@@ -229,17 +243,16 @@ You want to create an alias to a file in your database folder:
 ```
 <!-- END REF -->
 
----
+
 
 
 <!-- INCLUDE document.creationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.creationTime.Desc -->
 
----
 
 
 <!-- REF file.delete().Desc -->
@@ -286,72 +299,68 @@ You want to delete a specific file in the database folder:
 ``` 
 <!-- END REF -->
 
----
+
 
 
 <!-- INCLUDE document.exists.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.extension.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.fullName.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.getContent().Desc -->
 
----
+
 
 
 <!-- INCLUDE document.getIcon().Desc -->
 
----
-
 
 <!-- INCLUDE document.getText().Desc -->
 
----
+
 
 
 <!-- INCLUDE document.hidden.Desc -->
 
----
 
 
 <!-- INCLUDE document.isAlias.Desc -->
 
----
 
 
 <!-- INCLUDE document.isFile.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.isFolder.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.isWritable.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.modificationDate.Desc -->
 
----
+
 
 
 <!-- INCLUDE document.modificationTime.Desc -->
 
----
+
 
 
 <!-- REF file.moveTo().Desc -->
@@ -400,32 +409,26 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!-- END REF -->
 
 
----
 
 
 <!-- INCLUDE document.name.Desc -->
 
----
 
 
 <!-- INCLUDE document.original.Desc -->
 
----
 
 
 <!-- INCLUDE document.parent.Desc -->
 
----
 
 
 <!-- INCLUDE document.path.Desc -->
 
----
 
 
 <!-- INCLUDE document.platformPath.Desc -->
 
----
 
 
 <!-- REF file.rename().Desc --> 
@@ -472,8 +475,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!-- END REF -->
 
 
----
-
 
 <!-- REF file.setContent().Desc --> 
 ## .setContent()
@@ -510,11 +511,11 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 
 
----
 
 
 <!-- REF file.setText().Desc --> 
 ## .setText()
+
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -576,10 +577,10 @@ $myFile.setText("Hello world")
 
 
 
----
 
 
 <!-- INCLUDE document.size.Desc -->
 
 
 
+<style> h2 { background: #d9ebff;}</style>

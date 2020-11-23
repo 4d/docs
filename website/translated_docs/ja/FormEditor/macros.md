@@ -3,7 +3,6 @@ id: macros
 title: Form Editor Macros
 ---
 
-## 概要
 
 The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
 
@@ -148,7 +147,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      オブジェクト
+      object
     </td>
     
     <td>
@@ -168,7 +167,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      オブジェクト
+      object
     </td>
     
     <td>
@@ -262,7 +261,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : object)
 
-| 引数     | タイプ    | 説明                                                       |
+| 参照     | タイプ    | 説明                                                       |
 | ------ | ------ | -------------------------------------------------------- |
 | $macro | オブジェクト | Macro declaration object (in the `formMacros.json` file) |
 
@@ -271,6 +270,7 @@ Macros are instantiated using a [class constructor](Concepts/classes.md#class-co
 The class constructor is called once during class instantiation, which occurs at application startup.
 
 Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+
 
 
 #### 例題
@@ -302,7 +302,7 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| 引数      | タイプ    | 説明                                               |
+| 参照      | タイプ    | 説明                                               |
 | ------- | ------ | ------------------------------------------------ |
 | $editor | オブジェクト | Form properties                                  |
 | $result | オブジェクト | Form properties modified by the macro (optional) |
@@ -378,6 +378,7 @@ Function onInvoke($editor : Object)->$result : Object
         For each ($name; $editor.editor.currentSelection)
             $editor.editor.currentPage.objects[$name].stroke:="red"
             $editor.editor.currentPage.objects[$name].fontStyle:="italic"
+
         End for each 
 
     Else 
@@ -393,7 +394,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
 
-| 引数           |                       | タイプ    | 説明                                       |
+| 参照           |                       | タイプ    | 説明                                       |
 | ------------ | --------------------- | ------ | ---------------------------------------- |
 | $editor      |                       | オブジェクト | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | オブジェクト | Object returned by [onInvoke](#oninvoke) |

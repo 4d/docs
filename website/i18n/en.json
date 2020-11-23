@@ -11,6 +11,9 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "API/classClass": {
+        "title": "Class"
+      },
       "API/collectionClass": {
         "title": "Collections"
       },
@@ -68,7 +71,10 @@
       "API/transporter": {
         "title": "Transporter Class"
       },
-      "API/zipClass": {
+      "API/webServerClass": {
+        "title": "WebServer"
+      },
+      "API/zipArchiveClass": {
         "title": "ZIP Archive"
       },
       "Backup/backup": {
@@ -344,6 +350,9 @@
       },
       "Events/onValidate": {
         "title": "On Validate"
+      },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
       },
       "Events/onVpReady": {
         "title": "On VP Ready"
@@ -629,7 +638,7 @@
         "title": "Data Model Classes"
       },
       "ORDA/overview": {
-        "title": "Overview"
+        "title": "What is ORDA?"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"

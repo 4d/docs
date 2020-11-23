@@ -18,7 +18,7 @@ This event is generated when the height of a row is modified by a user in a 4D V
 | description | text    | "On Row Resize"                                                  |
 | objectName  | text    | 4D View Pro area name                                            |
 | sheetName   | text    | Name of the sheet of the event                                   |
-| range       | オブジェクト  | Cell range of the rows whose heights have changed                |
+| range       | object  | Cell range of the rows whose heights have changed                |
 | header      | boolean | True if the column header row (first row) is resized, else false |
 
 #### 例題

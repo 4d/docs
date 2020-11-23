@@ -3,7 +3,6 @@ id: forms
 title: A propos des formulaires 4D
 ---
 
-## Aperçu
 
 Forms provide the interface through which information is entered, modified, and printed in a desktop application. Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
 
@@ -58,6 +57,7 @@ You can add or modify 4D forms using the following elements:
                 "action": "Cancel",
                 "left": 60,
                 "top": 160,
+
 
                 "width": 100,
                 "height": 20

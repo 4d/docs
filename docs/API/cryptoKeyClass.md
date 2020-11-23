@@ -3,6 +3,7 @@ id: cryptoClass
 title: CryptoKey
 ---
 
+
 The `CryptoKey` class in the 4D language encapsulates an asymetric encryption key pair.
 
 This class is available from the `4D` class store.
@@ -17,18 +18,18 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
   // Get signature as base64
 $message:="hello world"
-$signature:=$key.sign($message;New object("hash";"HASH256"))
+$signature:=$key.sign($message;New object("hash";"SHA256"))
 
   // Verify signature
-$status:=$key.verify($message;$signature;New object("hash";"HASH256"))
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
 ASSERT($status.success)
 ```
 
 
-## Summary
+### Summary
 ||
 |---|
-|[<!-- INCLUDE #cryptokey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
+|[<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
 |[<!-- INCLUDE #cryptokey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.curve.Summary --> |
 |[<!-- INCLUDE #cryptokey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.decrypt().Summary -->|
 |[<!-- INCLUDE #cryptokey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.encrypt().Summary -->|
@@ -44,8 +45,7 @@ ASSERT($status.success)
 
 
 
----
-## 4D.CryptoKey.new( )
+## 4D.CryptoKey.new()
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -54,16 +54,16 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #cryptokey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
 
-<!-- REF #cryptokey.new().Params -->
+<!-- REF #4D.CryptoKey.new().Params -->
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Settings to generate or load a key pair|
-|cryptoKey|Object|<-|Object encapsulating an encryption key pair|
+|cryptoKey|Object|<-|Object encapsulating an encryption key pair|<!-- END REF -->
 
 
-The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
@@ -77,9 +77,9 @@ The `4D.CryptoKey.new()` function <!-- REF #cryptokey.new().Summary -->creates a
 #### *cryptoKey*
 
 The returned `cryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
-<!-- END REF -->
 
----
+
+
 <!-- REF cryptokey.curve -->
 ## .curve
 
@@ -98,7 +98,7 @@ Defined only for ECDSA keys: the <!-- REF #cryptokey.curve.Summary -->normalised
 Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
 
----
+
 <!-- REF cryptokey.decrypt().Desc -->
 ## .decrypt()
 
@@ -128,7 +128,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 |Property|Type|Description|
 |---|---|---|
-|hash|text|Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". |
+|hash|text|Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". |
 |encodingEncrypted|text|Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64".|
 |encodingDecrypted|text|Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".|
 
@@ -143,11 +143,11 @@ The function returns a status object with `success` property set to `true` if th
 |result|text|Message decrypted and decoded using the `options.encodingDecrypted`|
 |errors|collection|If `success` is `false`, may contain a collection of errors|
 
+
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 <!-- END REF -->
 
 
----
 <!-- REF cryptokey.encrypt().Desc -->
 ## .encrypt()
 
@@ -176,7 +176,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 |Property|Type|Description|
 |---|---|---|
-|hash|text|Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". |
+|hash|text|Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". |
 |encodingEncrypted|text|Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".|
 |encodingDecrypted|text|Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".|
 
@@ -189,7 +189,6 @@ The returned value is an encrypted message.
 
 
 
----
 <!-- REF cryptokey.getPrivateKey().Desc -->
 ## .getPrivateKey()
 
@@ -217,7 +216,7 @@ The returned value is the private key.
 <!-- END REF -->
 
 
----
+
 <!-- REF cryptokey.getPublicKey().Desc -->
 ## .getPublicKey()
 
@@ -262,7 +261,7 @@ The returned value is the public key.
 <!-- END REF -->
 
 
----
+
 <!-- REF cryptokey.sign().Desc -->
 ## .sign()
 
@@ -290,7 +289,7 @@ The `cryptoKey` must contain a valid **private** key.
 
 |Property|Type|Description|
 |---|---|---|
-|hash|text|Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size|
+|hash|text|Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size|
 |encodingEncrypted|text|Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".|
 |pss|boolean|Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm|
 |encoding|text|ERepresentation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".|
@@ -301,7 +300,7 @@ The `cryptoKey` must contain a valid **private** key.
 The utf8 representation of the *message* string.
 <!-- END REF -->
 
----
+
 <!-- REF cryptokey.size -->
 ## .size
 <!-- END REF -->
@@ -317,7 +316,7 @@ The utf8 representation of the *message* string.
 
 Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the key in bits<!-- END REF -->. Typically 2048 (default).
 
----
+
 <!-- REF cryptokey.type -->
 ## .type
 <!-- END REF -->
@@ -334,7 +333,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 
 <!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", or "PEM":
 
----
+
 <!-- REF cryptokey.verify().Desc -->
 ## .verify()
 
@@ -364,7 +363,7 @@ The `cryptoKey` must contain a valid **public** key.
 
 |Property|Type|Description|
 |---|---|---|
-|hash|text|Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size|
+|hash|text|Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size|
 |pss|boolean|Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm|
 |encoding|text|Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".
 
@@ -380,3 +379,5 @@ In case the signature couldn't be verified because it was not signed with the sa
 |success|boolean|True if the signature matches the message|
 |errors|collection|If `success` is `false`, may contain a collection of errors|
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

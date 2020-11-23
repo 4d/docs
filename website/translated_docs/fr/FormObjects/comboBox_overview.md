@@ -3,8 +3,6 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-## Aperçu
-
 Une combo box est semblable à une [liste déroulante](dropdownList_Overview.md#overview), hormis le fait que cet objet accepte la saisie de texte par l’utilisateur et qu'elle dispose d'options supplémentaires.
 
 ![](assets/en/FormObjects/combo_box.png)

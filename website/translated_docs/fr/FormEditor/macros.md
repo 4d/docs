@@ -3,7 +3,6 @@ id: macros
 title: Form Editor Macros
 ---
 
-## Aperçu
 
 The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
 
@@ -273,6 +272,7 @@ Le class constructor est appelé une fois lors de l'instanciation de classe, qui
 Les propriétés personnalisées ajoutées à la [déclaration macro](#declaring-macros) sont retournées dans le paramètre de la fonction class contructor.
 
 
+
 #### Exemple
 
 In the `formMacros.json` file:
@@ -378,6 +378,7 @@ Function onInvoke($editor : Object)->$result : Object
         For each ($name; $editor.editor.currentSelection)
             $editor.editor.currentPage.objects[$name].stroke:="red"
             $editor.editor.currentPage.objects[$name].fontStyle:="italic"
+
         End for each 
 
     Else 

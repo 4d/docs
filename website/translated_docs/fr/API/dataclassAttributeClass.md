@@ -6,8 +6,8 @@ title: DataClassAttribute
 Dataclass attributes are available as properties of their respective classes. Par exemple:
 
 ```4d
- nameAttribute:=ds.Company.name //reference to class attribute
- revenuesAttribute:=ds.Company["revenues"] //alternate way
+ nameAttribute:=ds.Company.name //référence à un attribut de classe
+ revenuesAttribute:=ds.Company["revenues"] //méthode alternative
 ```
 
 This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [**Entities**](entityClass.md).
@@ -16,46 +16,24 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
-## Summary
+### Summary
+
+|                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE dataclassAttributeClass.autoFilled.Syntax -->](#autoFilled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.autoFilled.Summary -->|
+| [<!-- INCLUDE dataclassAttributeClass.fieldNumber.Syntax -->](#fieldNumber)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.fieldNumber.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.fieldType.Syntax -->](#fieldType)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.fieldType.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.indexed.Syntax -->](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.indexed.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.inverseName.Syntax -->](#inverseName)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.inverseName.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.keyWordIndexed.Syntax -->](#keyWordIndexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.keyWordIndexed.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.kind.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.mandatory.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.relatedDataClass.Syntax -->](#relatedDataClass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.relatedDataClass.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.type.Summary --> |
+| [<!-- INCLUDE dataclassAttributeClass.unique.Syntax -->](#unique)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassAttributeClass.unique.Summary --> |
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #dataclassAttributeClass.autoFilled.Syntax -->](#autoFilled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.autoFilled.Summary -->|
-| [<!-- INCLUDE #dataclassAttributeClass.fieldNumber.Syntax -->](#fieldNumber)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.fieldNumber.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.fieldType.Syntax -->](#fieldType)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.fieldType.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.indexed.Syntax -->](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.indexed.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.inverseName.Syntax -->](#inverseName)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.inverseName.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.keyWordIndexed.Syntax -->](#keyWordIndexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.keyWordIndexed.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.kind.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.mandatory.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.name.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.relatedDataClass.Syntax -->](#relatedDataClass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.relatedDataClass.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.type.Summary --> |
-| [<!-- INCLUDE #dataclassAttributeClass.unique.Syntax -->](#unique)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassAttributeClass.unique.Summary --> |
-
----
 
 <!-- REF dataclassAttributeClass.autoFilled.Desc -->
 ## .autoFilled
@@ -67,12 +45,13 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 </details>
 
 
-<!-- REF #dataclassAttributeClass.autoFilled.Syntax -->
+<!-- REF dataclassAttributeClass.autoFilled.Syntax -->
 **.autoFilled** : Boolean<!-- END REF -->
 
 
 #### Description
-The `.autoFilled` property <!-- REF #dataclassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
+
+The `.autoFilled` property <!-- REF dataclassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
 
 *   "Autoincrement", for numeric type fields
 *   "Auto UUID", for UUID (alpha type) fields.
@@ -84,7 +63,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.fieldNumber.Desc -->
 ## .fieldNumber
@@ -96,12 +75,13 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 </details>
 
 
-<!-- REF #dataclassAttributeClass.fieldNumber.Syntax -->
+<!-- REF dataclassAttributeClass.fieldNumber.Syntax -->
 **.fieldNumber** : Integer<!-- END REF -->
 
 
 #### Description
-The `.fieldNumber` property <!-- REF #dataclassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->.
+
+The `.fieldNumber` property <!-- REF dataclassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->.
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 > For generic programming, you can use **Num**(dataClassAttribute.fieldNumber) to get a valid value (0) even if `.fieldNumber` is not returned. 
@@ -110,7 +90,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.fieldType.Desc -->
 ## .fieldType
@@ -122,14 +102,13 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 </details>
 
 
-<!-- REF #dataclassAttributeClass.fieldType.Syntax -->
+<!-- REF dataclassAttributeClass.fieldType.Syntax -->
 **.fieldType** : Integer<!-- END REF -->
 
 
 #### Description
-The `.fieldType` property <!-- REF #dataclassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. It depends on the attribute kind (see 
 
-[`.kind`](#kind)).
+The `.fieldType` property <!-- REF dataclassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. It depends on the attribute kind (see [`.kind`](#kind)).
 
 **Valeurs possibles :**
 
@@ -142,7 +121,6 @@ The `.fieldType` property <!-- REF #dataclassAttributeClass.fieldType.Summary --
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassAttributeClass.indexed.Desc -->
 ## .indexed
@@ -154,14 +132,13 @@ The `.fieldType` property <!-- REF #dataclassAttributeClass.fieldType.Summary --
 </details>
 
 
-<!-- REF #dataclassAttributeClass.indexed.Syntax -->
+<!-- REF dataclassAttributeClass.indexed.Syntax -->
 **.indexed** : Boolean<!-- END REF -->
 
 
 #### Description
-The `.indexed` property <!-- REF #dataclassAttributeClass.indexed.Summary -->contains 
 
-**True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
+The `.indexed` property <!-- REF dataclassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 > For generic programming, you can use **Bool**(dataClassAttribute.indexed) to get a valid value (false) even if `.indexed` is not returned. 
@@ -169,7 +146,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.inverseName.Desc -->
 ## .inverseName
@@ -181,12 +158,13 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 </details>
 
 
-<!-- REF #dataclassAttributeClass.inverseName.Syntax -->
+<!-- REF dataclassAttributeClass.inverseName.Syntax -->
 **.inverseName** : Text<!-- END REF -->
 
 
 #### Description
-The `.inverseName` property <!-- REF #dataclassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->.
+
+The `.inverseName` property <!-- REF dataclassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->.
 
 This property is not returned if `.kind` = "storage". It must be of the "relatedEntity" or "relatedEntities" kind.
 > For generic programming, you can use **String**(dataClassAttribute.inverseName) to get a valid value ("") even if `.inverseName` is not returned.  
@@ -195,7 +173,6 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 
 
 
----
 
 <!-- REF dataclassAttributeClass.keyWordIndexed.Desc -->
 ## .keyWordIndexed
@@ -207,21 +184,20 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 </details>
 
 
-<!-- REF #dataclassAttributeClass.keyWordIndexed.Syntax -->
+<!-- REF dataclassAttributeClass.keyWordIndexed.Syntax -->
 **.keyWordIndexed** : Boolean<!-- END REF -->
 
 
 #### Description
-The `.keyWordIndexed` property <!-- REF #dataclassAttributeClass.keyWordIndexed.Summary -->contains 
 
-**True** if there is a keyword index on the attribute<!-- END REF -->.
+The `.keyWordIndexed` property <!-- REF dataclassAttributeClass.keyWordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
 > For generic programming, you can use **Bool**(dataClassAttribute.keyWordIndexed) to get a valid value (false) even if `.keyWordIndexed` is not returned. 
 
 <!-- END REF -->
 
----
+
 
 <!-- REF dataclassAttributeClass.kind.Desc -->
 ## .kind
@@ -233,12 +209,13 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 </details>
 
 
-<!-- REF #dataclassAttributeClass.kind.Syntax -->
+<!-- REF dataclassAttributeClass.kind.Syntax -->
 **.kind** : Text<!-- END REF -->
 
 
 #### Description
-The `.kind` property <!-- REF #dataclassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. Returned value can be one of the following:
+
+The `.kind` property <!-- REF dataclassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. Returned value can be one of the following:
 
 *   "storage": storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute
 *   "relatedEntity": N -> 1 relation attribute (reference to an entity)
@@ -262,7 +239,7 @@ Given the following table and relation:
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.mandatory.Desc -->
 ## .mandatory
@@ -274,12 +251,13 @@ Given the following table and relation:
 </details>
 
 
-<!-- REF #dataclassAttributeClass.mandatory.Syntax -->
+<!-- REF dataclassAttributeClass.mandatory.Syntax -->
 **.mandatory** : Boolean<!-- END REF -->
 
 
 #### Description
-The `.mandatory` property <!-- REF #dataclassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->.
+
+The `.mandatory` property <!-- REF dataclassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->.
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
 > For generic programming, you can use **Bool**(dataClassAttribute.mandatory) to get a valid value (false) even if `.mandatory` is not returned.
@@ -288,7 +266,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.name.Desc -->
 ## .name
@@ -300,14 +278,13 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 </details>
 
 
-<!-- REF #dataclassAttributeClass.name.Syntax -->
+<!-- REF dataclassAttributeClass.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
 
 #### Description
-The `.name` property <!-- REF #dataclassAttributeClass.name.Summary -->returns the name of the 
 
-`dataClassAttribute` object as string<!-- END REF -->.
+The `.name` property <!-- REF dataclassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
 
 #### Exemple
 
@@ -319,7 +296,6 @@ The `.name` property <!-- REF #dataclassAttributeClass.name.Summary -->returns t
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass
@@ -328,16 +304,18 @@ The `.name` property <!-- REF #dataclassAttributeClass.name.Summary -->returns t
 | Version | Modifications |
 | ------- | ------------- |
 | v17 R5  | Ajoutées      |
+
 </details>
 
 
-<!-- REF #dataclassAttributeClass.relatedDataClass.Syntax -->
+<!-- REF dataclassAttributeClass.relatedDataClass.Syntax -->
 **.relatedDataClass** : Text<!-- END REF -->
 
 
 #### Description
 > This property is only available with attributes of the "relatedEntity" or "relatedEntities" [`.kind`](#kind) property.
-The `.relatedDataClass` property <!-- REF #dataclassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
+
+The `.relatedDataClass` property <!-- REF dataclassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
 
 #### Exemple
 
@@ -355,7 +333,6 @@ Given the following tables and relations:
 <!-- END REF -->
 
 
----
 
 <!-- REF dataclassAttributeClass.type.Desc -->
 ## .type
@@ -367,27 +344,28 @@ Given the following tables and relations:
 </details>
 
 
-<!-- REF #dataclassAttributeClass.type.Syntax -->
+<!-- REF dataclassAttributeClass.type.Syntax -->
 **.type** : Texte<!-- END REF -->
 
 
 #### Description
-The `.type` property <!-- REF #dataclassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
+
+The `.type` property <!-- REF dataclassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
 
 The conceptual value type depends on the attribute [`.kind`](#kind).
 
 **Valeurs possibles :**
 
-| dataClassAttribute.kind | type                                                             | Commentaire                                                                                                              |
-| ----------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| storage                 | "number", "date", "object", "bool", "image", "blob", or "string" | "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types |
-| relatedEntity           | related dataClass name                                           | Ex: "Companies"                                                                                                          |
-| relatedEntities         | related dataClass name + "Selection" suffix                      | Ex: "EmployeeSelection"                                                                                                  |
+| dataClassAttribute.kind | type                                                     | Commentaire                                                                                                                                   |
+| ----------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "number", "date", "object", "bool", "image", or "string" | "nombre" est rertourné pour tous les types numériques, y compris la durée. "string" est retourné pour les types de champs uuid, alpha et text |
+| relatedEntity           | nom de dataClass associé                                 | Ex : "Companies"                                                                                                                              |
+| relatedEntities         | nom de dataClass associé + suffixe "Selection"           | Ex : "EmployeeSelection"                                                                                                                      |
 
 <!-- END REF -->
 
 
----
+
 
 <!-- REF dataclassAttributeClass.unique.Desc -->
 ## .unique
@@ -399,14 +377,17 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 </details>
 
 
-<!-- REF #dataclassAttributeClass.unique.Syntax -->
-**.unique** : Boolean<!-- END REF -->
+<!-- REF dataclassAttributeClass.unique.Syntax -->
+**.unique** : Booléen<!-- END REF -->
 
 
 #### Description
-The `.unique` property <!-- REF #dataclassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. This property corresponds to the "Unique" 4D field property.
+
+La propriété `.unique` <!-- REF dataclassAttributeClass.unique.Summary -->contient True si la valeur d'attribut doit être unique<!-- END REF -->. Cette propriété correspond à la propriété de champ 4D "Unique".
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.unique) to get a valid value (false) even if `.unique` is not returned. 
+> Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.unique) pour obtenir une valeur valide (false) même si `.unique` n'est pas retourné. 
 
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

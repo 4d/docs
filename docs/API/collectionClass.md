@@ -3,17 +3,18 @@ id: collectionClass
 title: Collections
 ---
 
-The Collection class manages [Collection](../Concepts/collection.html) type variables.
+
+The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
 
 A collection is initialized with:
 
 ||
 |---|
-|[<!-- INCLUDE collection.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New collection.Summary -->|
-|[<!-- INCLUDE collection.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE collection.New shared collection.Summary -->|
+|[<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->|
+|[<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
-## Example 
+### Example 
 
 ```4d
  var $colVar : Collection //creation of collection type 4D variable
@@ -21,7 +22,7 @@ A collection is initialized with:
 ```
 
 
-## Summary
+### Summary
 
 
 ||
@@ -66,9 +67,8 @@ A collection is initialized with:
 |[<!-- INCLUDE #collection.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->|
 |[<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->|
 
----
 
-<!-- REF collection.New collection.Desc -->
+
 ## New collection
 
 <details><summary>History</summary>
@@ -77,10 +77,10 @@ A collection is initialized with:
 |v16 R4|Added|
 </details>
 
-<!-- REF collection.New collection.Syntax -->
+<!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
-<!-- REF collection.New collection.Params -->
+<!-- REF #_command_.New collection.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
@@ -90,7 +90,7 @@ A collection is initialized with:
 
 #### Description
 
-The `New collection` command <!-- REF collection.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
 
 If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
 
@@ -117,7 +117,6 @@ You must pay attention to the following conversion issues:
 *	If you pass a time, it is stored as a number of milliseconds (Real).
 
 #### Example 1
-
 
 
 
@@ -153,11 +152,8 @@ You create a new collection and then add a new element:
 ``` 
 
 
-<!-- END REF -->
 
----
 
-<!-- REF collection.New shared collection.Desc -->
 ## New shared collection
 
 <details><summary>History</summary>
@@ -166,10 +162,10 @@ You create a new collection and then add a new element:
 |v16 R6|Added|
 </details>
 
-<!-- REF collection.New shared collection.Syntax -->
+<!-- REF #_command_.New shared collection.Syntax -->
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
-<!-- REF collection.New shared collection.Params -->
+<!-- REF #_command_.New shared collection.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
@@ -179,7 +175,7 @@ You create a new collection and then add a new element:
 
 #### Description
 
-The `New shared collection` command <!-- REF collection.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
 Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
 
@@ -219,9 +215,7 @@ You can pass any number of values of the following supported types:
  End use
 ``` 
 
-<!-- END REF -->
 
----
 
 <!-- REF collection.average().Desc -->
 ## .average()
@@ -248,6 +242,8 @@ You can pass any number of values of the following supported types:
 #### Description
 
 The `.average()` function <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
+
+
 
 Only numerical elements are taken into account for the calculation (other element types are ignored).
 
@@ -281,7 +277,6 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <!-- END REF -->
 
----
 
 
 <!-- REF collection.clear().Desc -->
@@ -321,7 +316,7 @@ $vSize:=$col.length //$vSize=0
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.combine().Desc -->
@@ -373,7 +368,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.concat().Desc -->
@@ -418,7 +413,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.copy().Desc -->
@@ -545,7 +540,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.count().Desc -->
@@ -593,7 +588,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.countValues().Desc -->
@@ -675,7 +670,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.distinct().Desc -->
@@ -731,7 +726,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.equal().Desc -->
@@ -789,7 +784,6 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 <!-- END REF -->
 
 
----
 
 
 <!-- REF collection.every().Desc -->
@@ -885,7 +879,7 @@ End if
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.extract().Desc -->
@@ -961,7 +955,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.fill().Desc -->
@@ -1019,7 +1013,7 @@ In case of inconsistency, the following rules apply:
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.filter().Desc -->
@@ -1112,7 +1106,7 @@ The code for ***TypeLookUp*** is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.find().Desc -->
@@ -1211,7 +1205,7 @@ The code for ***FindCity*** is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.findIndex().Desc -->
@@ -1294,7 +1288,7 @@ The code for ***FindCity*** method is:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.indexOf().Desc -->
@@ -1356,7 +1350,7 @@ Optionally, you can pass the index of collection from which to start the search 
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.indices().Desc -->
@@ -1413,7 +1407,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.insert().Desc -->
@@ -1466,7 +1460,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.join().Desc -->
@@ -1511,7 +1505,7 @@ By default, null or empty elements of the collection are returned in the resulti
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.lastIndexOf().Desc -->
@@ -1572,7 +1566,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 <!-- END REF -->
 
---- 
+ 
 
 
 <!-- REF collection.length.Desc -->
@@ -1585,7 +1579,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 </details>
 
 <!-- REF #collection.length.Syntax -->
-**.length** -> Integer<!-- END REF -->
+**.length** : Integer<!-- END REF -->
 
 
 
@@ -1606,7 +1600,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.map().Desc -->
@@ -1673,7 +1667,7 @@ Here is the ***Percentage*** method:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.max().Desc -->
@@ -1724,7 +1718,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.min().Desc -->
@@ -1775,7 +1769,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -1878,6 +1872,7 @@ Ordering a collection of objects with a property path:
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
  $c.push(New object("name";"Blountsville";"phones";New object("p1";"00";"p2";"03")))
+
  $c2:=$c.orderBy("phones.p1 asc")
 ``` 
 
@@ -1913,7 +1908,7 @@ Ordering with a property path:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.orderByMethod().Desc -->
@@ -1998,7 +1993,7 @@ Here is the code for ***WordLength***:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.pop().Desc -->
@@ -2047,7 +2042,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.push().Desc -->
@@ -2106,7 +2101,7 @@ You want to sort the resutling collection:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.query().Desc -->
@@ -2214,7 +2209,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.reduce().Desc -->
@@ -2241,6 +2236,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 #### Description
+
 
 The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *methodName* callback method against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
 
@@ -2305,7 +2301,6 @@ With the following ***Flatten*** method:
 <!-- END REF -->
 
 
----
 
 
 <!-- REF collection.remove().Desc -->
@@ -2366,11 +2361,12 @@ If you try to remove an element from an empty collection, the method does nothin
 
 
 
----
+
 
 
 <!-- REF collection.resize().Desc -->
 ## .resize()
+
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -2423,7 +2419,7 @@ By default, new elements are filled will **null** values. You can specify the va
 <!-- END REF -->
 
 
----
+
 
 
 
@@ -2464,7 +2460,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.shift().Desc -->
@@ -2509,7 +2505,7 @@ If the collection is empty, this method does nothing.
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.slice().Desc -->
@@ -2561,7 +2557,7 @@ The returned collection contains the element specified by *startFrom* and all su
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.some().Desc -->
@@ -2642,7 +2638,7 @@ With the following *NumberGreaterThan0* method:
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.sort().Desc -->
@@ -2731,7 +2727,7 @@ If the collection contains elements of different types, they are first grouped b
  
 <!-- END REF -->
 
----
+
 
 
 <!-- REF collection.sum().Desc -->
@@ -2793,7 +2789,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- END REF -->
 
 
----
+
 
 
 <!-- REF collection.unshift().Desc -->
@@ -2838,3 +2834,6 @@ If several values are passed, they are inserted all at once, which means that th
 ```
 
 <!-- END REF -->
+
+
+<style> h2 { background: #d9ebff;}</style>

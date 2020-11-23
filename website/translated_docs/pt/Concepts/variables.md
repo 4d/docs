@@ -61,157 +61,22 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-<table spaces-before="0" line-breaks-before="2">
-  <tr>
-    <th>
-      varType
-    </th>
-    
-    <th>
-      Contents
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      Text
-    </td>
-    
-    <td>
-      Text value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Date
-    </td>
-    
-    <td>
-      Date value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Time
-    </td>
-    
-    <td>
-      Time value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Boolean
-    </td>
-    
-    <td>
-      Boolean value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Integer
-    </td>
-    
-    <td>
-      Long integer value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Real
-    </td>
-    
-    <td>
-      Real value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Pointer
-    </td>
-    
-    <td>
-      Pointer value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Picture
-    </td>
-    
-    <td>
-      Picture value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Blob
-    </td>
-    
-    <td>
-      BLOB value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Collection
-    </td>
-    
-    <td>
-      Collection value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Variant
-    </td>
-    
-    <td>
-      Variant value
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Object
-    </td>
-    
-    <td>
-      Object with default class (4D.Object)
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      4D.\<className>
-    </td>
-    
-    <td>
-      Object of the 4D class name
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      cs.\<className>
-    </td>
-    
-    <td>
-      Object of the user class name
-    </td>
-  </tr>
-</table>
+| varType        | Contents                              |
+| -------------- | ------------------------------------- |
+| Text           | Text value                            |
+| Date           | Date value                            |
+| Time           | Time value                            |
+| Boolean        | Boolean value                         |
+| Integer        | Long integer value                    |
+| Real           | Real value                            |
+| Pointer        | Pointer value                         |
+| Picture        | Picture value                         |
+| Blob           | BLOB value                            |
+| Collection     | Collection value                      |
+| Variant        | Variant value                         |
+| Object         | Object with default class (4D.Object) |
+| 4D.*className* | Object of the 4D class name           |
+| cs.*className* | Object of the user class name         |
 
 #### Examples
 

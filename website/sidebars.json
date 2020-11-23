@@ -27,6 +27,7 @@
   "Class API Reference":
   [
 	"API/overview",
+	"API/classClass",
 	"API/collectionClass",
 	"API/cryptoClass",
 	"API/dataclassClass",
@@ -42,7 +43,8 @@
 	"API/pop3TransporterClass",
 	"API/signalClass",
 	"API/smtpTransporterClass",
-	"API/zipClass"
+	"API/webServerClass",
+	"API/zipArchiveClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
   "Administration":["Admin/licenses","Admin/building"],
@@ -195,6 +197,7 @@
 			"Events/onUrlLoadingError",
 			"Events/onUrlResourceLoading",
 			"Events/onValidate",
+			"Events/onVpRangeChanged",
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
   "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]

@@ -3,6 +3,8 @@ id: null-undefined
 title: Null と 未定義
 ---
 
+Null and Undefined are data types that handle cases where the value of an expression is not known.
+
 ## Null
 
 Null は **null** の値のみをとることのできる特殊なデータタイプです。 この値は、値を持たない式によって返されます。

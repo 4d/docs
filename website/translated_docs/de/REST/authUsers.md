@@ -3,10 +3,10 @@ id: authUsers
 title: Users and sessions
 ---
 
+As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+
 
 ## Authenticating users
-
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
 
 You log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin).
 

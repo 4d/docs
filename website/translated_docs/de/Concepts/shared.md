@@ -3,8 +3,7 @@ id: shared
 title: Shared Objects und Shared Collections
 ---
 
-## Overview
-**Shared objects** und **shared collections** sind spezifische [Objekte](Concepts/dt_object.md) und [Collections](Concepts/dt_collection.md), deren Inhalt zwischen Prozessen geteilt wird. Im Gegensatz zu [Interprozessvariablen](Concepts/variables.md#interprocess-variables) haben shared objects und shared collections den Vorteil, dass sie mit **Preemptive 4D Prozessen** kompatibel sind: Sie können per Referenz als Parameter an Befehle wie en Vorteil, dass sie mit Preemptive 4D Prozesse kompatibel sind: Sie können per Referenz als Parameter an Befehle wie `New process` oder `CALL WORKER` übergeben werden.
+**Shared objects** und **shared collections** sind spezifische [Objekte](Concepts/dt_object.md) und [Collections](Concepts/dt_collection.md), deren Inhalt zwischen Prozessen geteilt wird. Im Gegensatz zu [Interprozessvariablen](Concepts/variables.md#interprocess-variables) haben shared objects und shared collections den Vorteil, dass sie mit **Preemptive 4D Prozessen** kompatibel sind: Sie können per Referenz als Parameter an Befehle wie `New process` oder `CALL WORKER` übergeben werden.
 
 "Shared objects/collections" lassen sich in Variablen speichern, die mit Standardbefehlen `C_OBJECT` und `C_COLLECTION` deklariert wurden, müssen aber über spezifische Befehle eine Instanz erhalten:
 
@@ -18,9 +17,11 @@ Zum Ändern von "shared object/collection" muss die Struktur **Use...End use** a
 Ein einmaliger, globaler Katalog, der vom Befehl `Storage` zurückgegeben wird, ist immer in der gesamten Anwendung und ihren Komponenten verfügbar. Darin lassen sich alle "shared objects/collections" speichern.
 
 ## Shared Objects oder Collections verwenden
+
 Ist mit den Befehlen `New shared object` oder `de>New shared collection` eine Instanz von shared object/collection erstellt, lassen sich ihre jeweiligen Eigenschaften und Elemente in jedem Prozess ändern oder lesen.
 
 ### Ändern
+
 Sie können shared objects/collections folgendermaßen bearbeiten:
 
 - Objekteigenschaften ändern oder entfernen
@@ -35,11 +36,11 @@ Jedoch müssen alle Anweisungen zum Ändern in shared object oder collection in 
  End Use
 ```
 
-Shared object/collection lässt sich zur selben Zeit immer nur von einem Prozess verändern. `Use` locks the shared object/collection from other threads, while `End use` unlocks the shared object/collection (if the locking counter is at 0, see below). . Versuchen Sie, ein shared object/collection ohne mindest ein `Use...End use` zu ändern, wird ein Fehler generiert. Ruft ein Prozess `Use...End use` in shared object/collection auf, das bereits von einem anderen Prozess benutzt wird, wird er bis zum Entsperren durch `End use` in Wartestellung gesetzt (es wird kein Fehler generiert). Deshalb sollten Anweisungen innerhalb der Struktur `Use...End use` rasch ablaufen und die Elemente so bald wie möglich entsperren  und Sie sollten ein shared object/collection nicht direkt auf der Oberfläche ändern, also z.B. über ein Dialogfenster.
+Shared object/collection lässt sich zur selben Zeit immer nur von einem Prozess verändern. `Use` sperrt shared object/collection von anderen Threads, während `End use` shared object/collection entsperrt (wenn der Sperrschlüssel 0 ist, siehe unten) . Versuchen Sie, ein shared object/collection ohne mindest ein `Use...End use` zu ändern, wird ein Fehler generiert. Ruft ein Prozess `Use...End use` in shared object/collection auf, das bereits von einem anderen Prozess benutzt wird, wird er bis zum Entsperren durch `End use` in Wartestellung gesetzt (es wird kein Fehler generiert). Deshalb sollten Anweisungen innerhalb der Struktur `Use...End use` rasch ablaufen und die Elemente so bald wie möglich entsperren  und Sie sollten ein shared object/collection nicht direkt auf der Oberfläche ändern, also z.B. über ein Dialogfenster.
 
 Shared objects/collections lassen sich auch Eigenschaften oder Elementen von anderen shared objects/collections zuweisen. Das erstellt **shared groups**. Eine shared group wird automatisch erstellt, wenn ein shared object/collection als Eigenschaftswert oder Element eines anderen shared object/collection gesetzt wird. Shared groups erlauben das Einbinden von shared objects/collections. Dafür gelten jedoch zusätzliche Regeln:
 
-- Calling `Use` on a shared object/collection belonging to a group locks properties/elements of all shared objects/collections of the group and increments its locking counter. Calling `End use` decrements the locking counter of the group and when the counter is at 0, all the linked shared objects/collections are unlocked.
+- Der Aufruf von `Use` in shared object/collection innerhalb einer Gruppe sperrt die Eigenschaften/Elemente aller shared objects/collections, die zur gleichen Gruppe gehören und erhöht ihren Sperrschlüssel. Aufrufen von `End use` verringert den Sperrschlüssel der Gruppe. Ist er dann bei 0, werden alle verknüpften shared objects/collections entsperrt.
 - Eine shared object/collection kann nur zu einer shared group gehören. Versuchen Sie, eine zu einer Gruppe gehörende shared object/collection in eine andere Gruppe zu setzen, wird ein Fehler generiert.
 - Die Gruppierung von shared objects/collections lässt sich nicht auflösen. Gehören sie zu einer shared group, bleibt diese Zuordnung während der gesamten Sitzung erhalten. Selbst wenn alle Referenzen eines Objekts bzw. einer Collection aus dem übergeordneten Objekt bzw. der Collection entfernt werden, bleibt diese Gruppierung erhalten.
 
@@ -48,14 +49,17 @@ In Beispiel 2 sehen Sie die Anwendung der Regeln für shared groups.
 **Hinweis:** Shared groups werden über die interne Eigenschaft *locking identifier* verwaltet. Weitere Informationen dazu finden Sie im 4D Developer Guide.
 
 ### Lesen
+
 Eigenschaften oder Elemente von shared object/collection lassen sich ohne die Struktur `Use...End use` lesen, selbst wenn shared object/collection von einem anderen Prozess benutzt wird.
 
 Sind dagegen mehrere Werte logisch miteinander verbunden, sollte shared object/collection aus Konsistenzgründen in der Struktur `Use...End use` gelesen werden.
 
 ### Duplizieren
+
 Standardmäßig wird bei Aufruf von `OB Copy/collection. copy( `) mit shared object/collection (oder darin enthaltenen shared objects/collections) ein reguläres Objekt bzw. Collection (not shared) mit den enthaltenen Objekten (falls vorhanden) zurückgegeben.
 
 ### Storage
+
 **Storage** ist ein einmaliges shared object, das automatisch in jeder Anwendung und auf jedem Rechner verfügbar ist. Es wird vom Befehl `Storage` zurückgegeben. Sie können es verwenden, um auf alle während der Sitzung definierten shared objects/collections zu verweisen, die über jeden preemptive oder standardmäßige Prozesse verfügbar sein sollen.
 
 Beachten Sie, dass das `Storage` Objekt, im Gegensatz zu den standardmäßigen shared objects, keine shared group erstellt, wenn shared objects/collections als Eigenschaft hinzugefügt werden. Auf diese Weise lässt sich das **Storage** Objekt ohne Sperren aller verbundenen shared objects/collections verwenden.
@@ -63,6 +67,7 @@ Beachten Sie, dass das `Storage` Objekt, im Gegensatz zu den standardmäßigen s
 Weitere Informationen dazu finden Sie unter dem Befehl `Storage`.
 
 ## Use...End use
+
 Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 ```4d
@@ -79,8 +84,8 @@ Shared objects und shared collections wurden zur Kommunikation zwischen Prozesse
 - Der dazwischenliegende Teil _statement(s)_ kann Änderungen in den Eigenschaften/Elementen von Shared_object_or_Shared_collection ohne das Risiko konkurrierender Zugriffe ausführen.
 - Werden ein anderes Objekt oder eine Collection als Eigenschaft des Parameters _Shared_object_or_Shared_collection_ hinzugefügt, werden sie mit derselben gemeinsam genutzten Gruppe verbunden (siehe **Shared Objects oder Collections verwenden**).
 - Versucht ein anderer Prozess, auf eine der Eigenschaften bzw. der verbundenen Eigenschaften von _Shared_object_or_Shared_collection_ zuzugreifen, während eine Sequenz **Use...End use** ausgeführt wird, wird er automatisch angehalten und wartet, bis die aktuelle Sequenz abgeschlossen ist.
-- The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects of the same group.
-- Im 4D Code können auch mehrere Strukturen **Use...End use** eingebunden sein. In the case of a group, each **Use** increments the locking counter of the group and each **End use** decrements it; all properties/elements will be released only when the last **End use** call sets the locking counter to 0.
+- Die Zeile **End use** entsperrt die Eigenschaften von _Shared_object_or_Shared_collection_ und alle Objekte in derselben Gruppe.
+- Im 4D Code können auch mehrere Strukturen **Use...End use** eingebunden sein. Bei einer Gruppe erhöht jedes **Use** den Sperrschlüssel der Gruppe und jedes **End use** verringert ihn; alle Eigenschaften/Elemente werden erst freigegeben, wenn der letzte Aufruf von **End use** den Sperrschlüssel auf 0 setzt.
 
 **Hinweis:** Verändert eine Collection Methode eine shared collection, wird beim Ausführen der Methode für diese shared collection automatisch ein internes **Use** aufgerufen.
 

@@ -21,7 +21,7 @@ Class constructor($firstname : Text; $lastname : Text)
     This.lastName:=$lastname
 ```
 
-In a method, creating a "Person":
+Dans une méthode, créons une "Personne" :
 
 ```
 var $o : cs.Person //object of Person class
@@ -35,15 +35,15 @@ $o:=cs.Person.new("John";"Doe")
 
 ### Définition d'une classe
 
-A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
+Une classe utilisateur dans 4D est définie par un fichier de méthode spécifique (.4dm), stocké dans le dossier `/Project/Sources/Classes/`. Le nom du fichier est le nom de la classe.
 
-When naming classes, you should keep in mind the following rules:
+Lorsque vous nommez des classes, gardez à l'esprit les règles suivantes :
 
 - A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
-- Class names are case sensitive.
-- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict.
+- Les noms de classe sont sensibles à la casse.
+- Il n'est pas recommandé de donner le même nom à une classe et à une table de base de données, afin d'éviter tout conflit.
 
-For example, if you want to define a class named "Polygon", you need to create the following file:
+Par exemple, si vous souhaitez définir une classe nommée "Polygon", vous devez créer le fichier suivant :
 
 - Dossier Project
     + Project
@@ -51,11 +51,11 @@ For example, if you want to define a class named "Polygon", you need to create t
             - Classes
                 + Polygon.4dm
 
-### Deleting a class
+### Supprimer une classe
 
-To delete an existing class, you can:
+Pour supprimer une classe existante, vous pouvez :
 
-- on your disk, remove the .4dm class file from the "Classes" folder,
+- sur votre disque, supprimer le fichier de classe .4dm du dossier "Classes",
 - in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 
@@ -63,36 +63,36 @@ To delete an existing class, you can:
 
 Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
 
-#### File menu and toolbar
+#### Menu Fichier et barre d'outils
 
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
+Vous pouvez créer un nouveau fichier de classe pour le projet en sélectionnant **Nouveau> Classe...** dans le menu **Fichier** de 4D Developer ou dans la barre d'outils.
 
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
+Vous pouvez également utiliser le raccourci **Ctrl+Maj+Alt+k**.
 
-#### Explorer
+#### Explorateur
 
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
+Dans la page **Méthodes** de l'Explorateur, les classes sont regroupées dans la catégorie **Classes**.
 
-To create a new class, you can:
+Pour créer une nouvelle classe, vous pouvez :
 
-- select the **Classes** category and click on the ![](assets/en/Users/PlussNew.png) button.
-- select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group. ![](assets/en/Concepts/newClass.png)
-- select **New > Class...** from the contexual menu of the Explorer's Home page.
+- sélectionnez la catégorie **Classes** et cliquez sur le bouton ![](assets/en/Users/PlussNew.png).
+- sélectionnez **Nouvelle classe...** dans le menu d'actions en bas de la fenêtre de l'Explorateur ou dans le menu contextuel du groupe Classes. ![](assets/en/Concepts/newClass.png)
+- sélectionnez **Nouveau> Classe...** dans le menu contextuel de la page d'accueil de l'Explorateur.
 
-#### Class code support
+#### Prise en charge du code de classe
 
-In the various 4D Developer windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+Dans les différentes fenêtres de 4D Developer (éditeur de code, compilateur, débogueur, explorateur d'exécution), le code de classe est essentiellement géré comme une méthode projet avec quelques spécificités :
 
-- In the code editor:
-    - a class cannot be run
-    - a class function is a code block
-    - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
-    - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the \<ClassName> constructor or \<ClassName>.\<FunctionName> format.
+- Dans l'éditeur de code :
+    - une classe ne peut pas être exécutée
+    - une fonction de classe est un bloc de code
+    - **Goto definition** sur un objet membre recherche des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Fonction f".
+    - **Search references** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Fonction f" donnera comme résultat "$o.f()".
+- Dans l'explorateur d'exécution et le Débogueur, les fonctions de classe sont affichées avec le format \<ClassName> constructor ou \<ClassName>. \<FunctionName> .
 
 ## Class stores
 
-Available classes are accessible from their class stores. Two class stores are available:
+Les classes disponibles sont accessibles depuis leurs class stores. Two class stores are available:
 
 - `cs` for user class store
 - `4D` for built-in class store
@@ -124,7 +124,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | 4D class store |
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKey.md).
+The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/cryptoKeyClass.md).
 
 #### Exemple
 
@@ -141,56 +141,20 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ### L'objet classe
 
-When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. Une classe est un objet de classe "Class". Un objet de classe a les propriétés et méthodes suivantes :
+When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/classClass.md). A class object has the following properties and function:
 
-- une chaîne `name`
-- un objet `superclass` (facultatif, nul s'il n'y en a aucun)
-- une méthode `new()` permettant d'instancier des objets de classe.
+- [`name`](API/classClass.md#name) string
+- [`superclass`](API/classClass.md#superclass) object (null if none)
+- [`new()`](API/classClass.md#new) function, allowing to instantiate class objects.
 
 De plus, un objet de classe peut référencer :
+
 - un objet [`constructeur`](#class-constructor) (facultatif),
 - un objet `prototype`, contenant des objets de [fonction](#function) nommés (facultatif).
 
-Un objet de classe est un objet partagé et est donc accessible simultanément à partir de différents processus 4D.
+A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
 
 
-
-### méthode new()
-
-#### cs.\<ClassName>.new() -> classObject
-
-| Paramètres  | Type   |    | Description                           |
-| ----------- | ------ | -- | ------------------------------------- |
-| classObject | object | <- | New object of the \<ClassName> class |
-
-The `new()` method creates and returns an object which is a new instance of the `<ClassName>` class on which it is called. It is automatically available on all classes from the `cs` [class store](#class-stores).
-
-If it is called on a non-existing class, an error is returned.
-
-#### Exemple
-
-To create a new instance of the Person class:
-
-```4d
-var $person : cs.Person //for accurate autocompletion  
-$person:=cs.Person.new() //create the new instance  
-//$Person contains functions of the class
-```
-
-Note that you can instantiate empty objects. For example, if you create the following `Empty.4dm` class file:
-
-```4d  
-//Fichier classe Empty.4dm
-//Rien
-```
-
-You could write in a method:
-
-```4d
-$o:=cs.Empty.new()  
-//$o : {}
-$cName:=OB Class($o).name //"Empty"
-```
 
 ### Recherche et prototype des propriétés
 
@@ -213,17 +177,17 @@ Class constructor($width : Integer; $height : Integer)
     // vrai
 ```
 
-Lors de l'énumération des propriétés d'un objet, son prototype de classe n'est pas énuméré. Par conséquent, l'instruction `For each` et la commande `JSON Stringify` ne retournent pas les propriétés de l'objet du prototype de classe. The prototype object property of a class is an internal hidden property.
+Lors de l'énumération des propriétés d'un objet, son prototype de classe n'est pas énuméré. Par conséquent, l'instruction `For each` et la commande `JSON Stringify` ne retournent pas les propriétés de l'objet du prototype de classe. La propriété d'objet prototype d'une classe est une propriété cachée interne.
 
 
 
-## Class keywords
+## Mots-clés de classe
 
-Specific 4D keywords can be used in class definitions:
+Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de classe :
 
-- `Function <Name>` to define member methods of the objects.
-- `Class constructor` to define the properties of the objects (i.e. the prototype).
-- `Class extends <ClassName>` to define inheritance.
+- `Fonction <Name>` pour définir les méthodes membres des objets.
+- `Class constructor` (constructeur de classe) pour définir les propriétés des objets (c'est-à-dire le prototype).
+- `Class extends <ClassName>` pour définir l'héritage.
 
 
 ### Fonction
@@ -235,9 +199,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class.
+Les fonctions de classe sont des propriétés de l'objet prototype de la classe propriétaire. Ce sont des objets de la classe "Function".
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers).
+Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/dt_object.md#object-property-identifiers).
 
 > **Astuce :** préfixer le nom de la fonction par un trait de soulignement ("_") exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
@@ -260,9 +224,9 @@ Function getFullname()->$fullname : Text
 
 For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. Les syntaxes suivantes sont prises en charge :
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
+- utilisation de l'opérateur `()`. For example, `myObject.methodName("hello")`
 - use of a "Function" class member method:
     - `apply()`
     - `call()`

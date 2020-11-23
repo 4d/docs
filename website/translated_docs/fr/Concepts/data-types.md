@@ -7,7 +7,7 @@ Dans 4D, les données sont gérées selon leur type à deux endroits : dans les 
 
 Bien qu'ils soient généralement équivalents, certains types de données de la base ne sont pas disponibles dans le langage et sont automatiquement convertis. A l'inverse, certains types de données sont gérés uniquement par le langage. Le tableau suivant liste tous les types de données disponibles, leur prise en charge et leur déclaration :
 
-| Types de données                             | Pris en charge par la base(1) | Pris en charge par le langage | [`var` declaration](variables.md#using-the-var-keyword) | [`C_` or `ARRAY` declaration](variables.md#using-a-c_-directive) |
+| Types de données                             | Pris en charge par la base(1) | Pris en charge par le langage | [déclaration `var`](variables.md#using-the-var-keyword) | [déclaration `C_` ou `ARRAY`](variables.md#using-a-c_-directive) |
 | -------------------------------------------- | ----------------------------- | ----------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
 | [Alphanumérique](dt_string.md)               | Oui                           | Converti en texte             | -                                                       | -                                                                |
 | [Texte](Concepts/dt_string.md)               | Oui                           | Oui                           | Texte                                                   | `C_TEXT`, `ARRAY TEXT`                                           |

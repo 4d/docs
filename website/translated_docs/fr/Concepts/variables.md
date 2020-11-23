@@ -7,7 +7,7 @@ Fondamentalement, dans 4D, les données peuvent être stockées de deux manière
 
 Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C’est pratiquement la même chose pour les variables — vous leur donnez un nom et un type (cf. [Type de données](Concepts/data-types.md)).
 
-Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:
+Une fois créée, vous pouvez utiliser une variable partout dans votre application. For example, you might need to store a text variable in a field of same type:
 
 ```4d
  [MaTable]MonChamp:=MonTexte
@@ -61,157 +61,22 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 
-<table spaces-before="0" line-breaks-before="2">
-  <tr>
-    <th>
-      varType
-    </th>
-    
-    <th>
-      Contenu
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      Texte
-    </td>
-    
-    <td>
-      Valeur texte
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Date
-    </td>
-    
-    <td>
-      Valeur date
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Heure
-    </td>
-    
-    <td>
-      Valeur Heure
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Booléen
-    </td>
-    
-    <td>
-      Valeur booléen
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Entier long
-    </td>
-    
-    <td>
-      Valeur entier long
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Réel
-    </td>
-    
-    <td>
-      Valeur réel
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Pointeur
-    </td>
-    
-    <td>
-      Valeur pointeur
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Image
-    </td>
-    
-    <td>
-      Valeur image
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Blob
-    </td>
-    
-    <td>
-      Valeur BLOB
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Collection
-    </td>
-    
-    <td>
-      Valeur collection
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Variant
-    </td>
-    
-    <td>
-      Valeur variant
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      Objet
-    </td>
-    
-    <td>
-      Objet avec classe par défaut (4D.object)
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      4D.\<className>
-    </td>
-    
-    <td>
-      Objet du nom de la classe 4D
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      cs.\<className>
-    </td>
-    
-    <td>
-      Objet du nom de la classe utilisateur
-    </td>
-  </tr>
-</table>
+| varType        | Contenu                                  |
+| -------------- | ---------------------------------------- |
+| Texte          | Valeur texte                             |
+| Date           | Valeur date                              |
+| Heure          | Valeur Heure                             |
+| Booléen        | Valeur booléen                           |
+| Entier long    | Valeur entier long                       |
+| Réel           | Valeur réel                              |
+| Pointeur       | Valeur pointeur                          |
+| Image          | Valeur image                             |
+| Blob           | Valeur BLOB                              |
+| Collection     | Valeur collection                        |
+| Variant        | Valeur variant                           |
+| Objet          | Objet avec classe par défaut (4D.object) |
+| 4D.*className* | Objet du nom de la classe 4D             |
+| cs.*className* | Objet du nom de la classe utilisateur    |
 
 #### Exemples
 
@@ -311,9 +176,9 @@ Une variable locale, comme son nom l’indique, est locale à une méthode — c
 
 Le nom d’une variable locale commence toujours par le signe dollar ($) et peut contenir jusqu’à 31 autres caractères. Si vous saisissez un nom plus long, 4D le tronque pour le ramener à 31 caractères.
 
-When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. Vous pouvez alors créer et utiliser une variable locale, sans devoir vous soucier de l’existence d’une autre variable du même nom ailleurs dans la base.
+Lorsque vous développez un projet d'application comportant de nombreuses méthodes et variables, il arrive souvent que vous n’ayez besoin d’utiliser une variable que dans une méthode. Vous pouvez alors créer et utiliser une variable locale, sans devoir vous soucier de l’existence d’une autre variable du même nom ailleurs dans la base.
 
-Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
+Souvent, dans une application, des informations ponctuelles sont demandées à l’utilisateur. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
 ```4d
  $vsID:=Request("Saisissez votre numéro d'identification :")
@@ -344,7 +209,7 @@ Pour plus d'informations, reportez-vous à la section **Process** et à la descr
 
 ### Variables interprocess
 
-Interprocess variables are available throughout the project and are shared across all cooperative processes. Les variables interprocess sont principalement utilisées pour le partage d’informations entre les process.
+Les variables interprocess sont visibles dans tout le projet et sont disponibles pour tous les process. Les variables interprocess sont principalement utilisées pour le partage d’informations entre les process.
 
 > L'utilisation de variables interprocess n'est pas recommandée car elles ne sont pas disponibles depuis le process préemptif et peuvent rendre le code moins maintenable.
 

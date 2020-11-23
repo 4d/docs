@@ -4,9 +4,9 @@ title: Parameters
 ---
 
 
-## Overview
-
 You'll often find that you need to pass data to your methods and functions. This is easily done with parameters.
+
+## Overview
 
 **Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
 
@@ -50,12 +50,12 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 - [sequentially numbered variables](#sequential-parameters).
 
 
-> Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. For example:
-> 
-> ```4d
+Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. For example:
+
+```4d
 Function add($x : Integer)
-  var $0;$2 : Integer
-  $0:=$x+$2
+    var $0;$2 : Integer
+    $0:=$x+$2
 ```
 
 

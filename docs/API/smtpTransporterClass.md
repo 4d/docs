@@ -2,12 +2,11 @@
 id: smtpTransporterClass
 title: SMTP Transporter
 ---
-
 The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
 
 
 
-## SMTP Transporter object
+### SMTP Transporter object
 
 SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-new-transporter) command. They provide the following properties and functions:
 
@@ -28,7 +27,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 |[<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
----
+
 
 <!-- REF smtpTransporterClass.SMTP New transporter.Desc -->
 ## SMTP New transporter
@@ -41,10 +40,10 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 |v17 R4|Added|
 </details>
 
-<!-- REF smtpTransporterClass.SMTP New transporter.Syntax -->
+<!-- REF #_command_.SMTP New transporter.Syntax -->
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
-<!-- REF smtpTransporterClass.SMTP New transporter.Params -->
+<!-- REF #_command_.SMTP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
@@ -54,7 +53,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 #### Description
 
-The `SMTP New transporter` command <!-- REF #smtpTransporterClass.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
+The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
 
 > This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.  
 > 
@@ -70,6 +69,7 @@ In the *server* parameter, pass an object containing the following properties:
 |*server*|Default value (if omitted)|
 |---|---|
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
+
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
 |[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->|`mail mode UTF8` (US-ASCII_UTF8_QP)|
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
@@ -119,21 +119,39 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 
 <!-- END REF -->
 
+## 4D.SMTPTransporter.new()
 
----
+
+<!-- REF #4D.SMTPTransporter.new().Syntax -->
+**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
+
+<!-- REF #4D.SMTPTransporter.new().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+<!-- END REF -->
+
+#### Description
+
+The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+
+> It is recommended to use the [`SMTP New transporter`](#smtp-new-transporter) shortcut command instead of `4D.SMTPTransporter.new()`. 
+
+
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
----
+
 
 <!-- INCLUDE transporter.authenticationMode.Desc -->
 
----
+
 
 <!-- INCLUDE transporter.bodyCharset.Desc -->
 
 
----
+
 
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
@@ -164,11 +182,11 @@ For information about SMTP status codes, please refer to [this page](https://www
  End if
 ```
 
----
+
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
----
+
 
 
 
@@ -176,12 +194,12 @@ For information about SMTP status codes, please refer to [this page](https://www
 <!-- INCLUDE transporter.headerCharset.Desc -->
 
 
----
+
 
 <!-- INCLUDE transporter.host.Desc -->
 
 
----
+
 
 
 ## .keepAlive
@@ -206,19 +224,19 @@ The SMTP connection is automatically closed:
 *	after each `.send( )` function execution if the `.keepAlive` property is set to false.
 
 
----
+
 
 
 
 <!-- INCLUDE transporter.logFile.Desc -->
 
----
+
 
 
 <!-- INCLUDE transporter.port.Desc -->
 
 
----
+
 
 ## .send()
 
@@ -250,12 +268,15 @@ The method creates the SMTP connection if it is not already alive. If the `.keep
 
 In *mail*, pass a valid [`Email` object](emailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
 
----
+
 
 
 <!-- INCLUDE transporter.sendTimeOut.Desc -->
 
 
----
+
 
 <!-- INCLUDE transporter.user.Desc -->
+
+
+<style> h2 { background: #d9ebff;}</style>

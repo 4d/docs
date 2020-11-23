@@ -4,7 +4,6 @@ title: Data Model Classes
 ---
 
 
-## Overview
 
 ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions. 
 
