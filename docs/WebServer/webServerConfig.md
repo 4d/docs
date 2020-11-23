@@ -12,9 +12,9 @@ There are different ways to configure the 4D web server settings, depending on t
 
 |Setting location|Scope|Involved web server|
 |---|----|---|
-|[webServer object](webServerObject.md)|Current session|Any web server, including component web servers|
-|`WEB SET OPTION` or a `WEB XXX` command|Current session|Main server|
-|**Settings** dialog box (**Web** pages)|Reused for all sessions (stored on disk)|Main server|
+|[webServer object](webServerObject.md)|Temporary (current session)|Any web server, including component web servers|
+|`WEB SET OPTION` or a `WEB XXX` command|Temporary (current session)|Main server|
+|**Settings** dialog box (**Web** pages)|Permanent (all sessions, stored on disk)|Main server|
 
 > Some settings are not available from all locations.  
 
@@ -66,7 +66,7 @@ Defines the set of characters to be used by the 4D web server. The default value
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`cipherSuite`|Text|
+|webServer object|[`cipherSuite`](API/webServerClass.md#ciphersuite)|Text|
 
 Cipher list used for the secure protocol; sets the priority of ciphering algorithms implemented by the web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
 
@@ -76,7 +76,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`CORSSettings`|Collection of objects (List of allowed hosts and methods for the CORS service)|
+|webServer object|[`CORSSettings`](API/webServerClass.md#corssettings)|Collection of objects (List of allowed hosts and methods for the CORS service)|
 |`WEB SET OPTION`|`Web CORS settings`|Collection of objects (List of allowed hosts and methods for the CORS service)|
 |Settings dialog box|Options (II) page/Domain names and HTTP methods allowed|Click on the [+] button to add an allowed domain name and its method(s)|
 
@@ -113,7 +113,9 @@ Accepted HTTP method(s) for the corresponding CORS host. The following HTTP meth
 
 Separate each method with a ";" (e,g,: "post;get"). If methods is empty, null, or undefined, all methods are enabled.
 
+#### See also
 
+[Enable CORS Service](#enable-cors-service)
 
 
 
@@ -139,7 +141,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`defaultHomepage`|Text|
+|webServer object|[`defaultHomepage`](API/webServerClass.md#defaulthomepage)|Text|
 |`WEB SET HOME PAGE`||Can be different for each web process|
 |Settings dialog box|Configuration page/Default Home Page||
 
@@ -163,7 +165,7 @@ If you do not specify any default home page, the `On Web Connection` database me
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`CORSEnabled`|Boolean, true to enable the CORS (false by default)|
+|webServer object|[`CORSEnabled`](API/webServerClass.md#corsenabled)|Boolean, true to enable the CORS (false by default)|
 |`WEB SET OPTION`|`Web CORS enabled`|0 (disabled, default) or 1 (enabled)|
 |Settings dialog box|Options (II) page/Enable CORS|Unchecked by default|
 
@@ -173,12 +175,14 @@ When disabled (default), all cross site requests sent with CORS are ignored.
 
 For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
 
+#### See also
+[CORS Settings](#cors-settings)
 
 ## Enable HTTP
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPEnabled`|boolean|
+|webServer object|[`HTTPEnabled`](API/webServerClass.md#httpenabled)|boolean|
 |`WEB SET OPTION`|`Web HTTP enabled`||
 |Settings dialog box|Configuration page/Enable HTTP||
 
@@ -189,7 +193,7 @@ Indicates whether or not the web server will accept non-secure connections.
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPSEnabled`|boolean|
+|webServer object|[`HTTPSEnabled`](API/webServerClass.md#httpsenabled)|boolean|
 |`WEB SET OPTION`|`Web HTTPS enabled`||
 |Settings dialog box|Configuration page/Enable HTTPS||
 
@@ -200,7 +204,7 @@ Status for communication over HTTPS. This option is described in the [Connection
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HSTSEnabled`|Boolean, true to enable HSTS (default is false)|
+|webServer object|[`HSTSEnabled`](API/webServerClass.md#hstsenabled)|Boolean, true to enable HSTS (default is false)|
 |`WEB SET OPTION`|`Web HSTS enabled`|0 (disabled, default) or 1 (enabled)|
 
 HTTP Strict Transport Security (HSTS) status. HSTS allows the 4D web server to declare that browsers should only interact with it via secure HTTPS connections. Once activated, the 4D web server will automatically add HSTS-related information to all response headers. Browsers will record the HSTS information the first time they receive a response from the 4D web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the Web **HSTS max age** setting.
@@ -212,7 +216,7 @@ HTTP Strict Transport Security (HSTS) status. HSTS allows the 4D web server to d
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HSTSMaxAge`|number in seconds|
+|webServer object|[`HSTSMaxAge`](API/webServerClass.md#hstsmaxage)|number in seconds|
 |`WEB SET OPTION`|`Web HSTS max age`|number in seconds|
 
 Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration.
@@ -228,7 +232,7 @@ Default value is 63072000 (2 years)
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPCompressionLevel`||
+|webServer object|[`HTTPCompressionLevel`](API/webServerClass.md#httpcompressionlevel)||
 |`WEB SET OPTION`|`Web HTTP compression level`|Applies to Web and Web Service |
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged. 
@@ -239,7 +243,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPCompressionThreshold`||
+|webServer object|[`HTTPCompressionThreshold`](API/webServerClass.md#httpcompressionthreshold)||
 |`WEB SET OPTION`|`Web HTTP compression threshold`||
 
 In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.
@@ -251,7 +255,7 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPPort`|number|
+|webServer object|[`HTTPPort`](API/webServerClass.md#httpport)|number|
 |`WEB SET OPTION`|`Web port ID`||
 |Settings dialog box|Configuration page/HTTP Port||
 
@@ -270,7 +274,7 @@ If you specify 0, 4D will use the default HTTP port number 80.
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPTrace`|Boolean, default = false |
+|webServer object|[`HTTPTrace`](API/webServerClass.md#httptrace)|Boolean, default = false |
 |`WEB SET OPTION`|`Web HTTP TRACE`|Integer, default = 0 (disabled)|
 
 HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
@@ -282,7 +286,7 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`HTTPSPort`|number|
+|webServer object|[`HTTPSPort`](API/webServerClass.md#httpsport)|number|
 |`WEB SET OPTION`|`Web HTTPS port ID`||
 |Settings dialog box|Configuration page/HTTPS Port||
 
@@ -293,7 +297,7 @@ Listening IP port number for HTTPS connections via TLS. By default, the value is
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`inactiveProcessTimeout`||
+|webServer object|[`inactiveProcessTimeout`](API/webServerClass.md#inactiveprocesstimeout)||
 |`WEB SET OPTION`|`Web inactive process timeout`||
 |Settings dialog box|Options (I) page/Inactive Process Timeout|Slider|
 
@@ -306,7 +310,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`inactiveSessionTimeout`||
+|webServer object|[`inactiveSessionTimeout`](API/webServerClass.md#inactivesessiontimeout)||
 |`WEB SET OPTION`|`Web inactive session timeout`||
 
 Life duration (in minutes) of inactive sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
@@ -318,7 +322,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`IPAddressToListen`||
+|webServer object|[`IPAddressToListen`](API/webServerClass.md#ipaddresstolisten)||
 |`WEB SET OPTION`|`Web IP address to listen`||
 |Settings dialog box|Configuration page/IP Address|Pop up menu|
 
@@ -333,7 +337,7 @@ Possible values: IP address string. Both IPv6 string formats (e.g. "2001:0db8:00
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`keepSession`||
+|webServer object|[`keepSession`](API/webServerClass.md#keepsession)||
 |`WEB SET OPTION`|`Web keep session`||
 |Settings dialog box|Options (I) page/Automatic Session Management||
 
@@ -348,7 +352,7 @@ Default is true (enabled).
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`logRecording`||
+|webServer object|[`logRecording`](API/webServerClass.md#logrecording)||
 |`WEB SET OPTION`|`Web log recording`||
 |Settings dialog box|Log (type) page/Log Format|Pop up menu|
 
@@ -371,7 +375,7 @@ This setting allows you to select the format of this file. Available values are:
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`maxConcurrentProcesses`||
+|webServer object|[`maxConcurrentProcesses`](API/webServerClass.md#maxconcurrentprocesses)||
 |`WEB SET OPTION`|`Web max concurrent processes`||
 |Settings dialog box|Options (I) page/Maximum Concurrent Web Processes||
 
@@ -384,7 +388,7 @@ By default, the value is 100. You can set the number anywhere between 10 and 320
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`maxRequestSize`||
+|webServer object|[`maxRequestSize`](API/webServerClass.md#maxrequestsize)||
 |`WEB SET OPTION`|`Web maximum requests size`||
 
 Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
@@ -398,7 +402,7 @@ Possible values: 500 000 to 2 147 483 648.
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`maxSessions`||
+|webServer object|[`maxSessions`](API/webServerClass.md#maxsessions)||
 |`WEB SET OPTION`|`Web max sessions	`||
 
 Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default). 
@@ -410,7 +414,7 @@ Default value: 100 (pass 0 to restore the default value).
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`minTLSVersion`|number|
+|webServer object|[`minTLSVersion`](API/webServerClass.md#mintlsversion)|number|
 
 Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.
 
@@ -429,7 +433,7 @@ If modified, the server must be restarted to use the new value.
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`name`||
+|webServer object|[`name`](API/webServerClass.md#name)||
 
 Name of the web server application. Useful when component web servers are started. 
 
@@ -437,7 +441,7 @@ Name of the web server application. Useful when component web servers are starte
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`openSSLVersion`|Read-only|
+|webServer object|[`openSSLVersion`](API/webServerClass.md#opensslversion)|Read-only|
 
 Version of the OpenSSL library used.
 
@@ -446,16 +450,16 @@ Version of the OpenSSL library used.
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`perfectForwardSecrecy`|Boolean, read-only|
+|webServer object|[`perfectForwardSecrecy`](API/webServerClass.md#perfectforwardsecrecy)|Boolean, read-only|
 
-True if PFS is available on the web server (see TLS section).
+True if PFS is available on the web server (see [TLS] section).
 
 
 ## Root Folder
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`rootFolder`|Text property but can be a [`4D.Folder`](API/folderClass.md) object when used with the *settings* parameter of the `start()` function|
+|webServer object|[`rootFolder`](API/webServerClass.md#rootfolder)|Text property but can be a [`4D.Folder`](API/folderClass.md) object when used with the *settings* parameter of the `start()` function|
 |`WEB SET ROOT FOLDER`|||
 |Settings dialog box|Configuration page/Default HTML Root||
 
@@ -484,7 +488,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`sessionCookieDomain`||
+|webServer object|[`sessionCookieDomain`](API/webServerClass.md#sessioncookiedomain)||
 |`WEB SET OPTION`|`Web session cookie domain`||
 
 Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
@@ -494,7 +498,7 @@ Value of the "domain" field of the session cookie. Useful for controlling the sc
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`sessionCookieName`||
+|webServer object|[`sessionCookieName`](API/webServerClass.md#sessioncookiename)||
 |`WEB SET OPTION`|`Web session cookie name`||
 
 Name of the cookie used for saving the session ID. Default = "4DSID".
@@ -504,7 +508,7 @@ Name of the cookie used for saving the session ID. Default = "4DSID".
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`sessionCookiePath`||
+|webServer object|[`sessionCookiePath`](API/webServerClass.md#sessioncookiepath)||
 |`WEB SET OPTION`|`Web session cookie path`||
 
 "path" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
@@ -514,7 +518,7 @@ Name of the cookie used for saving the session ID. Default = "4DSID".
 
 Can be set with|Name|Comments|
 |---|---|---|
-|webServer object|`sessionIPAddressValidation`||
+|webServer object|[`sessionIPAddressValidation`](API/webServerClass.md#sessionipaddressvalidation)||
 |`WEB SET OPTION`|`Web session enable IP address validation`||
 
 IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application.
@@ -532,7 +536,7 @@ The following settings are still supported but rely on deprecated features or te
 
 #### Allow database Access through 4DSYNC URLs
 
-This option controls support of HTTP synchronization requests containing deprecated */4DSYNC* URLs. 
+This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs. 
 
 
 #### Reuse temporary contexts (in remote mode)  

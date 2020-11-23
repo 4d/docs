@@ -1,24 +1,18 @@
 ---
 id: webServerSecurity
-title: Server Security
+title: Security
 ---
 
-## Overview
  
 The security of your 4D Web Server is based on the following elements:
 
-*	The combination of the web password management system (BASIC mode or DIGEST mode) and the [`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) database method,
+*	**Authentication**: flexible and highly customizable password management system via buil-it settings and the [`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) database method,
 
-*	The definition of a [Generic Web User](#generic-web-user),
+*	**Sandboxing** through the definition of a [HTML Root](#default-html-root) folder by default,
 
-*	The definition of a [HTML Root](#default-html-root) folder by default,
+*	**Control of exposed contents**: each function or project method that will be available must be explicitely declared.
 
-*	The definition of the “[Available through 4D tags and URLs](#available-through-4d-tags-and-urls) (4DACTION…)” property for each project method of the database.
-
-*	The option for the specific support of [synchronization](#allow-database-access-through-4dsync-urls) requests through HTTP.
-
->
->The security of the connection itself is managed through the [TLS Protocol (HTTPS)](webServerConnectSecurity.md#tls-protocol-https).
+* [**TLS Protocol (HTTPS)**](webServerConnectSecurity.md#tls-protocol-https) support.
 
 >For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
@@ -237,22 +231,3 @@ This option is unchecked by default for databases created. Methods that can be e
 In the Explorer, Project methods with this property are given a specific icon:
 
  ![](assets/en/WebServer/methodIcon.png)
-
-## Allow database access through 4DSYNC URLs 
- 
-This option on the "Web/Configuration" page of the Database Settings lets you control support of requests containing */4DSYNC URLs*. 
-
-This option enables or disables specific processing of requests containing */4DSYNC*:
-
-*	When it is not checked, */4DSYNC* requests are considered as standard requests and do not allow specific processing (using a synchronization request causes a "404 - resource unavailable" type response to be sent).
-
-*	When it is checked, the synchronization mechanism is enabled; */4DSYNC* requests are considered as special requests and are parsed by the 4D HTTP server.
-
-By default:
-
-*	this option is **not checked** in databases created with 4D v13 and newer.
-
-*	this option is **checked** in databases converted from a previous version of 4D, for compatibility reasons. We recommend that you deselect it if your application does not use the HTTP replication function. 
-
-The scope of this option is local to the application and the web server must be restarted to take it into account.
-
