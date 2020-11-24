@@ -15,7 +15,7 @@
         "title": "クラス"
       },
       "API/collectionClass": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
@@ -24,7 +24,7 @@
         "title": "DataClassAttribute"
       },
       "API/dataclassClass": {
-        "title": "データクラス"
+        "title": "DataClass"
       },
       "API/datastoreClass": {
         "title": "DataStore"
@@ -54,19 +54,19 @@
         "title": "Formula"
       },
       "API/imapTransporterClass": {
-        "title": "IMAP Transporter"
+        "title": "IMAPTransporter"
       },
       "API/overview": {
         "title": "Class API Overview"
       },
       "API/pop3TransporterClass": {
-        "title": "POP3 Transporter"
+        "title": "POP3Transporter"
       },
       "API/signalClass": {
         "title": "Signal"
       },
       "API/smtpTransporterClass": {
-        "title": "SMTP Transporter"
+        "title": "SMTPTransporter"
       },
       "API/transporter": {
         "title": "Transporter クラス"
@@ -75,7 +75,13 @@
         "title": "WebServer"
       },
       "API/zipArchiveClass": {
-        "title": "ZIP Archive"
+        "title": "ZIPArchive"
+      },
+      "API/zipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/zipFolderClass": {
+        "title": "ZIPFolder"
       },
       "Backup/backup": {
         "title": "バックアップ"
