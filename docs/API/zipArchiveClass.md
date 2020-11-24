@@ -7,7 +7,7 @@ title: ZIPArchive
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
 - You create a 4D ZIP archive with the [ZIP Create archive](#zip-create-archive) command.
-- 4D ZIPfile and  folder instances are available through the `root` property ([`ZIP Folder`](zipFolderClass.md)) of the object returned by [ZIP Read archive](#zip-read-archive) command. 
+- 4D [`ZIPFile`](zipFileClass.md) and [`ZIPFolder`](zipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command. 
 
 
 ### Example
