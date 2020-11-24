@@ -15,7 +15,7 @@
         "title": "Class"
       },
       "API/collectionClass": {
-        "title": "Collections"
+        "title": "Collection"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
@@ -24,7 +24,7 @@
         "title": "DataClassAttribute"
       },
       "API/dataclassClass": {
-        "title": "Dataclass"
+        "title": "DataClass"
       },
       "API/datastoreClass": {
         "title": "DataStore"
@@ -42,7 +42,7 @@
         "title": "Entity"
       },
       "API/entitySelectionClass": {
-        "title": "Entity Selections"
+        "title": "EntitySelection"
       },
       "API/fileClass": {
         "title": "File"
@@ -51,22 +51,22 @@
         "title": "Folder"
       },
       "API/formulaClass": {
-        "title": "Formulas"
+        "title": "Formula"
       },
       "API/imapTransporterClass": {
-        "title": "IMAP Transporter"
+        "title": "IMAPTransporter"
       },
       "API/overview": {
         "title": "Class API Overview"
       },
       "API/pop3TransporterClass": {
-        "title": "POP3 Transporter"
+        "title": "POP3Transporter"
       },
       "API/signalClass": {
-        "title": "Signals"
+        "title": "Signal"
       },
       "API/smtpTransporterClass": {
-        "title": "SMTP Transporter"
+        "title": "SMTPTransporter"
       },
       "API/transporter": {
         "title": "Transporter Class"
@@ -75,7 +75,13 @@
         "title": "WebServer"
       },
       "API/zipArchiveClass": {
-        "title": "ZIP Archive"
+        "title": "ZIPArchive"
+      },
+      "API/zipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/zipFolderClass": {
+        "title": "ZIPFolder"
       },
       "Backup/backup": {
         "title": "Backup"
