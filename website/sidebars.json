@@ -44,7 +44,9 @@
 	"API/signalClass",
 	"API/smtpTransporterClass",
 	"API/webServerClass",
-	"API/zipArchiveClass"
+	"API/zipArchiveClass",
+	"API/zipFileClass",
+	"API/zipFolderClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
   "Administration":["Admin/licenses","Admin/building"],
