@@ -88,10 +88,10 @@
 
   <span class="hljs-comment">// Get signature as base64</span>
 <span class="hljs-variable">$message</span>:=<span class="hljs-string">"hello world"</span> 
-<span class="hljs-variable">$signature</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">sign</span>(<span class="hljs-variable">$message</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"HASH256"</span>))
+<span class="hljs-variable">$signature</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">sign</span>(<span class="hljs-variable">$message</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"SHA256"</span>))
 
   <span class="hljs-comment">// Verify signature</span>
-<span class="hljs-variable">$status</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">verify</span>(<span class="hljs-variable">$message</span>;<span class="hljs-variable">$signature</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"HASH256"</span>))
+<span class="hljs-variable">$status</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">verify</span>(<span class="hljs-variable">$message</span>;<span class="hljs-variable">$signature</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"SHA256"</span>))
 <span class="hljs-function">ASSERT</span>(<span class="hljs-variable">$status</span>.success)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="4dcryptokeynew"></a><a href="#4dcryptokeynew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D.CryptoKey.new()</h2>
@@ -191,7 +191,7 @@
 <tbody>
 <tr><td>message</td><td></td><td>text</td><td>-&gt;</td><td>Message string to sign</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Signing options</td></tr>
-<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example: &quot;HASH256&quot;, &quot;HASH384&quot;, or &quot;HASH512&quot;.</td></tr>
+<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;. &quot;HASH256&quot;, &quot;HASH384&quot;, or &quot;HASH512&quot;.</td></tr>
 <tr><td></td><td>pss</td><td>boolean</td><td></td><td>Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass <code>true</code> when producing a JWT for PS@ algorithm</td></tr>
 <tr><td></td><td>encoding</td><td>text</td><td></td><td>Representation of provided signature. Possible values are &quot;Base64&quot; or &quot;Base64URL&quot;. Default is &quot;Base64&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
@@ -220,7 +220,7 @@
 <tr><td>message</td><td></td><td>text</td><td>-&gt;</td><td>Message string that was used to produce the signature</td></tr>
 <tr><td>signature</td><td></td><td>text</td><td>-&gt;</td><td>Signature to verify, in Base64 or Base64URL representation, depending on &quot;encoding&quot; option</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Signing options</td></tr>
-<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example: &quot;HASH256&quot;, &quot;HASH384&quot;, or &quot;HASH512&quot;.</td></tr>
+<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;. &quot;HASH256&quot;, &quot;HASH384&quot;, or &quot;HASH512&quot;.</td></tr>
 <tr><td></td><td>pss</td><td>boolean</td><td></td><td>Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass <code>true</code> when verifying a JWT for PS@ algorithm</td></tr>
 <tr><td></td><td>encoding</td><td>text</td><td></td><td>Encoding used to convert the <code>message</code> parameter into the binary representation to decrypt. Can be &quot;Base64&quot; or &quot;Base64URL&quot;. Default is &quot;Base64&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
@@ -252,7 +252,7 @@
 <tbody>
 <tr><td>message</td><td></td><td>text</td><td>-&gt;</td><td>Message string to be encoded using options.encodingDecrypted and encrypted.</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Encoding options</td></tr>
-<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example:</td></tr>
+<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;.</td></tr>
 <tr><td></td><td>encodingEncrypted</td><td>text</td><td></td><td>Encoding used to convert the binary encrypted message into the result string. Can be &quot;Base64&quot;, or &quot;Base64URL&quot;. Default is &quot;Base64&quot;.</td></tr>
 <tr><td></td><td>encodingDecrypted</td><td>text</td><td></td><td>Encoding used to convert the <code>message</code> parameter into the binary representation to encrypt. Can be &quot;UTF-8&quot;, &quot;Base64&quot;, or &quot;Base64URL&quot;. Default is &quot;UTF-8&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
@@ -280,7 +280,7 @@
 <tbody>
 <tr><td>message</td><td></td><td>text</td><td>-&gt;</td><td>Message string to be decoded using options.encodingEncrypted and decrypted.</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Decoding options</td></tr>
-<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example:</td></tr>
+<tr><td></td><td>hash</td><td>text</td><td></td><td>Digest algorithm to use. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;.</td></tr>
 <tr><td></td><td>encodingEncrypted</td><td>text</td><td></td><td>Encoding used to convert the binary decrypted message into the result string. Can be &quot;UTF-8&quot;, &quot;Base64&quot;, or &quot;Base64URL&quot;. Default is &quot;Base64&quot;.</td></tr>
 <tr><td></td><td>encodingDecrypted</td><td>text</td><td></td><td>Encoding used to convert the binary decrypted message into the result string. Can be &quot;UTF-8&quot;, &quot;Base64&quot;, or &quot;Base64URL&quot;. Default is &quot;UTF-8&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>

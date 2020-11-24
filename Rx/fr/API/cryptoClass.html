@@ -83,15 +83,15 @@
 </table>
 <h3><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
 <p>L'exemple suivant illustre la signature et la vérification d'un message à l'aide d'une nouvelle paire de clés ECDSA, afin de créer, par exemple, un token Web JSON ES256.</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-comment">// Générer une nouvelle paire de clés ECDSA</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-comment">// Generate a new ECDSA key pair</span>
 <span class="hljs-variable">$key</span>:=4D.CryptoKey.<span class="hljs-function">new</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"ECDSA"</span>;<span class="hljs-string">"curve"</span>;<span class="hljs-string">"prime256v1"</span>))
 
-  <span class="hljs-comment">// Obtenir une signature en base64</span>
+  <span class="hljs-comment">// Get signature as base64</span>
 <span class="hljs-variable">$message</span>:=<span class="hljs-string">"hello world"</span> 
-<span class="hljs-variable">$signature</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">sign</span>(<span class="hljs-variable">$message</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"HASH256"</span>))
+<span class="hljs-variable">$signature</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">sign</span>(<span class="hljs-variable">$message</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"SHA256"</span>))
 
-  <span class="hljs-comment">// Vérifier la signature</span>
-<span class="hljs-variable">$status</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">verify</span>(<span class="hljs-variable">$message</span>;<span class="hljs-variable">$signature</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"HASH256"</span>))
+  <span class="hljs-comment">// Verify signature</span>
+<span class="hljs-variable">$status</span>:=<span class="hljs-variable">$key</span>.<span class="hljs-function">verify</span>(<span class="hljs-variable">$message</span>;<span class="hljs-variable">$signature</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"hash"</span>;<span class="hljs-string">"SHA256"</span>))
 <span class="hljs-function">ASSERT</span>(<span class="hljs-variable">$status</span>.success)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="4dcryptokeynew"></a><a href="#4dcryptokeynew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D.CryptoKey.new()</h2>
@@ -191,7 +191,7 @@
 <tbody>
 <tr><td>message</td><td></td><td>Texte</td><td>-&gt;</td><td>Chaîne message à signer</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Options de signature</td></tr>
-<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. Par example : &quot;HASH256&quot;, &quot;HASH384&quot;, ou &quot;HASH512&quot;. Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@</td></tr>
+<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;. Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@</td></tr>
 <tr><td></td><td>pss</td><td>boolean</td><td></td><td>Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez <code>true</code> lors de la production d'un JWT pour l'algorithme PS@</td></tr>
 <tr><td></td><td>encoding</td><td>Texte</td><td></td><td>Représentation à utiliser pour la signature. Valeurs possibles : &quot;Base64&quot; ou &quot;Base64URL&quot;. La valeur par défaut est &quot;Base64&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
@@ -220,7 +220,7 @@
 <tr><td>message</td><td></td><td>Texte</td><td>-&gt;</td><td>Chaîne message utilisée pour générer la signature</td></tr>
 <tr><td>signature</td><td></td><td>Texte</td><td>-&gt;</td><td>Signature à vérifier, en représentation Base64 ou Base64URL, selon l'option &quot;encoding&quot;</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Options de signature</td></tr>
-<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. Par example : &quot;HASH256&quot;, &quot;HASH384&quot;, ou &quot;HASH512&quot;. Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@</td></tr>
+<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;. Lorsqu'elle est utilisée pour produire un JWT, la taille du hachage doit correspondre à la taille de l'algorithme PS@, ES@, RS@ ou PS@</td></tr>
 <tr><td></td><td>pss</td><td>boolean</td><td></td><td>Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez <code>true</code> lors de la vérification d'un JWT pour l'algorithme PS@</td></tr>
 <tr><td></td><td>encoding</td><td>Texte</td><td></td><td>Représentation de la signature fournie. Valeurs possibles : &quot;Base64&quot; ou &quot;Base64URL&quot;. La valeur par défaut est &quot;Base64&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
@@ -252,7 +252,7 @@
 <tbody>
 <tr><td>message</td><td></td><td>Texte</td><td>-&gt;</td><td>Chaine message à chiffrer à l'aide de options.encodingDecrypted et encrypted.</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Options de chiffrement</td></tr>
-<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. Par example : &quot;HASH256&quot;, &quot;HASH384&quot;, ou &quot;HASH512&quot;.</td></tr>
+<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;.</td></tr>
 <tr><td></td><td>encodingEncrypted</td><td>Texte</td><td></td><td>Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être &quot;Base64&quot; ou &quot;Base64URL&quot;. La valeur par défaut est &quot;Base64&quot;.</td></tr>
 <tr><td></td><td>encodingDecrypted</td><td>Texte</td><td></td><td>Chiffrement utilisé pour convertir le paramètre <code>message</code> en représentation binaire à chiffrer. Peut être &quot;UTF-8&quot;, &quot;Base64&quot; ou &quot;Base64URL&quot;. La valeur par défaut est &quot;UTF-8&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
@@ -280,7 +280,7 @@
 <tbody>
 <tr><td>message</td><td></td><td>Texte</td><td>-&gt;</td><td>Chaine message à décoder à l'aide de options.encodingEncrypted et decrypted.</td></tr>
 <tr><td>options</td><td></td><td>object</td><td>-&gt;</td><td>Options de décodage</td></tr>
-<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. Par example : &quot;HASH256&quot;, &quot;HASH384&quot;, ou &quot;HASH512&quot;.</td></tr>
+<tr><td></td><td>hash</td><td>Texte</td><td></td><td>Algorithme de hachage à utiliser. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;.</td></tr>
 <tr><td></td><td>encodingEncrypted</td><td>Texte</td><td></td><td>Chiffrement utilisé pour convertir le paramètre <code>message</code> en représentation binaire à déchiffrer. Peut être &quot;Base64&quot; ou &quot;Base64URL&quot;. La valeur par défaut est &quot;Base64&quot;.</td></tr>
 <tr><td></td><td>encodingDecrypted</td><td>Texte</td><td></td><td>Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être &quot;UTF-8&quot;, &quot;Base64&quot; ou &quot;Base64URL&quot;. La valeur par défaut est &quot;UTF-8&quot;.</td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
