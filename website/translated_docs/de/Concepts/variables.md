@@ -61,7 +61,7 @@ Ist `varTyp` nicht übergeben, wird eine Variable vom Typ **variant** erstellt.
 
 Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 
-| varTyp         | Contents                              |
+| varTyp         | Inhalt                                |
 | -------------- | ------------------------------------- |
 | Text           | Textwert                              |
 | Datum          | Datumswert                            |

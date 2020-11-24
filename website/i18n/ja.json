@@ -668,7 +668,7 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
         "title": "Calling ORDA class functions"
@@ -677,13 +677,13 @@
         "title": "サーバー設定"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "サーバー情報の取得"
       },
       "REST/gettingStarted": {
         "title": "はじめに"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "データ操作"
       },
       "REST/REST_requests": {
         "title": "About REST Requests"

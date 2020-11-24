@@ -3,7 +3,7 @@ id: classFunctions
 title: Calling ORDA class functions
 ---
 
-## Overview
+## Überblick
 
 You can call [user class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
@@ -47,7 +47,7 @@ Functions are called on the corresponding object on the server datastore.
 
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
 
-The following rules apply:
+Es gelten folgende Regeln:
 
 - Parameters must be passed in the **body of the POST request**
 - Parameters must be enclosed within a collection (JSON format)

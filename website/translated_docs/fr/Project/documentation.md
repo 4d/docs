@@ -125,8 +125,6 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
 
 ![](assets/en/Project/comments-explo4.png)
 
-
-
 | Ligne                                                 | Description                                                                                                                                                                                         |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \<!-- Type your summary here -->| Commentaire HTML. Utilisé en priorité comme description de méthode dans les [astuces de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |

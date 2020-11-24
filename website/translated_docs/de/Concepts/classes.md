@@ -1,10 +1,10 @@
 ---
 id: classes
-title: Klassen
+title: Classes
 ---
 
 
-## Overview
+## Überblick
 
 Die 4D Programmiersprache unterstützt das Konzept **Klassen**. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.
 
@@ -112,7 +112,7 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
 - Project folder
     + Project
         * Sources
-            - Klassen
+            - Classes
                 + Polygon.4dm
 
 ### Klassennamen

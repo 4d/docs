@@ -30,10 +30,10 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
   // Get signature as base64
 $message:="hello world" 
-$signature:=$key.sign($message;New object("hash";"HASH256"))
+$signature:=$key.sign($message;New object("hash";"SHA256"))
 
   // Verify signature
-$status:=$key.verify($message;$signature;New object("hash";"HASH256"))
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
 ASSERT($status.success)
 ```
 
@@ -118,15 +118,15 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 
 #### cryptoKey.sign(message;options) -> signature
 
-| Parameter | Property | Type    |    | Description                                                                                                                                                             |
-| --------- | -------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message   |          | text    | -> | Message string to sign                                                                                                                                                  |
-| options   |          | object  | -> | Signing options                                                                                                                                                         |
-|           | hash     | text    |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-|           | pss      | boolean |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                      |
-|           | encoding | text    |    | Representation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                          |
-|           |          |         |    |                                                                                                                                                                         |
-| signature |          | text    | <- | Resulting signature in Base64 or Base64URL representation, depending on "encoding" option                                                                               |
+| Parameter | Property | Type    |    | Description                                                                                                                                                          |
+| --------- | -------- | ------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| message   |          | text    | -> | Message string to sign                                                                                                                                               |
+| options   |          | object  | -> | Signing options                                                                                                                                                      |
+|           | hash     | text    |    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
+|           | pss      | boolean |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
+|           | encoding | text    |    | Representation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                       |
+|           |          |         |    |                                                                                                                                                                      |
+| signature |          | text    | <- | Resulting signature in Base64 or Base64URL representation, depending on "encoding" option                                                                            |
 
 This method signs the utf8 representation of a `message` string using the `cryptoKey` object keys and provided `options`. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
@@ -143,18 +143,18 @@ The `cryptoKey` must contain a valid **private** key.
 
 #### cryptoKey.verify(message;signature;options) -> status
 
-| Parameter | Property | Type       |    | Description                                                                                                                                                             |
-| --------- | -------- | ---------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| message   |          | text       | -> | Message string that was used to produce the signature                                                                                                                   |
-| signature |          | text       | -> | Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option                                                                              |
-| options   |          | object     | -> | Signing options                                                                                                                                                         |
-|           | hash     | text       |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-|           | pss      | boolean    |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                      |
-|           | encoding | text       |    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                                 |
-|           |          |            |    |                                                                                                                                                                         |
-| status    |          | object     | <- | Result of the verification                                                                                                                                              |
-|           | success  | boolean    |    | True if the signature matches the message                                                                                                                               |
-|           | errors   | collection |    | If `success` is `false`, may contain a collection of errors                                                                                                             |
+| Parameter | Property | Type       |    | Description                                                                                                                                                          |
+| --------- | -------- | ---------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| message   |          | text       | -> | Message string that was used to produce the signature                                                                                                                |
+| signature |          | text       | -> | Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option                                                                           |
+| options   |          | object     | -> | Signing options                                                                                                                                                      |
+|           | hash     | text       |    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
+|           | pss      | boolean    |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
+|           | encoding | text       |    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                              |
+|           |          |            |    |                                                                                                                                                                      |
+| status    |          | object     | <- | Result of the verification                                                                                                                                           |
+|           | success  | boolean    |    | True if the signature matches the message                                                                                                                            |
+|           | errors   | collection |    | If `success` is `false`, may contain a collection of errors                                                                                                          |
 
 This method verifies the base64 signature against the utf8 representation of `message` using the `cryptoKey` object keys and provided `options`.
 
@@ -179,7 +179,7 @@ The `cryptoKey` must contain a valid **public** key.
 | --------- | ----------------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | message   |                   | text   | -> | Message string to be encoded using options.encodingDecrypted and encrypted.                                                                               |
 | options   |                   | object | -> | Encoding options                                                                                                                                          |
-|           | hash              | text   |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                                 |
+|           | hash              | text   |    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                    |
 |           | encodingEncrypted | text   |    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
 |           | encodingDecrypted | text   |    | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
 |           |                   |        |    |                                                                                                                                                           |
@@ -206,7 +206,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 | --------- | ----------------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | message   |                   | text       | -> | Message string to be decoded using options.encodingEncrypted and decrypted.                                                                      |
 | options   |                   | object     | -> | Decoding options                                                                                                                                 |
-|           | hash              | text       |    | Digest algorithm to use. For example: "HASH256", "HASH384", or "HASH512".                                                                        |
+|           | hash              | text       |    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                           |
 |           | encodingEncrypted | text       |    | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
 |           | encodingDecrypted | text       |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
 |           |                   |            |    |                                                                                                                                                  |

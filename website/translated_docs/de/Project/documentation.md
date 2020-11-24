@@ -3,7 +3,7 @@ id: documentation
 title: Documenting a project
 ---
 
-## Overview
+## Überblick
 
 
 In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
@@ -39,7 +39,7 @@ All documentation files are stored in the `Documentation` folder, located at the
 The `Documentation` folder architecture is the following:
 
 - **Documentation**
-    + **Klassen**
+    + **Classes**
         * myClass.md
     + **DatabaseMethods**
         * onStartup.md
@@ -55,7 +55,7 @@ The `Documentation` folder architecture is the following:
             - input.md
             - ...
         * ...
-    + **Triggers**
+    + **Trigger**
         * table1.md
         * ...
 
@@ -124,8 +124,6 @@ However, you can use any [supported Markdown tags](#supported-markdown).
 New documentation files are created with the following default contents:
 
 ![](assets/en/Project/comments-explo4.png)
-
-
 
 | Line                                               | Beschreibung                                                                                                                                         |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |

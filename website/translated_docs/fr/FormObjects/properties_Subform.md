@@ -44,9 +44,9 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 ---
 ## Double-click on empty row
 
-Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
-- Do nothing: Ignores double-click.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
+Action to perform in case of a double-click on an empty line of a list subform. Les options suivantes sont disponibles :
+- Ne rien faire : ignore le double-clic.
+- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. L'enregistrement sera créé directement dans la liste si la propriété [Saisissable dans la liste] est activée. Sinon, il sera créé en mode page, dans le [formulaire détaillé](detail-form) associé au sous-formulaire.
 
 
 #### Grammaire JSON
@@ -94,9 +94,9 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 ---
 ## Enterable in list
 
-When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
+Lorsque cette propriété est activée pour un sous-formulaire de liste, l'utilisateur peut modifier les données de l'enregistrement directement dans la liste, sans avoir à utiliser le [formulaire détaillé associé](#detail-form).
 
-> To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
+> Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic).
 
 
 #### Grammaire JSON
@@ -114,9 +114,9 @@ When a list subform has this property enabled, the user can modify record data d
 ---
 ## List Form
 
-You use this property to declare the list form to use in the subform. A list subform lets you enter, view, and modify data in other tables.
+Cette option permet de désigner un formulaire liste à utiliser dans un sous-formulaire. Un sous-formulaire en liste vous permet de saisir, visualiser et modifier des données dans d’autres tables.
 
-List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. The input form is referred to as the Detail form.
+Les sous-formulaires de liste peuvent être utilisés pour la saisie de données de deux manières : l'utilisateur peut saisir des données directement dans le sous-formulaire ou les saisir dans un [formulaire de saisie](#detail-form). Dans cette configuration, le formulaire utilisé comme sous-formulaire est appelé formulaire Liste. Le formulaire de saisie est appelé le formulaire détaillé.
 
 #### Grammaire JSON
 
@@ -133,13 +133,13 @@ List subforms can be used for data entry in two ways: the user can enter data di
 ---
 ## Source
 
-Specifies the table that the list subform belongs to (if any).
+Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas échéant).
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                 |
-| ----- | --------------- | --------------------------------- |
-| table | string          | 4D table name, or "" if no table. |
+| Nom   | Type de données | Valeurs possibles                                     |
+| ----- | --------------- | ----------------------------------------------------- |
+| table | string          | Nom de la table 4D, ou "" s'il n'existe aucune table. |
 
 #### Objets pris en charge
 

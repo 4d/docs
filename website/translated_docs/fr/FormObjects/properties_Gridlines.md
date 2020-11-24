@@ -6,7 +6,7 @@ title: Quadrillage
 ---
 ## Couleur lignes horizontales
 
-Définit la couleur des lignes horizontales d'une list box (gris par défaut).
+Définit la couleur des lignes horizontales dans une list box (gris par défaut).
 
 #### Grammaire JSON
 

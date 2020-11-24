@@ -3,7 +3,7 @@ id: forms
 title: About 4D Forms
 ---
 
-## Overview
+## Überblick
 
 Forms provide the interface through which information is entered, modified, and printed in a desktop application. Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
 

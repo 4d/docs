@@ -7,7 +7,7 @@ title: Data Model Classes
 
 > ORDA data model class functions are provided as a **preview feature** in 4D v18 R4: all functions you create are exposed without restrictions. Future releases will include more control over the function availability, especially from REST requests. In the next release, **by default all your data model class functions will be set to private**. You will have to specify individually each function that you want to be exposed.
 
-## Overview
+## Überblick
 
 ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
 

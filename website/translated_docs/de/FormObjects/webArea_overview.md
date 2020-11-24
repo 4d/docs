@@ -3,7 +3,7 @@ id: webAreaOverview
 title: Web Area
 ---
 
-## Overview
+## Überblick
 
 Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 

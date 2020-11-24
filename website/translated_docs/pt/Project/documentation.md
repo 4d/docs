@@ -125,8 +125,6 @@ New documentation files are created with the following default contents:
 
 ![](assets/en/Project/comments-explo4.png)
 
-
-
 | Line                                               | Description                                                                                                                                          |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \<!-- Type your summary here -->| HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |

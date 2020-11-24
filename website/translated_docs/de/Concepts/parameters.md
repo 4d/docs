@@ -326,7 +326,7 @@ Dieser zweite Weg (durch eine Unterroutine einen Wert zurückgeben) wird "eine F
 
 ### Sonderfälle: Objekte und Collections
 
-Sie müssen im Blick behalten, dass sich Daten vom Typ Objekt und Collection nur über eine Referenz verwalten lassen (z.B. ein interner *Zeiger*).
+Daten vom Typ Objekt und Collection werden automatisch über eine Referenz verwaltet (wie ein interner *Zeiger*).
 
 Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
 
@@ -408,6 +408,6 @@ End if
 $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
-Hier ist der Vorteil, dass sie Ihren vorhandenen Code nicht verändern müssen. Er wird immer wie in der vorigen Version funktionieren, aber bei Bedarf können Sie einen anderen Wert als 10 Jahre verwenden.
+Hier ist der Vorteil, dass Sie Ihren vorhandenen Code nicht verändern müssen. Er wird immer wie in der vorigen Version funktionieren, aber bei Bedarf können Sie einen anderen Wert als 10 Jahre verwenden.
 
 Bei Variablen mit Namen kann jeder Parameter optional sein. Im oberen Beispiel sind alle Parameter optional und jeder kann gegeben sein, in beliebiger Reihenfolge. 
