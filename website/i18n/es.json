@@ -74,7 +74,7 @@
       "API/webServerClass": {
         "title": "WebServer"
       },
-      "API/zipClass": {
+      "API/zipArchiveClass": {
         "title": "ZIP Archive"
       },
       "Backup/backup": {
