@@ -2007,7 +2007,7 @@ $strings2:=$string1s.orderByMethod("sortCollection";sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ``` 
 
-The *sortCollection* method: 
+The ***sortCollection*** method: 
 
 ```4d
 var$1Object
