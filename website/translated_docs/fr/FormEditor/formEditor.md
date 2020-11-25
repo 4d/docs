@@ -743,7 +743,7 @@ Pour déverrouiller une vue, il suffit de la sélectionner ou de cliquer à nouv
 
 ## Zoom
 
-You can zoom in the current form. Switch to “Zoom” mode by clicking on the magnifying glass icon or clicking directly on the desired percentage bar (50%, 100%, 200%, 400% and 800%):
+Il est possible de zoomer dans le formulaire courant. Switch to “Zoom” mode by clicking on the magnifying glass icon or clicking directly on the desired percentage bar (50%, 100%, 200%, 400% and 800%):
 
 ![](assets/en/FormEditor/zoom.png)
 
