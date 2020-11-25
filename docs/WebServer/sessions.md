@@ -31,9 +31,9 @@ In both cases, the setting is local to the machine; so it can be different on th
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*". This cookie references the current web session for the application. 
+When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. This cookie references the current web session for the application. 
 
-> The default cookie name can be customized using the [`.sessionCookieName`](API/webServerClass.md#sessioncookiename) property. 
+> The cookie name can be get using the [`.sessionCookieName`](API/webServerClass.md#sessioncookiename) property. 
 
 1. In each web client request, the Web server checks for the presence and the value of the private "4DSID_*AppName*" cookie. 
 
@@ -47,10 +47,6 @@ When [sessions are enabled](#enabling-sessions), automatic mechanisms are implem
 The current `Session` object can then be accessed through the [`Session`](API/sessionClass.md#session) command in the code of any web processes.
 
 ![alt-text](assets/en/WebServer/schemaSession.png)
-
-### Example
-
-XXX
 
 
 ## Sharing information
@@ -91,6 +87,77 @@ If (Session.hasPrivilege("WebAdmin"))
 Else
 	//Display an authentication page
 End if
+```
+
+
+## Example
+
+In a CRM application, each salesperson manages their own client portfolio.
+
+The datastore contains at least 2 linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
+
+![alt-text](assets/en/WebServer/exampleSession.png)
+
+We run this URL to open a session: 
+
+```
+http://localhost:8044/?salesNumber=3&password=pwd&idleTimeout=120
+```
+
+If the salesperson is authenticated:
+
+- the *userName* is updated on the session
+- the "WebAdmin" privilege is associated to the session
+- the top 3 customers of the salesperson are loaded in the session
+- the session will close after 120 minutes of inactivity
+
+The `On Web Authentication` database method contains:
+
+```4d
+var $indexSalesNumber; $salesNumber; $indexTimeout; $idleTimeout; $indexPassword : Integer
+var $info; $userTop3; $salesPerson : Object
+var $userOK : Boolean
+var $password : Text
+
+ARRAY TEXT($anames; 0)
+ARRAY TEXT($avalues; 0)
+WEB GET VARIABLES($anames; $avalues)
+$indexSalesNumber:=Find in array($anames; "salesNumber")
+$indexTimeout:=Find in array($anames; "idleTimeout")
+$indexPassword:=Find in array($anames; "password")
+
+If ($indexSalesNumber#-1)
+    $salesNumber:=Num($avalues{$indexSalesNumber})
+End if 
+
+If ($indexPassword#-1)
+    $password:=String($avalues{$indexPassword})
+End if 
+
+If ($indexTimeout#-1)
+    $idleTimeout:=Num($avalues{$indexTimeout})
+End if 
+// ...
+// Check $salesNumber and $password
+// ...
+If ($userOK)  // The user has been previously checked
+    $info:=New object()
+    $salesPerson:=ds.SalesPersons.query("number = :1"; $salesNumber).first()
+    $info.userName:=$salesPerson.firstname+" "+$salesPerson.lastname
+    $info.privileges:="WebAdmin" 
+    Session.setPrivileges($info)
+    Session.idleTimeout:=$idleTimeout
+
+    Use (Session.storage)
+        If (Session.storage.myTop3=Null)
+            $userTop3:=ds.Customers.query("salesPerson.number = :1"; $salesNumber).orderBy("totalPurchase desc").slice(0; 3)
+            Session.storage.myTop3:=$userTop3
+        End if 
+    End use 
+
+    $0:=True
+End if
+
 ```
 
 

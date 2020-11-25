@@ -673,7 +673,7 @@ The <!-- REF #webServerClass.sessionCookieDomain.Summary -->"domain" field of th
 
 The <!-- REF #webServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->. 
 
-Default = "4DSID"
+*Read-only property*
 
 <!-- END REF -->
 
