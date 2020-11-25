@@ -54,7 +54,7 @@ ORDA データモデルクラスはすべて **`cs`** クラスストアのプ�
 ORDA データモデルユーザークラスのオブジェクトインスタンスは、それらの親クラスのプロパティや関数を使うことができます:
 
 - Datastore クラスオブジェクトは、[ORDA Datastore 汎用クラス](API/datastoreClass.md) の関数を呼び出すことができます。
-- Datastore クラスオブジェクトは、[ORDA Datastore 汎用クラス](API/datastoreClass.md) の関数を呼び出すことができます。
+- Datastore クラスオブジェクトは、[ORDA DataClass 汎用クラス](API/dataclassClass.md) の関数を呼び出すことができます。
 - EntitySelection クラスオブジェクトは [ORDA EntitySelection 汎用クラス](API/entitySelectionClass.md) の関数を呼び出すことができます。
 - Entity クラスオブジェクトは [ORDA Entity 汎用クラス](API/entityClass.md) の関数を呼び出すことができます。
 
@@ -336,17 +336,17 @@ local Function <functionName>
 
 > `local` キーワードは、データモデルクラス関数に対してのみ利用可能です。 [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
 
-最終的にサーバーへのアクセスが必要になっても (ORDAキャッシュが有効期限切れになった場合など) 関数は動作します。 もっとも、それではローカル実行によるパフォーマンスの向上は見込めないため、ローカル関数がサーバー上のデータにアクセスしないことを確認しておくことが推奨されます。 サーバーに対して複数のリクエストをおこなうローカル関数は、サーバー上で実行されて結果だけを返す関数よりも非効率的です。 たとえば、Schools DataClass クラスの次の関数を考えます:
+最終的にサーバーへのアクセスが必要になっても (ORDAキャッシュが有効期限切れになった場合など) 関数は動作します。 もっとも、それではローカル実行によるパフォーマンスの向上は見込めないため、ローカル関数がサーバー上のデータにアクセスしないことを確認しておくことが推奨されます。 サーバーに対して複数のリクエストをおこなうローカル関数は、サーバー上で実行されて結果だけを返す関数よりも非効率的です。 For example, consider the following function on the Schools entity class:
 
 ```4d
-// 2000年以降の生まれの生徒を検索します  
-// local キーワードを適切に使用していない例です
+// Get the youngest students  
+// Inappropriate use of local keyword
 local Function getYoungest
     var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 - `local` キーワードを **使わない** 場合、1つのリクエストで結果が得られます。
-- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。
+- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 In this example, using the `local` keyword is inappropriate.
 
 
 ### 例題
@@ -403,11 +403,6 @@ If ($status.success)
     $status:=Form.student.save() // サーバーを呼び出します
 End if
 ```
-
-
-#### Unappropriate use of local keyword
-
-This example illustrates the fact that
 
 
 

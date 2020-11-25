@@ -3,7 +3,7 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
+Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, date, objet, booléen, collection ou null).
 
 Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
 

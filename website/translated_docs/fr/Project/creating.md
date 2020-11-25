@@ -3,7 +3,7 @@ id: creating
 title: Créer ou ouvrir un projet
 ---
 
-All projects are handled through **4D** in local or remote mode, or **4D Server**.
+Tous les projets sont gérés via **4D** en mode local ou distant, ou via **4D Server**.
 
 ## Créer un projet
 

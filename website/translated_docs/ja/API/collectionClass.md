@@ -1,6 +1,6 @@
 ---
 id: collectionClass
-title: Collection
+title: コレクション
 ---
 
 
@@ -1084,6 +1084,7 @@ The code for ***TypeLookUp*** is:
  C_OBJECT($1)
  C_LONGINT($2)
  If(OB Get type($1;"value")=$2)
+
     $1.result:=True
  End if
 ``` 
@@ -2132,6 +2133,7 @@ For detailed information on how to build a query using , value and *querySetting
  $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
  $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
  $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
@@ -2334,6 +2336,7 @@ If you try to remove an element from an empty collection, the method does nothin
 | ------ | -- |
 | v16 R6 | 追加 |
 </details>
+
 
 
 <!-- REF #collection.resize().Syntax -->

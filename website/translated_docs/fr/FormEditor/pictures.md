@@ -3,7 +3,7 @@ id: pictures
 title: Images
 ---
 
-4D includes specific support for pictures used in your forms.
+4D inclut une prise en charge spécifique des images utilisées dans vos formulaires.
 
 
 ## Formats natifs pris en charge
