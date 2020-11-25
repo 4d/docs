@@ -46,7 +46,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 
 <!-- REF dataclassAttributeClass.autoFilled.Syntax -->
-**.autoFilled** : Boolean<!-- END REF -->
+**.autoFilled** : Booléen<!-- END REF -->
 
 
 #### Description
@@ -76,7 +76,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 
 <!-- REF dataclassAttributeClass.fieldNumber.Syntax -->
-**.fieldNumber** : Integer<!-- END REF -->
+**.fieldNumber** : Entier<!-- END REF -->
 
 
 #### Description
@@ -112,11 +112,11 @@ The `.fieldType` property <!-- REF dataclassAttributeClass.fieldType.Summary -->
 
 **Valeurs possibles :**
 
-| dataClassAttribute.kind | fieldType                   | Commentaire        |
-| ----------------------- | --------------------------- | ------------------ |
-| storage                 | Corresponding 4D field type | See `Type` command |
-| relatedEntity           | 38 (Is object)              |                    |
-| relatedEntities         | 42 (Is collection)          |                    |
+| dataClassAttribute.kind | fieldType                   | Commentaire             |
+| ----------------------- | --------------------------- | ----------------------- |
+| storage                 | Corresponding 4D field type | Voir la commande `Type` |
+| relatedEntity           | 38 (Is object)              |                         |
+| relatedEntities         | 42 (Is collection)          |                         |
 
 <!-- END REF -->
 
@@ -133,7 +133,7 @@ The `.fieldType` property <!-- REF dataclassAttributeClass.fieldType.Summary -->
 
 
 <!-- REF dataclassAttributeClass.indexed.Syntax -->
-**.indexed** : Boolean<!-- END REF -->
+**.indexed** : Booléen<!-- END REF -->
 
 
 #### Description
@@ -358,7 +358,7 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 | dataClassAttribute.kind | type                                                     | Commentaire                                                                                                                                   |
 | ----------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| storage                 | "number", "date", "object", "bool", "image", or "string" | "nombre" est rertourné pour tous les types numériques, y compris la durée. "string" est retourné pour les types de champs uuid, alpha et text |
+| storage                 | "number", "date", "object", "bool", "image", ou "string" | "nombre" est rertourné pour tous les types numériques, y compris la durée. "string" est retourné pour les types de champs uuid, alpha et text |
 | relatedEntity           | nom de dataClass associé                                 | Ex : "Companies"                                                                                                                              |
 | relatedEntities         | nom de dataClass associé + suffixe "Selection"           | Ex : "EmployeeSelection"                                                                                                                      |
 
