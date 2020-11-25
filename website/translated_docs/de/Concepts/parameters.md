@@ -53,7 +53,7 @@ Sie können jeden [Ausdruck](Concepts/quick-tour.md#expression-types) als Parame
 - Tabellen
 - arrays
 
-Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#zeiger-als-parameter-in-methoden).
 
 
 ## Funktionen
@@ -138,7 +138,7 @@ C_OBJECT($3)
 ```4d
  C_REAL(OneMethodAmongOthers;$1)
 ```
-Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und komplierter Modus](Concepts/interpreted.md).
+Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und kompilierter Modus](Concepts/interpreted-compiled.md).
 
 Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterstützen nicht die Deklaration in einer "Compiler" Methode):
 
@@ -215,7 +215,7 @@ Dieser zweite Weg (durch eine Unterroutine einen Wert zurückgeben) wird "eine F
 
 Daten vom Typ Objekt und Collection werden automatisch über eine Referenz verwaltet (wie ein interner *Zeiger*).
 
-Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
+Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#zeiger-als-parameter-in-methoden), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
 
 Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als Parameter sendet:
 
