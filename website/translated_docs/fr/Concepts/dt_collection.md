@@ -81,12 +81,12 @@ Some functions return the original collection after modification, so that you ca
 ### paramètre cheminPropriété
 
 
-Several functions accept a _propertyPath_ as parameter. Ce paramètre peut contenir :
+Plusieurs fonctions admettent un paramètre nommé _cheminPropriété_. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
 - soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
 
-**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Attention :** Lorsque des fonctions ou un paramètre cheminPropriété sont attendus, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin :
 
 ```4d
  $vmin:=$col.min("My.special.property") //indéfini

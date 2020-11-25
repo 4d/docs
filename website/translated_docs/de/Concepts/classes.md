@@ -84,7 +84,7 @@ Um eine neue Klasse zu erstellen:
 In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:
 
 - Im Code-Editor gilt folgendes:
-    - Es kann keine Klasse laufen
+    - a class cannot be run
     - Eine Klassenfunktion ist ein Code Block
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Objekt Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
@@ -106,7 +106,7 @@ Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 | ---------- | ------ | -- | ---------------------------------------------------- |
 | classStore | object | <- | Store der Benutzerklasse für Projekt oder Komponente |
 
-Der Befehl `cs` gibt den Store der Benutzerklassen für das aktuelle Projekt oder die Komponente zurück. Er gibt alle Benutzerklassen zurück, die im geöffneten Projekt bzw. der Komponente [definiert](#definition-einer-klasse) sind. Standardmäßig sind nur [ORDA Klassen](ORDA/ordaClasses.md) des Projekts verfügbar.
+Der Befehl `cs` gibt den Store der Benutzerklassen für das aktuelle Projekt oder die Komponente zurück. It returns all user classes [defined](#class-definition) in the opened project or component. Standardmäßig sind nur [ORDA Klassen](ORDA/ordaClasses.md) des Projekts verfügbar.
 
 #### Beispiel
 
@@ -139,9 +139,9 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ## Klassen in Ihrem Code verwenden
 
 
-### Objekt Klasse
+### Class object
 
-Ist in einem Projekt eine Klasse [definiert](#class-definition), wird sie in die 4D Programmiersprache Umgebung geladen. Eine Klasse ist selbst ein Objekt der Klasse ["class"](API/classClass.md). Ein Objekt Klasse hat folgende Eigenschaften und Funktionen:
+When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. Eine Klasse ist selbst ein Objekt der Klasse ["class"](API/classClass.md). A class object has the following properties and function:
 
 - String [`name`](API/classClass.md#name)
 - Objekt [`superclass`](API/classClass.md#superclass) (optional, null, wenn nicht vorhanden)
@@ -152,7 +152,7 @@ Zusätzlich kann ein Objekt Klasse verweisen auf:
 - Ein Objekt [`constructor`](#class-constructor) (optional),
 - Ein Objekt `prototype` mit Objektnamen [function](#function) (optional).
 
-Ein Objekt Klasse ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
 
 
 
@@ -521,10 +521,10 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
+> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. See [this example](#example-1).
 
 
-In jedem Fall bezieht sich `This` auf das Objekt, in dem die Methode aufgerufen wurde, als ob die Methode im Objekt wäre.
+In any cases, `This` refers to the object the method was called on, as if the method were on the object.
 
 ```4d
 //Class: ob
@@ -533,7 +533,7 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Dann können Sie in einer Projektmethode schreiben:
+Then you can write in a project method:
 
 ```4d
 $o:=cs.ob.new()
@@ -541,7 +541,7 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
+In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
 
 
 ## Befehle für Klassen
