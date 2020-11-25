@@ -33,6 +33,7 @@ In 4D, you create a new signal object by calling the [`New signal`](#new-signal)
 - `signal.wait()` must be called from the worker/process that needs another worker/process to finish a task in order to continue.
 - `signal.trigger()` must be called from the worker/process that finished its execution in order to release all others.
 
+
 ![](assets/en/API/signal.png)
 
 Once a signal has been released using a `signal.trigger()` call, it cannot be reused again. If you want to set another signal, you need to call the `New signal` command again.

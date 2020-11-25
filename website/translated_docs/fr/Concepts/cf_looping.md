@@ -3,7 +3,7 @@ id: looping
 title: Structures répétitives (ou "boucles")
 ---
 
-Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
+Les structures en boucle répètent une séquence d'instructions jusqu'à ce qu'une condition soit remplie ou qu'un certain nombre de fois est atteint.
 
 
 ## While...End while

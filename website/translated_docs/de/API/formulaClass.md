@@ -1,6 +1,6 @@
 ---
 id: formulaClass
-title: Formulas
+title: Formula
 ---
 
 
@@ -44,7 +44,7 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 #### Passing parameters
 
-You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. For example, you can write:
+You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. Sie schreiben zum Beispiel:
 
 ```4d
  var $f : Object
@@ -321,6 +321,7 @@ The following code will create a dialog accepting a formula in text format:
 #### Beschreibung
 
 The `.apply()` function <!-- REF #formulaClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
+
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 

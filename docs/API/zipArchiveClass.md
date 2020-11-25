@@ -1,12 +1,13 @@
 ---
 id: zipArchiveClass
-title: ZIP Archive
+title: ZIPArchive
 ---
+
 
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. These archives are created with a ".zip" extension and can be used to save disk space or transfer files via mediums which may have size limitations (e.g., email or network).
 
 - You create a 4D ZIP archive with the [ZIP Create archive](#zip-create-archive) command.
-- 4D ZIP file and folder instances are available through the `root` property (`ZIP Folder`) of the object returned by [ZIP Read archive](#zip-read-archive) command. 
+- 4D [`ZIPFile`](zipFileClass.md) and [`ZIPFolder`](zipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command. 
 
 
 ### Example
@@ -99,7 +100,7 @@ The returned status object contains the following properties:
 To compress a `4D.File`:
 
 ```4d
- var $file;$destination : 4D.File
+ var $file; $destination : 4D.File
  var $status : Object
  
  $destination:=Folder(fk desktop folder).file("MyDocs/file.zip")
@@ -264,72 +265,9 @@ To extract from the root folder:
 
 The `.root` property contains <!-- REF #zipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
 
-The `root` folder and its contents can be manipulated with the [File](fileClass.md) and [Folder](folderClass.md) functions and properties.
+The `root` folder and its contents can be manipulated with the [ZipFile](zipFileClass.md) and [ZipFolder](zipFolderClass.md) functions and properties.
 
 This property is **read-only**. 
-
-
-
-## ZipFile object
-
-The following properties and functions from the [File](fileClass.md) class are available to 4D ZIP file objects:
-
-|Available [File](fileClass.md) APIs for ZIP files|Comment |
-|---|---|
-|[<!-- INCLUDE #document.copyTo().Syntax -->](fileClass.md#copyto)||
-|[<!-- INCLUDE #document.creationDate.Syntax -->](fileClass.md#creationdate)||
-|[<!-- INCLUDE #document.creationTime.Syntax -->](fileClass.md#creationtime)||
-|[<!-- INCLUDE #document.exists.Syntax -->](fileClass.md#exists)||
-|[<!-- INCLUDE #document.extension.Syntax -->](fileClass.md#extension)||
-|[<!-- INCLUDE #document.fullName.Syntax -->](fileClass.md#fullname)||
-|[<!-- INCLUDE #document.getContent().Syntax -->](fileClass.md#getcontent)||
-|[<!-- INCLUDE #document.getIcon().Syntax -->](fileClass.md#geticon)||
-|[<!-- INCLUDE #document.getText().Syntax -->](fileClass.md#gettext)||
-|[<!-- INCLUDE #document.hidden.Syntax -->](fileClass.md#hidden)||
-|[<!-- INCLUDE #document.isAlias.Syntax -->](fileClass.md#isalias)||
-|[<!-- INCLUDE #document.isFile.Syntax -->](fileClass.md#isfile)||
-|[<!-- INCLUDE #document.isFolder.Syntax -->](fileClass.md#ifFolder)||
-|[<!-- INCLUDE #document.isWritable.Syntax -->](fileClass.md#iswritable)|Always false with ZIP archive|
-|[<!-- INCLUDE #document.modificationDate.Syntax -->](fileClass.md#modificationdate)||
-|[<!-- INCLUDE #document.modificationTime.Syntax -->](fileClass.md#modificationtime)||
-|[<!-- INCLUDE #document.name.Syntax -->](fileClass.md#name)||
-|[<!-- INCLUDE #document.original.Syntax -->](fileClass.md#original)||
-|[<!-- INCLUDE #document.parent.Syntax -->](fileClass.md#parent)||
-|[<!-- INCLUDE #document.path.Syntax -->](fileClass.md#path)|Returns a path relative to the archive|
-|[<!-- INCLUDE #document.platformPath.Syntax -->](fileClass.md#platformpath)||
-
-
-
-## ZipFolder object
-
-The following properties and functions from the [Folder](folderClass.md) class are available to 4D ZIP folder objects:
-
-
-|Available [Folder](folderClass.md) APIs for ZIP folder|Comment |
-|---|---|
-|[<!-- INCLUDE #directory.copyTo().Syntax -->](folderClass.md#copyto)||
-|[<!-- INCLUDE #directory.creationDate.Syntax -->](folderClass.md#creationdate)|Date may be different for the `root` folder from a folder within the archive|
-|[<!-- INCLUDE #directory.creationTime.Syntax -->](folderClass.md#creationtime)|Time may be different for the `root` folder from a folder within the archive|
-|[<!-- INCLUDE #directory.exists.Syntax -->](folderClass.md#exists)||
-|[<!-- INCLUDE #directory.extension.Syntax -->](folderClass.md#extension)||
-|[<!-- INCLUDE #directory.file().Syntax -->](folderClass.md#file)||
-|[<!-- INCLUDE #directory.files().Syntax -->](folderClass.md#files)||
-|[<!-- INCLUDE #directory.folder().Syntax -->](folderClass.md#folder)||
-|[<!-- INCLUDE #directory.folders().Syntax -->](folderClass.md#folders)||
-|[<!-- INCLUDE #directory.fullName.Syntax -->](folderClass.md#fullname)||
-|[<!-- INCLUDE #directory.getIcon().Syntax -->](folderClass.md#geticon)||
-|[<!-- INCLUDE #directory.hidden.Syntax -->](folderClass.md#hidden)||
-|[<!-- INCLUDE #directory.isAlias.Syntax -->](folderClass.md#isalias)||
-|[<!-- INCLUDE #directory.isFile.Syntax -->](folderClass.md#isfile)||
-|[<!-- INCLUDE #directory.isFolder.Syntax -->](folderClass.md#isfolder)||
-|[<!-- INCLUDE #directory.isPackage.Syntax -->](folderClass.md#ispackage)||
-|[<!-- INCLUDE #directory.modificationDate.Syntax -->](folderClass.md#modificationdate)|Date may be different for the `root` folder from a folder within the archive|
-|[<!-- INCLUDE #directory.modificationTime.Syntax -->](folderClass.md#modificationtime)|Time may be different for the `root` folder from a folder within the archive|
-|[<!-- INCLUDE #directory.name.Syntax -->](folderClass.md#name)||
-|[<!-- INCLUDE #directory.original.Syntax -->](folderClass.md#original)||
-|[<!-- INCLUDE #directory.parent.Syntax -->](folderClass.md#parent)|The archive's virtual `root` folder has no parent. However, the folders within the archive may have a parent other than the root.|
-|[<!-- INCLUDE #directory.path.Syntax -->](folderClass.md#path)|Returns a path relative to the archive|
-|[<!-- INCLUDE #directory.platformPath.Syntax -->](folderClass.md#platformpath)||
 
 
 <style> h2 { background: #d9ebff;}</style>

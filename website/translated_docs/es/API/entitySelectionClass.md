@@ -1,6 +1,6 @@
 ---
 id: entitySelectionClass
-title: Entity Selections
+title: EntitySelection
 ---
 
 
@@ -131,6 +131,7 @@ If the attribute does not exist in the entity selection, an error is returned.
 #### Example 1
 
 Projection of storage values:
+
 
 ```4d
  var $firstNames : Collection
@@ -1036,7 +1037,7 @@ We want to find the highest salary among all the female employees:
 </details>
 
 <!-- REF #entitySelectionClass.min().Syntax -->
-**.min()** : any<!-- END REF -->
+**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #entitySelectionClass.min().Params -->
 | Parameter     | Type |    | Description                                      |
