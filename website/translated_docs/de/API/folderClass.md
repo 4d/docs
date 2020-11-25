@@ -160,7 +160,7 @@ The `.create()` function <!-- REF #folderClass.create().Summary -->creates a fol
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-**Zurückgegebener Wert**
+**Rückgabewert**
 
 *   **True** if the folder is created successfully;
 *   **False** if a folder with the same name already exists or if an error occured.
