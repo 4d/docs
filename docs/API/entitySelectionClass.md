@@ -136,6 +136,7 @@ If the attribute does not exist in the entity selection, an error is returned.
 
 Projection of storage values:
 
+
 ```4d
  var $firstNames : Collection
  $entitySelection:=ds.Employee.all()
@@ -1048,7 +1049,7 @@ We want to find the highest salary among all the female employees:
 </details>
 
 <!-- REF #entitySelectionClass.min().Syntax -->
-**.min()** : any<!-- END REF -->
+**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #entitySelectionClass.min().Params -->
 |Parameter|Type||Description|
