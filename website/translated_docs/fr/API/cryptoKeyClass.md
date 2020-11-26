@@ -97,7 +97,7 @@ L'objet `cryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 
 
 
-Defined only for ECDSA keys: the <!-- REF #cryptokey.curve.Summary -->normalised curve name of the key. <!-- END REF -->
+Défini uniquement pour les clés ECDSA : le <!-- REF #cryptokey.curve.Summary -->nom de la courbe normalisée de la clé. <!-- END REF -->
 Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
 
@@ -317,7 +317,7 @@ Représentation utf8 de la chaîne *message*.
 <!-- REF #cryptokey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the key in bits<!-- END REF -->. Typically 2048 (default).
+Défini uniquement pour les clés RSA : <!-- REF #cryptokey.size.Summary -->la taille de la clé en bits<!-- END REF -->. Habituellement 2048 (par défaut).
 
 
 <!-- REF cryptokey.type -->
