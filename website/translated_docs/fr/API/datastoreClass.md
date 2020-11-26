@@ -92,7 +92,7 @@ Using the main datastore on the 4D database:
 ```
 
 ```4d
-  //getFirst method
+  //méthode getFirst
   //getFirst(localID;dataclass) -> entity
  #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
 
@@ -307,7 +307,7 @@ The `.encryptionStatus()` function <!-- REF #datastoreClass.encryptionStatus().S
 > Use the `Data file encryption status` command to determine the encryption status of any other data file.
 
 
-**Returned value**
+**Valeur retournée**
 
 The returned object contains the following properties:
 
@@ -451,7 +451,7 @@ The `.getRequestLog()` function <!-- REF #datastoreClass.getRequestLog().Summary
 
 This function must be called on a remote 4D, otherwise it returns an empty collection. It is designed for debugging purposes in client/server configurations.
 
-**Returned value**
+**Valeur retournée**
 
 Collection of stacked request objects. The most recent request has index 0.
 
