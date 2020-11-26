@@ -284,7 +284,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 #### Description
 
-The `.name` property <!-- REF dataclassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
+La propriété `.name` <!-- REF dataclassAttributeClass.name.Summary -->retourne le nom de l'objet `dataClassAttribute` en chaîne<!-- END REF -->.
 
 #### Exemple
 
@@ -313,13 +313,13 @@ The `.name` property <!-- REF dataclassAttributeClass.name.Summary -->returns th
 
 
 #### Description
-> This property is only available with attributes of the "relatedEntity" or "relatedEntities" [`.kind`](#kind) property.
+> Cette propriété n'est disponible qu'avec les attributs de la propriété "relatedEntity" ou "relatedEntities" [`.kind`](#kind).
 
-The `.relatedDataClass` property <!-- REF dataclassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
+La propriété `.relatedDataClass` <!-- REF dataclassAttributeClass.relatedDataClass.Summary -->retourne le nom de la dataclass associée à l'attribut<!-- END REF -->.
 
 #### Exemple
 
-Given the following tables and relations:
+Considérons les tableaux et relations suivants :
 
 
 ![](assets/en/API/dataclassAttribute4.png)
@@ -350,9 +350,9 @@ Given the following tables and relations:
 
 #### Description
 
-The `.type` property <!-- REF dataclassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
+La propriété `.type` <!-- REF dataclassAttributeClass.type.Summary -->contient le type de valeur conceptuelle de l'attribut<!-- END REF -->, utile pour la programmation générique.
 
-The conceptual value type depends on the attribute [`.kind`](#kind).
+Le type de valeur conceptuelle dépend de l'attribut [`.kind`](#kind).
 
 **Valeurs possibles :**
 
