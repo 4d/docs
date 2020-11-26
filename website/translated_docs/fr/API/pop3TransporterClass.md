@@ -65,26 +65,26 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| none                                                                |
-| **.password** : Text<p>User password for authentication on the server (not returned in *[SMTP transporter](#smtptransporterobject)* object)                                                             | none                                                                |
+| **.password** : Text<p>Mot de passe utilisateur pour l'authentification sur le serveur (non retourné dans l'objet *[SMTP transporter](#smtptransporterobject)*)                                         | none                                                                |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
 
 
 #### Résultat
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
-> The POP3 connection is automatically closed when the transporter object is destroyed.
+La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). All returned properties are **read-only**.
+> La connexion POP3 est automatiquement fermée lorsque l'objet transporteur est détruit.
 
 #### Exemple
 
 ```4d
  var $server : Object
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatoire
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
- $server.logFile:="LogTest.txt" //log to save in the Logs folder
+ $server.logFile:="LogTest.txt" //log à enregistrer dans le dossier Logs
 
  var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
@@ -112,9 +112,9 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 #### Description
 
-The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](#pop3-new-transporter) command (shortcut).
+La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary -->crée et retourne un nouvel objet de type `4D.POP3Transporter`<!-- END REF -->. Elle est identique à la commande [`POP3 New transporter`](#pop3-new-transporter) (raccourci).
 
-> It is recommended to use the [`POP3 New transporter`](#pop3-new-transporter) shortcut command instead of `4D.POP3Transporter.new()`. 
+> Il est recommandé d'utiliser la commande de raccourci [`POP3 New transporter`](#pop3-new-transporter) au lieu de `4D.POP3Transporter.new()`. 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -190,15 +190,15 @@ Executing this method does not actually remove any email. The flagged email will
 ```4d
  $mailInfoList:=$POP3_transporter.getMailInfoList()
  For each($mailInfo;$mailInfoList)
-  // Mark your mail as "to be deleted at the end of the session"
+  // Marquer votre e-mail comme "à supprimer à la fin de la session"
     $POP3_transporter.delete($mailInfo.number)
  End for each
-  // Force the session closure to delete the mails marked for deletion
+  // Forcer la fermeture de la session pour supprimer les e-mails marqués pour suppression
  CONFIRM("Selected messages will be deleted.";"Delete";"Undo")
- If(OK=1) //deletion confirmed
+ If(OK=1) //suppression confirmée
     $POP3_transporter:=Null
  Else
-    $POP3_transporter.undeleteAll() //remove deletion flags
+    $POP3_transporter.undeleteAll() //supprimer les marqueurs de suppression
  End if
 ```
 
@@ -229,10 +229,10 @@ The `.getBoxInfo()` function <!-- REF #pop3TransporterClass.getBoxInfo().Summary
 
 The `boxInfo` object returned contains the following properties:
 
-| Propriété | Type   | Description                       |
-| --------- | ------ | --------------------------------- |
-| mailCount | Nombre | Number of messages in the mailbox |
-| size      | Nombre | Message size in bytes             |
+| Propriété | Type   | Description                                            |
+| --------- | ------ | ------------------------------------------------------ |
+| mailCount | Nombre | Nombre de messages contenus dans la boîte de réception |
+| size      | Nombre | Taille du message en octets                            |
 
 
 
@@ -242,7 +242,7 @@ The `boxInfo` object returned contains the following properties:
  var $server; $boxinfo : Object
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatoire
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -284,8 +284,8 @@ Pass in *msgNumber* the number of the message to retrieve. This number is return
 
 The method returns Null if:
 
-*   *msgNumber* designates a non-existing message,
-*   the message was marked for deletion using `.delete( )`.
+*   *msgNumber* désigne un message inexistant,
+*   le message a été marqué pour suppression à l'aide de `.delete()`.
 
 
 **Returned object**
@@ -303,7 +303,7 @@ You want to know the sender of the first mail of the mailbox:
  var $sender : Variant
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatoire
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -344,15 +344,15 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 The `mailInfo` object returned contains the following properties:
 
-| Propriété | Type   | Description              |
-| --------- | ------ | ------------------------ |
-| size      | Nombre | Message size in bytes    |
-| id        | Texte  | Unique ID of the message |
+| Propriété | Type   | Description                 |
+| --------- | ------ | --------------------------- |
+| size      | Nombre | Taille du message en octets |
+| id        | Texte  | ID unique du message        |
 
 The method returns **Null** if:
 
-*   *msgNumber* designates a non-existing message,
-*   the message was marked for deletion using `.delete( )`.
+*   *msgNumber* désigne un message inexistant,
+*   le message a été marqué pour suppression à l'aide de `.delete()`.
 
 
 ##### Exemple
@@ -362,7 +362,7 @@ The method returns **Null** if:
  var $server; $mailInfo : Object
  var $mailNumber : Integer
 
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatoire
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -371,7 +371,7 @@ The method returns **Null** if:
  $transporter:=POP3 New transporter($server)
 
   //message info
- $mailInfo:=$transporter.getMailInfo(1) //get the first mail
+ $mailInfo:=$transporter.getMailInfo(1) //obtenir le premier e-mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
  End if
@@ -406,9 +406,9 @@ Each `mailInfo` object in the returned collection contains the following propert
 
 | Propriété    | Type   | Description                                                        |
 | ------------ | ------ | ------------------------------------------------------------------ |
-| \[ ].size   | Nombre | Message size in bytes                                              |
-| \[ ].number | Nombre | Message number                                                     |
-| \[ ].id     | Texte  | Unique ID of the message (useful if you store the message locally) |
+| \[ ].size   | Nombre | Taille du message en octets                                        |
+| \[ ].number | Nombre | Numéro du message                                                  |
+| \[ ].id     | Texte  | ID unique du message (utile si vous stockez le message localement) |
 
 If the mailbox does not contain a message, an empty collection is returned.
 
@@ -428,7 +428,7 @@ You want to know the total number and size of emails in the mailbox:
 ```4d
  var $server : Object
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatoire
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -476,8 +476,8 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 The method returns an empty BLOB if:
 
-*   *msgNumber* designates a non-existing message,
-*   the message was marked for deletion using `.delete()`.
+*   *msgNumber* désigne un message inexistant,
+*   le message a été marqué pour suppression à l'aide de `.delete()`.
 
 
 **Returned BLOB**
