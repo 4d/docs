@@ -10,17 +10,17 @@ Cette classe est disponible depuis le "class store" de `4D`.
 
 ### Exemple
 
-The following sample code signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
+L'extrait de code suivant illustre la signature et la vérification d'un message à l'aide d'une nouvelle paire de clés ECDSA, afin de créer, par exemple, un token Web JSON ES256.
 
 ```4d
- // Generate a new ECDSA key pair
+ // Générer une nouvelle paire de clés ECDSA
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
-  // Get signature as base64
-$message:="hello world"
+  // Obtenir une signature en base64
+$message:="hello world" 
 $signature:=$key.sign($message;New object("hash";"SHA256"))
 
-  // Verify signature
+  // Vérifier la signature
 $status:=$key.verify($message;$signature;New object("hash";"SHA256"))
 ASSERT($status.success)
 ```
@@ -54,7 +54,7 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Objet ) -> *cryptoKey* : Objet<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
 | Paramètres | Type  |    | Description                                                            |
@@ -92,7 +92,7 @@ The returned `cryptoKey` object encapsulates an encryption key pair. It is a sha
 | v18 R4  | Ajoutées      |
 </details>
 
-<!-- REF #cryptokey.curve.Syntax -->**.curve** : Text<!-- END REF -->
+<!-- REF #cryptokey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
 
 
 
@@ -260,7 +260,7 @@ The returned value is the public key.
 <!-- REF #cryptokey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->
+<!-- REF #cryptokey.pem.Summary -->Définition PEM d'une clé de chiffrement à charger<!-- END REF -->
 <!-- END REF -->
 
 
@@ -334,7 +334,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 <!-- REF #cryptokey.type.Syntax -->**.type** : Texte<!-- END REF -->
 
 
-<!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", ou "PEM":
+<!-- REF #cryptokey.type.Summary -->Nom du type de clé<!-- END REF --> - "RSA", "ECDSA", ou "PEM":
 
 
 <!-- REF cryptokey.verify().Desc -->
@@ -375,7 +375,7 @@ La `cryptoKey` doit contenir une clé **publique** valide.
 
 La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
 
-In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+Si la signature n'a pas pu être vérifiée car elle n'a pas été signée avec le même *message*, la clé ou l'algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
 
 | Propriété | Type       | Description                                                                 |
 | --------- | ---------- | --------------------------------------------------------------------------- |
