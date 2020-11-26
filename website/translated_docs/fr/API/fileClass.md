@@ -173,7 +173,7 @@ The `.create()` function <!-- REF #fileClass.create().Summary -->creates a file 
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-**Returned value**
+**Valeur retournée**
 
 *   **True** if the file is created successfully;
 *   **False** if a file with the same name already exists or if an error occured.
