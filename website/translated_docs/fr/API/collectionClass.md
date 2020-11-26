@@ -21,7 +21,7 @@ Une collection est initialisée avec :
 ```
 
 
-### Summary
+### Sommaire
 
 
 |                                                                                                                                                                                                  |
