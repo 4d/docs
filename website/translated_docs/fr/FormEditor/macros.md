@@ -4,27 +4,27 @@ title: Form Editor Macros
 ---
 
 
-The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+L'éditeur de formulaires 4D prend en charge les macros. Une macro est un ensemble d'instructions permettant de réaliser une action ou une séquence d'actions. Lorsqu'elle est appelée, la macro exécutera ses instructions et, automatiquement, les actions.
 
-For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
+Par exemple, si vous avez un rapport récurrent avec une mise en forme spécifique (par exemple, certains textes doivent apparaître en rouge et certains textes en vert), vous pouvez créer une macro pour définir automatiquement la couleur. Vous pouvez créer des macros pour l'éditeur de 4D Form qui peuvent :
 
-*   Create and execute 4D code
-*   Display dialogs
-*   Select form objects
-*   Add / delete / modify forms, form objects as well as their properties
-*   Modify project files (update, delete)
+*   Créer et exécuter du code 4D
+*   Afficher les boîtes de dialogue
+*   Sélectionnez des objets de formulaire
+*   Ajouter / supprimer / modifier des formulaires, des objets de formulaire ainsi que leurs propriétés
+*   Modifier les fichiers de projet (mettre à jour, supprimer)
 
-Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
+Le code des macros prend en charge les [class functions (fonctions de classe)](Concepts/classes.md) et les [propriétés d'objet de formulaire en JSON](FormObjects/properties_Reference.md) pour vous permettre de définir n'importe quelle fonctionnalité personnalisée dans l'éditeur de formulaire.
 
-Macros can been defined for the host project or for components within the project. Usually, you will create a macro and install it within the components you use for development.
+Des macros peuvent être définies pour le projet hôte ou pour les composants du projet. Habituellement, vous créez une macro et l'installez dans les composants que vous utilisez pour le développement.
 
-When called, a macro overrides any previously specified behaviors.
+Lorsqu'elle est appelée, une macro remplace tous les comportements précédemment spécifiés.
 
-## Hands-on example
+## Exemple pratique
 
-In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
+Dans ce court exemple, vous verrez comment créer et appeler une macro qui ajoute un bouton d'alerte "Hello World!" dans le coin supérieur gauche de votre formulaire.
 
-1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
+1. Dans un fichier `formMacros.json` dans le dossier `Sources` de votre projet, entrez le code suivant :
 
 ```
 {
@@ -36,9 +36,9 @@ In this short example, you'll see how to create and call a macro that adds a "He
 }
 ```
 
-2. Create a 4D class named `AddButton`.
+2. Créez une classe 4D nommée `AddButton`.
 
-3. Within the `AddButton` class, write the following function:
+3. Dans la classe `AddButton`, écrivez la fonction suivante :
 
 ```code4d
 Function onInvoke($editor : Object)->$result : Object
@@ -67,10 +67,10 @@ Function onInvoke($editor : Object)->$result : Object
         "currentPage"; $editor.editor.currentPage)
 ```
 
-You can then call the macro: ![](assets/en/FormEditor/macroex1.png) ![](assets/en/FormEditor/macroex2.png)
+Vous pouvez alors appeler la macro : ![](assets/en/FormEditor/macroex1.png) ![](assets/en/FormEditor/macroex2.png)
 
 
-## Calling macros in the Form editor
+## Appeler des macros dans l'éditeur de formulaires
 
 When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
 

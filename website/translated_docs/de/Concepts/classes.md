@@ -152,7 +152,7 @@ Zusätzlich kann ein Objekt class verweisen auf:
 - Ein Objekt [`constructor`](#class-constructor) (optional),
 - Ein Objekt `prototype` mit Objektnamen [function](#function) (optional).
 
-A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
+Ein Objekt Klasse ist ein [shared Object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
 
 
