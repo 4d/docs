@@ -3,12 +3,12 @@ id: pop3TransporterClass
 title: POP3Transporter
 ---
 
-The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
+La classe `POP3Transporter` vous permet de récupérer des messages à partir d'un serveur de messagerie POP3.
 
 
-### POP3 Transporter object
+### Objet POP3 Transporter
 
-POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. They provide the following properties and functions:
+Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transporter](#pop3-new-transporter). They provide the following properties and functions:
 
 
 |                                                                                                                                                                                                                                |
@@ -44,16 +44,16 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 **POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF pop3TransporterClass.POP3 New transporter.Params -->
-| Paramètres | Type               |    | Description                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | object             | -> | Mail server information                             |
-| Résultat   | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+| Paramètres | Type               |    | Description                                        |
+| ---------- | ------------------ |:--:| -------------------------------------------------- |
+| server     | object             | -> | Mail server information                            |
+| Résultat   | 4D.POP3Transporter | <- | [Objet POP3 transporter](#pop3-transporter-object) |
 <!-- END REF -->
 
 
 #### Description
 
-The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. The returned transporter object will then usually be used to receive emails.
+La commande `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summary -->configure une nouvelle connexion POP3<!-- END REF -->en fonction du paramètre *server* et retourne un nouvel objet *[POP3 transporter](#pop3-transporter-object)*. The returned transporter object will then usually be used to receive emails.
 
 In the *server* parameter, pass an object containing the following properties:
 
@@ -104,10 +104,10 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 **4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF #4D.POP3Transporter.new().Params -->
-| Paramètres | Type               |    | Description                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objet              | -> | Mail server information                             |
-| Résultat   | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+| Paramètres | Type               |    | Description                                        |
+| ---------- | ------------------ |:--:| -------------------------------------------------- |
+| server     | Objet              | -> | Mail server information                            |
+| Résultat   | 4D.POP3Transporter | <- | [Objet POP3 transporter](#pop3-transporter-object) |
 <!-- END REF -->
 
 #### Description
