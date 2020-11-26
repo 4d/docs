@@ -128,7 +128,7 @@ Optionally, in the *description* parameter you can pass a custom text describing
 Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
 
 
-**Returned value**
+**Valeur retournée**
 
 A new [`4D.Signal` object](#signal-object).
 

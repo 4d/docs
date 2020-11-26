@@ -114,7 +114,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 // Check hash password...
 ```
 
-### Returned value
+### Valeur retournée
 
 You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. Par exemple:
 
@@ -167,7 +167,7 @@ In the method code, the value of each parameter is automatically copied into $1,
 ```
 
 
-### Returned value
+### Valeur retournée
 
 The value to be returned is automatically put into the local variable `$0`.
 

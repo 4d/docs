@@ -945,7 +945,7 @@ Query with queryPlan and queryPath objects:
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
 
-  //you can then get these properties in the resulting entity selection
+  //vous pouvez ensuite obtenir ces propriétés dans la sélection d'entité résultante
 var $queryPlan; $queryPath : Object
 $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
@@ -980,7 +980,7 @@ Query with indexed placeholders for attributes:
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name")
-  //salesperson is a related entity
+  //salesperson est une entité reliée
 ```
 
 Query with indexed placeholders for attributes and named placeholders for values:
@@ -991,7 +991,7 @@ var $querySettings : Object
 $querySettings:=New object
 $querySettings.parameters:=New object("customerName";"Smith")
 $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"name";$querySettings)
-  //salesperson is a related entity
+  //salesperson est une entité reliée
 ```
 
 Query with indexed placeholders for attributes and values:
@@ -1000,7 +1000,7 @@ Query with indexed placeholders for attributes and values:
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith")
-  //salesperson is a related entity
+  //salesperson est une entité reliée
 ```
 
 #### Exemple 2
@@ -1051,12 +1051,12 @@ Query with named placeholders for attributes and values:
  var $es : cs.EmployeeSelection
  var $name : Text
  $querySettings:=New object
-  //Named placeholders for values
-  //The user is asked for a name
- $name:=Request("Please enter the name to search:")
+  //Placeholders pour les valeurs
+  //Il est demandé à l'utilisateur de saisir un nom
+ $name:=Request("Veuillez saisir un nom à rechercher :")
  If(OK=1)
     $querySettings.parameters:=New object("givenName";$name)
-  //Named placeholders for attribute paths
+  //Placeholders pour les chemins d'attributs
     $querySettings.attributes:=New object("attName";"name")
     $es:=ds.Employee.query(":attName= :givenName";$querySettings)
  End if
@@ -1112,7 +1112,7 @@ A text formula in *queryString* receives a parameter:
 ```
 
 ```4d
-  //checkName method
+  //méthode checkName 
  #DECLARE($exclude : Text) -> $result : Boolean
  $result:=(Position($exclude;This.lastname)=0)
 ```
@@ -1126,7 +1126,7 @@ Using the same ***checkName*** method, a `Formula` object as placeholder receive
  $settings:=New object()
  $settings.args:=New object("filter";"-")
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
- $settings.args.filter:="*" // change the parameters without updating the $formula object
+ $settings.args.filter:="*" // modifie les paramètres sans mettre à jour l'objet $formula 
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
@@ -1139,7 +1139,7 @@ We want to disallow formulas, for example when the user enters their query:
  $queryString:=Request("Enter your query:")
  if(OK=1)
     $settings:=New object("allowFormulas";False)
-    $es:=ds.Students.query($queryString;$settings) //An error is raised if $queryString contains a formula
+    $es:=ds.Students.query($queryString;$settings) //Une erreur est gnérée si $queryString contient une formule
  End if
 ``` 
 
