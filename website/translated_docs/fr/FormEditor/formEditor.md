@@ -743,16 +743,16 @@ Pour déverrouiller une vue, il suffit de la sélectionner ou de cliquer à nouv
 
 ## Zoom
 
-Il est possible de zoomer dans le formulaire courant. Switch to “Zoom” mode by clicking on the magnifying glass icon or clicking directly on the desired percentage bar (50%, 100%, 200%, 400% and 800%):
+Il est possible de zoomer dans le formulaire courant. Vous pouvez passer en mode “Zoom” soit en cliquant sur l'icône de loupe, soit en cliquant directement sur la barre correspondant à l’échelle désirée dans la barre d’outils de la fenêtre (les paliers d’affichage sont 50%, 100%, 200%, 400% et 800%) :
 
 ![](assets/en/FormEditor/zoom.png)
 
-*   When you click on the magnifying glass, the cursor changes into one. You can then click in the form to increase the display or hold down Shift and click to reduce the display percentage.
-*   When you click on a percentage bar, the display is immediately modified.
+*   Lorsque vous cliquez sur le bouton loupe, le curseur prend la forme d’une loupe. Pour augmenter le pourcentage d’affichage d’un palier, cliquez dans le formulaire. Pour réduire le pourcentage d’affichage d’un palier, appuyez sur la touche Majuscule et cliquez dans le formulaire.
+*   Lorsque vous cliquez sur une barre de pourcentage, l’affichage est immédiatement modifié.
 
-In Zoom mode, all Form editor functions remain available(*).
+En mode Zoom, toutes les fonctions de l’éditeur de formulaires restent disponibles(*).
 
-(*) For technical reasons, it is not possible to select list box elements (headers, columns, footers) when the Form editor is in Zoom mode.
+(*) Pour des raisons techniques, il n'est toutefois pas possible de sélectionner d'élément de list box (en-tête, colonne ou pied) lorsque l'éditeur de formulaires est en mode Zoom.
 
 
 
