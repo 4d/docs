@@ -945,7 +945,7 @@ Query with queryPlan and queryPath objects:
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
 
-  //you can then get these properties in the resulting entity selection
+  //vous pouvez ensuite obtenir ces propriétés dans la sélection d'entité résultante
 var $queryPlan; $queryPath : Object
 $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
