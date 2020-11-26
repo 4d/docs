@@ -57,29 +57,29 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Objet ) -> *cryptoKey* : Objet<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Paramètres | Type  |    | Description                                                            |
-| ---------- | ----- | -- | ---------------------------------------------------------------------- |
-| settings   | Objet | -> | Paramètres pour générer ou charger une paire de clés                   |
-| cryptoKey  | Objet | <- | Object encapsulating an encryption key pair|<!-- END REF -->
+| Paramètres | Type  |    | Description                                                                 |
+| ---------- | ----- | -- | --------------------------------------------------------------------------- |
+| settings   | Objet | -> | Paramètres pour générer ou charger une paire de clés                        |
+| cryptoKey  | Objet | <- | Objet contenant une paire de clés de chiffrement|<!-- END REF -->
 
 
 |
 
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
+La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre d'objet *settings*. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
 
 #### *settings*
 
 | Propriété       | Type    | Description                                                                                                                    |
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [type](#type)   | Texte   | Type of the key: "RSA", "ECDSA", or "PEM":<li>"RSA": generates an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM": loads a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li>          |
+| [type](#type)   | Texte   | Type de clé : "RSA", "ECDSA", ou "PEM" :<li>"RSA" : génère une paire de clés RSA, à l'aide de `settings.size` pour la taille [.size](#size).</li><li>"ECDSA": génère une paire de clés Elliptic Curve Digital Signature Algorithm, à l'aide de `settings.curve` pour la propriété curve [.curve](#curve)). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM" : charge une définition de paire de clés au format PEM, à l'aide de `settings.pem` pour [.pem](#pem).</li>            |
 | [size](#size)   | integer | Taille de la clé RSA en octets. 2048 par défaut                                                                                |
 | [curve](#curve) | Texte   | nom de la courbe ECDSA. Généralement "prime256v1" pour ES256 (par défaut), "secp384r1" pour ES384, "secp521r1" pour ES512      |
 | [pem](#pem)     | Texte   | Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. |
 
 #### *cryptoKey*
 
-The returned `cryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+L'objet `cryptoKey` retourné encapsule une paire de clés de chiffrement. C'est un objet partagé et peut être alors utilisé par de multiples traitements 4D simultanés.
 
 
 
@@ -115,15 +115,15 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 <!-- REF #cryptokey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #cryptokey.decrypt().Params -->
-| Paramètres | Type  |    | Description                                                                   |
-| ---------- | ----- | -- | ----------------------------------------------------------------------------- |
-| message    | Texte | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
-| options    | Objet | -> | Options de décodage                                                           |
-| Résultat   | Objet | <- | Statut                                                                        |
+| Paramètres | Type  |    | Description                                                                       |
+| ---------- | ----- | -- | --------------------------------------------------------------------------------- |
+| message    | Texte | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
+| options    | Objet | -> | Options de décodage                                                               |
+| Résultat   | Objet | <- | Statut                                                                            |
 <!-- END REF -->
 
 
-The `.decrypt()` function <!-- REF #cryptokey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
+La fonction `.encrypt()` <!-- REF #cryptokey.decrypt().Summary -->déchiffre le paramètre *message* à l'aide de la clé **private** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -138,7 +138,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 #### *Résultat*
 
-The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
+La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
 
 | Propriété | Type       | Description                                                                 |
 | --------- | ---------- | --------------------------------------------------------------------------- |
@@ -147,7 +147,7 @@ The function returns a status object with `success` property set to `true` if th
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 
 
-In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
 <!-- END REF -->
 
 
