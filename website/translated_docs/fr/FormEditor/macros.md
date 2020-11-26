@@ -360,7 +360,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 La propriété `$4dId` définit un ID unique pour chaque objet de la page courante. Cette clé est utilisée par le processeur de macros pour gérer les modifications dans `$result.currentPage` :
 
-- si la clé `$4dId` est manquante à la fois dans le formulaire et dans un objet de `$result`, l'objet est créé.
+- si la clé `$4dId` est manquante à la fois dans le formulaire et dans un objet dans `$result`, l'objet est créé.
 - si la clé `$4dId` existe dans le formulaire mais est manquante dans `$result`, l'objet est supprimé.
 - si la clé `$4dId` existe à la fois dans le formulaire et dans un objet dans `$result` l'objet est modifié.
 
@@ -374,7 +374,7 @@ Function onInvoke($editor : Object)->$result : Object
     var $name : Text
 
     If ($editor.editor.currentSelection.length>0)       
-        // Set stroke to red and style to italic for each selected object
+        // Définir le contour en rouge et le style en italique pour chaque objet sélectionné
         For each ($name; $editor.editor.currentSelection)
             $editor.editor.currentPage.objects[$name].stroke:="red"
             $editor.editor.currentPage.objects[$name].fontStyle:="italic"
@@ -385,7 +385,7 @@ Function onInvoke($editor : Object)->$result : Object
         ALERT("Please select a form object.")
     End if 
 
-    // Notify to 4D the modification
+    // Notifier la modification à 4D
     $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
