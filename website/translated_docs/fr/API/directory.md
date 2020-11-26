@@ -21,7 +21,7 @@ title: Classe Directory
 
 #### Description
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+La propriété `.creationDate` retourne <!-- REF #directory.creationDate.Summary -->la date de création du dossier.<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -45,7 +45,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propriété `.creationTime` retourne <!-- REF #directory.creationTime.Summary -->l'heure de création du dossier<!-- END REF --> (exprimée en nombre de secondes, commençant à 00:00).
 
 Cette propriété est en **lecture seule**. 
 
@@ -69,7 +69,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
+La propriété `.exists` retourne <!-- REF #directory.exists.Summary -->true si le dossier existe sur le disque<!-- END REF -->, et retourne false dans le cas contraire.
 
 Cette propriété est en **lecture seule**. 
 
@@ -94,7 +94,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+La propriété `.extension` <!-- REF #directory.extension.Summary -->retourne l'extension du nom du dossier (le cas échéant)<!-- END REF -->. Une extension commence toujours par ".". La propriété retourne une chaîne vide si le nom du dossier n'a pas d'extension.
 
 Cette propriété est en **lecture seule**. 
 
@@ -118,7 +118,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
+La propriété `.fullName` <!-- REF #directory.fullName.Summary -->retourne le nom complet du dossier, y compris son extension (le cas échéant)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -142,7 +142,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+La propriété `.hidden` retourne <!-- REF #directory.hidden.Summary --> true si le dossier est défini comme "hidden" au niveau du système<!-- END REF -->, et retourne false dans le cas contraire.
 
 Cette propriété est en **lecture seule**. 
 
@@ -167,7 +167,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
+La propriété `.isAlias` retourne <!-- REF #directory.isAlias.Summary -->toujours **false** pour un objet `Folder`<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -190,7 +190,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
+La propriété `.isFile` retourne<!-- REF #directory.isAlias.Summary -->toujours **false** pour un dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -213,7 +213,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
+La propriété `.isFolder` retourne <!-- REF #directory.isFolder.Summary -->toujours **false** pour un dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -236,9 +236,9 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. Sinon, elle retourne false.
+La propriété `.isPackage` retourne <!-- REF #directory.isPackage.Summary -->true si le dossier est un package sous macOS (et s'il existe sur le disque)<!-- END REF -->. Sinon, elle retourne false.
 
-On Windows, `.isPackage` always returns **false**.
+Sous Windows, `.isPackage` retourne toujours **false**.
 
 Cette propriété est en **lecture seule**. 
 
