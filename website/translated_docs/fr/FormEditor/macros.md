@@ -72,34 +72,34 @@ Vous pouvez alors appeler la macro : ![](assets/en/FormEditor/macroex1.png) ![](
 
 ## Appeler des macros dans l'éditeur de formulaires
 
-When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
+Lorsque des macros sont définies dans votre projet 4D, vous pouvez appeler une macro à l'aide du menu contextuel de l'éditeur de formulaires :
 
 ![](assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macros items are sorted in the order macro objects are defined in the file.
+Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Les éléments de macros sont triés dans l'ordre où les objets de macro sont définis dans le fichier.
 
-When macros exist at both the project and component levels, the following order is applied:
+Lorsque des macros existent au niveau du projet et du composant, l'ordre suivant est appliqué :
 
-1. project macros
-2. component macros
+1. macros de projet
+2. macros de composants
 
-This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
+Ce menu peut être appelé dans une zone vide ou une sélection dans le formulaire. Les objets sélectionnés sont passés à `$editor.currentSelection` ou `$editor.target` dans la fonction [`onInvoke`](#oninvoke) de la macro.
 
-A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
+Une seule macro peut exécuter plusieurs opérations. Si elle est sélectionnée, la fonction **Annuler** de l'éditeur de formulaires peut être utilisée pour inverser les opérations de macro.
 
-## Location of macro file
+## Emplacement du fichier de macro
 
-All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
+Toutes les macros de l'éditeur de formulaire 4D sont définies dans un seul fichier JSON par projet ou composant : `FormMacros.json`.
 
-This file must be located in the host or component's **Project** > **Sources** folder:
+Ce fichier doit se trouver dans le dossier **Projet** >**Sources** de l'hôte ou du composant :
 
 ![](assets/en/FormEditor/macroStructure.png)
 
 
 
-## Declaring macros
+## Déclaration de macros
 
-The structure of the `formMacros.json` file is the following:
+La structure du fichier `formMacros.json` est la suivante :
 
 ```js
 {
@@ -112,7 +112,7 @@ The structure of the `formMacros.json` file is the following:
 }
 ```
 
-Here is the description of the JSON file contents:
+Voici la description du contenu du fichier JSON :
 
 <table spaces-before="0" line-breaks-before="2">
   <tr>
@@ -151,7 +151,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      list of defined macros
+      liste des macros définis
     </td>
   </tr>
   
@@ -171,7 +171,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      macro definition
+      définition de la macro
     </td>
   </tr>
   
@@ -191,7 +191,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      macro class name
+      nom de classe de la macro
     </td>
   </tr>
   
@@ -211,12 +211,12 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      (optional) custom value to retrieve in the constructor
+      (optionnel) valeur personnalisée à récupérer dans le constructeur
     </td>
   </tr>
 </table>
 
-Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
+Les propriétés personnalisées, lorsqu'elles sont utilisées, sont passées à la fonction [constructeur](#class-constructor) de la macro.
 
 ### Exemple
 
@@ -238,23 +238,23 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 }
 ```
 
-> Keep in mind that the order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.
+> Gardez à l'esprit que l'ordre des objets macros dans le fichier définit l'organisation du menu [**Macros**](#calling-macros-in-the-form-editor) dans l'éditeur de formulaires.
 
 
-## Instantiating macros in 4D
+## Instancier des macros dans 4D
 
-Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
+Chaque macro que vous souhaitez instancier dans votre projet ou composant doit être déclarée en tant que [classe 4D](Concepts/classes.md).
 
-The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file.
+Le nom de la classe doit correspondre au nom défini à l'aide de l'attribut [class](#creating-macros) du fichier `formMacros.json`.
 
-Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
-
-
+Les macros sont instanciées au lancement de l'application. Par conséquent, si vous modifiez la structure de la classe de macro (ajouter une fonction, modifier un paramètre, etc.) ou le [constructeur](#class-constructor), vous devrez redémarrer l'application pour appliquer les modifications.
 
 
-## Macro Functions
 
-Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
+
+## Fonctions macro
+
+Chaque classe de macro peut contenir un `Class constructor` (constructeur de classe) et deux fonctions : `onInvoke()` et `onError()`.
 
 
 ### Class constructor
@@ -275,7 +275,7 @@ Les propriétés personnalisées ajoutées à la [déclaration macro](#declaring
 
 #### Exemple
 
-In the `formMacros.json` file:
+Dans le fichier `formMacros.json` :
 
 ```js
 {
@@ -302,10 +302,10 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| Paramètres | Type  | Description                                      |
-| ---------- | ----- | ------------------------------------------------ |
-| $editor    | Objet | Form properties                                  |
-| $result    | Objet | Form properties modified by the macro (optional) |
+| Paramètres | Type  | Description                                                  |
+| ---------- | ----- | ------------------------------------------------------------ |
+| $editor    | Objet | Propriétés du formulaire                                     |
+| $result    | Objet | Propriétés du formulaire modifiées par la macro (facultatif) |
 
 La fonction `onInvoke` est automatiquement exécutée à chaque fois que la macro est appelée.
 
@@ -354,15 +354,15 @@ When handling the `method` attribute of form objects, you can define the attribu
 |           |      |             |
  source|Chaine|Code de la méthode|
 
-4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
+4D créera un fichier en utilisant le nom de l'objet dans le dossier "objectMethods" avec le contenu de l'attribut `source`. Cette fonctionnalité n'est disponible que pour le code macro.
 
-#### `$4dId` property in `currentPage.objects`
+#### Propriété `$4dId` dans `currentPage.objects`
 
-The `$4dId` property defines a unique ID for each object in the current page. This key is used by the macro processor to control changes in `$result.currentPage`:
+La propriété `$4dId` définit un ID unique pour chaque objet de la page courante. Cette clé est utilisée par le processeur de macros pour gérer les modifications dans `$result.currentPage` :
 
-- if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
-- if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
-- if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+- si la clé `$4dId` est manquante à la fois dans le formulaire et dans un objet dans `$result`, l'objet est créé.
+- si la clé `$4dId` existe dans le formulaire mais est manquante dans `$result`, l'objet est supprimé.
+- si la clé `$4dId` existe à la fois dans le formulaire et dans un objet dans `$result` l'objet est modifié.
 
 
 #### Exemple
@@ -374,7 +374,7 @@ Function onInvoke($editor : Object)->$result : Object
     var $name : Text
 
     If ($editor.editor.currentSelection.length>0)       
-        // Set stroke to red and style to italic for each selected object
+        // Définir le contour en rouge et le style en italique pour chaque objet sélectionné
         For each ($name; $editor.editor.currentSelection)
             $editor.editor.currentPage.objects[$name].stroke:="red"
             $editor.editor.currentPage.objects[$name].fontStyle:="italic"
@@ -385,7 +385,7 @@ Function onInvoke($editor : Object)->$result : Object
         ALERT("Please select a form object.")
     End if 
 
-    // Notify to 4D the modification
+    // Notifier la modification à 4D
     $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
