@@ -12,14 +12,14 @@ The Form editor interface displays each JSON form in its own window, which has b
 
 ### Showing/hiding Form elements
 
-You can show or hide most interface elements in the Form editor. This feature allows you to show only the elements that you need to create or view in a form, or only the tools that you want to use. This option is always applied to the Form editor’s current window. For example, it is useful to show the output control lines when you are working on an output form.
+Vous pouvez choisir d’afficher ou de masquer les éléments de la fenêtre de l’éditeur. Cette fonctionnalité permet de n’afficher que les éléments nécessaires à la création ou à la visualisation du formulaire, ou de choisir les outils que vous souhaitez utiliser. This option is always applied to the Form editor’s current window. Par exemple, il est généralement inutile d’afficher les taquets et leurs libellés lorsque vous travaillez avec un formulaire entrée.
 
-To show or hide an element in the Form editor:
+Pour afficher ou masquer un élément de l’éditeur de formulaires :
 
-1.  Choose **Display** from the Form menu. OR Use the **Display** command in the context menu that appears in the Form editor’s window (right-click in the window without clicking on an object). A hierarchical submenu appears listing all the elements that you can show or hide:<p>![](assets/en/FormEditor/showHideElements.png)<p>A check mark placed next to the element indicates that it will be shown. To hide an element, select the element so that the check mark disappears.
+1.  Dans le menu Formulaire, choisissez la commande **Afficher**. OU Utilisez la commande **Afficher** du menu contextuel de l’éditeur (cliquez avec le bouton droit de la souris en-dehors de tout objet). Cette commande fait apparaître un sous-menu hiérarchique listant les éléments que vous pouvez afficher ou masquer :<p>![](assets/en/FormEditor/showHideElements.png)<p>Une coche placée en regard d’un élément indique son affichage. Sélectionnez l’élément que vous souhaitez masquer ou afficher.
 
-2.  Select the element that you want to show or hide.<p>Here is a description of the commands in this menu:
-    *   **Inherited form**: Shows or hides inherited form objects (if there is an inherited form) on the current page of the form. For more information, refer to Using inherited forms.
+2.  Sélectionnez l’élément que vous souhaitez masquer ou afficher.<p>Voici la description des commandes de ce menu :
+    *   **Formulaire hérité** : affiche ou masque les objets du formulaire hérité (s’il y en a un) dans la page courante du formulaire. Pour plus d’informations, reportez-vous au paragraphe Utiliser l'héritage de formulaire.
     *   **Page 0**: Shows or hides the objects from page 0 on the form’s current page. This option allows you to distinguish between the objects on the form’s current page and those on page 0. For more information about pages in forms, refer to the Creating a multi-page form section.
     *   **Paper**: Shows or hides the borders of the printing page, which are shown as gray lines. This option may have no apparent effect when the Limits (see below) option is selected. If the size of the form is smaller than the printing page, the page’s borders are shown outside of the form’s viewing area and therefore do not appear. Refer to Printing a form.
     *   **Rulers**: Shows or hides the rulers in the Form editor’s window. Markers: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
