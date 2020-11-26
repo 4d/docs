@@ -1,57 +1,32 @@
 ---
-id: webAdmin
-title: Web Administration
+id: dataBrowser
+title: Data Browser (web)
 ---
 
 
-You can monitor your running 4D and 4D Server applications through the web. An embedded web server component, `WebAdmin`, offers a dedicated administration interface. You can connect locally or remotely to this web server from a browser or any web application and administrate the associated 4D application. 
-
-The WebAdmin includes two main tools:
-
-- the Web Administration, to configure and monitor your 4D or 4D Server application,
-- the Data Browser, to view and handle the data within your datastore.
-
-This feature is specially intended for 4D applications running headless - but can also be used with any 4D applications, including those with interfaces.
+The 4D Data Browser provides a web interface to enter, view, and manage data in your datastore. Using this tool, you can easily import or export data, create or delete entities in the dataclasses, search, order, or compare attribute values. It helps you to quickly identify issues and control data at any steps of the development process. 
 
 
-## Starting the WebAdmin web server
+## Enabling the Data Browser
 
-By default, the `WebAdmin` web server is not launched at 4D or 4D Server startup. You can launch it automatically or at any moment. 
-
-
-### Launching at startup
-
-By default, the `WebAdmin` web server is not launched at 4D or 4D Server startup. 
-
-To configure an automatic startup:
-
-- If you use a 4D application with interface, select **Web server administration automatic startup** option in the Web administration settings dialog box:
-
-![alt-text](assets/en/Admin/waSettings.png)
+The Data Browser relies on the `WebAdmin` web server component for the configuration and authentication settings: the Data Browser is automatically available when [the `WebAdmin` web server is launched](webAdmin.md#starting-the-webadmin-web-server) and the [session user is authenticated](webAdmin.md#authentication-and-session).  
 
 
-- Whether you use 4D application which is headless or not, you can enable the automatic startup mode using the following Command Line Interface argument:
+## Opening a Data Browser window
 
-```
---webadmin-auto-start { true | false }
-```
+Once the Data Browser is enabled, you can open a Data Browser window:
 
-Example: 
+- If you use a 4D application with interface, select **Open DataBrowser Web Interface** command from the **Administration** menu.
 
-```
-open ~/Desktop/4D.app --webadmin-auto-start true
-```
+- Whether you use 4D application which is headless or not, you can open your web browser and enter the following address:
 
-> If the TCP port used by the `WebAdmin` web server (HTTPS or HTTP, depending on the settings) is not free at startup, 4D will try to use alternatively the 20 following ports, and use the first available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console. 
+`IP:HTTPPort/databrowser`
 
+or
 
-### Start and stop on demand
+`IP:HTTPSPort/databrowser`
 
-You can start or stop the `WebAdmin` web server for your project at any moment:
-
-- If you use a 4D application with interface, select **Start/Stop Web admin server** from the **Administration** menu.
-
-- Whether you use 4D application which is headless or not, you can execute the [.start()](API/webServerClass.md#start) or [.stop()](API/webServerClass.md#stop) function on the `WebAdmin` web server once it is instanciated.  
+[HTTPPort](webAdmin.md#http-port) and [HTTPSPort](webAdmin.md#https-port) are configured in the `WebAdmin` settings. 
 
 
 ## WebAdmin Settings

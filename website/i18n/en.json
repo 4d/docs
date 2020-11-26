@@ -11,6 +11,9 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "Admin/webAdmin": {
+        "title": "Administration tools (web)"
+      },
       "API/classClass": {
         "title": "Class"
       },
