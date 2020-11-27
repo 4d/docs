@@ -9,26 +9,36 @@ The 4D Data Browser provides a web interface to enter, view, and manage data in 
 
 ## Access Configuration
 
-The Data Browser relies on the `WebAdmin` web server component for the configuration and authentication settings.
+The Data Browser relies on the `WebAdmin` web server component for the configuration and authentication settings. 
 
-- **configuration**: the Data Browser is automatically available when [the `WebAdmin` web server is launched](webAdmin.md#starting-the-webadmin-web-server) and configured,
-- **authentication**: access to the Data Browser is only granted when the [session user is authenticated](webAdmin.md#authentication-and-session).  
+- **configuration**: the Data Browser is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server) and [configured](webAdmin.md#webadmin-settings),
+- **authentication**: access to the Data Browser is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and if the user has the "WebAdmin" privilege. When the Data Browser is accessed through the **Open DataBrowser Web Interface** menu (see below), an automatic authentication is provided. 
 
+## Opening the Data Browser
 
-## Opening a Data Browser window
+The Data Browser page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server) and [configured](webAdmin.md#webadmin-settings).
 
-Once enabled, the Data Browser is available through a web page. 
+To connect to the Data Browser web page:
 
-- If you use a 4D application with interface, select **Open DataBrowser Web Interface** command from the **Administration** menu.
+- if you use a 4D application with interface, select **Open DataBrowser Web Interface** command from the **Administration** menu.
 
-- Whether you use 4D application which is headless or not, you can open your web browser and enter the following address:
+- whether you use 4D application which is headless or not, you can open your web browser and enter the following address:
 
-`IP:HTTPPort/databrowser`
+`IPaddress:HTTPPort/databrowser`
 
 or
 
-`IP:HTTPSPort/databrowser`
+`IPaddress:HTTPSPort/databrowser`
 
 [HTTPPort](webAdmin.md#http-port) and [HTTPSPort](webAdmin.md#https-port) are configured in the `WebAdmin` settings. 
- 
 
+
+## Authentication
+
+Access to the Data Browser requires that the user session is authenticated and has the "WebAdmin" privilege.
+
+> If no [access key](webAdmin.md#access-key) has been defined, a warning message is displayed by the Data Browser.
+
+When the Data Browser is accessed through the **Open DataBrowser Web Interface** menu, the user is automatically authenticated. 
+
+When the Data Browser is accessed by entering a URL and without prior identification, an authentication is required. The authentication configuration is handle in the [WebAdmin](webAdmin.md#authentication-and-session). 

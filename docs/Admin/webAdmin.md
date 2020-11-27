@@ -112,7 +112,7 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 
 #### Access Key
 
-Access key definition. Once an access key is defined for a WebAdmin server, web clients must provide this access key to be allowed to connect to the WebAdmin page. 
+Access key definition. Once an access key is defined for a WebAdmin server, web clients must provide this access key to be allowed to connect to the WebAdmin page or to the [Data Browser page](dataBrowser.md). 
 
 
 ## WebAdmin Headless Configuration
@@ -148,7 +148,9 @@ As soon as an access key [is defined](#access-key) in the settings, any connecti
 
 > If no access key has been defined (empty string), a warning message is displayed by the WebAdmin.
 
-When the WebAdmin web server is accessed without prior identification, an authentication is required. 
+When the WebAdmin web server is accessed from the **Open Web admin interface** command of the **Administration** menu, the user is automatically authenticated. 
+ 
+When the WebAdmin web server is accessed by entering a URL and without prior identification, an authentication is required. 
 
 - By default, the WebAdmin web server displays an authentication dialog box, allowing the user to enter the access key.
 - You can also implement a custom authentication interface and validate the entered access key using the [`.validateAccessKey()`] function of the WebAdmin Web server.
