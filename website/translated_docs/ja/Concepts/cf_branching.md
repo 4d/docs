@@ -3,7 +3,7 @@ id: branching
 title: 分岐構造
 ---
 
-A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+分岐構造は、条件をテストし、その結果に基づいて異なる流れにメソッドを導きます。
 
 
 ## If...Else...End if
