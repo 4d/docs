@@ -92,7 +92,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Une extension commence toujours par ".". The property returns an empty string if the file name does not have an extension.
 
 Cette propriété est en **lecture seule**. 
 

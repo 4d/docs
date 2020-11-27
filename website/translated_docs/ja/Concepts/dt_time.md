@@ -9,7 +9,7 @@ title: 時間
 
 時間の値は数値として扱うことができます。 時間から返される数値は、その時間が表す総秒数です。
 
-**Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**注:** *4Dランゲージリファレンス* マニュアルでは、コマンド説明における時間引数は特に明記されていない限り、「時間」と表記されています。
 
 ## 時間リテラル
 

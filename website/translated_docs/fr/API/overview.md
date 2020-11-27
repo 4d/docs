@@ -19,9 +19,9 @@ Les conventions suivantes sont utilisées dans la syntaxe de la fonction :
 
 ## Autres ressources
 
-For an overall presentation of the 4D Language basics and concepts, please go to the [4D Language Concepts](Concepts/about.md) section.
+Pour une présentation générale des fondements et concepts du langage 4D, veuillez consulter la section [Concepts du langage 4D](Concepts/about.md).
 
-For a description of the 4D "classic" language, please go to the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). 
+Pour une description du langage «classique» de 4D, veuillez vous reporter au manuel de *Langage 4D* sur [doc.4d.com](https://doc.4d.com). 
 
 
 
