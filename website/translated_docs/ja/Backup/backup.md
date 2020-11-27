@@ -63,7 +63,7 @@ MSC を使用している場合、この進捗インジケーターは [MSC の�
 
 バックアップが正常に実行されない場合もあります。 バックアップが不成功に終わる原因としては、ユーザーによる中断、添付ファイルが見つからない場合、保存先ディスクのトラブル、不完全なトランザクションなど、いくつか考えられます。4D は原因に応じて問題に対処します。
 
-In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the database **Backup journal.txt**.
+すべての場合において、前回のバックアップのステータス (成功または不成功) は、[MSC のバックアップページ](MSC/backup.md) の "前回のバックアップの情報" エリア、4D Server の **メンテナンスページ**、およびデータベースの **バックアップジャーナル** (Backup Journal.txt) に表示されます。
 
 - **ユーザーによる中断**: 進捗ダイアログボックスの **中止** ボタンをクリックすると、いつでもバックアップを中断することができます。 この場合、各項目のコピーが中止されてエラー 1406 が生成されます。 このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
 - **添付ファイルが見つからない**: 添付ファイルが見つからない場合、4D はバックアップを部分的に実行し (データベースファイルおよびアクセス可能な添付ファイルのバックアップ)、エラーを返します。
