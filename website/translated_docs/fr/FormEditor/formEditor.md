@@ -22,7 +22,8 @@ Pour afficher ou masquer un élément de l’éditeur de formulaires :
     *   **Formulaire hérité** : affiche ou masque les objets du formulaire hérité (s’il y en a un) dans la page courante du formulaire. Pour plus d’informations, reportez-vous au paragraphe Utiliser l'héritage de formulaire.
     *   **Page 0** : affiche ou masque les objets de la page 0 dans la page courante du formulaire. Cette option vous permet de mieux visualiser et distinguer les objets de la page courante et ceux de la page 0. Pour plus d’informations, reportez-vous à la section Définir un formulaire multi-pages.
     *   **Papier** : affiche ou masque les contours de la page d’impression sous forme de filets grisés. Cette option peut être sans effet apparent lorsque l’option Limites (cf. ci-dessous) est sélectionnée. En effet dans ce cas, lorsque la taille du formulaire est inférieure à celle de la page d’impression, les contours de celle-ci sont affichés en-dehors de la zone de visualisation du formulaire et donc n’apparaissent pas. Reportez-vous à la section Imprimer un formulaire.
-    *   **Règle** : affiche ou masque les règles de la fenêtre de l’éditeur. Taquets : affiche ou masque les taquets délimitant les différentes zones du formulaire.
+    *   **Règle** : affiche ou masque les règles de la fenêtre de l’éditeur.
+    *   **Markers**: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
     *   **Libellés des taquets** : affiche ou masque les libellés des taquets, lorsque ceux-ci sont affichés. Pour plus d’informations sur les taquets et leurs libellés, reportez-vous à la section Déplacer les taquets.
     *   **Limites** : affiche ou masque les limites du formulaire. Lorsque cette option est sélectionnée, le formulaire est affiché dans l’éditeur tel qu’il apparaîtra en mode Application. Cette possibilité est particulièrement intéressante pour ajuster un formulaire sans devoir tester le mode Application pour visualiser le résultat.
 > Les options **Taille basée sur**, **Marge hor.** et **Marge ver.** des propriétés du formulaire modifient les limites du formulaire. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence. Pour plus d’informations sur les propriétés du formulaire, reportez-vous à la section [Propriétés des formulaires](jsonReference.html).
@@ -237,81 +238,81 @@ Le sous-menu Aligner du menu Objets (ou du menu contextuel de l’éditeur) et l
 
 ![](assets/en/FormEditor/alignmentMenu.png)
 
-Lorsque 4D aligne des objets, il utilise l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
+Lorsque 4D aligne des objets, il utilise l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite. Voici le résultat des alignements "aucun", "à gauche", "centré horizontalement" et "à droite" :
 
 ![](assets/en/FormEditor/alignmentTools.png)
 
-#### Using the alignment assistant
+#### Utiliser la boîte de dialogue d’alignement
 
-The Alignment Assistant allows you to perform any type of alignment and/or distribution of objects.
+La boîte de dialogue d’alignement vous permet d’appliquer tout type d’alignement et/ou de répartition aux objets sélectionnés.
 
 ![](assets/en/FormEditor/alignmentAssistant.png)
 
 
-To display this dialog box, select the objects you want to align then choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+Pour afficher cette boîte de dialogue, vous devez sélectionner les objets que vous souhaitez aligner puis choisir la commande **Alignement...** dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l’éditeur.
 
-*   In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.
+*   Cliquez sur l’icône d’alignement de votre choix dans les zones “Alignement droite/gauche” et/ou “Alignement haut/bas”.<p>La zone d’exemple illustre le principe de l’opération sélectionnée.
 
-*   To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**.<p>In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>OR:<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.
+*   Pour effectuer un alignement standard des objets sélectionnés, cliquez sur le bouton **Prévisualisation** ou **Appliquer**.<p>Dans ce cas, 4D utilisera l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite.<p>OU BIEN :<p>Pour aligner le groupe d’objets par rapport un objet particulier, cochez l’option **Aligner sur** puis sélectionnez dans la liste déroulante le nom de l’objet par rapport auquel aligner les autres. Dans ce cas, la position de l’objet de référence ne variera pas.
 
-You can preview the results of the alignment by clicking the **Preview** button. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
-> This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
+Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation**. l’opération s’effectue dans l’éditeur de formulaires, mais la boîte de dialogue reste au premier plan. Vous pouvez alors Appliquer ou Annuler les modifications.
+> Cette boîte de dialogue combine l’alignement d’objets et leur répartition. Pour plus d’informations sur la répartition, reportez-vous au paragraphe [Répartir des objets](#distributing-objects).
 
-#### Using the Magnetic Grid
+#### Utiliser l’alignement magnétique
 
-The Form editor provides a virtual magnetic grid that can help you place and align objects in a form. Magnetic alignment of objects is based on their position in relation to each other. The magnetic grid can only be used when at least two objects are present in the form.
+L’éditeur de formulaires est doté d’une grille magnétique virtuelle qui peut vous aider à placer et à aligner des objets sur un formulaire. L’alignement magnétique des objets est basée sur la position relative des objets entre eux. Le magnétisme n’est utilisable que lorsqu’au moins deux objets sont présents dans le formulaire.
 
-This works as follows: When you move an object in the form, 4D indicates possible locations for this object based on noticeable alignments with other form objects. A noticeable alignment is established each time that:
+Le principe est le suivant : lorsque vous faites glisser un objet dans le formulaire, 4D indique des emplacements possibles pour cet objet sur la base d’alignements remarquables avec les autres objets du formulaire. Un alignement remarquable est établi à chaque fois que :
 
 *   Horizontally, the edges or centers of two objects coincide,
 *   Vertically, the edges of two objects coincide.
 
-When this happens, 4D places the object at the location and displays a red line indicating the noticeable alignment taken into account:
+A ce moment, 4D place l’objet à l’emplacement et affiche un trait rouge indiquant l’alignement remarquable pris en compte :
 
 ![](assets/en/FormEditor/magneticGrid1.png)
 
-Concerning the distribution of objects, 4D proposes a distance based on interface standards. Like with magnetic alignment, red lines indicate the noticeable differences once they are reached.
+En ce qui concerne la répartition des objets, 4D propose une distance basée sur les standards d’interface (20 points). Comme pour l’alignement magnétique, des traits rouges indiquent les distances remarquables au moment où elles sont atteintes.
 
 ![](assets/en/FormEditor/magneticGrid2.png)
 
-This operation applies to all types of form objects. The Magnetic Grid can be enabled or disabled at any time using the **Magnetic Grid** command in the **Form** menu or in the editor context menu. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
-> The Magnetic Grid also influences the manual resizing of objects.
+Ce fonctionnement s’applique à tous les types d’objets des formulaires. Le magnétisme peut être activé ou désactivé à tout moment à l’aide de la commande **Activer la grille magnétique** du menu **Formulaire** ou du menu contextuel de l’éditeur. Il est également possible de définir l’activation par défaut de cette fonction dans la page **Préférences** >**Formulaires** (option **Activer l'auto-alignement par défaut**). Il est possible d’activer ou de désactiver manuellement la grille magnétique lorsqu’un objet est sélectionné en appuyant sur la touche **Ctrl** (Windows) ou **Control** (Mac Os).
+> Le magnétisme entraîne également l’observation de paliers lors du redimensionnement manuel des objets.
 
 ### Distributing objects
 
-You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. The latter allows you to align and distribute objects in one operation.
-> When the [Magnetic Grid](#using-the-magnetic-grid) is on, a visual guide is also provided for distribution when an object is moved manually.
+Vous pouvez répartir des objets de manière à ce qu’ils soient disposés en respectant un espacement égal entre eux. Pour cela, vous pouvez utiliser des commandes directes de répartition ou passer par l’intermédiaire de la boîte de dialogue d’alignement et répartition pour effectuer des répartitions spécifiques ou combiner alignement et répartition. The latter allows you to align and distribute objects in one operation.
+> Lorsque la [grille magnétique](#using-the-magnetic-grid) est activée, une aide visuelle est également fournie pour la répartition lors du déplacement manuel d’un objet.
 
-To distribute objects with equal spacing:
+Pour répartir directement une sélection d’objets (verticalement ou horizontalement) :
 
-1.  Select three or more objects and click the desired Distribute tool.
+1.  Sélectionnez les objets (au moins trois) que vous souhaitez répartir.
 
-2.  In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<p>![](assets/en/FormEditor/distributionTool.png)<p>OU<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.<p>4D distributes the objects accordingly. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
+2.  Dans la barre d’outils, cliquez sur l’outil de répartition qui correspond la répartition que vous souhaitez appliquer.<p>![](assets/en/FormEditor/distributionTool.png)<p>OU<p>Choisissez la commande Répartir horizontalement ou Répartir verticalement dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l'éditeur.<p>4D répartit les objets par rapport à leurs centres, la plus grande distance entre deux objets contigus est utilisée comme distance de référence.
 
-To distribute objects using the Align and Distribute dialog box:
+Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et répartition :
 
-1.  Select the objects you want to distribute.
+1.  Sélectionnez les objets que vous souhaitez répartir.
 
-2.  Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.<p>The following dialog box appears:![](assets/en/FormEditor/alignmentAssistant.png)
+2.  Choisissez la commande **Alignement...** dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l’éditeur.<p>La boîte de dialogue suivante apparaît :![](assets/en/FormEditor/alignmentAssistant.png)
 
-3.  In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Standard horizontal distribution icon)<p>The example area displays the results of your selection.
+3.  Cliquez sur l’icône de répartition standard (horizontale ou verticale) de votre choix: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(icône de répartition horizontale standard)<p>La zone d’exemple illustre le principe de l’opération sélectionnée.
 
-4.  To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:
+4.  Pour effectuer une répartition standard, cliquez sur le bouton **Prévisualisation** ou *Appliquer*.<p>Dans ce cas, les objets seront répartis de manière à ce que leurs côtés soient équidistants (répartition standard).<p>OU BIEN :<p>Pour effectuer une répartition spécifique (par exemple répartir les objets de manière à ce que leurs côtés droits — et non plus leurs intervalles soient équidistants), cochez une option **Répartir**. This option acts like a switch. Lorsque l'option Répartir est cochée, les icônes situées au-dessous d’elle s’appliquent alors à la répartition :
 
-    *   Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
-    *   Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
+    *   Horizontalement, les icônes correspondent aux répartitions suivantes : équidistance des côtés gauches, des centres (hor.) et des côtés droits des objets sélectionnés.
+    *   Verticalement, les icônes correspondent aux répartitions suivantes : équidistance des bords supérieurs, des centres (vert.) et des bords inférieurs des objets sélectionnés.
 
-    You can preview the actual result of your settings by clicking on the **Preview** button: the operation is carried out in the Form editor but the dialog box stays in the foreground. You can then **Cancel** or **Apply** the modifications.
-> This dialog box lets you combine object alignment and distribution. For more information about alignment, refer to [Aligning objects](#aligning-objects).
+    Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation** : l’opération s’effectue dans l’éditeur de formulaires, mais la boîte de dialogue reste au premier plan. Vous pouvez alors Appliquer ou Annuler les modifications. You can then **Cancel** or **Apply** the modifications.
+> Cette boîte de dialogue vous permet de combiner l’alignement d’objets et leur répartition. Pour plus d’informations sur l’alignement, reportez-vous au paragraphe [Aligner des objets](#aligning-objects).
 
 
-### Layering objects
+### Gérer les plans des objets
 
-You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. 4D provides four menu items, **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** that let you “layer” objects on the form. These layers also determine the default entry order (see Modifying data entry order). The figure below shows objects in front of and behind other objects:
+Il est parfois nécessaire de réorganiser certains objets qui occultent d’autres objets du formulaire. Par exemple, vous pouvez souhaiter voir apparaître un graphique derrière les champs dans un formulaire. 4D propose 4 commandes, **Passer au dernier plan**, **Passer au premier plan**, **Plan suivant** et **Plan précédent**, qui vous permettent d’organiser les plans des objets du formulaire. These layers also determine the default entry order (see Modifying data entry order). La fenêtre ci-dessous représente des objets organisés en couches :
 
 ![](assets/en/FormEditor/layering.png)
 
-To move an object to another level, select it and choose:
+Pour modifier le plan d'un objet, sélectionnez-le et choisissez :
 
 *   One of the **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** commands of the Object menu,
 *   One of the commands in the **Level>** submenu in the context menu of the editor,
