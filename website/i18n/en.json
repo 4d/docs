@@ -791,7 +791,7 @@
         "title": "Web Server object"
       },
       "WebServer/webServerSecurity": {
-        "title": "Server Security"
+        "title": "Security"
       },
       "WebServer/webServerSessions": {
         "title": "Session Management"

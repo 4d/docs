@@ -4,44 +4,113 @@ title: Security
 ---
 
  
-The security of your 4D Web Server is based on the following elements:
+Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. 
 
-*	**Authentication**: flexible and highly customizable password management system via buil-it settings and the [`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) database method,
+The 4D web server security is based upon the following elements:
+
+*	**Authentication**: flexible and highly customizable authentication system via built-it settings and the [`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) database method,
 
 *	**Sandboxing** through the definition of a [HTML Root](#default-html-root) folder by default,
 
-*	**Control of exposed contents**: each function or project method that will be available must be explicitely declared.
+*	**Control of exposed contents**: only functions or project methods that you declare explicitely can be available from web requests.
 
 * [**TLS Protocol (HTTPS)**](webServerConnectSecurity.md#tls-protocol-https) support.
 
 >For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
 
-## Password Management   
+## Authentication mode
 
-### BASIC Mode and DIGEST Mode  
+Authentication designates the way the information concerning the user name and password are collected and processed. 
 
-In the Database Settings, you can set the access control system that you want to apply to your Web server. Two authentication modes are provided: BASIC mode and DIGEST mode. The authentication mode concerns the way the information concerning the user name and password are collected and processed.
+The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
 
-*	In BASIC mode, the name and password entered by the user are sent unencrypted in the HTTP requests. This does not ensure total system security since this information could be intercepted and used by a third party.
+![](assets/en/WebServer/authentication.png)
 
-*	The DIGEST mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
+### Overview 
 
-For the user, the use of either authentication mode is transparent.
+The operation of the 4D web server's access system is summarized in the following diagram:
 
->For compatibility reasons, the BASIC authentication mode is used by default in 4D databases that are converted to version 11 (if the “Use Passwords” option was checked in the previous version). You must explicitly activate the Digest mode.
+![](assets/en/WebServer/serverAccess.png)
 
->Digest authentication is an HTTP1.1 function and is not supported by all browsers. For example, only versions 5.0 and later of Microsoft Internet Explorer accept this mode. If a browser that does not support this functionality sends a request to a web server when Digest authentication is activated, the server will reject the request and return an error message to the browser.
 
-You can now define, in the Database Settings dialog box, the access control system you want to apply to your 4D Web server. To do this, choose the Options (I) page of the **Web** theme:
 
-In the "Passwords" area, three options are available to you:
+- **Custom** (default):  
 
-*	**No passwords**: No authentication is carried out for connections to the web server. In this case:
+- **Basic protocol**: the name and password entered by the user are sent unencrypted in the HTTP request header. This does not ensure total system security since this information could be intercepted and used by a third party. It typically requires HTTPS to provide confidentiality. 
 
-	*	If the `On Web Authentication Database Method` exists, it is executed and, in addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. In this case, you can filter connections according to the IP address of the browser and/or the requested IP address of the server.
+- **Digest protocol**: provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
 
-	*	If the `On Web Authentication Database Method` does not exist, connections are automatically accepted.
+
+
+### Custom (default)
+
+Basically in this mode, 4D only calls the `On Web Authentication` database method with user credentials (and other information) for each request that is not already authenticated. It's up to the developer to provide the user with a way to authenticate. Once the user is authenticated, a user session will manage the user access through a cookie.  
+
+When this option is selected and the 4D web server receives an unauthenticated request, the [`On Web Authentication`](#on-web-authentication) database method is executed (if it exists) and, in addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated (and the resquested resource is served), and **False** in $0 if the authentication failed.  
+
+> **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode). 
+
+This authentication mode is the most flexible because it allows you to:
+
+- provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; validate user requests using a custom algorithm; 
+- or, delegate the user authentication to a third-party application (e.g. a social network).
+
+You can mix both solutions in your application.  
+
+
+Verifying the user credentials requires that you:
+
+
+provide the user with a way 
+
+(web form, SSO) to create their account; when submitted, in the 4D database, you store only a hash value for the user at the account creation, for example:
+
+```4d
+webUser.hash:=Generate password hash($password)  
+webUser.save()
+```  
+
+- provide the user with a way (e.g. a web form) to authenticate; when the form is submitted, the [`On Web Authentication`](#on-web-authentication) database method is called. In this method, use the `WEB GET VARIABLES` command to get entered values and the `Verify password hash` command to check the password:
+
+```4d
+C_LONGINT($posit)
+C_TEXT($username; $password)
+
+ARRAY TEXT($tName; 0)
+ARRAY TEXT($tVal; 0)
+
+Case of 
+	: ($1="/login")
+		
+		WEB GET VARIABLES($tName; $tVal)
+			
+			// get credentials from the form
+		$posit:=Find in array($tName; "username")
+		If ($posit>0)
+			$username:=$tVal{$posit}
+		End if 
+		
+		$posit:=Find in array($tName; "password")
+		If ($posit>0)
+			$password:=$tVal{$posit}
+		End if 
+			
+			// we use a custom user table
+		QUERY([WebUser]; [WebUser]User=$username)
+		
+		If (OK=1)  //we have a user with this name
+			$0:=Verify password hash($password; [WebUsers]hash)			
+		Else 			
+			$0:=False
+		End if 
+		
+End case 
+```
+ 
+
+
+
 Passwords with BASIC protocol: Standard authentication in BASIC mode. When a user connects to the server, a dialog box appears on their browser in order for them to enter their user name and password. These two values are then sent to the `On Web Authentication Database Method` along with the other connection parameters (IP address and port, URL...) so that you can process them.
 This mode provides access to the Include 4D passwords option that allows you to use, instead of or in addition to your own password system, 4D’s database password system (as defined in 4D).
 
@@ -83,31 +152,32 @@ Unlike BASIC mode, the DIGEST mode is not compatible with standard 4D passwords:
 
 When the DIGEST mode is activated, the $6 parameter (password) is always returned empty in the `On Web Authentication Database Method`. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
 
-The operation of the 4D Web Server's access system is summarized in the following diagram:
-
-![](assets/en/WebServer/serverAccess.png)
 
 
 
 
+## On Web Authentication
 
 
 
 
-## About robots (security note)  
+## On Web Connection
+
+
+## About robots 
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
 
-To do so, put the ROBOTS.TXT file at the server’s root. This file must be structured in the following manner:
+To do so, put the ROBOTS.TXT file at the server's root. This file must be structured in the following manner:
 
-   ```code4d
+   ```4d
    User-Agent: <name>
    Disallow: <URL> or <beginning of the URL>
    ```
    
 For example:
 
-   ```code4d
+   ```4d
    User-Agent: *
    Disallow: /4D
    Disallow: /%23%23

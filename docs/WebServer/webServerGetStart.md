@@ -169,7 +169,7 @@ You can also get any data.
 }
 ``` 
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed (see security below). In your web interfaces, you can easily bind the javascript or html code with returned data. XXXSee the "Datagrid" page to have an example of web interface bound to dataclasses through JSON.
+This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed (see security below). In your web interfaces, you can easily bind the javascript or html code with returned data. XXXSee the "Data Browser" page to have an example of web interface bound to dataclasses through JSON.
 
 
 ## Login and session
@@ -278,13 +278,13 @@ A more realistic example would use a custom \[Users] table and a hash code chall
 		
 ```
 
-In this example, the \[WebUsers] table could be encrypted for security. Note however that only the hash of the user password is stored and used for validation, not the password itself. The hash can be stored at user account creation using the following simple line of code:
+In this example, the \[WebUsers] table could be [encrypted](MSC/encrypt.md) for security. Note however that only the hash of the user password is stored and used for validation, not the password itself. The hash can be stored at user account creation using the following simple line of code:
 
 ```4d
 [WebUsers]hash:=Generate password hash($password) 
 ```  
 
-> To be secure from end to end, it is recommended that the connection is established via https.  
+> To be secure from end to end, it is recommended that the connection is established via [https](webServerConfig.md#enable-https).  
 
 
 Once the user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. 
