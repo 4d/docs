@@ -376,30 +376,18 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 > このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
 
-以下の例題では *Color* プロジェクトメソッドを使用する場合を考えます。 
+**例題**
 
-フォームメソッドには、以下のように書きます:
-
-
-
-```4d
-// フォームメソッド
-Case of
-  :(Form event=On Load)
-   Form.meta:=New object
-End case
-```
-
-
-*Color* メソッドには、以下のコードを書きます:
+In the *Color* project method, write the following code:
 
 
 
 ```4d
-// Color メソッド
-// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
+//Color method
+//Sets font color for certain rows and the background color for a specific column:
 C_OBJECT($0)
-If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
+Form.meta:=New object
+If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -409,8 +397,35 @@ $0:=Form.meta
 ```
 
 
+**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
 
-> [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドも参照してください。
+
+
+```4d
+  //form method
+ Case of
+    :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
+ End case
+```
+
+
+Then, the *Color* method would contain:
+
+
+
+```4d
+  //Color method
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+ ...
+```
+
+
+
+> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
 
 
 
