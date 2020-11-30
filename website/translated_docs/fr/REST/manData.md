@@ -18,9 +18,9 @@ Pour rechercher directement des données, vous pouvez utiliser la fonction [`$fi
 
 Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souhaitées dans 4D.
 
-Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Avant d'enregistrer des données, vous pouvez également les valider au préalable en appelant [`$method=validate`]($method.md#methodvalidate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
+Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une [fonction de classe (class function)](classFunctions.md#function-calls) qui retourne une entity selection (ou une collection).
+Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
 
 Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
