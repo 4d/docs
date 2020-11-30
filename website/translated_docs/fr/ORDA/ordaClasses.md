@@ -284,7 +284,7 @@ exposed Function <functionName>
 
 ### Exemple
 
-You want an exposed function to use a private function in a dataclass class:
+Vous voulez qu'une fonction exposée utilise une fonction privée dans une classe dataclass :
 
 ```4d
 Class extends DataClass
@@ -321,14 +321,14 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
 
-## Local functions
+## Fonctions locales
 
 By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
 
 However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The formal syntax is:
 
 ```4d  
-// declare a function to execute locally in client/server
+// déclarer une fonction à exécuter localement en client/serveur 
 local Function <functionName>   
 ```
 
@@ -351,11 +351,11 @@ local Function getYoungest
 
 ### Exemples
 
-#### Calculating age
+#### Calcul de l'âge
 
-Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
+Considérons une entité avec un attribut *birthDate*. Nous souhaitons définir une fonction `age()` qui serait appelée dans une list box. Cette fonction peut être exécutée sur le client, ce qui évite de déclencher une requête au serveur pour chaque ligne de la list box.
 
-On the *StudentsEntity* class:
+Dans la classe *StudentsEntity* :
 
 ```4d
 Class extends Entity
@@ -369,11 +369,11 @@ Else
 End if
 ```
 
-#### Checking attributes
+#### Vérification des attributs
 
-We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
+Nous souhaitons vérifier la cohérence des attributs d'une entité chargée sur le client et mise à jour par l'utilisateur, avant de demander au serveur de les enregistrer.
 
-On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
+Sur la classe *StudentsEntity*, la fonction locale `checkData()` vérifie l'âge de l'étudiant :
 
 ```4d
 Class extends Entity
@@ -392,15 +392,15 @@ Case of
 End case
 ```
 
-Calling code:
+Code d'appel :
 
 ```4d
 var $status : Object
 
-//Form.student is loaded with all its attributes and updated on a Form
+//Form.student est chargé avec tous ses a attributs et mis à jour sur un Form
 $status:=Form.student.checkData()
 If ($status.success)
-    $status:=Form.student.save() // call the server
+    $status:=Form.student.save() // appelle le serveur
 End if
 ```
 
