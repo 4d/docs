@@ -45,6 +45,7 @@ ASSERT($status.success)
 
 
 
+
 ## 4D.CryptoKey.new()
 
 <details><summary>Historique</summary>
@@ -54,28 +55,29 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Objet ) -> *cryptoKey* : Objet<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Paramètres | Type  |    | Description                                                                 |
-| ---------- | ----- | -- | --------------------------------------------------------------------------- |
-| settings   | Objet | -> | Paramètres pour générer ou charger une paire de clés                        |
-| cryptoKey  | Objet | <- | Objet contenant une paire de clés de chiffrement|<!-- END REF -->
+| Paramètres | Type         |    | Description                                                                 |
+| ---------- | ------------ | -- | --------------------------------------------------------------------------- |
+| settings   | Objet        | -> | Paramètres pour générer ou charger une paire de clés                        |
+| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement|<!-- END REF -->
 
 
 |
 
 
-La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre d'objet *settings*. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
 
 #### *settings*
 
-| Propriété       | Type    | Description                                                                                                                    |
-| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [type](#type)   | Texte   | Type de clé : "RSA", "ECDSA", ou "PEM" :<li>"RSA" : génère une paire de clés RSA, à l'aide de `settings.size` pour la taille [.size](#size).</li><li>"ECDSA": génère une paire de clés Elliptic Curve Digital Signature Algorithm, à l'aide de `settings.curve` pour la propriété curve [.curve](#curve)). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM" : charge une définition de paire de clés au format PEM, à l'aide de `settings.pem` pour [.pem](#pem).</li>            |
-| [size](#size)   | integer | Taille de la clé RSA en octets. 2048 par défaut                                                                                |
-| [curve](#curve) | Texte   | nom de la courbe ECDSA. Généralement "prime256v1" pour ES256 (par défaut), "secp384r1" pour ES384, "secp521r1" pour ES512      |
-| [pem](#pem)     | Texte   | Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. |
+| Propriété       | Type    | Description                                       |
+| --------------- | ------- | ------------------------------------------------- |
+| [curve](#curve) | Texte   | Name of ECDSA curve                               |
+| [pem](#pem)     | Texte   | Définition PEM d'une clé de chiffrement à charger |
+| [size](#size)   | integer | Size of RSA key in bits                           |
+| [type](#type)   | Texte   | Type of the key: "RSA", "ECDSA", or "PEM"</li>    |
+
 
 #### *cryptoKey*
 
@@ -260,7 +262,7 @@ La valeur retournée est la clé publique.
 <!-- REF #cryptokey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.pem.Summary -->Définition PEM d'une clé de chiffrement à charger<!-- END REF -->
+<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite.
 <!-- END REF -->
 
 
@@ -334,7 +336,7 @@ Défini uniquement pour les clés RSA : <!-- REF #cryptokey.size.Summary -->la t
 <!-- REF #cryptokey.type.Syntax -->**.type** : Texte<!-- END REF -->
 
 
-<!-- REF #cryptokey.type.Summary -->Nom du type de clé<!-- END REF --> - "RSA", "ECDSA", ou "PEM":
+<!-- REF #cryptokey.type.Summary -->Name of the key type - "RSA", "ECDSA", "PEM"<!-- END REF --><li>"RSA": an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
 
 
 <!-- REF cryptokey.verify().Desc -->
