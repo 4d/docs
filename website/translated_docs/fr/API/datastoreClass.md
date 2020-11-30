@@ -10,13 +10,14 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 ### Sommaire
 
-|                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #datastoreClass.cancelTransaction().Syntax -->](#canceltransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.cancelTransaction().Summary -->|
 | [<!-- INCLUDE datastoreClass.dataclassName.Syntax -->](#dataclassname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE datastoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #datastoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.encryptionStatus().Summary --> |
 | [<!-- INCLUDE #datastoreClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #datastoreClass.getRequestLog().Syntax -->](#getrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.getRequestLog().Summary --> |
+| [<!-- INCLUDE #datastoreClass.makeSelectionsAlterable().Syntax -->](#makeSelectionsAlterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #datastoreClass.provideDataKey().Syntax -->](#providedatakey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #datastoreClass.startRequestLog().Syntax -->](#startrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #datastoreClass.startTransaction().Syntax -->](#starttransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.startTransaction().Summary --> |
@@ -465,6 +466,36 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
+<!-- REF datastoreClass.makeSelectionsAlterable().Desc -->
+## .makeSelectionsAlterable()
+
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v18 R5  | Ajoutées      |
+</details>
+
+<!-- REF #datastoreClass.makeSelectionsAlterable().Syntax -->
+**.makeSelectionsAlterable()**<!-- END REF -->
+
+<!-- REF #datastoreClass.makeSelectionsAlterable().Params -->
+| Paramètres | Type |  | Description                     |
+| ---------- | ---- |::| ------------------------------- |
+|            |      |  | Does not require any parameters |
+<!-- END REF -->
+
+
+#### Description
+
+The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.getRequestLog().Summary -->sets by all entity selections as alterable by default in the current application<!-- END REF -->, including for [remote datastores](ORDA/datastores.md).
+
+When this method is not called, most entity selections are [shareable by default](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+
+> **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](entitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity. 
+
+
+<!-- END REF -->
+
 
 <!-- REF datastoreClass.provideDataKey().Desc -->
 ## .provideDataKey()
@@ -686,6 +717,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
  
 
 <!-- END REF -->
+
 
 
 
