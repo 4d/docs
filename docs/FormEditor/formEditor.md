@@ -26,7 +26,7 @@ To show or hide an element in the Form editor:
 	*	**Page 0**: Shows or hides the objects from page 0 on the form’s current page. This option allows you to distinguish between the objects on the form’s current page and those on page 0. For more information about pages in forms, refer to the Creating a multi-page form section.
 	*	**Paper**: Shows or hides the borders of the printing page, which are shown as gray lines. This option may have no apparent effect when the Limits (see below) option is selected. If the size of the form is smaller than the printing page, the page’s borders are shown outside of the form’s viewing area and therefore do not appear. Refer to Printing a form.
 	*	**Rulers**: Shows or hides the rulers in the Form editor’s window.
-Markers: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
+	*	**Markers**: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
 	*	**Marker Labels**: Shows or hides the marker labels, available only when the output control lines are displayed. For more information, refer to the Moving output control lines paragraph.
 	*	**Limits**: Shows or hides the form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
 
