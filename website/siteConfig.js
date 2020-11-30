@@ -46,8 +46,8 @@ const siteConfig = {
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
 
-	{href: 'https://developer.4d.com/docs', label:'v18 R4 BETA'},
-    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R3'},
+	{href: 'https://developer.4d.com/docs', label:'v18 R5 BETA'},
+    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R4'},
 	{href: 'https://developer.4d.com/docs/18', label:'v18'},
 	//{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
@@ -85,7 +85,7 @@ const siteConfig = {
 
   },
 
-  editUrl: 'https://github.com/4D/docs/edit/develop/docs/',
+  editUrl: 'https://github.com/4D/docs/edit/18/docs/',
 
   /* custom fonts for website */
   /*fonts: {

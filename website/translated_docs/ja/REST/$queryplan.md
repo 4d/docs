@@ -9,7 +9,7 @@ Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
 ## 説明
 $queryplan returns the query plan as it was passed to 4D Server.
 
-| プロパティ    | 型      | 説明                                                                                          |
+| プロパティ    | タイプ    | 説明                                                                                          |
 | -------- | ------ | ------------------------------------------------------------------------------------------- |
 | item     | String | Actual query executed                                                                       |
 | subquery | 配列     | If there is a subquery, an additional object containing an item property (as the one above) |
@@ -21,7 +21,7 @@ If you pass the following query:
 
  `GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`
 
-#### Response:
+#### レスポンス:
 
 ```
 __queryPlan: {

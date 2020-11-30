@@ -226,7 +226,7 @@
         "title": "Echelle"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/propertiesText": {
         "title": "Texte"
@@ -259,7 +259,7 @@
         "title": "Stepper"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/tabControl": {
         "title": "Onglets"
@@ -268,13 +268,13 @@
         "title": "Texte"
       },
       "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+        "title": "Zone 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Zone Web"
       },
       "FormObjects/writeProAreaOverview": {
-        "title": "4D Write Pro area"
+        "title": "Zone 4D Write Pro"
       },
       "GettingStarted/installation": {
         "title": "Installation et activation"
@@ -480,6 +480,7 @@
     "Web Server|no description given": "Serveur Web",
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
+    "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "Users and Groups|no description given": "Groupes et utilisateurs",
     "Getting started|no description given": "Prise en main",

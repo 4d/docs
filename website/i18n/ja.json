@@ -6,19 +6,19 @@
     "tagline": " 4D 開発リファレンス",
     "docs": {
       "Backup/backup": {
-        "title": "Backup"
+        "title": "バックアップ"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "ログファイル (.journal)"
       },
       "Backup/overview": {
         "title": "概要"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "復元"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "バックアップ設定"
       },
       "Concepts/about": {
         "title": "4D ランゲージについて"
@@ -169,7 +169,7 @@
         "title": "背景色と境界線"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "Coordinates & Sizing"
+        "title": "座標とサイズ"
       },
       "FormObjects/propertiesCrop": {
         "title": "行列数"
@@ -217,7 +217,7 @@
         "title": "値の範囲"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "JSON プロパティリスト"
       },
       "FormObjects/propertiesResizingOptions": {
         "title": "リサイズオプション"
@@ -235,7 +235,7 @@
         "title": "テキスト、ピクチャー"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "ラジオボタン"
@@ -262,7 +262,7 @@
         "title": "サブフォーム"
       },
       "FormObjects/tabControl": {
-        "title": "Tab Controls"
+        "title": "タブコントロール"
       },
       "FormObjects/text": {
         "title": "テキスト"
@@ -271,7 +271,7 @@
         "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro エリア"
@@ -280,59 +280,59 @@
         "title": "インストールとアクティベーション"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "メニューバーの管理"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "メニューとメニューバーの作成"
       },
       "Menus/overview": {
         "title": "概要"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "メニュープロパティ"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Windows での SDIモード"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "ログ解析ページ",
+        "sidebar_label": "ログ解析ページ"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "バックアップページ",
+        "sidebar_label": "バックアップページ"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "圧縮ページ",
+        "sidebar_label": "圧縮ページ"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "暗号化ページ",
+        "sidebar_label": "暗号化ページ"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "情報ページ",
+        "sidebar_label": "情報ページ"
       },
       "MSC/overview": {
         "title": "概要",
         "sidebar_label": "概要"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "修復ページ",
+        "sidebar_label": "修復ページ"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "復元ページ",
+        "sidebar_label": "復元ページ"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "ロールバックページ",
+        "sidebar_label": "ロールバックページ"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "検査ページ",
+        "sidebar_label": "検査ページ"
       },
       "Project/architecture": {
         "title": "4D プロジェクトのアーキテクチャー"
@@ -425,25 +425,25 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
       },
       "REST/configuration": {
-        "title": "Server Configuration"
+        "title": "サーバー設定"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "サーバー情報の取得"
       },
       "REST/gettingStarted": {
         "title": "はじめに"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "データ操作"
       },
       "REST/REST_requests": {
         "title": "About REST Requests"
       },
       "Users/editing": {
-        "title": "Managing 4D users and groups"
+        "title": "4Dユーザー＆グループの管理"
       },
       "Users/overview": {
         "title": "概要"
@@ -460,12 +460,12 @@
       "Project Databases": "プロジェクトデータベース",
       "Form Editor": "フォームエディター",
       "Form Objects": "フォームオブジェクト",
-      "Form Object Properties": "Form Object Properties",
-      "Menus": "Menus",
+      "Form Object Properties": "フォームオブジェクトプロパティ",
+      "Menus": "メニュー",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "REST Server": "REST Server"
+      "Backup and Restore": "バックアップと復元",
+      "Users and Groups": "ユーザー＆グループ",
+      "REST Server": "REST サーバー"
     }
   },
   "pages-strings": {
@@ -473,15 +473,16 @@
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project databases|in index page Getting started": "プロジェクトデータベース",
     "Form Editor|no description given": "フォームエディター",
-    "Form Events|no description given": "Form Events",
+    "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
-    "Form Object Properties|no description given": "Form Object Properties",
-    "Menus|no description given": "Menus",
-    "Web Server|no description given": "Web Server",
-    "REST Server|no description given": "REST Server",
-    "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
-    "Backup and Restore|no description given": "Backup and Restore",
-    "Users and Groups|no description given": "Users and Groups",
+    "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
+    "Menus|no description given": "メニュー",
+    "Web Server|no description given": "Web サーバー",
+    "REST Server|no description given": "REST サーバー",
+    "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
+    "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
+    "Backup and Restore|no description given": "バックアップと復元",
+    "Users and Groups|no description given": "ユーザー＆グループ",
     "Getting started|no description given": "はじめに",
     "Developing a Desktop application|no description given": "デスクトップアプリの開発",
     "Developing a Web application|no description given": "Web アプリの開発",

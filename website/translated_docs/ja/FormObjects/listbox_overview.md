@@ -140,7 +140,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [フッターを表示](properties_Headers.md#フッターを表示)                            | ○         | ○             | ○                            |
 | [行をダブルクリック](properties_ListBox.md#行をダブルクリック)                        |           | ○             |                              |
 | [ドラッグ有効](properties_Action.md#ドラッグ有効)                               | ○         | ○             | ○                            |
-| [ドロップ有効](properties_Action.md#ドロップ有効)                               | ○         | ○             | ○                            |
+| [ドロップ有効](properties_Action.md#ドラッグ有効)                               | ○         | ○             | ○                            |
 | [フォーカス可](properties_Entry.md#フォーカス可)                                | ○         | ○             | ○                            |
 | [フォント](properties_Text.md#フォント)                                     | ○         | ○             | ○                            |
 | [フォントカラー](properties_Text.md#フォントカラー)                               | ○         | ○             | ○                            |
@@ -184,7 +184,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [スタイル式](properties_Text.md#スタイル式)                                   |           | ○             | ○                            |
 | [上](properties_CoordinatesAndSizing.md#上)                           | ○         | ○             | ○                            |
 | [透過](properties_BackgroundAndBorder.md#透過)                          | ○         | ○             | ○                            |
-| [型](properties_Object.md#タイプ)                                       | ○         | ○             | ○                            |
+| [タイプ](properties_Object.md#タイプ)                                     | ○         | ○             | ○                            |
 | [下線](properties_Text.md#下線)                                         | ○         | ○             | ○                            |
 | [変数あるいは式](properties_Object.md#変数あるいは式)                             | ○         | ○             |                              |
 | [縦揃え](properties_Text.md#縦揃え)                                       | ○         | ○             | ○                            |

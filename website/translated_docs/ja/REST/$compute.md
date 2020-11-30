@@ -79,6 +79,6 @@ If you want to perform a calculation on an Object attribute, you can write the f
 
  `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
-Response:
+レスポンス:
 
 `45`  

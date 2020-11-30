@@ -9,15 +9,15 @@ title: バリアント
 
 - BLOB
 - boolean
-- コレクション
-- 日付
+- collection
+- date
 - 倍長整数
-- オブジェクト
+- object
 - ピクチャー
-- ポインター
+- pointer
 - 実数
 - text
-- 時間
+- time
 - null
 - 未定義
 

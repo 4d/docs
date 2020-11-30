@@ -4,7 +4,7 @@ title: Découpage
 ---
 
 ---
-## Colonnes
+## Columns
 
 Définit le nombre de colonnes dans un tableau d'imagettes.
 
@@ -22,7 +22,7 @@ Définit le nombre de colonnes dans un tableau d'imagettes.
 
 
 ---
-## Lignes
+## Rows
 
 Définit le nombre de lignes dans un tableau d'imagettes.
 
