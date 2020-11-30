@@ -92,152 +92,152 @@ To display/hide the Property List, choose **Property List** from the **Form** me
 
 Vous pouvez naviguer dans la Liste des propriétés à l’aide des raccourcis suivants :
 
-*   **Arrow key**s ↑ ↓: Used to go from one cell to another.
-*   **Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
-*   **PgUp** and **PgDn**: Used to scroll the Property List contents.
-*   **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
-*   **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
-*   **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+*   **Touches fléchées** haut ou bas ↑ ↓ : déplacement de cellule en cellule.
+*   **Touches fléchées** gauche ou droite ← → : déploie/contracte les thèmes ou les menus.
+*   **PgUp** et **PgDn** : sélectionne la première ou la dernière cellule visible de la liste affichée.
+*   **Début** et **Fin** : sélectionne la première ou la dernière cellule de la liste.
+*   **Ctrl+clic** (Windows) ou **Commande+clic** (Mac OS) sur un événement : sélectionne/désélectionne tous les événements, en fonction de l’état initial de l’événement sur lequel vous avez cliqué.
+*   **Ctrl+clic** (Windows) ou **Commande+clic** (Mac OS) sur un intitulé de thème : déploie/contracte tous les thèmes.
 
 
 
 ## Manipulating Form Objects
 
-### Adding objects
+### Ajouter des objets
 
-You can add objects to forms in several ways:
+Vous pouvez ajouter des objets dans un formulaire de nombreuses manières :
 
-*   By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#using-the-object-bar))
-*   By dragging and dropping the object from the object bar
-*   By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
-*   By dragging and dropping an object from another form,
-*   By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
+*   Par traçage d'un objet après sélection dans la barre d'objets (cf. paragraphe [Utiliser la barre d’objets](#using-the-object-bar))
+*   Par glisser-déposer depuis la barre d'objets
+*   Par glisser-déposer ou copier-coller depuis la [bibliothèque d'objets](objectLibrary.md) préconfigurés
+*   Par glisser-déposer depuis un autre formulaire,
+*   Par glisser-déposer depuis l'Explorateur (champs) ou les éditeurs du mode Développement (énumérations, images, etc.)
 
-Once the object is placed in the form, you can modify its characteristics using the Form editor.
+Une fois l'objet inséré, vous pouvez modifier toutes ses caractéristiques dans l'éditeur de formulaires.
 
-You can work with two types of objects in your forms:
+Vous pouvez travailler avec deux types d'objets dans vos formulaires :
 
-*   **Static objects** (lines, frames, background pictures, etc.): These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. They are available in the object bar of the Form editor. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. A la différence des objets actifs, les objets statiques ne sont pas associés à des variables. A noter qu'il est possible d'insérer des éléments dynamiques dans les objets statiques.
+*   **les objets statiques** (filets, cadres, images d'arrière-plan, etc.) : ces objets sont généralement utilisés pour le décor, les libellés ou encore l'interface graphique. Ces objets sont accessibles via la barre d'objets de l'éditeur de formulaires. Vous pouvez définir leurs attributs graphiques (taille, couleur, police...) ainsi que leurs propriétés de redimensionnement à l'aide de la Liste de propriétés. A la différence des objets actifs, les objets statiques ne sont pas associés à des variables. A noter qu'il est possible d'insérer des éléments dynamiques dans les objets statiques.
 
-*   **Active objects**: These objects perform tasks or functions in the interface and can take many forms: fields, buttons, scrollable lists, etc. Each active object is associated with either a field or a variable.
+*   **les objets actifs** : un objet actif est un objet qui réalise une tâche ou une fonction de l’interface. Il existe de nombreux types d’objets actifs : champs, boutons, listes déroulantes, etc. Un objet actif est associé soit à un champ, soit à une variable.
 
-### Selecting objects
+### Sélectionner des objets
 
-Before you can perform any operation on an object (such as changing a line width or font), you need to select the object that you want to modify.
+Avant de pouvoir réaliser une opération sur un objet (comme le changement de l’épaisseur d’une ligne ou d’une police), il est nécessaire de sélectionner cet objet.
 
-To select an object using the toolbar:
+Pour sélectionner un objet à l’aide de la barre d’outils :
 
-1.  Click the Arrow tool  in the toolbar.<p>![](assets/en/FormEditor/selection.png)<p> When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.
-2.  Click the object you want to select. Resizing handles identify the selected object.<p>![](assets/en/FormEditor/selectResize.png)
+1.  Cliquez sur l’outil Flèche  dans la barre d’outils.<p>![](assets/en/FormEditor/selection.png)<p> Lorsque vous le faites glisser au-dessus du formulaire, le pointeur prend la forme du pointeur standard.
+2.  Cliquez sur l’objet que vous souhaitez sélectionner. Des poignées de sélection identifient l’objet sélectionné.<p>![](assets/en/FormEditor/selectResize.png)
 
-To select an object using the Property List:
+Pour sélectionner un objet à l’aide de la Liste des propriétés :
 
-1.  Choose the object’s name from the Object List drop-down list located at the top of the Property List.<p>Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. To deselect an object, click outside the object’s boundary or **Shift+click** the object.
-> It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+1.  Sélectionnez le nom de l’objet dans la liste de sélection située en haut de la palette.<p>De cette manière, vous pouvez sélectionner un objet masqué par d’autres objets ou situé en-dehors des limites de la fenêtre. Pour désélectionner un objet, cliquez hors de ses limites ou cliquez dessus en maintenant la touche **Majuscule** enfoncée.
+> Il est également possible de sélectionner des objets en double-cliquant dans la fenêtre de résultat d’une recherche globale.
 
 ### Selecting multiple objects
 
-You may want to perform the same operation on more than one form object — for example, to move the objects, align them, or change their appearance. 4D lets you select several objects at the same time. There are several ways to select multiple objects:
+Il est souvent nécessaire de réaliser la même opération sur plusieurs objets d’un formulaire — par exemple, pour les déplacer, les aligner ou changer leur apparence. 4D vous permet de sélectionner plusieurs objets en même temps. Vous pouvez réaliser une sélection multiple en utilisant l’une des solutions suivantes :
 
-*   Choose **Select All** from the Edit menu to select all the objects.
-*   Right-click on the object and choose the **Select Similar Objects** command in the context menu.
-*   Hold down the **Shift** key and click the objects you want to select.
-*   Start at a location outside the group of objects you want to select and drag a marquee (sometimes called a selection rectangle) around the objects. When you release the mouse button, if any part of an object lies within or touches the boundaries of the selection rectangle, that object is selected.
-*   Hold down the **Alt** key (Windows) or the **Option** key (macOS) and draw a marquee. Any object that is completely enclosed by the marquee is selected.
+*   Choisissez **Tout sélectionner** dans le menu Edition.
+*   Cliquez avec le bouton droit de la souris sur un objet et choisissez la commande **Sélectionner objets de même type** dans le menu contextuel.
+*   Maintenez la touche **Maj** enfoncée et cliquez l’un après l’autre sur tous les objets que vous souhaitez sélectionner.
+*   Cliquez hors du groupe d’objets que vous souhaitez sélectionner et dessinez un rectangle de sélection entourant ou traversant les objets à sélectionner. Tout objet inclus dans les limites du rectangle ou qui touche ces limites est sélectionné lorsque vous relâchez le bouton de la souris.
+*   Maintenez enfoncée la touche **Alt** (sous Windows) ou **Option** (sous Mac Os) et tracez un rectangle de sélection. Dans ce cas, seuls les objets entièrement inclus dans ce rectangle seront sélectionnés.
 
-The figure below shows a marquee being drawn to select two objects:
+La fenêtre ci-dessous représente la sélection de deux objets à l’aide d’un rectangle de sélection :
 
 ![](assets/en/FormEditor/selectMultiple.png)
 
-To deselect an object that is part of a set of selected objects, hold down the **Shift** key and click the object. The other objects remain selected. To deselect all the selected objects, click outside the boundaries of all the objects.
+Pour désélectionner un objet qui fait partie d’un groupe d’objets sélectionnés, maintenez la touche **Majuscule** enfoncée et cliquez sur cet objet. Les autres objets demeurent sélectionnés. Pour désélectionner tous les objets, cliquez hors des limites de ces objets.
 
 
-### Duplicating objects
+### Dupliquer des objets
 
-You can duplicate any object in the form, including active objects. Copies of active objects retain all the properties of the original, including name, type, standard action, display format, and object method.
+Vous pouvez dupliquer tout objet de formulaire, y compris les objets actifs. Les copies d’objets actifs conservent toutes les propriétés de l’objet original comme le nom, le type, l’action automatique, le format d’affichage et la méthode objet.
 
-You can duplicate an object directly using the Duplicate tool in the Tools palette or use the Duplicate Many dialog box to duplicate an object more than once. Also, using this dialog box, you can set the distance between two copies.
+Vous pouvez dupliquer directement un objet ou une sélection d’objets, ou utiliser la boîte de dialogue “Dupliquer plusieurs” pour paramétrer une duplication multiple d’objets. Cette boîte de dialogue vous permet de créer autant de duplicata d’un ou de plusieurs objets que vous voulez, en une seule opération.
 
-To duplicate one or more objects:
+Pour dupliquer directement un ou plusieurs objet(s) :
 
-1. Select the object or objects that you want to duplicate.
-2. Choose **Duplicate** from the **Edit** menu. 4D creates a copy of each selected object and places the copy in front and slightly to the side of the original.
-3.  Move the copy (or copies) to the desired location. If you choose the Duplicate menu item again, 4D creates another copy of each object and moves it the exact same distance and direction from the first copy. If you need to distribute copies of the object along a line, you should use the following procedure. Duplicate the original object, move the copy to another location in the form, and then duplicate the copy. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. Subsequent copies are also placed in the same relation to their originals. The figure below shows how this relative placement of copies works:
+1. Sélectionnez le ou les objet(s) que vous souhaitez dupliquer.
+2. Choisissez la commande **Dupliquer** dans le menu **Edition**. 4D crée une copie de chaque objet sélectionné et place la copie juste à côté de l’original.
+3.  Déplacez la copie à l’emplacement souhaité. Si vous choisissez de nouveau la commande Dupliquer, 4D crée une autre copie pour chaque objet et la place exactement au même placement relatif par rapport à la première copie. Si vous devez répartir plusieurs copies d’un objet sur un axe, appliquez la procédure suivante. Dupliquez l’objet original, déplacez la copie à un autre emplacement sur le formulaire, puis dupliquez la copie. La deuxième copie adopte le même positionnement relatif par rapport à la première copie que celui qui existe entre la position de l’original et celle de la première copie. Les copies suivantes seront alors placées avec le même écart par rapport à leur original. Le schéma ci-dessous explique le fonctionnement du placement relatif des copies :
 
 ![](assets/en/FormEditor/duplicateObjects.png)
 
 
-#### Duplicate Many
+#### Dupliquer plusieurs
 
-The "Duplicate Many" dialog box appears when you select one or more object(s) and choose the **Duplicate Many...** command from the **Object** menu.
+La boîte de dialogue “Dupliquer plusieurs” apparaît lorsque vous sélectionnez un ou plusieurs objet(s) puis choisissez la commande **Dupliquer plusieurs...** dans le menu **Objets**.
 
 ![](assets/en/FormEditor/duplcateMany.png)
 
-*   In the upper area, enter the number of columns and lines (rows) of objects you want to get.<p>For example, if you want three columns and two lines of objects, enter 3 in the Column(s) area and 2 in the Line(s) area. If you want three horizontal new copies of an object, enter 4 in the Column(s) area and leave the default value, 1, in the Line(s) area.
+*   Dans la zone supérieure, saisissez le nombre de colonnes et de lignes d’objets que vous souhaitez obtenir.<p>Par exemple, si vous voulez obtenir 3 colonnes et 2 lignes d’objets, saisissez 3 dans la zone Colonne(s) et 2 dans la zone Ligne(s). Si vous souhaitez ajouter horizontalement deux copies d’un objet, saisissez 3 dans la zone Colonnes (laissez la zone Ligne(s) à 1).
 
-*   For lines and columns, define the offset that you wish to leave between each copy.<p>The value must be expressed in points. It will be applied to each copy, or copies, in relation to the original object.<p>For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
+*   Pour les lignes et les colonnes, définissez le décalage que vous souhaitez appliquer à chaque nouveau duplicata.<p>La valeur saisie doit être exprimée en points et sera appliquée relativement à l’origine de l’objet dupliqué.<p>Par exemple, si vous souhaitez laisser un intervalle vertical de 20 points entre chaque objet, et que la hauteur de l’objet source est de 50 points, saisissez 70 dans la zone “Intervalle” de Colonne.
 
-*   If you wish to create a matrix of variables, select the **Number Variables** option and select the direction in which the variables are to be numbered, either by line(s) or by column(s). This option is active only when the selected object is a variable. For more information on this option, refer to **Duplicating on a matrix** in the *Design Reference*.
+*   Si vous souhaitez créer une matrice de variables, cochez l’option **Numéroter les variables** et sélectionnez le sens dans lequel la numérotation des variables doit s’effectuer. Cette option n’est active que si l’objet sélectionné est une variable. Pour plus d’informations sur cette option, reportez-vous à la section **Dupliquer sur matrice** du *Manuel de développement*.
 
-### Moving objects
+### Déplacer des objets
 
-You can move any graphic or active object in the form including fields and objects created with a template. When moving an object, you have the following options:
+Vous pouvez déplacer tout objet d’un formulaire, graphique ou actif, y compris les champs ou les objets créés à l’aide d’un modèle. Pour déplacer un objet, vous pouvez :
 
-*   Move the object by dragging it,
-*   Move the object one pixel at a time using the arrow keys,
-*   Move the object by steps using the arrow keys (20-pixel steps by default),
+*   Déplacer l’objet en le faisant glisser avec la souris,
+*   Déplacer l’objet pixel par pixel en utilisant les touches fléchées du clavier,
+*   Déplacer l’objet par paliers (de 20 pixels par défaut),
 
-As you begin dragging the selected object, its handles disappear. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Be careful not to drag a handle. Dragging a handle resizes the object. You can press the **Shift** key to carry out the move with a constraint.
+Lorsque vous commencez à déplacer un objet à l'aide de la souris, les poignées disparaissent. 4D affiche des marqueurs qui indiquent l’emplacement des limites de l’objet dans les règles, vous pouvez ainsi placer les objets avec précision. Prenez garde à ne pas cliquer sur les poignées, ce qui aurait pour effet de redimensionner l’objet. Appuyez sur la touche **Majuscule** pour effectuer un déplacement avec contrainte.
 
-When the [Magnetic Grid](#using-the-magnetic-grid) is on, objects are moved in stages indicating noticeable locations.
+Si la [grille magnétique](#using-the-magnetic-grid) est activée, le déplacement de l’objet s’effectue par paliers indiquant les emplacements remarquables.
 
-To move an object one pixel at a time:
+Pour déplacer un objet pixel par pixel :
 
-*   Select the object or objects and use the arrow keys on the keyboard to move the object. Each time you press an arrow key, the object moves one pixel in the direction of the arrow.
+*   Sélectionnez le ou les objet(s) que vous souhaitez déplacer. A chaque fois que vous appuyez sur une touche fléchée, la sélection est déplacée d’un pixel dans la direction de la flèche.
 
-To move an object by steps:
+Pour déplacer l’objet par paliers :
 
-*   Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. By default, steps are 20 pixels at a time. You can change this value on the Forms Page of the Preferences.
-
-
-### Grouping objects
-
-4D lets you group objects so that you can select, move, and modify the group as a single object. Objects that are grouped retain their position in relation to each other. You would typically group a field and its label, an invisible button and its icon, and so forth.
-
-When you resize a group, all the objects in the group are resized proportionally (except text areas, which are resized in steps according to their font sizes.
-
-You can ungroup a group of objects to treat them as individual objects again.
-
-An active object that has been grouped must be ungrouped before you can access its properties or method. However, it is possible to select an object belonging to a group without degrouping the set: to do this, **Ctrl+click** (Windows) or **Command+click** (macOS) on the object (the group must be selected beforehand).
-
-Grouping only affects objects in the Form editor. When the form is executed, all grouped objects act as if they were ungrouped.
-> It is not possible to group objects belonging to different views and only those objects belonging to the current view can be grouped (see [Views](#views) ).
-
-To group objects:
-
-1.  Select the objects that you want to group.
-2.  Choose **Group** from the Object menu.<p>OU<p> Click the Group button  in the toolbar of the Form editor:<p>![](assets/en/FormEditor/group.png)<p> 4D marks the boundary of the newly grouped objects with handles. No handles mark the boundary of any of the individual objects within the group. Now, when you modify the grouped object, you change all the objects that make up the group.
-
-To ungroup an object:
-
-1.  Select the grouped object that you want to ungroup.
-2.  Choose **Ungroup** from the **Object** menu.<p>OU<p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.<p>4D marks the boundaries of the individual objects with handles.
+*   Sélectionnez le ou les objet(s) que vous souhaitez déplacer, appuyez sur la touche **Majuscule** et utilisez les touches fléchées du clavier pour déplacer l’objet par paliers. Par défaut, les paliers sont de 20 pixels. Vous pouvez modifier le pas dans la Page Formulaires des Préférences.
 
 
-### Aligning objects
+### Grouper des objets
 
-You can align objects with each other or using an invisible grid on the form.
+4D vous permet de grouper des objets de manière à ce que vous puissiez sélectionner, déplacer et modifier ce groupe comme un seul objet. Les objets qui sont groupés conservent leur position relative par rapport aux autres objets du groupe. Les objets groupés sont par exemple un champ et son libellé, un bouton invisible et son icône, etc.
 
-*   When you align one object to another, you can align it to the top, bottom, side, or horizontal or vertical center of the other object. You can directly align a selection of objects using the alignment tools or apply more advanced alignment settings using the Alignment Assistant. The latter option allows you, for example, to set the object that will be used as the position reference and to preview the alignment in the form before applying it.
-*   When you use the invisible grid, each object can be aligned manually with others based on “noticeable” positions which are depicted with dotted lines that appear when the object being moved approaches other objects.
+Lorsque vous redimensionnez un groupe, tous les objets du groupe sont redimensionnés proportionnellement (hormis les zones de texte, qui sont redimensionnées par étape suivant leur taille de police de caractères).
 
-#### Using the instantaneous alignment tools
+Vous pouvez dégrouper un groupe d’objets à tout moment et les traiter de nouveau comme des objets indépendants.
 
-The alignment tools in the toolbar and in the Align submenu of the Object menu allow you to quickly align selected objects.
+Un objet actif qui a été groupé doit être dégroupé pour que vous puissiez accéder à ses propriétés ou à sa méthode. Il est toutefois possible de sélectionner un objet appartenant à un groupe sans devoir dégrouper l’ensemble : pour cela, effectuez **Ctrl+clic** (Windows) ou **Commande+clic** (Mac Os) sur l’objet (le groupe doit être sélectionné au préalable).
+
+Grouper des objets n’a d’effet que dans l’éditeur de formulaires. Lors de l’exécution du formulaire, tous les objets groupés (hormis les boutons radio dans les bases binaires) se comportent comme s’ils étaient indépendants.
+> Il n’est pas possible de grouper des objets appartenant à des vues différentes et seuls les objets appartenant à la vue courante peuvent être groupés (cf. section [Utiliser les vues d'objet](#views)).
+
+Pour grouper les objets :
+
+1.  Sélectionnez les objets que vous souhaitez grouper.
+2.  Sélectionnez **Grouper** dans le menu Objets.<p>OU<p> Cliquez sur le bouton Grouper dans la barre d’outils de l’éditeur de formulaires :<p>![](assets/en/FormEditor/group.png)<p> 4D matérialise les bordures du groupe avec des poignées. Les objets du groupe ne sont plus marqués séparément par des poignées. Désormais, lorsque vous modifiez le groupe d’objets, vous modifiez tous les objets qui le composent.
+
+Pour dégrouper un groupe d’objets :
+
+1.  Sélectionnez le groupe que vous souhaitez dégrouper.
+2.  Choisissez **Dégrouper** dans le menu **Objets**.<p>OU<p>Sélectionnez la commande **Dégrouper** (menu du bouton **Grouper**) dans la barre d’outils de l’éditeur de formulaires.<p>Si la commande **Dégrouper** est désactivée, cela veut dire que l’objet sélectionné est déjà sous sa forme la plus simple.<p>4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
+
+
+### Aligner des objets
+
+Vous pouvez aligner un ensemble d’objets entre eux ou à l’aide d’une grille magnétique.
+
+*   Vous pouvez aligner entre eux des objets sur le haut, le bas, le côté, le centre horizontal ou le centre vertical. Vous pouvez aligner directement une sélection d’objets ou utiliser une boîte de dialogue vous permettant d’appliquer tout type d’alignement et de répartition aux objets sélectionnés. Cette boîte de dialogue vous permet en outre de sélectionner l’objet par rapport auquel vous voulez aligner les autres et de prévisualiser le résultat de vos paramétrages.
+*   Lorsque vous utilisez la grille magnétique, chaque objet peut être aligné manuellement avec les autres sur la base de positions “remarquables” représentées visuellement.
+
+#### Utiliser les outils et les commandes d’alignement direct
+
+Le sous-menu Aligner du menu Objets (ou du menu contextuel de l’éditeur) et les outils d’alignement de la barre d’outils vous permettent de rapidement aligner entre eux des objets sélectionnés.
 
 ![](assets/en/FormEditor/alignmentMenu.png)
 
-When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
+Lorsque 4D aligne des objets, il utilise l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
 
 ![](assets/en/FormEditor/alignmentTools.png)
 
@@ -530,7 +530,7 @@ Voici la description de chaque type de badge :
 | ![](assets/en/FormEditor/resizing.png)       | Redimensionnement                    | Pour les objets disposant d’au moins une propriété de redimensionnement, indique la combinaison de propriétés courante                        |
 | ![](assets/en/FormEditor/entryOrder.png)     | Ordre de saisie                      | Pour les objets saisissables, indique le numéro d’ordre de saisie                                                                             |
 | ![](assets/en/FormEditor/viewNumber.png)     | Vue courante                         | Pour tous les objets de la vue courante                                                                                                       |
-| ![](assets/en/FormEditor/cssShield.png)      | [Feuille de style](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                                    |
+| ![](assets/en/FormEditor/cssShield.png)      | [Feuille de style](stylesheets.html) | Pour les objets avec une ou plusieurs valeurs d'attribut remplacées par une feuille de style.                                                 |
 | ![](assets/en/FormEditor/filter.png)         | Filtre                               | Pour les objets saisissables auxquels un filtre de saisie est associé                                                                         |
 | ![](assets/en/FormEditor/helpTip.png)        | Infobulle                            | Pour les objets auxquels une infobulle (message d’aide) est associée                                                                          |
 | ![](assets/en/FormEditor/localized.png)      | Localisé                             | Pour les objets dont le libellé provient d’une référence (libellé débutant par “:”). La référence peut être de type ressource (STR#) ou XLIFF |
