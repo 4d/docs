@@ -18,7 +18,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 With the REST API, you can perform all the manipulations to data as you can in 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Before saving data, you can also validate it beforehand by calling [`$method=validate`]($method.md#methodvalidate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
 Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
 
