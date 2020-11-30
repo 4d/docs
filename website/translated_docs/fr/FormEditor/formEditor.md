@@ -3,16 +3,16 @@ id: formEditor
 title: Éditeur de formulaire
 ---
 
-4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+4D propose un éditeur de formulaires très complet qui vous permet de modifier votre formulaire jusqu’à ce que vous ayez atteint le résultat escompté. Dans l’éditeur de formulaires, vous pouvez créer et supprimer des objets, manipuler directement des objets et définir les propriétés des objets et des formulaires.
 
 
 ## Interface
 
-The Form editor interface displays each JSON form in its own window, which has both an object and tool bar. You can have several forms open at the same time. The rulers on the side and bottom help you position objects in the form. You can change measurement units so that it displays inches, centimeters, or pixels.
+L’éditeur de formulaires affiche chaque formulaire JSON ouvert dans sa propre fenêtre, dotée d’une barre d’outils et d’une barre d’objets. Vous pouvez ouvrir plusieurs formulaires en même temps. Les règles situées sur le côté et en bas de cette fenêtre ont pour but de vous aider à placer les objets dans le formulaire. Vous pouvez changer les unités que ces règles utilisent afin qu’elles soient affichées en pouces, centimètres ou pixels.
 
-### Showing/hiding Form elements
+### Afficher/masquer des éléments du formulaire
 
-Vous pouvez choisir d’afficher ou de masquer les éléments de la fenêtre de l’éditeur. Cette fonctionnalité permet de n’afficher que les éléments nécessaires à la création ou à la visualisation du formulaire, ou de choisir les outils que vous souhaitez utiliser. This option is always applied to the Form editor’s current window. Par exemple, il est généralement inutile d’afficher les taquets et leurs libellés lorsque vous travaillez avec un formulaire entrée.
+Vous pouvez choisir d’afficher ou de masquer les éléments de la fenêtre de l’éditeur. Cette fonctionnalité permet de n’afficher que les éléments nécessaires à la création ou à la visualisation du formulaire, ou de choisir les outils que vous souhaitez utiliser. Cette option est toujours appliquée à la fenêtre courante de l’éditeur de formulaires. Par exemple, il est généralement inutile d’afficher les taquets et leurs libellés lorsque vous travaillez avec un formulaire entrée.
 
 Pour afficher ou masquer un élément de l’éditeur de formulaires :
 
@@ -20,9 +20,9 @@ Pour afficher ou masquer un élément de l’éditeur de formulaires :
 
 2.  Sélectionnez l’élément que vous souhaitez masquer ou afficher.<p>Voici la description des commandes de ce menu :
     *   **Formulaire hérité** : affiche ou masque les objets du formulaire hérité (s’il y en a un) dans la page courante du formulaire. Pour plus d’informations, reportez-vous au paragraphe Utiliser l'héritage de formulaire.
-    *   **Page 0**: Shows or hides the objects from page 0 on the form’s current page. This option allows you to distinguish between the objects on the form’s current page and those on page 0. For more information about pages in forms, refer to the Creating a multi-page form section.
-    *   **Paper**: Shows or hides the borders of the printing page, which are shown as gray lines. This option may have no apparent effect when the Limits (see below) option is selected. If the size of the form is smaller than the printing page, the page’s borders are shown outside of the form’s viewing area and therefore do not appear. Refer to Printing a form.
-    *   **Rulers**: Shows or hides the rulers in the Form editor’s window. Markers: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
+    *   **Page 0** : affiche ou masque les objets de la page 0 dans la page courante du formulaire. Cette option vous permet de mieux visualiser et distinguer les objets de la page courante et ceux de la page 0. Pour plus d’informations, reportez-vous à la section Définir un formulaire multi-pages.
+    *   **Papier** : affiche ou masque les contours de la page d’impression sous forme de filets grisés. Cette option peut être sans effet apparent lorsque l’option Limites (cf. ci-dessous) est sélectionnée. En effet dans ce cas, lorsque la taille du formulaire est inférieure à celle de la page d’impression, les contours de celle-ci sont affichés en-dehors de la zone de visualisation du formulaire et donc n’apparaissent pas. Reportez-vous à la section Imprimer un formulaire.
+    *   **Règle** : affiche ou masque les règles de la fenêtre de l’éditeur. Taquets : affiche ou masque les taquets délimitant les différentes zones du formulaire.
     *   **Marker Labels**: Shows or hides the marker labels, available only when the output control lines are displayed. For more information, refer to the Moving output control lines paragraph.
     *   **Limits**: Shows or hides the form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
 > The **Size Based on**, **Hor margin** and **Vert margin** settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change. For more information on form properties, refer to the [Form properties](jsonReference.html) section.
