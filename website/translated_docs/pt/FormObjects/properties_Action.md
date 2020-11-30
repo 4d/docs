@@ -99,7 +99,7 @@ Several types of method references are supported:
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
 - a custom method file path including the .4dm extension, e.g.:  
-  `ObjectMethods/objectName.4dm` You can also use a filesystem:  
+  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
   `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
 
 
