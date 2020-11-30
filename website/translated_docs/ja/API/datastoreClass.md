@@ -17,7 +17,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 | [<!-- INCLUDE #datastoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.encryptionStatus().Summary --> |
 | [<!-- INCLUDE #datastoreClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #datastoreClass.getRequestLog().Syntax -->](#getrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.getRequestLog().Summary --> |
-| [<!-- INCLUDE #datastoreClass.makeSelectionsAlterable().Syntax -->](#makeSelectionsAlterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.makeSelectionsAlterable().Summary --> |
+| [<!-- INCLUDE #datastoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #datastoreClass.provideDataKey().Syntax -->](#providedatakey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #datastoreClass.startRequestLog().Syntax -->](#startrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #datastoreClass.startTransaction().Syntax -->](#starttransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #datastoreClass.startTransaction().Summary --> |
@@ -487,7 +487,7 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 #### 説明
 
-The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.getRequestLog().Summary -->sets by all entity selections as alterable by default in the current application<!-- END REF -->, including for [remote datastores](ORDA/datastores.md).
+The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.makeSelectionsAlterable().Summary -->sets by all entity selections as alterable by default in the current application<!-- END REF -->, including for [remote datastores](ORDA/datastores.md).
 
 When this method is not called, most entity selections are [shareable by default](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
