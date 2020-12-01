@@ -35,43 +35,33 @@ The operation of the 4D web server's access system is summarized in the followin
 
 
 
-- **Custom** (default):  
-
-- **Basic protocol**: the name and password entered by the user are sent unencrypted in the HTTP request header. This does not ensure total system security since this information could be intercepted and used by a third party. It typically requires HTTPS to provide confidentiality. 
-
-- **Digest protocol**: provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
-
-
-
 ### Custom (default)
 
-Basically in this mode, 4D only calls the `On Web Authentication` database method with user credentials (and other information) for each request that is not already authenticated. It's up to the developer to provide the user with a way to authenticate. Once the user is authenticated, a user session will manage the user access through a cookie.  
+Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests coming from the web and that require an authentication.
 
-When this option is selected and the 4D web server receives an unauthenticated request, the [`On Web Authentication`](#on-web-authentication) database method is executed (if it exists) and, in addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated (and the resquested resource is served), and **False** in $0 if the authentication failed.  
+- if a request corresponds to an opened session on the server (i.e. it has a valid session cookie), it gets access to the requested resource,
+- if a request does not correspond to an opened session, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.  
 
 > **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode). 
 
 This authentication mode is the most flexible because it allows you to:
 
-- provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; validate user requests using a custom algorithm; 
-- or, delegate the user authentication to a third-party application (e.g. a social network).
+- either, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm; 
+- or, delegate the user authentication to a third-party application (e.g. a social network, SSO).
 
 You can mix both solutions in your application.  
 
+#### Example
 
-Verifying the user credentials requires that you:
-
-
-provide the user with a way 
-
-(web form, SSO) to create their account; when submitted, in the 4D database, you store only a hash value for the user at the account creation, for example:
+In this example, you let users creating their own account using a web form. When they submit the form, the [`On Web Authentication`](#on-web-authentication) database method is called and you can create a new user account. The important thing is that you only store a hash value for the password, for example:
 
 ```4d
-webUser.hash:=Generate password hash($password)  
-webUser.save()
+//... creation code
+ds.webUser.hash:=Generate password hash($password)  
+ds.webUser.save()
 ```  
 
-- provide the user with a way (e.g. a web form) to authenticate; when the form is submitted, the [`On Web Authentication`](#on-web-authentication) database method is called. In this method, use the `WEB GET VARIABLES` command to get entered values and the `Verify password hash` command to check the password:
+Then, you provide the user with a way (e.g. a "login" web form) to authenticate; when the form is submitted, the [`On Web Authentication`](#on-web-authentication) database method is called. In the method, you can use the `WEB GET VARIABLES` command to get values posted through the "login" form and the `Verify password hash` command to check the password:
 
 ```4d
 C_LONGINT($posit)
@@ -96,11 +86,11 @@ Case of
 			$password:=$tVal{$posit}
 		End if 
 			
-			// we use a custom user table
-		QUERY([WebUser]; [WebUser]User=$username)
+			// we use the custom user table
+		QUERY([webUser]; [webUser]User=$username)
 		
 		If (OK=1)  //we have a user with this name
-			$0:=Verify password hash($password; [WebUsers]hash)			
+			$0:=Verify password hash($password; [webUser]hash)			
 		Else 			
 			$0:=False
 		End if 
@@ -110,58 +100,175 @@ End case
  
 
 
+## Basic protocol
 
-Passwords with BASIC protocol: Standard authentication in BASIC mode. When a user connects to the server, a dialog box appears on their browser in order for them to enter their user name and password. These two values are then sent to the `On Web Authentication Database Method` along with the other connection parameters (IP address and port, URL...) so that you can process them.
-This mode provides access to the Include 4D passwords option that allows you to use, instead of or in addition to your own password system, 4D’s database password system (as defined in 4D).
+When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password. 
 
-*	**Passwords with DIGEST protocol**: Authentication in DIGEST mode. As in BASIC mode, users must enter their name and password when they connect. These two values are then sent encrypted to the `On Web Authentication Database Method` with the other connection parameters. You must authenticate a user using the `WEB Validate digest` command.
+> The name and password entered by the user are sent unencrypted in the HTTP request header. This mode typically requires HTTPS to provide confidentiality. 
 
->You must restart the web server in order for the changes made to these parameters to be taken into account
+Entered values are then evaluated:
+
+- If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md). 
+	- If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. If the password is incorrect, the connection is refused.
+	- If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
+	
+- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected. 
 
 >With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validation of users/passwords is carried out by the 4D Server application.
 
-### BASIC Mode   
+## DIGEST protocol  
 
-If you use the BASIC mode, the system that filters connections to the 4D Web server depends on the combination of two parameters:
+This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher. 
 
-*	The web password options in the Database Settings dialog box,
+As in BASIC mode, users must enter their name and password when they connect. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
 
-*	The existence of the `On Web Authentication Database Method`.
-
-Here are the different resulting systems:
-
-The “Passwords with BASIC protocol” option is selected and the “Include 4D Passwords” option is not selected.
-
-*	If the `On Web Authentication Database Method` exists, it is executed and all its parameters are given. You can therefore filter more precisely the connections according to the user name, password, and/or the browser’s or web server’s IP address.
-
-*	If the `On Web Authentication Database Method` doesn’t exist, the connection is automatically refused and a message indicating that the Authentication method doesn’t exist is sent to the browser.
-
->If the user name sent by the browser is an empty string and if the On Web Authentication Database Method doesn’t exist, a password dialog box is sent to the browser.
-
-The “Passwords with BASIC protocol” and “Include 4D Passwords” options are selected.
-
-*	If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. If the password is incorrect, the connection is refused.
-
-*	If the user name sent by the browser doesn’t exist in 4D, two results are then possible:
-*	If the `On Web Authentication Database Method` exists, the parameters $1, $2, $3, $4, $5, and $6 are returned. You can therefore filter the connections according to the user name, password, and/or the browser’s or web server’s IP address.
-*	If the `On Web Authentication Database Method` doesn’t exist, the connection is refused.
-
-### DIGEST Mode  
-
-Unlike BASIC mode, the DIGEST mode is not compatible with standard 4D passwords: it is not possible to use 4D passwords as web IDs. The “Include 4D passwords” option is dimmed when this mode is selected. The IDs for web users must be managed in a customized manner (for example, via a table).
-
-When the DIGEST mode is activated, the $6 parameter (password) is always returned empty in the `On Web Authentication Database Method`. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
+>You must restart the web server in order for the changes made to these parameters to be taken into account. 
 
 
 
+## On Web Authentication 
+
+The `On Web Authentication` database method is in charge of managing web server engine access. It is called by 4D or 4D Server when a web browser request requires the execution of a 4D method on the server (method called using a `4DACTION URL`, a `4DSCRIPT` tag, etc.).
+
+**On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ; ) -> $0 : Boolean<!-- END REF -->
+
+|Parameters|Type||Description|
+|---|---|:---:|---|
+|$1|Text|<-|URL |
+|$2|Text|<-|HTTP headers + HTTP body (up to 32 kb limit) |
+|$3|Text|<-|IP address of the web client (browser) |
+|$4|Text|<-|IP address of the server |
+|$5|Text|<-|User name |
+|$6|Text|<-|Password |
+|$0|Boolean|->|True = request accepted, False = request rejected|
+
+You must declare these parameters as follows:
+
+```code4d
+//On Web Authentication database method
+ 
+ C_TEXT($1;$2;$3;$4;$5;$6)
+ C_BOOLEAN($0)
+ 
+//Code for the method
+```
+
+>All the `On Web Authentication` database method’s parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
 
 
-## On Web Authentication
+#### $1 - URL
+
+The first parameter (`$1`) is the URL entered by the user in the location area of their web browser, from which the host address has been removed.
+
+Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+
+|URL entered in web browser|Value of parameter $1|
+|---|---|
+|123.45.67.89|/ |
+|http://<i></i>123.45.67.89|/ |
+|123.45.67.89/Customers|/Customers |
+|http://<i></i>123.45.67.89/Customers/Add|/Customers/Add |
+|123.45.67.89/Do_This/If_OK/Do_That|/Do_This/If_OK/Do_That |
+
+#### $2 - Header and Body of the HTTP request
+
+The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
+
+If your application deals with this information, it is up to you to parse the header and the body.
+
+>For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+
+#### $3 - Web client IP address
+
+The `$3` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+
+>4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34.
+
+#### $4 - Server IP address
+
+The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. 
 
 
+#### $5 and $6 - User Name and Password
+
+The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
+
+>If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+
+#### $0 parameter
+
+The `On Web Authentication` database method returns a boolean in $0:
+
+*	If $0 is True, the connection is accepted.
+
+*	If $0 is False, the connection is refused.
+
+The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
+
+>**WARNING**<br>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
+
+>*	Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
+
+### Method calls  
+
+The `On Web Authentication` database method is automatically called when a request or processing requires the execution of a 4D method. It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
+
+The `On Web Authentication` database method is therefore called in the following cases:
+
+- when the web server receives a URL requesting a resource that does not exist
+- when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
+- when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
+- when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
+
+The `On Web Authentication` database method is NOT called:
+
+- when the web server receives a URL requesting a valid static page.
+- when the web server reveives a URL beginning with `rest/` and the REST server is launched.
 
 
-## On Web Connection
+### Example
+
+Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
+
+```code4d
+ // On Web Authentication Database Method
+ C_TEXT($1;$2;$5;$6;$3;$4)
+ C_TEXT($user)
+ C_BOOLEAN($0)
+ $0:=False
+ $user:=$5
+  // For security reasons, refuse names that contain @
+ If(WithWildcard($user))
+    $0:=False
+  // The <span class="rte4d_met">WithWildcard</span> method is described below
+ Else
+    QUERY([WebUsers];[WebUsers]User=$user)
+    If(OK=1)
+       $0:=WEB Validate digest($user;[WebUsers]password)
+    Else
+       $0:=False // User does not exist
+    End if
+ End if
+```
+
+The *WithWildcard* method is as follows:
+
+```code4d
+// WithWildcard Method
+  // WithWildcard ( String ) -> Boolean
+  // WithWildcard ( Name ) -> Contains a Wilcard character
+ 
+ C_LONGINT($i)
+ C_BOOLEAN($0)
+ C_TEXT($1)
+ 
+ $0:=False
+ For($i;1;Length($1))
+    If(Character code(Substring($1;$i;1))=Character code("@"))
+       $0:=True
+    End if
+ End for
+```
 
 
 ## About robots 
@@ -201,41 +308,11 @@ Another example:
 
 In this case, robots are not allowed to access the entire site.
 
-## Generic Web User  
 
-You can designate a user, previously defined in the 4D password table, as a “Generic Web User.” In this case, each browser that connects to the database can use the access authorizations and restrictions associated with this generic user. You can therefore easily control the browser’s access to the different parts of the database.
-
->Do not confuse this option, which allows you to restrict the browser’s access to different parts of the application (methods, forms, etc.), with the web server’s connection control system, managed by the password system and the `On Web Authentication Database Method`.
-
-To define a Generic Web User:
-
-1.	In Design mode, create at least one user with the Users editor of the Tool Box. You can associate a password with the user if you wish.
-
-2.	In the different 4D editors, authorize or restrict access to this user.
-
-3.	In the Database Settings dialog, choose the **Options (I)** page of the **Web** theme.<p>
-The “Web Passwords” area contains the **Generic Web User** drop-down list. By default, the Generic Web User is the Designer and the browsers have full access to the entire database.
-
-4.	Choose a user in the drop-down list and validate the dialog box:
-
-
-
-
-All of the web browsers that are authorized to connect to the database will benefit from the access authorizations and restrictions associated with this Generic Web User (except when the BASIC mode and the “Include 4D Passwords” option are checked and the user that connects does not exist in the 4D password table, see below).
-
-### Interaction with the BASIC protocol  
-
-The "Passwords with BASIC protocol" option does not influence how the Generic Web User operates. Whatever the state of this option, the access authorizations and restrictions associated with the “Generic Web User” will be applied to all the web browsers that are authorized to connect to the database.
-
-However, when the "Include 4D passwords" option is selected, two possible results can occur:
-
-*	The user’s name and password don’t exist in 4D’s password table. In this case, if the connection has been accepted by the `On Web Authentication Database Method`, the Generic Web User’s access rights will be applied to the browser.
-
-*	If the user’s name and password exist in 4D’s password table, the “Generic Web User” parameter is ignored. The user connects with his own access rights.
 
 ## Default HTML Root 
  
-This option in the Database Settings allows you to define the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers.
+This web server parameter allows you to define the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers.
 
 Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. This access restriction applies to URLs sent to Web browsers as well as to 4D’s Web Server commands, such as `WEB SEND FILE`. If a URL is sent to the database by a browser or if a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.
 
@@ -243,58 +320,50 @@ By default, 4D defines a HTML Root folder named **WebFolder**. If it does not al
 
 If you keep the default location, the root folder is created:
 
-*	with 4D in local mode and 4D Server:
-	*	in binary databases, at the same level as that of the database structure file. **Note**: As part of a compiled and merged application, the structure file is placed in the Database subfolder. 
-	*	in project databases, at the same level as the Project folder.
+*	with 4D in local mode and 4D Server, at the same level as the Project folder.
+*	with 4D in remote mode, in the 4D Client database folder (see the `Get 4D folder command`).
 
-*	with 4D in remote mode, in the local folder of the 4D database (see the Get 4D folder command).
+The default HTML root folder name and location [can be modified](webServerConfig.md#root-folder). 
 
-You can modify the default HTML root folder name and location in the Database Settings dialog box (Web theme, Configuration page):
-
+If you want the HTML root folder to be the project or 4D remote folder, but for access to the folders above to be forbidden, define "/" as the root folder. 
 
 
-In the “Default HTML Root” entry area, enter the new access path of the folder that you wish to define.
+## Control of exposed contents
 
-The access path entered in this dialog box is relative: it is established from the folder containing the structure of the database (4D in local mode or 4D Server) or the folder containing the 4D application or software package (4D in remote mode).
+### REST access
 
-For multi-platform compatibility of your databases, the 4D Web Server uses particular writing conventions to describe access paths. The syntax rules are as follows:
+When the [REST server in started](REST/configuration.md#starting-the-rest-server), you need to control the way your data are exposed through REST requests. 
 
-*	Folders are separated by a slash (“/”)
+By default, all your data are exposed to REST requests. For security reasons, you may want to only expose certain tables of your datastore to REST calls. For instance, if you created a **Customer** table, the following REST request will return all records within your table:
 
-*	The access path must not end with a slash (“/”)
+```
+rest/Customer
+```
 
-*	To “go up” one level in the folder hierarchy, enter “..” (two periods) before the folder name
+You control the REST exposure for tables and fields through the Expose as REST resource option in the Structure editor:
 
-*	The access path must not start with a slash (“/”) (except if you want the HTML root folder to be the database or 4D remote folder, see below).
+![](assets/en/REST/table.png)
 
-For example, if you want the HTML root folder to be the “Web” subfolder in the “4DDatabase” folder, enter **4DDatabase/Web**.
+Refer to the [REST Server section](REST/configuration.md#exposing-tables-and-fields) for more information.  
 
-If you want the HTML root folder to be the database or 4D remote folder, but for access to the folders above to be forbidden, enter “/” in the area. For a completely free access to the volumes, leave the “Default HTML Root” area empty.
+Anyway, it is recommended to create [data model class functions](ORDA/ordaClasses.md) which will only be allowed to access data, just like an API. You must [declare each class function](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) that you want to be exposed through REST.  
 
->**WARNING** <br>If you do not define a default HTML Root folder in the Preferences dialog box, the folder that contains the structure file of the database or the 4D application will be used. **Be careful because in this case there are no access restrictions** (users can access all volumes).
-
-**Notes**
-
-*	When the HTML root folder is modified in the Database Settings dialog box, the cache is cleared so as to not store files whose access is restricted.
-
-*	You can also dynamically define the HTML root folder by using the `WEB SET ROOT FOLDER` command. In this case, the modification applies to all the current web process for the worksession. The cache of the HTML pages is therefore cleared.
-
-## Available through 4D tags and URLs
+### 4D tags and URLs
   
-The special `4DACTION URL` and the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` (as well as the former `4DVAR` and `4DHTMLVAR`) tags, allow you to trigger the execution of any project method of a 4D database published on the Web. For example, the request *http://www.server.com/4DACTION/Erase_All* causes the execution of the ***Erase_All*** project method, if it exists.
+The special `4DACTION URL` and the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` tags allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *http://www.server.com/4DACTION/Erase_All* causes the execution of the ***Erase_All*** project method, if it exists.
 
-This mechanism therefore presents a security risk for the database, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in three ways:
+This mechanism therefore presents a security risk for the application, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in three ways:
 
 *	Restrict access to project methods using the 4D password system. Drawbacks: This system requires the use of 4D passwords and forbids any type of method execution (including using HTML tags).
 
-*	Filter the methods called via the URLS using the `On Web Authentication Database Method`. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
+*	Filter the methods called via the URLS using the `On Web Authentication` database method. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
 
 *	Use the **Available through 4D tags and URLs (4DACTION...)** option found in the Method properties dialog box:
 
 ![](assets/en/WebServer/methodProperties.png)
 
 
-This option is used to individually designate each project method that can be called using the special `URL`, `4DACTIONL` or the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` (as well as the former `4DVAR` and `4DHTMLVAR`) tags. When it is not checked, the project method concerned cannot be executed using an HTTP request containing a special URL or tag. Conversely, it can be executed using other types of calls (formulas, other methods, etc.).
+This option is used to individually designate each project method that can be called using the special `URL`, `4DACTION` or the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` (as well as the former `4DVAR` and `4DHTMLVAR`) tags. When it is not checked, the project method concerned cannot be executed using an HTTP request containing a special URL or tag. Conversely, it can be executed using other types of calls (formulas, other methods, etc.).
 
 This option is unchecked by default for databases created. Methods that can be executed using the `4DACTION Web URL` or the tags must be specifically indicated.
 

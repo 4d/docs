@@ -17,7 +17,7 @@ The 4D web server automatically creates a default root folder and a default home
 
 ## Security
 
-Several automatic configuration options allow you to grant specific access authorizations to web browsers or to use the password system integrated into 4D. You can define a "[Generic Web User](webServerSecurity.md#generic-web-user)" to simplify access management within the database.
+Several automatic configuration options allow you to grant specific access authorizations to web browsers or to use the password system integrated into 4D. 
 
 The `On Web Authentication` database method allows you to evaluate any request before it is processed by the web server. Moreover, the ability to define a [default HTML root](webServerSecurity.html#default-html-root) folder allows you to restrict access to files on disk.
 
