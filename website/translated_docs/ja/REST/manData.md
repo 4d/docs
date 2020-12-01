@@ -18,9 +18,9 @@ All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-field
 
 REST API を使って、4D内と同等のデータ操作をおこなうことができます。
 
-エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 データを保存する前に、[`$method=validate`]($method.md#methodvalidate) を呼び出して確定することもできます。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
+エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
 
-Besides retrieving one attribute in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
+Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
 
 Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 
