@@ -117,9 +117,9 @@ Plusieurs types de références de méthode sont pris en charge :
 
 - un nom de méthode projet : nom d'une méthode projet existante sans extension de fichier, c'est-à-dire : `maMéthode` Dans ce cas, 4D ne prend pas en charge automatiquement les opérations objet.
 
-- un chemin d'accès du fichier de méthode personnalisé comprenant l'extension .4dm, par exemple :  
-  `ObjectMethods/objectName.4dm` Vous pouvez également utiliser un filesystem :  
-  `/RESOURCES/Buttons/bOK.4dm` Dans ce cas, 4D ne prend pas en charge automatiquement les opérations sur les objets.
+- a custom method file path including the .4dm extension, e.g.:  
+  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
+  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
 
 
 
