@@ -328,35 +328,24 @@ The default HTML root folder name and location [can be modified](webServerConfig
 If you want the HTML root folder to be the project or 4D remote folder, but for access to the folders above to be forbidden, define "/" as the root folder. 
 
 
-## Control of exposed contents
+## Controlling exposed contents
 
 ### REST access
 
-When the [REST server in started](REST/configuration.md#starting-the-rest-server), you need to control the way your data are exposed through REST requests. 
+When the [REST server is started](REST/configuration.md#starting-the-rest-server), database contents and ORDA data model class functions can be exposed to REST requests. Theses accesses  can be controlled at several levels.
 
-By default, all your data are exposed to REST requests. For security reasons, you may want to only expose certain tables of your datastore to REST calls. For instance, if you created a **Customer** table, the following REST request will return all records within your table:
+- REST access: [configure the REST server](REST/configuration.md#configuring-rest-access) to only allow access to authorized users,
+- Table and field exposure: [unselect the tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests,
+- Data model class functions: [declare each class function](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) that you want to be exposed through REST. It is recommended to create [data model class functions](ORDA/ordaClasses.md) which will only be allowed to access data, just like an API.  
 
-```
-rest/Customer
-```
 
-You control the REST exposure for tables and fields through the Expose as REST resource option in the Structure editor:
-
-![](assets/en/REST/table.png)
-
-Refer to the [REST Server section](REST/configuration.md#exposing-tables-and-fields) for more information.  
-
-Anyway, it is recommended to create [data model class functions](ORDA/ordaClasses.md) which will only be allowed to access data, just like an API. You must [declare each class function](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) that you want to be exposed through REST.  
-
-### 4D tags and URLs
+### Project methods through HTTP
   
 The special `4DACTION URL` and the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` tags allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *http://www.server.com/4DACTION/Erase_All* causes the execution of the ***Erase_All*** project method, if it exists.
 
-This mechanism therefore presents a security risk for the application, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in three ways:
+This mechanism therefore presents a security risk for the application, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in the following ways:
 
-*	Restrict access to project methods using the 4D password system. Drawbacks: This system requires the use of 4D passwords and forbids any type of method execution (including using HTML tags).
-
-*	Filter the methods called via the URLS using the `On Web Authentication` database method. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
+*	Filter the methods called via the URLS using the [`On Web Authentication`](#on-web-authentication) database method. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
 
 *	Use the **Available through 4D tags and URLs (4DACTION...)** option found in the Method properties dialog box:
 
