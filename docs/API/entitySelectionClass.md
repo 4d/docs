@@ -137,6 +137,7 @@ If the attribute does not exist in the entity selection, an error is returned.
 Projection of storage values:
 
 
+
 ```4d
  var $firstNames : Collection
  $entitySelection:=ds.Employee.all()
@@ -324,6 +325,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
+|v18 R6|Returns undefined if empty entity selection|
 |v17|Added|
 
 </details>
@@ -335,7 +337,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Attribute path to be used for calculation|
-|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Null if empty entity selection)|
+|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
 <!-- END REF -->
 
 #### Description
@@ -348,12 +350,12 @@ Only numerical values are taken into account for the calculation. Note however t
 
 >Date values are converted to numerical values (seconds) and used to calculate the average.
 
-`.average()` returns null if the entity selection is empty.
+`.average()` returns **undefined** if the entity selection is empty or *attributePath* does not contain numerical values.
 
 An error is returned if:
 
-*	*attributePath* is a related attribute or does not contain numerical values,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* is a related attribute,
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 #### Example 
@@ -996,6 +998,7 @@ Entity selections always have a `.length` property.
 |Version|Changes|
 |---|---|
 |v17|Added|
+|v18 R6|Returns undefined if empty entity selection|
 
 </details>
 
@@ -1013,14 +1016,15 @@ Entity selections always have a `.length` property.
 
 The `.max()` function <!-- REF #entitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
 
-If you pass in *attributePath* a path to an object attribute containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.max()` returns **null**.
+If you pass in *attributePath* a path to an object attribute containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](collectionClass.md#sort) description). 
 
-If the entity selection is empty, `.max()` returns **null**.
+`.max()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
+
 
 An error is returned if:
 
 *	*attributePath* is a related attribute,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 
@@ -1045,6 +1049,8 @@ We want to find the highest salary among all the female employees:
 |Version|Changes|
 |---|---|
 |v17|Added|
+|v18 R6|Returns undefined if empty entity selection|
+
 
 </details>
 
@@ -1060,16 +1066,16 @@ We want to find the highest salary among all the female employees:
 
 #### Description
 
-The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
+The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
 
-If you pass in *attributePath* a path to an object attribute containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.min()` returns **null**.
+If you pass in *attributePath* a path to an object attribute containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](collectionClass.md#sort) description).
 
-If the entity selection is empty, `.min()` returns **null**.
+`.min()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
 
 An error is returned if:
 
 *	*attributePath* is a related attribute,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 #### Example   
@@ -1924,6 +1930,7 @@ Returns:
 #### Example 4  
 
 Example with `relatedEntity` type with simple form:
+
 
 ```4d
 var $employeesCollection : Collection
