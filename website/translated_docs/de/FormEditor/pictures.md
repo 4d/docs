@@ -1,6 +1,6 @@
 ---
 id: pictures
-title: Pictures
+title: Bilder
 ---
 
 ## Native Unterstützung von Formaten
