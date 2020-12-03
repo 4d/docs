@@ -30,7 +30,7 @@ En mode standard, une base de données est ouverte. Dans ce mode, certaines fonc
   ![](assets/en/MSC/mscicon.png)
 - Utiliser l'action standard “CSM” qu’il est possible d’associer à une commande de menu ou à un objet de formulaire (cf. section "Actions standard").
 
-- Use the `OPEN SECURITY CENTER` language command.
+- Utiliser la commande `OPEN SECURITY CENTER`.
 
 ## Disponibilité des fonctionnalités
 
