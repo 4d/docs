@@ -14,7 +14,7 @@ The 4D web server security is based upon the following elements:
 
 *	**Control of exposed contents**: only functions or project methods that you declare explicitely can be available from web requests.
 
-* [**TLS Protocol (HTTPS)**](webServerConnectSecurity.md#tls-protocol-https) support.
+* [**TLS Protocol (HTTPS)**](webServerTLS.md) support.
 
 >For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
@@ -130,7 +130,7 @@ As in BASIC mode, users must enter their name and password when they connect. Th
 
 The `On Web Authentication` database method is in charge of managing web server engine access. It is called by 4D or 4D Server when a web browser request requires the execution of a 4D method on the server (method called using a `4DACTION URL`, a `4DSCRIPT` tag, etc.).
 
-**On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ; ) -> $0 : Boolean<!-- END REF -->
+**On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ; ) -> $0 : Boolean
 
 |Parameters|Type||Description|
 |---|---|:---:|---|

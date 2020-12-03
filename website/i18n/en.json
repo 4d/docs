@@ -778,9 +778,6 @@
       "WebServer/webServerConnectMethods": {
         "title": "Connection Methods"
       },
-      "WebServer/webServerConnectSecurity": {
-        "title": "Connection Security"
-      },
       "WebServer/webServerGetStart": {
         "title": "Getting Started"
       },
@@ -795,6 +792,9 @@
       },
       "WebServer/webServerSessions": {
         "title": "Session Management"
+      },
+      "WebServer/webServerTLS": {
+        "title": "TLS Protocol (HTTPS)"
       }
     },
     "links": {

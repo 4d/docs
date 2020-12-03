@@ -131,6 +131,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 |Value|Constant|Description|
 |---|---|---|
 |0|wdl disable|Web HTTP debug log is disabled|
+
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)|
 |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only|
 |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only|
@@ -197,7 +198,7 @@ Indicates whether or not the web server will accept non-secure connections.
 |`WEB SET OPTION`|`Web HTTPS enabled`||
 |Settings dialog box|Configuration page/Enable HTTPS||
 
-Status for communication over HTTPS. This option is described in the [Connection Security](webServerConnectSecurity.md#managing-secured-connections-hsts) page.
+Status for communication over HTTPS. This option is described in [this section](webServerTLS.md).
 
 
 ## Enable HSTS
@@ -434,6 +435,7 @@ If modified, the server must be restarted to use the new value.
 |Can be set with|Name|Comments|
 |---|---|---|
 |webServer object|[`name`](API/webServerClass.md#name)||
+
 
 Name of the web server application. Useful when component web servers are started. 
 
