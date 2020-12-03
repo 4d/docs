@@ -314,18 +314,18 @@ Il est parfois nécessaire de réorganiser certains objets qui occultent d’aut
 
 Pour modifier le plan d'un objet, sélectionnez-le et choisissez :
 
-*   One of the **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** commands of the Object menu,
+*   Une des commandes **Passer à l'avant-plan**, **Passer au dernier plan**, **Plan suivant** et **Plan précédent** dans le menu Objet,
 *   One of the commands in the **Level>** submenu in the context menu of the editor,
 *   One of the commands associated with the level management button of the toolbar.
 
 ![](assets/en/FormEditor/level2.png)
 > When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
 
-When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
+Pour ordonner les différents plans, 4D va toujours de l’arrière-plan vers l’avant-plan. Par conséquent, le plan précédent fait reculer la sélection d’objets d’un plan vers l’arrière-plan du formulaire. Le plan suivant fait avancer la sélection d’objets d’un plan vers l’avant-plan du formulaire.
 
-### Data entry order
+### Ordre de saisie des données
 
-The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys.
+L’ordre de saisie est l’ordre dans lequel les champs, les sous-formulaires et les autres objets actifs sont sélectionnés lorsque vous appuyez sur la touche **Tabulation** ou **Retour chariot** dans un formulaire. Il est possible de parcourir le formulaire dans le sens inverse de l’ordre de saisie en appuyant sur les touches **Maj+Tabulation** ou **Maj+Retour chariot**.
 
 > You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands.
 
@@ -333,13 +333,13 @@ Every object that supports the focusable property is included in the data entry 
 
 Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
 
-If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form.
+Si vous ne spécifiez pas d’ordre de saisie personnalisé, 4D utilise par défaut le plan des objets comme ordre de saisie, dans le sens “arrière-plan vers premier plan.” Par défaut, l’ordre de saisie correspond donc à l’ordre de création des objets dans le formulaire.
 
-In some forms, a custom data entry order is needed. Below, for example, additional fields related to the address have been added after the creation of the form. The resulting standard entry order thus becomes illogical and forces the user to enter the information in an awkward manner:
+Dans certains formulaires, il est nécessaire de définir un ordre de saisie personnalisé. Ci-dessous par exemple, des champs supplémentaires relatifs à l’adresse ont été ajoutés après la création du formulaire. The resulting standard entry order thus becomes illogical and forces the user to enter the information in an awkward manner:
 
 ![](assets/en/FormEditor/entryOrder1.png)
 
-In cases such as this, a custom data entry order allows you to enter the information in a more logical order:
+Il est dans ce cas nécessaire de personnaliser l’ordre de saisie afin de proposer une progression plus logique :
 
 ![](assets/en/FormEditor/entryOrder2.png)
 
@@ -373,7 +373,7 @@ To create a data entry group:
 
 When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. The data entry order for the remaining objects adjusts as necessary.
 
-#### Excluding an object from the entry order
+#### Exclure un objet de l’ordre de saisie
 
 By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
 
