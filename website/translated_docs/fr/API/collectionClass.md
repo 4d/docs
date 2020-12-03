@@ -829,9 +829,9 @@ var $c : Collection
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") //retourne true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") //retourne false
 ```
 
 With the following ***NumberGreaterThan0*** method:
@@ -1529,11 +1529,11 @@ Optionally, you can pass the index of collection from which to start a reverse s
  var $col : Collection
  var $pos1;$pos2;$pos3;$pos4;$pos5 : Integer 
  $col:=Split string("a,b,c,d,e,f,g,h,i,j,e,k,e";",") //$col.length=13
- $pos1:=$col.lastIndexOf("e") //returns 12
- $pos2:=$col.lastIndexOf("e";6) //returns 4
- $pos3:=$col.lastIndexOf("e";15) //returns 12
- $pos4:=$col.lastIndexOf("e";-2) //returns 10
- $pos5:=$col.lastIndexOf("x") //returns -1
+ $pos1:=$col.lastIndexOf("e") //retourne 12
+ $pos2:=$col.lastIndexOf("e";6) //retourne 4
+ $pos3:=$col.lastIndexOf("e";15) //retourne 12
+ $pos4:=$col.lastIndexOf("e";-2) //retourne 10
+ $pos5:=$col.lastIndexOf("x") //retourne -1
 ``` 
 
 <!-- END REF -->
