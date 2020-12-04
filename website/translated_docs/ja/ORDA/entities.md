@@ -186,7 +186,7 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 ### 共有可能な/共有不可のエンティティセレクション
 
-エンティティセレクションには 2種類あります: **共有可能** (複数のプロセスで読み込み可能、ただし編集不可) のものと、**共有不可** (カレントプロセスでのみ利用可能、ただし編集可能) のものです:
+An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **non-shareable** (only usable by the current process, but alterable afterwards):
 
 - **共有可能** なエンティティセレクションは以下のような特徴を持ちます:
     - 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で共有することができます。
@@ -195,19 +195,33 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 - **共有不可** のエンティティセレクションは以下のような特徴を持ちます:
     + プロセス間での共有はできません。また共有オブジェクト/コレクションへの保存もできません。 共有不可のエンティティセレクションを共有オブジェクト/コレクションに保存しようとした場合、エラーがトリガーされます (エラー -10721 - 共有オブジェクトまたはコレクションにおいてサポートされる値の型ではありません)。
-    + 新たにエンティティを追加することができます。
+    + it accepts the addition of new entities, i.e. it is **alterable**.
 
-多くの場合において、新規のエンティティセレクションは **共有可能** です。たとえば:
+The **shareable** or **non-shareable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/entitySelectionClass.md#isalterable) function or the `OB Is shared` command.
 
-- 様々な ORDA クラス関数 ([`entitySelection.query( )`](API/entitySelectionClass.md#query)、[`dataClass.query( )`](API/dataclassClass.md#query) など) の結果として返されるエンティティセレクション。
-- リレーションに基づいたエンティティセレクション (例: `company.employee`)
-- 値の "投影" の結果のエンティティセレクション (例: `ds.Employee.all().employer`)
-- [`.copy( )`](API/entitySelectionClass.md#copy) または `OB Copy` を使用して、明示的に共有可能としてコピーされたエンティティセレクション
+A new entity selection **inherits** from the "parent" entity selection nature in the following cases:
 
-ただし、以下の場合には新規エンティティセレクションは **共有不可** となります:
+- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/entitySelectionClass.md#query), [.slice()](API/entitySelectionClass.md#slice), etc.) .
+- the new entity selection is based upon a relation:
+    - [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employee") when *attributeName* is a related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/entityClass.md#getselection) entity selection),
+    - [entitySelection.*attributeName*](API/entitySelectionClass.md#attributename) (e.g. "companies.employer") when *attributeName* is a related attribute (same nature as the entity selection),
+    - [.extract()](API/entitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
 
-- [`.newSelection( )`](API/dataclassClass.md#newselection) 関数または `Create entity selection` コマンドを使用して作成された空のエンティティセレクション
-- [`.copy( )`](API/entitySelectionClass.md#copy) または `OB Copy` を使用して、明示的に共有不可としてコピーされたエンティティセレクション
+
+A new entity selection is **shareable** in the following cases:
+
+- the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/dataclassClass.md#all), [dataClass.fromCollection()](API/dataclassClass.md#fromcollection), [dataClass.query()](API/dataclassClass.md#query),
+- the new entity selection is based upon a relation [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employee") when *attributeName* is a related attribute but the entity does not belong to an entity selection.
+- the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
+
+
+A new entity selection is **non-shareable** (i.e. **alterable**) in the following cases:
+
+- the new entity selection created blank using the [dataClass.newSelection()](API/dataclassClass.md#newselection) function or `Create entity selection` command,
+- the new entity selection is explicitely copied as non-shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+
+> *Compatibility*: It is possible to "force" all new entity selections to be alterable by default in your project using the [.makeSelectionsAlterable()](API/datastoreClass.md#makeselectionsalterable) function. This compatibility setting is not recommended for new projects.
+
 
 #### 例題
 
