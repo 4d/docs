@@ -132,6 +132,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 |---|---|---|
 |0|wdl disable|Web HTTP debug log is disabled|
 
+
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)|
 |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only|
 |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only|
@@ -424,6 +425,7 @@ Possible values:
 - 1 = TLSv1_0
 - 2 = TLSv1_1
 - 3 = TLSv1_2 (default)
+- 4 = TLSv1_3
 
 If modified, the server must be restarted to use the new value.
 
