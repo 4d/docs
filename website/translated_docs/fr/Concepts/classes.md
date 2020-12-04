@@ -257,7 +257,7 @@ You can also declare the return parameter only by adding `: type`, in which case
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Les deux syntaxes peuvent être mélangées. For example:
+> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Les deux syntaxes peuvent être mélangées. Par exemple :
 > 
 > ```4d
 Function add($x : Integer)
@@ -269,7 +269,7 @@ Function add($x : Integer)
 
 
 
-#### Example
+#### Exemple
 
 ```4d
 // Class: Rectangle
@@ -284,7 +284,7 @@ Function getArea()->$result : Integer
 ```
 
 ```4d
-// In a project method
+// Dans une méthode projet
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -296,7 +296,7 @@ $area:=$rect.getArea() //5000
 
 ### Class constructor
 
-#### Syntax
+#### Syntaxe
 
 ```4d
 // Class: MyClass
