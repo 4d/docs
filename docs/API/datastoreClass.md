@@ -489,9 +489,9 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 #### Description
 
-The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.makeSelectionsAlterable().Summary -->sets by all entity selections as alterable by default in the current application<!-- END REF -->, including for [remote datastores](ORDA/datastores.md). 
+The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF -->(including [remote datastores](ORDA/datastores.md)). It is intended to be used once, for example in the `On Startup` database method. 
 
-When this method is not called, most entity selections are [shareable by default](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+When this method is not called, entity selections are usually [shareable by default](ORDA/entities.md#shareable-or-non-shareable-entity-selections), i.e. not alterable.
 
 > **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](entitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. 
 On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity. 

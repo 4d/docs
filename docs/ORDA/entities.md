@@ -191,7 +191,7 @@ You can simultaneously create and use as many different entity selections as you
 
 ### Shareable or non-shareable entity selections
 
-An entity selection can be **shareable** (readable by multiple processes, but not modifiable after creation) or **non-shareable** (only usable by the current process, but modifiable afterwards):
+An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **non-shareable** (only usable by the current process, but alterable afterwards):
 
 - a **shareable** entity selection has the following characteristics:
 	- it can be stored in a shared object or shared collection, and can be shared between several processes or workers;
@@ -200,19 +200,33 @@ An entity selection can be **shareable** (readable by multiple processes, but no
 	
 - a **non-shareable** entity selection has the following characteristics:
 	+ it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
-	+ it accepts the addition of new entities. 
+	+ it accepts the addition of new entities, i.e. it is **alterable**.
+	
+The **shareable** or **non-shareable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/entitySelectionClass.md#isalterable) function or the `OB Is shared` command. 
 
-In most cases, new entity selections are **shareable**, including:
+A new entity selection **inherits** from the "parent" entity selection nature in the following cases:
 
-- entity selections resulting from various ORDA class functions ([`.query()`](API/entitySelectionClass.md#query), [`.query()`](API/dataclassClass.md#query), etc.),
-- entity selections based upon relations (e.g. `company.employee`),
-- entity selections resulting from projections of values (e.g. `ds.Employee.all().employer`),
-- entity selections explicitely copied as shareable with [`.copy()`](API/entitySelectionClass.md#copy) or `OB Copy`.
+- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/entitySelectionClass.md#query), [.slice()](API/entitySelectionClass.md#slice), etc.) .
+- the new entity selection is based upon a relation:
+	- [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employee") when *attributeName* is a related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/entityClass.md#getselection) entity selection),
+	- [entitySelection.*attributeName*](API/entitySelectionClass.md#attributename) (e.g. "companies.employer") when *attributeName* is a related attribute (same nature as the entity selection),
+	- [.extract()](API/entitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
+	
 
-New entity selections are **non-shareable** in the following cases:
+A new entity selection is **shareable** in the following cases:
 
-- blank entity selections created using the [`.newSelection()`](API/dataclassClass.md#newselection) function or `Create entity selection` command,
-- entity selections explicitely copied as non-shareable with [`.copy()`](API/entitySelectionClass.md#copy) or `OB Copy`.
+- the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/dataclassClass.md#all), [dataClass.fromCollection()](API/dataclassClass.md#fromcollection), [dataClass.query()](API/dataclassClass.md#query),
+- the new entity selection is based upon a relation [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employee") when *attributeName* is a related attribute but the entity does not belong to an entity selection.
+- the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
+
+
+A new entity selection is **non-shareable** (i.e. **alterable**) in the following cases:
+
+- the new entity selection created blank using the [dataClass.newSelection()](API/dataclassClass.md#newselection) function or `Create entity selection` command,
+- the new entity selection is explicitely copied as non-shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+
+> *Compatibility*: It is possible to "force" all new entity selections to be alterable by default in your project using the [.makeSelectionsAlterable()](API/datastoreClass.md#makeselectionsalterable) function. This compatibility setting is not recommended for new projects. 
+
 
 #### Example
 
