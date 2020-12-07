@@ -48,30 +48,30 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 エンティティセット内のエンティティの属性値を編集すると、それらの値が更新されます。 ただし、エンティティセットの生成に使用したクエリ条件に合致する値から合致しない値に変更したとしても、そのエンティティはエンティティセットから削除されません。 エンティティを削除した場合には、エンティティセットからも削除されます。
 
-If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
+4D Server のキャッシュからエンティティセットが消えていた場合、10分のデフォルトタイムアウトで再作成されます。 エンティティセットが消えていた場合、再作成されるエンティティセットの内容は更新されたものです (新しくエンティティが追加されていたり、存在していたエンティティが削除されていたりする場合がありえます)。
 
-Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. You can either combine the results in both, return only what is common between the two, or return what is not common between the two.
+[`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection) を使って、事前に作成した 2つのセンティティセットを統合できます。 両セットの内容を統合する (集合の和) ほか、共通のエンティティのみを返したり (集合の積) 、共通でないエンティティのみを返したり (集合の対称差) することができます。
 
-A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
+この場合m新規のエンティティセレクションが返されます。RESTリクエストの最後に [`$method=entityset`]($method.md#methodentityset) を追加することで新規のエンティティセットを作成することもできます。
 
 
 
-## Calculating data
+## データの計算
 
-By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. You can also compute all values with the $all keyword.
+[`$compute`]($compute.md) を使って、データクラスの任意の属性について、**average**や **count**、**min**、**max**、**sum** といった計算がおこなえます。 $all キーワードを使えば、全種の値を計算できます。
 
-For example, to get the highest salary:
+たとえば、一番高い給与を取得するには:
 
-`/rest/Employee/salary/?$compute=sum`
+`/rest/Employee/salary/?$compute=max`
 
-To compute all values and return a JSON object:
+全種の値を計算して JSONオブジェクトとして返すには:
 
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Calling Data model class functions
+## データモデルクラス関数の呼び出し
 
-You can call ORDA Data Model [user class functions](classFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+POSTリクエストを使って、ORDAデータモデルの [ユーザークラス関数](classFunctions.md) を呼び出すことで、ターゲットアプリケーションの公開API を活用できます。 たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 `/rest/City/getCity`
 
