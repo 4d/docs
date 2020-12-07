@@ -49,16 +49,16 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 
 You can start or stop the `WebAdmin` web server for your project at any moment:
 
-- If you use a 4D application with interface, select **Start/Stop Web admin server** from the **Administration** menu.
+- If you use a 4D application with interface, select **Start/Stop Server** from the **Administration** menu.
 
 - Whether you use 4D application which is headless or not, you can execute the [.start()](API/webServerClass.md#start) or [.stop()](API/webServerClass.md#stop) function on the `WebAdmin` web server once it is instanciated.  
 
 
 ## WebAdmin Settings
 
-You can configure the WebAdmin component using the WebAdmin settings dialog box. Configuring the WebAdmin component is mandatory in particular if you want to define the access key. By default when the access key is not set, access is free. 
+You can configure the WebAdmin component using the WebAdmin settings dialog box. Configuring the WebAdmin component is mandatory in particular if you want to define the [**access key**](#access-key). By default when the access key is not set, access is free. 
 
-To open the WebAdmin settings dialog box, select **WebAdmin Settings** in the **Administration** menu. 
+To open the WebAdmin settings dialog box, select **Settings...** in the **Administration** menu. 
 
 The WebAdmin Settings dialog box is displayed:
 
@@ -70,7 +70,7 @@ Check this option if you want the Admin web server to be automatically launched 
 
 #### HTTP Port 
 
-Port number to use for connections through HTTP to the Admin web server. Default value is 8080. This option is only used:
+Port number to use for connections through HTTP to the Admin web server. Default value is 7080. This option is only used:
 
 - if HTTP connections to the Admin web server are allowed
 - or, if the **Accept HTTP connections on localhost** is checked
@@ -85,7 +85,7 @@ By default, this option is checked.
 
 #### HTTPS Port 
 
-Port number to use for connections through HTTPS to the Admin web server. Default value is 8443. This option is only used:
+Port number to use for connections through HTTPS to the Admin web server. Default value is 7443. This option is only used:
 
 - if HTTPS connections to the Admin web server are allowed
 - or, if the **Accept HTTPS connections on localhost** is checked

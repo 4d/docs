@@ -37,7 +37,7 @@ const siteConfig = {
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
-  // customDocsPath: 'docsPostProcessed', //uniquement local
+  customDocsPath: 'docsPostProcessed', //uniquement local
   docsUrl:'',
 
   // For no header links in the top nav bar -> headerLinks: [],
