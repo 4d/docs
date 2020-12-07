@@ -257,7 +257,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 For example:
+> メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -269,22 +269,22 @@ Function add($x : Integer)
 
 
 
-#### Example
+#### 例題
 
 ```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
+// クラス: Rectangle
+Class Constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
 
-// Function definition
+// 関数定義
 Function getArea()->$result : Integer
     $result:=(This.height)*(This.width)
 ```
 
 ```4d
-// In a project method
+// プロジェクトメソッドにて
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -294,12 +294,12 @@ $area:=$rect.getArea() //5000
 
 
 
-### Class constructor
+### Class Constructor
 
-#### Syntax
+#### シンタックス
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 Class Constructor({$parameterName : type; ...})
 // コード
 ```
