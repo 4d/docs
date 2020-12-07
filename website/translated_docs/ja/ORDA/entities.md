@@ -186,7 +186,7 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 ### 共有可能な/共有不可のエンティティセレクション
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **non-shareable** (only usable by the current process, but alterable afterwards):
+エンティティセレクションには 2種類あります: **共有可能** (複数のプロセスで読み込み可能、ただし編集不可) のものと、**共有不可** (カレントプロセスでのみ利用可能、ただし編集可能) のものです:
 
 - **共有可能** なエンティティセレクションは以下のような特徴を持ちます:
     - 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で共有することができます。
