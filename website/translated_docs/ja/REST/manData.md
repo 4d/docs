@@ -3,7 +3,7 @@ id: manData
 title: データ操作
 ---
 
-All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](classFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
+REST によって、すべての [公開されているデータクラス、属性](configuration.md#テーブルやフィールドの公開)、そして [関数](classFunctions.md) にアクセスすることができます。 データクラス、属性、および関数名については、文字の大小が区別されます。クエリのデータについては、文字の大小は区別されません。
 
 ## データのクエリ
 
@@ -27,26 +27,26 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 ## データのナビゲーション
 
-Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
+エンティティのコレクションをナビゲートするにあたっては、クエリやエンティティセレクションに次の RESTリクエストを追加することができます: [`$skip`]($skip.md) (開始エンティティの指定)、[`$top/$limit`]($top_$limit.md) (返されるエンティティ数の指定)。
 
 
 
-## Creating and managing entity set
+## エンティティセットの作成と管理
 
-An entity set (aka *entity selection*) is a collection of entities obtained through a REST request that is stored in 4D Server's cache. Using an entity set prevents you from continually querying your application for the same results. Accessing an entity set is much quicker and can improve the speed of your application.
+エンティティセットとは、*エンティティセレクション* と同等の意味で、RESTリクエストによって取得され、4D Server のキャッシュに保存されるエンティティのコレクションのことです。 エンティティセットを利用することで、同じ結果を得るためにアプリケーションを繰り返しクエリすることが避けられます。 エンティティセットへのアクセスはクエリするよりも速いため、アプリケーション速度の向上にもつながります。
 
-To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
+エンティティセットを作成するには、RESTリクエスト内で [`$method=entityset`]($method.md#methodentityset) を呼び出します。 エンティティセットがタイムアウトした場合やサーバーから削除されてしまった場合への安全対策として、[`$filter`]($filter.md) や [`$orderby`]($orderby.md) を呼び出す際に [`$savedfilter`]($savedfilter.md) および [`$savedorderby`]($savedorderby.md) を使用することで、以前と同じ ID で再取得することができます。
 
-To access the entity set, you must use `$entityset/{entitySetID}`, for example:
+エンティティセットにアクセスするには、`$entityset/{entitySetID}` を使います。例:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
 
-By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). The timeout is continually being reset to the value defined for its timeout (either the default one or the one you define) each time you use it.
+デフォルトで、エンティティセットは 2時間保存されます。[`$timeout`]($timeout.md) に新しい値を渡すことで、タイムアウトを変更できます。 エンティティセットを使用するたびに、タイムアウトはデフォルト値または指定値にリセットされます。
 
-If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method.md#methodrelease).
+4D Server のキャッシュからエンティティセットを削除したい場合には [`$method=release`]($method.md#methodrelease) を使います。
 
-If you modify any of the entity's attributes in the entity set, the values will be updated. However, if you modify a value that was a part of the query executed to create the entity set, it will not be removed from the entity set even if it no longer fits the search criteria. Any entities you delete will, of course, no longer be a part of the entity set.
+エンティティセット内のエンティティの属性値を編集すると、それらの値が更新されます。 ただし、エンティティセットの生成に使用したクエリ条件に合致する値から合致しない値に変更したとしても、そのエンティティはエンティティセットから削除されません。 エンティティを削除した場合には、エンティティセットからも削除されます。
 
 If the entity set no longer exists in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
 
