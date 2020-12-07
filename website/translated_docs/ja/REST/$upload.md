@@ -18,7 +18,7 @@ Then, we upload the selected image to 4D Server:
 
  `POST  /rest/$upload?$rawPict=true`
 
-**Result**:
+**結果**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
