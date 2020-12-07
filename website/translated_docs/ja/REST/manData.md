@@ -262,9 +262,9 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
 
 
-## Retrieving only one entity
+## 1件のエンティティの取得
 
-You can use the [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. It's especially useful when you want to do a related search that isn't created on the dataclass's primary key. たとえば:
+エンティティを 1件のみ取得したい場合には [`{dataClass}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) シンタックスを利用できます。 これは、データクラスの主キーに基づかないリレーション検索をしたい場合に便利です。 たとえば:
 
  `GET  /rest/Company:companyCode("Acme001")`
  
