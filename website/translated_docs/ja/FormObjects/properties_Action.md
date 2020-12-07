@@ -97,9 +97,9 @@ title: 動作
 
 - 拡張子を省いた既存のプロジェクトメソッド名: `myMethod`。この場合、フォームオブジェクトに対して操作がおこなわれても、4D はそれらの変更を自動反映しません。
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- .4dm 拡張子を含むカスタムのメソッドファイルパス:   
+  `../../CustomMethods/myMethod.4dm`。 ファイルシステムも使用できます:  
+  `/RESOURCES/Buttons/bOK.4dm`。 この場合、フォームオブジェクトに対して操作がおこなわれても、4D はそれらの変更を自動反映しません。
 
 
 #### JSON 文法
