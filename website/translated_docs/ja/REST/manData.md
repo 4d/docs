@@ -3,7 +3,7 @@ id: manData
 title: データ操作
 ---
 
-REST によって、すべての [公開されているデータクラス、属性](configuration.md#テーブルやフィールドの公開)、そしてメソッドにアクセスすることができます。 データクラス、属性、およびメソッド名においては、文字の大小が区別されます。クエリのデータについては、文字の大小は区別されません。
+REST によって、すべての [公開されているデータクラス、属性](configuration.md#テーブルやフィールドの公開)、そしてメソッドにアクセスすることができます。 データクラス、属性、およびメソッド名については、文字の大小が区別されます。クエリのデータについては、文字の大小は区別されません。
 
 ## データのクエリ
 
@@ -22,7 +22,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 [{dataClass}({key})](%7BdataClass%7D.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、DataClassクラスにメソッドを書いて [{dataClass}/{method}](%7BdataClass%7D.md#dataclassmethod) のように使い、エンティティセレクションやコレクションを返すようにすることができます。
 
-Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+戻り値としてコレクションを返す前に、[`$orderby`]($orderby.md) を使って一つ以上の属性 (リレーション属性も可) を基準に並べ替えることもできます。
 
 
 ## Navigating data
