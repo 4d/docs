@@ -20,12 +20,12 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
+[{dataClass}({key})](%7BdataClass%7D.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、エンティティセレクションやコレクションを返す [クラス関数](classFunctions.md#関数の呼び出し) を用意することもできます。
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+戻り値としてセレクションを返す前に、[`$orderby`]($orderby.md) を使って一つ以上の属性 (リレーション属性も可) を基準に並べ替えることもできます。
 
 
-## Navigating data
+## データのナビゲーション
 
 Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
 
