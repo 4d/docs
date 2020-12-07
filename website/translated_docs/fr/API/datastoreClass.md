@@ -381,11 +381,11 @@ The `.getInfo()` function <!-- REF #datastoreClass.getInfo().Summary -->returns 
 
 **Returned object**
 
-| Propriété  | Type    | Description                                                                                                                                                    |
-| ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                             |
-| networked  | boolean | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                             |
-| localID    | Texte   | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.           |
+| Propriété  | Type    | Description                                                                                                                                                     |
+| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type       | string  | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
+| networked  | boolean | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
+| localID    | Texte   | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
 | connection | object  | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>Texte</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>boolean</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>Texte</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
@@ -487,9 +487,12 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 #### Description
 
-The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.makeSelectionsAlterable().Summary -->sets by all entity selections as alterable by default in the current application<!-- END REF -->, including for [remote datastores](ORDA/datastores.md).
+The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF -->(including [remote datastores](ORDA/datastores.md)). It is intended to be used once, for example in the `On Startup` database method.
 
-When this method is not called, most entity selections are [shareable by default](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+
+> This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used.
+
 
 > **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](entitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity. 
 

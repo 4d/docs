@@ -378,16 +378,16 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 **例題**
 
-In the *Color* project method, write the following code:
+*Color* プロジェクトメソッドには、以下のコードを書きます:
 
 
 
 ```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+// Color メソッド
+// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
 C_OBJECT($0)
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -397,35 +397,35 @@ $0:=Form.meta
 ```
 
 
-**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+**ベストプラクティス:** このような場合には最適化のため、フォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
 
 
 
 ```4d
-  //form method
- Case of
-    :(Form event code=On Load)
+  // フォームメソッド
+Case of
+  :(Form event code=On Load)
        Form.colStyle:=New object("Column2";New object("fill";"black"))
- End case
+End case
 ```
 
 
-Then, the *Color* method would contain:
+*Color* メソッドには、以下のコードを書きます:
 
 
 
 ```4d
-  //Color method
+  // Color メソッド
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle // より良いパフォーマンスのため、同じオブジェクトを再利用します
  ...
 ```
 
 
 
-> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
+> [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドも参照してください。
 
 
 

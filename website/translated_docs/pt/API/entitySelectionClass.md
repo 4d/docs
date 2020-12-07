@@ -23,6 +23,7 @@ An entity selection is an object containing one or more reference(s) to [entitie
 | [<!-- INCLUDE #entitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.extract().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.first().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.getDataClass().Summary -->|
+| [<!-- INCLUDE #entitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.isAlterable().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.isOrdered().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.last().Summary -->|
 | [<!-- INCLUDE #entitySelectionClass.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.length.Summary -->|
@@ -131,6 +132,7 @@ If the attribute does not exist in the entity selection, an error is returned.
 #### Example 1
 
 Projection of storage values:
+
 
 ```4d
  var $firstNames : Collection
@@ -841,6 +843,35 @@ The following generic code duplicates all entities of the entity selection:
 
 <!-- END REF -->
 
+
+<!-- REF entitySelectionClass.isAlterable().Desc -->
+## .isAlterable()
+
+<details><summary>History</summary>
+
+| Version | Changes |
+| ------- | ------- |
+| v18 R5  | Added   |
+
+</details>
+
+<!-- REF #entitySelectionClass.isAlterable().Syntax -->
+**.isAlterable()** : Boolean<!-- END REF -->
+
+<!-- REF #entitySelectionClass.isAlterable().Params -->
+| Parameter | Type    |    | Description                                                         |
+| --------- | ------- |:--:| ------------------------------------------------------------------- |
+| Result    | Boolean | <- | True if the entity selection is alterable, False if it is shareable |
+<!-- END REF -->
+
+#### Description
+
+The `.isAlterable()` function <!-- REF #entitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->. It returns False if the entity selection is not alterable, i.e. if it is *shareable*.
+
+For more information, please refer to [Shareable or non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+
+
+<!-- END REF -->
 
 
 <!-- REF entitySelectionClass.isOrdered().Desc -->
@@ -2096,6 +2127,7 @@ Returns:
     },
     {
         "firstName": "Gary",
+
         "lastName": "Reichert",
         "directReports": [
             {
