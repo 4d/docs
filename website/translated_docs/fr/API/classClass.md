@@ -63,7 +63,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La fonction `.new()` <!-- REF #classClass.new().Summary -->crée et returne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
+La `.new()` function <!-- REF #classClass.new().Summary -->crée et returne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
 
 S'il est appelé sur une classe inexistante, une erreur est retournée.
 
