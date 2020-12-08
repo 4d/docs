@@ -30,7 +30,7 @@ If($zipFile.extension=".txt")
 End if
 ```
 
-### Summary
+### Sommaire
 
 |                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -372,6 +372,6 @@ The `.root` property contains <!-- REF #zipArchiveClass.root.Summary -->a virtua
 
 The `root` folder and its contents can be manipulated with the [ZipFile](zipFileClass.md) and [ZipFolder](zipFolderClass.md) functions and properties.
 
-This property is **read-only**. 
+Cette propriété est en **lecture seule**. 
 
 <style> h2 { background: #d9ebff;}</style>

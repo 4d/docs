@@ -3,7 +3,7 @@ id: looping
 title: Schleifenstrukturen
 ---
 
-Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
+Schleifenstrukturen wiederholen eine Abfolge von Anweisungen, bis eine Bedingung gefunden wird oder eine Anzahl an Durchläufen erreicht ist.
 
 
 ## While...End while

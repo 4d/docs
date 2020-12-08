@@ -1176,23 +1176,32 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| プロパティ            |  | タイプ     | 説明                                                      |
-| ---------------- |  | ------- | ------------------------------------------------------- |
-| success          |  | boolean | True if the save action is successful, False otherwise. |
-|                  |  |         | ***Available only if `dk auto merge` option is used***: |
-| autoMerged       |  | boolean | True if an auto merge was done, False otherwise.        |
-|                  |  |         | ***Available only in case of error***:                  |
-| status(\*)     |  | number  | Error code, see below                                   |
-| statusText(\*) |  | text    | Description of the error, see below                     |
-|                  |  |         | ***Available only in case of pessimistic lock error***: |
-| lockKindText     |  | text    | "Locked by record"                                      |
-| lockInfo         |  | object  | Information about the lock                              |
- origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on the machine| ||user4d_id|    text|   User name in the 4D database directory| ||host_name |text   |Machine name| ||task_name|    text|   Process name| ||client_version|   text||
+| プロパティ        |                    | タイプ                   | 説明                                                                                                                      |
+| ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| success      |                    | boolean               | True if the save action is successful, False otherwise.                                                                 |
+|              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
+| autoMerged   |                    | boolean               | True if an auto merge was done, False otherwise.                                                                        |
+|              |                    |                       | ***Available only in case of error***:                                                                                  |
+| status       |                    | number                | Error code, [see below](#status-and-statustext)                                                                         |
+| statusText   |                    | text                  | Description of the error, [see below](#status-and-statustext)                                                           |
+|              |                    |                       | ***Available only in case of pessimistic lock error***:                                                                 |
+| lockKindText |                    | text                  | "Locked by record"                                                                                                      |
+| lockInfo     |                    | object                | Information about the lock origin                                                                                       |
+|              | task_id            | number                | Process id                                                                                                              |
+|              | user_name          | text                  | Session user name on the machine                                                                                        |
+|              | user4d_id          | text                  | User name in the 4D database directory                                                                                  |
+|              | host_name          | text                  | Machine name                                                                                                            |
+|              | task_name          | text                  | Process name                                                                                                            |
+|              | client_version     | text                  |                                                                                                                         |
+|              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
+| errors       |                    | collection of objects |                                                                                                                         |
+|              | message            | text                  | Error message                                                                                                           |
+|              | componentSignature | text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
+|              | errCode            | number                | Error code                                                                                                              |
 
-  
-||||***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...):| |errors ||  collection of objects|| ||message|  text    |Error message| ||componentSignature|   text|   Internal component signature (e.g. "dmbg" stands for the database component)| ||errCode|  number| Error code|
+##### status and statusText
 
-(\*) The following values can be returned in the status and statusText properties of Result object in case of error:
+The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
 | 定数                                        | 結果 | 説明                                                                                                                                                                                                                                                                |
 | ----------------------------------------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

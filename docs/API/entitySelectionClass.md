@@ -23,6 +23,7 @@ An entity selection is an object containing one or more reference(s) to [entitie
 |[<!-- INCLUDE #entitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.extract().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.first().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.getDataClass().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.isAlterable().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.isOrdered().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.last().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.length.Summary -->|
@@ -135,6 +136,8 @@ If the attribute does not exist in the entity selection, an error is returned.
 #### Example 1  
 
 Projection of storage values:
+
+
 
 
 ```4d
@@ -324,6 +327,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
+|v18 R6|Returns undefined if empty entity selection|
 |v17|Added|
 
 </details>
@@ -335,7 +339,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Attribute path to be used for calculation|
-|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Null if empty entity selection)|
+|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
 <!-- END REF -->
 
 #### Description
@@ -348,12 +352,12 @@ Only numerical values are taken into account for the calculation. Note however t
 
 >Date values are converted to numerical values (seconds) and used to calculate the average.
 
-`.average()` returns null if the entity selection is empty.
+`.average()` returns **undefined** if the entity selection is empty or *attributePath* does not contain numerical values.
 
 An error is returned if:
 
-*	*attributePath* is a related attribute or does not contain numerical values,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* is a related attribute,
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 #### Example 
@@ -853,6 +857,47 @@ The following generic code duplicates all entities of the entity selection:
 <!-- END REF -->
 
 
+<!-- REF entitySelectionClass.isAlterable().Desc -->
+## .isAlterable()   
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v18 R5|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.isAlterable().Syntax -->
+**.isAlterable()** : Boolean<!-- END REF -->
+
+<!-- REF #entitySelectionClass.isAlterable().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if the entity selection is alterable, False if it is shareable|
+<!-- END REF -->
+
+#### Description
+
+The `.isAlterable()` function <!-- REF #entitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->. It returns False if the entity selection is not alterable, i.e. if it is *shareable*. 
+
+For more information, please refer to [Shareable or non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+
+#### Example
+
+You are about to display `Form.products` in a [list box](FormObjects\listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
+
+```4d
+If (Not(Form.products.isAlterable()))
+    Form.products:=Form.products.copy()
+End if
+...
+Form.products.add(Form.product)
+```
+
+
+<!-- END REF -->
+
 
 <!-- REF entitySelectionClass.isOrdered().Desc -->
 ## .isOrdered()   
@@ -996,6 +1041,7 @@ Entity selections always have a `.length` property.
 |Version|Changes|
 |---|---|
 |v17|Added|
+|v18 R6|Returns undefined if empty entity selection|
 
 </details>
 
@@ -1013,14 +1059,15 @@ Entity selections always have a `.length` property.
 
 The `.max()` function <!-- REF #entitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
 
-If you pass in *attributePath* a path to an object attribute containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.max()` returns **null**.
+If you pass in *attributePath* a path to an object attribute containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](collectionClass.md#sort) description). 
 
-If the entity selection is empty, `.max()` returns **null**.
+`.max()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
+
 
 An error is returned if:
 
 *	*attributePath* is a related attribute,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 
@@ -1045,6 +1092,8 @@ We want to find the highest salary among all the female employees:
 |Version|Changes|
 |---|---|
 |v17|Added|
+|v18 R6|Returns undefined if empty entity selection|
+
 
 </details>
 
@@ -1060,16 +1109,16 @@ We want to find the highest salary among all the female employees:
 
 #### Description
 
-The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
+The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
 
-If you pass in *attributePath* a path to an object attribute containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.min()` returns **null**.
+If you pass in *attributePath* a path to an object attribute containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](collectionClass.md#sort) description).
 
-If the entity selection is empty, `.min()` returns **null**.
+`.min()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
 
 An error is returned if:
 
 *	*attributePath* is a related attribute,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 #### Example   
@@ -1925,6 +1974,7 @@ Returns:
 
 Example with `relatedEntity` type with simple form:
 
+
 ```4d
 var $employeesCollection : Collection
 $employeesCollection:=New collection
@@ -2111,6 +2161,7 @@ Returns:
     },
     {
         "firstName": "Gary",
+
         "lastName": "Reichert",
         "directReports": [
             {

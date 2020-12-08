@@ -64,7 +64,7 @@ Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeur
 
 Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
 
-The 4D development framework includes a file access manager to control concurrent access:
+Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:![](assets/en/Project/projectReload.png)

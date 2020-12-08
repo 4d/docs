@@ -3,7 +3,7 @@ id: branching
 title: Abfragestrukturen
 ---
 
-A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+Über eine Abfragestruktur können Methoden eine Bedingung testen und je nach Ergebnis alternative Wege einschlagen.
 
 
 ## If...Else...End if

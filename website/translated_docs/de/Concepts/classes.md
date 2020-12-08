@@ -84,7 +84,7 @@ Um eine neue Klasse zu erstellen:
 In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:
 
 - Im Code-Editor gilt folgendes:
-    - Es kann keine Klasse laufen
+    - Klassen können nicht direkt ausgeführt werden
     - Eine Klassenfunktion ist ein Code Block
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Objekt Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
@@ -106,7 +106,7 @@ Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 | ---------- | ------ | -- | ---------------------------------------------------- |
 | classStore | object | <- | Store der Benutzerklasse für Projekt oder Komponente |
 
-Der Befehl `cs` gibt den Store der Benutzerklassen für das aktuelle Projekt oder die Komponente zurück. Er gibt alle Benutzerklassen zurück, die im geöffneten Projekt bzw. der Komponente [definiert](#definition-einer-klasse) sind. Standardmäßig sind nur [ORDA Klassen](ORDA/ordaClasses.md) des Projekts verfügbar.
+Der Befehl `cs` gibt den Store der Benutzerklassen für das aktuelle Projekt oder die Komponente zurück. Er gibt alle Benutzerklassen zurück, die im geöffneten Projekt bzw. der Komponente [definiert](#eine-klasse-definieren) sind. Standardmäßig sind nur [ORDA Klassen](ORDA/ordaClasses.md) des Projekts verfügbar.
 
 #### Beispiel
 
@@ -139,20 +139,20 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ## Klassen in Ihrem Code verwenden
 
 
-### Objekt Klasse
+### Objekt Class
 
-Ist in einem Projekt eine Klasse [definiert](#class-definition), wird sie in die 4D Programmiersprache Umgebung geladen. Eine Klasse ist selbst ein Objekt der Klasse ["class"](API/classClass.md). Ein Objekt Klasse hat folgende Eigenschaften und Funktionen:
+Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie in die 4D Programmiersprache Umgebung geladen. Eine Klasse ist selbst ein Objekt der Klasse ["class"](API/classClass.md). Ein Objekt class hat folgende Eigenschaften und Funktionen:
 
 - String [`name`](API/classClass.md#name)
 - Objekt [`superclass`](API/classClass.md#superclass) (optional, null, wenn nicht vorhanden)
 - Funktion [`new()`](API/classClass.md#new), um Instanzen der Objekte einer Klasse zu setzen.
 
-Zusätzlich kann ein Objekt Klasse verweisen auf:
+Zusätzlich kann ein Objekt class verweisen auf:
 
 - Ein Objekt [`constructor`](#class-constructor) (optional),
 - Ein Objekt `prototype` mit Objektnamen [function](#function) (optional).
 
-Ein Objekt Klasse ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+Ein Objekt Klasse ist ein [shared Object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
 
 
@@ -201,7 +201,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Class Functions sind Eigenschaften des Objekts Prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
-In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object. md#identifier-für-objekteigenschaft) konform sein.
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#identifier-für-objekteigenschaft) konform sein.
 
 > **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im 4D Code-Editor unterdrückt und nicht vorgeschlagen. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `"cs.MyClass` eingeben.
 
@@ -521,10 +521,10 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
+> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. See [this example](#example-1).
 
 
-In jedem Fall bezieht sich `This` auf das Objekt, in dem die Methode aufgerufen wurde, als ob die Methode im Objekt wäre.
+In any cases, `This` refers to the object the method was called on, as if the method were on the object.
 
 ```4d
 //Class: ob
@@ -533,7 +533,7 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Dann können Sie in einer Projektmethode schreiben:
+Then you can write in a project method:
 
 ```4d
 $o:=cs.ob.new()
@@ -541,7 +541,7 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-In diesem Beispiel hat das der Variablen $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von der dazugehörigen Klasse. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
+In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
 
 
 ## Befehle für Klassen

@@ -8,7 +8,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`s'étendre`](#class-extends-classname) à une autre classe, puis hériter de ses [fonctions](#function).
+Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut s'étendre à une autre classe avec le mot-clé [`extend`](#class-extends-classname), puis hériter de ses fonctions.
 
 > Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -141,7 +141,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ### L'objet classe
 
-Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/classClass.md). Un objet de classe a les propriétés et fonctions suivantes :
+Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/classClass.md). Un objet class possède les propriétés et fonctions suivantes :
 
 - chaîne [`name`](API/classClass.md#name)
 - objet [`superclass`](API/classClass.md#superclass) (nul si aucun)
@@ -149,7 +149,7 @@ Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est cha
 
 De plus, un objet de classe peut référencer :
 
-- un objet [`constructeur`](#class-constructor) (facultatif),
+- un objet [`constructor`](#class-constructor) (facultatif),
 - un objet `prototype`, contenant des objets de [fonction](#function) nommés (facultatif).
 
 Un objet de classe est un [objet partagé](shared.md) et est donc accessible simultanément à partir de différents processus 4D.
@@ -185,12 +185,12 @@ Lors de l'énumération des propriétés d'un objet, son prototype de classe n'e
 
 Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de classe :
 
-- `Fonction <Name>` pour définir les méthodes membres des objets.
+- `Function <Name>` pour définir les méthodes membres des objets.
 - `Class constructor` (constructeur de classe) pour définir les propriétés des objets (c'est-à-dire le prototype).
 - `Class extends <ClassName>` pour définir l'héritage.
 
 
-### Fonction
+### Function
 
 #### Syntaxe
 
@@ -208,13 +208,13 @@ Dans le fichier de définition de classe, les déclarations de fonction utilisen
 Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple:
 
 ```4d
-Fonction computeArea($width : Integer; $height : Integer)->$area : Integer
+Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
 Dans une fonction de classe, la commande `This` est utilisée comme instance d'objet. Par exemple:
 
 ```4d  
-Fonction setFullname($firstname : Text; $lastname : Text)
+Function setFullname($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
@@ -226,38 +226,38 @@ Pour une fonction de classe, la commande `Current method name` retourne: "*\<Cla
 
 Dans le code de l'application, les fonctions de classe sont appelées en tant que méthodes membres de l'instance d'objet et peuvent recevoir des [paramètres](#class-function-parameters) le cas échéant. Les syntaxes suivantes sont prises en charge :
 
-- utilisation de l'opérateur `()`. For example, `myObject.methodName("hello")`
-- use of a "Function" class member method:
+- utilisation de l'opérateur `()`. Par exemple, `myObject.methodName("hello")`
+- utilisations d'une méthode membre de la classe "Function" :
     - `apply()`
     - `call()`
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **Avertissement de sécurité des threads :** Si une fonction de classe n'est pas thread-safe et est appelée par une méthode avec l'attribut "Peut être exécuté en processus préemptif" : - le compilateur ne génère aucune erreur (ce qui est différent des méthodes classiques), - une erreur n'est générée par 4D qu'au moment de l'exécution.
 
 
 
 
-#### Parameters
+#### Paramètres
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Les paramètres de fonction sont déclarés à l'aide du nom et du type de paramètre, séparés par deux points. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
-> If the type is not stated, the parameter will be defined as `Variant`.
+> Si le type n'est pas indiqué, le paramètre sera défini comme `Variant`.
 
-You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
-
-```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
-```
-
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example:
+Déclarez le paramètre de retour (facultatif) en ajoutant une flèche (->) et la définition du paramètre de retour après la liste des paramètres d'entrée. Par exemple :
 
 ```4d
-Function add($x : Variant; $y : Integer): Integer
-    $0:=$x+$y
+Function add ($x : Variant; $y : Integer)->$result : Integer
 ```
-> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Les deux syntaxes peuvent être mélangées. For example:
+
+Vous pouvez également déclarer le paramètre de retour uniquement en ajoutant `: type`, auquel cas il sera automatiquement disponible via $0. Par exemple :
+
+```4d
+Function add ($x : Variant; $y : Integer): Integer
+     $0:=$x+$y
+```
+> La [syntaxe 4D classique](parameters.md#sequential-parameters) des paramètres de méthode peut être utilisée pour déclarer les paramètres des fonctions de classe. Les deux syntaxes peuvent être mélangées. Par exemple :
 > 
 > ```4d
 Function add($x : Integer)
@@ -269,7 +269,7 @@ Function add($x : Integer)
 
 
 
-#### Example
+#### Exemple
 
 ```4d
 // Class: Rectangle
@@ -278,13 +278,13 @@ Class constructor($width : Integer; $height : Integer)
     This.height:=$height
     This.width:=$width
 
-// Function definition
+// Définition de la classe
 Function getArea()->$result : Integer
     $result:=(This.height)*(This.width)
 ```
 
 ```4d
-// In a project method
+// Dans une méthode projet
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -296,7 +296,7 @@ $area:=$rect.getArea() //5000
 
 ### Class constructor
 
-#### Syntax
+#### Syntaxe
 
 ```4d
 // Class: MyClass

@@ -1191,12 +1191,11 @@ The object returned by `.save()` contains the following properties:
 ||||***Available only if `dk auto merge` option is used***:|
 |autoMerged|	|boolean|True if an auto merge was done, False otherwise.|
 ||||***Available only in case of error***:|
-|status(\*)|	|number|Error code, see below|
-|statusText(\*)|	|text|Description of the error, see below|
+|status|	|number|Error code, [see below](#status-and-statustext)|
+|statusText|	|text|Description of the error, [see below](#status-and-statustext)|
 ||||***Available only in case of pessimistic lock error***:|
 |lockKindText|	|text|"Locked by record"|
-|lockInfo|	|object|Information about the lock
-origin|
+|lockInfo|	|object|Information about the lock origin|
 ||task_id|	number|	Process id|
 ||user_name	|text|	Session user name on the machine|
 ||user4d_id|	text|	User name in the 4D database directory|
@@ -1209,7 +1208,9 @@ origin|
 ||componentSignature|	text|	Internal component signature (e.g. "dmbg" stands for the database component)|
 ||errCode|	number|	Error code|
 
-(\*) The following values can be returned in the status and statusText properties of Result object in case of error:
+##### status and statusText
+
+The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
 |Constant|	Value	|Comment|
 |---|---|---|

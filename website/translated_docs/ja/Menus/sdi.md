@@ -8,7 +8,7 @@ Windows において、組みこみ 4Dアプリケーションを SDI (シング
 
 > SDI/MDI という概念は macOS には存在しません。 この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
 
-## SDI mode availability
+## SDIモード利用条件
 
 SDIモードは以下の実行環境に限り利用可能です:
 
