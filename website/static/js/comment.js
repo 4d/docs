@@ -14,7 +14,7 @@ function getCommentTrad($code){
     if($code == 'DE') return 'Comment';
     if($code == 'EN') return 'Comment';
     if($code == 'ES') return 'Comment';
-    if($code == 'FR') return 'Commentaire';
+    if($code == 'FR') return 'Comment';
     if($code == 'JA') return 'Comment';
     if($code == 'PT') return 'Comment';
     //if($code == 'US') return 'Comment';
@@ -47,7 +47,7 @@ $( document ).ready(function() {
   var pageHeader = $(".postHeaderTitle").text();
 
   // construct issue
-  var issueTitle="About page: "+pageHeader;
+  var issueTitle="Comment on: "+pageHeader;
   //var issueBody=`- 🇬🇧 [${pageName}](${pageLink})\n`;
   var issueBody=`- [${pageName}](${pageLink})\n`;
 
@@ -55,9 +55,9 @@ $( document ).ready(function() {
     // from https://github.com/4D/docs/edit/Rx/docs/Project/overview.md
     // to /4d/docs/blob/Rx/website/translated_docs/<lang>/Project/overview.md
      pageLink=replaceLast(pageLink,"/docs/", "/website/translated_docs/"+lang+"/");
-     issueBody+=`- ${getFlags(lang)} [${pageName}](${pageLink})`;
+     issueBody+=`- ${getFlags(lang)} [${pageName}](${pageLink})\n\n`;
   }
-
+  issueBody+="Enter your comment here:"+`\n`;
   var commentLink = `https://github.com/4d/docs/issues/new?title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}`
 
   editButton.attr("href", commentLink);
