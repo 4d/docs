@@ -55,9 +55,9 @@ $( document ).ready(function() {
     // from https://github.com/4D/docs/edit/Rx/docs/Project/overview.md
     // to /4d/docs/blob/Rx/website/translated_docs/<lang>/Project/overview.md
      pageLink=replaceLast(pageLink,"/docs/", "/website/translated_docs/"+lang+"/");
-     issueBody+=`- ${getFlags(lang)} [${pageName}](${pageLink})\n\n`;
+     issueBody+=`- ${getFlags(lang)} [${pageName}](${pageLink})`;
   }
-  issueBody+="Enter your comment here:"+`\n`;
+  issueBody+=`\n\n`+"Enter your comment here:"+`\n`;
   var commentLink = `https://github.com/4d/docs/issues/new?title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}`
 
   editButton.attr("href", commentLink);
