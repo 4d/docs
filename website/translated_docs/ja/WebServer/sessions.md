@@ -11,7 +11,8 @@ Web server user sessions allow to:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
 - share data between the processes of a web client,
-- associate privileges to user sessions.
+- associate privileges to user sessions,
+- handle access through a `Session` object and the [Session API](API/sessionClass.md).
 
 ## Enabling sessions
 

@@ -121,7 +121,7 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 | ------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message | テキスト   | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
 | options | オブジェクト | -> | デコーディングオプション                                                                  |
-| 戻り値     | オブジェクト | <- | Status                                                                        |
+| 戻り値     | オブジェクト | <- | ステータス                                                                         |
 <!-- END REF -->
 
 
