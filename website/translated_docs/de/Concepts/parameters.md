@@ -82,7 +82,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Es gelten folgende Regeln:
 
 - Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (davor können nur Kommentare oder Zeilenumbrüche stehen).
-- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
+- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#identifier-für-objekteigenschaft) konform sein.
 - Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
@@ -122,7 +122,7 @@ Sie deklarieren den Rückgabeparameter einer Funktion mit einem Pfeil (->) und d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Er ist dann automatisch über `$0` verfügbar ([siehe unten sequentielle Syntax](#zurückgegebener-wert-1)). Beispiel:
+Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Er ist dann automatisch über `$0` verfügbar ([siehe unten sequentielle Syntax](#rückgabewert-1)). Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer

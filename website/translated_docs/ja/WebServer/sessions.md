@@ -11,21 +11,24 @@ Web server user sessions allow to:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
 - share data between the processes of a web client,
-- associate privileges to user sessions.
+- associate privileges to user sessions,
+- handle access through a `Session` object and the [Session API](API/sessionClass.md).
 
 ## Enabling sessions
 
-The session management feature can be enabled and disabled on your 4D web server. There are two ways to enable session management:
+The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
 - Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting): ![alt-text](assets/en/WebServer/settingsSession.png)
 
 This option is selected by default in new projects. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
-- Using the `WEB SET OPTION(Web scalable session;1)` statement. In this case, this setting overrides the option defined in the Settings dialog box and is applied only during the working session (it is not stored on disk).
+- Using the [`.scalableSession`](API/webServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/webServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-In both cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
+> The `WEB SET OPTION` command can also set the session mode for the main Web server.
 
-> **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site). In converted projects, it is recommended to enable **Scalable sessions**.
+In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
+
+> **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
 
 
 ## Session implementation
@@ -50,7 +53,7 @@ The current `Session` object can then be accessed through the [`Session`](API/se
 
 ## Sharing information
 
-Each `Session` object provides a [`.storage`](API/sessionClass.md#storage) property which is a [shared object](Concepts/shared). This property allows you to share information between all processes handled by the session.
+Each `Session` object provides a [`.storage`](API/sessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
 
 ## Session lifetime
 
@@ -74,9 +77,9 @@ When a scalable web session is closed, if the [`Session`](API/sessionClass.md#se
 
 Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 
-By default, new sessions do not have any privilege: they are **Guest** sessions. You can assign privileges usign the [`.setPrivileges()`](API/sessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/sessionClass.md#hasprivilege) function.
+You can assign privileges usign the [`.setPrivileges()`](API/sessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/sessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/sessionClass.md#isguest) function returns true).
 
-> In the current implementation, only "Guest" and "WebAdmin" privileges are available.
+> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
 
 例:
 

@@ -3,11 +3,11 @@ id: sessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](#session) command, when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). A Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-relat(WebServer/sessions.mded preemptive processes.
+Session objects are returned by the [`Session`](#session) command when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). The Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes.
 
 For detailed information about the session implementation, please refer to the [web server Sessions](WebServer/sessions.md) section.
 
-## Summary
+### Summary
 
 
 |                                                                                                                                                                                                           |
@@ -136,7 +136,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 The `.expirationDate` property contains <!-- REF #sessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.timeout`](#timeout) property value is modified.
+This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### Example
 
@@ -284,29 +284,38 @@ End if
 </details>
 
 <!-- REF #sessionClass.setPrivileges().Syntax -->
-**.setPrivileges**( *settings* : Object )<!-- END REF -->
+**.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #sessionClass.setPrivileges().Params -->
-| Parameter | Type   |    | Description                                                |
-| --------- | ------ |:--:| ---------------------------------------------------------- |
-| settings  | Object | -> | Object with a "privileges" property (string or collection) |
+| Parameter  | Type       |    | Description                                                |
+| ---------- | ---------- |:--:| ---------------------------------------------------------- |
+| privilege  | Text       | -> | Privilege name                                             |
+| privileges | Collection | -> | Collection of privilege names                              |
+| settings   | Object     | -> | Object with a "privileges" property (string or collection) |
 <!-- END REF -->
 
 #### Description
 
-The `.setPrivileges()` function <!-- REF #sessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the *settings* parameter to the session<!-- END REF -->.
+The `.setPrivileges()` function <!-- REF #sessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
 
-In the *settings* parameter, pass an object containing the following property:
+- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+
+- In the *privileges* parameter, pass a collection of strings containing privilege names.
+
+- In the *settings* parameter, pass an object containing the following properties:
 
 | Property   | Type               | Description                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
 | privileges | Text or Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
+| userName   | Text               | User name to associate to the session (optional)   |
 
 If the `privileges` property contains an invalid privilege name, it is ignored.
 
 > In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
 
-By default when no privilege is associated to the session, the session is a Guest session.
+By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
+
+The [`userName`](#username) property is available at session object level (read-only).
 
 #### Example
 
@@ -359,7 +368,7 @@ The `.storage` property contains <!-- REF #sessionClass.storage.Summary -->a sha
 
 When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server.
 
-This property is **read write**.
+This property is **read only** itself but it returns a read-write object.
 
 #### Example
 
@@ -395,27 +404,15 @@ End if
 
 #### Description
 
-The `.userName` property contains <!-- REF #sessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->.
+The `.userName` property contains <!-- REF #sessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. You can use it to identify the user within your code.
 
-This property is empty by default. You can use it to identify the user within your code.
+This property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 
-This property is **read write**.
-
-#### Example
-
-In the `On Web Authentication` database method:
-
-```4d
-var $clientName; $5 : Text
-
-$clientName:=$5
-
-... //Authenticate the user
-
-Session.userName:=$clientName
-
-```
+This property is **read only**. 
 
 
 
 <!-- END REF -->
+
+
+<style> h2 { background: #d9ebff;}</style>
