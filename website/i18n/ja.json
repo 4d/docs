@@ -62,6 +62,9 @@
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
       },
+      "API/sessionClass": {
+        "title": "セッション"
+      },
       "API/signalClass": {
         "title": "Signal"
       },
@@ -761,13 +764,16 @@
         "title": "データ操作"
       },
       "REST/REST_requests": {
-        "title": "About REST Requests"
+        "title": "RESTリクエストについて"
       },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
       },
       "Users/overview": {
         "title": "概要"
+      },
+      "WebServer/sessions": {
+        "title": "User sessions"
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"

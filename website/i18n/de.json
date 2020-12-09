@@ -62,6 +62,9 @@
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
       },
+      "API/sessionClass": {
+        "title": "Session"
+      },
       "API/signalClass": {
         "title": "Signal"
       },
@@ -768,6 +771,9 @@
       },
       "Users/overview": {
         "title": "Überblick"
+      },
+      "WebServer/sessions": {
+        "title": "User sessions"
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"
