@@ -69,17 +69,17 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Getting data from methods
+## メソッドを利用したデータ取得
 
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
+[RESTサービスとして公開](%7BdataClass%7D.html#4d-configuration) されている 4Dプロジェクトメソッドを呼び出すことができます。 4Dメソッドは次のものを $0 に返せます:
 
-- an object
-- a collection
+- オブジェクト
+- コレクション
 
-The following example is a dataclass method that reveives parameters and returns an object:
+引数を受け取ってオブジェクトを返すデータクラスメソッドの例です:
 
 ```4d
-// 4D findPerson method
+// 4D findPerson メソッド
 C_TEXT($1;$firstname;$2;$lastname)
 $firstname:=$1
 $lastname:=$2
@@ -87,11 +87,11 @@ $lastname:=$2
 $0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
 ```
 
-The method properties are configured accordingly on the 4D project side:
+4Dプロジェクト側では、下図のとおりメソッドプロパティが設定されています:
 
 ![alt-text](assets/en/REST/methodProp_ex.png)
 
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
+この場合、次のように `HTTP Request` 4Dコマンドを使って REST POSTリクエストを送信できます:
 
 ```4d
 C_TEXT($content)
@@ -102,7 +102,7 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
+メソッドの呼び出しについての詳細は [{dataClass}](%7BdataClass%7D.html#dataclassmethod-と-dataclasskeymethod) を参照ください。
 
 ## 取得する属性の選択
 

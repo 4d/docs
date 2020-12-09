@@ -214,7 +214,7 @@ The following request returns all the public data of the employee named "Jones".
  `GET  /rest/Employee:lastname(Jones)`
 
 
-## {dataClass}/{method} and {dataClass}({key})/{method}
+## {dataClass}/{method} と {dataClass}({key})/{method}
 
 Returns an object or a collection based on a project method.
 
