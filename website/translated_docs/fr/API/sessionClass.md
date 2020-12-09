@@ -284,29 +284,36 @@ End if
 </details>
 
 <!-- REF #sessionClass.setPrivileges().Syntax -->
-**.setPrivileges**( *settings* : Object )<!-- END REF -->
+**.setPrivileges**( *privilege* : Text )<cr>**.setPrivileges**( *privileges* : Collection )<cr>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #sessionClass.setPrivileges().Params -->
-| Paramètres | Type  |    | Description                                                |
-| ---------- | ----- |:--:| ---------------------------------------------------------- |
-| settings   | Objet | -> | Object with a "privileges" property (string or collection) |
+| Paramètres | Type       |    | Description                                                |
+| ---------- | ---------- |:--:| ---------------------------------------------------------- |
+| privilege  | Texte      | -> | Privilege name                                             |
+| privileges | Collection | -> | Collection of privilege names                              |
+| settings   | Objet      | -> | Object with a "privileges" property (string or collection) |
 <!-- END REF -->
 
 #### Description
 
-The `.setPrivileges()` function <!-- REF #sessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the *settings* parameter to the session<!-- END REF -->.
+The `.setPrivileges()` function <!-- REF #sessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
 
-In the *settings* parameter, pass an object containing the following property:
+- In the *privilege* parameter, pass a string containing a privilege name, or
+- in the *privileges* parameter, pass a collection of strings containing privilege names, or
+- in the *settings* parameter, pass an object containing the following properties:
 
 | Propriété  | Type               | Description                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
 | privileges | Text or Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
+| userName   | Texte              | User name to associate to the session (optional)   |
 
 If the `privileges` property contains an invalid privilege name, it is ignored.
 
 > In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
 
 By default when no privilege is associated to the session, the session is a Guest session.
+
+The [`userName`](#username) property is available at session object level (read-only).
 
 #### Exemple
 
@@ -395,11 +402,11 @@ End if
 
 #### Description
 
-The `.userName` property contains <!-- REF #sessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->.
+The `.userName` property contains <!-- REF #sessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. You can use it to identify the user within your code.
 
-This property is empty by default. You can use it to identify the user within your code.
+This property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 
-This property is **read write**.
+This property is **read only**.
 
 #### Exemple
 
