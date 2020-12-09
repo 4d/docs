@@ -50,7 +50,7 @@ var $myVar //a variant variable
 ```
 
 `varName` ist der Variablenname, er muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.   
-Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#lokale-prozess--und-interprozess-variablen), d. h. [Interprozessvariablen](#interprozessvariablen) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
+Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#lokale-prozess--und-interprozessvariablen), d. h. [Interprozessvariablen](#interprozessvariablen) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
 
 `varTyp` kann folgendes sein:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Eine C_Direktive verwenden
 
-> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
+> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#das-schlüsselwort-var-verwenden) zu verwenden.
 
 Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
