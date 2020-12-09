@@ -69,12 +69,12 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Getting data from methods
+## メソッドを利用したデータ取得
 
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
+[RESTサービスとして公開](%7BdataClass%7D.html#4d-configuration) されている 4Dプロジェクトメソッドを呼び出すことができます。 4Dメソッドは次のものを $0 に返せます:
 
-- an object
-- a collection
+- オブジェクト
+- コレクション
 
 The following example is a dataclass method that reveives parameters and returns an object:
 
