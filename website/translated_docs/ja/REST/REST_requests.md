@@ -1,12 +1,12 @@
 ---
 id: REST_requests
-title: About REST Requests
+title: RESTリクエストについて
 ---
 
 
-The following structures are supported for REST requests:
+RESTリクエストでは次の構文がサポートされています:
 
-| URI                              | Resource                                                                    | {Subresource}                                                              | {Querystring}                                                   |
+| URI                              | リソース                                                                        | {サブリソース}                                                                   | {クエリ文字列}                                                        |
 | -------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |                                                                 |
 |                                  | [{dataClass}](%7BdataClass%7D.html)/                                        | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ | [{method}](%7BdataClass%7D.html#dataclassmethod)                |
@@ -20,7 +20,7 @@ The following structures are supported for REST requests:
 |                                  | [$info]($info.md)                                                           |                                                                            |                                                                 |
 
 
-While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
+RESTリクエストには、URI とリソースが必ず含まれていなければなりませんが、返されるデータをフィルダーするサブリソースの使用は任意です。
 
 As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. たとえば:
 
