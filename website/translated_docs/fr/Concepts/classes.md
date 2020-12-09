@@ -86,8 +86,8 @@ Dans les différentes fenêtres de 4D Developer (éditeur de code, compilateur, 
 - Dans l'éditeur de code :
     - une classe ne peut pas être exécutée
     - une fonction de classe est un bloc de code
-    - **Goto definition** sur un objet membre recherche des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Fonction f".
-    - **Search references** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Fonction f" donnera comme résultat "$o.f()".
+    - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
+    - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
 - Dans l'explorateur d'exécution et le Débogueur, les fonctions de classe sont affichées avec le format \<ClassName> constructor ou \<ClassName>. \<FunctionName> .
 
 ## Class stores
@@ -306,9 +306,13 @@ Class Constructor({$parameterName : type; ...})
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
+Dans ce cas, lorsque vous appelez la méthode membre `new()` de la classe, le "class constructor" est appelé avec les paramètres éventuellement passés à la fonction `new()`.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
+Pour une fonction "class constructor", la commande `Current method name` retourne : "*\<ClassName>.constructor*", par exemple "MyClass.constructor".
+
+
+
+#### Exemple :
 
 
 
@@ -316,14 +320,14 @@ For a class constructor function, the `Current method name` command returns: "*\
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
+// Class constructor de MyClass
 Class Constructor ($name : Text)
     This.name:=$name
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Dans une méthode projet
+// Vous pouvez instancier un objet
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -334,14 +338,14 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### Class extends \<ClassName>
 
-#### Syntax
+#### Syntaxe
 
 ```4d
-// Class: ChildClass
+// Class : ChildClass
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+Le mot-clé `Class extends` est utilisé dans une déclaration de classe pour créer une classe utilisateur qui est elle-même enfant d'une autre classe utilisateur. The child class inherits all functions of the parent class.
 
 Class extension must respect the following rules:
 
