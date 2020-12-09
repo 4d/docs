@@ -21,7 +21,7 @@ For detailed information about the session implementation, please refer to the [
 |[<!-- INCLUDE #sessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #sessionClass.userName.Summary -->|
 
 
----
+
 
 ## Session
 
@@ -78,7 +78,7 @@ IP:port/4DACTION/action_Session
  End case
 ```
 
----
+
 
 <!-- REF sessionClass.clearPrivileges().Desc -->
 ## .clearPrivileges()
@@ -117,7 +117,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 <!-- END REF -->
 
----
+
 
 <!-- REF sessionClass.expirationDate.Desc -->
 ## .expirationDate
@@ -148,7 +148,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 <!-- END REF -->
 
 
----
+
 
 <!-- REF sessionClass.hasPrivilege().Desc -->
 ## .hasPrivilege()
@@ -190,7 +190,6 @@ End if
 
 <!-- END REF -->
 
----
 <!-- REF sessionClass.idleTimeout.Desc -->
 ## .idleTimeout
 
@@ -232,7 +231,6 @@ End if
 
 <!-- END REF -->
 
----
 
 <!-- REF sessionClass.isGuest().Desc -->
 ## .isGuest()
@@ -271,7 +269,6 @@ End if
 
 <!-- END REF -->
 
----
 
 <!-- REF sessionClass.setPrivileges().Desc -->
 ## .setPrivileges()
@@ -348,7 +345,6 @@ End if
 
 <!-- END REF -->
 
----
 <!-- REF sessionClass.storage.Desc -->
 ## .storage
 
@@ -385,7 +381,7 @@ End if
 
 <!-- END REF -->
 
----
+
 
 
 

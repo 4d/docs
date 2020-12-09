@@ -82,7 +82,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 The following rules apply:
 
 - The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
+- Parameter names must start with a `$` character and be compliant with [property naming rules](dt_object.md#object-property-identifiers). 
 - Multiple parameters (and types) are separated by semicolons (;). 
 - Multiline syntaxes are supported (using "\\" character).
 
@@ -200,12 +200,12 @@ In this example, `$0` is first assigned the value of `$1`, then used as paramete
 
 ### Supported data types
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
+You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
 
 - tables
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](Concepts/dt_pointer.md#pointers-as-parameters-to-methods). 
+Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods). 
 
 ### Parameter indirection
 
@@ -272,7 +272,7 @@ This command means that starting with the fourth  parameter (included), the meth
 
 ### Declaring parameters for compiled mode
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble. 
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble. 
 
 When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. For example:
 
@@ -318,7 +318,7 @@ C_OBJECT($3)
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```  
-See [Interpreted and compiled modes](Concepts/interpreted.md) page for more information.
+See [Interpreted and compiled modes](interpreted.md) page for more information.
 
 Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
 
@@ -516,7 +516,7 @@ This second technique of returning a value by a subroutine is called “using a 
 
 You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*). 
 
-Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
 
 For example, consider the `CreatePerson` method that creates an object and sends it as a parameter:
 

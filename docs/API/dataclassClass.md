@@ -291,6 +291,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
 
+
 ```
 
 #### Example 5
