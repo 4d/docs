@@ -1,19 +1,19 @@
 ---
 id: REST_requests
-title: About REST Requests
+title: RESTリクエストについて
 ---
 
 
-The following structures are supported for REST requests:
+RESTリクエストでは次の構文がサポートされています:
 
-| URI                              | Resource (Input)                                                                                    | /? or &{filter} (Output)                                                                              |
+| URI                              | リソース (入力)                                                                                           | /? または &{filter} (出力)                                                                                 |
 | -------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)                                                                 | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                  | [{dataClass}](%7BdataClass%7D.html)/[$entityset/{entitySetID}](entityset.html#entitysetentitysetid) | [$method=...]($method.md)                                                                             |
 |                                  | [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)                                             | [$attributes]($attributes.md)                                                                         |
 |                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D.html#dataclassattributevalue)                      |                                                                                                       |
 
-While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
+RESTリクエストには、URI とリソースが必ず含まれていなければなりませんが、返されるデータをフィルダーする出力パラメーターの使用は任意です。
 
 As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. たとえば:
 
