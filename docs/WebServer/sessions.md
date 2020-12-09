@@ -76,9 +76,9 @@ When a scalable web session is closed, if the [`Session`](API/sessionClass.md#se
 
 Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session. 
 
-By default, new sessions do not have any privilege: they are **Guest** sessions. You can assign privileges usign the [`.setPrivileges()`](API/sessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/sessionClass.md#hasprivilege) function. 
+You can assign privileges usign the [`.setPrivileges()`](API/sessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/sessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/sessionClass.md#isguest) function returns true).
 
-> In the current implementation, only "Guest" and "WebAdmin" privileges are available.
+> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
 
 Example: 
 
