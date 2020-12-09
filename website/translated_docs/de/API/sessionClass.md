@@ -3,7 +3,7 @@ id: sessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](#session) command, when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). A Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-relat(WebServer/sessions.mded preemptive processes.
+Session objects are returned by the [`Session`](#session) command, when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). A Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes.
 
 For detailed information about the session implementation, please refer to the [web server Sessions](WebServer/sessions.md) section.
 
