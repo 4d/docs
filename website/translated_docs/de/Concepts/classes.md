@@ -224,7 +224,7 @@ Function getFullname()->$fullname : Text
 
 Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<ClassName>.\<FunctionName>*", z.B. "MyClass.myMethod".
 
-Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#class-function-parameters) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
+Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#parameter) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
 - Verwendung des Operators `()` Zum Beispiel, `myObject.methodName("hello")`
 - Verwendung einer Class Member Method "Function":
