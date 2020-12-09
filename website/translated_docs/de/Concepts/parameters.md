@@ -82,7 +82,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Es gelten folgende Regeln:
 
 - Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (davor können nur Kommentare oder Zeilenumbrüche stehen).
-- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#identifier-für-objekteigenschaft) konform sein.
+- Parameter names must start with a `$` character and be compliant with [property naming rules](dt_object.md#object-property-identifiers).
 - Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
@@ -199,12 +199,12 @@ In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Pa
 
 ### Unterstützte Datentypen
 
-Sie können jeden [Ausdruck](Concepts/quick-tour.md#ausdruckstypen) als sequentiellen Parameter verwenden, außer:
+You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
 
 - Tabellen
 - arrays
 
-Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#zeiger-als-parameter-in-methoden).
+Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
 ### Parameter Indirektion
 
@@ -271,7 +271,7 @@ Dieser Befehl bedeutet, dass die Methode ab dem 4. Parameter (eingeschlossen) ei
 
 ### Parameter für kompilierten Modus deklarieren
 
-Auch wenn es im [interpretierten Modus](Concepts/interpreted-compiled.md) nicht zwingend ist, sollten Sie jeden Parameter in den aufgerufenen Methoden oder Functions deklarieren, um Probleme zu vermeiden.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
 
 Mit der Syntax [benannte Variable](#parameter-mit-namen), werden Parameter automatisch über das Schlüsselwort `#DECLARE` oder den Prototyp `Function` deklariert. Beispiel:
 
@@ -317,7 +317,7 @@ C_OBJECT($3)
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und kompilierter Modus](Concepts/interpreted-compiled.md).
+See [Interpreted and compiled modes](interpreted.md) page for more information.
 
 Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterstützen nicht die Deklaration in einer "Compiler" Methode):
 
@@ -514,7 +514,7 @@ Dieser zweite Weg (durch eine Unterroutine einen Wert zurückgeben) wird "eine F
 
 Daten vom Typ Objekt und Collection werden automatisch über eine Referenz verwaltet (wie ein interner *Zeiger*).
 
-Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#zeiger-als-parameter-in-methoden), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
+Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
 
 Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als Parameter sendet:
 
