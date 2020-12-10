@@ -82,7 +82,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Les règles suivantes s'appliquent :
 
 - La ligne de déclaration doit être la première ligne de code de la méthode ou de la fonction, sinon une erreur est affichée (seuls les commentaires ou les sauts de ligne peuvent précéder la déclaration).
-- Les noms de paramètres doivent commencer par un caractère `$` et être conformes aux [règles de dénomination des propriétés](Concepts/dt_object.md#object-property-identifiers).
+- Parameter names must start with a `$` character and be compliant with [property naming rules](dt_object.md#object-property-identifiers).
 - Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 - Les syntaxes multilignes sont prises en charge (en utilisant le caractère "\\").
 
@@ -199,12 +199,12 @@ Dans cet exemple, `$0` recevait d'abord la valeur de `$1`, puis était utilisée
 
 ### Type de données pris en charge
 
-You can use any [expression](Concepts/quick-tour.md#expression-types) as sequential parameter, except:
+You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
 
 - tables
 - arrays
 
-Les expressions de tables ou de tableaux peuvent être passées uniquement [comme une référence utilisant un pointeur](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
 ### Indirections sur les paramètres
 
@@ -271,7 +271,7 @@ La commande ci-dessus signifie que tous les paramètres à partir du quatrième 
 
 ### Déclaration des paramètres pour le mode compilé
 
-Even if it is not mandatory in [interpreted mode](Concepts/interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
 
 When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. Par exemple:
 
@@ -317,7 +317,7 @@ C_OBJECT($3)
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-Pour plus d'informations, consultez la page [Modes interprété et compilé](Concepts/interpreted.md).
+See [Interpreted and compiled modes](interpreted.md) page for more information.
 
 La déclaration des paramètres est également obligatoire dans les contextes suivants (ces contextes ne prennent pas en charge les déclarations dans une méthode "Compiler") :
 
@@ -514,7 +514,7 @@ Cette deuxième technique de renvoi d'une valeur par une sous-routine est appel�
 
 Veillez à ce que les types de données d'Objet et Collection ne puissent être gérés que via une référence (c'est-à-dire un* pointeur* interne).
 
-Par conséquent, lorsque vous utilisez des types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), à l'exception des paramètres `$1, $2 ...` n'ont pas besoin d'être déréférencés dans la sous-routine.
+Par conséquent, lorsque vous utilisez des types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
 
 Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
 
