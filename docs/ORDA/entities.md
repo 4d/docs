@@ -225,7 +225,7 @@ A new entity selection is **shareable** in the following cases:
 A new entity selection is **alterable** in the following cases:
 
 - the new entity selection created blank using the [dataClass.newSelection()](API/dataclassClass.md#newselection) function or `Create entity selection` command,
-- the new entity selection is explicitely copied as non-shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+- the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
 
 
 #### Example
@@ -234,10 +234,13 @@ You work with two entity selections that you want to pass to a worker process so
 
 ```4d
 
-$paid:=ds.Invoices.query("status=:1";"Paid")
-$unpaid:=ds.Invoices.query("status=:1";"Unpaid")
- 
-CALL WORKER("mailing";"sendMails";Storage.info)
+var $paid; $unpaid : cs.InvoicesSelection
+//We get entity selections for paid and unpaid invoices
+$paid:=ds.Invoices.query("status=:1"; "Paid")
+$unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
+
+//We pass entity selection references as parameters to the worker
+CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
  
 ```
 
@@ -245,11 +248,10 @@ The `sendMails` method:
 
 ```4d 
 
- var $info;$1 : Object
- var $paid;$unpaid : cs.InvoicesSelection
+ #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
  var $invoice : cs.InvoicesEntity
  
- var $server;$transporter;$email;$status : Object
+ var $server; $transporter; $email; $status : Object
  
   //Prepare emails
  $server:=New object()
@@ -259,11 +261,6 @@ The `sendMails` method:
  $transporter:=SMTP New transporter($server)
  $email:=New object()
  $email.from:="myName@company.com"
- 
-  //Get entity selections
- $info:=$1
- $paid:=$info.paid
- $unpaid:=$info.unpaid
  
   //Loops on entity selections
  For each($invoice;$paid)
