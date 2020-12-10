@@ -257,7 +257,7 @@ Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` dekla
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> Mit der [klassischen 4D Syntax](parameters. md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. For example:
+> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. For example:
 > 
 > ```4d
 Function add($x : Integer)
