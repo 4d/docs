@@ -32,9 +32,9 @@ Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten lie
 - **Process**: Internal number of process in which the operation was carried out. Diese interne Nummer entspricht dem Kontext der Operation.
 - **Size**: Size (in bytes) of data processed by the operation.
 - **Date and Hour**: Date and hour when the operation was performed.
-- **User**: Name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.
-- **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.  
+- **Anwender**: Name des Anwenders, der die Operation ausgeführt hat. Im Client-/Server-Modus erscheint der Name des client-seitigen Rechners; im Einzelplatz die ID des Anwenders. Sind keine 4D Kennwörter aktiviert, ist diese Spalte leer.
+- **Werte**: Werte der Felder für den Datensatz bei Hinzufügen oder Ändern. Die Werte werden durch “;” voneinander getrennt. Only values represented in alphanumeric form are displayed.  
   ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 - **Records**: Record number.
 
-Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. The **Export...** button can be used to export the contents of the file as text.
+Klicken Sie am unteren Rand auf die Schaltfläche **Analysieren**, um den Inhalt des aktuellen Logbuchs der ausgewählten Datenbank anzuzeigen. Es hat in 4D standardmäßig den Namen dataname.journal. Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Datenbank. Mit der Schaltfläche **Exportieren** exportieren Sie den Inhalt der Datei als Text.
