@@ -82,7 +82,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Es gelten folgende Regeln:
 
 - Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (davor können nur Kommentare oder Zeilenumbrüche stehen).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](dt_object.md#object-property-identifiers).
+- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](dt_object.md#identifier-für-objekteigenschaft) konform sein.
 - Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
@@ -199,12 +199,12 @@ In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Pa
 
 ### Unterstützte Datentypen
 
-You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
+Sie können jeden [Ausdruck](schnelle-tour.md#ausdruckstypen) als sequentiellen Parameter verwenden, außer:
 
 - Tabellen
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
+Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](dt_pointer.md#zeiger-als-parameter-in-methoden).
 
 ### Parameter Indirektion
 
@@ -271,7 +271,7 @@ Dieser Befehl bedeutet, dass die Methode ab dem 4. Parameter (eingeschlossen) ei
 
 ### Parameter für kompilierten Modus deklarieren
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
+Auch wenn es im [interpretierten Modus](interpreted-compiled.md) nicht zwingend ist, sollten Sie jeden Parameter in den aufgerufenen Methoden oder Functions deklarieren, um Probleme zu vermeiden.
 
 Mit der Syntax [benannte Variable](#parameter-mit-namen), werden Parameter automatisch über das Schlüsselwort `#DECLARE` oder den Prototyp `Function` deklariert. Beispiel:
 
@@ -317,7 +317,7 @@ C_OBJECT($3)
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-See [Interpreted and compiled modes](interpreted.md) page for more information.
+Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und kompilierter Modus](interpreted-compiled.md).
 
 Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterstützen nicht die Deklaration in einer "Compiler" Methode):
 
