@@ -928,7 +928,7 @@ For more information, please refer to [Shareable or alterable entity selections]
 
 #### Example
 
-You are about to display `Form.products` in a [list box](FormObjects\listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
+You are about to display `Form.products` in a [list box](FormObjects/listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
 
 ```4d
 If (Not(Form.products.isAlterable()))
