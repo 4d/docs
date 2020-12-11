@@ -18,7 +18,7 @@ REST によって、すべての [公開されているデータクラス、属�
 
 REST API を使って、4D内と同等のデータ操作をおこなうことができます。
 
-エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 データを保存する前に、[`$method=validate`]($method.md#methodvalidate) を呼び出して確定することもできます。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
+エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
 
 [{dataClass}({key})](%7BdataClass%7D.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、DataClassクラスにメソッドを書いて [{dataClass}/{method}](%7BdataClass%7D.md#dataclassmethod) のように使い、エンティティセレクションやコレクションを返すようにすることができます。
 
