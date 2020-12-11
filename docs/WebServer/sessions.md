@@ -101,11 +101,14 @@ The datastore contains at least 2 linked dataclasses: Customers and SalesPersons
 
 ![alt-text](assets/en/WebServer/exampleSession.png)
 
+
 We run this URL to open a session: 
 
 ```
-http://localhost:8044/?salesNumber=3&password=pwd&idleTimeout=120
+http://localhost:8044/authenticate.shtml
 ```
+
+> In a production environement, it it necessary to use a [HTTPS connection](API/WebServerClass.md#httpsenabled) to avoid any uncrypted information to circulate online.  
 
 If the salesperson is authenticated:
 
