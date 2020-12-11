@@ -191,19 +191,26 @@ You can simultaneously create and use as many different entity selections as you
 
 ### Shareable or alterable entity selections
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/entitySelectionClass.md#add) function, but only usable by the current process):
+An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/entitySelectionClass.md#add) function, but only usable by the current process). 
 
-- a **shareable** entity selection has the following characteristics:
-	- it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
-	- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
-	- it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/entitySelectionClass.md#copy) function, before calling [`.add()`](API/entitySelectionClass.md#add).
+#### Properties
+
+A **shareable** entity selection has the following characteristics:
+
+- it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
+- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
+- it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/entitySelectionClass.md#copy) function, before calling [`.add()`](API/entitySelectionClass.md#add).
 	
-> Entity selection APIs such as [`.slice()`](API/entitySelectionClass.md#add) support shareable entity selection since they do not need to alter the original entity selection (they return a new one). 
+> Most entity selection functions (such as [`.slice()`](API/entitySelectionClass.md#slice), [`.and()`](API/entitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one). 
 	
-- an **alterable** entity selection has the following characteristics:
-	+ it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
-	+ it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/entitySelectionClass.md#add) function.
+An **alterable** entity selection has the following characteristics:
+
+- it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
+- it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/entitySelectionClass.md#add) function.
 	
+
+#### How are they defined?
+
 The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/entitySelectionClass.md#isalterable) function or the `OB Is shared` command. 
 
 
@@ -213,8 +220,7 @@ A new entity selection is **shareable** in the following cases:
 - the new entity selection is based upon a relation [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
 - the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
 
-Example:
-
+Example: 
 ```4d
 $myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
 $employees:=$myComp.employees //$employees is shareable
@@ -226,7 +232,6 @@ A new entity selection is **alterable** in the following cases:
 - the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
 
 Example:
-
 ```4d
 $toModify:=ds.Company.all().copy() //$toModify is alterable
 ```
@@ -240,16 +245,20 @@ A new entity selection **inherits** from the original entity selection nature in
 	- [entitySelection.*attributeName*](API/entitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
 	- [.extract()](API/entitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
 
-Example:
-
+Examples:
+ 
 ```4d
-$highSal:=ds.Employee.query("salary >= :1"; 100000)   
+$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 	//$highSal is shareable because of the query on dataClass
-$richComp:=$highSal.employer //$richComp is shareable because $highSal is shareable
+$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+
+$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
+	//$lowSal is alterable because of the copy()
+$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
 
-#### Passing an entity selection to a process
+#### Sharing an entity selection between processes (example)
 
 You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
 
