@@ -249,7 +249,7 @@ $richComp:=$highSal.employer //$richComp is shareable because $highSal is sharea
 ```
 
 
-#### Example
+#### Passing an entity selection to a process
 
 You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
 
