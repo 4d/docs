@@ -31,7 +31,7 @@ The default home page is displayed:
 
 ### Displaying Hello World
 
-1. Open the Explorer and double-click on the `On Web Connection` database method. 
+1. Open the Explorer and create a project method named "hello".
 
 2. Enter the following line of code:
 
@@ -41,63 +41,43 @@ WEB SEND TEXT("Hello World!")
 
 This very simple line only sends the text passed as parameter to the browser. 
 
-The `On Web Connection` database method can be used as a fallback: it is called when the server receives an invalid request. 
+3. Display the method properties by clicking on the `**[i]**` button in the code editor.
+4. 
+![](assets/en/WebServer/authenticate.png)
 
-3. Enter a non-existing page in the URL, for example:
+4. Check the `4D tags and URLs (4DACTION...)` option and click **OK**. 
+
+5. In your browser, enter the following URL:
 
 ```
-http://localhost/hello
+http://localhost/4daction/hello
 ```
 
-The web server handles the request and calls the `On Web Connection` database method, which returns:
+The web server handles the request and calls the `hello` method, which returns:
 
 ![](assets/en/WebServer/hello.png)
 
 
 ## Getting data from the database
 
-Now we'll see how simple it is to get data from database. First, we will create a table and fill it with some data.
+Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
 
 Create a simple database with, for example, a single table containing some records:
 
 ![](assets/en/WebServer/hello2.png)
 ![](assets/en/WebServer/hello3.png)
 
-1. You will need to use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
+1. You will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
 
 ![](assets/en/WebServer/hello5.png)
 
-2. In the `WebFolder` of the project, create and save the "myPage.html" page which contains the following code:
+2. In your browser, enter the following URL:
 
-```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	</head>
-	<body>
-		<div align="center">
-			<table border="0" cellpadding="0" cellspacing="0" width="675">
-				<tr><td>
-	      		<h2 align="center">Getting started page</h2>
-				<form action="/rest/$catalog" method="get">
-  					<div align="center">
-						<input type="submit" value="Send request">
-					</div>
-				</form>
-				</td></tr>
-			</table>
-		</div>
-	</body>
-</html>
+```
+http://localhost/rest/$catalog
 ```
 
-3. Enter `/myPage.html` in the server root address. The page is served:
-
-![](assets/en/WebServer/hello4.png)
-
-4. Click the **Send request** button; it will generate the `/rest/$catalog` REST request and the server returns the result in JSON:
+The web server returns the results in JSON:
 
 ```json
 {
@@ -116,13 +96,13 @@ You get the catalog, i.e. the list of exposed dataclasses and attributes in the 
 
 You can also get any data.
 
-5. Replace the <form action... line code with:
+3. Enter the following URL:
 
-```html
-	<form action="/rest/Friends" method="get">
+```
+http://localhost/rest/Friends
 ```
 
-4. Click the **Send request** button; it will generate the `/rest/Friends` REST request and the server returns the result in JSON:
+The server returns the entities, i.e. the data, from the Friends dataclass:
 
 ```json
 {
@@ -172,121 +152,114 @@ You can also get any data.
 This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed (see security below). In your web interfaces, you can easily bind the javascript or html code with returned data. XXXSee the "Data Browser" page to have an example of web interface bound to dataclasses through JSON.
 
 
+
+
 ## Login and session
 
 In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
 
-The most simple and secured way to log a user on the 4D web server is to combine the `On Web Authentication` database method and user sessions. T
+### Create a table of users
 
-First, we need to add some code in the home page so that users can enter their credentials. We will use a small JavaScript.
+The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
 
-1. In the `index.html` default page, replace the body part with the following code:
+- Users are stored in a dedicated, unexposed table (named *WebUsers* for example)
+- The *WebUsers* table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
+
+1. Create a table with some fields, for example:
+
+![](assets/en/WebServer/helloUsers.png)
+
+2. Write and execute the following code to create a user:
+
+```4d
+var $webUser : cs.WebUsersEntity
+
+$webUser:=ds.WebUsers.new()
+$webUser.firstName:="John"
+$webUser.lastName:="Doe"
+// the password would be entered by the user
+$webUser.password:=Generate password hash("123")
+$webUser.userId:="john@4d.com"
+$webUser.save()
+```
+
+
+
+### Authenticating users
+
+> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https). 
+
+1. Create and store in the `WebFolder` a simple page named `authenticate.shtml` containing this code:
 
 ```html
-	<body bgcolor="#ffffff">
-		<form align="center" action="/login" method="post">
-			<div>
-			    <label for="username">Username:</label>
-			    <input type="text" id="username" name="username">
-			</div>
-
-			<div>
-			    <label for="pass">Password:</label>
-			    <input type="password" id="pass" name="password">
-			</div>
-			
-			<div>
-			<input type="submit" value="Sign in">
-			</div>
-		</form>
-	</body>
-
+<!DOCTYPE html>
+<html>
+<body bgcolor="#ffffff">
+<FORM ACTION="/4DACTION/authenticate" METHOD=POST>
+    User name: <INPUT TYPE=TEXT NAME=userId VALUE=""><BR>
+    Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
+<INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
+</FORM>
+</body>
+</html>
 ```
 
+2. Open the Explorer and create a project method named "authenticate".
 
-2. In 4D, select **Design**/**Explorer**/**Methods**, expand "Database Methods" then double-click on `On Web Authentication`.
-
-The `On Web Authentication` database method is automatically called for every request that needs some code execution on the 4D web server side:
-
-- If it returns `True` in $0, the request is accepted and a session cookie is sent to the browser. 
-- If it returns `False` in $0, the request is rejected. 
-
-In this quick start guide, we will use a simple code that will only return a valid message if both user and passwords are identical (we will see later a more realistic challenge). In the `On Web Authentication` database method, enter the following code:
+3. Write the following code:
 
 ```4d
-C_LONGINT($posit)
-C_TEXT($username; $password)
+var $indexUserId; $indexPassword : Integer
+var $userId; $password : Text
+var $user; $info : Object
 
-ARRAY TEXT($tName; 0)
-ARRAY TEXT($tVal; 0)
 
-Case of 
-	: ($1="/login")
-		
-		WEB GET VARIABLES($tName; $tVal)
-			
-			// get credentials from the form
-		$posit:=Find in array($tName; "username")
-		If ($posit>0)
-			$username:=$tVal{$posit}
-		End if 
-		
-		$posit:=Find in array($tName; "password")
-		If ($posit>0)
-			$password:=$tVal{$posit}
-		End if 
-			
-			//only for demo 
-		If ($username=$password)
-			WEB SEND TEXT("You're logged")
-		Else 
-			WEB SEND TEXT("Wrong password")
-		End if 
-		
-End case 
+ARRAY TEXT($anames; 0)
+ARRAY TEXT($avalues; 0)
+
+WEB GET VARIABLES($anames; $avalues)
+
+$indexUserId:=Find in array($anames; "userId")
+$userId:=$avalues{$indexUserId}
+
+$indexPassword:=Find in array($anames; "password")
+$password:=$avalues{$indexPassword}
+
+//look for a user with the entered name in the users table
+$user:=ds.WebUsers.query("userId = :1"; $userId).first()
+
+If ($user#Null) //a user was found
+		//check the password
+    If (Verify password hash($password; $user.password))
+    		//password ok, fill the session
+        $info:=New object()
+        $info.userName:=$user.firstName+" "+$user.lastName
+        Session.setPrivileges($info)
+        	//You can use the user session to store any information
+        WEB SEND TEXT("Welcome "+Session.userName)
+    Else 
+        WEB SEND TEXT("Wrong user name or password.")
+    End if 
+Else 
+    WEB SEND TEXT("Wrong user name or password.")
+End if 
 ```
 
-3. In the browser, enter the web server address. 
+3. Display the method properties by clicking on the `i` button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
 
-You should have a dialog similar to this one:
+4. In your browser, enter the following URL:
 
-![](assets/en/WebServer/hello6.png)
-
-4. Enter two identical values and click **Sign in**. 
-
-Your web page now displays: 
 ```
-"You're logged"
+http://localhost/authenticate.shtml
 ```
 
-Entering two different values would result in displaying "Wrong password".
+The login dialog is displayed:
 
-A more realistic example would use a custom \[Users] table and a hash code challenge:
+![](assets/en/WebServer/authenticate.png)
 
-```4d
-			// replace demo part with this one
-			// we use a custom user table
-		QUERY([WebUsers]; [WebUsers]User=$username)
-		
-		If (OK=1)  //we have a user with this name
-			$0:=Verify password hash($password; [WebUsers]hash)
-			WEB SEND TEXT("You're logged")			
-		Else 			
-			$0:=False
-			WEB SEND TEXT("Wrong username or password")
-		End if 
-		
-```
+If you enter valid credentials and click **Log In**, then you will be logged:
 
-In this example, the \[WebUsers] table could be [encrypted](MSC/encrypt.md) for security. Note however that only the hash of the user password is stored and used for validation, not the password itself. The hash can be stored at user account creation using the following simple line of code:
+![](assets/en/WebServer/authenticate3.png)
 
-```4d
-[WebUsers]hash:=Generate password hash($password) 
-```  
-
-> To be secure from end to end, it is recommended that the connection is established via [https](webServerConfig.md#enable-https).  
-
-
-Once the user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. 
-
+Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. 
 
