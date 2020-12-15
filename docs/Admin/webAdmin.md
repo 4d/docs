@@ -42,7 +42,7 @@ Check the **Web server administration automatic startup** option in the settings
 
 ![alt-text](assets/en/Admin/waSettings.png)
 
-- Whether you use 4D application which is headless or not, you can enable the automatic startup mode using the following Command Line Interface argument:
+- Whether you use 4D application which is headless or not, you can enable the automatic startup mode using the following *Command Line Interface* argument:
 
 ```
 --webadmin-auto-start { true | false }
