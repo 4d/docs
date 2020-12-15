@@ -3,8 +3,6 @@ id: radiobuttonOverview
 title: Radio Button
 ---
 
-## Overview
-
 Radio buttons are objects that allow the user to select one of a group of buttons.
 
 Usually, a radio button shows a small bullseye with text. However, radio buttons can have [various appearances](#button-styles).

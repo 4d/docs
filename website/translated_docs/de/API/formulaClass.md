@@ -1,15 +1,16 @@
 ---
 id: formulaClass
-title: Formulas
+title: Formula
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
-### Formula Objects
 
 The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
-Such formula objects can be encapsulated in object properties:
+
+### Formula Objects
+
+Formula objects can be encapsulated in object properties:
 
 ```4d
  var $f : 4D.Function
@@ -43,7 +44,7 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 #### Passing parameters
 
-You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. For example, you can write:
+You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. Sie schreiben zum Beispiel:
 
 ```4d
  var $f : Object
@@ -177,6 +178,7 @@ A simple formula:
 A formula using local variables:
 
 ```4d
+
 
  $value:=10
  $o:=New object("f";Formula($value))
@@ -325,6 +327,7 @@ The following code will create a dialog accepting a formula in text format:
 
 The `.apply()` function <!-- REF #formulaClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
+
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
 You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
@@ -442,3 +445,5 @@ This property is **read-only**.
 
 
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

@@ -43,7 +43,10 @@
 	"API/pop3TransporterClass",
 	"API/signalClass",
 	"API/smtpTransporterClass",
-	"API/zipClass"
+	"API/webServerClass",
+	"API/zipArchiveClass",
+	"API/zipFileClass",
+	"API/zipFolderClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
   "Administration":["Admin/licenses","Admin/building"],

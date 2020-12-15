@@ -2,7 +2,7 @@
 id: entityClass
 title: Entity
 ---
-<style> h2 { background: #d9ebff;}</style>
+
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
@@ -120,6 +120,7 @@ This function can only be used with entities already saved in the database. It c
  $empCloned:=$emp.clone()
  
  $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
+
 ```
 
 <!-- END REF -->
@@ -1035,6 +1036,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
  $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[0]
  $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+
 ```
 
 <!-- END REF -->
@@ -1751,3 +1753,4 @@ The object returned by `.unlock()` contains the following property:
 
 
 
+<style> h2 { background: #d9ebff;}</style>

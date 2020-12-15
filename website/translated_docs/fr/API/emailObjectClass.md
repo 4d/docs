@@ -3,8 +3,6 @@ id: emails
 title: Emails
 ---
 
-<style> h2 { background: #d9ebff;}</style>
-
 Creating, sending or receiving emails in 4D is done by handling an `Email` object. This object is used by the following commands and methods:
 
 - SMTP - [`.send()`](smtpTransporterClass.md#send) function to send an email through SMTP
@@ -508,6 +506,4 @@ La propriété `.textBody` contient la <!-- REF #emailObjectClass.textBody.Summa
 
 La propriété `.to` contient <!-- REF #emailObjectClass.to.Summary -->le ou les [destinataires](#email-addresses) principaux de l'e-mail<!-- END REF -->. 
 
-
-
-
+<style> h2 { background: #d9ebff;}</style>

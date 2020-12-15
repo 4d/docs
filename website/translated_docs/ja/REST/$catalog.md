@@ -40,7 +40,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 `GET  /rest/$catalog`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -75,7 +75,7 @@ For more information about what is returned for each datastore class and its att
 
 `GET  /rest/$catalog/$all`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -238,7 +238,7 @@ You can retrieve the information regarding a specific datastore class.
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**結果**:
 
 ````
 {

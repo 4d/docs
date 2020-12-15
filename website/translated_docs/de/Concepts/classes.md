@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: Klassen
 ---
 
 
@@ -33,13 +33,13 @@ $o:=cs.Person.new("John";"Doe")
 
 ## Klassen verwalten
 
-### Definition einer Klasse
+### Eine Klasse definieren
 
 Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner `/Project/Sources/Classes/` gespeichert wird. Der Name der Datei ist der Klassenname.
 
 Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
-- Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#identifier-f%C3%BCr-objekteigenschaft) konform sein.
+- Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#identifier-für-objekteigenschaft) konform sein.
 - Es wird zwischen Groß- und Kleinschreibung unterschieden.
 - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden.
 
@@ -84,11 +84,11 @@ Um eine neue Klasse zu erstellen:
 In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:
 
 - Im Code-Editor gilt folgendes:
-    - Es kann keine Klasse laufen
+    - Klassen können nicht direkt ausgeführt werden
     - Eine Klassenfunktion ist ein Code Block
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Objekt Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format \<ClassName> Constructor oder \.\ angezeigt.<ClassName> <FunctionName> format.
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem <ClassName> Constructor<ClassName> Constructor oder <ClassName>.<FunctionName><ClassName> <FunctionName> Format angezeigt.
 
 ## Stores für Klassen
 
@@ -106,7 +106,7 @@ Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 | ---------- | ------ | -- | ---------------------------------------------------- |
 | classStore | object | <- | Store der Benutzerklasse für Projekt oder Komponente |
 
-Der Befehl `cs` gibt den Store der Benutzerklassen für das aktuelle Projekt oder die Komponente zurück. Er gibt alle Benutzerklassen zurück, die im geöffneten Projekt bzw. der Komponente [definiert](#class-definition) sind. Standardmäßig sind nur [ORDA Klassen](ORDA/ordaClasses.md) des Projekts verfügbar.
+Der Befehl `cs` gibt den Store der Benutzerklassen für das aktuelle Projekt oder die Komponente zurück. Er gibt alle Benutzerklassen zurück, die im geöffneten Projekt bzw. der Komponente [definiert](#eine-klasse-definieren) sind. Standardmäßig sind nur [ORDA Klassen](ORDA/ordaClasses.md) des Projekts verfügbar.
 
 #### Beispiel
 
@@ -139,28 +139,28 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ## Klassen in Ihrem Code verwenden
 
 
-### Objekt Klasse
+### Objekt class
 
-Ist in einem Projekt eine Klasse [definiert](#class-definition), wird sie in die 4D Programmiersprache Umgebung geladen. Eine Klasse ist selbst ein Objekt der Klasse ["Klasse"](API/classClass.md). Ein Objekt Klasse hat folgende Eigenschaften und Funktionen:
+Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie in die 4D Programmiersprache Umgebung geladen. Eine Klasse ist selbst ein Objekt der Klasse ["class"](API/classClass.md). Ein Objekt class hat folgende Eigenschaften und Funktionen:
 
 - String [`name`](API/classClass.md#name)
 - Objekt [`superclass`](API/classClass.md#superclass) (optional, null, wenn nicht vorhanden)
 - Funktion [`new()`](API/classClass.md#new), um Instanzen der Objekte einer Klasse zu setzen.
 
-Zusätzlich kann ein Objekt Klasse verweisen auf:
+Zusätzlich kann ein Objekt class verweisen auf:
 
 - Ein Objekt [`constructor`](#class-constructor) (optional),
 - Ein Objekt `prototype` mit Objektnamen [function](#function) (optional).
 
-Ein Objekt Klasse ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+Ein Objekt class ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
 
 
 ### Nach Eigenschaft suchen und Prototyp
 
-Alle Objekte in 4D sind intern an ein Objekt Klasse gebunden. Findet 4D eine Eigenschaft nicht in einem Objekt, sucht es im Objekt Prototyp seiner Klasse; wird sie hier nicht gefunden, sucht 4D weiter im Objekt Prototyp seiner Superklasse, usw. bis es keine Superklasse mehr gibt.
+Alle Objekte in 4D sind intern an ein Objekt class gebunden. Findet 4D eine Eigenschaft nicht in einem Objekt, sucht es im Objekt Prototyp seiner Klasse; wird sie hier nicht gefunden, sucht 4D weiter im Objekt prototype seiner Superklasse, usw. bis es keine Superklasse mehr gibt.
 
-Alle Objekte erben vom Objekt Klasse als ihrer obersten Klasse im Vererbungsbaum.
+Alle Objekte erben vom Objekt class als ihrer obersten Klasse im Vererbungsbaum.
 
 ```4d
 //Class: Polygon
@@ -201,11 +201,11 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 Class Functions sind Eigenschaften des Objekts Prototype der Klasse des Eigentümers. Das sind Objekte der Klasse "Function".
 
-In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object. md#identifier-f%C3%BCr-objekteigenschaft) konform sein.
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Ein Klassenname muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#identifier-für-objekteigenschaft) konform sein.
 
-> **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im 4D Code-Editor nicht berücksichtigt. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `"cs.MyClass` eingeben.
+> **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im 4D Code-Editor unterdrückt und nicht vorgeschlagen. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `"cs.MyClass` eingeben.
 
-Direkt nach dem Namen von Function lassen sich passende [Parameter](#parameters) angeben mit zugewiesenem Namen und Datentyp, inkl. Rückgabeparameter (optional). Beispiel:
+Direkt nach dem Namen von Function lassen sich passende [Parameter](#parameter) angeben mit zugewiesenem Namen und Datentyp, inkl. Rückgabeparameter (optional). Beispiel:
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
@@ -224,7 +224,7 @@ Function getFullname()->$fullname : Text
 
 Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<ClassName>.\<FunctionName>*", z.B. "MyClass.myMethod".
 
-Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#class-function-parameters) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
+Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#parameter) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
 - Verwendung des Operators `()` Zum Beispiel, `myObject.methodName("hello")`
 - Verwendung einer Class Member Method "Function":
@@ -257,7 +257,7 @@ Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` dekla
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> Mit der [klassischen 4D Syntax](parameters. md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
+> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
 > 
 > ```4d
 Function add($x : Integer)
@@ -405,7 +405,7 @@ Super($text1) //calls superclass constructor with a text param
 This.param:=$text2 // use second param
 ```
 
-- Innerhalb einer [Class Member Function](#class-function) bezeichnet  `Super` den Prototypen der Superclass und ermöglicht, eine Function der Superclass Hierarchie aufzurufen.
+- Innerhalb einer [Class Member Function](#function) bezeichnet  `Super` den Prototypen der Superclass und ermöglicht, eine Function der Superclass Hierarchie aufzurufen.
 
 ```4d
 Super.doSomething(42) //calls "doSomething" function  
@@ -521,7 +521,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
+> Wird der Superclass Constructor in einem Constructor über das Schlüsselwort [Super](#super) aufgerufen, müssen Sie darauf achten, dass `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#beispiel-1-1).
 
 
 In jedem Fall bezieht sich `This` auf das Objekt, in dem die Methode aufgerufen wurde, als ob die Methode im Objekt wäre.

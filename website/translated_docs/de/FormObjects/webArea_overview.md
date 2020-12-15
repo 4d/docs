@@ -3,7 +3,6 @@ id: webAreaOverview
 title: Web Area
 ---
 
-## Überblick
 
 Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -33,6 +32,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 > This property is only available if the web area [uses the embedded web rendering engine](#use-embedded-web-rendering-engine).
 
 ### $4d object
+
 
 
 

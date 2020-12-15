@@ -295,8 +295,8 @@ Function getArea()->$result : Integer
 var $rect : cs.Rectangle
 var $area : Real
 
-$rect:=cs.Rectangle.new()  
-$area:=$rect.getArea(50;100) //5000
+$rect:=cs.Rectangle.new(50;100)  
+$area:=$rect.getArea() //5000
 ```
 
 

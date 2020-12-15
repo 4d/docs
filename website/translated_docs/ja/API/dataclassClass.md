@@ -1,11 +1,10 @@
 ---
 id: dataclassClass
-title: データクラス
+title: DataClass
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 
-A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
+A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
 
 
 
@@ -288,6 +287,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  $emp.__NEW:=True
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
+
 ```
 
 #### Example 5
@@ -1145,3 +1145,4 @@ We want to disallow formulas, for example when the user enters their query:
 
 <!-- END REF -->
 
+<style> h2 { background: #d9ebff;}</style>

@@ -1,9 +1,8 @@
 ---
 id: smtpTransporterClass
-title: SMTP Transporter
+title: SMTPTransporter
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
 
 
@@ -247,3 +246,6 @@ In *mail*, pass a valid [`Email` object](emailObjectClass.md#email-object) to se
 
 
 <!-- INCLUDE transporter.user.Desc -->
+
+
+<style> h2 { background: #d9ebff;}</style>

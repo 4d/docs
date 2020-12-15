@@ -1,9 +1,8 @@
 ---
 id: entitySelectionClass
-title: Entity Selections
+title: EntitySelection
 ---
 
-<style>h2 { background: #d9ebff;}</style>
 
 An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
@@ -133,6 +132,7 @@ If the attribute does not exist in the entity selection, an error is returned.
 
 Projection of storage values:
 
+
 ```4d
  var $firstNames : Collection
  $entitySelection:=ds.Employee.all()
@@ -209,7 +209,7 @@ The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the s
 
 *   If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
 *   If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
-> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsmapping.md#ordered-or-unordered-entity-selection) section.
+> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
 
 The modified entity selection is returned by the function, so that function calls can be chained.
 
@@ -713,14 +713,14 @@ Given the following table and relation:
   //
   //
   //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type 
+  //"who" property content is String type
   //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
   //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type 
-  //"city" property content is String type 
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
   //$teachers is a collection of objects with properties "where" and "who"
@@ -1035,7 +1035,7 @@ We want to find the highest salary among all the female employees:
 </details>
 
 <!-- REF #entitySelectionClass.min().Syntax -->
-**.min()** : any<!-- END REF -->
+**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #entitySelectionClass.min().Params -->
 | Parameter     | Typ  |    | Beschreibung                                     |
@@ -1114,7 +1114,7 @@ If the original entity selection and the parameter are not related to the same d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
+ $employees:=ds.Employee.query("lastName = :1";"H@")
   // The $employees entity selection contains the entity with primary key 710 and other entities
   // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
@@ -1268,6 +1268,7 @@ You can add as many objects in the criteria collection as necessary.
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```
+
 
 
 <!-- END REF -->
@@ -1442,7 +1443,7 @@ For detailed information on how to build a query using *queryString*, *value*, a
 
 #### Beispiel 2
 
-More examples of queries can be found in the DataClass [`.query()`](dataclassClass.md#query) page. 
+More examples of queries can be found in the DataClass [`.query()`](dataclassClass.md#query) page.
 
 <!-- END REF -->
 
@@ -1466,7 +1467,7 @@ More examples of queries can be found in the DataClass [`.query()`](dataclassCla
 
 The `.queryPath` property <!-- REF #entitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](dataclassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](dataclassClass.html#query) page.
 
 <!-- END REF -->
 
@@ -1490,7 +1491,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 The `.queryPlan` property <!-- REF #entitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](dataclassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](dataclassClass.html#query) page.
 
 <!-- END REF -->
 
@@ -2214,3 +2215,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 
 
 
+<style> h2 { background: #d9ebff;}</style>

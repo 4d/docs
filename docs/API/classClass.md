@@ -2,7 +2,7 @@
 id: classClass
 title: Class
 ---
-<style> h2 { background: #d9ebff;}</style>
+
 
 When a user class is [defined](Concepts/classes.md#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of "Class" class, which has properties and a function.
 
@@ -120,3 +120,5 @@ $sup:=cs.MyFile.superclass //File
 
 **See also:** [Super](Concepts/classes.md#super)
 <!-- END REF -->
+
+<style> h2 { background: #d9ebff;}</style>

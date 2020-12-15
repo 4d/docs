@@ -489,7 +489,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 | `fk overwrite` | 4    | Overwrite existing elements, if any |
 
 
-**Zurückgegebener Wert**
+**Rückgabewert**
 
 The copied `File` object.
 
@@ -530,7 +530,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
-**Zurückgegebener Wert**
+**Rückgabewert**
 
 A `Blob`.
 
@@ -578,7 +578,7 @@ The optional *size* parameter specifies the dimensions in pixels of the returned
 
 If the file does not exist on disk, a default blank icon is returned.
 
-**Zurückgegebener Wert**
+**Rückgabewert**
 
 File icon [picture](../Concepts/picture.html).
 
@@ -635,7 +635,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-**Zurückgegebener Wert**
+**Rückgabewert**
 
 Text of the file.
 

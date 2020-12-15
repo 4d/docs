@@ -39,6 +39,7 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
 
   docsUrl:'',
+  //customDocsPath: 'docsPostProcessed', //uniquement local
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
@@ -113,7 +114,8 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js',
+  scripts: ['https://code.jquery.com/jquery-3.5.1.min.js','/docs/js/comment.js',
+  'https://buttons.github.io/buttons.js','https://buttons.github.io/buttons.js',
   'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
   '/docs/js/code-blocks-buttons.js'],
 

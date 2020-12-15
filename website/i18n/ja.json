@@ -15,7 +15,7 @@
         "title": "クラス"
       },
       "API/collectionClass": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
@@ -24,7 +24,7 @@
         "title": "DataClassAttribute"
       },
       "API/dataclassClass": {
-        "title": "データクラス"
+        "title": "DataClass"
       },
       "API/datastoreClass": {
         "title": "DataStore"
@@ -54,25 +54,34 @@
         "title": "Formula"
       },
       "API/imapTransporterClass": {
-        "title": "IMAP Transporter"
+        "title": "IMAPTransporter"
       },
       "API/overview": {
         "title": "Class API Overview"
       },
       "API/pop3TransporterClass": {
-        "title": "POP3 Transporter"
+        "title": "POP3Transporter"
       },
       "API/signalClass": {
         "title": "Signal"
       },
       "API/smtpTransporterClass": {
-        "title": "SMTP Transporter"
+        "title": "SMTPTransporter"
       },
       "API/transporter": {
         "title": "Transporter クラス"
       },
-      "API/zipClass": {
-        "title": "ZIP Archive"
+      "API/webServerClass": {
+        "title": "WebServer"
+      },
+      "API/zipArchiveClass": {
+        "title": "ZIPArchive"
+      },
+      "API/zipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/zipFolderClass": {
+        "title": "ZIPFolder"
       },
       "Backup/backup": {
         "title": "バックアップ"
@@ -635,7 +644,7 @@
         "title": "データモデルクラス"
       },
       "ORDA/overview": {
-        "title": "概要"
+        "title": "ORDAとは何か"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"
@@ -752,7 +761,7 @@
         "title": "データ操作"
       },
       "REST/REST_requests": {
-        "title": "About REST Requests"
+        "title": "RESTリクエストについて"
       },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"

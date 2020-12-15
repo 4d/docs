@@ -3,7 +3,7 @@ id: folderClass
 title: Folder
 ---
 
-<style> h2 { background: #d9ebff;}</style>
+
 
 `Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
 
@@ -468,3 +468,4 @@ The renamed `Folder` object.
 ```
 <!-- END REF -->
 
+<style> h2 { background: #d9ebff;}</style>

@@ -1,9 +1,8 @@
 ---
 id: imapTransporterClass
-title: IMAP Transporter
+title: IMAPTransporter
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.
 
 
@@ -384,7 +383,7 @@ The `boxInfo` object returned contains the following properties:
 | Propriété  | Type   | Description                                                         |
 | ---------- | ------ | ------------------------------------------------------------------- |
 | name       | Texte  | Name of the mailbox                                                 |
-| mailCount  | number | Number of messages in the mailbox                                   |
+| mailCount  | number | Nombre de messages contenus dans la boîte de réception              |
 | mailRecent | number | Number of messages with the "recent" flag (indicating new messages) |
 
 
@@ -539,7 +538,7 @@ Mailbox name delimiter character.
 | Paramètres | Type        |    | Description                                      |
 | ---------- | ----------- |:--:| ------------------------------------------------ |
 | msgNumber  | Entier long | -> | Sequence number of the message                   |
-| msgID      | Texte       | -> | Unique ID of the message                         |
+| msgID      | Texte       | -> | ID unique du message                             |
 | options    | Objet       | -> | Message handling instructions                    |
 | Résultat   | Objet       | <- | [Email object](emailObjectClass.md#email-object) |
 <!-- END REF -->
@@ -719,7 +718,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 | Paramètres | Type        |    | Description                                                                                   |
 | ---------- | ----------- |:--:| --------------------------------------------------------------------------------------------- |
 | msgNumber  | Entier long | -> | Sequence number of the message                                                                |
-| msgID      | Texte       | -> | Unique ID of the message                                                                      |
+| msgID      | Texte       | -> | ID unique du message                                                                          |
 | updateSeen | Booléen     | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
 | Résultat   | BLOB        | <- | Blob of the MIME string returned from the mail server                                         |
 <!-- END REF -->
@@ -890,6 +889,7 @@ To move all messages in the current mailbox:
 ```
 
 <!-- END REF -->
+
 
 
 <!-- REF imapTransporterClass.numToID().Desc -->
@@ -1133,11 +1133,11 @@ The optional *state* parameter defines the type of access to the mailbox. The po
 
 The `boxInfo` object returned contains the following properties:
 
-| Propriété  | Type   | Description                               |
-| ---------- | ------ | ----------------------------------------- |
-| name       | Texte  | Name of the mailbox                       |
-| mailCount  | number | Number of messages in the mailbox         |
-| mailRecent | number | Number of messages with the "recent" flag |
+| Propriété  | Type   | Description                                            |
+| ---------- | ------ | ------------------------------------------------------ |
+| name       | Texte  | Name of the mailbox                                    |
+| mailCount  | number | Nombre de messages contenus dans la boîte de réception |
+| mailRecent | number | Number of messages with the "recent" flag              |
 
 
 #### Exemple
@@ -1165,6 +1165,7 @@ The `boxInfo` object returned contains the following properties:
 
 
 
+<style> h2 { background: #d9ebff;}</style>
 
 
 

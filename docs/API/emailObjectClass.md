@@ -2,7 +2,6 @@
 id: emails
 title: Emails
 ---
-<style> h2 { background: #d9ebff;}</style>
 
 Creating, sending or receiving emails in 4D is done by handling an `Email` object. This object is used by the following commands and methods:
 
@@ -484,3 +483,4 @@ The `.to` property contains the <!-- REF #emailObjectClass.to.Summary -->primary
 
 
 
+<style> h2 { background: #d9ebff;}</style>
