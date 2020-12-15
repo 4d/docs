@@ -28,6 +28,7 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #webServerClass.defaultHomepage.Syntax -->](#defaulthomepage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.defaultHomepage.Summary -->|
 |[<!-- INCLUDE #webServerClass.HSTSEnabled.Syntax -->](#hstsenabled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HSTSEnabled.Summary --> |
 |[<!-- INCLUDE #webServerClass.HSTSMaxAge.Syntax -->](#hstsmaxage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HSTSMaxAge.Summary -->|
+
 |[<!-- INCLUDE #webServerClass.HTTPCompressionLevel.Syntax -->](#httpcompressionlevel)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPCompressionLevel.Summary -->|
 |[<!-- INCLUDE #webServerClass.HTTPCompressionThreshold.Syntax -->](#httpcompressionthreshold)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPCompressionThreshold.Summary -->|
 |[<!-- INCLUDE #webServerClass.HTTPEnabled.Syntax -->](#httpenabled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPEnabled.Summary -->|
@@ -56,7 +57,7 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Summary -->|
 |[<!-- INCLUDE #webServerClass.start().Syntax -->](#start)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.start().Summary -->|
 |[<!-- INCLUDE #webServerClass.stop().Syntax -->](#stop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.stop().Summary -->|
-|[<!-- INCLUDE #webServerClass.validateAccessKey().Syntax -->](#validateaccesskey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.validateAccessKey().Summary -->|
+
 
 
 ## WEB Server
@@ -845,34 +846,5 @@ To stop the database Web server:
 
 
 
-<!-- REF webServerClass.validateAccessKey().Desc -->
-
-## .validateAccessKey()
-
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v18 R6|Added
-</details>
-
-<!-- REF #webServerClass.validateAccessKey().Syntax -->
-**.validateAccessKey**( *accessKey* : Text ) : Boolean<!-- END REF -->
-
-
-
-<!-- REF #webServerClass.validateAccessKey().Params -->
-
-|Parameter|Type||Description|
-|---|---|----|---|
-|accessKey|Text|->|Text value|  
-|Result|Boolean|<-|True is the `accessKey` value correspond to the WebAdmin access key|
-
-<!-- END REF -->
-
-The `.validateAccessKey()` function <!-- REF #webServerClass.validateAccessKey().Summary --> returns True if the string passed in *accessKey* corresponds to the defined WebAdmin access key<!-- END REF -->, and False otherwise.
-
-
-
-<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -165,9 +165,8 @@ When an administration page is accessed directly from a 4D or 4D Server menu ite
  
 When an administration page is accessed by entering a URL and without prior identification, an authentication is required. 
 
-- By default, the WebAdmin web server displays an authentication dialog box, allowing the user to enter the access key.
-- You can also implement a custom authentication interface and validate the entered access key using the [`.validateAccessKey()`] function of the WebAdmin Web server.
+The WebAdmin web server displays an authentication dialog box, allowing the user to enter the access key.
 
-If the user provides the access key, a session with the "WebAdmin" privilege is created on the 4D application. As long as the current session has "WebAdmin" privilege, the WebAdmin component delivers requested pages.
+If the user provides the access key, a web [session](WebServer/sessions.md) with the "WebAdmin" privilege is created on the 4D application. As long as the current session has "WebAdmin" privilege, the WebAdmin component delivers requested pages.
 
 
