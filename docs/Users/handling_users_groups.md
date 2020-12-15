@@ -3,9 +3,11 @@ id: editing
 title: Managing 4D users and groups
 ---
 
-## Designer and Administrator
 
 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect. 
+
+
+## Designer and Administrator
 
 The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. 
 The Designer can:
@@ -29,8 +31,8 @@ The Administrator cannot:
 
 Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
-- Designer icon: ![](assets/en/Users/IconDesigner.png)
-- Administrator icon: ![](assets/en/Users/IconAdmin.png)
+- Designer icon: ![](assets/en/Users/iconDesigner.png)
+- Administrator icon: ![](assets/en/Users/iconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
@@ -77,6 +79,7 @@ You can add or remove the selected user to/from a group by checking the correspo
 The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
 
 ### Deleting a user
+
 
 To delete a user, select it then click the deletion button or use the **Delete** command of the context menu.
 ![](assets/en/Users/MinussNew.png)

@@ -3,6 +3,9 @@ id: pictures
 title: Images
 ---
 
+4D inclut une prise en charge spécifique des images utilisées dans vos formulaires.
+
+
 ## Formats natifs pris en charge
 
 4D intègre une gestion native des images. Cela signifie que les images sont affichées et stockées dans leur format d’origine, sans interprétation dans 4D. Les spécificités des différents formats (ombrages, zones transparentes...) sont conservées en cas de copier-coller et affichées sans altération. Ce support natif est valable pour toutes les images stockées dans les formulaires 4D : [images statiques](FormObjects/staticPicture.md) collées en mode Développement, images collées dans des [objets de saisie](FormObjects/input_overview.md) à l'exécution, etc.

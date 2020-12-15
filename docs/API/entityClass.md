@@ -2,7 +2,7 @@
 id: entityClass
 title: Entity
 ---
-<style> h2 { background: #d9ebff;}</style>
+
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
@@ -120,6 +120,7 @@ This function can only be used with entities already saved in the database. It c
  $empCloned:=$emp.clone()
  
  $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
+
 ```
 
 <!-- END REF -->
@@ -1035,6 +1036,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
  $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[0]
  $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+
 ```
 
 <!-- END REF -->
@@ -1189,12 +1191,11 @@ The object returned by `.save()` contains the following properties:
 ||||***Available only if `dk auto merge` option is used***:|
 |autoMerged|	|boolean|True if an auto merge was done, False otherwise.|
 ||||***Available only in case of error***:|
-|status(\*)|	|number|Error code, see below|
-|statusText(\*)|	|text|Description of the error, see below|
+|status|	|number|Error code, [see below](#status-and-statustext)|
+|statusText|	|text|Description of the error, [see below](#status-and-statustext)|
 ||||***Available only in case of pessimistic lock error***:|
 |lockKindText|	|text|"Locked by record"|
-|lockInfo|	|object|Information about the lock
-origin|
+|lockInfo|	|object|Information about the lock origin|
 ||task_id|	number|	Process id|
 ||user_name	|text|	Session user name on the machine|
 ||user4d_id|	text|	User name in the 4D database directory|
@@ -1207,7 +1208,9 @@ origin|
 ||componentSignature|	text|	Internal component signature (e.g. "dmbg" stands for the database component)|
 ||errCode|	number|	Error code|
 
-(\*) The following values can be returned in the status and statusText properties of Result object in case of error:
+##### status and statusText
+
+The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
 |Constant|	Value	|Comment|
 |---|---|---|
@@ -1751,3 +1754,4 @@ The object returned by `.unlock()` contains the following property:
 
 
 
+<style> h2 { background: #d9ebff;}</style>

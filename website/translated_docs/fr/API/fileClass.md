@@ -3,8 +3,6 @@ id: fileClass
 title: File
 ---
 
-<style> h2 { background: #d9ebff;}</style>
-
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
 ### Exemple
@@ -61,7 +59,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF fileClass.File.Syntax -->
+<!-- REF #_command_.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
@@ -175,7 +173,7 @@ The `.create()` function <!-- REF #fileClass.create().Summary -->creates a file 
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-**Returned value**
+**Valeur retournée**
 
 *   **True** if the file is created successfully;
 *   **False** if a file with the same name already exists or if an error occured.
@@ -587,3 +585,4 @@ $myFile.setText("Hello world")
 
 
 
+<style> h2 { background: #d9ebff;}</style>

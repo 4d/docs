@@ -1,7 +1,10 @@
 ---
 id: pictures
-title: Pictures
+title: Bilder
 ---
+
+4D includes specific support for pictures used in your forms.
+
 
 ## Native Unterstützung von Formaten
 

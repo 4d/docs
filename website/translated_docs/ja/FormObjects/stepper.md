@@ -3,8 +3,6 @@ id: stepper
 title: ステッパー
 ---
 
-## 概要
-
 このオブジェクトを使用すると、ユーザーは矢印ボタンをクリックすることで、数値、時間、または日付を定義済みのステップ毎にスクロールすることができます。
 
 ![](assets/en/FormObjects/indicator_numericStepper.png)

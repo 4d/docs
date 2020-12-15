@@ -3,7 +3,6 @@ id: entityClass
 title: Entity
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
@@ -115,6 +114,7 @@ This function can only be used with entities already saved in the database. It c
  $empCloned:=$emp.clone()
 
  $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
+
 ```
 
 <!-- END REF -->
@@ -1028,6 +1028,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
  $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[0]
  $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+
 ```
 
 <!-- END REF -->
@@ -1175,23 +1176,32 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Property         |  | Typ     | Beschreibung                                            |
-| ---------------- |  | ------- | ------------------------------------------------------- |
-| success          |  | boolean | True if the save action is successful, False otherwise. |
-|                  |  |         | ***Available only if `dk auto merge` option is used***: |
-| autoMerged       |  | boolean | True if an auto merge was done, False otherwise.        |
-|                  |  |         | ***Available only in case of error***:                  |
-| status(\*)     |  | number  | Error code, see below                                   |
-| statusText(\*) |  | Text    | Description of the error, see below                     |
-|                  |  |         | ***Available only in case of pessimistic lock error***: |
-| lockKindText     |  | Text    | "Locked by record"                                      |
-| lockInfo         |  | object  | Information about the lock                              |
- origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on the machine| ||user4d_id|    text|   User name in the 4D database directory| ||host_name |text   |Machine name| ||task_name|    text|   Process name| ||client_version|   text||
+| Property     |                    | Typ                   | Beschreibung                                                                                                            |
+| ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| success      |                    | boolean               | True if the save action is successful, False otherwise.                                                                 |
+|              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
+| autoMerged   |                    | boolean               | True if an auto merge was done, False otherwise.                                                                        |
+|              |                    |                       | ***Available only in case of error***:                                                                                  |
+| status       |                    | number                | Error code, [see below](#status-and-statustext)                                                                         |
+| statusText   |                    | Text                  | Description of the error, [see below](#status-and-statustext)                                                           |
+|              |                    |                       | ***Available only in case of pessimistic lock error***:                                                                 |
+| lockKindText |                    | Text                  | "Locked by record"                                                                                                      |
+| lockInfo     |                    | object                | Information about the lock origin                                                                                       |
+|              | task_id            | number                | Process id                                                                                                              |
+|              | user_name          | Text                  | Session user name on the machine                                                                                        |
+|              | user4d_id          | Text                  | User name in the 4D database directory                                                                                  |
+|              | host_name          | Text                  | Machine name                                                                                                            |
+|              | task_name          | Text                  | Process name                                                                                                            |
+|              | client_version     | Text                  |                                                                                                                         |
+|              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
+| errors       |                    | collection of objects |                                                                                                                         |
+|              | message            | Text                  | Error message                                                                                                           |
+|              | componentSignature | Text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
+|              | errCode            | number                | Error code                                                                                                              |
 
-  
-||||***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...):| |errors ||  collection of objects|| ||message|  text    |Error message| ||componentSignature|   text|   Internal component signature (e.g. "dmbg" stands for the database component)| ||errCode|  number| Error code|
+##### status and statusText
 
-(\*) The following values can be returned in the status and statusText properties of Result object in case of error:
+The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
 | Constant                                  | Wert | Kommentar                                                                                                                                                                                                                                                         |
 | ----------------------------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1734,3 +1744,4 @@ The object returned by `.unlock()` contains the following property:
 
 
 
+<style> h2 { background: #d9ebff;}</style>

@@ -38,7 +38,7 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"database.example.com:9000";$body_t;$response;$hKey;$hValues)
 ```
 
-**Result**:
+**結果**:
 
 If the login was successful, the result will be:
 

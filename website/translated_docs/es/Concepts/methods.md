@@ -4,8 +4,6 @@ title: Methods
 ---
 
 
-## Overview
-
 A method is basically a piece of code that executes one or several actions. A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
 
 The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.

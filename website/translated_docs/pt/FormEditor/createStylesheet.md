@@ -3,7 +3,6 @@ id: stylesheets
 title: Style sheets
 ---
 
-## Overview
 
 A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
 
@@ -13,7 +12,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *   Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 *   Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
 
-### Style Sheet Files
+## Style Sheet Files
 
 4D accepts three, specific style sheet files:
 
@@ -26,7 +25,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
 
-### Style Sheet Architecture
+## Style Sheet Architecture
 
 While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
@@ -183,6 +182,7 @@ All objects of the text type with a text attribute whose value starts with "Hell
 text[text|=Hello]
 {
      stroke: yellow;
+
 
 }
 ```

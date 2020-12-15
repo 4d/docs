@@ -1,9 +1,8 @@
 ---
 id: pop3TransporterClass
-title: POP3 Transporter
+title: POP3Transporter
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
 
 
@@ -98,6 +97,24 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 <!-- END REF -->
 
+## 4D.POP3Transporter.new()
+
+
+<!-- REF #4D.POP3Transporter.new().Syntax -->
+**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
+
+<!-- REF #4D.POP3Transporter.new().Params -->
+| Parameter | Typ                |    | Beschreibung                                        |
+| --------- | ------------------ |:--:| --------------------------------------------------- |
+| server    | Objekt             | -> | Mail server information                             |
+| Ergebnis  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+<!-- END REF -->
+
+#### Beschreibung
+
+The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](#pop3-new-transporter) command (shortcut).
+
+> It is recommended to use the [`POP3 New transporter`](#pop3-new-transporter) shortcut command instead of `4D.POP3Transporter.new()`. 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -540,12 +557,4 @@ The `.undeleteAll()` function <!-- REF #pop3TransporterClass.undeleteAll().Summa
 
 
 
-
-
-
-
-
-
-
-
-
+<style> h2 { background: #d9ebff;}</style>

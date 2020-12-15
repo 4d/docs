@@ -111,11 +111,13 @@ const siteConfig = {
       hljs.registerLanguage("4d", hljsRobotsTxt);
     }
   },
-
+  
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js',
+  scripts: ['https://code.jquery.com/jquery-3.5.1.min.js','/docs/alpha/js/comment.js',
+  'https://buttons.github.io/buttons.js',
   'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
   '/docs/js/code-blocks-buttons.js'],
+
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',

@@ -3,7 +3,6 @@ id: objectLibrary
 title: Object libraries
 ---
 
-## Überblick
 
 You can use object librairies in your forms. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
 
@@ -99,7 +98,7 @@ The following is a list of dependent objects that will be pasted into the librar
 
 - Lists
 - Formats/Filters
-- Pictures
+- Bilder
 - Help Tips (linked to a field)
 - Object methods
 

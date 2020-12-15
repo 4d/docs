@@ -3,7 +3,6 @@ id: webAreaOverview
 title: Zone Web
 ---
 
-## Aperçu
 
 Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -33,6 +32,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 > This property is only available if the web area [uses the embedded web rendering engine](#use-embedded-web-rendering-engine).
 
 ### Objet $4d
+
 
 
 
@@ -124,7 +124,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 ## Actions standard
 
-Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. Ces actions sont décrites dans [Actions standard](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Quatre actions standard sont disponibles pour gérer automatiquement les zones Web : `Open Back URL`, `Open Forward URL`, `Refresh Current URL` et `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. Ces actions sont décrites dans [Actions standard](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
 ## Evénements formulaire

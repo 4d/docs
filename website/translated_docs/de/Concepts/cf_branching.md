@@ -3,6 +3,9 @@ id: branching
 title: Abfragestrukturen
 ---
 
+Über eine Abfragestruktur können Methoden eine Bedingung testen und je nach Ergebnis alternative Wege einschlagen.
+
+
 ## If...Else...End if
 
 Die formale Syntax der Abfragefolge `If...Else...End if` lautet:

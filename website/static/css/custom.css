@@ -20,7 +20,7 @@ em,i {font-style:italic}
 
 
 a {
-text-decoration: none; /* Les liens ne seront plus soulignés */
+text-decoration: none; /* Les liens ne seront plus soulignï¿½s */
 color: #1E90FF;  /*Les liens seront en rouge au lieu de bleu */
 /*color: #004289; bleu 4d*/
 }
@@ -209,12 +209,12 @@ color: #fff;
   .gridBlock .blockElement.imageAlignTop {
     margin-bottom: 80px;
   }
- 
+
 }
 
 .docImage {
   margin: 3rem auto;
-  
+
   max-width: 400px;
 
 }

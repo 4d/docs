@@ -3,13 +3,14 @@ id: listboxOverview
 title: List Box
 ---
 
-## Aperçu
 
 Les list box sont des objets actifs complexes permettant d’afficher et de saisir des données sous forme de tableaux. Ils peuvent être liés au contenu de la base de données, comme les sélections d'entités ("entity selections") et les sections d'enregistrement, ou à tout contenu linguistique tel que les collections et les tableaux. Ils incluent des fonctionnalités avancées concernant la saisie de données, le tri des colonnes, la gestion des événements, l'apparence personnalisée, le déplacement des colonnes, etc.
 
 ![](assets/en/FormObjects/listbox.png)
 
 Une list box contient une ou plusieurs colonnes dont le contenu est automatiquement synchronisé. Le nombre de colonnes est en principe illimité (il dépend des ressources de la machine).
+
+## Aperçu
 
 ### Principes d'utilisation basiques
 

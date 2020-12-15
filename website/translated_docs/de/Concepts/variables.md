@@ -50,7 +50,7 @@ var $myVar //a variant variable
 ```
 
 `varName` ist der Variablenname, er muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.   
-Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#local-process-and-interprocess-variables), d. h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
+Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#lokale-prozess--und-interprozessvariablen), d. h. [Interprozessvariablen](#interprozessvariablen) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
 
 `varTyp` kann folgendes sein:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Eine C_Direktive verwenden
 
-> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
+> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#das-schlüsselwort-var-verwenden) zu verwenden.
 
 Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
@@ -146,7 +146,7 @@ MyNumber:=3
 
 erstellt die Variable _ MyNumber_ und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#creating-variables) zu erstellen.
+> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#variablen-erstellen) zu erstellen.
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie _ MyNumber_ auf die rechte Seite des Zuweisungsoperators:
 

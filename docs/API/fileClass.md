@@ -2,7 +2,6 @@
 id: fileClass
 title: File 
 ---
-<style> h2 { background: #d9ebff;}</style>
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
@@ -59,7 +58,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |v17 R5|Added|
 </details>
 
-<!-- REF fileClass.File.Syntax -->
+<!-- REF #_command_.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
@@ -584,3 +583,4 @@ $myFile.setText("Hello world")
 
 
 
+<style> h2 { background: #d9ebff;}</style>

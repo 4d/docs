@@ -3,8 +3,6 @@ id: checkboxOverview
 title: Check Box
 ---
 
-## Überblick
-
 A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a third state can be defined (see below).
 
 ![](assets/en/FormObjects/checkbox.png)

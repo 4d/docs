@@ -3,6 +3,9 @@ id: branching
 title: Branching structures
 ---
 
+A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+
+
 ## If...Else...End if
 
 The formal syntax of the `If...Else...End if` control flow structure is:

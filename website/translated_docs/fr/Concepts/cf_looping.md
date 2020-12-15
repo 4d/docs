@@ -3,7 +3,11 @@ id: looping
 title: Structures répétitives (ou "boucles")
 ---
 
+Les structures en boucle répètent une séquence d'instructions jusqu'à ce qu'une condition soit remplie ou qu'un certain nombre de fois est atteint.
+
+
 ## While...End while
+
 La syntaxe de la structure répétitive (ou boucle) `While...End while` est la suivante :
 ```4d
  While(Expression_booléenne)
@@ -47,6 +51,7 @@ La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-c
 L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
 
 ### Exemple
+
 Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous constatez qu’il n’est pas nécessaire d’initialiser l’expression booléenne — il n’y a pas de commande `CONFIRM` pour initialiser la variable `OK`.
 
 ```4d
@@ -56,6 +61,7 @@ Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous c
 ```
 
 ## For...End for
+
 La syntaxe de la structure répétitive `For...End for` est la suivante :
 
 ```4d
@@ -79,6 +85,7 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
 - Si *Start_Expression* est supérieure à *End_Expression*, la boucle ne s'exécutera pas du tout, à moins que vous ne spécifiiez une *Increment_Expression* négative. Reportez-vous ci-dessous au paragraphe décrivant ce point.
 
 ### Exemples élémentaires
+
 1. La boucle suivante s'exécute 100 fois :
 
 ```4d
@@ -264,6 +271,7 @@ Voici deux exemples :
 ```
 
 ## For each...End for each
+
 La syntaxe de la structure répétitive (ou boucle) `For each...End for each` est la suivante :
 
 ```4d
@@ -414,7 +422,9 @@ Par exemple:
  End for each
   //$col2=[1,2,3,"a","b","c","d"]
 ```
+
 ### Conditions Until et While
+
 Vous pouvez contrôler l'exécution de `For each...End for each` en ajoutant une condition `Jusque` ou `Tant que` à la boucle. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
 
 Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :

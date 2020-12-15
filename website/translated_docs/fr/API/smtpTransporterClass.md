@@ -1,9 +1,8 @@
 ---
 id: smtpTransporterClass
-title: SMTP Transporter
+title: SMTPTransporter
 ---
 
-<style> h2 { background: #d9ebff;}</style>
 The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
 
 
@@ -45,7 +44,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 <!-- REF #_command_.SMTP New transporter.Syntax -->
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
-<!-- REF smtpTransporterClass.SMTP New transporter.Params -->
+<!-- REF #_command_.SMTP New transporter.Params -->
 | Paramètres | Type               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | server     | Objet              | -> | Mail server information                             |
@@ -108,6 +107,24 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 
 <!-- END REF -->
 
+## 4D.SMTPTransporter.new()
+
+
+<!-- REF #4D.SMTPTransporter.new().Syntax -->
+**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
+
+<!-- REF #4D.SMTPTransporter.new().Params -->
+| Paramètres | Type               |    | Description                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Objet              | -> | Mail server information                             |
+| Résultat   | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+<!-- END REF -->
+
+#### Description
+
+The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+
+> It is recommended to use the [`SMTP New transporter`](#smtp-new-transporter) shortcut command instead of `4D.SMTPTransporter.new()`. 
 
 
 
@@ -247,3 +264,6 @@ In *mail*, pass a valid [`Email` object](emailObjectClass.md#email-object) to se
 
 
 <!-- INCLUDE transporter.user.Desc -->
+
+
+<style> h2 { background: #d9ebff;}</style>

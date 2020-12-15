@@ -3,7 +3,7 @@ id: splitters
 title: Séparateur
 ---
 
-## Aperçu
+
 
 Un séparateur divise un formulaire en deux zones. Il permet à l’utilisateur d’agrandir ou de réduire chaque zone en le déplaçant. Un séparateur peut être horizontal ou vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your application's interface. Un séparateur peut être “pousseur” ou non
 
@@ -36,6 +36,7 @@ Une fois inséré, un séparateur se présente sous la forme d’un trait. Vous 
 
 
 ### Propriétés prises en charge
+
 [Border Line Style](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md##font-color-line-color) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 ## Interaction avec les propriétés des objets environnants
