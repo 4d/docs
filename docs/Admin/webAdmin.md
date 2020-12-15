@@ -35,7 +35,7 @@ The menu item becomes **Stop Server** when the server is launched; select **Stop
 You can configure the `WebAdmin` web server to be launched at 4D or 4D Server application startup (before any project is loaded).  
 
 - If you use a 4D application with interface, select the **File > Web Administration > Settings...** menu item. 
-- 
+
 ![alt-text](assets/en/Admin/waMenu1.png)
 
 Check the **Web server administration automatic startup** option in the settings dialog box:
