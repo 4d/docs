@@ -1,5 +1,5 @@
 ---
-id: boolean
+id: Boolean
 title: Boolean
 ---
 

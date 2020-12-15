@@ -172,7 +172,7 @@ title: テキスト
 * 16進数値 - 例: "#ff0000"
 * RGB値 - 例: "rgb(255,0,0)"
 
-このプロパティはOBJECT SET RGB COLORS** コマンドによって設定することができます。 </p> 
+このプロパティはOBJECT SET RGB COLORS** コマンドによって設定することができます。</p> 
 
 
 
@@ -234,7 +234,7 @@ Foreground color;Dark shadow color)
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md) 
+[リストボックス](listbox_overview.md)
 
 
 
@@ -318,7 +318,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 エリア中のテキストの縦位置を指定します。
 
-**デフォルト** オプション (JSON値: `automatic`) の場合は、各列のデータ型に基づき整列方向が決定されます: 
+**デフォルト** オプション (JSON値: `automatic`) の場合は、各列のデータ型に基づき整列方向が決定されます:
 
 - ピクチャーを除き、すべて `下` です。
 - ピクチャーは `上` です。
@@ -376,17 +376,36 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 > このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
 
-以下の例題では *Color* プロジェクトメソッドを使用する場合を考えます。 
+**例題**
 
-フォームメソッドには、以下のように書きます:
+*Color* プロジェクトメソッドには、以下のコードを書きます:
 
 
 
 ```4d
-// フォームメソッド
+// Color メソッド
+// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
+C_OBJECT($0)
+Form.meta:=New object
+If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
+  Form.meta.stroke:="purple"
+  Form.meta.cell:=New object("Column2";New object("fill";"black"))
+Else
+  Form.meta.stroke:="orange"
+End if
+$0:=Form.meta
+```
+
+
+**ベストプラクティス:** このような場合には最適化のため、フォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
+
+
+
+```4d
+  // フォームメソッド
 Case of
-  :(Form event=On Load)
-   Form.meta:=New object
+  :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
 End case
 ```
 
@@ -396,16 +415,12 @@ End case
 
 
 ```4d
-// Color メソッド
-// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
-C_OBJECT($0)
-If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
-  Form.meta.stroke:="purple"
-  Form.meta.cell:=New object("Column2";New object("fill";"black"))
-Else
-  Form.meta.stroke:="orange"
-End if
-$0:=Form.meta
+  // Color メソッド
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle // より良いパフォーマンスのため、同じオブジェクトを再利用します
+ ...
 ```
 
 
@@ -443,7 +458,7 @@ $0:=Form.meta
 
 ## マルチスタイル
 
-このプロパティは、選択エリアでスタイルの利用を可能にするかどうかを指定するものです。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の \<SPAN> HTMLタグをスタイル属性として解釈します。 </p> 
+このプロパティは、選択エリアでスタイルの利用を可能にするかどうかを指定するものです。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の \<SPAN> HTMLタグをスタイル属性として解釈します。</p> 
 
 <p spaces-before="0">
   デフォルトでは、このオプションは有効化されていません。
@@ -570,7 +585,7 @@ $0:=Form.meta
 </table>
 
 <p spaces-before="0">
-  <a href="text.md">スタティックなテキストエリア</a> のほかに、<a href="properties_Entry.md#入力可">入力不可</a> に設定された <a href="input_overview.md">入力オブジェクト</a> も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。 
+  <a href="text.md">スタティックなテキストエリア</a> のほかに、<a href="properties_Entry.md#入力可">入力不可</a> に設定された <a href="input_overview.md">入力オブジェクト</a> も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。
 </p>
 
 
@@ -640,7 +655,7 @@ $0:=Form.meta
 </p>
 
 <p spaces-before="0">
-  リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。 
+  リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
 </p>
 
 <p spaces-before="0">
@@ -847,24 +862,3 @@ $0:=Form.meta
 <p spaces-before="0">
   <a href="input_overview.md">入力</a>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

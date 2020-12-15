@@ -99,7 +99,7 @@ The following is a list of dependent objects that will be pasted into the librar
 
 - Lists
 - Formats/Filters
-- Pictures
+- Bilder
 - Help Tips (linked to a field)
 - Object methods
 

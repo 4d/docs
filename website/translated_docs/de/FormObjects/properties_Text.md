@@ -316,25 +316,15 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-The following example uses the *Color* project method.
+**Beispiel**
 
-In the form method, write the following code:
-
-```4d
-//form method
-Case of
-  :(Form event=On Load)
-   Form.meta:=New object
-End case
-```
-
-
-In the *Color* method, write the following code:
+In the *Color* project method, write the following code:
 
 ```4d
 //Color method
 //Sets font color for certain rows and the background color for a specific column:
 C_OBJECT($0)
+Form.meta:=New object
 If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
@@ -343,7 +333,28 @@ Else
 End if
 $0:=Form.meta
 ```
-> See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
+
+**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+
+```4d
+  //form method
+ Case of
+    :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
+ End case
+```
+
+Then, the *Color* method would contain:
+
+```4d
+  //Color method
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+ ...
+```
+> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
 
 
 
@@ -367,7 +378,7 @@ $0:=Form.meta
 ---
 ## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
+This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
 
 <p spaces-before="0">
   By default, this option is not enabled.
@@ -735,24 +746,3 @@ This property enables the possibility of using specific styles in the selected a
 <p spaces-before="0">
   <a href="input_overview.md">Input</a>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

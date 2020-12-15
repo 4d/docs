@@ -12,7 +12,7 @@ Ist eine Klasse definiert, können Sie Objekte dieser Klasse als **Instanz** üb
 
 Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf einer Kette von Prototypen.
 
-### Objekt Klasse
+### Objekt Class
 
 Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgende Eigenschaften und Methoden:
 
@@ -20,7 +20,7 @@ Die Klasse ist selbst ein Objekt vom Typ "Klasse". Ein Objekt Klasse hat folgend
 - Objekt `superclass` (optional, null, wenn nicht vorhanden)
 - Methode `new()`, um Instanzen der Objekte in einer Klasse zu setzen.
 
-Zusätzlich kann ein Objekt Klasse verweisen auf:
+Zusätzlich kann ein Objekt class verweisen auf:
 - Ein Objekt `constructor` (optional)
 - Ein Objekt `prototype` mit Objekten "named function" (optional).
 
@@ -149,11 +149,11 @@ Um eine neue Klasse zu erstellen:
 In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:
 
 - Im Code-Editor gilt folgendes:
-    - Es kann keine Klasse laufen
+    - Klassen können nicht direkt ausgeführt werden
     - Eine Klassenfunktion ist ein Code Block
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Objekt Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem Format \<ClassName> Constructor oder \.\ angezeigt.<ClassName> <FunctionName> format.
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem <ClassName> Constructor<ClassName> Constructor oder <ClassName>.<FunctionName><ClassName> <FunctionName> Format angezeigt.
 
 
 ### Eine Klasse löschen
@@ -202,14 +202,14 @@ Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<Clas
 
 Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können Parameter empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- Verwendung des Operators `()` Zum Beispiel `myObject.methodName("hello")`.
-- Verwendung der Klasse "Function" als  Member Method
+- Verwendung des Operators `()` Beispiel `myObject.methodName("hello")`.
+- Verwendung einer Class Member Method "Function"
     - `apply()`
     - `call()`
 
 
-> **Thread-safety Warnung:** Ist eine Class Function nicht thread-safe und wird von einer Methode mit der Option "Als preemptive Prozess starten" aufgerufen:  
-> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - gibt 4D einen Fehler nur im laufenden Betrieb aus.
+> **Thread-Safety Warnung:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit der Option "In preemptive Prozess starten" aufgerufen:  
+> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden), - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
 
 
 #### Beispiel
@@ -234,8 +234,8 @@ Function getArea
 C_OBJECT($o)  
 C_REAL($area)
 
-$o:=cs.Rectangle.new()  
-$area:=$o.getArea(50;100) //5000
+$rect:=cs.Rectangle.new(50;100)  
+$area:=$rect.getArea() //5000
 ```
 
 
@@ -249,11 +249,11 @@ Class Constructor
 // code
 ```
 
-Mit einer Function Class Constructor, die Parameter zulässt, lässt sich eine Benutzerklasse definieren.
+Eine Function Class Constructor, die Parameter zulässt, lässt sich zum Definieren einer Benutzerklasse verwenden.
 
-Dann wird beim Aufrufen der Member Method `new()` der Klasse der Class Constructor mit den optional in `new()` übergebenen Parametern aufgerufen.
+In diesem Fall wird der Class Constructor beim Aufrufen der Class Member Method `new()`  mit den Parametern aufgerufen, die optional in der Function `new()` übergeben wurden.
 
-Für eine Function Class Constructor gibt der Befehl `Current method name` zurück: "*\<ClassName>.constructor*", zum Beispiel "MyClass.constructor".
+Für eine Class Constructor Function, gibt der Befehl `Current method name` zurück: "*\<ClassName>.constructor*", z.B. "MyClass.constructor".
 
 
 #### Beispiel:
@@ -286,7 +286,7 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-Das Schlüsselwort `Class extends` dient beim Deklarieren der Klasse zum Erstellen einer Benutzerklasse, die ein Kind einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Funktionen von der übergeordneten Klasse.
+Das Schlüsselwort `Class extends` dient in der Deklaration der Klasse zum Erstellen einer Benutzerklasse, die eine Unterklasse einer anderen Benutzerklasse ist. Die Unterklasse erbt alle Funktionen von der übergeordneten Klasse.
 
 Für Erweiterungen einer Klasse gelten folgende Regeln:
 

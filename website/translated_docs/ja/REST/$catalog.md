@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Available syntaxes
 
-| シンタックス                                        | 例題                   | 説明                                                                               |
+| シンタックス                                        | 例                    | 説明                                                                               |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -40,7 +40,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 `GET  /rest/$catalog`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -75,7 +75,7 @@ For more information about what is returned for each datastore class and its att
 
 `GET  /rest/$catalog/$all`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -238,7 +238,7 @@ You can retrieve the information regarding a specific datastore class.
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**結果**:
 
 ````
 {

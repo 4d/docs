@@ -62,7 +62,7 @@ Return all the data for a specific datastore class.
 
  `GET  /rest/Company`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -166,7 +166,7 @@ The following request returns all the public data in the Company datastore class
 
  `GET  /rest/Company(1)`
 
-**Result**:
+**結果**:
 
 ````
 {

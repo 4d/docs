@@ -316,26 +316,16 @@ Indique une expression ou une variable qui sera évaluée pour chaque ligne affi
 
 > Les paramètres de style définis avec cette propriété sont ignorés si d'autres paramètres de style sont déjà définis via des expressions (par exemple, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-L'exemple suivant utilise la méthode projet *Color*.
+**Exemple**
 
-Dans la méthode formulaire, écrivez le code suivant :
-
-```4d
-//méthode formulaire
-Case of
-  :(Form event=On Load)
-   Form.meta:=New object
-End case
-```
-
-
-Dans la méthode *Color*, entrez le code suivant :
+In the *Color* project method, write the following code:
 
 ```4d
-//Méthode Color
-//Définit la couleur de police pour certaines lignes et la couleur de fond pour une colonne spécifique :
+//Color method
+//Sets font color for certain rows and the background color for a specific column:
 C_OBJECT($0)
-If(This.ID>5) //ID est un attribut d'objets/entités d'une collection
+Form.meta:=New object
+If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -343,7 +333,28 @@ Else
 End if
 $0:=Form.meta
 ```
-> Voir également la commande [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).
+
+**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+
+```4d
+  //form method
+ Case of
+    :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
+ End case
+```
+
+Then, the *Color* method would contain:
+
+```4d
+  //Color method
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+ ...
+```
+> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
 
 
 
@@ -367,7 +378,7 @@ $0:=Form.meta
 ---
 ## Multistyle
 
-Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. Lorsque cette option est cochée, 4D interprète toutes les balises \<SPAN> HTML présentes dans la zone. </p> 
+Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. Lorsque cette option est cochée, 4D interprète toutes les balises \<SPAN> HTML présentes dans la zone.</p> 
 
 <p spaces-before="0">
   Par défaut, cette option n'est pas activée.
@@ -735,24 +746,3 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
 <p spaces-before="0">
   <a href="input_overview.md">Input</a>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

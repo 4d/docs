@@ -202,73 +202,73 @@ Pour une fonction de classe, la commande `Current method name` retourne: "*\<Cla
 
 Dans le code de l'application, les fonctions de classe sont appelées en tant que méthodes membres de l'instance d'objet et peuvent recevoir des paramètres le cas échéant. Les syntaxes suivantes sont prises en charge :
 
-- utilisation de l'opérateur `()`. Par exemple `myObject.methodName("hello")`.
-- utilisation des méthodes membres d'une classe "Function"
+- utilisation de l'opérateur `()`. For example `myObject.methodName("hello")`.
+- use of a "Function" class member methods
     - `apply()`
     - `call()`
 
 
-> **Avertissement lié au thread-safe :** Si une fonction de classe n'est pas thread-safe et est appelée par une méthode avec l'attribut "Peut être exécuté en mode préemptif" :  
-> - le compilateur ne génère aucune erreur (contrairement aux méthodes habituelles), - une erreur est générée par 4D uniquement à l'exécution.
+> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:  
+> - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
 
 
-#### Exemple
+#### Example
 
 ```4d
-// Classe : Rectangle
+// Class: Rectangle
 Class Constructor
     C_LONGINT($1;$2)
     This.name:="Rectangle"
     This.height:=$1
     This.width:=$2
 
-// Définition de la fonction
-Fonction getArea
+// Function definition
+Function getArea
     C_LONGINT($0)
     $0:=(This.height)*(This.width)
 
 ```
 
 ```4d
-// Dans une méthode projet
+// In a project method
 C_OBJECT($o)  
 C_REAL($area)
 
-$o:=cs.Rectangle.new()  
-$area:=$o.getArea(50;100) //5000
+$rect:=cs.Rectangle.new(50;100)  
+$area:=$rect.getArea() //5000
 ```
 
 
 ### Class constructor
 
-#### Syntaxe
+#### Syntax
 
 ```js
-// Classe : MyClass
+// Class: MyClass
 Class Constructor
 // code
 ```
 
-Une fonction de class constructor, qui peut accepter des paramètres, peut être utilisée pour définir une classe utilisateurs.
+A class constructor function, which can accept parameters, can be used to define a user class.
 
-Dans ce cas, lorsque vous appelez la méthode membre `new()` de la classe, le class constructor est appelé avec les paramètres  passés initialement à la fonction `new()`.
+In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-Pour une fonction de class constructor, la commande `Current method name` retourne : "*\<ClassName>.constructor*", par exemple "MyClass.constructor".
+For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
 
-#### Exemple :
+#### Example:
 
 ```4d
-// Classe : MyClass
-// Class constructor de MyClass
+// Class: MyClass
+// Class constructor of MyClass
 Class Constructor
 C_TEXT($1)
 This.name:=$1
 ```
 
 ```4d
-// Dans une méthode projet
-// Vous pouvez instancier un objet
+// In a project method
+// You can instantiate an object
 C_OBJECT($o)
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -279,14 +279,14 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### Class extends \<ClassName>
 
-#### Syntaxe
+#### Syntax
 
 ```js
-// Classe : ChildClass
+// Class: ChildClass
 Class extends <ParentClass>
 ```
 
-Le mot-clé de `Class extends` est utilisé dans une déclaration de classe pour créer une classe utilisateur qui est l'enfant d'une autre classe utilisateur. La classe enfant hérite de toutes les fonctions de la classe parente.
+The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. La classe enfant hérite de toutes les fonctions de la classe parente.
 
 L'extension de classe doit respecter les règles suivantes :
 
