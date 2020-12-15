@@ -8,8 +8,8 @@
       "Admin/building": {
         "title": "Building a project package"
       },
-      "Admin/dataBrowser": {
-        "title": "Data Browser (web)"
+      "Admin/dataExplorer": {
+        "title": "Data Explorer (web)"
       },
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
@@ -830,7 +830,7 @@
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
-    "Web Data Browser|no description given": "Web Data Browser",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",
