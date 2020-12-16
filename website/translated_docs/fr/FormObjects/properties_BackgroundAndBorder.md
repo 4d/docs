@@ -1,64 +1,64 @@
 ---
 id: propertiesBackgroundAndBorder
-title: Fond et bordure
+title: Background and Border
 ---
 
 ---
-## Couleur de fond alternée
+## Alternate Background Color
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
+Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom           | Type de données | Valeurs possibles                          |
-| ------------- | --------------- | ------------------------------------------ |
-| alternateFill | string          | une valeur css; "transparent"; "automatic" |
+| Name          | Data Type | Possible Values                           |
+| ------------- | --------- | ----------------------------------------- |
+| alternateFill | string    | any css value; "transparent"; "automatic" |
 
-#### Objets pris en charge
-[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
+#### Objects Supported
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
 ---
-## Couleur de fond / Couleur de remplissage
+## Background Color / Fill Color
 
-Définit la couleur de fond d'un objet.
+Defines the background color of an object.
 
-Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
+In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
-#### Grammaire JSON
+#### JSON Grammar
 
 
-| Nom          | Type de données | Valeurs possibles                          |
-| ------------ | --------------- | ------------------------------------------ |
-| border-style | string          | une valeur css; "transparent"; "automatic" |
+| Name | Data Type | Possible Values                           |
+| ---- | --------- | ----------------------------------------- |
+| fill | string    | any css value; "transparent"; "automatic" |
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Liste Hiérarchique](list_overview.md) - [List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns) - [Pied List Box](listbox_overview.md#list-box-footers) - [Ovale](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Zone de texte](text.md)
+[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
-#### Voir également
+#### See also
 [Transparent](#transparent)
 
 
 ---
-## Expression couleur de fond
+## Background Color Expression
 
-`List box de type collection et de type sélection d'entité`
+`Selection and collection type list boxes`
 
-Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. Pour plus d'informations, reportez-vous à la description de la commande `OBJECT SET RGB COLORS` dans le *manuel de langage 4D*.
+An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
 
-Vous pouvez également définir cette propriété à l'aide de la commande `LISTBOX SET PROPERTY` avec la constante `lk background color expression`.
-> Avec les list box de type collection ou sélection d'entité, cette propriété peut également être définie à l'aide d'une [Meta Info Expression](properties_Text.md#meta-info-expression).
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
+> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom           | Type de données | Valeurs possibles                                   |
-| ------------- | --------------- | --------------------------------------------------- |
-| rowFillSource | string          | Une expression retournant une valeur de couleur RGB |
+| Name          | Data Type | Possible Values                           |
+| ------------- | --------- | ----------------------------------------- |
+| rowFillSource | string    | An expression returning a RGB color value |
 
-#### Objets pris en charge
-[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
+#### Objects Supported
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -66,58 +66,58 @@ Vous pouvez également définir cette propriété à l'aide de la commande `LIST
 
 
 ---
-## Style de la bordure
+## Border Line Style
 
-Permet de définir un style standard pour la bordure de l'objet.
+Allows setting a standard style for the object border.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles                                                 |
-| ----------- | --------------- | ----------------------------------------------------------------- |
-| borderStyle | Texte           | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| Name        | Data Type | Possible Values                                                   |
+| ----------- | --------- | ----------------------------------------------------------------- |
+| borderStyle | text      | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Zone 4D View Pro](viewProArea_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md) - [Boutons](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Case à cocher](list_overview.md#overview) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md#overview) - [Bouton image](pictureButton_overview.md) - [Pop up menu image](picturePopupMenu_overview.md) - [Zone de plug-in](pluginArea_overview.md#overview) - [Indicateur de progression](progressIndicator.md) - [Règle](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Sous-formulaire](subform_overview.md#overview) - [Onglet](text.md) - [Zone Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 
 
 ---
 ## Dotted Line Type
 
-Décrit le type de ligne en pointillé comme une séquence de points noirs et blancs.
+Describes dotted line type as a sequence of black and white points.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom             | Type de données        | Valeurs possibles                                                           |
-| --------------- | ---------------------- | --------------------------------------------------------------------------- |
-| strokeDashArray | number array or string | Ex : "6 1" ou \[6,1\] pour une séquence de points noirs et un point blanc |
+| Name            | Data Type              | Possible Values                                                          |
+| --------------- | ---------------------- | ------------------------------------------------------------------------ |
+| strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Rectangle](shapes_overview.md#rectangle) - [Ovale](shapes_overview.md#oval) - [Ligne](shapes_overview.md#line)
+[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
 
 
 
 
 ---
-## Masquer lignes vides finales
+## Hide extra blank rows
 
-Contrôle l'affichage des lignes vides supplémentaires ajoutées au bas d'un objet list box. Par défaut, 4D ajoute ces lignes supplémentaires pour remplir la zone vide :
+Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de l'objet list box est alors laissé vide :
+You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom                | Type de données | Valeurs possibles |
-| ------------------ | --------------- | ----------------- |
-| hideExtraBlankRows | boolean         | true, false       |
+| Name               | Data Type | Possible Values |
+| ------------------ | --------- | --------------- |
+| hideExtraBlankRows | boolean   | true, false     |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md#overview)
 
@@ -127,42 +127,42 @@ Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de
 ---
 ## Line Color
 
-Désigne la couleur des lignes de l'objet. La couleur peut être spécifiée par :
+Designates the color of the object's lines. The color can be specified by:
 
-* un nom de couleur - comme "red"
-* une valeur HEX - comme "# ff0000"
-* une valeur RVB - comme "rgb (255,0,0)"
+* a color name - like "red"
+* a HEX value - like "#ff0000"
+* an RGB value - like "rgb(255,0,0)"
 
-Vous pouvez également définir cette propriété à l'aide de la commande [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
+You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom    | Type de données | Valeurs possibles                          |
-| ------ | --------------- | ------------------------------------------ |
-| stroke | string          | une valeur css; "transparent"; "automatic" |
+| Name   | Data Type | Possible Values                           |
+| ------ | --------- | ----------------------------------------- |
+| stroke | string    | any css value, "transparent", "automatic" |
 
-> Cette propriété est également disponible pour les objets à base de texte, auquel cas elle désigne à la fois la couleur de la police et les lignes de l'objet, voir [Couleur de la police](properties_Text.md#font-color).
+> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Ligne](shapes_overview.md#line) - [Ovale](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
 
 ---
 ## Line Width
 
-Désigne l'épaisseur d'une ligne.
+Designates the thickness of a line.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles                                                                       |
-| ----------- | --------------- | --------------------------------------------------------------------------------------- |
-| strokeWidth | number          | 0 pour la plus petite largeur dans un formulaire imprimé, ou toute valeur d'entier < 20 |
+| Name        | Data Type | Possible Values                                                   |
+| ----------- | --------- | ----------------------------------------------------------------- |
+| strokeWidth | number    | 0 for smallest width on a printed form, or any integer value < 20 |
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Ligne](shapes_overview.md#line) - [Ovale](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
 
@@ -171,43 +171,43 @@ Désigne l'épaisseur d'une ligne.
 
 
 ---
-## Tableau couleurs de fond
+## Row Background Color Array
 
-`List box de type tableau`
+`Array type list boxes`
 
-Le nom d'un tableau pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne ou colonne de la list box.
+The name of an array to apply a custom background color to each row of the list box or column.
 
-Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+The name of a Longint array must be entered. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
-Par exemple, considérons une list box où les lignes ont une couleur alternée gris/gris clair, définie dans les propriétés de la list box. Un tableau de couleurs d'arrière-plan a également été défini pour la list box afin de changer en orange clair la couleur des lignes où au moins une valeur est négative :
+For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
 
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // valeur par défaut
+ <>_BgndColors{$i}:=-255 // default value
 ```
 ![](assets/en/FormObjects/listbox_styles1.png)
 
-Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple <>_BgndColor_1, <>_BgndColor_2 et <>_BgndColor_3. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
+Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // orange foncé
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
 ```
 ![](assets/en/FormObjects/listbox_styles2.png)
 
-Vous pouvez obtenir le même résultat en utilisant les commandes `LISTBOX SET ROW FONT STYLE` et `LISTBOX SET ROW COLOR`. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont plutôt créés dynamiquement par les commandes.
+You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom           | Type de données | Valeurs possibles             |
-| ------------- | --------------- | ----------------------------- |
-| rowFillSource | string          | Nom d'un tableau entier long. |
+| Name          | Data Type | Possible Values              |
+| ------------- | --------- | ---------------------------- |
+| rowFillSource | string    | The name of a longint array. |
 
-#### Objets pris en charge
-[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
+#### Objects Supported
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -216,16 +216,16 @@ Vous pouvez obtenir le même résultat en utilisant les commandes `LISTBOX SET R
 ---
 ## Transparent
 
-Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est définie, toute [autre couleur d'arrière-plan](#alternate-background-color) ou [couleur d'arrière-plan](#background-color-fill-color) définie pour la colonne est ignorée.
+Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| border-style | Texte           | "transparent"     |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+| fill | text      | "transparent"   |
 
-#### Objets pris en charge
+#### Objects Supported
 [List Box](listbox_overview.md#overview)
 
-#### Voir également
-[Couleur de fond / Couleur de remplissage](#background-color-fill-color)
+#### See also
+[Background Color / Fill Color](#background-color-fill-color)
