@@ -1,10 +1,10 @@
 ---
 id: propertiesResizingOptions
-title: Resizing Options
+title: Options de redimensionnement
 ---
 
 ---
-## Column Auto-Resizing
+## Redimensionnement colonnes auto
 
 When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
 
@@ -31,13 +31,13 @@ The fake header and/or footer can be clicked but this does not have any effect o
 If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
 
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name         | Data Type | Possible Values         |
-| ------------ | --------- | ----------------------- |
-| resizingMode | string    | "rightToLeft", "legacy" |
+| Nom          | Type de données | Valeurs possibles       |
+| ------------ | --------------- | ----------------------- |
+| resizingMode | string          | "rightToLeft", "legacy" |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [List Box](listbox_overview.md)
 
@@ -45,58 +45,58 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 
 ---
-## Horizontal Sizing
+## Dimensionnement horizontal
 
 This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                                 |
-| ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
-| Move   | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                                 |
+| Option   | Valeur JSON | Résultat                                                                                                               |
+| -------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Agrandir | "grow"      | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
+| Déplacer | "move"      | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
+| Aucun    | "fixed"     | The object remains stationary when the form is resized                                                                 |
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingX | string    | "grow", "move", "fixed" |
+| Nom     | Type de données | Valeurs possibles       |
+| ------- | --------------- | ----------------------- |
+| sizingX | string          | "grow", "move", "fixed" |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[Zone 4D View Pro](viewProArea_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md) - [Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Case à cocher](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Liste hiérarchique](list_overview.md#overview) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md#overview) - [Ligne](shapes_overview.md#line) - [Colonne List Box](listbox_overview.md#list-box-columns) - [Ovale](shapes_overview.md#oval) - [Bouton image](pictureButton_overview.md) - [Pop up menu image](picturePopupMenu_overview.md) - [Zone de plug-in](pluginArea_overview.md#overview) - [Indicateur de progression](progressIndicator.md) - [Bouton radio](radio_overview.md) - [Règle](ruler.md) - [ Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Image statique](staticPicture.md) [Stepper](stepper.md) - [Sous-formulaire](subform_overview.md) - [Onglet](tabControl.md) - [Zone de texte](text.md)
 
 
 ---
-## Vertical Sizing
+## Dimensionnement vertical
 
 This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                               |
-| ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| Move   | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                               |
+| Option   | Valeur JSON | Résultat                                                                                                             |
+| -------- | ----------- | -------------------------------------------------------------------------------------------------------------------- |
+| Agrandir | "grow"      | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
+| Déplacer | "move"      | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
+| Aucun    | "fixed"     | The object remains stationary when the form is resized                                                               |
 > This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingY | string    | "grow", "move", "fixed" |
+| Nom     | Type de données | Valeurs possibles       |
+| ------- | --------------- | ----------------------- |
+| sizingY | string          | "grow", "move", "fixed" |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[Zone 4D View Pro](viewProArea_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md) - [Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Case à cocher](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Liste hiérarchique](list_overview.md#overview) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md#overview) - [Ligne](shapes_overview.md#line) - [Colonne List Box](listbox_overview.md#list-box-columns) - [Ovale](shapes_overview.md#oval) - [Bouton image](pictureButton_overview.md) - [Pop up menu image](picturePopupMenu_overview.md) - [Zone de plug-in](pluginArea_overview.md#overview) - [Indicateur de progression](progressIndicator.md) - [Bouton radio](radio_overview.md) - [Règle](ruler.md) - [ Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Image statique](staticPicture.md) [Stepper](stepper.md) - [Sous-formulaire](subform_overview.md) - [Onglet](tabControl.md) - [Zone de texte](text.md)
 
 
 
 ---
-## Pusher
+## Pousseur
 
 When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
 
@@ -109,30 +109,30 @@ When this property is not applied to the splitter, the result is as follows:
 ![](assets/en/FormObjects/splitter_pusher2.png)
 
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name         | Data Type |           Possible Values            |
-|:------------ |:---------:|:------------------------------------:|
-| splitterMode |  string   | "move" (pusher), "resize" (standard) |
+| Nom          | Type de données |          Valeurs possibles           |
+|:------------ |:---------------:|:------------------------------------:|
+| splitterMode |     string      | "move" (pusher), "resize" (standard) |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[Splitter](splitterTabControlOverview#splitters)
+[Séparateur](splitterTabControlOverview#splitters)
 
 
 
 
 ---
-## Resizable
+## Redimensionnable
 
 Designates if the size of the column can be modified by the user.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name      | Data Type | Possible Values |
-|:--------- |:---------:|:---------------:|
-| resizable |  boolean  | "true", "false" |
+| Nom       | Type de données | Valeurs possibles |
+|:--------- |:---------------:|:-----------------:|
+| resizable |     boolean     |  "true", "false"  |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
