@@ -257,7 +257,7 @@ Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` dekla
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. For example:
+> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
 > 
 > ```4d
 Function add($x : Integer)
@@ -269,7 +269,7 @@ Function add($x : Integer)
 
 
 
-#### Example
+#### Beispiel
 
 ```4d
 // Class: Rectangle
@@ -288,13 +288,13 @@ Function getArea()->$result : Integer
 var $rect : cs.Rectangle
 var $area : Real
 
-$rect:=cs.Rectangle.new(50;100)  
-$area:=$rect.getArea() //5000
+$rect:=cs.Rectangle.new()  
+$area:=$rect.getArea(50;100) //5000
 ```
 
 
 
-### Class constructor
+### Class Constructor
 
 #### Syntax
 
