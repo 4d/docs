@@ -17,7 +17,7 @@ You will find in this page a comprehensive list of all object properties sorted 
     </th>
     
     <th>
-      Description
+      Beschreibung
     </th>
     
     <th>
