@@ -13,7 +13,7 @@ The default value can only be used if the [data source type](properties_Object.m
 - number/integer
 - date
 - time
-- boolean
+- Boolean
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
@@ -29,7 +29,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### JSON Grammar
 
-| Name         | Data Type                           | Possible Values                            |
+| Name         | Datentyp                            | Possible Values                            |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
@@ -48,9 +48,9 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                  |
-| ------------ | --------- | -------------------------------- |
-| excludedList | list      | A list of values to be excluded. |
+| Name         | Datentyp | Possible Values                  |
+| ------------ | -------- | -------------------------------- |
+| excludedList | list     | A list of values to be excluded. |
 
 #### Objects Supported
 
@@ -69,9 +69,9 @@ Making a list required does not automatically display the list when the field is
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values             |
-| ------------ | --------- | --------------------------- |
-| requiredList | list      | A list of mandatory values. |
+| Name         | Datentyp | Possible Values             |
+| ------------ | -------- | --------------------------- |
+| requiredList | list     | A list of mandatory values. |
 
 #### Objects Supported
 
