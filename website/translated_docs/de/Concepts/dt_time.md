@@ -1,63 +1,63 @@
 ---
 id: time
-title: Zeit
+title: Time
 ---
 
-- Datenfelder, Variablen oder Ausdrücke vom Typ Zeit umfassen den Bereich 00:00:00 bis 596.000:00:00.
-- Zeiten werden im 24 Stundenformat angezeigt.
-- Ein Wert vom Typ Zeit wird intern wie eine Zahl behandelt. Die von einer Zeit zurückgegebene Zahl ist die Anzahl Sekunden ab Mitternacht (00:00:00).
+- A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
+- Times are in 24-hour format.
+- A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
 
-**Hinweis:** Im Handbuch 4D Programmiersprache werden Zeitparameter in der Beschreibung der Befehle generell als Zeit bezeichnet, außer es ist anders angegeben.
+**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
 
-## Zeitformate
+## Time literals
 
-Eine Zeitkonstante steht zwischen Fragezeichen (?...?).
+A time literal constant is enclosed by question marks (?...?).
 
-Ein Zeitformat erscheint in der Reihenfolge Stunde:Minute:Sekunde, getrennt durch Doppelpunkt (:). Zeiten erscheinen im 24-Stunden Format.
+A time literal constant is ordered hour:minute:second, with a colon (:) setting off each part. Times are specified in 24-hour format.
 
-Hier ein paar Beispiele:
+Here are some examples of time literals:
 
 ```4d
-?00:00:00? ` Mitternacht
+?00:00:00? ` midnight
 ?09:30:00? ` 9:30 am
-?13:01:59? ` 13 Uhr, 1 Minute und 59 Sekunden
+?13:01:59? ` 1 pm, 1 minute, and 59 seconds
 ```
 
-Eine Leerzeit wird als ?00:00:00? angegeben.
+A null time is specified by ?00:00:00?
 
-**Tipp:** Der Methodeneditor hat ein Tastaturkürzel für Leerzeit. Tippen Sie ein Fragezeichen (?) und drücken die Eingabetaste.
+**Tip:** The Method Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
 
-## Zeitoperatoren
+## Time operators
 
-| Operation               | Syntax       | Ergibt  | Ausdruck                | Wert       |
-| ----------------------- | ------------ | ------- | ----------------------- | ---------- |
-| Addition                | Zeit + Zeit  | Zeit    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraktion             | Zeit – Zeit  | Zeit    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition                | Zeit + Zahl  | Zahl    | ?02:03:04? + 65         | 7449       |
-| Subtraktion             | Zeit – Zahl  | Zahl    | ?02:03:04? – 65         | 7319       |
-| Multiplikation          | Zeit * Zahl  | Zahl    | ?02:03:04? * 2          | 14768      |
-| Division                | Zeit / Zahl  | Zahl    | ?02:03:04? / 2          | 3692       |
-| Ganzzahlige Division    | Zeit \ Zahl | Zahl    | ?02:03:04? \ 2         | 3692       |
-| Modulo                  | Zeit % Zeit  | Zeit    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                  | Zeit % Zahl  | Zahl    | ?02:03:04? % 2          | 0          |
-| Gleichheit              | Zeit = Zeit  | Boolean | ?01:02:03? = ?01:02:03? | Wahr       |
-|                         |              |         | ?01:02:03? = ?01:02:04? | Falsch     |
-| Ungleichheit            | Zeit # Zeit  | Boolean | ?01:02:03? # ?01:02:04? | Wahr       |
-|                         |              |         | ?01:02:03? # ?01:02:03? | Falsch     |
-| Größer als              | Zeit > Zeit  | Boolean | ?01:02:04? > ?01:02:03? | Wahr       |
-|                         |              |         | ?01:02:03? > ?01:02:03? | Falsch     |
-| Kleiner als             | Zeit < Zeit  | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
-|                         |              |         | ?01:02:03? < ?01:02:03? | Falsch     |
-| Größer als oder gleich  | Zeit >= Zeit | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
-|                         |              |         | ?01:02:03? >=?01:02:04? | Falsch     |
-| Kleiner als oder gleich | Zeit <= Zeit | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
-|                         |              |         | ?01:02:04? <=?01:02:03? | Falsch     |
+| Operation                | Syntax         | Returns | Expression              | Value      |
+| ------------------------ | -------------- | ------- | ----------------------- | ---------- |
+| Addition                 | Time + Time    | Time    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Subtraction              | Time – Time    | Time    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition                 | Time + Number  | Number  | ?02:03:04? + 65         | 7449       |
+| Subtraction              | Time – Number  | Number  | ?02:03:04? – 65         | 7319       |
+| Multiplication           | Time * Number  | Number  | ?02:03:04? * 2          | 14768      |
+| Division                 | Time / Number  | Number  | ?02:03:04? / 2          | 3692       |
+| Longint division         | Time \ Number | Number  | ?02:03:04? \ 2         | 3692       |
+| Modulo                   | Time % Time    | Time    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo                   | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
+| Equality                 | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | True       |
+|                          |                |         | ?01:02:03? = ?01:02:04? | False      |
+| Inequality               | Time # Time    | Boolean | ?01:02:03? # ?01:02:04? | True       |
+|                          |                |         | ?01:02:03? # ?01:02:03? | False      |
+| Greater than             | Time > Time    | Boolean | ?01:02:04? > ?01:02:03? | True       |
+|                          |                |         | ?01:02:03? > ?01:02:03? | False      |
+| Less than                | Time < Time    | Boolean | ?01:02:03? < ?01:02:04? | True       |
+|                          |                |         | ?01:02:03? < ?01:02:03? | False      |
+| Greater than or equal to | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | True       |
+|                          |                |         | ?01:02:03? >=?01:02:04? | False      |
+| Less than or equal to    | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | True       |
+|                          |                |         | ?01:02:04? <=?01:02:03? | False      |
 
-### Beispiel 1
+### Example 1
 
-Für eine Zeitangabe, die Ausdrücke vom Typ Zeit und Zahl kombiniert, verwenden Sie die Befehle `Time` und `Time string`.
+To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
 
-Mit den Funktionen `Time` oder `Current time` können Sie Ausdrücke vom Typ Zeit und Zahl kombinieren:
+You can combine expressions of the time and number types using the `Time` or `Current time` functions:
 
 ```4d
     //The following line assigns to $vlSeconds the number of seconds   
@@ -67,16 +67,16 @@ $vlSeconds:=Current time+3600
 $vhSoon:=Time(Current time+3600)
 ```
 
-Die 2. Zeile lässt sich auch einfacher schreiben:
+The second line could be written in a simpler way:
 
 ```4d
   // The following line assigns to $vHSoon the time it will be in one hour
  $vhSoon:=Current time+?01:00:00?
 ```
 
-### Beispiel 2
+### Example 2
 
-Der Operator Modulo dient insbesondere zum Hinzufügen von Zeiten im 24-Stunden Format:
+The Modulo operator can be used, more specifically, to add times that take the 24-hour format into account:
 
 ```4d
 $t1:=?23:00:00? // It is 23:00 p.m.
