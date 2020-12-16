@@ -3,41 +3,41 @@ id: compute
 title: '$compute'
 ---
 
-Calculez des attributs spécifiques (par exemple, `Employee/salary/?$compute=sum)` ou dans le cas d'un attribut Objet (par exemple, Employee/objectAtt.property1/?$compute=sum)
+Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)
 
 
 ## Description
 
-Ce paramètre vous permet de réaliser des calculs avec vos données.
+This parameter allows you to do calculations on your data.
 
-Si vous souhaitez effectuer un calcul avec un attribut, saisissez ce qui suit :
+If you want to perform a calculation on an attribute, you write the following:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-Si vous souhaitez passer un attribut Objet, vous devez passer l'une de ses propriétés. Par exemple:
+If you want to pass an Object attribute, you must pass one of its property. For example:
 
  `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
-Vous pouvez utiliser l'un des mots clés suivants :
+You can use any of the following keywords:
 
 
-| Mot-clé | Description                                                                                                                                                                                  |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $all    | Un objet JSON qui définit toutes les fonctions de l'attribut (moyenne, nombre, min, max et somme pour les attributs de type Numérique et count, min et max pour les attributs de type Chaîne |
-| average | Obtenir la moyenne d'un attribut numérique                                                                                                                                                   |
-| count   | Obtenir le nombre total dans la collection ou la classe de datastore (dans les deux cas, vous devez spécifier un attribut)                                                                   |
-| min     | Obtenir la valeur minimale d'un attribut numérique ou la plus petite valeur d'un attribut de type Chaîne                                                                                     |
-| max     | Obtenir la valeur maximale d'un attribut numérique ou la plus grande valeur d'un attribut de type Chaîne                                                                                     |
-| sum     | Obtenir la somme d'un attribut numérique                                                                                                                                                     |
+| Keyword | Description                                                                                                                                                                           |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $all    | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
+| average | Get the average on a numerical attribute                                                                                                                                              |
+| count   | Get the total number in the collection or datastore class (in both cases you must specify an attribute)                                                                               |
+| min     | Get the minimum value on a numerical attribute or the lowest value in an attribute of type String                                                                                     |
+| max     | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
+| sum     | Get the sum on a numerical attribute                                                                                                                                                  |
 
 
-## Exemple
+## Example
 
-Si vous souhaitez obtenir tous les calculs pour un attribut de type Numérique, vous pouvez écrire :
+If you want to get all the computations for an attribute of type Number, you can write:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-**Réponse** :
+**Response**:
 
 ````
 {
@@ -51,11 +51,11 @@ Si vous souhaitez obtenir tous les calculs pour un attribut de type Numérique, 
 }
 ````
 
-Si vous souhaitez obtenir tous les calculs pour un attribut de type Chaîne, vous pouvez écrire :
+If you want to get all the computations for an attribute of type String, you can write:
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Réponse** :
+**Response**:
 
 ````
 {
@@ -67,18 +67,18 @@ Si vous souhaitez obtenir tous les calculs pour un attribut de type Chaîne, vou
 }
 ````
 
-Si vous souhaitez obtenir un calcul avec un attribut, vous pouvez écrire ce qui suit :
+If you want to just get one calculation on an attribute, you can write the following:
 
  `GET  /rest/Employee/salary/?$compute=sum`
 
-**Réponse** :
+**Response**:
 
 `235000`
 
-Si vous souhaitez effectuer un calcul avec un attribut Objet, vous pouvez saisir ce qui suit :
+If you want to perform a calculation on an Object attribute, you can write the following:
 
  `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
-Réponse :
+Response:
 
 `45`  
