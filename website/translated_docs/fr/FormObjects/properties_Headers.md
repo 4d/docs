@@ -1,20 +1,20 @@
 ---
 id: propertiesHeaders
-title: En-têtes
+title: Headers
 ---
 
 ---
-## Afficher en-têtes
+## Display Headers
 
-Cette propriété est utilisée pour afficher ou masquer [les en-têtes de colonne listbox](listbox_overview.md#list-box-headers). Il existe un en-tête par colonne; chaque en-tête est configuré séparément.
+This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles |
-| ----------- | --------------- | ----------------- |
-| showHeaders | boolean         | true, false       |
+| Name        | Data Type | Possible Values |
+| ----------- | --------- | --------------- |
+| showHeaders | boolean   | true, false     |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
 
@@ -22,17 +22,17 @@ Cette propriété est utilisée pour afficher ou masquer [les en-têtes de colon
 
 
 ---
-## Hauteur
+## Height
 
-Cette propriété sert à définir la hauteur de ligne d'un en-tête de list box en **pixels** ou en **lignes de texte** (lorsqu'elle est affichée). Les deux types d'unités peuvent être utilisés dans la même list box :
+This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
 
-*   *Pixel* - la valeur de hauteur est appliquée directement à la ligne concernée, quelle que soit la taille de la police contenue dans les colonnes. Si une police est trop grande, le texte est tronqué. De plus, les images sont tronquées ou redimensionnées selon leur format.
+*   *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
 
-*   *Ligne* - la hauteur est calculée en tenant compte de la taille de police de la ligne concernée.
+*   *Line* - the height is calculated while taking into account the font size of the row concerned.
     *   If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
     *   This calculation does not take into account the size of pictures nor any styles applied to the fonts.
     *   In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
-> Cette propriété peut être également définie dynamiquement à l'aide de la commande [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html).
+> This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html) command.
 
 Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is "Lucida grande 24", a height of "1 line" is converted to "30 pixels" and a height of "60 pixels" is converted to "2 lines".
 
@@ -40,7 +40,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "List Box": {
@@ -53,17 +53,17 @@ Note that converting back and forth may lead to an end result that is different 
 
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom          | Type de données | Valeurs possibles                   |
-| ------------ | --------------- | ----------------------------------- |
-| headerHeight | string          | décimales positives +px &#124; em ) |
+| Name         | Data Type | Possible Values                 |
+| ------------ | --------- | ------------------------------- |
+| headerHeight | string    | positive decimal+px &#124; em ) |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
 
 
-#### Voir également
+#### See also
 
-[Pieds](properties_Footers.md) - [En-têtes List box](listbox_overview.md#list-box-headers)
+[Footers](properties_Footers.md) - [List box headers](listbox_overview.md#list-box-headers)
