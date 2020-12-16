@@ -67,6 +67,7 @@ Possible values are:
 |APOP|`POP3 authentication APOP`|Authentication using APOP protocol (POP3 only)|
 |CRAM-MD5|`SMTP authentication CRAM MD5`, `POP3 authentication CRAM-MD5`, `IMAP authentication CRAM MD5`|Authentication using CRAM-MD5 protocol|
 |LOGIN|`SMTP authentication login`, `POP3 authentication login`, `IMAP authentication login`|Authentication using LOGIN protocol|
+|OAUTH2|`SMTP authentication OAUTH2`, `POP3 authentication OAUTH2`, `IMAP authentication OAUTH2`|Authentication using OAuth2 protocol|
 |PLAIN|`SMTP authentication plain`, `POP3 authentication plain`, `IMAP authentication plain`|Authentication using PLAIN protocol|
 
 <!-- END REF -->
