@@ -1,86 +1,86 @@
 ---
 id: identifiers
-title: Namensregeln
+title: Identifiers
 ---
 
-Dieser Abschnitt beschreibt die Konventionen und Regeln zum Bezeichnen verschiedener Elemente in der 4D Programmiersprache, wie Variablen, Tabellen, Objekte, Formulare, etc.
+This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
 
 
-## Grundregeln
+## Basic Rules
 
-Die folgenden Regeln gelten für alle 4D Frameworks.
+The following rules apply for all 4D frameworks.
 
-- Ein Name muss mit einem Buchstaben, einem Unterstrich oder einem Dollarzeichen ("$") beginnen (Beachten Sie, dass das Dollarzeichen ein Element auf lokaler Ebene kennzeichnen kann, siehe unten.).
-- Der Name kann Buchstaben, Zahlen, Leerzeichen und den Unterstrich ("_") enthalten.
-- Punkte (".") und Klammern ("[ ]") sind in Tabellen-, Feld-, Methoden- oder Variablennamen nicht erlaubt.
-- Kommas, Schrägstriche, Anführungszeichen und Doppelpunkte sind nicht erlaubt.
-- Zeichen, die für Operatoren reserviert sind, wie z.B. * und +, sind nicht erlaubt.
-- Verwenden Sie keine reservierten Namen, d.h. 4D Befehlsnamen (`Date`, `Time`, usw.), Schlüsselwörter (If, For, usw.) und Konstanten.
-- Leerzeichen am Anfang oder Ende werden ignoriert, können aber innerhalb des Namens verwendet werden.
+- A name must begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
+- Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
+- Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Commas, slashes, quotation marks, and colons are not allowed.
+- Characters reserved for use as operators, such as * and +, are not allowed.
+- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
+- Any trailing spaces are ignored.
 
-### Zusätzliche Regeln für Namen von Objekteigenschaften und ORDA
-- Leerzeichen sind nicht erlaubt.
-- Klammern ("[ ]") sind nicht erlaubt.
-- <0>Wichtig:</0> Groß- und Kleinschreibung wird unterschieden.
+### Additional rules for object property and ORDA names
+- Space characters are not allowed.
+- Periods (".") and brackets ("[ ]") are not allowed.
+- Names are case sensitive.
 
-### Zusätzliche Regeln für SQL
-- Nur die Zeichen _0123456789abcdefghijklmnopqrstuvwxyz werden akzeptiert.
-- Namen dürfen keine SQL Schlüsselwörter enthalten, wie command, attribute, etc.
+### Additional rules for SQL
+- Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
+- Names must not include any SQL keywords (command, attribute, etc.).
 
-**Hinweis:** Der SQL-Bereich des Inspektors im Struktureditor zeigt automatisch alle nicht-zugelassenen Zeichen im Namen einer Tabelle oder eines Feldes an.
+**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
 
 
-## Tabellen
+## Tables
 
-Eine Tabelle kennzeichnen Sie durch eckige Klammern: [...]. Der Tabellenname kann max. 31 Zeichen lang sein.
+You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
 
-Beispiele:
+Examples:
 ```4d
 DEFAULT TABLE([Orders])
 FORM SET INPUT([Clients];"Entry")
 ADD RECORD([Letters])
 ```
 
-## Felder
+## Fields
 
-Ein Datenfeld kennzeichnen Sie durch die vorangestellte Tabelle, zu der dieses Datenfeld gehört. Der Name des Datenfelds folgt unmittelbar auf den Tabellennamen. Der Datenfeldname kann max. 31 Zeichen lang sein.
+You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
 
-Beispiele:
+Examples:
 ```4d
 [Orders]Total:=Sum([Line]Amount)
 QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## Interprozessvariablen
+## Interprocess Variables
 
-Eine Interprozessvariable kennzeichnen Sie mit den vorangestellten Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+You designate an interprocess variable by preceding the name of the variable with the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
-Der Name einer Interprozessvariablen kann ohne die vorangestellten Symbole max. 31 Zeichen lang sein.
+The name of an interprocess variable can be up to 31 characters, not including the <> symbols.
 
-Beispiele:
+Examples:
 ```4d
 <>vlProcessID:=Current process
 <>vsKey:=Char(KeyCode)
 If(<>vtName#"")
 ```
 
-## Prozessvariablen
+## Process Variables
 
-Eine Prozessvariable kennzeichnen Sie durch ihren Namen (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name der Prozessvariablen kann max. 31 Zeichen lang sein.
+You designate a process variable by using its name (which cannot start with the <> symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
 
-Beispiele:
+Examples:
 ```4d
 <>vrGrandTotal:=Sum([Accounts]Amount)
 If(bValidate=1)
 vsCurrentName:=""
 ```
 
-## Lokale Variablen
+## Local Variables
 
-Eine lokale Variable kennzeichnen Sie durch das vorangestellte Dollarzeichen ($). Der Name einer lokalen Variable kann ohne Dollarzeichen max. 31 Zeichen lang sein.
+You designate a local variable by placing a dollar sign ($) before the variable name. A local variable name can contain up to 31 characters, not including the dollar sign.
 
-Beispiele:
+Examples:
 ```4d
 For($vlRecord;1;100)
 If($vsTempVar="No")
@@ -89,48 +89,48 @@ $vsMyString:="Hello there"
 
 ## Arrays
 
-Ein Array kennzeichnen Sie durch seinen Namen. Das ist der Name, den Sie beim Erstellen des Array übergeben haben, z. B. ARRAY LONGINT. Arrays sind Variablen, von daher gibt es in Bezug auf die Reichweite, wie bei Variablen auch drei Array-Typen:
+You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
 
-- Interprozess-Arrays
-- Prozess-Arrays
-- Lokale Arrays
+- Interprocess arrays,
+- Process arrays,
+- Local arrays.
 
-### Interprozess-Arrays
-Der Name eines Interprozess-Array beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+### Interprocess Arrays
+The name of an interprocess array is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
-Der Name des Interprozess-Array kann ohne die vorangestellten Symbole bis zu 31 Zeichen lang sein.
+An interprocess array name can contain up to 31 characters, not including the <> symbols.
 
-Beispiele:
+Examples:
 ```4d
 ARRAY TEXT(<>atSubjects;Records in table([Topics]))
 SORT ARRAY(<>asKeywords;>)
 ARRAY INTEGER(<>aiBigArray;10000)
 ```
 
-### Prozess-Arrays
-Ein Prozess-Array kennzeichnen Sie durch seinen Namen. (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name des Prozess-Array kann bis zu 31 Zeichen lang sein.
+### Process Arrays
+You designate a process array by using its name (which cannot start with the <> symbols nor the dollar sign $). A process array name can contain up to 31 characters.
 
-Beispiele:
+Examples:
 ```4d
 ARRAY TEXT(atSubjects;Records in table([Topics]))
 SORT ARRAY(asKeywords;>)
 ARRAY INTEGER(aiBigArray;10000)
 ```
 
-### Lokale Arrays
-Der Name eines lokalen Array beginnt mit dem Dollarzeichen ($) Der Name eines lokalen Array kann ohne Dollarzeichen max. 31 Zeichen lang sein.
+### Local Arrays
+The name of a local array is preceded by the dollar sign ($). A local array name can contain up to 31 characters, not including the dollar sign.
 
-Beispiele:
+Examples:
 ```4d
 ARRAY TEXT($atSubjects;Records in table([Topics]))
 SORT ARRAY($asKeywords;>)
 ARRAY INTEGER($aiBigArray;10000)
 ```
 
-### Elemente von Arrays
-Sie verweisen auf ein Element eines Interprozess-, Prozess- oder lokalen Array mit geschweiften Klammern ({…}). Das angesprochene Element ist ein numerischer Ausdruck.
+### Elements of arrays
+You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
 
-Beispiele:
+Examples:
 ```4d  
     //Addressing an element of an interprocess array
 If(<>asKeywords{1}="Stop")
@@ -148,10 +148,10 @@ $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elemente von zweidimensionalen Arrays
-Sie verweisen auf ein Element eines zweidimensionalen Array mit doppelt geschweiften Klammern ({…}).   Das angesprochene Element besteht aus zwei numerischen Ausdrücken in zwei Sätzen geschweifter Klammern.
+### Elements of two-dimensional arrays
+You reference an element of a two-dimensional array by using the curly braces ({…}) twice. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
-Beispiele:
+Examples:
 ```4d
     //Addressing an element of a two-dimensional interprocess array
 If(<>asKeywords{$vlNextRow}{1}="Stop")
@@ -169,58 +169,58 @@ $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
-## Objektattribute
+## Object attributes
 
-Ist Objektnotation aktiviert, definieren Sie ein Objektattribut (auch Objekteigenschaft genannt) durch Setzen eines Punktes (".") zwischen dem Namen des Objekts (oder Attributs) und dem Namen des Attributs. Ein Attributsname kann bis zu 255 Zeichen lang sein und unterscheidet zwischen Groß- und Kleinschreibung.
+When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
 
-Beispiele:
+Examples:
 ```4d
 myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Hinweis:** Für Namen von Objektattributen gelten zusätzliche Regeln (sie müssen konform zur ECMAScript Spezifikation sein). Weitere Informationen dazu finden Sie unter [Identifier für Objekteigenschaft](Concepts/dt_object.md#object-property-identifiers).
+**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). For more information, see [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
-## Formulare
+## Forms
 
-Ein Formular kennzeichnen Sie durch einen String Ausdruck, der dessen Namen darstellt. Ein Formularname kann max. 31 Zeichen lang sein.
+You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
 
-Beispiele:
+Examples:
 ```4d
 FORM SET INPUT([People];"Input")
 FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
-## Formularobjekte
+## Form objects
 
-Sie geben ein Formularobjekt über einen Namen als String mit vorangestelltem Parameter * an. Der Name eines Formularobjekts kann bis zu 255 Zeichen enthalten.
+You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
 
-Beispiel:
+Example:
 ```4d
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Hinweis:** Verwechseln Sie nicht Formularobjekte (Schaltflächen, Listboxen, eingebbare Variablen, etc.) und Objekte in der 4D Programmiersprache. Objekte der 4D Programmiersprache werden über Objektnotation oder spezifische Befehle erstellt und verwaltet.
+**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.
 
-## Projektmethoden
+## Project methods
 
-Eine Projektmethode (Prozedur und Funktion) kennzeichnen Sie durch ihren Namen. Ein Methodenname kann bis zu 31 Zeichen enthalten.
+You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
 
-**Hinweis:** Eine Projektmethode, die kein Ergebnis zurückgibt, heißt auch Prozedur. Eine Projektmethode, die ein Ergebnis zurückgibt, heißt auch Funktion.
+**Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
 
-Beispiele:
+Examples:
 ```4d
 If(New client)
 DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tipp:** Es ist eine gute Programmiertechnik, dieselbe Namenskonvention wie von 4D für integrierte Methoden zu verwenden. Großschreibung für Prozeduren; Kleinschreibung mit großem Anfangsbuchstaben für Funktionen. Öffnen Sie dann eine Datenbank nach einigen Monaten für eine Wartung, erkennen Sie im Explorer Fenster bereits an der Schreibweise des Namens, ob die Methode ein Ergebnis zurückgibt.
+**Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
-**Hinweis:** Zum Aufrufen einer Methode tippen Sie einfach ihren Namen ein. Einige in 4D integrierte Befehle wie z. B. `ON EVENT CALL`, sowie alle Plug-In Befehle erwarten dagegen den Namen der Methode als String, wenn ein Parameter für die Methode übergeben wurde. Beispiel:
+**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Example:
 
-Beispiele:
+Examples:
 ```4d
     //This command expects a method (function) or formula
 QUERY BY FORMULA([aTable];Special query)
@@ -230,11 +230,11 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Projektmethoden können Parameter (Argumente) akzeptieren. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. Die Parameter sind innerhalb der aufgerufenen Methode als durchnumerierte lokale Variablen verfügbar: $1, $2,…, $n. Mehrere aufeinanderfolgende (und letzte) Parameter können Sie mit der Syntax ${n} ansprechen, wobei n die Nummer des Parameters ist.
+Project methods can accept parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. In addition, multiple consecutive (and last) parameters can be addressed with the syntax ${n}where n, numeric expression, is the number of the parameter.
 
-Innerhalb einer Funktion enthält die lokale Variable $0 den zurückzugebenden Wert.
+Inside a function, the $0 local variable contains the value to be returned.
 
-Beispiele:
+Examples:
 ```4d
     //Within DROP SPACES $1 is a pointer to the field [People]Name
 DROP SPACES(->[People]Name)
@@ -254,40 +254,40 @@ $vsResult:=Calc creator(1;5;"Nice")
 vtClone:=Dump("is";"the";"it")
 ```
 
-## Plug-In Befehle
+## Plug-In Commands
 
-Einen Plug-In Befehl kennzeichnen Sie durch den Namen, wie vom Plug-In definiert. Ein Plug-In Befehl kann max. 31 Zeichen lang sein.
+You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
 
-Beispiele:
+Examples:
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
 
-## Mengen
+## Sets
 
-In Bezug auf die Reichweite gibt es zwei Arten von Mengen:
+From the scope point of view, there are two types of sets:
 
-- Interprozessmengen
-- Prozessmengen
+- Interprocess sets
+- Process sets
 
-4D Server enthält auch:
+4D Server also includes:
 
-- Client-Mengen
+- Client sets
 
-### Interprozessmengen
-Der Name einer Interprozessmenge beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+### Interprocess Sets
+A set is an interprocess set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
-Der Name einer Interprozessmenge kann ohne die Symbole <> bis zu 255 Zeichen lang sein.
+An interprocess set name can contain up to 255 characters, not including the <> symbols.
 
-### Prozessmengen
-Eine Prozessmenge kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name der Prozessmenge kann bis zu 255 Zeichen lang sein.
+### Process Sets
+You denote a process set by using a string expression that represents its name (which cannot start with the <> symbols or the dollar sign $). A set name can contain up to 255 characters.
 
-### Client-Mengen
-Der Name eines Client beginnt mit dem Dollarzeichen ($). Der Name der Client-Menge kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
+### Client Sets
+The name of a client set is preceded by the dollar sign ($). A client set name can contain up to 255 characters, not including the dollar sign.
 
-**Hinweis:** Mengen werden auf dem Server-Rechner gehalten. In bestimmten Fällen, wie mehr Effizienz oder für spezielle Zwecke, benötigen Sie Mengen lokal auf dem Client-Rechner. Dafür verwenden Sie Client-Mengen.
+**Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
 
-Beispiele:
+Examples:
 ```4d
     //Interprocess sets
 USE SET("<>Deleted Records")
@@ -303,22 +303,22 @@ CREATE SET([Customers];"$Customer Orders")
 If(Records in set("$Selection"+String($i))>0)
 ```
 
-## Temporäre Auswahlen
+## Named Selections
 
-In Bezug auf die Reichweite gibt es zwei Arten von temporären Mengen:
+From the scope point of view, there are two types of named selections:
 
-- Temporäre Interprozessauswahlen
-- Temporäre Prozessauswahlen
+- Interprocess named selections
+- Process named selections.
 
-### Temporäre Interprozessauswahlen
-Der Name einer temporären Interprozessauswahl beginnt mit den Symbolen (<>) — die Zeichen “kleiner als” und “größer als”.
+### Interprocess Named Selections
+A named selection is an interprocess named selection if its name is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign.
 
-Der Name einer temporären Interprozessauswahl kann ohne die Symbole <> bis zu 255 Zeichen lang sein.
+An interprocess named selection name can contain up to 255 characters, not including the <> symbols.
 
-### Temporäre Prozessauswahlen
-Eine temporäre Prozessauswahl kennzeichnen Sie durch einen String Ausdruck, der ihren Namen darstellt. (Er darf nicht mit den Symbolen <> oder $ beginnen). Der Name einer temporären Auswahl kann bis zu 255 Zeichen enthalten.
+### Process Named Selections
+You denote a process named selection by using a string expression that represents its name (which cannot start with the <> symbols nor the dollar sign $). A named selection name can contain up to 255 characters.
 
-Beispiele:
+Examples:
 ```4d
     //Interprocess Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
@@ -326,20 +326,20 @@ USE NAMED SELECTION([Customers];"<>ByZipcode")
 USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
-## Prozesse
+## Processes
 
-In der Einzelplatzversion bzw. im Client/Server-Betrieb auf der Client-Seite gibt es zwei Arten:
+In the single-user version, or in Client/Server on the Client side, there are two types of processes:
 
-- Globale Prozesse
-- Lokale Prozesse
+- Global processes
+- Local processes.
 
-### Globale Prozesse
-Einen globalen Prozess kennzeichnen Sie durch einen String Ausdruck, der seinen Namen darstellt (Er darf nicht mit dem Dollarzeichen $ beginnen). Der Prozessname kann bis zu 255 Zeichen lang sein.
+### Global Processes
+You denote a global process by using a string expression that represents its name (which cannot start with the dollar sign $). A process name can contain up to 255 characters.
 
-### Lokale Prozesse
-Der Name eines lokalen Prozesses beginnt mit dem Dollarzeichen $. Der Name des Prozesses kann ohne das Dollarzeichen bis zu 255 Zeichen lang sein.
+### Local Processes
+You denote a local process if the name of the process is preceded by a dollar ($) sign. The process name can contain up to 255 characters, not including the dollar sign.
 
-Beispiele:
+Examples:
 ```4d
     //Starting the global process "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
@@ -347,44 +347,44 @@ $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
-## Zusammenfassung der Namenskonventionen
+## Summary of Naming Conventions
 
-Nachfolgende Tabelle zeigt die Übersicht der Namenskonventionen in 4D.
+The following table summarizes 4D naming conventions.
 
-| Name                       | Max. Länge | Beispiel                   |
-| -------------------------- | ---------- | -------------------------- |
-| Tabelle                    | 31         | [Invoices]                 |
-| Datenfeld                  | 31         | [Employees]Last Name       |
-| Interprozessvariable/Array | <> + 31    | <>vlNextProcessID          |
-| Prozessvariable/Array      | 31         | vsCurrentName              |
-| Lokale Variable/Array      | $ + 31     | $vlLocalCounter            |
-| Objektattribut             | 255        | $o.myAttribute             |
-| Formular                   | 31         | "My Custom Web Input"      |
-| Formularobjekt             | 255        | "MyButton"                 |
-| Projektmethode             | 31         | M_ADD_CUSTOMERS          |
-| Plug-In Routine            | 31         | PDF SET ROTATION           |
-| Interprozessmenge          | <> + 255   | "<>Records to be Archived" |
-| Prozessmenge               | 255        | "Current selected records" |
-| Client-Menge               | $ + 255    | "$Previous Subjects"       |
-| Temporäre Auswahl          | 255        | "Employees A to Z"         |
-| Temporäre Auswahl          | <> + 255   | "<>Employees Z to A"       |
-| Lokaler Prozess            | $ + 255    | "$Follow Events"           |
-| Globaler Prozess           | 255        | "*P_INVOICES_MODULE*"    |
-| Semaphore                  | 255        | "mysemaphore"              |
+| Identifier                   | Max. Length | Example                    |
+| ---------------------------- | ----------- | -------------------------- |
+| Table                        | 31          | [Invoices]                 |
+| Field                        | 31          | [Employees]Last Name       |
+| Interprocess Variable/Array  | <> + 31     | <>vlNextProcessID          |
+| Process Variable/Array       | 31          | vsCurrentName              |
+| Local Variable/Array         | $ + 31      | $vlLocalCounter            |
+| Object attribute             | 255         | $o.myAttribute             |
+| Form                         | 31          | "My Custom Web Input"      |
+| Form object                  | 255         | "MyButton"                 |
+| Project method               | 31          | M_ADD_CUSTOMERS          |
+| Plug-in Routine              | 31          | PDF SET ROTATION           |
+| Interprocess Set             | <> + 255    | "<>Records to be Archived" |
+| Process Set                  | 255         | "Current selected records" |
+| Client Set                   | $ + 255     | "$Previous Subjects"       |
+| Named Selection              | 255         | "Employees A to Z"         |
+| Interprocess Named Selection | <> + 255    | "<>Employees Z to A"       |
+| Local Process                | $ + 255     | "$Follow Events"           |
+| Global Process               | 255         | "*P_INVOICES_MODULE*"    |
+| Semaphore                    | 255         | "mysemaphore"              |
 
-**Hinweis:** Bei Verwenden nicht-romanischer Zeichen in Namen kann die max. Länge kürzer sein.
+**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 
-## Namenskonflikte lösen
+## Resolving Naming Conflicts
 
-Achten Sie darauf, dass die Namen für die verschiedenen Elemente in Ihrer Anwendung einmalig sind. Hat ein Element denselben Namen wie ein anderes Element (beispielsweise ein Datenfeld und eine Variable mit demselben Namen Person), arbeitet 4D mit einer Prioritätenliste.
+Be sure to use unique names for the different elements in your database. If a particular object has the same name as another object of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
 
-4D identifiziert Namen in Prozeduren in folgender Reihenfolge:
+4D identifies names used in procedures in the following order:
 
-1. Felder
-2. Befehle
-3. Methoden
-4. Plug-In Routinen
-5. Vordefinierte Konstanten
-6. Variablen
+1. Fields
+2. Commands
+3. Methods
+4. Plug-in routines
+5. Predefined constants
+6. Variables.
 
-Beispiel: In 4D gibt es den Befehl mit Namen `Date`. Nennen Sie eine Methode *Date*, wertet 4D diese als den integrierten Befehl `Date` und nicht als Ihre Methode. Ihre Methode wird nicht aufgerufen. Haben Sie dagegen ein Datenfeld mit dem Namen “Date” angelegt, versucht 4D, dieses Datenfeld anstatt des Befehls `Date` zu benutzen.
+For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
