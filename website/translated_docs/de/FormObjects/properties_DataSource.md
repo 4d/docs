@@ -22,9 +22,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| Name               | Datentyp | Possible Values |
+| ------------------ | -------- | --------------- |
+| automaticInsertion | Boolean  | true, false     |
 
 #### Objects Supported
 
@@ -40,7 +40,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### JSON Grammar
 
-| Name       | Data Type        | Possible Values                                     |
+| Name       | Datentyp         | Possible Values                                     |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
 | list       | list, collection | A list of possible values (hierarchical lists only) |
@@ -59,7 +59,7 @@ List of static values to use as labels for the tab control object.
 
 #### JSON Grammar
 
-| Name   | Data Type        | Possible Values                          |
+| Name   | Datentyp         | Possible Values                          |
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
@@ -77,9 +77,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values   |
-| ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| Name              | Datentyp | Possible Values   |
+| ----------------- | -------- | ----------------- |
+| currentItemSource | string   | Object expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -101,9 +101,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### JSON Grammar
 
-| Name                      | Data Type | Possible Values   |
-| ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| Name                      | Datentyp | Possible Values   |
+| ------------------------- | -------- | ----------------- |
+| currentItemPositionSource | string   | Number expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md)
@@ -113,7 +113,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 
 ---
-## Data Type
+## Datentyp
 
 Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
@@ -142,7 +142,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Name   | Data Type  | Possible Values                                                  |
+| Name   | Datentyp   | Possible Values                                                  |
 | ------ | ---------- | ---------------------------------------------------------------- |
 | values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
@@ -154,7 +154,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 
 ---
-## Expression
+## Ausdruck
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
@@ -165,9 +165,9 @@ A 4D expression to be associated with a column. You can enter:
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
     *   String
     *   Numeric
-    *   Date
-    *   Time
-    *   Picture
+    *   Datum
+    *   Zeit
+    *   Bild
     *   Boolean  
       You can use fields from the Master Table or from other tables.
 
@@ -175,8 +175,8 @@ A 4D expression to be associated with a column. You can enter:
   The following expression types are supported:
     *   String
     *   Numeric
-    *   Date
-    *   Picture
+    *   Datum
+    *   Bild
     *   Boolean
 
     For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
@@ -190,9 +190,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                         |
-| ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| Name       | Datentyp | Possible Values                                                         |
+| ---------- | -------- | ----------------------------------------------------------------------- |
+| dataSource | string   | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -212,9 +212,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| table | number    | Table number    |
+| Name  | Datentyp | Possible Values |
+| ----- | -------- | --------------- |
+| table | number   | Table number    |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
@@ -247,9 +247,9 @@ Using this property requires compliance with the following principles:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| Name   | Datentyp | Possible Values      |
+| ------ | -------- | -------------------- |
+| saveAs | string   | "value", "reference" |
 
 #### Objects Supported
 [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -268,9 +268,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values       |
-| ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| Name                | Datentyp | Possible Values       |
+| ------------------- | -------- | --------------------- |
+| selectedItemsSource | string   | Collection expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -286,9 +286,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values      |
-| -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| Name           | Datentyp | Possible Values      |
+| -------------- | -------- | -------------------- |
+| namedSelection | string   | Named selection name |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
