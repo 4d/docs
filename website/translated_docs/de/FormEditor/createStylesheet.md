@@ -3,7 +3,7 @@ id: stylesheets
 title: Style sheets
 ---
 
-## Überblick
+## Overview
 
 A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
 
@@ -139,14 +139,14 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 
 #### Supported syntaxes
 
-| Syntax                    | Beschreibung                                                                                            |
+| Syntax                    | Description                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [attribute]               | matches objects with the `attribute`                                                                    |
 | [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
 | [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
 | [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
 
-#### Beispiele
+#### Examples
 
 All objects with the `borderStyle` attribute will have purple lines:
 
@@ -232,7 +232,7 @@ icon: url("edit.png"); /* relative path to the form file */
     - hexa value: `fill: #FF0000;`
     - the `rgb()` function: `fill:rgb(255,0,0)`
 
-- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. Beispiel:
+- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
     - a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
     - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
 
