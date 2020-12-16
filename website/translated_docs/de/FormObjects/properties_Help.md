@@ -22,9 +22,9 @@ You can either:
 
 #### JSON Grammar
 
-|  Name   | Data Type | Possible Values                       |
-|:-------:|:---------:| ------------------------------------- |
-| tooltip |   text    | additional information to help a user |
+|  Name   | Datentyp | Possible Values                       |
+|:-------:|:--------:| ------------------------------------- |
+| tooltip |   Text   | additional information to help a user |
 
 #### Objects Supported
 
