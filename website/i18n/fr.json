@@ -57,7 +57,7 @@
         "title": "Numérique (Réel, Entier, Entier long)"
       },
       "Concepts/object": {
-        "title": "Objects"
+        "title": "Objets"
       },
       "Concepts/picture": {
         "title": "Image"
@@ -115,46 +115,46 @@
         "title": "Images"
       },
       "FormObjects/buttonOverview": {
-        "title": "Button"
+        "title": "Bouton"
       },
       "FormObjects/buttonGridOverview": {
-        "title": "Button Grid"
+        "title": "Grille de boutons"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "Case à cocher"
       },
       "FormObjects/comboBoxOverview": {
         "title": "Combo Box"
       },
       "FormObjects/dropdownListOverview": {
-        "title": "Drop-down List"
+        "title": "Liste déroulante"
       },
       "FormObjects/formObjectsOverview": {
-        "title": "About 4D Form Objects"
+        "title": "A propos des objets formulaires 4D"
       },
       "FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "Zone de groupe"
       },
       "FormObjects/inputOverview": {
         "title": "Input"
       },
       "FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "Liste hiérarchique"
       },
       "FormObjects/listboxOverview": {
         "title": "List Box"
       },
       "FormObjects/pictureButtonOverview": {
-        "title": "Picture Button"
+        "title": "Bouton image"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "Pop-up menu image"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "Plug-in Area"
+        "title": "Zone de plug-in"
       },
       "FormObjects/progressIndicator": {
-        "title": "Progress Indicator"
+        "title": "Indicateurs de progression"
       },
       "FormObjects/propertiesAction": {
         "title": "Action"
@@ -163,46 +163,46 @@
         "title": "Animation"
       },
       "FormObjects/propertiesAppearance": {
-        "title": "Appearance"
+        "title": "Apparence"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
-        "title": "Background and Border"
+        "title": "Fond et bordure"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "Coordinates & Sizing"
+        "title": "Coordonnées et dimensions"
       },
       "FormObjects/propertiesCrop": {
-        "title": "Crop"
+        "title": "Découpage"
       },
       "FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "Source de données"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "Affichage"
       },
       "FormObjects/propertiesEntry": {
-        "title": "Entry"
+        "title": "Saisie"
       },
       "FormObjects/propertiesFooters": {
-        "title": "Footers"
+        "title": "Pieds"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "Gridlines"
+        "title": "Quadrillage"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "En-têtes"
       },
       "FormObjects/propertiesHelp": {
-        "title": "Help"
+        "title": "Aide"
       },
       "FormObjects/propertiesHierarchy": {
-        "title": "Hierarchy"
+        "title": "Hiérarchie"
       },
       "FormObjects/propertiesListBox": {
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "Objets"
       },
       "FormObjects/propertiesPicture": {
         "title": "Image"
@@ -211,140 +211,140 @@
         "title": "Plug-ins"
       },
       "FormObjects/propertiesPrint": {
-        "title": "Print"
+        "title": "Imprimer"
       },
       "FormObjects/propertiesRangeOfValues": {
-        "title": "Range of Values"
+        "title": "Plage de valeurs"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "Liste de propriétés JSON"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "Resizing Options"
+        "title": "Options de redimensionnement"
       },
       "FormObjects/propertiesScale": {
-        "title": "Scale"
+        "title": "Echelle"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/propertiesText": {
-        "title": "Text"
+        "title": "Texte"
       },
       "FormObjects/propertiesTextAndPicture": {
-        "title": "Text and Picture"
+        "title": "Texte et Image"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Zone Web"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "Radio Button"
+        "title": "Bouton radio"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "Règle"
       },
       "FormObjects/shapesOverview": {
-        "title": "Shapes"
+        "title": "Formes"
       },
       "FormObjects/spinner": {
         "title": "Spinner"
       },
       "FormObjects/splitters": {
-        "title": "Splitter"
+        "title": "Séparateur"
       },
       "FormObjects/staticPicture": {
-        "title": "Static picture"
+        "title": "Image statique"
       },
       "FormObjects/stepper": {
         "title": "Stepper"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/tabControl": {
-        "title": "Tab Controls"
+        "title": "Onglets"
       },
       "FormObjects/text": {
-        "title": "Text"
+        "title": "Texte"
       },
       "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+        "title": "Zone 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Zone Web"
       },
       "FormObjects/writeProAreaOverview": {
-        "title": "4D Write Pro area"
+        "title": "Zone 4D Write Pro"
       },
       "GettingStarted/installation": {
-        "title": "Installation and activation"
+        "title": "Installation et activation"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "Barres de menus"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "Créer des menus et des barres de menus"
       },
       "Menus/overview": {
         "title": "Aperçu"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "Propriétés des menus"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Mode SDI sous Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Page Analyse d'activités",
+        "sidebar_label": "Page Analyse d'activités"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Page Sauvegarde",
+        "sidebar_label": "Page Sauvegarde"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Page compactage",
+        "sidebar_label": "Page compactage"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Page chiffrement",
+        "sidebar_label": "Page chiffrement"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Page informations",
+        "sidebar_label": "Page informations"
       },
       "MSC/overview": {
         "title": "Aperçu",
         "sidebar_label": "Aperçu"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "Page Réparation",
+        "sidebar_label": "Page Réparation"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "Page restitution",
+        "sidebar_label": "Page restitution"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "Page Retour en arrière",
+        "sidebar_label": "Page Retour en arrière"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "Page Vérification",
+        "sidebar_label": "Page Vérification"
       },
       "Project/architecture": {
-        "title": "Architecture of a 4D project"
+        "title": "Architecture d'un projet 4D"
       },
       "Project/building": {
         "title": "Générer un package projet"
       },
       "Project/creating": {
-        "title": "Creating a 4D project"
+        "title": "Créer un projet 4D"
       },
       "Project/developing": {
-        "title": "Developing a project"
+        "title": "Développer un projet"
       },
       "Project/overview": {
         "title": "Aperçu"
@@ -425,25 +425,25 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "Sessions et utilisateurs"
       },
       "REST/configuration": {
-        "title": "Server Configuration"
+        "title": "Configuration du serveur"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "Obtenir des informations du serveur"
       },
       "REST/gettingStarted": {
-        "title": "Getting Started"
+        "title": "Prise en main"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "Manipulation des données"
       },
       "REST/REST_requests": {
-        "title": "About REST Requests"
+        "title": "A propos des requêtes REST"
       },
       "Users/editing": {
-        "title": "Managing 4D users and groups"
+        "title": "Gestion des groupes et utilisateurs 4D"
       },
       "Users/overview": {
         "title": "Aperçu"
@@ -455,41 +455,41 @@
       "v18": "v18"
     },
     "categories": {
-      "Getting Started": "Getting Started",
-      "4D Language Concepts": "4D Language Concepts",
-      "Project Databases": "Project Databases",
+      "Getting Started": "Prise en main",
+      "4D Language Concepts": "Concepts du langage 4D",
+      "Project Databases": "Bases projet",
       "Form Editor": "Éditeur de formulaire",
-      "Form Objects": "Form Objects",
-      "Form Object Properties": "Form Object Properties",
+      "Form Objects": "Objets formulaires",
+      "Form Object Properties": "Propriétés des objets formulaire",
       "Menus": "Menus",
-      "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "REST Server": "REST Server"
+      "MSC": "CSM",
+      "Backup and Restore": "Sauvegarde et restitution",
+      "Users and Groups": "Groupes et utilisateurs",
+      "REST Server": "Serveur REST"
     }
   },
   "pages-strings": {
-    "Installation and activation|in index page Getting started": "Installation and activation",
-    "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project databases|in index page Getting started": "Project databases",
+    "Installation and activation|in index page Getting started": "Installation et activation",
+    "Language Concepts|in index page Getting started": "Concepts du langage",
+    "Project databases|in index page Getting started": "Bases projets",
     "Form Editor|no description given": "Éditeur de formulaire",
-    "Form Events|no description given": "Form Events",
-    "Form Objects|no description given": "Form Objects",
-    "Form Object Properties|no description given": "Form Object Properties",
+    "Form Events|no description given": "Evénements formulaire",
+    "Form Objects|no description given": "Objets formulaires",
+    "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
-    "Web Server|no description given": "Web Server",
-    "REST Server|no description given": "REST Server",
-    "Maintenance and Security Center|no description given": "Maintenance and Security Center",
-    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
-    "Backup and Restore|no description given": "Backup and Restore",
-    "Users and Groups|no description given": "Users and Groups",
-    "Getting started|no description given": "Getting started",
-    "Developing a Desktop application|no description given": "Developing a Desktop application",
-    "Developing a Web application|no description given": "Developing a Web application",
-    "Developing a Mobile application|no description given": "Developing a Mobile application",
+    "Web Server|no description given": "Serveur Web",
+    "REST Server|no description given": "Serveur REST",
+    "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
+    "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
+    "Backup and Restore|no description given": "Sauvegarde et restitution",
+    "Users and Groups|no description given": "Groupes et utilisateurs",
+    "Getting started|no description given": "Prise en main",
+    "Developing a Desktop application|no description given": "Développer une application Desktop",
+    "Developing a Web application|no description given": "Développer une application web",
+    "Developing a Mobile application|no description given": "Développer une application mobile",
     "Administration|no description given": "Administration",
-    "Help Translate|recruit community translators for your project": "Help Translate",
-    "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
-    "Translate this Doc|recruitment message asking to translate the docs": "Translate"
+    "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
+    "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
+    "Translate this Doc|recruitment message asking to translate the docs": "Traduire"
   }
 }
