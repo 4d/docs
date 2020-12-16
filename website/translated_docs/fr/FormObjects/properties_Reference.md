@@ -1,10 +1,10 @@
 ---
 id: propertiesReference
-title: Liste de propriétés JSON
+title: JSON property list
 ---
 
-Vous trouverez dans cette page une liste complète de toutes les propriétés d'objets triées selon leur nom JSON. Cliquez sur un nom de propriété pour accéder à sa description détaillée.
-> Dans le chapitre "Propriétés des objets de formulaire", les propriétés sont triées en fonction des noms et des thèmes de la liste des propriétés.
+You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description.
+> In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes.
 
 
 [a](#a) - [b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [g](#g) - [h](#h) - [i](#i) - [j](#j) - [k](#k) - [l](#l) - [m](#m) - [n](#n) - [p](#p) - [r](#r) - [s](#s) - [t](#t) - [u](#u) - [v](#v) - [w](#w) - [z](#z)
@@ -13,7 +13,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
 <table spaces-before="0" line-breaks-before="3">
   <tr>
     <th>
-      Propriété
+      Property
     </th>
     
     <th>
@@ -21,7 +21,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </th>
     
     <th>
-      Valeurs possibles
+      Possible Values
     </th>
   </tr>
   
@@ -43,11 +43,11 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Une action à exécuter.
+      Typical activity to be performed.
     </td>
     
     <td>
-      Nom d'une action standard valide.
+      The name of a valid standard action.
     </td>
   </tr>
   
@@ -57,11 +57,11 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Permet d'afficher le sélecteur de polices système ou le sélecteur de couleurs pour modifier les attributs d'un objet
+      Allows displaying system font picker or color picker to edit object attributes
     </td>
     
     <td>
-      true, false (par défaut)
+      true, false (default)
     </td>
   </tr>
   
@@ -71,11 +71,11 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box.
+      Allows setting a different background color for odd-numbered rows/columns in a list box.
     </td>
     
     <td>
-      Toute valeur CSS; "transparent"; "automatic"
+      Any CSS value; "transparent"; "automatic"
     </td>
   </tr>
   
@@ -85,7 +85,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Permet d'ajouter automatiquement une valeur à une liste lorsqu'un utilisateur saisit une valeur qui ne se trouve pas dans l'énumération associée à l'objet.
+      Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.
     </td>
     
     <td>
@@ -111,7 +111,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Indique seulement deux valeurs possibles.
+      Specifies only two possible values.
     </td>
     
     <td>
@@ -125,11 +125,11 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      La valeur du rayon d'arrondi pour les rectangles à coins arrondis.
+      The radius value for round rectangles.
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   
@@ -139,7 +139,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Permet de définir un style standard pour la bordure de l'objet.
+      Allows setting a standard style for the object border.
     </td>
     
     <td>
@@ -153,11 +153,11 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Positionne un objet en bas (centré).
+      Positions an object at the bottom (centered).
     </td>
     
     <td>
-      minimum : 0<a name="c"></a>
+      minimum: 0<a name="c"></a>
     </td>
   </tr>
   
@@ -179,11 +179,11 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Associe une énumération à un objet
+      A list of choices associated with an object
     </td>
     
     <td>
-      Une énumération
+      A list of choices
     </td>
   </tr>
   
@@ -197,7 +197,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Une liste de noms de classes
+      A list of class names
     </td>
   </tr>
   
@@ -207,7 +207,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Nombre de colonnes.
+      Number of columns.
     </td>
     
     <td>
@@ -221,11 +221,11 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Une collection de colonnes list box
+      A collection of list box columns
     </td>
     
     <td>
-      Collection d'objets colonne avec des propriétés de colonnes définies
+      Collection of column objects with defined column properties
     </td>
   </tr>
   
@@ -267,7 +267,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      "input", "checkbox" (pour les colonnes booléen / numérique), "automatic", "popup" (uniquement pour les colonnes booléens)
+      "input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)
     </td>
   </tr>
   
@@ -281,7 +281,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Expression d'objet
+      Object expression
     </td>
   </tr>
   
@@ -295,7 +295,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Expression numérique
+      Number expression
     </td>
   </tr>
   
@@ -309,7 +309,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Chemin relatif en syntaxe POSIX. Doit être utilisé avec l'option "Personnalisé" de la propriété "Style".
+      Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.
     </td>
   </tr>
   
@@ -323,7 +323,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   
@@ -337,7 +337,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   
@@ -351,7 +351,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      minimum : 0
+      minimum: 0
     </td>
   </tr>
   
@@ -365,7 +365,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      Chaîne JSON ou chaîne encodée en base64<a name="d"></a>
+      JSON string or base64 encoded string<a name="d"></a>
     </td>
   </tr>
   
@@ -383,7 +383,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
   
   <tr>
     <td>
-      <a href="properties_Object.md#variable-or-expression">dataSource</a> (objets)<br><a href="properties_Subform.md#source">dataSource</a> (sous-formulaires)<br><a href="properties_Object.md#data-source">dataSource</a> (list box array) <br> <a href="properties_Object.md#collection-or-entity-selection">dataSource</a> (List box Collection ou entity selection<br> <a href="properties_DataSource.md#expression">dataSource</a> (colonne list box) <br> <a href="properties_Hierarchy.md#hierarchical-list-box">dataSource</a> (list box hiérarchique)
+      <a href="properties_Object.md#variable-or-expression">dataSource</a> (objects)<br><a href="properties_Subform.md#source">dataSource</a> (subforms)<br><a href="properties_Object.md#data-source">dataSource</a> (array list box) <br> <a href="properties_Object.md#collection-or-entity-selection">dataSource</a> (Collection or entity selection list box)<br> <a href="properties_DataSource.md#expression">dataSource</a> (list box column) <br> <a href="properties_Hierarchy.md#hierarchical-list-box">dataSource</a> (hierarchical list box)
     </td>
     
     <td>
@@ -397,7 +397,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
   
   <tr>
     <td>
-      <a href="properties_Object.md#expression-type">dataSourceTypeHint</a> (objects) <br> <a href="properties_DataSource.md#data-type">dataSourceTypeHint</a> (colonne list box)
+      <a href="properties_Object.md#expression-type">dataSourceTypeHint</a> (objects) <br> <a href="properties_DataSource.md#data-type">dataSourceTypeHint</a> (list box column)
     </td>
     
     <td>
@@ -467,7 +467,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
   
   <tr>
     <td>
-      <a href="properties_ListBox.md#detail-form-name">detailForm</a> (list box)<br><a href="properties_Subform.md#detail-form">detailForm</a> (sous-formulaire)
+      <a href="properties_ListBox.md#detail-form-name">detailForm</a> (list box)<br><a href="properties_Subform.md#detail-form">detailForm</a> (subform)
     </td>
     
     <td>
@@ -503,13 +503,13 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      "addSubrecord" ou "" to do nothing
+      "addSubrecord" or "" to do nothing
     </td>
   </tr>
   
   <tr>
     <td>
-      <a href="properties_ListBox.md#double-click-on-row">doubleClickInRowAction</a> (list box)<br><a href="properties_Subform.md#double-click-on-row">doubleClickInRowAction</a> (sous-formulaire)
+      <a href="properties_ListBox.md#double-click-on-row">doubleClickInRowAction</a> (list box)<br><a href="properties_Subform.md#double-click-on-row">doubleClickInRowAction</a> (subform)
     </td>
     
     <td>
@@ -545,7 +545,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      "none", "custom", "automatic" (hors énumération, list box)
+      "none", "custom", "automatic" (excluding list, list box)
     </td>
   </tr>
   
@@ -559,7 +559,7 @@ Vous trouverez dans cette page une liste complète de toutes les propriétés d'
     </td>
     
     <td>
-      "none", "custom", "automatic" (hors énumération, list box)<a name="e"></a>
+      "none", "custom", "automatic" (excluding list, list box)<a name="e"></a>
     </td>
   </tr>
   
