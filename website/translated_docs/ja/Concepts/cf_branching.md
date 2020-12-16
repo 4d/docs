@@ -1,11 +1,11 @@
 ---
 id: branching
-title: 分岐構造
+title: Branching structures
 ---
 
 ## If...Else...End if
 
-`If...Else...End if` による制御フロー構造の正式な構文は以下のようになります:
+The formal syntax of the `If...Else...End if` control flow structure is:
 
 ```4d
  If(Boolean_Expression)
@@ -15,16 +15,16 @@ title: 分岐構造
  End if
 ```
 
-`Else` 部分はオプションであり、省略して以下のように記述できます:
+Note that the `Else` part is optional; you can write:
 ```4d
  If(Boolean_Expression)
     statement(s)
  End if
 ```
 
-`If...Else...End if` 構造は、条件 (ブール式) が true か false かによって、処理の選択肢を2つメソッドに与えます。 ブール式が true の場合は、テストのすぐ後のステートメントを実行し、 ブール式が FALSE の場合には、Else 文のすぐ後のステートメントを実行します。 任意の `Else` が省略されていた場合、`End if` のすぐ後のステートメント (あれば) へと実行が続行されます。
+The `If...Else...End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. When the Boolean expression is TRUE, the statements immediately following the test are executed. If the Boolean expression is FALSE, the statements following the Else statement are executed. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
 
-ブール式は常に全体が評価されるという点に注意してください。 たとえば、以下のような場合:
+Note that the Boolean expression is always fully evaluated. Consider in particular the following test:
 
 ```4d
  If(MethodA & MethodB)
@@ -32,7 +32,7 @@ title: 分岐構造
  End if
 ```
 
-この場合、両方のメソッドが true である場合に限り、式は true になります。 しかしながら _MethodA_ が false であっても、4Dは_MethodB_ も評価するため、これは時間の無駄になります。 この場合には、以下のような構造を使用するほうが賢明といえます:
+he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
 
 ```4d
  If(MethodA)
@@ -42,21 +42,21 @@ title: 分岐構造
  End if
 ```
 
-上記の結果はほぼ同じで、_MethodB_ は必要な場合にのみ評価されます。
+The result is similar and _MethodB_ is evaluated only if necessary.
 
-### 例題
+### Example
 
 ```4d
-  // ユーザーに名前の入力を求めます
- $Find:=Request("名前を入力してください")
+  // Ask the user to enter a name
+ $Find:=Request(Type a name)
  If(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
-    ALERT("名前が入力されませんでした")
+    ALERT("You did not enter a name.")
  End if
 ```
 
-**Tip:** 一方の条件に実行ステートメントがない分岐処理を書くこともできます。 下のようなコードはどちらも有効です:
+**Tip:** Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:
 
 ```4d
  If(Boolean_Expression)
@@ -64,7 +64,7 @@ title: 分岐構造
     statement(s)
  End if
 ```
-または:
+or:
 
 ```4d
  If(Boolean_Expression)
@@ -75,7 +75,7 @@ title: 分岐構造
 
 ## Case of...Else...End case
 
-`Case of...Else...End case` による制御フロー構造の正式な構文は以下のようになります:
+The formal syntax of the `Case of...Else...End case` control flow structure is:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -93,7 +93,7 @@ title: 分岐構造
  End case
 ```
 
-`Else` 部分はオプションであり、省略して以下のように記述できます:
+Note that the `Else` part is optional; you can write:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -108,85 +108,80 @@ title: 分岐構造
        statement(s)
  End case
 ```
-`If...Else...End if` と同様に、`Case of...Else...End case` 構造も処理の選択肢をメソッドに与えます。 `If...Else...End` との違いは、`Case of...Else...End case` 構造が複数のブール式を評価し、その中から最初に true となるステートメントを実行することです。
+As with the `If...Else...End if` structure, the `Case of...Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of...Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
 
-ブール式の前にはそれぞれコロン (`:`) を付けます。 コロンとブール式の組み合わせをケースと呼びます。 例えば以下の行はケースです:
+Each Boolean expression is prefaced by a colon (`:`). This combination of the colon and the Boolean expression is called a case. For example, the following line is a case:
 
 ```4d
 :(bValidate=1)
 ```
 
-最初に true になったケースに続く (次のケースまでの) ステートメントだけが実行されます。 true になるケースがない場合、どのステートメントも実行されません (`Else` 文が指定されていない場合) 。
+Only the statements following the first TRUE case (and up to the next case) will be executed. If none of the cases are TRUE, none of the statements will be executed (if no `Else` part is included).
 
-最後のケースの後に Else 文を含むことができます。 すべてのケースが FALSE の場合に、`Else` 文の後のステートメントが実行されます。
+You can include an Else statement after the last case. If all of the cases are FALSE, the statements following the `Else` will be executed.
 
-### 例題
+### Example
 
-下記の例は数値変数を判定し、対応する数字をアラートボックスに表示します:
+This example tests a numeric variable and displays an alert box with a word in it:
 
 ```4d
  Case of
-    :(vResult=1) // 数値が1の場合
-       ALERT("一です。") // 1のアラートボックスを表示します
-    :(vResult=2) // 数値が2の場合
-       ALERT("二です。") // 2のアラートボックスを表示します
-    :(vResult=3) // 数値が3の場合
-       ALERT("三です。") // 3のアラートボックスを表示します
-    Else // 数値が1,2,3のいずれでもない場合
-       ALERT("一、二、三のいずれでもありません。")
+    :(vResult=1) //Test if the number is 1
+       ALERT("One.") //If it is 1, display an alert
+    :(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
+    :(vResult=3) //Test if the number is 3
+       ALERT("Three.") //If it is 3, display an alert
+    Else //If it is not 1, 2, or 3, display an alert
+       ALERT("It was not one, two, or three.")
  End case
 ```
 
-比較するために、同じことを `If...Else...End if` 構文で記述すると以下のようになります。
+For comparison, here is the `If...Else...End if` version of the same method:
 
 ```4d
- If(vResult=1) // 数値が1の場合
-    ALERT("一です。") // 1のアラートボックスを表示します
+ If(vResult=1) //Test if the number is 1
+    ALERT("One.") //If it is 1, display an alert
  Else
-    If(vResult=2) // 数値が2の場合
-       ALERT("二です。") // 2のアラートボックスを表示します
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
     Else
-       If(vResult=3) // 数値が3の場合
-          ALERT("三です。") // 3のアラートボックスを表示します
-       Else // 数値が1,2,3のいずれでもない場合
-          ALERT("一、二、三のいずれでもありません。")
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
+          ALERT("It was not one, two, or three.")
        End if
     End if
  End if
 ```
 
-`Case of...Else...End case` 構造は、最初に true になったケースだけを実行します。 2つ以上のケースが true の場合は、最初に true になったケースのステートメントだけを実行します。
+Remember that with a `Case of...Else...End case` structure, only the first TRUE case is executed. Even if two or more cases are TRUE, only the statements following the first TRUE case will be executed.
 
-したがって、階層的なテストを実行するときには、階層上で低い位置にある条件がテスト順序で先に記述されていることを確認する必要があります。 以下の例では、ケース2が true の場合、ケース1も必ず true であるため、ケース1は後に位置すべきです。 このままの順序では、ケース2のステートメントはけっして実行されません:
+Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence. For example, the following code will never see its last condition detected:
 
 ```4d
  Case of
     :(vResult=1)
-       ...
- // ステートメントなど
-    :((vResult=1) & (vCondition#2)) // このケースが判定されることはありません
-       ...
- // ステートメントなど
+       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //this case will never be detected
+       ... //statement(s)
  End case
 ```
 
-vResult = 1の判定により他の条件を見る前に分岐するので、第2のケースが判定されることはありません。 コードが正しく実行されるためには次のように書きます:
+In the code above, the presence of the second condition is not detected since the test "vResult=1" branches off the code before any further testing. For the code to operate properly, you can write it as follows:
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) // このケースが先に判定されます
-       ...
- // ステートメントなど
+    :((vResult=1) & (vCondition#2)) //this case will be detected first
+       ... //statement(s)
     :(vResult=1)
-       ...
- 
-// ステートメントなど
+       ... //statement(s)
  End case
 ```
 
-さらに階層的なテストを実行したい場合、コードも階層化する必要があります。
+Also, if you want to implement hierarchical testing, you may consider using hierarchical code.
 
-**Tip:** 分岐構造において、ケースに続くステートメントの記述は必須ではありません。 下のようなコードはどちらも有効です:
+**Tip:** Branching can be performed without statements to be executed in one case or another. When developing an algorithm or a specialized application, nothing prevents you from writing:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -200,7 +195,7 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
  End case
 ```
 
-または:
+or:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -214,7 +209,7 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
  End case
 ```
 
-または:
+or:
 ```4d
  Case of
     Else
