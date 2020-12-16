@@ -1,97 +1,97 @@
 ---
 id: checkboxOverview
-title: チェックボックス
+title: Check Box
 ---
 
-## 概要
+## Overview
 
-チェックボックスはボタンの一種で、バイナリ (true-false) データの入力や表示をおこないます。 基本的に、チェックボックスの状態は選択または未選択のいずれかになりますが、3つめの状態を定義することもできます (後述参照)。
+A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a third state can be defined (see below).
 
 ![](assets/en/FormObjects/checkbox.png)
 
-チェックボックスはメソッドにより制御されます。 他のボタンと同じように、フォームが初めて開かれると、チェックボックスの変数は 0 に初期化されます。 チェックボックスが選択されると、チェックボックスに割り当てられたメソッドが実行されます。
+Check boxes are controlled by methods. Like all buttons, a check box variable is set to 0 when the form is first opened. The method associated with it executes when the check box is selected.
 
-チェックボックスは小さな四角形の右側にテキストを表示します。 このテキストはチェックボックスの [タイトル](properties_Object.md#title) プロパティで設定します。 タイトルには、XLIFF参照を入れることもできます ([付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) 参照)。
-
-
-## チェックボックスの使用
-
-チェックボックスには整数型またはブール型の [変数あるいは式](properties_Object.md#変数あるいは式) を設定することができます。
-
-- **整数型:** チェックボックスが選択されると、変数の値は 1 になります。 チェックボックスが選択されていない場合の値は 0 です。 チェックボックスが 3番目の状態 (後述参照) のとき、変数値は 2 になります。
-- **ブール型:** チェックボックスが選択されると、変数の値は `true` になります。 チェックボックスが選択されていない場合の値は `False` です。
-
-フォーム上のすべてのチェックボックスは選択/未選択のいずれかの状態にすることができます。 チェックボックスを複数使用することで、複数の候補を同時に選択できるようになります。
+A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 
-### スリーステートチェックボックス
+## Using check boxes
 
-[通常](checkbox_overview.md#通常) および [フラット](checkbox_overview.md#フラット) タイプのチェックボックスは 3番目の状態を受け入れます。 この 3番目の状態は中間的な状態であり、一般的には表示のために用いられます。 たとえば、選択されたオブジェクトが複数あるうち、一部のオブジェクトにのみ特定のプロパティが存在することを表すのに使用されます。
+A check box can be associated to a [variable or expression](properties_Object.md#variable-or-expression) of type integer or boolean.
+
+- **integer:** if the box is checked, the variable has the value 1. When not checked, it has the value 0. If check box is in third state (see below), it has the value 2.
+- **boolean:** if the box is checked, the variable has the value `True`. When not checked, it has the value `False`.
+
+Any or all check boxes in a form can be checked or unchecked. Multiple check boxes allow the user to select multiple options.
+
+
+### Three-States check box
+
+Check box objects with style [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) accept a third state. This third state is an intermediate status, which is generally used for display purposes. For example, it allows indicating that a property is present in a selection of objects, but not in each object of the selection.
 
 ![](assets/en/FormObjects/checkbox_3states.png)
 
-この 3番目の状態を有効にするには [スリーステート](properties_Display.md#スリーステート) プロパティを選択します。
+To enable this third state, you must select the [Three-States](properties_Display.md#three-states) property.
 
-このプロパティは、数値型の [変数あるいは式](properties_Object.md#変数あるいは式) に関連付けられた通常およびフラットスタイルのチェックボックスに対してのみ使用できます。ブール型のチェックボックスは [スリーステート](properties_Display.md#スリーステート) プロパティを利用することができません (ブール式には中間状態が存在しません)。
+This property is only available for regular and flat check boxes associated with numeric [variables or expressions](properties_Object.md#variable-or-expression) — check boxes for Boolean expressions cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean expression cannot be in an intermediary state).
 
-チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。
-> スリーステートチェックボックスは入力モードにおいて、チェックなし / チェック / 中間状態 / チェックなし、という順に状態表示を切り替えます。 一般的にこの中間状態は入力モードではあまり役に立たないため、2という値になった場合は、コード上で変数の値を強制的に 0 に設定し、チェックされた状態からチェックなしの状態へ直接移行します。
+The variable associated with the check box returns the value 2 when the check box is in the third state.
+> In entry mode, the Three-States check boxes display each state sequentially, in the following order: unchecked / checked / intermediary / unchecked, etc. The intermediary state is generally not very useful in entry mode; in the code, simply force the value of the variable to 0 when it takes the value of 2 in order to pass directly from the checked state to the unchecked state.
 
 
-## 標準アクションの使用
+## Using a standard action
 
-チェックボックスに [標準アクション](properties_Action.md#標準アクション) を割り当てることで、テキストエリアの属性を管理することができます。 たとえば、`fontBold` 標準アクションを選択すると、ランタイムにおいてそのチェックボックスは、カレントエリア内で選択されたテキストの "bold" 属性を管理します。
+You can assign a [standard action](properties_Action.md#standard-action) to a check box to handle attributes of text areas. For example, if you assign the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area.
 
-true/false ステータスで表すことのできるアクション ("checkable" アクション) のみがサポートされます:
+Only actions that can represent a true/false status ("checkable" actions) are supported by this object:
 
-| サポートされるアクション                        | 使用条件 (あれば)        |
-| ----------------------------------- | ----------------- |
-| avoidPageBreakInsideEnabled         | 4D Write Proエリアのみ |
-| fontItalic                          |                   |
-| fontBold                            |                   |
-| fontLinethrough                     |                   |
-| fontSubscript                       | 4D Write Proエリアのみ |
-| fontSuperscript                     | 4D Write Proエリアのみ |
-| fontUnderline                       |                   |
-| font/showDialog                     | macOS のみ          |
-| htmlWYSIWIGEnabled                  | 4D Write Proエリアのみ |
-| section/differentFirstPage          | 4D Write Proエリアのみ |
-| section/differentLeftRightPages     | 4D Write Proエリアのみ |
-| spell/autoCorrectionEnabled         |                   |
-| spell/autoDashSubstitutionsEnabled  | macOS のみ          |
-| spell/autoLanguageEnabled           | macOS のみ          |
-| spell/autoQuoteSubstitutionsEnabled | macOS のみ          |
-| spell/autoSubstitutionsEnabled      |                   |
-| spell/enabled                       |                   |
-| spell/grammarEnabled                | macOS のみ          |
-| spell/showDialog                    | macOS のみ          |
-| spell/visibleSubstitutions          |                   |
-| visibleBackground                   | 4D Write Proエリアのみ |
-| visibleFooters                      | 4D Write Proエリアのみ |
-| visibleHeaders                      | 4D Write Proエリアのみ |
-| visibleHiddenChars                  | 4D Write Proエリアのみ |
-| visibleHorizontalRuler              | 4D Write Proエリアのみ |
-| visiblePageFrames                   | 4D Write Proエリアのみ |
-| visibleReferences                   |                   |
-| widowAndOrphanControlEnabled        | 4D Write Proエリアのみ |
+| Supported actions                   | Usage condition (if any) |
+| ----------------------------------- | ------------------------ |
+| avoidPageBreakInsideEnabled         | 4D Write Pro areas only  |
+| fontItalic                          |                          |
+| fontBold                            |                          |
+| fontLinethrough                     |                          |
+| fontSubscript                       | 4D Write Pro areas only  |
+| fontSuperscript                     | 4D Write Pro areas only  |
+| fontUnderline                       |                          |
+| font/showDialog                     | Mac only                 |
+| htmlWYSIWIGEnabled                  | 4D Write Pro areas only  |
+| section/differentFirstPage          | 4D Write Pro areas only  |
+| section/differentLeftRightPages     | 4D Write Pro areas only  |
+| spell/autoCorrectionEnabled         |                          |
+| spell/autoDashSubstitutionsEnabled  | Mac only                 |
+| spell/autoLanguageEnabled           | Mac only                 |
+| spell/autoQuoteSubstitutionsEnabled | Mac only                 |
+| spell/autoSubstitutionsEnabled      |                          |
+| spell/enabled                       |                          |
+| spell/grammarEnabled                | Mac only                 |
+| spell/showDialog                    | Mac only                 |
+| spell/visibleSubstitutions          |                          |
+| visibleBackground                   | 4D Write Pro areas only  |
+| visibleFooters                      | 4D Write Pro areas only  |
+| visibleHeaders                      | 4D Write Pro areas only  |
+| visibleHiddenChars                  | 4D Write Pro areas only  |
+| visibleHorizontalRuler              | 4D Write Pro areas only  |
+| visiblePageFrames                   | 4D Write Pro areas only  |
+| visibleReferences                   |                          |
+| widowAndOrphanControlEnabled        | 4D Write Pro areas only  |
 
-これらのアクションについての詳細は、[標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) の章を参照してください。
+For detailed information on these actions, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
 
-## チェックボックスのボタンスタイル
+## Check box button styles
 
-チェックボックススタイルは、チェックボックスの外観を制御すると同時に、提供されるプロパティをも決定します。 チェックボックスには、あらかじめ定義されたスタイルを割り当てることができます。 これらのプロパティや動作を組み合わせることで、多数のバリエーションが得られます。
+Check box styles control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors.
 
-スタイルによって [提供されるプロパティ](#プロパティ一覧) は異なりますが、大多数のチェックボックスは *構造上* 同じです。 違いは、関連づけられた変数の処理にあります。
+With the exception of the [available properties](#supported-properties), many check box objects are *structurally* identical. The difference is in the processing of their associated variables.
 
-次の既定スタイルが提供されています:
+4D provides check boxes in the following predefined styles:
 
-### 通常
+### Regular
 
-通常スタイルのチェックボックスは、標準的なシステムチェックボックス (四角形にタイトルが付いたもの) です。
+The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 
 ![](assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -102,20 +102,20 @@ true/false ステータスで表すことのできるアクション ("checkable
         "left": 60,         
         "top": 160,     
         "width": 100,           
-        "height": 20,
+        "height": 20        
         "dataSourceTypeHint":"boolean"
         }
 ```
 
 
 
-### フラット
+### Flat
 
-フラットスタイルのチェックボックスでは、装飾が最小限に抑えられています。 このグラフィック的特性により、フラットスタイルは印刷フォームでの使用に適しています。
+The Flat check box style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
 
 ![](assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -125,25 +125,25 @@ true/false ステータスで表すことのできるアクション ("checkable
             "action": "cancel",
             "left": 60,     
             "top": 160,
-            "width": 100,
-            "height": 20
+            "width": 100,           
+            "height": 20            
             }
 ```
 
 
 
-### ツールバーボタン
+### Toolbar button
 
-チェックボックスのツールバーボタンスタイルは、主としてツールバーで使用するためのものです。
+The Toolbar button check box style is primarily intended for integration in a toolbar.
 
-ツールバーボタンスタイルは、透明の背景にラベルが付いています。 また、通常は [4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられます。
+The Toolbar style has a transparent background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
 
-チェックなし / チェック / ハイライト状態の例です:
+Example with states unchecked / checked / highlighted:
 
 ![](assets/en/FormObjects/checkbox_toolbar.png)
 
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -151,28 +151,28 @@ true/false ステータスで表すことのできるアクション ("checkable
                 "style":"toolbar",
                 "text": "Checkbox",
                 "icon": "/RESOURCES/File.png",
-                "iconFrames": 4,
+                "iconFrames": 4
                 "left": 60,
                 "top": 160,
-                "width": 100,
-                "height": 20
+                "width": 100,                   
+                "height": 20                    
                 }
 ```
 
 
 
-### ベベル
+### Bevel
 
-ベベルスタイルはデフォルトでは、ベベルボタンのような外観 (四角にラベル) に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar) style's behavior.
 
-ベベルスタイルは、明るいグレーの背景にラベルが付いています。 また、通常は [4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられます。
+The Bevel style has a light gray background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
 
-チェックなし / チェック / ハイライト状態の例です:
+Example with states unchecked / checked / highlighted:
 
 ![](assets/en/FormObjects/checkbox_bevel.png)
 
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -180,7 +180,7 @@ true/false ステータスで表すことのできるアクション ("checkable
                 "style":"bevel",
                 "text": "Checkbox",  
                 "icon": "/RESOURCES/File.png",
-                "iconFrames": 4,
+                "iconFrames": 4
                 "left": 60,
                 "top": 160,
                 "width": 100,               
@@ -190,20 +190,20 @@ true/false ステータスで表すことのできるアクション ("checkable
 
 
 
-### 角の丸いベベル
+### Rounded Bevel
 
-角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。 ベベルスタイルと同様に、角の丸いベベルスタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-角の丸いベベルスタイルは、明るいグレーの背景にラベルが付いています。 また、通常は [4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられます。
+The Rounded Bevel style has a light gray background with a title. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
 
-macOS の例:
+Example on macOS:
 
   ![](assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> Windows 上では、角の丸いベベルスタイルは [ベベル](#ベベル) スタイルと同じです。
+> on Windows, the Rounded Bevel style is identical to the [Bevel](#bevel) style.
 
 
-#### JSON 例:
+#### JSON Example:
 
 ```4d
     "myCheckBox": {
@@ -211,7 +211,7 @@ macOS の例:
                 "style":"roundedBevel",  
                 "text": "Checkbox",
                 "icon": "/RESOURCES/File.png",
-                "iconFrames": 4,
+                "iconFrames": 4
                 "left": 60,
                 "top": 160,
                 "width": 100,           
@@ -221,18 +221,18 @@ macOS の例:
 
 
 
-### OS Xグラデーション
+### OS X Gradient
 
-OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 ベベルスタイルと同様に、OS Xグラデーションスタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+The OS X Gradient check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-OS X グラデーションスタイルは明るいグレーの背景にラベルが付いています。macOS 上では2トーンのシステムボタンとして表示されます。 また、通常は [4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられます。
+The OS X Gradient style has a light gray background with a title and is displayed as a two-tone system button on macOS. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).
 
   ![](assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
+> On Windows, this style is identical to the [Bevel](#bevel) style.
 
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -240,7 +240,7 @@ OS X グラデーションスタイルは明るいグレーの背景にラベル
             "style":"gradientBevel",
             "text": "Checkbox",
             "icon": "/RESOURCES/File.png",
-            "iconFrames": 4,
+            "iconFrames": 4
             "left": 60,     
             "top": 160,     
             "width": 100,               
@@ -251,21 +251,21 @@ OS X グラデーションスタイルは明るいグレーの背景にラベル
 
 
 
-### OS Xテクスチャー
+### OS X Textured
 
-OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 ベベルスタイルと同様に、OS Xテクスチャースタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+The OS X Textured checkbox style is similar to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
+By default, the OS X Textured style appears as:
 
- - *Windows* - 明るいブルーの背景に中央配置のラベルが付いた標準のシステムボタンです。
+ - *Windows* - a standard system button with a light blue background with a title in the center.
 
   ![](assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
+ - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
 
   ![](assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -274,8 +274,8 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
             "text": "Checkbox",
             "left": 60,
             "top": 160,
-            "width": 100,
-            "height": 20
+            "width": 100,                   
+            "height": 20                    
             }
 ```
 
@@ -284,19 +284,19 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 ### Office XP
 
-Office XPスタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
+The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
 
- - *Windows* - マウスオーバー時にのみ背景が表示されます。 チェックなし / チェック / ハイライト状態の例です:
+ - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
 
   ![](assets/en/FormObjects/checkbox_officexp.png)
 
- - *macOS* - 背景は常に表示されます。 チェックなし / チェック状態の例です:
+ - *macOS* - its background is always displayed. Example with states unchecked / checked:
 
   ![](assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -305,7 +305,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
                 "text": "Checkbox",  
                 "action": "fontBold",
                 "icon": "/RESOURCES/File.png",
-                "iconFrames": 4,
+                "iconFrames": 4     
                "left": 60,
                 "top": 160,     
                 "width": 100,           
@@ -315,20 +315,20 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 
 
-### 折りたたみ/展開
+### Collapse / Expand
 
-このチェックボックススタイルは標準の折りたたみ/展開アイコンを表示するのに使用します。 これらは階層リストで使用されます。
+This check box style can be used to add a standard collapse/expand icon. These buttons are used natively in hierarchical lists.
 
- - *Windows* - [+] または [-] のように表示されます。
+ - *Windows* - the button looks like a [+] or a [-]
 
   ![](assets/en/FormObjects/checkbox_collapse.png)
 
- - *macOS* - 右や下を指す三角として表示されます。
+ - *macOS* - it looks like a triangle pointing right or down.
 
   ![](assets/en/FormObjects/checkbox_collapse_mac.png)
 
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -344,9 +344,9 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 
 
-### 開示ボタン
+### Disclosure Button
 
-開示ボタンスタイルが適用されたチェックボックスは macOS および Windowsにおいて、詳細情報の表示/非表示にするのに使われる標準的な開示ボタンとして描画されます。 値が 0 のときにはボタンの矢印が下向き、値が 1 のときは上向きになります。
+In macOS and Windows, a check box with the "Disclosure" style appears as a standard disclosure button, usually used to show/hide additional information. When used as a radio button, the button symbol points downwards with value 0 and upwards with value 1.
 
  - *Windows*
 
@@ -357,7 +357,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
     ![](assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckBox": {
@@ -372,17 +372,17 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 ```
 
 
-### カスタム
+### Custom
 
-カスタムスタイルのチェックボックスは、背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます:
+The Custom check box style accepts a personalized background picture and allows managing specific properties:
 
--  [背景パス名](properties_TextAndPicture.md#背景パス名)
-- [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット)
-- [横方向マージン](properties_TextAndPicture.md#横方向マージン) と [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
+-  [Background pathname](properties_TextAndPicture.md#backgroundPathname)
+- [Icon Offset](properties_TextAndPicture.md#icon-offset)
+- [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) and [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
 
-カスタムチェックボックスには通常、[4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられ、これは同じく [4つの状態を持つ](properties_TextAndPicture.md#状態の数) [背景ピクチャー](properties_TextAndPicture.md#backgroundPathname) と同時に使用することができます。
+It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
-#### JSON 例:
+#### JSON Example:
 
 ```
     "myCheckbox": {
@@ -392,10 +392,10 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
         "icon": "/RESOURCES/smiley.jpg",
         "iconFrame": 4,
         "customBackgroundPicture": "/RESOURCES/paper.jpg",
-        "iconOffset": 5, // クリック時のアイコンオフセット
+        "iconOffset": 5, //custom icon offset when clicked
         "left": 60,
         "top": 160,
-        "width": 100,
+        "width": 100,       
         "height": 20,
         "customBorderX": 20,
         "customBorderY": 5
@@ -405,16 +405,16 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 
 
-## プロパティ一覧
+## Supported Properties
 
-すべてのチェックボックスは次の基本プロパティを共有します:
-
-
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#CSSクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプTips) - [標準アクション](properties_Action.md#標準アクション)
+All check boxes share the same set of basic properties:
 
 
-[ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-- [背景パス名](properties_TextAndPicture.md#背景パス名) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタムスタイル)
-- [スリーステート](properties_Display.md#スリーステート) (通常、フラット)
-- [ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名) - [状態の数](properties_TextAndPicture.md#状態の数) - [タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトル/ピクチャー位置) (ツールバーボタン、ベベル、角の丸いベベル、OS X グラデーション、OS X テクスチャー、Office XP、カスタム)
+
+Additional specific properties are available, depending on the [button style](#button-styles):
+
+- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [Three-States](properties_Display.md#three-states) (Flat, Regular)
+- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
