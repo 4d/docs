@@ -1,20 +1,20 @@
 ---
 id: propertiesFooters
-title: Pieds
+title: Footers
 ---
 
 ---
-## Afficher pieds
+## Display Footers
 
-Cette propriété est utilisée pour afficher ou masquer [les pieds de de colonne listbox](listbox_overview.md#list-box-footers). Il existe un pied par colonne; chaque pied est configuré séparément.
+This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles |
-| ----------- | --------------- | ----------------- |
-| showFooters | boolean         | true, false       |
+| Name        | Data Type | Possible Values |
+| ----------- | --------- | --------------- |
+| showFooters | boolean   | true, false     |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
 
@@ -22,13 +22,13 @@ Cette propriété est utilisée pour afficher ou masquer [les pieds de de colonn
 
 
 ---
-## Hauteur
+## Height
 
-Cette propriété sert à définir la hauteur de ligne d'un pied de list box en **pixels** ou en **lignes de texte** (lorsqu'elle est affichée). Les deux types d'unités peuvent être utilisés dans la même list box :
+This property is used to set the row height for a list box footer in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
 
-*   *Pixel* - la valeur de hauteur est appliquée directement à la ligne concernée, quelle que soit la taille de la police contenue dans les colonnes. Si une police est trop grande, le texte est tronqué. De plus, les images sont tronquées ou redimensionnées selon leur format.
+*   *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. If a font is too big, the text is truncated. Moreover, pictures are truncated or resized according to their format.
 
-*   *Ligne* - la hauteur est calculée en tenant compte de la taille de police de la ligne concernée.
+*   *Line* - the height is calculated while taking into account the font size of the row concerned.
     *   If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
     *   This calculation does not take into account the size of pictures nor any styles applied to the fonts.
     *   In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
@@ -42,7 +42,7 @@ Note that converting back and forth may lead to an end result that is different 
 *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
 
-#### Exemple JSON :
+#### JSON Example:
 
 ```
     "List Box": {
@@ -54,17 +54,17 @@ Note that converting back and forth may lead to an end result that is different 
 ```
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom          | Type de données | Valeurs possibles                 |
-| ------------ | --------------- | --------------------------------- |
-| footerHeight | string          | décimales positives +px &#124; em |
+| Name         | Data Type | Possible Values               |
+| ------------ | --------- | ----------------------------- |
+| footerHeight | string    | positive decimal+px &#124; em |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
 
 
-#### Voir également
+#### See also
 
-[En-têtes](properties_Headers.md) - [Pieds List box](listbox_overview.md#list-box-footers)
+[Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)
