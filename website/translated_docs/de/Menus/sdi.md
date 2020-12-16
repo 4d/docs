@@ -3,7 +3,7 @@ id: sdi
 title: SDI mode on Windows
 ---
 
-## Overview
+## Überblick
 
 On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar. SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window.
 
