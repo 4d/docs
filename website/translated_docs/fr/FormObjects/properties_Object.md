@@ -1,30 +1,30 @@
 ---
 id: propertiesObject
-title: Objets
+title: Objects
 ---
 
 ---
 ## Type
 
- `PARAMETRAGE OBLIGATOIRE`
+ `MANDATORY SETTING`
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom  | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                        |
-| ---- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type | string          | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
+| Name | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
+| ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type | string    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 
 ---
-## Nom d'objet
+## Object Name
 
 Each active form object is associated with an object name. Each object name must be unique.
 > Object names are limited to a size of 255 bytes.
@@ -35,20 +35,20 @@ When using 4D’s language, you can refer to an active form object by its object
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom  | Type de données | Valeurs possibles                                                    |
-| ---- | --------------- | -------------------------------------------------------------------- |
-| name | string          | Any allowed name which does not belong to an already existing object |
+| Name | Data Type | Possible Values                                                      |
+| ---- | --------- | -------------------------------------------------------------------- |
+| name | string    | Any allowed name which does not belong to an already existing object |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 
 
 ---
-## Variable ou expression
+## Variable or Expression
 
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
@@ -85,7 +85,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Par exemple:
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
 
 ```4d
   // assign the time 12:00:00 to the variable for the "tstart" object
@@ -105,14 +105,14 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom        | Type de données         | Valeurs possibles                                                                                                                                                                                                                                                                                                                     |
+| Name       | Data Type               | Possible Values                                                                                                                                                                                                                                                                                                                       |
 | ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSource | string, or string array | <li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
 
@@ -135,13 +135,13 @@ However, this property has a typing function in the following specific cases:
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string          | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
+| Name               | Data Type | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string    | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
 
@@ -152,21 +152,21 @@ However, this property has a typing function in the following specific cases:
 A list of space-separated words used as class selectors in css files.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom   | Type de données | Valeurs possibles                                         |
-| ----- | --------------- | --------------------------------------------------------- |
-| class | string          | One string with CSS name(s) separated by space characters |
+| Name  | Data Type | Possible Values                                           |
+| ----- | --------- | --------------------------------------------------------- |
+| class | string    | One string with CSS name(s) separated by space characters |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 
 
 ---
-## Collection ou entity selection
+## Collection or entity selection
 
 To use collection elements or entities to define the row contents of the list box.
 
@@ -178,13 +178,13 @@ The collection or the entity selection must be available to the form when it is 
 *   if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
 > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom        | Type de données | Valeurs possibles                                            |
-| ---------- | --------------- | ------------------------------------------------------------ |
-| dataSource | string          | Expression that returns a collection or an entity selection. |
+| Name       | Data Type | Possible Values                                              |
+| ---------- | --------- | ------------------------------------------------------------ |
+| dataSource | string    | Expression that returns a collection or an entity selection. |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
 
@@ -194,7 +194,7 @@ The collection or the entity selection must be available to the form when it is 
 
 
 ---
-## Source de données
+## Data Source
 
 Specify the type of list box.
 
@@ -205,13 +205,13 @@ Specify the type of list box.
 - **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
 - **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles                                           |
-| ----------- | --------------- | ----------------------------------------------------------- |
-| listboxType | string          | "array", "currentSelection", "namedSelection", "collection" |
+| Name        | Data Type | Possible Values                                             |
+| ----------- | --------- | ----------------------------------------------------------- |
+| listboxType | string    | "array", "currentSelection", "namedSelection", "collection" |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
 
@@ -226,15 +226,15 @@ Specify the type of list box.
 Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom            | Type de données | Valeurs possibles                                             |
-| -------------- | --------------- | ------------------------------------------------------------- |
-| pluginAreaKind | string          | Name of the plug-in external area (starts with a % character) |
+| Name           | Data Type | Possible Values                                               |
+| -------------- | --------- | ------------------------------------------------------------- |
+| pluginAreaKind | string    | Name of the plug-in external area (starts with a % character) |
 
 
-#### Objets pris en charge
-[Zone de plug-in](pluginArea_overview.md)
+#### Objects Supported
+[Plug-in Area](pluginArea_overview.md)
 
 
 
@@ -244,22 +244,22 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom        | Type de données | Valeurs possibles |
-| ---------- | --------------- | ----------------- |
-| radioGroup | string          | Radio group name  |
+| Name       | Data Type | Possible Values  |
+| ---------- | --------- | ---------------- |
+| radioGroup | string    | Radio group name |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Bouton radio](radio_overview.md)
+[Radio Button](radio_overview.md)
 
 
 
 ---
 
-## Titre de menu
+## Title
 
 Allows inserting a label on an object. The font and the style of this label can be specified.
 
@@ -273,13 +273,13 @@ By default, the label is placed in the center of the object. When the object als
 
 For database translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom   | Type de données | Valeurs possibles |
-| ----- | --------------- | ----------------- |
-| Texte | string          | any text          |
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+| text | string    | any text        |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -297,17 +297,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Texte | Date | Heure | Bool | Pict | footer var type     |
-| --------------------- | --- | ----- | ---- | ----- | ---- | ---- | ------------------- |
-| Minimum               | X   |       | X    | X     | X    |      | Same as column type |
-| Maximum               | X   |       | X    | X     | X    |      | Same as column type |
-| Sum                   | X   |       | X    |       | X    |      | Same as column type |
-| Count                 | X   | X     | X    | X     | X    | X    | Entier long         |
-| Average               | X   |       |      | X     |      |      | Réel                |
-| Standard deviation(*) | X   |       |      | X     |      |      | Réel                |
-| Variance(*)           | X   |       |      | X     |      |      | Réel                |
-| Sum squares(*)        | X   |       |      | X     |      |      | Réel                |
-| Custom ("none")       | X   | X     | X    | X     | X    | X    | Any                 |
+| Calculation           | Num | Text | Date | Heure | Bool | Pict | footer var type     |
+| --------------------- | --- | ---- | ---- | ----- | ---- | ---- | ------------------- |
+| Minimum               | X   |      | X    | X     | X    |      | Same as column type |
+| Maximum               | X   |      | X    | X     | X    |      | Same as column type |
+| Sum                   | X   |      | X    |       | X    |      | Same as column type |
+| Count                 | X   | X    | X    | X     | X    | X    | Longint             |
+| Average               | X   |      |      | X     |      |      | Real                |
+| Standard deviation(*) | X   |      |      | X     |      |      | Real                |
+| Variance(*)           | X   |      |      | X     |      |      | Real                |
+| Sum squares(*)        | X   |      |      | X     |      |      | Real                |
+| Custom ("none")       | X   | X    | X    | X     | X    | X    | Any                 |
 
 (*) Only for array type list boxes.
 
@@ -316,12 +316,12 @@ When an automatic calculation is set, it is applied to all the values found in t
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 > Automatic calculations are not supported with: *  footers of columns based on formulas, *  footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. You need to use custom calculations.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom                 | Type de données | Valeurs possibles                                                                                     |
-| ------------------- | --------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string          | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| Name                | Data Type | Possible Values                                                                                       |
+| ------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
+| variableCalculation | string    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box Footer](listbox_overview.md#list-box-footers)
