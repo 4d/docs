@@ -1,26 +1,26 @@
 ---
 id: propertiesEntry
-title: Saisie
+title: Entry
 ---
 
 ---
-## Correction orthographique
+## Auto Spellcheck
 
-4D inclut des fonctionnalités de correction orthographique intégrées et personnalisables. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
 The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom        | Type de données | Valeurs possibles |
-| ---------- | --------------- | ----------------- |
-| spellcheck | boolean         | true, false       |
+| Name       | Data Type | Possible Values |
+| ---------- | --------- | --------------- |
+| spellcheck | boolean   | true, false     |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Zone 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md)
+[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
 
 
 ---
@@ -38,13 +38,13 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles                     |
-| ----------- | --------------- | ------------------------------------- |
-| contextMenu | string          | "automatic" (used if missing), "none" |
+| Name        | Data Type | Possible Values                       |
+| ----------- | --------- | ------------------------------------- |
+| contextMenu | string    | "automatic" (used if missing), "none" |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
@@ -54,7 +54,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 
 ---
-## Saisissable
+## Enterable
 
 The Enterable attribute indicates whether users can enter values into the object.
 
@@ -63,13 +63,13 @@ Objects are enterable by default. If you want to make a field or an object non-e
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom       | Type de données | Valeurs possibles |
-| --------- | --------------- | ----------------- |
-| enterable | boolean         | true, false       |
+| Name      | Data Type | Possible Values |
+| --------- | --------- | --------------- |
+| enterable | boolean   | true, false     |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
@@ -121,14 +121,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles                                                                                                            |
-| ----------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| entryFilter | string          | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
+| Name        | Data Type | Possible Values                                                                                                              |
+| ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | string    | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -153,14 +153,14 @@ When the **Focusable** property is enabled for an object, the object can have th
 When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom       | Type de données | Valeurs possibles |
-| --------- | --------------- | ----------------- |
-| focusable | boolean         | true, false       |
+| Name      | Data Type | Possible Values |
+| --------- | --------- | --------------- |
+| focusable | boolean   | true, false     |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
 
@@ -176,46 +176,46 @@ By default, the object uses the current keyboard layout.
 
 > You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom             | Type de données | Valeurs possibles                                                           |
-| --------------- | --------------- | --------------------------------------------------------------------------- |
-| keyboardDialect | Texte           | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| Name            | Data Type | Possible Values                                                             |
+| --------------- | --------- | --------------------------------------------------------------------------- |
+| keyboardDialect | text      | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
 
 
 
 ---
-## Multilignes
+## Multiline
 
-Cette propriété est disponible pour les [objets de zone de saisie](input_overview.md) contenant les expressions de type texte et les champs de type alpha et texte. Elle peut prendre trois valeurs : Oui, Non, Automatique (par défaut).
+This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
 
-#### Automatique
-- Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques :  
+#### Automatic
+- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
+- In multiline inputs, 4D carries out automatic line returns:  
   ![](assets/en/FormObjects/multilineAuto.png)
 
-#### Non
-- Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. Si le champ ou la variable alpha ou texte contient des retour chariots, le texte situé après le premier retour chariot est effacé dès que la zone est modifiée :  
+#### No
+- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
+- There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
   ![](assets/en/FormObjects/multilineNo.png)
 
-#### Oui
-Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option [Retour à la ligne](properties_Display.md#wordwrap).
+#### Yes
+When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom       | Type de données | Valeurs possibles                                   |
-| --------- | --------------- | --------------------------------------------------- |
-| multiline | Texte           | "yes", "no", "automatic" (par défaut si non défini) |
+| Name      | Data Type | Possible Values                                   |
+| --------- | --------- | ------------------------------------------------- |
+| multiline | text      | "yes", "no", "automatic" (default if not defined) |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [Input](input_overview.md)
 
@@ -244,20 +244,20 @@ You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, fo
 You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
 > You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles                                                  |
-| ----------- | --------------- | ------------------------------------------------------------------ |
-| placeholder | string          | Texte à afficher (grisé) lorsque l'objet ne contient aucune valeur |
+| Name        | Data Type | Possible Values                                                              |
+| ----------- | --------- | ---------------------------------------------------------------------------- |
+| placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Zone de saisie](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Input](input_overview.md)
 
 
-#### Voir également
+#### See also
 
-[Message d'aide](properties_Help.md)
+[Help tip](properties_Help.md)
 
 
 
@@ -267,14 +267,14 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
 
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom           | Type de données | Valeurs possibles |
-| ------------- | --------------- | ----------------- |
-| showSelection | boolean         | true, false       |
+| Name          | Data Type | Possible Values |
+| ------------- | --------- | --------------- |
+| showSelection | boolean   | true, false     |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
 
@@ -293,20 +293,20 @@ You can configure this option by clicking the [...] button in the Shortcuts prop
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom             | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                           |
-| --------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | boolean         | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | boolean         | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | boolean         | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | boolean         | true, false                                                                                                                                                                                                                                                                                 |
-|                 |                 |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string          | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| Name            | Data Type | Possible Values                                                                                                                                                                                                                                                                             |
+| --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean   | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | boolean   | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | boolean   | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | boolean   | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | boolean   | true, false                                                                                                                                                                                                                                                                                 |
+|                 |           |                                                                                                                                                                                                                                                                                             |
+| shortcutKey     | string    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
-#### Objets pris en charge
+#### Objects Supported
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
 
@@ -315,7 +315,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 
 ---
-## Saisie sur clic unique
+## Single-Click Edit
 
 Enables direct passage to edit mode in list boxes.
 
@@ -323,12 +323,12 @@ When this option is enabled, list box cells switch to edit mode after a single u
 
 When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom             | Type de données | Valeurs possibles |
-| --------------- | --------------- | ----------------- |
-| singleClickEdit | boolean         | true, false       |
+| Name            | Data Type | Possible Values |
+| --------------- | --------- | --------------- |
+| singleClickEdit | boolean   | true, false     |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
