@@ -1,22 +1,22 @@
 ---
 id: propertiesCrop
-title: Découpage
+title: Crop
 ---
 
 ---
 ## Columns
 
-Définit le nombre de colonnes dans un tableau d'imagettes.
+Sets the number of columns in a thumbnail table.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom         | Type de données | Valeurs possibles |
-|:----------- |:---------------:| ----------------- |
-| columnCount |     integer     | minimum: 1        |
+| Name        | Data Type | Possible Values |
+|:----------- |:---------:| --------------- |
+| columnCount |  integer  | minimum: 1      |
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Bouton image](pictureButton_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md)
+[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
 
 
 
@@ -24,14 +24,14 @@ Définit le nombre de colonnes dans un tableau d'imagettes.
 ---
 ## Rows
 
-Définit le nombre de lignes dans un tableau d'imagettes.
+Sets the number of rows in a thumbnail table.
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom      | Type de données | Valeurs possibles |
-|:-------- |:---------------:| ----------------- |
-| rowCount |     integer     | minimum: 1        |
+| Name     | Data Type | Possible Values |
+|:-------- |:---------:| --------------- |
+| rowCount |  integer  | minimum: 1      |
 
-#### Objets pris en charge
+#### Objects Supported
 
-[Bouton image](pictureButton_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md)
+[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
