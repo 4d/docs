@@ -4,43 +4,43 @@ title: '$catalog'
 ---
 
 
-The catalog describes all the dataclasses and attributes available in the datastore.
+Le catalogue décrit toutes les dataclass et les attributs disponibles dans le datastore.
 
 
-## Available syntaxes
+## Syntaxe
 
-| Syntax                                        | Example              | Description                                                                      |
-| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Returns information about a dataclass and its attributes                         |
+| Syntaxe                                       | Exemple              | Description                                                                            |
+| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                      | `/$catalog`          | Retourne une liste des dataclasse de votre projet avec deux URI                        |
+| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs |
+| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Renvoie des informations sur une dataclass et ses attributs                            |
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
+Retourne une liste de dataclass dans votre projet avec deux URI : une pour accéder aux informations sur sa structure et une pour récupérer les données de la dataclass
 
 
 ### Description
 
-When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
+Lorsque vous appelez `$catalog`, une liste des dataclass est retournée avec deux URI pour chaque dataclass dans le datastore de votre projet.
 
-Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+Seules les dataclass exposées apparaissent dans cette liste pour le datastore de votre projet. Pour plus d'informations, reportez-vous à la section [**Exposition des tableaux et des champs**](configuration.md#exposing-tables-and-fields).
 
-Here is a description of the properties returned for each dataclass in your project's datastore:
-
-
-| Property | Type   | Description                                                                       |
-| -------- | ------ | --------------------------------------------------------------------------------- |
-| name     | Chaine | Name of the dataclass.                                                            |
-| uri      | Chaine | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI  | Chaine | A URI that allows you to view the data in the dataclass.                          |
+Voici une description des propriétés retournées pour chaque dataclass dans le datastore de votre projet :
 
 
-### Example
+| Propriété | Type   | Description                                                                          |
+| --------- | ------ | ------------------------------------------------------------------------------------ |
+| name      | Chaine | Nom de la dataclass.                                                                 |
+| uri       | Chaine | Un URI vous permettant d'obtenir des informations sur la dataclass et ses attributs. |
+| dataURI   | Chaine | URI vous permettant d'afficher les données dans la dataclass.                        |
+
+
+### Exemple
 
 `GET  /rest/$catalog`
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -62,20 +62,20 @@ Here is a description of the properties returned for each dataclass in your proj
 
 ## $catalog/$all
 
-Returns information about all of your project's dataclasses and their attributes
+Retourne des informations sur toutes les dataclasse de votre projet et leurs attributs
 
 ### Description
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model.
+En appelant `$catalog/$all`, vous pouvez recevoir des informations détaillées sur les attributs de chacune des classes du datastore du modèle courant de votre projet.
 
-For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+Pour plus d'informations sur ce qui est retourné pour chaque classe du datastore et ses attributs, utilisez [`$catalog/{dataClass}`](#catalogdataClass).
 
 
-### Example
+### Exemple
 
 `GET  /rest/$catalog/$all`
 
-**Result**:
+**Résultat** :
 
 ````
 {
@@ -183,64 +183,64 @@ For more information about what is returned for each datastore class and its att
 
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes
+Renvoie des informations sur une dataclass et ses attributs
 
 ### Description
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the datastore classes in your project's datastore, use [`$catalog/$all`](#catalogall).
+L'appel de `$catalog/{dataClass}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient. Si vous souhaitez récupérer ces informations pour toutes les classes de datastore dans le datastore de votre projet, utilisez [`$catalog/$all`](#catalogall).
 
-The information you retrieve concerns the following:
+Les informations que vous récupérez concernent :
 
 *   Dataclass
-*   Attribute(s)
-*   Method(s) if any
-*   Primary key
+*   Attribut(s)
+*   Méthode(s) le cas échéant
+*   Clé primaire
 
 ### DataClass
 
-The following properties are returned for an exposed dataclass:
+Les propriétés suivantes sont retournées pour une dataclass exposée :
 
 
-| Property       | Type   | Description                                                                                        |
-| -------------- | ------ | -------------------------------------------------------------------------------------------------- |
-| name           | Chaine | Name of the dataclass                                                                              |
-| collectionName | Chaine | Name of an entity selection on the dataclass                                                       |
-| tableNumber    | Number | Table number in the 4D database                                                                    |
-| scope          | Chaine | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
-| dataURI        | Chaine | A URI to the data in the dataclass                                                                 |
+| Propriété      | Type   | Description                                                                                                                  |
+| -------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| name           | Chaine | Nom de la dataclass                                                                                                          |
+| collectionName | Chaine | Nom d'une entity selection dans la dataclass                                                                                 |
+| tableNumber    | Nombre | Numéro de la table dans la base 4D                                                                                           |
+| scope          | Chaine | Étendue de la dataclass (à noter que seules les classes du datastore dont **l'étendue** (scope) est publique sont affichées) |
+| dataURI        | Chaine | Un URI aux données de la dataclass                                                                                           |
 
 
-### Attribute(s)
+### Attribut(s)
 
-Here are the properties for each exposed attribute that are returned:
+Voici les propriétés de chaque attribut exposé qui sont retournées :
 
-| Property    | Type    | Description                                                                                                                                                 |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | Chaine  | Attribute name.                                                                                                                                             |
-| kind        | Chaine  | Attribute type (storage or relatedEntity).                                                                                                                  |
-| fieldPos    | Number  | Position of the field in the database table).                                                                                                               |
-| scope       | Chaine  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
-| indexed     | Chaine  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
-| type        | Chaine  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| identifying | Booléen | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                   |
-| path        | Chaine  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                       |
- foreignKey|String   |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.|
+| Propriété   | Type    | Description                                                                                                                                                                      |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | Chaine  | Le nom de l’attribut.                                                                                                                                                            |
+| kind        | Chaine  | Type d'attribut (stockage ou relatedEntity).                                                                                                                                     |
+| fieldPos    | Nombre  | Position du champ dans la table de la base.                                                                                                                                      |
+| scope       | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                             |
+| indexed     | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                              |
+| type        | Chaine  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
+| identifying | Booléen | Cette propriété retourne True si l'attribut est la clé primaire. Sinon, cette propriété n'apparaîtra pas.                                                                        |
+| path        | Chaine  | Nom du lien d'un attribut relatedEntity ou relateEntities.                                                                                                                       |
+ foreignKey|Chaine|Pour un attribut relatedEntity, nom de l'attribut associé.| inverseName |Chaine|Nom du lien opposé pour un attribut relatedEntity ou relateEntities.|
 
-### Method(s)
+### Méthode(s)
 
-Defines the project methods asociated to the dataclass, if any.
+Définit les méthodes projet associées à la dataclass, le cas échéant.
 
-### Primary Key
+### Clé primaire
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
+L'objet clé retourne le nom de l'attribut (**name**) défini comme **clé primaire** pour la classe du datastore.
 
 
-### Example
-You can retrieve the information regarding a specific datastore class.
+### Exemple
+Vous pouvez récupérer les informations concernant une classe de datastore spécifique.
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**Résultat** :
 
 ````
 {
