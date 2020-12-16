@@ -63,11 +63,14 @@ Function add($x : Integer)
 
 ## Paramètres nommés
 
-Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+## Paramètres nommés Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
 - Pour les fonctions de classe, les paramètres sont déclarés avec le mot clé `Function`.
 - Pour les méthodes (méthodes projet, méthodes objet formulaire, méthodes de base de données et les triggers), les paramètres sont déclarés à l'aide du mot clé `#DECLARE` saisi au début du code de la méthode.
 
+Voici quelques exemples :
+
+```4d
 Voici quelques exemples :
 
 ```4d
@@ -465,7 +468,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 
 ## Valeurs ou références
 
-Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la**valeur résultante** sur les variables locales dans la fonction de classe ou la sous-routine. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine/fonction de classe, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la**valeur résultante** sur les variables locales dans la fonction de classe ou la sous-routine. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Par exemple:
 
 ```4d
     //Voici du code extrait de la méthode MY_METHOD
