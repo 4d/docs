@@ -1,187 +1,168 @@
 ---
 id: propertiesBackgroundAndBorder
-title: 背景色と境界線
+title: Background and Border
 ---
 
 ---
-## 交互に使用する背景色
+## Alternate Background Color
 
-奇数番の行/列に使用するための異なる背景色を設定することができます。 デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
+Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名             | データタイプ | とりうる値                                |
-| ------------- | ------ | ------------------------------------ |
-| alternateFill | string | 任意の css値; "transparent"; "automatic" |
+| Name          | Data Type | Possible Values                           |
+| ------------- | --------- | ----------------------------------------- |
+| alternateFill | string    | any css value; "transparent"; "automatic" |
 
-#### 対象オブジェクト
-[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
-
-
-
----
-## 背景色/塗りカラー
-
-オブジェクトの背景色を設定します。
-
-リストボックスの場合にはデフォルトで、*自動* が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
-
-#### JSON 文法
-
-
-| 名    | データタイプ | とりうる値                                |
-| ---- | ------ | ------------------------------------ |
-| fill | string | 任意の css値; "transparent"; "automatic" |
-
-#### 対象オブジェクト
-
-[階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
-
-#### 参照
-[透過](#透過)
-
-
----
-## 背景色式
-
-`セレクションとコレクション型リストボックス`
-
-リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](https://livedoc.4d.com/--18/-/OBJECT-SET-RGB-COLORS.301-4505456.ja.html) コマンドの説明を参照ください。
-
-また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk background color expression` 定数を指定して設定することもできます。
-> コレクション/エンティティセレクション型リストボックスでは、このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
-
-#### JSON 文法
-
-| 名             | データタイプ | とりうる値       |
-| ------------- | ------ | ----------- |
-| rowFillSource | string | RGBカラー値を返す式 |
-
-#### 対象オブジェクト
-[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
-
-
-
+#### Objects Supported
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
 ---
-## 境界線スタイル
+## Background Color / Fill Color
 
-リストボックスの境界線のスタイルを設定します。
+Defines the background color of an object.
 
-#### JSON 文法
+In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
-| 名           | データタイプ | とりうる値                                                             |
-| ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+#### JSON Grammar
 
-#### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+| Name | Data Type | Possible Values                           |
+| ---- | --------- | ----------------------------------------- |
+| fill | string    | any css value; "transparent"; "automatic" |
 
+#### Objects Supported
+
+[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+
+#### See also
+[Transparent](#transparent)
 
 
 ---
-## 点線タイプ
+## Background Color Expression
 
-点線のタイプを、点と白のパターンにより指定します。
+`Selection and collection type list boxes`
 
-#### JSON 文法
+An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
 
-| 名               | データタイプ     | とりうる値                                              |
-| --------------- | ---------- | -------------------------------------------------- |
-| strokeDashArray | 数値配列または文字列 | 例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
+You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
+> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
-#### 対象オブジェクト
+#### JSON Grammar
 
-[四角](shapes_overview.md#四角) - [楕円](shapes_overview.md#楕円) - [線](shapes_overview.md#線)
+| Name          | Data Type | Possible Values                           |
+| ------------- | --------- | ----------------------------------------- |
+| rowFillSource | string    | An expression returning a RGB color value |
+
+#### Objects Supported
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+
+
 
 
 
 
 ---
-## 追加の空白の行を非表示
+## Border Line Style
 
-リストボックスオブジェクト下部に追加される余分な空白行の表示を管理します。 デフォルトで、4D は空のエリアを埋めるためにこのような行を追加します:
+Allows setting a standard style for the object border.
+
+#### JSON Grammar
+
+| Name        | Data Type | Possible Values                                                   |
+| ----------- | --------- | ----------------------------------------------------------------- |
+| borderStyle | text      | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+
+#### Objects Supported
+
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+
+
+
+---
+## Dotted Line Type
+
+Describes dotted line type as a sequence of black and white points.
+
+#### JSON Grammar
+
+| Name            | Data Type              | Possible Values                                                          |
+| --------------- | ---------------------- | ------------------------------------------------------------------------ |
+| strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+
+#### Objects Supported
+
+[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+
+
+
+
+---
+## Hide extra blank rows
+
+Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-このオプションをチェックすると、これらの空白行を除去することができます。 リストボックスオブジェクトの下部は空のままになります:
+You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
-#### JSON 文法
+#### JSON Grammar
 
-| 名                  | データタイプ  | とりうる値       |
-| ------------------ | ------- | ----------- |
-| hideExtraBlankRows | boolean | true, false |
+| Name               | Data Type | Possible Values |
+| ------------------ | --------- | --------------- |
+| hideExtraBlankRows | boolean   | true, false     |
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[リストボックス](listbox_overview.md)
-
-
-
-
----
-## 線カラー
-
-オブジェクトの線の色を指定します。 カラーは次の方法で指定できます:
-
-* カラーネーム - 例: "red"
-* 16進数値 - 例: "#ff0000"
-* RGB値 - 例: "rgb(255,0,0)"
-
-このプロパティは
-OBJECT SET RGB COLORS** コマンドによって設定することができます。</p> 
-
-
-
-#### JSON 文法
-
-| 名      | データタイプ | とりうる値                                |
-| ------ | ------ | ------------------------------------ |
-| stroke | string | 任意の css値; "transparent"; "automatic" |
-
-
-
-
-> このプロパティはテキスト系のオブジェクトでも利用可能です。この場合、このプロパティはフォントカラーおよびオブジェクトの線カラーの両方を指定します ([フォントカラー](properties_Text.md#フォントカラー) 参照)。
-
-
-
-#### 対象オブジェクト
-
-[線](shapes_overview.md#線) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角)
-
+[List Box](listbox_overview.md#overview)
 
 
 
 
 ---
+## Line Color
+
+Designates the color of the object's lines. The color can be specified by:
+
+* a color name - like "red"
+* a HEX value - like "#ff0000"
+* an RGB value - like "rgb(255,0,0)"
+
+You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+
+#### JSON Grammar
+
+| Name   | Data Type | Possible Values                           |
+| ------ | --------- | ----------------------------------------- |
+| stroke | string    | any css value, "transparent", "automatic" |
+
+> This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
+
+#### Objects Supported
+
+[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
-## 線幅
 
-線の幅を指定します。
+---
+## Line Width
 
+Designates the thickness of a line.
 
+#### JSON Grammar
 
-#### JSON 文法
+| Name        | Data Type | Possible Values                                                   |
+| ----------- | --------- | ----------------------------------------------------------------- |
+| strokeWidth | number    | 0 for smallest width on a printed form, or any integer value < 20 |
 
-| 名           | データタイプ | とりうる値                             |
-| ----------- | ------ | --------------------------------- |
-| strokeWidth | number | 印刷されるフォームにおける最小幅 0 から、整数値 < 20 まで |
+#### Objects Supported
 
-
-
-
-#### 対象オブジェクト
-
-[線](shapes_overview.md#線) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角)
-
-
+[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
 
 
 
@@ -190,90 +171,61 @@ OBJECT SET RGB COLORS** コマンドによって設定することができま�
 
 
 ---
+## Row Background Color Array
 
+`Array type list boxes`
 
-## 行背景色配列
+The name of an array to apply a custom background color to each row of the list box or column.
 
-`配列型リストボックス`
+The name of a Longint array must be entered. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
-リストボックスまたはリストボックス列の各行にカスタムの背景色を適用するのに使用する配列名です。
-
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
-
-たとえば、リストボックスプロパティにてグレー/ライトグレーカラーが行の交互背景色として設定されているとします。 同じリストボックスに行背景色配列が指定されており、行内で負の値が一つでもあれば色をオレンジに変えます:
-
-
+For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
 
 ```4d
- <>_BgndColors{$i}:=0x00FFD0B0 // オレンジ
- <>_BgndColors{$i}:=-255 // デフォルト値
+ <>_BgndColors{$i}:=0x00FFD0B0 // orange
+ <>_BgndColors{$i}:=-255 // default value
 ```
-
-
 ![](assets/en/FormObjects/listbox_styles1.png)
 
-次に、負の値を持つセルの色を濃いオレンジで示したい場合、 各列にも行背景色配列を設定します (例: <>_BgndColor_1, <>_BgndColor_2 と <>_BgndColor_3)。 これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
-
-
+Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // 濃いオレンジ
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
 ```
-
-
 ![](assets/en/FormObjects/listbox_styles2.png)
 
-`LISTBOX SET ROW FONT STYLE` や `LISTBOX SET ROW COLOR` コマンドを使っても同じような効果が得られます。 コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。この場合、これらはコマンドによって動的に作成されます。
+You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
 
 
+#### JSON Grammar
 
+| Name          | Data Type | Possible Values              |
+| ------------- | --------- | ---------------------------- |
+| rowFillSource | string    | The name of a longint array. |
 
-#### JSON 文法
-
-| 名             | データタイプ | とりうる値      |
-| ------------- | ------ | ---------- |
-| rowFillSource | string | 倍長整数型配列の名前 |
-
-
-
-
-#### 対象オブジェクト
-
-[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
-
-
+#### Objects Supported
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
 
 
 ---
+## Transparent
 
+Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
 
-## 透過
+#### JSON Grammar
 
-リストボックスの背景を透明にします。 このプロパティが有効になっていると、列に対して設定されている [交互に使用する背景色](#交互に使用する背景色) および [背景色](#背景色-塗りカラー) の設定は無視されます。
+| Name | Data Type | Possible Values |
+| ---- | --------- | --------------- |
+| fill | text      | "transparent"   |
 
+#### Objects Supported
+[List Box](listbox_overview.md#overview)
 
-
-#### JSON 文法
-
-| 名    | データタイプ | とりうる値         |
-| ---- | ------ | ------------- |
-| fill | text   | "transparent" |
-
-
-
-
-#### 対象オブジェクト
-
-[リストボックス](listbox_overview.md)
-
-
-
-#### 参照
-
-[背景色/塗りカラー](#背景色-塗りカラー)
+#### See also
+[Background Color / Fill Color](#background-color-fill-color)
