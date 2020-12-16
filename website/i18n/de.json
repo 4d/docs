@@ -12,7 +12,7 @@
         "title": "Log file (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -21,22 +21,22 @@
         "title": "Backup Settings"
       },
       "Concepts/about": {
-        "title": "About the 4D Language"
+        "title": "Über die 4D Programmiersprache"
       },
       "Concepts/arrays": {
         "title": "Arrays"
       },
       "Concepts/branching": {
-        "title": "Branching structures"
+        "title": "Abfragestrukturen"
       },
       "Concepts/looping": {
-        "title": "Looping structures"
+        "title": "Schleifenstrukturen"
       },
       "Concepts/components": {
-        "title": "Components"
+        "title": "Komponenten"
       },
       "Concepts/data-types": {
-        "title": "Data types overview"
+        "title": "Überblick über Datentypen"
       },
       "Concepts/blob": {
         "title": "BLOB"
@@ -48,62 +48,62 @@
         "title": "Collection"
       },
       "Concepts/date": {
-        "title": "Date"
+        "title": "Datum"
       },
       "Concepts/null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null und Undefiniert"
       },
       "Concepts/number": {
-        "title": "Number (Real, Longint, Integer)"
+        "title": "Numerisch (Zahl, Lange Ganzzahl, Ganzzahl)"
       },
       "Concepts/object": {
-        "title": "Objects"
+        "title": "Objekte"
       },
       "Concepts/picture": {
-        "title": "Picture"
+        "title": "Bild"
       },
       "Concepts/pointer": {
-        "title": "Pointer"
+        "title": "Zeiger"
       },
       "Concepts/string": {
         "title": "String"
       },
       "Concepts/time": {
-        "title": "Time"
+        "title": "Zeit"
       },
       "Concepts/variant": {
         "title": "Variant"
       },
       "Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "Fehlerverwaltung"
       },
       "Concepts/control-flow": {
-        "title": "Control flow overview"
+        "title": "Ablaufsteuerung Überblick"
       },
       "Concepts/identifiers": {
-        "title": "Identifiers"
+        "title": "Namensregeln"
       },
       "Concepts/interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "Interpretierter und kompilierter Modus"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "Methoden"
       },
       "Concepts/parameters": {
-        "title": "Parameters"
+        "title": "Parameter"
       },
       "Concepts/plug-ins": {
-        "title": "Plug-ins"
+        "title": "Plug-Ins"
       },
       "Concepts/quick-tour": {
-        "title": "A Quick Tour",
-        "sidebar_label": "A Quick Tour"
+        "title": "Schnelle Tour",
+        "sidebar_label": "Schnelle Tour"
       },
       "Concepts/shared": {
-        "title": "Shared objects and collections"
+        "title": "Shared Objects und Shared Collections"
       },
       "Concepts/variables": {
-        "title": "Variables"
+        "title": "Variablen"
       },
       "FormEditor/stylesheets": {
         "title": "Style sheets"
@@ -112,7 +112,7 @@
         "title": "Object libraries"
       },
       "FormEditor/pictures": {
-        "title": "Pictures"
+        "title": "Bilder"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -157,7 +157,7 @@
         "title": "Progress Indicator"
       },
       "FormObjects/propertiesAction": {
-        "title": "Action"
+        "title": "Aktion"
       },
       "FormObjects/propertiesAnimation": {
         "title": "Animation"
@@ -202,13 +202,13 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "Objekte"
       },
       "FormObjects/propertiesPicture": {
-        "title": "Picture"
+        "title": "Bild"
       },
       "FormObjects/propertiesPlugIns": {
-        "title": "Plug-ins"
+        "title": "Plug-Ins"
       },
       "FormObjects/propertiesPrint": {
         "title": "Print"
@@ -286,7 +286,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -295,44 +295,44 @@
         "title": "SDI mode on Windows"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "Seite Aktivität Analyse",
+        "sidebar_label": "Seite Aktivität Analyse"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "Seite Backup",
+        "sidebar_label": "Seite Backup"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "Seite Kompakt",
+        "sidebar_label": "Seite Kompakt"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "Seite Verschlüsseln",
+        "sidebar_label": "Seite Verschlüsseln"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "Seite Information",
+        "sidebar_label": "Seite Information"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Überblick",
+        "sidebar_label": "Überblick"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "Seite Reparieren",
+        "sidebar_label": "Seite Reparieren"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "Seite Wiederherstellen",
+        "sidebar_label": "Seite Wiederherstellen"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "Seite Zurückfahren",
+        "sidebar_label": "Seite Zurückfahren"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "Seite Prüfen",
+        "sidebar_label": "Seite Prüfen"
       },
       "Project/architecture": {
         "title": "Architecture of a 4D project"
@@ -347,7 +347,7 @@
         "title": "Developing a project"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -446,7 +446,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       }
     },
     "links": {
@@ -456,7 +456,7 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
-      "4D Language Concepts": "4D Language Concepts",
+      "4D Language Concepts": "Konzepte der 4D Programmiersprache",
       "Project Databases": "Project Databases",
       "Form Editor": "Form Editor",
       "Form Objects": "Form Objects",
@@ -480,7 +480,7 @@
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
-    "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
+    "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Backup and Restore|no description given": "Backup and Restore",
     "Users and Groups|no description given": "Users and Groups",
     "Getting started|no description given": "Getting started",
