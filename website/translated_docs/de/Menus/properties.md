@@ -23,7 +23,7 @@ You can set some properties of the menu commands by using control characters (me
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Beschreibung                | Usage                                                         |
+| Character   | Description                 | Usage                                                         |
 | ----------- | --------------------------- | ------------------------------------------------------------- |
 | (           | open parenthese             | Disable item                                                  |
 | <B          | less than B                 | Bold font                                                     |
@@ -40,7 +40,7 @@ You can associate a custom parameter with each menu item. A menu item parameter 
 
 Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
 
-## Aktion
+## Action
 
 Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a **Monthly Report** menu command can call a project method that prepares a monthly report from a table containing financial data. The **Cut** menu command usually calls the `cut` standard action in order to move the selection to the clipboard and erase it from the window in the foreground.
 
