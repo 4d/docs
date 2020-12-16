@@ -11,7 +11,7 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 ## Available syntaxes
 
-| Syntax                                                                     | Beispiel                    | Beschreibung                                                                                         |
+| Syntax                                                                     | Example                     | Description                                                                                          |
 | -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Returns all the data (by default the first 100 entities) for the dataclass                           |
 | [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Returns the data for the specific entity defined by the dataclass's primary key                      |
@@ -26,35 +26,35 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
 
-### Beschreibung
+### Description
 
 When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
 
 Here is a description of the data returned:
 
-| Property      | Typ        | Beschreibung                                                                                                                                                                                    |
+| Property      | Type       | Description                                                                                                                                                                                     |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | String     | Name of the datastore class.                                                                                                                                                                    |
-| __COUNT       | Zahl       | Number of entities in the datastore class.                                                                                                                                                      |
-| __SENT        | Zahl       | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
-| __FIRST       | Zahl       | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
+| __COUNT       | Number     | Number of entities in the datastore class.                                                                                                                                                      |
+| __SENT        | Number     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
+| __FIRST       | Number     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
 | __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent. |
 
 Each entity contains the following properties:
 
-| Property    | Typ    | Beschreibung                                                                                               |
+| Property    | Type   | Description                                                                                                |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
 | __KEY       | String | Value of the primary key defined for the datastore class.                                                  |
-| __TIMESTAMP | Datum  | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | Zahl   | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
+| __STAMP     | Number | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Beispiel:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company/name,address`
 
 
 
-### Beispiel
+### Example
 
 Return all the data for a specific datastore class.
 
@@ -144,13 +144,13 @@ Return all the data for a specific datastore class.
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
 
-### Beschreibung
+### Description
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your datastore class. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
 For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Beispiel:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company(1)/name,address`
 
@@ -158,7 +158,7 @@ If you want to expand a relation attribute using `$expand`, you do so by specify
 
  `GET  /rest/Company(1)/name,address,staff?$expand=staff`
 
-### Beispiel
+### Example
 
 The following request returns all the public data in the Company datastore class whose key is 1.
 
@@ -193,13 +193,13 @@ The following request returns all the public data in the Company datastore class
 
 Returns the data for one entity in which the attribute's value is defined
 
-### Beschreibung
+### Description
 
 By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Beispiel:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
@@ -207,7 +207,7 @@ If you want to use a relation attribute using [$attributes]($attributes.md), you
 
  `GET  /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name`
 
-### Beispiel
+### Example
 
 The following request returns all the public data of the employee named "Jones".
 
@@ -218,7 +218,7 @@ The following request returns all the public data of the employee named "Jones".
 
 Returns an object or a collection based on a project method.
 
-### Beschreibung
+### Description
 
 Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
 
@@ -255,7 +255,7 @@ You can POST data in the body part of the request, for example:
 
 
 
-### Beispiele
+### Examples
 
 #### Table scope
 
