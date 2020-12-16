@@ -1,32 +1,32 @@
 ---
 id: shared
-title: Shared objects and collections
+title: 共有オブジェクトと共有コレクション
 ---
 
-## Overview
-**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
+## 概要
+**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](Concepts/dt_object.md) と [コレクション](Concepts/dt_collection.md) です。 [インタープロセス変数](Concepts/variables.md#インタープロセス変数) に比べると、共有オブジェクトと共有コレクションは **プリエンプティブ4Dプロセス** と互換性があるという点で利点があります。つまり、`New process` や `CALL WORKER` といったコマンドの引数として、参照の形で渡すことができるということです。
 
-Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
+共有オブジェクトと共有コレクションは、標準の `C_OBJECT` と `C_COLLECTION` コマンドで宣言された変数に保存することができますが、専用のコマンドを使用してインスタンス化されている必要があります:
 
-- to create a shared object, use the `New shared object` command,
-- to create a shared collection, use the `New shared collection` command.
+- 共有オブジェクトを作成するには、`New shared object` コマンドを使用します。
+- 共有コレクションを作成するには、`New shared collection` コマンドを使用します。
 
-**Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+**注:** 共有オブジェクトと共有コレクションは標準の (非共有の) オブジェクトおよびコレクションのプロパティとして設定することができます。
 
-In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
+共有オブジェクト/コレクションを編集するには、**Use...End use** 構文を使う必要があります。 共有オブジェクト/コレクションの値を読むにあたっては、**Use...End use** は必要ありません。
 
-A unique, global catalog returned by the `Storage` command is always available throughout the database and its components, and can be used to store all shared objects and collections.
+`Storage` コマンドが返す、データベースにおいて固有かつグローバルなカタログは、そのデータベース内あるいはコンポーネントからいつでも利用することができ、すべての共有オブジェクトおよびコレクションを保存するのに使用することができます。
 
-## Using shared objects or collections
-Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
+## 共有オブジェクト/共有コレクションの使用
+`New shared object` あるいは `New shared collection` コマンドでインスタンス化されると、その共有オブジェクト/コレクションの属性と要素はどのプロセスからでも編集/読み出しができるようになります。
 
-### Modification
-Modifications can be applied to shared objects and shared collections:
+### 編集
+共有オブジェクトと共有コレクションは、編集することが可能です:
 
-- adding or removing object properties,
-- adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
+- オブジェクトプロパティの追加・削除
+- 値の追加・編集 (共有オブジェクトがサポートしている範囲内で)。これには、他の共有オブジェクトやコレクションの追加・編集も含まれます (この場合、共有グループを作成します。後述参照)
 
-However, all modification instructions in a shared object or collection must be surrounded by the `Use...End use` keywords, otherwise an error is generated.
+ただし、共有オブジェクトあるいは共有コレクションを編集するコードは、必ず `Use...End use` 構文に組み込まれている必要があり、そうでない場合にはエラーが返されます。
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -35,63 +35,63 @@ However, all modification instructions in a shared object or collection must be 
  End Use
 ```
 
-A shared object/collection can only be modified by one process at a time. `Use` locks the shared object/collection from other threads, while the last `End use` unlocks all objects and collections. Trying to modify a shared object/collection without at least one `Use...End use` generates an error. When a process calls `Use...End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use...End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
+一度に 1プロセスのみ、共有オブジェクト/コレクションを編集することができます。 `Use` は共有オブジェクト/コレクションを他のスレッドからアクセスできないようにロックする一方、`End use` はこのロックを解除します。 `Use...End use` を使わずに共有オブジェクト/コレクションを編集しようとすると、エラーが生成されます。 すでに他のプロセスによって使用されている共有オブジェクト/コレクションに対して、別のプロセスが `Use...End use` を呼び出した場合、先着プロセスが `End use` でロックを解除するまで、その呼び出しは待機状態になります (エラーは生成されません)。 したがって、`Use...End use` 構文内の処理は迅速に実行され、ロックは可及的速やかに解除される必要があります。 そのため、共有オブジェクト/コレクションをインターフェース(ダイアログボックスなど) から直接編集することは避けることが強く推奨されます。
 
-Assigning shared objects/collections to properties or elements of other shared objects/collections is allowed and creates **shared groups**. A shared group is automatically created when a shared object/collection is set as property value or element of another shared object/collection. Shared groups allow nesting shared objects and collections but enforce additional rules:
+共有オブジェクト/コレクションを他の共有オブジェクト/コレクションのプロパティあるいは要素に割り当てることは可能で、このとき **共有グループ** が作成されます。 共有グループは、共有オブジェクト/コレクションのプロパティ値あるいは要素として他の共有オブジェクト/コレクションが設定されたときに自動的に作成されます。 共有グループを使用すると共有オブジェクトを入れ子にすることができますが、以下のルールに気をつける必要があります:
 
-- Calling `Use` on a shared object/collection of a group will lock properties/elements of all shared objects/collections belonging to the same group.
-- A shared object/collection can only belong to one shared group. An error is returned if you try to set an already grouped shared object/collection to a different group.
-- Grouped shared objects/collections cannot be ungrouped. Once included in a shared group, a shared object/collection is linked permanently to that group during the whole session. Even if all references of an object/collection are removed from the parent object/collection, they will remain linked.
+- あるグループの共有オブジェクト/コレクションに対して `Use` を使うと、そのグループに所属するすべての共有オブジェクト/コレクションのプロパティ/要素がロックされます。
+- 共有オブジェクト/コレクションは一つの共有グループにしか所属することができません。 すでにグループに所属している共有オブジェクト/コレクションを他のグループへと割り当てようとした場合、エラーが返されます。
+- 一旦グループ化された共有オブジェクト/コレクションについて、グループを解除することはできません。 一度共有グループに含まれた共有オブジェクト/コレクションは、セッション中はずっと同グループに所属することになります。 親オブジェクト/コレクションから子オブジェクト/コレクションへの参照をすべて削除したとしても、両者のリンクが解除されるわけではありません。
 
-Please refer to example 2 for an illustration of shared group rules.
+共有グループのルールについての詳細は、例題2を参照してください。
 
-**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
+**注:** 共有グループは、*ロック識別子* と呼ばれる内部プロパティによって管理されています。 この値についての詳細は、[ランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/Shared-objects-and-shared-collections.300-4505654.ja.html#3648963) を参照ください。
 
-### Read
-Reading properties or elements of a shared object/collection is allowed without having to call the `Use...End use` structure, even if the shared object/collection is in use by another process.
+### 読み出し
+たとえ共有オブジェクト/コレクションが他のプロセスによって使用中であっても、それらのプロパティや要素は、`Use...End use` 構文を呼び出さずとも取得することが可能です。
 
-However, it is necessary to read a shared object/collection within `Use...End use` when several values are linked together and must be read at once, for consistency reasons.
+ただし、複数の値が互いにリンクしていてそれらを一度に読み出す必要がある場合には、一貫性の観点から、共有オブジェクト/コレクションを `Use...End use` 内で扱う必要があります。
 
-### Duplication
-Calling `OB Copy` with a shared object (or with an object containing shared object(s) as properties) is possible, but will return a standard (not shared) object including its contained objects (if any).
+### 複製
+共有オブジェクト (あるいは共有オブジェクトをプロパティとして格納しているオブジェクト) に対して `OB Copy` コマンドを使用することは可能ですが、含まれている子オブジェクト含め、標準 (非共有) のオブジェクトが戻り値として返されます。
 
-### Storage
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the `Storage` command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
+### ストレージ
+**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 この共有オブジェクトは `Storage` コマンドから返されます。 このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
 
-Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
+`ストレージ` オブジェクトは標準の共有オブジェクトとは異なり、共有オブジェクト/コレクションがプロパティとして追加されたときでも共有グループを作成しないという点に注意してください。 この例外的な振る舞いにより、**ストレージ** オブジェクトを使用するたびに、リンクされている共有オブジェクト/コレクションをすべてロックせずに済みます。
 
-For more information, refer to the `Storage` command description.
+詳細な情報については、`Storage` コマンドの詳細を参照してください。
 
 ## Use...End use
-The formal syntax of the `Use...End use` structure is:
+`Use...End use` 構文の正式なシンタックスは、以下の通りです:
 
 ```4d
  Use(Shared_object_or_Shared_collection)
-    statement(s)
+    statement(s) // ステートメント
  End use
 ```
 
-The `Use...End use` structure defines a sequence of statements that will execute tasks on the *Shared_object_or_Shared_collection* parameter under the protection of an internal semaphore. *Shared_object_or_Shared_collection* can be any valid shared object or shared collection.
+`Use...End use` 構文は、内部セマフォーの保護下において *Shared_object_or_Shared_collection* 引数に対して処理を実行するステートメントを定義します。 *Shared_object_or_Shared_collection* として任意の有効な共有オブジェクトあるいは共有コレクションを渡すことができます。
 
-Shared objects and shared collections are designed to allow communication between processes, in particular, **preemptive 4D processes**. They can be passed by reference as parameters from a process to another one. For detailed information on shared objects or shared collections, refer to the **Shared objects and shared collections** page. Surrounding modifications on shared objects or shared collections by the `Use...End use` keywords is mandatory to prevent concurrent access between processes.
+共有オブジェクトおよび共有コレクションは、プロセス間の (とくに **プリエンプティブ4Dプロセス** 間の) 通信ができるように設計されています 。 これらはプロセスから他のプロセスへ、参照型の引数として渡すことができます。 共有オブジェクトおよび共有コレクションについての詳細な情報については、**共有オブジェクトと共有コレクション** を参照してください。 共有オブジェクトおよび共有コレクションを扱う際には、複数プロセスによる同時アクセスを避けるために、必ずそれらを `Use...End use` キーワードでくくる必要があります。
 
-- Once the **Use** line is successfully executed, all _Shared_object_or_Shared_collection_ properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
-- The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
-- If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group (see **Using shared objects or collections**).
-- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
-- The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects sharing the same locking identifier.
-- Several **Use...End use** structures can be nested in the 4D code. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed.
+- **Use** の実行が成功すると、対応する **End use</code> が実行されるまで、_Shared_object_or_Shared_collection_ のプすべてのロパティ/要素は他のあらゆるプロセスに対し書き込みアクセスがロックされます。</li>
+- _statement(s)_ で実行されるステートメントは、*Shared_object_or_Shared_collection* のプロパティ/要素に対して、競合アクセスのリスクなしに変更も実行することができます。
+- _Shared_object_or_Shared_collection_ に他の共有オブジェクトあるいはコレクションがプロパティとして追加された場合、それらも同じ共有グループとして連結されます (**共有オブジェクト/共有コレクションの使用** を参照してください)。
+- **Use...End use ** 内ステートメントの実行中に、他のプロセスが _Shared_object_or_Shared_collection_ のプロパティやリンクされたプロパティにアクセスしようとした場合、そのアクセスは自動的に保留され、実行中の処理が終了するまで待機します。
+- **End use** は、_Shared_object_or_Shared_collection_ プロパティおよび、同じロック識別子を共有するすべてのオブジェクトのロックを解除します。
+- 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 この場合、すべてのロックはスタックされ、プロパティ/要素は最後の **End use** が実行されたときに解除されます。</ul>
 
-**Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
+**注:** コレクションのメンバーメソッドが共有コレクションを変更する場合、そのメソッド実行中は、対象の共有コレクションに対して **Use** が内部的に自動で呼ばれます。
 
 
-## Example 1
+## 例題 1
 
-You want to launch several processes that perform an inventory task on different products and update the same shared object. The main process instantiates an empty shared object and then, launches the other processes, passing the shared object and the products to count as parameters:
+それぞれ異なる製品の在庫更新を実行する複数のプロセスを起動し、同じ共有オブジェクトを更新していきます。 まずメインプロセスで空の共有オブジェクトをインスタンス化してから、共有オブジェクトへの参照と対象製品を引数として渡して別プロセス起動します:
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... // 在庫を確認する製品を配列に格納します
  $nbItems:=Size of array($_items)
  C_OBJECT($inventory)
  $inventory:=New shared object
@@ -99,59 +99,60 @@ You want to launch several processes that perform an inventory task on different
     $inventory.nbItems:=$nbItems
  End use
 
-  //Create processes
+  // プロセスを起動します
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
-  //$inventory object sent by reference
+  // $inventory オブジェクトは参照で渡されます
  End for
 ```
 
-In the "HowMany" method, inventory is done and the $inventory shared object is updated as soon as possible:
+"HowMany" メソッド内では、在庫確認が終わるとすぐに $inventory 共有オブジェクトが更新されます:
 
 ```4d
  C_TEXT($1)
  C_TEXT($what)
  C_OBJECT($2)
  C_OBJECT($inventory)
- $what:=$1 //for better readability
+ $what:=$1 // 可読性のため
  $inventory:=$2
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+ $count:=CountMethod($what) // 在庫確認用のメソッド
+ Use($inventory) // 共有オブジェクトを使用します
+    $inventory[$what]:=$count  // 当該製品の在庫を保存します
  End use
 ```
 
-## Example 2
+## 例題 2
 
-The following examples highlight specific rules when handling shared groups:
+以下の例題は、共有グループを扱う際のルールについて説明しています:
 
 ```4d
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
+    $ob1.a:=$ob2  // グループ1 が作成されます
  End use
 
  $ob3:=New shared object
  $ob4:=New shared object
  Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
+    $ob3.a:=$ob4  // グループ2 が作成されます
  End use
 
- Use($ob1) //use an object from group 1
-    $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
+ Use($ob1) // グループ1のオブジェクトを使用します
+    $ob1.b:=$ob4  // これはエラーになります
+  // $ob4 はすでに他のグループに所属しているため
+  // 代入することはできません
  End use
 
  Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
+    $ob3.a:=Null // グループ2から$ob4 への参照をすべて解除します
+
  End use
 
- Use($ob1) //use an object from group 1
-    $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
+ Use($ob1) // グループ1のオブジェクトを使用します
+    $ob1.b:=$ob4  // これもエラーになります
+  // $ob4 は依然としてグループ2に所属しているため
+  // 代入は不可能です
  End use
 ```
