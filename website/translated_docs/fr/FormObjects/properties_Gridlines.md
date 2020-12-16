@@ -1,20 +1,20 @@
 ---
 id: propertiesGridlines
-title: Quadrillage
+title: Gridlines
 ---
 
 ---
-## Couleur lignes horizontales
+## Horizontal Line Color
 
-Définit la couleur des lignes horizontales dans une list box (gris par défaut).
+Defines the color of the horizontal lines in a list box (gray by default).
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom                  | Type de données | Valeurs possibles                          |
-| -------------------- | --------------- | ------------------------------------------ |
-| horizontalLineStroke | color           | une valeur css; "transparent"; "automatic" |
+| Name                 | Data Type | Possible Values                            |
+| -------------------- | --------- | ------------------------------------------ |
+| horizontalLineStroke | color     | any css value, "'transparent", "automatic" |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
 
@@ -22,16 +22,16 @@ Définit la couleur des lignes horizontales dans une list box (gris par défaut)
 
 
 ---
-## Couleur lignes verticales
+## Vertical Line Color
 
-Définit la couleur des lignes verticales d'une list box (gris par défaut).
+Defines the color of the vertical lines in a list box (gray by default).
 
-#### Grammaire JSON
+#### JSON Grammar
 
-| Nom                | Type de données | Valeurs possibles                          |
-| ------------------ | --------------- | ------------------------------------------ |
-| verticalLineStroke | color           | une valeur css; "transparent"; "automatic" |
+| Name               | Data Type | Possible Values                            |
+| ------------------ | --------- | ------------------------------------------ |
+| verticalLineStroke | color     | any css value, "'transparent", "automatic" |
 
-#### Objets pris en charge
+#### Objects Supported
 
 [List Box](listbox_overview.md)
