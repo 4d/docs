@@ -1,131 +1,131 @@
 ---
 id: propertiesScale
-title: スケール
+title: Scale
 ---
 
 ---
-## バーバーショップ
+## Barber shop
 
-このプロパティは、サーモメーターの "バーバーショップ" バリエーションを有効にします。
+Enables the "barber shop" variant for the thermometer.
 
-#### JSON 文法
+#### JSON Grammar
 
-|     名      | データタイプ | とりうる値                                      |
-|:----------:|:------:| ------------------------------------------ |
-| [max](#最大) | number | プロパティが存在しない = 有効; 存在する = 無効 (デフォルトサーモメーター) |
+|      Name       | Data Type | Possible Values                                             |
+|:---------------:|:---------:| ----------------------------------------------------------- |
+| [max](#maximum) |  number   | NOT passed = enabled; passed = disabled (basic thermometer) |
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[バーバーショップ](progressIndicator.md#バーバーショップ)
-
-
-
----
-## 目盛りを表示
-
-ラベルの隣に目盛を表示、または非表示にします。
-
-#### JSON 文法
-
-|        名        | データタイプ  | とりうる値           |
-|:---------------:|:-------:| --------------- |
-| showGraduations | boolean | "true", "false" |
-
-#### 対象オブジェクト
-
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
+[Barber shop](progressIndicator.md#barber-shop)
 
 
 
 ---
-## 目盛りのステップ
+## Display graduation
 
-目盛の表示単位です。
+Displays/Hides the graduations next to the labels.
 
-#### JSON 文法
+#### JSON Grammar
 
-|       名        | データタイプ  | とりうる値  |
-|:--------------:|:-------:| ------ |
-| graduationStep | integer | 最小値: 0 |
+|      Name       | Data Type | Possible Values |
+|:---------------:|:---------:| --------------- |
+| showGraduations |  boolean  | "true", "false" |
 
+#### Objects Supported
 
-#### 対象オブジェクト
-
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
-
-
-
----
-## ラベル位置
-
-ラベルが表示される際の位置です。
-
-* なし - ラベルは表示されません。
-* 上 - インジケーターの上または左にラベルを表示します。
-* 下 - インジケーターの下または右にラベルを表示します。
-
-#### JSON 文法
-
-|        名        | データタイプ | とりうる値                                    |
-|:---------------:|:------:| ---------------------------------------- |
-| labelsPlacement | string | "none", "top", "bottom", "left", "right" |
-
-#### 対象オブジェクト
-
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
 
 
 ---
-## 最大
+## Graduation step
 
-インジケーターの最大値です。
+Scale display measurement.
 
-- 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
-- [バーバーショップサーモメーター](progressIndicator.md#バーバーショップ) を有効にするには、このプロパティを取り除きます。
+#### JSON Grammar
 
-#### JSON 文法
+|      Name      | Data Type | Possible Values |
+|:--------------:|:---------:| --------------- |
+| graduationStep |  integer  | minimum: 0      |
 
-|  名  |     データタイプ      | とりうる値           |
-|:---:|:---------------:| --------------- |
-| max | string / number | 最小値: 0 (数値型の場合) |
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
 
 
 ---
-## 最小
+## Label Location
 
-インジケーターの最小値です。 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
+Specifies the location of an object's displayed text.
 
-#### JSON 文法
+* None - no label is displayed
+* Top - Displays labels to the left of or above an indicator
+* Bottom - Displays labels to the right of or below an indicator
 
-|  名  |     データタイプ      | とりうる値           |
-|:---:|:---------------:| --------------- |
-| min | string / number | 最小値: 0 (数値型の場合) |
+#### JSON Grammar
 
-#### 対象オブジェクト
+|      Name       | Data Type | Possible Values                          |
+|:---------------:|:---------:| ---------------------------------------- |
+| labelsPlacement |  string   | "none", "top", "bottom", "left", "right" |
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+#### Objects Supported
+
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+
+
+
+---
+## Maximum
+
+Maximum value of an indicator.
+
+- For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
+
+#### JSON Grammar
+
+| Name |    Data Type    | Possible Values                     |
+|:----:|:---------------:| ----------------------------------- |
+| max  | string / number | minimum: 0 (for numeric data types) |
+
+#### Objects Supported
+
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+
+
+
+---
+## Minimum
+
+Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+
+#### JSON Grammar
+
+| Name |    Data Type    | Possible Values                     |
+|:----:|:---------------:| ----------------------------------- |
+| min  | string / number | minimum: 0 (for numeric data types) |
+
+#### Objects Supported
+
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
 
 
 
 ---
-## ステップ
+## Step
 
-使用時に各値の間にあけることができる最小の間隔です。 時間型のステッパーの場合、このプロパティは秒を表します。日付型のステッパーでは日数を表します。
+Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
 
-#### JSON 文法
+#### JSON Grammar
 
-|  名   | データタイプ  | とりうる値  |
-|:----:|:-------:| ------ |
-| step | integer | 最小値: 1 |
+| Name | Data Type | Possible Values |
+|:----:|:---------:| --------------- |
+| step |  integer  | minimum: 1      |
 
 
-#### 対象オブジェクト
+#### Objects Supported
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
