@@ -1,34 +1,34 @@
 ---
 id: overview
-title: 概要
+title: Overview
 ---
 
-4Dデータベースやカスタムアプリケーション用にカスタムメニューを作成できます。 デスクトップアプリケーションではプルダウン形式のメニューが標準機能であるため、メニューを追加することでデータベースがより使いやすくなりユーザーに親しみやすいものになるでしょう。
+You can create menu bars and menus for your 4D databases and custom applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your databases easier to use and will make them feel familiar to users.
 
 ![](assets/en/Menus/menubar.png)
 
-**メニューバー** とは、スクリーン上にまとめて表示されるメニューのグループです。 メニューバー上の各 **メニュー** はメニューコマンドを持ちます。またメニューコマンドは階層メニューと呼ばれるサブメニューを持つこともできます。 メニューやサブメニューコマンドをユーザーが選択すると、プロジェクトメソッドまたは標準アクションが呼び出されます。
+A **menu bar** is a group of menus that can be displayed on a screen together. Each **menu** on a menu bar can have numerous menu commands in it, including some that call cascading submenus (or hierarchical submenus). When the user chooses a menu or submenu command, it calls a project method or a standard action that performs an operation.
 
-各データベースに対し、異なるメニューバーを複数作成することもできます。 たとえば、あるメニューバーには標準的なデータベース処理用のメニューを納め、別のメニューバーはレポート作成時にのみアクティブにすることができます。 また別のメニューバーには、レコード入力用のメニューコマンドを含むメニューを格納することも可能です。 入力フォームと一緒に表示されるメニューバーには同じメニューを格納しながらも、データ入力中は不要になるメニューコマンドを選択不可にすることができます。
+You can have many separate menu bars for each database. For example, you can use one menu bar that contains menus for standard database operations and another that becomes active only for reporting. One menu bar may contain a menu with menu commands for entering records. The menu bar appearing with the input form may contain the same menu, but the menu commands are disabled because the user doesn’t need them during data entry.
 
-あるメニューを複数のメニューバーで使用したり、どのメニューバーにも割り当てずにプログラムからのみ管理することもできます (独立メニューと呼びます)。
+You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
 
-メニューを設計する際には以下の 2つのルールを覚えておいてください:
-- メニューに適している機能に対しメニューを使用する: メニューコマンドは、レコードの追加や検索、レポートの印刷のような作業を実行しなければなりません。
-- メニューコマンドを機能別にまとめる: たとえば、レポートの印刷をおこなうメニューコマンドはすべて同じメニュー内に置くべきです。 また別の例として、特定のテーブルに関するすべての操作を 1つのメニューに納めてもよいでしょう。
+When you design menus, keep the following two rules in mind:
+- Use menus for functions that are suited to menus: Menu commands should perform tasks such as adding a record, searching for records, or printing a report.
+- Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
 
-メニューやメニューバーを作成するには以下のいずれかを使用します:
+To create menus and menu bars, you can use either:
 
-- ツールボックスのメニューエディター
-- "メニュー" テーマのランゲージコマンド
-- 上 2つの組み合わせ
+- the Menu editor from the Toolbox,
+- language commands for the "Menus" theme,
+- a combination of both.
 
 
-## メニューエディター
-ツールボックスの **メニュー** ページを開くと、メニューエディターにアクセスできます。
+## Menu editor
+The Menu editor is accessed using the **Menus** button of the Toolbox.
 
 ![](assets/en/Menus/editor1.png)
 
-メニューおよびメニューバーは両方ともエディター左の階層リスト中に表示されます。 各メニューは、メニューバーあるいは別のメニューに添付できます。 後者の場合、そのメニューはサブメニューとなります。
+Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Each menu can be attached to a menu bar or to another menu. In the second case, the menu becomes a sub-menu.
 
-4D はメニューバーに連番を割り当てます。メニューバー#1 が一番上に表示されます。 メニューバーの名前を変更することができますが、番号は変更できません。 この番号はランゲージコマンドで使用されます。
+4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. You can rename menu bars but you cannot change their numbers. These numbers are used by the language commands.
