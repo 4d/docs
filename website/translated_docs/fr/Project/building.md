@@ -176,39 +176,39 @@ Lors de la génération d'une application autonome, 4D copie le contenu du dossi
 
 #### Emplacements des fichiers Web
 
-Si votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. These items are the following:
+Si votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. Ces éléments sont les suivants :
 
-*   *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-*   default Web root folder.
+*   Fichiers *cert.pem* et *key.pem* (facultatif) : ces fichiers sont utilisés pour les connexions SSL et par les commandes de chiffrement des données,
+*   dossier racine Web par défaut.
 
-Items must be installed:
+Des éléments doivent être installés :
 
-- **on Windows**: in the *Final Application\MyProject\Database* subfolder.
-- **on macOS**: next to the *MyProject.app* software package.
-
-
+- **sous Windows** : dans le sous-dossier *Final Application\MyProject\Database*.
+- **sur macOS **: à côté du progiciel *MyProject.app*. </ul>
 
 
 
-## Client/Server page
 
-On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option.
+
+## Page Client / Serveur
+
+Dans cet onglet, vous pouvez créer des applications client-serveur personnalisées homogènes, multiplateformes et avec une option de mise à jour automatique.
 
 ![](assets/en/Project/buildappCSProj.png)
 
-### What is a Client/Server application?
+### Qu'est-ce qu'une application client / serveur ?
 
-A client/server application comes from the combination of three items:
+Une application client/serveur est issue de la combinaison de trois éléments :
 
-- A compiled 4D database,
-- The 4D Server application,
-- The 4D Volume Desktop application (macOS and/or Windows).
+- Une base de données 4D compilée,
+- L'application 4D Server,
+- L'application 4D Volume Desktop (macOS et/ou Windows).
 
-Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine).
+Une fois créée, une application client/serveur est composée de deux parties personnalisées : la partie serveur (unique) et la partie client (à installer sur chaque machine cliente).
 
-Also, the client/server application is customized and its handling simplified:
+De plus, l'application client/serveur est personnalisée et sa prise en main simplifiée :
 
-- To launch the server portion, the user simply double-clicks on the server application. Il n’est pas nécessaire de sélectionner la base.
+- Pour lancer la partie serveur, l'utilisateur double-clique simplement sur l'application serveur. Il n’est pas nécessaire de sélectionner la base.
 - Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur. Il n’est pas nécessaire de choisir une base de données dans une boîte de dialogue de connexion. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). Il est également possible de “forcer” l’affichage de la boîte de dialogue de connexion standard en maintenant la touche **Option** (macOS) ou **Alt** (Windows) enfoncée lors du lancement de l’application cliente. Seule la partie cliente peut se connecter à la partie serveur correspondante. Si un utilisateur tente de se connecter à la partie serveur à l’aide d’une application 4D standard, un message d’erreur est retourné et la connexion est impossible.
 - Une application client/serveur peut être paramétrée de telle sorte que la partie cliente [puisse être mise à jour automatiquement via le réseau](#copy-of-client-applications-in-the-server-application).
 - Il est également possible d'automatiser la mise à jour de la partie serveur moyennant l'utilisation d'une séquence de commandes du langage ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) et [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
@@ -313,15 +313,15 @@ Si vous avez coché l'option "Autoriser la mise à jour automatique de l'applica
 
 #### Personnaliser le dossier 4D Volume Desktop
 
-Lors de la construction d'une application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le sous-dossier Final Application du dossier de destination. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. You can, for instance:
+Lors de la construction d'une application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le sous-dossier Final Application du dossier de destination. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez par exemple :
 
-- Install a 4D Volume Desktop version corresponding to a specific language;
-- Add a custom PlugIns folder;
-- Customize the contents of the Resources folder.
+- Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
+- Ajouter un dossier PlugIns personnalisé;
+- Personnaliser le contenu du dossier Resources.
 
-#### Location of Web files
+#### Emplacement des fichiers Web
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+Si la partie serveur et/ou client de votre application double-cliquable est utilisée comme serveur Web, les fichiers et dossiers requis par le serveur doivent être installés dans des emplacements spécifiques. These items are the following:
 
 - *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
 - Default Web root folder (WebFolder).
@@ -445,7 +445,7 @@ For more information on the notarization concept, please refer to [this page on 
 
     Your icon file must have the same name as the project file and include the *.ico* extension. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable.
 
-Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. The following keys are available:
+Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. Les clés suivantes sont disponibles :
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -458,36 +458,36 @@ Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17
 
 
 
-## Management of data file(s)
+## Gestion de fichier(s) de données
 
-### Opening the data file
+### Ouverture du fichier de données
 
-When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
+Lorsqu'un utilisateur lance une application fusionnée ou une mise à jour (applications monoposte ou client/serveur), 4D tente de sélectionner un fichier de données valide. Plusieurs emplacements sont examinés successivement par l'application.
 
-The opening sequence for launching a merged application is:
+La séquence d'ouverture pour lancer une application fusionnée est la suivante :
 
-1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
-2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
-3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+1. 4D tente d'ouvrir le dernier fichier de données ouvert, [comme décrit ci-dessous](#last-data-file-opened) (non applicable lors du lancement initial).
+2. S'il ne le trouve pas, 4D tente d'ouvrir le fichier de données dans un dossier de données par défaut à côté du fichier .4DZ en lecture seule.
+3. S'il ne le trouve pas, 4D tente d'ouvrir le fichier de données standard par défaut (même nom et même emplacement que le fichier .4DZ).
+4. S'il n'est pas trouvé, 4D affiche une boîte de dialogue standard "Ouvrir un fichier de données".
 
 
-### Last data file opened
+### Dernier fichier de données ouvert
 
-#### Path of last data file
-Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder.
+#### Chemin du dernier fichier de données
+Toute application autonome ou serveur construit(e) avec 4D stocke le chemin du dernier fichier de données ouvert dans le dossier des préférences utilisateur de l'application.
 
-The location of the application's user preferences folder corresponds to the path returned by the following statement:
+L'emplacement du dossier des préférences utilisateur de l'application correspond au chemin retourné par l'instruction suivante :
 
 ```4d
-userPrefs:=Get 4D folder(Active 4D Folder)
+userPrefs: = Get 4D folder(Active 4D Folder)
 ```
 
-The data file path is stored in a dedicated file, named *lastDataPath.xml*.
+Le chemin du fichier de données est stocké dans un fichier dédié, nommé *lastDataPath.xml*.
 
-Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
+Grâce à cette architecture, lorsque vous fournissez une mise à jour de votre application, le fichier de données utilisateur local (dernier fichier de données utilisé) s'ouvre automatiquement au premier lancement.
 
-This mechanism is usually suitable for standard deployments. Cependant, dans des cas spécifiques, par exemple si vous dupliquez vos applications fusionnées, vous pouvez avoir besoin de modifier la manière dont le fichier de données est lié à l'application.
+Ce mécanisme convient généralement aux déploiements standard. Cependant, dans des cas spécifiques, par exemple si vous dupliquez vos applications fusionnées, vous pouvez avoir besoin de modifier la manière dont le fichier de données est lié à l'application.
 
 #### Configurer le mode de liaison des données
 
