@@ -13,21 +13,7 @@ This feature can be used in 4D applications running headless as well as 4D appli
 
 ## Starting the WebAdmin web server
 
-By default, the `WebAdmin` web server is not launched. You need to start it automatically or at any moment.
-
-
-### Start and stop
-
-You can start or stop the `WebAdmin` web server for your project at any moment:
-
-- If you use a 4D application with interface, select the **File > Web Administration > Start Server** menu item.
-
-![alt-text](assets/en/Admin/waMenu2.png)
-
-The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the WebAdmin server.
-
-- Whether you use 4D application which is headless or not, you can execute the [.start()](API/webServerClass.md#start) or [.stop()](API/webServerClass.md#stop) function on the `WebAdmin` web server once it is instanciated.
-
+By default, the `WebAdmin` web server is not launched. You need to configure the launch at startup, or (in versions with interface) launch it manually using a menu item.
 
 
 ### Launch at startup
@@ -54,16 +40,28 @@ Exemple :
 open ~/Desktop/4D.app --webadmin-auto-start true
 ```
 
-> If the TCP port used by the `WebAdmin` web server (HTTPS or HTTP, depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console.
+> If the TCP port used by the `WebAdmin` web server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console.
+
+
+### Start and stop
+
+If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
+
+Select the **File > Web Administration > Start Server** menu item.
+
+![alt-text](assets/en/Admin/waMenu2.png)
+
+The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the WebAdmin server.
+
 
 
 ## WebAdmin Settings
 
-Configuring the WebAdmin component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, administration access is free.
+Configuring the WebAdmin component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, no administration access is allowed.
 
 You can configure the WebAdmin component using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
 
-> If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced settings.
+> If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced parameters.
 
 
 ### Settings dialog box
@@ -123,36 +121,44 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 
 #### Access Key
 
-An access key is similar to a password but is not associated to a login. Once an access key is defined for a WebAdmin web server, web clients must provide this access key to be allowed to connect to any web administration interface, including the [Data Explorer page](dataExplorer.md).
+Defining an access key is mandatory to unlock the WebAdmin web server. When the access key is not defined, web clients are not allowed to connect to any web administration interface, including the [Data Explorer page](dataExplorer.md):
 
-- To define a new access key: click the **Add** button, enter the access key string in the dialog box and click **OK**. The button label becomes **Modify**.
+![alt-text](assets/en/Admin/accessKey.png)
+
+Once an access key is defined for a WebAdmin web server, web clients that provide it are allowed to connect and use the administration features.
+
+An access key is similar to a password but not associated to a login.
+
+- To define a new access key: click the **Define** button, enter the access key string in the dialog box and click **OK**. The button label becomes **Modify**.
 - To modify the access key: click the **Modify** button, enter the new access key string in the dialog box and click **OK**.
 - To delete the access key: click the **Modify** button, let the access key area empty and click **OK**.
 
 
 ## WebAdmin Headless Configuration
 
-All \[WebAdmin settings\](#webadmin settings) are stored in a `settings.4DSettings` file (except the access key, which must be [defined separatly](#defining-the-access-key)). There is one default `settings.4DSettings` file per 4D or 4D Server application, so that it is possible to deploy multiple applications on the same host machine.
+All \[WebAdmin settings\](#webadmin settings) are stored in the `WebAdmin.4DSettings` file. There is one default `WebAdmin.4DSettings` file per 4D and 4D Server application, so that it is possible to deploy multiple applications on the same host machine.
 
-When running a 4D or 4D Server application headless, you can set and use the default `settings.4DSettings` file, or designate a custom `.4DSettings` file.
+When running a 4D or 4D Server application headless, you can set and use the default `WebAdmin.4DSettings` file, or designate a custom `.4DSettings` file.
 
-To set the file contents, you can use the [WebAdmin settings dialog](#settings-dialog-box) of the 4D application with interface and run it headless afterwards. The default `settings.4DSettings` file is then used.
+To set the file contents, you can use the [WebAdmin settings dialog](#settings-dialog-box) of the 4D application with interface and run it headless afterwards. The default `WebAdmin.4DSettings` file is then used.
 
 Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the *Command Line Interface* to support this feature:
 
-| Argument                  | Valeur    | Description                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| --webadmin-settings-file  | File path | Path of the custom WebAdmin `.4DSettings` file for the WebAdmin web server                                                                                                                                                                                                                                                                                                                                                       |
-| --webadmin-access-key     | Chaine    | Access key for the WebAdmin web server                                                                                                                                                                                                                                                                                                                                                                                           |
-| --webadmin-auto-start     | Booléen   | Status of the automatic startup for the WebAdmin web server                                                                                                                                                                                                                                                                                                                                                                      |
-| --webadmin-store-settings |           | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default `settings.4DSettings` file or a custom file designated with the `--webadmin-settings-path` parameter). By default for security reasons, the access key and automatic starting parameters are not stored in the `.4DSettings` file. Use the `--webadmin-store-settings` argument to save these settings if necessary |
+| Argument                  | Valeur    | Description                                                                                                                                                                                                                                                                                          |
+| ------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --webadmin-settings-file  | File path | Path of the custom WebAdmin `.4DSettings` file for the WebAdmin web server                                                                                                                                                                                                                           |
+| --webadmin-access-key     | Chaine    | Access key for the WebAdmin web server                                                                                                                                                                                                                                                               |
+| --webadmin-auto-start     | Booléen   | Status of the automatic startup for the WebAdmin web server                                                                                                                                                                                                                                          |
+| --webadmin-store-settings |           | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default `WebAdmin.4DSettings` file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary |
 
-> The access key is never stored in the `.4DSettings` file, but a hash.
+> The access key is not stored in the `.4DSettings` file, but a hash.
 
 Exemple :
 
 ```
-"%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key "my Fabulous AccessKey" --webadmin-auto-start true --webadmin-store-settings
+"%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key 
+    "my Fabulous AccessKey" --webadmin-auto-start true   
+    --webadmin-store-settings
 
 ```
 
