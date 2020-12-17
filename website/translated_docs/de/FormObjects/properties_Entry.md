@@ -15,7 +15,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 | Name       | Datentyp | Possible Values |
 | ---------- | -------- | --------------- |
-| spellcheck | boolean  | true, false     |
+| spellcheck | Boolean  | true, false     |
 
 
 #### Objects Supported
@@ -67,7 +67,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 | Name      | Datentyp | Possible Values |
 | --------- | -------- | --------------- |
-| enterable | boolean  | true, false     |
+| enterable | Boolean  | true, false     |
 
 #### Objects Supported
 
@@ -157,7 +157,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 | Name      | Datentyp | Possible Values |
 | --------- | -------- | --------------- |
-| focusable | boolean  | true, false     |
+| focusable | Boolean  | true, false     |
 
 
 #### Objects Supported
@@ -271,7 +271,7 @@ This property keeps the selection visible within the object after it has lost th
 
 | Name          | Datentyp | Possible Values |
 | ------------- | -------- | --------------- |
-| showSelection | boolean  | true, false     |
+| showSelection | Boolean  | true, false     |
 
 
 #### Objects Supported
@@ -297,11 +297,11 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 | Name            | Datentyp | Possible Values                                                                                                                                                                                                                                                                             |
 | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean  | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | boolean  | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | boolean  | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | boolean  | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | boolean  | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutAccel   | Boolean  | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | Boolean  | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | Boolean  | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | Boolean  | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | Boolean  | true, false                                                                                                                                                                                                                                                                                 |
 |                 |          |                                                                                                                                                                                                                                                                                             |
 | shortcutKey     | string   | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
@@ -327,7 +327,7 @@ When this option is not enabled, users must first select the cell row and then c
 
 | Name            | Datentyp | Possible Values |
 | --------------- | -------- | --------------- |
-| singleClickEdit | boolean  | true, false     |
+| singleClickEdit | Boolean  | true, false     |
 
 #### Objects Supported
 
