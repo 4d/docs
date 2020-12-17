@@ -560,7 +560,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
 </p>
 
 <p spaces-before="0">
-  Permet de définir une couleur de police personnalisée à chaque ligne de list box ou de chaque cellule de la colonne.
+  Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 </p>
 
 <p spaces-before="0">
@@ -623,7 +623,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
 </p>
 
 <p spaces-before="0">
-  Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
+  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 </p>
 
 <p spaces-before="0">

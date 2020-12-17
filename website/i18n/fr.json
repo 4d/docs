@@ -8,8 +8,14 @@
       "Admin/building": {
         "title": "Générer un package projet"
       },
+      "Admin/dataExplorer": {
+        "title": "Data Explorer (web)"
+      },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "Class"
@@ -823,6 +829,8 @@
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
+    "Web Administration|no description given": "Web Administration",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
     "Getting started|no description given": "Prise en main",

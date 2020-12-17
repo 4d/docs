@@ -112,7 +112,7 @@ Only project forms can be specified as published subforms.
 
 | Name   | Datentyp | Possible Values |
 | ------ | -------- | --------------- |
-| shared | boolean  | true, false     |
+| shared | Boolean  | true, false     |
 
 
 ---
@@ -131,7 +131,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 | Name             | Datentyp | Possible Values |
 | ---------------- | -------- | --------------- |
-| memorizeGeometry | boolean  | true, false     |
+| memorizeGeometry | Boolean  | true, false     |
 
 #### See also
 [**Save Value**](FormObjects/properties_Object.md#save-value)
