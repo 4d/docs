@@ -401,49 +401,49 @@ A l’issue de la génération, un nouveau fichier de licence de déploiement es
 
 ### Certification des applications sous macOS
 
-Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, 4D Server et parties clientes sous macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
+Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, 4D Server et parties clientes sous macOS). La signature d'une application lui permet d'être exécutée à l'aide de la fonctionnalité Gatekeeper de macOS lorsque l'option "Mac App Store and identified Developers" est sélectionnée (voir "À propos de Gatekeeper" ci-dessous).
 
-- Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
+- Cochez l'option **Signer l'application** pour inclure la certification dans la procédure de création d'application pour OS X. 4D vérifiera la disponibilité des éléments requis pour la certification lors de la création :
 
 ![](assets/en/Project/buildapposxcertProj.png)
 
-This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
+Cette option s'affiche à la fois sous Windows et sous macOS, mais elle n'est prise en compte que pour les versions de macOS.
 
-*   **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. The certificate name is usually the name of the certificate in the Keychain Access utility (part in red in the following example):
+*   **Nom du certificat** - Entrez le nom de votre certificat de développeur validé par Apple dans cette zone de saisie. Le nom du certificat est généralement le nom du certificat présent dans l'utilitaire Keychain Access (partie en rouge dans l'exemple suivant) :
 
 ![](assets/en/Project/certificate.png)
 
-To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
-> This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
+Pour obtenir un certificat de développeur auprès d'Apple, Inc., vous pouvez utiliser les commandes du menu Keychain Access ou cliquer sur le lien suivant : [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/ Procédures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
+> Ce certificat nécessite la présence de l'utilitaire Apple codesign, qui est fourni par défaut et généralement situé dans le dossier “/usr/bin/”. Si une erreur se produit, assurez-vous que cet utilitaire est présent sur votre disque.
 
 
-#### About Gatekeeper
+#### À propos de Gatekeeper
 
-Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
+Gatekeeper est une fonction de sécurité d'OS X qui contrôle l'exécution des applications téléchargées sur Internet. Si une application téléchargée ne provient pas de l'Apple Store ou n'est pas signée, elle est rejetée et ne peut pas être lancée.
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+L'option **Signe l'application** du générateur d'applications 4D vous permet de générer des applications compatibles avec cette option par défaut.
 
 
-#### About Notarization
+#### À propos de la notarisation
 
-Application notarization is highly recommended by Apple as of macOS 10.14.5 (Mojave) and 10.15 (Catalina), since non-notarized applications deployed via the internet are blocked by default.
+La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notariées déployées via Internet sont bloquées par défaut.
 
-In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Please refer to [this 4D blog post](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) that provides a step-by-step description of the notarization process.
+Sous 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour afin de répondre à toutes les exigences d'Apple pour permettre l'utilisation du service Apple notary. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Veuillez vous référer à [ce billet du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description du processus de notarisation,  étape par étape.
 
-For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+Pour plus d'informations sur le concept de notarisation, veuillez consulter [cette page sur le site Web Apple developer](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## Customizing application icons
+## Personnalisation des icônes d'application
 
-4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
+4D associe par défaut une icône aux applications autonomes, serveur et clientes, mais il est possible de personnaliser l'icône pour chaque application.
 
-*   **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.
-> Apple, Inc. provides a specific tool for building *icns* icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
+*   **macOs** - Lors de la création d'une application double-cliquable, 4D gère la personnalisation de l'icône. Pour ce faire, vous devez créer un fichier icône (type icns), avant de créer le fichier d'application, et le placer à côté du dossier du projet.
+> Apple, Inc. fournit un outil spécifique pour créer des fichiers d'icônes *icns* (pour plus d'informations, reportez-vous à [la documentation Apple](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
-    Your icon file must have the same name as the project file and include the *.icns* extension. 4D automatically takes this file into account when building the double-clickable application (the *.icns* file is renamed *ApplicationName.icns* and copied into the Resources folder; the *CFBundleFileIcon* entry of the *info.plist* file is updated).
+    Votre fichier d'icône doit porter le même nom que le fichier de projet et inclure l'extension *.icns*. 4D prend automatiquement en compte ce fichier lors de la création de l'application double-cliquable (le fichier *.icns* est renommé *ApplicationName.icns* et copié dans le dossier Resources; l'entrée *CFBundleFileIcon* du fichier *info.plist* est mise à jour).
 
-*   **Windows** - When building a double-clickable application, 4D handles the customizing of its icon. In order to do this, you must create an icon file (*.ico* extension), prior to building the application file, and place it next to the project folder.
+*   **Windows** - Lors de la création d'une application double-cliquable, 4D gère la personnalisation de son icône. Pour ce faire, vous devez créer un fichier icône (extension *.ico*), avant de créer le fichier d'application, et le placer à côté du dossier du projet.
 
-    Your icon file must have the same name as the project file and include the *.ico* extension. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable.
+    Votre fichier d'icône doit porter le même nom que le fichier de projet et inclure l'extension *.ico*. 4D prend automatiquement ce fichier en compte lors de la construction de l'application exécutable.
 
 Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. Les clés suivantes sont disponibles :
 
