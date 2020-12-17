@@ -210,9 +210,9 @@ Note that setting properties for an element overrides any other values for this 
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable
- //sets row 6 as disabled AND not selectable
+ //définit la ligne 6 comme étant désactivée AND non sélectionnable
  aLControlArr{6}:=lk row is disabled
- //sets row 6 as disabled but selectable again
+ //définit la ligne 6 comme étant désactivée mais sélectionnable à nouveau
 ```
 
 
