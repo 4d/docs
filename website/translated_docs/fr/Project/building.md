@@ -248,26 +248,26 @@ Vous devez désigner sur votre disque l’emplacement de l’application 4D Volu
 
 > Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. Par exemple, si vous utilisez 4D Developer v18, vous devez sélectionner un 4D Volume Desktop v18.
 
-Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Pour plus d'informations sur ce fichier, reportez-vous à la description de la commande`BUILD APPLICATION`. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. The different scenarios proposed are described in the [Management of connections by client applications](#management-of-client-connections) paragraph.
+Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Pour plus d'informations sur ce fichier, reportez-vous à la description de la commande`BUILD APPLICATION`. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. Les différents scénarios proposés sont décrits dans le paragraphe [Gestion des connexions par les applications clientes](#management-of-client-connections).
 
-#### Copy of client applications in the server application
+#### Copie des applications clientes dans l'application serveur
 
-The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
+Les options de cette zone permettent de configurer le mécanisme de mise à jour des parties clientes de vos applications client/serveur en utilisant le réseau à chaque fois qu'une nouvelle version de l'application est générée.
 
-- **Allow automatic update of Windows client application** - Check these options so that your Windows client/server application can take advantage of the automatic update mechanism for clients via the network.
-- **Allow automatic update of Macintosh client application** - Check these options so that your Macintosh client/server application can take advantage of the automatic update mechanism for clients via the network.
+- **Autoriser la mise à jour automatique de l'application cliente Windows** - Cochez ces options afin que votre application client/serveur Windows puisse tirer parti du mécanisme de mise à jour automatique des clients via le réseau.
+- **Autoriser la mise à jour automatique de l'application client Macintosh** - Cochez ces options afin que votre application client/serveur Macintosh puisse tirer parti du mécanisme de mise à jour automatique des clients via le réseau.
 
-*   **Allow automatic update of Macintosh client application** - If you want to create a cross-platform client application, you must designate the location on your disk of the 4D Volume Desktop application that corresponds to the “concurrent” platform of the build platform.
+*   **Autoriser la mise à jour automatique de l'application cliente Macintosh** - Si vous souhaitez créer une application cliente multiplateforme, vous devez désigner l'emplacement sur votre disque de l'application 4D Volume Desktop qui correspond à la plateforme «simultanée» de la plateforme de build.
 
-    For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
+    Par exemple, si vous créez votre application sous Windows, vous devez utiliser le bouton **[...]** pour désigner l'application macOS 4D Volume Desktop (fournie sous forme de package).
 
 
 
-#### Displaying update notification
+#### Affichage de la notification de mise à jour
 
-The client application update notification is carried out automatically following the server application update.
+La notification de mise à jour de l'application cliente est effectuée automatiquement après la mise à jour de l'application serveur.
 
-It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). Si vous avez suivi le processus de génération d’une application cliente multi-plate-forme, un fichier *. 4darchive* de mise à jour est disponible pour chaque plate-forme :
+Cela fonctionne comme suit : lorsqu'une nouvelle version de l'application client/serveur est créée à l'aide du générateur d'application, la nouvelle partie cliente est copiée sous forme de fichier compressé dans le sous-dossier **Upgrade4DClient** du dossier Server **ApplicationName** (sous macOS, ces dossiers sont inclus dans le package serveur). Si vous avez suivi le processus de génération d’une application cliente multi-plate-forme, un fichier *. 4darchive* de mise à jour est disponible pour chaque plate-forme :
 
 Pour provoquer la mise à jour des applications clientes, il suffit de remplacer l’ancienne version de l’application serveur par la nouvelle puis de l’exécuter. Le reste du processus est automatique.
 
@@ -321,41 +321,41 @@ Lors de la construction d'une application exécutable, 4D duplique le contenu du
 
 #### Emplacement des fichiers Web
 
-Si la partie serveur et/ou client de votre application double-cliquable est utilisée comme serveur Web, les fichiers et dossiers requis par le serveur doivent être installés dans des emplacements spécifiques. These items are the following:
+Si la partie serveur et/ou client de votre application double-cliquable est utilisée comme serveur Web, les fichiers et dossiers requis par le serveur doivent être installés dans des emplacements spécifiques. Ces éléments sont les suivants :
 
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
-- Default Web root folder (WebFolder).
+- Fichiers *cert.pem* et *key.pem* (facultatif) : ces fichiers sont utilisés pour les connexions SSL et par les commandes de chiffrement des données,
+- Dossier racine Web par défaut (WebFolder).
 
-Items must be installed:
-*   **on Windows**
-    *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
-    *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
+Des éléments doivent être installés :
+*   **sous Windows**
+    *   **Application serveur** - dans le sous-dossier *exécutable Client Server \ \<ApplicationName>Server\Server Database*.
+    *   **Application cliente** - dans le sous-dossier *exécutable Client Server \ \<ApplicationName>Client*.
 
-*   **on macOS**
-    *   **Server application** - next to the *\<ApplicationName>Server* software package.
-    *   **Client application** - next to the *\<ApplicationName>Client* software package.
-
-
+*   **sous macOS**
+    *   **Application serveur** - à côté du progiciel *\<ApplicationName>Server*.
+    *   **Application cliente** - à côté du progiciel *\<ApplicationName>Client*.
 
 
 
-## Plugins & components page
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 
-The page lists the elements loaded by the current 4D application:
+## Page Plugins et composants
+
+Dans cet onglet, vous définissez chaque [plug-in](Concepts/plug-ins.md) et chaque [composant](Concepts/components.md) que vous utiliserez dans votre application autonome ou client/serveur.
+
+La page liste les éléments chargés par l'application 4D courante :
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
-*    **Active** column - Indicates that the items will be integrated into the application package built. Par défaut, tous les éléments sont inclus. To exclude a plug-in or a component, deselect the check box next to it.
+*    Colonne **active** - Indique que les éléments seront intégrés dans le package d'application créé. Par défaut, tous les éléments sont inclus. Pour exclure un plug-in ou un composant, décochez la case située à côté.
 
-*   **Plugins and components** column - Displays the name of the plug-in/component.
+*   Colonne **Plugins et composants** - Affiche le nom du plug-in/composant.
 
-*   **ID** column - Displays the plug-in/component's identification number (if any).
+*   Colonne **ID** - Affiche le numéro d'identification du plug-in/composant (le cas échéant).
 
-*   **Type** column - Indicates the type of item: plug-in or component.
+*   Colonne **Type** - Indique le type d'élément : plug-in ou composant.
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
+Si vous souhaitez intégrer d'autres plug-ins ou composants dans l'application exécutable, il vous suffit de les placer dans un dossier **PlugIns** ou **Components** situé à côté de l'application 4D Volume Desktop ou de l'application 4D Server. Le mécanisme de copie du contenu du dossier de l’application source (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) permet d’intégrer tout type de fichier à l’application exécutable.
 
 En cas de conflit entre deux versions différentes d’un même plug-in (l’une chargée par 4D et l’autre placée dans le dossier de l’application source), la priorité revient au plug-in installé dans le dossier de 4D Volume Desktop/4D Server. However, if there are two instances of the same component, the application will not open.
 > The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
@@ -382,18 +382,18 @@ Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** 
 
 Lorsque vous cliquez sur le bouton [+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *Licenses* de votre poste. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command.
 
-Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
+Vous devez désigner les fichiers contenant votre licence Developer et ainsi que vos licences de déploiement. Ces fichiers ont été générés ou mis à jour lors de l'achat de la licence *4D Developer Professional* et des licences *4D Desktop Volume*.
 
-Once you have selected a file, the list will indicate the characteristics of the license that it contains.
+Une fois que vous avez sélectionné un fichier, la liste indiquera les caractéristiques de la licence qu'il contient.
 
-*   **License #** - Product license number
-*   **License** - Name of the product
-*   **Expiration date** - Expiration date of the license (if any)
-*   **Path** -  Location on disk
+*   **License #** - Numéro de licence du produit
+*   **Licence** - Nom du produit
+*   **Date d'expiration** - Date d'expiration de la licence (le cas échéant)
+*   **Chemin** - Emplacement sur le disque
 
-If a license is not valid, a message will warn you.
+Si une licence n'est pas valide, un message vous en avertira.
 
-You can designate as many valid files as you want. Lors de la génération de l’application exécutable, 4D utilisera les licences les plus appropriées.
+Vous pouvez désigner autant de fichiers valides que vous le souhaitez. Lors de la génération de l’application exécutable, 4D utilisera les licences les plus appropriées.
 > Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-4DDP").
 
 A l’issue de la génération, un nouveau fichier de licence de déploiement est automatiquement inclus dans un dossier Licences placé à côté de l’application exécutable (Windows) ou dans le progiciel (macOS).
