@@ -20,7 +20,7 @@ Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souh
 
 Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+Outre la récupération d'une seule entité dans une dataclass à l'aide de [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une méthode dans votre classe DataClass et l'appeler pour retourner une entity selection (ou une collection) à l'aide de [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
 
 Avant de retourner la collection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
@@ -69,17 +69,17 @@ Pour calculer toutes les valeurs et retourner un objet JSON :
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Getting data from methods
+## Obtenir des données à partir de méthodes
 
-You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). A 4D method can return in $0:
+Vous pouvez appeler des méthodes projet 4D [exposées en tant que service REST](%7BdataClass%7D.html#4d-configuration). Une méthode 4D peut retourner en $0 :
 
-- an object
-- a collection
+- un objet
+- une collection
 
-The following example is a dataclass method that reveives parameters and returns an object:
+L'exemple suivant est une méthode de dataclass qui reçoit des paramètres et retourne un objet :
 
 ```4d
-// 4D findPerson method
+// méthode 4D findPerson
 C_TEXT($1;$firstname;$2;$lastname)
 $firstname:=$1
 $lastname:=$2
@@ -87,11 +87,11 @@ $lastname:=$2
 $0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
 ```
 
-The method properties are configured accordingly on the 4D project side:
+Les propriétés de la méthode sont configurées en conséquence côté projet 4D :
 
 ![alt-text](assets/en/REST/methodProp_ex.png)
 
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
+Vous pouvez ensuite envoyer la requête REST POST suivante, à l'aide par exemple de la commande 4D `HTTP Request` :
 
 ```4d
 C_TEXT($content)
@@ -102,7 +102,7 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
-Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
+Les appels de méthode sont détaillés dans la section [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod).
 
 ## Selecting Attributes to get
 
