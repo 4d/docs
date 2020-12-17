@@ -10,7 +10,7 @@ Cette section détaille les règles d'écriture et de nommage appliquées aux di
 
 Les règles suivantes s'appliquent à toutes les structures de 4D.
 
-- A name must begin with an alphabetic character, an underscore, or a dollar ("$") (note that a dollar sign can denote a local element, see below).
+- Un nom doit commencer par un caractère alphabétique, un tiret bas ou un dollar ("$") (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).
 - Le nom peut ensuite contenir des caractères alphabétiques, des caractères numériques, des espaces et des tirets bas (_).
 - Les points (".") Les points (".") et les crochets ("[ ]") sont interdits dans les noms de tables, champs, méthodes ou variables.
 - Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.
@@ -171,7 +171,7 @@ Voici quelques exemples :
 
 ## Propriétés (attributs) d'objets
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. between the name of the object (or attribute) and the name of the attribute. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
+Lorsque la notation objet est activée, vous désignez un attribut d'objet (également appelé propriété d'objet) en plaçant un point (".") entre le nom de l'objet (ou de l'attribut) et le nom de l'attribut. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
 Voici quelques exemples :
 ```4d
