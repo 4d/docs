@@ -382,7 +382,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 1. フィールド
 2. コマンド
-3. Methods
+3. メソッド
 4. プラグインコマンド
 5. 定義済み定数
 6. 変数
