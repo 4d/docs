@@ -31,7 +31,7 @@ Pour ouvrir un projet existant en local depuis 4D :
 
 1. Sélectionnez **Ouvrir un projet d'application local** dans la boite de dialogue de l'Assistant de bienvenue <p>OU<p> Sélectionnez **Ouvrir > Projet local...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.<p> La boîte de dialogue standard d’ouverture de fichiers apparaît.
 
-2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> By default, the project is opened with its current data file. Other file types are suggested:
+2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
     - *Packed project files*: `.4dz` extension  - deployment projects
     - *Shortcut files*: `.4dlink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
@@ -91,4 +91,4 @@ Once a connection to the server has been established, the remote project will be
     -   *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
 
 - via les préférences :
-    -   Set the **At startup** general preference to **Open last used project**. 
+    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**. 
