@@ -142,26 +142,26 @@ Une fois le dossier sélectionné, son chemin d’accès complet est affiché et
 
 > Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. Par exemple, si vous utilisez 4D Developer v18, vous devez sélectionner un 4D Volume Desktop v18.
 
-#### Data linking mode
+#### Mode de liaison des données
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+Cette option vous permet de sélectionner le mode de liaison entre l'application fusionnée et le fichier de données local. Deux modes de liaison sont disponibles :
 
-*   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Cela vous permet de déplacer librement le dossier de l'application sur le disque. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
+*   **Nom de l'application** (défaut) - Dans ce mode, l'application 4D ouvre automatiquement le dernier fichier de données ouvert correspondant à la structure. Cela vous permet de déplacer librement le dossier de l'application sur le disque. Il est conseillé en général pour les applications fusionnées, à moins que vous n'ayez spécifiquement besoin de dupliquer l'application.
 
-*   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Otherwise, the last opened data file is opened (default mode).
+*   **Chemin de l'application** - Dans ce mode, l'application 4D fusionnée va lire le contenu du fichier *lastDataPath.xml* et tenter d'ouvrir le fichier de données dont l'attribut "executablePath" correspond au chemin d'accès de l'application. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Sinon, le dernier fichier de données utilisé est ouvert (mode par défaut).
 
-For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
+Pour plus d'informations sur le mode de liaison des données, reportez-vous au paragraphe [Dernier fichier de données ouvert](#last-data-file-opened).
 
 
 #### Fichiers générés
 
-When you click on the **Build** button, 4D automatically creates a **Final Application** folder in the specified **Destination Folder**. Inside the Final Application folder is a subfolder with the name of the specified application in it.
+Lorsque vous cliquez sur le bouton **Générer**, 4D crée automatiquement un dossier **Final Application** dans le **Dossier de destination** défini. Inside the Final Application folder is a subfolder with the name of the specified application in it.
 
 If you have specified "MyProject" as the name of the application, you will find the following files in this subfolder (aka MyProject):
 
 *   *Sous Windows*
-    *   MyProject.exe  - Your executable and a MyProject.rsr (the application resources)
-    *   4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
+    *   MonAppli.exe qui est votre exécutable et MonAppli.Rsr qui contient les ressources de l’application
+    *   Les dossiers 4D Extensions et Resources ainsi que les diverses librairies (DLL), le dossier Native Components et SAS Plugins -fichiers nécessaires au fonctionnement de l’application
     *   Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
     *   (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the project. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
     *   Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
@@ -175,25 +175,25 @@ If you have specified "MyProject" as the name of the application, you will find 
 
 #### Customizing 4D Volume Desktop folder
 
-When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. You can, for example:
+Lors de la construction de l’application exécutable, 4D duplique le contenu du dossier 4D Volume Desktop dans le dossier *Final Application*. Vous pouvez donc parfaitement personnaliser le contenu du dossier 4D Volume Desktop d’origine en fonction de vos besoins. Vous pouvez, par exemple :
 
-*   Install a 4D Volume Desktop version corresponding to a specific language;
-*   Add a custom *PlugIns* folder;
-*   Customize the contents of the *Resources* folder.
-> In macOS, 4D Volume Desktop is provided in the form of a software package. In order to modify it, you must first display its contents (**Control+click** on the icon).
+*   Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
+*   Ajouter un dossier *PlugIns* personnalisé ;
+*   Personnaliser le contenu du dossier *Resources*.
+> Sous Mac Os, 4D Volume Desktop est fourni sous forme de progiciel. Vous devrez tout d’abord afficher son contenu (effectuez **Control+clic** sur son icône) afin de pouvoir le modifier.
 
 
-#### Location of Web files
+#### Emplacements des fichiers Web
 
-If your stand-alone application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+Si votre application exécutable est utilisée en tant que serveur Web, les fichiers et dossiers requis par le serveur doivent être installés à des emplacements spécifiques. Ces éléments sont les suivants :
 
-*   *cert.pem* and *key.pem* files (optional): These files are used for TLS connections and by data encryption commands,
-*   default Web root folder.
+*   fichiers *cert.pem* et *key.pem* (facultatifs) : ces fichiers sont utilisés pour les connexions TLS ainsi que par les commandes de cryptage des données,
+*   dossier racine Web par défaut.
 
-Items must be installed:
+Des éléments doivent être installée :
 
-- **on Windows**: in the *Final Application\MyProject\Database* subfolder.
-- **on macOS**: next to the *MyProject.app* software package.
+- **Sous Windows** : dans le sous-dossier *Final Application\MonAppli\Database*.
+- **Sous macOS** : à côté du progiciel *MonProjet.app*.
 
 
 
@@ -240,15 +240,15 @@ Used to indicate the current version number for the application generated. Vous 
 
 This option lets you choose the linking mode between the merged application and the local data file.
 
-#### Data linking mode
+#### Mode de liaison des données
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+Cette option vous permet de sélectionner le mode de liaison entre l'application fusionnée et le fichier de données local. Deux modes de liaison sont disponibles :
 
-*   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Cela vous permet de déplacer librement le dossier de l'application sur le disque. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
+*   **Nom de l'application** (défaut) - Dans ce mode, l'application 4D ouvre automatiquement le dernier fichier de données ouvert correspondant à la structure. Cela vous permet de déplacer librement le dossier de l'application sur le disque. Il est conseillé en général pour les applications fusionnées, à moins que vous n'ayez spécifiquement besoin de dupliquer l'application.
 
-*   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Otherwise, the last opened data file is opened (default mode).
+*   **Chemin de l'application** - Dans ce mode, l'application 4D fusionnée va lire le contenu du fichier *lastDataPath.xml* et tenter d'ouvrir le fichier de données dont l'attribut "executablePath" correspond au chemin d'accès de l'application. Si cette clé est trouvée, son fichier de données correspondant (défini via son attribut "dataFilePath") est ouvert. Sinon, le dernier fichier de données utilisé est ouvert (mode par défaut).
 
-For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
+Pour plus d'informations sur le mode de liaison des données, reportez-vous au paragraphe [Dernier fichier de données ouvert](#last-data-file-opened).
 
 
 ### Build client application
@@ -329,14 +329,14 @@ If you checked the “Allow automatic update of client application” option, an
 If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. This file is used during the automatic client application update.
 
 
-#### Location of Web files
+#### Emplacements des fichiers Web
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Ces éléments sont les suivants :
 
 - *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
 - Default Web root folder (WebFolder).
 
-Items must be installed:
+Des éléments doivent être installée :
 *   **on Windows**
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
