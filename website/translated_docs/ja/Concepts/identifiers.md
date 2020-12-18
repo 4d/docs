@@ -72,7 +72,7 @@ atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 ```
 
-## Classes
+## クラス
 
 クラス名は標準的な [プロパティ名の命名規則](Concepts/dt_object.md#ORDA-やオブジェクトプロパティに適用される追加ルール) に準拠している必要があります。 大文字・小文字は区別されます。 競合防止のため、[データベーステーブル](#tables) と同じ名前のクラスを作成するのは推奨されないこと
 
@@ -318,7 +318,7 @@ If(bValidate=1) // プロセス変数
 
 1. フィールド
 2. コマンド
-3. Methods
+3. メソッド
 4. プラグインコマンド
 5. 定義済み定数
 6. 変数
