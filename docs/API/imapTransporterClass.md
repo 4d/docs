@@ -313,7 +313,7 @@ $status:=$imap.append($msg; "Drafts")
 
 
 
-<!-- INCLUDE transporter.authenticationMode.Desc -->
+<!-- INCLUDE transporter.authenticationModeIMAP.Desc -->
 
 
 
@@ -1001,6 +1001,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 |updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
 |Result|BLOB|<-|Blob of the MIME string returned from the mail server|
 <!-- END REF -->
+
 
 
 #### Description
