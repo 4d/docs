@@ -8,7 +8,7 @@ Variant ist ein Variablentyp, um Daten von beliebigem regulären Typ in eine Var
 Eine Variable vom Typ Variant kann einen Wert in folgenden Datentypen enthalten:
 
 - BLOB
-- boolean
+- Boolean
 - collection
 - date
 - Lange Ganzzahl
@@ -23,7 +23,7 @@ Eine Variable vom Typ Variant kann einen Wert in folgenden Datentypen enthalten:
 
 > Arrays lassen sich nicht in Variablen vom Typ Variant speichern.
 
-Im interpretierten und im kompilierten Modus kann derselben Variablen vom Typ Variant Inhalt mit unterschiedlichen Typen zugewiesen werden. Im Gegensatz zu festen Variablentypen ist der Inhaltstyp von Variant unterschiedlich von der Variable selbst. Beispiel:
+Sowohl im interpretierten als auch im kompilierten Modus kann derselben Variablen vom Typ Variant Inhalt mit unterschiedlichen Typen zugewiesen werden. Im Gegensatz zu festen Variablentypen ist der Inhaltstyp von Variant unterschiedlich von der Variable selbst. Beispiel:
 
 ```4d
 C_VARIANT($variant)

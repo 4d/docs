@@ -184,96 +184,119 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 データクラスに対して、異なるエンティティセレクションを好きなだけ同時に作成し、使用することができます。 エンティティセレクションは、エンティティへの参照を格納しているに過ぎないという点に注意してください。 異なるエンティティセレクションが同じエンティティへの参照を格納することも可能です。
 
-### 共有可能な/共有不可のエンティティセレクション
+### Shareable or alterable entity selections
 
-エンティティセレクションには 2種類あります: **共有可能** (複数のプロセスで読み込み可能、ただし編集不可) のものと、**共有不可** (カレントプロセスでのみ利用可能、ただし編集可能) のものです:
+An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/entitySelectionClass.md#add) function, but only usable by the current process).
 
-- **共有可能** なエンティティセレクションは以下のような特徴を持ちます:
-    - 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で共有することができます。
-    - 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、*ロック識別子* を持っていないということです)。
-    - 新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、[`.add( )`](API/entitySelectionClass.md#add) 関数を呼び出す前に、[`.copy( )`](API/entitySelectionClass.md#copy) 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。
+#### Properties
 
-- **共有不可** のエンティティセレクションは以下のような特徴を持ちます:
-    + プロセス間での共有はできません。また共有オブジェクト/コレクションへの保存もできません。 共有不可のエンティティセレクションを共有オブジェクト/コレクションに保存しようとした場合、エラーがトリガーされます (エラー -10721 - 共有オブジェクトまたはコレクションにおいてサポートされる値の型ではありません)。
-    + it accepts the addition of new entities, i.e. it is **alterable**.
+A **shareable** entity selection has the following characteristics:
 
-The **shareable** or **non-shareable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/entitySelectionClass.md#isalterable) function or the `OB Is shared` command.
+- it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
+- 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、*ロック識別子* を持っていないということです)。
+- 新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、[`.add( )`](API/entitySelectionClass.md#add) 関数を呼び出す前に、[`.copy( )`](API/entitySelectionClass.md#copy) 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。
 
-A new entity selection **inherits** from the "parent" entity selection nature in the following cases:
+> Most entity selection functions (such as [`.slice()`](API/entitySelectionClass.md#slice), [`.and()`](API/entitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
 
-- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/entitySelectionClass.md#query), [.slice()](API/entitySelectionClass.md#slice), etc.) .
-- the new entity selection is based upon a relation:
-    - [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employee") when *attributeName* is a related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/entityClass.md#getselection) entity selection),
-    - [entitySelection.*attributeName*](API/entitySelectionClass.md#attributename) (e.g. "companies.employer") when *attributeName* is a related attribute (same nature as the entity selection),
-    - [.extract()](API/entitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
+An **alterable** entity selection has the following characteristics:
+
+- プロセス間での共有はできません。また共有オブジェクト/コレクションへの保存もできません。 共有不可のエンティティセレクションを共有オブジェクト/コレクションに保存しようとした場合、エラーがトリガーされます (エラー -10721 - 共有オブジェクトまたはコレクションにおいてサポートされる値の型ではありません)。
+- it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/entitySelectionClass.md#add) function.
+
+
+#### How are they defined?
+
+The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/entitySelectionClass.md#isalterable) function or the `OB Is shared` command.
 
 
 A new entity selection is **shareable** in the following cases:
 
 - the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/dataclassClass.md#all), [dataClass.fromCollection()](API/dataclassClass.md#fromcollection), [dataClass.query()](API/dataclassClass.md#query),
-- the new entity selection is based upon a relation [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employee") when *attributeName* is a related attribute but the entity does not belong to an entity selection.
+- the new entity selection is based upon a relation [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
 - the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
 
+例:
+```4d
+$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
+$employees:=$myComp.employees //$employees is shareable
+```
 
-A new entity selection is **non-shareable** (i.e. **alterable**) in the following cases:
+A new entity selection is **alterable** in the following cases:
 
 - the new entity selection created blank using the [dataClass.newSelection()](API/dataclassClass.md#newselection) function or `Create entity selection` command,
-- the new entity selection is explicitely copied as non-shareable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+- the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/entitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
 
-> *Compatibility*: It is possible to "force" all new entity selections to be alterable by default in your project using the [.makeSelectionsAlterable()](API/datastoreClass.md#makeselectionsalterable) function. This compatibility setting is not recommended for new projects.
+例:
+```4d
+$toModify:=ds.Company.all().copy() //$toModify is alterable
+```
 
 
-#### 例題
+A new entity selection **inherits** from the original entity selection nature in the following cases:
+
+- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/entitySelectionClass.md#query), [.slice()](API/entitySelectionClass.md#slice), etc.) .
+- the new entity selection is based upon a relation:
+    - [entity.*attributeName*](API/entityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/entityClass.md#getselection) entity selection),
+    - [entitySelection.*attributeName*](API/entitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
+    - [.extract()](API/entitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
+
+例:
+
+```4d
+$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
+    //$highSal is shareable because of the query on dataClass
+$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+
+$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
+    //$lowSal is alterable because of the copy()
+$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+```
+
+
+#### Sharing an entity selection between processes (example)
 
 二つのエンティティセレクションを使用し、それらをワーカープロセスに渡して適切な相手にメールを送信したい場合を考えます:
 
 ```4d
- If(Storage.info=Null)
-    Use(Storage)
-       Storage.info:=New shared object()
-    End use
- End if
 
- Use(Storage.info)
-  // エンティティセレクションを共有オブジェクトへと保存します
-    Storage.info.paid:=ds.Invoices.query("status=:1";"Paid")
-    Storage.info.unpaid:=ds.Invoices.query("status=:1";"Unpaid")
- End use
+var $paid; $unpaid : cs.InvoicesSelection
+//We get entity selections for paid and unpaid invoices
+$paid:=ds.Invoices.query("status=:1"; "Paid")
+$unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
- CALL WORKER("mailing";"sendMails";Storage.info)
+//We pass entity selection references as parameters to the worker
+CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
-sendMails メソッド:
+```
 
- var $info: ;$1Object
- var $paid;$unpaid : cs.InvoicesSelection
+The `sendMails` method:
+
+```4d 
+
+ #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
  var $invoice : cs.InvoicesEntity
 
- var $server;$transporter;$email;$status : Object
+ var $server; $transporter; $email; $status : Object
 
-  // Eメールを準備します
- $server:=New object
+  //Prepare emails
+ $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
  $server.password:="my!!password"
  $transporter:=SMTP New transporter($server)
- $email:=New object
+ $email:=New object()
  $email.from:="myName@company.com"
 
-  // エンティティセレクションを取得します
- $info:=$1
- $paid:=$info.paid
- $unpaid:=$info.unpaid
-
-  //  エンティティセレクション内をループします
+  //Loops on entity selections
  For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number)+” の入金を確認しました。”
+    $email.to:=$invoice.customer.address // email address of the customer
+    $email.subject:="Payment OK for invoice # "+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number)+" が未入金となっています。"
+    $email.to:=$invoice.customer.address // email address of the customer
+    $email.subject:="Please pay invoice # "+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 ```
@@ -398,6 +421,7 @@ ORDA では、以下の二つのロックモードを提供しています:
 *   `entitySelection.orderBy()`
 *   `entitySelection.slice()`
 *   `entitySelection.drop()`
+
 
 
 **例題**

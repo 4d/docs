@@ -84,12 +84,12 @@ Typically, you select the form category when you create the form, but you can ch
 
 ## Pages formulaire
 
-Each form has is made of at least two pages:
+Chaque formulaire est composé d'au moins deux pages :
 
-- a page 1: a main page, displayed by default
-- a page 0: a background page, whose contents is displayed on every other page.
+- une page 1 : une page principale, affichée par défaut
+- une page 0 : une page de fond, dont le contenu est affiché sur une page sur deux.
 
-You can create multiple pages for an input form. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. Multiple pages allow you to do the following:
+Vous pouvez créer plusieurs pages pour un formulaire d'entrée. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. Multiple pages allow you to do the following:
 
 - Place the most important information on the first page and less important information on other pages.
 - Organize each topic on its own page.
@@ -105,7 +105,7 @@ A multi-page form has both a background page and several display pages. Objects 
 
 ## Formulaires hérités
 
-4D forms can use and be used as "inherited forms," meaning that all of the objects from *Form A* can be used in *Form B*. In this case, *Form B* "inherits" the objects from *Form A*.
+Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du *Formulaire A* peuvent être utilisés dans le *Formulaire B*. Dans ce cas, *Formulaire B* "hérite" des objets du *Formulaire A*.
 
 Les références à un formulaire hérité est toujours active : si un élément d'un formulaire hérité est modifié (par exemple le style des boutons), tous les formulaires qui l’utilisent seront automatiquement modifiés.
 
@@ -126,9 +126,9 @@ Les propriétés ainsi que la méthode d’un formulaire ne sont pas prises en c
 
 Pour définir un formulaire hérité, les propriétés de [Inherited Form Name](properties_FormProperties.md#inherited-form-name) et [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (pour les formulaires table) doivent être définies dans le formulaire qui héritera de quelque chose issue d'un autre formulaire.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to **\<None>** in the Property List (or " " in JSON).
+Un formulaire peut hériter d'un formulaire projet, en définissant la propriété [Inherited Form Table](properties_FormProperties.md#inherited-form-table) sur **\<None>** dans la liste des propriétés (ou " " dans JSON).
 
-To stop inheriting a form, select **\<None>** in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+Pour stopper l’héritage d’un formulaire, choisissez l’option **\<None>** dans la Liste des propriétés (ou " " dansJSON) pour la propriété [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
 > Il est possible de définir un formulaire hérité dans un formulaire qui servira à son tour de formulaire hérité pour un troisième formulaire. La combinaison des objets s’effectue alors de manière récursive. 4D détecte les boucles récursives (par exemple si le formulaire [table1]form1 est défini comme formulaire hérité de [table1]form1, c’est-à-dire de lui-même) et interrompt le chaînage des formulaires.
 
 

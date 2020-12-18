@@ -60,7 +60,7 @@ Entity selections can be created from existing selections using various function
 
 #### 説明
 
-The `Create entity selection` command builds and returns a new, [non-shareable](ORDA/entities.md#shareable-or-non-shareable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
 
 If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
 
@@ -224,10 +224,10 @@ The resulting object is an entity selection of Employee with duplications remove
 ## .add()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                            |
-| ------ | --------------------------------------------- |
-| v18 R5 | Only supports non-shareable entity selections |
-| v17    | 追加                                            |
+| バージョン  | 内容                                        |
+| ------ | ----------------------------------------- |
+| v18 R5 | Only supports alterable entity selections |
+| v17    | 追加                                        |
 </details>
 
 
@@ -247,7 +247,7 @@ The resulting object is an entity selection of Employee with duplications remove
 The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
 > This function modifies the original entity selection.
 
-**Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
+**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
 
 
 *   If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
@@ -526,9 +526,9 @@ The `.copy()` function <!-- REF #entitySelectionClass.copy().Summary -->returns 
 
 > This function does not modify the original entity selection.
 
-By default, if the *option* parameter is omitted, the function returns a new, non-shareable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
+By default, if the *option* parameter is omitted, the function returns a new, alterable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
 
-> For information on the shareable property of entity selections, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
+> For information on the shareable property of entity selections, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
 
 #### 例題
 
@@ -850,6 +850,7 @@ There is, however, a difference between both statements when the selection is em
 <!-- REF #entitySelectionClass.getDataClass().Syntax -->
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
+
 <!-- REF #entitySelectionClass.getDataClass().Params -->
 | 参照  | タイプ          |    | 説明                                                     |
 | --- | ------------ |:--:| ------------------------------------------------------ |
@@ -901,20 +902,20 @@ The following generic code duplicates all entities of the entity selection:
 **.isAlterable()** : Boolean<!-- END REF -->
 
 <!-- REF #entitySelectionClass.isAlterable().Params -->
-| 参照  | タイプ |    | 説明                                                                  |
-| --- | --- |:--:| ------------------------------------------------------------------- |
-| 戻り値 | ブール | <- | True if the entity selection is alterable, False if it is shareable |
+| 参照  | タイプ |    | 説明                                                         |
+| --- | --- |:--:| ---------------------------------------------------------- |
+| 戻り値 | ブール | <- | True if the entity selection is alterable, False otherwise |
 <!-- END REF -->
 
 #### 説明
 
-The `.isAlterable()` function <!-- REF #entitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->. It returns False if the entity selection is not alterable, i.e. if it is *shareable*.
+The `.isAlterable()` function <!-- REF #entitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, and False if the entity selection is not alterable.
 
-For more information, please refer to [Shareable or non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+For more information, please refer to [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 #### 例題
 
-You are about to display `Form.products` in a [list box](FormObjects\listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
+You are about to display `Form.products` in a [list box](FormObjects/listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
 
 ```4d
 If (Not(Form.products.isAlterable()))
@@ -1075,6 +1076,7 @@ Entity selections always have a `.length` property.
 
 <!-- REF #entitySelectionClass.max().Syntax -->
 **.max**( *attributePath* : Text ) : any<!-- END REF -->
+
 
 <!-- REF #entitySelectionClass.max().Params -->
 | 参照            | タイプ  |    | 説明                                               |
@@ -1989,6 +1991,7 @@ Returns:
         "lastName": "Durham"
     }
 ]
+
 ```
 
 #### Example 4

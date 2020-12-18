@@ -32,7 +32,7 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 
 ## High Resolution Pictures
 
-4D supports high resolution pictures on both macOS and Windows platforms. High resolution pictures can be defined by either scale factor or dpi.
+4D prend en charge des images haute résolution sur les plateformes macOS et Windows. High resolution pictures can be defined by either scale factor or dpi.
 
 ### Scale factor (macOS only)
 

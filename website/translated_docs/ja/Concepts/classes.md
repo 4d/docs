@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: クラス
 ---
 
 
@@ -48,7 +48,7 @@ $o:=cs.Person.new("John";"Doe")
 - Project フォルダー
     + Project
         * Sources
-            - Classes
+            - クラス
                 + Polygon.4dm
 
 ### クラスの削除
