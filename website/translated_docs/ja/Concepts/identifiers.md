@@ -3,150 +3,60 @@ id: identifiers
 title: 識別子の命名規則
 ---
 
-この章では、4D ランゲージにおけるさまざまな要素 (変数、テーブル、オブジェクト、フォームなど) の命名規則について説明します。
+This section describes the conventions and rules for naming various elements in the 4D language (variables, object properties, tables, forms, etc.).
 
-
-## 基本ルール
-
-以下の命名規則は 4D フレームワークにおいて全般的に適用されます:
-
-- 識別子の 1文字目は、半角アルファベット、アンダースコア ("_")、あるいはドル記号 ("$") で始めます。
-- その後の文字には、半角アルファベット文字・数字・スペース・アンダースコアを使用ができます。
-- ピリオド (".") および大カッコ ("[ ]") は、テーブル・フィールド・メソッド・変数の名称に使用できません。
-- カンマ (,)・スラッシュ(/)・引用符(")・コロン(:) の使用は禁止されています。
-- 演算子として用いられる記号 ("*" や "+" など) の使用は禁止されています。
-- 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (If, For 等)、そして定数が含まれます。
-- 名前の最後につけたスペースは無視されます。
-
-### ORDA やオブジェクトプロパティに適用される追加ルール
-
-- スペースは使えません。
-- ピリオド (".") および大カッコ ("[ ]") は使用できません。
-- 大文字・小文字は区別されます。
-
-### SQL で処理する場合の追加ルール
-
-- 文字 _0123456789abcdefghijklmnopqrstuvwxyz のみを使用できます。
-- 名前に SQLキーワード (コマンド、属性 等) が含まれていてはなりません。
-
-**注:** ストラクチャーエディターのインスペクター下部にある ”SQL” エリアには、テーブル名やフィールド名として許可されない文字があると警告が表示されます。
-
+> If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 
 
 
 ## 配列
 
-配列は、配列作成時に配列宣言コマンド (ARRAY LONGINT 等) に渡す名前でもって表されます。 配列は変数であり、配列名はスコープ記号を除いて31文字まで指定することができます。スコープに基づいて次の3種類があります:
+Array names follow the same rules as [variables](#variables).
 
-- 配列名がドル記号 ($) で始まるものは、**ローカル** 配列です。
-- (<>記号や$記号から始まらない) 名前を使用して、**プロセス** 配列を表します。
-- **インタープロセス** 配列の名前は、先頭にインタープロセス記号 (<>) が付きます。
-
-例:
-```4d
-ARRAY TEXT($atSubjects;Records in table([Topics])) // ローカル配列
-SORT ARRAY(asKeywords;>) // プロセス配列
-ARRAY BOOLEAN(<>settings;Records in table([MySettings])) // インタープロセス配列
-```
-
-
-### 配列の要素
-中カッコ ("{ }") を使用して、インタープロセス配列、プロセス配列、ローカル配列の要素を参照します。 参照される配列要素は数式で表されます。
-
-例:
-```4d   
-    // ローカル配列の特定要素にアクセスする例
-If($asKeywords{1}="Stop")
-$atSubjects{$vlElem}:=[Topics]Subject
-$viNextValue:=$aiBigArray{Size of array($aiBigArray)}
-```
-
-### 二次元配列の要素
-中カッコ ("{ }") を2回使用して、2次元配列の要素を参照します 。 参照される要素は2組の中カッコ内の2つの数式で表されます。
-
-例:
-```4d 
-    // 二次元配列の特定要素にアクセスする例
-If(asKeywords{$vlNextRow}{1}="Stop")
-atSubjects{10}{$vlElem}:=[Topics]Subject
-$viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
-```
 
 ## クラス
 
-クラス名は標準的な [プロパティ名の命名規則](Concepts/dt_object.md#ORDA-やオブジェクトプロパティに適用される追加ルール) に準拠している必要があります。 大文字・小文字は区別されます。 競合防止のため、[データベーステーブル](#tables) と同じ名前のクラスを作成するのは推奨されないこと
+The name of a class can contain up to 31 characters.
+
+A class name must be compliant with standard [property naming rules](#object-properties) for dot notation.
+
+> 競合防止のため、[データベーステーブル](#tables) と同じ名前のクラスを作成するのは推奨されないこと
 
 
-## フィールド
-
-フィールドが属するテーブルを最初に指定することで、フィールドを表します。 フィールド名はテーブル名のすぐ後に続けます。 フィールド名は31文字以内で指定します。
-
-例:
-```4d
-[Orders]Total:=Sum([Line]Amount)
-QUERY([Clients];[Clients]Name="Smith")
-[Letters]Text:=Capitalize text([Letters]Text)
-```
-
-## フォームオブジェクト
-
-フォームオブジェクトを引数としてコマンドに渡すには、文字列の名称の前に、任意パラメーターである * 記号を使います。 オブジェクト名には最大で255バイトまで含めることができます。
-
-例:
-```4d
-OBJECT SET FONT(*;"Binfo";"Times")
-```
-
-**注:** フォームオブジェクト (ボタン、リストボックス、入力可能な変数など) と 4Dランゲージのオブジェクト型を混同しないようにしてください。 4Dランゲージのオブジェクト型はオブジェクト記法と専用のコマンドを使用して作成し、管理されます。
-
-## Forms
-
-フォームの名前は文字列を使用して表します。 フォーム名は31文字以内で指定します。
-
-例:
-```4d
-FORM SET INPUT([People];"Input")
-FORM SET OUTPUT([People];"Output")
-DIALOG([Storage];"Note box"+String($vlStage))
-```
 
 ## 関数
 
-関数名は標準的な [プロパティ名の命名規則](Concepts/dt_object.md#ORDA-やオブジェクトプロパティに適用される追加ルール) に準拠している必要があります。
+Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
 
-> Tip: アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。
+> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。
 
 
-## 命名セレクション
 
-命名セレクション名は、スコープ記号を除いて255文字以内で指定します。
+## オブジェクトプロパティ
 
-- **プロセス** 命名セレクションの名前を表す文字列式を使用してプロセスセットを表します (<>記号も$記号も名前の先頭につきません) 。
-- **インタープロセス** 命名セレクションの名前は、先頭にインタープロセス記号 (<>) が付きます。
+The name of an object property (also called object *attribute*) can contain up to 255 characters.
+
+Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
+
+- A property name must begin with a letter, an underscore, or a dollar "$".
+- Thereafter, the name can include any letter, digit, the underscore character ("_"), or the dollar character ("$").
+- Property names are case sensitive.
+
 
 例:
-```4d
-USE NAMED SELECTION([Customers];"Closed")// プロセス命名セレクション
-USE NAMED SELECTION([Customers];"<>ByZipcode") // インタープロセス命名セレクション
-```
 
-
-## オブジェクト属性
-
-ドット (".") をオブジェクト名と属性名の間に置くことでオブジェクト属性 (オブジェクトプロパティとも呼びます) を指定します。 属性名は255文字以内の文字列で指定し、また大文字と小文字を区別することに注意してください。
-
-例:
 ```4d
 myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、[上述の追加ルール](#ORDA-やオブジェクトプロパティに適用される追加ルール) および [オブジェクトプロパティ識別子](Concepts/dt_object.md#オブジェクトプロパティ識別子) を参照ください。
+> If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`).
 
+See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
 
 ## 引数
 
-引数名は必ず `$` 文字で始まり、[プロパティ名の命名規則](Concepts/dt_object.md#ORDA-やオブジェクトプロパティに適用される追加ルール) に準拠している必要があります。
+Parameter names must start with a `$` character and follow the same rules as [variable names](#variables).
 
 例:
 
@@ -156,50 +66,30 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 #DECLARE ($i : Integer ; $param : Date) -> $myResult : Object
 ```
 
-## プラグインコマンド
-
-プラグインにより定義された名前を使用して、プラグインコマンドを表します。 プラグインコマンド名は 31文字以内で指定します。
-
-例:
-
-```4d
-$error:=SMTP_From($smtp_id;"henry@gmail.com")
-```
-
-## プロセス
-
-ローカルプロセス名は、スコープ記号を除いて255文字以内で指定します。
-
-シングルユーザー版およびクライアント/サーバー版のクライアント側において、**グローバル** と **ローカル** という2種類のプロセススコープがあります。
-
-- $記号以外から始まる文字列を使用して **グローバル** プロセスの名前を表します。
-- 名前の前にドル記号 ($) をつけて **ローカル** プロセスを表します。
-
-例:
-```4d
-    // グローバルプロセス "Add Customers" を開始します
-$vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
-    // ローカルプロセス "$Follow Mouse Moves" を開始します
-$vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-```
-
 
 ## プロジェクトメソッド
 
-プロジェクトメソッド (プロシージャーおよび関数) は名前によって表されます。 メソッド名は31文字以内で指定します。
+The name of a project method name contain up to 31 characters.
 
-**注:** 結果を返さないプロジェクトメソッドはプロシージャーとも呼ばれます。 結果を返すプロジェクトメソッドを関数と呼びます。
+- A project method name must begin with a letter, a digit, or an underscore
+- Thereafter, the name can include any letter or digit, the underscore character ("_"), or the space character.
+- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- Project method names are case insensitive.
 
 例:
+
 ```4d
 If(New client)
 DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** 4Dのビルトインコマンドと同じ命名規約を利用することは良いプログラミングテクニックです。 メソッド名には大文字を使用しますが、メソッドが関数の場合には最初の文字だけを大文字にします。 このように命名することにより、数ヶ月後に保守のためプロジェクトを再度開いたときに、エクスプローラーウィンドウでその名前を見ただけで、メソッドが結果を返すかどうかがわかります。
+**Tip:** 4Dのビルトインコマンドと同じ命名規約を利用することは良いプログラミングテクニックです。 Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. このように命名することにより、数ヶ月後に保守のためプロジェクトを再度開いたときに、エクスプローラーウィンドウでその名前を見ただけで、メソッドが結果を返すかどうかがわかります。
 
-**注:** メソッドを呼び出すには、そのメソッド名を入力します。 しかし `ON EVENT CALL` など一部の 4Dのビルトインコマンドやプラグインコマンドにメソッド名を引数として渡す場合には文字列 (ダブルクォートで括る) として渡します。 例:
+ > When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed.
+
+例:
+
 ```4d
     // このコマンドはメソッド (関数) またはフォーミュラを受け取ります
 QUERY BY FORMULA([aTable];Special query)
@@ -209,119 +99,80 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-プロジェクトメソッドには引数を渡すことができます。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号が付けられたローカル変数 ($1, $2, ...$n) に格納されます。 さらに、複数の連続する引数は、${n}というシンタックスを用いて使用できます。nは数値で引数の番号を示します。
 
-関数の戻り値は、ローカル変数 $0 に代入することで指定します。
+
+
+
+## テーブルとフィールド
+
+大カッコ内 (\[...]) に名前を入れることで、テーブルを表します。 You designate a field by first specifying the table to which it belongs (the field name immediately follows the table name).
+
+A table name and field name can contain up to 31 characters.
+
+- A table or fied name must begin with a letter, an underscore, or a dollar ("$")
+- その後の文字には、半角アルファベット文字・数字・スペース・アンダースコアを使用ができます。
+- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.).
+
 
 例:
+
 ```4d
-    // DROP SPACES メソッド内で、$1 はフィールド [People]Name へのポインターです
-DROP SPACES(->[People]Name)
-
-    // Calc creator メソッド内で、
-    //- $1 は数値の 1
-    //- $2 は数値の 5
-    //- $3 テキストまたは文字列の "Nice"
-    //- 戻り値は $0 に代入されます
-$vsResult:=Calc creator(1;5;"Nice")
-
-    // Dump メソッド内で、
-    //- 3つの引数はテキストまたは文字列です
-    //- これらの引数は $1, $2, $3 で参照できます
-    //- また、これらの引数を ${$vlParam} で間接的に参照することもできます ($vlParamは1, 2, 3)
-    //- 戻り値は $0 に代入されます
-vtClone:=Dump("is";"the";"it")
-```
-
-## セット
-
-セット名は、スコープ記号を除いて255文字以内で指定します。
-
-- セットの名前を表す文字列を使用して **プロセス** セットを表します (<>記号も$記号も名前の先頭につきません) 。
-- **インタープロセス** セットの名前は、先頭にインタープロセス記号 (<>) が付きます。
-- 4D サーバー上において **クライアント** セット名は、先頭にドル記号 ($) を指定します。 クライアントセット名は、ドル記号を除いて255文字以内で指定します。
-
-> セットはサーバーマシン上で保守されます。 効率や特殊目的のために、クライアントマシン上でローカルにセットを使用したい場合があります。 このような場合にクライアントセットを使用します。
-
-例:
-```4d
-CREATE SET([Customers];"Customer Orders")// プロセスセット
-USE SET("<>Deleted Records") // インタープロセスセット
-If(Records in set("$Selection"+String($i))>0) // クライアントセット
-```
-
-
-
-
-## テーブル
-
-大カッコ内 (\[...]) に名前を入れることで、テーブルを表します。 テーブル名は、31文字以内で指定します。 競合防止のため、[クラス](#クラス) と同じ名前のテーブルを作成するのは推奨されません。
-
-例:
-```4d
-DEFAULT TABLE([Orders])
 FORM SET INPUT([Clients];"Entry")
 ADD RECORD([Letters])
+[Orders]Total:=Sum([Line]Amount)
+QUERY([Clients];[Clients]Name="Smith")
+[Letters]Text:=Capitalize text([Letters]Text)
+
 ```
+
+> 競合防止のため、[クラス](#クラス) と同じ名前のテーブルを作成するのは推奨されません。
 
 ## 変数
 
-変数名は、スコープ記号を除いて最大31文字以内で指定することができます。
+The name of a variable can be up to 31 characters, not including the scope symbols ($ or <>).
 
-- ドル記号 ($) を名前の先頭につけて **ローカル** 変数を表します。
-- (<>記号や$記号から始まらない) 名前を使用して、**プロセス** 変数を表します。
-- 名前の先頭にインタープロセス記号 (<>) を付けることによって、**インタープロセス** 変数を表します。
+- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or "<>" for [interprocess variables](variables.md#interprocess-variables).
+- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Thereafter, the name can include any letter or digit, and the underscore character ("_").
+- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- Variable names are case insensitive.
+
 
 例:
 
 ```4d
-For($vlRecord;1;100) // ローカル変数
-$vsMyString:="Hello there" // ローカル変数
-If(bValidate=1) // プロセス変数
-<>vlProcessID:=Current process // インタープロセス変数
+For($vlRecord;1;100) //local variable
+$vsMyString:="Hello there" //local variable
+var $vName; $vJob : Text //local variales 
+If(bValidate=1) //process variable
+<>vlProcessID:=Current process() //interprocess variable
 ```
 
+## Other names
 
+In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
 
-## 識別子の一覧
+Such string names can contain up to 255 characters, not including the "$" or "<>" characters (if any).
 
-次の表は、4Dの命名規則についてまとめています。
+- String names can contain any characters.
+- String names are case insensitive.
 
-| 識別子              | 最大 長     | 例題                         |
-| ---------------- | -------- | -------------------------- |
-| テーブル             | 31       | [Invoices]                 |
-| フィールド            | 31       | [Employees]Last Name       |
-| インタープロセス変数/配列    | <> + 31  | <>vlNextProcessID          |
-| プロセス変数/配列        | 31       | vsCurrentName              |
-| ローカル変数/配列        | $ + 31   | $vlLocalCounter            |
-| オブジェクト属性         | 255      | $o.myAttribute             |
-| フォーム             | 31       | "My Custom Web Input"      |
-| フォームオブジェクト       | 255      | "MyButton"                 |
-| プロジェクトメソッド       | 31       | M_ADD_CUSTOMERS          |
-| プラグインコマンド        | 31       | PDF SET ROTATION           |
-| インタープロセスセット      | <> + 255 | "<>Records to be Archived" |
-| プロセスセット          | 255      | "Current selected records" |
-| クライアントセット        | $ + 255  | "$Previous Subjects"       |
-| 命名セレクション         | 255      | "Employees A to Z"         |
-| インタ－プロセス命名セレクション | <> + 255 | "<>Employees Z to A"       |
-| ローカルプロセス         | $ + 255  | "$Follow Events"           |
-| グロ－バルプロセス        | 255      | "*P_INVOICES_MODULE*"    |
-| セマフォー            | 255      | "mysemaphore"              |
+例:
 
-**注:** 非ローマ文字 (日本語など) が識別子に使用された場合、その最大長は短かくなることがあります。
+```4d
+DIALOG([Storage];"Note box"+String($vlStage))
+OBJECT SET FONT(*;"Binfo";"Times")
+USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
+    //Starting the global process "Add Customers"
+$vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
+    //Starting the local process "$Follow Mouse Moves"
+$vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
+CREATE SET([Customers];"Customer Orders")//Process set
+USE SET("<>Deleted Records") //Interprocess set
+If(Records in set("$Selection"+String($i))>0) //Client set
 
-## 名前が重複する場合
-
-プロジェクト内の要素に対して、ぞれぞれ重複しない名前を使用するようにしてください。 特定の要素が別タイプの要素と同じ名前を持つ場合 (たとえばフィールドが Person という名前で、変数も Person という名前の場合)、4Dは優先順位システムを使用します。
-
-4Dは、メソッドで使用される名前を次の順位で識別します:
-
-1. フィールド
-2. コマンド
-3. メソッド
-4. プラグインコマンド
-5. 定義済み定数
-6. 変数
-
-たとえば、4Dには `Date` というビルトインコマンドがあります。 メソッドに *Date* という名前を付けても、4Dはビルトインコマンドの `Date` として認識し、メソッドとしては認識しません。 つまり、そのメソッドの呼び出しはできないということです。 しかしながら、フィールドを "Date" と命名した場合には、4Dは `Date` コマンドの代わりにフィールドとしての使用を試みます。
+```
 
