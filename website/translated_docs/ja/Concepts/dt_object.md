@@ -5,7 +5,7 @@ title: オブジェクト
 
 オブジェクト型の変数・フィールド・式にはさまざまなデータを格納することができます。 4D のネイティブなオブジェクトの構造は、よくある「プロパティ/値」(または「属性/値」) というペア (連想配列) に基づいています。 これらオブジェクトの記法は JSON をもとにしていますが、完全に同じというわけではありません。
 
-- プロパティ名は必ずテキストで表現されます。
+- プロパティ名は必ずテキストで表現されます。 It must follow [specific rules](identifiers.md#object-properties).
 
 - プロパティ値は以下のどれかの型で表現されます:
     - 数値 (実数、整数、等)
@@ -22,11 +22,11 @@ title: オブジェクト
 
 **警告:** 属性名は大文字と小文字を区別するという点に注意してください。
 
-オブジェクト型の変数・フィールド・式を操作するには **オブジェクト (ランゲージ)** テーマのコマンドを使用するか、オブジェクト記法 ([オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) 参照)を用います。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
+You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](dt_object.md#syntax-basics)). オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
-- 4Dコード内。メソッド (メソッドエディター) に書いても、外部化(フォーミュラ、PROCESS 4D TAGS あるいは Web Server によって処理される 4D tags ファイル、4D Write Proドキュメントなど) しても使用可能です。
+- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
 - デバッガー及びランタイムエクスプローラーの式エリア内。
 - フォームエディターにおいて、フォームオブジェクトのプロパティリスト内。変数あるいは式フィールド内の他、様々なセレクションリストボックス及びカラムの式 (データソース、背景色、スタイル、フォントカラー等) において使用可能です。
 
@@ -90,6 +90,7 @@ title: オブジェクト
      $val:=$myCollection[3].subvalue // コレクション要素
 ```
 - オブジェクトを返す **4D コマンド** 例:
+
 
 ```4d
      $measures:=Get database measures.DB.tables
@@ -212,19 +213,6 @@ title: オブジェクト
  $myString:=Lowercase(String($o.a.b)) // 未定義の場合でもコード内でエラーが起きないように
   // 文字列の値が得られるようにします
 ```
-
-## オブジェクトプロパティ識別子
-
-トークンメンバー名 (つまり、オブジェクト記法を使用してアクセスしたオブジェクトプロパティ名) には、[標準の 4Dオブジェクト名](identifiers.md) より厳格な規制があります。 プロパティ名は JavaScriptの字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照):
-
-- 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
-- その後の文字には、文字、数字、アンダースコア、またはドル記号を使用することができます (スペース文字は使用することはできません)。
-- 大文字・小文字は区別されます。
-
-**注:**
-
-- テーブルフィールドをコレクションインデックスとして使用すること (例: a.b[[Table1]Id] ) は許可されていません。 この場合には媒介として変数を使用する必要があります。
-- 大カッコでくくった文字列を使用してオブジェクト属性を作成すると、ECMAスクリプトのルールを無視することができます。 たとえば、`$o["My Att"]` という属性はスペースを含みますが、4D において有効です。 しかしながらこの場合、この属性に対してドット記法や自動補完機能を使用することは不可能です。
 
 
 ## 例題
