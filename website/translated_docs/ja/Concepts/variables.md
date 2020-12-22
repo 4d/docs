@@ -21,7 +21,7 @@ title: 変数
 変数は宣言によって作成されます。 4D ランゲージでは、変数の宣言方法は2つあります:
 
 - `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合)
-- "コンパイラー" や "配列" テーマの 4D ランゲージコマンドを使った宣言 (廃止予定、クラシックランゲージのみ)
+- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
 
 **注:** この方法は推奨されませんが、単純に使用することによって変数を宣言することもできます。正式にそれらを定義することは必須ではありません。 たとえば、今日の日付に30日足した値を格納した変数を宣言するには、次のように書くことができます:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### C_ 指示子による宣言
 
-> **互換性に関する注記:** 4D v18 R3 以降は廃止予定となっています。 [var](#using-the-var-keyword) キーワードの使用が推奨されます。
+> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
 "コンパイラー" テーマコマンドの指示子を使って、基本のデータ型の変数を宣言することができます。
 
@@ -123,15 +123,14 @@ var $entity : cs.EmployeeEntity
 いくつかの基本的な変数宣言の例です:
 
 ```4d
- C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します
- C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
- C_LONGINT(vg1;vg2;vg3) // 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します
- C_OBJECT($vObj) // ローカル変数 $vObj をオブジェクト型として宣言します
- C_COLLECTION($vCol) // ローカル変数 $vCol をコレクション型として宣言します
- ARRAY LONGINT(alAnArray;10) // プロセス変数 alAnArray を 10個の倍長整数型要素を持つ配列として宣言します
+ C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
+ C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
+ C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
+ C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
+ C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
 ```
 
-**注:** 配列とは、変数の一種です。 配列とは、同じタイプの変数を番号付きで並べたものです。 詳細については [配列](Concepts/arrays.md) を参照ください。
+**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. 詳細については [配列](Concepts/arrays.md) を参照ください。
 
 
 ## 変数への代入
