@@ -1500,14 +1500,14 @@ In this example, the "marks" object field in the **Students** dataClass contains
 </details>
 
 <!-- REF #entitySelectionClass.query().Syntax -->
-**.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.query().Params -->
 | 参照            | タイプ                |    | 説明                                                                                                                                                            |
 | ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | テキスト               | -> | Search criteria as string                                                                                                                                     |
 | formula       | オブジェクト             | -> | Search criteria as formula object                                                                                                                             |
-| value         | expression         | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
+| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
 | querySettings | オブジェクト             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
 | 戻り値           | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
@@ -1998,6 +1998,7 @@ Returns:
 ]
 
 ```
+
 
 #### Example 4
 
