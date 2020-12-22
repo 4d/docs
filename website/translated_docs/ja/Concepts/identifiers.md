@@ -132,47 +132,47 @@ QUERY([Clients];[Clients]Name="Smith")
 
 変数名は、スコープ記号 ($ および <>) を除いて最大31文字以内で指定することができます。
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or "<>" for [interprocess variables](variables.md#interprocess-variables).
-- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
-- Thereafter, the name can include any letter or digit, and the underscore character ("_").
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- 変数名の 1文字目は、文字あるいはアンダースコア(_) でなければなりません。また、[引数](parameters.md) や [ローカル変数](variables.md#ローカル変数) の場合はドル記号 ($) 、[インタープロセス変数](variables.md#インタープロセス変数) の場合はインタープロセス記号 (<>) を 1文字目に使用します。
+- 変数の1文字目に数字を使うことは許可されていますが、推奨されません。また、[`var` 宣言のシンタックス](variables.md#var-キーワードによる宣言) ではサポートされていません。
+- その後の文字には、文字・数字・アンダースコア(_) が使用できます。
+- 変数名にスペースを使うことは許可されていますが、推奨されません。また、[`var` 宣言のシンタックス](variables.md#var-キーワードによる宣言) ではサポートされていません。
 - 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (`If`, `For` 等)、そして定数 (`Euro`, `Black`, `Friday` 等) が含まれます。
-- Variable names are case insensitive.
+- 変数名においては、大文字・小文字は区別されません。
 
 
 例:
 
 ```4d
-For($vlRecord;1;100) //local variable
-$vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales 
-If(bValidate=1) //process variable
-<>vlProcessID:=Current process() //interprocess variable
+For($vlRecord;1;100) // ローカル変数
+$vsMyString:="Hello there" // ローカル変数
+var $vName; $vJob : Text // ローカル変数 
+If(bValidate=1) // プロセス変数
+<>vlProcessID:=Current process() // インタープロセス変数
 ```
 
-## Other names
+## その他の識別子
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+4Dランゲージにおいては、識別子が文字列として扱われる要素も多数存在します: **フォーム**, **フォームオブジェクト**, **命名セレクション**, **プロセス**, **セット**, **メニューバー**, 等。
 
-Such string names can contain up to 255 characters, not including the "$" or "<>" characters (if any).
+このような文字列名は、(該当する場合はスコープ記号を除いて) 255文字以内で指定します。
 
-- String names can contain any characters.
-- String names are case insensitive.
+- 文字列名にはあらゆる文字を使用できます。
+- 文字列名においては、大文字・小文字は区別されません。
 
 例:
 
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
-    //Starting the global process "Add Customers"
+USE NAMED SELECTION([Customers];"Closed")// プロセス命名セレクション
+USE NAMED SELECTION([Customers];"<>ByZipcode") // インタープロセス命名セレクション
+    // グローバルプロセス "Add Customers" の開始:
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
-    //Starting the local process "$Follow Mouse Moves"
+    // ローカルプロセス "$Follow Mouse Moves" の開始:
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-CREATE SET([Customers];"Customer Orders")//Process set
-USE SET("<>Deleted Records") //Interprocess set
-If(Records in set("$Selection"+String($i))>0) //Client set
+CREATE SET([Customers];"Customer Orders")// プロセスセット
+USE SET("<>Deleted Records") // インタープロセスセット
+If(Records in set("$Selection"+String($i))>0) // クライアントセット
 
 ```
 
