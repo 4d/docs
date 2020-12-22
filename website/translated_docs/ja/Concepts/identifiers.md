@@ -39,8 +39,8 @@ title: 識別子の命名規則
 オブジェクトプロパティは、スカラー値・ORDA要素・クラス関数・他のオブジェクト等を参照できます。 参照先に関わらず、**[ドット記法](dt_object.md#object-properties) を使用するには** オブジェクトプロパティ名は次の命名規則に従う必要があります:
 
 - 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
-- Thereafter, the name can include any letter, digit, the underscore character ("_"), or the dollar character ("$").
-- Property names are case sensitive.
+- その後の文字には、文字・数字・アンダースコア(_)・ドル記号 ($) が使用できます。
+- 大文字・小文字は区別されます。
 
 
 例:
@@ -50,13 +50,13 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-> If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`).
+> 大カッコ [ ] に文字列を含める記法を利用すれば、プロパティ名にはあらゆる文字を使用することができます (例: `myObject["1. First property"]`)。
 
-See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+詳細は [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) を参照ください。
 
 ## 引数
 
-Parameter names must start with a `$` character and follow the same rules as [variable names](#variables).
+引数名は必ず `$` 文字で始まります。また、[変数名](#variables) と同じルールが適用されます。
 
 例:
 
@@ -69,12 +69,12 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 
 ## プロジェクトメソッド
 
-The name of a project method name contain up to 31 characters.
+プロジェクトメソッド名は 31文字以内で指定します。
 
-- A project method name must begin with a letter, a digit, or an underscore
-- Thereafter, the name can include any letter or digit, the underscore character ("_"), or the space character.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
-- Project method names are case insensitive.
+- 1文字目は、文字、数字、あるいはアンダースコア(_) でなければなりません。
+- その後の文字には、文字・数字・アンダースコア(_)・スペースが使用できます。
+- 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (`If`, `For` 等)、そして定数 (`Euro`, `Black`, `Friday` 等) が含まれます。
+- 大文字・小文字は区別されます。
 
 例:
 
@@ -84,9 +84,9 @@ DELETE DUPLICATED VALUES
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Tip:** 4Dのビルトインコマンドと同じ命名規約を利用することは良いプログラミングテクニックです。 Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. このように命名することにより、数ヶ月後に保守のためプロジェクトを再度開いたときに、エクスプローラーウィンドウでその名前を見ただけで、メソッドが結果を返すかどうかがわかります。
+**Tip:** 4Dのビルトインコマンドと同じ命名規約を利用することは良いプログラミングテクニックです。 メソッド名には大文字を使用しますが、メソッドが値を返す場合には最初の文字だけを大文字にします。 このように命名することにより、数ヶ月後に保守のためプロジェクトを再度開いたときに、エクスプローラーウィンドウでその名前を見ただけで、メソッドが結果を返すかどうかがわかります。
 
- > When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed.
+ > メソッドを呼び出すには、メソッド名を書きます。 しかし `ON EVENT CALL` など一部の 4Dのビルトインコマンドやプラグインコマンドに、引数としてメソッド名を渡す場合には、文字列 (ダブルクォートで括る) として渡します。
 
 例:
 
@@ -105,14 +105,14 @@ ON EVENT CALL("HANDLE EVENTS")
 
 ## テーブルとフィールド
 
-大カッコ内 (\[...]) に名前を入れることで、テーブルを表します。 You designate a field by first specifying the table to which it belongs (the field name immediately follows the table name).
+大カッコ内 (\[...]) に名前を入れることで、テーブルを表します。 フィールドを表すには、そのフィールドが属するテーブルをまず指定し、フィールド名を続けて書きます。
 
-A table name and field name can contain up to 31 characters.
+テーブル名およびフィールド名は、31文字以内で指定します。
 
-- A table or fied name must begin with a letter, an underscore, or a dollar ("$")
+- 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
 - その後の文字には、半角アルファベット文字・数字・スペース・アンダースコアを使用ができます。
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
-- Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.).
+- 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (`If`, `For` 等)、そして定数 (`Euro`, `Black`, `Friday` 等) が含まれます。
+- SQLで処理する場合には追加のルールがあります: 文字 _0123456789abcdefghijklmnopqrstuvwxyz のみを使用できます。また、名前に SQLキーワード (コマンド、属性 等) が含まれていてはなりません。
 
 
 例:
@@ -130,13 +130,13 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## 変数
 
-The name of a variable can be up to 31 characters, not including the scope symbols ($ or <>).
+変数名は、スコープ記号 ($ および <>) を除いて最大31文字以内で指定することができます。
 
 - A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or "<>" for [interprocess variables](variables.md#interprocess-variables).
 - A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
 - Thereafter, the name can include any letter or digit, and the underscore character ("_").
 - Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (`If`, `For` 等)、そして定数 (`Euro`, `Black`, `Friday` 等) が含まれます。
 - Variable names are case insensitive.
 
 
