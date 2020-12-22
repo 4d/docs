@@ -5,7 +5,7 @@ title: オブジェクト
 
 オブジェクト型の変数・フィールド・式にはさまざまなデータを格納することができます。 4D のネイティブなオブジェクトの構造は、よくある「プロパティ/値」(または「属性/値」) というペア (連想配列) に基づいています。 これらオブジェクトの記法は JSON をもとにしていますが、完全に同じというわけではありません。
 
-- プロパティ名は必ずテキストで表現されます。 It must follow [specific rules](identifiers.md#object-properties).
+- プロパティ名は必ずテキストで表現されます。 プロパティ名には [命名規則](identifiers.md#オブジェクトプロパティ) があります。
 
 - プロパティ値は以下のどれかの型で表現されます:
     - 数値 (実数、整数、等)
@@ -22,11 +22,11 @@ title: オブジェクト
 
 **警告:** 属性名は大文字と小文字を区別するという点に注意してください。
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](dt_object.md#syntax-basics)). オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
+オブジェクト型の変数・フィールド・式を操作するには **オブジェクト (ランゲージ)** テーマのコマンドを使用するか、オブジェクト記法 ([オブジェクト記法の使用](dt_object.md#オブジェクト記法の使用) 参照) を用います。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- 4Dコード内。メソッド (メソッドエディター) に書いても、外部化(フォーミュラ、`PROCESS 4D TAGS` あるいは Web Server によって処理される 4D tags ファイル、4D Write Proドキュメントなど) しても使用可能です。
 - デバッガー及びランタイムエクスプローラーの式エリア内。
 - フォームエディターにおいて、フォームオブジェクトのプロパティリスト内。変数あるいは式フィールド内の他、様々なセレクションリストボックス及びカラムの式 (データソース、背景色、スタイル、フォントカラー等) において使用可能です。
 
