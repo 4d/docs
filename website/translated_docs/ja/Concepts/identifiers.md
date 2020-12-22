@@ -3,22 +3,22 @@ id: identifiers
 title: 識別子の命名規則
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, object properties, tables, forms, etc.).
+この章では、4D ランゲージにおけるさまざまな要素 (変数、オブジェクトプロパティ、テーブル、フォームなど) の命名規則について説明します。
 
-> If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+> 非ローマ文字 (日本語など) が識別子に使用された場合、その最大長は短かくなることがあります。
 
 
 
 ## 配列
 
-Array names follow the same rules as [variables](#variables).
+[変数](#変数) と同じルールが適用されます。
 
 
 ## クラス
 
-The name of a class can contain up to 31 characters.
+クラス名は31文字以内で指定します。
 
-A class name must be compliant with standard [property naming rules](#object-properties) for dot notation.
+クラス名は、ドット記法のための標準的な [プロパティ名の命名規則](Concepts/dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。
 
 > 競合防止のため、[データベーステーブル](#tables) と同じ名前のクラスを作成するのは推奨されないこと
 
@@ -26,7 +26,7 @@ A class name must be compliant with standard [property naming rules](#object-pro
 
 ## 関数
 
-Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
+関数名は、ドット記法のための標準的な [プロパティ名の命名規則](#オブジェクトプロパティ) に準拠している必要があります。
 
 > **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。
 
@@ -34,11 +34,11 @@ Function names must be compliant with standard [property naming rules](#object-p
 
 ## オブジェクトプロパティ
 
-The name of an object property (also called object *attribute*) can contain up to 255 characters.
+プロパティ名 (オブジェクト *属性* とも呼びます) は255文字以内の文字列で指定します。
 
-Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
+オブジェクトプロパティは、スカラー値・ORDA要素・クラス関数・他のオブジェクト等を参照できます。 参照先に関わらず、**[ドット記法](dt_object.md#object-properties) を使用するには** オブジェクトプロパティ名は次の命名規則に従う必要があります:
 
-- A property name must begin with a letter, an underscore, or a dollar "$".
+- 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
 - Thereafter, the name can include any letter, digit, the underscore character ("_"), or the dollar character ("$").
 - Property names are case sensitive.
 
