@@ -6,8 +6,8 @@ title: 4D プロジェクトのアーキテクチャー
 4D プロジェクトは、一つの親プロジェクトフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 たとえば:
 
 - MyProject
-    - コンポーネント
-    - データ
+    - Components
+    - Data
         - Logs
         - Settings
     - Documentation

@@ -181,7 +181,7 @@ $value:=$clientObj.data.address.city
 
 **注:** オブジェクト属性名にはさらにルールが適用されます (オブジェクト属性は ECMAScript の仕様に沿う必要があります)。 詳細については、[オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) を参照ください。
 
-## Forms
+## フォーム
 
 フォームの名前は文字列を使用して表します。 フォーム名は31文字以内で指定します。
 
@@ -382,7 +382,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 1. フィールド
 2. コマンド
-3. Methods
+3. メソッド
 4. プラグインコマンド
 5. 定義済み定数
 6. 変数
