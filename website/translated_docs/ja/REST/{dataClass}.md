@@ -38,8 +38,8 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 | プロパティ         | タイプ    | 説明                                                                                         |
 | ------------- | ------ | ------------------------------------------------------------------------------------------ |
-| __entityModel | 文字列    | Name of the datastore class.                                                               |
-| __COUNT       | 数値     | データクラスに含まれる全エンティティ数                                                                        |
+| __entityModel | 文字列    | Name of the dataclass.                                                                     |
+| __COUNT       | 数値     | Number of entities in the dataclass.                                                       |
 | __SENT        | 数値     | RESTリクエストが返すエンティティの数。 総エンティティ数が `$top/$limit` で指定された数より少なければ、総エンティティの数になります。               |
 | __FIRST       | 数値     | セレクションの先頭エンティティの番号。 デフォルトでは 0; または `$skip` で指定された値。                                        |
 | __ENTITIES    | コレクション | エンティティ毎にその属性をすべて格納したオブジェクトのコレクションです。 リレーション属性は、リレーション先の情報を取得するための URI を格納したオブジェクトとして返されます。 |
@@ -47,11 +47,11 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 各エンティティには次のプロパティが含まれます:
 
-| プロパティ       | タイプ | 説明                                                 |
-| ----------- | --- | -------------------------------------------------- |
-| __KEY       | 文字列 | データクラスにおいて定義されているプライマリーキーの値                        |
-| __TIMESTAMP | 日付  | エンティティが最後に編集された日時を記録するタイムスタンプ                      |
-| __STAMP     | 数値  | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ |
+| プロパティ       | タイプ | 説明                                                  |
+| ----------- | --- | --------------------------------------------------- |
+| __KEY       | 文字列 | Value of the primary key defined for the dataclass. |
+| __TIMESTAMP | 日付  | エンティティが最後に編集された日時を記録するタイムスタンプ                       |
+| __STAMP     | 数値  | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ  |
 
 
 取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 たとえば:
@@ -64,7 +64,7 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 ### 例題
 
-特定のデータクラスの全データを取得します。
+Return all the data for a specific dataclass.
 
 `GET  /rest/Company`
 
@@ -161,7 +161,7 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 ### 説明
 
-データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
+データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 The key is the value in the attribute defined as the Primary Key for your dataclass. プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
 返されるデータについての詳細は [{dataClass}](#dataclass) を参照ください。
 
@@ -177,7 +177,7 @@ If you want to expand a relation attribute using `$expand`, you do so by specify
 
 ### 例題
 
-The following request returns all the public data in the Company datastore class whose key is 1.
+The following request returns all the public data in the Company dataclass whose key is 1.
 
 `GET  /rest/Company(1)`
 

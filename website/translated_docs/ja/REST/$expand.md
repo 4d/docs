@@ -20,6 +20,6 @@ Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$image
 
 ## BLOB属性のディスク保存
 
-If you want to save a BLOB stored in your datastore class, you can write the following by also passing "true" to $binary:
+If you want to save a BLOB stored in your dataclass, you can write the following by also passing "true" to $binary:
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`

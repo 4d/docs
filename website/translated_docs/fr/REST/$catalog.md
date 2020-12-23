@@ -66,9 +66,9 @@ Retourne des informations sur toutes les dataclasse de votre projet et leurs att
 
 ### Description
 
-En appelant `$catalog/$all`, vous pouvez recevoir des informations détaillées sur les attributs de chacune des classes du datastore du modèle courant de votre projet.
+Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
 
-Pour plus d'informations sur ce qui est retourné pour chaque classe du datastore et ses attributs, utilisez [`$catalog/{dataClass}`](#catalogdataClass).
+For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
 
 ### Exemple
@@ -187,7 +187,7 @@ Renvoie des informations sur une dataclass et ses attributs
 
 ### Description
 
-L'appel de `$catalog/{dataClass}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient. Si vous souhaitez récupérer ces informations pour toutes les classes de datastore dans le datastore de votre projet, utilisez [`$catalog/$all`](#catalogall).
+L'appel de `$catalog/{dataClass}` pour une dataclass spécifique retournera les informations suivantes sur la dataclass et les attributs qu'elle contient. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
 Les informations que vous récupérez concernent :
 
@@ -201,40 +201,40 @@ Les informations que vous récupérez concernent :
 Les propriétés suivantes sont retournées pour une dataclass exposée :
 
 
-| Propriété      | Type   | Description                                                                                                                  |
-| -------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| name           | Chaine | Nom de la dataclass                                                                                                          |
-| collectionName | Chaine | Nom d'une entity selection dans la dataclass                                                                                 |
-| tableNumber    | Nombre | Numéro de la table dans la base 4D                                                                                           |
-| scope          | Chaine | Étendue de la dataclass (à noter que seules les classes du datastore dont **l'étendue** (scope) est publique sont affichées) |
-| dataURI        | Chaine | Un URI aux données de la dataclass                                                                                           |
+| Propriété      | Type   | Description                                                                                  |
+| -------------- | ------ | -------------------------------------------------------------------------------------------- |
+| name           | Chaine | Nom de la dataclass                                                                          |
+| collectionName | Chaine | Nom d'une entity selection dans la dataclass                                                 |
+| tableNumber    | Nombre | Numéro de la table dans la base 4D                                                           |
+| scope          | Chaine | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
+| dataURI        | Chaine | Un URI aux données de la dataclass                                                           |
 
 
 ### Attribut(s)
 
 Voici les propriétés de chaque attribut exposé qui sont retournées :
 
-| Propriété   | Type    | Description                                                                                                                                                                      |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | Chaine  | Le nom de l’attribut.                                                                                                                                                            |
-| kind        | Chaine  | Type d'attribut (stockage ou relatedEntity).                                                                                                                                     |
-| fieldPos    | Nombre  | Position du champ dans la table de la base.                                                                                                                                      |
-| scope       | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                             |
-| indexed     | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                                              |
-| type        | Chaine  | Type d'attribut de chaîne (booléen, blob, octet, date, durée, image, long, long64, numérique, chaîne, uuid ou mot) ou la classe de datastore pour un attribut de relation N-> 1. |
-| identifying | Booléen | Cette propriété retourne True si l'attribut est la clé primaire. Sinon, cette propriété n'apparaîtra pas.                                                                        |
-| path        | Chaine  | Nom du lien d'un attribut relatedEntity ou relateEntities.                                                                                                                       |
-| foreignKey  | Chaine  | Pour un attribut relatedEntity, nom de l'attribut associé.                                                                                                                       |
-| inverseName | Chaine  | Nom de la relation opposée pour un attribut relatedEntity ou relatedEntities.                                                                                                    |
+| Propriété   | Type    | Description                                                                                                                                           |
+| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | Chaine  | Le nom de l’attribut.                                                                                                                                 |
+| kind        | Chaine  | Type d'attribut (stockage ou relatedEntity).                                                                                                          |
+| fieldPos    | Nombre  | Position du champ dans la table de la base.                                                                                                           |
+| scope       | Chaine  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                  |
+| indexed     | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                   |
+| type        | Chaine  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
+| identifying | Booléen | Cette propriété retourne True si l'attribut est la clé primaire. Sinon, cette propriété n'apparaîtra pas.                                             |
+| path        | Chaine  | Nom du lien d'un attribut relatedEntity ou relateEntities.                                                                                            |
+| foreignKey  | Chaine  | Pour un attribut relatedEntity, nom de l'attribut associé.                                                                                            |
+| inverseName | Chaine  | Nom de la relation opposée pour un attribut relatedEntity ou relatedEntities.                                                                         |
 
 
 ### Clé primaire
 
-L'objet clé retourne le nom de l'attribut (**name**) défini comme **clé primaire** pour la classe du datastore.
+The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
 
 
 ### Exemple
-Vous pouvez récupérer les informations concernant une classe de datastore spécifique.
+You can retrieve the information regarding a specific dataclass.
 
 `GET  /rest/$catalog/Employee`
 
