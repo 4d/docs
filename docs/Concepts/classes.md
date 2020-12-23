@@ -19,14 +19,19 @@ For example, you could create a `Person` class with the following definition:
 Class constructor($firstname : Text; $lastname : Text)
 	This.firstName:=$firstname
 	This.lastName:=$lastname
+	
+Function sayHello()->$welcome : Text
+	$welcome:="Hello "+This.firstName+" "+This.lastName
 ```
 
 In a method, creating a "Person":
 
 ```
-var $o : cs.Person //object of Person class
-$o:=cs.Person.new("John";"Doe")
-// $o:{firstName: "John"; lastName: "Doe" }
+var $person : cs.Person //object of Person class  
+var $hello : Text
+$person:=cs.Person.new("John";"Doe")
+// $person:{firstName: "John"; lastName: "Doe" }
+$hello:=$person.sayHello() //"Hello John Doe"
 ```
 
 
@@ -39,7 +44,7 @@ A user class in 4D is defined by a specific method file (.4dm), stored in the `/
 
 When naming classes, you should keep in mind the following rules:
 
-- A class name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). 
+- A [class name](identifiers.md#classes) must be compliant with [property naming rules](identifiers.md#object-properties). 
 - Class names are case sensitive.
 - Giving the same name to a class and a database table is not recommended, in order to prevent any conflict. 
 
@@ -82,7 +87,7 @@ To create a new class, you can:
 
 #### Class code support
 
-In the various 4D Developer windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+In the various 4D windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
 
 - In the code editor:
 	- a class cannot be run
@@ -137,10 +142,8 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 
 
-## Using classes in your code
 
-
-### Class object
+## Class object
 
 When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/classClass.md). A class object has the following properties and function:
 
@@ -148,45 +151,22 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - [`superclass`](API/classClass.md#superclass) object (null if none)
 - [`new()`](API/classClass.md#new) function, allowing to instantiate class objects.
 
-In addition, a class object can reference: 
-
-- a [`constructor`](#class-constructor) object (optional),
-- a `prototype` object, containing named [function](#function) objects (optional).
+In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
 
 A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
 
+### Inheritance
 
+If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/classClass.md#superclass). 
 
-### Property lookup and prototype
-
-All objects in 4D are internally linked to a class object. When 4D does not find a property in an object, it searches in the prototype object of its class; if not found, 4D continues searching in the prototype object of its superclass, and so on until there is no more superclass.
-
-All objects inherit from the class "Object" as their inheritance tree top class.
-
-```4d
-//Class: Polygon
-Class constructor($width : Integer; $height : Integer)
-	This.area:=$width*$height
-
-	//var $poly : Object
-	var $instance : Boolean
-	$poly:=cs.Polygon.new(4;3)
-
-	$instance:=OB Instance of($poly;cs.Polygon)
-	// true
-	$instance:=OB Instance of($poly;4D.Object)
-	// true
-```
-
-When enumerating properties of an object, its class prototype is not enumerated. As a consequence, `For each` statement and `JSON Stringify` command do not return properties of the class prototype object. The prototype object property of a class is an internal hidden property.
-
+When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/classClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass). 
 
 
 ## Class keywords
 
 Specific 4D keywords can be used in class definitions:
 
-- `Function <Name>` to define member methods of the objects. 
+- `Function <Name>` to define class functions of the objects. 
 - `Class constructor` to define the properties of the objects (i.e. the prototype).
 - `Class extends <ClassName>` to define inheritance.
 
@@ -200,9 +180,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are properties of the prototype object of the owner class. They are objects of the "Function" class. 
+Class functions are specific properties of the class. They are objects of the [4D.Function](API/formulaClass.md#about-4dfunction-objects) class. 
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers).
+In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
 > **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
 
@@ -228,9 +208,9 @@ For a class function, the `Current method name` command returns: "*\<ClassName>.
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
-- use of a "Function" class member method:
-	- `apply()`
-	- `call()`
+- use of a "4D.Function" class member method:
+	- [`apply()`](API/formulaClass.md#apply)
+	- [`call()`](API/formulaClass.md#call)
 	
 > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: 
 > - the compiler does not generate any error (which is different compared to regular methods),
@@ -241,7 +221,7 @@ In the application code, class functions are called as member methods of the obj
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/dt_object.md#object-property-identifiers). Multiple parameters (and types) are separated by semicolons (;). 
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;). 
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -313,7 +293,7 @@ Class Constructor({$parameterName : type; ...})
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.  
 
-In that case, when you call the `new()` class member method, the class constructor is called with the parameters optionally passed to the `new()` function.
+In that case, when you call the [`new()`](API/classClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
 For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
 
@@ -511,7 +491,7 @@ $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the `new()` keyword), its `This` is bound to the new object being constructed.
+When a [class constructor](#class-constructor) function is used (with the [`new()`](API/classClass.md#new) function), its `This` is bound to the new object being constructed.
 
 ```4d
 //Class: ob
