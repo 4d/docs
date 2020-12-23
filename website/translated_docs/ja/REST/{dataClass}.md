@@ -54,7 +54,7 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 | __STAMP     | 数値  | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ |
 
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). たとえば:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 たとえば:
 
 `GET  /rest/Company/name,address`
 
@@ -64,7 +64,7 @@ If you want to specify which attributes you want to return, define them using th
 
 ### 例題
 
-Return all the data for a specific datastore class.
+特定のデータクラスの全データを取得します。
 
 `GET  /rest/Company`
 
@@ -155,17 +155,17 @@ Return all the data for a specific datastore class.
 
 ## {dataClass}({key})
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company(22)` または </code>Company("IT0911AB2200")</code> など)。
 
 
 
 ### 説明
 
-By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your datastore class. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
 For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). たとえば:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 たとえば:
 
 `GET  /rest/Company(1)/name,address`
 
@@ -223,7 +223,7 @@ By passing the *dataClass* and an *attribute* along with a value, you can retrie
 
 `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). たとえば:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 たとえば:
 
 `GET  /rest/Company:companyCode(Acme001)/name,address`
 
