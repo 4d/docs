@@ -47,11 +47,11 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 各エンティティには次のプロパティが含まれます:
 
-| プロパティ       | タイプ | 説明                                                                                                         |
-| ----------- | --- | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | 文字列 | データクラスにおいて定義されているプライマリーキーの値                                                                                |
-| __TIMESTAMP | 日付  | エンティティが最後に編集された日時を記録するタイムスタンプ                                                                              |
-| __STAMP     | 数値  | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| プロパティ       | タイプ | 説明                                                 |
+| ----------- | --- | -------------------------------------------------- |
+| __KEY       | 文字列 | データクラスにおいて定義されているプライマリーキーの値                        |
+| __TIMESTAMP | 日付  | エンティティが最後に編集された日時を記録するタイムスタンプ                      |
+| __STAMP     | 数値  | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ |
 
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). たとえば:
