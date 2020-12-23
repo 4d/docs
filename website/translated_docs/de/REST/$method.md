@@ -321,7 +321,7 @@ If, for example, the stamp is not correct, the following error is returned:
             "errCode": 1046
         },
         {
-            "message": "The entity# 1 in the \"Persons\" datastore class cannot be saved",
+            "message": "The entity# 1 in the \"Persons\" dataclass cannot be saved",
             "componentSignature": "dbmg",
             "errCode": 1517
         }

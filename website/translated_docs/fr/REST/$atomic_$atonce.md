@@ -57,7 +57,7 @@ Nous obtenons l'erreur suivante dans la deuxième entité ; la première entité
     },
     "__ERROR": [
         {
-            "message": "Cannot find entity with \"201\" key in the \"Employee\" datastore class",
+            "message": "Cannot find entity with \"201\" key in the \"Employee\" dataclass",
             "componentSignature": "dbmg",
             "errCode": 1542
         }
