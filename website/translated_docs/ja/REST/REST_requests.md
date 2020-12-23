@@ -20,7 +20,7 @@ RESTリクエストには、URI とリソースが必ず含まれていなけれ
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > 曖昧さ回避のため、値は引用符内に書くことができます。 たとえば、上の例では名字 (lastName) の値を単一引用符内に書けます: "lastName!='Jones'"。
 
-パラメーターを利用することで、4Dプロジェクトのデータクラスのデータを操作できます。 `GET` HTTPメソッドを使ってデータを取得する以外にも、`POST` HTTPメソッドを使ってデータクラスのエンティティを追加・更新・削除することが可能です。
+パラメーターを利用することで、4Dプロジェクトのデータクラスのデータを操作できます。 Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
 
 JSON の代わりに配列形式でデータを取得するには [`$asArray`]($asArray.md) パラメーターを使います。
 
