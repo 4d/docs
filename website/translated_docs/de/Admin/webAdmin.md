@@ -117,11 +117,9 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 
 #### Access Key
 
-Defining an access key is mandatory to unlock the `WebAdmin` web server. When the access key is not defined, web clients are not allowed to connect to any web administration interface, including the [Data Explorer page](dataExplorer.md):
+Defining an access key is mandatory to unlock access to the `WebAdmin` web server through an URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through an URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
 
 ![alt-text](assets/en/Admin/accessKey.png)
-
-Once an access key is defined for a `WebAdmin` web server, web clients that provide it are allowed to connect and use the administration features.
 
 An access key is similar to a password but not associated to a login.
 
