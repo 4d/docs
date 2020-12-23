@@ -46,7 +46,7 @@ RESTリクエストにこのパラメーターのみを渡すと、(`$top/$limit
 | プロパティ       | タイプ | 説明                                                                                                         |
 | ----------- | --- | ---------------------------------------------------------------------------------------------------------- |
 | __KEY       | 文字列 | データクラスにおいて定義されているプライマリーキーの値                                                                                |
-| __TIMESTAMP | 日付  | Timestamp of the last modification of the entity                                                           |
+| __TIMESTAMP | 日付  | エンティティが最後に編集された日時を記録するタイムスタンプ                                                                              |
 | __STAMP     | 数値  | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
 
 
