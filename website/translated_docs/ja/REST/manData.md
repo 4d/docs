@@ -109,7 +109,7 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
 
 #### データクラスの例
 
-次のリクエストは、People データクラス (データクラス全体または `$filter` の定義に応じたエンティティセレクション) から名字 (firstName) と名前 (lastName) 属性のみを取得します。
+The following requests returns only the first name and last name from the People dataclass (either the entire dataclass or a selection of entities based on the search defined in `$filter`).
 
  `GET  /rest/People/firstName,lastName/`
 
