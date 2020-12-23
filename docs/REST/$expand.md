@@ -22,6 +22,6 @@ For more information about the image formats, refer to [`$imageformat`]($imagefo
 
 ## Saving a BLOB attribute to disk  
 
-If you want to save a BLOB stored in your datastore class, you can write the following by also passing "true" to $binary:
+If you want to save a BLOB stored in your dataclass, you can write the following by also passing "true" to $binary:
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
