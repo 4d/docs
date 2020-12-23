@@ -310,17 +310,17 @@ Les causes possibles de cette erreur sont multiples. Lorsque vous rencontrez ce 
 
 ### Fichiers générés
 
-Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, *\<ApplicationName>Client* and *\<ApplicationName>Server*.
-> These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
+A l’issue du processus de génération d’une application client-serveur, vous devez trouver dans le dossier de destination un nouveau dossier nommé **Client Server executable**. Ce dossier contient deux sous-dossiers, *\<ApplicationName>Client* et *\<ApplicationName>Server*.
+> Ces dossiers ne sont pas générés si une erreur est survenue. Dans ce cas, ouvrez le [fichier d’historique](#log-file) pour connaître la cause de l’erreur.
 
-The *\<ApplicationName>Client* folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. Le dossier *\<ApplicationName>Server* contient la partie serveur de l'application.
+Le dossier *\<ApplicationName>Client* contient la partie cliente de l’application correspondant à la plate-forme d’exécution du générateur d’application. Ce dossier doit être installé sur chaque poste client. Le dossier *\<ApplicationName>Server* contient la partie serveur de l'application.
 
-The contents of these folders vary depending on the current platform:
+Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
 
-*   *Windows* - Each folder contains the application executable file, named *\<ApplicationName>Client.exe* for the client part and *\<ApplicationName>Server.exe* for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-*   *macOS* - Each folder contains only the application package, named \<ApplicationName> Client for the client part and \<ApplicationName> Server for the server part. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Under macOS, launch a package by double-clicking it.
+*   *Sous Windows*, chaque dossier contient le fichier exécutable de l’application, nommé *\<ApplicationName>Client.exe* pour la partie cliente et *\<ApplicationName>Server.exe* pour la partie serveur, ainsi que les fichiers .rsr correspondants. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
+*   *Sous macOS*, chaque dossier contient uniquement le progiciel de l’application, nommé \<ApplicationName> Client pour la partie cliente et \<ApplicationName> Server pour la partie serveur. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
 
-    > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
+    > Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
 
 If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the *\<ApplicationName>Server* folder/package. </blockquote></li> </ul>
 
@@ -335,7 +335,7 @@ If the server and/or client part of your double-clickable application is used as
 - Default Web root folder (WebFolder).
 
 Des éléments doivent être installée :
-*   **on Windows**
+*   **Sous Windows**
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
 
