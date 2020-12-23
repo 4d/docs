@@ -167,7 +167,7 @@ When 4D does not find a function or a property in a class, it searches it in its
 Specific 4D keywords can be used in class definitions:
 
 - `Function <Name>` to define class functions of the objects. 
-- `Class constructor` to define the properties of the objects (i.e. the prototype).
+- `Class constructor` to define the properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
 
 
