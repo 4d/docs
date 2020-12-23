@@ -24,7 +24,7 @@ For each entity selection currently stored in 4D Server's cache, the following i
 |Property|	Type|	Description|
 |---|---|---|
 |id|String|	A UUID that references the entity set.|
-|dataClass|String	|Name of the datastore class.|
+|dataClass|String	|Name of the dataclass.|
 |selectionSize|	Number|	Number of entities in the entity selection.|
 |sorted|Boolean|Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.|
 |refreshed|Date|When the entity set was created or the last time it was used.|

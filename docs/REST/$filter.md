@@ -27,7 +27,7 @@ A more compex filter is composed of the following elements, which joins two quer
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
 
-For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee datastore class.
+For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
 
 ### Using the params property
 
@@ -35,7 +35,7 @@ You can also use 4D's params property.
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee datastore class.
+For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
 
 For more information regarding how to query data in 4D, refer to the [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentation. 
 
@@ -91,14 +91,14 @@ In the following example, we look for all employees whose last name begins with 
  GET  /rest/Employee?$filter="lastName begin j"
 ```
 
-In this example, we search the Employee datastore class for all employees whose salary is greater than 20,000 and who do not work for a company named Acme:
+In this example, we search the Employee dataclass for all employees whose salary is greater than 20,000 and who do not work for a company named Acme:
 
 ```
  GET  /rest/Employee?$filter="salary>20000 AND  
  employer.name!=acme"&$orderby="lastName,firstName"
 ```
 
-In this example, we search the Person datastore class for all the people whose number property in the anotherobj attribute of type Object is greater than 50:
+In this example, we search the Person dataclass for all the people whose number property in the anotherobj attribute of type Object is greater than 50:
 
 ```
  GET  /rest/Person/?filter="anotherobj.mynum > 50"
