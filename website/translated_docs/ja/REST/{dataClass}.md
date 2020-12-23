@@ -161,9 +161,9 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 ### 説明
 
-データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
-For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
+返されるデータについての詳細は [{dataClass}](#dataclass) を参照ください。
 
 取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 たとえば:
 
