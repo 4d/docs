@@ -29,7 +29,7 @@ You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity select
 
 ## Example with related entities
 
-If we pass the following REST request for our Company datastore class (which has a relation attribute "employees"):
+If we pass the following REST request for our Company dataclass (which has a relation attribute "employees"):
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
@@ -75,7 +75,7 @@ If you want to get last name and job name attributes from employees:
 
 ## Example with related entity
 
-If we pass the following REST request for our Employee datastore class (which has several relation attributes, including "employer"):
+If we pass the following REST request for our Employee dataclass (which has several relation attributes, including "employer"):
 
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
