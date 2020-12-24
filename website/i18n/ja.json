@@ -30,7 +30,7 @@
         "title": "DataClassAttribute"
       },
       "API/dataclassClass": {
-        "title": "DataClass"
+        "title": "データクラス"
       },
       "API/datastoreClass": {
         "title": "DataStore"
