@@ -31,7 +31,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 | プロパティ   | タイプ | 説明                                                                                |
 | ------- | --- | --------------------------------------------------------------------------------- |
-| name    | 文字列 | Name of the dataclass.                                                            |
+| name    | 文字列 | データクラスの名称。                                                                        |
 | uri     | 文字列 | A URI allowing you to obtain information about the |dataclass and its attributes. |
 | dataURI | 文字列 | A URI that allows you to view the data in the dataclass.                          |
 
