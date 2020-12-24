@@ -7,7 +7,7 @@ title: '$catalog'
 The catalog describes all the dataclasses and attributes available in the datastore.
 
 
-## Available syntaxes
+## 使用可能なシンタックス
 
 | シンタックス                                        | 例題                   | 説明                                                                               |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
