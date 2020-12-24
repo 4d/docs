@@ -4,36 +4,38 @@ title: '$catalog'
 ---
 
 
-The catalog describes all the dataclasses and attributes available in the datastore.
+カタログには、データストアを構成するすべてのデータクラスおよび属性の詳細な情報が含まれます。
 
 
 ## 使用可能なシンタックス
 
-| シンタックス                                        | 例題                   | 説明                                                                               |
-| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Returns information about a dataclass and its attributes                         |
+| シンタックス                                        | 例題                   | 説明                                    |
+| --------------------------------------------- | -------------------- | ------------------------------------- |
+| [**$catalog**](#catalog)                      | `/$catalog`          | プロジェクト内のデータクラスのリストを、2つの URI とともに返します。 |
+| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | プロジェクト内のすべてのデータクラスとそれらの属性の情報を返します。    |
+| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | 特定のデータクラスとその属性の情報を返します。               |
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
+プロジェクト内のデータクラスのリストを、2つの URI とともに返します。1つはデータクラスのストラクチャー情報にアクセスするためのもので、もう1つはデータクラスのデータを取得するためのものです。
 
 
 ### 説明
 
-When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
+`$catalog` を呼び出すと、プロジェクトのデータストア内のデータクラスのリストを、データクラス毎に 2つの URI とともに返します。
 
-Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+プロジェクトのデータストア内の、公開されているデータクラスのみがリストされます。 詳細については、テーブルやフィールドの公開** を参照してください。 </p> 
 
-Here is a description of the properties returned for each dataclass in your project's datastore:
+データクラス毎に返されるプロパティの説明です:
+
+| プロパティ   | タイプ | 説明                                |
+| ------- | --- | --------------------------------- |
+| name    | 文字列 | データクラスの名称。                        |
+| uri     | 文字列 | データクラスとその属性に関する情報を取得するための URI です。 |
+| dataURI | 文字列 | データクラスのデータを取得するための URI です。        |
 
 
-| プロパティ   | タイプ | 説明                                                                                |
-| ------- | --- | --------------------------------------------------------------------------------- |
-| name    | 文字列 | データクラスの名称。                                                                        |
-| uri     | 文字列 | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI | 文字列 | A URI that allows you to view the data in the dataclass.                          |
+
 
 
 ### 例題
@@ -41,6 +43,8 @@ Here is a description of the properties returned for each dataclass in your proj
 `GET  /rest/$catalog`
 
 **結果**:
+
+
 
 ````
 {
@@ -60,22 +64,31 @@ Here is a description of the properties returned for each dataclass in your proj
 ````
 
 
+
+
+
 ## $catalog/$all
 
-Returns information about all of your project's dataclasses and their attributes
+プロジェクト内のすべてのデータクラスとそれらの属性の情報を返します。    
+
+
 
 ### 説明
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
+`$catalog/$all` を呼び出すと、プロジェクトのデータストア内の各データクラスについて属性の情報を取得します。
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+各データクラスと属性について取得される情報についての詳細は [`$catalog/{dataClass}`](#catalogdataClass) を参照ください。
+
+
 
 
 ### 例題
 
-`GET  /rest/$catalog/$all`
+`GET  /rest/$catalog/$all` 
 
 **結果**:
+
+
 
 ````
 {
@@ -181,44 +194,53 @@ For more information about what is returned for each dataclass and its attribute
 ````
 
 
+
+
+
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes
+特定のデータクラスとその属性の情報を返します。 
+
+
 
 ### 説明
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+`$catalog/{dataClass}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
 
-The information you retrieve concerns the following:
+返される情報は次の通りです:
 
 *   データクラス
-*   Attribute(s)
-*   Method(s) if any
-*   Primary key
+*   属性
+*   メソッド (あれば)
+*   プライマリーキー
 
-### DataClass
 
-The following properties are returned for an exposed dataclass:
 
+### データクラス
+
+公開されているデータクラスについて、次のプロパティが返されます:
 
 | プロパティ          | タイプ | 説明                                                                                           |
 | -------------- | --- | -------------------------------------------------------------------------------------------- |
-| name           | 文字列 | Name of the dataclass                                                                        |
-| collectionName | 文字列 | Name of an entity selection on the dataclass                                                 |
-| tableNumber    | 数値  | Table number in the 4D database                                                              |
+| name           | 文字列 | データクラスの名称                                                                                    |
+| collectionName | 文字列 | データクラスにおいて作成されるエンティティセレクションの名称                                                               |
+| tableNumber    | 数値  | 4Dデータベース内のテーブル番号                                                                             |
 | scope          | 文字列 | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
-| dataURI        | 文字列 | A URI to the data in the dataclass                                                           |
+| dataURI        | 文字列 | データクラスのデータを取得するための URI                                                                       |
 
 
-### Attribute(s)
 
-Here are the properties for each exposed attribute that are returned:
+
+
+### 属性
+
+公開されている各属性について、次のプロパティが返されます:
 
 | プロパティ       | タイプ | 説明                                                                                                                                                    |
 | ----------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | 文字列 | Attribute name.                                                                                                                                       |
-| kind        | 文字列 | Attribute type (storage or relatedEntity).                                                                                                            |
-| fieldPos    | 数値  | Position of the field in the database table).                                                                                                         |
+| name        | 文字列 | 属性の名称                                                                                                                                                 |
+| kind        | 文字列 | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                                                 |
+| fieldPos    | 数値  | データベーステーブルのフィールドポジション                                                                                                                                 |
 | scope       | 文字列 | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
 | indexed     | 文字列 | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
 | type        | 文字列 | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
@@ -228,17 +250,25 @@ Here are the properties for each exposed attribute that are returned:
 | inverseName | 文字列 | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                        |
 
 
+
+
+
 ### Primary Key
 
 The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
 
 
+
+
 ### 例題
+
 You can retrieve the information regarding a specific dataclass.
 
 `GET  /rest/$catalog/Employee`
 
 **結果**:
+
+
 
 ````
 {
