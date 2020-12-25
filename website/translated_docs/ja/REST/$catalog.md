@@ -245,24 +245,24 @@ title: '$catalog'
 | indexed     | 文字列 | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                      |
 | type        | 文字列 | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
 | identifying | ブール | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                  |
-| path        | 文字列 | relatedEntity または relatedEntities 属性のリレーション名                                                                                  |
+| path        | 文字列 | relatedEntity または relatedEntities 属性のリレーションパス                                                                                 |
 | foreignKey  | 文字列 | relatedEntity 属性の場合、リレート先の属性名                                                                                                 |
-| inverseName | 文字列 | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                |
+| inverseName | 文字列 | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                               |
 
 
 
 
 
-### Primary Key
+### プライマリーキー
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
+key オブジェクトには、データクラスの **プライマリーキー** として定義された属性の **名称 (name プロパティ)** が返されます。
 
 
 
 
 ### 例題
 
-You can retrieve the information regarding a specific dataclass.
+特定のデータクラスに関する情報を取得します。
 
 `GET  /rest/$catalog/Employee`
 
