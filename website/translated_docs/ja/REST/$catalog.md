@@ -240,8 +240,8 @@ title: '$catalog'
 | ----------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | 文字列 | 属性の名称                                                                                                                                                 |
 | kind        | 文字列 | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                                                 |
-| fieldPos    | 数値  | データベーステーブルのフィールドポジション                                                                                                                                 |
-| scope       | 文字列 | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
+| fieldPos    | 数値  | データベーステーブルのフィールド番号                                                                                                                                    |
+| scope       | 文字列 | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                                               |
 | indexed     | 文字列 | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
 | type        | 文字列 | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
 | identifying | ブール | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                             |
