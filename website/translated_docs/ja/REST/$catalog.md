@@ -236,18 +236,18 @@ title: '$catalog'
 
 公開されている各属性について、次のプロパティが返されます:
 
-| プロパティ       | タイプ | 説明                                                                                                                                                    |
-| ----------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | 文字列 | 属性の名称                                                                                                                                                 |
-| kind        | 文字列 | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                                                 |
-| fieldPos    | 数値  | データベーステーブルのフィールド番号                                                                                                                                    |
-| scope       | 文字列 | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                                               |
-| indexed     | 文字列 | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
-| type        | 文字列 | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
-| identifying | ブール | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                             |
-| path        | 文字列 | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                 |
-| foreignKey  | 文字列 | For a relatedEntity attribute, name of the related attribute.                                                                                         |
-| inverseName | 文字列 | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                        |
+| プロパティ       | タイプ | 説明                                                                                                                            |
+| ----------- | --- | ----------------------------------------------------------------------------------------------------------------------------- |
+| name        | 文字列 | 属性の名称                                                                                                                         |
+| kind        | 文字列 | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                         |
+| fieldPos    | 数値  | データベーステーブルのフィールド番号                                                                                                            |
+| scope       | 文字列 | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                       |
+| indexed     | 文字列 | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                      |
+| type        | 文字列 | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
+| identifying | ブール | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                  |
+| path        | 文字列 | relatedEntity または relatedEntities 属性のリレーション名                                                                                  |
+| foreignKey  | 文字列 | relatedEntity 属性の場合、リレート先の属性名                                                                                                 |
+| inverseName | 文字列 | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                |
 
 
 
