@@ -3,9 +3,9 @@ id: onDisplayDetail
 title: Sur affichage corps
 ---
 
-| Code | Peut être appelé par                               | Définition                                                                                        |
-| ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| 8    | Form - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
+| Code | Peut être appelé par                                     | Définition                                                                                        |
+| ---- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 8    | Formulaire - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
 
 
 ## Description
@@ -16,7 +16,7 @@ The `On Display Detail` event can be used in the following contexts:
 
 A record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
 
 In this context, the following sequence of calls to methods and form events is triggered:
 
