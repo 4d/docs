@@ -3,9 +3,9 @@ id: onBeforeDataEntry
 title: Sur avant saisie
 ---
 
-| Code | Peut être appelé par                                                                                              | Définition                                         |
-| ---- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 41   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A list box cell is about to change to editing mode |
+| Code | Peut être appelé par                                                                                                  | Définition                                         |
+| ---- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 41   | [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | A list box cell is about to change to editing mode |
 
 
 ## Description
