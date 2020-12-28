@@ -14,7 +14,7 @@ The `On Printing Break` event can only be used in the context of an **output for
 
 This event usually follows a call to the `Subtotal` command.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
 
 
 
