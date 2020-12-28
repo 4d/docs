@@ -3,9 +3,9 @@ id: onColumnMoved
 title: Sur déplacement colonne
 ---
 
-| Code | Peut être appelé par                                                                                              | Définition                                               |
-| ---- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| 32   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A list box column is moved by the user via drag and drop |
+| Code | Peut être appelé par                                                                                                  | Définition                                               |
+| ---- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| 32   | [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | A list box column is moved by the user via drag and drop |
 
 
 ## Description
