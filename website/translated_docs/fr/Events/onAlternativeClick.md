@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: Sur clic alternatif
 ---
 
-| Code | Peut être appelé par                                                                                                                                             | Définition                                                                                                                                                                                                |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 38   | [Bouton](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Buttons: The "arrow" area of a button is clicked<li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked |
+| Code | Peut être appelé par                                                                                                                                             | Définition                                                                                                                                                                                                  |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 38   | [Bouton](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Boutons : la zone "flèche" d'un bouton est cliquée<li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked |
 
 
 ## Description
