@@ -14,7 +14,7 @@ L'événement `On Double Clicked` est généré lorsque l'utilisateur double-cli
 
 Si la propriété [`On Clicked`](onClicked.md) ou `On Double Clicked` d'événement d'objet de onDoubleClicked.md est sélectionnée pour un objet, vous pouvez détecter et gérer les clics dans ou sur l'objet, à l'aide de la commande `FORM event` qui retoure [`On Clicked`](onClicked.md) ou `On Double Clicked`, selon le cas.
 
-If both events are selected for an object, the `On Clicked` and then the `On Double Clicked` events will be generated when the user double-clicks the object.
+Si les deux événements sont sélectionnés pour un objet, les événements `On Clicked` puis `On Double Clicked` seront générés lorsque l'utilisateur double-clique sur l'objet.
 
 ### 4D View Pro
 
