@@ -18,7 +18,7 @@ Cet événement est généré lorsque la largeur d'une colonne dans la list box 
 
 ### 4D View Pro
 
-Cet événement est généré lorsque la largeur d'une colonne est modifiée par un utilisateur. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Cet événement est généré lorsque la largeur d'une colonne est modifiée par un utilisateur. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
 
 | Propriété   | Type        | Description                                                                                |
 | ----------- | ----------- | ------------------------------------------------------------------------------------------ |
