@@ -5,7 +5,7 @@ title: On VP Range Changed
 
 | Code | Peut être appelé par                                    | Définition                                                                                                      |
 | ---- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| 61   | [4D View Pro Area](FormObjects/viewProArea_overview.md) | La plage de cellules 4D View Pro a changé (ex : un calcul de formule, une valeur supprimée d'une cellule, etc.) |
+| 61   | [Zone 4D View Pro](FormObjects/viewProArea_overview.md) | La plage de cellules 4D View Pro a changé (ex : un calcul de formule, une valeur supprimée d'une cellule, etc.) |
 
 
 ## Description
