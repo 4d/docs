@@ -10,7 +10,7 @@ title: Sur glisser
 
 ## Description
 
-The `On Drag Over` event is repeatedly sent to the destination object when the mouse pointer is moved over the object. In response to this event, you usually:
+L'événement `On Drag Over` est envoyé à plusieurs reprises à l'objet de destination lorsque le pointeur de la souris est déplacé sur l'objet. Généralement, en réponse à cet événement :
 
 - Get the data and signatures found in the pasteboard (via the `GET PASTEBOARD DATA` command).
 -  Depending on the nature and type of data in the pasteboard, you **accept** or **reject** the drag and drop.
