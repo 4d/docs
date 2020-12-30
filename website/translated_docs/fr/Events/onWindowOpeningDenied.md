@@ -5,12 +5,12 @@ title: On Window Opening Denied
 
 | Code | Peut être appelé par                        | Définition                       |
 | ---- | ------------------------------------------- | -------------------------------- |
-| 53   | [Zone Web](FormObjects/webArea_overview.md) | A pop-up window has been blocked |
+| 53   | [Zone Web](FormObjects/webArea_overview.md) | Une fenêtre pop-up a été bloquée |
 
 
 ## Description
 
-This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
+Cet événement est généré lorsque l'ouverture d'une fenêtre pop-up est bloquée par la zone Web. Les zones Web de 4D ne permettent pas l'ouverture de fenêtres contextuelles.
 
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
