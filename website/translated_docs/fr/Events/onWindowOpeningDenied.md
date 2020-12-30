@@ -12,7 +12,7 @@ title: On Window Opening Denied
 
 This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
 
 ### Voir également
