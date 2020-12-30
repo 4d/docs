@@ -3,9 +3,9 @@ id: onScroll
 title: Sur défilement
 ---
 
-| Code | Peut être appelé par                                                                                                                                | Définition                                                                                                    |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| 59   | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) - [List Box](FormObjects/listbox_overview.md) | L'utilisateur fait défiler le contenu d'un objet image ou d'une list box à l'aide de la souris ou du clavier. |
+| Code | Peut être appelé par                                                                                                                                   | Définition                                                                                                    |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| 59   | [Zone de saisie](FormObjects/input_overview.md) de [type](FormObjects/properties_Object.md#type) `image` - [List Box](FormObjects/listbox_overview.md) | L'utilisateur fait défiler le contenu d'un objet image ou d'une list box à l'aide de la souris ou du clavier. |
 
 
 ## Description
