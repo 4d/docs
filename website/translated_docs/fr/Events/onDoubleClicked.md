@@ -18,7 +18,7 @@ If both events are selected for an object, the `On Clicked` and then the `On Dou
 
 ### 4D View Pro
 
-Cet événement est généré lorsque l'utilisateur double-clique n'importe où dans un document 4D View Pro. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Cet événement est généré lorsque l'utilisateur double-clique n'importe où dans un document 4D View Pro. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
 
 | Propriété   | Type        | Description                    |
 | ----------- | ----------- | ------------------------------ |
