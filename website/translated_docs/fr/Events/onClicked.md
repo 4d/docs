@@ -22,13 +22,13 @@ L'événement `On Clicked` se produit généralement une fois que le bouton de l
 - [Listes déroulantes](FormObjects/dropdownList_Overview.md) : l'événement `On Clicked` se produit uniquement si l'utilisateur sélectionne une autre valeur dans le menu. L'événement `On Data Change` vous permet de détecter l'activation de l'objet lorsqu'une valeur différente de la valeur courante est sélectionnée
 - Lorsqu'une cellule d'entrée de list box est [en cours d'édition](FormObjects/listbox_overview.md#managing-entry), l'événement `On Clicked` est généré lorsque le bouton de la souris est enfoncé, permettant d'utiliser la commande `Contextual click` par exemple.
 
-In the context of an `On Clicked` event, you can test the number of clicks made by the user by means of the `Clickcount` command.
+Dans le cas d'un événement `On Clicked`, vous pouvez tester le nombre de clics effectués par l'utilisateur à l'aide de la commande `Clickcount`.
 
-### On Clicked and On Double Clicked
+### On Clicked et On Double Clicked
 
-After the `On Clicked` or [`On Double Clicked`](onDoubleClicked.md) object event property is selected for an object, you can detect and handle the clicks within or on the object, using the `FORM event` command that returns `On Clicked` or [`On Double Clicked`](onDoubleClicked.md), depending on the case.
+Une fois que la propriété d'événement d'objet `On Clicked` ou [`On Double Clicked`](onDoubleClicked.md) est sélectionnée pour un objet, vous pouvez détecter et gérer les clics dans ou sur l'objet, à l'aide de la commande `FORM event` qui retourne `On Clicked` ou [`On Double Clicked`](onDoubleClicked.md), selon le cas.
 
-If both events are selected for an object, the `On Clicked` and then the `On Double Clicked` events will be generated when the user double-clicks the object.
+Si les deux événements sont sélectionnés pour un objet, les événements `On Clicked` puis `On Double Clicked` seront générés lorsque l'utilisateur double-clique sur l'objet.
 
 ### 4D View Pro
 
