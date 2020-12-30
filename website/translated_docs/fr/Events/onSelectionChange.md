@@ -14,7 +14,7 @@ Cet événement peut être généré dans différents contextes.
 
 
 ### 4D View Pro
-La sélection courante de lignes ou de colonnes est modifiée. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+La sélection courante de lignes ou de colonnes est modifiée. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
 
 | Propriété     | Type        | Description                        |
 | ------------- | ----------- | ---------------------------------- |
