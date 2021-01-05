@@ -1,6 +1,6 @@
 ---
 id: dataclassClass
-title: DataClass
+title: データクラス
 ---
 
 
@@ -505,7 +505,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 | プロパティ       | タイプ  | 説明                                       |
 | ----------- | ---- | ---------------------------------------- |
-| name        | テキスト | Name of the dataclass                    |
+| name        | テキスト | データクラスの名称                                |
 | primaryKey  | テキスト | Name of the primary key of the dataclass |
 | tableNumber | 整数   | Internal 4D table number                 |
 

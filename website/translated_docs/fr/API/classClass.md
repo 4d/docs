@@ -52,12 +52,13 @@ Cette propriété est en **lecture seule**.
 </details>
 
 <!-- REF #classClass.new().Syntax -->
-**.new()** : 4D.Class<!-- END REF -->
+**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #classClass.new().Params -->
-| Paramètres | Type     |    | Description               |
-| ---------- | -------- |:--:| ------------------------- |
-| Résultat   | 4D.Class | <- | Nouvel objet de la classe |
+| Paramètres | Type     |    | Description                                      |
+| ---------- | -------- |:--:| ------------------------------------------------ |
+| param      | any      | -> | Parameter(s) to pass to the constructor function |
+| Résultat   | 4D.Class | <- | Nouvel objet de la classe                        |
 <!-- END REF -->
 
 
@@ -65,17 +66,37 @@ Cette propriété est en **lecture seule**.
 
 La `.new()` function <!-- REF #classClass.new().Summary -->crée et returne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
 
-S'il est appelé sur une classe inexistante, une erreur est retournée.
+You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
 
+If `.new()` is called on a non-existing class, an error is returned.
 
-#### Exemple
+#### Exemples
 
 Pour créer une nouvelle instance de la classe Person :
 
 ```4d
 var $person : cs.Person  
-$person:=cs.Person.new() //créer la nouvelle instance  
-//$Person contient les fonctions de la classe
+$person:=cs.Person.new() //create the new instance  
+//$person contains functions of the class
+```
+
+To create a new instance of the Person class with parameters:
+
+```4d
+//Class: Person.4dm
+Class constructor($firstname : Text; $lastname : Text; $age : Integer)
+    This.firstName:=$firstname
+    This.lastName:=$lastname
+    This.age:=$age
+```
+
+```4d
+//In a method
+var $person : cs.Person  
+$person:=cs.Person.new("John";"Doe";40)  
+//$person.firstName = "John"
+//$person.lastName = "Doe"
+//$person.age = 40
 ```<!-- END REF --><!-- REF classClass.superclass.Desc -->## .superclass
 
 <details><summary>Historique</summary>
