@@ -30,11 +30,6 @@ Check the **Web server administration automatic startup** option in the settings
 
 - Whether you use 4D application which is headless or not, you can enable the automatic startup mode using the following *Command Line Interface* argument:
 
-```
---webadmin-auto-start { true | false }
-```
-
-Example:
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
@@ -161,7 +156,7 @@ Example:
 
 - When a web management page is accessed by entering an URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible.
 
-- When a web management page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)) is granted without authentication, the user is automatically authenticated.
+- When a web management page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated.
 
 Once the access is granted, a web [session](WebServer/sessions.md) with the "WebAdmin" privilege is created on the 4D application. As long as the current session has "WebAdmin" privilege, the `WebAdmin` component delivers requested pages.
 
