@@ -428,7 +428,7 @@ L'option **Signe l'application** du générateur d'applications 4D vous permet d
 
 La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notariées déployées via Internet sont bloquées par défaut.
 
-Sous 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour afin de répondre à toutes les exigences d'Apple pour permettre l'utilisation du service Apple notary. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). Veuillez vous référer à [ce billet du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description du processus de notarisation,  étape par étape.
+Sous 4D v18, les [fonctionnalités de signature intégrées](#os-x-signing-certificate) ont été mises à jour afin de répondre à toutes les exigences d'Apple pour permettre l'utilisation du service Apple notary. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D (à noter également qu'elle nécessite l'installation de Xcode). Veuillez vous référer à [ce billet du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description du processus de notarisation,  étape par étape.
 
 Pour plus d'informations sur le concept de notarisation, veuillez consulter [cette page sur le site Web Apple developer](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
