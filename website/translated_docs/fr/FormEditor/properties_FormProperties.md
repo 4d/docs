@@ -9,10 +9,10 @@ title: Propriétés des formulaires
 
 Chaque formulaire est composé d'au moins deux pages :
 
-- a page 0 (background page)
-- a page 1 (main page)
+- une page 0 (page de fond)
+- une page 1 (page principale)
 
-For more information, please refer to [Form pages](forms.md#form-pages).
+Pour plus d'informations, veuillez consulter le thème [Pages formulaire](forms.md#form-pages).
 
 
 #### Grammaire JSON
