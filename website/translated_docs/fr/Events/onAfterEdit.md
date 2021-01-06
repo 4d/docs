@@ -3,9 +3,9 @@ id: onAfterEdit
 title: Sur après modification
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                                   | Définition                                                                     |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| 45   | [Zone 4D View Pro](FormObjects/viewProArea_overview) - [Zone 4D Write Pro](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Formulaire - [Zone de saisie](FormObjects/input_overview.md) - [Liste hiérarchique](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne List Box](FormObjects/listbox_overview.md#list-box-columns) | The contents of the enterable object that has the focus has just been modified |
+| Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                                   | Définition                                                            |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| 45   | [Zone 4D View Pro](FormObjects/viewProArea_overview) - [Zone 4D Write Pro](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Formulaire - [Zone de saisie](FormObjects/input_overview.md) - [Liste hiérarchique](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne List Box](FormObjects/listbox_overview.md#list-box-columns) | Le contenu de l'objet saisissable qui a le focus vient d'être modifié |
 
 
 ## Description
@@ -14,7 +14,7 @@ title: Sur après modification
 
 Cet événement peut être utilisé pour filtrer la saisie de données dans les objets saisissables au clavier au niveau le plus bas.
 
-When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, *i.e.*:
+Lorsqu'il est utilisé, cet événement est généré après chaque modification apportée au contenu d'un objet saisissable, quelle que soit l'action qui a provoqué la modification, c'est-à-dire :
 
 - Actions d'édition standard qui modifient le contenu comme les actions coller, couper, supprimer ou annuler;
 - Déposer une valeur (action similaire à coller);
@@ -23,32 +23,32 @@ When it is used, this event is generated after each change made to the contents 
 
 ### 4D View Pro
 
-The object returned by the `FORM Event` command contains:
+L'objet retourné par la commande `FORM Event` contient :
 
 | Propriété   | Type        | Description                                                                                         |
 | ----------- | ----------- | --------------------------------------------------------------------------------------------------- |
 | code        | entier long | Sur après modification                                                                              |
 | description | Texte       | "On After Edit"                                                                                     |
-| objectName  | Texte       | 4D View Pro area name                                                                               |
-| sheetName   | Texte       | Name of the sheet of the event                                                                      |
+| objectName  | Texte       | Nom de la zone 4D View Pro                                                                          |
+| sheetName   | Texte       | Nom de la feuille de l'événement                                                                    |
 | action      | Texte       | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
-Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
+En fonction de la valeur de la propriété `action`, l'[objet event](overview.md#event-object) contiendra des propriétés supplémentaires.
 
 #### action = editChange
 
-| Propriété   | Type    | Description                       |
-| ----------- | ------- | --------------------------------- |
-| range       | object  | Cell range                        |
-| editingText | variant | The value from the current editor |
+| Propriété   | Type    | Description                              |
+| ----------- | ------- | ---------------------------------------- |
+| range       | object  | Plage de cellule                         |
+| editingText | variant | La valeur provenant de l'éditeur courant |
 
 #### action = valueChanged
 
-| Propriété | Type    | Description                 |
-| --------- | ------- | --------------------------- |
-| range     | object  | Cell range                  |
-| oldValue  | variant | Value of cell before change |
-| newValue  | variant | Value of cell after change  |
+| Propriété | Type    | Description                                |
+| --------- | ------- | ------------------------------------------ |
+| range     | object  | Plage de cellule                           |
+| oldValue  | variant | Valeur de la cellule avant la modification |
+| newValue  | variant | Valeur de la cellule après la modification |
 
 
 #### action = DragDropBlock
@@ -66,28 +66,28 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | Propriété | Type   | Description         |
 | --------- | ------ | ------------------- |
 | fillRange | object | Range used for fill |
- autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
+ autoFillType|longint|Valeur utilisée pour le remplissage.<li>0 : les cellules sont remplies avec toutes les données (valeurs, formatage et formules)<li>1 : les cellules contiennent des données automatiquement séquentielles<li>2 : les cellules contiennent uniquement le formatage<li>3 : les cellules contiennent des valeurs mais pas de formatage<li>4 : les valeurs des cellules sont supprimées<li>5: Les cellules sont remplies automatiquement| |fillDirection|longint|Direction du remplissage.<li>0 : les cellules à gauche sont remplies<li>1 : les cellules à droite sont remplies<li>2 : Les cellules ci-dessus sont remplies<li>3 : Les cellules ci-dessous sont remplies|
 
 
 #### action = formulaChanged
 
-| Propriété | Type   | Description         |
-| --------- | ------ | ------------------- |
-| range     | object | Cell range          |
-| formula   | Texte  | The formula entered |
+| Propriété | Type   | Description       |
+| --------- | ------ | ----------------- |
+| range     | object | Plage de cellule  |
+| formula   | Texte  | La formule saisie |
 
 #### action = clipboardPasted
 
-| Propriété   | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | object      | Cell range                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| pasteOption | entier long | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values) |
-| pasteData   | object      | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard                                                                                                                                                                                                                                                                           |
+| Propriété   | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object      | Plage de cellule                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| pasteOption | entier long | Indique ce qui est collé à partir du presse-papiers :<li>0 : tout est collé (valeurs, mise en forme et formules)<li>1 : seules les valeurs sont collées<li>2 : seul le formatage est collé<li>3 : seules les formules sont collées<li>4 : les valeurs et la mise en forme sont collées (pas les formules)<li>5 : Les formules et la mise en forme sont collées (pas les valeurs) |
+| pasteData   | object      | Les données du presse-papiers à coller<li>"text" (texte) : le texte du presse-papiers<li>"html" (texte) : le code HTML du presse-papiers                                                                                                                                                                                                                                                                                                                                 |
 
 
 #### Exemple
 
-Here is an example handling an `On After Edit` event:
+Voici un exemple qui gère l'événement `On After Edit` :
 
 ```4d
  If(FORM Event.code=On After Edit)
@@ -103,7 +103,7 @@ Here is an example handling an `On After Edit` event:
  End if
 ```
 
-The above example could generate an event object like this:
+L'exemple ci-dessus pourrait générer un objet événement tel que celui-ci :
 
 ```
 {
