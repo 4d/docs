@@ -8,8 +8,14 @@
       "Admin/building": {
         "title": "プロジェクトパッケージのビルド"
       },
+      "Admin/dataExplorer": {
+        "title": "Data Explorer (web)"
+      },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "クラス"
@@ -24,7 +30,7 @@
         "title": "DataClassAttribute"
       },
       "API/dataclassClass": {
-        "title": "DataClass"
+        "title": "データクラス"
       },
       "API/datastoreClass": {
         "title": "DataStore"
@@ -114,7 +120,7 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "Classes"
+        "title": "クラス"
       },
       "Concepts/components": {
         "title": "コンポーネント"
@@ -150,7 +156,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字列"
       },
       "Concepts/time": {
         "title": "時間"
@@ -171,7 +177,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "メソッド"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -823,6 +829,8 @@
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
+    "Web Administration|no description given": "Web Administration",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",

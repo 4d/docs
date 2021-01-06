@@ -109,7 +109,7 @@ Vous pouvez appliquer cette méthode à :
 
 #### Exemple avec une dataclass
 
-Les requêtes suivantes retournent uniquement le prénom et le nom de la datastore class People (soit la datastore class entière, soit une sélection d'entités basée sur la recherche définie dans `$filter`).
+The following requests returns only the first name and last name from the People dataclass (either the entire dataclass or a selection of entities based on the search defined in `$filter`).
 
  `GET  /rest/People/firstName,lastName/`
 

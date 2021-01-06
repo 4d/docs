@@ -177,7 +177,7 @@ The `.hasPrivilege()` function <!-- REF #sessionClass.hasPrivilege().Summary -->
 
 #### Beispiel
 
-In the `On Web Connection` database method, you want to check if the "WebAdmin" privilege is associated to the session:
+You want to check if the "WebAdmin" privilege is associated to the session:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -316,28 +316,18 @@ The [`userName`](#username) property is available at session object level (read-
 
 #### Beispiel
 
-In the `On Web Authentication` database method:
+In a custom authentication method, you set the "WebAdmin" privilege to the user:
 
 ```4d
-var $clientIP; $3 : Text
 var $userOK : Boolean
-
-$clientIP:=$3
 
 ... //Authenticate the user
 
 If ($userOK) //The user has been approved
   var $info : Object
-  $info:=New object
+  $info:=New object()
   $info.privileges:=New collection("WebAdmin")
   Session.setPrivileges($info)
-
-  Use (Session.storage)
-     Session.storage.clientIP:=New shared object("value"; $clientIP)
-  End use
-
- $0:=True
-
 End if
 
 ```

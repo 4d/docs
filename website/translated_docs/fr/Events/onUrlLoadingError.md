@@ -3,16 +3,16 @@ id: onUrlLoadingError
 title: On URL Loading Error
 ---
 
-| Code | Peut être appelé par                        | Définition                                 |
-| ---- | ------------------------------------------- | ------------------------------------------ |
-| 50   | [Zone Web](FormObjects/webArea_overview.md) | An error occurred when the URL was loading |
+| Code | Peut être appelé par                        | Définition                                            |
+| ---- | ------------------------------------------- | ----------------------------------------------------- |
+| 50   | [Zone Web](FormObjects/webArea_overview.md) | Une erreur s'est produite lors du chargement de l'URL |
 
 
 ## Description
 
-This event is generated when an error is detected during the loading of a URL.
+Cet événement est généré lorsqu'une erreur est détectée lors du chargement d'une URL.
 
-You can call the `WA GET LAST URL ERROR` command in order to get information about the error.
+Vous pouvez appeler la commande `WA GET LAST URL ERROR` afin d'obtenir des informations sur l'erreur.
 
 
 ### Voir également

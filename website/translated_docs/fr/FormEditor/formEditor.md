@@ -26,7 +26,7 @@ Pour afficher ou masquer un élément de l’éditeur de formulaires :
     *   **Markers**: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
     *   **Libellés des taquets** : affiche ou masque les libellés des taquets, lorsque ceux-ci sont affichés. Pour plus d’informations sur les taquets et leurs libellés, reportez-vous à la section Déplacer les taquets.
     *   **Limites** : affiche ou masque les limites du formulaire. Lorsque cette option est sélectionnée, le formulaire est affiché dans l’éditeur tel qu’il apparaîtra en mode Application. Cette possibilité est particulièrement intéressante pour ajuster un formulaire sans devoir tester le mode Application pour visualiser le résultat.
-> Les options **Taille basée sur**, **Marge hor.** et **Marge ver.** des propriétés du formulaire modifient les limites du formulaire. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence. Pour plus d’informations sur les propriétés du formulaire, reportez-vous à la section [Propriétés des formulaires](jsonReference.html).
+> > Les options **Taille basée sur**, **Marge hor.** et **Marge ver.** des propriétés du formulaire modifient les limites du formulaire. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence. Pour plus d’informations sur les propriétés du formulaire, reportez-vous à la section [Propriétés des formulaires](jsonReference.html).
 
 
 ### Utiliser la barre d’outils
@@ -748,7 +748,7 @@ Il est possible de zoomer dans le formulaire courant. Vous pouvez passer en mode
 
 ![](assets/en/FormEditor/zoom.png)
 
-*   Lorsque vous cliquez sur le bouton loupe, le curseur prend la forme d’une loupe. Pour augmenter le pourcentage d’affichage d’un palier, cliquez dans le formulaire. Pour réduire le pourcentage d’affichage d’un palier, appuyez sur la touche Majuscule et cliquez dans le formulaire.
+*   Lorsque vous cliquez sur le bouton loupe, le curseur prend la forme d’une loupe. Pour réduire le pourcentage d’affichage d’un palier, appuyez sur la touche Majuscule et cliquez dans le formulaire.
 *   Lorsque vous cliquez sur une barre de pourcentage, l’affichage est immédiatement modifié.
 
 En mode Zoom, toutes les fonctions de l’éditeur de formulaires restent disponibles(*).

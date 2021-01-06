@@ -1520,14 +1520,14 @@ In this example, the "marks" object field in the **Students** dataClass contains
 </details>
 
 <!-- REF #entitySelectionClass.query().Syntax -->
-**.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.query().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString |Text |-> |Search criteria as string|
 |formula |Object |-> |Search criteria as formula object|
-|value|expression|->|Value(s) to use for indexed placeholder(s)|
+|value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
 |Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
@@ -1556,6 +1556,10 @@ For detailed information on how to build a query using *queryString*, *value*, a
 #### Example 2  
 
 More examples of queries can be found in the DataClass [`.query()`](dataclassClass.md#query) page. 
+
+#### See also
+
+[`.query()`](dataclassClass.md#query) for dataclass
 
 <!-- END REF -->
 
@@ -1849,6 +1853,7 @@ If a filter is specified for an attribute of the `relatedEntities` kind:
 *	propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
 
 
+
 In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
 The *begin* parameter allows you to indicate the starting index of the entities to extract. You can pass any value between 0 and entity selection length-1.
@@ -2015,6 +2020,7 @@ Returns:
 ]
 
 ```
+
 
 #### Example 4  
 

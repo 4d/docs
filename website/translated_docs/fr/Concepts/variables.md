@@ -21,7 +21,7 @@ Les variables sont des objets du langage; vous pouvez créer et utiliser des var
 Vous créez des variables en les déclarant. Le langage 4D propose deux manières de déclarer des variables :
 
 - à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
-- à l'aide de l'une des commandes du langage 4D du thème "Compilateur" ou "Tableaux" (obsolète, langage classique uniquement).
+- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
 
 **Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Using a C_ directive
 
-> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword.
+> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
 Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 
@@ -123,15 +123,14 @@ Par exemple, si vous souhaitez définir une variable de type texte, il suffira d
 Voici quelques déclarations de variables simples :
 
 ```4d
- C_BLOB(vxMyBlob) // La variable process vxMyBlob est déclarée comme variable de type BLOB
- C_DATE($vdCurDate) // La variable locale $vdCurDate est déclarée comme variable de type Date
- C_C_LONGINT(vg1;vg2;vg3) // Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long
- C_OBJECT($vObj) // La variable locale $vObj est déclarée comme variable de type Objet
- C_COLLECTION($vCol) // La variable locale $vCol est déclarée comme variable de type Collection
-ARRAY LONGINT(alAnArray;10) //La variable process alAnArray est déclarée comme un tableau entier long de 10 éléments
+ C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
+ C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
+ C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
+ C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
+ C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
 ```
 
-**Note :** Les tableaux sont un type particulier de variables. Un tableau est une série ordonnée de variables de même type. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
 
 ## Assigner des valeurs

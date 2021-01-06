@@ -184,11 +184,11 @@ Par défaut, le style Bevel arrondi a un fond gris clair avec un libellé au cen
 
 ### OS X Gradient
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style. Comme pour le style Bevel, le style OS X Gradient combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar).
+Le style du bouton OS X Gradient est presque identique au style [Bevel](#bevel). Comme pour le style Bevel, le style OS X Gradient combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar).
 
 Par défaut, le style OS Gradient a un fond gris clair avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
- - *Sous Windows* - le bouton est identique au style Bevel. When it uses the “With Pop-up Menu” property, a triangle is displayed on the right side of the button.
+ - *Sous Windows* - le bouton est identique au style Bevel. Lorsqu’il dispose de la propriété “Avec pop up menu”, un triangle est affiché à droite du bouton.
 
 ![](assets/en/FormObjects/button_osxgradient.png)
 
@@ -363,5 +363,5 @@ Des propriétés spécifiques supplémentaires sont disponibles, en fonction du 
 
 - [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname) - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) - [Décalage icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#verticalMargin) (Personnalisé)
 - [Bouton par défaut](properties_Appearance.md#default-button) (A plat, Classique)
-- [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+- [Avec pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Barre outils, Bevel, Bevel arrondi, OS X Gradient, OS X Textured, Office XP, Rond, Personnalisé)
 

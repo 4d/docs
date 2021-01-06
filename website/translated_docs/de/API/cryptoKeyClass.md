@@ -144,7 +144,7 @@ The function returns a status object with `success` property set to `true` if th
 
 | Property | Typ        | Beschreibung                                                        |
 | -------- | ---------- | ------------------------------------------------------------------- |
-| success  | boolean    | True if the message has been successfully decrypted                 |
+| success  | Boolean    | True if the message has been successfully decrypted                 |
 | result   | Text       | Message decrypted and decoded using the `options.encodingDecrypted` |
 | errors   | collection | If `success` is `false`, may contain a collection of errors         |
 
@@ -296,7 +296,7 @@ The `cryptoKey` must contain a valid **private** key.
 | ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | Text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
 | encodingEncrypted | Text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                  |
-| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
+| pss               | Boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
 | encoding          | Text    | ERepresentation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                      |
 
 
@@ -369,7 +369,7 @@ The `cryptoKey` must contain a valid **public** key.
 | Property | Typ     | Beschreibung                                                                                                                                                         |
 | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash     | Text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-| pss      | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
+| pss      | Boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
 | encoding | Text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                              |
 
 
@@ -381,7 +381,7 @@ In case the signature couldn't be verified because it was not signed with the sa
 
 | Property | Typ        | Beschreibung                                                |
 | -------- | ---------- | ----------------------------------------------------------- |
-| success  | boolean    | True if the signature matches the message                   |
+| success  | Boolean    | True if the signature matches the message                   |
 | errors   | collection | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 

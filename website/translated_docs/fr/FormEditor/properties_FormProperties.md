@@ -7,7 +7,7 @@ title: Propriétés des formulaires
 
 ## Pages
 
-Each form has is made of at least two pages:
+Chaque formulaire est composé d'au moins deux pages :
 
 - a page 0 (background page)
 - a page 1 (main page)

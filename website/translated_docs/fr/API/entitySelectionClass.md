@@ -60,7 +60,7 @@ Entity selections can be created from existing selections using various function
 
 #### Description
 
-The `Create entity selection` command builds and returns a new, [non-shareable](ORDA/entities.md#shareable-or-non-shareable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
 
 If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
 
@@ -111,7 +111,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 *   If *index* is out of range, an error is returned.
 *   If *index* corresponds to a dropped entity, a Null value is returned.
-> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](entityClass.md#lock) or [`.save()`](entityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Voici quelques exemples :
+> > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](entityClass.md#lock) or [`.save()`](entityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Voici quelques exemples :
 
 ```4d
  $sel:=ds.Employee.all() //create the entity selection
@@ -224,10 +224,10 @@ The resulting object is an entity selection of Employee with duplications remove
 ## .add()
 
 <details><summary>Historique</summary>
-| Version | Modifications                                 |
-| ------- | --------------------------------------------- |
-| v18 R5  | Only supports non-shareable entity selections |
-| v17     | Ajoutées                                      |
+| Version | Modifications                             |
+| ------- | ----------------------------------------- |
+| v18 R5  | Only supports alterable entity selections |
+| v17     | Ajoutées                                  |
 </details>
 
 
@@ -247,7 +247,7 @@ The resulting object is an entity selection of Employee with duplications remove
 The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
 > This function modifies the original entity selection.
 
-**Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
+**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
 
 
 *   If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
@@ -526,9 +526,9 @@ The `.copy()` function <!-- REF #entitySelectionClass.copy().Summary -->returns 
 
 > This function does not modify the original entity selection.
 
-By default, if the *option* parameter is omitted, the function returns a new, non-shareable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
+By default, if the *option* parameter is omitted, the function returns a new, alterable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
 
-> For information on the shareable property of entity selections, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section.
+> For information on the shareable property of entity selections, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
 
 #### Exemple
 
@@ -850,6 +850,7 @@ There is, however, a difference between both statements when the selection is em
 <!-- REF #entitySelectionClass.getDataClass().Syntax -->
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
+
 <!-- REF #entitySelectionClass.getDataClass().Params -->
 | Paramètres | Type         |    | Description                                            |
 | ---------- | ------------ |:--:| ------------------------------------------------------ |
@@ -901,20 +902,20 @@ The following generic code duplicates all entities of the entity selection:
 **.isAlterable()** : Boolean<!-- END REF -->
 
 <!-- REF #entitySelectionClass.isAlterable().Params -->
-| Paramètres | Type    |    | Description                                                         |
-| ---------- | ------- |:--:| ------------------------------------------------------------------- |
-| Résultat   | Booléen | <- | True if the entity selection is alterable, False if it is shareable |
+| Paramètres | Type    |    | Description                                                |
+| ---------- | ------- |:--:| ---------------------------------------------------------- |
+| Résultat   | Booléen | <- | True if the entity selection is alterable, False otherwise |
 <!-- END REF -->
 
 #### Description
 
-The `.isAlterable()` function <!-- REF #entitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->. It returns False if the entity selection is not alterable, i.e. if it is *shareable*.
+The `.isAlterable()` function <!-- REF #entitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, and False if the entity selection is not alterable.
 
-For more information, please refer to [Shareable or non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+For more information, please refer to [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 #### Exemple
 
-You are about to display `Form.products` in a [list box](FormObjects\listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
+You are about to display `Form.products` in a [list box](FormObjects/listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
 
 ```4d
 If (Not(Form.products.isAlterable()))
@@ -1075,6 +1076,7 @@ Entity selections always have a `.length` property.
 
 <!-- REF #entitySelectionClass.max().Syntax -->
 **.max**( *attributePath* : Text ) : any<!-- END REF -->
+
 
 <!-- REF #entitySelectionClass.max().Params -->
 | Paramètres    | Type  |    | Description                                      |
@@ -1498,14 +1500,14 @@ In this example, the "marks" object field in the **Students** dataClass contains
 </details>
 
 <!-- REF #entitySelectionClass.query().Syntax -->
-**.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.query().Params -->
 | Paramètres    | Type               |    | Description                                                                                                                                                   |
 | ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Texte              | -> | Search criteria as string                                                                                                                                     |
 | formula       | Objet              | -> | Search criteria as formula object                                                                                                                             |
-| value         | expression         | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
+| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
 | querySettings | Objet              | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
 | Résultat      | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
@@ -1533,7 +1535,11 @@ For detailed information on how to build a query using *queryString*, *value*, a
 
 #### Exemple 2
 
-More examples of queries can be found in the DataClass [`.query()`](dataclassClass.md#query) page. 
+More examples of queries can be found in the DataClass [`.query()`](dataclassClass.md#query) page.
+
+#### Voir également
+
+[`.query()`](dataclassClass.md#query) for dataclass
 
 <!-- END REF -->
 
@@ -1825,6 +1831,7 @@ If a filter is specified for an attribute of the `relatedEntities` kind:
 *   propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
 
 
+
 In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
 The *begin* parameter allows you to indicate the starting index of the entities to extract. You can pass any value between 0 and entity selection length-1.
@@ -1989,7 +1996,9 @@ Returns:
         "lastName": "Durham"
     }
 ]
+
 ```
+
 
 #### Example 4
 
