@@ -53,20 +53,20 @@ En fonction de la valeur de la propriété `action`, l'[objet event](overview.md
 
 #### action = DragDropBlock
 
-| Propriété | Type    | Description                                         |
-| --------- | ------- | --------------------------------------------------- |
-| fromRange | object  | Range of source cell range (being dragged)          |
-| toRange   | object  | Range of the destination cell range (drop location) |
-| copy      | boolean | Specifies if the source range is copied or not      |
-| insert    | boolean | Specifies if the source range is inserted or not    |
+| Propriété | Type    | Description                                       |
+| --------- | ------- | ------------------------------------------------- |
+| fromRange | object  | Plage de cellule source (qui est glissée)         |
+| toRange   | object  | Plage de cellule de destination (qui est déposée) |
+| copy      | boolean | Indique si la plage source est copiée ou non      |
+| insert    | boolean | Indique si la plage source est insérée ou non     |
 
 
 #### action = DragFillBlock
 
-| Propriété | Type   | Description         |
-| --------- | ------ | ------------------- |
-| fillRange | object | Range used for fill |
- autoFillType|longint|Valeur utilisée pour le remplissage.<li>0 : les cellules sont remplies avec toutes les données (valeurs, formatage et formules)<li>1 : les cellules contiennent des données automatiquement séquentielles<li>2 : les cellules contiennent uniquement le formatage<li>3 : les cellules contiennent des valeurs mais pas de formatage<li>4 : les valeurs des cellules sont supprimées<li>5: Les cellules sont remplies automatiquement| |fillDirection|longint|Direction du remplissage.<li>0 : les cellules à gauche sont remplies<li>1 : les cellules à droite sont remplies<li>2 : Les cellules ci-dessus sont remplies<li>3 : Les cellules ci-dessous sont remplies|
+| Propriété | Type   | Description                        |
+| --------- | ------ | ---------------------------------- |
+| fillRange | object | Plage utilisée pour le remplissage |
+ autoFillType|longint|Valeur utilisée pour le remplissage.<li>0 : les cellules contiennent toutes les données (valeurs, formatage et formules)<li>1 : les cellules contiennent des données automatiquement séquentielles<li>2 : les cellules contiennent uniquement le formatage<li>3 : les cellules contiennent des valeurs mais pas de formatage<li>4 : les valeurs des cellules sont supprimées<li>5: Les cellules sont remplies automatiquement| |fillDirection|longint|Direction du remplissage.<li>0 : les cellules à gauche sont remplies<li>1 : les cellules à droite sont remplies<li>2 : Les cellules ci-dessus sont remplies<li>3 : Les cellules ci-dessous sont remplies|
 
 
 #### action = formulaChanged
