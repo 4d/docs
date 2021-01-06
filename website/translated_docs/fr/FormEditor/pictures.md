@@ -30,7 +30,7 @@ L'icône est automatiquement utilisée partout où l'image doit être affichée 
 Cette icône indique que l'image ne peut être ni affichée ni manipulée localement -- mais elle peut être stockée sans altération pour être affichée sur une autre machine. C'est le cas, par exemple, pour les images PDF sous Windows ou les images au format PICT.
 
 
-## High Resolution Pictures
+## Images de haute résolution
 
 4D prend en charge des images haute résolution sur les plateformes macOS et Windows. High resolution pictures can be defined by either scale factor or dpi.
 
