@@ -20,8 +20,8 @@ La sélection courante de lignes ou de colonnes est modifiée. Dans ce contexte,
 | ------------- | ----------- | ---------------------------------- |
 | code          | entier long | 31                                 |
 | description   | Texte       | "On Selection Change"              |
-| objectName    | Texte       | 4D View Pro area name              |
-| sheetName     | Texte       | Name of the sheet of the event     |
+| objectName    | Texte       | Nom de la zone 4D View Pro         |
+| sheetName     | Texte       | Nom de la feuille de l'événement   |
 | oldSelections | object      | Plage de cellules avant changement |
 | newSelections | object      | Plage de cellules après changement |
 
