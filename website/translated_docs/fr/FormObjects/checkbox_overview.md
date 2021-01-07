@@ -21,7 +21,7 @@ Une case à cocher peut être associée à une [variable ou expression](properti
 - **entier :** si la case est cochée, la variable prend la valeur 1. Lorsqu'elle n'est pas cochée, elle porte la valeur 0. Si la case à cocher a un troisième état (voir ci-dessous), elle porte la valeur 2.
 - **booléen :** si la case est cochée, la variable prend la valeur `Vrai`. Lorsqu'elle n'est pas cochée, elle prend la valeur `Faux`.
 
-Une partie ou la totalité des cases à cocher contenues dans un formulaires peut être cochée ou non cochée. Multiple check boxes allow the user to select multiple options.
+Une partie ou la totalité des cases à cocher contenues dans un formulaires peut être cochée ou non cochée. Plusieurs cases à cocher permettent à l'utilisateur de cocher plusieurs options.
 
 
 ### Cases à cocher à trois états
