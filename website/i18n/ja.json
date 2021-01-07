@@ -9,7 +9,7 @@
         "title": "プロジェクトパッケージのビルド"
       },
       "Admin/dataExplorer": {
-        "title": "Data Explorer (web)"
+        "title": "Web Data Explorer"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"

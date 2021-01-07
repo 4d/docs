@@ -62,7 +62,7 @@ By using [`$compute`]($compute.md), you can compute the **average**, **count**, 
 
 For example, to get the highest salary:
 
-`/rest/Employee/salary/?$compute=sum`
+`/rest/Employee/salary/?$compute=max`
 
 To compute all values and return a JSON object:
 

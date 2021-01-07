@@ -223,7 +223,7 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 | indexed     | Chaine  | Si un **type d'index** a été sélectionné, cette propriété retournera true. Sinon, cette propriété n'apparaîtra pas.                                   |
 | type        | Chaine  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
 | identifying | Booléen | Cette propriété retourne True si l'attribut est la clé primaire. Sinon, cette propriété n'apparaîtra pas.                                             |
-| path        | Chaine  | Nom du lien d'un attribut relatedEntity ou relateEntities.                                                                                            |
+| path        | Chaine  | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                         |
 | foreignKey  | Chaine  | Pour un attribut relatedEntity, nom de l'attribut associé.                                                                                            |
 | inverseName | Chaine  | Nom de la relation opposée pour un attribut relatedEntity ou relatedEntities.                                                                         |
 

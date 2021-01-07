@@ -29,9 +29,9 @@ Cet événement est généré lorsque l'utilisateur clique sur un en-tête de co
 | ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | code        | entier long | 42                                                                                                                                          |
 | description | Texte       | "On Header Click"                                                                                                                           |
-| objectName  | Texte       | 4D View Pro area name                                                                                                                       |
-| sheetName   | Texte       | Name of the sheet of the event                                                                                                              |
-| range       | object      | Cell range                                                                                                                                  |
+| objectName  | Texte       | Nom de la zone 4D View Pro                                                                                                                  |
+| sheetName   | Texte       | Nom de la feuille de l'événement                                                                                                            |
+| range       | object      | Plage de cellule                                                                                                                            |
 | sheetArea   | entier long | L'emplacement de la feuille où l'événement a eu lieu :<br><li>0 : la zone de croisement entre le numéro de colonne/les en-têtes de lettre (en haut à gauche de la feuille)</li><li>1 : les en-têtes de colonne (zone indiquant les numéros/lettres de colonnes)</li><li>2 : les en-têtes de ligne (zone indiquant les numéros de ligne)</li> |
 
 #### Exemple

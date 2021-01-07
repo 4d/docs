@@ -384,7 +384,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 
 ---
-## Display Type
+## Type d'affichage
 
 Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
