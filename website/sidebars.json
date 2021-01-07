@@ -61,8 +61,7 @@
 	"WebServer/webServerTLS",
 	"WebServer/webServerConnect",
 	"WebServer/webServerConnectMethods",
-	"WebServer/webServerSessions",
-  "WebServer/sessions",
+    "WebServer/sessions",
 	"WebServer/webServerObject"],
   "REST Server": [		{
         "type": "subcategory",

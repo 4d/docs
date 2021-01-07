@@ -147,7 +147,7 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 }
 ``` 
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed (see security below). In your web interfaces, you can easily bind the javascript or html code with returned data. XXXSee the "Data Browser" page to have an example of web interface bound to dataclasses through JSON.
+This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed (see security below). In your web interfaces, you can easily bind the javascript or html code with returned data. See the "Data Browser" page to have an example of web interface bound to dataclasses through JSON.
 
 
 

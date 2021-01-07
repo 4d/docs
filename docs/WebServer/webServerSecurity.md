@@ -27,6 +27,8 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 ![](assets/en/WebServer/authentication.png)
 
+> Using a **custom** authentication is recommended.
+
 ### Overview 
 
 The operation of the 4D web server's access system is summarized in the following diagram:
@@ -37,7 +39,7 @@ The operation of the 4D web server's access system is summarized in the followin
 
 ### Custom (default)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests coming from the web and that require an authentication.
+Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests that require an authentication.
 
 - if a request corresponds to an opened session on the server (i.e. it has a valid session cookie), it gets access to the requested resource,
 - if a request does not correspond to an opened session, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.  
@@ -46,61 +48,19 @@ Basically in this mode, it's up to the developer to define how to authenticate u
 
 This authentication mode is the most flexible because it allows you to:
 
-- either, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm; 
-- or, delegate the user authentication to a third-party application (e.g. a social network, SSO).
-
-You can mix both solutions in your application.  
-
-#### Example
-
-In this example, you let users creating their own account using a web form. When they submit the form, the [`On Web Authentication`](#on-web-authentication) database method is called and you can create a new user account. The important thing is that you only store a hash value for the password, for example:
+- either, delegate the user authentication to a third-party application (e.g. a social network, SSO);
+- or, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm (see [this example](sessions.md#example) from the "User sessions" chapter). The important thing is that you never store the password in clear, using such code:
 
 ```4d
-//... creation code
-ds.webUser.hash:=Generate password hash($password)  
+//... user account creation
+ds.webUser.password:=Generate password hash($password)  
 ds.webUser.save()
 ```  
 
-Then, you provide the user with a way (e.g. a "login" web form) to authenticate; when the form is submitted, the [`On Web Authentication`](#on-web-authentication) database method is called. In the method, you can use the `WEB GET VARIABLES` command to get values posted through the "login" form and the `Verify password hash` command to check the password:
-
-```4d
-C_LONGINT($posit)
-C_TEXT($username; $password)
-
-ARRAY TEXT($tName; 0)
-ARRAY TEXT($tVal; 0)
-
-Case of 
-	: ($1="/login")
-		
-		WEB GET VARIABLES($tName; $tVal)
-			
-			// get credentials from the form
-		$posit:=Find in array($tName; "username")
-		If ($posit>0)
-			$username:=$tVal{$posit}
-		End if 
-		
-		$posit:=Find in array($tName; "password")
-		If ($posit>0)
-			$password:=$tVal{$posit}
-		End if 
-			
-			// we use the custom user table
-		QUERY([webUser]; [webUser]User=$username)
-		
-		If (OK=1)  //we have a user with this name
-			$0:=Verify password hash($password; [webUser]hash)			
-		Else 			
-			$0:=False
-		End if 
-		
-End case 
-```
- 
+See also [this example](webServerGetStart.md#authenticating-users) from the "Getting started" chapter. 
 
 
-## Basic protocol
+### Basic protocol
 
 When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password. 
 
@@ -116,7 +76,7 @@ Entered values are then evaluated:
 
 >With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validation of users/passwords is carried out by the 4D Server application.
 
-## DIGEST protocol  
+### DIGEST protocol  
 
 This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher. 
 
