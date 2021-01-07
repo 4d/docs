@@ -167,12 +167,12 @@ Ce sont des dataclasses liées par des attributs de relation.
 
 Les attributs de relation sont utilisés pour conceptualiser les relations entre les dataclasses (N vers 1 et 1 vers N).
 
-*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   Relation N vers 1 (la dataclassA fait référence à une occurrence de la dataclassB) : un attribut de relation est disponible dans dataclassA et fait référence à une instance de dataclassB.
+*   Relation 1 vers N (une occurrence de dataclassB fait référence à plusieurs occurrences de dataclassA) : un attribut de relation est disponible dans la dataclassB et fait référence à plusieurs instances de la dataclassA.
 
-A dataclass can have recursive relation attributes.
+Une dataclass peut avoir des attributs de relation récursifs.
 
-In an entity, the value of a relation attribute can be an entity or an entity selection.
+Dans une entité, la valeur d'un attribut de relation peut être une entité ou une sélection d'entité.
 
 ## Related entities
 
