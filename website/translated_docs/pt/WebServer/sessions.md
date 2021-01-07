@@ -113,6 +113,7 @@ http://localhost:8044/authenticate.shtml
 
 2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
 
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -125,6 +126,8 @@ http://localhost:8044/authenticate.shtml
 </body>
 </html>
 ```
+
+![alt-text](assets/en/WebServer/authenticate.png)
 
 3. The authenticate project method looks for the *userID* person and validates the password against the hashed value already stored in the *SalesPersons* table:
 
