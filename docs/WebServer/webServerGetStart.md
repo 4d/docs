@@ -8,7 +8,7 @@ This "Getting started" section is geared at first-time users who want an overall
 
 ## Hello World Example
 
-Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and call the On Web Connection database method.
+Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and call a project method that returns a text.
 
 ### Starting the web server
 
@@ -41,13 +41,11 @@ WEB SEND TEXT("Hello World!")
 
 This very simple line only sends the text passed as parameter to the browser. 
 
-3. Display the method properties by clicking on the `**[i]**` button in the code editor.
-4. 
-![](assets/en/WebServer/authenticate.png)
+3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option then click **OK**. 
 
-4. Check the `4D tags and URLs (4DACTION...)` option and click **OK**. 
+![](assets/en/WebServer/hello0.png)
 
-5. In your browser, enter the following URL:
+4. In your browser, enter the following URL:
 
 ```
 http://localhost/4daction/hello
@@ -60,14 +58,14 @@ The web server handles the request and calls the `hello` method, which returns:
 
 ## Getting data from the database
 
-Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
+Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data. Thanks to the [ORDA concept](ORDA/overview.md), this table will be automatically available as a dataclass and available through [REST](REST/gettingStarted.md). 
 
 Create a simple database with, for example, a single table containing some records:
 
 ![](assets/en/WebServer/hello2.png)
 ![](assets/en/WebServer/hello3.png)
 
-1. You will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
+1. We will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
 
 ![](assets/en/WebServer/hello5.png)
 
@@ -189,22 +187,7 @@ $webUser.save()
 
 > To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https). 
 
-1. Create and store in the `WebFolder` a simple page named `authenticate.shtml` containing this code:
-
-```html
-<!DOCTYPE html>
-<html>
-<body bgcolor="#ffffff">
-<FORM ACTION="/4DACTION/authenticate" METHOD=POST>
-    User name: <INPUT TYPE=TEXT NAME=userId VALUE=""><BR>
-    Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
-<INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
-</FORM>
-</body>
-</html>
-```
-
-2. Open the Explorer and create a project method named "authenticate".
+1. Open the Explorer and create a project method named "login".
 
 3. Write the following code:
 
@@ -212,16 +195,15 @@ $webUser.save()
 var $indexUserId; $indexPassword : Integer
 var $userId; $password : Text
 var $user; $info : Object
-
-
 ARRAY TEXT($anames; 0)
 ARRAY TEXT($avalues; 0)
 
+// get values sent in the header of the request
 WEB GET VARIABLES($anames; $avalues)
 
+// look for header login fields
 $indexUserId:=Find in array($anames; "userId")
 $userId:=$avalues{$indexUserId}
-
 $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
@@ -245,21 +227,23 @@ Else
 End if 
 ```
 
-3. Display the method properties by clicking on the `i` button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
+3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
 
 4. In your browser, enter the following URL:
 
 ```
-http://localhost/authenticate.shtml
+http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-The login dialog is displayed:
+> This request is usually handled through a web form and a POST request. See [this example](sessions.md#example) for more information. 
 
-![](assets/en/WebServer/authenticate.png)
+Then you will be logged for the session:
 
-If you enter valid credentials and click **Log In**, then you will be logged:
+![](assets/en/WebServer/login1.png)
 
-![](assets/en/WebServer/authenticate3.png)
+Wrong credentials would be rejected:
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. 
+![](assets/en/WebServer/login2.png)
+
+Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page. 
 
