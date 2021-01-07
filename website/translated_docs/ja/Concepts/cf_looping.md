@@ -3,7 +3,7 @@ id: looping
 title: ループ構造
 ---
 
-Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
+ループ構造は、条件が満たされるまで、あるいは指定した回数まで、同じ処理を繰り返します。
 
 
 ## While...End while

@@ -3,7 +3,7 @@ id: null-undefined
 title: Null と 未定義
 ---
 
-Null and Undefined are data types that handle cases where the value of an expression is not known.
+Null および未定義は、式の値が未知のケースを扱うデータ型です。
 
 ## Null
 

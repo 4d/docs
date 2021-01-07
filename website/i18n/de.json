@@ -8,14 +8,20 @@
       "Admin/building": {
         "title": "Building a project package"
       },
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
+      },
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "Class"
       },
       "API/collectionClass": {
-        "title": "Collections"
+        "title": "Collection"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
@@ -24,7 +30,7 @@
         "title": "DataClassAttribute"
       },
       "API/dataclassClass": {
-        "title": "Dataclass"
+        "title": "DataClass"
       },
       "API/datastoreClass": {
         "title": "DataStore"
@@ -42,7 +48,7 @@
         "title": "Entity"
       },
       "API/entitySelectionClass": {
-        "title": "Entity Selections"
+        "title": "EntitySelection"
       },
       "API/fileClass": {
         "title": "File"
@@ -51,22 +57,25 @@
         "title": "Folder"
       },
       "API/formulaClass": {
-        "title": "Formulas"
+        "title": "Formula"
       },
       "API/imapTransporterClass": {
-        "title": "IMAP Transporter"
+        "title": "IMAPTransporter"
       },
       "API/overview": {
         "title": "Class API Overview"
       },
       "API/pop3TransporterClass": {
-        "title": "POP3 Transporter"
+        "title": "POP3Transporter"
+      },
+      "API/sessionClass": {
+        "title": "Session"
       },
       "API/signalClass": {
-        "title": "Signals"
+        "title": "Signal"
       },
       "API/smtpTransporterClass": {
-        "title": "SMTP Transporter"
+        "title": "SMTPTransporter"
       },
       "API/transporter": {
         "title": "Transporter Class"
@@ -74,8 +83,14 @@
       "API/webServerClass": {
         "title": "WebServer"
       },
-      "API/zipClass": {
-        "title": "ZIP Archive"
+      "API/zipArchiveClass": {
+        "title": "ZIPArchive"
+      },
+      "API/zipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/zipFolderClass": {
+        "title": "ZIPFolder"
       },
       "Backup/backup": {
         "title": "Backup"
@@ -379,7 +394,7 @@
         "title": "Object libraries"
       },
       "FormEditor/pictures": {
-        "title": "Pictures"
+        "title": "Bilder"
       },
       "FormEditor/action": {
         "title": "Aktion"
@@ -763,6 +778,9 @@
       "Users/overview": {
         "title": "Überblick"
       },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
       "WebServer/webServerObject": {
         "title": "Web Server object"
       }
@@ -811,6 +829,8 @@
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
+    "Web Administration|no description given": "Web Administration",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",

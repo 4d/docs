@@ -22,7 +22,7 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 | styleSheets_mac.css     | Pour définir des styles d'attributs spécifiques de macOS uniquement     |
 | styleSheets_windows.css | Pour définir des styles d'attributs spécifiques pour Windows uniquement |
 
-Ces fichiers sont stockés dans le dossier "/SOURCES" du projet. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
+Ces fichiers sont stockés dans le dossier "/SOURCES" du projet. Ils sont également accessibles directement via le [CSS Preview](formEditor.md#css-preview) dans la barre d'outils de l'éditeur de formulaires.
 
 
 ## Architecture des feuilles de style
@@ -229,8 +229,8 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 
 - Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-    - CSS color name: `fill: red;`
-    - Hexa value: `fill: #FF0000;`
+    - Nom la couleur CSS : `fill: red;`
+    - Valeur hexadécimale : `fill: #FF0000;`
     - fonction `rgb()` : `fill:rgb(255,0,0)`
 
 - Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple:

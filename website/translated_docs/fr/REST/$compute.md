@@ -25,7 +25,7 @@ Vous pouvez utiliser l'un des mots clés suivants :
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $all    | Un objet JSON qui définit toutes les fonctions de l'attribut (moyenne, nombre, min, max et somme pour les attributs de type Numérique et count, min et max pour les attributs de type Chaîne |
 | average | Obtenir la moyenne d'un attribut numérique                                                                                                                                                   |
-| count   | Obtenir le nombre total dans la collection ou la classe de datastore (dans les deux cas, vous devez spécifier un attribut)                                                                   |
+| count   | Get the total number in the collection or dataclass (in both cases you must specify an attribute)                                                                                            |
 | min     | Obtenir la valeur minimale d'un attribut numérique ou la plus petite valeur d'un attribut de type Chaîne                                                                                     |
 | max     | Obtenir la valeur maximale d'un attribut numérique ou la plus grande valeur d'un attribut de type Chaîne                                                                                     |
 | sum     | Obtenir la somme d'un attribut numérique                                                                                                                                                     |
@@ -74,6 +74,7 @@ Si vous souhaitez obtenir un calcul avec un attribut, vous pouvez écrire ce qui
 **Réponse** :
 
 `235000`
+
 
 Si vous souhaitez effectuer un calcul avec un attribut Objet, vous pouvez saisir ce qui suit :
 

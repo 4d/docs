@@ -376,17 +376,36 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 > このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
 
-以下の例題では *Color* プロジェクトメソッドを使用する場合を考えます。 
+**例題**
 
-フォームメソッドには、以下のように書きます:
+*Color* プロジェクトメソッドには、以下のコードを書きます:
 
 
 
 ```4d
-// フォームメソッド
+// Color メソッド
+// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
+C_OBJECT($0)
+Form.meta:=New object
+If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
+  Form.meta.stroke:="purple"
+  Form.meta.cell:=New object("Column2";New object("fill";"black"))
+Else
+  Form.meta.stroke:="orange"
+End if
+$0:=Form.meta
+```
+
+
+**ベストプラクティス:** このような場合には最適化のため、フォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
+
+
+
+```4d
+  // フォームメソッド
 Case of
-  :(Form event=On Load)
-   Form.meta:=New object
+  :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
 End case
 ```
 
@@ -396,16 +415,12 @@ End case
 
 
 ```4d
-// Color メソッド
-// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
-C_OBJECT($0)
-If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
-  Form.meta.stroke:="purple"
-  Form.meta.cell:=New object("Column2";New object("fill";"black"))
-Else
-  Form.meta.stroke:="orange"
-End if
-$0:=Form.meta
+  // Color メソッド
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle // より良いパフォーマンスのため、同じオブジェクトを再利用します
+ ...
 ```
 
 

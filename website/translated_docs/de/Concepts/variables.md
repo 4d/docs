@@ -21,7 +21,7 @@ Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen u
 Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache bietet zwei Wege zum Deklarieren von Variablen:
 
 - Über das Schlüsselwort `var` (empfohlen, besonders wenn Ihr Code Objekte und Klassen verwendet),
-- Über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (überholt, nur in der klassischen Programmiersprache).
+- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
 
 **Hinweis:** Auch wenn wir davon abraten, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht formell mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
@@ -50,7 +50,7 @@ var $myVar //a variant variable
 ```
 
 `varName` ist der Variablenname, er muss mit den [4D Regeln](Concepts/identifiers.md) für Identifier konform sein.   
-Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#local-process-and-interprocess-variables), d. h. [Interprozessvariablen](#interprocess-variables) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
+Diese Syntax unterstützt nur Deklarationen für [lokale und Prozessvariablen](#lokale-prozess--und-interprozessvariablen), d. h. [Interprozessvariablen](#interprozessvariablen) und [Arrays](Concepts/arrays.md) sind ausgeschlossen.
 
 `varTyp` kann folgendes sein:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Eine C_Direktive verwenden
 
-> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#using-the-var-keyword) zu verwenden.
+> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
 Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
@@ -123,15 +123,14 @@ Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
 Hier sehen Sie einige grundlegende Variablendeklarationen:
 
 ```4d
- C_BLOB(vxMyBlob) // Die Prozessvariable vxMyBlob ist als eine Variable vom Typ BLOB deklariert
- C_DATE($vdCurDate) // Die lokale Variable $vdCurDate ist als eine Variable vom Typ Datum deklariert
- C_LONGINT(vg1;vg2;vg3) // Die 3 Prozessvariablen vg1, vg2 und vg3 sind als Variablen vom Type Lange Ganzzahl deklariert  
- C_OBJECT($vObj) // Die lokale Variable $vObj ist als eine Variable vom Typ Objekt deklariert
- C_COLLECTION($vCol) // Die lokale Variable $vCol ist als eine Variable vom Typ Collection deklariert
- ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
+ C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
+ C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
+ C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
+ C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
+ C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
 ```
 
-**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
 
 ## Daten zuweisen
@@ -146,7 +145,7 @@ MyNumber:=3
 
 erstellt die Variable _ MyNumber_ und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#creating-variables) zu erstellen.
+> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#variablen-erstellen) zu erstellen.
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie _ MyNumber_ auf die rechte Seite des Zuweisungsoperators:
 

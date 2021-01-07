@@ -59,7 +59,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | v17 R5  | Added   |
 </details>
 
-<!-- REF fileClass.File.Syntax -->
+<!-- REF #_command_.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
@@ -173,7 +173,7 @@ The `.create()` function <!-- REF #fileClass.create().Summary -->creates a file 
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-**Zurückgegebener Wert**
+**Rückgabewert**
 
 *   **True** if the file is created successfully;
 *   **False** if a file with the same name already exists or if an error occured.

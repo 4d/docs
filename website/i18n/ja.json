@@ -8,14 +8,20 @@
       "Admin/building": {
         "title": "プロジェクトパッケージのビルド"
       },
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
+      },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "クラス"
       },
       "API/collectionClass": {
-        "title": "Collection"
+        "title": "コレクション"
       },
       "API/cryptoClass": {
         "title": "CryptoKey"
@@ -54,19 +60,22 @@
         "title": "Formula"
       },
       "API/imapTransporterClass": {
-        "title": "IMAP Transporter"
+        "title": "IMAPTransporter"
       },
       "API/overview": {
         "title": "Class API Overview"
       },
       "API/pop3TransporterClass": {
-        "title": "POP3 Transporter"
+        "title": "POP3Transporter"
+      },
+      "API/sessionClass": {
+        "title": "セッション"
       },
       "API/signalClass": {
         "title": "Signal"
       },
       "API/smtpTransporterClass": {
-        "title": "SMTP Transporter"
+        "title": "SMTPTransporter"
       },
       "API/transporter": {
         "title": "Transporter クラス"
@@ -74,8 +83,14 @@
       "API/webServerClass": {
         "title": "WebServer"
       },
-      "API/zipClass": {
-        "title": "ZIP Archive"
+      "API/zipArchiveClass": {
+        "title": "ZIPArchive"
+      },
+      "API/zipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/zipFolderClass": {
+        "title": "ZIPFolder"
       },
       "Backup/backup": {
         "title": "バックアップ"
@@ -105,7 +120,7 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "Classes"
+        "title": "クラス"
       },
       "Concepts/components": {
         "title": "コンポーネント"
@@ -141,7 +156,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字列"
       },
       "Concepts/time": {
         "title": "時間"
@@ -162,7 +177,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "メソッド"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -755,13 +770,16 @@
         "title": "データ操作"
       },
       "REST/REST_requests": {
-        "title": "About REST Requests"
+        "title": "RESTリクエストについて"
       },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
       },
       "Users/overview": {
         "title": "概要"
+      },
+      "WebServer/sessions": {
+        "title": "User sessions"
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"
@@ -811,6 +829,8 @@
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
+    "Web Administration|no description given": "Web Administration",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",

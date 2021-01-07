@@ -1,10 +1,10 @@
 ---
 id: collectionClass
-title: Collections
+title: Collection
 ---
 
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
+La classe Collection gère les variables de type [Collection](Concepts/dt_collection.md).
 
 Une collection est initialisée avec :
 
@@ -21,7 +21,7 @@ Une collection est initialisée avec :
 ```
 
 
-### Summary
+### Sommaire
 
 
 |                                                                                                                                                                                                  |
@@ -68,7 +68,7 @@ Une collection est initialisée avec :
 
 
 
-## New collection
+## Nouvelle collection
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -83,36 +83,36 @@ Une collection est initialisée avec :
 | Paramètres | Type                                                                       |    | Description             |
 | ---------- | -------------------------------------------------------------------------- |:--:| ----------------------- |
 | value      | Numérique, Texte, Date, Heure, Booléen, Objet, Collection, Image, Pointeur | -> | Valeur(s) de collection |
-| Résultat   | Collection                                                                 | <- | New collection          |
+| Résultat   | Collection                                                                 | <- | Nouvelle collection     |
 <!-- END REF -->
 
 
 #### Description
 
-The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+La commande `New collection` <!-- REF #_command_.New collection.Summary --> crée une nouvelle collection vide ou préremplie<!-- END REF --> et retourne sa référence.
 
-If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
+Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
 
-You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+Vous devez affecter la référence retournée à une variable 4D de type Collection.
+> Gardez à l'esprit que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable de type `Collection` mais ne créent aucune collection.
 
-Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
+En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s).
 
-Otherwise, you can add or modify elements subsequently through assignment. Par exemple:
+Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple :
 
 ```4d
  myCol[10]:="My new element"
 ```
 
-If the new element index is beyond the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires sont attribués une valeur **null**.
 
-You can pass any number of values of any supported type (number, text, date, picture, pointer, object, collection...). Unlike arrays, collections can mix data of different types.
+Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris en charge (number, text, date, picture, pointer, object, collection...). Contrairement aux tableaux, les collections peuvent mélanger des données de différents types.
 
-You must pay attention to the following conversion issues:
+Vous devez prêter attention aux problèmes de conversion suivants :
 
-*   If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
-*   Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
-*   If you pass a time, it is stored as a number of milliseconds (Real).
+*   Si vous passez un pointeur, il est conservé "tel quel"; il est évalué à l'aide de la commande `JSON Stringify`
+*   Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Vous pouvez modifier ce comportement à l'aide du sélecteur `Dates inside objects` de la commande `SET DATABASE PARAMETER`.
+*   Si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (Réel).
 
 #### Exemple 1
 
@@ -144,7 +144,7 @@ You create a new collection and then add a new element:
  var $coll : Collection
  $coll:=New collection("a";"b";"c")
   //$coll=["a","b","c"]
- $coll[9]:="z" //add a 10th element with value "z"
+ $coll[9]:="z" //ajouter un 10e élément avec la valeur "z"
  $vcolSize:=$coll.length //10
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
@@ -152,7 +152,7 @@ You create a new collection and then add a new element:
 
 
 
-## New shared collection
+## Nouvelle collection partagée
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -164,10 +164,10 @@ You create a new collection and then add a new element:
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| Paramètres | Type                                                                |    | Description                  |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
-| Résultat   | Collection                                                          | <- | New shared collection        |
+| Paramètres | Type                                                                |    | Description                         |
+| ---------- | ------------------------------------------------------------------- |:--:| ----------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée |
+| Résultat   | Collection                                                          | <- | Nouvelle collection partagée        |
 <!-- END REF -->
 
 
@@ -180,8 +180,8 @@ Adding an element to this collection must be surrounded by the [`Use...End`](Con
 
 If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
 
-You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+Vous devez affecter la référence retournée à une variable 4D de type Collection.
+> Gardez à l'esprit que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable de type `Collection` mais ne créent aucune collection.
 
 Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Otherwise, you can add or modify elements subsequently through object notation assignment (see example).
 
@@ -458,11 +458,11 @@ var $text : Text
 $sharedObject:=New shared object
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) //$lastnames est un collection standard
 
-$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames is a shared collection
+$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames est une collection partagée
 
-//Now we can put $sharedLastnames into $sharedObject
+//Nous pouvons désormais placer $sharedLastnames dans $sharedObject
 Use($sharedObject)
     $sharedObject.lastnames:=$sharedLastnames
 End use
@@ -829,9 +829,9 @@ var $c : Collection
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") //retourne true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") //retourne false
 ```
 
 With the following ***NumberGreaterThan0*** method:
@@ -1083,6 +1083,7 @@ The code for ***TypeLookUp*** is:
  C_OBJECT($1)
  C_LONGINT($2)
  If(OB Get type($1;"value")=$2)
+
     $1.result:=True
  End if
 ``` 
@@ -1528,11 +1529,11 @@ Optionally, you can pass the index of collection from which to start a reverse s
  var $col : Collection
  var $pos1;$pos2;$pos3;$pos4;$pos5 : Integer 
  $col:=Split string("a,b,c,d,e,f,g,h,i,j,e,k,e";",") //$col.length=13
- $pos1:=$col.lastIndexOf("e") //returns 12
- $pos2:=$col.lastIndexOf("e";6) //returns 4
- $pos3:=$col.lastIndexOf("e";15) //returns 12
- $pos4:=$col.lastIndexOf("e";-2) //returns 10
- $pos5:=$col.lastIndexOf("x") //returns -1
+ $pos1:=$col.lastIndexOf("e") //retourne 12
+ $pos2:=$col.lastIndexOf("e";6) //retourne 4
+ $pos3:=$col.lastIndexOf("e";15) //retourne 12
+ $pos4:=$col.lastIndexOf("e";-2) //retourne 10
+ $pos5:=$col.lastIndexOf("x") //retourne -1
 ``` 
 
 <!-- END REF -->
@@ -1953,8 +1954,33 @@ Here is the code for ***WordLength***:
 
 ```4d
  $1.result:=Length(String($1.value))>Length(String($1.value2))
-``` 
+```
 
+#### Example 3
+
+You want to sort a collection by character code or language:
+
+```4d
+var $strings1; $strings2 : Collection
+$strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
+
+//using the character code:
+$strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
+// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+
+//using the language:
+$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+```
+
+The ***sortCollection*** method:
+
+```4d
+var$1Object
+var$2Integer // sort option
+
+$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+``` 
 
 <!-- END REF -->
 
@@ -2131,6 +2157,11 @@ For detailed information on how to build a query using , value and *querySetting
  $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
  $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
  $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
@@ -2161,7 +2192,7 @@ This example returns persons hired more than 90 days ago:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 if today is 01/10/2018
 ```
 
 
@@ -2333,6 +2364,7 @@ If you try to remove an element from an empty collection, the method does nothin
 | ------- | ------------- |
 | v16 R6  | Ajoutées      |
 </details>
+
 
 
 <!-- REF #collection.resize().Syntax -->
@@ -2544,7 +2576,7 @@ The returned collection contains the element specified by *startFrom* and all su
 La fonction `.some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
 
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). Cette méthode reçoit un `objet` comme premier paramètre ($1) et doit définir *$1.result* sur **True** pour chaque élément du test.
+In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
 *methodName* receives the following parameters:
 
@@ -2559,7 +2591,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de collection retournant true dans *$1.result*, elle arrête d'appeler *methodName* et retourne **true**.
 
-Par défaut, `.some()` teste toute la collection. Vous pouvez éventuellement passer l'index d'un élément à partir duquel vous pouvez démarrer le test dans *startFrom*.
+By default, `.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
 
 *   Si *startFrom* >= la longueur de la collection, **False** est retourné, ce qui signifie que la collection n'est pas testée.
 *   Si *startFrom* < 0, il est considéré comme le décalage depuis la fin de la collection.

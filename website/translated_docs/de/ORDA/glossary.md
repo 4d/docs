@@ -130,7 +130,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   number
 *   Text
 *   Null
-*   boolean
+*   Boolean
 *   date
 *   object
 *   collection

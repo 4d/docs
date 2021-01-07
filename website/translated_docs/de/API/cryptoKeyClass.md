@@ -45,6 +45,7 @@ ASSERT($status.success)
 
 
 
+
 ## 4D.CryptoKey.new()
 
 <details><summary>History</summary>
@@ -54,28 +55,29 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parameter | Typ    |    | Beschreibung                                                           |
-| --------- | ------ | -- | ---------------------------------------------------------------------- |
-| settings  | Objekt | -> | Settings to generate or load a key pair                                |
-| cryptoKey | Objekt | <- | Object encapsulating an encryption key pair|<!-- END REF -->
+| Parameter | Typ          |    | Beschreibung                                                           |
+| --------- | ------------ | -- | ---------------------------------------------------------------------- |
+| settings  | Objekt       | -> | Settings to generate or load a key pair                                |
+| result    | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
 |
 
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
-| Property        | Typ     | Beschreibung                                                                                                                   |
-| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [type](#type)   | Text    | Type of the key: "RSA", "ECDSA", or "PEM":<li>"RSA": generates an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": loads a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li>          |
-| [size](#size)   | integer | Size of RSA key in bits. 2048 by default                                                                                       |
-| [curve](#curve) | Text    | name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                    |
-| [pem](#pem)     | Text    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
+| Property        | Typ     | Beschreibung                                   |
+| --------------- | ------- | ---------------------------------------------- |
+| [curve](#curve) | Text    | Name of ECDSA curve                            |
+| [pem](#pem)     | Text    | PEM definition of an encryption key to load    |
+| [size](#size)   | integer | Size of RSA key in bits                        |
+| [type](#type)   | Text    | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
+
 
 #### *cryptoKey*
 
@@ -142,7 +144,7 @@ The function returns a status object with `success` property set to `true` if th
 
 | Property | Typ        | Beschreibung                                                        |
 | -------- | ---------- | ------------------------------------------------------------------- |
-| success  | boolean    | True if the message has been successfully decrypted                 |
+| success  | Boolean    | True if the message has been successfully decrypted                 |
 | result   | Text       | Message decrypted and decoded using the `options.encodingDecrypted` |
 | errors   | collection | If `success` is `false`, may contain a collection of errors         |
 
@@ -260,7 +262,7 @@ The returned value is the public key.
 <!-- REF #cryptokey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->
+<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->. If the key is a private key, the RSA or ECDSA public key will be deduced from it.
 <!-- END REF -->
 
 
@@ -294,7 +296,7 @@ The `cryptoKey` must contain a valid **private** key.
 | ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | Text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
 | encodingEncrypted | Text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                  |
-| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
+| pss               | Boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
 | encoding          | Text    | ERepresentation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                      |
 
 
@@ -334,7 +336,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 <!-- REF #cryptokey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", or "PEM":
+<!-- REF #cryptokey.type.Summary -->Name of the key type - "RSA", "ECDSA", "PEM"<!-- END REF --><li>"RSA": an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
 
 
 <!-- REF cryptokey.verify().Desc -->
@@ -367,7 +369,7 @@ The `cryptoKey` must contain a valid **public** key.
 | Property | Typ     | Beschreibung                                                                                                                                                         |
 | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash     | Text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-| pss      | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
+| pss      | Boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
 | encoding | Text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                              |
 
 
@@ -379,7 +381,7 @@ In case the signature couldn't be verified because it was not signed with the sa
 
 | Property | Typ        | Beschreibung                                                |
 | -------- | ---------- | ----------------------------------------------------------- |
-| success  | boolean    | True if the signature matches the message                   |
+| success  | Boolean    | True if the signature matches the message                   |
 | errors   | collection | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 

@@ -45,6 +45,7 @@ ASSERT($status.success)
 
 
 
+
 ## 4D.CryptoKey.new()
 
 <details><summary>History</summary>
@@ -54,28 +55,29 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parameter | Type   |    | Description                                                            |
-| --------- | ------ | -- | ---------------------------------------------------------------------- |
-| settings  | Object | -> | Settings to generate or load a key pair                                |
-| cryptoKey | Object | <- | Object encapsulating an encryption key pair|<!-- END REF -->
+| Parameter | Type         |    | Description                                                            |
+| --------- | ------------ | -- | ---------------------------------------------------------------------- |
+| settings  | Object       | -> | Settings to generate or load a key pair                                |
+| result    | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
 |
 
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
-| Property        | Type    | Description                                                                                                                    |
-| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [type](#type)   | text    | Type of the key: "RSA", "ECDSA", or "PEM":<li>"RSA": generates an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": loads a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li>          |
-| [size](#size)   | integer | Size of RSA key in bits. 2048 by default                                                                                       |
-| [curve](#curve) | text    | name of ECDSA curve. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512                    |
-| [pem](#pem)     | text    | PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. |
+| Property        | Type    | Description                                    |
+| --------------- | ------- | ---------------------------------------------- |
+| [curve](#curve) | text    | Name of ECDSA curve                            |
+| [pem](#pem)     | text    | PEM definition of an encryption key to load    |
+| [size](#size)   | integer | Size of RSA key in bits                        |
+| [type](#type)   | text    | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
+
 
 #### *cryptoKey*
 
@@ -260,7 +262,7 @@ The returned value is the public key.
 <!-- REF #cryptokey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->
+<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->. If the key is a private key, the RSA or ECDSA public key will be deduced from it.
 <!-- END REF -->
 
 
@@ -334,7 +336,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 <!-- REF #cryptokey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", or "PEM":
+<!-- REF #cryptokey.type.Summary -->Name of the key type - "RSA", "ECDSA", "PEM"<!-- END REF --><li>"RSA": an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
 
 
 <!-- REF cryptokey.verify().Desc -->

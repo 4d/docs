@@ -45,6 +45,7 @@ ASSERT($status.success)
 
 
 
+
 ## 4D.CryptoKey.new()
 
 <details><summary>履歴</summary>
@@ -54,28 +55,29 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) -> *cryptoKey* : Object<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| 参照        | タイプ    |    | 説明                                                                     |
-| --------- | ------ | -- | ---------------------------------------------------------------------- |
-| settings  | オブジェクト | -> | キーペアを生成・ロードするための設定                                                     |
-| cryptoKey | オブジェクト | <- | Object encapsulating an encryption key pair|<!-- END REF -->
+| 参照       | タイプ          |    | 説明                                                                     |
+| -------- | ------------ | -- | ---------------------------------------------------------------------- |
+| settings | オブジェクト       | -> | キーペアを生成・ロードするための設定                                                     |
+| result   | 4D.CryptoKey | <- | Object encapsulating an encryption key pair|<!-- END REF -->
 
 
 |
 
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. 新規の RSA または ECDSA キーを生成するほか、PEM 形式の既存のキーペアをロードすることができます。
 
 #### *settings*
 
-| プロパティ           | タイプ     | 説明                                                                                                                    |
-| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| [type](#type)   | text    | Type of the key: "RSA", "ECDSA", or "PEM":<li>"RSA": generates an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。</li><li>"PEM": loads a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li> |
-| [size](#size)   | integer | RSA キーのサイズ (ビット単位)。 デフォルト値: 2048                                                                                      |
-| [curve](#curve) | text    | ECDSA 曲線名。 通常、ES256 (デフォルト) の場合は "prime256v1", ES384 の場合は "secp384r1", ES512 の場合は "secp521r1"                         |
-| [pem](#pem)     | text    | ロードする PEM 形式の暗号化キー。 秘密鍵を渡した場合、RSA または ECDSA の公開鍵は秘密鍵から推定されます。                                                         |
+| プロパティ           | タイプ     | 説明                                             |
+| --------------- | ------- | ---------------------------------------------- |
+| [curve](#curve) | text    | Name of ECDSA curve                            |
+| [pem](#pem)     | text    | PEM definition of an encryption key to load    |
+| [size](#size)   | integer | Size of RSA key in bits                        |
+| [type](#type)   | text    | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
+
 
 #### *cryptoKey*
 
@@ -119,7 +121,7 @@ Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for
 | ------- | ------ | -- | ----------------------------------------------------------------------------- |
 | message | テキスト   | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
 | options | オブジェクト | -> | デコーディングオプション                                                                  |
-| 戻り値     | オブジェクト | <- | Status                                                                        |
+| 戻り値     | オブジェクト | <- | ステータス                                                                         |
 <!-- END REF -->
 
 
@@ -260,7 +262,7 @@ The returned value is the public key.
 <!-- REF #cryptokey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->
+<!-- REF #cryptokey.pem.Summary -->PEM definition of an encryption key to load<!-- END REF -->. 秘密鍵を渡した場合、RSA または ECDSA の公開鍵は秘密鍵から推定されます。
 <!-- END REF -->
 
 
@@ -334,7 +336,7 @@ Defined only for RSA keys: <!-- REF #cryptokey.size.Summary -->the size of the k
 <!-- REF #cryptokey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-<!-- REF #cryptokey.type.Summary -->Name of the key type<!-- END REF --> - "RSA", "ECDSA", or "PEM":
+<!-- REF #cryptokey.type.Summary -->Name of the key type - "RSA", "ECDSA", "PEM"<!-- END REF --><li>"RSA": an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。</li><li>"PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
 
 
 <!-- REF cryptokey.verify().Desc -->

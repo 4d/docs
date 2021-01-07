@@ -327,26 +327,17 @@ Specifies an expression or a variable which will be evaluated for each row displ
 |cell.\<columnName>|	object|	Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object|
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
-  
-The following example uses the *Color* project method. 
-
-In the form method, write the following code:
-
-```4d
-//form method
-Case of
-  :(Form event=On Load)
-   Form.meta:=New object
-End case
-``` 
 
 
-In the *Color* method, write the following code:
+**Example**
+
+In the *Color* project method, write the following code:
 
 ```4d
 //Color method
 //Sets font color for certain rows and the background color for a specific column:
 C_OBJECT($0)
+Form.meta:=New object
 If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
@@ -356,7 +347,29 @@ End if
 $0:=Form.meta
 ```
 
->See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
+**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+
+```4d
+  //form method
+ Case of
+    :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
+ End case
+```
+
+Then, the *Color* method would contain:
+
+```4d
+  //Color method
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+ ...
+``` 
+
+
+>See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
 
 
 

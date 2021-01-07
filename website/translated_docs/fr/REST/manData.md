@@ -18,7 +18,7 @@ Pour rechercher directement des données, vous pouvez utiliser la fonction [`$fi
 
 Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souhaitées dans 4D.
 
-Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Avant d'enregistrer des données, vous pouvez également les valider au préalable en appelant [`$method=validate`]($method.md#methodvalidate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
+Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
 Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une [fonction de classe (class function)](classFunctions.md#function-calls) qui retourne une entity selection (ou une collection).
 
@@ -62,7 +62,7 @@ En utilisant [`$compute`]($compute.md), vous pouvez calculer la **moyenne**, le 
 
 Par exemple, pour obtenir le salaire le plus élevé :
 
-`/rest/Employee/salary/?$compute=sum`
+`/rest/Employee/salary/?$compute=max`
 
 Pour calculer toutes les valeurs et retourner un objet JSON :
 
@@ -109,7 +109,7 @@ Vous pouvez appliquer cette méthode à :
 
 #### Exemple avec une dataclass
 
-Les requêtes suivantes retournent uniquement le prénom et le nom de la datastore class People (soit la datastore class entière, soit une sélection d'entités basée sur la recherche définie dans `$filter`).
+The following requests returns only the first name and last name from the People dataclass (either the entire dataclass or a selection of entities based on the search defined in `$filter`).
 
  `GET  /rest/People/firstName,lastName/`
 

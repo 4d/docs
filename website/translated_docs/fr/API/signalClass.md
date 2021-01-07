@@ -1,6 +1,6 @@
 ---
 id: signalClass
-title: Signaux
+title: Signal
 ---
 
 Signals are tools provided by the 4D language to manage interactions and avoid conflicts between processes in a multiprocess application. Signals allow you to make sure one or more process(es) will wait for a specific task to be completed before continuing execution. Any process can wait and/or release a signal.
@@ -32,6 +32,7 @@ In 4D, you create a new signal object by calling the [`New signal`](#new-signal)
 
 - `signal.wait()` must be called from the worker/process that needs another worker/process to finish a task in order to continue.
 - `signal.trigger()` must be called from the worker/process that finished its execution in order to release all others.
+
 
 ![](assets/en/API/signal.png)
 
@@ -79,7 +80,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $signal.trigger()
 ```
 
-### Summary
+### Sommaire
 
 
 |                                                                                                                                                                                         |
@@ -127,7 +128,7 @@ Optionally, in the *description* parameter you can pass a custom text describing
 Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
 
 
-**Returned value**
+**Valeur retournée**
 
 A new [`4D.Signal` object](#signal-object).
 
@@ -206,7 +207,7 @@ This property is **read-write**.
 
 The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
-This property is **read-only**. 
+Cette propriété est en **lecture seule**. 
 
 <!-- END REF -->
 

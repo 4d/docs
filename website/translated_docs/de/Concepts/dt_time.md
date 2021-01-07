@@ -9,7 +9,7 @@ Zeiten werden im 24 Stundenformat angezeigt.
 
 Ein Wert vom Typ Zeit wird intern wie eine Zahl behandelt. Die von einer Zeit zurückgegebene Zahl ist die Anzahl Sekunden ab Mitternacht (00:00:00).
 
-**Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Hinweis:** Im *Handbuch 4D Programmiersprache* werden Zeitparameter in der Beschreibung der Befehle generell als Zeit bezeichnet, außer es ist anders angegeben.
 
 ## Zeitformate
 

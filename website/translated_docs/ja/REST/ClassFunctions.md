@@ -6,7 +6,7 @@ title: Calling ORDA class functions
 
 You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Functions are simply called in POST requests on the appropriate ORDA interface, without (). たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 `/rest/City/getCity`
 
@@ -18,9 +18,9 @@ In 4D language, this call is equivalent to, :
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
-## Function calls
+## 関数の呼び出し
 
 Functions must always be called using REST **POST** requests (a GET request will receive an error).
 
@@ -48,7 +48,7 @@ Functions are called on the corresponding object on the server datastore.
 
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
 
-The following rules apply:
+次のルールが適用されます:
 
 - Parameters must be passed in the **body of the POST request**
 - Parameters must be enclosed within a collection (JSON format)
@@ -77,7 +77,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 | Properties               | タイプ                                  | 説明                                                                         |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
+| __DATACLASS              | 文字列                                  | Mandatory - Indicates the Dataclass of the entity                          |
 | __ENTITY                 | ブール                                  | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
@@ -100,11 +100,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | タイプ    | 説明                                                                                   |
-| ------------------------ | ------ | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed  | Optional - Values to modify                                                          |
-| __DATASET                | String | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | ブール    | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Properties               | タイプ   | 説明                                                                                   |
+| ------------------------ | ----- | ------------------------------------------------------------------------------------ |
+| Attributes of the entity | mixed | Optional - Values to modify                                                          |
+| __DATASET                | 文字列   | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES               | ブール   | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 

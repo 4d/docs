@@ -31,7 +31,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 | Name          | Datentyp | Possible Values |
 | ------------- | -------- | --------------- |
-| rowHeightAuto | boolean  | true, false     |
+| rowHeightAuto | Boolean  | true, false     |
 
 #### Objects Supported
 
@@ -252,7 +252,7 @@ This property is used to specify the name of a row height array that you want to
 
 When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
 
-For example, you can write:
+Sie schreiben zum Beispiel:
 
 ```4d
 ARRAY LONGINT(RowHeights;20)

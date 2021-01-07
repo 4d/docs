@@ -363,7 +363,7 @@ The object returned by `.drop( )` contains the following properties:
 
 | Property      |                     | Typ                   | Beschreibung                                                                                                          |
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| success       |                     | boolean               | true if the drop action is successful, false otherwise.                                                               |
+| success       |                     | Boolean               | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
 | status(*)     |                     | number                | Error code, see below                                                                                                 |
 | statusText(*) |                     | Text                  | Description of the error, see below                                                                                   |
@@ -920,9 +920,9 @@ The object returned by `.lock( )` contains the following properties:
 
 | Property         |                     | Typ                   | Beschreibung                                                                                                        |
 | ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean               | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
+| success          |                     | Boolean               | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
-| **wasReloaded**  |                     | boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
+| **wasReloaded**  |                     | Boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
 |                  |                     |                       | ***Available only in case of error:***                                                                              |
 | status(\*)     |                     | number                | Error code, see below                                                                                               |
 | statusText(\*) |                     | Text                  | Description of the error, see below                                                                                 |
@@ -1105,7 +1105,7 @@ The object returned by `.reload( )` contains the following properties:
 
 | Property         | Typ     | Beschreibung                                                                                                                                          |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          | boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
+| success          | Boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
 | status(\*)     | number  | Error code, see below                                                                                                                                 |
 | statusText(\*) | Text    | Description of the error, see below                                                                                                                   |
 
@@ -1176,23 +1176,32 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Property         |  | Typ     | Beschreibung                                            |
-| ---------------- |  | ------- | ------------------------------------------------------- |
-| success          |  | boolean | True if the save action is successful, False otherwise. |
-|                  |  |         | ***Available only if `dk auto merge` option is used***: |
-| autoMerged       |  | boolean | True if an auto merge was done, False otherwise.        |
-|                  |  |         | ***Available only in case of error***:                  |
-| status(\*)     |  | number  | Error code, see below                                   |
-| statusText(\*) |  | Text    | Description of the error, see below                     |
-|                  |  |         | ***Available only in case of pessimistic lock error***: |
-| lockKindText     |  | Text    | "Locked by record"                                      |
-| lockInfo         |  | object  | Information about the lock                              |
- origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on the machine| ||user4d_id|    text|   User name in the 4D database directory| ||host_name |text   |Machine name| ||task_name|    text|   Process name| ||client_version|   text||
+| Property     |                    | Typ                   | Beschreibung                                                                                                            |
+| ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| success      |                    | Boolean               | True if the save action is successful, False otherwise.                                                                 |
+|              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
+| autoMerged   |                    | Boolean               | True if an auto merge was done, False otherwise.                                                                        |
+|              |                    |                       | ***Available only in case of error***:                                                                                  |
+| status       |                    | number                | Error code, [see below](#status-and-statustext)                                                                         |
+| statusText   |                    | Text                  | Description of the error, [see below](#status-and-statustext)                                                           |
+|              |                    |                       | ***Available only in case of pessimistic lock error***:                                                                 |
+| lockKindText |                    | Text                  | "Locked by record"                                                                                                      |
+| lockInfo     |                    | object                | Information about the lock origin                                                                                       |
+|              | task_id            | number                | Process id                                                                                                              |
+|              | user_name          | Text                  | Session user name on the machine                                                                                        |
+|              | user4d_id          | Text                  | User name in the 4D database directory                                                                                  |
+|              | host_name          | Text                  | Machine name                                                                                                            |
+|              | task_name          | Text                  | Process name                                                                                                            |
+|              | client_version     | Text                  |                                                                                                                         |
+|              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
+| errors       |                    | collection of objects |                                                                                                                         |
+|              | message            | Text                  | Error message                                                                                                           |
+|              | componentSignature | Text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
+|              | errCode            | number                | Error code                                                                                                              |
 
-  
-||||***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...):| |errors ||  collection of objects|| ||message|  text    |Error message| ||componentSignature|   text|   Internal component signature (e.g. "dmbg" stands for the database component)| ||errCode|  number| Error code|
+##### status and statusText
 
-(\*) The following values can be returned in the status and statusText properties of Result object in case of error:
+The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
 | Constant                                  | Wert | Kommentar                                                                                                                                                                                                                                                         |
 | ----------------------------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

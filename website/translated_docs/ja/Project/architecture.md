@@ -30,9 +30,9 @@ title: プロジェクトのアーキテクチャー
 
 - *applicationName*.4DProject ファイル
 - Sources
-    + Classes
+    + クラス
     + DatabaseMethods
-    + Methods
+    + メソッド
     + Forms
     + TableForms
     + Triggers
@@ -120,7 +120,7 @@ title: プロジェクトのアーキテクチャー
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
-- Methods
+- メソッド
 - Forms
 - TableForms
 

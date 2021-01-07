@@ -175,7 +175,7 @@ The `.bodyValues` object contains the following properties:
 | Property                   | Typ     | Wert                                                                                                                                        |
 | -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | *partID*.value             | Text    | Value of the body part                                                                                                                      |
-| *partID*.isEncodingProblem | boolean | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
+| *partID*.isEncodingProblem | Boolean | True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default |
 
 
 
@@ -341,7 +341,7 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
     </td>
     
     <td>
-      boolean
+      Boolean
     </td>
     
     <td>

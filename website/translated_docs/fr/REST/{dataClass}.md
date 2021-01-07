@@ -36,8 +36,8 @@ Voici une description des données retournées :
 
 | Propriété     | Type       | Description                                                                                                                                                                                                             |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | Chaine     | Nom de la classe du datastore.                                                                                                                                                                                          |
-| __COUNT       | Nombre     | Nombre d'entités dans la classe du datastore.                                                                                                                                                                           |
+| __entityModel | Chaine     | Nom de la dataclass.                                                                                                                                                                                                    |
+| __COUNT       | Nombre     | Number of entities in the dataclass.                                                                                                                                                                                    |
 | __SENT        | Nombre     | Nombre d'entités envoyées par la requête REST. Ce nombre peut être le nombre total d'entités s'il est inférieur à la valeur définie par `$top/$limit`.                                                                  |
 | __FIRST       | Nombre     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                            |
 | __ENTITIES    | Collection | Cette collection d'objets contient un objet pour chaque entité avec tous ses attributs. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
@@ -46,7 +46,7 @@ Chaque entité contient les propriétés suivantes :
 
 | Propriété   | Type   | Description                                                                                                                  |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| __KEY       | Chaine | Valeur de la clé primaire définie pour le datastore class.                                                                   |
+| __KEY       | Chaine | Value of the primary key defined for the dataclass.                                                                          |
 | __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
 | __STAMP     | Nombre | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
@@ -58,7 +58,7 @@ Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide
 
 ### Exemple
 
-Renvoie toutes les données d'une classe de datastore spécifique.
+Return all the data for a specific dataclass.
 
  `GET  /rest/Company`
 
@@ -148,7 +148,7 @@ Renvoie les données de l'entité spécifique définie par la clé primaire de l
 
 ### Description
 
-En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. La clé est la valeur de l'attribut définie comme clé primaire pour votre classe de datastore. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
+En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. The key is the value in the attribute defined as the Primary Key for your dataclass. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
 Pour plus d'informations sur les données retournées, reportez-vous à [{datastoreClass}](#datastoreclass).
 
@@ -162,7 +162,7 @@ Si vous souhaitez développer un attribut relationnel à l'aide de `$expand`, vo
 
 ### Exemple
 
-La requête suivante retourne toutes les données publiques de la classe de datastore de Company dont la clé est 1.
+The following request returns all the public data in the Company dataclass whose key is 1.
 
  `GET  /rest/Company(1)`
 

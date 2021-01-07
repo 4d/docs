@@ -1,6 +1,6 @@
 ---
 id: collectionClass
-title: Collections
+title: Collection
 ---
 
 
@@ -1099,6 +1099,7 @@ The code for ***TypeLookUp*** is:
  C_OBJECT($1)
  C_LONGINT($2)
  If(OB Get type($1;"value")=$2)
+
     $1.result:=True
  End if
 ``` 
@@ -1989,6 +1990,31 @@ Here is the code for ***WordLength***:
  $1.result:=Length(String($1.value))>Length(String($1.value2))
 ``` 
 
+#### Example 3
+
+You want to sort a collection by character code or language:
+
+```4d
+var $strings1; $strings2 : Collection
+$strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
+
+//using the character code:
+$strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
+// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+
+//using the language:
+$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+``` 
+
+The ***sortCollection*** method: 
+
+```4d
+var$1Object
+var$2Integer // sort option
+ 
+$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+``` 
 
 <!-- END REF -->
 
@@ -2168,6 +2194,7 @@ For detailed information on how to build a query using , value and *querySetting
  $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
  $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
  $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
@@ -2373,6 +2400,7 @@ If you try to remove an element from an empty collection, the method does nothin
 |---|---|
 |v16 R6|Added|
 </details>
+
 
 
 <!-- REF #collection.resize().Syntax -->

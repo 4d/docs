@@ -3,7 +3,7 @@ id: branching
 title: Structures conditionnelles
 ---
 
-A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+Une structure de branchement permet aux méthodes de tester une condition et d'emprunter des chemins alternatifs, en fonction du résultat.
 
 
 ## If...Else...End if

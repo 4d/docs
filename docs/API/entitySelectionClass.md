@@ -1,11 +1,12 @@
 ---
 id: entitySelectionClass
-title: Entity Selections
+title: EntitySelection
 ---
 
 
 An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass. 
 
+Entity selections can be created from existing selections using various functions of the [`DataClass` class](dataclassClass.md) such as [`.all()`](dataclassClass.md#all) or [`.query()`](dataclassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](dataclassClass.md#newselection) function or the [`Create new selection`](#create-new-selection) command.
 
 ### Summary
 
@@ -23,6 +24,7 @@ An entity selection is an object containing one or more reference(s) to [entitie
 |[<!-- INCLUDE #entitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.extract().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.first().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.getDataClass().Summary -->|
+|[<!-- INCLUDE #entitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.isAlterable().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.isOrdered().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.last().Summary -->|
 |[<!-- INCLUDE #entitySelectionClass.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entitySelectionClass.length.Summary -->|
@@ -42,7 +44,48 @@ An entity selection is an object containing one or more reference(s) to [entitie
 
 
 
+## Create entity selection
 
+<!-- REF #_command_.Create entity selection.Syntax -->
+**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+
+<!-- REF #_command_.Create entity selection.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|dsTable|Table|->|Table in the 4D database whose current selection will be used to build the entity selection|
+|settings|Object|->|Build option: context	|
+|Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|
+<!-- END REF -->
+
+
+#### Description
+
+The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+
+If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created. 
+
+If the *dsTable* is not exposed in [`ds`](API/datastoreClass.md#ds), an error is returned. This command cannot be used with a Remote datastore.
+
+In the optional *settings* parameter, you can pass an object containing the following property:
+
+|Property|Type|Description|
+|---|---|---|	
+|context|Text|Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection.|
+
+
+#### Example
+
+```4d
+var $employees : cs.EmployeeSelection
+ALL RECORDS([Employee])
+$employees:=Create entity selection([Employee]) 
+// The $employees entity selection now contains a set of reference
+// on all entities related to the Employee dataclass
+```
+
+#### See also
+
+[`dataClass.newSelection()`](dataclassClass.md#newselection)
 
 <!-- REF entitySelectionClass.index.Desc -->
 ## &#91;*index*&#93; 
@@ -136,6 +179,9 @@ If the attribute does not exist in the entity selection, an error is returned.
 
 Projection of storage values:
 
+
+
+
 ```4d
  var $firstNames : Collection
  $entitySelection:=ds.Employee.all()
@@ -186,7 +232,7 @@ The resulting object is an entity selection of Employee with duplications remove
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R5|Only supports non-shareable entity selections|
+|v18 R5|Only supports alterable entity selections|
 |v17|Added|
 </details>
 
@@ -208,7 +254,7 @@ The `.add()` function <!-- REF #entitySelectionClass.add().Summary -->adds the s
 
 >This function modifies the original entity selection.
 
-**Warning:** The entity selection must be *non-shareable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section. 
+**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](dataclassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section. 
 
 
 *	If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
@@ -323,6 +369,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
+|v18 R6|Returns undefined if empty entity selection|
 |v17|Added|
 
 </details>
@@ -334,7 +381,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Attribute path to be used for calculation|
-|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Null if empty entity selection)|
+|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
 <!-- END REF -->
 
 #### Description
@@ -347,12 +394,12 @@ Only numerical values are taken into account for the calculation. Note however t
 
 >Date values are converted to numerical values (seconds) and used to calculate the average.
 
-`.average()` returns null if the entity selection is empty.
+`.average()` returns **undefined** if the entity selection is empty or *attributePath* does not contain numerical values.
 
 An error is returned if:
 
-*	*attributePath* is a related attribute or does not contain numerical values,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* is a related attribute,
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 #### Example 
@@ -490,9 +537,9 @@ The `.copy()` function <!-- REF #entitySelectionClass.copy().Summary -->returns 
 
 > This function does not modify the original entity selection.
 
-By default, if the *option* parameter is omitted, the function returns a new, non-shareable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
+By default, if the *option* parameter is omitted, the function returns a new, alterable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
 
-> For information on the shareable property of entity selections, please refer to the [Shareable vs Non-shareable entity selections](ORDA/entities.md#shareable-or-non-shareable-entity-selections) section. 
+> For information on the shareable property of entity selections, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section. 
 
 #### Example   
 
@@ -816,6 +863,7 @@ There is, however, a difference between both statements when the selection is em
 <!-- REF #entitySelectionClass.getDataClass().Syntax -->
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
+
 <!-- REF #entitySelectionClass.getDataClass().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
@@ -851,6 +899,47 @@ The following generic code duplicates all entities of the entity selection:
 
 <!-- END REF -->
 
+
+<!-- REF entitySelectionClass.isAlterable().Desc -->
+## .isAlterable()   
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v18 R5|Added|
+
+</details>
+
+<!-- REF #entitySelectionClass.isAlterable().Syntax -->
+**.isAlterable()** : Boolean<!-- END REF -->
+
+<!-- REF #entitySelectionClass.isAlterable().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if the entity selection is alterable, False otherwise|
+<!-- END REF -->
+
+#### Description
+
+The `.isAlterable()` function <!-- REF #entitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, and False if the entity selection is not alterable. 
+
+For more information, please refer to [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections).
+
+#### Example
+
+You are about to display `Form.products` in a [list box](FormObjects/listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
+
+```4d
+If (Not(Form.products.isAlterable()))
+    Form.products:=Form.products.copy()
+End if
+...
+Form.products.add(Form.product)
+```
+
+
+<!-- END REF -->
 
 
 <!-- REF entitySelectionClass.isOrdered().Desc -->
@@ -995,11 +1084,13 @@ Entity selections always have a `.length` property.
 |Version|Changes|
 |---|---|
 |v17|Added|
+|v18 R6|Returns undefined if empty entity selection|
 
 </details>
 
 <!-- REF #entitySelectionClass.max().Syntax -->
 **.max**( *attributePath* : Text ) : any<!-- END REF -->
+
 
 <!-- REF #entitySelectionClass.max().Params -->
 |Parameter|Type||Description|
@@ -1012,14 +1103,15 @@ Entity selections always have a `.length` property.
 
 The `.max()` function <!-- REF #entitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
 
-If you pass in *attributePath* a path to an object attribute containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.max()` returns **null**.
+If you pass in *attributePath* a path to an object attribute containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](collectionClass.md#sort) description). 
 
-If the entity selection is empty, `.max()` returns **null**.
+`.max()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
+
 
 An error is returned if:
 
 *	*attributePath* is a related attribute,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 
@@ -1044,11 +1136,13 @@ We want to find the highest salary among all the female employees:
 |Version|Changes|
 |---|---|
 |v17|Added|
+|v18 R6|Returns undefined if empty entity selection|
+
 
 </details>
 
 <!-- REF #entitySelectionClass.min().Syntax -->
-**.min()** : any<!-- END REF -->
+**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #entitySelectionClass.min().Params -->
 |Parameter|Type||Description|
@@ -1059,16 +1153,16 @@ We want to find the highest salary among all the female employees:
 
 #### Description
 
-The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
+The `.min()` function <!-- REF #entitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
 
-If you pass in *attributePath* a path to an object attribute containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](collectionClass.md#sort) description). In this case, if *attributePath* does not exist in the object, `.min()` returns **null**.
+If you pass in *attributePath* a path to an object attribute containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](collectionClass.md#sort) description).
 
-If the entity selection is empty, `.min()` returns **null**.
+`.min()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
 
 An error is returned if:
 
 *	*attributePath* is a related attribute,
-*	*attributePath* is not found in the entity selection dataclass.
+*	*attributePath* designates an attribute that does not exist in the entity selection dataclass.
 
 
 #### Example   
@@ -1426,14 +1520,14 @@ In this example, the "marks" object field in the **Students** dataClass contains
 </details>
 
 <!-- REF #entitySelectionClass.query().Syntax -->
-**.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #entitySelectionClass.query().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString |Text |-> |Search criteria as string|
 |formula |Object |-> |Search criteria as formula object|
-|value|expression|->|Value(s) to use for indexed placeholder(s)|
+|value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
 |Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
@@ -1462,6 +1556,10 @@ For detailed information on how to build a query using *queryString*, *value*, a
 #### Example 2  
 
 More examples of queries can be found in the DataClass [`.query()`](dataclassClass.md#query) page. 
+
+#### See also
+
+[`.query()`](dataclassClass.md#query) for dataclass
 
 <!-- END REF -->
 
@@ -1678,6 +1776,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 #### Description
 
+
 The `.sum()` function <!-- REF #entitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
 
 `.sum()` returns 0 if the entity selection is empty.
@@ -1752,6 +1851,7 @@ If a filter is specified for an attribute of the `relatedEntities` kind:
 
 *	propertyPath = "relatedEntities.*" -> all the properties are extracted
 *	propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
+
 
 
 In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
@@ -1918,11 +2018,14 @@ Returns:
         "lastName": "Durham"
     }
 ]
+
 ```
+
 
 #### Example 4  
 
 Example with `relatedEntity` type with simple form:
+
 
 ```4d
 var $employeesCollection : Collection
@@ -2110,6 +2213,7 @@ Returns:
     },
     {
         "firstName": "Gary",
+
         "lastName": "Reichert",
         "directReports": [
             {
@@ -2133,6 +2237,7 @@ Example with extraction of all properties of `relatedEntities`:
 var $employeesCollection : Collection
 $employeesCollection:=New collection
 $employeesCollection:=$employees.toCollection("firstName, lastName, directReports.*")
+
 ```
 
 ```4d

@@ -24,19 +24,19 @@ Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou 
 
 ## Class code
 
-Code for the user class function(s).
+Code pour la (les) fonction(s) de classe utilisateurs.
 
 ## Data model class
 
-Extended class available for a data model object.
+Classe étendue disponible pour un objet de modèle de données.
 
 ## Data model object
 
-Database objects available through the ORDA concept, i.e. datastore, dataclasses, entities and entity selections.
+Objets de base de données disponibles via le concept ORDA, c'est-à-dire datastore, dataclasses, entities (entités) et entity selections (sélections d'entités).
 
 ## Data model function
 
-Function of an ORDA data model class.
+Fonction d'une classe de modèle de données ORDA.
 
 ## Dataclass
 

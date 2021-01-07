@@ -27,7 +27,7 @@ Un filtre plus complexe est composé des éléments suivants, qui joint deux req
 **{attribut} {comparateur} {valeur} {AND/OR/EXCEPT} {attribut} {comparateur} {valeur}**
 
 
-Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la classe de datastore "Employee".
+For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
 
 ### Utiliser la propriété params
 
@@ -35,7 +35,7 @@ Vous pouvez également utiliser la propriété params de 4D.
 
 **{attribut} {comparateur} {placeholder} {AND/OR/EXCEPT} {attribut} {comparateur} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee datastore class.
+For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
 
 Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la documentation de [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
 > Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
@@ -87,14 +87,14 @@ Dans l'exemple suivant, nous recherchons tous les employés dont le nom de famil
  GET  /rest/Employee?$filter="lastName begin j"
 ```
 
-Dans cet exemple, nous recherchons dans la classe de datastore "Employee" tous les employés d'une entreprise autre que Acmedont et dont le salaire est supérieur à 20 000 :
+In this example, we search the Employee dataclass for all employees whose salary is greater than 20,000 and who do not work for a company named Acme:
 
 ```
  GET  /rest/Employee?$filter="salary>20000 AND  
  employer.name!=acme"&$orderby="lastName,firstName"
 ```
 
-Dans cet exemple, nous recherchons dans la classe de datastore "Person" toutes les personnes dont la propriété numérique, de l'attribut anotherobj de type Objet, est supérieure à 50 :
+In this example, we search the Person dataclass for all the people whose number property in the anotherobj attribute of type Object is greater than 50:
 
 ```
  GET  /rest/Person/?filter="anotherobj.mynum > 50"

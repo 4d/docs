@@ -1,14 +1,14 @@
 ---
 id: dataclassClass
-title: Dataclass
+title: DataClass
 ---
 
 
-A [Dataclass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
+A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
 
 
 
-### Summary
+### Sommaire
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -287,6 +287,9 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  $emp.__NEW:=True
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
+
+
+
 ```
 
 #### Example 5
@@ -641,20 +644,22 @@ When created, the entity selection does not contain any entities (`mySelection.l
 ## .query()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v17     | Ajoutées      |
+| Version | Modifications                      |
+| ------- | ---------------------------------- |
+| v17 R6  | Support of Formula parameters      |
+| v17 R5  | Support of placeholders for values |
+| v17     | Ajoutées                           |
 </details>
 
 <!-- REF #dataclassClass.query().Syntax -->
-**.query**( *queryString* : Text { ; *...value* : expression } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
+**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #dataclassClass.query().Params -->
 | Paramètres    | Type               |    | Description                                                                                                                 |
 | ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Texte              | -> | Search criteria as string                                                                                                   |
 | formula       | Objet              | -> | Search criteria as formula object                                                                                           |
-| value         | expression         | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
+| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
 | querySettings | Objet              | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
 | Résultat      | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
 <!-- END REF -->
@@ -671,9 +676,9 @@ If no matching entities are found, an empty `EntitySelection` is returned.
 The *queryString* parameter uses the following syntax:
 
 ```4d
-*attributePath|formula comparator value   
+attributePath|formula comparator value   
     {logicalOperator attributePath|formula comparator value}   
-    {order by attributePath {desc | asc}}*
+    {order by attributePath {desc | asc}}
 ```
 
 where:
@@ -689,8 +694,8 @@ where:
     (*) if the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.
 
     Formulas in queries can receive parameters through $1. This point is detailed in the **formula parameter** paragraph below.
-> * You can also pass directy a formula parameter object instead of the queryString parameter (recommended when formulas are more complex). See **formula parameter** paragraph below.
-> * For security reasons, formula calls within query() member methods can be disallowed. See querySettings parameter description.
+> * You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). See **formula parameter** paragraph below.
+> * For security reasons, formula calls within `query()` methods can be disallowed. See `querySettings` parameter description.
 
 *   **comparator**: symbol that compares *attributePath* and *value*. The following symbols are supported:
 
@@ -740,25 +745,6 @@ You can use parentheses in the query to give priority to the calculation. For ex
 ```4d
 "(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
 ```
-
-**Passing parameters to formulas**
-
-Any *formula* called by the `query()` class function can receive parameters:
-
-*   Parameters must be passed through the **args** property (object) of the *querySettings* parameter.
-*   The formula receives this **args** object as a **$1** parameter.
-
-This small code shows the principles of how parameter are passed to methods:
-
-```4d
- $settings:=New object("args";New object("exclude";"-")) //args object to pass parameters
- $es:=ds.Students.query("eval(checkName($1.exclude))";$settings) //args is received in $1
-```
-
-Additional examples are provided in example 3.
-
-**4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
-
 
 
 **Using placeholders**
@@ -821,6 +807,56 @@ You will not get the expected result because the null value will be evaluated by
 ```
 
 
+**Linking collection attribute query arguments**
+
+When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
+
+For example, with the following two entities:
+
+```
+Entity 1:
+ds.People.name: "martin"
+ds.People.places: 
+    { "locations" : [ {
+                "kind":"home",
+                "city":"paris" 
+            } ] }
+
+Entity 2:
+ds.People.name: "smith"
+ds.People.places: 
+    { "locations" : [ {
+                "kind":"home",
+                "city":"lyon" 
+            } , {
+                "kind":"office",
+                "city":"paris" 
+            } ] }
+```
+
+You want to find people with a "home" location kind in the city "paris". If you write:
+
+```4d
+ds.People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
+```
+
+... the query will return "martin" **and** "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
+
+If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. To link query arguments:
+
+- Add a letter between the \[] in the first path to link and repeat the same letter in all linked arguments. For example: `locations[a].city and locations[a].kind`. You can use any letter of the Latin alphabet (not case sensitive).
+- To add different linked criteria in the same query, use another letter. You can create up to 26 combinations of criteria in a single query.
+
+With the above entities, if you write:
+
+```4d
+ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
+```
+
+... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
+
+
+
 **formula parameter**
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
@@ -831,6 +867,24 @@ The formula must have been created using the `Formula` or `Formula from string` 
 *   within the *formula*, the entity is available through the `This` object.
 *   if the `Formula` object is **null**, the errror 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
 > For security reasons, formula calls within `query(`) member methods can be disallowed. See *querySettings* parameter description.
+
+**Passing parameters to formulas**
+
+Any *formula* called by the `query()` class function can receive parameters:
+
+*   Parameters must be passed through the **args** property (object) of the *querySettings* parameter.
+*   The formula receives this **args** object as a **$1** parameter.
+
+This small code shows the principles of how parameter are passed to methods:
+
+```4d
+ $settings:=New object("args";New object("exclude";"-")) //args object to pass parameters
+ $es:=ds.Students.query("eval(checkName($1.exclude))";$settings) //args is received in $1
+```
+
+Additional examples are provided in example 3.
+
+**4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
 
 
 
@@ -944,7 +998,7 @@ Query with queryPlan and queryPath objects:
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
 
-  //you can then get these properties in the resulting entity selection
+  //vous pouvez ensuite obtenir ces propriétés dans la sélection d'entité résultante
 var $queryPlan; $queryPath : Object
 $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
@@ -953,7 +1007,21 @@ $queryPath:=$entitySelection.queryPath
 Query with an attribute path of Collection type:
 
 ```4d
-$entitySelection:=ds.Employee.query("additionalInfo.hobbies[].name = :1";"horsebackriding")
+$entitySelection:=ds.Employee.query("extraInfo.hobbies[].name = :1";"horsebackriding")
+```
+
+Query with an attribute path of Collection type and linked attributes:
+
+```4d
+$entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and extraInfo.hobbies[a].level=:2";"horsebackriding";2)
+```
+
+Query with an attribute path of Collection type and multiple linked attributes:
+
+```4d
+$entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
+    extraInfo.hobbies[a].level = :2 and extraInfo.hobbies[b].name = :3 and
+    extraInfo.hobbies[b].level = :4";"horsebackriding";2;"Tennis";5)
 ```
 
 Query with an attribute path of Object type:
@@ -979,7 +1047,7 @@ Query with indexed placeholders for attributes:
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name")
-  //salesperson is a related entity
+  //salesperson est une entité reliée
 ```
 
 Query with indexed placeholders for attributes and named placeholders for values:
@@ -990,7 +1058,7 @@ var $querySettings : Object
 $querySettings:=New object
 $querySettings.parameters:=New object("customerName";"Smith")
 $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"name";$querySettings)
-  //salesperson is a related entity
+  //salesperson est une entité reliée
 ```
 
 Query with indexed placeholders for attributes and values:
@@ -999,7 +1067,7 @@ Query with indexed placeholders for attributes and values:
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith")
-  //salesperson is a related entity
+  //salesperson est une entité reliée
 ```
 
 #### Exemple 2
@@ -1050,12 +1118,12 @@ Query with named placeholders for attributes and values:
  var $es : cs.EmployeeSelection
  var $name : Text
  $querySettings:=New object
-  //Named placeholders for values
-  //The user is asked for a name
- $name:=Request("Please enter the name to search:")
+  //Placeholders pour les valeurs
+  //Il est demandé à l'utilisateur de saisir un nom
+ $name:=Request("Veuillez saisir un nom à rechercher :")
  If(OK=1)
     $querySettings.parameters:=New object("givenName";$name)
-  //Named placeholders for attribute paths
+  //Placeholders pour les chemins d'attributs
     $querySettings.attributes:=New object("attName";"name")
     $es:=ds.Employee.query(":attName= :givenName";$querySettings)
  End if
@@ -1111,7 +1179,7 @@ A text formula in *queryString* receives a parameter:
 ```
 
 ```4d
-  //checkName method
+  //méthode checkName 
  #DECLARE($exclude : Text) -> $result : Boolean
  $result:=(Position($exclude;This.lastname)=0)
 ```
@@ -1125,7 +1193,7 @@ Using the same ***checkName*** method, a `Formula` object as placeholder receive
  $settings:=New object()
  $settings.args:=New object("filter";"-")
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
- $settings.args.filter:="*" // change the parameters without updating the $formula object
+ $settings.args.filter:="*" // modifie les paramètres sans mettre à jour l'objet $formula 
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
@@ -1138,10 +1206,13 @@ We want to disallow formulas, for example when the user enters their query:
  $queryString:=Request("Enter your query:")
  if(OK=1)
     $settings:=New object("allowFormulas";False)
-    $es:=ds.Students.query($queryString;$settings) //An error is raised if $queryString contains a formula
+    $es:=ds.Students.query($queryString;$settings) //Une erreur est gnérée si $queryString contient une formule
  End if
-``` 
+```
 
+#### Voir également
+
+[`.query()`](entitySelectionClass.md#query) for entity selections
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

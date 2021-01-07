@@ -66,9 +66,9 @@ Returns information about all of your project's dataclasses and their attributes
 
 ### Description
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the datastore classes in your project's active model.
+Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
 
-For more information about what is returned for each datastore class and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
 
 
 ### Example
@@ -187,7 +187,7 @@ Returns information about a dataclass and its attributes
 
 ### Description
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the datastore classes in your project's datastore, use [`$catalog/$all`](#catalogall).
+Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
 The information you retrieve concerns the following:
 
@@ -201,40 +201,40 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Property       | Type   | Description                                                                                        |
-| -------------- | ------ | -------------------------------------------------------------------------------------------------- |
-| name           | String | Name of the dataclass                                                                              |
-| collectionName | String | Name of an entity selection on the dataclass                                                       |
-| tableNumber    | Number | Table number in the 4D database                                                                    |
-| scope          | String | Scope for the dataclass (note that only datastore classes whose **Scope** is public are displayed) |
-| dataURI        | String | A URI to the data in the dataclass                                                                 |
+| Property       | Type   | Description                                                                                  |
+| -------------- | ------ | -------------------------------------------------------------------------------------------- |
+| name           | String | Name of the dataclass                                                                        |
+| collectionName | String | Name of an entity selection on the dataclass                                                 |
+| tableNumber    | Number | Table number in the 4D database                                                              |
+| scope          | String | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
+| dataURI        | String | A URI to the data in the dataclass                                                           |
 
 
 ### Attribute(s)
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property    | Type    | Description                                                                                                                                                 |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | Attribute name.                                                                                                                                             |
-| kind        | String  | Attribute type (storage or relatedEntity).                                                                                                                  |
-| fieldPos    | Number  | Position of the field in the database table).                                                                                                               |
-| scope       | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                           |
-| indexed     | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                               |
-| type        | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the datastore class for a N->1 relation attribute. |
-| identifying | Boolean | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                   |
-| path        | String  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                       |
-| foreignKey  | String  | For a relatedEntity attribute, name of the related attribute.                                                                                               |
-| inverseName | String  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                              |
+| Property    | Type    | Description                                                                                                                                           |
+| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | String  | Attribute name.                                                                                                                                       |
+| kind        | String  | Attribute type (storage or relatedEntity).                                                                                                            |
+| fieldPos    | Number  | Position of the field in the database table).                                                                                                         |
+| scope       | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
+| indexed     | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
+| type        | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
+| identifying | Boolean | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                             |
+| path        | String  | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                 |
+| foreignKey  | String  | For a relatedEntity attribute, name of the related attribute.                                                                                         |
+| inverseName | String  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                        |
 
 
 ### Primary Key
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the datastore class.
+The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
 
 
 ### Example
-You can retrieve the information regarding a specific datastore class.
+You can retrieve the information regarding a specific dataclass.
 
 `GET  /rest/$catalog/Employee`
 

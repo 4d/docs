@@ -44,13 +44,13 @@ MyLength:=Length("How did I get here?")
 
 Jede Subroutine kann einen Wert zurückgeben. Pro Methode oder Class Function lässt sich nur ein einzelner Ausgabeparameter deklarieren.
 
-Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#values-or-references) und in lokale Variablen innerhalb der aufgerufenen Class Function oder Methode kopiert. Es gibt zwei Syntaxarten, um Variablenparameter im aufgerufenen Code zu deklarieren:
+Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#werte-oder-referenzen) und in lokale Variablen innerhalb der aufgerufenen Class Function oder Methode kopiert. Es gibt zwei Syntaxarten, um Variablenparameter im aufgerufenen Code zu deklarieren:
 
-- [benannte Variablen](#named-parameters) (in den meisten Fällen empfohlen) oder
+- [benannte Variablen](#parameter-mit-namen) (in den meisten Fällen empfohlen) oder
 - [sequentiell nummerierte Variablen](#sequentielle-parameter).
 
 
-Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#named-parameters) und [sequentiell](#sequential-parameters) uneingeschränkt miteinander mischen. Beispiel:
+Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#parameter-mit-namen) und [sequentiell](#sequentielle-parameter) uneingeschränkt miteinander mischen. Beispiel:
 
 ```4d
 Function add($x : Integer)
@@ -82,7 +82,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Es gelten folgende Regeln:
 
 - Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (davor können nur Kommentare oder Zeilenumbrüche stehen).
-- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](Concepts/dt_object.md#object-property-identifiers) konform sein.
+- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](dt_object.md#identifier-für-objekteigenschaft) konform sein.
 - Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
@@ -114,7 +114,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 // Check hash password...
 ```
 
-### Zurückgegebener Wert
+### Rückgabewert
 
 Sie deklarieren den Rückgabeparameter einer Funktion mit einem Pfeil (->) und der Definition des Parameters nach der Liste der Eingabeparameter. Beispiel:
 
@@ -122,7 +122,7 @@ Sie deklarieren den Rückgabeparameter einer Funktion mit einem Pfeil (->) und d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Er ist dann automatisch über `$0` verfügbar ([siehe unten sequentielle Parameter](#returned-value-1)). Beispiel:
+Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Er ist dann automatisch über `$0` verfügbar ([siehe unten sequentielle Syntax](#rückgabewert-1)). Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -132,7 +132,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 ### Unterstützte Datentypen
 
-Mit benannten Parametern können Sie dieselben Datentypen wie für [ das Schlüsselwort `var` ](variables.md#using-the-var-keyword) verwenden, inkl. Objekte von Klassen.  Beispiel:
+Mit benannten Parametern können Sie dieselben Datentypen wie für [ das Schlüsselwort `var` ](variables.md#das schlüsselwort-var-verwenden) verwenden, inkl. Objekte von Klassen.  Beispiel:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -144,9 +144,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## Sequentielle Parameter
 
-Als Alternative zur Syntax [benannte Parameter](#named-parameters) können Sie Parameter über fortlaufend nummerierte Variablen deklarieren: **$1**, **$2**, **$3**, usw. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter.
+Als Alternative zur Syntax [benannte Parameter](#parameter-mit-namen) können Sie Parameter über fortlaufend nummerierte Variablen deklarieren: **$1**, **$2**, **$3**, usw. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter.
 
-> Auch wenn Class Functions diese Syntax unterstützen, empfehlen wir hier, die Syntax [benannte Parameter](#named-parameters) zu verwenden.
+> Auch wenn Class Functions diese Syntax unterstützen, empfehlen wir hier, die Syntax [benannte Parameter](#parameter-mit-namen) zu verwenden.
 
 Sie können z. B. eine Projektmethode `DO_SOMETHING` mit drei Parametern aufrufen:
 
@@ -167,7 +167,7 @@ Im Code der Methode wird der Wert jedes Parameters automatisch in die Variablen 
 ```
 
 
-### Zurückgegebener Wert
+### Rückgabewert
 
 Der zurückzugebende Wert wird automatisch in die lokale Variable `$0` gesetzt.
 
@@ -186,7 +186,7 @@ $NewPhrase:=Uppercase4("This is good.")
 
 Die Variable *$NewPhrase* erhält “THIS is good.”
 
-Der zurückgegebene Wert `$0` ist eine lokale Variable innerhalb der Unterroutine. Sie lässt sich als solche innerhalb der Unterroutine verwenden. For example, you can write:
+Der zurückgegebene Wert `$0` ist eine lokale Variable innerhalb der Unterroutine. Sie lässt sich als solche innerhalb der Unterroutine verwenden. Sie schreiben zum Beispiel:
 
 ```4d
 // Do_something
@@ -199,18 +199,18 @@ In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Pa
 
 ### Unterstützte Datentypen
 
-Sie können jeden [Ausdruck](Concepts/quick-tour.md#expression-types) als sequentiellen Parameter verwenden, außer:
+Sie können jeden [Ausdruck](schnelle-tour.md#ausdruckstypen) als sequentiellen Parameter verwenden, außer:
 
 - Tabellen
-- arrays
+- Arrays
 
-Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](dt_pointer.md#zeiger-als-parameter-in-methoden).
 
 ### Parameter Indirektion
 
 4D Projektmethoden akzeptieren eine variable Anzahl von Parametern desselben Typs, beginnend von rechts. Dieses Prinzip wird **Parameter Indirektion** genannt. Mit dem Befehl `Count parameters` können Sie dann solche Parameter mit einer `For...End for`-Schleife und der Syntax Parameter Indirektion ansprechen.
 
-> Die Parameter Indirektion lässt sich nur mit der [sequentiellen](#sequential-parameters) Syntax verwenden.
+> Die Parameter Indirektion lässt sich nur mit der [sequentiellen](#sequentielle-parameter) Syntax verwenden.
 
 Im folgenden Beispiel akzeptiert die Projektmethode `SEND PACKETS` einen Parameter Time mit einer variablen Anzahl von Textparametern:
 
@@ -271,9 +271,9 @@ Dieser Befehl bedeutet, dass die Methode ab dem 4. Parameter (eingeschlossen) ei
 
 ### Parameter für kompilierten Modus deklarieren
 
-Auch wenn es im [interpretierten Modus](Concepts/interpreted.md) nicht zwingend ist, sollten Sie jeden Parameter in den aufgerufenen Methoden oder Functions deklarieren, um Probleme zu vermeiden.
+Auch wenn es im [interpretierten Modus](interpreted-compiled.md) nicht zwingend ist, sollten Sie jeden Parameter in den aufgerufenen Methoden oder Functions deklarieren, um Probleme zu vermeiden.
 
-Mit der Syntax [benannte Variable](#named-parameters), werden Parameter automatisch über das Schlüsselwort `#DECLARE` oderden Prototyp `Function` deklariert. Beispiel:
+Mit der Syntax [benannte Variable](#parameter-mit-namen), werden Parameter automatisch über das Schlüsselwort `#DECLARE` oder den Prototyp `Function` deklariert. Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
@@ -317,7 +317,7 @@ C_OBJECT($3)
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und komplierter Modus](Concepts/interpreted.md).
+Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und kompilierter Modus](interpreted-compiled.md).
 
 Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterstützen nicht die Deklaration in einer "Compiler" Methode):
 
@@ -328,7 +328,7 @@ Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterst�
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-> Sie können auch [benannte Parameter](#named-parameters) mit dem Schlüsselwort `#DECLARE` verwende.
+> Sie können auch [benannte Parameter](#parameter-mit-namen) mit dem Schlüsselwort `#DECLARE` verwende.
 
 - Trigger - Der Parameter $0 (Lange Ganzzahl), der das Ergebnis eines Trigger ist, wird vom Compiler typisiert, wenn der Parameter nicht explizit deklariert wurde. Wollen Sie ihn jedoch deklarieren, müssen Sie das direkt im Trigger tun.
 
@@ -430,7 +430,7 @@ ALERT("Time is over") //1 parameter
 
 Auch 4D Projektmethoden akzeptieren solche optionalen Parameter, gestartet von rechts. Das Problem bei optionalen Parametern ist, wie sie sich verwalten lassen, wenn welche in der aufgerufenen Methode fehlen - das sollte nie einen Fehler produzieren. Eine gute Praxis ist, den nicht-verwendeten Parametern Standardwerte zuzuweisen.
 
-> Werden optionale Parameter in Ihren Methoden benötigt, können Sie [Objekteigenschaften als benannte Parameter](#using-objects-properties-as-named-parameters) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
+> Werden optionale Parameter in Ihren Methoden benötigt, können Sie [Objekteigenschaften als benannte Parameter](#objekteigenschaften-als-genannte parameter-verwenden) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
 
 Über den Befehl `Count parameters` in der aufgerufenen Methode können Sie die aktuelle Anzahl der Parameter abfragen und je nach dem, was Sie bekommen, unterschiedliche Operationen ausführen.
 
@@ -507,14 +507,14 @@ Hier ist der Parameter nicht das Feld, sondern ein Zeiger auf das Feld. Deshalb 
  ALERT($0)
 ```
 
-Dieser zweite Weg (durch eine Unterroutine einen Wert zurückgeben) wird "eine Funktion verwenden" genannt. Weitere Informationen dazu finden Sie im Abschnitt [Rückgabewerte](#returning-values).
+Dieser zweite Weg (durch eine Unterroutine einen Wert zurückgeben) wird "eine Funktion verwenden" genannt. Weitere Informationen dazu finden Sie im Abschnitt [Rückgabewerte](#rückgabewert).
 
 
 ### Sonderfälle: Objekte und Collections
 
 Daten vom Typ Objekt und Collection werden automatisch über eine Referenz verwaltet (wie ein interner *Zeiger*).
 
-Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
+Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](dt_pointer.md#zeiger-als-parameter-in-methoden), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
 
 Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als Parameter sendet:
 

@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
+Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, date, objet, booléen, collection ou null).
 
-Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Pour manipuler les variables de type Collection, vous devez utiliser la notation objet (voir [Les bases de la syntaxe](Concepts/dt_object.md#syntax-basics)).
 
 Pour des informations complémentaires sur les collections 4D, passez le numéro (l'indice) de l'élément entre crochets :
 
@@ -13,7 +13,7 @@ Pour des informations complémentaires sur les collections 4D, passez le numéro
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in *expression*. Voici quelques exemples :
+Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans *expression*. Voici quelques exemples :
 
 ```4d
  myCollection[5]  //accès au 6e élément de la collection
@@ -22,7 +22,7 @@ You can pass any valid 4D expression which returns a positive integer in *expres
 
 **Attention :** N'oubliez pas que la numérotation des éléments de collection débute à 0.
 
-You can assign a value to a collection element or get a collection element value:
+Vous pouvez assigner une valeur à un élément de collection ou lire une valeur d'élément de collection :
 
 ```4d
  myCol[10]:="Mon nouvel élément"
@@ -54,14 +54,14 @@ Exemple :
 
 Vous pouvez créer deux types de collections :
 
-- regular (non-shared) collections, using the [`New collection`](API/collectionClass.md#new-collection) command. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
-- shared collections, using the [`New shared collection`](API/collectionClass.md#new-shared-collection) command. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- standard (non partagées), à l'aide de la commande [`New collection`](API/collectionClass.md#new-collection). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
+- partagées, à l'aide de la commande [`New shared collection`](API/collectionClass.md#new-shared-collection). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures [`Use...End use`](Concepts/shared.md#useend-use).
 
 Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
 
-## Collection functions
+## Fonctions de collection
 
-4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](API/collectionClass.md) section.
+Les références de collections 4D bénéficient de fonctions de classe spécifiques (souvent appelées *fonctions méthodes*). Les fonctions de collection sont répertoriées dans la section [Class API Reference](API/collectionClass.md).
 
 Par exemple:
 
@@ -70,7 +70,7 @@ $newCol:=$col.copy() //copie de $col vers $newCol
  $col.push(10;100) //ajout de 10 et 100 à la collection
 ```
 
-Some functions return the original collection after modification, so that you can run the calls in a sequence:
+Certaines fonctions retournent la collection d'origine après modification, de manière à ce que vous puissiez enchaîner les appels dans une même séquence :
 
 ```4d
  $col:=New collection(5;20)
@@ -81,12 +81,12 @@ Some functions return the original collection after modification, so that you ca
 ### paramètre cheminPropriété
 
 
-Several functions accept a _propertyPath_ as parameter. Ce paramètre peut contenir :
+Plusieurs fonctions admettent un paramètre nommé _cheminPropriété_. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
 - soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
 
-**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Attention :** Lorsque des fonctions ou un paramètre cheminPropriété sont attendus, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin :
 
 ```4d
  $vmin:=$col.min("My.special.property") //indéfini

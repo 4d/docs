@@ -3,7 +3,7 @@ id: creating
 title: プロジェクトの作成・開始
 ---
 
-All projects are handled through **4D** in local or remote mode, or **4D Server**.
+プロジェクトを編集・管理するには、ローカルまたはリモートモードの **4D**、または **4D Server** を使います。
 
 ## プロジェクトの作成
 

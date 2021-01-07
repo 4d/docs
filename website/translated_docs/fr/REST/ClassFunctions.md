@@ -4,7 +4,7 @@ title: Appeler des fonctions de classe ORDA
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Vous pouvez appeler les [fonctions de classe de modèles de données](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
 
 Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
@@ -18,7 +18,7 @@ Dans le langage 4D, cet appel équivaut à :
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Seules les fonctions contenant le mot-clé `exposed` peuvent être directement appelées à partir de requêtes REST. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
 ## Appeler des fonctions
 
@@ -319,7 +319,7 @@ exposed Function pushData
 
     $entity:=$1
 
-    $status:=checkData($entity) // $status is an object with a success boolean property
+    $status:=checkData($entity) // $status est un objet avec une propriété booléenne "success"
 
     $0:=$status
 
@@ -460,7 +460,7 @@ exposed Function putToSchool()
 
         //$1 is a Schools entity
     $school:=$1
-        //Associate the related entity school to the current Students entity
+        //Associe l'entité reliée "school" à l'entité courante "Students"
     This.school:=$school
 
     $status:=This.save()
@@ -511,7 +511,7 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      //Boucle sur la sélection d'entité
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
