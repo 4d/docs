@@ -28,7 +28,7 @@ Code pour la (les) fonction(s) de classe utilisateurs.
 
 ## Data model class
 
-Classe étendue disponible pour un objet de modèle de données.
+Classe étendue disponible pour un objet modèle de données.
 
 ## Data model object
 
@@ -47,7 +47,7 @@ Une dataclass est reliée à un seul datastore.
 
 ## DataClass class
 
-Class for specific dataclass objects, in which you can add custom functions.
+Classe pour des objets dataclass spécifiques, dans laquelle vous pouvez ajouter des fonctions personnalisées.
 
 ## Datastore
 
@@ -64,68 +64,68 @@ Un datastore ne référence qu'une seule base de données. Il est toutefois poss
 
 ## DataStore class
 
-Class for datastore objects, in which you can add custom functions.
+Classe pour des objets datastore spécifiques, dans laquelle vous pouvez ajouter des fonctions personnalisées.
 
 
 ## DataStoreImplementation
 
-Internal name of the generic DataStore class in the `4D` class store.
+Nom interne de la classe générique DataStore dans le class store `4D`.
 
-## Deep copy
+## Copie profonde
 
-A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
+Une copie profonde (deep copy) duplique un objet et toutes les références qu'il contient. Après une deep copy, une collection copiée contient des éléments dupliqués et donc de nouvelles références de tous les éléments originaux. Voir également Copie superficielle.
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. It matches the datastore available upon the 4D main database.
+`ds` est la commande de langage 4D qui retourne une référence d'objet [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
 
 ## Entity
 
-An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
+Une entité est un objet qui correspond à un modèle de dataclass. Une entité contient les mêmes attributs que la dataclass.
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
+Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. The purpose of the entity is to manage data (create, update, delete).
 
-For more information, see Entities.
+Pour plus d'informations, voir le chapitre Entités.
 
 ## Entity selection
 
-An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
+Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête est envoyée au datastore, une sélection d'entités est retournée. Une sélection d'entité est un ensemble de références à des entités liées à la même dataclass.
 
-An entity selection contains:
+Une sélection d'entités contient :
 
-*   un ensemble de 0 à X références d'entités
+*   un ensemble de 0 à X références d'entités,
 *   une propriété length (toujours),
 *   les propriétés queryPlan et queryPath (si demandées lors de la requête).
 
-An entity selection can also be empty.
+Une sélection d'entités peut également être vide.
 
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
+Classe intégrée pour les objets ORDA tels que les entités ou les dataclasses. Les fonctions et propriétés des classes génériques sont automatiquement disponibles dans les classes utilisateur étendues, telles que `EmployeeEntity`.
 
 
 ## Lazy loading
 
-Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. This optimization principle is called lazy loading.
+Commes les entités sont gérées comme des références, les données sont chargées uniquement lorsque cela est nécessaire, c'est-à-dire lorsqu'on y accède dans le code ou via des widgets d'interface. Ce principe d'optimisation est appelé lazy loading.
 
-## Main datastore
+## Datastore principal
 
-The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
+L'objet Datastore correspondant à la base 4D ouverte (autonome ou client/serveur). Le datastore principal est retourné par la commande ds.
 
 ## Méthode
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. Ils fournissent des méthodes spécifiques pour interagir directement avec eux. Ces méthodes sont aussi appelées des fonctions membres (member functions). Ces méthodes sont utilisées en étant appelées sur une instance de l'objet.
+Les objets ORDA tels que les "datastores", "dataclasses", "entity selections" et "entities" définissent les classes d'objets. Ils fournissent des méthodes spécifiques pour interagir directement avec eux. Ces méthodes sont aussi appelées des fonctions membres (member functions). Ces méthodes sont utilisées en étant appelées sur une instance de l'objet.
 
-Par exemple, la méthode `query()` est une "member function" de dataclass. If you have stored a dataclass object in the `$myClass` variable, you can write:
+Par exemple, la méthode `query()` est une "member function" de dataclass. Si vous avez stocké un objet dataclass dans la variable `$myClass`, vous pouvez écrire :
 
 ```code4d
 $myClass.query("name = smith")
 ```
 
-## Mixed data type
+## Type de données "Mixte"
 
-In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Par exemple :
+Dans cette documentation, le type de données "Mixte" est utilisé pour désigner les différents types de valeurs qui peuvent être stockés dans les attributs d'une dataclass. Par exemple :
 
 *   number
 *   Texte
@@ -136,7 +136,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   collection
 *   image(\*)
 
-*(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
+*(\*) le type Image n'est pas supporté par des méthodes statistiques telles que dans* `entitySelection.max()`.
 
 ## Verrouillage optimiste
 
@@ -148,7 +148,7 @@ Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que 
 
 ## Propriété
 
-See [Attribute](#attribute).
+Voir [Attribut](#attribute).
 > Les attributs et les propriétés sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
