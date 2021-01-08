@@ -319,14 +319,14 @@ Indique une expression ou une variable qui sera évaluée pour chaque ligne affi
 
 **Exemple**
 
-In the *Color* project method, write the following code:
+Dans la méthode projet *Color*, entrez le code suivant :
 
 ```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+//Méthode Color
+//Définit la couleur de police pour certaines lignes et la couleur de fond pour une colonne spécifique :
 C_OBJECT($0)
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) //ID est un attribut d'objets/entités d'une collection
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -335,27 +335,27 @@ End if
 $0:=Form.meta
 ```
 
-**Best Practice:** For optimization reasons, it would be recommended in this case to create the `meta.cell` object once in the form method:
+**Bonnes pratiques :** Pour des raisons d'optimisation, il serait recommandé dans ce cas de créer l'objet `meta.cell` une fois contenu dans la méthode formulaire :
 
 ```4d
-  //form method
+  //méthode formulaire
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Column2";New object("fill";"black"))
  End case
 ```
 
-Then, the *Color* method would contain:
+La méthode *Color* contiendrait alors :
 
 ```4d
-  //Color method
+  //méthode Color
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle //réutiliser le même objet pour de meilleures performances
  ...
 ```
-> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
+> Voir également la commande [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 
 
