@@ -232,11 +232,11 @@ The entity selection properties are however enumerable:
 
 #### Ordered or unordered entity selection
 
-For optimization reasons, by default 4D ORDA usually creates unordered entity selections, except when you use the `orderBy( )` method or use specific options. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
+Pour des raisons d'optimisation, par défaut, 4D ORDA crée généralement des sélections d'entités non-ordonnées, sauf lorsque vous utilisez la méthode `orderBy( )` ou si vous utilisez les options appropriées. Dans cette documentation, sauf indication contraire, "sélection d'entités" fait généralement référence à une "sélection d'entités non-ordonnée".
 
-Ordered entity selections are created only when necessary or when specifically requested using options, i.e. in the following cases:
+Les sélections d'entités ordonnées sont créées uniquement lorsque cela est nécessaire ou lorsqu'elles sont spécifiquement demandées à l'aide d'options, c'est-à-dire dans les cas suivants :
 
-*   result of an `orderBy()` on a selection (of any type) or an `orderBy()` on a dataclass
+*   résultat d'un `orderBy( )` sur une sélection (de n'importe quel type) ou un `orderBy( )` sur une dataclass,
 *   result of the `newSelection()` method with the `dk keep ordered` option
 
 Unordered entity selections are created in the following cases:
