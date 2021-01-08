@@ -8,7 +8,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 
 The 4D web server security is based upon the following elements:
 
-*	**Authentication**: flexible and highly customizable authentication system via built-it settings and the [`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) database method,
+*	**Authentication**: flexible and highly customizable authentication system via built-it settings and features, as well as the [`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) database method as a fallback,
 
 *	**Sandboxing** through the definition of a [HTML Root](#default-html-root) folder by default,
 

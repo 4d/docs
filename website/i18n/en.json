@@ -778,6 +778,9 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
       "WebServer/webServer": {
         "title": "Overview"
       },
