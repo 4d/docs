@@ -203,16 +203,16 @@ An entity selection is an object containing one or more reference(s) to entities
 Exemple :
 
 ```4d
-var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
-$e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
+var $e : cs.EmployeeSelection //déclare une variable objet $e de type de classe EmployeeSelection
+$e:=ds.Employee.all() //assigne la référence de la sélection d'entité résultante à la variable $e
 ```
 
-Entity selections can be:
+Les sélections d'entités peuvent être :
 
-- "shareable" or "non-shareable",
-- "sorted" or "unsorted".
+- "partageables" or "non partageables",
+- "triées" ou "non triées".
 
-These points are discussed below.
+Ces points sont décrits ci-dessous.
 
 L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
 
