@@ -20,6 +20,6 @@ Pour plus d'informations sur les formats d'image, reportez-vous à [`$imageforma
 
 ## Enregistrement d'un attribut BLOB sur le disque
 
-If you want to save a BLOB stored in your dataclass, you can write the following by also passing "true" to $binary:
+Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez écrire ce qui suit en passant également "true" à $binary :
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
