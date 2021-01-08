@@ -203,50 +203,50 @@ An entity selection is an object containing one or more reference(s) to entities
 Exemple :
 
 ```4d
-var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
-$e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
+var $e : cs.EmployeeSelection //déclare une variable objet $e de type de classe EmployeeSelection
+$e:=ds.Employee.all() //assigne la référence de la sélection d'entité résultante à la variable $e
 ```
 
-Entity selections can be:
+Les sélections d'entités peuvent être :
 
-- "shareable" or "non-shareable",
-- "sorted" or "unsorted".
+- "partageables" or "non partageables",
+- "triées" ou "non triées".
 
-These points are discussed below.
+Ces points sont décrits ci-dessous.
 
-The entity selection object itself cannot be copied as an object:
+L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
 
 ```4d
- $myentitysel:=OB Copy(ds.Employee.all()) //returns null
+ $myentitysel:=OB Copy(ds.Employee.all()) //retourne null
 ```
 
-The entity selection properties are however enumerable:
+Les propriétés des sélections d'entités sont toutefois énumérables :
 
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.all();$prop)
-  //$prop contains the names of the entity selection properties
-  //("length", 00", "01"...)
+  //$prop contient les noms des propriétés des sélections d'entités
+  //("length", "00", "01"...)
 ```
 
 
-#### Ordered or unordered entity selection
+#### Sélections d'entités triées vs Sélections d'entités non-triées
 
 Pour des raisons d'optimisation, par défaut, 4D ORDA crée généralement des sélections d'entités non-ordonnées, sauf lorsque vous utilisez la méthode `orderBy( )` ou si vous utilisez les options appropriées. Dans cette documentation, sauf indication contraire, "sélection d'entités" fait généralement référence à une "sélection d'entités non-ordonnée".
 
 Les sélections d'entités ordonnées sont créées uniquement lorsque cela est nécessaire ou lorsqu'elles sont spécifiquement demandées à l'aide d'options, c'est-à-dire dans les cas suivants :
 
 *   résultat d'un `orderBy( )` sur une sélection (de n'importe quel type) ou un `orderBy( )` sur une dataclass,
-*   result of the `newSelection()` method with the `dk keep ordered` option
+*   résultat de la méthode `newSelection( )` avec l'option `dk keep ordered`
 
-Unordered entity selections are created in the following cases:
+Les sélections d'entités non-triées sont créées dans les cas suivants :
 
-*   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
-*   result of the `newSelection()` method without option,
-*   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> The following entity selections are always **ordered**:
+*   résultat d'un `query()` standard sur une sélection (de n'importe quel type) ou un `query()` sur une dataclass,
+*   résultat de la méthode `newSelection()` sans option,
+*   résultat de l'une des méthodes de comparaison, quel que soit le type de sélection saisi : `or()`, `and()`, `minus()`.
+> Les sélections d'entités suivantes sont toujours **triées** :
 > 
-> * entity selections returned by 4D Server to a remote client
-> * entity selections built upon remote datastores.
+> * sélections d'entités retournées par 4D Server vers un client distant
+> * sélections d'entités fondées sur des datastores distants.
 
-Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
+Notez que lorsqu'une sélection d'entités ordonnée devient une sélection non-ordonnée, toute référence d'entité répétée est supprimée.

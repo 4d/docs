@@ -49,7 +49,7 @@ Créez un autre ensemble d'entités basé sur des ensembles d'entités préalabl
 
 ### Description
 
-Après avoir créé un ensemble d'entités (ensemble d'entités n°1) à l'aide de `$method=entityset`, vous pouvez ensuite créer un autre ensemble d'entités en utilisant la syntaxe `$entityset/{entitySetID}?$operator... &$otherCollection`, la propriété `$operator` (dont les valeurs sont indiquées ci-dessous), et un autre ensemble d'entités (jeu d'entités n°2) défini par la propriété `$otherCollection`. The two entity sets must be in the same dataclass.
+Après avoir créé un ensemble d'entités (ensemble d'entités n°1) à l'aide de `$method=entityset`, vous pouvez ensuite créer un autre ensemble d'entités en utilisant la syntaxe `$entityset/{entitySetID}?$operator... &$otherCollection`, la propriété `$operator` (dont les valeurs sont indiquées ci-dessous), et un autre ensemble d'entités (jeu d'entités n°2) défini par la propriété `$otherCollection`. Les deux ensembles d'entités doivent être dans la même dataclass.
 
 Vous pouvez ensuite créer un autre ensemble d'entités contenant les résultats de cet appel en utilisant le `$method=entityset` à la fin de la requête REST.
 
