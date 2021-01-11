@@ -123,7 +123,7 @@ This method returns the public key of the `cryptoKey` object in PEM format, or a
 | message   |          | Text    | -> | Message string to sign                                                                                                                                               |
 | options   |          | object  | -> | Signing options                                                                                                                                                      |
 |           | hash     | Text    |    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-|           | pss      | boolean |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
+|           | pss      | Boolean |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
 |           | encoding | Text    |    | Representation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                       |
 |           |          |         |    |                                                                                                                                                                      |
 | signature |          | Text    | <- | Resulting signature in Base64 or Base64URL representation, depending on "encoding" option                                                                            |
@@ -149,11 +149,11 @@ The `cryptoKey` must contain a valid **private** key.
 | signature |          | Text       | -> | Signature to verify, in Base64 or Base64URL representation, depending on "encoding" option                                                                           |
 | options   |          | object     | -> | Signing options                                                                                                                                                      |
 |           | hash     | Text       |    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-|           | pss      | boolean    |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
+|           | pss      | Boolean    |    | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
 |           | encoding | Text       |    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                              |
 |           |          |            |    |                                                                                                                                                                      |
 | status    |          | object     | <- | Result of the verification                                                                                                                                           |
-|           | success  | boolean    |    | True if the signature matches the message                                                                                                                            |
+|           | success  | Boolean    |    | True if the signature matches the message                                                                                                                            |
 |           | errors   | collection |    | If `success` is `false`, may contain a collection of errors                                                                                                          |
 
 This method verifies the base64 signature against the utf8 representation of `message` using the `cryptoKey` object keys and provided `options`.
@@ -211,7 +211,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 |           | encodingDecrypted | Text       |    | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
 |           |                   |            |    |                                                                                                                                                  |
 | status    |                   | object     | <- | Ergebnis                                                                                                                                         |
-|           | success           | boolean    |    | True if the message has been successfully decrypted                                                                                              |
+|           | success           | Boolean    |    | True if the message has been successfully decrypted                                                                                              |
 |           | result            | Text       |    | Message decrypted and decoded using the `options.encodingDecrypted`                                                                              |
 |           | errors            | collection |    | If `success` is `false`, may contain a collection of errors                                                                                      |
 

@@ -3,16 +3,16 @@ id: onLongClick
 title: Sur clic long
 ---
 
-| Code | Peut être appelé par                     | Définition                                                                           |
-| ---- | ---------------------------------------- | ------------------------------------------------------------------------------------ |
-| 39   | [Bouton](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
+| Code | Peut être appelé par                     | Définition                                                                            |
+| ---- | ---------------------------------------- | ------------------------------------------------------------------------------------- |
+| 39   | [Bouton](FormObjects/button_overview.md) | Un bouton est cliqué et le bouton de la souris reste enfoncé pendant un certain temps |
 
 
 ## Description
 
-This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
+Cet événement est généré lorsqu'un bouton reçoit un clic et que le bouton de la souris est maintenu pendant un certain temps. En théorie, la durée de génération de cet événement est égale à la durée maximale séparant un double-clic, telle que définie dans les préférences système.
 
-This event can be generated for the following button styles:
+Cet événement peut être généré pour les styles de boutons suivants :
 
 - [Barre d’outils](FormObjects/button_overview.md#toolbar)
 - [Bevel](FormObjects/button_overview.md#bevel)
@@ -24,7 +24,7 @@ This event can be generated for the following button styles:
 - [Rond](FormObjects/button_overview.md#circle)
 - [Personnalisé](FormObjects/button_overview.md#custom)
 
-This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
+Cet événement est généralement utilisé pour afficher des pop-up menus en cas de longs clics sur les boutons. Si l'événement [`On Clicked`](onClicked.md) est activé, il est généré si l'utilisateur relâche le bouton de la souris avant la limite de temps du "long clic".
 
 ### Voir également
 [`Sur clic alternatif`](onAlternativeClick.md)

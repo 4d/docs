@@ -3,59 +3,59 @@ id: overview
 title: Aperçu
 ---
 
-Form events are events that can lead to the execution of the form method and/or form object method(s). Form events allow you to control the flow of your application and to write code that is executed only when a specific event occurs.
+Les événements formulaire sont des événements qui peuvent conduire à l'exécution de la méthode de formulaire et/ou de la ou des méthodes objet de formulaire. Les événements de formulaire vous permettent de contrôler le flux de votre application et d'écrire du code qui n'est exécuté que lorsqu'un événement spécifique se produit.
 
-In your code, you control the events using the `FORM Event` command, that returns the triggered event. Par exemple:
+Dans votre code, vous contrôlez les événements à l'aide de la commande `FORM Event`, qui retourne l'événement déclenché. Par exemple:
 
 ```4d  
-//code of a button
+//code d'un bouton
 If(FORM Event.code=On Clicked) 
-// do something when the button is clicked
+// faire quelque chose quand on clique sur le bouton
 End if
 ```
 
-> Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
+> Chaque formulaire et chaque objet actif du formulaire peut lire un ensemble prédéfini d'événements, mais seuls les événements que vous avez activés au niveau du formulaire et/ou à chaque niveau d'objet se produiront réellement.
 
 
-## Event object
+## Objet événement
 
-Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
+Chaque événement est retourné sous forme d'objet par la commande `FORM Event`. Par défaut, il contient les propriétés suivantes :
 
 | Propriété | Type | Description |
 | --------- | ---- | ----------- |
 |           |      |             |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the
 
-Additional properties are returned when the event occurs on specific objects. For example, the [On After Edit](onAfterEdit.md) event object returned by a [4D View Pro area](FormObjects/viewProArea_overview.md) contains `sheetName` or `action` properties.
+Des propriétés supplémentaires sont retournées lorsque l'événement se produit sur des objets spécifiques. Par exemple, l'événement [On After Edit](onAfterEdit.md) retourné par une zone [4D View Pro](FormObjects/viewProArea_overview.md) contient des propriétés `sheetName` ou `action`.
 
 
-## Events and Methods
+## Événements et méthodes
 
-When a form event occurs, 4D performs the following actions:
+Lorsqu'un événement formulaire se produit, 4D effectue les actions suivantes :
 
-- First, it browses the objects of the form and calls the object method for any object (involved in the event) whose corresponding object event property has been selected.
-- Second, it calls the form method if the corresponding form event property has been selected.
+- Tout d'abord, il parcourt les objets du formulaire et appelle la méthode objet pour tout objet (associé à l'événement) dont la propriété d'événement d'objet correspondante a été sélectionnée.
+- Deuxièmement, il appelle la méthode formulaire si la propriété d'événement formulaire correspondante a été sélectionnée.
 
-Do not assume that the object methods, if any, will be called in a particular order. The rule of thumb is that the object methods are always called before the form method. If an object is a subform, the object methods of the subform’s list form are called, then the form method of the list form is called. 4D then continues to call the object methods of the parent form. In other words, when an object is a subform, 4D uses the same rule of thumb for the object and form methods within the subform object.
+Ne supposez pas que les méthodes objet, le cas échéant, seront appelées dans un ordre particulier. La règle d'or est que les méthodes objet sont toujours appelées avant la méthode formulaire. Si un objet est un sous-formulaire, les méthodes objet du formulaire liste du sous-formulaire sont appelées, suivie de la méthode formulaire du formulaire liste. 4D continue alors d'appeler les méthodes objet du formulaire parent. En d'autres termes, lorsqu'un objet est un sous-formulaire, 4D utilise la même règle pour les méthodes objet et formulaire au sein de l'objet sous-formulaire.
 
-Except for the [On Load](onLoad.md) and [On Unload](onUnload.md) events (see below), if the form event property is not selected for a given event, this does not prevent calls to object methods for the objects whose same event property is selected. In other words, enabling or disabling an event at the form level has no effect on the object event properties.
+À l'exception des événements [On Load](onLoad.md) et [On Unload](onUnload.md) (voir ci-dessous), si la propriété d'événement formulaire n'est pas sélectionnée pour un événement donné, cela n'empêche pas les appels vers les méthodes objet pour les objets dont la même propriété d'événement est sélectionnée. En d'autres termes, l'activation ou la désactivation d'un événement au niveau du formulaire n'a aucun effet sur les propriétés d'événement de l'objet.
 
-The number of objects involved in an event depends on the nature of the event.
+Le nombre d'objets associés à un événement dépend de la nature de l'événement.
 
-## Call Table
+## Tableau des appels
 
-The following table summarizes how object and form methods are called for each event type:
+Le tableau suivant résume la manière dont les méthodes objet et formulaire sont appelées pour chaque type d'événement :
 
 | Evénement                     | Méthode objet                      | Méthode formulaire | Objets                      |
 | ----------------------------- | ---------------------------------- | ------------------ | --------------------------- |
 | On Load                       | Oui                                | Oui                | Tous les objets             |
 | On Unload                     | Oui                                | Oui                | Tous les objets             |
 | Sur validation                | Oui                                | Oui                | Tous les objets             |
-| Sur clic                      | Oui                                | Oui                | Objets concernés uniquement |
-| Sur double clic               | Oui                                | Oui                | Objets concernés uniquement |
-| Sue avant frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
-| Sue après frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
-| Sur après modification        | Oui                                | Oui                | Objets concernés uniquement |
+| On Clicked                    | Oui                                | Oui                | Objets concernés uniquement |
+| On Double Clicked             | Oui                                | Oui                | Objets concernés uniquement |
+| On Before Keystroke           | Oui                                | Oui                | Objets concernés uniquement |
+| On After Keystroke            | Oui                                | Oui                | Objets concernés uniquement |
+| On After Edit                 | Oui                                | Oui                | Objets concernés uniquement |
 | On Getting Focus              | Oui                                | Oui                | Objets concernés uniquement |
 | On Losing Focus               | Oui                                | Oui                | Objets concernés uniquement |
 | Sur activation                | Jamais                             | Oui                | Aucun                       |
@@ -95,9 +95,9 @@ The following table summarizes how object and form methods are called for each e
 | Sur après tri                 | Oui (List box)                     | Jamais             | Objets concernés uniquement |
 | Sur clic long                 | Oui (Bouton)                       | Oui                | Objets concernés uniquement |
 | Sur clic alternatif           | Oui (Bouton et List box)           | Jamais             | Objets concernés uniquement |
-| Sur déployer                  | Yes (Hier. list and list box)      | Jamais             | Objets concernés uniquement |
-| Sur contracter                | Yes (Hier. list and list box)      | Jamais             | Objets concernés uniquement |
-| Sur action suppression        | Yes (Hier. list and list box)      | Jamais             | Objets concernés uniquement |
+| Sur déployer                  | Oui (Liste hiérar. et list box)    | Jamais             | Objets concernés uniquement |
+| Sur contracter                | Oui (Liste hiérar. et list box)    | Jamais             | Objets concernés uniquement |
+| Sur action suppression        | Oui (Liste hiérar. et list box)    | Jamais             | Objets concernés uniquement |
 | On URL Resource Loading       | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
 | On Begin URL Loading          | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
 | On URL Loading Error          | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
@@ -108,7 +108,7 @@ The following table summarizes how object and form methods are called for each e
 | On VP Ready                   | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 | On Row Resize                 | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 
-Always keep in mind that, for any event, the method of a form or an object is called if the corresponding event property is selected for the form or objects. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.
+Gardez toujours à l'esprit que, pour tout événement, la méthode d'un formulaire ou d'un objet est appelée si la propriété d'événement correspondante est sélectionnée pour le formulaire ou les objets. L'avantage de la désactivation des événements dans l'environnement de développement (à l'aide de la liste des propriétés de l'éditeur de formulaires) est la réduction du nombre d'appels vers des méthodes et par conséquent l'optimisation de la vitesse d'exécution de vos formulaires.
 
-> WARNING: The [On Load](onLoad) and [On Unload](onUnloas) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
+> ATTENTION : Les événements [On Load et [](onUnloas)On Unload](onLoad) sont générés pour les objets s'ils sont activés à la fois pour les objets et pour le formulaire auquel appartiennent les objets. Si les événements sont activés pour les objets uniquement, ils ne se produiront pas; ces deux événements doivent également être activés au niveau du formulaire.
 

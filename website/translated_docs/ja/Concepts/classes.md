@@ -112,7 +112,7 @@ $cName:=OB Class($o).name // "Empty"
 - Project フォルダー
     + Project
         * Sources
-            - Classes
+            - クラス
                 + Polygon.4dm
 
 ### クラス名

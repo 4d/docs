@@ -3,9 +3,9 @@ id: object
 title: Object
 ---
 
-Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation: 
+Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
 
-- A property name is always a text, for example "Name".
+- A property name is always a text, for example "Name". It must follow [specific rules](identifiers.md#object-properties).
 
 - A property value can be of the following type:
 	- number (Real, Integer, etc.)
@@ -18,19 +18,19 @@ Variables, fields or expressions of the Object type can contain various types of
 	- picture(*)
 	- collection
 
-(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]". 
+(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
 **Warning:** Keep in mind that attribute names differentiate between upper and lower case.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields. 
+You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
 
 Each property value accessed through the object notation is considered an expression. You can use such values wherever 4D expressions are expected:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by PROCESS 4D TAGS or the Web Server, export files, 4D Write Pro documents...),
+- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
-## Initialization 
+## Initialization
 
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
@@ -44,8 +44,8 @@ Example:
 
 You can create two types of objects:
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
+- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
+- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures.
 For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 
@@ -85,7 +85,7 @@ Object notation is available on any language element that can contains or return
 
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements).
     Examples:
-    
+
 ```4d
      $age:=$myObjVar.employee.age //variable
      $addr:=[Emp]data_obj.address //field
@@ -96,31 +96,32 @@ Object notation is available on any language element that can contains or return
 - **4D commands** that return objects.
     Example:
 
+
 ```4d
      $measures:=Get database measures.DB.tables
 ```
-    
+
 - **Project methods** that return objects.
     Example:
-    
+
 ```4d
       // MyMethod1
      C_OBJECT($0)
      $0:=New object("a";10;"b";20)
-     
+
       //myMethod2
      $result:=MyMethod1.a //10
 ```
 
 - **Collections**
     Example:
-    
+
 ```4d
      myColl.length //size of the collection
 ```
 
 ### Pointers
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers. 
+**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.
 
 Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
 
@@ -178,7 +179,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 ```4d
      C_OBJECT($o)
      mymethod($o.a) //pass an undefined parameter
-     
+
       //In mymethod method
      C_TEXT($1) //parameter type is text
       // $1 contains ""
@@ -245,12 +246,12 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
  $myObj:=New object //creates an object and assigns to the variable
  $myObj.age:=56
  $age:=$myObj.age //56
- 
+
   // Using the command notation
  C_OBJECT($myObj2) //declares a 4D variable object
  OB SET($myObj2;"age";42) //creates an object and adds the age property
  $age:=OB Get($myObj2;"age") //42
- 
+
   // Of course, both notations can be mixed
  C_OBJECT($myObj3)
  OB SET($myObj3;"age";10)
@@ -274,7 +275,7 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-- You can access properties as strings using the [ ] operator 
+- You can access properties as strings using the [ ] operator
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

@@ -25,14 +25,14 @@ Un objet `cryptoKey` est instancié par la méthode [4D.CryptoKey.new](#4dcrypto
 L'exemple suivant illustre la signature et la vérification d'un message à l'aide d'une nouvelle paire de clés ECDSA, afin de créer, par exemple, un token Web JSON ES256.
 
 ```4d
- // Generate a new ECDSA key pair
+ // Générer une nouvelle paire de clés ECDSA
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
-  // Get signature as base64
+  // Obtenir une signature en base64
 $message:="hello world" 
 $signature:=$key.sign($message;New object("hash";"SHA256"))
 
-  // Verify signature
+  // Vérifier la signature
 $status:=$key.verify($message;$signature;New object("hash";"SHA256"))
 ASSERT($status.success)
 ```

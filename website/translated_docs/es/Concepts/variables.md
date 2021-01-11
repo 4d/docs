@@ -21,7 +21,7 @@ Variables are language objects; you can create and use variables that will never
 You create variables by declaring them. The 4D language offers two ways to declare variables:
 
 - using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (deprecated, classic language only).
+- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
 
 **Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Using a C_ directive
 
-> **Compatibility Note:** This feature is deprecated as of 4D v18 R3. It is now recommended to use the [var](#using-the-var-keyword) keyword.
+> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
 Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 
@@ -128,10 +128,9 @@ The following are some basic variable declarations:
  C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
  C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
  C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
- ARRAY LONGINT(alAnArray;10) //The process alAnArray variable is declared as a Longint array of 10 elements
 ```
 
-**Note:** Arrays are a particular type of variables. An array is an ordered series of variables of the same type. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
 
 
 ## Assigning Data

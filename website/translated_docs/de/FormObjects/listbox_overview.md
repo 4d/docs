@@ -250,7 +250,7 @@ Form events on list box or list box column objects may return the following addi
 | footerName       | Text           | Name of the footer                                                    |
 | headerName       | Text           | Name of the header                                                    |
 | horizontalScroll | Lange Ganzzahl | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected    | boolean        | True if row is selected, else False                                   |
+| isRowSelected    | Boolean        | True if row is selected, else False                                   |
 | newPosition      | Lange Ganzzahl | New position of the column or row                                     |
 | newSize          | Lange Ganzzahl | New size (in pixels) of the column or row                             |
 | oldPosition      | Lange Ganzzahl | Previous position of the column or row                                |
@@ -867,7 +867,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | Text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | Zahl      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| boolean   | check box                                      | drop-down menu (required list)                                                                 |
+| Boolean   | check box                                      | drop-down menu (required list)                                                                 |
 | color     | background color                               | Text                                                                                           |
 | event     | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
@@ -895,7 +895,7 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | Text | Zahl | integer | boolean | color | event |
+|                       | valueType                               | Text | Zahl | integer | Boolean | color | event |
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
 | *Attributes*          | *Beschreibung*                          |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
