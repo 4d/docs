@@ -56,6 +56,7 @@ class Index extends React.Component {
     licenses: <translate>License Management</translate>,
     buildApp: <translate>Build Application</translate>,
     webAdmin: <translate>Web Administration</translate>,
+    tls: <translate>TLS Protocol (HTTPS)</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
 	langRef: <translate>Language Reference (4D Doc Center)</translate>,
 	  users: <translate>Access Rights</translate>
@@ -96,7 +97,8 @@ class Index extends React.Component {
 				  [${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
                   [${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
                   [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>
-                  [${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Admin/building.html)`,
+                  [${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Admin/building.html)<br>
+				  [${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',

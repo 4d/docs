@@ -14,6 +14,9 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
+      },
       "Admin/webAdmin": {
         "title": "Web Administration"
       },
@@ -860,6 +863,7 @@
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",

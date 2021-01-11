@@ -118,6 +118,46 @@ Separate each method with a ";" (e,g,: "post;get"). If methods is empty, null, o
 [Enable CORS Service](#enable-cors-service)
 
 
+## Custom HTTP Error Pages  
+
+The 4D Web Server allows you to customize HTTP error pages sent to clients, based on the status code of the server response. Error pages refer to:
+
+*	status codes starting with 4 (client errors), for example 404
+
+*	status codes starting with 5 (server errors), for example 501. 
+
+For a full description of HTTP error status codes, you can refer to the [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
+
+#### How does it work?  
+
+To replace default 4D Web Server error pages with your own pages you just need to:
+
+*	put custom HTML pages at the first level of the application's web folder,
+
+*	name the custom pages "{statusCode}.html" (for example, "404.html"). 
+
+You can define one error page per status code and/or a generic error page for a range of errors, named "{number}xx.html". For example, you can create "4xx.html" for generic client errors. The 4D Web Server will first look for a {statusCode}.html page then, if it does not exist, a generic page.
+
+For example, when an HTTP response returns a status code 404:
+
+1.	4D Web Server tries to send a "404.html" page located in the application's web folder.
+
+2.	If it is not found, 4D Web Server tries to send a "4xx.html" page located in the application's web folder.
+
+3.	If not found, 4D Web Server then uses its default error page.
+
+#### Example  
+
+If you define the following custom pages in your web folder:
+
+![](assets/en/WebServer/errorPage.png)
+
+*	the "403.html" or "404.html" pages will be served when 403 or 404 HTTP responses are returned respectively,
+
+*	the "4xx.html" page will be served for any other 4xx error status (400, 401, etc.),
+
+*	the "5xx.html" page will be served for any 5xx error status.
+
 
 ## Debug log
 
@@ -131,6 +171,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 |Value|Constant|Description|
 |---|---|---|
 |0|wdl disable|Web HTTP debug log is disabled|
+
 
 
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)|
@@ -209,9 +250,15 @@ Status for communication over HTTPS. This option is described in [this section](
 |webServer object|[`HSTSEnabled`](API/webServerClass.md#hstsenabled)|Boolean, true to enable HSTS (default is false)|
 |`WEB SET OPTION`|`Web HSTS enabled`|0 (disabled, default) or 1 (enabled)|
 
-HTTP Strict Transport Security (HSTS) status. HSTS allows the 4D web server to declare that browsers should only interact with it via secure HTTPS connections. Once activated, the 4D web server will automatically add HSTS-related information to all response headers. Browsers will record the HSTS information the first time they receive a response from the 4D web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the Web **HSTS max age** setting.
+HTTP Strict Transport Security (HSTS) status. 
 
-> HSTS requires that HTTPS is enabled on the server. HTTP must also be enabled to allow client initial connections.
+When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabled](#enable-http), the browser can still switch between HTTPS and HTTP (for example, in the browser URL area, the user can replace "https" by "http"). To forbid http redirections, you can [disable HTTP](#enable-http), however in this case an error message is displayed to client HTTP requests.
+
+HSTS allows the 4D web server to declare that browsers should only interact with it via secure HTTPS connections. Once activated, the 4D web server will automatically add HSTS-related information to all response headers. Browsers will record the HSTS information the first time they receive a response from the 4D web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the Web **HSTS max age** setting.
+
+> HSTS requires that HTTPS is [enabled](enable-https) on the server. [HTTP](enable-http) must also be enabled to allow client initial connections.
+
+> You can get the current connection mode using the `WEB Is secured connection` command.
 
 
 ## HSTS Max Age
@@ -456,7 +503,42 @@ Version of the OpenSSL library used.
 |---|---|---|
 |webServer object|[`perfectForwardSecrecy`](API/webServerClass.md#perfectforwardsecrecy)|Boolean, read-only|
 
-True if PFS is available on the web server (see [TLS] section).
+True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forward-secrecy-pfs) section).
+
+
+## Robots.txt 
+
+Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
+
+To do so, put the ROBOTS.TXT file at the server's root. This file must be structured in the following manner:
+
+```4d
+   User-Agent: <name>
+   Disallow: <URL> or <beginning of the URL>
+```
+   
+For example:
+
+```4d
+   User-Agent: *
+   Disallow: /4D
+   Disallow: /%23%23
+   Disallow: /GIFS/
+```
+   
+*	“User-Agent: *” - all robots are affected.
+*	“Disallow: /4D” - robots are not allowed to access URLs beginning with /4D.
+*	“Disallow: /%23%23” - robots are not allowed to access URLs beginning with /%23%23.
+*	“Disallow: /GIFS/’ - robots are not allowed to access the /GIFS/ folder or its subfolders.
+
+Another example:
+
+```code4d
+   User-Agent: *
+   Disallow: /
+```
+
+In this case, robots are not allowed to access the entire site.
 
 
 ## Root Folder
@@ -480,7 +562,7 @@ You can designate another default HTML root folder by entering its pathname.
 - The path is relative to the [Project folder](Project/architecture.md#project-folder) (4D local and 4D Server) or to the folder containing the 4D application or software package (4D in remote mode).
 - The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
 - To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name
-- The path must  start not end with a slash (except if you want the HTML root folder to be the Project or 4D remote folder, see below).
+- The path must not start with a slash (except if you want the HTML root folder to be the Project or 4D remote folder, but for access to the folders above to be forbidden, in which case you can pass "/" as the root folder). 
 
 For example, if you want the HTML root folder to be the "Web" subfolder in the "MyWebApp" folder, enter "MyWebApp/Web".
 

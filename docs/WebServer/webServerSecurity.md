@@ -8,13 +8,13 @@ Data security is present at every stage of the 4D web server implementations. Se
 
 The 4D web server security is based upon the following elements:
 
-*	**Authentication**: flexible and highly customizable authentication system via built-it settings and features, as well as the [`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) database method as a fallback,
+*	**Authentication**: flexible and highly customizable authentication system via built-it settings and features, as well as fallback database methods ([`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) for the web server and [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
-*	**Sandboxing** through the definition of a [HTML Root](#default-html-root) folder by default,
+*	**Control of exposed contents**: only functions or project methods that you declare explicitely can be available from web and REST requests,
 
-*	**Control of exposed contents**: only functions or project methods that you declare explicitely can be available from web requests.
+*	**Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
 
-* [**TLS Protocol (HTTPS)**](webServerTLS.md) support.
+* [**TLS Protocol (HTTPS)**](Admin/tls.md) support.
 
 >For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
@@ -35,16 +35,12 @@ The operation of the 4D web server's access system is summarized in the followin
 
 ![](assets/en/WebServer/serverAccess.png)
 
+> Requests starting with `rest/` are directly handled by the [REST server](REST/configuration.md), they are not processed like this diagram.
 
 
 ### Custom (default)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests that require an authentication.
-
-- if a request corresponds to an opened session on the server (i.e. it has a valid session cookie), it gets access to the requested resource,
-- if a request does not correspond to an opened session, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.  
-
-> **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode). 
+Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
 
 This authentication mode is the most flexible because it allows you to:
 
@@ -58,6 +54,10 @@ ds.webUser.save()
 ```  
 
 See also [this example](webServerGetStart.md#authenticating-users) from the "Getting started" chapter. 
+
+If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.  
+
+> **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode). 
 
 
 ### Basic protocol
@@ -88,7 +88,26 @@ As in BASIC mode, users must enter their name and password when they connect. Th
 
 ## On Web Authentication 
 
-The `On Web Authentication` database method is in charge of managing web server engine access. It is called by 4D or 4D Server when a web browser request requires the execution of a 4D method on the server (method called using a `4DACTION URL`, a `4DSCRIPT` tag, etc.).
+The `On Web Authentication` database method is in charge of managing web server engine access. It is called by 4D or 4D Server when a dynamic HTTP request is received.
+
+### Method calls  
+
+The `On Web Authentication` database method is automatically called when a request or processing requires the execution of some 4D code (except for REST calls). It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
+
+The `On Web Authentication` database method is therefore called:
+
+- when the web server receives a URL requesting a resource that does not exist
+- when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
+- when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
+- when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
+
+The `On Web Authentication` database method is NOT called:
+
+- when the web server receives a URL requesting a valid static page.
+- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+
+
+### Syntax
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ; ) -> $0 : Boolean
 
@@ -113,7 +132,18 @@ You must declare these parameters as follows:
 //Code for the method
 ```
 
->All the `On Web Authentication` database method’s parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
+Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+
+```code4d
+// On Web Authentication database method
+#DECLARE ($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text) \
+  -> $RequestAccepted : Boolean
+
+```
+
+>All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
 
 
 #### $1 - URL
@@ -169,22 +199,6 @@ The `On Web Connection` database method is only executed if the connection has b
 
 >*	Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 
-### Method calls  
-
-The `On Web Authentication` database method is automatically called when a request or processing requires the execution of a 4D method. It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
-
-The `On Web Authentication` database method is therefore called in the following cases:
-
-- when the web server receives a URL requesting a resource that does not exist
-- when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
-- when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
-
-The `On Web Authentication` database method is NOT called:
-
-- when the web server receives a URL requesting a valid static page.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched.
-
 
 ### Example
 
@@ -231,61 +245,6 @@ The *WithWildcard* method is as follows:
 ```
 
 
-## About robots 
-
-Certain robots (query engines, spiders...) scroll through web servers and static pages. If you want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
-
-To do so, put the ROBOTS.TXT file at the server's root. This file must be structured in the following manner:
-
-   ```4d
-   User-Agent: <name>
-   Disallow: <URL> or <beginning of the URL>
-   ```
-   
-For example:
-
-   ```4d
-   User-Agent: *
-   Disallow: /4D
-   Disallow: /%23%23
-   Disallow: /GIFS/
-   ```
-   
-*	“User-Agent: *” - all robots are affected.
-
-*	“Disallow: /4D” - robots are not allowed to access URLs beginning with /4D.
-
-*	“Disallow: /%23%23” - robots are not allowed to access URLs beginning with /%23%23.
-
-*	“Disallow: /GIFS/’ - robots are not allowed to access the /GIFS/ folder or its subfolders.
-
-Another example:
-
-   ```code4d
-   User-Agent: *
-   Disallow: /
-   ```
-
-In this case, robots are not allowed to access the entire site.
-
-
-
-## Default HTML Root 
- 
-This web server parameter allows you to define the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers.
-
-Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. This access restriction applies to URLs sent to Web browsers as well as to 4D’s Web Server commands, such as `WEB SEND FILE`. If a URL is sent to the database by a browser or if a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.
-
-By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time.
-
-If you keep the default location, the root folder is created:
-
-*	with 4D in local mode and 4D Server, at the same level as the Project folder.
-*	with 4D in remote mode, in the 4D Client database folder (see the `Get 4D folder command`).
-
-The default HTML root folder name and location [can be modified](webServerConfig.md#root-folder). 
-
-If you want the HTML root folder to be the project or 4D remote folder, but for access to the folders above to be forbidden, define "/" as the root folder. 
 
 
 ## Controlling exposed contents
@@ -301,7 +260,7 @@ When the [REST server is started](REST/configuration.md#starting-the-rest-server
 
 ### Project methods through HTTP
   
-The special `4DACTION URL` and the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` tags allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *http://www.server.com/4DACTION/Erase_All* causes the execution of the ***Erase_All*** project method, if it exists.
+The special `4DACTION URL` and the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` tags allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *http://www.server.com/4DACTION/login* causes the execution of the ***login*** project method, if it exists.
 
 This mechanism therefore presents a security risk for the application, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in the following ways:
 
@@ -312,9 +271,9 @@ This mechanism therefore presents a security risk for the application, in partic
 ![](assets/en/WebServer/methodProperties.png)
 
 
-This option is used to individually designate each project method that can be called using the special `URL`, `4DACTION` or the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` (as well as the former `4DVAR` and `4DHTMLVAR`) tags. When it is not checked, the project method concerned cannot be executed using an HTTP request containing a special URL or tag. Conversely, it can be executed using other types of calls (formulas, other methods, etc.).
+This option is used to individually designate each project method that can be called using the `4DACTION` special URL, or the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, and `4DHTML` tags. When it is not checked, the project method concerned cannot be directly executed through an HTTP request. Conversely, it can be executed using other types of calls (formulas, other methods, etc.).
 
-This option is unchecked by default for databases created. Methods that can be executed using the `4DACTION Web URL` or the tags must be specifically indicated.
+This option is unchecked by default. Methods that can be executed through `4DACTION` or specific tags must be specifically indicated.
 
 In the Explorer, Project methods with this property are given a specific icon:
 
