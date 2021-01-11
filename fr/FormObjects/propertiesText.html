@@ -333,12 +333,12 @@ Foreground color;Dark shadow color)
 <p>Les paramètres de style définis avec cette propriété sont ignorés si d'autres paramètres de style sont déjà définis via des expressions (par exemple, <a href="#style-expression">Style Expression</a>, <a href="#font-color-expression">Font Color Expression</a>, <a href="#background-color-expression">Background Color Expression</a>).</p>
 </blockquote>
 <p><strong>Exemple</strong></p>
-<p>In the <em>Color</em> project method, write the following code:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//Color method</span>
-<span class="hljs-comment">//Sets font color for certain rows and the background color for a specific column:</span>
+<p>Dans la méthode projet <em>Color</em>, entrez le code suivant :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//Méthode Color</span>
+<span class="hljs-comment">//Définit la couleur de police pour certaines lignes et la couleur de fond pour une colonne spécifique :</span>
 <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$0</span>)
 Form.meta:=New object<span class="hljs-keyword">
-If</span>(<span class="hljs-literal">This</span>.ID&gt;<span class="hljs-number">5</span>) <span class="hljs-comment">//ID is an attribute of collection objects/entities</span>
+If</span>(<span class="hljs-literal">This</span>.ID&gt;<span class="hljs-number">5</span>) <span class="hljs-comment">//ID est un attribut d'objets/entités d'une collection</span>
   Form.meta.stroke:=<span class="hljs-string">"purple"</span>
   Form.meta.cell:=<span class="hljs-function">New object</span>(<span class="hljs-string">"Column2"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"fill"</span>;<span class="hljs-string">"black"</span>))<span class="hljs-keyword">
 Else</span>
@@ -346,23 +346,23 @@ Else</span>
 End if</span>
 <span class="hljs-variable">$0</span>:=Form.meta
 </code></pre>
-<p><strong>Best Practice:</strong> For optimization reasons, it would be recommended in this case to create the <code>meta.cell</code> object once in the form method:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">//form method</span><span class="hljs-keyword">
+<p><strong>Bonnes pratiques :</strong> Pour des raisons d'optimisation, il serait recommandé dans ce cas de créer l'objet <code>meta.cell</code> une fois contenu dans la méthode formulaire :</p>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">//méthode formulaire</span><span class="hljs-keyword">
  Case of</span>
     :(Form event code=On Load)
        Form.colStyle:=<span class="hljs-function">New object</span>(<span class="hljs-string">"Column2"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"fill"</span>;<span class="hljs-string">"black"</span>))<span class="hljs-keyword">
  End case</span>
 </code></pre>
-<p>Then, the <em>Color</em> method would contain:</p>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">//Color method</span>
+<p>La méthode <em>Color</em> contiendrait alors :</p>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">//méthode Color</span>
  ...<span class="hljs-keyword">
  If</span>(<span class="hljs-literal">This</span>.ID&gt;<span class="hljs-number">5</span>)
     Form.meta.stroke:=<span class="hljs-string">"purple"</span>
-    Form.meta.cell:=Form.colStyle <span class="hljs-comment">//reuse the same object for better performance</span>
+    Form.meta.cell:=Form.colStyle <span class="hljs-comment">//réutiliser le même objet pour de meilleures performances</span>
  ...
 </code></pre>
 <blockquote>
-<p>See also the <a href="https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html">This</a> command.</p>
+<p>Voir également la commande <a href="https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html">This</a>.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="grammaire-json-12"></a><a href="#grammaire-json-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Grammaire JSON</h4>
 <table>
@@ -520,7 +520,7 @@ Objets pris en charge
   <code>List box de type tableau</code>
 </p>
 <p spaces-before="0">
-  Permet de définir une couleur de police personnalisée à chaque ligne de list box ou de chaque cellule de la colonne.
+  Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 </p>
 <p spaces-before="0">
   Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a>. Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
@@ -570,7 +570,7 @@ Objets pris en charge
   <code>List box de type tableau</code>
 </p>
 <p spaces-before="0">
-  Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
+  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 </p>
 <p spaces-before="0">
   Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Styles de caractères</a>. Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
@@ -672,7 +672,7 @@ Objets pris en charge
 <p spaces-before="0">
   <a href="input_overview.md">Input</a>
 </p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/FormObjects/propertiesSubform.html"><span class="arrow-prev">← </span><span>Sous-formulaire</span></a><a class="docs-next button" href="/docs/fr/FormObjects/propertiesTextAndPicture.html"><span>Texte et Image</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#autoriser-sélecteur-policecouleur">Autoriser sélecteur police/couleur</a></li><li><a href="#gras">Gras</a></li><li><a href="#italique">Italique</a></li><li><a href="#souligné">Souligné</a></li><li><a href="#police">Police</a><ul class="toc-headings"><li><a href="#thème-de-police">Thème de police</a></li><li><a href="#famille-de-police">Famille de police</a></li></ul></li><li><a href="#taille">Taille</a></li><li><a href="#couleur-de-la-police">Couleur de la police</a></li><li><a href="#expression-couleur-police">Expression couleur police</a></li><li><a href="#expression-style">Expression style</a></li><li><a href="#alignement-horizontal">Alignement horizontal</a></li><li><a href="#alignement-vertical">Alignement vertical</a></li><li><a href="#meta-info-expression">Meta Info expression</a></li><li><a href="#multistyle">Multistyle</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/FormObjects/propertiesSubform.html"><span class="arrow-prev">← </span><span>Sous-formulaire</span></a><a class="docs-next button" href="/docs/fr/FormObjects/propertiesTextAndPicture.html"><span>Texte et Image</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#autoriser-sélecteur-policecouleur">Autoriser sélecteur police/couleur</a></li><li><a href="#gras">Gras</a></li><li><a href="#italique">Italique</a></li><li><a href="#souligné">Souligné</a></li><li><a href="#police">Police</a><ul class="toc-headings"><li><a href="#thème-de-police">Thème de police</a></li><li><a href="#famille-de-police">Famille de police</a></li></ul></li><li><a href="#taille">Taille</a></li><li><a href="#couleur-de-la-police">Couleur de la police</a></li><li><a href="#expression-couleur-police">Expression couleur police</a></li><li><a href="#expression-style">Expression style</a></li><li><a href="#alignement-horizontal">Alignement horizontal</a></li><li><a href="#alignement-vertical">Alignement vertical</a></li><li><a href="#meta-info-expression">Meta Info expression</a></li><li><a href="#multistyle">Multistyle</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

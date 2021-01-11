@@ -370,7 +370,7 @@
 <tr><th>Property</th><th></th><th>Typ</th><th>Beschreibung</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>boolean</td><td>true if the drop action is successful, false otherwise.</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>true if the drop action is successful, false otherwise.</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>Available only in case of error:</em></strong></td></tr>
 <tr><td>status(*)</td><td></td><td>number</td><td>Error code, see below</td></tr>
 <tr><td>statusText(*)</td><td></td><td>Text</td><td>Description of the error, see below</td></tr>
@@ -812,9 +812,9 @@
 <tr><th>Property</th><th></th><th>Typ</th><th>Beschreibung</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>boolean</td><td>true if the lock action is successful (or if the entity is already locked in the current process), false otherwise.</td></tr>
+<tr><td>success</td><td></td><td>Boolean</td><td>true if the lock action is successful (or if the entity is already locked in the current process), false otherwise.</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>Available only if <code>dk reload if stamp changed</code> option is used:</em></strong></td></tr>
-<tr><td><strong>wasReloaded</strong></td><td></td><td>boolean</td><td>true if the entity was reloaded with success, false otherwise.</td></tr>
+<tr><td><strong>wasReloaded</strong></td><td></td><td>Boolean</td><td>true if the entity was reloaded with success, false otherwise.</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>Available only in case of error:</em></strong></td></tr>
 <tr><td>status(*)</td><td></td><td>number</td><td>Error code, see below</td></tr>
 <tr><td>statusText(*)</td><td></td><td>Text</td><td>Description of the error, see below</td></tr>
@@ -965,7 +965,7 @@
 <tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td>boolean</td><td>True if the reload action is successful, False otherwise.<p><p><strong><em>Available only in case of error</em></strong>:</td></tr>
+<tr><td>success</td><td>Boolean</td><td>True if the reload action is successful, False otherwise.<p><p><strong><em>Available only in case of error</em></strong>:</td></tr>
 <tr><td>status(*)</td><td>number</td><td>Error code, see below</td></tr>
 <tr><td>statusText(*)</td><td>Text</td><td>Description of the error, see below</td></tr>
 </tbody>
@@ -1030,9 +1030,9 @@
 <p>The object returned by <code>.save()</code> contains the following properties:</p>
 <p>| Property         |  | Typ     | Beschreibung                                            |
 | ---------------- |  | ------- | ------------------------------------------------------- |
-| success          |  | boolean | True if the save action is successful, False otherwise. |
+| success          |  | Boolean | True if the save action is successful, False otherwise. |
 |                  |  |         | <strong><em>Available only if <code>dk auto merge</code> option is used</em></strong>: |
-| autoMerged       |  | boolean | True if an auto merge was done, False otherwise.        |
+| autoMerged       |  | Boolean | True if an auto merge was done, False otherwise.        |
 |                  |  |         | <strong><em>Available only in case of error</em></strong>:                  |
 | status(*)     |  | number  | Error code, see below                                   |
 | statusText(*) |  | Text    | Description of the error, see below                     |
@@ -1478,7 +1478,7 @@ origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on
  End if</span>
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/de/API/emails.html"><span class="arrow-prev">← </span><span>Emails</span></a><a class="docs-next button" href="/docs/de/API/entitySelectionClass.html"><span class="function-name-prevnext">EntitySelection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#clone">.clone()</a></li><li><a href="#diff">.diff()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#first">.first()</a></li><li><a href="#fromobject">.fromObject()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#getkey">.getKey()</a></li><li><a href="#getselection">.getSelection()</a></li><li><a href="#getstamp">.getStamp()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#isnew">.isNew()</a></li><li><a href="#last">.last()</a></li><li><a href="#lock">.lock()</a></li><li><a href="#next">.next()</a></li><li><a href="#previous">.previous()</a></li><li><a href="#reload-">.reload( )</a></li><li><a href="#save">.save()</a></li><li><a href="#toobject">.toObject()</a></li><li><a href="#touched-">.touched( )</a></li><li><a href="#touchedattributes-">.touchedAttributes( )</a></li><li><a href="#unlock">.unlock()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/de/API/emails.html"><span class="arrow-prev">← </span><span>Emails</span></a><a class="docs-next button" href="/docs/de/API/entitySelectionClass.html"><span class="function-name-prevnext">EntitySelection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#clone">.clone()</a></li><li><a href="#diff">.diff()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#first">.first()</a></li><li><a href="#fromobject">.fromObject()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#getkey">.getKey()</a></li><li><a href="#getselection">.getSelection()</a></li><li><a href="#getstamp">.getStamp()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#isnew">.isNew()</a></li><li><a href="#last">.last()</a></li><li><a href="#lock">.lock()</a></li><li><a href="#next">.next()</a></li><li><a href="#previous">.previous()</a></li><li><a href="#reload-">.reload( )</a></li><li><a href="#save">.save()</a></li><li><a href="#toobject">.toObject()</a></li><li><a href="#touched-">.touched( )</a></li><li><a href="#touchedattributes-">.touchedAttributes( )</a></li><li><a href="#unlock">.unlock()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

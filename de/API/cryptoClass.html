@@ -87,7 +87,7 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#4dcryptokeynew"></a><p>    </td></tr>
+<tr><td><a href="#4dcryptokeynew"><strong>4D.CryptoKey.new</strong>( <em>settings</em> : Object ) : 4D.CryptoKey</a><p>    creates a new <code>4D.CryptoKey</code> object encapsulating an encryption key pair</td></tr>
 <tr><td><a href="#curve"><strong>.curve</strong> : Text</a><p>    normalised curve name of the key.</td></tr>
 <tr><td><a href="#decrypt"><strong>.decrypt</strong>( <em>message</em> : Text ; <em>options</em> : Object ) : Object</a><p>    decrypts the <em>message</em> parameter using the <strong>private</strong> key</td></tr>
 <tr><td><a href="#encrypt"><strong>.encrypt</strong>( <em>message</em> : Text ; <em>options</em> : Object ) : Text</a><p>    encrypts the <em>message</em> parameter using the <strong>public</strong> key</td></tr>
@@ -191,7 +191,7 @@
 <tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td>boolean</td><td>True if the message has been successfully decrypted</td></tr>
+<tr><td>success</td><td>Boolean</td><td>True if the message has been successfully decrypted</td></tr>
 <tr><td>result</td><td>Text</td><td>Message decrypted and decoded using the <code>options.encodingDecrypted</code></td></tr>
 <tr><td>errors</td><td>collection</td><td>If <code>success</code> is <code>false</code>, may contain a collection of errors</td></tr>
 </tbody>
@@ -326,7 +326,7 @@
 <tbody>
 <tr><td>hash</td><td>Text</td><td>Digest algorithm to use. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;. When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size</td></tr>
 <tr><td>encodingEncrypted</td><td>Text</td><td>Encoding used to convert the binary encrypted message into the result string. Can be &quot;Base64&quot;, or &quot;Base64URL&quot;. Default is &quot;Base64&quot;.</td></tr>
-<tr><td>pss</td><td>boolean</td><td>Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass <code>true</code> when producing a JWT for PS@ algorithm</td></tr>
+<tr><td>pss</td><td>Boolean</td><td>Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass <code>true</code> when producing a JWT for PS@ algorithm</td></tr>
 <tr><td>encoding</td><td>Text</td><td>ERepresentation to be used for result signature. Possible values: &quot;Base64&quot; or &quot;Base64URL&quot;. Default is &quot;Base64&quot;.</td></tr>
 </tbody>
 </table>
@@ -390,7 +390,7 @@
 </thead>
 <tbody>
 <tr><td>hash</td><td>Text</td><td>Digest algorithm to use. For example: &quot;SHA256&quot;, &quot;SHA384&quot;, or &quot;SHA512&quot;. When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size</td></tr>
-<tr><td>pss</td><td>boolean</td><td>Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass <code>true</code> when verifying a JWT for PS@ algorithm</td></tr>
+<tr><td>pss</td><td>Boolean</td><td>Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass <code>true</code> when verifying a JWT for PS@ algorithm</td></tr>
 <tr><td>encoding</td><td>Text</td><td>Representation of provided signature. Possible values are &quot;Base64&quot; or &quot;Base64URL&quot;. Default is &quot;Base64&quot;.</td></tr>
 </tbody>
 </table>
@@ -402,12 +402,12 @@
 <tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td>boolean</td><td>True if the signature matches the message</td></tr>
+<tr><td>success</td><td>Boolean</td><td>True if the signature matches the message</td></tr>
 <tr><td>errors</td><td>collection</td><td>If <code>success</code> is <code>false</code>, may contain a collection of errors</td></tr>
 </tbody>
 </table>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/de/API/collectionClass.html"><span class="arrow-prev">← </span><span>Collection</span></a><a class="docs-next button" href="/docs/de/API/dataclassClass.html"><span class="function-name-prevnext">DataClass</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#4dcryptokeynew">4D.CryptoKey.new()</a></li><li><a href="#curve">.curve</a></li><li><a href="#decrypt">.decrypt()</a></li><li><a href="#encrypt">.encrypt()</a></li><li><a href="#getprivatekey">.getPrivateKey()</a></li><li><a href="#getpublickey">.getPublicKey()</a></li><li><a href="#pem">.pem</a></li><li><a href="#sign">.sign()</a></li><li><a href="#size">.size</a></li><li><a href="#type">.type</a></li><li><a href="#verify">.verify()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/de/API/collectionClass.html"><span class="arrow-prev">← </span><span>Collection</span></a><a class="docs-next button" href="/docs/de/API/dataclassClass.html"><span class="function-name-prevnext">DataClass</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#4dcryptokeynew">4D.CryptoKey.new()</a></li><li><a href="#curve">.curve</a></li><li><a href="#decrypt">.decrypt()</a></li><li><a href="#encrypt">.encrypt()</a></li><li><a href="#getprivatekey">.getPrivateKey()</a></li><li><a href="#getpublickey">.getPublicKey()</a></li><li><a href="#pem">.pem</a></li><li><a href="#sign">.sign()</a></li><li><a href="#size">.size</a></li><li><a href="#type">.type</a></li><li><a href="#verify">.verify()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

@@ -74,7 +74,7 @@
 </thead>
 <tbody>
 <tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    contains the name of the <code>4D.Class</code> object</td></tr>
-<tr><td><a href="#new"><strong>.new()</strong> : 4D.Class</a><p>    creates and returns a <code>cs.className</code> object which is a new instance of the class on which it is called</td></tr>
+<tr><td><a href="#new"><strong>.new</strong>( <em>param</em> : any { <em>;...paramN</em> } ) : 4D.Class</a><p>    creates and returns a <code>cs.className</code> object which is a new instance of the class on which it is called</td></tr>
 <tr><td><a href="#superclass"><strong>.superclass</strong> : 4D.Class</a><p>    returns the parent class of the class</td></tr>
 </tbody>
 </table>
@@ -104,23 +104,39 @@
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.new()</strong> : 4D.Class</p>
+<p><strong>.new</strong>( <em>param</em> : any { <em>;...paramN</em> } ) : 4D.Class</p>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
+<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass to the constructor function</td></tr>
 <tr><td>Result</td><td>4D.Class</td><td style="text-align:center">&lt;-</td><td>New object of the class</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.new()</code> function creates and returns a <code>cs.className</code> object which is a new instance of the class on which it is called. This function is automatically available on all classes from the <a href="/docs/pt/Concepts/classes.html#cs"><code>cs</code> class store</a>.</p>
-<p>If it is called on a non-existing class, an error is returned.</p>
-<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>You can pass one or more optional <em>param</em> parameters, which will be passed to the <a href="/docs/pt/Concepts/classes.html#class-constructor">class constructor</a> function (if any) in the className class definition. Within the constructor function, the <a href="/docs/pt/Concepts/classes.html#this"><code>This</code></a> is bound to the new object being constructed.</p>
+<p>If <code>.new()</code> is called on a non-existing class, an error is returned.</p>
+<h4><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
 <p>To create a new instance of the Person class:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$person </span>: cs.Person  
 <span class="hljs-variable">$person</span>:=cs.Person.<span class="hljs-function">new</span>() <span class="hljs-comment">//create the new instance  </span>
-<span class="hljs-comment">//$Person contains functions of the class</span>
+<span class="hljs-comment">//$person contains functions of the class</span>
+</code></pre>
+<p>To create a new instance of the Person class with parameters:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: Person.4dm</span><span class="hljs-keyword">
+Class constructor</span>(<span class="hljs-variable">$firstname </span>: Text; <span class="hljs-variable">$lastname </span>: Text; <span class="hljs-variable">$age </span>: Integer)
+    <span class="hljs-literal">This</span>.firstName:=<span class="hljs-variable">$firstname</span>
+    <span class="hljs-literal">This</span>.lastName:=<span class="hljs-variable">$lastname</span>
+    <span class="hljs-literal">This</span>.age:=<span class="hljs-variable">$age</span>
+</code></pre>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//In a method</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$person </span>: cs.Person  
+<span class="hljs-variable">$person</span>:=cs.Person.<span class="hljs-function">new</span>(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Doe"</span>;<span class="hljs-number">40</span>)  
+<span class="hljs-comment">//$person.firstName = "John"</span>
+<span class="hljs-comment">//$person.lastName = "Doe"</span>
+<span class="hljs-comment">//$person.age = 40</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="superclass"></a><a href="#superclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.superclass</h2>
 <p><details><summary>History</summary></p>
@@ -138,7 +154,7 @@
 <p>The <code>.superclass</code> property returns the parent class of the class. A superclass can be a <code>4D.Class</code> object, or a <code>cs.className</code> object. If the class does not have a parent class, the property returns <strong>null</strong>.</p>
 <p>A superclass of a user class is declared in a class by using the <a href="/docs/pt/Concepts/classes.html#class-extends-classname"><code>Class extends &lt;superclass&gt;</code></a> keyword.</p>
 <p>This property is <strong>read-only</strong>.</p>
-<h4><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<h4><a class="anchor" aria-hidden="true" id="examples-1"></a><a href="#examples-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$sup</span>:=4D.File.superclass <span class="hljs-comment">//Document</span>
 <span class="hljs-variable">$sup</span>:=4D.Document.superclass <span class="hljs-comment">//Object</span>
 <span class="hljs-variable">$sup</span>:=4D.Object.superclass <span class="hljs-comment">//null</span>
@@ -150,7 +166,7 @@
 </code></pre>
 <p><strong>See also:</strong> <a href="/docs/pt/Concepts/classes.html#super">Super</a></p>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/API/overview.html"><span class="arrow-prev">← </span><span>Class API Overview</span></a><a class="docs-next button" href="/docs/pt/API/collectionClass.html"><span>Collection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#name">.name</a></li><li><a href="#new">.new()</a></li><li><a href="#superclass">.superclass</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2020 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pt/API/overview.html"><span class="arrow-prev">← </span><span>Class API Overview</span></a><a class="docs-next button" href="/docs/pt/API/collectionClass.html"><span>Collection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#name">.name</a></li><li><a href="#new">.new()</a></li><li><a href="#superclass">.superclass</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
