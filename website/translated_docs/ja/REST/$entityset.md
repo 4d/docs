@@ -6,7 +6,7 @@ title: '$entityset'
 After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
 
 
-## Available syntaxes
+## 使用可能なシンタックス
 
 | シンタックス                                                                                                     | 例題                                                                                 | 説明                                                           |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -40,16 +40,16 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| 引数               | タイプ    | 説明                                                             |
-| ---------------- | ------ | -------------------------------------------------------------- |
-| $operator        | String | One of the logical operators to test with the other entity set |
-| $otherCollection | String | Entity set ID                                                  |
+| 参照               | タイプ | 説明                                                             |
+| ---------------- | --- | -------------------------------------------------------------- |
+| $operator        | 文字列 | One of the logical operators to test with the other entity set |
+| $otherCollection | 文字列 | Entity set ID                                                  |
 
 
 
 ### 説明
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same datastore class.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same dataclass.
 
 You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
 

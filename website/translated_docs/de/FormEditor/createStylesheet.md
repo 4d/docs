@@ -3,7 +3,7 @@ id: stylesheets
 title: Style sheets
 ---
 
-## Overview
+## Überblick
 
 A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
 

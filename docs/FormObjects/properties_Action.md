@@ -102,7 +102,7 @@ Several types of method references are supported:
 In this case, 4D does not provide automatic support for object operations.
 
 - a custom method file path including the .4dm extension, e.g.:  
-`ObjectMethods/objectName.4dm`
+`../../CustomMethods/myMethod.4dm`
 You can also use a filesystem:  
 `/RESOURCES/Buttons/bOK.4dm`
 In this case, 4D does not provide automatic support for object operations.

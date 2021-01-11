@@ -63,7 +63,7 @@ Referenzen auf 4D Collection können spezifische Methoden, genannt *Member Metho
 
 > {$result:=}myCollection.memberFunction( {params} )
 
-Beachten Sie, dass eine member method auch ohne definierte Parameter in runden Klammern () stehen muss, sonst wird ein Syntaxfehler erzeugt.
+Beachten Sie, dass eine Member Method auch ohne definierte Parameter in runden Klammern () stehen muss, sonst wird ein Syntaxfehler erzeugt.
 
 Beispiel:
 

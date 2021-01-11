@@ -7,7 +7,7 @@ Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un 
 
 - MonProjet
     - Composants
-    - Data
+    - Données
         - Logs
         - Settings
     - Documentation
@@ -87,19 +87,19 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 #### Dossier Forms
 
-| Contenu                                   | Description                                  | Format |
-| ----------------------------------------- | -------------------------------------------- | ------ |
-| *formName*/form.4DForm                    | Description du formulaire projet             | json   |
-| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte  |
-| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | image  |
-| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte  |
+| Contenu                                   | Description                                  | Format  |
+| ----------------------------------------- | -------------------------------------------- | ------- |
+| *formName*/form.4DForm                    | Description du formulaire projet             | json    |
+| *formName*/method.4dm                     | Méthode formulaire projet                    | Texte   |
+| *formName*/Images/*pictureName*           | Image statique du formulaire projet          | picture |
+| *formName*/ObjectMethods/*objectName*.4dm | Méthodes objet. Un fichier par méthode objet | Texte   |
 
 #### Dossier TableForms
 
 | Contenu                                              | Description                                                                  | Format  |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------- | ------- |
 | *n*/Input/*formName*/form.4DForm                     | Description du formulaire d'entrée de la table (n étant le numéro de table)  | json    |
-| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | image   |
+| *n*/Input/*formName*/Images/*pictureName*            | Images statiques du formulaire d'entrée de la table                          | picture |
 | *n*/Input/*formName*/method.4dm                      | Méthode du formulaire d'entrée de la table                                   | Texte   |
 | *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Méthodes objet du formulaire d'entrée. Un fichier par méthode objet          | Texte   |
 | *n*/Output/*formName*/form.4DForm                    | Description du formulaire de sortie de la table (n étant le numéro de table) | json    |
@@ -136,10 +136,10 @@ Le dossier DerivedData contient des données en cache utilisées en interne par 
 
 Le dossier Resources contient tous les fichiers et dossiers de ressources personnalisés de la base de données. Dans ce dossier, vous pouvez placer tous les fichiers nécessaires à la traduction ou à la personnalisation de l'interface de l'application (fichiers image, fichiers texte, fichiers XLIFF, etc.). 4D utilise des mécanismes automatiques pour manipuler le contenu de ce dossier, notamment pour le traitement des fichiers XLIFF et des images statiques. Pour l'utilisation en mode distant, le dossier Resources vous permet de partager des fichiers entre le serveur et tous les ordinateurs clients. Voir le *Manuel 4D Server - Référence*.
 
-| Contenu               | Description                                                                                                                                                                                 | Format |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés |
-| Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | image  |
+| Contenu               | Description                                                                                                                                                                                 | Format  |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| *item*                | Fichiers et dossiers de ressources de la base                                                                                                                                               | variés  |
+| Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | picture |
 
 (*) uniquement si le projet a été exporté depuis une base binaire .4db.
 

@@ -4,15 +4,15 @@ title: Sous-formulaire
 ---
 
 ---
-## Allow Deletion
+## Autoriser la suppression
 
-Specifies if the user can delete subrecords in a list subform.
+Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-formulaire liste.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles           |
-| --------------- | --------------- | --------------------------- |
-| deletableInList | boolean         | true, false (default: true) |
+| Nom             | Type de données | Valeurs possibles               |
+| --------------- | --------------- | ------------------------------- |
+| deletableInList | boolean         | true, false (par défaut : true) |
 
 #### Objets pris en charge
 
@@ -20,15 +20,15 @@ Specifies if the user can delete subrecords in a list subform.
 
 
 ---
-## Detail Form
+## Formulaire détaillé
 
-You use this property to declare the detail form to use in the subform. It can be:
+Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
-- a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
-  You can select a component form name when it is published in the component.
-> You can generate [components](Concepts/components.md) providing additional functionalities through subforms.
+- un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. Dans ce cas, [le sous-formulaire de liste](#list-form) et les propriétés [Source](#source) doivent être vides ou non présents.   
+  Vous pouvez sélectionner un nom de formulaire de composant lorsqu'il est publié dans le composant.
+> Vous pouvez générer des [composants](Concepts/components.md) fournissant des fonctionnalités supplémentaires via des sous-formulaires.
 
-- the detail form to associate a with the [list subform](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
+- le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
 
 
 #### Grammaire JSON
@@ -44,16 +44,16 @@ You use this property to declare the detail form to use in the subform. It can b
 ---
 ## Double-click on empty row
 
-Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
-- Do nothing: Ignores double-click.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
+Action to perform in case of a double-click on an empty line of a list subform. Les options suivantes sont disponibles :
+- Ne rien faire : ignore le double-clic.
+- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. L'enregistrement sera créé directement dans la liste si la propriété [Saisissable dans la liste] est activée. Sinon, il sera créé en mode page, dans le [formulaire détaillé](detail-form) associé au sous-formulaire.
 
 
 #### Grammaire JSON
 
 | Nom                          | Type de données | Valeurs possibles                  |
 | ---------------------------- | --------------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string          | "addSubrecord" or "" to do nothing |
+| doubleClickInEmptyAreaAction | string          | "addSubrecord" ou "" to do nothing |
 
 #### Objets pris en charge
 
@@ -94,9 +94,9 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 ---
 ## Enterable in list
 
-When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
+Lorsque cette propriété est activée pour un sous-formulaire de liste, l'utilisateur peut modifier les données de l'enregistrement directement dans la liste, sans avoir à utiliser le [formulaire détaillé associé](#detail-form).
 
-> To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
+> Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic).
 
 
 #### Grammaire JSON
@@ -114,11 +114,9 @@ When a list subform has this property enabled, the user can modify record data d
 ---
 ## List Form
 
-You use this property to declare the list form to use in the subform.  A list subform lets you enter, view, and modify data in other tables.
+Cette option permet de désigner un formulaire liste à utiliser dans un sous-formulaire. Un sous-formulaire en liste vous permet de saisir, visualiser et modifier des données dans d’autres tables.
 
-List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. The input form is referred to as the Detail form.
-
-You can also allow the user to enter data in the List form.
+Les sous-formulaires de liste peuvent être utilisés pour la saisie de données de deux manières : l'utilisateur peut saisir des données directement dans le sous-formulaire ou les saisir dans un [formulaire de saisie](#detail-form). Dans cette configuration, le formulaire utilisé comme sous-formulaire est appelé formulaire Liste. Le formulaire de saisie est appelé le formulaire détaillé.
 
 #### Grammaire JSON
 
@@ -135,13 +133,13 @@ You can also allow the user to enter data in the List form.
 ---
 ## Source
 
-Specifies the table that the list subform belongs to (if any).
+Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas échéant).
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                 |
-| ----- | --------------- | --------------------------------- |
-| table | string          | 4D table name, or "" if no table. |
+| Nom   | Type de données | Valeurs possibles                                     |
+| ----- | --------------- | ----------------------------------------------------- |
+| table | string          | Nom de la table 4D, ou "" s'il n'existe aucune table. |
 
 #### Objets pris en charge
 

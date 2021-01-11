@@ -6,13 +6,13 @@ title: Quadrillage
 ---
 ## Couleur lignes horizontales
 
-Defines the color of the horizontal lines in a list box (gray by default).
+Définit la couleur des lignes horizontales dans une list box (gris par défaut).
 
 #### Grammaire JSON
 
 | Nom                  | Type de données | Valeurs possibles                          |
 | -------------------- | --------------- | ------------------------------------------ |
-| horizontalLineStroke | color           | any css value, "'transparent", "automatic" |
+| horizontalLineStroke | color           | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 
@@ -24,13 +24,13 @@ Defines the color of the horizontal lines in a list box (gray by default).
 ---
 ## Couleur lignes verticales
 
-Defines the color of the vertical lines in a list box (gray by default).
+Définit la couleur des lignes verticales d'une list box (gris par défaut).
 
 #### Grammaire JSON
 
 | Nom                | Type de données | Valeurs possibles                          |
 | ------------------ | --------------- | ------------------------------------------ |
-| verticalLineStroke | color           | any css value, "'transparent", "automatic" |
+| verticalLineStroke | color           | une valeur css; "transparent"; "automatic" |
 
 #### Objets pris en charge
 

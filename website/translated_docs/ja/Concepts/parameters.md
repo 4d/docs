@@ -51,7 +51,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 引数はあらゆる [式](Concepts/quick-tour.md#式のタイプ) の形で渡すことができますが、例外があります:
 
 - テーブル
-- 配列
+- arrays
 
 テーブルや配列の式は [ポインターを介した参照として](Concepts/dt_pointer.md#メソッドの引数としてのポインター) 渡す必要があります。
 

@@ -5,7 +5,7 @@ title: '$method'
 
 This parameter allows you to define the operation to execute with the returned entity or entity selection.
 
-## Available syntaxes
+## 使用可能なシンタックス
 
 | シンタックス                                          | 例題                                                                                              | 説明                                                                                                         |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ You can also delete an entity set using $entityset/{entitySetID}:
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
-Response:
+レスポンス:
 
 ```
 {
@@ -97,7 +97,7 @@ Release an existing entity set:
 
 `GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
 
-#### Response:
+#### レスポンス:
 
 If the request was successful, the following response is returned:
 
@@ -138,7 +138,7 @@ If you want to retrieve only the related entities for a specific entity, you can
 
 `GET  /rest/Company(1)/staff?$expand=staff&$method=subentityset&$subOrderby=lastName ASC`
 
-#### Response:
+#### レスポンス:
 
 ```
 {
@@ -258,7 +258,7 @@ You can also create and update multiple entities at the same time using the same
 }]
 ```
 
-**Response:**
+**レスポンス:**
 
 When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:
 
@@ -321,7 +321,7 @@ If, for example, the stamp is not correct, the following error is returned:
             "errCode": 1046
         },
         {
-            "message": "The entity# 1 in the \"Persons\" datastore class cannot be saved",
+            "message": "The entity# 1 in the \"Persons\" dataclass cannot be saved",
             "componentSignature": "dbmg",
             "errCode": 1517
         }

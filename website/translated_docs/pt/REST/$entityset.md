@@ -49,7 +49,7 @@ Create another entity set based on previously created entity sets
 
 ### Description
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same datastore class.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same dataclass.
 
 You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
 

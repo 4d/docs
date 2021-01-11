@@ -371,24 +371,43 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                 |
 | unselectable        | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。 このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。 チェックボックスやリストといったコントロール類は引き続き稼働します。 この設定はリストボックスの選択モードが "なし" の場合には無視されます。 デフォルト値: false |
 | disabled            | boolean | 対応する行を無効化します。 このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。 テキストや、(チェックボックス、リストなどの) コントロール類は暗くなっているかグレーアウトされます。 デフォルト値: false                                                                                                |
-| cell.\<columnName> | オブジェクト  | プロパティを単一のカラムに適用するときに使用します。 \<columnName> には、リストボックスカラムのオブジェクト名を渡します。 **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。                                                       |
+| cell.\<columnName> | object  | プロパティを単一のカラムに適用するときに使用します。 \<columnName> には、リストボックスカラムのオブジェクト名を渡します。 **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。                                                       |
 
 
 
 
 > このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
 
-以下の例題では *Color* プロジェクトメソッドを使用する場合を考えます。
+**例題**
 
-フォームメソッドには、以下のように書きます:
+*Color* プロジェクトメソッドには、以下のコードを書きます:
 
 
 
 ```4d
-// フォームメソッド
+// Color メソッド
+// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
+C_OBJECT($0)
+Form.meta:=New object
+If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
+  Form.meta.stroke:="purple"
+  Form.meta.cell:=New object("Column2";New object("fill";"black"))
+Else
+  Form.meta.stroke:="orange"
+End if
+$0:=Form.meta
+```
+
+
+**ベストプラクティス:** このような場合には最適化のため、フォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
+
+
+
+```4d
+  // フォームメソッド
 Case of
-  :(Form event=On Load)
-   Form.meta:=New object
+  :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
 End case
 ```
 
@@ -398,16 +417,12 @@ End case
 
 
 ```4d
-// Color メソッド
-// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
-C_OBJECT($0)
-If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
-  Form.meta.stroke:="purple"
-  Form.meta.cell:=New object("Column2";New object("fill";"black"))
-Else
-  Form.meta.stroke:="orange"
-End if
-$0:=Form.meta
+  // Color メソッド
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle // より良いパフォーマンスのため、同じオブジェクトを再利用します
+ ...
 ```
 
 

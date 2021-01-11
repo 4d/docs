@@ -12,7 +12,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 | Name        | Datentyp | Possible Values |
 | ----------- | -------- | --------------- |
-| showHeaders | boolean  | true, false     |
+| showHeaders | Boolean  | true, false     |
 
 #### Objects Supported
 

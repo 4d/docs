@@ -12,7 +12,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 | Name            | Datentyp | Possible Values             |
 | --------------- | -------- | --------------------------- |
-| deletableInList | boolean  | true, false (default: true) |
+| deletableInList | Boolean  | true, false (default: true) |
 
 #### Objects Supported
 
@@ -103,7 +103,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 | Name            | Datentyp | Possible Values |
 | --------------- | -------- | --------------- |
-| enterableInList | boolean  | true, false     |
+| enterableInList | Boolean  | true, false     |
 
 
 #### Objects Supported
@@ -114,11 +114,9 @@ When a list subform has this property enabled, the user can modify record data d
 ---
 ## List Form
 
-You use this property to declare the list form to use in the subform.  A list subform lets you enter, view, and modify data in other tables.
+You use this property to declare the list form to use in the subform. A list subform lets you enter, view, and modify data in other tables.
 
 List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. The input form is referred to as the Detail form.
-
-You can also allow the user to enter data in the List form.
 
 #### JSON Grammar
 

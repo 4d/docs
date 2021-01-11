@@ -27,7 +27,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 ---
 ## Styles de bouton
 
-General appearance of the button. The button style also plays a part in the availability of certain options.
+Aspect général du bouton. Le style du bouton joue également un rôle dans la disponibilité de certaines options.
 
 
 #### Grammaire JSON
@@ -93,9 +93,9 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 ---
 ## Décalage icône
 
-Sets a custom offset value in pixels, which will be used when the button is clicked
+Définit une valeur de décalage personnalisée en pixels, qui sera utilisée lorsque le bouton est cliqué
 
-The title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This allows applying a customized 3D effect when the button is clicked.
+Le titre du bouton sera décalé vers la droite et vers le bas pour le nombre de pixels saisis. Cela permet d'appliquer un effet 3D personnalisé lorsque le bouton est cliqué.
 
 #### Grammaire JSON
 
@@ -112,16 +112,16 @@ The title of the button will be shifted to the right and toward the bottom for t
 ---
 ## Nombre d'états
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive.
+Cette propriété définit le nombre exact d'états présents dans l'image utilisée comme icône pour un [bouton avec icône](button_overview.md), une [case à cocher](checkbox_overview.md) ou un [bouton radio](radio_overview.md) personnalisé. En général, une icône de bouton comprend quatre états : actif, cliqué, survolé et inactif.
 
-Each state is represented by a different picture. In the source picture, the states must be stacked vertically:
+Chaque état est représenté par une image différente. Dans l'image source, les états doivent être empilés verticalement :
 
 ![](assets/en/property_numberOfStates.png)
 
-The following states are represented:
-1. button not clicked / check box unchecked (variable value=0)
-2. button clicked / check box checked (variable value=1)
-3. roll over
+Les états suivants sont représentés :
+1. bouton non cliqué / case non cochée (valeur de la variable = 0)
+2. bouton cliqué / case cochée (valeur de la variable = 1)
+3. survolé
 4. disabled
 
 
@@ -133,48 +133,48 @@ The following states are represented:
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) (tous les styles sauf[Aide](button_overview.md#help)) - [Case à cocher](checkbox_overview.md) - [Bouton radio](radio_overview.md)
 
 
 
 
 
 ---
-## Picture pathname
+## Chemin d'accès de l'image
 
-Sets the path of the picture that will be used as icon for the object.
+Définit le chemin d'accès de l'image qui sera utilisée comme icône de l'objet.
 
 Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'accès pour les images statiques](properties_Picture.md#pathname).
 
-> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
+> Lorsqu'elle est utilisée comme icône pour les objets actifs, l'image doit être conçue pour prendre en charge [un nombre d'états](#number-of-states) variable.
 
 #### Grammaire JSON
 
-| Nom  | Type de données | Valeurs possibles                            |
-| ---- | --------------- | -------------------------------------------- |
-| icon | picture         | Relative or filesystem path in POSIX syntax. |
+| Nom  | Type de données | Valeurs possibles                              |
+| ---- | --------------- | ---------------------------------------------- |
+| icon | picture         | Chemin relatif ou filesystem en syntaxe POSIX. |
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) (tous les styles sauf[Aide](button_overview.md#help)) - [Case à cocher](checkbox_overview.md) - [En-tête List box](listbox_overview.md#list-box-headers)[Bouton radio](listbox_overview.md#list-box-headers)
 
 
 
 
 ---
-## Title/Picture Position
+## Position Titre/Image
 
-This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a button contains a title and a picture, the text is placed below the picture.
+Cette propriété permet de modifier l’emplacement relatif du titre par rapport à l’icône associée. Cette propriété n’a pas d’effet lorsque le bouton contient uniquement un titre (pas d’image associée) ou une image (pas de titre). Par défaut, lorsqu’un bouton 3D contient un titre et une image, le texte est placé en-dessous de l’image.
 
-Here are the results using the various options for this property:
+Voici le résultat des différentes options de cette propriété :
 
-| Option       | Description                                                                                                                                      | Exemple                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Gauche**   | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Haut**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Droite**   | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Bas**      | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centered** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
+| Option     | Description                                                                                                                                              | Exemple                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Gauche** | Le texte est placé à gauche de l’icône. Le contenu du bouton est aligné à droite.                                                                        | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Haut**   | Le texte est placé au-dessus de l’icône. Le contenu du bouton est centré.                                                                                | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Droite** | Le texte est placé à droite de l’icône. Le contenu du bouton est aligné à gauche.                                                                        | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Bas**    | Le texte est placé en-dessous de l’icône. Le contenu du bouton est centré.                                                                               | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Centre** | Le texte de l’icône est centré verticalement et horizontalement dans le bouton. Ce paramétrage convient par exemple pour du texte inclus dans une icône. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Grammaire JSON
 
@@ -184,19 +184,19 @@ Here are the results using the various options for this property:
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) (tous les styles sauf[Aide](button_overview.md#help)) - [Case à cocher](checkbox_overview.md) - [Bouton radio](radio_overview.md)
 
 
 
 
 ---
-## Vertical Margin
+## Marge verticale
 
-This property allows setting the size (in pixels) of the vertical margins of the button. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
+Cette propriété permet de définir la taille (en pixels) des marges verticales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
-This parameter is useful, for example, when the background picture contains borders.
+Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordures.
 
-> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
+> Cette propriété fonctionne avec la propriété [Marge horizontale](#horizontal-margin).
 
 #### Grammaire JSON
 
@@ -212,32 +212,32 @@ This parameter is useful, for example, when the background picture contains bord
 
 
 ---
-## With pop-up menu
+## Avec pop-up menu
 
-This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+Cette propriété permet d’afficher un symbole en forme de triangle indiquant qu’un pop up menu lui est associé :
 
 ![](assets/en/FormObjects/property_popup.png)
 
-The appearance and location of this symbol depends on the button style and the current platform.
+L’apparence et l’emplacement de ce symbole dépend du style de bouton et de la plate-forme courante.
 
 
-### Linked and Separated
+### Séparé et Lié
 
-To attach a pop-up menu symbol to a button, there are two display options available:
+Pour associer un symbole de pop up menu à un bouton, vous disposez de deux options d’affichage :
 
-|                        Linked                        |                        Separated                        |
+|                        Séparé                        |                         Et Lié                          |
 |:----------------------------------------------------:|:-------------------------------------------------------:|
 | ![](assets/en/FormObjects/property_popup_linked.png) | ![](assets/en/FormObjects/property_popup_separated.png) |
-> The actual availability of a "separated" mode depends on the style of the button and the platform.
+> La disponibilité effective d’un mode “Séparé” dépend du style de bouton et de la plate-forme.
 
-Each option specifies the relation between the button and the attached pop-up menu:
+Chaque option précise la relation entre le bouton et le pop up menu associé :
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button. <li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.
+<li>Lorsque le pop up menu est **séparé**, un clic sur la partie gauche du bouton exécute directement l’action courante du bouton ; cette action peut être modifiée via le pop up menu accessible dans la partie droite du bouton. <li>Lorsque le pop up menu est **lié**, un simple clic sur le bouton ne déclenche aucune autre action que l’affichage du pop up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.
 
 
-### Managing the pop-up menu
+### Gestion du pop up menu
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L’affichage du pop up menu et de ses valeurs doivent être entièrement gérés par le développeur, notamment à l’aide des `événements formulaire` et des commandes **[Pop up menu dynamique](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** et **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)**.
 
 
 #### Grammaire JSON
@@ -249,4 +249,4 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 #### Objets pris en charge
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Bouton barre outils](button_overview.md#toolbar) - [Bouton Bevel](button_overview.md#bevel) - [Bouton bevel circulaire](button_overview.md#Rounded-bevel) - [Bouton OS X Gradient](button_overview.md#os-x-gradient) - [Bouton OS X Textured](button_overview.md#os-x-textured) - [Bouton Office XP](button_overview.md#office-XP) - [Bouton cercle](button_overview.md#circle) - [Personnalisé](button_overview.md#custom)

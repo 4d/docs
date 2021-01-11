@@ -72,19 +72,19 @@ The 4D Language includes a dedicated "List Box" theme for list box commands, but
 
 Dans une list box de type tableau, chaque colonne est associée à un tableau 4D à une dimension ; tous les types de tableaux peuvent être utilisés, à l’exception des tableaux de pointeurs. The number of rows is based on the number of array elements.
 
-By default, 4D assigns the name “ColumnX” to each column variable, and thus to each associated array. You can change it, as well as other column properties, in the [column properties](listbox_overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command
+By default, 4D assigns the name "ColumnX" to each column. You can change it, as well as other column properties, in the [column properties](listbox_overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command.
 > Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms.
 
 Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry. Les valeurs des colonnes sont gérées à l’aide des commandes de haut niveau du thème List box (telles que `LISTBOX INSERT ROWS` ou `LISTBOX INSERT COLUMN`) ainsi que des commandes de manipulation des tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
-ARRAY TEXT(ColumnName;size)
+ARRAY TEXT(varCol;size)
 ```
 
 Vous pouvez également utiliser une énumération :
 
 ```4d
-LIST TO ARRAY("ListName";ColumnName)
+LIST TO ARRAY("ListName";varCol)
 ```
 > **Attention :** Lorsqu’un objet List box contient plusieurs colonnes de tailles différentes, seul le nombre d’éléments correspondant au plus petit tableau est affiché. Il est donc conseillé de veiller à ce que chaque tableau ait le même nombre d’éléments que les autres. A noter également que si une colonne de la list box est “vide” (c'est le cas lorsque le tableau associé n'a pas été correctement déclaré ou dimensionné via le langage), la list box n'affiche aucun contenu.
 
@@ -208,7 +208,7 @@ A list box is made of one or more column object(s) which have specific propertie
 ![](assets/en/FormObjects/listbox_column.png)
 
 You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
-> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). The use of object arrays requires a 4D View Pro licence (see [Using object arrays in columns (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
+> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). L'utilisation de tableaux d'objets nécessite une licence 4D View Pro (voir [Utilisation de tableaux d'objets en colonnes (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
 
 
 ### Propriétés spécifiques des list box
@@ -225,6 +225,7 @@ Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans
 ![](assets/en/FormObjects/listbox_header.png)
 
 Vous pouvez définir, pour chaque en-tête de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box.
+
 
 Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
 
@@ -268,7 +269,7 @@ When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to al
 For a list box cell to be enterable, both of the following conditions must be met:
 
 - The cell’s column must have been set as [Enterable](properties_Entry.md#enterable) (otherwise, the cells of the column can never be enterable).
-- In the `On Before Data Entry` event, $0 does not return -1. When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the column method. If, in the context of this event, $0 is set to -1, the cell is considered as not enterable. If the event was generated after **Tab** or **Shift+Tab** was pressed, the focus goes to either the next cell or the previous one, respectively. If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.
+- In the `On Before Data Entry` event, $0 does not return -1. When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the column method. Si, dans le contexte de cet événement, $0 est défini sur -1, la cellule est considérée comme non saisissable. Si l'événement a été généré après avoir appuyé sur **Tab** ou **Maj+Tab**, le focus va respectivement à la cellule suivante ou à la précédente. Si la valeur de $0 n'est pas -1 (par défaut $0 est 0), la cellule est saisissable et passe en mode d'édition.
 
 Let’s consider the example of a list box containing two arrays, one date and one text. The date array is not enterable but the text array is enterable if the date has not already past.
 
@@ -278,13 +279,13 @@ Here is the method of the *arrText* column:
 
 ```4d
  Case of
-    :(Form event=On Before Data Entry) // a cell gets the focus
+    :(Form event=On Before Data Entry) // une cellule obtient le focus
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
-  // identification of cell
-       If(arrDate{$row}<Current date) // if date is earlier than today
-          $0:=-1 // cell is NOT enterable
+  // identification d'une cellule
+       If(arrDate{$row}<Current date) // si la date est antérieure à aujourd'hui
+          $0:=-1 // la cellule n'est PAS saisissable
        Else
-  // otherwise, cell is enterable
+  // sinon, la cellule est saisissable
        End if
  End case
 ```
@@ -395,11 +396,11 @@ In the object method of the list box, you can write:
  Case of
     :(Form event=On Selection Change)
        $n:=Size of array(LB_Arrays)
-       ARRAY LONGINT(_ListboxBackground;$n) // row background colors
+       ARRAY LONGINT(_ListboxBackground;$n) // couleurs d'arrière-plan de la ligne
        For($i;1;$n)
-          If(LB_Arrays{$i}=True) // selected
-             _ListboxBackground{$i}:=0x0080C080 // green background
-          Else // not selected
+          If(LB_Arrays{$i}=True) // sélectionné
+             _ListboxBackground{$i}:=0x0080C080 // arrière-plan vert
+          Else // non sélectionné
              _ListboxBackground{$i}:=lk inherited
           End if
        End for
@@ -733,7 +734,7 @@ Les colonnes de list box peuvent être associées à des tableaux d'objets. Comm
 La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ![](assets/en/FormObjects/listbox_column_objectArray.png)
-> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. For more information, please refer to the 4D Web site.
+> **Note sur les licences** : La possibilité d'utiliser des tableaux d'objets dans des list box est une première étape vers le prochain outil "4D View Pro" qui remplacera progressivement le plug-in 4D View. L'utilisation de cette fonctionnalité nécessite une licence 4D View valide. Pour plus d'informations, veuillez consulter le site Web de 4D.
 
 ### Configuring an object array column
 

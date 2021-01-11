@@ -74,7 +74,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 | Name                | Datentyp | Possible Values |
 | ------------------- | -------- | --------------- |
-| continuousExecution | boolean  | true, false     |
+| continuousExecution | Boolean  | true, false     |
 
 #### Objects Supported
 
@@ -99,7 +99,7 @@ Several types of method references are supported:
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
 - a custom method file path including the .4dm extension, e.g.:  
-  `ObjectMethods/objectName.4dm` You can also use a filesystem:  
+  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
   `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
 
 
@@ -127,7 +127,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 | Name        | Datentyp | Possible Values |
 | ----------- | -------- | --------------- |
-| movableRows | boolean  | true, false     |
+| movableRows | Boolean  | true, false     |
 
 #### Objects Supported
 
@@ -170,7 +170,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 | Name     | Datentyp | Possible Values |
 | -------- | -------- | --------------- |
-| sortable | boolean  | true, false     |
+| sortable | Boolean  | true, false     |
 
 #### Objects Supported
 [List Box](listbox_overview.md)

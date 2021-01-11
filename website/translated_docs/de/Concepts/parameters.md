@@ -48,12 +48,12 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 
 ### Unterstützte Ausdrücke
 
-Sie können jeden [Ausdruck](Concepts/quick-tour.md#expression-types) als Parameter verwenden, außer:
+Sie können jeden [Ausdruck](Concepts/quick-tour.md#ausdruckstypen) als Parameter verwenden, außer:
 
 - Tabellen
-- Arrays
+- arrays
 
-Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#pointers-as-parameters-to-methods).
+Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](Concepts/dt_pointer.md#zeiger-als-parameter-in-methoden).
 
 
 ## Funktionen
@@ -89,7 +89,7 @@ Das Funktionsergebnis `$0` ist eine lokale Variable innerhalb der Unterroutine. 
 
 ## Parameter deklarieren
 
-Auch wenn es im [interpretierten Modus](Concepts/interpreted.md) nicht zwingend ist, müssen Sie jeden Parameter in den aufgerufenen Methoden deklarieren, um Probleme zu vermeiden.
+Auch wenn es im [interpretierten Modus](Concepts/interpreted-compiled.md) nicht zwingend ist, müssen Sie jeden Parameter in den aufgerufenen Methoden deklarieren, um Probleme zu vermeiden.
 
 Im folgenden Beispiel deklariert die Projektmethode `OneMethodAmongOthers` drei Parameter:
 
@@ -138,7 +138,7 @@ C_OBJECT($3)
 ```4d
  C_REAL(OneMethodAmongOthers;$1)
 ```
-Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und komplierter Modus](Concepts/interpreted.md).
+Weitere Informationen dazu finden Sie auf der Seite [Interpretierter und kompilierter Modus](Concepts/interpreted-compiled.md).
 
 Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterstützen nicht die Deklaration in einer "Compiler" Methode):
 
@@ -213,9 +213,9 @@ Dieser zweite Weg (durch eine Unterroutine einen Wert zurückgeben) wird "eine F
 
 ### Sonderfälle: Objekte und Collections
 
-Sie müssen im Blick behalten, dass sich Daten vom Typ Objekt und Collection nur über eine Referenz verwalten lassen (z.B. ein interner *Zeiger*).
+Daten vom Typ Objekt und Collection werden automatisch über eine Referenz verwaltet (wie ein interner *Zeiger*).
 
-Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#pointers-as-parameters-to-methods), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
+Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#zeiger-als-parameter-in-methoden), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
 
 Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als Parameter sendet:
 
@@ -295,7 +295,7 @@ End if
 $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
-Hier ist der Vorteil, dass sie Ihren vorhandenen Code nicht verändern müssen. Er wird immer wie in der vorigen Version funktionieren, aber bei Bedarf können Sie einen anderen Wert als 10 Jahre verwenden.
+Hier ist der Vorteil, dass Sie Ihren vorhandenen Code nicht verändern müssen. Er wird immer wie in der vorigen Version funktionieren, aber bei Bedarf können Sie einen anderen Wert als 10 Jahre verwenden.
 
 Bei Variablen mit Namen kann jeder Parameter optional sein. Im oberen Beispiel sind alle Parameter optional und jeder kann gegeben sein, in beliebiger Reihenfolge.
 

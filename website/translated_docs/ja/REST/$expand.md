@@ -10,16 +10,16 @@ Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$image
 
 
 
-## Viewing an image attribute
+## 画像属性の表示
 
-If you want to view an image attribute in its entirety, write the following:
+画像属性の全体像を表示させるには、次のように書きます:
 
  `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
+画像形式についての詳細は [`$imageformat`]($imageformat.md) を参照ください。 version パラメーターについての詳細は [`$version`]($version.md) を参照ください。
 
-## Saving a BLOB attribute to disk
+## BLOB属性のディスク保存
 
-If you want to save a BLOB stored in your datastore class, you can write the following by also passing "true" to $binary:
+If you want to save a BLOB stored in your dataclass, you can write the following by also passing "true" to $binary:
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`

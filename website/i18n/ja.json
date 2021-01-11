@@ -66,7 +66,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字列"
       },
       "Concepts/time": {
         "title": "時間"
@@ -87,7 +87,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "メソッド"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -280,7 +280,7 @@
         "title": "インストールとアクティベーション"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "メニューバーの管理"
       },
       "Menus/creating": {
         "title": "メニューとメニューバーの作成"
@@ -292,7 +292,7 @@
         "title": "メニュープロパティ"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Windows での SDIモード"
       },
       "MSC/analysis": {
         "title": "ログ解析ページ",
@@ -425,22 +425,22 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
       },
       "REST/configuration": {
-        "title": "Server Configuration"
+        "title": "サーバー設定"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "サーバー情報の取得"
       },
       "REST/gettingStarted": {
         "title": "はじめに"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "データ操作"
       },
       "REST/REST_requests": {
-        "title": "About REST Requests"
+        "title": "RESTリクエストについて"
       },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
@@ -465,7 +465,7 @@
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Users and Groups": "ユーザー＆グループ",
-      "REST Server": "REST Server"
+      "REST Server": "REST サーバー"
     }
   },
   "pages-strings": {
@@ -473,13 +473,14 @@
     "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
     "Project databases|in index page Getting started": "プロジェクトデータベース",
     "Form Editor|no description given": "フォームエディター",
-    "Form Events|no description given": "Form Events",
+    "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
-    "Web Server|no description given": "Web Server",
-    "REST Server|no description given": "REST Server",
+    "Web Server|no description given": "Web サーバー",
+    "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
+    "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Backup and Restore|no description given": "バックアップと復元",
     "Users and Groups|no description given": "ユーザー＆グループ",
     "Getting started|no description given": "はじめに",

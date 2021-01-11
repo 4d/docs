@@ -29,8 +29,8 @@ The Administrator cannot:
 
 Both the Designer and Administrator are available by default in all databases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
-- Designer icon: ![](assets/en/Users/IconDesigner.png)
-- Administrator icon: ![](assets/en/Users/IconAdmin.png)
+- Designer icon: ![](assets/en/Users/iconDesigner.png)
+- Administrator icon: ![](assets/en/Users/iconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 

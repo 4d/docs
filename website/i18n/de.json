@@ -12,7 +12,7 @@
         "title": "Log file (.journal)"
       },
       "Backup/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "Backup/restore": {
         "title": "Restore"
@@ -84,7 +84,7 @@
         "title": "Namensregeln"
       },
       "Concepts/interpreted-compiled": {
-        "title": "Interpreted and Compiled modes"
+        "title": "Interpretierter und kompilierter Modus"
       },
       "Concepts/methods": {
         "title": "Methoden"
@@ -112,7 +112,7 @@
         "title": "Object libraries"
       },
       "FormEditor/pictures": {
-        "title": "Pictures"
+        "title": "Bilder"
       },
       "FormObjects/buttonOverview": {
         "title": "Button"
@@ -286,7 +286,7 @@
         "title": "Creating menus and menu bars"
       },
       "Menus/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "Menus/properties": {
         "title": "Menu item properties"
@@ -315,8 +315,8 @@
         "sidebar_label": "Seite Information"
       },
       "MSC/overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
+        "title": "Überblick",
+        "sidebar_label": "Überblick"
       },
       "MSC/repair": {
         "title": "Seite Reparieren",
@@ -347,7 +347,7 @@
         "title": "Developing a project"
       },
       "Project/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -446,7 +446,7 @@
         "title": "Managing 4D users and groups"
       },
       "Users/overview": {
-        "title": "Overview"
+        "title": "Überblick"
       }
     },
     "links": {
@@ -480,6 +480,7 @@
     "Web Server|no description given": "Web Server",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
+    "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Backup and Restore|no description given": "Backup and Restore",
     "Users and Groups|no description given": "Users and Groups",
     "Getting started|no description given": "Getting started",

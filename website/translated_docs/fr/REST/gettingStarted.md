@@ -5,7 +5,7 @@ title: Prise en main
 
 4D vous fournit un serveur REST puissant, qui permet d'accéder directement aux données stockées dans vos bases de données 4D.
 
-The REST server is included in the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
+Le serveur REST est inclus dans les applications 4D et 4D Server et automatiquement disponible dans vos bases 4D [une fois configuré](configuration.md).
 
 Cette section est destinée à vous familiariser avec la fonctionnalité REST à l'aide d'un exemple simple. Nous allons :
 - créer et configurer une base de données 4D simple

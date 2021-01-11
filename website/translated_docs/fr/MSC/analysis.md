@@ -32,7 +32,7 @@ Les informations affichées permettent d’identifier la source et le contexte d
 - **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération. Taille : taille en octets des données traitées par l’opération.
 - **Taille** : taille (en octets) des données traitées par l’opération.
 - **Date et Heure** : date et heure à laquelle l’opération a été effectuée.
-- **Utilisateur** : nom de l’utilisateur ayant effectué l’opération. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.
+- **Utilisateur** : nom de l’utilisateur ayant effectué l’opération. En version client-serveur, le nom de la machine du poste client s'affiche. En version monoposte, l'ID de l’utilisateur s'affiche. Si les mots de passe de 4D ne sont pas activés, cette colonne est vide.
 - **Valeurs** : valeurs des champs de l’enregistrement en cas d’ajout ou de modification. Les valeurs sont séparées par des “;”. Seules les valeurs représentables sous forme alphanumérique sont affichées.  
   ***Note** : Si la base est chiffrée et si aucune clé de données valide correspondant au fichier d'historique n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne.*
 - **Enregistrements** : Numéro de l’enregistrement.
