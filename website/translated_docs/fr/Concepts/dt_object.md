@@ -5,7 +5,7 @@ title: Objet
 
 Les variables, champs ou expressions de type objet peuvent contenir des données de divers types. La structure des objets "natifs" 4D est basée sur le principe classique des paires "propriété/valeur" (aussi appelées "attribut/valeur). La syntaxe de ces objets s’inspire du JSON :
 
-- Un nom de propriété est toujours un texte, par exemple "Nom".
+- Un nom de propriété est toujours un texte, par exemple "Nom". It must follow [specific rules](identifiers.md#object-properties).
 
 - Une valeur de propriété peut être du type suivant :
     - Nombre (réel, entier long, etc.)
@@ -22,11 +22,11 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 **Attention :** N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules.
 
-Pour gérer les variables, champs ou expressions de type objet, vous pouvez utiliser la notation objet (cf. [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)) ou les commandes 4D du thème **Objets (Langage)**. A noter que des commandes spécifiques du thème Requêtes, telles que `CHERCHER PAR ATTRIBUT`, `CHERCHER PAR ATTRIBUT DANS SELECTION` ou `TRIER PAR ATTRIBUT` peuvent être utilisées pour traiter des champs objets.
+You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](dt_object.md#syntax-basics)). A noter que des commandes spécifiques du thème Requêtes, telles que `CHERCHER PAR ATTRIBUT`, `CHERCHER PAR ATTRIBUT DANS SELECTION` ou `TRIER PAR ATTRIBUT` peuvent être utilisées pour traiter des champs objets.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. You can use such values wherever 4D expressions are expected:
 
-- Dans le code 4D, soit écrites dans les méthodes (éditeur de méthodes) soit externalisées (formules, fichiers d'étiquettes traités par la commande PROCESS 4D TAGS ou le Serveur Web, fichiers d'export, documents 4D Write Pro, etc.),
+- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,
 - Dans la liste de propriétés de l'éditeur de formulaires pour les objets formulaires : champ Variable ou Expression et plusieurs expressions de list box et colonnes (source de données, couleur de fond, style ou couleur de police).
 
@@ -89,6 +89,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
  $val:=$myCollection[3].subvalue //élément de collection
 ```
 - avec les **commandes 4D** qui retournent des objets. Exemple :
+
 
 ```4d
      $measures:=Lire mesures base.DB.tables
@@ -212,19 +213,6 @@ Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous
  $myString:=Lowercase(String($o.a.b)) //pour être sûr d'obtenir une valeur texte même si indéfinie
   //afin d'éviter des erreurs dans le code
 ```
-
-## Identifiants de propriétés d'objets
-
-Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux [noms d'objets 4D standard](identifiers.md). Ils doivent se conformer à la grammaire des identificateurs JavaScript (voir [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
-
-- le premier caractère doit être une lettre, un trait de soulignement (_) ou le symbole dollar ($),
-- les autres caractères peuvent être des lettres, des chiffres, des traits de soulignement ou des symboles dollar (les espaces sont proscrits),
-- ils différencient les caractères majuscules/minuscules.
-
-**Notes :**
-
-- L'utilisation d'un champ comme indice de collection, par exemple a.b[[Table1]Id], n'est pas autorisé. Vous devez utiliser une variable intermédiaire.
-- La création d'attributs d'objets à l'aide d'une chaîne entre crochets permet de s'affranchir des règles d'ECMA Script. Par exemple, l'attribut `$o["My Att"]` est valide dans 4D, malgré l'espace. Dans ce cas cependant, il ne sera pas possible d'utiliser la notation à points et l'autocomplétion avec cet attribut.
 
 
 ## Exemples

@@ -12,7 +12,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 | Name            | Datentyp | Possible Values             |
 | --------------- | -------- | --------------------------- |
-| deletableInList | boolean  | true, false (default: true) |
+| deletableInList | Boolean  | true, false (default: true) |
 
 #### Objects Supported
 
@@ -103,7 +103,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 | Name            | Datentyp | Possible Values |
 | --------------- | -------- | --------------- |
-| enterableInList | boolean  | true, false     |
+| enterableInList | Boolean  | true, false     |
 
 
 #### Objects Supported

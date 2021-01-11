@@ -29,7 +29,7 @@ ASSERT($status.success)
 ### Summary
 |                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #cryptokey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.new().Summary -->|
+| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
 | [<!-- INCLUDE #cryptokey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.curve.Summary --> |
 | [<!-- INCLUDE #cryptokey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.decrypt().Summary -->|
 | [<!-- INCLUDE #cryptokey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.encrypt().Summary -->|
@@ -39,6 +39,8 @@ ASSERT($status.success)
 | [<!-- INCLUDE #cryptokey.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.size.Summary --> |
 | [<!-- INCLUDE #cryptokey.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.type.Summary --> |
 | [<!-- INCLUDE #cryptokey.verify().Syntax -->](#verify)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #cryptokey.verify().Summary -->|
+
+
 
 
 
@@ -57,7 +59,7 @@ ASSERT($status.success)
 
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
-<!-- REF #cryptokey.new().Params -->
+<!-- REF #4D.CryptoKey.new().Params -->
 | Parameter | Typ          |    | Beschreibung                                                           |
 | --------- | ------------ | -- | ---------------------------------------------------------------------- |
 | settings  | Objekt       | -> | Settings to generate or load a key pair                                |
@@ -82,7 +84,7 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 #### *cryptoKey*
 
 The returned `cryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
-<!-- END REF -->
+
 
 
 <!-- REF cryptokey.curve -->
@@ -144,7 +146,7 @@ The function returns a status object with `success` property set to `true` if th
 
 | Property | Typ        | Beschreibung                                                        |
 | -------- | ---------- | ------------------------------------------------------------------- |
-| success  | boolean    | True if the message has been successfully decrypted                 |
+| success  | Boolean    | True if the message has been successfully decrypted                 |
 | result   | Text       | Message decrypted and decoded using the `options.encodingDecrypted` |
 | errors   | collection | If `success` is `false`, may contain a collection of errors         |
 
@@ -295,7 +297,7 @@ The `cryptoKey` must contain a valid **private** key.
 | ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | Text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
 | encodingEncrypted | Text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                  |
-| pss               | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
+| pss               | Boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm                                   |
 | encoding          | Text    | ERepresentation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".                                                      |
 
 
@@ -368,7 +370,7 @@ The `cryptoKey` must contain a valid **public** key.
 | Property | Typ     | Beschreibung                                                                                                                                                         |
 | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash     | Text    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-| pss      | boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
+| pss      | Boolean | Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when verifying a JWT for PS@ algorithm                                   |
 | encoding | Text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Default is "Base64".                                                              |
 
 
@@ -380,7 +382,7 @@ In case the signature couldn't be verified because it was not signed with the sa
 
 | Property | Typ        | Beschreibung                                                |
 | -------- | ---------- | ----------------------------------------------------------- |
-| success  | boolean    | True if the signature matches the message                   |
+| success  | Boolean    | True if the signature matches the message                   |
 | errors   | collection | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 

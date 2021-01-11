@@ -157,7 +157,7 @@ The differences are returned as a collection of objects whose properties are:
 
 | プロパティ名        | タイプ                             | 説明                                          |
 | ------------- | ------------------------------- | ------------------------------------------- |
-| attributeName | String                          | Name of the attribute                       |
+| attributeName | 文字列                             | Name of the attribute                       |
 | value         | any - Depends on attribute type | Value of the attribute in the entity        |
 | otherValue    | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
 

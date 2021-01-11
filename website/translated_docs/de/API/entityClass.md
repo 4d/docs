@@ -363,7 +363,7 @@ The object returned by `.drop( )` contains the following properties:
 
 | Property      |                     | Typ                   | Beschreibung                                                                                                          |
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| success       |                     | boolean               | true if the drop action is successful, false otherwise.                                                               |
+| success       |                     | Boolean               | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
 | status(*)     |                     | number                | Error code, see below                                                                                                 |
 | statusText(*) |                     | Text                  | Description of the error, see below                                                                                   |
@@ -920,9 +920,9 @@ The object returned by `.lock( )` contains the following properties:
 
 | Property         |                     | Typ                   | Beschreibung                                                                                                        |
 | ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean               | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
+| success          |                     | Boolean               | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
-| **wasReloaded**  |                     | boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
+| **wasReloaded**  |                     | Boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
 |                  |                     |                       | ***Available only in case of error:***                                                                              |
 | status(\*)     |                     | number                | Error code, see below                                                                                               |
 | statusText(\*) |                     | Text                  | Description of the error, see below                                                                                 |
@@ -1105,7 +1105,7 @@ The object returned by `.reload( )` contains the following properties:
 
 | Property         | Typ     | Beschreibung                                                                                                                                          |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          | boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
+| success          | Boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
 | status(\*)     | number  | Error code, see below                                                                                                                                 |
 | statusText(\*) | Text    | Description of the error, see below                                                                                                                   |
 
@@ -1178,9 +1178,9 @@ The object returned by `.save()` contains the following properties:
 
 | Property         |  | Typ     | Beschreibung                                            |
 | ---------------- |  | ------- | ------------------------------------------------------- |
-| success          |  | boolean | True if the save action is successful, False otherwise. |
+| success          |  | Boolean | True if the save action is successful, False otherwise. |
 |                  |  |         | ***Available only if `dk auto merge` option is used***: |
-| autoMerged       |  | boolean | True if an auto merge was done, False otherwise.        |
+| autoMerged       |  | Boolean | True if an auto merge was done, False otherwise.        |
 |                  |  |         | ***Available only in case of error***:                  |
 | status(\*)     |  | number  | Error code, see below                                   |
 | statusText(\*) |  | Text    | Description of the error, see below                     |

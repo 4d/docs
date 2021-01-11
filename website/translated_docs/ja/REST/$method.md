@@ -5,7 +5,7 @@ title: '$method'
 
 This parameter allows you to define the operation to execute with the returned entity or entity selection.
 
-## Available syntaxes
+## 使用可能なシンタックス
 
 | シンタックス                                          | 例題                                                                                              | 説明                                                                                                         |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -321,7 +321,7 @@ If, for example, the stamp is not correct, the following error is returned:
             "errCode": 1046
         },
         {
-            "message": "The entity# 1 in the \"Persons\" datastore class cannot be saved",
+            "message": "The entity# 1 in the \"Persons\" dataclass cannot be saved",
             "componentSignature": "dbmg",
             "errCode": 1517
         }

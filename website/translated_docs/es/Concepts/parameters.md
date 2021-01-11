@@ -53,9 +53,10 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 > Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. For example:
 > 
 > ```4d
-Function add($x : Integer)
-  var $0;$2 : Integer
-  $0:=$x+$2
+```4d
+  Function add($x : Integer)
+    var $0;$2 : Integer
+    $0:=$x+$2
 ```
 
 
@@ -63,7 +64,7 @@ Function add($x : Integer)
 
 ## Named parameters
 
-Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
 
 - For class functions, parameters are declared along with the `Function` keyword.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
@@ -465,7 +466,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpA
 
 ## Values or references
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. For example:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. For example:
 
 ```4d
     //Here is some code from the method MY_METHOD

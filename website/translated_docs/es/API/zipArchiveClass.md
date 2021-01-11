@@ -63,7 +63,7 @@ End if
 
 #### Description
 
-The `ZIP Create archive` command <!-- REF zipArchive.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+The `ZIP Create archive` command<!-- REF zipArchive. ZIP Create archive. Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
 
 You can pass a 4D.File, a 4D.Folder, or a zip structure object as first parameter:
 
@@ -285,7 +285,7 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 #### Description
 
-The `ZIP Read archive` command <!-- REF zipArchive.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+The `ZIP Read archive` command<!-- REF zipArchive. ZIP Read archive. Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
 
 

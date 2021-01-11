@@ -2135,6 +2135,10 @@ For detailed information on how to build a query using , value and *querySetting
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 This example returns persons whose name contains "in":
@@ -2163,7 +2167,7 @@ This example returns persons hired more than 90 days ago:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 if today is 01/10/2018
 ```
 
 
@@ -2547,7 +2551,7 @@ The returned collection contains the element specified by *startFrom* and all su
 La fonction `.some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
 
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). Cette méthode reçoit un `objet` comme premier paramètre ($1) et doit définir *$1.result* sur **True** pour chaque élément du test.
+In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
 *methodName* receives the following parameters:
 
@@ -2562,7 +2566,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de collection retournant true dans *$1.result*, elle arrête d'appeler *methodName* et retourne **true**.
 
-Par défaut, `.some()` teste toute la collection. Vous pouvez éventuellement passer l'index d'un élément à partir duquel vous pouvez démarrer le test dans *startFrom*.
+By default, `.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
 
 *   Si *startFrom* >= la longueur de la collection, **False** est retourné, ce qui signifie que la collection n'est pas testée.
 *   Si *startFrom* < 0, il est considéré comme le décalage depuis la fin de la collection.

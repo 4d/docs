@@ -192,7 +192,7 @@ You can pass any number of values of the following supported types:
 
 *   number (real, longint...). Number values are always stored as reals.
 *   Text
-*   boolean
+*   Boolean
 *   date
 *   time (stored as number of milliseconds - real)
 *   Null

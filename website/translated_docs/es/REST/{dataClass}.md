@@ -36,8 +36,8 @@ Here is a description of the data returned:
 
 | Property      | Type       | Description                                                                                                                                                                                     |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Name of the datastore class.                                                                                                                                                                    |
-| __COUNT       | Number     | Number of entities in the datastore class.                                                                                                                                                      |
+| __entityModel | String     | Name of the dataclass.                                                                                                                                                                          |
+| __COUNT       | Number     | Number of entities in the dataclass.                                                                                                                                                            |
 | __SENT        | Number     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
 | __FIRST       | Number     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
 | __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent. |
@@ -46,7 +46,7 @@ Each entity contains the following properties:
 
 | Property    | Type   | Description                                                                                                |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Value of the primary key defined for the datastore class.                                                  |
+| __KEY       | String | Value of the primary key defined for the dataclass.                                                        |
 | __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
 | __STAMP     | Number | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
 
@@ -58,7 +58,7 @@ If you want to specify which attributes you want to return, define them using th
 
 ### Example
 
-Return all the data for a specific datastore class.
+Return all the data for a specific dataclass.
 
  `GET  /rest/Company`
 
@@ -148,7 +148,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 ### Description
 
-By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your datastore class. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
 For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 
@@ -162,7 +162,7 @@ If you want to expand a relation attribute using `$expand`, you do so by specify
 
 ### Example
 
-The following request returns all the public data in the Company datastore class whose key is 1.
+The following request returns all the public data in the Company dataclass whose key is 1.
 
  `GET  /rest/Company(1)`
 

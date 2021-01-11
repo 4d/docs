@@ -319,7 +319,7 @@ Here are the properties of the `$editor` object:
 | ------------------------- | ------ | --------------------------------------------------------------------------------- |
 | $editor.form              | オブジェクト | The entire form                                                                   |
 | $editor.file              | File   | File object of the form file                                                      |
-| $editor.name              | String | Name of the form                                                                  |
+| $editor.name              | 文字列    | Name of the form                                                                  |
 | $editor.table             | number | Table number of the form, 0 for project form                                      |
 | $editor.currentPageNumber | number | The number of the current page                                                    |
 | $editor.currentPage       | オブジェクト | The current page, containing all the form objects and the entry order of the page |
@@ -336,7 +336,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | formProperties    | オブジェクト | formProperties if modified by the macro                     |
 | editor.groups     | オブジェクト | group info, if groups are modified by the macro             |
 | editor.views      | オブジェクト | view info, if views are modified by the macro               |
-| editor.activeView | String | Active view name                                            |
+| editor.activeView | 文字列    | Active view name                                            |
 
 
 

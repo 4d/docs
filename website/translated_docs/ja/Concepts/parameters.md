@@ -79,10 +79,10 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
 
 
-The following rules apply:
+次のルールが適用されます:
 
 - 宣言文はメソッドや関数のコードの先頭に位置していなければなりません。宣言文より前に置けるのはコメントと改行のみであり、それ以外の場合にはエラーが表示されます。
-- Parameter names must start with a `$` character and be compliant with [property naming rules](dt_object.md#object-property-identifiers).
+- 引数名は必ず `$` 文字で始まり、[プロパティ名の命名規則](dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。
 - 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 - 複数行シンタックスがサポートされています ("\\" 文字を使用)。
 
@@ -200,12 +200,12 @@ ALERT($0)
 
 ### サポートされているデータ型
 
-You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
+位置引数には、あらゆる [式](quick-tour.md#式のタイプ) の形が使用できますが、例外があります:
 
 - テーブル
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
+テーブルや配列の式は [ポインターを介した参照として](dt_pointer.md#メソッドの引数としてのポインター) 渡す必要があります。
 
 ### 引数の間接参照
 
@@ -272,7 +272,7 @@ Tables or array expressions can only be passed [as reference using a pointer](dt
 
 ### コンパイルモード用のパラメーター宣言
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
+[インタープリターモード](interpreted.md) では必須ではないものの、問題を避けるにはメソッドや関数の各パラメーターを宣言しておくべきでしょう。
 
 [名前付き引数シンタックス](#名前付き引数) を利用している場合には、それらの引数は `#DECLARE` キーワードまたは `Function` プロトタイプによって自動的に宣言されます。 たとえば:
 
@@ -318,7 +318,7 @@ C_OBJECT($3)
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-See [Interpreted and compiled modes](interpreted.md) page for more information.
+詳細については [インタープリターモードとコンパイルモード](interpreted.md) を参照ください。
 
 パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
 
@@ -515,7 +515,7 @@ ALERT([People]Name)
 
 オブジェクトやコレクションのデータタイプは参照 (つまり、内部的な *ポインター*) を介した形でのみ扱われることに注意が必要です。
 
-したがって、`$1、$2...` には *値* ではなく *参照* が格納されます。 `$1、$2...` の値をサブルーチン内で変更した場合、その変更は元となるオブジェクトやコレクションが使用されているところへと伝播します。 This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+したがって、`$1、$2...` には *値* ではなく *参照* が格納されます。 `$1、$2...` の値をサブルーチン内で変更した場合、その変更は元となるオブジェクトやコレクションが使用されているところへと伝播します。 これは [ポインター](dt_pointer.md#メソッドの引数としてのポインター) に対する原理と同じものですが、`$1、$2...` の使用にあたって参照を外す必要はありません。
 
 次の例では、`CreatePerson` メソッドはオブジェクトを作成したのち、それを引数として `ChangeAge` に渡します:
 

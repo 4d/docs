@@ -492,7 +492,7 @@ The `.subject` property contains the <!-- REF #emailObjectClass.subject.Summary 
 
 #### Description
 
-La propriété `.textBody` contient la <!-- REF #emailObjectClass.textBody.Summary -->représentation en texte brut du message électronique (le jeu de caractères par défaut est UTF-8) (facultatif, SMTP uniquement)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+The `.htmlBody` property contains the<!-- REF #emailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
 
 

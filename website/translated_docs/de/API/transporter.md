@@ -318,7 +318,7 @@ The function sends a request to the mail server and returns an object describing
 
 | Property   |                          | Typ        | Beschreibung                                                                                                 |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| success    |                          | boolean    | True if the check is successful, False otherwise                                                             |
+| success    |                          | Boolean    | True if the check is successful, False otherwise                                                             |
 | status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
 | statusText |                          | Text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
 | errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |

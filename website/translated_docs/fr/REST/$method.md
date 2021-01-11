@@ -321,7 +321,7 @@ Si, par exemple, le tampon n'est pas correct, l'erreur suivante est retournée :
             "errCode": 1046
         },
         {
-            "message": "The entity# 1 in the \"Persons\" datastore class cannot be saved",
+            "message": "The entity# 1 in the \"Persons\" dataclass cannot be saved",
             "componentSignature": "dbmg",
             "errCode": 1517
         }

@@ -20,7 +20,7 @@ As with all URIs, the first parameter is delimited by a “?” and all subseque
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > You can place all values in quotes in case of ambiguity. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
 
-The parameters allow you to manipulate data in dataclasses in your 4D project. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a datastore class using `POST` HTTP methods.
+The parameters allow you to manipulate data in dataclasses in your 4D project. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
 
 If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
 
