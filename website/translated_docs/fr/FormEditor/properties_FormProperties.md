@@ -117,15 +117,15 @@ Only project forms can be specified as published subforms.
 
 ---
 
-## Save Geometry
+## Mémoriser géométrie
 
-When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
+Lorsque cette option est cochée, si la fenêtre est ouverte via la commande `Creer fenetre` formulaire avec le paramètre `*`, plusieurs paramètres du formulaire seront automatiquement mémorisés par 4D au moment de la fermeture de la fenêtre, quelle que soit la manière dont ils ont été modifiés au cours de la session :
 
-*   the current page,
-*   the position, size and visibility of each form object (including the size and visibility of list box columns).
-> > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+*   la page courante,
+*   la position, la taille et la visibilité de chaque objet du formulaire (y compris la taille et la visibilité des colonnes de list box).
+> Cette option ne prend pas en compte les objets générés via la commande `OBJECT DUPLICATE`. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
 
-When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
+Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/properties_Object.md#save-value) est en outre disponible pour certains objets.
 
 #### Grammaire JSON
 
@@ -134,27 +134,29 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 | memorizeGeometry | boolean         | true, false       |
 
 #### Voir également
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+[**Mémoriser valeur**](FormObjects/properties_Object.md#save-value)
 
 
 ---
 
-## Window Title
+## Nom de la fenêtre
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+Le nom de la fenêtre est utilisé lorsque le formulaire est ouvert à l'aide des commandes `Open form window` et `Open window` dans l'environnement d'application. Le nom de la fenêtre apparaît dans la barre de titre de la fenêtre.
 
-You can use dynamic references to set the window titles for forms, *i.e.*:
+Vous pouvez utiliser des références dynamiques pour définir les noms de fenêtre des formulaires, c'est-à-dire :
 
-*   A standard XLIFF reference stored in the Resources folder.
-*   A table or field label: The syntax to apply is <?[TableNum]FieldNum> or
-*   A variable or a field: The syntax to apply is \<VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
+*   Une référence XLIFF standard stockée dans le dossier Resources.
+*   Une étiquette de table ou de champ : la syntaxe à appliquer est <?[TableNum]FieldNum> ou 
+  
+  <?[TableName]FieldName>.
+*   Une variable ou un champ : La syntaxe à appliquer est \<VariableName> ou <[TableName]FieldName>. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
 
-> The number of characters for a window title is limited to 31.
+> Le nombre de caractères pour un nom de fenêtre est limité à 31.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                      |
-| ----------- | --------------- | ------------------------------------------------------ |
-| windowTitle | string          | The name of the window as plain text or as a reference |
+| Nom         | Type de données | Valeurs possibles                                             |
+| ----------- | --------------- | ------------------------------------------------------------- |
+| windowTitle | string          | Le nom de la fenêtre sous forme de texte brut ou de référence |
 
 
