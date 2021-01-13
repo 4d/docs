@@ -781,8 +781,20 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/gettingStarted": {
+        "title": "Getting Started"
+      },
+      "WebServer/webServerConnect": {
+        "title": "Connection Management"
+      },
       "WebServer/sessions": {
         "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Using template pages"
       },
       "WebServer/webServer": {
         "title": "Overview"
@@ -793,14 +805,8 @@
       "WebServer/webServerConfig": {
         "title": "Configuration"
       },
-      "WebServer/webServerConnect": {
-        "title": "Connection Management"
-      },
       "WebServer/webServerConnectMethods": {
         "title": "Connection Methods"
-      },
-      "WebServer/webServerGetStart": {
-        "title": "Getting Started"
       },
       "WebServer/webServerMgmt": {
         "title": "Server Management"
@@ -813,9 +819,6 @@
       },
       "WebServer/webServerSessions": {
         "title": "Session Management"
-      },
-      "WebServer/webServerTLS": {
-        "title": "TLS Protocol (HTTPS)"
       }
     },
     "links": {
@@ -834,6 +837,7 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
+      "Web Development": "Web Development",
       "REST Server": "REST Server",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
@@ -857,6 +861,7 @@
     "Form Object Properties|no description given": "Form Object Properties",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",

@@ -1,5 +1,5 @@
 ---
-id: webServerGetStart
+id: gettingStarted
 title: Getting Started
 ---
 
@@ -17,7 +17,7 @@ To start the 4D web server:
 1. Launch your 4D application and create a new, empty 4D project. 
 2. In the **Run** menu, select **Start Web Server**.
 
-That's all! The web server is started and ready to handle requests. To check it, we'll display the default home page. 
+That's all! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page. 
 
 ### Displaying the default home page
 

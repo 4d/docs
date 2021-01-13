@@ -17,13 +17,23 @@ The 4D web server automatically creates a default root folder and a default home
 
 ## Security
 
-Several automatic configuration options allow you to grant specific access authorizations to web browsers or to use the password system integrated into 4D. 
+Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. The 4D web server security is based upon the following elements:
 
-The `On Web Authentication` database method allows you to evaluate any request before it is processed by the web server. Moreover, the ability to define a [default HTML root](webServerSecurity.html#default-html-root) folder allows you to restrict access to files on disk.
+* Extended support of the [**TLS Protocol (HTTPS)**](Admin/tls.md),
 
-You have to designate individually each project method and each ORDA class function (REST) that can be executed via the web.
+*	**Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
-TLS protocol are enabled by default for HTTPS connections. 
+*	**Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. You must declare:
+	-	[Project methods]() exposed through HTTP requests
+	-	[ORDA functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
+	-	[Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
+
+*	**Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
+
+* **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.html#maximum-concurrent-web-processes) option). 
+
+>For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+
 
 ## Dedicated Database Methods
 

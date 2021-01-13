@@ -82,7 +82,7 @@ You must copy these files manually on the remote machine.
 
 The installation of **key.pem** and **cert.pem** files makes it possible to use TLS with the 4D server. However, in order for TLS connections to be accepted by the server, you must enable them:
 
-- With the 4D web server, you must [enable HTTPS](WebServer/webServerConfig.md#enable-https). You can set the [HSTS option](webServerConfig.md#enable-hsts) to redirect browsers trying to connect in http mode. 
+- With the 4D web server, you must [enable HTTPS](WebServer/webServerConfig.md#enable-https). You can set the [HSTS option](WebServer/webServerConfig.md#enable-hsts) to redirect browsers trying to connect in http mode. 
 - With the application server, you must select the **Encrypt Client-Server Communications** option in the "Client-server/Network options" page of the Settings dialog box.
 - With the SQL server, you must select the **Enable TLS** option in the "SQL" page of the Settings dialog box. 
 

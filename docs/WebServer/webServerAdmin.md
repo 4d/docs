@@ -141,7 +141,7 @@ Both log files are automatically created in the **Logs** folder of the applicati
 
 ### HTTPDebugLog.txt
 
-The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObjet.md) or the `WEB SET OPTION` command. 
+The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command. 
 
 This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
@@ -159,7 +159,7 @@ The following fields are logged for both Request and Response:
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObjet.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. You need to select the log format. 
+The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. You need to select the log format. 
 
 #### CLF/DLF 
 

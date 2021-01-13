@@ -1,27 +1,12 @@
 ---
-id: webServerSecurity
-title: Security
+id: authentication
+title: Authentication
 ---
 
- 
-Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. 
-
-The 4D web server security is based upon the following elements:
-
-*	**Authentication**: flexible and highly customizable authentication system via built-it settings and features, as well as fallback database methods ([`On Web Authentication`](webServerConnectMethods.md#on-web-authentication) for the web server and [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
-
-*	**Control of exposed contents**: only functions or project methods that you declare explicitely can be available from web and REST requests,
-
-*	**Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
-
-* [**TLS Protocol (HTTPS)**](Admin/tls.md) support.
-
->For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
 
 
-## Authentication mode
-
-Authentication designates the way the information concerning the user name and password are collected and processed. 
+## Authentication modes
 
 The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
 
@@ -244,37 +229,3 @@ The *WithWildcard* method is as follows:
  End for
 ```
 
-
-
-
-## Controlling exposed contents
-
-### REST access
-
-When the [REST server is started](REST/configuration.md#starting-the-rest-server), database contents and ORDA data model class functions can be exposed to REST requests. Theses accesses  can be controlled at several levels.
-
-- REST access: [configure the REST server](REST/configuration.md#configuring-rest-access) to only allow access to authorized users,
-- Table and field exposure: [unselect the tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests,
-- Data model class functions: [declare each class function](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) that you want to be exposed through REST. It is recommended to create [data model class functions](ORDA/ordaClasses.md) which will only be allowed to access data, just like an API.  
-
-
-### Project methods through HTTP
-  
-The special `4DACTION URL` and the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, `4DHTML` tags allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *http://www.server.com/4DACTION/login* causes the execution of the ***login*** project method, if it exists.
-
-This mechanism therefore presents a security risk for the application, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in the following ways:
-
-*	Filter the methods called via the URLS using the [`On Web Authentication`](#on-web-authentication) database method. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
-
-*	Use the **Available through 4D tags and URLs (4DACTION...)** option found in the Method properties dialog box:
-
-![](assets/en/WebServer/methodProperties.png)
-
-
-This option is used to individually designate each project method that can be called using the `4DACTION` special URL, or the `4DSCRIPT`, `4DEVAL`, `4DTEXT`, and `4DHTML` tags. When it is not checked, the project method concerned cannot be directly executed through an HTTP request. Conversely, it can be executed using other types of calls (formulas, other methods, etc.).
-
-This option is unchecked by default. Methods that can be executed through `4DACTION` or specific tags must be specifically indicated.
-
-In the Explorer, Project methods with this property are given a specific icon:
-
- ![](assets/en/WebServer/methodIcon.png)

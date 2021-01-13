@@ -240,7 +240,7 @@ Indicates whether or not the web server will accept non-secure connections.
 |`WEB SET OPTION`|`Web HTTPS enabled`||
 |Settings dialog box|Configuration page/Enable HTTPS||
 
-Status for communication over HTTPS. This option is described in [this section](webServerTLS.md).
+Status for communication over HTTPS. This option is described in [this section](Admin/tls.md).
 
 
 ## Enable HSTS
@@ -381,6 +381,28 @@ By default, no specific address is defined (**Any** value in the Settings dialog
 
 Possible values: IP address string. Both IPv6 string formats (e.g. "2001:0db8:0000:0000:0000:ff00:0042:8329") and IPv4 string formats (e.g. "123.45.67.89") are supported.
 
+#### About IPv6 support
+
+*	**No warning when TCP port is occupied**<br>
+When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. In fact, 4D server does not detect any error in this case because the port remains free on the IPv6 address. However, it is not possible to access it using the IPv4 address of the machine, nor by means of the local address: 127.0.0.1.<p>
+If your 4D server does not seem to be responding on the port defined, you can test the address [::1] on the server machine (equivalent to 127.0.0.1 for IPv6, add [:portNum] to test another port number). If 4D responds, it is likely that another application is using the port in IPv4.
+
+*	**IPv4-mapped IPv6 addresses**<br>
+To standardize processing, 4D provides a standard hybrid representation of IPv4 addresses in IPv6. These addresses are written with a 96-bit prefix in IPv6 format, followed by 32 bits written in the dot-decimal notation of IPv4. For example, ::ffff:192.168.2.34 represents the IPv4 address 192.168.2.34.
+
+*	**Indication of port numbers**<br>
+Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
+
+```code4d
+	2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
+	2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+```
+
+To avoid this confusion, we recommend using the [ ] notation whenever you combine an IPv6 address with a port number, for instance:
+
+```code4d
+	[2001:0DB8::85a3:0:ac1f:8001]:8081 //IPv6 address with port 8081
+```
 
 ## Keep Session
 
