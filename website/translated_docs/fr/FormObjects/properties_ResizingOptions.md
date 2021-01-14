@@ -125,7 +125,7 @@ When this property is not applied to the splitter, the result is as follows:
 ---
 ## Redimensionnable
 
-Designates if the size of the column can be modified by the user.
+Indique si la taille de la colonne peut être modifiée par l'utilisateur.
 
 #### Grammaire JSON
 
