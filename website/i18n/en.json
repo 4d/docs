@@ -787,14 +787,14 @@
       "WebServer/gettingStarted": {
         "title": "Getting Started"
       },
-      "WebServer/webServerConnect": {
+      "WebServer/httpRequests": {
         "title": "Connection Management"
       },
       "WebServer/sessions": {
         "title": "User sessions"
       },
       "WebServer/templates": {
-        "title": "Using template pages"
+        "title": "Template pages"
       },
       "WebServer/webServer": {
         "title": "Overview"
@@ -804,6 +804,9 @@
       },
       "WebServer/webServerConfig": {
         "title": "Configuration"
+      },
+      "WebServer/webServerConnect": {
+        "title": "Connection Management"
       },
       "WebServer/webServerConnectMethods": {
         "title": "Connection Methods"
