@@ -58,11 +58,11 @@ Mesure de l'affichage de l'échelle.
 ---
 ## Label Location
 
-Specifies the location of an object's displayed text.
+Indique l'emplacement du texte d'un objet.
 
-* None - no label is displayed
-* Top - Displays labels to the left of or above an indicator
-* Bottom - Displays labels to the right of or below an indicator
+* Aucun - aucun libellé n'est affiché
+* Haut - Affiche les libellés à gauche ou au-dessus d'un indicateur
+* Bas - Affiche les libellés à droite ou en dessous d'un indicateur
 
 #### Grammaire JSON
 
@@ -81,8 +81,8 @@ Specifies the location of an object's displayed text.
 
 Valeur maximale d'un indicateur.
 
-- For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
+- Pour les steppers numériques, cette propriété représente les secondes lorsque l'objet est associé à une valeur de type heure, et représente les jours lorsqu'il est associé à une valeur de type date.
+- Pour activer les [thermomètres du barber shop](progressIndicator.md#barber-shop), cette propriété doit être omise.
 
 #### Grammaire JSON
 
@@ -99,7 +99,7 @@ Valeur maximale d'un indicateur.
 ---
 ## Minimum
 
-Valeur minimale d'un indicateur. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+Valeur minimale d'un indicateur. Pour les steppers numériques, cette propriété représente les secondes lorsque l'objet est associé à une valeur de type heure, et représente les jours lorsqu'il est associé à une valeur de type date.
 
 #### Grammaire JSON
 
