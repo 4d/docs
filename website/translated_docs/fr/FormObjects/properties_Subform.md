@@ -42,7 +42,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 [Sous-formulaire](subform_overview.md)
 
 ---
-## Double-click on empty row
+## Double-clic sur ligne vide
 
 Action to perform in case of a double-click on an empty line of a list subform. Les options suivantes sont disponibles :
 - Ne rien faire : ignore le double-clic.
@@ -60,12 +60,12 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 [Sous-formulaire](subform_overview.md)
 
 #### Voir également
-[Double click on row](#double-click-on-row)
+[Double-clic sur ligne](#double-click-on-row)
 
 ---
 ## Double-clic sur ligne
 
-`List subform`
+`Sous-formulaires liste`
 
 Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
 
