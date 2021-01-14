@@ -10,7 +10,7 @@ Dataclass attributes are available as properties of their respective classes. Pa
  revenuesAttribute:=ds.Company["revenues"] //méthode alternative
 ```
 
-This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [**Entities**](entityClass.md).
+This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes. To handle values, you need to go through [**Entities**](entityClass.md).
 
 `DataClassAttribute` objects have properties that you can read to get information about your dataclass attributes.
 
