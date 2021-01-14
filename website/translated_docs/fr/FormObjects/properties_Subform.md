@@ -28,7 +28,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
   Vous pouvez sélectionner un nom de formulaire de composant lorsqu'il est publié dans le composant.
 > Vous pouvez générer des [composants](Concepts/components.md) fournissant des fonctionnalités supplémentaires via des sous-formulaires.
 
-- le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
+- le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). Le formulaire détaillé peut être utilisé pour saisir ou afficher des sous-enregistrements. Il contient généralement plus d'informations que le sous-formulaire liste. Naturellement, le formulaire détaillé doit appartenir à la même table que le sous-formulaire. Vous utilisez normalement un formulaire de sortie comme formulaire liste et un formulaire d'entrée comme formulaire détaillé. Si vous n'indiquez pas le formulaire à utiliser pour la saisie pleine page, 4D utilise automatiquement le format d'entrée par défaut de la table.
 
 
 #### Grammaire JSON
@@ -67,7 +67,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 `Sous-formulaires liste`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
+Définit l'action à réaliser lorsqu'un utilisateur double-clique sur une ligne dans un sous-formulaire liste. The available options are:
 
 *   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
 *   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). The record is opened in read-write mode so it can be modified.
@@ -89,10 +89,10 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 
 #### Voir également
-[Double click on empty row](#double-click-on-empty-row)
+[Double-clic sur ligne vide](#double-click-on-empty-row)
 
 ---
-## Enterable in list
+## Saisissable en liste
 
 Lorsque cette propriété est activée pour un sous-formulaire de liste, l'utilisateur peut modifier les données de l'enregistrement directement dans la liste, sans avoir à utiliser le [formulaire détaillé associé](#detail-form).
 
@@ -149,7 +149,7 @@ Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas éch�
 ## Mode de sélection
 
 Designates the option for allowing users to select rows:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
+- **None**: Rows cannot be selected if this mode is chosen. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](subform_overview.md#enterable-in-list) soit activée. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
 - **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
   The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
