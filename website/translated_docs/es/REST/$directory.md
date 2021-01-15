@@ -35,7 +35,7 @@ $hKey{3}:="session-4D-length"
 $hValues{1}:="john"
 $hValues{2}:=Generate digest("123";4D digest)
 $hValues{3}:=120
-$httpStatus:=HTTP Request(HTTP POST method;"database.example.com:9000";$body_t;$response;$hKey;$hValues)
+$httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory/login";$body_t;$response;$hKey;$hValues)
 ```
 
 **Result**:
