@@ -48,7 +48,7 @@ Plusieurs options graphiques sont disponibles : valeurs minimales/maximales, gra
 
 ![](assets/en/FormObjects/indicator.gif)
 
-**Barber shop** is a variant of the default thermometer. Pour active cette variante, vous devez définir la propriété du [Barber shop](properties_Scale.md#barber-shop).
+**Le barber shop** est une variante du thermomètre par défaut. Pour active cette variante, vous devez définir la propriété du [Barber shop](properties_Scale.md#barber-shop).
 > En code JSON, supprimez simplement la propriété "max" de l'objet thermomètre par défaut pour activer le barber shop.
 
 Le barber shop affiche une animation continue, telle que le [spinner](spinner.md). Les thermomètres “Barber shop” sont généralement utilisés pour indiquer à l’utilisateur que le programme est en train d’effectuer une opération longue. Lorsque le thermomètre est sélectionné, le thème ["Graduations"](properties_Scale.md) de la liste des propriétés est masqué.
