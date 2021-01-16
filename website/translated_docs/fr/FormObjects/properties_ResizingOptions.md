@@ -47,7 +47,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 ---
 ## Dimensionnement horizontal
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+Cette propriété indique si la taille horizontale d'un objet doit être déplacée ou redimensionnée lorsqu'un utilisateur redimensionne le formulaire. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Three options are available:
 
@@ -72,16 +72,16 @@ Three options are available:
 ---
 ## Dimensionnement vertical
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+Cette propriété indique si la taille verticale d'un objet doit être déplacée ou redimensionnée lorsqu'un utilisateur redimensionne le formulaire. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Three options are available:
 
-| Option   | Valeur JSON | Résultat                                                                                                             |
-| -------- | ----------- | -------------------------------------------------------------------------------------------------------------------- |
-| Agrandir | "grow"      | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| Déplacer | "move"      | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| Aucun    | "fixed"     | The object remains stationary when the form is resized                                                               |
-> This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
+| Option   | Valeur JSON | Résultat                                                                                                                                         |
+| -------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Agrandir | "grow"      | Le même pourcentage est appliqué à la hauteur de l'objet lorsque l'utilisateur redimensionne la largeur de la fenêtre,                           |
+| Déplacer | "move"      | L'objet est déplacé vers le haut ou vers le bas selon l'augmentation de la hauteur lorsque l'utilisateur redimensionne la largeur de la fenêtre, |
+| Aucun    | "fixed"     | The object remains stationary when the form is resized                                                                                           |
+> Cette propriété fonctionne avec la propriété [Dimensionnement horizontal](#horizontal-sizing).
 
 #### Grammaire JSON
 
@@ -98,13 +98,13 @@ Three options are available:
 ---
 ## Pousseur
 
-When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
+Lorsqu'un objet splitter a cette propriété, les autres objets à sa droite (splitter vertical) ou en dessous (splitter horizontal) sont poussés en même temps que le splitter, sans arrêt.
 
-Here is the result of a “pusher” splitter being moved: ![](assets/en/FormObjects/splitter_pusher1.png)
+Voici le résultat du déplacement d'un splitter «pousseur» : ![](assets/en/FormObjects/splitter_pusher1.png)
 
 ![](assets/en/FormObjects/splitter_pusher3.png)
 
-When this property is not applied to the splitter, the result is as follows:
+Lorsque cette propriété n'est pas appliquée au splitter, le résultat est le suivant :
 
 ![](assets/en/FormObjects/splitter_pusher2.png)
 
