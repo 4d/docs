@@ -38,7 +38,7 @@ ds.webUser.password:=Generate password hash($password)
 ds.webUser.save()
 ```  
 
-See also [this example](webServerGetStart.md#authenticating-users) from the "Getting started" chapter. 
+See also [this example](gettingStarted.md#authenticating-users) from the "Getting started" chapter. 
 
 If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.  
 
@@ -94,7 +94,7 @@ The `On Web Authentication` database method is NOT called:
 
 ### Syntax
 
-**On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ; ) -> $0 : Boolean
+**On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
 |Parameters|Type||Description|
 |---|---|:---:|---|
@@ -108,7 +108,7 @@ The `On Web Authentication` database method is NOT called:
 
 You must declare these parameters as follows:
 
-```code4d
+```4d
 //On Web Authentication database method
  
  C_TEXT($1;$2;$3;$4;$5;$6)
@@ -133,23 +133,23 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 #### $1 - URL
 
-The first parameter (`$1`) is the URL entered by the user in the location area of their web browser, from which the host address has been removed.
+The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
 
 Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
 
 |URL entered in web browser|Value of parameter $1|
 |---|---|
 |123.45.67.89|/ |
-|http://<i></i>123.45.67.89|/ |
+|http://123.45.67.89|/ |
 |123.45.67.89/Customers|/Customers |
-|http://<i></i>123.45.67.89/Customers/Add|/Customers/Add |
+|http://123.45.67.89/Customers/Add|/Customers/Add |
 |123.45.67.89/Do_This/If_OK/Do_That|/Do_This/If_OK/Do_That |
 
 #### $2 - Header and Body of the HTTP request
 
 The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
 
-If your application deals with this information, it is up to you to parse the header and the body.
+If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
 
 >For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
 
@@ -157,11 +157,12 @@ If your application deals with this information, it is up to you to parse the he
 
 The `$3` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
 
->4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34.
+>4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConnect.md#ipv6-support) section.
+
 
 #### $4 - Server IP address
 
-The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. 
+The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
 
 
 #### $5 and $6 - User Name and Password

@@ -24,7 +24,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 *	**Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
 *	**Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. You must declare:
-	-	[Project methods]() exposed through HTTP requests
+	-	[Project methods](templates.md#allowing-project-methods) exposed through HTTP requests
 	-	[ORDA functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
 	-	[Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
 
@@ -33,11 +33,6 @@ Data security is present at every stage of the 4D web server implementations. Se
 * **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.html#maximum-concurrent-web-processes) option). 
 
 >For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
-
-
-## Dedicated Database Methods
-
-`On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
 
 
 ## User Sessions
@@ -59,7 +54,10 @@ The 4D web server configuration is defined through a comprehensive set of applic
 
 The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs. 
 
-- Template pages contain [special tags] that initiate web server processing at the time when they are sent to browsers.
+- Template pages contain [special tags](templates.md) that initiate web server processing at the time when they are sent to browsers.
 
-- [specific URLs] enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
+- [specific URLs](httpRequests) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
 
+## Dedicated Database Methods
+
+`On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.

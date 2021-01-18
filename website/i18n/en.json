@@ -781,14 +781,41 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "WebServer/webServerConnect": {
+        "title": "Connection Management"
+      },
+      "WebServer/webServerConnectMethods": {
+        "title": "Connection Methods"
+      },
+      "WebServer/webServerMgmt": {
+        "title": "Server Management"
+      },
+      "WebServer/webServerProcess": {
+        "title": "Using Preemptive Web Processes"
+      },
+      "WebServer/webServerSecurity": {
+        "title": "Security"
+      },
+      "WebServer/webServerSessions": {
+        "title": "Session Management"
+      },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
       "WebServer/authentication": {
         "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
       },
       "WebServer/gettingStarted": {
         "title": "Getting Started"
       },
       "WebServer/httpRequests": {
-        "title": "Connection Management"
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
       },
       "WebServer/sessions": {
         "title": "User sessions"
@@ -805,23 +832,8 @@
       "WebServer/webServerConfig": {
         "title": "Configuration"
       },
-      "WebServer/webServerConnect": {
-        "title": "Connection Management"
-      },
-      "WebServer/webServerConnectMethods": {
-        "title": "Connection Methods"
-      },
-      "WebServer/webServerMgmt": {
-        "title": "Server Management"
-      },
       "WebServer/webServerObject": {
         "title": "Web Server object"
-      },
-      "WebServer/webServerSecurity": {
-        "title": "Security"
-      },
-      "WebServer/webServerSessions": {
-        "title": "Session Management"
       }
     },
     "links": {

@@ -16,7 +16,7 @@ For example, if you write in an HTML page:
 The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
 
 
-## Available tags
+## Tags for templates
 
 The following 4D tags are available:
 
@@ -31,6 +31,8 @@ The following 4D tags are available:
 - 4DLOOP and 4DENDLOOP, to make loops in the HTML code.
 
 These tags are described in the [4D Transformation Tags](https://doc.4d.com/4Dv18R5/4D/18-R5/4D-Transformation-Tags.300-5128433.en.html) page on doc.4d.com.
+
+> For security reasons, any 4D project method called from a 4D tag must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
 
 It is possible to mix tags. For example, the following HTML code is allowed:
 
@@ -94,16 +96,7 @@ If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4
 This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted. For more information about this point, refer to the following section.
 
 
-
-
-
-## Security
-
-### Allowing methods
-
-Running a 4D method with `4DTEXT`, `4DHTML`, `4DEVAL`, `4DSCRIPT`, `4DIF`, `4DELSEIF` or `4DLOOP` from a web request is subject to the “Available through 4D tags and URLs (4DACTION...)” attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request. 
-
-### Prevention of malicious code insertion  
+## Prevention of malicious code insertion  
 
 4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
 
