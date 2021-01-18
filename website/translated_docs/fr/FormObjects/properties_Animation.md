@@ -99,7 +99,7 @@ Modifie le contenu du bouton image lorsque le curseur de la souris passe dessus.
 
 
 ---
-## Use Last frame as disabled
+## Dernière imagette si désactivé
 
 Permet de définir la dernière vignette comme étant celle à afficher lorsque le bouton est désactivé. La vignette utilisée lorsque le bouton est désactivé est traitée séparément par 4D : lorsque vous combinez cette option avec "Basculer en continu" et "Revenir en boucle à la première image", la dernière image est exclue de la séquence associée au bouton et n'apparaît que lorsqu'elle est désactivée.
 
