@@ -3,6 +3,9 @@ id: branching
 title: Structures conditionnelles
 ---
 
+Une structure de branchement permet aux méthodes de tester une condition et d'emprunter des chemins alternatifs, en fonction du résultat.
+
+
 ## If...Else...End if
 
 La syntaxe de la structure conditionnelle `If...Else...End if` est la suivante :

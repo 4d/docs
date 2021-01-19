@@ -3,8 +3,9 @@ id: date
 title: Date
 ---
 
-- A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
-- Although the representation mode for dates by can work with dates up to the year 32 767, certain operations passing through the system impose a lower limit.  
+A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
+
+Although the representation mode for dates by can work with dates up to the year 32 767, certain operations passing through the system impose a lower limit.  
 
 **Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.  
 

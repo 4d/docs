@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, objet, booléen, collection ou null).
+Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, date, objet, booléen, collection ou null).
 
-Pour manipuler les variables de type Collection, vous devez utiliser la notation objet (voir [Utiliser la notation objet](Concepts/dt_object.md#syntax-basics)).
+Pour manipuler les variables de type Collection, vous devez utiliser la notation objet (voir [Les bases de la syntaxe](Concepts/dt_object.md#syntax-basics)).
 
 Pour des informations complémentaires sur les collections 4D, passez le numéro (l'indice) de l'élément entre crochets :
 
@@ -13,7 +13,7 @@ Pour des informations complémentaires sur les collections 4D, passez le numéro
 collectionRef[expression]
 ```
 
-Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans expression. Voici quelques exemples :
+Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans *expression*. Voici quelques exemples :
 
 ```4d
  myCollection[5]  //accès au 6e élément de la collection
@@ -22,7 +22,7 @@ Vous pouvez passer toute expression 4D valide qui retourne un nombre entier posi
 
 **Attention :** N'oubliez pas que la numérotation des éléments de collection débute à 0.
 
-Vous pouvez assigner une valeur à un élément de collection ou lire une valeur d'élément de collection à l'aide de la notation objet :
+Vous pouvez assigner une valeur à un élément de collection ou lire une valeur d'élément de collection :
 
 ```4d
  myCol[10]:="Mon nouvel élément"
@@ -32,7 +32,7 @@ Vous pouvez assigner une valeur à un élément de collection ou lire une valeur
 Si vous assignez un numéro d'élément plus grand que celui du dernier élément existant dans la collection, la collection est automatiquement redimensionnée et les nouveaux éléments intermédiaires prennent la valeur null :
 
 ```4d
- C_COLLECTION(myCol)
+ var myCol : Collection
  myCol:=New collection("A";"B")
  myCol[5]:="Z"
   //myCol[2]=null
@@ -45,24 +45,23 @@ Si vous assignez un numéro d'élément plus grand que celui du dernier élémen
 Les collections doivent être initialisées à l'aide, par exemple, de la commande `Creer collection`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification d'un ou plusieurs élements de la collection.
 
 Exemple :
+
 ```4d
- C_COLLECTION($colVar) //création d'une variable 4D de type collection. $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
+ var $colVar : Collection //création d'une variable 4D de type collection. $colVar:=New $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
 ```
 
 ### Collection standard ou collection partagée
 
 Vous pouvez créer deux types de collections :
 
-- standard (non partagées), à l'aide de la commande `New collection`. Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
-- partagées, à l'aide de la commande `New shared collection`. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
+- standard (non partagées), à l'aide de la commande [`New collection`](API/collectionClass.md#new-collection). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
+- partagées, à l'aide de la commande [`New shared collection`](API/collectionClass.md#new-shared-collection). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures [`Use...End use`](Concepts/shared.md#useend-use).
 
-## Méthodes de collection
+Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
 
-Les références de collections 4D bénéficient de méthodes spécifiques (souvent appelées *fonctions méthodes*). Grâce à la notation objet, ces méthodes sont appliquées sur les références de collections à l'aide de la syntaxe suivante :
+## Fonctions de collection
 
-> {$result:=}myCollection.method( {params} )
-
-A noter que, même si elle n'a pas de paramètres, une méthode membre doit être appelée avec les parenthèses ( ) (opérateur d'exécution de méthode), sinon une erreur de syntaxe est générée.
+Les références de collections 4D bénéficient de fonctions de classe spécifiques (souvent appelées *fonctions méthodes*). Les fonctions de collection sont répertoriées dans la section [Class API Reference](API/collectionClass.md).
 
 Par exemple:
 
@@ -71,7 +70,7 @@ $newCol:=$col.copy() //copie de $col vers $newCol
  $col.push(10;100) //ajout de 10 et 100 à la collection
 ```
 
-Certaines méthodes retournent la collection d'origine après modification, de manière à ce que vous puissiez enchaîner les appels dans une même séquence :
+Certaines fonctions retournent la collection d'origine après modification, de manière à ce que vous puissiez enchaîner les appels dans une même séquence :
 
 ```4d
  $col:=New collection(5;20)
@@ -82,12 +81,12 @@ Certaines méthodes retournent la collection d'origine après modification, de m
 ### paramètre cheminPropriété
 
 
-Plusieurs méthodes de collection admettent un _paramètre nommé cheminPropriété_. Ce paramètre peut contenir :
+Plusieurs fonctions admettent un paramètre nommé _cheminPropriété_. Ce paramètre peut contenir :
 
 - soit un nom de propriété d'objet, par exemple "nomComplet"
 - soit un chemin de propriété d'objet, c'est-à-dire une séquence hiérarchique de sous-propriétés reliées par des points, par exemple "employé.enfant.prénom".
 
-**Attention :** Lorsqu'un paramètre cheminPropriété est attendu, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin:
+**Attention :** Lorsque des fonctions ou un paramètre cheminPropriété sont attendus, l'utilisation de noms de propriétés contenant ".", "[ ]", ou des espaces n'est pas prise en charge car cela empêcherait 4D d'analyser correctement le chemin :
 
 ```4d
  $vmin:=$col.min("My.special.property") //indéfini

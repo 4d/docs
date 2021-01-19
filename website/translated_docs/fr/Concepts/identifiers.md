@@ -145,7 +145,7 @@ Voici quelques exemples :
 ```4d
 For($vlRecord;1;100) //local variable
 $vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales
+var $vName; $vJob : Text //local variales 
 If(bValidate=1) //process variable
 <>vlProcessID:=Current process() //interprocess variable
 ```
@@ -175,3 +175,4 @@ USE SET("<>Deleted Records") //Interprocess set
 If(Records in set("$Selection"+String($i))>0) //Client set
 
 ```
+

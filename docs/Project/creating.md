@@ -3,6 +3,7 @@ id: creating
 title: Creating or opening a project
 ---
 
+All projects are handled through **4D** in local or remote mode, or **4D Server**.  
 
 ## Creating a project
 

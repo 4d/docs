@@ -114,6 +114,7 @@ Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein
 ```
 
 ### Zeiger
+
 **Vorbemerkung:** Da Objekte immer per Referenz übergeben werden, sind normalerweise keine Zeiger erforderlich. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.
 
 Die Objektnotation mit Zeigern ist ähnlich wie die Objektnotation direkt mit Objekten, der Unterschied ist Weglassen des Zeichens "Punkt".
@@ -214,21 +215,9 @@ Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen
   //to avoid errors in the code
 ```
 
-## Identifier für Objekteigenschaft
-
-Die Namensvergabe für Token, z.B. Namen von Objekteigenschaften, auf die über Objektnotation zugegriffen wird, ist restriktiver als für standardmäßige 4D Objektnamen. Sie müssen die Regeln für JavaScript Identifier berücksichtigen (siehe [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
-
-- Das erste Zeichen muss ein Buchstabe, ein Unterstrich (_) oder ein Dollarzeichen sein ($),
-- Nachfolgende Zeichen können ein Buchstabe, Digit, Unterstrich oder Dollarzeichen sein. Leerzeichen sind NICHT erlaubt.
-- Groß- und Kleinschreibung wird berücksichtigt.
-
-**Hinweis:**
-
-- Die Verwendung eines Tabellenfeldes als Collection Index, wie z.B. a.b[[Table1]Id], ist nicht erlaubt. Sie müssen eine Variable dazwischen setzen.
-- Bei Objektattributen, die als String in eckige Klammern gesetzt sind, müssen Sie keine ECMA Schreibregeln beachten. Beispiel: Das Attribut $o["My Att"] ist in 4D trotz Leerzeichen gültig. Sie können dann jedoch mit diesem Attribut keine Objektnotation verwenden.
-
 
 ## Beispiele
+
 Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekten. Beachten Sie, dass die Befehlsnotation weiterhin voll unterstützt wird.
 
 - Objekte schreiben und lesen (dieses Beispiel vergleicht Objektnotation und Befehlsnotation miteinander):

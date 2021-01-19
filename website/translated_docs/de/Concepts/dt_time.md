@@ -3,11 +3,13 @@ id: time
 title: Zeit
 ---
 
-- Datenfelder, Variablen oder Ausdrücke vom Typ Zeit umfassen den Bereich 00:00:00 bis 596.000:00:00.
-- Zeiten werden im 24 Stundenformat angezeigt.
-- Ein Wert vom Typ Zeit wird intern wie eine Zahl behandelt. Die von einer Zeit zurückgegebene Zahl ist die Anzahl Sekunden ab Mitternacht (00:00:00).
+Datenfelder, Variablen oder Ausdrücke vom Typ Zeit umfassen den Bereich 00:00:00 bis 596.000:00:00.
 
-**Hinweis:** Im Handbuch 4D Programmiersprache werden Zeitparameter in der Beschreibung der Befehle generell als Zeit bezeichnet, außer es ist anders angegeben.
+Zeiten werden im 24 Stundenformat angezeigt.
+
+Ein Wert vom Typ Zeit wird intern wie eine Zahl behandelt. Die von einer Zeit zurückgegebene Zahl ist die Anzahl Sekunden ab Mitternacht (00:00:00).
+
+**Hinweis:** Im *Handbuch 4D Programmiersprache* werden Zeitparameter in der Beschreibung der Befehle generell als Zeit bezeichnet, außer es ist anders angegeben.
 
 ## Zeitformate
 

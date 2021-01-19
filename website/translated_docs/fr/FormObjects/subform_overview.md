@@ -3,12 +3,11 @@ id: subformOverview
 title: Sous-formulaire
 ---
 
-## Aperçu
 
 Un sous-formulaire est un formulaire inclus dans un autre formulaire.
 
 
-### Terminologie
+## Terminologie
 
 Afin de bien définir les notions mises en oeuvre avec les sous-formulaires, voici quelques définitions relatives aux termes employés :
 

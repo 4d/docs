@@ -3,7 +3,6 @@ id: stylesheets
 title: Feuilles de style (style sheets)
 ---
 
-## Aperçu
 
 Une feuille de style regroupe une combinaison d’attributs d'objets formulaire —  allant des attributs de texte à quasiment tous les attributs d'objet disponibles.
 
@@ -13,7 +12,7 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 *   Facilité de maintenance : les feuilles de styles ont la propriété de modifier l’apparence de tous les objets qui les utilisent. Changer, par exemple, la taille de la police dans une feuille de style changera la taille de la police pour tous les objets qui utilisent cette feuille de style.
 *   Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée.
 
-### Fichiers feuilles de style
+## Fichiers feuilles de style
 
 4D accepte trois fichiers feuilles de style spécifiques :
 
@@ -23,10 +22,10 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 | styleSheets_mac.css     | Pour définir des styles d'attributs spécifiques de macOS uniquement     |
 | styleSheets_windows.css | Pour définir des styles d'attributs spécifiques pour Windows uniquement |
 
-Ces fichiers sont stockés dans le dossier "/SOURCES" du projet.
+Ces fichiers sont stockés dans le dossier "/SOURCES" du projet. Ils sont également accessibles directement via le [CSS Preview](formEditor.md#css-preview) dans la barre d'outils de l'éditeur de formulaires.
 
 
-### Architecture des feuilles de style
+## Architecture des feuilles de style
 
 While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
@@ -183,6 +182,8 @@ Tous les objets de type texte ayant un attribut text dont la valeur commence par
 text[text|=Hello]
 {
      stroke: yellow;
+
+
 }
 ```
 
@@ -228,8 +229,8 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 
 - Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-    - nom de la couleur css : `fill: red;`
-    - valeur valeur hexadécimale : `fill: #FF0000;`
+    - Nom la couleur CSS : `fill: red;`
+    - Valeur hexadécimale : `fill: #FF0000;`
     - fonction `rgb()` : `fill:rgb(255,0,0)`
 
 - Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple:
@@ -254,12 +255,12 @@ Pour remplacer ce comportement, la valeur du style doit être suivie d'une décl
 | ------------------------------ | ---------------- | ---------- |
 | `"text": "Button",`            | `text: Edit;`    | `"Button"` |
 
-
 **Exemple 2 :**
 
 | Description du formulaire JSON | Feuille de style         | 4D affiche |
 | ------------------------------ | ------------------------ | ---------- |
 | `"text": "Button",`            | `text: Edit !important;` | `"Edit"`   |
+
 
 
 
@@ -296,12 +297,6 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
     ```
 
 > Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. * Pour des raisons de sécurité, seuls les chemins de système de fichiers (filesystem) sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
-
-
-
-
-
-
 
 
 ## Création ou modification d'une feuille de style

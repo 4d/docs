@@ -3,7 +3,6 @@ id: developing
 title: Developing a project
 ---
 
-## Overview
 
 4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as an application runtime, allowing to develop, test, and debug the project. 
 

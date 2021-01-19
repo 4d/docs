@@ -316,6 +316,7 @@ Indique une expression ou une variable qui sera évaluée pour chaque ligne affi
 
 > Les paramètres de style définis avec cette propriété sont ignorés si d'autres paramètres de style sont déjà définis via des expressions (par exemple, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
+
 **Exemple**
 
 Dans la méthode projet *Color*, entrez le code suivant :
@@ -378,7 +379,7 @@ La méthode *Color* contiendrait alors :
 ---
 ## Multistyle
 
-Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. Lorsque cette option est cochée, 4D interprète toutes les balises \<SPAN> HTML présentes dans la zone.</p> 
+Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. Lorsque cette option est cochée, 4D interprète toutes les balises \<SPAN> HTML présentes dans la zone. </p> 
 
 <p spaces-before="0">
   Par défaut, cette option n'est pas activée.
@@ -746,3 +747,24 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
 <p spaces-before="0">
   <a href="input_overview.md">Input</a>
 </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

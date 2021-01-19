@@ -316,6 +316,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
+
 **Beispiel**
 
 In the *Color* project method, write the following code:
@@ -378,7 +379,7 @@ Then, the *Color* method would contain:
 ---
 ## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
+This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. </p> 
 
 <p spaces-before="0">
   By default, this option is not enabled.
@@ -746,3 +747,24 @@ This property enables the possibility of using specific styles in the selected a
 <p spaces-before="0">
   <a href="input_overview.md">Input</a>
 </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

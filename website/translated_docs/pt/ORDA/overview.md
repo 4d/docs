@@ -1,9 +1,7 @@
 ---
 id: overview
-title: Overview
+title: What is ORDA?
 ---
-
-## What is ORDA?
 
 ORDA stands for **Object Relational Data Access**. It is an enhanced technology allowing to access both the model and the data of a database through objects.
 

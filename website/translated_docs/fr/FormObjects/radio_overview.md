@@ -3,8 +3,6 @@ id: radiobuttonOverview
 title: Bouton radio
 ---
 
-## Aperçu
-
 Les boutons radio sont des objets qui permettent à l’utilisateur de sélectionner une valeur parmi un groupe de valeurs.
 
 Un bouton radio apparaît sous la forme d’un texte suivi d’un cercle. Cependant, les boutons radio peuvent avoir [différentes apparences](#button-styles).

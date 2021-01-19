@@ -3,13 +3,12 @@ id: progressIndicator
 title: Progress Indicator
 ---
 
-## Überblick
 
 A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically.
 
 ![](assets/en/FormObjects/progress1.png)
 
-### Using indicators
+## Using indicators
 
 You can use indicators either to display or set values. For example, if a progress indicator is given a value by a method, it displays the value. If the user drags the indicator point, the value changes. The value can be used in another object such as a field or an enterable or non-enterable object.
 

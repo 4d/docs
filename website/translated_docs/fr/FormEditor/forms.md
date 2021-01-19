@@ -3,7 +3,6 @@ id: forms
 title: A propos des formulaires 4D
 ---
 
-## Aperçu
 
 Les formulaires fournissent l'interface par laquelle les informations sont saisies, modifiées et imprimées dans une application de bureau. A l'aide des formulaires, les utilisateurs peuvent interagir avec les données d'une base de données et imprimer des rapports. Les formulaires permettent de créer des boîtes de dialogue personnalisées, des palettes ou toute fenêtre personnalisée.
 
@@ -58,6 +57,8 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
                 "action": "Cancel",
                 "left": 60,
                 "top": 160,
+
+
                 "width": 100,
                 "height": 20
                 }
@@ -92,7 +93,7 @@ Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de
 
 - Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
 - Organisez chaque sujet sur sa propre page.
-- Réduisez ou éliminez le défilement pendant la saisie des données.
+- Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order).
 - Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
@@ -117,7 +118,7 @@ A l’exécution du formulaire, les objets sont chargés et combinés dans l’o
 3.  Page zéro du formulaire ouvert
 4.  Page courante du formulaire ouvert.
 
-Cet ordre détermine l’ordre de saisie des objets dans le formulaire.
+Cet ordre détermine [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order) par défaut des objets dans le formulaire.
 
 > Seules les pages 0 et 1 du formulaire hérité peuvent apparaître dans les autres formulaires.
 

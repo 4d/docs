@@ -2,7 +2,6 @@
 id: radiobuttonOverview
 title: Radio Button
 ---
-## Overview
 
 Radio buttons are objects that allow the user to select one of a group of buttons.
 

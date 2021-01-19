@@ -3,9 +3,8 @@ id: classFunctions
 title: Calling ORDA class functions
 ---
 
-## 概要
 
-You can call [user class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
 Functions are simply called in POST requests on the appropriate ORDA interface, without (). たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
@@ -19,6 +18,7 @@ In 4D language, this call is equivalent to, :
 $city:=ds.City.getCity("Aguada")
 ```
 
+> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
 ## 関数の呼び出し
 
@@ -43,6 +43,7 @@ Functions are called on the corresponding object on the server datastore.
 
 
 ## 引数
+
 
 
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
@@ -123,7 +124,7 @@ The US_Cities `DataStore` class provides an API:
 
 Class extends DataStoreImplementation
 
-Function getName()
+exposed Function getName()
     $0:="US cities and zip codes manager" 
 ```
 
@@ -148,7 +149,7 @@ The Dataclass class `City` provides an API that returns a city entity from a nam
 
 Class extends DataClass
 
-Function getCity()
+exposed Function getCity()
     var $0 : cs.CityEntity
     var $1,$nameParam : text
     $nameParam:=$1
@@ -197,7 +198,7 @@ The Entity class `CityEntity` provides an API:
 
 Class extends Entity
 
-Function getPopulation()
+exposed Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
@@ -223,7 +224,7 @@ The EntitySelection class `CitySelection` provides an API:
 
 Class extends EntitySelection
 
-Function getPopulation()
+exposed Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
@@ -248,7 +249,7 @@ The `StudentsSelection` class has a `getAgeAverage` function:
 
 Class extends EntitySelection
 
-Function getAgeAverage
+exposed Function getAgeAverage
     C_LONGINT($sum;$0)
     C_OBJECT($s)
 
@@ -281,7 +282,7 @@ The `StudentsSelection` class has a `getLastSummary` function:
 
 Class extends EntitySelection
 
-Function getLastSummary
+exposed Function getLastSummary
     C_TEXT($0)
     C_OBJECT($last)
 
@@ -313,7 +314,7 @@ The Dataclass class `Students` has the function `pushData()` receiving an entity
 
 Class extends DataClass
 
-Function pushData
+exposed Function pushData
     var $1, $entity, $status, $0 : Object
 
     $entity:=$1
@@ -454,7 +455,7 @@ In this example, we associate an existing school to a Students entity. The `Stud
 
 Class extends Entity
 
-Function putToSchool()
+exposed Function putToSchool()
     var $1, $school , $0, $status : Object
 
         //$1 is a Schools entity
@@ -496,7 +497,7 @@ In the `Students` Dataclass class, the `setFinalExam()` function updates a recei
 
 Class extends DataClass
 
-Function setFinalExam()
+exposed Function setFinalExam()
 
     var $1, $es, $student, $status : Object
     var $2, $examResult : Text

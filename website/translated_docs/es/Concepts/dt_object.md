@@ -114,6 +114,7 @@ Object notation is available on any language element that can contains or return
 ```
 
 ### Pointers
+
 **Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.
 
 Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
@@ -214,21 +215,9 @@ When expressions of a given type are expected in your 4D code, you can make sure
   //to avoid errors in the code
 ```
 
-## Object property identifiers
-
-Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
-
-- the first character must be a letter, an underscore (_), or a dollar sign ($),
-- subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
-- they are case sensitive.
-
-**Note:**
-
-- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
-- Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
-
 
 ## Examples
+
 Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.
 
 - Writing and reading objects (this example compares object notation and command notation):

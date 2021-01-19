@@ -4,8 +4,6 @@ title: Page restitution
 sidebar_label: Page restitution
 ---
 
-## Restauration d'une sauvegarde
-
 You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
 
 ![](assets/en/MSC/MSC_restore.png)

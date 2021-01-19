@@ -3,7 +3,11 @@ id: looping
 title: Schleifenstrukturen
 ---
 
+Schleifenstrukturen wiederholen eine Abfolge von Anweisungen, bis eine Bedingung gefunden wird oder eine Anzahl an Durchläufen erreicht ist.
+
+
 ## While...End while
+
 Die formale Syntax der Abfragefolge `While...End while` lautet:
 ```4d
  While(Boolean_Expression)
@@ -47,6 +51,7 @@ Die Schleife `Repeat...Until` arbeitet ähnlich wie die Schleife [While...End wh
 Ein weiterer Unterschied ist, dass `Repeat...Until` weiterläuft, bis der Boolean Ausdruck TRUE ist.
 
 ### Beispiel
+
 Vergleichen Sie folgendes Beispiel mit dem Beispiel zu `While...End while`. Beachten Sie, dass der Boolean Ausdruck nicht initialisiert werden muss—es gibt keinen Befehl `CONFIRM` zum Initialisieren der Variable `OK`.
 
 ```4d
@@ -56,6 +61,7 @@ Vergleichen Sie folgendes Beispiel mit dem Beispiel zu `While...End while`. Beac
 ```
 
 ## For...End for
+
 Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 ```4d
@@ -79,6 +85,7 @@ Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
 - Ist *Start_Expression* größer als *End_Expression*, wird die Schleife gar nicht ausgeführt, außer *Increment_Expression* hat einen negativen Wert. Sehen Sie die Beispiele.
 
 ### Allgemeine Beispiele
+
 1. Folgendes Beispiel führt 100 Durchläufe aus:
 
 ```4d
@@ -264,6 +271,7 @@ Hier zwei Beispiele:
 ```
 
 ## For each...End for each
+
 Die formale Syntax der Abfragefolge `For each..End for each` lautet:
 
 ```4d
@@ -414,7 +422,9 @@ Beispiel:
  End for each
   //$col2=[1,2,3,"a","b","c","d"]
 ```
+
 ### Bedingungen Until und While
+
 Sie können die Ausführung von `For each...End for each` durch Einfügen einer Bedingung `Until` oder `While` in der Schleife steuern. Ist eine Anweisung `Until(condition)` in der Schleife vorhanden, stoppt der Durchlauf, sobald condition mit `Wahr` gewertet wird. Bei einer Anweisung `While(condition)` stoppt der Durchlauf dagegen, sobald condition mit `Falsch` gewertet wird.
 
 Sie können je nach Bedarf ein anderes Schlüsselwort verwenden:

@@ -3,7 +3,7 @@ id: splitters
 title: スプリッター
 ---
 
-## 概要
+
 
 スプリッターはフォームを2つのエリアに分割します。ユーザーはいずれかの方向へスプリッターを移動してエリアを拡げたり縮めたりすることができます。 水平方向または垂直方向のスプリッターを作成できます。 スプリッターでは各オブジェクトのサイズ調整プロパティが考慮されます。つまり作成するアプリケーションのインタフェースをすべてカスタマイズすることができます。 また、スプリッターは “プッシャー” (押し込みタイプ) にすることも可能です。
 
@@ -36,6 +36,7 @@ title: スプリッター
 
 
 ### プロパティ一覧
+
 [タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#CSSクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [線カラー](properties_BackgroundAndBorder.md#線カラー) - [ヘルプTips](properties_Help.md#ヘルプTips)
 
 ## 隣接するオブジェクトのプロパティとの相互作用

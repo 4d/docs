@@ -3,8 +3,6 @@ id: spinner
 title: Spinner
 ---
 
-## Overview
-
 The spinner is a circular indicator that displays a continuous animation, like the [Barber shop](progressIndicator.md#barber-shop).
 
 ![](assets/en/FormObjects/spinner.gif)
@@ -17,5 +15,6 @@ When the form is executed, the object is not animated. You manage the animation 
 * 0 = Stop animation
 
 ### Supported Properties
+
 [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Height](properties_CoordinatesAndSizing.md#height) -[Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
  

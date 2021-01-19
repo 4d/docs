@@ -175,3 +175,4 @@ USE SET("<>Deleted Records") // インタープロセスセット
 If(Records in set("$Selection"+String($i))>0) // クライアントセット
 
 ```
+

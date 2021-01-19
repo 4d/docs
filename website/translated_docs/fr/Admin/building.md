@@ -41,7 +41,7 @@ Chaque paramètre de générateur d'application est stocké en tant que clé XML
 
 Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
 
-Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html).
+Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D Clés XML BuildApplication](https://doc.4d.com/4Dv18R4/4D/18-R4/4D-XML-Keys-BuildApplication.100-5068211.en.html).
 
 ### Fichier d'historique
 
@@ -334,7 +334,7 @@ Si la partie serveur et/ou la partie cliente de votre application exécutable es
 - fichiers *cert.pem* et *key.pem* (facultatifs) : ces fichiers sont utilisés pour les connexions SSL ainsi que par les commandes de cryptage des données,
 - Dossier racine Web (DossierWeb) par défaut.
 
-Des éléments doivent être installés :
+Des éléments doivent être installée :
 *   **Sous Windows**
     *   **Application serveur** : dans le sous-dossier *Client Server executable\ \<ApplicationName>Server\Server Database*.
     *   **Application cliente** : dans le sous-dossier *Client Server executable\ \<ApplicationName>Client*.
@@ -367,6 +367,41 @@ Le scénario standard est le suivant :
     - si l'application monoposte ne possède pas de dossier "Data" par défaut, le client fusionné sera exécuté sans données.
 
 Les fonctionnalités de mise à jour automatique de 4D Server (clé [CurrentVers](#current-version), commande `SET UPDATE FOLDER`, etc.) fonctionnent avec une application monoposte, comme avec une application distante standard. Lors de la connexion, l'application monoposte compare sa clé `CurrentVers` à la plage de version 4D Server. Si elle se trouve en dehors de plage, l'application cliente monoposte mise à jour est téléchargée depuis le serveur et l'Updater lance le processus de mise à jour locale.
+
+
+### Personnalisation des noms de dossier de cache client et/ou serveur
+
+Les dossiers de cache client et serveur sont utilisés pour stocker des éléments partagés tels que des ressources ou des composants. Ils sont nécessaires pour gérer les échanges entre le serveur et les clients distants. Les applications client/serveur utilisent les chemins d'accès par défaut pour les dossiers de cache système client et serveur.
+
+Dans certains cas spécifiques, vous devrez personnaliser les noms de ces dossiers pour implémenter des architectures spécifiques (voir ci-dessous). 4D vous fournit les clés `ClientServerSystemFolderName` et `ServerStructureFolderName` à définir dans le fichier de paramètres *buildApp*.
+
+
+#### Dossier de cache client
+
+La personnalisation du nom du dossier de cache côté client peut être utile lorsque votre application cliente est utilisée pour se connecter à plusieurs serveurs fusionnés qui sont similaires mais qui utilisent des ensembles de données différents. Dans ce cas, pour enregistrer plusieurs téléchargements inutiles de ressources locales identiques, vous pouvez utiliser le même dossier de cache local personnalisé.
+
+- Configuration par défaut (*pour chaque connexion à un serveur, un dossier cache spécifique est téléchargé/mis à jour*) :
+
+![](assets/en/Admin/cachea.png)
+
+- À l'aide de la clé `ClientServerSystemFolderName` (*un seul dossier de cache est utilisé pour tous les serveurs*) :
+
+![](assets/en/Admin/cacheb.png)
+
+
+#### Dossier de cache du serveur
+
+La personnalisation du nom du dossier de cache côté serveur est utile lorsque vous exécutez plusieurs applications serveur identiques créées avec différentes versions de 4D sur le même ordinateur. Si vous souhaitez que chaque serveur utilise son propre ensemble de ressources, vous devez personnaliser le dossier de cache du serveur.
+
+- Configuration par défaut (*les mêmes applications serveur partagent le même dossier de cache*) :
+
+![](assets/en/Admin/cacheServera.png)
+
+- À l'aide de la clé `ServerStructureFolderName` (*un dossier de cache dédié est utilisé pour chaque application serveur*) :
+
+![](assets/en/Admin/cacheServerb.png)
+
+
 
 
 ## Page Plugins et composants
@@ -539,7 +574,7 @@ Ce mode vous permet de dupliquer vos applications fusionnées sans rompre le lie
 
 *Duplication lorsque les données sont liées par le chemin de l'application :* ![](assets/en/Project/datalinking2.png)
 
-Vous sélectionnez le mode de liaison des données lors de la phase de génération de l'application. Vous pouvez soit :
+Vous sélectionnez le mode de liaison des données lors de la phase de génération de l'application. Vous pouvez :
 
 - Utiliser la [Page Application](#application) ou la [Page Client/Serveur](#client-server) de boîte de dialogue du Générateur d'applications.
 - Utiliser la clé XML **LastDataPathLookup** (application monoposte ou application serveur).

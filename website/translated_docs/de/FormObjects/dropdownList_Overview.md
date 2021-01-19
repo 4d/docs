@@ -3,8 +3,6 @@ id: dropdownListOverview
 title: Drop-down List
 ---
 
-## Überblick
-
 Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
 
 On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform:

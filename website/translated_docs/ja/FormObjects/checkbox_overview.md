@@ -3,8 +3,6 @@ id: checkboxOverview
 title: チェックボックス
 ---
 
-## 概要
-
 チェックボックスはボタンの一種で、バイナリ (true-false) データの入力や表示をおこないます。 基本的に、チェックボックスの状態は選択または未選択のいずれかになりますが、3つめの状態を定義することもできます (後述参照)。
 
 ![](assets/en/FormObjects/checkbox.png)

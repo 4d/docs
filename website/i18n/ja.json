@@ -11,8 +11,77 @@
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
       },
+      "API/classClass": {
+        "title": "クラス"
+      },
+      "API/collectionClass": {
+        "title": "コレクション"
+      },
       "API/cryptoClass": {
-        "title": "CryptoKey クラス"
+        "title": "CryptoKey"
+      },
+      "API/dataclassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/dataclassClass": {
+        "title": "データクラス"
+      },
+      "API/datastoreClass": {
+        "title": "DataStore"
+      },
+      "API/directory": {
+        "title": "Directory クラス"
+      },
+      "API/document": {
+        "title": "Document Class"
+      },
+      "API/emails": {
+        "title": "Email"
+      },
+      "API/entityClass": {
+        "title": "エンティティ"
+      },
+      "API/entitySelectionClass": {
+        "title": "EntitySelection"
+      },
+      "API/fileClass": {
+        "title": "File"
+      },
+      "API/folderClass": {
+        "title": "Folder"
+      },
+      "API/formulaClass": {
+        "title": "Formula"
+      },
+      "API/imapTransporterClass": {
+        "title": "IMAPTransporter"
+      },
+      "API/overview": {
+        "title": "Class API Overview"
+      },
+      "API/pop3TransporterClass": {
+        "title": "POP3Transporter"
+      },
+      "API/signalClass": {
+        "title": "Signal"
+      },
+      "API/smtpTransporterClass": {
+        "title": "SMTPTransporter"
+      },
+      "API/transporter": {
+        "title": "Transporter クラス"
+      },
+      "API/webServerClass": {
+        "title": "WebServer"
+      },
+      "API/zipArchiveClass": {
+        "title": "ZIPArchive"
+      },
+      "API/zipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/zipFolderClass": {
+        "title": "ZIPFolder"
       },
       "Backup/backup": {
         "title": "バックアップ"
@@ -288,6 +357,9 @@
       "Events/onValidate": {
         "title": "On Validate"
       },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
+      },
       "Events/onVpReady": {
         "title": "On VP Ready"
       },
@@ -305,6 +377,9 @@
       },
       "FormEditor/forms": {
         "title": "About 4D Forms"
+      },
+      "FormEditor/macros": {
+        "title": "Form Editor Macros"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -569,7 +644,7 @@
         "title": "データモデルクラス"
       },
       "ORDA/overview": {
-        "title": "概要"
+        "title": "ORDAとは何か"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"

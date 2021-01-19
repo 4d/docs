@@ -3,7 +3,6 @@ id: webAreaOverview
 title: Web Area
 ---
 
-## Overview
 
 Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -33,6 +32,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 > This property is only available if the web area [uses the embedded web rendering engine](#use-embedded-web-rendering-engine).
 
 ### $4d object
+
 
 
 
@@ -124,7 +124,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 ## Standard actions
 
-Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Next URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
 ## Form events

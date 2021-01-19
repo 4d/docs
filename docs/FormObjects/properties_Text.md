@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: Text
+title: Text 
 ---
 ---
 ## Allow font/color picker
@@ -23,7 +23,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 Sets the selected text to appear darker and heavier.
 
-You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
 
 >This is normal text.<br>
 **This is bold text.**
@@ -44,7 +44,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 Sets the selected text to slant slightly to the right.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
 
 >This is normal text.<br>
 *This is text in italics.*
@@ -87,7 +87,7 @@ Sets the text to have a line running beneath it.
 ---
 ## Font
 
-This property allows you to specify either the **font theme** or the **font family** used in the object.
+This property allows you to specify either the **font theme** or the **font family** used in the object. 
 
 >**Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
 
@@ -100,7 +100,7 @@ The font theme property designates an automatic style name. Automatic styles det
 - the system language,
 - and the type of form object.
 
-With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
+With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another. 
 
 Three font themes are available:
 - **normal**: automatic style, applied by default to any new object created in the Form editor.
@@ -156,7 +156,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 ---
 ## Font Size
 
-Allows defining the object's font size in points.
+Allows defining the object's font size in points. 
 
 #### JSON Grammar
 
@@ -172,9 +172,9 @@ Allows defining the object's font size in points.
 ---
 ## Font Color
 
-Designates the font color.
+Designates the font color. 
 
-> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
+> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used. 
 
 The color can be specified by:
 
@@ -182,7 +182,7 @@ The color can be specified by:
 * a HEX value - like "#ff0000"
 * an RGB value - like "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command. 
 
 
 #### JSON Grammar
@@ -210,9 +210,9 @@ You must enter an expression or a variable (array type variables cannot be used)
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
 
 >This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
-
+ 
 The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
-
+ 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
 Foreground color;Dark shadow color)
@@ -226,7 +226,7 @@ Foreground color;Dark shadow color)
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md#overview) 
 
 ---
 ## Style Expression
@@ -238,7 +238,7 @@ Used to apply a custom character style to each row of the list box or each cell 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
 Example:
-
+ 
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
@@ -284,8 +284,8 @@ Horizontal location of text within the area that contains it.
 
 Vertical location of text within the area that contains it.
 
-The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
-- `bottom` for all data (except pictures) and
+The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column: 
+- `bottom` for all data (except pictures) and 
 - `top` for picture type data.
 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
@@ -328,6 +328,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
+
 **Example**
 
 In the *Color* project method, write the following code:
@@ -365,7 +366,7 @@ Then, the *Color* method would contain:
     Form.meta.stroke:="purple"
     Form.meta.cell:=Form.colStyle //reuse the same object for better performance
  ...
-```
+``` 
 
 
 >See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
@@ -392,7 +393,7 @@ Then, the *Color* method would contain:
 ---
 ## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.
+This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area. 
 
 By default, this option is not enabled.
 
@@ -428,7 +429,7 @@ Modifies the orientation (rotation) of a text area. Text areas can be rotated by
 |180|![](assets/en/FormObjects/orientation3.png)|
 |270|![](assets/en/FormObjects/orientation4.png)|
 
-In addition to [static text areas](text.md), [input](input_overview.md) text objects can be rotated when they are non-[enterable](properties_Entry.md#enterable). When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
+In addition to [static text areas](text.md), [input](input_overview.md) text objects can be rotated when they are non-[enterable](properties_Entry.md#enterable). When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order. 
 
 
 
@@ -451,8 +452,8 @@ In addition to [static text areas](text.md), [input](input_overview.md) text obj
 ## Row Font Color Array
 `Array type list boxes`
 
-Allows setting a custom font color to each row of the list box or cell of the column.
-
+Allows setting a custom font color to each row of the list box or cell of the column. 
+ 
 The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
@@ -493,7 +494,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 ---
 ## Store with default style tags
 
-This property is only available for a [Multi-style](#multi-style) input area.
+This property is only available for a [Multi-style](#multi-style) input area. 
 When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
 
 For example, here is a text that includes a style modification:
@@ -521,3 +522,24 @@ When the property is enabled, the area stores all the formatting information. Th
 #### Objects Supported
 
 [Input](input_overview.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

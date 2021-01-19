@@ -3,9 +3,6 @@ id: backup
 title: Sauvegarde
 ---
 
-
-## Lancer une sauvegarde
-
 Une sauvegarde peut être déclenchée de trois manières :
 
 - Manuellement, via la commande **Sauvegarde...** du menu **Fichier** de 4D ou le bouton **Sauvegarde** du [Centre de sécurité et de maintenance (CSM)](MSC/backup.md).
@@ -14,7 +11,7 @@ Une sauvegarde peut être déclenchée de trois manières :
 
 > 4D Server : Il est possible de déclencher “manuellement” une sauvegarde depuis un poste distant, via une méthode appelant la commande `BACKUP`. Dans tous les cas, la commande sera exécutée sur le serveur.
 
-### Sauvegarde manuelle
+## Sauvegarde manuelle
 
 1. Choisissez la commande **Sauvegarde...** dans le menu **Fichier** de 4D.   
    La fenêtre de sauvegarde s’affiche : ![](assets/en/Backup/backup01.png) Vous pouvez visualiser l'emplacement du dossier de sauvegarde à l'aide du pop up menu associé à la zone "Destination de la sauvegarde". Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
@@ -26,14 +23,14 @@ Le bouton **Propriétés de la base...** provoque l’affichage de la boîte de 
  2. Cliquez sur le bouton **Sauvegarde** pour déclencher la sauvegarde avec les paramètres courants.
 
 
-### Sauvegarde automatique périodique
+## Sauvegarde automatique périodique
 
 Les sauvegardes périodiques sont déclenchées automatiquement. Elles sont configurées dans la Page **Sauvegarde/Périodicité** des **Propriétés**.
 
 Les sauvegardes s'effectuent automatiquement au moment défini, sans intervention de l’utilisateur. Pour plus d’informations sur le fonctionnement de cette boîte de dialogue, reportez-vous à la section [Définir des sauvegardes périodiques](settings.md#scheduler).
 
 
-### Commande BACKUP
+## Commande BACKUP
 
 Lorsque la commande `BACKUP` est exécutée depuis une méthode, la sauvegarde est alors déclenchée avec les paramètres courants définis dans les propriétés. Vous pouvez utiliser la Méthode base `On Backup Startup` et `On Backup Shutdown` afin de contrôler le déroulement de la sauvegarde (cf. le manuel *Langage de 4D*).
 

@@ -24,7 +24,30 @@
 	],
 
   "ORDA":["ORDA/overview","ORDA/dsmapping","ORDA/ordaClasses","ORDA/entities","ORDA/datastores","ORDA/glossary"],
-  "Class API Reference":["API/cryptoClass"],
+  "Class API Reference":
+  [
+	"API/overview",
+	"API/classClass",
+	"API/collectionClass",
+	"API/cryptoClass",
+	"API/dataclassClass",
+	"API/dataclassAttributeClass",
+	"API/datastoreClass",
+	"API/emails",
+	"API/entityClass",
+	"API/entitySelectionClass",
+	"API/fileClass",
+	"API/folderClass",
+	"API/formulaClass",
+	"API/imapTransporterClass",
+	"API/pop3TransporterClass",
+	"API/signalClass",
+	"API/smtpTransporterClass",
+	"API/webServerClass",
+	"API/zipArchiveClass",
+	"API/zipFileClass",
+	"API/zipFolderClass"
+	],
   "Access Rights":["Users/overview","Users/editing"],
   "Administration":["Admin/licenses","Admin/building"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
@@ -53,7 +76,7 @@
 		  ]
 		}
 	],
-  "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
+  "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/macros","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
 		"FormObjects/buttonOverview",
@@ -167,6 +190,7 @@
 			"Events/onUrlLoadingError",
 			"Events/onUrlResourceLoading",
 			"Events/onValidate",
+			"Events/onVpRangeChanged",
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
   "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]

@@ -113,6 +113,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 ```
 
 ### Pointeurs
+
 **Note :** Les objets étant toujours passés par référence, l'utilisation de pointeurs n'est généralement pas nécessaire. En passant un objet, 4D utilise automatiquement, en interne, un mécanisme similaire à un pointeur pour minimiser la mémoire nécessaire, pour vous permettre de modifier le paramètre et de retourner les modifications. Par conséquent, vous n'aurez pas besoin d'utiliser des pointeurs. Cependant, si vous souhaitez utiliser des pointeurs, il est possible d'accéder aux valeurs de propriétés via des pointeurs.
 
 La notation objet pour les pointeurs est semblable à la notation objet standard, à la seule différence que le symbole "point" doit être omis.
@@ -213,21 +214,9 @@ Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous
   //afin d'éviter des erreurs dans le code
 ```
 
-## Identifiants de propriétés d'objets
-
-Les règles de nommage des tokens (noms des propriétés d'objets auxquelles on accède via la notation objet) sont plus restrictives que celles qui s'appliquent aux noms d'identifiants 4D standard. Ils doivent se conformer à la grammaire des identificateurs JavaScript (voir [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
-
-- le premier caractère doit être une lettre, un trait de soulignement (_) ou le symbole dollar ($),
-- les autres caractères peuvent être des lettres, des chiffres, des traits de soulignement ou des symboles dollar (les espaces sont proscrits),
-- ils différencient les caractères majuscules/minuscules.
-
-**Notes :**
-
-- L'utilisation d'un champ comme indice de collection, par exemple a.b[[Table1]Id], n'est pas autorisé. Vous devez utiliser une variable intermédiaire.
-- La création d'attributs d'objets à l'aide d'une chaîne entre crochets permet de s'affranchir des règles d'ECMA Script. Par exemple, l'attribut $o["Mon Att. nom"] est valide dans 4D, malgré l'espace. Dans ce cas cependant, il ne sera pas possible d'utiliser la notation à points avec cet attribut.
-
 
 ## Exemples
+
 L'utilisation de la notation objet simplifie grandement le code 4D de manipulation des objets. A noter toutefois que la notation utilisant les commandes "OB" reste entièrement prise en charge.
 
 - Ecriture et lecture de propriétés d'objets (cet exemple compare la notation objet et la syntaxe avec commandes) :

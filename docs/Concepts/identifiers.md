@@ -3,32 +3,32 @@ id: identifiers
 title: Identifiers
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, object properties, tables, forms, etc.).
+This section describes the conventions and rules for naming various elements in the 4D language (variables, object properties, tables, forms, etc.). 
 
 > If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 
 
 
-## Arrays
+## Arrays 
 
-Array names follow the same rules as [variables](#variables).
+Array names follow the same rules as [variables](#variables). 
 
 
 ## Classes
 
 The name of a class can contain up to 31 characters.
 
-A class name must be compliant with standard [property naming rules](#object-properties) for dot notation.
+A class name must be compliant with standard [property naming rules](#object-properties) for dot notation. 
 
 > Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
 
 
 
-## Functions
+## Functions 
 
 Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. 
 
 
 
@@ -50,9 +50,9 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-> If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`).
+> If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`). 
 
-See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6). 
 
 ## Parameters
 
@@ -67,7 +67,7 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 ```
 
 
-## Project methods
+## Project methods 
 
 The name of a project method name contain up to 31 characters.
 
@@ -86,7 +86,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Tip:** It is a good programming technique to adopt the same naming convention as the one used by 4D for built-in methods. Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
- > When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed.
+ > When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all plug-in commands, expect the name of a method as a string when a method parameter is passed. 
 
 Examples:
 
@@ -105,14 +105,14 @@ ON EVENT CALL("HANDLE EVENTS")
 
 ## Tables and Fields
 
-You designate a table by placing its name between brackets: \[...]. You designate a field by first specifying the table to which it belongs (the field name immediately follows the table name).
+You designate a table by placing its name between brackets: \[...]. You designate a field by first specifying the table to which it belongs (the field name immediately follows the table name). 
 
 A table name and field name can contain up to 31 characters.
 
 - A table or fied name must begin with a letter, an underscore, or a dollar ("$")
 - Thereafter, the name can include alphabetic characters, numeric characters, the space character, and the underscore character ("_").
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
-- Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.).
+- Additional rules must be respected when the database must be handled via SQL: only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted, and the name must not include any SQL keywords (command, attribute, etc.). 
 
 
 Examples:
@@ -145,14 +145,14 @@ Examples:
 ```4d
 For($vlRecord;1;100) //local variable
 $vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales
+var $vName; $vJob : Text //local variales 
 If(bValidate=1) //process variable
 <>vlProcessID:=Current process() //interprocess variable
 ```
 
 ## Other names
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc. 
 
 Such string names can contain up to 255 characters, not including the "$" or "<>" characters (if any).
 
@@ -175,3 +175,4 @@ USE SET("<>Deleted Records") //Interprocess set
 If(Records in set("$Selection"+String($i))>0) //Client set
 
 ```
+

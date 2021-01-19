@@ -2,7 +2,6 @@
 id: pictureButtonOverview
 title: Picture Button
 ---
-## Overview
 
 A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
 

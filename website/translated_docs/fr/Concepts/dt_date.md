@@ -3,8 +3,9 @@ id: date
 title: Date
 ---
 
-- Les variables, champs ou expressions de type Date peuvent être compris entre 1/1/100 et 31/12/32767.
-- Bien que le mode de représentation des dates par C_DATE permette de manipuler des dates allant jusqu'à l'année 32 767, certaines opérations passant par le système imposent une limite plus basse.
+Les variables, champs ou expressions de type Date peuvent être compris entre 1/1/100 et 31/12/32767.
+
+Bien que le mode de représentation des dates par C_DATE permette de manipuler des dates allant jusqu'à l'année 32 767, certaines opérations passant par le système imposent une limite plus basse.
 
 **Note :** Dans ce manuel de référence du langage 4D, les paramètres de type Date dans les descriptions des commandes sont appelés Date, sauf spécification explicite.
 

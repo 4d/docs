@@ -26,7 +26,10 @@ Chaque événement est retourné sous forme d'objet par la commande `FORM Event`
 |           |      |             |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the
 
-Des propriétés supplémentaires sont retournées lorsque l'événement se produit sur des objets spécifiques. Par exemple, l'événement [On After Edit](onAfterEdit.md) retourné par une zone [4D View Pro](FormObjects/viewProArea_overview.md) contient des propriétés `sheetName` ou `action`.
+Des propriétés supplémentaires sont retournées lorsque l'événement se produit sur des objets spécifiques. En particulier :
+
+- Les [list box](FormObjects/listbox_overview.md#supported-form-events) et les [colonnes de list box](FormObjects/listbox_overview.md#supported-form-events-1) retournent des [propriétés supplémentaires](FormObjects/listbox_overview.md#additional-properties) telles que `columnName` ou `isRowSelected`.
+- Les [zones 4D View Pro](FormObjects/viewProArea_overview.md) retournent par exemple des propriétés `sheetName` ou `action` dans l'objet événement [On After Edit](onAfterEdit.md).
 
 
 ## Événements et méthodes
@@ -51,11 +54,11 @@ Le tableau suivant résume la manière dont les méthodes objet et formulaire so
 | On Load                       | Oui                                | Oui                | Tous les objets             |
 | On Unload                     | Oui                                | Oui                | Tous les objets             |
 | Sur validation                | Oui                                | Oui                | Tous les objets             |
-| On Clicked                    | Oui                                | Oui                | Objets concernés uniquement |
-| On Double Clicked             | Oui                                | Oui                | Objets concernés uniquement |
-| On Before Keystroke           | Oui                                | Oui                | Objets concernés uniquement |
-| On After Keystroke            | Oui                                | Oui                | Objets concernés uniquement |
-| On After Edit                 | Oui                                | Oui                | Objets concernés uniquement |
+| Sur clic                      | Oui                                | Oui                | Objets concernés uniquement |
+| Sur double clic               | Oui                                | Oui                | Objets concernés uniquement |
+| Sue avant frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
+| Sue après frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
+| Sur après modification        | Oui                                | Oui                | Objets concernés uniquement |
 | On Getting Focus              | Oui                                | Oui                | Objets concernés uniquement |
 | On Losing Focus               | Oui                                | Oui                | Objets concernés uniquement |
 | Sur activation                | Jamais                             | Oui                | Aucun                       |
@@ -105,6 +108,7 @@ Le tableau suivant résume la manière dont les méthodes objet et formulaire so
 | On End URL Loading            | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
 | On Open External Link         | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
 | On Window Opening Denied      | Oui (Zone Web)                     | Jamais             | Objets concernés uniquement |
+| On VP Range Changed           | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 | On VP Ready                   | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 | On Row Resize                 | Oui (4D View Pro Area)             | Jamais             | Objets concernés uniquement |
 

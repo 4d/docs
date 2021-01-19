@@ -14,8 +14,6 @@ title: Sur clic entête
 
 Cet événement est généré lorsqu'un clic se produit sur l'en-tête d'une colonne de list box. Dans ce cas, la commande `Self` vous permet d'identifier l'en-tête de la colonne sur laquelle vous avez cliqué.
 
-> L'événement [`On Clicked`](onClicked.md) est généré lorsqu'un clic droit (Windows) ou Ctrl+clic (macOS) se produit sur une colonne ou un en-tête de colonne. Vous pouvez tester le nombre de clics effectués par l'utilisateur à l'aide de la commande `Clickcount`.
-
 Si la propriété [Sortable](FormObjects/properties_Action.md#sortable) a été sélectionnée pour la list box, vous pouvez décider d'autoriser ou non un tri standard de la colonne en passant la valeur 0 ou -1 dans la variable `$0` :
 
 - Si `$0` est égal à 0, un tri standard est effectué.

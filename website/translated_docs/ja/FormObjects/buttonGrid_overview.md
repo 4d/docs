@@ -3,8 +3,6 @@ id: buttonGridOverview
 title: ボタングリッド
 ---
 
-## 概要
-
 ボタングリッドは透明なオブジェクトであり、画像の最前面に配置されます。 おもに、列と行の配列を表現する画像との組み合わせで使用します。 ユーザーがグラフィック上でクリックすると、そこが凹んだように描画されます。
 
 ![](assets/en/FormObjects/buttonGrid_smileys.png)

@@ -3,7 +3,11 @@ id: looping
 title: ループ構造
 ---
 
+ループ構造は、条件が満たされるまで、あるいは指定した回数まで、同じ処理を繰り返します。
+
+
 ## While...End while
+
 `While...End while` による制御フロー構造の正式な構文は以下のようになります:
 ```4d
  While(Boolean_Expression)
@@ -47,6 +51,7 @@ title: ループ構造
 もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 
 ### 例題
+
 以下の例を、`While...End while` ループの例と比較してください。 ブール式を、初期化しておく必要がない点に注目してください。システム変数　`OK` を初期化する `CONFIRM` コマンドはありません。
 
 ```4d
@@ -56,6 +61,7 @@ title: ループ構造
 ```
 
 ## For...End for
+
 `For...End for` による制御フロー構造の正式な構文は以下のようになります:
 
 ```4d
@@ -79,6 +85,7 @@ title: ループ構造
 - *Start_Expression* が *End_Expression* より大きい場合、*Increment_Expression* に負の値を指定しない限り、ループはおこなわれません。 次に例を示します。
 
 ### 基本的な使用例
+
 1. 以下の例は、100回の繰り返しをおこないます:
 
 ```4d
@@ -264,6 +271,7 @@ title: ループ構造
 ```
 
 ## For each...End for each
+
 `For each...End for each` による制御フロー構造の正式な構文は以下のようになります:
 
 ```4d
@@ -414,7 +422,9 @@ Employees データクラスの中から、英国の従業員の給与を引き�
  End for each
   //$col2=[1,2,3,"a","b","c","d"]
 ```
+
 ### Until と While 条件
+
 `For each...End for each` の実行は、`Until` あるいは `While` 条件を追加することでコントロールすることができます。 `Until(condition)` 条件がループに組み込まれた場合、condition の式が true に評価されるとループは停止します。`While(condition)` 条件の場合は逆に、condition の式が false になるとループが停止します。
 
 使用する条件は状況に応じて選べます:

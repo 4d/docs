@@ -3,7 +3,11 @@ id: looping
 title: Looping structures
 ---
 
+Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
+
+
 ## While...End while
+
 The formal syntax of the `While...End while` control flow structure is:
 ```4d
  While(Boolean_Expression)
@@ -47,6 +51,7 @@ A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileen
 The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
 
 ### Example
+
 Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
 
 ```4d
@@ -56,6 +61,7 @@ Compare the following example with the example for the `While...End while` loop.
 ```
 
 ## For...End for
+
 The formal syntax of the `For...End for` control flow structure is:
 
 ```4d
@@ -79,6 +85,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
 - If *Start_Expression* is greater than *End_Expression*, the loop will not execute at all unless you specify a negative *Increment_Expression*. See the examples.
 
 ### Basic examples
+
 1. The following example executes 100 iterations:
 
 ```4d
@@ -264,6 +271,7 @@ Here are two examples:
 ```
 
 ## For each...End for each
+
 The formal syntax of the `For each...End for each` control flow structure is:
 
 ```4d
@@ -414,7 +422,9 @@ For example:
  End for each
   //$col2=[1,2,3,"a","b","c","d"]
 ```
+
 ### Until and While conditions
+
 You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
 
 You can pass either keyword depending on your needs:

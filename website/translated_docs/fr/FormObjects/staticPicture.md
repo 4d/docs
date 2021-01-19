@@ -3,7 +3,6 @@ id: staticPicture
 title: Image statique
 ---
 
-## Aperçu
 
 Les images statiques sont des [objets statiques](formObjects_overview.md#active-and-static-objects) pouvant être utilisées à des fins diverses dans les formulaires 4D, notamment comme décor, arrière-plan ou interface utilisateur :
 

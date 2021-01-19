@@ -11,8 +11,77 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "API/classClass": {
+        "title": "Class"
+      },
+      "API/collectionClass": {
+        "title": "Collection"
+      },
       "API/cryptoClass": {
-        "title": "CryptoKey Class"
+        "title": "CryptoKey"
+      },
+      "API/dataclassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/dataclassClass": {
+        "title": "DataClass"
+      },
+      "API/datastoreClass": {
+        "title": "DataStore"
+      },
+      "API/directory": {
+        "title": "Directory Class"
+      },
+      "API/document": {
+        "title": "Document Class"
+      },
+      "API/emails": {
+        "title": "Emails"
+      },
+      "API/entityClass": {
+        "title": "Entity"
+      },
+      "API/entitySelectionClass": {
+        "title": "EntitySelection"
+      },
+      "API/fileClass": {
+        "title": "File"
+      },
+      "API/folderClass": {
+        "title": "Folder"
+      },
+      "API/formulaClass": {
+        "title": "Formula"
+      },
+      "API/imapTransporterClass": {
+        "title": "IMAPTransporter"
+      },
+      "API/overview": {
+        "title": "Class API Overview"
+      },
+      "API/pop3TransporterClass": {
+        "title": "POP3Transporter"
+      },
+      "API/signalClass": {
+        "title": "Signal"
+      },
+      "API/smtpTransporterClass": {
+        "title": "SMTPTransporter"
+      },
+      "API/transporter": {
+        "title": "Transporter Class"
+      },
+      "API/webServerClass": {
+        "title": "WebServer"
+      },
+      "API/zipArchiveClass": {
+        "title": "ZIPArchive"
+      },
+      "API/zipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/zipFolderClass": {
+        "title": "ZIPFolder"
       },
       "Backup/backup": {
         "title": "Backup"
@@ -288,6 +357,9 @@
       "Events/onValidate": {
         "title": "On Validate"
       },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
+      },
       "Events/onVpReady": {
         "title": "On VP Ready"
       },
@@ -305,6 +377,9 @@
       },
       "FormEditor/forms": {
         "title": "About 4D Forms"
+      },
+      "FormEditor/macros": {
+        "title": "Form Editor Macros"
       },
       "FormEditor/objectLibrary": {
         "title": "Object libraries"
@@ -569,7 +644,7 @@
         "title": "Data Model Classes"
       },
       "ORDA/overview": {
-        "title": "Overview"
+        "title": "What is ORDA?"
       },
       "ORDA/quickTour": {
         "title": "A Quick Tour in ORDA"

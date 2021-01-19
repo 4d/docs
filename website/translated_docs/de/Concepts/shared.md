@@ -3,7 +3,6 @@ id: shared
 title: Shared Objects und Shared Collections
 ---
 
-## Überblick
 **Shared objects** und **shared collections** sind spezifische [Objekte](Concepts/dt_object.md) und [Collections](Concepts/dt_collection.md), deren Inhalt zwischen Prozessen geteilt wird. Im Gegensatz zu [Interprozessvariablen](Concepts/variables.md#interprocess-variables) haben shared objects und shared collections den Vorteil, dass sie mit **Preemptive 4D Prozessen** kompatibel sind: Sie können per Referenz als Parameter an Befehle wie `New process` oder `CALL WORKER` übergeben werden.
 
 "Shared objects/collections" lassen sich in Variablen speichern, die mit Standardbefehlen `C_OBJECT` und `C_COLLECTION` deklariert wurden, müssen aber über spezifische Befehle eine Instanz erhalten:
@@ -18,9 +17,11 @@ Zum Ändern von "shared object/collection" muss die Struktur **Use...End use** a
 Ein einmaliger, globaler Katalog, der vom Befehl `Storage` zurückgegeben wird, ist immer in der gesamten Anwendung und ihren Komponenten verfügbar. Darin lassen sich alle "shared objects/collections" speichern.
 
 ## Shared Objects oder Collections verwenden
+
 Ist mit den Befehlen `New shared object` oder `de>New shared collection` eine Instanz von shared object/collection erstellt, lassen sich ihre jeweiligen Eigenschaften und Elemente in jedem Prozess ändern oder lesen.
 
 ### Ändern
+
 Sie können shared objects/collections folgendermaßen bearbeiten:
 
 - Objekteigenschaften ändern oder entfernen
@@ -48,14 +49,17 @@ In Beispiel 2 sehen Sie die Anwendung der Regeln für shared groups.
 **Hinweis:** Shared groups werden über die interne Eigenschaft *locking identifier* verwaltet. Weitere Informationen dazu finden Sie im 4D Developer Guide.
 
 ### Lesen
+
 Eigenschaften oder Elemente von shared object/collection lassen sich ohne die Struktur `Use...End use` lesen, selbst wenn shared object/collection von einem anderen Prozess benutzt wird.
 
 Sind dagegen mehrere Werte logisch miteinander verbunden, sollte shared object/collection aus Konsistenzgründen in der Struktur `Use...End use` gelesen werden.
 
 ### Duplizieren
+
 Standardmäßig wird bei Aufruf von `OB Copy/collection. copy( `) mit shared object/collection (oder darin enthaltenen shared objects/collections) ein reguläres Objekt bzw. Collection (not shared) mit den enthaltenen Objekten (falls vorhanden) zurückgegeben.
 
 ### Storage
+
 **Storage** ist ein einmaliges shared object, das automatisch in jeder Anwendung und auf jedem Rechner verfügbar ist. Es wird vom Befehl `Storage` zurückgegeben. Sie können es verwenden, um auf alle während der Sitzung definierten shared objects/collections zu verweisen, die über jeden preemptive oder standardmäßige Prozesse verfügbar sein sollen.
 
 Beachten Sie, dass das `Storage` Objekt, im Gegensatz zu den standardmäßigen shared objects, keine shared group erstellt, wenn shared objects/collections als Eigenschaft hinzugefügt werden. Auf diese Weise lässt sich das **Storage** Objekt ohne Sperren aller verbundenen shared objects/collections verwenden.
@@ -63,6 +67,7 @@ Beachten Sie, dass das `Storage` Objekt, im Gegensatz zu den standardmäßigen s
 Weitere Informationen dazu finden Sie unter dem Befehl `Storage`.
 
 ## Use...End use
+
 Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 ```4d
