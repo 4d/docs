@@ -1,0 +1,708 @@
+<!DOCTYPE html><html lang="fr"><head><meta name="docsearch:version" content="18 R5"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>DataStore · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="A [Datastore](/docs/Rx/fr/ORDA/dsmapping.html#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:"/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="DataStore · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/Rx/index.html"/><meta property="og:description" content="A [Datastore](/docs/Rx/fr/ORDA/dsmapping.html#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:"/><meta property="og:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><link rel="shortcut icon" href="/docs/Rx/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/Rx/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/Rx/js/code-blocks-buttons.js"></script><script src="/docs/Rx/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/Rx/css/main.css"/><script src="/docs/Rx/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/Rx/fr"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v18 R6 BETA</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/Rx" target="_self">v18 R5</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/Rx/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/Rx/en/API/datastoreClass.html">English</a></li><li><a href="/docs/Rx/ja/API/datastoreClass.html">日本語</a></li><li><a href="/docs/Rx/de/API/datastoreClass.html">Deutsch</a></li><li><a href="/docs/Rx/es/API/datastoreClass.html">Español</a></li><li><a href="/docs/Rx/pt/API/datastoreClass.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Classes API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Prise en main<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/GettingStarted/installation.html">Installation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Gestion de projet<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/creating.html">Créer ou ouvrir un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/architecture.html">Architecture of a project</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/developing.html">Développer un projet</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Project/documentation.html">Documenter un projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Concepts du langage 4D<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/about.html">À propos du Langage 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/quick-tour.html">Tour d&#x27;horizon</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/data-types.html">Types de données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/boolean.html">Booléen</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/null-undefined.html">Null et Indefinie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/number.html">Numérique (Réel, Entier, Entier long)</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/object.html">Objet</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/picture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/pointer.html">Pointeur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/string.html">Chaine</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/time.html">Heure</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/arrays.html">Tableaux</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/methods.html">Méthodes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/parameters.html">Paramètres</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/shared.html">Objets et collections partagés</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/classes.html">Classes</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/control-flow.html">Conditions et boucles</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/branching.html">Structures conditionnelles</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/looping.html">Structures répétitives (ou &quot;boucles&quot;)</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/error-handling.html">Gestion des erreurs</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/interpreted-compiled.html">Modes interprété et compilé</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/components.html">Composants</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Concepts/identifiers.html">Identifiants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORDA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/overview.html">Que signifie ORDA ?</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/dsmapping.html">Data Model Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/ordaClasses.html">Classes du modèle de données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/entities.html">Travailler avec des données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/datastores.html">Utiliser un datastore distant</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/ORDA/glossary.html">Glossaire</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Classes API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/overview.html">Aperçu - API des classes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/classClass.html">Class</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/collectionClass.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/cryptoClass.html">CryptoKey</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/dataclassClass.html">DataClass</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/dataclassAttributeClass.html">DataClassAttribute</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/Rx/fr/API/datastoreClass.html">DataStore</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/emails.html">Emails</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/entityClass.html">Entity</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/entitySelectionClass.html">EntitySelection</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/fileClass.html">File</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/folderClass.html">Folder</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/formulaClass.html">Formula</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/imapTransporterClass.html">IMAPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/pop3TransporterClass.html">POP3Transporter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/signalClass.html">Signal</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/smtpTransporterClass.html">SMTPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/webServerClass.html">WebServer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/zipArchiveClass.html">ZIPArchive</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/zipFileClass.html">ZIPFile</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/API/zipFolderClass.html">ZIPFolder</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Droits d&#x27;accès<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Users/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Users/editing.html">Gestion des groupes et utilisateurs 4D</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Administration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Admin/licenses.html">Gestion des licences 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Admin/building.html">Générer un package projet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">CSM<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/information.html">Page informations</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/analysis.html">Page Analyse d&#x27;activités</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/verify.html">Page Vérification</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/backup.html">Page Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/compact.html">Page compactage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/rollback.html">Page Retour en arrière</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/restore.html">Page restitution</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/repair.html">Page Réparation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/MSC/encrypt.html">Page chiffrement</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Sauvegarde et restitution<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/backup.html">Sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/settings.html">Paramètres de sauvegarde</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/log.html">Fichier d&#x27;historique (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Backup/restore.html">Restitution</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Serveur Web<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/WebServer/webServerObject.html">Objet Serveur Web</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Serveur REST<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/gettingStarted.html">Prise en main</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/configuration.html">Configuration du serveur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/authUsers.html">Sessions et utilisateurs</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/genInfo.html">Obtenir des informations du serveur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/manData.html">Manipulation des données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/classFunctions.html">Appeler des fonctions de classe ORDA</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/REST_requests.html">A propos des requêtes REST</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API (general)</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/catalog.html">$catalog</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/directory.html">$directory</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/info.html">$info</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/upload.html">$upload</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API (dataClass)</h4><ul><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/{dataClass}.html">{dataClass}</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/asArray.html">$asArray</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/atomic_$atonce.html">$atomic/$atonce</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/attributes.html">$attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/binary.html">$binary</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/compute.html">$compute</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/distinct.html">$distinct</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/entityset.html">$entityset</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/expand.html">$expand</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/filter.html">$filter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/imageformat.html">$imageformat</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/method.html">$method</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/orderby.html">$orderby</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/querypath.html">$querypath</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/queryplan.html">$queryplan</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/savedfilter.html">$savedfilter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/savedorderby.html">$savedorderby</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/skip.html">$skip</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/timeout.html">$timeout</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/top_$limit.html">$top/$limit</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/REST/version.html">$version</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/forms.html">A propos des formulaires 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/formEditor.html">Éditeur de formulaire</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/macros.html">Form Editor Macros</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/objectLibrary.html">Bibliothèques d&#x27;objets</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/stylesheets.html">Feuilles de style (style sheets)</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/pictures.html">Images</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Propriétés des formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/jsonReference.html">Liste de propriétés JSON</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/action.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/propertiesForm.html">Propriétés des formulaires</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/formSize.html">Form Size</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/markers.html">Markers</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/menu.html">Menu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/print.html">Imprimer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormEditor/windowSize.html">Window Size</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Objets formulaires<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/formObjectsOverview.html">A propos des objets formulaires 4D</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/buttonOverview.html">Bouton</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/buttonGridOverview.html">Grille de boutons</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/checkboxOverview.html">Case à cocher</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/comboBoxOverview.html">Combo Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/dropdownListOverview.html">Liste déroulante</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/groupBox.html">Zone de groupe</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/inputOverview.html">Input</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/listOverview.html">Liste hiérarchique</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/listboxOverview.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/pictureButtonOverview.html">Bouton image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/picturePopupMenuOverview.html">Pop-up menu image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/pluginAreaOverview.html">Zone de plug-in</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/progressIndicator.html">Indicateurs de progression</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/radiobuttonOverview.html">Bouton radio</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/ruler.html">Règle</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/shapesOverview.html">Formes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/spinner.html">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/splitters.html">Séparateur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/staticPicture.html">Image statique</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/stepper.html">Stepper</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/subformOverview.html">Sous-formulaire</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/tabControl.html">Onglets</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/text.html">Texte</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/webAreaOverview.html">Zone Web</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/viewProAreaOverview.html">Zone 4D View Pro</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/writeProAreaOverview.html">Zone 4D Write Pro</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Propriétés des objets formulaire<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesReference.html">Liste de propriétés JSON</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesAction.html">Action</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesAnimation.html">Animation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesAppearance.html">Apparence</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesBackgroundAndBorder.html">Fond et bordure</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesCoordinatesAndSizing.html">Coordonnées et dimensions</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesCrop.html">Découpage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesDataSource.html">Source de données</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesDisplay.html">Affichage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesEntry.html">Saisie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesFooters.html">Pieds</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesGridlines.html">Quadrillage</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesHeaders.html">En-têtes</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesHelp.html">Aide</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesHierarchy.html">Hiérarchie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesListBox.html">List Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesObject.html">Objets</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesPicture.html">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesPlugIns.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesPrint.html">Imprimer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesRangeOfValues.html">Plage de valeurs</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesResizingOptions.html">Options de redimensionnement</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesScale.html">Echelle</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesSubform.html">Sous-formulaire</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesText.html">Texte</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesTextAndPicture.html">Texte et Image</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/FormObjects/propertiesWebArea.html">Zone Web</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Evénements formulaire<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onActivate.html">Sur activation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAfterEdit.html">Sur après modification</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAfterKeystroke.html">Sue après frappe clavier</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAfterSort.html">Sur après tri</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onAlternativeClick.html">Sur clic alternatif</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeforeDataEntry.html">Sur avant saisie</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeforeKeystroke.html">Sue avant frappe clavier</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeginDragOver.html">Sur début survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBeginUrlLoading.html">On Begin URL Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onBoundVariableChange.html">On Bound Variable Change</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onClicked.html">Sur clic</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onCloseBox.html">On Close Box</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onCloseDetail.html">Sur fermeture corps</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onCollapse.html">Sur contracter</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onColumnMoved.html">Sur déplacement colonne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onColumnResize.html">Sur redimensionnement colonne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDataChange.html">Sur données modifiées</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDeactivate.html">On Deactivate</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDeleteAction.html">Sur action suppression</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDisplayDetail.html">Sur affichage corps</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDoubleClicked.html">Sur double clic</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDragOver.html">Sur glisser</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onDrop.html">Sur déposer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onEndUrlLoading.html">On End URL Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onExpand.html">Sur déployer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onFooterClick.html">Sur clic pied</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onGettingFocus.html">On getting focus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onHeader.html">Sur entête</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onHeaderClick.html">Sur clic entête</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLoad.html">On Load</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLoadRecord.html">Sur chargement ligne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLongClick.html">Sur clic long</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onLosingFocus.html">Sur perte focus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMenuSelected.html">Sur menu sélectionné</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseEnter.html">Sur début survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseLeave.html">Sur fin survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseMove.html">Sur survol</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onMouseUp.html">On Mouse Up</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onOpenDetail.html">Sur ouverture corps</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onOpenExternalLink.html">On Open External Link</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onOutsideCall.html">Sur appel extérieur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPageChange.html">Sur changement page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPlugInArea.html">Sur appel zone du plug in</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPrintingBreak.html">On Printing Break</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPrintingDetail.html">On Printing Detail</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onPrintingFooter.html">On Printing Footer</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onResize.html">Sur redimensionnement</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onRowMoved.html">Sur déplacement ligne</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onRowResize.html">On Row Resize</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onScroll.html">Sur défilement</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onSelectionChange.html">Sur nouvelle sélection</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onTimer.html">Sur minuteur</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUnload.html">On Unload</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUrlFiltering.html">On URL Filtering</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUrlLoadingError.html">On URL Loading Error</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onUrlResourceLoading.html">On URL Resource Loading</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onValidate.html">Sur validation</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onVpRangeChanged.html">On VP Range Changed</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onVpReady.html">On VP Ready</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Events/onWindowOpeningDenied.html">On Window Opening Denied</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Menus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/overview.html">Aperçu</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/creating.html">Créer des menus et des barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/properties.html">Propriétés des menus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/bars.html">Barres de menus</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/fr/Menus/sdi.html">Mode SDI sous Windows</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/datastoreClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">DataStore</h1></header><article><div><span><p>A <a href="/docs/Rx/fr/ORDA/dsmapping.html#datastore">Datastore</a> is the interface object provided by ORDA to reference and access a database. <code>Datastore</code> objects are returned by the following commands:</p>
+<ul>
+<li><a href="#ds">ds</a>: a shortcut to the main datastore</li>
+<li><a href="#open-datastore">Open datastore</a>: to open any remote datastore</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="sommaire"></a><a href="#sommaire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sommaire</h3>
+<table>
+<thead>
+<tr><th></th></tr>
+</thead>
+<tbody>
+<tr><td><a href="#canceltransaction"><strong>.cancelTransaction()</strong></a><p>    cancels the transaction</td></tr>
+<tr><td><a href="#dataclassname"><strong><em>.dataclassName</em></strong> : 4D.DataClass</a><p>    contains a description of the dataclass</td></tr>
+<tr><td><a href="#encryptionstatus"><strong>.encryptionStatus()</strong>: Object</a><p>    returns an object providing the encryption status for the current data file</td></tr>
+<tr><td><a href="#getinfo"><strong>.getInfo()</strong>: Object</a><p>    returns an object providing information about the datastore</td></tr>
+<tr><td><a href="#getrequestlog"><strong>.getRequestLog()</strong> : Collection</a><p>    returns the ORDA requests logged in memory on the client side</td></tr>
+<tr><td><a href="#makeSelectionsAlterable"><strong>.makeSelectionsAlterable()</strong></a><p>    sets all entity selections as alterable by default in all the current application datastores</td></tr>
+<tr><td><a href="#providedatakey"><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object </a><p>    allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data</td></tr>
+<tr><td><a href="#startrequestlog"><strong>.startRequestLog</strong>()<br><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</a><p>    starts the logging of ORDA requests on the client side</td></tr>
+<tr><td><a href="#starttransaction"><strong>.startTransaction()</strong></a><p>    starts a transaction in the current process on the database matching the datastore to which it applies</td></tr>
+<tr><td><a href="#stoprequestlog"><strong>.stopRequestLog()</strong>  </a><p>    stops any logging of ORDA requests on the client side</td></tr>
+<tr><td><a href="#validatetransaction"><strong>.validateTransaction()</strong>  </a><p>    accepts the transaction</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="ds"></a><a href="#ds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ds</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v18</td><td>Support of localID parameter</td></tr>
+<tr><td>v17</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>ds</strong> { ( <em>localID</em> : Text ) } : cs.DataStore</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>localID</td><td>Texte</td><td>-&gt;</td><td>Local ID of the remote datastore to return</td></tr>
+<tr><td>Résultat</td><td>cs.DataStore</td><td>&lt;-</td><td>Reference to the datastore</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>ds</code> command returns a reference to the datastore matching the current 4D database or the database designated by <em>localID</em>.</p>
+<p>If you omit the <em>localID</em> parameter (or pass an empty string &quot;&quot;), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through <code>ds</code>.</p>
+<p>You can also get a reference on an open remote datastore by passing its local id in the <em>localID</em> parameter. The datastore must have been previously opened with the <a href="#open-datastore"><code>Open datastore</code></a> command by the current database (host or component). The local id is defined when using this command.</p>
+<blockquote>
+<p>The scope of the local id is the database where the datastore has been opened.</p>
+</blockquote>
+<p>If no <em>localID</em> datastore is found, the command returns <strong>Null</strong>.</p>
+<p>Using <code>ds</code> requires that the target database is compliant with ORDA, as specified in the <strong>ORDA prerequisites</strong> section. The following rules are applied:</p>
+<ul>
+<li>Un datastore ne référence que les tables avec une seule clé primaire. Tables without a primary key or with composite primary keys are not referenced.</li>
+<li>BLOB type attributes are not managed in the datastore.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<p>Using the main datastore on the 4D database:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$result</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"firstName = :1"</span>;<span class="hljs-string">"S@"</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo</span>; <span class="hljs-variable">$firstFrench</span>; <span class="hljs-variable">$firstForeign </span>: Object<span class="hljs-keyword">
+
+ var</span> <span class="hljs-variable">$frenchStudents</span>; <span class="hljs-variable">$foreignStudents </span>: cs.DataStore
+
+ <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
+ <span class="hljs-variable">$frenchStudents</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"french"</span>)
+
+ <span class="hljs-variable">$connectTo</span>.hostname:=<span class="hljs-string">"192.168.18.11:8050"</span>
+ <span class="hljs-variable">$foreignStudents</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"foreign"</span>)
+  <span class="hljs-comment">//...</span>
+  <span class="hljs-comment">//...</span>
+ <span class="hljs-variable">$firstFrench</span>:=<span class="hljs-function">getFirst</span>(<span class="hljs-string">"french"</span>;<span class="hljs-string">"Students"</span>)
+ <span class="hljs-variable">$firstForeign</span>:=<span class="hljs-function">getFirst</span>(<span class="hljs-string">"foreign"</span>;<span class="hljs-string">"Students"</span>)
+</code></pre>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">//méthode getFirst</span>
+  <span class="hljs-comment">//getFirst(localID;dataclass) -&gt; entity</span>
+ #<span class="hljs-function">DECLARE</span>( <span class="hljs-variable">$localId </span>: Text; <span class="hljs-variable">$dataClassName </span>: Text ) -&gt; <span class="hljs-variable">$entity </span>: 4D.Entity
+
+ <span class="hljs-variable">$0</span>:=ds(<span class="hljs-variable">$localId</span>)[<span class="hljs-variable">$dataClassName</span>].<span class="hljs-function">all</span>().<span class="hljs-function">first</span>()
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="open-datastore"></a><a href="#open-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open datastore</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v18</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>Open datastore</strong>( <em>connectionInfo</em> : Object ; <em>localID</em> : Text ) : cs.DataStore</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>connectionInfo</td><td>Objet</td><td>-&gt;</td><td>Connection properties used to reach the remote datastore</td></tr>
+<tr><td>localID</td><td>Texte</td><td>-&gt;</td><td>Id to assign to the opened datastore on the local application (mandatory)</td></tr>
+<tr><td>Résultat</td><td>cs.DataStore</td><td>&lt;-</td><td>Datastore object</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>Open datastore</code> command connects the application to the 4D database identified by the <em>connectionInfo</em> parameter and returns a matching <code>cs.DataStore</code> object associated with the <em>localID</em> local alias.</p>
+<p>The <em>connectionInfo</em> 4D database must be available as a remote datastore, i.e.:</p>
+<ul>
+<li>its web server must be launched with http and/or https enabled,</li>
+<li>its <a href="/docs/Rx/fr/REST/configuration.html#starting-the-rest-server"><strong>Expose as REST server</strong></a> option must be checked,</li>
+<li>at least one client license is available.</li>
+</ul>
+<p>If no matching database is found, <code>Open datastore</code> returns <strong>Null</strong>.</p>
+<p><em>localID</em> is a local alias for the session opened on remote datastore. If <em>localID</em> already exists on the application, it is used. Otherwise, a new <em>localID</em> session is created when the datastore object is used.</p>
+<p>Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myds</span>:=<span class="hljs-function">Open datastore</span>(connectionInfo;<span class="hljs-string">"myLocalId"</span>)
+ <span class="hljs-variable">$myds2</span>:=ds(<span class="hljs-string">"myLocalId"</span>)
+  <span class="hljs-comment">//$myds and $myds2 are equivalent</span>
+</code></pre>
+<p>Pass in <em>connectionInfo</em> an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except <em>hostname</em>):</p>
+<table>
+<thead>
+<tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>hostname</td><td>Texte</td><td>Name or IP address of the remote database + &quot;:&quot; + port number (port number is mandatory)</td></tr>
+<tr><td>user</td><td>Texte</td><td>User name</td></tr>
+<tr><td>password</td><td>Texte</td><td>User password</td></tr>
+<tr><td>idleTimeout</td><td>Entier long</td><td>Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be &lt; 60 (if a lower value is passed, the timeout is set to 60). For more information, see <strong>Closing sessions</strong>.</td></tr>
+<tr><td>tls</td><td>Booléen</td><td>Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.</td></tr>
+<tr><td>type</td><td>Texte</td><td>Must be &quot;4D Server&quot;</td></tr>
+</tbody>
+</table>
+<p>(*) If tls is true, the HTTPS protocol is used if:</p>
+<ul>
+<li>HTTPS is enabled on the remote datastore</li>
+<li>the given port is the right HTTPS port configured in the database settings</li>
+<li>a valid certificate and private encryption key are installed in the database. Otherwise, error &quot;1610 - A remote request to host xxx has failed&quot; is raised</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<p>Connection to a remote datastore without user / password:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword"> 
+ var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore
+ <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
+ <span class="hljs-variable">$remoteDS</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"students"</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-string">"This remote datastore contains "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$remoteDS</span>.Students.<span class="hljs-function">all</span>().length)+<span class="hljs-string">" students"</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-1"></a><a href="#exemple-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<p>Connection to a remote datastore with user / password / timeout / tls:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword"> 
+ var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore
+ <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;\<span class="hljs-string">"192.168.18.11:4443"</span>;\  
+    <span class="hljs-string">"user"</span>;<span class="hljs-string">"marie"</span>;<span class="hljs-string">"password"</span>;<span class="hljs-variable">$pwd</span>;<span class="hljs-string">"idleTimeout"</span>;<span class="hljs-number">70</span>;<span class="hljs-string">"tls"</span>;<span class="hljs-literal">True</span>)
+ <span class="hljs-variable">$remoteDS</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"students"</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-string">"This remote datastore contains "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$remoteDS</span>.Students.<span class="hljs-function">all</span>().length)+<span class="hljs-string">" students"</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h4>
+<p>Working with several remote datastores:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword"> 
+ var</span> <span class="hljs-variable">$frenchStudents</span>; <span class="hljs-variable">$foreignStudents </span>: cs.DataStore
+ <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
+ <span class="hljs-variable">$frenchStudents</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"french"</span>)
+ <span class="hljs-variable">$connectTo</span>.hostname:=<span class="hljs-string">"192.168.18.11:8050"</span>
+ <span class="hljs-variable">$foreignStudents</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"foreign"</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-string">"They are "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$frenchStudents</span>.Students.<span class="hljs-function">all</span>().length)+<span class="hljs-string">" French students"</span>)
+<span class="hljs-function"> ALERT</span>(<span class="hljs-string">"They are "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$foreignStudents</span>.Students.<span class="hljs-function">all</span>().length)+<span class="hljs-string">" foreign students"</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="error-management"></a><a href="#error-management" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error management</h4>
+<p>In case of error, the command returns <strong>Null</strong>. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 &quot;A remote request to host XXX has failed&quot; is raised. You can intercept this error with a method installed by <code>ON ERR CALL</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="dataclassname"></a><a href="#dataclassname" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>.dataclassName</em></h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong><em>.dataclassName</em></strong> : 4D.DataClass</p>
+<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>Each dataclass in a datastore is available as a property of the <a href="/docs/Rx/fr/ORDA/dsmapping.html#datastore">DataStore object</a>data. The returned object contains a description of the dataclass.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.Employee<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$sel </span>: cs.EmployeeSelection
+ <span class="hljs-variable">$emp</span>:=ds.Employee <span class="hljs-comment">//$emp contains the Employee dataclass</span>
+ <span class="hljs-variable">$sel</span>:=<span class="hljs-variable">$emp</span>.<span class="hljs-function">all</span>() <span class="hljs-comment">//gets an entity selection of all employees</span>
+
+  <span class="hljs-comment">//you could also write directly:</span>
+ <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">all</span>()
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="canceltransaction"></a><a href="#canceltransaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.cancelTransaction()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v18</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.cancelTransaction()</strong>
+| Paramètres | Type |  | Description                     |
+| ---------- | ---- |::| ------------------------------- |
+|            |      |  | Does not require any parameters |</p>
+<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.cancelTransaction()</code> function cancels the transaction opened by the <a href="#starttransaction"><code>.startTransaction()</code></a> function at the corresponding level in the current process for the specified datastore.</p>
+<p>The <code>.cancelTransaction()</code> function cancels any changes made to the data during the transaction.</p>
+<p>You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the <a href="#validatetransactions"><code>.validateTransaction()</code></a> function.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-3"></a><a href="#exemple-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>See example for the <a href="#starttransaction"><code>.startTransaction()</code></a> function.</p>
+<h2><a class="anchor" aria-hidden="true" id="encryptionstatus"></a><a href="#encryptionstatus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.encryptionStatus()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R5</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.encryptionStatus()</strong>: Object</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Résultat</td><td>Objet</td><td style="text-align:center">&lt;-</td><td>Information about the encryption of the current datastore and of each table</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.encryptionStatus()</code> function returns an object providing the encryption status for the current data file (i.e., the data file of the <code>ds</code> datastore). The status for each table is also provided.</p>
+<blockquote>
+<p>Use the <code>Data file encryption status</code> command to determine the encryption status of any other data file.</p>
+</blockquote>
+<p><strong>Valeur retournée</strong></p>
+<p>The returned object contains the following properties:</p>
+<table>
+<thead>
+<tr><th>Propriété</th><th></th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>isEncrypted</td><td></td><td></td><td>Booléen</td><td>True if the data file is encrypted</td></tr>
+<tr><td>keyProvided</td><td></td><td></td><td>Booléen</td><td>True if the encryption key matching the encrypted data file is provided(*).</td></tr>
+<tr><td>tables</td><td></td><td></td><td>Objet</td><td>Object containing as many properties as there are encryptable or encrypted tables.</td></tr>
+<tr><td></td><td><em>tableName</em></td><td></td><td>Objet</td><td>Encryptable or Encrypted table</td></tr>
+<tr><td></td><td></td><td>name</td><td>Texte</td><td>Name of the table</td></tr>
+<tr><td></td><td></td><td>num</td><td>Nombre</td><td>Table number</td></tr>
+<tr><td></td><td></td><td>isEncryptable</td><td>Booléen</td><td>True if the table is declared encryptable in the structure file</td></tr>
+<tr><td></td><td></td><td>isEncrypted</td><td>Booléen</td><td>True if the records of the table are encrypted in the data file</td></tr>
+</tbody>
+</table>
+<p>(*) The encryption key can be provided:</p>
+<ul>
+<li>with the <code>.provideDataKey()</code> command,</li>
+<li>at the root of a connected device before opening the datastore,</li>
+<li>with the <code>Discover data key</code> command.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-4"></a><a href="#exemple-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>You want to know the number of encrypted tables in the current data file:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object
+
+ <span class="hljs-variable">$status</span>:=dataStore.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
+
+ If</span>(<span class="hljs-variable">$status</span>.isEncrypted) <span class="hljs-comment">//the database is encrypted</span>
+<span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$vcount</span>)
+<span class="hljs-function">    C_TEXT</span>(<span class="hljs-variable">$tabName</span>)<span class="hljs-keyword">
+    For each</span>(<span class="hljs-variable">$tabName</span>;<span class="hljs-variable">$status</span>.tables)<span class="hljs-keyword">
+       If</span>(<span class="hljs-variable">$status</span>.tables[<span class="hljs-variable">$tabName</span>].isEncrypted)
+          <span class="hljs-variable">$vcount</span>:=<span class="hljs-variable">$vcount</span>+<span class="hljs-number">1</span><span class="hljs-keyword">
+       End if</span><span class="hljs-keyword">
+    End for each</span>
+<span class="hljs-function">    ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$vcount</span>)+<span class="hljs-string">" encrypted table(s) in this datastore."</span>)<span class="hljs-keyword">
+ Else</span>
+<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"This database is not encrypted."</span>)<span class="hljs-keyword">
+ End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getinfo"></a><a href="#getinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getInfo()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.getInfo()</strong>: Object</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Résultat</td><td>Objet</td><td style="text-align:center">&lt;-</td><td>Datastore properties</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.getInfo()</code> function returns an object providing information about the datastore. This function is useful for setting up generic code.</p>
+<p><strong>Returned object</strong></p>
+<table>
+<thead>
+<tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>string</td><td><li>&quot;4D&quot;: main datastore, available through ds </li><li>&quot;4D Server&quot;: remote datastore, open with Open datastore</li></td></tr>
+<tr><td>networked</td><td>boolean</td><td><li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li></td></tr>
+<tr><td>localID</td><td>Texte</td><td>ID of the datastore on the machine. Corresponds to the localId string given with the <code>Open datastore</code> command. Empty string (&quot;&quot;) for main datastore.</td></tr>
+<tr><td>connection</td><td>object</td><td>Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>Texte</td><td>IP address or name of the remote datastore + &quot;:&quot; + port number</td></tr><tr><td>tls</td><td>boolean</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>Texte</td><td>User authenticated on the remote datastore</td></tr></table></td></tr>
+</tbody>
+</table>
+<ul>
+<li>If the <code>.getInfo()</code> function is executed on a 4D Server or 4D single-user, <code>networked</code> is False.</li>
+<li>If the <code>.getInfo()</code> function is executed on a remote 4D, <code>networked</code> is True</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-2"></a><a href="#exemple-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$info </span>: Object
+
+ <span class="hljs-variable">$info</span>:=ds.<span class="hljs-function">getInfo</span>() <span class="hljs-comment">//Executed on 4D Server or 4D</span>
+  <span class="hljs-comment">//{"type":"4D","networked":false,"localID":""}</span>
+
+ <span class="hljs-variable">$info</span>:=ds.<span class="hljs-function">getInfo</span>() <span class="hljs-comment">// Executed on 4D remote</span>
+  <span class="hljs-comment">//{"type":"4D","networked":true,"localID":""}</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-2"></a><a href="#exemple-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<p>On a remote datastore:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">  var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore<span class="hljs-keyword">
+  var</span> <span class="hljs-variable">$info</span>; <span class="hljs-variable">$connectTo </span>: Object
+
+ <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"111.222.33.44:8044"</span>;<span class="hljs-string">"user"</span>;<span class="hljs-string">"marie"</span>;<span class="hljs-string">"password"</span>;<span class="hljs-string">"aaaa"</span>)
+ <span class="hljs-variable">$remoteDS</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"students"</span>)
+ <span class="hljs-variable">$info</span>:=<span class="hljs-variable">$remoteDS</span>.<span class="hljs-function">getInfo</span>()
+
+  <span class="hljs-comment">//{"type":"4D Server",</span>
+  <span class="hljs-comment">//"localID":"students",</span>
+  <span class="hljs-comment">//"networked":true,</span>
+  <span class="hljs-comment">//"connection":{hostname:"111.222.33.44:8044","tls":false,"idleTimeout":2880,"user":"marie"}}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getrequestlog"></a><a href="#getrequestlog" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getRequestLog()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R6</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.getRequestLog()</strong> : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of objects, where each object describes a request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.getRequestLog()</code> function returns the ORDA requests logged in memory on the client side. The ORDA request logging must have previously been enabled using the <a href="#startrequestlog"><code>.startRequestLog()</code></a> function.</p>
+<p>This function must be called on a remote 4D, otherwise it returns an empty collection. It is designed for debugging purposes in client/server configurations.</p>
+<p><strong>Valeur retournée</strong></p>
+<p>Collection of stacked request objects. The most recent request has index 0.</p>
+<p>For a description of the ORDA request log format, please refer to the <a href="https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373"><strong>ORDA client requests</strong></a> section.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-5"></a><a href="#exemple-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>See Example 2 of <a href="#startrequestlog"><code>.startRequestLog()</code></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="makeselectionsalterable"></a><a href="#makeselectionsalterable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.makeSelectionsAlterable()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v18 R5</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.makeSelectionsAlterable()</strong>
+| Paramètres | Type |  | Description                     |
+| ---------- | ---- |::| ------------------------------- |
+|            |      |  | Does not require any parameters |</p>
+<h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.makeSelectionsAlterable()</code> function sets all entity selections as alterable by default in all the current application datastores (including <a href="/docs/Rx/fr/ORDA/datastores.html">remote datastores</a>). It is intended to be used once, for example in the <code>On Startup</code> database method.</p>
+<p>When this function is not called, new entity selections can be shareable, depending on the nature of their &quot;parent&quot;, or <a href="/docs/Rx/fr/ORDA/entities.html#shareable-or-non-shareable-entity-selections">how they are created</a>.</p>
+<blockquote>
+<p>This function does not modify entity selections created by <a href="#copy"><code>.copy()</code></a> or <code>OB Copy</code> when the explicit <code>ck shared</code> option is used.</p>
+</blockquote>
+<blockquote>
+<p><strong>Compatibility</strong>: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing <a href="/docs/Rx/fr/API/entitySelectionClass.html#add">.add()</a> calls. In this context, using <code>.makeSelectionsAlterable()</code> can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher <strong>is not recommended</strong>, since it prevents entity selections to be shared, which provides greater performance and scalabitlity.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="providedatakey"></a><a href="#providedatakey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.provideDataKey()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R5</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>curPassPhrase</td><td>Texte</td><td>-&gt;</td><td>Current encryption passphrase</td></tr>
+<tr><td>curDataKey</td><td>Objet</td><td>-&gt;</td><td>Current data encryption key</td></tr>
+<tr><td>Résultat</td><td>Objet</td><td>&lt;-</td><td>Result of the encryption key matching</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.provideDataKey()</code> function allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data. This function can be used when opening an encrypted database, or when executing any encryption operation that requires the encryption key, such as re-encrypting the data file.</p>
+<blockquote>
+<ul>
+<li>The <code>.provideDataKey()</code> function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the <code>Data file encryption status</code> command to determine if the database is encrypted.</li>
+<li>The <code>.provideDataKey()</code> function cannot be called from a remote 4D or an encrypted remote datastore.</li>
+</ul>
+</blockquote>
+<p>If you use the <em>curPassPhrase</em> parameter, pass the string used to generate the data encryption key. When you use this parameter, an encryption key is generated.</p>
+<p>If you use the <em>curDataKey</em> parameter, pass an object (with <em>encodedKey</em> property) that contains the data encryption key. This key may have been generated with the <code>New data key</code> command.</p>
+<p>If a valid data encryption key is provided, it is added to the <em>keyChain</em> in memory and the encryption mode is enabled:</p>
+<ul>
+<li>all data modifications in encryptable tables are encrypted on disk (.4DD, .journal. 4Dindx files)</li>
+<li>all data loaded from encryptable tables is decrypted in memory</li>
+</ul>
+<p><strong>Résultat</strong></p>
+<p>The result of the command is described in the returned object:</p>
+<table>
+<thead>
+<tr><th>Propriété</th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td></td><td>Booléen</td><td>True if the provided encryption key matches the encrypted data, False otherwise</td></tr>
+<tr><td></td><td></td><td></td><td>Properties below are returned only if success is <em>FALSE</em></td></tr>
+<tr><td>status</td><td></td><td>Nombre</td><td>Error code (4 if the provided encryption key is wrong)</td></tr>
+<tr><td>statusText</td><td></td><td>Texte</td><td>Error message</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Stack of errors. The first error has the highest index</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>Texte</td><td>Internal component name</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>Nombre</td><td>Error number</td></tr>
+<tr><td></td><td>[ ].message</td><td>Texte</td><td>Error message</td></tr>
+</tbody>
+</table>
+<p>If no <em>curPassphrase</em> or <em>curDataKey</em> is given, <code>.provideDataKey()</code> returns <strong>null</strong> (no error is generated).</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-6"></a><a href="#exemple-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$keyStatus </span>: Object<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$passphrase </span>: Text
+
+ <span class="hljs-variable">$passphrase</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Enter the passphrase"</span>)<span class="hljs-keyword">
+ If</span>(OK=<span class="hljs-number">1</span>)
+    <span class="hljs-variable">$keyStatus</span>:=ds.<span class="hljs-function">provideDataKey</span>(<span class="hljs-variable">$passphrase</span>)<span class="hljs-keyword">
+    If</span>(<span class="hljs-variable">$keyStatus</span>.success)
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"You have provided a valid encryption key"</span>)<span class="hljs-keyword">
+    Else</span>
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"You have provided an invalid encryption key, you will not be able to work with encrypted data"</span>)<span class="hljs-keyword">
+    End if</span><span class="hljs-keyword">
+ End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="startrequestlog"></a><a href="#startrequestlog" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.startRequestLog()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R6</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.startRequestLog</strong>()<br><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>file</td><td>4D.File</td><td>-&gt;</td><td>File object</td></tr>
+<tr><td>reqNum</td><td>Entier long</td><td>-&gt;</td><td>Number of requests to keep in memory</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.startRequestLog()</code> function starts the logging of ORDA requests on the client side.</p>
+<p>This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.</p>
+<p>The ORDA request log can be sent to a file or to memory, depending on the parameter type:</p>
+<ul>
+<li>If you passed a <em>file</em> object created with the <code>File</code> command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it. If <code>.startRequestLog( )</code> is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.</li>
+</ul>
+<blockquote>
+<p>A ] character must be manually appended at the end of the file to perform a JSON validation</p>
+</blockquote>
+<ul>
+<li><p>If you passed a <em>reqNum</em> integer, the log in memory is emptied (if any) and a new log is initialized. It will keep <em>reqNum</em> requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br>If <code>.startRequestLog()</code> is called with a <em>reqNum</em> while a logging was previously started in a file, the file logging is stopped.</p></li>
+<li><p>If you did not pass any parameter, the log is started in memory. If <code>.startRequestLog()</code> was previously called with a <em>reqNum</em> (before a <code>.stopRequestLog()</code>), the log data is stacked in memory until the next time the log is emptied or <code>.stopRequestLog()</code> is called.</p></li>
+</ul>
+<p>For a description of the ORDA request log format, please refer to the <a href="https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373"><strong>ORDA client requests</strong></a> section.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-3"></a><a href="#exemple-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<p>You want to log ORDA client requests in a file and use the log sequence number:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$file </span>: 4D.File<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$e </span>: cs.PersonsEntity
+
+ <span class="hljs-variable">$file</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/LOGS/ORDARequests.txt"</span>) <span class="hljs-comment">//logs folder</span>
+
+<span class="hljs-function"> SET DATABASE PARAMETER</span>(Client Log Recording;<span class="hljs-number">1</span>) <span class="hljs-comment">//to trigger the global log sequence number</span>
+ ds.<span class="hljs-function">startRequestLog</span>(<span class="hljs-variable">$file</span>)
+ <span class="hljs-variable">$e</span>:=ds.Persons.<span class="hljs-function">get</span>(<span class="hljs-number">30001</span>) <span class="hljs-comment">//send a request</span>
+ ds.<span class="hljs-function">stopRequestLog</span>()
+<span class="hljs-function"> SET DATABASE PARAMETER</span>(Client Log Recording;<span class="hljs-number">0</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-3"></a><a href="#exemple-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<p>You want to log ORDA client requests in memory:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.PersonsSelection<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$log </span>: Collection
+
+ ds.<span class="hljs-function">startRequestLog</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">//keep 3 requests in memory</span>
+
+ <span class="hljs-variable">$es</span>:=ds.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"name=:1"</span>;<span class="hljs-string">"Marie"</span>)
+ <span class="hljs-variable">$es</span>:=ds.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"name IN :1"</span>;<span class="hljs-function">New collection</span>(<span class="hljs-string">"Marie"</span>))
+ <span class="hljs-variable">$es</span>:=ds.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"name=:1"</span>;<span class="hljs-string">"So@"</span>)
+
+ <span class="hljs-variable">$log</span>:=ds.<span class="hljs-function">getRequestLog</span>()
+<span class="hljs-function"> ALERT</span>(<span class="hljs-string">"The longest request lasted: "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$log</span>.<span class="hljs-function">max</span>(<span class="hljs-string">"duration"</span>))+<span class="hljs-string">" ms"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="starttransaction"></a><a href="#starttransaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.startTransaction()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v18</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.startTransaction()</strong>
+| Paramètres | Type |  | Description                     |
+| ---------- | ---- |  | ------------------------------- |
+|            |      |  | Does not require any parameters |</p>
+<h4><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.startTransaction()</code> function starts a transaction in the current process on the database matching the datastore to which it applies. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled.</p>
+<blockquote>
+<p>If this method is called on the main datastore (i.e. the datastore returned by the <code>ds</code> command), the transaction is applied to all operations performed on the main datastore and on the underlying database, thus including ORDA and classic languages.</p>
+</blockquote>
+<p>You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the <code>.validateTransaction()</code> function.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connect</span>; <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$person </span>: cs.PersonsEntity<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$ds </span>: cs.DataStore<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$choice </span>: Text<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$error </span>: Boolean<span class="hljs-keyword">
+
+ Case of</span>
+    :(<span class="hljs-variable">$choice</span>=<span class="hljs-string">"local"</span>)
+       <span class="hljs-variable">$ds</span>:=ds
+    :(<span class="hljs-variable">$choice</span>=<span class="hljs-string">"remote"</span>)
+       <span class="hljs-variable">$connect</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"111.222.3.4:8044"</span>)
+       <span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connect</span>;<span class="hljs-string">"myRemoteDS"</span>)<span class="hljs-keyword">
+ End case</span>
+
+ <span class="hljs-variable">$ds</span>.<span class="hljs-function">startTransaction</span>()
+ <span class="hljs-variable">$person</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"lastname=:1"</span>;<span class="hljs-string">"Peters"</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword">
+
+ If</span>(<span class="hljs-variable">$person</span>#<span class="hljs-literal">Null</span>)
+    <span class="hljs-variable">$person</span>.lastname:=<span class="hljs-string">"Smith"</span>
+    <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$person</span>.<span class="hljs-function">save</span>()<span class="hljs-keyword">
+ End if</span>
+ ...
+ ...<span class="hljs-keyword">
+ If</span>(<span class="hljs-variable">$error</span>)
+    <span class="hljs-variable">$ds</span>.<span class="hljs-function">cancelTransaction</span>()<span class="hljs-keyword">
+ Else</span>
+    <span class="hljs-variable">$ds</span>.<span class="hljs-function">validateTransaction</span>()<span class="hljs-keyword">
+ End if</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="stoprequestlog"></a><a href="#stoprequestlog" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.stopRequestLog()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R6</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.stopRequestLog()</strong>  <br>
+| Paramètres | Type |  | Description                     |
+| ---------- | ---- |  | ------------------------------- |
+|            |      |  | Does not require any parameters |</p>
+<h4><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.stopRequestLog()</code> function stops any logging of ORDA requests on the client side (in file or in memory). It is particularly useful when logging in a file, since it actually closes the opened document on disk.</p>
+<p>This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-8"></a><a href="#exemple-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>See examples for <a href="#startrequestlog"><code>.startRequestLog()</code></a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="validatetransaction"></a><a href="#validatetransaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.validateTransaction()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v18</td><td>Ajoutées</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.validateTransaction()</strong>  <br>
+| Paramètres | Type |  | Description                     |
+| ---------- | ---- |  | ------------------------------- |
+|            |      |  | Does not require any parameters |</p>
+<h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The <code>.validateTransaction()</code> function accepts the transaction that was started with <a href="#starttransaction"><code>.startTransaction()</code></a> at the corresponding level on the specified datastore.</p>
+<p>The function saves the changes to the data on the datastore that occurred during the transaction.</p>
+<p>You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-9"></a><a href="#exemple-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>See example for <a href="#starttransaction"><code>.startTransaction()</code></a>.</p>
+<style> h2 { background: #d9ebff;}</style>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/API/dataclassAttributeClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">DataClassAttribute</span></a><a class="docs-next button" href="/docs/Rx/fr/API/emails.html"><span>Emails</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ds">ds</a></li><li><a href="#open-datastore">Open datastore</a></li><li><a href="#dataclassname"><em>.dataclassName</em></a></li><li><a href="#canceltransaction">.cancelTransaction()</a></li><li><a href="#encryptionstatus">.encryptionStatus()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#getrequestlog">.getRequestLog()</a></li><li><a href="#makeselectionsalterable">.makeSelectionsAlterable()</a></li><li><a href="#providedatakey">.provideDataKey()</a></li><li><a href="#startrequestlog">.startRequestLog()</a></li><li><a href="#starttransaction">.startTransaction()</a></li><li><a href="#stoprequestlog">.stopRequestLog()</a></li><li><a href="#validatetransaction">.validateTransaction()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:fr"]}
+              });
+            </script></body></html>
