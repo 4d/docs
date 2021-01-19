@@ -18,7 +18,7 @@ Si vous dessinez une zone de plug-in trop petite, 4D l’affiche sous forme de b
 
 ### Propriétés avancées
 
-If advanced options are provided by the author of the plug-in, a **Plug-in** theme containing an [**Advanced Properties**](properties_Plugins.md) button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+Si les options avancées sont fournies par l'auteur du plug-in, un thème **Plug-in** contenant un bouton [**Propriétés avancées**](properties_Plugins.md) peut être activé dans la liste des propriétés. Dans ce cas, vous pouvez cliquer sur ce bouton pour définir ces options, généralement via une boîte de dialogue personnalisée.
 
 
 ## Installer un plug-in

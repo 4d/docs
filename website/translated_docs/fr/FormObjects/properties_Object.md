@@ -149,7 +149,7 @@ However, this property has a typing function in the following specific cases:
 ---
 ## CSS Class
 
-A list of space-separated words used as class selectors in css files.
+Une liste de mots séparés par des espaces utilisés comme sélecteurs de classe dans les fichiers css.
 
 
 #### Grammaire JSON
