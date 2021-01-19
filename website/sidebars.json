@@ -41,6 +41,7 @@
 	"API/formulaClass",
 	"API/imapTransporterClass",
 	"API/pop3TransporterClass",
+	"API/sessionClass",
 	"API/signalClass",
 	"API/smtpTransporterClass",
 	"API/webServerClass",
@@ -49,10 +50,10 @@
 	"API/zipFolderClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
-  "Administration":["Admin/licenses","Admin/building"],
+  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/building"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
-  "Web Server":["WebServer/webServerObject"],
+  "Web Server":["WebServer/webServerObject","WebServer/sessions"],
 	"REST Server": [
 		{
         "type": "subcategory",

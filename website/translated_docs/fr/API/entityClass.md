@@ -1176,20 +1176,32 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Propriété        |  | Type    | Description                                             |
-| ---------------- |  | ------- | ------------------------------------------------------- |
-| success          |  | boolean | True if the save action is successful, False otherwise. |
-|                  |  |         | ***Available only if `dk auto merge` option is used***: |
-| autoMerged       |  | boolean | True if an auto merge was done, False otherwise.        |
-|                  |  |         | ***Available only in case of error***:                  |
-| status(\*)     |  | number  | Error code, see below                                   |
-| statusText(\*) |  | Texte   | Description of the error, see below                     |
-|                  |  |         | ***Available only in case of pessimistic lock error***: |
-| lockKindText     |  | Texte   | "Locked by record"                                      |
-| lockInfo         |  | object  | Information about the lock                              |
- origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on the machine| ||user4d_id|    text|   User name in the 4D database directory| ||host_name |text   |Machine name| ||task_name|    text|   Process name| ||client_version|   text||
+| Propriété    |                    | Type                | Description                                                                                                             |
+| ------------ | ------------------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| success      |                    | boolean             | True if the save action is successful, False otherwise.                                                                 |
+|              |                    |                     | ***Available only if `dk auto merge` option is used***:                                                                 |
+| autoMerged   |                    | boolean             | True if an auto merge was done, False otherwise.                                                                        |
+|              |                    |                     | ***Available only in case of error***:                                                                                  |
+| status       |                    | number              | Error code, [see below](#status-and-statustext)                                                                         |
+| statusText   |                    | Texte               | Description of the error, [see below](#status-and-statustext)                                                           |
+|              |                    |                     | ***Available only in case of pessimistic lock error***:                                                                 |
+| lockKindText |                    | Texte               | "Locked by record"                                                                                                      |
+| lockInfo     |                    | object              | Information about the lock origin                                                                                       |
+|              | task_id            | number              | Process id                                                                                                              |
+|              | user_name          | Texte               | Session user name on the machine                                                                                        |
+|              | user4d_id          | Texte               | User name in the 4D database directory                                                                                  |
+|              | host_name          | Texte               | Machine name                                                                                                            |
+|              | task_name          | Texte               | Process name                                                                                                            |
+|              | client_version     | Texte               |                                                                                                                         |
+|              |                    |                     | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
+| errors       |                    | collection d'objets |                                                                                                                         |
+|              | message            | Texte               | Error message                                                                                                           |
+|              | componentSignature | Texte               | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
+|              | errCode            | number              | Error code                                                                                                              |
 
-(\*) The following values can be returned in the status and statusText properties of Result object in case of error:
+##### status and statusText
+
+The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
 | Constant                                  | Valeur | Commentaire                                                                                                                                                                                                                                                       |
 | ----------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

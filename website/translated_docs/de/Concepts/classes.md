@@ -38,7 +38,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 ## Klassen verwalten
 
-### Eine Klasse definieren
+### Definition einer Klasse
 
 Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner `/Project/Sources/Classes/` gespeichert wird. Der Name der Datei ist der Klassenname.
 
@@ -50,7 +50,7 @@ Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
 Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Datei anlegen:
 
-- Project folder
+- Ordner Project
     + Project
         * Sources
             - Classes
@@ -93,7 +93,7 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
     - Eine Klassenfunktion ist ein Code Block
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Objekt Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem <ClassName> Constructor<ClassName> Constructor oder <ClassName>.<FunctionName><ClassName> <FunctionName> Format angezeigt.
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem \<ClassName> Constructor oder \<ClassName>.\<FunctionName> Format angezeigt.
 
 ## Stores für Klassen
 
@@ -152,7 +152,7 @@ Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie 
 
 In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
 
-Ein Objekt class ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+Ein Objekt Klasse ist ein [shared Object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
 ### Inheritance
 
@@ -288,7 +288,7 @@ Eine Function Class Constructor, die [Parameter](#parameters) zulässt, lässt s
 
 In that case, when you call the [`new()`](API/classClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
+For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
 
 
 

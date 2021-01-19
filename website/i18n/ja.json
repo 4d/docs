@@ -8,8 +8,14 @@
       "Admin/building": {
         "title": "プロジェクトパッケージのビルド"
       },
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
+      },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "クラス"
@@ -61,6 +67,9 @@
       },
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
+      },
+      "API/sessionClass": {
+        "title": "セッション"
       },
       "API/signalClass": {
         "title": "Signal"
@@ -769,6 +778,9 @@
       "Users/overview": {
         "title": "概要"
       },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
       "WebServer/webServerObject": {
         "title": "Web Server object"
       }
@@ -817,6 +829,8 @@
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
+    "Web Administration|no description given": "Web Administration",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",

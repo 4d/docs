@@ -46,8 +46,6 @@ ASSERT($status.success)
 
 
 
-
-
 ## 4D.CryptoKey.new()
 
 <details><summary>Historique</summary>
@@ -149,6 +147,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 | success   | boolean    | True si le message a été déchiffré avec succès                              |
 | result    | Texte      | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`         |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
+
 
 Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
 <!-- END REF -->

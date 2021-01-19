@@ -46,8 +46,6 @@ ASSERT($status.success)
 
 
 
-
-
 ## 4D.CryptoKey.new()
 
 <details><summary>History</summary>
@@ -149,6 +147,7 @@ The function returns a status object with `success` property set to `true` if th
 | success  | boolean    | True if the message has been successfully decrypted                 |
 | result   | text       | Message decrypted and decoded using the `options.encodingDecrypted` |
 | errors   | collection | If `success` is `false`, may contain a collection of errors         |
+
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 <!-- END REF -->

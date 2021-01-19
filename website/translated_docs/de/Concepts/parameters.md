@@ -50,12 +50,12 @@ Eingabe- und Ausgabewerte werden im Moment des Aufrufs [bewertet](#werte-oder-re
 - [sequentiell nummerierte Variablen](#sequentielle-parameter).
 
 
-> Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#parameter-mit-namen) und [sequentiell](#sequentielle-parameter) uneingeschränkt miteinander mischen. Beispiel:
-> 
-> ```4d
+Zum Deklarieren von Parametern lassen sich die beiden Arten [benannt](#parameter-mit-namen) und [sequentiell](#sequentielle-parameter) uneingeschränkt miteinander mischen. Beispiel:
+
+```4d
 Function add($x : Integer)
-  var $0;$2 : Integer
-  $0:=$x+$2
+    var $0;$2 : Integer
+    $0:=$x+$2
 ```
 
 
@@ -202,7 +202,7 @@ In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Pa
 Sie können jeden [Ausdruck](schnelle-tour.md#ausdruckstypen) als sequentiellen Parameter verwenden, außer:
 
 - Tabellen
-- arrays
+- Arrays
 
 Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](dt_pointer.md#zeiger-als-parameter-in-methoden).
 
@@ -373,7 +373,7 @@ In der Methode `ChangeAge` schreiben Sie:
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
 
-Das ist eine leistungsstarke Möglichkeit zum Definieren von [optionale Parameter](#optionale-parameter) (siehe auch unten). Fehlende Parameter können Sie wie folgt verwalten:
+Das ist eine leistungsstarke Möglichkeit zum Definieren von [optionale Parameter](#optional-parameters) (siehe auch unten). Fehlende Parameter können Sie wie folgt verwalten:
 - Sie prüfen, ob alle erwarteten Parameter geliefert werden, durch Vergleichen mit dem Wert `Null`, oder
 - Sie setzen Parameterwerte vorab, oder
 - Sie verwenden sie als leere Werte.

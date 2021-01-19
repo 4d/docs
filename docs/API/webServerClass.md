@@ -18,6 +18,7 @@ They provide the following properties and functions:
 ### Summary
 ||
 |---|
+|[<!-- INCLUDE #webServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.accessKeyDefined.Summary -->|
 |[<!-- INCLUDE #webServerClass.certificateFolder.Syntax -->](#certificatefolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.certificateFolder.Summary -->|
 |[<!-- INCLUDE #webServerClass.characterSet.Syntax -->](#characterset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.characterSet.Summary -->|
 |[<!-- INCLUDE #webServerClass.cipherSuite.Syntax -->](#ciphersuite)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.cipherSuite.Summary -->|
@@ -27,6 +28,7 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #webServerClass.defaultHomepage.Syntax -->](#defaulthomepage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.defaultHomepage.Summary -->|
 |[<!-- INCLUDE #webServerClass.HSTSEnabled.Syntax -->](#hstsenabled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HSTSEnabled.Summary --> |
 |[<!-- INCLUDE #webServerClass.HSTSMaxAge.Syntax -->](#hstsmaxage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HSTSMaxAge.Summary -->|
+
 |[<!-- INCLUDE #webServerClass.HTTPCompressionLevel.Syntax -->](#httpcompressionlevel)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPCompressionLevel.Summary -->|
 |[<!-- INCLUDE #webServerClass.HTTPCompressionThreshold.Syntax -->](#httpcompressionthreshold)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPCompressionThreshold.Summary -->|
 |[<!-- INCLUDE #webServerClass.HTTPEnabled.Syntax -->](#httpenabled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPEnabled.Summary -->|
@@ -48,12 +50,14 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #webServerClass.openSSLVersion.Syntax -->](#opensslversion)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.openSSLVersion.Summary -->|
 |[<!-- INCLUDE #webServerClass.perfectForwardSecrecy.Syntax -->](#perfectforwardsecrecy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.perfectForwardSecrecy.Summary -->|
 |[<!-- INCLUDE #webServerClass.rootFolder.Syntax -->](#rootfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.rootFolder.Summary -->|
-|[<!-- INCLUDE #webServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookieDomain.Summary -->|
+|[<!-- INCLUDE #webServerClass.scalableSession.Syntax -->](#scalableSession)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.scalableSession.Summary -->|
+[<!-- INCLUDE #webServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookieDomain.Summary -->|
 |[<!-- INCLUDE #webServerClass.sessionCookieName.Syntax -->](#sessioncookiename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookieName.Summary -->|
 |[<!-- INCLUDE #webServerClass.sessionCookiePath.Syntax -->](#sessioncookiepath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookiePath.Summary -->|
 |[<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Summary -->|
 |[<!-- INCLUDE #webServerClass.start().Syntax -->](#start)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.start().Summary -->|
 |[<!-- INCLUDE #webServerClass.stop().Syntax -->](#stop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.stop().Summary -->|
+
 
 
 ## WEB Server
@@ -77,7 +81,7 @@ They provide the following properties and functions:
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the option parameter<!-- END REF -->. 
+The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
@@ -122,34 +126,45 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- END REF -->
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->. 
+The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
 
-A 4D application can contain anywhere from one to several Web servers: 
+A 4D application can contain anywhere from one to several Web servers:
 
 - one Web server for the host database (default Web server)
-- one Web server for each component. 
+- one Web server for each component.
 
-All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not. 
+All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
 
-> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command. 
+> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
 
-You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached. 
+You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
 
 #### Example  
 
-We want to know how many running web servers are available: 
+We want to know how many running web servers are available:
 
 ```4d
  var $wSList : Collection
  var $vRun : Integer
- 
+
  $wSList:=WEB Server list
  $vRun:=$wSList.countValues(True;"isRunning")
  ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
 
 ```
 
+
+
+
+## .accessKeyDefined
+
+
+<!-- REF #webServerClass.accessKeyDefined.Syntax -->
+**.accessKeyDefined** : Boolean<!-- END REF -->
+
+
+The **.accessKeyDefined** property contains <!-- REF #webServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. This property is used by the WebAdmin web server to validate the security configuration of the administration interface.
 
 
 <!-- REF webServerClass.certificateFolder.Desc -->
@@ -360,7 +375,7 @@ Default compression threshold = 1024 bytes
 **.HTTPEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #webServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -375,7 +390,7 @@ The <!-- REF #webServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END 
 **.HTTPPort** : Number<!-- END REF -->
 
 
-The <!-- REF #webServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
 
 Default = 80
 
@@ -403,7 +418,7 @@ The <!-- REF #webServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!--
 <!-- REF #webServerClass.HTTPSEnabled.Syntax -->
 **.HTTPSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #webServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -416,7 +431,7 @@ The <!-- REF #webServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- EN
 <!-- REF #webServerClass.HTTPSPort.Syntax -->
 **.HTTPSPort** : Number<!-- END REF -->
 
-The <!-- REF #webServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->. 
+The <!-- REF #webServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
 
 Default = 443
 
@@ -430,8 +445,9 @@ Default = 443
 <!-- REF #webServerClass.inactiveProcessTimeout.Syntax -->
 **.inactiveProcessTimeout** : Number<!-- END REF -->
 
+> This property is not returned in [scalable sessions mode](#scalablesession).
 
-The <!-- REF #webServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
+The <!-- REF #webServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
 
 Default = 480 minutes
 
@@ -445,8 +461,9 @@ Default = 480 minutes
 <!-- REF #webServerClass.inactiveSessionTimeout.Syntax -->
 **.inactiveSessionTimeout** : Number<!-- END REF -->
 
+> This property is not returned in [scalable sessions mode](#scalablesession).
 
-The <!-- REF #webServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive sessions (duration set in cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
+The <!-- REF #webServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
 
 Default = 480 minutes
 
@@ -479,7 +496,7 @@ The <!-- REF #webServerClass.IPAddressToListen.Summary -->IP address on which th
 
 *Read-only property*
 
-The <!-- REF #webServerClass.isRunning.Summary -->web server running state<!-- END REF -->. 
+The <!-- REF #webServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -492,9 +509,10 @@ The <!-- REF #webServerClass.isRunning.Summary -->web server running state<!-- E
 **.keepSession** : Boolean<!-- END REF -->
 
 
-The <!-- REF #webServerClass.keepSession.Summary -->session management enabling status<!-- END REF -->. 
+<!-- REF #webServerClass.keepSession.Summary -->True if legacy sessions are enabled in the web server, False otherwise<!-- END REF -->.
 
-Default = true
+##### See also:
+[.scalableSession](#scalablesession)
 
 <!-- END REF -->
 
@@ -508,7 +526,7 @@ Default = true
 **.logRecording** : Number<!-- END REF -->
 
 
-The <!-- REF #webServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->. 
+The <!-- REF #webServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
 
 *	0 = Do not record (default)
 *	1 = Record in CLF format
@@ -560,8 +578,9 @@ Possible values: 500000 - 2147483648
 <!-- REF #webServerClass.maxSessions.Syntax -->
 **.maxSessions** : Number<!-- END REF -->
 
+> This property is not returned in [scalable sessions mode](#scalablesession).
 
-The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneous sessions<!-- END REF -->. When you reach the limit, the oldest session is closed (and `On Web Close Process` database method is called) if the web server needs to create a new one. The number of simultaneous sessions cannot exceed the total number of web processes (maxConcurrentProcesses property, 100 by default)
+The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
 
 <!-- END REF -->
 
@@ -598,7 +617,7 @@ If modified, the server must be restarted to use the new value.
 
 *Read-only property*
 
-The <!-- REF #webServerClass.name.Summary -->name of the web server application<!-- END REF -->. 
+The <!-- REF #webServerClass.name.Summary -->name of the web server application<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -614,7 +633,7 @@ The <!-- REF #webServerClass.name.Summary -->name of the web server application<
 
 *Read-only property*
 
-The <!-- REF #webServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->. 
+The <!-- REF #webServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -630,7 +649,7 @@ The <!-- REF #webServerClass.openSSLVersion.Summary -->version of the OpenSSL li
 
 *Read-only property*
 
-The <!-- REF #webServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->. 
+The <!-- REF #webServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -647,6 +666,19 @@ The <!-- REF #webServerClass.rootFolder.Summary -->path of web server root folde
 
 <!-- END REF -->
 
+<!-- REF webServerClass.scalableSession.Desc -->
+## .scalableSession
+
+
+<!-- REF #webServerClass.scalableSession.Syntax -->
+**.scalableSession** : Boolean<!-- END REF -->
+
+
+<!-- REF #webServerClass.scalableSession.Summary -->True if scalable sessions are used in the web server, and False otherwise<!-- END REF -->.
+
+##### See also:
+[.keepSession](#keepsession)
+<!-- END REF -->
 
 <!-- REF webServerClass.sessionCookieDomain.Desc -->
 
@@ -671,9 +703,9 @@ The <!-- REF #webServerClass.sessionCookieDomain.Summary -->"domain" field of th
 **.sessionCookieName** : Text<!-- END REF -->
 
 
-The <!-- REF #webServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->. 
+The <!-- REF #webServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
 
-Default = "4DSID"
+*Read-only property*
 
 <!-- END REF -->
 
@@ -730,12 +762,13 @@ The <!-- REF #webServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #webServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter. 
+The `.start()` function <!-- REF #webServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session. 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), and [.perfectForwardSecrecy](#perfectforwardsecrecy)).
+The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
-Customized session settings will be reset when the [`.stop()`](#stop) function is called. 
+All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
+
+Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
 
 #### Returned object
@@ -750,16 +783,16 @@ The function returns an object describing the Web server launch status. This obj
 ||\[].message|Text|Description of the 4D error |
 ||\[].componentSignature|Text|Signature of the internal component which returned the error|
 
->If the Web server was already launched, an error is returned. 
+>If the Web server was already launched, an error is returned.
 
-#### Example 
+#### Example
 
 ```4d
  var $settings;$result : Object
  var $webServer : 4D.WebServer
-  
+
  $settings:=New object("HTTPPort";8080;"defaultHomepage";"myAdminHomepage.html")
- 
+
  $webServer:=WEB Server
  $result:=$webServer.start($settings)
  If($result.success)
@@ -791,23 +824,27 @@ The function returns an object describing the Web server launch status. This obj
 
  <!-- END REF -->
 
-The `.stop()` function <!-- REF #webServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->. 
+The `.stop()` function <!-- REF #webServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
 If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
 
->This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any. 
+>This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 
-#### Example 
+#### Example
 
 To stop the database Web server:
 
 ```4d
  var $webServer : 4D.WebServer
- 
+
  $webServer:=WEB Server(Web server database)
  $webServer.stop()
 ```
 
 <!-- END REF -->
+
+
+
+
 <style> h2 { background: #d9ebff;}</style>

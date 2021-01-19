@@ -288,6 +288,8 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
 
+
+
 ```
 
 #### Example 5
@@ -416,8 +418,8 @@ This example illustrates the use of the *context* property:
 
  $e4:=ds.Employee.get(4;$settings2)
  completeSummary($e4) //In completeSummary method, the optimization associated to context "summary" is applied
-```
-
+``` 
+ 
 
 <!-- END REF -->
 
@@ -511,7 +513,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 #### Example 1
 
-```4d
+```4d 
  #DECLARE ($entity : Object)  
  var $status : Object
 
@@ -537,7 +539,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 
 #### Example 3
 
-```4d
+```4d 
  var $pk : Text
  var $dataClassAttribute : Object
 
@@ -580,13 +582,13 @@ The entity object is created in memory and is not saved in the database until th
 
 This example creates a new entity in the "Log" Dataclass and records information in the "info" attribute:
 
-```4d
+```4d 
  var $entity : cs.LogEntity
  $entity:=ds.Log.new() //create a reference
  $entity.info:="New entry" //store some information
  $entity.save() //save the entity
 ```
-
+ 
 <!-- END REF -->
 
 
@@ -627,12 +629,12 @@ When created, the entity selection does not contain any entities (`mySelection.l
 #### Example
 
 
-```4d
+```4d 
  var $USelection; $OSelection : cs.EmployeeSelection
  $USelection:=ds.Employee.newSelection() //create an unordered empty entity selection
  $OSelection:=ds.Employee.newSelection(dk keep ordered) //create an ordered empty entity selection
 ```
-
+ 
 
 <!-- END REF -->
 
@@ -814,21 +816,21 @@ For example, with the following two entities:
 ```
 Entity 1:
 ds.People.name: "martin"
-ds.People.places:
+ds.People.places: 
     { "locations" : [ {
                 "kind":"home",
-                "city":"paris"
+                "city":"paris" 
             } ] }
 
 Entity 2:
 ds.People.name: "smith"
-ds.People.places:
+ds.People.places: 
     { "locations" : [ {
                 "kind":"home",
-                "city":"lyon"
+                "city":"lyon" 
             } , {
                 "kind":"office",
-                "city":"paris"
+                "city":"paris" 
             } ] }
 ```
 

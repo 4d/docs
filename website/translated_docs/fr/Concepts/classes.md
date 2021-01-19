@@ -91,8 +91,8 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
 - Dans l'éditeur de code :
     - une classe ne peut pas être exécutée
     - une fonction de classe est un bloc de code
-    - **Goto definition** sur un objet membre recherche des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Fonction f".
-    - **Search references** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Fonction f" donnera comme résultat "$o.f()".
+    - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
+    - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
 - Dans l'explorateur d'exécution et le Débogueur, les fonctions de classe sont affichées avec le format \<ClassName> constructor ou \<ClassName>. \<FunctionName> .
 
 ## Class stores
@@ -111,7 +111,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Deux class s
 | ---------- | ------ | -- | ------------------------------------------------------------------- |
 | classStore | object | <- | Class store utilisateur utilisateurs pour le projet ou le composant |
 
-La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Il retourne toutes les classes utilisateurs [définies](#class-definition)>dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 #### Exemple
 
@@ -288,7 +288,7 @@ A class constructor function, which can accept [parameters](#parameters), can be
 
 In that case, when you call the [`new()`](API/classClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>.constructor*", for example "MyClass.constructor".
+For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
 
 
 

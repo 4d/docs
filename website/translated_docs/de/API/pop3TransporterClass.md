@@ -58,14 +58,15 @@ The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summ
 In the *server* parameter, pass an object containing the following properties:
 
 
-| *server*                                                                                                                                                                                                                       | Default value (if omitted)                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                        | Default value (if omitted)                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| Falsch                                                              |
+| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | none                                                                |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| none                                                                |
-| **.password** : Text<p>User password for authentication on the server (not returned in *[SMTP transporter](#smtptransporterobject)* object)                                                             | none                                                                |
+| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                              | none                                                                |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
 
@@ -97,13 +98,31 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 <!-- END REF -->
 
+## 4D.POP3Transporter.new()
+
+
+<!-- REF #4D.POP3Transporter.new().Syntax -->
+**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
+
+<!-- REF #4D.POP3Transporter.new().Params -->
+| Parameter | Typ                |    | Beschreibung                                        |
+| --------- | ------------------ |:--:| --------------------------------------------------- |
+| server    | Objekt             | -> | Mail server information                             |
+| Ergebnis  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+<!-- END REF -->
+
+#### Beschreibung
+
+The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](#pop3-new-transporter) command (shortcut).
+
+> It is recommended to use the [`POP3 New transporter`](#pop3-new-transporter) shortcut command instead of `4D.POP3Transporter.new()`. 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 
 
 
-<!-- INCLUDE transporter.authenticationMode.Desc -->
+<!-- INCLUDE transporter.authenticationModePOP3.Desc -->
 
 
 

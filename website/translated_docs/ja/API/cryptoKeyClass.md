@@ -46,8 +46,6 @@ ASSERT($status.success)
 
 
 
-
-
 ## 4D.CryptoKey.new()
 
 <details><summary>履歴</summary>
@@ -149,6 +147,7 @@ The function returns a status object with `success` property set to `true` if th
 | success | boolean    | メッセージの復号に成功した場合は true                             |
 | result  | text       | options.encodingDecrypted を使って復号およびデコードされたメッセージ   |
 | errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
+
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 <!-- END REF -->

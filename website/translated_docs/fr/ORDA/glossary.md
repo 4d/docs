@@ -83,7 +83,7 @@ Une copie profonde (deep copy) duplique un objet et toutes les références qu'i
 
 Une entité est un objet qui correspond à un modèle de dataclass. Une entité contient les mêmes attributs que la dataclass.
 
-Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. The purpose of the entity is to manage data (create, update, delete).
+Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
 
 Pour plus d'informations, voir le chapitre Entités.
 

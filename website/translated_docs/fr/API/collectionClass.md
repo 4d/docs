@@ -98,7 +98,7 @@ Vous devez affecter la référence retournée à une variable 4D de type Collect
 
 En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s).
 
-Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple:
+Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple :
 
 ```4d
  myCol[10]:="My new element"
@@ -1954,8 +1954,33 @@ Here is the code for ***WordLength***:
 
 ```4d
  $1.result:=Length(String($1.value))>Length(String($1.value2))
-``` 
+```
 
+#### Example 3
+
+You want to sort a collection by character code or language:
+
+```4d
+var $strings1; $strings2 : Collection
+$strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
+
+//using the character code:
+$strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
+// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+
+//using the language:
+$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+```
+
+The ***sortCollection*** method:
+
+```4d
+var$1Object
+var$2Integer // sort option
+
+$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+``` 
 
 <!-- END REF -->
 

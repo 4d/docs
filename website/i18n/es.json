@@ -8,8 +8,14 @@
       "Admin/building": {
         "title": "Building a project package"
       },
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
+      },
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "Class"
@@ -61,6 +67,9 @@
       },
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
+      },
+      "API/sessionClass": {
+        "title": "Session"
       },
       "API/signalClass": {
         "title": "Signal"
@@ -769,6 +778,9 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
       "WebServer/webServerObject": {
         "title": "Web Server object"
       }
@@ -817,6 +829,8 @@
     "Backup and Restore|no description given": "Backup and Restore",
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
+    "Web Administration|no description given": "Web Administration",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
     "Getting started|no description given": "Getting started",

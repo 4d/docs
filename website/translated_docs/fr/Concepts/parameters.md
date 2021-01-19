@@ -50,11 +50,10 @@ Les valeurs d'entrée et de sortie sont [évaluées](#values-or-references) au m
 - [sequentially numbered variables](#sequential-parameters).
 
 
-> Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. Par exemple:
-> 
-> ```4d
+Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. Par exemple:
+
 ```4d
-  Function add($x : Integer)
+Function add($x : Integer)
     var $0;$2 : Integer
     $0:=$x+$2
 ```
