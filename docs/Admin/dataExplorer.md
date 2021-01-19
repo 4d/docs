@@ -4,7 +4,7 @@ title: Web Data Explorer
 ---
 
 
-The Data Explorer provides a web interface to enter, view, and manage data in your datastore. Using this tool, you can easily import or export data, create or delete entities in the dataclasses, search, order, or compare attribute values. It helps you to quickly identify issues and control data at any steps of the development process. 
+The Data Explorer provides a web interface to enter, view, and manage data in your datastore. Using this tool, you can easily browse among all your entities in the dataclasses, search, order, or compare attribute values. It helps you to control data and quickly identify issues at any steps of the development process. 
 
 
 ## Access Configuration
