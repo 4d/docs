@@ -4,7 +4,7 @@ title: Web Data Explorer
 ---
 
 
-The Data Explorer provides a web interface to enter, view, and manage data in your datastore. Using this tool, you can easily browse among all your entities in the dataclasses, search, order, or compare attribute values. It helps you to control data and quickly identify issues at any steps of the development process. 
+The Data Explorer provides a web interface to view and query data in your datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you to control data and quickly identify issues at any steps of the development process. 
 
 ![alt-text](assets/en/Admin/dataExplorer1.png)
 
@@ -36,6 +36,7 @@ or
 	`IPaddress:HTTPSPort/dataexplorer`
 
 [HTTPPort](webAdmin.md#http-port) and [HTTPSPort](webAdmin.md#https-port) values are configured in the `WebAdmin` settings. 
+
 
 
 
