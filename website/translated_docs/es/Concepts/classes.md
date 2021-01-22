@@ -111,7 +111,7 @@ Available classes are accessible from their class stores. Two class stores are a
 | ---------- | ------ | -- | --------------------------------------------- |
 | classStore | object | <- | User class store for the project or component |
 
-The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+The `cs` command returns the user class store for the current project or component. The `cs` command returns the user class store for the current project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
 #### Example
 

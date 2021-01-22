@@ -202,7 +202,7 @@ In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Pa
 Sie können jeden [Ausdruck](schnelle-tour.md#ausdruckstypen) als sequentiellen Parameter verwenden, außer:
 
 - Tabellen
-- Arrays
+- arrays
 
 Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](dt_pointer.md#zeiger-als-parameter-in-methoden).
 
