@@ -29,15 +29,12 @@ Selecting the embedded web rendering engine allows you to call 4D methods from t
 ### Access 4D methods
 When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a web area.
 
-> This property is only available if the web area [uses the embedded web rendering engine](#use-embedded-web-rendering-engine).
+> This property is only available if the web area [uses the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### $4d object
 
 
-
-
-
-The [4D embedded web rendering engine](#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
@@ -169,8 +166,11 @@ For reasons related to window redrawing mechanisms, the insertion of a web area 
 ### Web Area and Web server conflict (Windows)
 In Windows, it is not recommended to access, via a web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own web server.
 
-### Web plugins and Java applets
+### Web plugins and Java applets (Windows)
+
 The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+
+> Using web plugins and Java applets is only available on Windows (system web engine).
 
 ### Insertion of protocol (macOS)
 The URLs handled by programming in web areas in macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
