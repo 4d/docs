@@ -781,24 +781,6 @@
       "Users/overview": {
         "title": "概要"
       },
-      "WebServer/webServerConnect": {
-        "title": "Connection Management"
-      },
-      "WebServer/webServerConnectMethods": {
-        "title": "Connection Methods"
-      },
-      "WebServer/webServerMgmt": {
-        "title": "Server Management"
-      },
-      "WebServer/webServerProcess": {
-        "title": "Using Preemptive Web Processes"
-      },
-      "WebServer/webServerSecurity": {
-        "title": "Security"
-      },
-      "WebServer/webServerSessions": {
-        "title": "Session Management"
-      },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
       },
