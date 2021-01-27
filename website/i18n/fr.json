@@ -14,6 +14,9 @@
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
       },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
+      },
       "Admin/webAdmin": {
         "title": "Web Administration"
       },
@@ -778,16 +781,64 @@
       "Users/overview": {
         "title": "Aperçu"
       },
+      "WebServer/webServerConnect": {
+        "title": "Connection Management"
+      },
+      "WebServer/webServerConnectMethods": {
+        "title": "Connection Methods"
+      },
+      "WebServer/webServerMgmt": {
+        "title": "Server Management"
+      },
+      "WebServer/webServerProcess": {
+        "title": "Using Preemptive Web Processes"
+      },
+      "WebServer/webServerSecurity": {
+        "title": "Security"
+      },
+      "WebServer/webServerSessions": {
+        "title": "Session Management"
+      },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "Prise en main"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
       "WebServer/sessions": {
         "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "Aperçu"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "Administration"
+      },
+      "WebServer/webServerConfig": {
+        "title": "Configuration"
       },
       "WebServer/webServerObject": {
         "title": "Objet Serveur Web"
       }
     },
     "links": {
-      "v18 R5 BETA": "v18 R5 BETA",
-      "v18 R4": "v18 R4",
+      "v18 R6 BETA": "v18 R6 BETA",
+      "v18 R5": "v18 R5",
       "v18": "v18"
     },
     "categories": {
@@ -801,6 +852,7 @@
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
+      "Web Development": "Web Development",
       "REST Server": "Serveur REST",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
@@ -824,12 +876,14 @@
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Serveur Web",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Web Administration",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
