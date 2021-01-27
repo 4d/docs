@@ -29,15 +29,12 @@ Le moteur de rendu Web vous permet d'appeler des méthodes 4D à partir de la zo
 ### Accéder aux méthodes 4D
 Lorsque la propriété [Accès méthodes 4D](properties_WebArea.md#access-4d-methods) est cochée, vous pouvez appeler des méthodes 4D à partir d'une zone web.
 
-> Cette propriété n'est disponible que si la zone web [utilise le moteur de rendu web intégré](#use-embedded-web-rendering-engine).
+> This property is only available if the web area [uses the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### Objet $4d
 
 
-
-
-
-Le [moteur de rendu Web intégré 4D](#use-embedded-web-rendering-engine) fournit à la zone un objet JavaScript nommé $4d que vous pouvez associer à n'importe quelle méthode projet 4D à l'aide de la notation objet ".".
+The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
 Par exemple, pour appeler la méthode 4D `HelloWorld`, vous devez simplement exécuter la déclaration suivante :
 
@@ -169,8 +166,11 @@ Pour des raisons liées aux mécanismes de redessinement des fenêtres, l'insert
 ### Conflit Zone Web et serveur Web (Windows)
 Sous Windows, il est déconseillé d’accéder via une zone web au serveur Web de l’application 4D contenant la zone car cette configuration peut provoquer un conflit paralysant l’application. Bien entendu, un 4D distant peut accéder au serveur Web du 4D Server, mais pas à son propre serveur web.
 
-### Plugins Web et applets Java
+### Web plugins and Java applets (Windows)
+
 (*) L'usage de plugins web et d'applets Java est toutefois déconseillé dans les zones web car ils peuvent déstabiliser une opération menée par 4D, notamment au niveau de la gestion d'événement.
+
+> Using web plugins and Java applets is only available on Windows (system web engine).
 
 ### Insertion du protocole (macOS)
 Les URLs manipulés par programmation dans les zones web sous macOS doivent débuter par le protocole. Par exemple, vous devez passer la chaîne "http://www.monsite.fr" et non uniquement "www.monsite.fr".
