@@ -664,6 +664,9 @@
       "Project/architecture": {
         "title": "Architecture of a project"
       },
+      "Project/compiler": {
+        "title": "Compiler"
+      },
       "Project/creating": {
         "title": "Creating or opening a project"
       },
