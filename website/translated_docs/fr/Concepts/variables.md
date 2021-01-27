@@ -21,7 +21,7 @@ Les variables sont des objets du langage; vous pouvez créer et utiliser des var
 Vous créez des variables en les déclarant. Le langage 4D propose deux manières de déclarer des variables :
 
 - à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
+- à l'aide de l'une des commandes du langage 4D du thème "Compilateur" ou "Tableaux" (langage classique uniquement).
 
 **Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Using a C_ directive
 
-> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
+> **Note de compatibilité :** cette fonctionnalité n'est pas recommandée pour déclarer des variables dans des méthodes. Il est recommandé d'utiliser le mot-clé [var](#using-the-var-keyword).
 
 Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 

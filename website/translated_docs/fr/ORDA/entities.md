@@ -173,13 +173,13 @@ Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associé "1"
 
 ## Créer une sélection d'entité (entity selection)
 
-You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
+Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selection) comme suit :
 
-*   Querying the entities [in a dataclass](API/dataclassClass.md#query) or in an [existing entity selection](API/entitySelectionClass.md#query);
-*   Using the [`.all()`](API/dataclassClass.md#all) dataclass function to select all the entities in a dataclass;
-*   Using the `Create entity selection` command or the [`.newSelection()`](API/dataclassClass.md#newselection) dataclass function to create a blank entity selection;
-*   Using the [`.copy()`](API/entitySelectionClass.md#copy) function to duplicate an existing entity selection;
-*   Using one of the various functions from the [Entity selection class](API/entitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/entitySelectionClass.md#or);
+*   Lancez une requête sur les entités [dans une dataclass](API/dataclassClass.md#query) ou dans une [sélection d'entités existante](API/entitySelectionClass.md#query);
+*   Utilisez la fonction de dataclass [`.all()`](API/dataclassClass.md#all) pour sélectionner toutes les entités d'une dataclass;
+*   Utilisez la commande `Create entity selection` ou la fonction de dataclass [`.newSelection()`](API/dataclassClass.md#newselection) pour créer un objet de sélection d'entités (entity collection) vide;
+*   Utilisez la fonction [`.copy()`](API/entitySelectionClass.md#copy) pour dupliquer une sélection d'entités existante;
+*   Utilisez l'une des diverses fonctions de [Entity selection class](API/entitySelectionClass.md) qui retourne une nouvelle sélection d'entité, telle que [`entitySelection.or()`](API/entitySelectionClass.md#or);
 *   Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
 
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
