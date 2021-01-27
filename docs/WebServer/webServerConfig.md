@@ -134,6 +134,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 
 
 
+
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)|
 |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only|
 |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only|
@@ -372,7 +373,7 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 |`WEB SET OPTION`|`Web keep session`||
 |Settings dialog box|Options (I) page/Automatic Session Management||
 
-Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](webServerSessions.md) section.
+Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
 
 Default is true (enabled).
 

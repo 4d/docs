@@ -9,7 +9,7 @@ title: Overview
 
 You can start or stop publication of the web application at any time. To do so, you just need to select a menu command or execute a single line of code.
 
-Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerMgmt.md#website-management-urls). 
+Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls). 
 
 ## Ready-to-use
 
