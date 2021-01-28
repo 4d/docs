@@ -8,7 +8,7 @@ This "Getting started" section is geared at first-time users who want an overall
 
 ## Hello World Example
 
-Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and call a project method that returns a text.
+Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
 
 ### Starting the web server
 
@@ -31,34 +31,39 @@ The default home page is displayed:
 
 ### Displaying Hello World
 
-1. Open the Explorer and create a project method named "hello".
+1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
 
-2. Enter the following line of code:
+2. Enter the following code:
 
 ```4d
-WEB SEND TEXT("Hello World!")
+Case of 
+    : ($1="/hello")
+        WEB SEND TEXT("Hello World!")
+    Else 
+        // Error 404 for example
+End case 
 ```
 
-This very simple line only sends the text passed as parameter to the browser.
+The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser.
 
-3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option then click **OK**.
-
-![](assets/en/WebServer/hello0.png)
-
-4. In your browser, enter the following URL:
+3. In your browser, enter the following URL:
 
 ```
-http://localhost/4daction/hello
+http://localhost/hello
 ```
 
-The web server handles the request and calls the `hello` method, which returns:
+The web server handles the request and returns:
 
 ![](assets/en/WebServer/hello.png)
 
 
 ## Getting data from the database
 
-Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data. Thanks to the [ORDA concept](ORDA/overview.md), this table will be automatically available as a dataclass and available through [REST](REST/gettingStarted.md).
+Now we'll see how simple it is to get data from the database. , we will create a table and fill it with some data. First,
+
+As a fist  display the data
+
+Thanks to the [ORDA concept](ORDA/overview.md), this table will be automatically available as a dataclass and available through [REST](REST/gettingStarted.md).
 
 Create a simple database with, for example, a single table containing some records:
 
@@ -227,6 +232,9 @@ End if
 ```
 
 3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
+
+![](assets/en/WebServer/hello0.png)
+
 
 4. In your browser, enter the following URL:
 
