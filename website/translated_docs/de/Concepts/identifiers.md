@@ -109,7 +109,7 @@ Eine Tabelle kennzeichnen Sie durch eckige Klammern um den Tabellennamen: \ [...
 
 Der Tabellenname und Feldname kann max. 31 Zeichen lang sein.
 
-- Ein Tabellen- oder Feldname muss mit einem Buchstaben, Unterstrich oder Dollarzeichen "$" beginnen
+- A table or field name must begin with a letter, an underscore, or a dollar ("$")
 - Der Name kann Buchstaben, Zahlen, Leerzeichen und den Unterstrich ("_") enthalten.
 - Verwenden Sie keine reservierten Namen, wie 4D Befehlsnamen (`Date`, `Time`, etc), Schlüsselwörter (`If`, `For`, etc.), oder Konstantennamen (`Euro`, `Black`, `Friday`, etc.).
 - Bei Verwalten der Anwendung via SQL gelten zusätzliche Regeln: nur die Zeichen _0123456789abcdefghijklmnopqrstuvwxyz werden akzeptiert, und ein Name darf keine SQL Schlüsselwörter (Befehl, Attribut, etc.) enthalten.
