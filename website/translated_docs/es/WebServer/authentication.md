@@ -117,7 +117,7 @@ You must declare these parameters as follows:
 
 Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
 
-```code4d
+```4d
 // On Web Authentication database method
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
@@ -182,43 +182,18 @@ The `On Web Connection` database method is only executed if the connection has b
 
 Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
 
-```code4d
+```4d
  // On Web Authentication Database Method
- C_TEXT($1;$2;$5;$6;$3;$4)
- C_TEXT($user)
- C_BOOLEAN($0)
- $0:=False
- $user:=$5
-  // For security reasons, refuse names that contain @
- If(WithWildcard($user))
-    $0:=False
-  // The <span class="rte4d_met">WithWildcard</span> method is described below
+ #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
+    $user : Text; $pw : Text) -> $valid : Boolean
+
+ var $found : cs.WebUserSelection
+ $valid:=False
+
+ $found:=ds.WebUser.query("User === :1";$user)
+ If($found.length=1) // User is found
+    $valid:=WEB Validate digest($user;[WebUser]password)
  Else
-    QUERY([WebUsers];[WebUsers]User=$user)
-    If(OK=1)
-       $0:=WEB Validate digest($user;[WebUsers]password)
-    Else
-       $0:=False // User does not exist
-    End if
+    $valid:=False // User does not exist
  End if
 ```
-
-The *WithWildcard* method is as follows:
-
-```code4d
-// WithWildcard Method
-  // WithWildcard ( String ) -> Boolean
-  // WithWildcard ( Name ) -> Contains a Wilcard character
-
- C_LONGINT($i)
- C_BOOLEAN($0)
- C_TEXT($1)
-
- $0:=False
- For($i;1;Length($1))
-    If(Character code(Substring($1;$i;1))=Character code("@"))
-       $0:=True
-    End if
- End for
-```
-
