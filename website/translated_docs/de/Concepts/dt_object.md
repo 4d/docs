@@ -5,7 +5,7 @@ title: Objekt
 
 Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen enthalten. Die Struktur von "native" 4D Objekten basiert auf dem klassischen Prinzip von "Eigenschaft/Wert" bzw. "Key/Value" Paaren. Die Syntax dieser Objekte basiert auf JSON Notation:
 
-- Ein Eigenschaftenname ist immer ein Text, z. B. "Name". It must follow [specific rules](identifiers.md#object-properties).
+- Ein Eigenschaftenname ist immer ein Text, z. B. "Name". Er muss [spezifische Regeln](identifiers.md#objekteigenschaften) einhalten.
 
 - Der Wert einer Eigenschaft kann einer der folgenden Typen sein:
     - numerisch (Zahl, Ganzzahl, etc.)
@@ -22,11 +22,11 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
 
 **Warnung:** Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](dt_object.md#syntax-basics)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
+Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation (siehe [Grundlagen der Syntax](dt_object.md#grundlagen-der-syntax)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
 
 Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- In 4D Code, entweder in den Methoden (Methodeneditor) oder extern geschrieben (Formeln, Dateien mit 4D Tags, die mit `PROCESS 4D TAGS` oder dem Web Server bearbeitet werden, Exportdateien, 4D Write Pro Dokumente...),
 - In den Bereichen Ausdruck des Debugger und des Runtime Explorer,
 - In der Eigenschaftenliste des Formulareditors für Formularobjekte: Felder vom Typ Variable oder Ausdruck, sowie verschiedene Auswahl Listboxen und Spalten Ausdrücke (Datenquelle, Hintergrundfarbe, Stil oder Schriftfarbe).
 
