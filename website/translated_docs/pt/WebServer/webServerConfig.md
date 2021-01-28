@@ -130,9 +130,6 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | ----- | ----------- | ------------------------------ |
 | 0     | wdl disable | Web HTTP debug log is disabled |
 
-
-
-
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|
 
 
@@ -521,7 +518,7 @@ In this case, robots are not allowed to access the entire site.
 | `WEB SET ROOT FOLDER` |                                                  |                                                                                                                                       |
 | Settings dialog box   | Configuration page/Default HTML Root             |                                                                                                                                       |
 
-Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path using [filesystems]. The web server will need to be restarted in order for the new root folder to be taken into account.
+Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path. The web server will need to be restarted in order for the new root folder to be taken into account.
 
 Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. If a requested URL or a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.
 
