@@ -58,11 +58,11 @@
 	"WebServer/webServerAdmin",
 	"WebServer/webServerObject"],
   "Web Development":["WebServer/gettingStarted",
-	"WebServer/authentication",
-	"WebServer/allowProject",
 	"WebServer/templates",
 	"WebServer/httpRequests",
+	"WebServer/allowProject",
 	"WebServer/errorPages",
+	"WebServer/authentication",
 	"WebServer/sessions",
 	"WebServer/preemptiveWeb"],
   "REST Server": [		{
