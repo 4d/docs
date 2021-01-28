@@ -3,15 +3,15 @@ id: identifiers
 title: Namensregeln
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, object properties, tables, forms, etc.).
+Dieser Abschnitt beschreibt die Konventionen und Regeln zum Bezeichnen verschiedener Elemente in der 4D Programmiersprache, wie Variablen, Objekteigenschaften, Tabellen, Formulare, etc.
 
-> If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+> Bei Verwenden nicht-romanischer Zeichen in Namen kann die max. Länge kürzer sein.
 
 
 
 ## Arrays
 
-Array names follow the same rules as [variables](#variables).
+Für Namen von Arrays gelten dieselben Regeln wie für [Variablen](#variablen).
 
 
 ## Classes
