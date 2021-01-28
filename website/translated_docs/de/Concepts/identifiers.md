@@ -135,9 +135,9 @@ Ein Variablenname kann ohne das Symbol für Reichweite ($ oder <>) bis zu 31 Zei
 - Er muss für [Parameter](parameters.md) und [lokale Variablen](variables.md#lokale-variable) mit einem Buchstaben, Unterstrich oder Dollarzeichen ("$") beginnen, und für [Interprozessvariablen](variables.md#interprozessvariablen) mit "<>".
 - Eine Ziffer als erstes Zeichen ist erlaubt, wird aber nicht empfohlen, da die [Deklaration mit `var` ](variables.md#das-schlüsselwort-var-verwenden) dies nicht unterstützt.
 - Folglich kann der Name einen beliebigen Buchstaben, eine Ziffer und das Unterstrichzeichen ("_") enthalten.
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Leerzeichen sind erlaubt, werden aber nicht empfohlen, da die [Deklaration mit `var` ](variables.md#using-the-var-keyword) dies nicht unterstützt.
 - Verwenden Sie keine reservierten Namen, wie 4D Befehlsnamen (`Date`, `Time`, etc), Schlüsselwörter (`If`, `For`, etc.), oder Konstantennamen (`Euro`, `Black`, `Friday`, etc.).
-- Variable names are case insensitive.
+- Es wird nicht zwischen Groß- und Kleinschreibung unterschieden.
 
 
 Beispiele:
@@ -150,14 +150,14 @@ If(bValidate=1) //process variable
 <>vlProcessID:=Current process() //interprocess variable
 ```
 
-## Other names
+## Andere Namen
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+Die 4D Programmiersprache verwaltet die Namen einiger Elemente als String: **Formulare**, **Formularobjekte**, **temporäre Auswahlen**, **Prozesse**, **Mengen**, **Menüleisten**, etc.
 
-Such string names can contain up to 255 characters, not including the "$" or "<>" characters (if any).
+Solche String-Namen können bis zu 255 Zeichen enthalten, ohne die Zeichen "$" oder "<>" (falls vorhanden).
 
-- String names can contain any characters.
-- String names are case insensitive.
+- String-Namen können beliebige Zeichen enthalten.
+- Es wird nicht zwischen Groß- und Kleinschreibung unterschieden.
 
 Beispiele:
 
