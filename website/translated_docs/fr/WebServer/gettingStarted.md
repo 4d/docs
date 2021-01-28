@@ -59,15 +59,44 @@ The web server handles the request and returns:
 
 ## Getting data from the database
 
-Now we'll see how simple it is to get data from the database. , we will create a table and fill it with some data. First,
+Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
 
-As a fist  display the data
-
-Thanks to the [ORDA concept](ORDA/overview.md), this table will be automatically available as a dataclass and available through [REST](REST/gettingStarted.md).
-
-Create a simple database with, for example, a single table containing some records:
+Create a basic database with, for example, a single table containing some records:
 
 ![](assets/en/WebServer/hello2.png) ![](assets/en/WebServer/hello3.png)
+
+### Displaying data in a page
+
+The most simple solution to display data is to call a [template page](templates.md) containing tags.
+
+1. Using any text editor, create a file containing the following lines:
+
+```html
+<html>
+<body>
+<!--#4DCODE ALL RECORDS([Friends])-->
+<!--#4DLOOP [Friends]-->
+<!--#4DTEXT [Friends]lastName--> <!--#4DTEXT [Friends]firstName--><BR>
+<!--#4DENDLOOP-->
+</body>
+</html>
+```
+
+2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
+3. In your browser, enter the following URL:
+
+```
+http://localhost/friends.shtml
+```
+
+`.shtml` pages are automatically processed by the web server. Your page filled with data is returned:
+
+![](assets/en/WebServer/hello3bis.png)
+
+### REST request
+
+If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+
 
 1. We will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
 
@@ -151,7 +180,7 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 }
 ```
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. In your web interfaces, you can easily bind the javascript or html code with returned data. See the [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses through JSON.
+This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. In your web interfaces, you can easily bind the javascript or html code with returned data. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
 
 
 
@@ -160,7 +189,7 @@ This very simple example shows how the web server interacts transparently with t
 
 In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
 
-### Create a table of users
+### Creating a table of users
 
 The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
 
@@ -242,7 +271,7 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> This request is usually handled through a web form and a POST request. See [this example](sessions.md#example) for more information.
+> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST.
 
 Then you will be logged for the session:
 
