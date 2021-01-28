@@ -5,22 +5,106 @@ title: Processing HTTP requests
 
 The 4D web server provides several features to handle HTTP requests:
 
-- special URLs (`/4DACTION` and `/4DCGI`) to call server-side code
+- the `On Web Connection` database method, a router for your web application,
+- the `/4DACTION` URL to call server-side code
 - `WEB GET VARIABLES` to get values from HTML objects sent to the server
 - other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
+- the *COMPILER_WEB* project method, to declare your variables.
 
 
-## URLs for code execution
+## On Web Connection
 
-The 4D Web Server offers special HTTP requests that allow you to call directly some code in your application. Such HTTP requests can be used as URLs or HTML form actions.
+The `On Web Connection` database method can be used as the entry point for the 4D Web server.
 
-These requests are:
+### Database method calls
 
-- `/4DACTION`, to call an project method of your database,
-- `/4DCGI`, to call the `On Web Connection` database method from any HTML object.
+The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. The database method is called with the URL.
+
+For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
+
+> The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
+
+### Syntax
+
+**On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
+
+| Parameter | Typ  |    | Beschreibung                                 |
+| --------- | ---- |:--:| -------------------------------------------- |
+| $1        | Text | <- | URL                                          |
+| $2        | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
+| $3        | Text | <- | IP address of the web client (browser)       |
+| $4        | Text | <- | IP address of the server                     |
+| $5        | Text | <- | User name                                    |
+| $6        | Text | <- | Password                                     |
 
 
-### /4DACTION
+You must declare these parameters as shown below:
+
+```4d
+//On Web Connection database method
+
+ C_TEXT($1;$2;$3;$4;$5;$6)
+
+//Code for the method
+```
+
+Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+
+```4d
+// On Web Connection database method
+#DECLARE ($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text)
+
+```
+
+
+> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
+
+
+### $1 - URL extra data
+
+The first parameter ($1) is the URL entered by users in the address area of their web browser, without the host address.
+
+Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
+
+| URL entered in web browser           | Value of parameter $1    |
+| ------------------------------------ | ------------------------ |
+| 123.4.567.89                         | /                        |
+| http://123.4.567.89                  | /                        |
+| 123.4.567.89/Customers               | /Customers               |
+| http://123.4.567.89/Customers/Add    | /Customers/Add           |
+| 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
+
+Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+
+
+### $2 - Header and Body of the HTTP request
+
+The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
+
+If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+
+
+### $3 - Web client IP address
+
+The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+> 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+
+### $4 - Server IP address
+
+The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
+
+### $5 and $6 - User Name and Password
+
+The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
+> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+
+
+
+
+## /4DACTION
 
 ***/4DACTION/***MethodName***<br> **/4DACTION/******MethodName/Param*
 
@@ -138,133 +222,6 @@ End if
 ```
 
 
-### /4DCGI
-
-**/4DCGI/***action*
-
-| Parameter | Typ  |    | Beschreibung                                                                |
-| --------- | ---- |:--:| --------------------------------------------------------------------------- |
-| action    | Text | -> | Any custom string to be received in the $1 parameter of `On Web Connection` |
-
-This URL allows you to call the `On Web Connection` database method with the action parameter. The complete URL, including the *action* string, is passed to the *$1* parameter of the database method.
-
-When the 4D Web server receives the `/4DCGI` URL, the `On Web Authentication` database method (if it exists) is called first.
-
-The `/4DCGI` URL does not correspond to any file. Its role is only to call 4D using the `On Web Connection` database method. The *action* parameter can contain any type of information. This URL allows you to perform any type of action. You just need to test the value of *$1* in the `On Web Connection` database method or in one of its submethods and have 4D perform the appropriate action. For example, you can build completely custom static HTML pages to add, search, or sort records or to generate images on-the-fly.
-
-When issuing an action, a “response” must be returned, by using commands that send data (WEB SEND FILE, WEB SEND BLOB, etc.).
-
-**Warning:** Please be sure to execute the shortest possible actions so as not to hold up the browser.
-
-#### Beispiel
-
-You can use this command to execute custom requests in 4D by using static pages. Imagine that you have a text input and a **OK** button in a static HTML page. The POST action "/4dcgi/rech" has been associated to the text area and to the **OK** button.
-
-In the `On Web Connection` database method, you insert the following code:
-
-```4d
- Case of
-    :($1="/4dcgi/rech") //When 4D receives this URL
-  //If the OK button has been used and the ‘name’ field contains a Value
-       If((bOK="OK") & (name#""))
-  //Change the URL to execute the request code,
-  //placed farther down in the same method
-          WEB SEND HTTP REDIRECT("/4dcgi/rech?"+name)
-       Else
-  //Else return to the beginning page
-          WEB SEND HTTP REDIRECT("/page1.htm")
-       End if
-       ...
-    :($1="/4dcgi/rech?@") //If the URL has been redirected
-       ... //Put the request code here
- End case
-```
-
-
-### On Web Connection
-
-The `On Web Connection` database method can be used as the entry point for the 4D Web server, either using the special [`4DCGI URL`](#4dcgi), or using customized command URLs.
-
-
-#### Database method calls
-
-
-The `On Web Connection` database method is called in the following cases:
-
-*   When 4D receives the [`/4DCGI`](#4dcgi) URL. The database method is called with the */4DCGI/\action* URL in $1.
-
-*   When a web page is called with a URL of type *\<path>/\<file>* is not found. The database method is called with the URL.
-
-*   When a web page is called with a URL of type *\<file>/* and no [home page]() has been defined by default. The database method is called with the URL.
-
-
-> The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
-
-#### Syntax
-
-**On Web Connections**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
-
-| Parameters | Type |    | Description                                  |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| $1         | Text | <- | URL                                          |
-| $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
-| $3         | Text | <- | IP address of the web client (browser)       |
-| $4         | Text | <- | IP address of the server                     |
-| $5         | Text | <- | User name                                    |
-| $6         | Text | <- | Password                                     |
-
-
-You must declare these parameters as shown below:
-
-```4d
-//On Web Connection database method
-
- C_TEXT($1;$2;$3;$4;$5;$6)
-
-//Code for the method
-```
-
-> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) ends the method processing.
-
-
-#### $1 - URL extra data
-
-The first parameter ($1) is the URL entered by users in the address area of their web browser, without the host address.
-
-Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
-
-| URL entered in web browser           | Value of parameter $1    |
-| ------------------------------------ | ------------------------ |
-| 123.4.567.89                         | /                        |
-| http://123.4.567.89                  | /                        |
-| 123.4.567.89/Customers               | /Customers               |
-| http://123.4.567.89/Customers/Add    | /Customers/Add           |
-| 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
-
-Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
-
-
-#### $2 - Header and Body of the HTTP request
-
-The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
-
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
-
-
-#### $3 - Web client IP address
-
-The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
-> 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
-
-#### $4 - Server IP address
-
-The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
-
-#### $5 and $6 - User Name and Password
-
-The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
 
 
 ## Getting values from HTTP requests
@@ -389,7 +346,7 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 
 ## COMPILER_WEB Project Method
 
-The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL containing the `/4DCGI` action. This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the database is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. You must explicitly create it.
+The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. You must explicitly create it.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
 
