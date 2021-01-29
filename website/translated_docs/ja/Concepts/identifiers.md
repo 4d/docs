@@ -109,7 +109,7 @@ ON EVENT CALL("HANDLE EVENTS")
 
 テーブル名およびフィールド名は、31文字以内で指定します。
 
-- 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
+- A table or field name must begin with a letter, an underscore, or a dollar ("$")
 - その後の文字には、半角アルファベット文字・数字・スペース・アンダースコアを使用ができます。
 - 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (`If`, `For` 等)、そして定数 (`Euro`, `Black`, `Friday` 等) が含まれます。
 - SQLで処理する場合には追加のルールがあります: 文字 _0123456789abcdefghijklmnopqrstuvwxyz のみを使用できます。また、名前に SQLキーワード (コマンド、属性 等) が含まれていてはなりません。

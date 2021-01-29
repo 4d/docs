@@ -17,9 +17,9 @@ Pour plus d'informations, veuillez consulter le thème [Pages formulaire](forms.
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                                                        |
-| ----- | --------------- | ------------------------------------------------------------------------ |
-| pages | collection      | Collection of pages (each page is an object, page 0 is the first element |
+| Nom   | Type de données | Valeurs possibles                                                                |
+| ----- | --------------- | -------------------------------------------------------------------------------- |
+| pages | collection      | Collection de pages (chaque page est un objet, la page 0 est le premier élément) |
 
 ---
 
