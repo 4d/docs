@@ -82,7 +82,7 @@ The most simple solution to display data is to call a [template page](templates.
 </body>
 </html>
 ```
-![](assets/en/WebServer/tempo_codeHTML.png)
+
 2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
 3. In your browser, enter the following URL:
 
