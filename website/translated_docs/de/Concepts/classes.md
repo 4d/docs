@@ -179,7 +179,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/formulaClass.md#about-4dfunction-objects) class.
+Class Functions sind spezifische Eigenschaften der Klasse. Es sind Objekte der Klasse [4D.Function](API/formulaClass.md#about-4dfunction-objects).
 
 In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/identifiers.md#objekteigenschaften) konform sein.
 
