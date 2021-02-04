@@ -70,7 +70,7 @@ Diese Operation bietet sich an, wenn Sie Ihren aktuellen Verschlüsselungscode f
 Diese Operation entfernt jede Verschlüsselung aus der Datendatei. Sollen Ihre Daten nicht länger verschlüsselt sein:
 
 1. Klicken Sie auf die Option **Alle Daten entschlüsseln**.
-2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein (siehe unter Den aktuellen Verschlüsselungscode für Daten liefern).
+2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein (siehe oben unter "Den aktuellen Verschlüsselungscode für Daten liefern").
 
 Die Datendatei wird komplett entschlüsselt und es erscheint eine Meldung als Bestätigung: ![](assets/en/MSC/MSC_encrypt10.png)
 > Ist die Datendatei entschlüsselt, passt der Verschlüsselungsstatus der Tabellen nicht mehr zur Eigenschaft Verschlüsselbar. Um den passenden Status wiederherzustellen, müssen Sie alle Eigenschaften **Verschlüsselbar** auf der Strukturebene der Anwendungen abwählen.
