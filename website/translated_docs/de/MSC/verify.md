@@ -23,10 +23,10 @@ Die Seite enthält die Schaltflächen für Aktionen, über die Sie direkt auf di
 
 Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the application. Hier erscheinen alle durchgeführten Überprüfungen und evtl. gefundene Fehler. Gibt es keine Fehler, wird das durch [OK] angezeigt. It is created in XML format and is named: *ApplicationName*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml where:
 
-- *ApplicationName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *ApplicationName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
+- *yyyy-mm-dd hh-mm-ss* ist der Zeitstempel der Datei. Er basiert auf der lokalen Systemzeit, zur der die Wartungsoperation gestartet wurde, zum Beispiel "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Klicken Sie auf die Schaltfläche **Logbuch öffnen**, zeigt 4D das neueste Logbuch im standardmäßigen Browser des Rechners an.
 
 
 ## Details
