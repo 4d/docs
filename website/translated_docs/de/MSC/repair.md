@@ -63,7 +63,7 @@ Next select the table you want to assign to the group in the "Unassigned tables"
 
 Ist das Reparieren abgeschlossen, erzeugt 4D ein Logbuch im Ordner Logs der Datenbank. Hier können Sie alle ausgeführten Operationen ansehen. Es wird im XML-Format erstellt und lautet:  *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*":
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
+- *DatabaseName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
