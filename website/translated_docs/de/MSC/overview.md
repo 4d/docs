@@ -26,11 +26,11 @@ Es gibt zwei Stellen, das MSC im Wartungsmodus zu öffnen:
 
 Im Standardmodus wird eine Datenbank geöffnet. Hier sind nicht alle Wartungsfunktionen verfügbar. Es gibt mehrere Möglichkeiten, das MSC Fenster zu öffnen:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der 4D Toolbar  
   ![](assets/en/MSC/mscicon.png)
 - Über die Standardaktion “msc”, die Sie einem Menübefehl oder einem Formularobjekt zuordnen können (siehe Abschnitt "Standardaktionen").
 
-- Use the `OPEN SECURITY CENTER` language command.
+- Über den 4D Befehl `OPEN SECURITY CENTER`
 
 ## Verfügbarkeit der Funktionen
 
