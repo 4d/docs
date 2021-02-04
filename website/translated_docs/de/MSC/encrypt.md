@@ -4,20 +4,20 @@ title: Seite Verschlüsseln
 sidebar_label: Seite Verschlüsseln
 ---
 
-You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.
+Auf dieser Seite können Sie die Datendatei verschlüsseln oder *entschlüsseln* (z.B. die Verschlüsselung entfernen). Das richtet sich nach der Eigenschaft **Verschlüsselbar**, die für jede Tabelle in der Anwendung gesetzt werden kann. Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln" des 4D Handbuchs *Designmodus*.
 
-Bei jeder Operation Verschlüsselung/Entschlüsselung wird ein neuer Ordner angelegt. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
-> Verschlüsselung ist nur im [Wartungsmodus](overview.md#display-in-maintenance-mode) verfügbar. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode
+Bei jeder Operation Verschlüsselung/Entschlüsselung wird ein neuer Ordner angelegt. Er lautet "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> oder "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
+> Verschlüsselung ist nur im [Wartungsmodus](overview.md#display-in-maintenance-mode) verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erhalten Sie die Meldung, dass die Anwendung geschlossen und im Wartungsmodus neu gestartet wird
 
 **Warnung:**
-- Encrypting a data file is a lengthy operation. Währenddessen erscheint ein Ablaufbalken (den der Benutzer unterbrechen kann). Note also that an application encryption operation always includes a compacting step.
+- Das Verschlüsseln einer Anwendung ist eine längere Operation. Währenddessen erscheint ein Ablaufbalken (den der Benutzer unterbrechen kann). Beachten Sie auch, dass beim Verschlüsselungsprozess immer eine Komprimierung durchgeführt wird.
 - Jeder Verschlüsselungsvorgang produziert eine Kopie der Datendatei, was den Anwendungsordner vergrößert. Sie sollten darauf achten (besonders auf macOS, wo 4D Anwendungen als Package erscheinen), dass die Größe der Anwendung nicht exzessiv ansteigt. In diesem Fall ist es hilfreich, die Kopien der Originaldatei im Package manuell zu entfernen, damit die Größe des Package im Rahmen bleibt.
 
 ## Daten zum ersten Mal verschlüsseln
 Beim ersten Verschlüsseln Ihrer Daten über das MSC sind folgende Schritte erforderlich:
 
-1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. Weitere Informationen dazu finden Sie im Abschnitt "Tabelleneigenschaften".
-2. Öffnen Sie die Seite Verschlüsseln des MSC. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](assets/en/MSC/MSC_encrypt2.png)<p> This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
+1. Markieren Sie im Struktureditor über das Inspektorfenster für jede Tabelle, die verschlüsselbar sein soll, die Eigenschaft **Verschlüsselbar**. Weitere Informationen dazu finden Sie im Abschnitt "Tabelleneigenschaften".
+2. Öffnen Sie die Seite Verschlüsseln des MSC. Haben Sie für keine Tabelle die Eigenschaft **Verschlüsselbar** gewählt, erscheint auf der Seite folgende Meldung: ![](assets/en/MSC/MSC_encrypt1.png) Andernfalls erscheint diese Meldung: ![](assets/en/MSC/MSC_encrypt2.png)<p> Das bedeutet, dass der Status **Verschlüsselbar** für mindestens eine Tabelle geändert wurde und die Datendatei noch nicht verschlüsselt ist. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
 3. Click on the Encrypt picture button.  
    ![](assets/en/MSC/MSC_encrypt3.png)  
    You will be prompted to enter a passphrase for your data file: ![](assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. Eine Passphrase ist eine sicherere Version als ein Kennwort, da sie eine größere Anzahl Zeichen enthalten kann. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
