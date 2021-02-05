@@ -6,7 +6,7 @@ sidebar_label: Überblick
 
 Das Fenster Maintenance und Security Center (MSC) enthält alle Tools zum Prüfen, Analysieren, Warten, Sichern, Komprimieren und Verschlüsseln von Datendateien. Das MSC ist in allen 4D Programmen verfügbar, also 4D Developer, 4D Server oder 4D Desktop.
 
-**Note:** The MSC window is not available from a 4D remote connection.
+**Hinweis:** Das MSC Fenster ist in einer 4D remote Verbindung nicht verfügbar.
 
 Es gibt verschiedene Wege, das MSC-Fenster zu öffnen. Die Art des Zugriffs bestimmt auch die Art, wie die Datenbank geöffnet wird: im Wartungs- oder im Standardmodus. Im Wartungsmodus wird die Datenbank nicht durch 4D geöffnet, sondern nur ihre Referenz an MSC geliefert. Im Standardmodus wird die Datenbank von 4D geöffnet.
 
@@ -26,11 +26,11 @@ Es gibt zwei Stellen, das MSC im Wartungsmodus zu öffnen:
 
 Im Standardmodus wird eine Datenbank geöffnet. Hier sind nicht alle Wartungsfunktionen verfügbar. Es gibt mehrere Möglichkeiten, das MSC Fenster zu öffnen:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der 4D Toolbar  
   ![](assets/en/MSC/mscicon.png)
 - Über die Standardaktion “msc”, die Sie einem Menübefehl oder einem Formularobjekt zuordnen können (siehe Abschnitt "Standardaktionen").
 
-- Use the `OPEN SECURITY CENTER` language command.
+- Über den 4D Befehl `OPEN SECURITY CENTER`
 
 ## Verfügbarkeit der Funktionen
 
