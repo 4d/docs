@@ -130,9 +130,7 @@ title: 入力
 
 #### 対象オブジェクト
 
-コンボボックス - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)</p> 
-
-
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 
 
@@ -141,23 +139,18 @@ title: 入力
 
 
 ---
-
-
 ## フォーカス可
 
 オブジェクトに対し **フォーカス可** プロパティが選択されていると、そのオブジェクトはフォーカスを得ることができ、キーボードなどを使用してアクティブ化することができます。 オブジェクトはフォーカスを得ると、オブジェクトごとあるいは OS ごとに定められた方法でハイライトされます。ただし [フォーカスの四角を隠す](properties_Appearance.md#hide-focus-rectangle) オプションが選択されている場合を除きます。
 
-
-
-> [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。 
+> [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。
 
 * ![](assets/en/FormObjects/property_focusable1.png)<br>選択時にフォーカスを表示しているチェックボックス <p> <p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>選択されているが、フォーカスを表示していないチェックボックス
 
+
 入力できないオブジェクトに **フォーカス可** プロパティが設定されていると、ユーザーはエリアの内容を選択、コピー、およびドラッグ＆ドロップすることができます。
-
-
 
 
 #### JSON 文法
@@ -167,9 +160,6 @@ title: 入力
 | focusable | boolean | true, false |
 
 
-
-
-
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [プラグインエリア](pluginArea_overview.md) - [ラジオボタン](radio_overview.md) - [サブフォーム](subform_overview.md)
@@ -177,22 +167,14 @@ title: 入力
 
 
 
-
-
 ---
-
-
 ## キーボードレイアウト
 
 このプロパティは [入力](input_overview.md) オブジェクトに対して特定のキーボードレイアウトを関連付けます。 たとえば、国際的なアプリケーションにおいて、フォーム内にギリシャ文字で入力しなければならないフィールドがあった場合、"ギリシャ語" のキーボードレイアウトをこのフィールドに対して関連付けることができます。 これにより、このフィールドがフォーカスを受けている場合にはデータ入力時にキーボード設定が自動的に変わります。
 
 デフォルトでは、オブジェクトはカレントのキーボードレイアウトを使用します。
 
-
-
 > このプロパティは、`OBJECT SET KEYBOARD LAYOUT` と `OBJECT Get keyboard layout` コマンドを使用して動的に設定することが可能です。
-
-
 
 #### JSON 文法
 
@@ -201,47 +183,29 @@ title: 入力
 | keyboardDialect | text   | 言語コード (例: "ar-ma", "cs" など) RFC3066, ISO639 および ISO3166 を参照ください。 |
 
 
-
-
-
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
 
 
 
-
-
 ---
-
-
 ## 複数行
 
 このプロパティは、テキストタイプの式や、文字およびテキストタイプのフィールドが割り当てられている [入力オブジェクト](input_overview.md) で使用できます。 値は、あり・なし・自動 (デフォルト) が選択できます。
 
-
-
 #### 自動
-
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
 - 複数行の入力オブジェクトの場合、4D は自動で改行します:  
   ![](assets/en/FormObjects/multilineAuto.png)
 
-
-
 #### ×
-
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
 - 改行はおこなわれません。テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:  
   ![](assets/en/FormObjects/multilineNo.png)
 
-
-
 #### ◯
-
 この値を選択すると、追加の [ワードラップ](properties_Display.md#ワードラップ) オプションが表示されます。
-
-
 
 
 #### JSON 文法
@@ -251,29 +215,22 @@ title: 入力
 | multiline | text   | "yes", "no", "automatic" (定義されていない場合のデフォルト) |
 
 
-
-
-
 #### 対象オブジェクト
 
 [入力](input_overview.md)
 
 
 
-
-
 ---
-
-
 ## プレースホルダー
 
-4D では、フォームのフィールド内にプレースホルダーテキストを表示することができます。 
+4D では、フォームのフィールド内にプレースホルダーテキストを表示することができます。
 
 このテキストはフィールド内で半透明のテキストとして表示され、入力されるデータに関するヘルプ、指示、具体例などを表示します。 このテキストは、ユーザーが文字をエリアに入力した瞬間に表示されなくなります:
 
 ![](assets/en/FormObjects/property_placeholder.png)
 
-プレースホルダーテキストは、フィールドの中身が消去されると再び表示されます。 
+プレースホルダーテキストは、フィールドの中身が消去されると再び表示されます。
 
 プレースホルダーとして表示できるデータの型は以下の通りです:
 
@@ -283,14 +240,9 @@ title: 入力
 xliff 参照を ":xliff:resname" の形でプレースホルダーとして使用することもできます。たとえば: 
 
     :xliff:PH_Lastname
-    
 
-この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。 
-
-
+この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。
 > プレースホルダーのテキストは、[OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-PLACEHOLDER.301-4505467.ja.html) と [OBJECT Get placeholder](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-placeholder.301-4505473.ja.html) コマンドを使って、プログラミングによって設定したり取得したりすることができます。
-
-
 
 #### JSON 文法
 
@@ -298,14 +250,9 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 | ----------- | ------ | -------------------------------- |
 | placeholder | string | オブジェクトに値が格納されていない場合に表示する半透明のテキスト |
 
-
-
-
 #### 対象オブジェクト
 
 [コンボボックス](comboBox_overview.md) - [入力](input_overview.md)
-
-
 
 
 #### 参照
@@ -314,16 +261,10 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 
 
-
-
 ---
-
-
 ## 選択を常に表示
 
 このプロパティを選択すると、オブジェクト中で選択した文字列の反転状態が、フォーカスを失った後も表示されるようになります。 これにより、テキストスタイルを更新するようなインターフェースの実装が容易になります ([マルチスタイル](properties_Text.md#マルチスタイル) 参照)。
-
-
 
 
 #### JSON 文法
@@ -333,34 +274,24 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 | showSelection | boolean | true, false |
 
 
-
-
-
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
 
 
 
-
-
 ---
-
-
 ## ショートカット
 
-[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。 
+[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
 
 ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...] ボタンをクリックします:
 
+
 ![](assets/en/FormObjects/property_shortcut.png)
-
-
 > カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 メニューへのショートカットの割り当てについては [メニュープロパティを設定する](https://doc.4d.com/4Dv18/4D/18/Setting-menu-properties.300-4575512.ja.html) を参照してください。
 
 4D のデザイン環境で使用できるショートカットの一覧は、環境設定ダイアログの [ショートカットページ](https://doc.4d.com/4Dv18/4D/18/Shortcuts-Page.300-4575689.ja.html) にて確認できます。
-
-
 
 #### JSON 文法
 
@@ -375,9 +306,6 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 | shortcutKey     | string  | <li>任意の文字キー: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
-
-
-
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ラジオボタン](radio_overview.md)
@@ -386,29 +314,20 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 
 
-
-
 ---
-
-
 ## シングルクリック編集
 
 リストボックスにおいて、編集モードへの直接移行を可能にします。
 
 このオプションがチェックされている場合、そのリストボックスの当該エリアが事前に選択されていたかどうかに関わらず、ユーザーのワンクリックだけでリストボックスセルを編集モードへと移行させることができます。 このオプションは、リストボックスの [選択モード](properties_ListBox.md#選択モード) が "なし" に設定されている場合でもセルの編集を可能にすると言う点に注意してください。
 
-このオプションがチェックされていない場合、セルの内容を編集するにはユーザーはまず最初に編集したいセルの行を選択し、その次に編集するセルを選択する必要があります。 
-
-
+このオプションがチェックされていない場合、セルの内容を編集するにはユーザーはまず最初に編集したいセルの行を選択し、その次に編集するセルを選択する必要があります。
 
 #### JSON 文法
 
 | 名               | データタイプ  | とりうる値       |
 | --------------- | ------- | ----------- |
 | singleClickEdit | boolean | true, false |
-
-
-
 
 #### 対象オブジェクト
 
