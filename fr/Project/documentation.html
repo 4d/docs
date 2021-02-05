@@ -155,7 +155,7 @@
 <p><img src="/docs/assets/en/Project/codeEditor_Comments.png" alt=""></p>
 <p>Si un fichier nommé &quot;&lt;MethodName&gt;.md&quot; existe dans le dossier &quot;&lt;package&gt;/documentation&quot;, l'éditeur de code affiche (par priorité) :</p>
 <ul>
-<li><p>Tout texte saisi dans une balise de <code>commentaire</code> HTML (**) en haut du fichier markdown.</p></li>
+<li><p>Tout texte saisi dans une balise de <code>commentaire</code> HTML (<em>&lt;!-- commande documentation --&gt;</em>) en haut du fichier markdown.</p></li>
 <li><p>Ou, si aucune balise de <code>commentaire</code> html n'est utilisée, la première phrase après une balise <code># Description</code> du fichier markdown.<br>
 Dans ce cas, la première ligne contient le <strong>prototype</strong> de la méthode, généré automatiquement par le parseur du code 4D.</p>
 <blockquote>
@@ -172,7 +172,7 @@ Dans ce cas, la première ligne contient le <strong>prototype</strong> de la mé
 <tr><th>Ligne</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>&quot;&quot;</td><td>Commentaire HTML. Utilisé en priorité comme description de méthode dans les <a href="#viewing-documentation-in-the-code-editor">astuces de l'éditeur de code</a></td></tr>
+<tr><td>&quot;&lt;!-- Type your summary here --&gt;&quot;</td><td>Commentaire HTML. Utilisé en priorité comme description de méthode dans les <a href="#viewing-documentation-in-the-code-editor">astuces de l'éditeur de code</a></td></tr>
 <tr><td>## Description</td><td>Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les astuces de l'éditeur de code si le commentaire HTML n'est pas utilisé</td></tr>
 <tr><td>## Example</td><td>Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code</td></tr>
 <tr><td>`<code>4D &lt;br&gt;Insérez votre exemple ici \`</code></td><td>Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)</td></tr>

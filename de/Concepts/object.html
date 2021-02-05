@@ -68,7 +68,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/Concepts/dt_object.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Objekt</h1></header><article><div><span><p>Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen enthalten. Die Struktur von &quot;native&quot; 4D Objekten basiert auf dem klassischen Prinzip von &quot;Eigenschaft/Wert&quot; bzw. &quot;Key/Value&quot; Paaren. Die Syntax dieser Objekte basiert auf JSON Notation:</p>
 <ul>
-<li><p>Ein Eigenschaftenname ist immer ein Text, z. B. &quot;Name&quot;. It must follow <a href="/docs/de/Concepts/identifiers.html#object-properties">specific rules</a>.</p></li>
+<li><p>Ein Eigenschaftenname ist immer ein Text, z. B. &quot;Name&quot;. Er muss <a href="/docs/de/Concepts/identifiers.html#objekteigenschaften">spezifische Regeln</a> einhalten.</p></li>
 <li><p>Der Wert einer Eigenschaft kann einer der folgenden Typen sein:</p>
 <ul>
 <li>numerisch (Zahl, Ganzzahl, etc.)</li>
@@ -84,10 +84,10 @@
 </ul>
 <p>(*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild &quot;[Objekt Bild]&quot; an.</p>
 <p><strong>Warnung:</strong> Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.</p>
-<p>You manage Object type variables, fields or expressions using the commands available in the <strong>Objects (Language)</strong> theme or through the object notation (see <a href="/docs/de/Concepts/object.html#syntax-basics">Syntax basics</a>). Über spezifische Befehle im Kapitel Suchen wie <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code> oder <code>ORDER BY ATTRIBUTE</code> können Sie mit Objektfeldern arbeiten.</p>
+<p>Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel <strong>Objekte (Sprache</strong>), oder über die Objektnotation (siehe <a href="/docs/de/Concepts/object.html#grundlagen-der-syntax">Grundlagen der Syntax</a>). Über spezifische Befehle im Kapitel Suchen wie <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code> oder <code>ORDER BY ATTRIBUTE</code> können Sie mit Objektfeldern arbeiten.</p>
 <p>Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:</p>
 <ul>
-<li>in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by <code>PROCESS 4D TAGS</code> or the Web Server, export files, 4D Write Pro documents...),</li>
+<li>In 4D Code, entweder in den Methoden (Methodeneditor) oder extern geschrieben (Formeln, Dateien mit 4D Tags, die mit <code>PROCESS 4D TAGS</code> oder dem Web Server bearbeitet werden, Exportdateien, 4D Write Pro Dokumente...),</li>
 <li>In den Bereichen Ausdruck des Debugger und des Runtime Explorer,</li>
 <li>In der Eigenschaftenliste des Formulareditors für Formularobjekte: Felder vom Typ Variable oder Ausdruck, sowie verschiedene Auswahl Listboxen und Spalten Ausdrücke (Datenquelle, Hintergrundfarbe, Stil oder Schriftfarbe).</li>
 </ul>
