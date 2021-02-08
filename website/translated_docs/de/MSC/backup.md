@@ -14,6 +14,6 @@ Diese Seite ist in drei Bereiche unterteilt:
 - **Letztes Backup**: Zeigt Datum und Uhrzeit des zuletzt für die Datenbank ausgeführten Backup (automatisch oder manuell).
 - **Inhalt der Backup-Datei**: Zeigt die in der Backup-Datei enthaltenen Dateien und Ordner an.
 
-The **Backup** button is used to launch a manual backup.
+Mit der Schaltfläche **Backup** starten Sie ein manuelles Backup.
 
-Auf dieser Seite können Sie keine Backup-Parameter verändern. To do this, you must click on the **Database properties...** button.
+Auf dieser Seite können Sie keine Backup-Parameter verändern. Dazu müssen Sie am unteren Rand auf die Schaltfläche **Datenbank-Eigenschaften** klicken.
