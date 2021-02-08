@@ -30,12 +30,12 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 
 [4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
 
-> This property is only available if the web area [uses the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
 ### $4dオブジェクトの使用
 
 
-The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+[4Dの埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みWebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 

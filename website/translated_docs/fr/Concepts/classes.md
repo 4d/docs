@@ -185,13 +185,13 @@ Dans le fichier de définition de classe, les déclarations de fonction utilisen
 
 > **Astuce :** préfixer le nom de la fonction par un trait de soulignement ("_") exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
-Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple:
+Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
-Dans une fonction de classe, la commande `This` est utilisée comme instance d'objet. Par exemple:
+Dans une fonction de classe, la commande `This` est utilisée comme instance d'objet. Par exemple :
 
 ```4d  
 Function setFullname($firstname : Text; $lastname : Text)

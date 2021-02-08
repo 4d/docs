@@ -1,26 +1,26 @@
 ---
 id: macros
-title: Form Editor Macros
+title: フォームエディターマクロ
 ---
 
 
-The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+4D のフォームエディターはマクロをサポートしています。 1つ以上のアクションを実行するための指示をマクロと呼びます。 呼び出されると、マクロは登録された指示を実行し、自動的に指定のアクションをおこないます。
 
-For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
+たとえば、定期レポートに特定のフォーマットが指定されている場合 (例: テキストによってフォントカラーが赤や緑であるなど)、マクロを作成してフォントカラーの設定を自動でおこなうことができます。 4Dフォームエディターのマクロでは、次のことがおこなえます:
 
-*   Create and execute 4D code
-*   Display dialogs
-*   Select form objects
-*   Add / delete / modify forms, form objects as well as their properties
-*   Modify project files (update, delete)
+*   4Dコードを作成・実行する
+*   ダイアログを表示する
+*   オブジェクトを選択する
+*   フォームやフォームオブジェクトおよびそれらのプロパティを追加・編集・削除する
+*   プロジェクトファイルを編集する (更新・削除)
 
-Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
+フォームエディター用にカスタム機能を定義するため、マクロコードは [クラス関数](Concepts/classes.md) と [JSON のフォームオブジェクトプロパティ](FormObjects/properties_Reference.md) を使用できます。
 
-Macros can been defined for the host project or for components within the project. Usually, you will create a macro and install it within the components you use for development.
+ホストプロジェクトおよび、プロジェクト内のコンポーネントにてマクロを定義することができます。 通常は開発用のコンポーネントにマクロをインストールして使用します。
 
-When called, a macro overrides any previously specified behaviors.
+マクロが呼び出されると、指定されている既存の動作はマクロによってオーバーライドされます。
 
-## Hands-on example
+## 例題
 
 In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
 
