@@ -64,7 +64,7 @@ Les références de collections 4D bénéficient de méthodes spécifiques (souv
 
 A noter que, même si elle n'a pas de paramètres, une méthode membre doit être appelée avec les parenthèses ( ) (opérateur d'exécution de méthode), sinon une erreur de syntaxe est générée.
 
-Par exemple:
+Par exemple :
 
 ```4d
 $newCol:=$col.copy() //copie de $col vers $newCol
