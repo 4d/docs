@@ -64,7 +64,7 @@ Or using the [.call()](#call) function:
 
 #### Parameters to a single method
 
-For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. Par exemple:
+For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. Par exemple :
 
 ```4d
  var $f : 4D.Function
