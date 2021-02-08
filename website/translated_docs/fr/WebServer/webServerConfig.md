@@ -486,7 +486,7 @@ To do so, put the ROBOTS.TXT file at the server's root. This file must be struct
    Disallow: <URL> or <beginning of the URL>
 ```
 
-Par exemple:
+Par exemple :
 
 ```4d
    User-Agent: *
