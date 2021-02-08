@@ -35,36 +35,21 @@ It is possible to mix several types of tags. For example, the following HTML str
 ```
 
 
-## Tag parsing
+
+## Principles for using tags
+
+### Parsing
 
 Parsing the contents of a *template* source is done in two contexts:
 
 - Using the `PROCESS 4D TAGS` command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
+
 - Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, http://www.server.com/dir/page.shtm).
 
-## Tag overview
-
-The following table lists the available 4D transformation tags. For more details, see the description of the tags below.
-
-|Tag|Action|Example|$ Syntax|Comments|
-|---|---|---|---|---|
-|4DTEXT|Inserts 4D variables and expressions as text|`<!--#4DTEXT [Customer]Name-->`|X|Recommended if data processed externally in order to avoid malicious code injections|
-|4DHTML|Inserts HTML code|`<!--#4DHTML <br/>-->`|X|Not recommended if data processed externally|
-|4DEVAL|Evaluates any 4D expression|`<!--#4DEVAL a:=20-->`|X|Not recommended if data processed externally|
-|4DSCRIPT/|Executes a 4D method with a parameter|`<!--#4DSCRIPT/MyMethod/MyParam-->`|||	
-|4DINCLUDE|Includes an HTML page inside another|`<!--#4DINCLUDE subpage.html-->`|||	
-|4DBASE|Designates the file used by 4DINCLUDE|`<!--#4DBASE ../file/-->`|||
-|4DCODE|Inserts 4D code|`<!--#4DCODE ALERT(myVar)-->`||Supports CR, LF (4D code blocks)|
-|4DIF, 4DELSE, 4DELSEIF, 4DENDIF|Inserts conditions into code within tags|`<!--#4DIF (myVar=1)-->`|||		
-|4DLOOP, 4DENDLOOP|Inserts loops into code within tags|`<!--#4DLOOP [table]-->`||Can be used with tables, arrays, methods, expressions, pointerArrays|
-
-**About $ Syntax:** The tags should generally be inserted as HTML comments (`<!--#Tag Content-->`) in the source text. An alternative syntax [using $](#alternative-syntax-for-4dtext-4dhtml-4deval) is possible under certain conditions for tags returning values, to make them XML compliant.
-
-## Principles for using tags
 
 ### Accessing 4D methods via the Web
 
-Running a 4D method with [`4DEACH`](#4deach), [`4DELSEIF`](#4delseif), [`4DEVAL`](#4deval), [`4DHTML`](#4dhtml), [`4DIF`](#4dif), [`4DLOOP`](#4dloop), [`4DSCRIPT`](#4dscript), or [`4DTEXT`](#4dtext) from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](WebServer/allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
+Executing a 4D method with [`4DEACH`](#4deach), [`4DELSEIF`](#4delseif), [`4DEVAL`](#4deval), [`4DHTML`](#4dhtml), [`4DIF`](#4dif), [`4DLOOP`](#4dloop), [`4DSCRIPT`](#4dscript), or [`4DTEXT`](#4dtext) from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](WebServer/allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
 
 ### Recursive processing
 
@@ -76,15 +61,8 @@ Running a 4D method with [`4DEACH`](#4deach), [`4DELSEIF`](#4delseif), [`4DEVAL`
 
 If the [Mail]Letter_type text field itself contains a tag, for example `<!--#4DSCRIPT/m_Gender-->`, this tag will be evaluated recursively after the interpretation of the `4DHTML` tag.
 
-This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow [malicious code](prevention-of-malicious-code-insertion) to be inserted.
+This powerful principle meets most needs related to text transformation. Note, however, that in some cases you may need to prevent [malicious code](prevention-of-malicious-code-insertion) to be inserted.
 
-### Prevention of malicious code insertion
-
-4D transformation tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your application code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.). In this case, it is advisable to not use transformation tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
-
-In addition, according to the principle of [recursion](#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT tag`. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited.
-
-To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" which will not be transformed.
 
 ### Identifiers with tokens
 
@@ -230,17 +208,15 @@ The number of loops is based on the number of elements of the collection. At eac
 
 #### Example with a collection of scalar values
 
-*getNames* returns a collection of strings.
+*getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+ 
 
 ```html
 	<table class="table">    
-		<!--#4DCODE 
-            $names:=getNames
-          -->          
 
         <tr><th>Name</th></tr>
         
-          <!--#4DEACH $name in $names-->
+          <!--#4DEACH $name in getNames-->
         <tr>
             <td ><!--#4DTEXT $name--></td>
         </tr>
@@ -250,13 +226,16 @@ The number of loops is based on the number of elements of the collection. At eac
 
 #### Example with a collection of objects
 
-*getSalesPersons* returns a collection of objects. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+*getSalesPersons* returns a collection of objects. 
 
 ```html
     <table class="table">    
-        <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
+         <!--#4DCODE 
+            $salePersons:=getSalesPersons
+          -->          
+       <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
 
-          <!--#4DEACH $salesPerson in getSalesPersons-->
+          <!--#4DEACH $salesPerson in $salePersons-->
         <tr>
             <td ><!--#4DTEXT $salesPerson.ID--></td>
             <td ><!--#4DTEXT $salesPerson.firstname--></td>
@@ -748,7 +727,7 @@ Using the $ syntax, the following code is validated by the parser:
 
 Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
 
-The reason for this difference is to prevent malicious code injection. As [explained above](#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
+The reason for this difference is to prevent malicious code injection. As [explained below](#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
 
 The following examples show the result of processing depending on the syntax and tag used:
 
@@ -789,3 +768,10 @@ You can write:
 ```
 
 
+## Prevention of malicious code insertion
+
+4D transformation tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your application code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.). In this case, it is advisable to not use transformation tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
+
+In addition, according to the principle of [recursion](#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the [`4DTEXT`](#4dtext) tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text like `"<!--#4DEVAL QUIT 4D-->"` is inserted instead of the name, interpreting this tag will cause the application to be exited.
+
+To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" which will not be transformed.
