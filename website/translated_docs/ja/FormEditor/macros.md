@@ -18,9 +18,9 @@ title: フォームエディターマクロ
 
 ホストプロジェクトおよび、プロジェクト内のコンポーネントにてマクロを定義することができます。 通常は開発用のコンポーネントにマクロをインストールして使用します。
 
-When called, a macro overrides any previously specified behaviors.
+マクロが呼び出されると、指定されている既存の動作はマクロによってオーバーライドされます。
 
-## Hands-on example
+## 例題
 
 In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
 
