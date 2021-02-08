@@ -64,7 +64,7 @@ The following table lists the available 4D transformation tags. For more details
 
 ### Accessing 4D methods via the Web
 
-Running a 4D method with `4DTEXT`, `4DHTML`, `4DEVAL`, `4DSCRIPT`, `4DIF`, `4DELSEIF` or `4DLOOP` from a web request is subject to the [Available through tags and 4D URLs (4DACTION ...)](WebServer/allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
+Running a 4D method with [`4DEACH`](#4deach), [`4DELSEIF`](#4delseif), [`4DEVAL`](#4deval), [`4DHTML`](#4dhtml), [`4DIF`](#4dif), [`4DLOOP`](#4dloop), [`4DSCRIPT`](#4dscript), or [`4DTEXT`](#4dtext) from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](WebServer/allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
 
 ### Recursive processing
 
@@ -159,6 +159,8 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 ## 4DCODE
 
+#### Syntax: `<!--#4DCODE codeLines-->`
+
 The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
 
 When a `<!--#4DCODE` sequence is detected that is followed by a space, a CR or a LF character, 4D interprets all the lines of code up to the next `-->` sequence. The code block itself can contain carriage returns, line feeds, or both; it will be interpreted sequentially by 4D.
@@ -197,12 +199,151 @@ Here are the 4DCODE tag features:
 > The fact that 4DCODE tags can call any of the 4D language commands or project methods could be seen as a security issue, especially when the database is available through HTTP. However, since it executes server-side code called from your own template files, the tag itself does not represent a security issue. In this context, as for any Web server, security is mainly handled at the level of remote accesses to server files.
 
 
+## 4DEACH and 4DENDEACH
+
+#### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
+
+The `<!--#4DEACH-->` comment allows iterating a specified item over all values of the *expression*. The item is set to a *variable* whose type depends on the *expression* type. 
+
+The `<!--#4DEACH-->` comment can iterate through three expression types:
+
+- [collections](#--4deach-item-in-collection--): loop through each element of the collection,
+- [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
+- [objects](#--4deach-property-in-object--): loop through each object property.
+
+The number of iterations is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
+
+
+### `<!--#4DEACH item in collection-->`
+
+This syntax iterates on each *item* of the *collection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each collection element.
+
+The *item* parameter is a variable of the same type as the collection elements. 
+
+The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
+
+The number of loops is based on the number of elements of the collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+
+- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
+- The *item* variable gets the same type as the first collection element. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
+- If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
+
+#### Example with a collection of scalar values
+
+*getNames* returns a collection of strings.
+
+```html
+	<table class="table">    
+		<!--#4DCODE 
+            $names:=getNames
+          -->          
+
+        <tr><th>Name</th></tr>
+        
+          <!--#4DEACH $name in $names-->
+        <tr>
+            <td ><!--#4DTEXT $name--></td>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
+```
+
+#### Example with a collection of objects
+
+*getSalesPersons* returns a collection of objects. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+
+```html
+    <table class="table">    
+        <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
+
+          <!--#4DEACH $salesPerson in getSalesPersons-->
+        <tr>
+            <td ><!--#4DTEXT $salesPerson.ID--></td>
+            <td ><!--#4DTEXT $salesPerson.firstname--></td>
+            <td ><!--#4DTEXT $salesPerson.lastname--></td>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
+```
+
+
+### `<!--#4DEACH entity in entitySelection-->`
+
+This syntax iterates on each *entity* of the *entitySelection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+
+The *entity* parameter is an object variable of the entity selection class. 
+
+
+The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
+
+#### Example with a html table
+
+```html
+    <table class="table">     
+
+        <tr><th>ID</th><th>Name</th><th>Total purchase</th></tr>
+
+          <!--#4DEACH $customer in ds.Customers.all()-->
+        <tr>
+            <td ><!--#4DTEXT $customer.ID--></td>
+            <td ><!--#4DTEXT $customer.name--></td>
+            <td ><center><!--#4DTEXT String($customer.totalPurchase;"$###,##0")--></center></td>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
+```
+
+#### Example with `PROCESS 4D TAGS`
+
+```4d
+var customers : cs.CustomersSelection
+var $input; $output : Text
+
+customers:=ds.Customers.all()
+$input:="<!--#4DEACH $cust in customers-->" 
+$input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
+$input:=$input+"<!--#4DENDEACH-->" 
+PROCESS 4D TAGS($input; $output)
+```
+
+### `<!--#4DEACH property in object-->`
+
+This syntax iterates on each *property* of the *object*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each property of the object.
+
+The *property* parameter is a text variable automatically filled with the name of the currently processed property. 
+
+The properties of the object are processed according to their creation order. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+
+#### Example with the properties of an object
+
+*getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
+
+```html
+    <table class="table">    
+          <!--#4DCODE
+           $gamers:=getGamers
+          -->          
+
+        <tr><th>Gamers</th><th>Scores</th></tr>
+
+          <!--#4DEACH $key in $gamers-->
+        <tr>
+            <td ><!--#4DTEXT $key--></td>
+            <td ><!--#4DTEXT $gamers[$key]--></td>
+        </tr>
+          <!--#4DENDEACH-->
+    </table>
+```
+
+
+
+
 ## 4DEVAL 
 
-#### Syntax: `<!--#4DEVAL 4DExpression-->`
-#### Alternative syntax: `$4DEVAL(4DExpression)`
+#### Syntax: `<!--#4DEVAL expression-->`
+#### Alternative syntax: `$4DEVAL(expression)`
 
-The `4DEVAL` tag allows you to assess a variable or a 4D expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
+The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
 For example, you can execute:
 
@@ -220,11 +361,11 @@ In case of an error during interpretation, the text inserted will be in the form
 
 ## 4DHTML 
 
-#### Syntax: `<!--#4DHTML 4DExpression-->`
-#### Alternative syntax: `$4DHTML(4DExpression)`
+#### Syntax: `<!--#4DHTML expression-->`
+#### Alternative syntax: `$4DHTML(expression)`
 
 
-Just like the `4DTEXT` tag, this tag lets you assess a variable or 4D expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
+Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
@@ -452,9 +593,9 @@ The `my_method` method can be as follows:
  End if
 ```
 
-### `<!--#4DLOOP 4DExpression-->`
+### `<!--#4DLOOP expression-->`
 
-With this syntax, the `4DLOOP` tag makes a loop as long as the *4DExpression* returns `True`. The expression can be any valid Boolean expression and must contain a variable part to be evaluated in each loop to avoid infinite loops.
+With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* returns `True`. The expression can be any valid Boolean expression and must contain a variable part to be evaluated in each loop to avoid infinite loops.
 
 For example, the following code:
 
@@ -535,11 +676,11 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 
 ## 4DTEXT 
 
-#### Syntax: `<!--#4DTEXT 4DExpression-->`
-#### Alternative syntax: `$4DTEXT(4DExpression)`
+#### Syntax: `<!--#4DTEXT expression-->`
+#### Alternative syntax: `$4DTEXT(expression)`
 
 
-The tag `<!--#4DTEXT 4DExpression-->` allows you to insert a reference to a 4D variable or expression returning a value. For example, if you write (in an HTML page):
+The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. For example, if you write (in an HTML page):
 
 ```html
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
@@ -647,199 +788,4 @@ You can write:
  -->output is 1"(hello)"
 ```
 
-
-
-
-
-
-
-
-
-
-
-## For each...End for each
-
-The formal syntax of the `For each...End for each` control flow structure is:
-
-```4d
- For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
-    statement(s)
-
- End for each
-```
-
-The `For each...End for each` structure iterates a specified *Current_item* over all values of the *Expression*. The *Current_item* type depends on the *Expression* type. The `For each...End for each` loop can iterate through three *Expression* types:
-
-- collections: loop through each element of the collection,
-- entity selections: loop through each entity,
-- objects: loop through each object property.
-
-The following table compares the three types of `For each...End for each`:
-
-||Loop through collections	|Loop through entity selections	|Loop through objects|
-|---|---|---|---|
-|Current_Item type	|Variable of the same type as collection elements	|Entity	|Text variable|
-|Expression type	|Collection (with elements of the same type)	|Entity selection	|Object|
-|Number of loops (by default)	|Number of collection elements	|Number of entities in the selection	|Number of object properties|
-|Support of begin / end parameters	|Yes	|Yes	|No|
-
-- The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
-- By default, the enclosed _statement(s)_ are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
-- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
-	- before entering the loop, if items should be modified together for integrity reasons, or
-	- within the loop when only some elements/properties need to be modified and no integrity management is required. 
-
-### Loop through collections 
-
-When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
-
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
-
-At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. The following points must be taken into account:
-
-- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
-- The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
-
-#### Example
-
-You want to compute some statistics for a collection of numbers:
-```4d
- C_COLLECTION($nums)
- $nums:=New collection(10;5001;6665;33;1;42;7850)
- C_LONGINT($item;$vEven;$vOdd;$vUnder;$vOver)
- For each($item;$nums)
-    If($item%2=0)
-       $vEven:=$vEven+1
-    Else
-       $vOdd:=$vOdd+1
-    End if
-    Case of
-       :($item<5000)
-          $vUnder:=$vUnder+1
-       :($item>6000)
-          $vOver:=$vOver+1
-    End case
- End for each
-  //$vEven=3, $vOdd=4
-  //$vUnder=4,$vOver=2
-```
-
-### Loop through entity selections
-
-When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
-
-The number of loops is based on the number of entities in the entity selection. On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
-
-**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
-
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
-
-#### Example
-
-You want to raise the salary of all British employees in an entity selection:
-```4d
- C_OBJECT(emp)
- For each(emp;ds.Employees.query("country='UK'"))
-    emp.salary:=emp.salary*1,03
-    emp.save()
- End for each
-```
-
-### Loop through object properties
-
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property. 
-
-The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
-
-#### Example
-
-You want to switch the names to uppercase in the following object:
-```4d
-{
-    "firstname": "gregory",
-    "lastname": "badikora",
-    "age": 20
-}
-```
-You can write:
-```4d
- For each(property;vObject)
-    If(Value type(vObject[property])=Is text)
-       vObject[property]:=Uppercase(vObject[property])
-    End if
- End for each
-```
-```
-{
-    "firstname": "GREGORY",
-    "lastname": "BADIKORA",
-    "age": 20
-}
-```
-### begin / end parameters
-
-You can define bounds to the iteration using the optional begin and end parameters.
-
-**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
-
-- In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded). 
-
-If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included).
-If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*.
-If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0.
-
-**Note:** Even if begin is negative, the iteration is still performed in the standard order.
-If *end* is a negative value, it is recalculed as `end:=end+Expression size`
-
-For example:
-- a collection contains 10 elements (numbered from 0 to 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
-
-#### Example
-
-```4d
- C_COLLECTION($col;$col2)
- $col:=New collection("a";"b";"c";"d";"e")
- $col2:=New collection(1;2;3)
- C_TEXT($item)
- For each($item;$col;0;3)
-    $col2.push($item)
- End for each
-  //$col2=[1,2,3,"a","b","c"]
- For each($item;$col;-2;-1)
-    $col2.push($item)
- End for each
-  //$col2=[1,2,3,"a","b","c","d"]
-```
-
-### Until and While conditions
-
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
-
-You can pass either keyword depending on your needs:
-
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
-
-#### Example 
-
-```4d
- $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
- 
- $total:=0
- For each($num;$colNum)While($total<30) //tested at the beginning
-    $total:=$total+$num
- End for each
- ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
- 
- $total:=1000
- For each($num;$colNum)Until($total>30) //tested at the end
-    $total:=$total+$num
- End for each
- ALERT(String($total)) //$total = 1001 (1000+1)
-```
 
