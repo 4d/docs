@@ -15,7 +15,7 @@ title: クラス
 たとえば、次のように `Person` クラスを定義した場合:
 
 ```4d  
-//Class: Person.4dm
+// クラス: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
@@ -27,7 +27,7 @@ Function sayHello()->$welcome : Text
 この "Person" のインスタンスをメソッド内で作成するには、以下のように書けます:
 
 ```
-var $person : cs.Person //object of Person class  
+var $person : cs.Person // Person クラスのオブジェクト
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
 // $person:{firstName: "John"; lastName: "Doe" }
@@ -44,7 +44,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 クラスを命名する際には、次のルールに留意してください:
 
-- A [class name](identifiers.md#classes) must be compliant with [property naming rules](identifiers.md#object-properties).
+- [クラス名](identifiers.md#クラス) は [プロパティ名の命名規則](identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 - 大文字と小文字が区別されること
 - 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと
 
@@ -86,7 +86,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 #### クラスのコードサポート
 
-In the various 4D windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+各種 4Dウィンドウ (コードエディター、コンパイラー、デバッガー、ランタイムエクスプローラー) において、クラスコードは "特殊なプロジェクトメソッド" のように扱われます:
 
 - コードエディター:
     - クラスは実行できません
@@ -150,7 +150,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 - [`superclass`](API/classClass.md#superclass) オブジェクト (無い場合は null)
 - [`new()`](API/classClass.md#new) 関数 (クラスオブジェクトをインスタンス化します)
 
-In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
+また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です。
 
 Class オブジェクトは [共有オブジェクト](shared.md) です。したがって、異なる 4Dプロセスから同時にアクセスすることができます。
 
@@ -165,8 +165,8 @@ When 4D does not find a function or a property in a class, it searches it in its
 
 クラス定義内では、専用の 4Dキーワードが使用できます:
 
-- `Function <Name>` to define class functions of the objects.
-- `Class constructor` to define the properties of the objects.
+- `Function <Name>`: オブジェクトのクラス関数を定義します。
+- `Class constructor`: オブジェクトのプロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
 
 
@@ -179,9 +179,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // コード
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/formulaClass.md#about-4dfunction-objects) class.
+クラス関数とは、当該クラスのプロパティです。 クラス関数は [4D.Function](API/formulaClass.md#4dfunction-オブジェクトについて) クラスのオブジェクトです。
 
-クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
 > **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
 
@@ -218,7 +218,7 @@ Function getFullname()->$fullname : Text
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. パラメーター名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
