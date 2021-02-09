@@ -14,22 +14,12 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 
 4D プロジェクトファイルによって、汎用的なコーディング、アプリケーションテンプレートの作成や、コードシェアリングが容易になります。 プロジェクトは内部的に [フォルダーとファイル](Project/architecture.md) で構成されています。
 
-4D プロジェクト開発の柔軟性が一番顕著になるのは、複数のデベロッパーがアプリケーションの同じ部分で同時に作業しなければならないときです。 4D プロジェクトファイルの管理には、Perforce、Git、SVNなどの**ソース管理**リポジトリがとくに適しており、これらによって開発チームはつぎのような機能を活用できます:
-
-- バージョン管理
-- リビジョン比較
-- ロールバック
 
 ## 開発
 
-プロジェクトは **ローカル** または **リモート** で開くことができます:
+4D プロジェクトは **4D** アプリケーションを使って作成します。 It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project.
 
-- **[ローカル](creating.md#ローカルプロジェクトを開く)** - プロジェクトファイルは使用するマシン内に保存されています。アプリケーションを開いて編集できるのは、そのマシンのみです。
-- **[リモート](creating.md#opening-a-remote-project)** - プロジェクトファイルは 4D Server を実行するマシン内に保存されています。4D を使って、クライアントとしてサーバーに接続し、プロジェクトを読み取り専用モードで開くことができます (おもにテスト目的)。 クライアントとサーバーの [両方が同一のマシン上で動いている](Project/developing.md#using-4d-developer-on-the-same-machine) 場合に限り、4D は 4D Server で実行されているプロジェクトを編集することができます。
-
-![](assets/en/getStart/localremote.png)
-
-ローカルかリモートかは、実行するプロジェクトを選択する際に選択します。
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
 ## 運用
