@@ -380,7 +380,7 @@ The object returned by `.drop( )` contains the following properties:
 | errors        |                     | collection of objects |                                                                                                                       |
 |               | message             | text                  | Error message                                                                                                         |
 |               | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                          |
-|               | errCode             | number                | Error code                                                                                                            |
+|               | errCode             | number                | エラーコード                                                                                                                |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
@@ -940,7 +940,7 @@ The object returned by `.lock( )` contains the following properties:
 | errors           |                     | collection of objects |                                                                                                                     |
 |                  | message             | text                  | Error message                                                                                                       |
 |                  | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                        |
-|                  | errCode             | number                | Error code                                                                                                          |
+|                  | errCode             | number                | エラーコード                                                                                                              |
 
 
 (\*) The following values can be returned in the *status* and *statusText* properties of the *Result* object in case of error:
@@ -1197,7 +1197,7 @@ The object returned by `.save()` contains the following properties:
 | errors       |                    | collection of objects |                                                                                                                         |
 |              | message            | text                  | Error message                                                                                                           |
 |              | componentSignature | text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
-|              | errCode            | number                | Error code                                                                                                              |
+|              | errCode            | number                | エラーコード                                                                                                                  |
 
 ##### status and statusText
 
