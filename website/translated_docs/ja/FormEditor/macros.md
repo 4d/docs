@@ -254,33 +254,33 @@ JSONファイルの説明です:
 
 ## マクロ関数
 
-Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
+マクロクラスは、1つの `Class constructor` のほかに、`onInvoke()` および `onError()` という 2つの関数を持つことができます。
 
 
 ### Class constructor
 
 #### Class constructor($macro : object)
 
-| 参照     | タイプ    | 説明                                                       |
-| ------ | ------ | -------------------------------------------------------- |
-| $macro | オブジェクト | Macro declaration object (in the `formMacros.json` file) |
+| 参照     | タイプ    | 説明                                 |
+| ------ | ------ | ---------------------------------- |
+| $macro | オブジェクト | `formMacros.json` ファイルのマクロ宣言オブジェクト |
 
-Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
+[Class constructor](Concepts/classes.md#class-constructor) 関数が定義されている場合、マクロはそれによってインスタンス化されます。
 
-The class constructor is called once during class instantiation, which occurs at application startup.
+アプリケーションの起動時にクラスがインスタンス化される際に、このコンストラクターが呼び出されます。
 
-Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+[マクロの宣言](#マクロの宣言) に追加したカスタムプロパティは、クラスコンストラクターが引数として受け取ります。
 
 
 
 #### 例題
 
-In the `formMacros.json` file:
+`formMacros.json` ファイルに次のようなマクロ宣言をした場合:
 
 ```js
 {
    "macros": {
-     "Align to Left on Target Object": {
+     "最後に選択したオブジェクトを基準に左揃え": {
        "class": "AlignOnTarget",
        "myParam": "left"
      }
@@ -291,10 +291,9 @@ In the `formMacros.json` file:
 以下のように書くことができます:
 
 ```code4d  
-// Class "AlignOnTarget"
+// クラス "AlignOnTarget"
 Class constructor($macro : Object)
-    This.myParameter:=$macro.myParam //left
-    ...
+    This.myParameter:=$macro.myParam // left    ...
 ```
 
 
@@ -302,26 +301,26 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : object) -> $result : object
 
-| 参照      | タイプ    | 説明                                               |
-| ------- | ------ | ------------------------------------------------ |
-| $editor | オブジェクト | Form properties                                  |
-| $result | オブジェクト | Form properties modified by the macro (optional) |
+| 参照      | タイプ    | 説明                         |
+| ------- | ------ | -------------------------- |
+| $editor | オブジェクト | フォームプロパティ                  |
+| $result | オブジェクト | マクロによって変更されたフォームプロパティ (任意) |
 
-The `onInvoke` function is automatically executed each time the macro is called.
+マクロが呼び出されるたびに、`onInvoke` 関数が自動的に実行されます。
 
-When the function is called, it receives in the `$editor` parameter a copy of all the elements of the form with their current values. You can then execute any operation on these properties.
+呼び出しの際、関数は `$editor` パラメーターに、フォームの全要素とそれらの現在値のコピーを受け取ります。 つまり、これらのプロパティに対して、任意の処理を実行することができます。
 
-Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
+マクロによってオブジェクトを変更・追加・削除した場合、操作を反映させるには最後に結果のプロパティを `$result` に返します。 返されたプロパティは解析され、フォームに対して変更が適用されます。 戻り値に含まれるプロパティが少ないほど、この処理にかかる時間も削減されます。
 
-Here are the properties of the `$editor` object:
+`$editor` オブジェクトのプロパティは次の通りです:
 
 | プロパティ                     | タイプ    | 説明                                                                                |
 | ------------------------- | ------ | --------------------------------------------------------------------------------- |
-| $editor.form              | オブジェクト | The entire form                                                                   |
-| $editor.file              | File   | File object of the form file                                                      |
-| $editor.name              | 文字列    | Name of the form                                                                  |
-| $editor.table             | number | Table number of the form, 0 for project form                                      |
-| $editor.currentPageNumber | number | The number of the current page                                                    |
+| $editor.form              | オブジェクト | フォーム全体                                                                            |
+| $editor.file              | File   | フォームファイルの Fileオブジェクト                                                              |
+| $editor.name              | 文字列    | フォームの名称                                                                           |
+| $editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。                                                     |
+| $editor.currentPageNumber | number | 現在のページの番号                                                                         |
 | $editor.currentPage       | オブジェクト | The current page, containing all the form objects and the entry order of the page |
 | $editor.currentSelection  | コレクション | Collection of names of selected objects                                           |
 | $editor.formProperties    | オブジェクト | Properties of the current form                                                    |
