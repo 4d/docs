@@ -83,7 +83,7 @@ Function onInvoke($editor : Object)->$result : Object
 1. プロジェクトマクロ
 2. コンポーネントマクロ
 
-このメニューは、フォームエディター内で右クリックにより開くことができます。 選択オブジェクトがある状態でマクロを呼び出した場合は、それらのオブジェクトはマクロの [`onInvoke`](#oninvoke) 関数の `$editor.currentSelection` や `$editor.target` パラメーターに受け渡されます。
+このメニューは、フォームエディター内で右クリックにより開くことができます。 選択オブジェクトがある状態や、フォームオブジェクトの上でマクロを呼び出した場合は、それらのオブジェクト名がマクロの [`onInvoke`](#oninvoke) 関数の `$editor.currentSelection` や `$editor.target` パラメーターに受け渡されます。
 
 1つのマクロによって複数の処理を実行することができます。 マクロで実行した処理は、フォームエディターの **取り消し** 機能でもとに戻すことができます。
 
@@ -314,66 +314,66 @@ Class constructor($macro : Object)
 
 `$editor` オブジェクトのプロパティは次の通りです:
 
-| プロパティ                     | タイプ    | 説明                                                                                |
-| ------------------------- | ------ | --------------------------------------------------------------------------------- |
-| $editor.form              | オブジェクト | フォーム全体                                                                            |
-| $editor.file              | File   | フォームファイルの Fileオブジェクト                                                              |
-| $editor.name              | 文字列    | フォームの名称                                                                           |
-| $editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。                                                     |
-| $editor.currentPageNumber | number | 現在のページの番号                                                                         |
-| $editor.currentPage       | オブジェクト | The current page, containing all the form objects and the entry order of the page |
-| $editor.currentSelection  | コレクション | Collection of names of selected objects                                           |
-| $editor.formProperties    | オブジェクト | Properties of the current form                                                    |
-| $editor.target            | string | Name of the object under the mouse when clicked on a macro                        |
+| プロパティ                     | タイプ    | 説明                               |
+| ------------------------- | ------ | -------------------------------- |
+| $editor.form              | オブジェクト | フォーム全体                           |
+| $editor.file              | File   | フォームファイルの Fileオブジェクト             |
+| $editor.name              | 文字列    | フォームの名称                          |
+| $editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。    |
+| $editor.currentPageNumber | number | 現在のページの番号                        |
+| $editor.currentPage       | オブジェクト | 現在のページ (フォームオブジェクトおよび入力順序を格納)    |
+| $editor.currentSelection  | コレクション | 選択されているオブジェクトの名称のコレクション          |
+| $editor.formProperties    | オブジェクト | カレントフォームのプロパティ                   |
+| $editor.target            | string | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称 |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
+マクロによる変更をフォームに反映させたい場合に、`$result` オブジェクトに渡せるプロパティの一覧です。 いずれのプロパティも任意です:
 
-| プロパティ             | タイプ    | 説明                                                          |
-| ----------------- | ------ | ----------------------------------------------------------- |
-| currentPage       | オブジェクト | currentPage including objects modified by the macro, if any |
-| currentSelection  | コレクション | currentSelection if modified by the macro                   |
-| formProperties    | オブジェクト | formProperties if modified by the macro                     |
-| editor.groups     | オブジェクト | group info, if groups are modified by the macro             |
-| editor.views      | オブジェクト | view info, if views are modified by the macro               |
-| editor.activeView | 文字列    | Active view name                                            |
-
-
+| プロパティ             | タイプ    | 説明                                |
+| ----------------- | ------ | --------------------------------- |
+| currentPage       | オブジェクト | マクロによって変更されたオブジェクトを含む currentPage |
+| currentSelection  | コレクション | マクロによって変更された currentSelection     |
+| formProperties    | オブジェクト | マクロによって変更された formProperties       |
+| editor.groups     | オブジェクト | マクロによって変更されたグループ情報                |
+| editor.views      | オブジェクト | マクロによって変更されたビュー情報                 |
+| editor.activeView | 文字列    | 有効なビュー名                           |
 
 
-#### `method` attribute
 
-When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
 
-- Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
+#### `method` 属性
 
-- Using an object with the following structure:
+フォームオブジェクトの `method` 属性を操作する場合、属性値は2通りの方法で定義できます:
+
+- [メソッドファイル名あるいはパスを指定する文字列](FormObjects/properties_Action.md#メソッド) の使用
+
+- 次の構造を持つオブジェクトの使用:
 
 | プロパティ | タイプ | 説明 |
 | ----- | --- | -- |
 |       |     |    |
- source|String|method code|
+ source|文字列|メソッドコード|
 
-4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
+後者の場合、4D は "objectMethods" フォルダー内に当該オブジェクト名を冠したファイルを作成し、`source` 属性に指定したメソッドコードを格納します。 この機能はマクロコードの場合にのみ有効です。
 
-#### `$4dId` property in `currentPage.objects`
+#### `currentPage.objects` の `$4dId` プロパティ
 
-The `$4dId` property defines a unique ID for each object in the current page. This key is used by the macro processor to control changes in `$result.currentPage`:
+`$4dId` プロパティは、現在のページにある各オブジェクトについて一意のIDを定義します。 このキーは`$result.currentPage` の変更を反映させるのに使用されます:
 
-- if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
-- if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
-- if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+- フォーム上および `$result` 内のオブジェクトの両方で `$4dId` キーが存在しない場合、そのオブジェクトは作成されます。
+- フォーム上で存在する `$4dId` キーが、`$result` 内には存在しない場合、当該オブジェクトは削除されます。
+- フォーム上および `$result` 内のオブジェクトの両方で `$4dId` キーが存在する場合、そのオブジェクトは変更されます。
 
 
 #### 例題
 
-You want to define a macro function that will apply the red color and italic font style to any selected object(s).
+選択されているオブジェクトに対して、フォントカラーを赤に、フォントスタイルをイタリックに変更するマクロ関数を定義します。
 
 ```code4d
 Function onInvoke($editor : Object)->$result : Object
     var $name : Text
 
     If ($editor.editor.currentSelection.length>0)       
-        // Set stroke to red and style to italic for each selected object
+        // 選択されている各オブジェクトの stroke 属性を red に、style 属性を italic に設定します
         For each ($name; $editor.editor.currentSelection)
             $editor.editor.currentPage.objects[$name].stroke:="red"
             $editor.editor.currentPage.objects[$name].fontStyle:="italic"
@@ -381,10 +381,10 @@ Function onInvoke($editor : Object)->$result : Object
         End for each 
 
     Else 
-        ALERT("Please select a form object.")
+        ALERT("フォームオブジェクトを選択してください。")
     End if 
 
-    // Notify to 4D the modification
+    // 4Dに変更を通知します
     $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
@@ -393,25 +393,25 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : object; $resultMacro : Object ; $error : Collection)
 
-| 参照           |                       | タイプ    | 説明                                       |
-| ------------ | --------------------- | ------ | ---------------------------------------- |
-| $editor      |                       | オブジェクト | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                       | オブジェクト | Object returned by [onInvoke](#oninvoke) |
-| $error       |                       | コレクション | Error stack                              |
-|              | [].errCode            | 数値     | Error code                               |
-|              | [].message            | テキスト   | Description of the error                 |
-|              | [].componentSignature | テキスト   | Internal component signature             |
+| 参照           |                       | タイプ    | 説明                                   |
+| ------------ | --------------------- | ------ | ------------------------------------ |
+| $editor      |                       | オブジェクト | [onInvoke](#oninvoke) に渡されたオブジェクト    |
+| $resultMacro |                       | オブジェクト | [onInvoke](#oninvoke) によって返されたオブジェクト |
+| $error       |                       | コレクション | エラースタック                              |
+|              | [].errCode            | 数値     | エラーコード                               |
+|              | [].message            | テキスト   | エラーの詳細                               |
+|              | [].componentSignature | テキスト   | 内部コンポーネントのシグネチャー                     |
 
-The `onError` function is executed when the macros processor encounters an error.
+マクロの実行時にエラーが発生した場合、`onError` 関数が実行されます。
 
-When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. It is the case for example if executing a macro would result in:
+マクロの実行時に発生したエラーが、マクロの取り消しを不可能にする内容の場合、マクロは実行されません。 たとえば次のような場合が該当します:
 
-- deleting or modifying a script whose file is read-only.
-- creating two objects with the same internal ID.
+- 読み取り専用ファイルのスクリプトを変更・削除しようとしたとき
+- 同じ内部ID を持つオブジェクトを複数作成しようとしたとき
 
 #### 例題
 
-In a macro class definition, you can write the following generic error code:
+マクロクラス定義に、次のような汎用的なエラーコードを書くことができます:
 
 ```4d
 Function onError($editor : Object; $resultMacro : Object; $error : Collection)
