@@ -76,22 +76,22 @@ Function onInvoke($editor : Object)->$result : Object
 
 ![](assets/en/FormEditor/macroSelect.png)
 
-このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 Macros items are sorted in the order macro objects are defined in the file.
+このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 ファイル内で定義されている順にメニュー項目が表示されます。
 
-When macros exist at both the project and component levels, the following order is applied:
+プロジェクトとコンポーネントの両レベルでマクロが存在する場合、次の優先順位に従って表示されます:
 
-1. project macros
-2. component macros
+1. プロジェクトマクロ
+2. コンポーネントマクロ
 
-This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
+このメニューは、フォームエディター内で右クリックにより開くことができます。 選択オブジェクトがある状態でマクロを呼び出した場合は、それらのオブジェクトはマクロの [`onInvoke`](#oninvoke) 関数の `$editor.currentSelection` や `$editor.target` パラメーターに受け渡されます。
 
-A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
+1つのマクロによって複数の処理を実行することができます。 マクロで実行した処理は、フォームエディターの **取り消し** 機能でもとに戻すことができます。
 
 ## マクロファイルの場所
 
-All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
+4Dフォームエディターマクロは、プロジェクトあるいはコンポーネントごとに 1つの JSONファイルによって定義されます: `FormMacros.json`。
 
-This file must be located in the host or component's **Project** > **Sources** folder:
+このファイルは、ホストまたはコンポーネントプロジェクトの **Project** > **Sources** フィルダーに配置しなければなりません:
 
 ![](assets/en/FormEditor/macroStructure.png)
 
@@ -99,7 +99,7 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 ## マクロの宣言
 
-The structure of the `formMacros.json` file is the following:
+`formMacros.json` ファイルの構造は次の通りです:
 
 ```js
 {
@@ -112,7 +112,7 @@ The structure of the `formMacros.json` file is the following:
 }
 ```
 
-Here is the description of the JSON file contents:
+JSONファイルの説明です:
 
 <table spaces-before="0" line-breaks-before="2">
   <tr>
@@ -151,7 +151,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      list of defined macros
+      定義されたマクロのリスト
     </td>
   </tr>
   
@@ -171,7 +171,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      macro definition
+      マクロ定義
     </td>
   </tr>
   
@@ -191,7 +191,7 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      macro class name
+      マクロクラス名
     </td>
   </tr>
   
@@ -211,12 +211,12 @@ Here is the description of the JSON file contents:
     </td>
     
     <td>
-      (optional) custom value to retrieve in the constructor
+      (任意) コンストラクターによって取得するカスタム値
     </td>
   </tr>
 </table>
 
-Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
+カスタムプロパティはマクロの [constructor](#class-constructor) 関数に受け渡されます。
 
 ### 例題
 
@@ -238,16 +238,16 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 }
 ```
 
-> Keep in mind that the order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.
+> このファイル内のマクロオブジェクトの順が、フォームエディターの [**マクロ** メニュー](#フォームエディターでマクロを呼び出す) の表示順を定義します。
 
 
-## Instantiating macros in 4D
+## マクロのインスタンス化
 
-Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
+プロジェクトおよびコンポーネントにおいてインスタンス化するマクロは、それぞれ [4Dクラス](Concepts/classes.md) として宣言する必要があります。
 
-The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file.
+クラスの名称は、`formMacros.json` ファイルで [class](#マクロの宣言) 属性に定義した名前と同一でなくてはなりません。
 
-Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
+マクロは、アプリケーションの起動時にインスタンス化されます。 そのため、関数の追加やパラメーターの編集など、マクロクラスになんらかの変更を加えた場合には、それらを反映するにはアプリケーションを再起動する必要があります。
 
 
 
