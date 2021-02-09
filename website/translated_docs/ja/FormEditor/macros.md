@@ -14,7 +14,7 @@ title: フォームエディターマクロ
 *   フォームやフォームオブジェクトおよびそれらのプロパティを追加・編集・削除する
 *   プロジェクトファイルを編集する (更新・削除)
 
-フォームエディター用にカスタム機能を定義するため、マクロコードは [クラス関数](Concepts/classes.md) と [JSON のフォームオブジェクトプロパティ](FormObjects/properties_Reference.md) を使用できます。
+フォームエディター用のカスタム機能を定義するため、マクロコードは [クラス関数](Concepts/classes.md) と [JSON のフォームオブジェクトプロパティ](FormObjects/properties_Reference.md) を使用できます。
 
 ホストプロジェクトおよび、プロジェクト内のコンポーネントにてマクロを定義することができます。 通常は開発用のコンポーネントにマクロをインストールして使用します。
 
@@ -22,9 +22,9 @@ title: フォームエディターマクロ
 
 ## 例題
 
-In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
+フォームの左上に "Hello World" アラートボタンを追加するマクロを作成します。
 
-1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
+1. プロジェクトの `Sources` フォルダー内に配置された `formMacros.json` ファイルに、次のように書きます:
 
 ```
 {
@@ -36,16 +36,16 @@ In this short example, you'll see how to create and call a macro that adds a "He
 }
 ```
 
-2. Create a 4D class named `AddButton`.
+2. 次に、`AddButton` という名前の 4Dクラスを作成します。
 
-3. Within the `AddButton` class, write the following function:
+3. `AddButton` クラスに次の関数を定義します:
 
 ```code4d
 Function onInvoke($editor : Object)->$result : Object
 
     var $btnHello : Object
 
-    // Create a "Hello" button
+    // "Hello" ボタンを作成します
     $btnHello:=New object("type"; "button"; \
     "text"; "Hello World!"; \
     "method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -55,28 +55,28 @@ Function onInvoke($editor : Object)->$result : Object
     "top"; 0; \
     "left"; 0)  
 
-    // Add button in the current page
+    // 現在のページにボタンを追加します
     $editor.editor.currentPage.objects.btnHello:=$btnHello  
 
-    // Select the new button in the form editor
+    // フォームエディター上で新規作成したボタンを選択します
     $editor.editor.currentSelection.clear() //unselect elements
     $editor.editor.currentSelection.push("btnHello")    
 
-    // Notify the modification to the 4D Form editor
+    // 4D に変更内容を通知します
     $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
         "currentPage"; $editor.editor.currentPage)
 ```
 
-You can then call the macro: ![](assets/en/FormEditor/macroex1.png) ![](assets/en/FormEditor/macroex2.png)
+マクロを呼び出します: ![](assets/en/FormEditor/macroex1.png) ![](assets/en/FormEditor/macroex2.png)
 
 
-## Calling macros in the Form editor
+## フォームエディターでマクロを呼び出す
 
-When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
+4Dプロジェクトにマクロが定義されていると、フォームエディターのコンテキストメニューを使ってマクロを呼び出すことができます:
 
 ![](assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macros items are sorted in the order macro objects are defined in the file.
+このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 Macros items are sorted in the order macro objects are defined in the file.
 
 When macros exist at both the project and component levels, the following order is applied:
 
@@ -87,7 +87,7 @@ This menu can be called in an empty area or a selection in the form. Selected ob
 
 A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
 
-## Location of macro file
+## マクロファイルの場所
 
 All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
 
@@ -97,7 +97,7 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 
 
-## Declaring macros
+## マクロの宣言
 
 The structure of the `formMacros.json` file is the following:
 
@@ -252,7 +252,7 @@ Macros are instantiated at application startup. Consequently, if you modify the 
 
 
 
-## Macro Functions
+## マクロ関数
 
 Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
 
