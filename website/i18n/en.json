@@ -201,6 +201,9 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
+      },
       "Events/onActivate": {
         "title": "On Activate"
       },

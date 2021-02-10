@@ -64,6 +64,7 @@ Once a connection to the server has been established, the remote project will be
 
 ### Updating project files on the server
 
+
 Developing a 4D Server project is based upon the following principles:
 
 - You create, test, and modify the project features in a local version of the files using 4D. To work directly with 4D Server, you can [use 4D on the same machine as 4D Server](#using-4d-on-the-same-machine).  
@@ -87,6 +88,7 @@ When an updated .4dz version of the project has been produced on 4D Server, conn
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 
+
 However, you need to pay attention to the following behavior differences compared to [standard project architecture](architecture.md):
 
 - the userPreferences.{username} folder used by 4D is not the same folder used by 4D Server in the project folder. Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
@@ -97,21 +99,3 @@ However, you need to pay attention to the following behavior differences compare
 
 > It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
 
-
-## File saving
-
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus. 
-
-Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
-
-The 4D development framework includes a file access manager to control concurrent access:
-
-- if an open file is read-only at the OS level, a locked icon is displayed in the editor: 
-![](assets/en/Project/lockicon.png)
-- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
-![](assets/en/Project/projectReload.png)  
-	- **Yes**: discard editor changes and reload the modified version
-	- **No**: save changes and overwrite the other version
-	- **Cancel**: do not save
-
-This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
