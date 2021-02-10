@@ -3,7 +3,7 @@ id: compiler
 title: Compiler
 ---
 
-You can compile your project, i.e., translate all of your methods into machine language. Compiling a project lets you check the consistency of the code and accelerate its execution, as well as making it possible to protect the code in its entirety. Compilation is an indispensable step between the development of projects using 4D and their deployment as stand-alone applications. 
+You can compile your project, i.e., translate all of your methods into machine language. Compiling a project lets you check the consistency of the code and accelerate its execution, as well as making it possible to obfuscate the code in its entirety. Compilation is an indispensable step between the development of projects using 4D and their deployment as stand-alone applications. 
 
 The compilation process is entirely automatic; however, compilation requires greater rigor when writing 4D code. The compiler will indicate any programming errors and situate them in their context. 
 
@@ -70,15 +70,15 @@ Used to set the number of passes performed by the compiler and thus the duration
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
 
-- **Intel/AMD** processors,
-- **Apple Silicon** processors, only available on some Apple machines.
+- **Intel/AMD** processors (all machines),
+- **Apple Silicon** (aka **M1**) processors.
 
 Two target options are proposed. The result depends on the processor on which 4D is running.
 
-||**My processor** (*Processor family*)|**All processors**|
+|Code produced on|**My processor** (*Processor family*)|**All processors**|
 |---|---|---|
-|Code produced on a Silicon machine|For Silicon processor|For Silicon processor + For Intel/AMD processor<br>*Two applications will be available*|
-|Code produced on an Intel/AMD machine|For Intel/AMD processor|For Intel/AMD processor<br>*It is not possible to produce Silicon code from an Intel/AMD machine*|
+|Apple machine with Apple Silicon processor|For Apple Silicon processor|For Apple Silicon processor + For Intel/AMD processor<br>*Two applications will be available*|
+|Machine with Intel/AMD processor|For Intel/AMD processor|For Intel/AMD processor<br>*It is not possible to produce Apple Silicon code from an Intel/AMD machine*|
 
 
 > Apple Silicon compiler target requires that the **clang** application be installed on your machine. If it is missing, 4D will provide instructions about how to get it. 
