@@ -561,7 +561,7 @@ Valeurs possibles : 500000 - 2147483648
 **.maxSessions** : Number<!-- END REF -->
 
 
-The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneous sessions<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Close Process` est appelée) si le serveur Web doit en créer une nouvelle. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Close Process` est appelée) si le serveur Web doit en créer une nouvelle.
+The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneous sessions<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Close Process` est appelée) si le serveur Web doit en créer une nouvelle. The number of simultaneous sessions cannot exceed the total number of web processes (maxConcurrentProcesses property, 100 by default)
 
 <!-- END REF -->
 

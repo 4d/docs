@@ -1189,6 +1189,9 @@ The object returned by `.save()` contains the following properties:
 | lockInfo         |  | object  | Information about the lock                              |
  origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on the machine| ||user4d_id|    text|   User name in the 4D database directory| ||host_name |text   |Machine name| ||task_name|    text|   Process name| ||client_version|   text||
 
+  
+||||***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...):| |errors ||  collection of objects|| ||message|  text    |Error message| ||componentSignature|   text|   Internal component signature (e.g. "dmbg" stands for the database component)| ||errCode|  number| Error code|
+
 (\*) The following values can be returned in the status and statusText properties of Result object in case of error:
 
 | Constant                                  | Value | Comment                                                                                                                                                                                                                                                           |

@@ -113,7 +113,7 @@ $compClass:=ds.Company //affecte la référence de dataclasse Company à $compCl
 
 Un objet dataclass peut contenir :
 
-*   attributes
+*   des attributs
 *   des attributs relationnels
 
 La dataclass offre une abstraction de la base de données physique et permet de gérer un modèle de données conceptuel. La dataclass est le seul moyen d'interroger le datastore. Une requête est effectuée à partir d'une seule dataclass. Les requêtes sont construites autour des attributs et des noms d'attributs relationnels des dataclasses. Les attributs relationnels sont ainsi les moyens d'impliquer plusieurs tables liées dans une requête.
@@ -135,7 +135,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 ### Attribut
 
-Les propriétés de dataclass sont des objets attribut décrivant les champs ou relations sous-jacents. Par exemple:
+Les propriétés de dataclass sont des objets attribut décrivant les champs ou relations sous-jacents. Par exemple :
 
 ```4d 
  $nameAttribute:=ds.Company.name //référence à un attribut de classe

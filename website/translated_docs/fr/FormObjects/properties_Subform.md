@@ -155,7 +155,7 @@ Designates the option for allowing users to select rows:
 - **Multiple**: Several rows can be selected simultaneously in this mode.
     - Les sous-enregistrements sélectionnés sont retournés par la commande `GET HIGHLIGHTED RECORDS`.
     - Cliquer sur l'enregistrement permettra de le sélectionner, mais ne modifiera pas l'enregistrement courant.
-    - Si vous pressez **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur un enregistrement, cela fera basculer son état (entre sélectionné ou non). Les touches fléchées Haut et Bas sélectionnent l'enregistrement précédent/suivant dans la liste. The other navigation keys scroll the list. L'événement formulaire `On Selection Change` est généré chaque fois que l'enregistrement sélectionné est modifié.
+    - Si vous pressez **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur un enregistrement, cela fera basculer son état (entre sélectionné ou non). Les touches fléchées Haut et Bas sélectionnent l'enregistrement précédent/suivant dans la liste. Les autres touches de navigation font défiler la liste. L'événement formulaire `On Selection Change` est généré chaque fois que l'enregistrement sélectionné est modifié.
 
 
 #### Grammaire JSON

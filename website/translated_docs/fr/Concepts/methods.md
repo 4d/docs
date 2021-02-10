@@ -88,7 +88,7 @@ Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les 
 
 The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. Par exemple:
+To execute a method stored in an object property, use the **( )** operator after the property name. Par exemple :
 
 ```4d
 //myAlert
@@ -127,7 +127,7 @@ $result:=$o.full_name("John";"Smith")
 // équivalent à $result:=fullName("param1";"param2")
 ```
 
-Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:
+Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple :
 
 ```4d
 //méthode fullName2 
@@ -173,7 +173,7 @@ Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. 
 
 ## Méthode projet récursives
 
-Des méthodes projet peuvent s'appeler les unes les autres. Par exemple:
+Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 - Une méthode A peut appeler une méthode B, qui appelle A, donc A appelle B de nouveau, etc.
 - Une méthode peut s'appeler elle-même.

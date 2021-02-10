@@ -5,7 +5,7 @@ title: Aperçu
 
 Les événements formulaire sont des événements qui peuvent conduire à l'exécution de la méthode de formulaire et/ou de la ou des méthodes objet de formulaire. Les événements de formulaire vous permettent de contrôler le flux de votre application et d'écrire du code qui n'est exécuté que lorsqu'un événement spécifique se produit.
 
-Dans votre code, vous contrôlez les événements à l'aide de la commande `FORM Event`, qui retourne l'événement déclenché. Par exemple:
+Dans votre code, vous contrôlez les événements à l'aide de la commande `FORM Event`, qui retourne l'événement déclenché. Par exemple :
 
 ```4d  
 //code d'un bouton
@@ -54,11 +54,11 @@ Le tableau suivant résume la manière dont les méthodes objet et formulaire so
 | On Load                       | Oui                                | Oui                | Tous les objets             |
 | On Unload                     | Oui                                | Oui                | Tous les objets             |
 | Sur validation                | Oui                                | Oui                | Tous les objets             |
-| Sur clic                      | Oui                                | Oui                | Objets concernés uniquement |
-| Sur double clic               | Oui                                | Oui                | Objets concernés uniquement |
-| Sue avant frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
-| Sue après frappe clavier      | Oui                                | Oui                | Objets concernés uniquement |
-| Sur après modification        | Oui                                | Oui                | Objets concernés uniquement |
+| On Clicked                    | Oui                                | Oui                | Objets concernés uniquement |
+| On Double Clicked             | Oui                                | Oui                | Objets concernés uniquement |
+| On Before Keystroke           | Oui                                | Oui                | Objets concernés uniquement |
+| On After Keystroke            | Oui                                | Oui                | Objets concernés uniquement |
+| On After Edit                 | Oui                                | Oui                | Objets concernés uniquement |
 | On Getting Focus              | Oui                                | Oui                | Objets concernés uniquement |
 | On Losing Focus               | Oui                                | Oui                | Objets concernés uniquement |
 | Sur activation                | Jamais                             | Oui                | Aucun                       |

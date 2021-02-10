@@ -373,7 +373,7 @@ In der Methode `ChangeAge` schreiben Sie:
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
 
-Das ist eine leistungsstarke Möglichkeit zum Definieren von [optionale Parameter](#optionale-parameter) (siehe auch unten). Fehlende Parameter können Sie wie folgt verwalten:
+Das ist eine leistungsstarke Möglichkeit zum Definieren von [optionale Parameter](#optional-parameters) (siehe auch unten). Fehlende Parameter können Sie wie folgt verwalten:
 - Sie prüfen, ob alle erwarteten Parameter geliefert werden, durch Vergleichen mit dem Wert `Null`, oder
 - Sie setzen Parameterwerte vorab, oder
 - Sie verwenden sie als leere Werte.

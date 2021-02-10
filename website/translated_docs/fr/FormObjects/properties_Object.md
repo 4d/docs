@@ -113,7 +113,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Par exemple:
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Par exemple :
 
 ```4d
   // assign the time 12:00:00 to the variable for the "tstart" object

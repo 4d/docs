@@ -1189,6 +1189,9 @@ The object returned by `.save()` contains the following properties:
 | lockInfo         |  | object  | Information about the lock                              |
  origin| ||task_id|  number| Process id| ||user_name |text|  Session user name on the machine| ||user4d_id|    text|   User name in the 4D database directory| ||host_name |text   |Machine name| ||task_name|    text|   Process name| ||client_version|   text||
 
+  
+||||***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...):| |errors ||  collection of objects|| ||message|  text    |Error message| ||componentSignature|   text|   Internal component signature (e.g. "dmbg" stands for the database component)| ||errCode|  number| Error code|
+
 (\*) The following values can be returned in the status and statusText properties of Result object in case of error:
 
 | Constant                                  | Valeur | Commentaire                                                                                                                                                                                                                                                       |
@@ -1695,7 +1698,7 @@ The `.unlock()` function <!-- REF #entityClass.unlock().Summary -->removes the p
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 
 A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).
-> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Par exemple:
+> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Par exemple :
 
 ```4d
  $e1:=ds.Emp.all()[0]

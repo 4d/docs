@@ -98,7 +98,7 @@ Vous devez affecter la référence retournée à une variable 4D de type Collect
 
 En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s).
 
-Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple:
+Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple :
 
 ```4d
  myCol[10]:="My new element"

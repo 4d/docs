@@ -53,10 +53,9 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 > Both [named](#named-parameters) and [sequential](#sequential-parameters) variables syntaxes can be mixed with no restriction to declare parameters. For example:
 > 
 > ```4d
-```4d
-  Function add($x : Integer)
-    var $0;$2 : Integer
-    $0:=$x+$2
+Function add($x : Integer)
+  var $0;$2 : Integer
+  $0:=$x+$2
 ```
 
 

@@ -66,7 +66,7 @@ Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une a
 COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
-Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées qui sont utilisées à l'aide de la notation en point. Par exemple:
+Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées qui sont utilisées à l'aide de la notation en point. Par exemple :
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -157,7 +157,7 @@ Les types de données sont détaillés dans la section [Types de données](Conce
 
 ## Objets et collections
 
-Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple:
+Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple :
 
 ```4d
 employee.name:="Smith"
@@ -232,7 +232,7 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Par exemple:
+A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Par exemple :
 
 ```4d  
 //in the Square.4dm file
@@ -315,7 +315,7 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 
 ### Expressions assignables et non-assignables
 
-Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:
+Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple :
 
 ```4d  
 //La variable $myVar est assignable, vous pouvez écrire :  

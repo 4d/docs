@@ -18,7 +18,7 @@ Dans le langage 4D, cet appel équivaut à :
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Seules les fonctions contenant le mot-clé `exposed` peuvent être directement appelées à partir de requêtes REST. Voir la section [Fonctions exposées vs non exposées](ordaClasses.md#exposed-vs-non-exposed-functions).
+> Seules les fonctions contenant le mot-clé `exposed` peuvent être directement appelées à partir de requêtes REST. See [Exposed vs non-exposed functions](ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
 ## Appeler des fonctions
 

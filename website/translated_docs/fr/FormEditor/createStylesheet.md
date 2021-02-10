@@ -233,7 +233,7 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
     - Valeur hexadécimale : `fill: #FF0000;`
     - fonction `rgb()` : `fill:rgb(255,0,0)`
 
-- Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple:
+- Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :
     - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
     - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
 

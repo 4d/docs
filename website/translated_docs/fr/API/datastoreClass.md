@@ -167,7 +167,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 Connection to a remote datastore without user / password:
 
 ```4d
- var $connectTo : Object 
+ var $connectTo : Object
  var $remoteDS : cs.DataStore
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
@@ -179,7 +179,7 @@ Connection to a remote datastore without user / password:
 Connection to a remote datastore with user / password / timeout / tls:
 
 ```4d
- var $connectTo : Object 
+ var $connectTo : Object
  var $remoteDS : cs.DataStore
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
     "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
@@ -192,7 +192,7 @@ Connection to a remote datastore with user / password / timeout / tls:
 Working with several remote datastores:
 
 ```4d
- var $connectTo : Object 
+ var $connectTo : Object
  var $frenchStudents; $foreignStudents : cs.DataStore
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")

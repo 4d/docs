@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Klassen
+title: Classes
 ---
 
 
@@ -38,13 +38,13 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 ## Klassen verwalten
 
-### Eine Klasse definieren
+### Definition einer Klasse
 
 Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner `/Project/Sources/Classes/` gespeichert wird. Der Name der Datei ist der Klassenname.
 
 Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
-- A [class name](identifiers.md#classes) must be compliant with [property naming rules](identifiers.md#object-properties).
+- Der [Klassenname](identifiers.md#classes) muss mit den [Schreibregeln für Eigenschaftsnamen](identifiers.md#objekteigenschaften) konform sein.
 - Es wird zwischen Groß- und Kleinschreibung unterschieden.
 - Um Konflikte zu vermeiden, sollten Sie für eine Klasse und eine Tabelle in derselben Anwendung unterschiedliche Namen verwenden.
 
@@ -86,14 +86,14 @@ Um eine neue Klasse zu erstellen:
 
 #### Unterstützung von Code für Klassen
 
-In the various 4D windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime-Explorer) wird Code für Klassen im allgemeinen wie eine Projektmethode mit einigen spezifischen Merkmalen verwaltet:
 
 - Im Code-Editor gilt folgendes:
     - Klassen können nicht direkt ausgeführt werden
     - Eine Klassenfunktion ist ein Code Block
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Objekt Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem <ClassName> Constructor<ClassName> Constructor oder <ClassName>.<FunctionName><ClassName> <FunctionName> Format angezeigt.
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem \<ClassName> Constructor oder \<ClassName> <FunctionName> Format angezeigt.
 
 ## Stores für Klassen
 
@@ -150,23 +150,23 @@ Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie 
 - Objekt [`superclass`](API/classClass.md#superclass) (optional, null, wenn nicht vorhanden)
 - Funktion [`new()`](API/classClass.md#new), um Instanzen der Objekte einer Klasse zu setzen.
 
-In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
+Ein Objekt class kann zusätzlich auf ein Objekt [`constructor`](#class-constructor) verweisen (optional).
 
-Ein Objekt class ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+Ein Objekt Klasse ist ein [shared Object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
-### Inheritance
+### Vererbung
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/classClass.md#superclass).
+Erbt eine Klasse von einer anderen Klasse (z.B.in der Definition wird das Schlüsselwort [Class extends](classes.md#class-extends-classname) verwendet), ist die übergeordnete Klasse deren [`superclass`](API/classClass.md#superclass).
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/classClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
+Findet 4D eine Funktion oder Eigenschaft nicht in einer Klasse, sucht es in deren [superclass</code>](API/classClass.md#superclass); werden sie hier nicht gefunden, geht die Suche weiter in der Superclass der Superclass, etc., bis es keine Superclass mehr gibt (alle Objekte erben von der Superclass "Object".).
 
 
 ## Schlüsselwörter für Klassen
 
 In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:
 
-- `Function <Name>` to define class functions of the objects.
-- `Class constructor` to define the properties of the objects.
+- `Function <Name>` zum Definieren von Class Functions der Objekte.
+- `Class constructor` zum Definieren der Eigenschaften der Objekte.
 - `Class extends <ClassName>` zum Definieren der Vererbung.
 
 
@@ -179,9 +179,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/formulaClass.md#about-4dfunction-objects) class.
+Class Functions sind spezifische Eigenschaften der Klasse. Es sind Objekte der Klasse [4D.Function](API/formulaClass.md#about-4dfunction-objects).
 
-In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+In der Datei mit der Definition der Klasse verwenden Function Deklarationen das Schlüsselwort `Function` und den Namen von Function. Der Function Name muss mit den [ Schreibregeln für Eigenschaftsnamen](Concepts/identifiers.md#objekteigenschaften) konform sein.
 
 > **Tipp:** Namen, die mit einem Unterstrich (_) beginnen, werden beim automatischen Vervollständigen (autocompletion) im 4D Code-Editor unterdrückt und nicht vorgeschlagen. Schreiben Sie z.B. `Function _myPrivateFunction` in `MyClass`, wird das nicht im Code-Editor vorgeschlagen, wenn Sie `"cs.MyClass` eingeben.
 
@@ -206,19 +206,19 @@ Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<Clas
 
 Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#parameter) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- Verwendung des Operators `()` For example, `myObject.methodName("hello")`
-- use of a "4D.Function" class member method:
-    - [`apply()`](API/formulaClass.md#apply)
-    - [`call()`](API/formulaClass.md#call)
+- Verwendung des Operators `()` Zum Beispiel, `myObject.methodName("hello")`
+- Verwendung einer Class Member Method "Function":
+    - `apply()`
+    - `call()`
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
-
-
+> **Thread-Safety Warnung:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit der Option "In preemptive Prozess starten" aufgerufen:</br> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
 
 
-#### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
+
+#### Parameter
+
+Function Parameter werden mit Name und Typ des Parameters, getrennt durch Komma, deklariert. Der Parametername muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/identifiers.md#objekteigenschaften) konform sein. Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -477,14 +477,14 @@ Das Schlüsselwort `This` gibt eine Referenz auf das gerade bearbeitete Objekt z
 
 In den meisten Fällen bestimmt der Wert von `This`, wie eine Function aufgerufen wird. Es lässt sich während der Ausführung nicht per Zuweisung setzen und kann bei jedem Aufrufen der Funktion anders sein.
 
-Wird eine Formel als Member Method eines Objekts aufgerufen, wird das dazugehörige `This` auf das Objekt gesetzt, wo die Methode aufgerufen wird. For example:
+Wird eine Formel als Member Method eines Objekts aufgerufen, wird das dazugehörige `This` auf das Objekt gesetzt, wo die Methode aufgerufen wird. Beispiel:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/classClass.md#new) function), its `This` is bound to the new object being constructed.
+Bei Verwendung einer Function [class constructor](#class-constructor) (mit der Function [`new()`](API/classClass.md#new)), wird ihr `This` an das neue Objekt in Konstruktion gebunden.
 
 ```4d
 //Class: ob
@@ -502,10 +502,10 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> Beachten Sie beim Aufrufen des Superclass Constructor in einem Constructor mit dem Schlüsselwort [Super](#super), dass  `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#example-1).
 
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+In allen Fällen bezieht sich `This` auf das Objekt, wo die Methode aufgerufen wurde, als ob sie im Objekt wäre.
 
 ```4d
 //Class: ob
@@ -514,7 +514,7 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+Dann können Sie in einer Projektmethode schreiben:
 
 ```4d
 $o:=cs.ob.new()
@@ -522,7 +522,7 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
+In diesem Beispiel hat das der Variable $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von seiner Klasse. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
 
 
 ## Befehle für Klassen

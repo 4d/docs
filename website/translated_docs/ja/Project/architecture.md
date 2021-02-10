@@ -6,8 +6,8 @@ title: プロジェクトのアーキテクチャー
 4D プロジェクトは、一つの親アプリケーションフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 たとえば:
 
 - MyProject
-    - コンポーネント
-    - データ
+    - Components
+    - Data
         - Logs
         - Settings
     - Documentation
@@ -30,9 +30,9 @@ title: プロジェクトのアーキテクチャー
 
 - *applicationName*.4DProject ファイル
 - Sources
-    + クラス
+    + Classes
     + DatabaseMethods
-    + メソッド
+    + Methods
     + Forms
     + TableForms
     + Triggers
@@ -120,7 +120,7 @@ title: プロジェクトのアーキテクチャー
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
-- メソッド
+- Methods
 - Forms
 - TableForms
 

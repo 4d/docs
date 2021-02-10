@@ -76,7 +76,7 @@ Lorsque des macros sont définies dans votre projet 4D, vous pouvez appeler une 
 
 ![](assets/en/FormEditor/macroSelect.png)
 
-Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Les éléments de macros sont triés dans l'ordre où les objets de macro sont définis dans le fichier.
+Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Macro items are sorted in alphabetical order.
 
 Lorsque des macros existent au niveau du projet et du composant, l'ordre suivant est appliqué :
 

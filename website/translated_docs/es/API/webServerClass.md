@@ -77,7 +77,7 @@ They provide the following properties and functions:
 
 <!-- END REF -->
 
-The `WEB Server` command<!-- REF #_command_.WEB Server. Summary -->returns the default Web server object, or the Web server object defined through the option parameter<!-- END REF -->.
+The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the option parameter<!-- END REF -->.
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
@@ -561,7 +561,7 @@ Possible values: 500000 - 2147483648
 **.maxSessions** : Number<!-- END REF -->
 
 
-The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneous sessions<!-- END REF -->. When you reach the limit, the oldest session is closed (and `On Web Close Process` database method is called) if the web server needs to create a new one. When you reach the limit, the oldest session is closed (and `On Web Close Process` database method is called) if the web server needs to create a new one.
+The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneous sessions<!-- END REF -->. When you reach the limit, the oldest session is closed (and `On Web Close Process` database method is called) if the web server needs to create a new one. The number of simultaneous sessions cannot exceed the total number of web processes (maxConcurrentProcesses property, 100 by default)
 
 <!-- END REF -->
 
