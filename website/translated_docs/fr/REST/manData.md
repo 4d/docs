@@ -62,7 +62,7 @@ En utilisant [`$compute`]($compute.md), vous pouvez calculer la **moyenne**, le 
 
 Par exemple, pour obtenir le salaire le plus élevé :
 
-`/rest/Employee/salary/?$compute=sum`
+`/rest/Employee/salary/?$compute=max`
 
 Pour calculer toutes les valeurs et retourner un objet JSON :
 
@@ -109,7 +109,7 @@ Vous pouvez appliquer cette méthode à :
 
 #### Exemple avec une dataclass
 
-Les requêtes suivantes retournent uniquement le prénom et le nom de la datastore class People (soit la datastore class entière, soit une sélection d'entités basée sur la recherche définie dans `$filter`).
+Les requêtes suivantes retournent uniquement le prénom et le nom de la dataclass People (soit la dataclass entière, soit une sélection d'entités basée sur la recherche définie dans `$filter`).
 
  `GET  /rest/People/firstName,lastName/`
 

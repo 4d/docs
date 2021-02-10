@@ -21,7 +21,7 @@ Variablen sind Objekte der Programmiersprache; Sie können Variablen erstellen u
 Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache bietet zwei Wege zum Deklarieren von Variablen:
 
 - Über das Schlüsselwort `var` (empfohlen, besonders wenn Ihr Code Objekte und Klassen verwendet),
-- Über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (überholt, nur in der klassischen Programmiersprache).
+- über Befehle der 4D Programmiersprache in den Kapiteln "Compiler" oder "Arrays" (nur in der klassischen Programmiersprache).
 
 **Hinweis:** Auch wenn wir davon abraten, können Sie Variablen einfach durch ihre Verwendung erstellen; Sie müssen sie nicht formell mit Typ definieren. Beispiel: Für eine Variable, die das aktuelle Datum plus 30 Tage angibt, können Sie schreiben:
 
@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Eine C_Direktive verwenden
 
-> **Hinweis zur Kompatibilität:** Diese Funktionalität ist ab 4D v18 R3 veraltet. Es wird empfohlen, das Schlüsselwort [var](#das-schlüsselwort-var-verwenden) zu verwenden.
+> **Hinweis zur Kompatibilität:**Dieses Feature wird zum Deklarieren von Variablen in Methoden nicht empfohlen. Es wird empfohlen, das Schlüsselwort [var](#das-schlüsselwort-var-verwenden) zu verwenden.
 
 Über Direktiven von Compiler-Befehlen können Sie Grundtypen von Variablen deklarieren.
 
@@ -123,15 +123,14 @@ Wollen Sie z. B. eine Textvariable definieren, schreiben Sie:
 Hier sehen Sie einige grundlegende Variablendeklarationen:
 
 ```4d
- C_BLOB(vxMyBlob) // Die Prozessvariable vxMyBlob ist als eine Variable vom Typ BLOB deklariert
- C_DATE($vdCurDate) // Die lokale Variable $vdCurDate ist als eine Variable vom Typ Datum deklariert
- C_LONGINT(vg1;vg2;vg3) // Die 3 Prozessvariablen vg1, vg2 und vg3 sind als Variablen vom Type Lange Ganzzahl deklariert  
- C_OBJECT($vObj) // Die lokale Variable $vObj ist als eine Variable vom Typ Objekt deklariert
- C_COLLECTION($vCol) // Die lokale Variable $vCol ist als eine Variable vom Typ Collection deklariert
- ARRAY LONGINT(alAnArray;10) //Die Prozessvariable alAnArray ist als ein Array vom Typ Lange Ganzzahl mit 10 Elementen deklariert
+ C_BLOB(vxMyBlob) // Die Prozessvariable vxMyBlob ist deklariert als eine Variable vom Typ BLOB
+ C_DATE($vdCurDate) // Die lokale Variable $vdCurDate ist deklariert als eine Variable vom Typ Datum
+ C_LONGINT(vg1;vg2;vg3) // Die 3 Prozessvariablen vg1, vg2 und vg3 sind deklariert als Variablen vom Typ Lange Ganzzahl
+ C_OBJECT($vObj) // Die lokale Variable $vObj ist deklariert als eine Variable vom Typ Objekt
+ C_COLLECTION($vCol) // Die lokale Variable $vCol ist deklariert als eine Variable vom Typ Collection
 ```
 
-**Hinweis:** Arrays sind ein besonderer Variablentyp. Ein Array ist eine sortierte Reihe von Variablen desselben Typs. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
+**Hinweis:** Arrays sind ein spezieller Variablentyp (ein Array ist eine sortierte Reihe von Variablen vom gleichen Typ). Arrays werden mit spezifischen Befehlen deklariert, wie z.B. `ARRAY LONGINT(alAnArray;10)`. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
 
 ## Daten zuweisen

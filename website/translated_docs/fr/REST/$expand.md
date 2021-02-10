@@ -20,6 +20,6 @@ Pour plus d'informations sur les formats d'image, reportez-vous à [`$imageforma
 
 ## Enregistrement d'un attribut BLOB sur le disque
 
-Si vous souhaitez enregistrer un BLOB stocké dans votre classe de datastore, vous pouvez écrire ce qui suit en passant également "true" à $binary :
+Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez écrire ce qui suit en passant également "true" à $binary :
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`

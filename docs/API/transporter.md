@@ -42,7 +42,7 @@ Available secured ports are:
 
 --- 
  
- <!-- REF transporter.authenticationMode.Desc -->
+ <!-- REF transporter.authenticationModeIMAP.Desc -->
 ## .authenticationMode 
 
 <details><summary>History</summary>
@@ -64,10 +64,73 @@ Possible values are:
 
 |Value|Constants|Comment|
 |---|---|---|
+|CRAM-MD5|`IMAP authentication CRAM MD5`|Authentication using CRAM-MD5 protocol|
+|LOGIN|`IMAP authentication login`|Authentication using LOGIN protocol|
+|OAUTH2|`IMAP authentication OAUTH2`|Authentication using OAuth2 protocol|
+|PLAIN|`IMAP authentication plain`|Authentication using PLAIN protocol|
+
+<!-- END REF -->
+
+--- 
+ 
+ <!-- REF transporter.authenticationModePOP3.Desc -->
+## .authenticationMode 
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R4|Added|
+</details>
+
+
+**.authenticationMode** : Text
+
+#### Description
+
+The `.authenticationMode` property contains the authentication mode used to open the session on the mail server. 
+
+By default, the most secured mode supported by the server is used.
+
+Possible values are:
+
+|Value|Constants|Comment|
+|---|---|---|
 |APOP|`POP3 authentication APOP`|Authentication using APOP protocol (POP3 only)|
-|CRAM-MD5|`SMTP authentication CRAM MD5`, `POP3 authentication CRAM-MD5`, `IMAP authentication CRAM MD5`|Authentication using CRAM-MD5 protocol|
-|LOGIN|`SMTP authentication login`, `POP3 authentication login`, `IMAP authentication login`|Authentication using LOGIN protocol|
-|PLAIN|`SMTP authentication plain`, `POP3 authentication plain`, `IMAP authentication plain`|Authentication using PLAIN protocol|
+|CRAM-MD5|`POP3 authentication CRAM-MD5`|Authentication using CRAM-MD5 protocol|
+|LOGIN|`POP3 authentication login`|Authentication using LOGIN protocol|
+|OAUTH2|`POP3 authentication OAUTH2`|Authentication using OAuth2 protocol|
+|PLAIN|`POP3 authentication plain`|Authentication using PLAIN protocol|
+
+<!-- END REF -->
+
+--- 
+ 
+ <!-- REF transporter.authenticationModeSMTP.Desc -->
+## .authenticationMode 
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v17 R4|Added|
+</details>
+
+
+**.authenticationMode** : Text
+
+#### Description
+
+The `.authenticationMode` property contains the authentication mode used to open the session on the mail server. 
+
+By default, the most secured mode supported by the server is used.
+
+Possible values are:
+
+|Value|Constants|Comment|
+|---|---|---|
+|CRAM-MD5|`SMTP authentication CRAM MD5`|Authentication using CRAM-MD5 protocol|
+|LOGIN|`SMTP authentication login`|Authentication using LOGIN protocol|
+|OAUTH2|`SMTP authentication OAUTH2`|Authentication using OAuth2 protocol|
+|PLAIN|`SMTP authentication plain`|Authentication using PLAIN protocol|
 
 <!-- END REF -->
 
@@ -207,9 +270,9 @@ The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the pa
 
 Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:
 
-*	**SMTP connections** - [4DSMTPLog.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#4165231) 
-*	**POP3 connections** - [4DPOP3Log.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#4837674)
-*	**IMAP connections** - [4DIMAPLog.txt](https://doc.4d.com/4Dv18R4/4D/18-R4/Description-of-log-files.300-5005934.en.html#5040475)
+*	**SMTP connections** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt) 
+*	**POP3 connections** - [4DPOP3Log.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*	**IMAP connections** - [4DIMAPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 
 

@@ -62,7 +62,7 @@ By using [`$compute`]($compute.md), you can compute the **average**, **count**, 
 
 For example, to get the highest salary:
 
-`/rest/Employee/salary/?$compute=sum`
+`/rest/Employee/salary/?$compute=max`
 
 To compute all values and return a JSON object:
 
@@ -109,7 +109,7 @@ You can apply this technique to:
 
 #### Dataclass Example  
 
-The following requests returns only the first name and last name from the People datastore class (either the entire datastore class or a selection of entities based on the search defined in `$filter`).
+The following requests returns only the first name and last name from the People dataclass (either the entire dataclass or a selection of entities based on the search defined in `$filter`).
 
  `GET  /rest/People/firstName,lastName/`
 

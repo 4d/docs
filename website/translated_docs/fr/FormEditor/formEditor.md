@@ -23,10 +23,10 @@ Pour afficher ou masquer un élément de l’éditeur de formulaires :
     *   **Page 0** : affiche ou masque les objets de la page 0 dans la page courante du formulaire. Cette option vous permet de mieux visualiser et distinguer les objets de la page courante et ceux de la page 0. Pour plus d’informations, reportez-vous à la section Définir un formulaire multi-pages.
     *   **Papier** : affiche ou masque les contours de la page d’impression sous forme de filets grisés. Cette option peut être sans effet apparent lorsque l’option Limites (cf. ci-dessous) est sélectionnée. En effet dans ce cas, lorsque la taille du formulaire est inférieure à celle de la page d’impression, les contours de celle-ci sont affichés en-dehors de la zone de visualisation du formulaire et donc n’apparaissent pas. Reportez-vous à la section Imprimer un formulaire.
     *   **Règle** : affiche ou masque les règles de la fenêtre de l’éditeur.
-    *   **Markers**: Shows or hides the output control lines and associated markers that show the limits of the form’s different areas.
-    *   **Libellés des taquets** : affiche ou masque les libellés des taquets, lorsque ceux-ci sont affichés. Pour plus d’informations sur les taquets et leurs libellés, reportez-vous à la section Déplacer les taquets.
-    *   **Limites** : affiche ou masque les limites du formulaire. Lorsque cette option est sélectionnée, le formulaire est affiché dans l’éditeur tel qu’il apparaîtra en mode Application. Cette possibilité est particulièrement intéressante pour ajuster un formulaire sans devoir tester le mode Application pour visualiser le résultat.
-> Les options **Taille basée sur**, **Marge hor.** et **Marge ver.** des propriétés du formulaire modifient les limites du formulaire. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence. Pour plus d’informations sur les propriétés du formulaire, reportez-vous à la section [Propriétés des formulaires](jsonReference.html).
+    *   **Taquets** : affichent ou masquent les taquets délimitant les différentes zones du formulaire.
+    *   **Libellés des taquets** : affichent ou masquent les libellés des taquets, lorsque ceux-ci sont affichés. Pour plus d’informations sur les taquets et leurs libellés, reportez-vous à la section Déplacer les taquets.
+    *   **Limites** : affichent ou masquent les limites du formulaire. Lorsque cette option est sélectionnée, le formulaire est affiché dans l’éditeur tel qu’il apparaîtra en mode Application. Cette possibilité est particulièrement intéressante pour ajuster un formulaire sans devoir tester le mode Application pour visualiser le résultat.
+> > Les options **Taille basée sur**, **Marge hor.** et **Marge ver.** des propriétés du formulaire modifient les limites du formulaire. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence. Pour plus d’informations sur les propriétés du formulaire, reportez-vous à la section [Propriétés des formulaires](jsonReference.html).
 
 
 ### Utiliser la barre d’outils
@@ -264,8 +264,8 @@ L’éditeur de formulaires est doté d’une grille magnétique virtuelle qui p
 
 Le principe est le suivant : lorsque vous faites glisser un objet dans le formulaire, 4D indique des emplacements possibles pour cet objet sur la base d’alignements remarquables avec les autres objets du formulaire. Un alignement remarquable est établi à chaque fois que :
 
-*   Horizontally, the edges or centers of two objects coincide,
-*   Vertically, the edges of two objects coincide.
+*   Horizontalement, les extrémités ou les centres de deux objets coïncident,
+*   Verticalement, les extrémités de deux objets coïncident.
 
 A ce moment, 4D place l’objet à l’emplacement et affiche un trait rouge indiquant l’alignement remarquable pris en compte :
 
@@ -302,7 +302,7 @@ Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et r
     *   Horizontalement, les icônes correspondent aux répartitions suivantes : équidistance des côtés gauches, des centres (hor.) et des côtés droits des objets sélectionnés.
     *   Verticalement, les icônes correspondent aux répartitions suivantes : équidistance des bords supérieurs, des centres (vert.) et des bords inférieurs des objets sélectionnés.
 
-    Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation** : l’opération s’effectue dans l’éditeur de formulaires, mais la boîte de dialogue reste au premier plan. Vous pouvez alors Appliquer ou Annuler les modifications. You can then **Cancel** or **Apply** the modifications.
+    Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation** : l’opération s’effectue dans l’éditeur de formulaires, mais la boîte de dialogue reste au premier plan. Vous pouvez alors Appliquer ou Annuler les modifications. Vous pouvez alors **Appliquer** ou **Annuler** les modifications.
 > Cette boîte de dialogue vous permet de combiner l’alignement d’objets et leur répartition. Pour plus d’informations sur l’alignement, reportez-vous au paragraphe [Aligner des objets](#aligning-objects).
 
 
@@ -315,11 +315,11 @@ Il est parfois nécessaire de réorganiser certains objets qui occultent d’aut
 Pour modifier le plan d'un objet, sélectionnez-le et choisissez :
 
 *   Une des commandes **Passer à l'avant-plan**, **Passer au dernier plan**, **Plan suivant** et **Plan précédent** dans le menu Objet,
-*   One of the commands in the **Level>** submenu in the context menu of the editor,
-*   One of the commands associated with the level management button of the toolbar.
+*   Une des commandes du sous-menu **Plan>** du menu contextuel de l'éditeur,
+*   Une des commandes associées au bouton de gestion des plans de la barre d'outils.
 
 ![](assets/en/FormEditor/level2.png)
-> When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
+> Lorsque plusieurs objets sont superposés, le raccourci **Ctrl+clic** / **Commande+clic** permet de sélectionner successivement chaque objet en descendant d’un plan à chaque clic.
 
 Pour ordonner les différents plans, 4D va toujours de l’arrière-plan vers l’avant-plan. Par conséquent, le plan précédent fait reculer la sélection d’objets d’un plan vers l’arrière-plan du formulaire. Le plan suivant fait avancer la sélection d’objets d’un plan vers l’avant-plan du formulaire.
 
@@ -748,7 +748,7 @@ Il est possible de zoomer dans le formulaire courant. Vous pouvez passer en mode
 
 ![](assets/en/FormEditor/zoom.png)
 
-*   Lorsque vous cliquez sur le bouton loupe, le curseur prend la forme d’une loupe. Pour augmenter le pourcentage d’affichage d’un palier, cliquez dans le formulaire. Pour réduire le pourcentage d’affichage d’un palier, appuyez sur la touche Majuscule et cliquez dans le formulaire.
+*   Lorsque vous cliquez sur le bouton loupe, le curseur prend la forme d’une loupe. Pour réduire le pourcentage d’affichage d’un palier, appuyez sur la touche Majuscule et cliquez dans le formulaire.
 *   Lorsque vous cliquez sur une barre de pourcentage, l’affichage est immédiatement modifié.
 
 En mode Zoom, toutes les fonctions de l’éditeur de formulaires restent disponibles(*).

@@ -37,7 +37,7 @@ const siteConfig = {
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
-  // customDocsPath: 'docsPostProcessed', //uniquement local
+  //customDocsPath: 'docsPostProcessed', //uniquement local
   docsUrl:'',
 
   // For no header links in the top nav bar -> headerLinks: [],
@@ -45,8 +45,8 @@ const siteConfig = {
 
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
-    {href: 'https://developer.4d.com/docs', label:'v18 R5 BETA'},
-    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R4'},
+    {href: 'https://developer.4d.com/docs', label:'v18 R6 BETA'},
+    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R5'},
     {href: 'https://developer.4d.com/docs/18', label:'v18'},
     //{href: 'https://developer.4d.com/', label:'Developer Center'},
     //{href: 'http://kb.4d.com/', label: 'knowledgebase'},

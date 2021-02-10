@@ -3,8 +3,6 @@ id: sessions
 title: User sessions
 ---
 
-## Overview
-
 The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
 
 Web server user sessions allow to:
@@ -13,6 +11,9 @@ Web server user sessions allow to:
 - share data between the processes of a web client,
 - associate privileges to user sessions,
 - handle access through a `Session` object and the [Session API](API/sessionClass.md).
+
+> **Note:** The current implementation (v18 R6) is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
+
 
 ## Enabling sessions
 
@@ -94,72 +95,77 @@ End if
 
 ## Example
 
-In a CRM application, each salesperson manages their own client portfolio.
-
-The datastore contains at least 2 linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
+In a CRM application, each salesperson manages their own client portfolio. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
 
 ![alt-text](assets/en/WebServer/exampleSession.png)
 
-We run this URL to open a session:
+We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
+
+
+1. We run this URL to open a session:
 
 ```
-http://localhost:8044/?salesNumber=3&password=pwd&idleTimeout=120
+http://localhost:8044/authenticate.shtml
 ```
 
-If the salesperson is authenticated:
+> In a production environment, it it necessary to use a [HTTPS connection](API/webServerClass.md#httpsenabled) to avoid any uncrypted information to circulate on the network.
 
-- the *userName* is updated on the session
-- the "WebAdmin" privilege is associated to the session
-- the top 3 customers of the salesperson are loaded in the session
-- the session will close after 120 minutes of inactivity
 
-The `On Web Authentication` database method contains:
+2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
+
+
+```html
+<!DOCTYPE html>
+<html>
+<body bgcolor="#ffffff">
+<FORM ACTION="/4DACTION/authenticate" METHOD=POST>
+    UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><BR>
+    Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
+<INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
+</FORM>
+</body>
+</html>
+```
+
+![alt-text](assets/en/WebServer/authenticate.png)
+
+3. The authenticate project method looks for the *userID* person and validates the password against the hashed value already stored in the *SalesPersons* table:
 
 ```4d
-var $indexSalesNumber; $salesNumber; $indexTimeout; $idleTimeout; $indexPassword : Integer
-var $info; $userTop3; $salesPerson : Object
-var $userOK : Boolean
+var $indexUserId; $indexPassword; $userId : Integer
 var $password : Text
+var $userTop3; $sales; $info : Object
+
 
 ARRAY TEXT($anames; 0)
 ARRAY TEXT($avalues; 0)
+
 WEB GET VARIABLES($anames; $avalues)
-$indexSalesNumber:=Find in array($anames; "salesNumber")
-$indexTimeout:=Find in array($anames; "idleTimeout")
+
+$indexUserId:=Find in array($anames; "userId")
+$userId:=Num($avalues{$indexUserId})
+
 $indexPassword:=Find in array($anames; "password")
+$password:=$avalues{$indexPassword}
 
-If ($indexSalesNumber#-1)
-    $salesNumber:=Num($avalues{$indexSalesNumber})
+$sales:=ds.SalesPersons.query("userId = :1"; $userId).first()
+
+If ($sales#Null)
+    If (Verify password hash($password; $sales.password))
+        $info:=New object()
+        $info.userName:=$sales.firstname+" "+$sales.lastname
+        Session.setPrivileges($info)
+        Use (Session.storage)
+            If (Session.storage.myTop3=Null)
+                $userTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
+                Session.storage.myTop3:=$userTop3
+            End if 
+        End use 
+        WEB SEND HTTP REDIRECT("/authenticationOK.shtml")
+    Else 
+        WEB SEND TEXT("This password is wrong")
+    End if 
+Else 
+    WEB SEND TEXT("This userId is unknown")
 End if 
-
-If ($indexPassword#-1)
-    $password:=String($avalues{$indexPassword})
-End if 
-
-If ($indexTimeout#-1)
-    $idleTimeout:=Num($avalues{$indexTimeout})
-End if 
-// ...
-// Check $salesNumber and $password
-// ...
-If ($userOK)  // The user has been previously checked
-    $info:=New object()
-    $salesPerson:=ds.SalesPersons.query("number = :1"; $salesNumber).first()
-    $info.userName:=$salesPerson.firstname+" "+$salesPerson.lastname
-    $info.privileges:="WebAdmin" 
-    Session.setPrivileges($info)
-    Session.idleTimeout:=$idleTimeout
-
-    Use (Session.storage)
-        If (Session.storage.myTop3=Null)
-            $userTop3:=ds.Customers.query("salesPerson.number = :1"; $salesNumber).orderBy("totalPurchase desc").slice(0; 3)
-            Session.storage.myTop3:=$userTop3
-        End if 
-    End use 
-
-    $0:=True
-End if
-
 ```
-
-

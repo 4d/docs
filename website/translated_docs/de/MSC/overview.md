@@ -6,35 +6,35 @@ sidebar_label: Überblick
 
 Das Fenster Maintenance und Security Center (MSC) enthält alle Tools zum Prüfen, Analysieren, Warten, Sichern, Komprimieren und Verschlüsseln von Datendateien. Das MSC ist in allen 4D Programmen verfügbar, also 4D Developer, 4D Server oder 4D Desktop.
 
-**Note:** The MSC window is not available from a 4D remote connection.
+**Hinweis:** Das MSC Fenster ist in einer 4D remote Verbindung nicht verfügbar.
 
-Es gibt verschiedene Wege, das MSC-Fenster zu öffnen. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. In standard mode, the project is opened by 4D.
+Es gibt verschiedene Wege, das MSC-Fenster zu öffnen. Die Art des Zugriffs bestimmt auch die Art, wie das Anwendungsprojekt geöffnet wird: im Wartungs- oder im Standardmodus. Im Wartungsmodus wird das Projekt nicht durch 4D geöffnet, sondern nur ihre Referenz an das MSC geliefert. Im Standardmodus wird das Projekt von 4D geöffnet.
 
 
 ## Anzeige im Wartungsmodus
 
-In maintenance mode, only the MSC window is displayed (the project is not opened by the 4D application). This means that projects that are too damaged to be opened in standard mode by 4D can nevertheless be accessed. Moreover, certain operations (compacting, repair, and so on) require the project to be opened in maintenance mode (see [Feature availability](#feature-availability)).
+Im Wartungsmodus erscheint nur das MSC-Fenster, d. h. das Projekt wird nicht vom 4D Programm geöffnet. Das bedeutet, dass auch Zugriff auf Projekte möglich ist, die sich wegen Beschädigung nicht im Standardmodus öffnen lassen. Außerdem müssen Sie für bestimmte Operationen, wie Komprimieren, Reparieren u. ä. das Projekt im Wartungsmodus öffnen (siehe unter [Verfügbarkeit der Funktionen](#verfügbarkeit-der-funktionen)).
 
 Es gibt zwei Stellen, das MSC im Wartungsmodus zu öffnen:
 
-- **From the standard project opening dialog box** The standard Open dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](assets/en/MSC/MSC_standardOpen.png)
-- **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (project not open)  
+- **Über den Standard-Öffnen Dialog** Der Standarddialog zum Öffnen des Projekts enthält in der rechten unteren Ecke die Schaltfläche **Öffnen** mit einem PopUp-Menü, in dem Sie die Option **Maintenance Security Center** anklicken können: ![](assets/en/MSC/MSC_standardOpen.png)
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der Toolbar (Projekt ist nicht geöffnet)  
   ![](assets/en/MSC/mscicon.png)   
-  When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. The project will not be opened by 4D.
+  Auf dem Bildschirm erscheint der Standard-Öffnen Dialog, in dem Sie das *4DProjekt* oder die *.4dz* Datei zum Prüfen auswählen können. Dabei öffnet 4D nicht das Projekt selbst.
 
 ## Anzeige im Standardmodus
 
-In standard mode, a project is open. Hier sind nicht alle Wartungsfunktionen verfügbar. Es gibt mehrere Möglichkeiten, das MSC Fenster zu öffnen:
+Im Standardmodus wird ein Projekt geöffnet. Hier sind nicht alle Wartungsfunktionen verfügbar. Es gibt mehrere Möglichkeiten, das MSC Fenster zu öffnen:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der 4D Toolbar  
   ![](assets/en/MSC/mscicon.png)
-- Use the “msc” standard action that it is possible to associate with a menu command or a form object.
-- Use the `OPEN SECURITY CENTER` language command.
+- Über die Standardaktion “msc”, die Sie einem Menübefehl oder einem Formularobjekt zuordnen können.
+- Über den 4D Befehl `OPEN SECURITY CENTER`
 
 ## Verfügbarkeit der Funktionen
 
 Je nach dem Öffnen-Modus in MSC sind bestimmte MSC Funktionen nicht verfügbar:
 
-- Backup function is only available when the project is open (the MSC must have been opened in standard mode).
-- Datenkomprimierung, Zurückfahren, Wiederherstellen, Reparieren und Verschlüsselung sind nur bei nicht-geöffneten Datendateien verwendbar, d. h. MSC muss im Wartungsmodus geöffnet sein. If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
+- Die Backup-Funktion ist nur verfügbar, wenn das Projekt geöffnet ist, d. h. MSC muss im Standardmodus geöffnet sein.
+- Datenkomprimierung, Zurückfahren, Wiederherstellen, Reparieren und Verschlüsselung sind nur bei nicht-geöffneten Datendateien verwendbar, d. h. MSC muss im Wartungsmodus geöffnet sein. Versuchen Sie, diese Funktionen bei im Standardmodus geöffnetem Projekt aufzurufen, erscheint ein Dialogfenster, um die Anwendung zu schließen und im Wartungsmodus erneut aufzurufen.
 - In verschlüsselten Datenbanken ist für den Zugriff auf verschlüsselte Daten oder die Datei .journal ein gültiger Schlüssel zum Entschlüsseln erforderlich (siehe unter [Seite Verschlüsseln](encrypt.md)). Andernfalls sind verschlüsselte Daten nicht sichtbar. 

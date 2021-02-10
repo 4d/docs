@@ -8,8 +8,17 @@
       "Admin/building": {
         "title": "プロジェクトパッケージのビルド"
       },
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
+      },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
       },
       "API/classClass": {
         "title": "クラス"
@@ -24,7 +33,7 @@
         "title": "DataClassAttribute"
       },
       "API/dataclassClass": {
-        "title": "DataClass"
+        "title": "データクラス"
       },
       "API/datastoreClass": {
         "title": "DataStore"
@@ -114,7 +123,7 @@
         "title": "ループ構造"
       },
       "Concepts/classes": {
-        "title": "Classes"
+        "title": "クラス"
       },
       "Concepts/components": {
         "title": "コンポーネント"
@@ -150,7 +159,7 @@
         "title": "ポインター"
       },
       "Concepts/string": {
-        "title": "String"
+        "title": "文字列"
       },
       "Concepts/time": {
         "title": "時間"
@@ -171,7 +180,7 @@
         "title": "インタープリターモードとコンパイル済みモード"
       },
       "Concepts/methods": {
-        "title": "Methods"
+        "title": "メソッド"
       },
       "Concepts/parameters": {
         "title": "引数"
@@ -379,10 +388,10 @@
         "title": "フォームエディター"
       },
       "FormEditor/forms": {
-        "title": "About 4D Forms"
+        "title": "4D フォームについて"
       },
       "FormEditor/macros": {
-        "title": "Form Editor Macros"
+        "title": "フォームエディターマクロ"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -394,7 +403,7 @@
         "title": "動作"
       },
       "FormEditor/propertiesForm": {
-        "title": "Form Properties"
+        "title": "フォームプロパティ"
       },
       "FormEditor/formSize": {
         "title": "Form Size"
@@ -412,7 +421,7 @@
         "title": "印刷"
       },
       "FormEditor/windowSize": {
-        "title": "Window Size"
+        "title": "ウィンドウサイズ"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -749,7 +758,7 @@
         "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
-        "title": "Calling ORDA class functions"
+        "title": "ORDAクラス関数の呼び出し"
       },
       "REST/configuration": {
         "title": "サーバー設定"
@@ -772,16 +781,46 @@
       "Users/overview": {
         "title": "概要"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "はじめに"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
       "WebServer/sessions": {
         "title": "User sessions"
       },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "概要"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "データベース管理"
+      },
+      "WebServer/webServerConfig": {
+        "title": "バックアップ設定"
+      },
       "WebServer/webServerObject": {
-        "title": "Web Server object"
+        "title": "Webサーバーオブジェクト"
       }
     },
     "links": {
-      "v18 R5 BETA": "v18 R5 BETA",
-      "v18 R4": "v18 R4",
+      "v18 R6 BETA": "v18 R6 BETA",
+      "v18 R5": "v18 R5",
       "v18": "v18"
     },
     "categories": {
@@ -795,9 +834,10 @@
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
+      "Web Development": "Web Development",
       "REST Server": "REST サーバー",
       "Forms": "Forms",
-      "Form Properties": "Form Properties",
+      "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
@@ -812,17 +852,21 @@
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "Forms",
-    "Form Properties|no description given": "Form Properties",
+    "Form Properties|no description given": "フォームプロパティ",
     "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web サーバー",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
+    "Web Administration|no description given": "Web Administration",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
     "Getting started|no description given": "はじめに",

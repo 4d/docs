@@ -1,6 +1,6 @@
 ---
 id: classFunctions
-title: Calling ORDA class functions
+title: ORDAクラス関数の呼び出し
 ---
 
 
@@ -48,7 +48,7 @@ Functions are called on the corresponding object on the server datastore.
 
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
 
-The following rules apply:
+次のルールが適用されます:
 
 - Parameters must be passed in the **body of the POST request**
 - Parameters must be enclosed within a collection (JSON format)
@@ -74,10 +74,10 @@ Entities passed in parameters are referenced on the server through their key (*i
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
-| Properties               | タイプ                                  | 説明                                                                         |
+| プロパティ                    | タイプ                                  | 説明                                                                         |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
+| __DATACLASS              | 文字列                                  | Mandatory - Indicates the Dataclass of the entity                          |
 | __ENTITY                 | ブール                                  | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
@@ -100,11 +100,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Properties               | タイプ    | 説明                                                                                   |
-| ------------------------ | ------ | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed  | Optional - Values to modify                                                          |
-| __DATASET                | String | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | ブール    | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| プロパティ                    | タイプ   | 説明                                                                                   |
+| ------------------------ | ----- | ------------------------------------------------------------------------------------ |
+| Attributes of the entity | mixed | Optional - Values to modify                                                          |
+| __DATASET                | 文字列   | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES               | ブール   | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 

@@ -10,7 +10,7 @@ Vous pouvez obtenir plusieurs informations du serveur REST :
 
 ## Catalogue
 
-Utilisez les paramètres [`$catalog`]($catalog.md),[`$catalog/{dataClass}`]($catalog.md#catalogdataclass), ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste [des classes du datastore exposées et leurs attributs](configuration.md#exposing-tables-and-fields).
+Utilisez les paramètres [`$catalog`]($catalog.md),[`$catalog/{dataClass}`]($catalog.md#catalogdataclass), ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste [des dataclasses exposées et leurs attributs](configuration.md#exposing-tables-and-fields).
 
 Pour obtenir la collection de toutes les dataclass exposées avec leurs attributs :
 
@@ -25,7 +25,7 @@ Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les
 
 Les sélections d'entité générées par les requêtes peuvent avoir les deux propriétés suivantes : `queryPlan` et `queryPath`. Pour calculer et retourner ces propriétés, il vous suffit d'ajouter [`$queryPlan`]($queryplan.md) et/ou [`$queryPath`]($querypath.md) dans la demande REST.
 
-Par exemple:
+Par exemple :
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 

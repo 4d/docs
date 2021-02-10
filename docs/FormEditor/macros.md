@@ -78,7 +78,7 @@ When macros are defined in your 4D project, you can call a macro using the conte
 
 ![](assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macros items are sorted in the order macro objects are defined in the file. 
+This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macro items are sorted in alphabetical order. 
 
 When macros exist at both the project and component levels, the following order is applied: 
 
@@ -145,7 +145,6 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 }
 ```
 
-> Keep in mind that the order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.  
 
 
 ## Instantiating macros in 4D

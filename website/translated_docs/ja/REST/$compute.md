@@ -25,7 +25,7 @@ You can use any of the following keywords:
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $all    | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
 | average | Get the average on a numerical attribute                                                                                                                                              |
-| count   | Get the total number in the collection or datastore class (in both cases you must specify an attribute)                                                                               |
+| count   | Get the total number in the collection or dataclass (in both cases you must specify an attribute)                                                                                     |
 | min     | Get the minimum value on a numerical attribute or the lowest value in an attribute of type String                                                                                     |
 | max     | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
 | sum     | Get the sum on a numerical attribute                                                                                                                                                  |
@@ -37,7 +37,7 @@ If you want to get all the computations for an attribute of type Number, you can
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-**Response**:
+**レスポンス**:
 
 ````
 {
@@ -55,7 +55,7 @@ If you want to get all the computations for an attribute of type String, you can
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**レスポンス**:
 
 ````
 {
@@ -71,9 +71,10 @@ If you want to just get one calculation on an attribute, you can write the follo
 
  `GET  /rest/Employee/salary/?$compute=sum`
 
-**Response**:
+**レスポンス**:
 
 `235000`
+
 
 If you want to perform a calculation on an Object attribute, you can write the following:
 

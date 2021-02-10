@@ -600,6 +600,7 @@ Possible values:
 *	1 = TLSv1_0
 *	2 = TLSv1_1
 *	3 = TLSv1_2 (default)
+*	4 = TLSv1_3
 
 If modified, the server must be restarted to use the new value.
 

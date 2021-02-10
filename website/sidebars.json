@@ -50,12 +50,22 @@
 	"API/zipFolderClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
-  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/building"],
+  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/building","Admin/tls","Admin/debugLogFiles"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
-  "Web Server":["WebServer/webServerObject","WebServer/sessions"],
-	"REST Server": [
-		{
+  "Web Server":["WebServer/webServer",
+	"WebServer/webServerConfig",
+	"WebServer/webServerAdmin",
+	"WebServer/webServerObject"],
+  "Web Development":["WebServer/gettingStarted",
+	"WebServer/templates",
+	"WebServer/httpRequests",
+	"WebServer/allowProject",
+	"WebServer/errorPages",
+	"WebServer/authentication",
+	"WebServer/sessions",
+	"WebServer/preemptiveWeb"],
+  "REST Server": [		{
         "type": "subcategory",
         "label": "Guides",
         "ids": [
