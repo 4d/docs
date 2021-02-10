@@ -21,9 +21,9 @@ Die Seite enthält die Schaltflächen für Aktionen, über die Sie direkt auf di
 
 ## Logbuch öffnen
 
-Bei allen Überprüfungsarten generiert 4D ein Logbuch im Ordner `Logs` der Datenbank. Hier erscheinen alle durchgeführten Überprüfungen und evtl. gefundene Fehler. Gibt es keine Fehler, wird das durch [OK] angezeigt. It is created in XML format and is named: *DatabaseName*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml where:
+Bei allen Überprüfungsarten generiert 4D ein Logbuch im Ordner `Logs` der Anwendung. Hier erscheinen alle durchgeführten Überprüfungen und evtl. gefundene Fehler. Gibt es keine Fehler, wird das durch [OK] angezeigt. Das Logbuch wird im XML-Format angelegt und hat den Namen *ApplicationName*_Verify_Log_*yyyy-mm-dd hh-mm-ss*.xml:
 
-- *DatabaseName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
+- *ApplicationName* ist der Name der Projektdatei ohne Endung, zum Beispiel "Rechnungen"
 - *yyyy-mm-dd hh-mm-ss* ist der Zeitstempel der Datei. Er basiert auf der lokalen Systemzeit, zur der die Wartungsoperation gestartet wurde, zum Beispiel "2019-02-11 15-20-45".
 
 Klicken Sie auf die Schaltfläche **Logbuch öffnen**, zeigt 4D das neueste Logbuch im standardmäßigen Browser des Rechners an.
