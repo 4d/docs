@@ -17,9 +17,9 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 
 ## 開発
 
-4D プロジェクトは **4D** アプリケーションを使って作成します。 It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project.
+4D プロジェクトは **4D** アプリケーションを使って作成します。 4D は 4D プロジェクト用の統合開発環境 (IDE) を提供するだけでなく、Webサーバー、モバイルプロジェクトジェネレーター、およびアプリケーションランタイムも提供し、プロジェクトの開発・テスト・デバッグに使います。
 
-Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+マルチユーザー開発は標準的な **ソース管理** リポジトリツール (Perforce, Git, SVN 等) を使っておこないます。これによって、異なるブランチで開発し、比較してマージまたは変更を戻すといった処理が可能になります。
 
 
 ## 運用
