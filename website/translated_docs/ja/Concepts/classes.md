@@ -154,11 +154,15 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 Class オブジェクトは [共有オブジェクト](shared.md) です。したがって、異なる 4Dプロセスから同時にアクセスすることができます。
 
-### Inheritance
+### 継承
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/classClass.md#superclass).
+クラス宣言において [Class extends](classes.md#class-extends-classname) キーワードを使うと、そのクラスは親クラス (つまり
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/classClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
+`スーパークラス`) を継承します。 </p> 
+
+関数やプロパティがクラス内で見つからない場合、4D はそのクラスの [`スーパークラス`](API/classClass.md#superclass) 内を検索します。見つからない場合、4D はさらに、そのスーパークラスのスーパークラス内を探します。これは、スーパークラスが存在しなくなるまで続きます (すべてのオブジェクトは "Object" スーパークラスを継承しています)。 
+
+
 
 
 ## クラスキーワード
@@ -170,28 +174,42 @@ When 4D does not find a function or a property in a class, it searches it in its
 - `Class extends <ClassName>`: 継承を定義します。
 
 
+
+
 ### Function
 
+
+
 #### シンタックス
+
+
 
 ```4d
 Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // コード
 ```
 
-クラス関数とは、当該クラスのプロパティです。 クラス関数は [4D.Function](API/formulaClass.md#4dfunction-オブジェクトについて) クラスのオブジェクトです。
+
+クラス関数とは、当該クラスのプロパティです。 クラス関数は [4D.Function](API/formulaClass.md#4dfunction-オブジェクトについて) クラスのオブジェクトです。 
 
 クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
+
+
 
 > **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
 
 関数名のすぐ後に、名前とデータ型を指定して [引数](#引数) を宣言します (戻り値の宣言も可)。 たとえば:
 
+
+
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
+
 クラスメソッド内でオブジェクトインスタンスを参照するには `This` コマンドを使います。 たとえば:
+
+
 
 ```4d  
 Function setFullname($firstname : Text; $lastname : Text)
@@ -202,41 +220,59 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
+
 クラス関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>.\<FunctionName>*" (例: "MyClass.myMethod")。
 
 アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
 
-- `()` 演算子の使用 For example, `myObject.methodName("hello")`
-- use of a "4D.Function" class member method:
-    - [`apply()`](API/formulaClass.md#apply)
+- `()` 演算子の使用 例: `myObject.methodName("hello")`
+- "4D.Function" クラスメンバーメソッドの使用: 
+      - [`apply()`](API/formulaClass.md#apply)
     - [`call()`](API/formulaClass.md#call)
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+
+
+> **スレッドセーフに関する警告: ** クラス関数がスレッドセーフではないのに、"プリエンプティブプロセスで実行可能" なメソッドから呼び出された場合: - 普通のメソッドの場合とは異なり、コンパイラーはエラーを生成しません。 - ランタイムにおいてのみ、4D はエラーを生成します。
 
 
 
 
-#### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. パラメーター名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。
+
+#### 引数
+
+関数の引数は、引数名とデータ型をコロンで区切って宣言します。 パラメーター名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。 
+
+
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
+
+
+
 > パラメーターの型が宣言されていない場合には、`バリアント型` として定義されます。
 
 関数の戻り値を宣言するには (任意)、入力パラメーターリストに矢印 (->) と戻り値の定義を追加します。 XPath: /ul[5]/li[2]/ClassName/ClassName/FunctionName/p[22] たとえば:
+
+
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-戻り値は、コロン (:) 記号の後に戻り値のデータ型だけを指定して宣言することもできます。その場合は、自動的に $0 が使用されます。 たとえば:
+
+戻り値は、コロン (:) 記号の後に戻り値のデータ型だけを指定して宣言することもできます。その場合は、自動的に $0 が使用されます。 たとえば: 
+
+
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
+
+
+
 > メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 たとえば:
 > 
 > ```4d
@@ -249,7 +285,11 @@ Function add($x : Integer)
 
 
 
+
+
 #### 例題
+
+
 
 ```4d
 // クラス: Rectangle
@@ -263,6 +303,9 @@ Function getArea()->$result : Integer
     $result:=(This.height)*(This.width)
 ```
 
+
+
+
 ```4d
 // プロジェクトメソッドにて
 var $rect : cs.Rectangle
@@ -274,9 +317,16 @@ $area:=$rect.getArea() //5000
 
 
 
+
+
+
 ### Class Constructor
 
+
+
 #### シンタックス
+
+
 
 ```4d
 // クラス: MyClass
@@ -284,26 +334,34 @@ Class Constructor({$parameterName : type; ...})
 // コード
 ```
 
-クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。
 
-In that case, when you call the [`new()`](API/classClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。  
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
+クラスコンストラクターが定義されていると、 [`new()`](API/classClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (引数を指定している場合は `new()` 関数に渡します)。
+
+クラスコンストラクター関数の場合には、 `Current method name` コマンドは次を返します: "*\<ClassName>:constructor*" (例:  "MyClass:constructor")。
 
 
 
-#### Example:
+
+
+#### 例題:
+
+
 
 ```4d
-// Class: MyClass
-// Class constructor of MyClass
-Class Constructor ($name : Text)
+// クラス: MyClass
+// MyClass のクラスコンストラクター
+Class constructor ($name : Text)
     This.name:=$name
 ```
 
+
+
+
 ```4d
-// In a project method
-// You can instantiate an object
+// プロジェクトメソッドにて
+// オブジェクトをインスタンス化します
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -312,16 +370,24 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
+
+
+
 ### Class extends \<ClassName>
 
-#### Syntax
+
+
+#### シンタックス
+
+
 
 ```4d
-// Class: ChildClass
+// クラス: ChildClass
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. この子クラスは、親クラスのすべての機能を継承します。
+
+クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 この子クラスは、親クラスのすべての機能を継承します。
 
 クラス継承は次のルールに沿っている必要があります:
 
@@ -334,9 +400,13 @@ The `Class extends` keyword is used in class declaration to create a user class 
 
 派生クラスは、[`Super`](#super) コマンドを使って親クラスのコンストラクターを呼び出すことができます。.
 
+
+
 #### 例題
 
 `Polygon` クラスを継承した `Square` クラスを作成します。
+
+
 
 ```4d
 // クラス: Square
@@ -358,7 +428,12 @@ Class constructor ($side : Integer)
         $0:=This.height*This.width
 ```
 
+
+
+
 ### Super
+
+
 
 
 #### Super {( param{;...;paramN} )} {-> Object}
@@ -368,15 +443,19 @@ Class constructor ($side : Integer)
 | param | mixed  | -> | 親コンストラクターに受け渡す引数 |
 | 戻り値   | object | <- | 親オブジェクト          |
 
+
 `Super` キーワードによってスーパークラス (親クラス) を呼び出すことができます。
 
 `Super` は次の2つの目的のために使います:
 
 - [コンストラクターコード](#class-constructor) 内において、 `Super` はスーパークラスのコンストラクターを呼び出すコマンドです。 コンストラクター内で使用する際には、`Super` コマンドは単独で使用され、また `This` キーワードよりも先に使用される必要があります。
-    - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
+  
+      - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
     - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
 
     - `Super` を、オブジェクトのスコープ外で呼び出した場合、または、スーパークラスコンストラクターがすでに呼び出されたオブジェクトを対象に呼び出した場合には、エラー -10746 が生成されます。
+
+
 
 ```4d
 // myClass コンストラクター
@@ -385,16 +464,24 @@ Super($text1) // テキスト型引数をスーパークラスコンストラク
 This.param:=$text2 // 2番目の引数を使用します
 ```
 
+
 - [クラスメンバー関数](#function) 内において、`Super` はスーパークラスのプロトタイプを指し、スーパークラス階層のメンバーメソッドの呼び出しを可能にします。
+
+
 
 ```4d
 Super.doSomething(42) // スーパークラスにて宣言されている
 // "doSomething" メンバーメソッドを呼び出します
 ```
 
+
+
+
 #### 例題 1
 
 クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラス の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
+
+
 
 ```4d
 // クラス: Rectangle
@@ -412,6 +499,9 @@ Function getArea()
     var $0 : Integer
     $0:=(This.height)*(This.width)
 ```
+
+
+
 
 ```4d
 // クラス: Square
@@ -432,9 +522,14 @@ Function getArea()
     $0:=This.height*This.width
 ```
 
+
+
+
 #### 例題 2
 
 クラスメンバーメソッド内で `Super` を使う例です。 メンバーメソッドを持つ `Rectangle` クラスを作成します:
+
+
 
 ```4d
 // クラス: Rectangle
@@ -444,7 +539,10 @@ Function nbSides()
     $0:="I have 4 sides"
 ```
 
+
 `Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:
+
+
 
 ```4d
 // クラス: Square
@@ -456,7 +554,10 @@ Function description()
     $0:=Super.nbSides()+" which are all equal"
 ```
 
+
 すると、プロジェクトメソッド内には次のように書けます:
+
+
 
 ```4d
 var $square : Object
@@ -465,7 +566,12 @@ $square:=cs.Square.new()
 $message:=$square.description() // "I have 4 sides which are all equal"
 ```
 
+
+
+
 ### This
+
+
 
 #### This -> Object
 
@@ -473,39 +579,52 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 | --- | ------ | -- | ---------- |
 | 戻り値 | object | <- | カレントオブジェクト |
 
+
 `This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) で使用することができます。
 
-`This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
+`This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。 
 
-オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 For example:
+オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 たとえば:
+
+
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/classClass.md#new) function), its `This` is bound to the new object being constructed.
+
+[クラスコンストラクター](#class-constructor) 関数が  [`new()`](API/classClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
+
+
 
 ```4d
-//Class: ob
+// クラス: ob
 
-Class Constructor  
+Class constructor  
 
-    // Create properties on This as
-    // desired by assigning to them
+    // This のプロパティを
+    // 代入によって作成します
     This.a:=42 
 ```
 
+
+
+
 ```4d
-// in a 4D method  
+// 4Dメソッドにて 
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. こちらの [例題](#例題-1) を参照ください。
 
+
+
+> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。
 
 基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
+
+
 
 ```4d
 // クラス: ob
@@ -514,7 +633,10 @@ Function f()
     $0:=This.a+This.b
 ```
 
+
 この場合、プロジェクトメソッドには次のように書けます:
+
+
 
 ```4d
 $o:=cs.ob.new()
@@ -522,7 +644,11 @@ $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
 ```
+
+
 この例では、変数 $o に代入されたオブジェクトは *f* プロパティを持たないため、これをクラスより継承します。 *f* は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
+
+
 
 
 ## クラスコマンド
@@ -530,14 +656,22 @@ $val:=$o.f() //8
 4D ランゲージには、クラス機能を扱う複数のコマンドがあります。
 
 
+
+
 ### OB Class
+
+
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` は引数として渡したオブジェクトのクラスを返します。
+`OB Class` は引数として渡したオブジェクトのクラスを返します。 
+
+
 
 
 ### OB Instance of
+
+
 
 #### OB Instance of ( object ; class ) -> Boolean
 
