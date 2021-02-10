@@ -3,8 +3,33 @@ id: developing
 title: Developing a project
 ---
 
+4D projects are developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). 
 
-4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as an application runtime, allowing to develop, test, and debug the project. 
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications. 
+
+
+
+## File saving
+
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus. 
+
+Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+
+The 4D development framework includes a file access manager to control concurrent access:
+
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor: 
+![](assets/en/Project/lockicon.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
+![](assets/en/Project/projectReload.png)  
+	- **Yes**: discard editor changes and reload the modified version
+	- **No**: save changes and overwrite the other version
+	- **Cancel**: do not save
+
+This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
+
+
+
+4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project manager, and an application runtime, allowing to develop, test, and debug any kind of project. 
 
 > Because most of the 4D project files are text files, you can use any text editor to work in them. Concurrent file access is handled via a file access manager (see below).
 
@@ -58,20 +83,3 @@ However, you need to pay attention to the following behavior differences compare
 > It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
 
 
-## File saving
-
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus. 
-
-Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
-
-The 4D development framework includes a file access manager to control concurrent access:
-
-- if an open file is read-only at the OS level, a locked icon is displayed in the editor: 
-![](assets/en/Project/lockicon.png)
-- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
-![](assets/en/Project/projectReload.png)  
-	- **Yes**: discard editor changes and reload the modified version
-	- **No**: save changes and overwrite the other version
-	- **Cancel**: do not save
-
-This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).

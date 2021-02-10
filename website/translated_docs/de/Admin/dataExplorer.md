@@ -18,7 +18,7 @@ The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component f
 - **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#webadmin-settings),
 - **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the Data Explorer is accessed through the **Data Explorer** menu item (see below), an automatic authentication is provided.
 
-> If data must not be available on the server, the Data Explorer access can be disabled using the [`.setAdminProtection()`](API/datastoreClass.md#setadminprotection) function.
+> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/datastoreClass.md#setadminprotection) function.
 
 
 ## Opening the Data Explorer

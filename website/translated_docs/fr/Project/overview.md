@@ -14,22 +14,12 @@ Les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils p
 
 De plus, les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code. Les projets sont organisés en interne dans des [fichiers et dossiers](Project/architecture.md).
 
-La flexibilité du développement d'un projet 4D est particulièrement démontrée lorsque plusieurs développeurs doivent travailler simultanément sur la même partie d'une application. Les fichiers de projet 4D sont particulièrement bien adaptés pour être gérés par un système de **contrôle de version** (Perforce, Git, SVN, etc.), permettant aux équipes de développement de tirer parti de fonctionnalités telles que :
-
-- Versioning
-- Comparaisons de révision
-- Retours en arrière (Rollbacks)
 
 ## Développement
 
-Votre application 4D peut ouvrir des projets **en local** ou **à distance** :
+Les projets 4D sont développés à l'aide de l'application **4D**. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project.
 
-- **[en loca](creating.md#opening-a-local-project)** - les fichiers de projet sont stockés sur le même poste que l'application 4D; ils sont exécutés et édités par une seule application 4D.
-- **[à distance](creating.md#opening-a-remote-project)** - les fichiers de projet sont stockés sur la machine 4D Server; Les applications 4D se connectent au serveur et ouvrent le projet en lecture seule, généralement à des fins de test. Cependant, un projet ouvert par 4D Server est modifiable par 4D si [les deux applications sont sur la même machine](Project/developing.md#using-4d-developer-on-the-same-machine).
-
-![](assets/en/getStart/localremote.png)
-
-Lorsque vous sélectionnez le projet à ouvrir, vous sélectionnez également le mode à utiliser.
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
 ## Déploiement

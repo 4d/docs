@@ -152,7 +152,7 @@ If(vsNom#"")
 End if
 ```
 
-Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple:
+Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :
 
 ```4d
 //L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"

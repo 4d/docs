@@ -18,7 +18,7 @@ The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component f
 - **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#webadmin-settings),
 - **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the Data Explorer is accessed through the **Data Explorer** menu item (see below), an automatic authentication is provided.
 
-> If data must not be available on the server, the Data Explorer access can be disabled using the [`.setAdminProtection()`](API/datastoreClass.md#setadminprotection) function.
+> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/datastoreClass.md#setadminprotection) function.
 
 
 ## Opening the Data Explorer
@@ -146,7 +146,7 @@ Text filters are not diacritic (a = A).
 
 The filter is of the "starts with" type. For example, entering "Jim" will show "Jim" and "Jimmy" values.
 
-You can also use the wildcard character (@) to replace one or more starting characters. Par exemple:
+You can also use the wildcard character (@) to replace one or more starting characters. Par exemple :
 
 | A filter with | Finds                                              |
 | ------------- | -------------------------------------------------- |

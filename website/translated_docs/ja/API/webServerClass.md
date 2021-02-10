@@ -8,7 +8,7 @@ The `WebServer` class API allows you to start and monitor a web server for the m
 
 
 
-### Web Server object
+### Webサーバーオブジェクト
 
 Web server objects are instantiated with the [`WEB Server`](#web-server) command.
 

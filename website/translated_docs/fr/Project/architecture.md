@@ -3,7 +3,7 @@ id: architecture
 title: Architecture of a project
 ---
 
-Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de l'application (dossier package). Par exemple:
+Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de l'application (dossier package). Par exemple :
 
 - MonProjet
     - Composants

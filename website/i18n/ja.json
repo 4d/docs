@@ -385,10 +385,10 @@
         "title": "フォームエディター"
       },
       "FormEditor/forms": {
-        "title": "About 4D Forms"
+        "title": "4D フォームについて"
       },
       "FormEditor/macros": {
-        "title": "Form Editor Macros"
+        "title": "フォームエディターマクロ"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -400,7 +400,7 @@
         "title": "動作"
       },
       "FormEditor/propertiesForm": {
-        "title": "Form Properties"
+        "title": "フォームプロパティ"
       },
       "FormEditor/formSize": {
         "title": "Form Size"
@@ -418,7 +418,7 @@
         "title": "印刷"
       },
       "FormEditor/windowSize": {
-        "title": "Window Size"
+        "title": "ウィンドウサイズ"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -755,7 +755,7 @@
         "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
-        "title": "Calling ORDA class functions"
+        "title": "ORDAクラス関数の呼び出し"
       },
       "REST/configuration": {
         "title": "サーバー設定"
@@ -782,7 +782,7 @@
         "title": "User sessions"
       },
       "WebServer/webServerObject": {
-        "title": "Web Server object"
+        "title": "Webサーバーオブジェクト"
       }
     },
     "links": {
@@ -803,7 +803,7 @@
       "Web Server": "Web サーバー",
       "REST Server": "REST サーバー",
       "Forms": "Forms",
-      "Form Properties": "Form Properties",
+      "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
@@ -818,7 +818,7 @@
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "Forms",
-    "Form Properties|no description given": "Form Properties",
+    "Form Properties|no description given": "フォームプロパティ",
     "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",

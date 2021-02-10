@@ -731,7 +731,7 @@ where:
 
 **Using quotes**
 
-When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Par exemple:
+When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Par exemple :
 
 ```4d
 "employee.name = 'smith' AND employee.firstname = 'john'"

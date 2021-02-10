@@ -48,38 +48,6 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 - **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée.
 
 
-## Ouvrir un projet distant
-
-La première fois que vous vous connectez à un projet 4D Server via un 4D distant, vous utiliserez généralement la boîte de dialogue de connexion standard. Par la suite, vous pourrez vous connecter directement en utilisant le menu **Ouvrir projets récents** ou un fichier de raccourci 4DLink ([voir ci-dessous](#project-opening-shortcuts)).
-
-Pour vous connecter à distance à un projet 4D Server :
-
-1. Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue, <p>OU<p> Sélectionnez **Ouvrir > Projet distant...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.
-
-La boîte de dialogue de connexion à 4D Server apparaît. Cette boîte de dialogue comporte trois onglets : **Récent**, **Disponible** et **Personnalisé**.
-
-Si 4D Server est connecté au même réseau que le 4D distant, sélectionnez **Disponible**. 4D Server inclut un système de diffusion TCP/IP intégré qui, par défaut, publie le nom des projets 4D Server disponibles sur le réseau. La liste est triée par ordre d'apparition et est mise à jour dynamiquement.
-
-![](assets/en/getStart/serverConnect.png)
-
-Pour vous connecter à un serveur de la liste, double-cliquez sur son nom ou sélectionnez-le et cliquez sur le bouton **OK**.
-
-> Un accent circonflexe (^) est placé avant le nom des projets publiés avec l'option de chiffrement activée.
-
-Si le projet publié n'est pas affiché dans la liste **Disponible**, sélectionnez **Personnalisé**. La page Personnalisé vous permet de vous connecter à un serveur publié sur le réseau en utilisant son adresse réseau et en lui attribuant un nom personnalisé.
-
-![](assets/en/getStart/serverConnect2.png)
-
-
-- **Nom du projet** : définit le nom local du projet 4D Server. Ce nom sera utilisé dans la page **Récent** pour faire référence au projet.
-- **Adresse réseau** : L'adresse IP de la machine sur laquelle le 4D Server a été lancé. <p>Si deux serveurs sont exécutés simultanément sur la même machine, l'adresse IP doit être suivie de deux points et d'un numéro de port, par exemple : `192.168.92.104:19814`. <p>Par défaut, le port de publication d'un 4D Server est 19813. Ce numéro peut être modifié dans les paramètres du projet.
-
-Une fois que cette page attribue un serveur, cliquez sur le bouton **OK** pour vous connecter au serveur.
-
-> Si le projet est publié avec l'option de chiffrement activée, vous devez ajouter un accent circonflexe (^) avant le nom, sinon la connexion sera refusée. Pour plus d'informations, reportez-vous à la section Chiffrement des connexions client/serveur.
-
-Une fois la connexion au serveur établie, le projet distant sera répertorié dans l'onglet **Récent**.
-
 
 
 ## Raccourcis d’ouverture des projets
