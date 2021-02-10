@@ -13,7 +13,7 @@ Auf dieser Seite wählen Sie Optionen zum Reparieren der Datendatei bei Beschäd
 ## Datei Überblick
 
 ### Datendatei reparieren
-Pfadname der aktuellen Datendatei. Über die Schaltfläche ** [...]** können Sie eine andere Datendatei auswählen. Klicken Sie auf diese Schaltfläche, erscheint ein Standard-Öffnen Dialog, um die gewünschte Datendatei zum Reparieren auszuwählen. Bei der [Standard Reparatur](#standard_repair) müssen Sie eine Datendatei wählen, die mit der geöffneten Projektdatei kompatibel ist. Bei [Reparieren nach Datensatzheader](#recover-by-record-headers) können Sie jede Datendatei wählen. Bestätigen Sie dieses Dialogfenster, erscheint der Pfadname der Datei zum Reparieren im Fenster.
+Pfadname der aktuellen Datendatei. Über die Schaltfläche ** [...]** können Sie eine andere Datendatei auswählen. Klicken Sie auf diese Schaltfläche, erscheint ein Standard-Öffnen Dialog, um die gewünschte Datendatei zum Reparieren auszuwählen. Bei der [Standard Reparatur](#standard_reparatur) müssen Sie eine Datendatei wählen, die mit der geöffneten Projektdatei kompatibel ist. Bei [Reparieren nach Datensatzheader](#Wiederherstellen-nach-Datensatzheader) können Sie jede Datendatei wählen. Bestätigen Sie dieses Dialogfenster, erscheint der Pfadname der Datei zum Reparieren im Fenster.
 
 ### Ordner Backup der Originaldateien
 Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert  und im Unterordner “Replaced files (repairing)” im Datenbank-Ordner abgelegt. Über die zweite Schaltfläche **[...]** können Sie vor dem Reparieren einen anderen Ort zum Speichern der Originaldateien angeben. Diese Möglichkeit ist insbesondere beim Reparieren umfangreicher Dateien auf verschiedenen Festplatten hilfreich.
@@ -26,14 +26,14 @@ Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert  und im Unt
 
 Wählen Sie diese Option, wenn nur wenige Datensätze oder Indizes beschädigt sind (Adresstabellen sind intakt). Die Daten werden komprimiert und repariert. Diese Art der Reparatur lässt sich nur ausführen, wenn Datendatei und Strukturdatei zueinander passen.
 
-Ist die Reparatur abgeschlossen, erscheint die Seite "Reparieren" des MSC. Eine Meldung gibt an, ob die Reparatur erfolgreich war. In diesem Fall können Sie die Datenbank sofort öffnen. ![](assets/en/MSC/MSC_RepairOK.png)
+Ist die Reparatur abgeschlossen, erscheint die Seite "Reparieren" des MSC. Eine Meldung gibt an, ob die Reparatur erfolgreich war. In diesem Fall können Sie die Anwendung sofort öffnen. ![](assets/en/MSC/MSC_RepairOK.png)
 
 ## Wiederherstellen nach Datensatzheader
 Verwenden Sie diese Reparatur auf niederer Ebene nur, wenn die Datendatei ernsthaft beschädigt ist und alle anderen Lösungen, wie Wiederherstellen über ein Backup, Standard Reparatur wirkungslos geblieben sind.
 
 4D Datensätze sind unterschiedlich groß. Deshalb muss die Stelle, wo sie auf der Festplatte in einer spezifischen Tabelle, genannt Adresstabelle, gespeichert sind, beibehalten werden, um sie wieder zu finden. Das Programm greift deshalb auf die Adresse des Datensatzes über einen Index und eine Adresstabelle zu. Sind nur Datensätze oder Indizes beschädigt, reicht die Standardreparatur in der Regel aus, um das Problem zu lösen. Ist dagegen die Adresstabelle selbst betroffen, ist ein komplexeres Wiederherstellen erforderlich, da diese Tabelle wiederhergestellt werden muss. Dazu verwendet das MSC die Marker, die im Kopfteil jedes Datensatzes angelegt sind. Sie sind vergleichbar mit einem Inhaltsverzeichnis des Datensatzes, inkl. aller wichtigen Informationen, über die sich die Adresstabelle rekonstruieren lässt.
 
-> If you have deselected the **Records definitively deleted** option in the properties of a table in the database structure, performing a recovery by header markers may cause records that were previously deleted to reappear. Wiederherstellen nach Kopfteil berücksichtigt keine Einschränkungen zur Datenintegrität. So erhalten Sie nach Ausführen dieser Operation u. U. doppelte Werte in einmaligen Feldern oder NULL Werte mit Feldern, für die **Nie Null** definiert wurde.
+> Haben Sie in der Struktur in den Tabelleneigenschaften die Option **Datensätze definitiv löschen** deaktiviert, können nach dem Wiederherstellen nach Datensatzheader zuvor gelöschte Datensätze wieder erscheinen. Wiederherstellen nach Kopfteil berücksichtigt keine Einschränkungen zur Datenintegrität. So erhalten Sie nach Ausführen dieser Operation u. U. doppelte Werte in einmaligen Feldern oder NULL Werte mit Feldern, für die **Nie Null** definiert wurde.
 
 Klicken Sie auf die Schaltfläche **Scannen und Reparieren**, scannt 4D die Datendatei komplett. Ist die Operation abgeschlossen, erscheint folgendes Fenster:
 
