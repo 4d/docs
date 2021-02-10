@@ -584,7 +584,7 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 
 `This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。 
 
-オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 For example:
+オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 たとえば:
 
 
 
@@ -594,17 +594,17 @@ $val:=$o.f() //42
 ```
 
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/classClass.md#new) function), its `This` is bound to the new object being constructed.
+[クラスコンストラクター](#class-constructor) 関数が  [`new()`](API/classClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 
 
 ```4d
-//Class: ob
+// クラス: ob
 
-Class Constructor  
+Class constructor  
 
-    // Create properties on This as
-    // desired by assigning to them
+    // This のプロパティを
+    // 代入によって作成します
     This.a:=42 
 ```
 
@@ -612,7 +612,7 @@ Class Constructor
 
 
 ```4d
-// in a 4D method  
+// 4Dメソッドにて 
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
@@ -620,7 +620,7 @@ $val:=$o.a //42
 
 
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. こちらの [例題](#例題-1) を参照ください。
+> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。
 
 基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
 
