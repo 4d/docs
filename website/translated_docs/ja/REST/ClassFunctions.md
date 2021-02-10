@@ -1,6 +1,6 @@
 ---
 id: classFunctions
-title: Calling ORDA class functions
+title: ORDAクラス関数の呼び出し
 ---
 
 
