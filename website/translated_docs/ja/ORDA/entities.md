@@ -184,29 +184,29 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 データクラスに対して、異なるエンティティセレクションを好きなだけ同時に作成し、使用することができます。 エンティティセレクションは、エンティティへの参照を格納しているに過ぎないという点に注意してください。 異なるエンティティセレクションが同じエンティティへの参照を格納することも可能です。
 
-### Shareable or alterable entity selections
+### 共有可能/追加可能なエンティティセレクション
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/entitySelectionClass.md#add) function, but only usable by the current process).
+エンティティセレクションには 2種類あります: **共有可能 (shareable)** (複数のプロセスで読み込み可能、ただし追加不可) のものと、**追加可能 (alterable)** ([`add()`](API/entitySelectionClass.md#add) 関数が使用可能、ただしカレントプロセスでのみ利用可) のものです:
 
-#### Properties
+#### プロパティ
 
-A **shareable** entity selection has the following characteristics:
+**共有可能** なエンティティセレクションは以下のような特徴を持ちます:
 
-- it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
+- 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で引数として受け渡しすることができます。
 - 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、*ロック識別子* を持っていないということです)。
 - 新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、[`.add( )`](API/entitySelectionClass.md#add) 関数を呼び出す前に、[`.copy( )`](API/entitySelectionClass.md#copy) 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。
 
-> Most entity selection functions (such as [`.slice()`](API/entitySelectionClass.md#slice), [`.and()`](API/entitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+> 大多数のエンティティセレクション関数 ([`.slice()`](API/entitySelectionClass.md#slice), [`.and()`](API/entitySelectionClass.md#and) 等) は、呼び出し対象のエンティティセレクションを変更せずに新規のエンティティセレクションを返すため、共有可能なエンティティセレクションに対して使用できます。
 
-An **alterable** entity selection has the following characteristics:
+**追加可能** なエンティティセレクションは以下のような特徴を持ちます:
 
 - プロセス間での共有はできません。また共有オブジェクト/コレクションへの保存もできません。 共有不可のエンティティセレクションを共有オブジェクト/コレクションに保存しようとした場合、エラーがトリガーされます (エラー -10721 - 共有オブジェクトまたはコレクションにおいてサポートされる値の型ではありません)。
-- it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/entitySelectionClass.md#add) function.
+- 新規エンティティを受け取ることができます (つまり、[`.add()`](API/entitySelectionClass.md#add) 関数を使用できます)。
 
 
-#### How are they defined?
+#### 共有可能/追加可能エンティティセレクションの定義
 
-The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/entitySelectionClass.md#isalterable) function or the `OB Is shared` command.
+エンティティセレクションが **共有可能** または **追加可能** のいずれの特性を持つかは、そのエンティティセレクションの作成時に定義され、あとから変更することはできません。 You can know the nature of an entity selection using the [.isAlterable()](API/entitySelectionClass.md#isalterable) function or the `OB Is shared` command.
 
 
 A new entity selection is **shareable** in the following cases:
