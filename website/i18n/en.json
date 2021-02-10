@@ -11,6 +11,9 @@
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
+      },
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
@@ -45,7 +48,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Emails"
+        "title": "Emails and Attachments"
       },
       "API/entityClass": {
         "title": "Entity"
