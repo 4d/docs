@@ -145,7 +145,6 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 }
 ```
 
-> Keep in mind that the order of macros objects in the file defines the [**Macros** menu](#calling-macros-in-the-form-editor) organization in the Form editor.  
 
 
 ## Instantiating macros in 4D
