@@ -182,7 +182,7 @@
     vsNom<span class="hljs-variable">[[1]]</span>:=<span class="hljs-function">Uppercase</span>(vsNom<span class="hljs-variable">[[1]]</span>)<span class="hljs-keyword">
 End if</span>
 </code></pre>
-<p>Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple:</p>
+<p>Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"</span><span class="hljs-keyword">
  If</span>(vtText#<span class="hljs-string">""</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Character code</span>(<span class="hljs-function">Substring</span>(vtText;<span class="hljs-function">Length</span>(vtText);<span class="hljs-number">1</span>))=At sign)

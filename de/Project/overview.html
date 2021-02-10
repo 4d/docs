@@ -71,20 +71,9 @@
 <p>4D project files are open and edited using regular 4D platform applications (4D or 4D Server). With 4D, full-featured editors are available to manage files, including a structure editor, a method editor, a form editor, a menu editor...</p>
 <p>Since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.</p>
 <p>In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in <a href="/docs/de/Project/architecture.html">folders and files</a>.</p>
-<p>The flexibility of developing a 4D project is especially demonstrated when multiple developers need to work on the same part of an application, at the same time. 4D project files are particularly well suited to be managed by a <strong>source control</strong> repository (Perforce, Git, SVN, etc.), allowing development teams to take advantage of features such as:</p>
-<ul>
-<li>Versioning</li>
-<li>Revision comparisons</li>
-<li>Rollbacks</li>
-</ul>
 <h2><a class="anchor" aria-hidden="true" id="development"></a><a href="#development" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Development</h2>
-<p>Your 4D application can open projects <strong>locally</strong> or <strong>remotely</strong>:</p>
-<ul>
-<li><strong><a href="/docs/de/Project/creating.html#opening-a-local-project">locally</a></strong> - project files are stored on the same machine as the 4D application; they are executed and edited by a single 4D application.</li>
-<li><strong><a href="/docs/de/Project/creating.html#opening-a-remote-project">remotely</a></strong> - project files are stored on the 4D Server machine; 4D applications connect to the server and open the project in read-only mode, usually for testing purposes. However, a project opened by 4D Server is editable by 4D if <a href="/docs/de/Project/developing.html#using-4d-developer-on-the-same-machine">both applications are on the same machine</a>.</li>
-</ul>
-<p><img src="/docs/assets/en/getStart/localremote.png" alt=""></p>
-<p>When you select the project to open, you also select the mode to be used.</p>
+<p>4D projects are developed using the <strong>4D</strong> application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project.</p>
+<p>Multi-user development is managed via standard <strong>source control</strong> repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.</p>
 <h2><a class="anchor" aria-hidden="true" id="deployment"></a><a href="#deployment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deployment</h2>
 <p>Project files can be compiled and easily deployed for your web, mobile, or desktop (client-server or single-user) application.</p>
 <p>Final application deployment files are generated during the building process, using the <a href="/docs/de/Admin/building.html">4D build manager</a>. Applications can be opened by 4D Server, 4D, or merged with 4D Volume license.</p>

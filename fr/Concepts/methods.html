@@ -128,7 +128,7 @@ PRINT_CHECK_BOOK_REPORT <span class="hljs-comment">// Imprimer un relevé</span>
 <h3><a class="anchor" aria-hidden="true" id="objet-formule"></a><a href="#objet-formule" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objet formule</h3>
 <p>Vous pouvez encapsuler vos méthodes projets dans les objets <strong>formule</strong> et les appeler à partir de vos objets.</p>
 <p>The <code>Formula</code> or <code>Formula from string</code> commands allow you to create native formula objects that you can encapsulate in object properties. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.</p>
-<p>To execute a method stored in an object property, use the <strong>( )</strong> operator after the property name. Par exemple:</p>
+<p>To execute a method stored in an object property, use the <strong>( )</strong> operator after the property name. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//myAlert</span>
 <span class="hljs-function">ALERT</span>(<span class="hljs-string">"Hello world!"</span>)
 </code></pre>
@@ -152,7 +152,7 @@ PRINT_CHECK_BOOK_REPORT <span class="hljs-comment">// Imprimer un relevé</span>
 <span class="hljs-comment">//$result = "John Smith"</span>
 <span class="hljs-comment">// équivalent à $result:=fullName("param1";"param2")</span>
 </code></pre>
-<p>Lorsqu'elles sont associées à la fonction <code>This</code>, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple:</p>
+<p>Lorsqu'elles sont associées à la fonction <code>This</code>, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//méthode fullName2 </span>
 <span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
 <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-literal">This</span>.lastName
@@ -178,7 +178,7 @@ PRINT_CHECK_BOOK_REPORT <span class="hljs-comment">// Imprimer un relevé</span>
 <p>Une <strong>méthode de gestion d’événements</strong> est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, reportez-vous à la description de la commande <code>APPELER SUR EVENEMENT</code>.</p>
 <p>Une <strong>méthode de gestion d’erreurs</strong> est une méthode projet d'interruption. Elle s'exécute à l'intérieur du process dans lequel elle a été installée à chaque fois qu'une erreur se produit. Pour plus d'informations, reportez-vous à la description de la commande <code>APPELER SUR ERREUR</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="méthode-projet-récursives"></a><a href="#méthode-projet-récursives" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Méthode projet récursives</h2>
-<p>Des méthodes projet peuvent s'appeler les unes les autres. Par exemple:</p>
+<p>Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :</p>
 <ul>
 <li>Une méthode A peut appeler une méthode B, qui appelle A, donc A appelle B de nouveau, etc.</li>
 <li>Une méthode peut s'appeler elle-même.</li>

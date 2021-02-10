@@ -99,7 +99,7 @@ MyVar:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme
 <p>Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que <code>CREATE RECORD</code> ou <code>ALERT</code>, sont décrites dans le <em>Manuel Langage de 4D</em>, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">COPY DOCUMENT</span>(<span class="hljs-string">"dossier1\\nom1"</span>;<span class="hljs-string">"dossier2\\"</span> ; <span class="hljs-string">"nouveau"</span>)
 </code></pre>
-<p>Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées qui sont utilisées à l'aide de la notation en point. Par exemple:</p>
+<p>Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées qui sont utilisées à l'aide de la notation en point. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)
 <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">0</span>;<span class="hljs-number">3</span>) <span class="hljs-comment">//$nc=[1,2,3]  </span>
 
@@ -152,7 +152,7 @@ End for</span>
 <p>Si <em>Numéro</em> vaut 17, <em>[Produits]Matricule</em> prendra la valeur “17abc”.</p>
 <p>Les types de données sont détaillés dans la section <a href="/docs/fr/Concepts/data-types.html">Types de données</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="objets-et-collections"></a><a href="#objets-et-collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objets et collections</h2>
-<p>Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple:</p>
+<p>Vous pouvez gérer les objets et collections du langage 4D à l'aide de la notation objet pour lire ou définir leurs valeurs. Par exemple :</p>
 <pre><code class="hljs css language-4d">employee.name:=<span class="hljs-string">"Smith"</span>
 </code></pre>
 <p>Vous pouvez également utiliser de crochets, comme dans l'exemple ci-dessous :</p>
@@ -198,7 +198,7 @@ Class constructor</span>
 <span class="hljs-literal">This</span>.width:=<span class="hljs-variable">$2  </span>
 <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Rectangle"</span>
 </code></pre>
-<p>A class can extend another class by using <code>Class extends &lt;ClassName&gt;</code>. Superclasses can be called using the <code>Super</code> command. Par exemple:</p>
+<p>A class can extend another class by using <code>Class extends &lt;ClassName&gt;</code>. Superclasses can be called using the <code>Super</code> command. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//in the Square.4dm file</span><span class="hljs-keyword">
 Class extends</span> rectangle<span class="hljs-keyword">
 
@@ -279,7 +279,7 @@ Class constructor</span>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="expressions-assignables-et-non-assignables"></a><a href="#expressions-assignables-et-non-assignables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions assignables et non-assignables</h3>
-<p>Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne &quot;Hello&quot;, ou une variable telle que <code>$myButton</code>. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont <strong>non-assignables</strong>, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être <strong>assignables</strong>. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple:</p>
+<p>Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne &quot;Hello&quot;, ou une variable telle que <code>$myButton</code>. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont <strong>non-assignables</strong>, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être <strong>assignables</strong>. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//La variable $myVar est assignable, vous pouvez écrire :  </span>
 <span class="hljs-variable">$myVar</span>:=<span class="hljs-string">"Hello"</span> <span class="hljs-comment">//assigner "Hello" à myVar</span>
 <span class="hljs-comment">//Form.pageNumber est assignable, vous pouvez écrire :  </span>

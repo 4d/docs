@@ -71,20 +71,9 @@
 <p>Les fichiers de projet 4D sont ouverts et édités à l'aide d'applications standard de la plate-forme 4D (4D ou 4D Server). Avec 4D, des éditeurs complets sont disponibles pour gérer les fichiers, y compris un éditeur de structure, un éditeur de méthode, un éditeur de formulaire, un éditeur de menu, etc...</p>
 <p>Les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils peuvent être lus ou édités manuellement par les développeurs, à l’aide de n’importe quel éditeur de code.</p>
 <p>De plus, les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code. Les projets sont organisés en interne dans des <a href="/docs/fr/Project/architecture.html">fichiers et dossiers</a>.</p>
-<p>La flexibilité du développement d'un projet 4D est particulièrement démontrée lorsque plusieurs développeurs doivent travailler simultanément sur la même partie d'une application. Les fichiers de projet 4D sont particulièrement bien adaptés pour être gérés par un système de <strong>contrôle de version</strong> (Perforce, Git, SVN, etc.), permettant aux équipes de développement de tirer parti de fonctionnalités telles que :</p>
-<ul>
-<li>Versioning</li>
-<li>Comparaisons de révision</li>
-<li>Retours en arrière (Rollbacks)</li>
-</ul>
 <h2><a class="anchor" aria-hidden="true" id="développement"></a><a href="#développement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Développement</h2>
-<p>Votre application 4D peut ouvrir des projets <strong>en local</strong> ou <strong>à distance</strong> :</p>
-<ul>
-<li><strong><a href="/docs/fr/Project/creating.html#opening-a-local-project">en loca</a></strong> - les fichiers de projet sont stockés sur le même poste que l'application 4D; ils sont exécutés et édités par une seule application 4D.</li>
-<li><strong><a href="/docs/fr/Project/creating.html#opening-a-remote-project">à distance</a></strong> - les fichiers de projet sont stockés sur la machine 4D Server; Les applications 4D se connectent au serveur et ouvrent le projet en lecture seule, généralement à des fins de test. Cependant, un projet ouvert par 4D Server est modifiable par 4D si <a href="/docs/fr/Project/developing.html#using-4d-developer-on-the-same-machine">les deux applications sont sur la même machine</a>.</li>
-</ul>
-<p><img src="/docs/assets/en/getStart/localremote.png" alt=""></p>
-<p>Lorsque vous sélectionnez le projet à ouvrir, vous sélectionnez également le mode à utiliser.</p>
+<p>Les projets 4D sont développés à l'aide de l'application <strong>4D</strong>. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project.</p>
+<p>Multi-user development is managed via standard <strong>source control</strong> repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.</p>
 <h2><a class="anchor" aria-hidden="true" id="déploiement"></a><a href="#déploiement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Déploiement</h2>
 <p>Les fichiers de projet peuvent être compilés et facilement déployés pour votre application Web, mobile ou de bureau (client-serveur ou monoposte).</p>
 <p>Les fichiers de déploiement de l'application finale sont générés lors du processus de génération, à l'aide du <a href="/docs/fr/Admin/building.html">gestionnaire de génération d'application 4D</a>. Les applications peuvent s'ouvrir avec 4D Server, 4D, ou fusionnées avec une licence 4D Volume.</p>

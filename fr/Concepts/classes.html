@@ -139,8 +139,8 @@ var <span class="hljs-variable">$hello</span> : Text
 <ul>
 <li>une classe ne peut pas être exécutée</li>
 <li>une fonction de classe est un bloc de code</li>
-<li><strong>Goto definition</strong> sur un objet membre recherche des déclarations de fonction de classe; par exemple, &quot;$o.f()&quot; donnera comme résultat de recherche &quot;Fonction f&quot;.</li>
-<li><strong>Search references</strong> sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, &quot;Fonction f&quot; donnera comme résultat &quot;$o.f()&quot;.</li>
+<li><strong>Aller à définition...</strong> sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, &quot;$o.f()&quot; donnera comme résultat de recherche &quot;Function f&quot;.</li>
+<li><strong>Chercher les références...</strong> sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, &quot;Function f&quot; donnera comme résultat &quot;$o.f()&quot;.</li>
 </ul></li>
 <li>Dans l'explorateur d'exécution et le Débogueur, les fonctions de classe sont affichées avec le format &lt;ClassName&gt; constructor ou &lt;ClassName&gt;. &lt;FunctionName&gt; .</li>
 </ul>
@@ -209,10 +209,10 @@ var <span class="hljs-variable">$hello</span> : Text
 <blockquote>
 <p><strong>Astuce :</strong> préfixer le nom de la fonction par un trait de soulignement (&quot;_&quot;) exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez <code>Function _myPrivateFunction</code> dans <code>MyClass</code>, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez <code>&quot;cs.MyClass. &quot;</code>.</p>
 </blockquote>
-<p>Immédiatement après le nom de la fonction, les <a href="#parameters">paramètres</a> de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple:</p>
+<p>Immédiatement après le nom de la fonction, les <a href="#parameters">paramètres</a> de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> computeArea</span>(<span class="hljs-variable">$width </span>: Integer; <span class="hljs-variable">$height </span>: Integer)-&gt;<span class="hljs-variable">$area </span>: Integer
 </code></pre>
-<p>Dans une fonction de classe, la commande <code>This</code> est utilisée comme instance d'objet. Par exemple:</p>
+<p>Dans une fonction de classe, la commande <code>This</code> est utilisée comme instance d'objet. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> setFullname</span>(<span class="hljs-variable">$firstname </span>: Text; <span class="hljs-variable">$lastname </span>: Text)
     <span class="hljs-literal">This</span>.firstName:=<span class="hljs-variable">$firstname</span>
     <span class="hljs-literal">This</span>.lastName:=<span class="hljs-variable">$lastname</span><span class="hljs-keyword">
