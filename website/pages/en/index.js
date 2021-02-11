@@ -57,6 +57,7 @@ class Index extends React.Component {
     licenses: <translate>License Management</translate>,
     buildApp: <translate>Build Application</translate>,
     webAdmin: <translate>Web Administration</translate>,
+	cs: <translate>Client/Server</translate>,
     tls: <translate>TLS Protocol (HTTPS)</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
 	langRef: <translate>Language Reference (4D Doc Center)</translate>,
@@ -98,7 +99,6 @@ class Index extends React.Component {
 				  [${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
                   [${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
                   [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>
-                  [${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Admin/building.html)<br>
 				  [${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)`,
                   image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
@@ -130,7 +130,14 @@ class Index extends React.Component {
                   title: <translate>Mobile applications</translate>,
                 },
                 {
-                  content: `[${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>[${subContents.formProperties}](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>[${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>[${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>[${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>[${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+                  content: `[${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Desktop/building.html)<br>
+				  [${subContents.cs}](${siteConfig.baseUrl}${this.props.language}/Desktop/clientServer.html)<br>
+				  [${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>
+				  [${subContents.formProperties}](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>
+				  [${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>
+				  [${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>
+				  [${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>
+				  [${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',

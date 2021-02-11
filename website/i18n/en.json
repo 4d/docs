@@ -201,7 +201,10 @@
       "Concepts/variables": {
         "title": "Variables"
       },
-      "CS/clientServer": {
+      "Desktop/building": {
+        "title": "Building a project package"
+      },
+      "Desktop/clientServer": {
         "title": "Client/Server Management"
       },
       "Events/onActivate": {
@@ -842,7 +845,7 @@
       "Web Server": "Web Server",
       "Web Development": "Web Development",
       "REST Server": "REST Server",
-      "Client-Server": "Client-Server",
+      "Client/Server": "Client/Server",
       "Forms": "Forms",
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
