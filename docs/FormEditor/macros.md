@@ -80,11 +80,6 @@ When macros are defined in your 4D project, you can call a macro using the conte
 
 This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macro items are sorted in alphabetical order. 
 
-When macros exist at both the project and component levels, the following order is applied: 
-
-1. project macros
-2. component macros
-
 This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro. 
 
 A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally. 
