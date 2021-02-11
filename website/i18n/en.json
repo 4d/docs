@@ -5,9 +5,6 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
-      "Admin/building": {
-        "title": "Building a project package"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
@@ -851,7 +848,8 @@
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
-      "Menus": "Menus"
+      "Menus": "Menus",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -875,6 +873,7 @@
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",

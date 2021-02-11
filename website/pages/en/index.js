@@ -130,14 +130,14 @@ class Index extends React.Component {
                   title: <translate>Mobile applications</translate>,
                 },
                 {
-                  content: `[${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Desktop/building.html)<br>
-				  [${subContents.cs}](${siteConfig.baseUrl}${this.props.language}/Desktop/clientServer.html)<br>
+                  content: `[${subContents.cs}](${siteConfig.baseUrl}${this.props.language}/Desktop/clientServer.html)<br>
 				  [${subContents.formEditor}](${siteConfig.baseUrl}${this.props.language}/FormEditor/forms.html)<br>
 				  [${subContents.formProperties}](${siteConfig.baseUrl}${this.props.language}/FormEditor/jsonReference.html)<br>
 				  [${subContents.formObjects}](${siteConfig.baseUrl}${this.props.language}/FormObjects/formObjectsOverview.html)<br>
 				  [${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>
 				  [${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>
-				  [${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)`,
+				  [${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)<br>
+				  [${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Desktop/building.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
