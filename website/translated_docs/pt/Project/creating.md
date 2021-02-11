@@ -1,13 +1,16 @@
 ---
 id: creating
-title: Creating or opening a project
+title: Working with a project
 ---
 
-All projects are handled through **4D** in local or remote mode, or **4D Server**.
+4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
+
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+
 
 ## Creating a project
 
-New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine.
+New 4D application projects can be created from **4D** or **4D Server**. In any case, project files are stored on the local machine.
 
 To create a new project:
 
@@ -25,9 +28,9 @@ When you validate the **Save** dialog, 4D closes the current project (if any), c
 You can then start developing your project.
 
 
-## Opening a local project
+## Opening a project
 
-To open an existing project locally from 4D:
+To open an existing project from 4D:
 
 1. Select **Open a local application project** in the Welcome Wizard dialog, <p>OR<p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> The standard Open dialog appears.
 
@@ -59,4 +62,21 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
     -   *4D Tool bar* -  Select the project from the menu associated with the **Open** button
 
 - via preferences:
-    -   Set the **At startup** general preference to **Open last used project**. 
+    -   Set the **At startup** general preference to **Open last used project**.
+
+
+## File saving
+
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+
+Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+
+The 4D development framework includes a file access manager to control concurrent access:
+
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes: ![](assets/en/Project/projectReload.png)
+    - **Yes**: discard editor changes and reload the modified version
+    - **No**: save changes and overwrite the other version
+    - **Cancel**: do not save
+
+This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
