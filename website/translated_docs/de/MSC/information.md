@@ -31,8 +31,8 @@ Die Seite listet alle Tabellen der Anwendung - auch die ausgeblendeten - mit den
 - **Datensätze**: Gesamtanzahl der Datensätze in der Tabelle. Ist ein Datensatz beschädigt oder nicht lesbar, erscheint *Error* anstelle der Zahl. Dann können Sie abwägen, ob Sie die Tools zum Prüfen und Reparieren einsetzen.
 - **Felder**: Anzahl der Felder in der Tabelle Ausgeblendete Felder werden mitgezählt, gelöschte Felder dagegen nicht.
 - **Indizes**: Anzahl der verschiedenen Indizes in der Tabelle
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see Encryptable paragraph in the Design Reference Manual).
-- **Verschlüsselt**: Ist dieses Attribut aktiv, werden die Datensätze der Tabelle in der Datendatei verschlüsselt. ***Note:** Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the **Encrypt page** of the database. *
+- **Verschlüsselbar**: Ist dieses Attribut aktiv, wird es für die Tabelle auf der Strukturebene ausgewählt (siehe unter Abschnitt **Verschlüsselbar** im Handbuch 4D Designmodus).
+- **Verschlüsselt**: Ist dieses Attribut aktiv, werden die Datensätze der Tabelle in der Datendatei verschlüsselt. **Hinweis:** Besteht Inkonsistenz zwischen der Option Verschlüsselbar und Verschlüsselt, müssen Sie den Verschlüsselungsstatus der Datendatei auf der Seite **Verschlüsseln** des MSC prüfen. *
 - **Größe der Adresstabelle**: Größe der Adresstabelle für jede Tabelle. In der Adresstabelle wird pro angelegtem Datensatz in der Tabelle intern ein Element gespeichert. Es verbindet Datensätze mit ihrer physikalischen Adresse. Aus Performance Gründen wird sie beim Löschen von Datensätzen nicht angepasst, so dass ihre Größe von der aktuellen Anzahl der Datensätze in der Tabelle abweichen kann. Bei einem deutlichen Unterschied können Sie die Größe der Adresstabelle über die Option "Komprimiere Adresstabelle" optimieren (siehe Seite [Kompakt](compact.md)). ***Hinweis:** Unterschiede zwischen Größe der Adresstabelle und Anzahl der Datensätze kann auch bei einer Störung während dem Leeren des Cache entstehen.*
 
 
