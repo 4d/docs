@@ -3,7 +3,7 @@ id: building
 title: Générer un package projet
 ---
 
-4D Developer inclut un générateur d’application final pour créer un package de projet (version finale). Ce générateur simplifie le processus de finalisation et de déploiement des applications compilées 4D. Il gère automatiquement les fonctionnalités spécifiques de différents systèmes d'exploitation et facilite le déploiement d'applications client-serveur.
+4D includes a final application builder to create a project package (final build). Ce générateur simplifie le processus de finalisation et de déploiement des applications compilées 4D. Il gère automatiquement les fonctionnalités spécifiques de différents systèmes d'exploitation et facilite le déploiement d'applications client-serveur.
 
 Le générateur d'applications vous permet de :
 
@@ -14,6 +14,7 @@ Le générateur d'applications vous permet de :
 *   Générer des applications client-serveur avec mise à jour automatique des composants client et serveur.
 *   Enregistrer vos paramètres de génération pour une utilisation ultérieure (bouton *Enregistrer les paramètres*).
 
+> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible in compiled applications.
 
 
 ## Aperçu du générateur d'application
@@ -84,7 +85,7 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> Un fichier .4dz est essentiellement une version compressée du dossier du projet. Les fichiers .4dz peuvent être utilisés par 4D Server, la licence 4D Volume (applications fusionnées) et 4D Developer (4D). La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
+> Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
 
 #### Inclure les dossiers associés
