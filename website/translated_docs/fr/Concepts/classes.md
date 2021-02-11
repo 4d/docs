@@ -44,7 +44,7 @@ Une classe utilisateur dans 4D est définie par un fichier de méthode spécifiq
 
 Lorsque vous nommez des classes, gardez à l'esprit les règles suivantes :
 
-- A [class name](identifiers.md#classes) must be compliant with [property naming rules](identifiers.md#object-properties).
+- Un [nom de classe](identifiers.md#classes) doit être conforme aux [règles de nommage des propriétés](identifiers.md#object-properties).
 - Les noms de classe sont sensibles à la casse.
 - Il n'est pas recommandé de donner le même nom à une classe et à une table de base de données, afin d'éviter tout conflit.
 
@@ -86,7 +86,7 @@ Pour créer une nouvelle classe, vous pouvez :
 
 #### Prise en charge du code de classe
 
-In the various 4D windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
+Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, explorateur d'exécution), le code de classe est essentiellement géré comme une méthode projet avec quelques spécificités :
 
 - Dans l'éditeur de code :
     - une classe ne peut pas être exécutée
@@ -150,23 +150,23 @@ Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est cha
 - objet [`superclass`](API/classClass.md#superclass) (nul si aucun)
 - fonction [`new()`](API/classClass.md#new), permettant d'instancier des objets de classe.
 
-In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
+De plus, un objet classe peut référencer un objet [`constructor`](#class-constructor) (facultatif).
 
 Un objet de classe est un [objet partagé](shared.md) et est donc accessible simultanément à partir de différents processus 4D.
 
-### Inheritance
+### Héritage
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/classClass.md#superclass).
+Si une classe hérite d'une autre classe (c'est-à-dire que le mot-clé [Class extends](classes.md#class-extends-classname) est utilisé dans sa définition), la classe parente est sa [`superclasse`](API/classClass.md#superclass).
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/classClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
+Lorsque 4D ne trouve pas de fonction ou de propriété dans une classe, il la recherche dans sa [`superclasse`](API/classClass.md#superclass); s'il ne la trouve pas, 4D continue la recherche dans la superclasse de la superclasse, et ainsi de suite, jusqu'à ce qu'il n'y ait plus de superclasse (tous les objets héritent de la superclasse "Object").
 
 
 ## Mots-clés de classe
 
 Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de classe :
 
-- `Function <Name>` to define class functions of the objects.
-- `Class constructor` to define the properties of the objects.
+- `Fonction <Name>` pour définir les fonctions de classe des objets.
+- `Class constructor` pour définir les propriétés des objets.
 - `Class extends <ClassName>` pour définir l'héritage.
 
 
@@ -179,9 +179,9 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/formulaClass.md#about-4dfunction-objects) class.
+Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/formulaClass.md#about-4dfunction-objects).
 
-Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
 > **Astuce :** préfixer le nom de la fonction par un trait de soulignement ("_") exclura la fonction des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
@@ -218,7 +218,7 @@ Dans le code de l'application, les fonctions de classe sont appelées en tant qu
 
 #### Parameters
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -284,7 +284,7 @@ Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
+Une fonction class constructor, qui peut accepter des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
 
 In that case, when you call the [`new()`](API/classClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
