@@ -283,6 +283,7 @@ $input:="<!--#4DEACH $cust in customers-->"
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
 $input:=$input+"<!--#4DENDEACH-->" 
 PROCESS 4D TAGS($input; $output)
+TEXT TO DOCUMENT("customers.txt"; $output)
 ```
 
 ### `<!--#4DEACH property in object-->`
