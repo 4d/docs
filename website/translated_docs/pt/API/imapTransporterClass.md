@@ -20,7 +20,9 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.checkConnectionDelay.Summary -->|
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.copy().Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.copy().Summary -->|
-| [<!-- INCLUDE #imapTransporterClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.expunge().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.createBox().Syntax -->](#createbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.createBox().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.delete().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.deleteBox().Syntax -->](#deletebox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.deleteBox().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.expunge().Syntax -->](#expunge)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.expunge().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getBoxInfo().Syntax -->](#getboxinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxInfo().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.getBoxList().Syntax -->](#getboxlist)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.getBoxList().Summary -->|
@@ -33,9 +35,12 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #imapTransporterClass.move().Syntax -->](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.move().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.numToID().Syntax -->](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.numToID().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.removeFlags().Syntax -->](#removeflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.removeFlags().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.renameBox().Syntax -->](#renamebox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.renameBox().Summary -->|
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.searchMails().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.searchMails().Summary -->|
 | [<!-- INCLUDE #imapTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.selectBox().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.subscribe().Syntax -->](#subscribe)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.subscribe().Summary -->|
+| [<!-- INCLUDE #imapTransporterClass.unsubscribe().Syntax -->](#unsubscribe)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #imapTransporterClass.unsubscribe().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
 
@@ -88,20 +93,20 @@ The function returns an [**IMAP transporter object**](#imap-transporter-object).
 #### Example
 
 ```4d
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
- $server.logFile:="LogTest.txt" //log to save in the Logs folder
+$server:=New object
+$server.host:="imap.gmail.com" //Mandatory
+$server.port:=993
+$server.user:="4d@gmail.com"
+$server.password:="XXXXXXXX"
+$server.logFile:="LogTest.txt" //log to save in the Logs folder
 
- var $transporter : 4D.IMAPTransporter
+var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
- $status:=$transporter.checkConnection()
- If(Not($status.success))
-    ALERT("An error occurred: "+$status.statusText)
- End if
+$status:=$transporter.checkConnection()
+If(Not($status.success))
+   ALERT("An error occurred: "+$status.statusText)
+End if
 ```
 
 
@@ -438,6 +443,7 @@ To copy all messages in the current mailbox:
  $transporter:=IMAP New transporter($server)
 
   //select mailbox
+
  $boxInfo:=$transporter.selectBox("inbox")
 
   // copy all messages to the "documents" mailbox
@@ -445,6 +451,90 @@ To copy all messages in the current mailbox:
 ```
 
 <!-- END REF -->
+
+
+<!-- REF imapTransporterClass.createBox().Desc -->
+## .createBox()
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19     | Added   |
+</details>
+
+<!-- REF #imapTransporterClass.createBox().Syntax -->
+**.createBox**( *name* :  Text ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.createBox().Params -->
+| Parameter | Type   |    | Description                              |
+| --------- | ------ |:--:| ---------------------------------------- |
+| name      | Text   | -> | Name of the new mailbox                  |
+| Result    | Object | <- | Status of the mailbox creation operation |
+<!-- END REF -->
+
+
+#### Description
+
+The `.createBox()` function <!-- REF #imapTransporterClass.createBox().Summary -->creates a mailbox with the given `name`<!-- END REF -->. If the IMAP server’s hierarchy separator character appears elsewhere in the mailbox name, the IMAP server will create any parent names needed to create the given mailbox.
+
+In other words, an attempt to create "Projects/IMAP/Doc" on a server in which "/" is the hierarchy separator character will create:
+
+*   Only the "Doc" mailbox if "Projects" & "IMAP" already exist.
+*   "IMAP" & "Doc" mailboxes if only “Projects” already exists.
+*   "Projects" & “IMAP” & "Doc" mailboxes, if they do not already exist.
+
+In the `name` parameter, pass the name of the new mailbox.
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| Property   |                         | Type       | Description                                                                              |
+| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
+|            | \[].errcode            | Number     | 4D error code                                                                            |
+|            | \[].message            | Text       | Description of the 4D error                                                              |
+|            | \[].componentSignature | Text       | Signature of the internal component which returned the error                             |
+
+
+
+
+#### Example
+
+To create a new “Invoices” mailbox:
+
+
+```4d
+var $pw : text
+var $options; $transporter; $status : object
+
+$options:=New object
+
+$pw:=Request("Please enter your password:")
+If(OK=1)
+$options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+$status:=$transporter.createBox("Invoices")
+
+If ($status.success)
+ALERT("Mailbox creation successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
+```
+
+<!-- END REF -->
+
+
+
 
 
 
@@ -479,6 +569,7 @@ You can pass:
 - in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
 
 Executing this function does not actually remove messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
+
 
 
 **Returned object**
@@ -550,6 +641,90 @@ To delete all messages in the current mailbox:
 ```
 
 <!-- END REF -->
+
+
+<!-- REF imapTransporterClass.deleteBox().Desc -->
+## .deleteBox()
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19     | Added   |
+</details>
+
+<!-- REF #imapTransporterClass.deleteBox().Syntax -->
+**.deleteBox**( *name* : Text ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.deleteBox().Params -->
+| Parameter | Type   |    | Description                              |
+| --------- | ------ |:--:| ---------------------------------------- |
+| name      | Text   | -> | Name of the mailbox to delete            |
+| Result    | Object | <- | Status of the mailbox deletion operation |
+<!-- END REF -->
+
+
+#### Description
+
+The `.deleteBox()` function <!-- REF #imapTransporterClass.deleteBox().Summary -->permanently removes the mailbox with the given `name` from the IMAP server<!-- END REF -->. Attempting to delete an INBOX or a mailbox that does not exist will generate an error.
+
+In the `name` parameter, pass the name of the mailbox to delete.
+> * The function cannot delete a mailbox that has child mailboxes if the parent mailbox has the "\Noselect" attribute.
+> * All messages in the deleted mailbox will also be deleted.
+> * The ability to delete a mailbox depends on the mail server.
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| Property   |                         | Type       | Description                                                                              |
+| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
+|            | \[].errcode            | Number     | 4D error code                                                                            |
+|            | \[].message            | Text       | Description of the 4D error                                                              |
+|            | \[].componentSignature | Text       | Signature of the internal component which returned the error                             |
+
+
+
+
+#### Example
+
+To delete the "Nova Orion Industries" child mailbox from the "Bills" mailbox hierarchy:
+
+```4d
+var $pw; $name : text
+var $options; $transporter; $status : object
+
+$options:=New object
+
+$pw:=Request("Please enter your password:")
+
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+// delete mailbox
+$name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
+$status:=$transporter.deleteBox($name)
+
+If ($status.success)
+ALERT("Mailbox deletion successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
+```
+
+<!-- END REF -->
+
+
+
+
+
 
 
 <!-- REF imapTransporterClass.expunge().Desc -->
@@ -676,24 +851,32 @@ The `boxInfo` object returned contains the following properties:
 ## .getBoxList()
 
 <details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes                      |
+| ------- | ---------------------------- |
+| v18 R4  | Added                        |
+| v19     | Add `isSubscribed` parameter |
 </details>
 
 <!-- REF #imapTransporterClass.getBoxList().Syntax -->
-**.getBoxList()** : Collection<!-- END REF -->
+**.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
 <!-- REF #imapTransporterClass.getBoxList().Params -->
-| Parameter | Type       |    | Description                   |
-| --------- | ---------- |:--:| ----------------------------- |
-| Result    | Collection | <- | Collection of mailbox objects |
+| Parameter  | Type       |    | Description                   |
+| ---------- | ---------- |:--:| ----------------------------- |
+| parameters | Object     | -> | Parameter object              |
+| Result     | Collection | <- | Collection of mailbox objects |
 <!-- END REF -->
 
 
 #### Description
 
 The `.getBoxList()` function <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
+
+In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. You can pass:
+
+| Property     | Type    | Description                                          |
+| ------------ | ------- | ---------------------------------------------------- |
+| isSubscribed | Boolean | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li> |
 
 #### Result
 
@@ -833,6 +1016,7 @@ The optional *options* parameter allows you pass an object defining additional i
 > * If there is no open connection, `.getMail()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox)`.
 
 
+
 #### Result
 
 `.getMail()` returns an [`Email` object](emailObjectClass.md#email-object) with the following specific IMAP properties: *id*, *receivedAt*, and *size*.
@@ -933,7 +1117,8 @@ The optional *options* parameter allows you to define the parts of the messages 
 | Property | Type       | Description                                                                                                                        |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | list     | Collection | Collection of [`Email` objects](emailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
-| notFound | Collection | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                       |
+
+|notFound |Collection| Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.|
 
 
 #### Example
@@ -991,6 +1176,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 | updateSeen | Boolean | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
 | Result     | BLOB    | <- | Blob of the MIME string returned from the mail server                                         |
 <!-- END REF -->
+
 
 
 
@@ -1065,6 +1251,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 </details>
 
 <!-- REF #imapTransporterClass.move().Syntax -->
+
 **.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #imapTransporterClass.move().Params -->
@@ -1313,6 +1500,86 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 <!-- END REF -->
 
 
+<!-- REF imapTransporterClass.renameBox().Desc -->
+## .renameBox()
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19     | Added   |
+</details>
+
+<!-- REF #imapTransporterClass.renameBox().Syntax -->
+**.renameBox**( *currentName* : Text ; *newName* : Text ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.renameBox().Params -->
+| Parameter   | Type   |    | Description                      |
+| ----------- | ------ |:--:| -------------------------------- |
+| currentName | Text   | -> | Name of the current mailbox      |
+| newName     | Text   | -> | New mailbox name                 |
+| Result      | Object | <- | Status of the renaming operation |
+<!-- END REF -->
+
+
+#### Description
+
+The `.renameBox()` function <!-- REF #imapTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Attempting to rename a mailbox from a mailbox name that does not exist or to a mailbox name that already exists will generate an error.
+
+In the `currentName` parameter, pass the name of the mailbox to be renamed.
+
+Pass the new name for the mailbox in the `newName` parameter.
+
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| Property   |                         | Type       | Description                                                                              |
+| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
+|            | \[].errcode            | Number     | 4D error code                                                                            |
+|            | \[].message            | Text       | Description of the 4D error                                                              |
+|            | \[].componentSignature | Text       | Signature of the internal component which returned the error                             |
+
+
+#### Example
+
+To to rename your “Invoices” mailbox to “Bills”:
+
+```4d
+var $pw : text
+var $options; $transporter; $status : object
+
+$options:=New object
+
+$pw:=Request("Please enter your password:")
+
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+// rename mailbox
+$status:=$transporter.renameBox("Invoices"; "Bills")
+
+If ($status.success)
+ALERT("Mailbox renaming successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
+```
+
+<!-- END REF -->
+
+
+
+
+
+
 
 <!-- INCLUDE transporter.port.Desc -->
 
@@ -1472,12 +1739,12 @@ Search-keys may request the value to search for:
 
 #### Description
 
-The `.selectBox()` function <!-- REF #imapTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+The `.selectBox()` function <!-- REF #imapTransporterClass.selectBox().Summary -->selects the `name` mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the `name` parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
-The optional *state* parameter defines the type of access to the mailbox. The possible values are:
+The optional `state` parameter defines the type of access to the mailbox. The possible values are:
 
 | Constant              | Value | Comment                                                                                                                                                               |
 | --------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1515,6 +1782,152 @@ The `boxInfo` object returned contains the following properties:
 
 <!-- END REF -->
 
+
+
+<!-- REF imapTransporterClass.subscribe().Desc -->
+## .subscribe()
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19     | Added   |
+</details>
+
+<!-- REF #imapTransporterClass.subscribe().Syntax -->
+**.subscribe**( *name* : Text ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.subscribe().Params -->
+| Parameter | Type   |    | Description                       |
+| --------- | ------ |:--:| --------------------------------- |
+| name      | Text   | -> | Name of the mailbox               |
+| Result    | Object | <- | Status of the subscribe operation |
+<!-- END REF -->
+
+
+#### Description
+
+The `.subscribe()` function <!-- REF #imapTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.
+
+In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| Property   |                         | Type       | Description                                                                              |
+| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
+|            | \[].errcode            | Number     | 4D error code                                                                            |
+|            | \[].message            | Text       | Description of the 4D error                                                              |
+|            | \[].componentSignature | Text       | Signature of the internal component which returned the error                             |
+
+
+
+#### Example
+
+To subscribe to the "Atlas Corp” mailbox in the "Bills" hierarchy:
+
+```4d
+var $pw; $name : text
+var $options; $transporter; $status : object
+
+$options:=New object
+
+$pw:=Request("Please enter your password:")
+
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
+$status:=$transporter.subscribe($name)
+
+If ($status.success)
+ALERT("Mailbox subscription successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
+```
+
+<!-- END REF -->
+
+
+<!-- REF imapTransporterClass.unsubscribe().Desc -->
+## .unsubscribe()
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19     | Added   |
+</details>
+
+<!-- REF #imapTransporterClass.unsubscribe().Syntax -->
+**.unsubscribe**( *name* : Text ) : Object<!-- END REF -->
+
+<!-- REF #imapTransporterClass.unsubscribe().Params -->
+| Parameter | Type   |    | Description                         |
+| --------- | ------ |:--:| ----------------------------------- |
+| name      | Text   | -> | Name of the mailbox                 |
+| Result    | Object | <- | Status of the unsubscribe operation |
+<!-- END REF -->
+
+
+#### Description
+
+The `.unsubscribe()` function <!-- REF #imapTransporterClass.unsubscribe().Summary -->removes a mailbox from a set of subscribed mailboxes<!-- END REF -->. This allows you reduce the number of mailboxes you usually see.
+
+In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
+
+**Returned object**
+
+The function returns an object describing the IMAP status:
+
+| Property   |                         | Type       | Description                                                                              |
+| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True if the operation is successful, False otherwise                                     |
+| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
+| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
+|            | \[].errcode            | Number     | 4D error code                                                                            |
+|            | \[].message            | Text       | Description of the 4D error                                                              |
+|            | \[].componentSignature | Text       | Signature of the internal component which returned the error                             |
+
+
+
+#### Example
+
+To unsubscribe from the "Atlas Corp” mailbox in the "Bills" hierarchy:
+
+```4d
+var $pw; $name : text
+var $options; $transporter; $status : object
+
+$options:=New object
+
+$pw:=Request("Please enter your password:")
+
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
+$status:=$transporter.unsubscribe($name)
+
+If ($status.success)
+ALERT("Mailbox unsubscription successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
+```
+
+<!-- END REF -->
 
 
 
