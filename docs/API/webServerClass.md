@@ -67,7 +67,9 @@ They provide the following properties and functions:
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added
+|v18 R3|Added|
+|v19|support for .sessionCookieSameSite|
+
 </details>
 
 <!-- REF #_command_.WEB Server.Syntax -->
@@ -734,7 +736,7 @@ The <!-- REF #webServerClass.sessionCookiePath.Summary -->"path" field of the se
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v19|Added
+|v19|Added|
 </details>
 
 <!-- REF #webServerClass.sessionCookieSameSite.Syntax -->
