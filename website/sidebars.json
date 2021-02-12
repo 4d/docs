@@ -50,7 +50,7 @@
 	"API/zipFolderClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
-  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/building"],
+  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServerObject","WebServer/sessions"],
@@ -77,6 +77,7 @@
 		  ]
 		}
 	],
+    "Client/Server":["Desktop/clientServer"],
   "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/macros","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
@@ -194,7 +195,8 @@
 			"Events/onVpRangeChanged",
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
-  "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]
+  "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
+     "Build application":["Desktop/building"]
 
   }
 }

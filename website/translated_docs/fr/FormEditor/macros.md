@@ -78,11 +78,6 @@ Lorsque des macros sont définies dans votre projet 4D, vous pouvez appeler une 
 
 Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Macro items are sorted in alphabetical order.
 
-Lorsque des macros existent au niveau du projet et du composant, l'ordre suivant est appliqué :
-
-1. macros de projet
-2. macros de composants
-
 Ce menu peut être appelé dans une zone vide ou une sélection dans le formulaire. Les objets sélectionnés sont passés à `$editor.currentSelection` ou `$editor.target` dans la fonction [`onInvoke`](#oninvoke) de la macro.
 
 Une seule macro peut exécuter plusieurs opérations. Si elle est sélectionnée, la fonction **Annuler** de l'éditeur de formulaires peut être utilisée pour inverser les opérations de macro.
@@ -238,7 +233,6 @@ Les propriétés personnalisées, lorsqu'elles sont utilisées, sont passées à
 }
 ```
 
-> Gardez à l'esprit que l'ordre des objets macros dans le fichier définit l'organisation du menu [**Macros**](#calling-macros-in-the-form-editor) dans l'éditeur de formulaires.
 
 
 ## Instancier des macros dans 4D

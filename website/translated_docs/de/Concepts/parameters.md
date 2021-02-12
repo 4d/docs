@@ -28,7 +28,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 Die Eingabeparameter werden durch Strichpunkte (;) voneinander getrennt.
 
-Dassselbe Prinzip gilt, wenn Methoden durch bestimmte Befehle ausgeführt werden, zum Beispiel:
+Dasselbe Prinzip gilt, wenn Methoden durch bestimmte Befehle ausgeführt werden, zum Beispiel:
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
