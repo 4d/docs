@@ -22,9 +22,12 @@ In addition, 4D project files make it easier to program generically, create appl
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications. 
 
 
-## Deployment
+## Final application
 
-Project files can be compiled and easily deployed for your web, mobile, or desktop (client-server or single-user) application. 
+Project files can be compiled and easily deployed. 4D allows you to create three types of applications from your projects:
 
-Final application deployment files are generated during the building process, using the [4D build manager](Admin/building.md). Applications can be opened by 4D Server, 4D, or merged with 4D Volume license.
+- [web](WebServer/webServerObject.md) applications,
+- [mobile](https://developer.4d.com/4d-for-ios/) applications, 
+- [desktop](Desktop/building.md) applications (client/server or single-user). 
 
+Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.

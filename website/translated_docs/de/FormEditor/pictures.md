@@ -3,7 +3,7 @@ id: pictures
 title: Bilder
 ---
 
-4D includes specific support for pictures used in your forms.
+4D bietet gezielte Unterstützung für Bilder in Ihren Formularen.
 
 
 ## Native Unterstützung von Formaten
@@ -30,11 +30,11 @@ Dieser Icon erscheint automatisch beim Anzeigen der betroffenen Bilder:
 Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lässt sich aber speichern und ggf. auf anderen Rechnern anzeigen. Das ist z. B. bei PDF Bildern auf Windows oder Bildern im PICT-Format der Fall.
 
 
-## High Resolution Pictures
+## Hochauflösende Bilder
 
-4D supports high resolution pictures on both macOS and Windows platforms. High resolution pictures can be defined by either scale factor or dpi.
+4D unterstützt hochauflösende Bilder auf den beiden Plattformen Windows und macOS. Sie lassen sich über den Skalierungsfaktor oder dpi definieren.
 
-### Scale factor (macOS only)
+### Skalierungsfaktor (nur macOS)
 
 High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.).
 
