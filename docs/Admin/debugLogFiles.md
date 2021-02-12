@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Description of log files 
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the   `SET DATABASE PARAMETER` or `WEB SET OPTION` commands and are stored in the Logs folder of the database (see the [Description of 4D files](https://doc.4d.com/4Dv18R5/4D/18-R5/Description-of-4D-files.300-5126565.en.html) section).
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the   `SET DATABASE PARAMETER` or `WEB SET OPTION` commands and are stored in the [Logs folder](Project/architecture.md#logs-folder) of the database.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
@@ -206,9 +206,9 @@ The following fields are logged for each event:
 
 These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
 
-*	SMTP - [SMTP New transporter](API/smtpTransporterClass.html#smtp-new-transporter) 
-*	POP3 - [POP3 New transporter](API/pop3TransporterClass.html#pop3-new-transporter)
-*	IMAP  - [IMAP New transporter](API/imapTransporterClass.html#imap-new-transporter)   
+*	SMTP - [SMTP New transporter](API/smtpTransporterClass.md#smtp-new-transporter) 
+*	POP3 - [POP3 New transporter](API/pop3TransporterClass.md#pop3-new-transporter)
+*	IMAP  - [IMAP New transporter](API/imapTransporterClass.md#imap-new-transporter)   
 
 The log files can be produced in two versions:
 
