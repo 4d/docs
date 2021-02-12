@@ -152,6 +152,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
+
 ---
 ## Expression Type
 
@@ -335,8 +336,8 @@ There are several types of calculations available. The following table shows whi
 
 |Calculation|Num|Text|Date|Time|Bool|Pict|footer var type|  
 |---|---|---|---|---|---|---|---|
-|Minimum|X||X|X|X||Same as column type|
-|Maximum|X||X|X|X||Same as column type|  
+|Minimum|X|X|X|X|X||Same as column type|
+|Maximum|X|X|X|X|X||Same as column type|  
 |Sum|X||X||X||Same as column type|  
 |Count|X|X|X|X|X|X|Longint|  
 |Average|X|||X|||Real|    
@@ -347,14 +348,15 @@ There are several types of calculations available. The following table shows whi
 
 (*) Only for array type list boxes.
 
-When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+Automatic calculations ignore the shown/hidden state of list box rows. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+
+Null values are not taken into account for any calculations.  
+
+When used with a collection-based column with different types of values, calculation returns a result according to the type list order defined in the [collection.sort()](API/collectionClass.md#sort) function.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 
->Automatic calculations are not supported with:
->*	footers of columns based on formulas,
->*	footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes.
-You need to use custom calculations. 
+> Automatic calculations are not supported with footers of columns based on formulas. You need to use custom calculations. 
 
 #### JSON Grammar
 
