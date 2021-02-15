@@ -74,17 +74,18 @@
 <li>数値 (実数、整数、等)</li>
 <li>text</li>
 <li>null</li>
-<li>ブール</li>
+<li>boolean</li>
 <li>ポインター (<code>JSON Stringify</code> コマンドの使用、またはコピーの際に評価されます)</li>
 <li>日付 (日付型あるいは ISO日付フォーマット文字列)</li>
-<li>オブジェクト (オブジェクトは入れ子にすることができます)</li>
-<li>ピクチャー (*)</li>
+<li>object(1) (objects can be nested on several levels)</li>
+<li>picture(2)</li>
 <li>collection</li>
 </ul></li>
 </ul>
-<p>(*) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは &quot;[object Picture]&quot; と表されます。</p>
+<p>(1)ORDA objects such as <a href="/docs/Rx/ja/ORDA/dsmapping.html#entity">entities</a> or <a href="/docs/Rx/ja/ORDA/dsmapping.html#entity-selection">entity selections</a> cannot be stored in <strong>object fields</strong>; however, they are fully supported in <strong>object variables</strong> in memory.</p>
+<p>(2)When exposed as text in the debugger or exported to JSON, picture object properties print &quot;[object Picture]&quot;.</p>
 <p><strong>警告:</strong> 属性名は大文字と小文字を区別するという点に注意してください。</p>
-<p>オブジェクト型の変数・フィールド・式を操作するには <strong>オブジェクト (ランゲージ)</strong> テーマのコマンドを使用するか、オブジェクト記法 (<a href="/docs/Rx/ja/Concepts/object.html#オブジェクト記法の使用">オブジェクト記法の使用</a> 参照) を用います。 オブジェクト型フィールドに対して処理をおこなうには <code>QUERY BY ATTRIBUTE</code>、<code>QUERY SELECTION BY ATTRIBUTE</code> や <code>ORDER BY ATTRIBUTE</code> など、クエリテーマの特定のコマンドも使用することができます。</p>
+<p>You manage Object type variables, fields or expressions using the <a href="/docs/Rx/ja/Concepts/object.html#syntax-basics">object notation</a> or the classic commands available in the <strong>Objects (Language)</strong> theme. Note that specific commands of the <strong>Queries</strong> theme such as <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code>, or <code>ORDER BY ATTRIBUTE</code> can be used to carry out processing on object fields.</p>
 <p>オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:</p>
 <ul>
 <li>4Dコード内。メソッド (メソッドエディター) に書いても、外部化(フォーミュラ、<code>PROCESS 4D TAGS</code> あるいは Web Server によって処理される 4D tags ファイル、4D Write Proドキュメントなど) しても使用可能です。</li>

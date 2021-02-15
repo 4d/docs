@@ -74,17 +74,18 @@
 <li>Nombre (réel, entier long, etc.)</li>
 <li>Texte</li>
 <li>null</li>
-<li>Booléen</li>
+<li>boolean</li>
 <li>Pointeur (stocké tel quel, évalué à l’aide de la commande <code>JSON Stringify</code> ou lors d’une copie),</li>
 <li>Date (type date ou chaîne au format date ISO)</li>
-<li>Objet (les objets peuvent être imbriqués sur plusieurs niveaux)</li>
-<li>Image(*)</li>
+<li>object(1) (objects can be nested on several levels)</li>
+<li>picture(2)</li>
 <li>collection</li>
 </ul></li>
 </ul>
-<p>(*)Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent &quot;[objet Image]&quot;.</p>
+<p>(1)ORDA objects such as <a href="/docs/Rx/fr/ORDA/dsmapping.html#entity">entities</a> or <a href="/docs/Rx/fr/ORDA/dsmapping.html#entity-selection">entity selections</a> cannot be stored in <strong>object fields</strong>; however, they are fully supported in <strong>object variables</strong> in memory.</p>
+<p>(2)When exposed as text in the debugger or exported to JSON, picture object properties print &quot;[object Picture]&quot;.</p>
 <p><strong>Attention :</strong> N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules.</p>
-<p>You manage Object type variables, fields or expressions using the commands available in the <strong>Objects (Language)</strong> theme or through the object notation (see <a href="/docs/Rx/fr/Concepts/object.html#syntax-basics">Syntax basics</a>). A noter que des commandes spécifiques du thème Requêtes, telles que <code>CHERCHER PAR ATTRIBUT</code>, <code>CHERCHER PAR ATTRIBUT DANS SELECTION</code> ou <code>TRIER PAR ATTRIBUT</code> peuvent être utilisées pour traiter des champs objets.</p>
+<p>You manage Object type variables, fields or expressions using the <a href="/docs/Rx/fr/Concepts/object.html#syntax-basics">object notation</a> or the classic commands available in the <strong>Objects (Language)</strong> theme. Note that specific commands of the <strong>Queries</strong> theme such as <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code>, or <code>ORDER BY ATTRIBUTE</code> can be used to carry out processing on object fields.</p>
 <p>Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. You can use such values wherever 4D expressions are expected:</p>
 <ul>
 <li>in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by <code>PROCESS 4D TAGS</code> or the Web Server, export files, 4D Write Pro documents...),</li>

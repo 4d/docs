@@ -77,14 +77,15 @@
 <li>Boolean</li>
 <li>Zeiger (als solcher gespeichert, wird beim Verwenden der Funktion <code>JSON Stringify</code> oder beim Kopieren bewertet)</li>
 <li>Datum (Datumstyp oder ISO Datumsformat)</li>
-<li>Objekt (Objekte können in mehrere Stufen verschachtelt sein)</li>
-<li>Bild (*)</li>
+<li>object(1) (objects can be nested on several levels)</li>
+<li>picture(2)</li>
 <li>collection</li>
 </ul></li>
 </ul>
-<p>(*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild &quot;[Objekt Bild]&quot; an.</p>
+<p>(1)ORDA objects such as <a href="/docs/Rx/de/ORDA/dsmapping.html#entity">entities</a> or <a href="/docs/Rx/de/ORDA/dsmapping.html#entity-selection">entity selections</a> cannot be stored in <strong>object fields</strong>; however, they are fully supported in <strong>object variables</strong> in memory.</p>
+<p>(2)When exposed as text in the debugger or exported to JSON, picture object properties print &quot;[object Picture]&quot;.</p>
 <p><strong>Warnung:</strong> Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.</p>
-<p>Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel <strong>Objekte (Sprache</strong>), oder über die Objektnotation (siehe <a href="/docs/Rx/de/Concepts/object.html#grundlagen-der-syntax">Grundlagen der Syntax</a>). Über spezifische Befehle im Kapitel Suchen wie <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code> oder <code>ORDER BY ATTRIBUTE</code> können Sie mit Objektfeldern arbeiten.</p>
+<p>You manage Object type variables, fields or expressions using the <a href="/docs/Rx/de/Concepts/object.html#syntax-basics">object notation</a> or the classic commands available in the <strong>Objects (Language)</strong> theme. Note that specific commands of the <strong>Queries</strong> theme such as <code>QUERY BY ATTRIBUTE</code>, <code>QUERY SELECTION BY ATTRIBUTE</code>, or <code>ORDER BY ATTRIBUTE</code> can be used to carry out processing on object fields.</p>
 <p>Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:</p>
 <ul>
 <li>In 4D Code, entweder in den Methoden (Methodeneditor) oder extern geschrieben (Formeln, Dateien mit 4D Tags, die mit <code>PROCESS 4D TAGS</code> oder dem Web Server bearbeitet werden, Exportdateien, 4D Write Pro Dokumente...),</li>
