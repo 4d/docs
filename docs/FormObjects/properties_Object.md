@@ -352,7 +352,9 @@ Automatic calculations ignore the shown/hidden state of list box rows. If you wa
 
 Null values are not taken into account for any calculations.  
 
-When used with a collection-based column with different types of values, calculation returns a result according to the type list order defined in the [collection.sort()](API/collectionClass.md#sort) function.
+If the column contains different types of values (collection-based column for example):
+- Average and Sum only take numerical elements into account (other element types are ignored).
+- Minimum and Maximum return a result according to the type list usual order as defined in the [collection.sort()](API/collectionClass.md#sort) function.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 
