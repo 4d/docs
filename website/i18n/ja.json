@@ -5,11 +5,11 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
-      "Admin/building": {
-        "title": "プロジェクトパッケージのビルド"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
+      },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
@@ -45,7 +45,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Email"
+        "title": "Emails and Attachments"
       },
       "API/entityClass": {
         "title": "エンティティ"
@@ -197,6 +197,12 @@
       },
       "Concepts/variables": {
         "title": "変数"
+      },
+      "Desktop/building": {
+        "title": "プロジェクトパッケージのビルド"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -668,10 +674,7 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "プロジェクトの作成・開始"
-      },
-      "Project/developing": {
-        "title": "プロジェクトの開発"
+        "title": "Working with a project"
       },
       "Project/documentation": {
         "title": "ドキュメンテーション"
@@ -836,12 +839,14 @@
       "Web Server": "Web サーバー",
       "Web Development": "Web Development",
       "REST Server": "REST サーバー",
+      "Client/Server": "Client/Server",
       "Forms": "Forms",
       "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
-      "Menus": "メニュー"
+      "Menus": "メニュー",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -865,6 +870,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",

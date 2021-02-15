@@ -1,13 +1,16 @@
 ---
 id: creating
-title: Créer ou ouvrir un projet
+title: Working with a project
 ---
 
-Tous les projets sont gérés via **4D** en mode local ou distant, ou via **4D Server**.
+4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
+
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+
 
 ## Créer un projet
 
-De nouveaux projets d'application 4D peuvent être créés à partir de **4D** ou de **4D Server** (voir [Développer un projet](Project/developing.md)). Dans tous les cas, les fichiers de projet sont stockés sur la machine locale.
+New 4D application projects can be created from **4D** or **4D Server**. Dans tous les cas, les fichiers de projet sont stockés sur la machine locale.
 
 Pour créer un nouveau projet :
 
@@ -25,9 +28,9 @@ Lorsque vous validez la boîte de dialogue **Enregistrer**, 4D ferme le projet e
 Vous pouvez alors commencer à développer votre projet.
 
 
-## Ouvrir un projet local
+## Opening a project
 
-Pour ouvrir un projet existant en local depuis 4D :
+To open an existing project from 4D:
 
 1. Sélectionnez **Ouvrir un projet d'application local** dans la boite de dialogue de l'Assistant de bienvenue <p>OU<p> Sélectionnez **Ouvrir > Projet local...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.<p> La boîte de dialogue standard d’ouverture de fichiers apparaît.
 
@@ -59,4 +62,21 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
     -   *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
 
 - via les préférences :
-    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**. 
+    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
+
+
+## Enregistrement des fichiers
+
+Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur disque lorsque vous sélectionnez un élément de menu **Sauvegarde**, ou lorsque la fenêtre de l'éditeur pert ou récupère le focus.
+
+Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
+
+Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
+
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:![](assets/en/Project/projectReload.png)
+    - **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
+    - **Non** : enregistrer les modifications et écraser l'autre version
+    - **Annuler** : ne pas enregistrer
+
+Cette fonctionnalité est activée pour tous les éditeurs 4D intégrés (Structure, Formulaire, Méthode, Paramètres et Boite à outils).
