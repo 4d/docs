@@ -195,6 +195,12 @@
       "Concepts/variables": {
         "title": "Variables"
       },
+      "Desktop/building": {
+        "title": "Générer un package projet"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
+      },
       "Events/onActivate": {
         "title": "Sur activation"
       },
@@ -665,10 +671,7 @@
         "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Créer ou ouvrir un projet"
-      },
-      "Project/developing": {
-        "title": "Développer un projet"
+        "title": "Working with a project"
       },
       "Project/documentation": {
         "title": "Documenter un projet"
@@ -802,12 +805,14 @@
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
       "REST Server": "Serveur REST",
+      "Client/Server": "Client/Server",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
-      "Menus": "Menus"
+      "Menus": "Menus",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -830,6 +835,7 @@
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",

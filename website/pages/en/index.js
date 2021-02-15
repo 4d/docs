@@ -50,6 +50,7 @@ class Index extends React.Component {
 	  formObjectProperties: <translate>Form Object Properties</translate>,
 	  menus: <translate>Menus</translate>,
 	  webServer: <translate>Web Server</translate>,
+	  webDev: <translate>Web Development</translate>,
 	  restServer: <translate>REST Server</translate>,
 	  msc: <translate>Maintenance and Security Center</translate>,
 	  backup: <translate>Backup and Restore</translate>,
@@ -57,6 +58,7 @@ class Index extends React.Component {
     buildApp: <translate>Build Application</translate>,
     webAdmin: <translate>Web Administration</translate>,
 	cs: <translate>Client/Server</translate>,
+	tls: <translate>TLS Protocol (HTTPS)</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
 	langRef: <translate>Language Reference (4D Doc Center)</translate>,
 	  users: <translate>Access Rights</translate>
@@ -96,8 +98,9 @@ class Index extends React.Component {
 				  [${subContents.dataExplorer}](${siteConfig.baseUrl}${this.props.language}/Admin/dataExplorer.html)<br>
 				  [${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
                   [${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
-                  [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)`,
-                  image: `${siteConfig.baseUrl}img/illu_Administration.png`,
+                  [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>
+                  [${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)`,
+				  image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',
                   title: <translate>Administration</translate>,
@@ -111,7 +114,9 @@ class Index extends React.Component {
               align="left"
               contents={[
                 {
-                  content: `[${subContents.webServer}](${siteConfig.baseUrl}${this.props.language}/WebServer/webServerObject.html)<br>[${subContents.restServer}](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
+                  content: `[${subContents.webServer}](${siteConfig.baseUrl}${this.props.language}/WebServer/webServer.html)<br>
+				  [${subContents.webDev}](${siteConfig.baseUrl}${this.props.language}/WebServer/gettingStarted.html)<br>
+				  [${subContents.restServer}](${siteConfig.baseUrl}${this.props.language}/REST/gettingStarted.html)`,
                   image: `${siteConfig.baseUrl}img/illu_WebApplication.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',

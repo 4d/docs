@@ -5,14 +5,14 @@
     "previous": "Previous",
     "tagline": "Documentation for 4D Developers",
     "docs": {
-      "Admin/building": {
-        "title": "Building a project package"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
       },
       "Admin/webAdmin": {
         "title": "Web Administration"
@@ -781,8 +781,38 @@
       "Users/overview": {
         "title": "Overview"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "Getting Started"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
       "WebServer/sessions": {
         "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "Overview"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "Administration"
+      },
+      "WebServer/webServerConfig": {
+        "title": "Configuration"
       },
       "WebServer/webServerObject": {
         "title": "Web Server object"
@@ -804,6 +834,7 @@
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
+      "Web Development": "Web Development",
       "REST Server": "REST Server",
       "Client/Server": "Client/Server",
       "Forms": "Forms",
@@ -829,6 +860,7 @@
     "Form Object Properties|no description given": "Form Object Properties",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Web Server",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
@@ -836,6 +868,7 @@
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",

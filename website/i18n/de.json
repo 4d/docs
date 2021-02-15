@@ -195,6 +195,12 @@
       "Concepts/variables": {
         "title": "Variablen"
       },
+      "Desktop/building": {
+        "title": "Building a project package"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
+      },
       "Events/onActivate": {
         "title": "On Activate"
       },
@@ -665,10 +671,7 @@
         "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Creating or opening a project"
-      },
-      "Project/developing": {
-        "title": "Developing a project"
+        "title": "Working with a project"
       },
       "Project/documentation": {
         "title": "Documenting a project"
@@ -802,12 +805,14 @@
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
       "REST Server": "REST Server",
+      "Client/Server": "Client/Server",
       "Forms": "Formulare",
       "Form Properties": "Form Properties",
       "Form Objects": "Form Objects",
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
-      "Menus": "Menus"
+      "Menus": "Menus",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -830,6 +835,7 @@
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",

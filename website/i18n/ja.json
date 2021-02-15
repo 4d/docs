@@ -195,6 +195,12 @@
       "Concepts/variables": {
         "title": "変数"
       },
+      "Desktop/building": {
+        "title": "プロジェクトパッケージのビルド"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
+      },
       "Events/onActivate": {
         "title": "On Activate"
       },
@@ -665,10 +671,7 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "プロジェクトの作成・開始"
-      },
-      "Project/developing": {
-        "title": "プロジェクトの開発"
+        "title": "Working with a project"
       },
       "Project/documentation": {
         "title": "ドキュメンテーション"
@@ -802,12 +805,14 @@
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
       "REST Server": "REST サーバー",
+      "Client/Server": "Client/Server",
       "Forms": "Forms",
       "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
-      "Menus": "メニュー"
+      "Menus": "メニュー",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -830,6 +835,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",

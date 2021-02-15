@@ -22,9 +22,12 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 マルチユーザー開発は標準的な **ソース管理** リポジトリツール (Perforce, Git, SVN 等) を使っておこないます。これによって、異なるブランチで開発し、比較してマージまたは変更を戻すといった処理が可能になります。
 
 
-## 運用
+## Final application
 
-プロジェクトファイルをコンパイルし、Web、モバイル、またはデスクトップ (クライアントサーバーまたはシングルユーザー) で運用することができます。
+Project files can be compiled and easily deployed. 4D allows you to create three types of applications from your projects:
 
-最終アプリケーション運用ファイルは [4D アプリケーションビルダー](Admin/building.md) を使って生成します。 アプリケーションは、4D Server または 4D を使って開くほか、4D Volume ライセンスと統合することも可能です。
+- [web](WebServer/webServerObject.md) applications,
+- [mobile](https://developer.4d.com/4d-for-ios/) applications,
+- [desktop](Desktop/building.md) applications (client/server or single-user).
 
+Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.

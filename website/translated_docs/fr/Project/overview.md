@@ -22,9 +22,12 @@ Les projets 4D sont développés à l'aide de l'application **4D**. It provides 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
-## Déploiement
+## Final application
 
-Les fichiers de projet peuvent être compilés et facilement déployés pour votre application Web, mobile ou de bureau (client-serveur ou monoposte).
+Project files can be compiled and easily deployed. 4D allows you to create three types of applications from your projects:
 
-Les fichiers de déploiement de l'application finale sont générés lors du processus de génération, à l'aide du [gestionnaire de génération d'application 4D](Admin/building.md). Les applications peuvent s'ouvrir avec 4D Server, 4D, ou fusionnées avec une licence 4D Volume.
+- [web](WebServer/webServerObject.md) applications,
+- [mobile](https://developer.4d.com/4d-for-ios/) applications,
+- [desktop](Desktop/building.md) applications (client/server or single-user).
 
+Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.

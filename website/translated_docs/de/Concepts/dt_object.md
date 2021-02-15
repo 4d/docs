@@ -14,15 +14,17 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
     - Boolean
     - Zeiger (als solcher gespeichert, wird beim Verwenden der Funktion `JSON Stringify` oder beim Kopieren bewertet)
     - Datum (Datumstyp oder ISO Datumsformat)
-    - Objekt (Objekte können in mehrere Stufen verschachtelt sein)
-    - Bild (*)
+    - object(1) (objects can be nested on several levels)
+    - picture(2)
     - collection
 
-(*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
+(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.
+
+(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
 **Warnung:** Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.
 
-Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation (siehe [Grundlagen der Syntax](dt_object.md#grundlagen-der-syntax)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
+You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
 
 Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 
