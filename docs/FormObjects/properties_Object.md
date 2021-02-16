@@ -154,6 +154,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
+
 ---
 ## Expression Type
 
@@ -174,7 +175,7 @@ Otherwise, the picture variable will not be displayed correctly (only in interpr
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSourceTypeHint |string  |<li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"|
+|dataSourceTypeHint |string  |<li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"|
 
 #### Objects Supported
 
