@@ -3,11 +3,11 @@ id: checkboxOverview
 title: Case à cocher
 ---
 
-Une case à cocher est un type de bouton utilisée pour saisir ou afficher une donnée binaire (vrai-faux). Elle peut être soit sélectionnée soit désélectionnée, mais un troisième état peut également être défini (voir ci-dessous).
+Une case à cocher est un type de bouton utilisée pour saisir ou afficher une donnée binaire (vrai-faux). Basically, it is either checked or unchecked, but a [third state](#three-states-check-box) can be defined.
 
 ![](assets/en/FormObjects/checkbox.png)
 
-L’effet d’une case à cocher est contrôlé par une méthode. Comme tous les boutons, une case à cocher est initialisée à la valeur zéro lorsque le formulaire est ouvert pour la première fois. La méthode associée à une case à cocher est exécutée lorsqu’elle est cochée.
+Check boxes are controlled by methods or [standard actions](#using-a-standard-action). La méthode associée à une case à cocher est exécutée lorsqu’elle est cochée. Comme tous les boutons, une case à cocher est initialisée à la valeur zéro lorsque le formulaire est ouvert pour la première fois.
 
 Une case à cocher affiche généralement du texte en face de la case. Ce texte est défini dans la zone [Titre](properties_Object.md#title) du thème “Objets” de la Liste des propriétés. Vous pouvez saisir dans cette zone un libellé sous forme de référence XLIFF (cf. [Annexe B : Architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -374,7 +374,7 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
 
 The Custom button style accepts a personalized background picture and allows managing specific properties:
 
--  [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname)
+- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname)
 - [Décalage icône](properties_TextAndPicture.md#icon-offset)
 - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) and [Marge verticale](properties_TextAndPicture.md#verticalMargin)
 
