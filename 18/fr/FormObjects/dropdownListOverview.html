@@ -75,7 +75,7 @@
 <p>Les objets pop-up/listes déroulantes peuvent être initialisés par le chargement d’une liste de valeurs dans un tableau. Vous pouvez réaliser cette opération de plusieurs manières :</p>
 <ul>
 <li><p>Saisir une liste de valeurs par défaut dans les propriétés de l’objet<Static List>Pour cela, dans le thème <a href="/docs/18/fr/FormObjects/propertiesDataSource.html">Sources de données</a> de la Liste des propriétés, sélectionnez &quot;&quot;. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.</p></li>
-<li><p>Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple:</p></li>
+<li><p>Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple :</p></li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function">  ARRAY TEXT</span>(<span class="hljs-variable">$aCities</span>;<span class="hljs-number">6</span>)
   <span class="hljs-variable">$aCities{1}</span>:=<span class="hljs-string">"Philadelphia"</span>
@@ -87,7 +87,7 @@
 </code></pre>
 <p>Dans ce cas, le nom de la variable associée à l’objet dans le formulaire doit être <em>tVilles</em>. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire <code>Sur chargement</code> se produit.</p>
 <ul>
-<li>Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html">LIST TO ARRAY</a>. Par exemple:</li>
+<li>Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html">LIST TO ARRAY</a>. Par exemple :</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function">   LIST TO ARRAY</span>(<span class="hljs-string">"Cities"</span>;<span class="hljs-variable">$aCities</span>)
 </code></pre>

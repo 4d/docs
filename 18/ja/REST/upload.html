@@ -78,14 +78,14 @@
 <p><code>{ &quot;ID&quot;: &quot;D507BC03E613487E9B4C2F6A0512FE50&quot; }</code></p>
 <p>Afterwards, you use this ID to add it to an attribute using <a href="/docs/18/ja/REST/method.html#methodupdate"><code>$method=update</code></a> to add the image to an entity:</p>
 <p><code>POST /rest/Employee/?$method=update</code></p>
-<p><strong>POST data</strong>:</p>
+<p><strong>POST データ</strong>:</p>
 <pre><code class="hljs">{
     <span class="hljs-attribute">__KEY</span>: <span class="hljs-string">"12"</span>,
     __STAMP: <span class="hljs-number">4</span>,
     photo: { <span class="hljs-string">"ID"</span>: <span class="hljs-string">"D507BC03E613487E9B4C2F6A0512FE50"</span> } 
 }
 </code></pre>
-<p><strong>Response</strong>:</p>
+<p><strong>レスポンス</strong>:</p>
 <p>The modified entity is returned:</p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"12"</span>, 

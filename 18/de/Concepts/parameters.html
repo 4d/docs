@@ -85,7 +85,7 @@
   <span class="hljs-comment">//$3 contains the ThisWay parameter</span>
 </code></pre>
 <p>Innerhalb der Unterroutine können Sie die Parameter $1, $2... auf dieselbe Weise wie jede andere lokale Variable verwenden. Dagegen lassen sich bei Befehlen, die den Wert der als Parameter übergebenen Variablen verändern, wie z. B. <code>Find in field</code> die Parameter $1, $2, usw. nicht direkt verwenden. Sie müssen sie erst in standardmäßige lokale Variablen kopieren, wie z. B. <code>$myvar=$1</code>.</p>
-<p>Dassselbe Prinzip gilt, wenn Methoden durch bestimmte Befehle ausgeführt werden, zum Beispiel:</p>
+<p>Dasselbe Prinzip gilt, wenn Methoden durch bestimmte Befehle ausgeführt werden, zum Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">EXECUTE METHOD IN SUBFORM</span>(<span class="hljs-string">"Cal2"</span>;<span class="hljs-string">"SetCalendarDate"</span>;*;<span class="hljs-literal">!05/05/10!</span>)  
 <span class="hljs-comment">//pass the !05/05/10! date as parameter to the SetCalendarDate  </span>
 <span class="hljs-comment">// in the context of a subform</span>

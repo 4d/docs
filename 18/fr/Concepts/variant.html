@@ -86,7 +86,7 @@
 <blockquote>
 <p>Les tableaux ne peuvent pas être stockés dans des variables de type variant.</p>
 </blockquote>
-<p>En modes interprété et compilé, le même contenu peut être affecté à une même variable variant. Contrairement aux types de variable standard, le type de contenu des variable de type variant est différent du type de variable variant lui-même. Par exemple:</p>
+<p>En modes interprété et compilé, le même contenu peut être affecté à une même variable variant. Contrairement aux types de variable standard, le type de contenu des variable de type variant est différent du type de variable variant lui-même. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$variant</span>)
 
 <span class="hljs-variable">$variant</span>:=<span class="hljs-string">"hello world"</span>
@@ -97,7 +97,7 @@
 <span class="hljs-variable">$vtype</span>:=<span class="hljs-function">Type</span>(<span class="hljs-variable">$variant</span>) <span class="hljs-comment">// 12 (Is variant)</span>
 <span class="hljs-variable">$vtypeVal</span>:=<span class="hljs-function">Value type</span>(<span class="hljs-variable">$variant</span>) <span class="hljs-comment">// 1 (Is real)</span>
 </code></pre>
-<p>Vous pouvez utiliser des variables variant chaque fois qu'elles sont attendues. Vous devez simplement vous assurer que le type de données du contenu de la variable est du type attendu. Lorsque vous accédez à des variables de type variant, seule leur valeur courante est prise en compte. Par exemple:</p>
+<p>Vous pouvez utiliser des variables variant chaque fois qu'elles sont attendues. Vous devez simplement vous assurer que le type de données du contenu de la variable est du type attendu. Lorsque vous accédez à des variables de type variant, seule leur valeur courante est prise en compte. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_VARIANT</span>(<span class="hljs-variable">$v</span>)
 <span class="hljs-variable">$v</span>:=<span class="hljs-string">"hello world"</span>
 <span class="hljs-variable">$v2</span>:=<span class="hljs-variable">$v </span><span class="hljs-comment">//assign variable to another variable</span>

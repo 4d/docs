@@ -384,7 +384,7 @@ For</span>(<span class="hljs-variable">$vlCounter</span>;<span class="hljs-numbe
 <li>Dans le paramètre <em>fin</em>, vous pouvez passer la position de l'élément de <em>Expression</em> auquel stopper l'itération (<em>fin</em> est exclus).</li>
 </ul>
 <p>Si <em>fin</em> est omis ou si <em>fin</em> est plus grand que le nombre d'éléments de <em>Expression</em>, les éléments sont itérés depuis <em>début</em> jusqu'au dernier inclus. Si les paramètres <em>début</em> et <em>fin</em> sont des valeurs positives, ils représentent des positions d'éléments dans <em>Expression</em>. Si <em>begin</em> est une valeur négative, elle est recalculée comme <code>begin:=begin+Taille expression</code> (elle est considérée comme un décalage à partir de la fin de <em>Expression</em>). Si la valeur calculée est négative, <em>begin</em> prend la valeur 0. <strong>Note :</strong> Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si <em>fin</em> est une valeur négative, elle est recalculée comme <code>fin:=fin+Taille expression</code></p>
-<p>Par exemple:</p>
+<p>Par exemple :</p>
 <ul>
 <li>une collection contient 10 éléments (numérotés de 0 à 9)</li>
 <li>début=-4 &gt; début=-4+10=6 &gt; l'itération démarre au 6e élément (numéro 5)</li>

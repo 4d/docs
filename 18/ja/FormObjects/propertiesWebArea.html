@@ -129,20 +129,16 @@
 <h2><a class="anchor" aria-hidden="true" id="埋め込みwebレンダリングエンジンを使用"></a><a href="#埋め込みwebレンダリングエンジンを使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>埋め込みWebレンダリングエンジンを使用</h2>
 <p>このオプションを使用して、Webエリアで使用する描画エンジンを 2つのうちから選択することができます:</p>
 <ul>
-<li><p><strong>チェックなし</strong> - <code>JSON値: system</code> (デフォルト): この場合、4Dはシステムの最適なエンジンを使用します。 Windows では、4Dはマシンにインストールされた最新のブラウザー (IE11、MS Edge、等) を自動的に使用します。 macOS では、カレントバージョンの WebKit (Safari) です。 この結果、HTML5 や JavaScript の最新 Web描画エンジンを自動的に利用できることになります。 しかし、Internet Explorer/Edge と Web Kit 間で若干描画に違いがでることがあります。</p></li>
-<li><p><strong>チェックあり</strong> - <code>JSON値: embedded</code>: この場合、4Dは Google の Blink を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。使用エンジンの新バージョンは 4D のリリースを通して提供されます。</p>
-<p>ただし、Blinkエンジンには以下のような制約があることに注意してください:</p>
-<ul>
-<li><a href="https://doc.4d.com/4Dv18/4D/18/WA-SET-PAGE-CONTENT.301-4504852.ja.html">WA SET PAGE CONTENT</a>: このコマンドを使用する場合、(<a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。</li>
-<li>Blink の Webエリアにおいては、Java applet、JavaScript、およびプラグインの実行は常に許可されており、無効化することはできません。 <a href="https://doc.4d.com/4Dv18/4D/18/WA-SET-PREFERENCE.301-4504849.ja.html">WA SET PREFERENCE</a> および <a href="https://doc.4d.com/4Dv18/4D/18/WA-GET-PREFERENCE.301-4504832.ja.html">WA GET PREFERENCE</a> コマンドでの以下のセレクターは無視されます:
-<ul>
-<li><code>WA enable Java applets</code></li>
-<li><code>WA enable JavaScript</code></li>
-<li><code>WA enable plugins</code></li>
-</ul></li>
-<li><a href="https://doc.4d.com/4Dv18/4D/18/WA-SET-PREFERENCE.301-4504849.ja.html">WA SET PREFERENCE</a> コマンドの <code>WA enable URL drop</code> セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は <a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドを呼び出すか、またはエリアに割り当てられている URL変数に URL が渡されている必要があります。</li>
-</ul></li>
+<li><strong>チェックなし</strong> - <code>JSON値: system</code> (デフォルト): この場合、4Dはシステムの最適なエンジンを使用します。 Windows では、4Dはマシンにインストールされた最新のブラウザー (IE11、MS Edge、等) を自動的に使用します。 macOS では、カレントバージョンの WebKit (Safari) です。 この結果、HTML5 や JavaScript の最新 Web描画エンジンを自動的に利用できることになります。 しかし、Internet Explorer/Edge と Web Kit 間で若干描画に違いがでることがあります。</li>
+<li><strong>チェックあり</strong> - <code>JSON値: embedded</code>: この場合、4Dは Google の Blink を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。使用エンジンの新バージョンは 4D のリリースを通して提供されます。</li>
 </ul>
+<p>ただし、Blinkエンジンには以下のような制約があることに注意してください:
+*   <a href="https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.ja.html">WA SET PAGE CONTENT</a>: このコマンドを使用する場合、(<a href="https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.ja.html">WA OPEN URL</a> コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
+*   Blink の Webエリアにおいては、JavaScript の実行は常に許可されており、無効化することはできません。Java applet およびプラグインの実行は常に無効化されています。 これらの設定は Blink にて変更できません。 <a href="https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.ja.html">WA SET PREFERENCE</a> および <a href="https://doc.4d.com/4Dv18/4D/18.4/WA-GET-PREFERENCE.301-5232945.ja.html">WA GET PREFERENCE</a> コマンドでの以下のセレクターは無視されます:
+*   <code>WA enable Java applets</code>
+*   <code>WA enable JavaScript</code>
+*   <code>WA enable plugins</code>
+*   <a href="https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.ja.html">WA SET PREFERENCE</a> コマンドの <code>WA enable URL drop</code> セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は <a href="https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.ja.html">WA OPEN URL</a> コマンドを呼び出すか、またはエリアに割り当てられている URL変数に URL が渡されている必要があります。</p>
 <h4><a class="anchor" aria-hidden="true" id="json-文法-3"></a><a href="#json-文法-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
 <table>
 <thead>

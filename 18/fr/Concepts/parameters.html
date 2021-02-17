@@ -132,7 +132,7 @@
 <span class="hljs-function"> C_TEXTE</span>(<span class="hljs-variable">$0</span>;<span class="hljs-variable">$1</span>)
  <span class="hljs-variable">$0</span>:=<span class="hljs-function">Majusc</span>(<span class="hljs-function">Sous chaine</span>(<span class="hljs-variable">$1</span>;<span class="hljs-number">1</span>;<span class="hljs-number">1</span>))+<span class="hljs-function">Minusc</span>(<span class="hljs-function">Sous chaine</span>(<span class="hljs-variable">$1</span>;<span class="hljs-number">2</span>))
 </code></pre>
-<p>L'utilisation de commandes telles que <code>Nouveau process</code> avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. Par exemple:</p>
+<p>L'utilisation de commandes telles que <code>Nouveau process</code> avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. Par exemple :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$string</span>)
 <span class="hljs-function">C_LONGINT</span>(<span class="hljs-variable">$idProc</span>;<span class="hljs-variable">$int</span>)
 <span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$obj</span>)
@@ -159,7 +159,7 @@
 </code></pre>
 <ul>
 <li><p>Triggers Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.</p></li>
-<li><p>Objets formulaires qui acceptent l'événement formulaire <code>Sur glisser</code> Le paramètre $0 (Entier long), qui résulte de l'événement formulaire <code>Sur glisser</code> est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. <strong>Note :</strong> Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire <code>Sur glisser</code>, vous devez initialiser $0. Par exemple:</p></li>
+<li><p>Objets formulaires qui acceptent l'événement formulaire <code>Sur glisser</code> Le paramètre $0 (Entier long), qui résulte de l'événement formulaire <code>Sur glisser</code> est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. <strong>Note :</strong> Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire <code>Sur glisser</code>, vous devez initialiser $0. Par exemple :</p></li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$0</span>)<span class="hljs-keyword">
  If</span>(Form event=On Drag Over)
@@ -172,7 +172,7 @@
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="valeurs-ou-références"></a><a href="#valeurs-ou-références" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Valeurs ou références</h2>
-<p>Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la <strong>valeur résultante</strong> sur les variables locales $1, $2 etc. dans la sous-routine (voir <a href="#using-parameters">Utilisation des paramètres</a>). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple:</p>
+<p>Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la <strong>valeur résultante</strong> sur les variables locales $1, $2 etc. dans la sous-routine (voir <a href="#using-parameters">Utilisation des paramètres</a>). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple :</p>
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">//Voici du code extrait de la méthode MY_METHOD</span>
 <span class="hljs-function">DO_SOMETHING</span>([People]Name) <span class="hljs-comment">//Let's say [People]Name value is "williams"</span>
 <span class="hljs-function">ALERT</span>([People]Name)

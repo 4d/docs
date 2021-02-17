@@ -239,7 +239,7 @@
 <ul>
 <li>L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.</li>
 </ul>
-<p>Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous pouvez vous assurer qu'elles auront le type souhaité même en cas de valeur Indéfinie en les encadrant avec la commande de transtypage 4D appropriée : <code>String</code>, <code>Num</code>, <code>Time</code>, <code>Date</code>, <code>Bool</code>. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple:</p>
+<p>Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous pouvez vous assurer qu'elles auront le type souhaité même en cas de valeur Indéfinie en les encadrant avec la commande de transtypage 4D appropriée : <code>String</code>, <code>Num</code>, <code>Time</code>, <code>Date</code>, <code>Bool</code>. Ces commandes retournent une valeur vide du type spécifié lorsque l'expression est évaluée à Indéfinie. Par exemple :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myString</span>:=<span class="hljs-function">Lowercase</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$o</span>.a.b)) <span class="hljs-comment">//pour être sûr d'obtenir une valeur texte même si indéfinie</span>
   <span class="hljs-comment">//afin d'éviter des erreurs dans le code</span>
 </code></pre>
