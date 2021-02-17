@@ -1,6 +1,6 @@
 ---
 id: whatsNew
-title: What's New
+title: 新着情報
 ---
 
 The list of new or modified 4D features that are covered in this documentation.
