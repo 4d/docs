@@ -674,7 +674,7 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "Working with a project"
+        "title": "プロジェクトを開発する"
       },
       "Project/documentation": {
         "title": "ドキュメンテーション"
@@ -683,7 +683,7 @@
         "title": "概要"
       },
       "ReleaseNotes/whatsNew": {
-        "title": "What's New"
+        "title": "新着情報"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
