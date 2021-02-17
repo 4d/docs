@@ -3,11 +3,11 @@ id: checkboxOverview
 title: チェックボックス
 ---
 
-チェックボックスはボタンの一種で、バイナリ (true-false) データの入力や表示をおこないます。 Basically, it is either checked or unchecked, but a [third state](#three-states-check-box) can be defined.
+チェックボックスはボタンの一種で、バイナリ (true-false) データの入力や表示をおこないます。 基本的に、チェックボックスの状態は選択または未選択のいずれかになりますが、[3つめの状態](#スリーステートチェックボックス) を定義することもできます。
 
 ![](assets/en/FormObjects/checkbox.png)
 
-Check boxes are controlled by methods or [standard actions](#using-a-standard-action). チェックボックスが選択されると、チェックボックスに割り当てられたメソッドが実行されます。 他のボタンと同じように、フォームが初めて開かれると、チェックボックスの変数は 0 に初期化されます。
+チェックボックスは、メソッドまたは [標準アクション](#標準アクションの使用) を使って管理します。 チェックボックスが選択されると、チェックボックスに割り当てられたメソッドが実行されます。 他のボタンと同じように、フォームが初めて開かれると、チェックボックスの変数は 0 に初期化されます。
 
 チェックボックスは小さな四角形の右側にテキストを表示します。 このテキストはチェックボックスの [タイトル](properties_Object.md#title) プロパティで設定します。 タイトルには、XLIFF参照を入れることもできます ([付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) 参照)。
 
