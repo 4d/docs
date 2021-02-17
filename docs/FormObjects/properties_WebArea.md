@@ -85,13 +85,13 @@ This option allows choosing between two rendering engines for the Web area, depe
 This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between Internet Explorer/Edge implementations and Web Kit ones.
 *	**checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google. Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, new versions of the engines are provided through 4D.
 
-	Note that the Blink engine has the following limitations:
-	*	[WA SET PAGE CONTENT](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PAGE-CONTENT.301-4310783.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-OPEN-URL.301-4310772.en.html) or an assignment to the URL variable associated to the area).
-	*	Execution of Java applets, JavaScripts and plug-ins is always enabled and cannot be disabled in Web areas in Blink. The following selectors of the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) and [WA GET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-GET-PREFERENCE.301-4310763.en.html) commands are ignored:
+Note that the Blink engine has the following limitations:
+	*	[WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or an assignment to the URL variable associated to the area).
+	*	Execution of JavaScript is always enabled; execution of Java applets and plug-ins is always disabled. These settings cannot be modified in Blink. The following selectors of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) and [WA GET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-GET-PREFERENCE.301-5232945.en.html) commands are ignored:
 		*	`WA enable Java applets`
 		*	`WA enable JavaScript`
 		*	`WA enable plugins`
-	*	When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-OPEN-URL.301-4310772.en.html) or one assignment to the URL variable associated to the area.
+	*	When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or one assignment to the URL variable associated to the area.
 
 #### JSON Grammar
 

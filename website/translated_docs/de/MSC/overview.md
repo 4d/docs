@@ -6,7 +6,7 @@ sidebar_label: Überblick
 
 Das Fenster Maintenance und Security Center (MSC) enthält alle Tools zum Prüfen, Analysieren, Warten, Sichern, Komprimieren und Verschlüsseln von Datendateien. Das MSC ist in allen 4D Programmen verfügbar, also 4D Developer, 4D Server oder 4D Desktop.
 
-**Note:** The MSC window is not available from a 4D remote connection.
+**Hinweis:** Das MSC Fenster ist in einer 4D remote Verbindung nicht verfügbar.
 
 Es gibt verschiedene Wege, das MSC-Fenster zu öffnen. Die Art des Zugriffs bestimmt auch die Art, wie die Datenbank geöffnet wird: im Wartungs- oder im Standardmodus. Im Wartungsmodus wird die Datenbank nicht durch 4D geöffnet, sondern nur ihre Referenz an MSC geliefert. Im Standardmodus wird die Datenbank von 4D geöffnet.
 
@@ -17,20 +17,20 @@ Im Wartungsmodus erscheint nur das MSC-Fenster, d. h. die Datenbank wird nicht v
 
 Es gibt zwei Stellen, das MSC im Wartungsmodus zu öffnen:
 
-- **From the standard database opening dialog box** The standard Open database dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](assets/en/MSC/MSC_standardOpen.png)
-- **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (database not open)  
+- **Über den Standard-Öffnen Dialog** Der Standarddialog zum Öffnen der Datenbank enthält in der rechten unteren Ecke die Schaltfläche **Öffnen** mit einem PopUp-Menü, in dem Sie die Option **Maintenance Security Center** anklicken können: ![](assets/en/MSC/MSC_standardOpen.png)
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der Toolbar (Die Datenbank ist nicht geöffnet)  
   ![](assets/en/MSC/mscicon.png)   
-  When you call this function, a standard Open file dialog appears so that you can indicate the database to be examined. Dabei öffnet 4D nicht die Datenbank.
+  Auf dem Bildschirm erscheint der Standard-Öffnen Dialog, in dem Sie die entsprechende Datenbank auswählen können. Dabei öffnet 4D nicht die Datenbank.
 
 ## Anzeige im Standardmodus
 
 Im Standardmodus wird eine Datenbank geöffnet. Hier sind nicht alle Wartungsfunktionen verfügbar. Es gibt mehrere Möglichkeiten, das MSC Fenster zu öffnen:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- Über das Menü **Hilfe/Maintenance Security Center** oder die Schaltfläche **MSC** in der 4D Toolbar  
   ![](assets/en/MSC/mscicon.png)
 - Über die Standardaktion “msc”, die Sie einem Menübefehl oder einem Formularobjekt zuordnen können (siehe Abschnitt "Standardaktionen").
 
-- Use the `OPEN SECURITY CENTER` language command.
+- Über den 4D Befehl `OPEN SECURITY CENTER`
 
 ## Verfügbarkeit der Funktionen
 

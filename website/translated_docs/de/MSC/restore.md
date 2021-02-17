@@ -6,26 +6,26 @@ sidebar_label: Seite Wiederherstellen
 
 ## Backup wiederherstellen
 
-You can manually restore an archive of the current database using the **Restore** page. Hier können Sie auch verschiedene Optionen zum Steuern der Wiederherstellung der Datenbank festlegen:
+Über die Seite **Wiederherstellen** können Sie ein Archiv der aktuellen Anwendung manuell wiederherstellen. Hier können Sie auch verschiedene Optionen zum Steuern der Wiederherstellung festlegen:
 
 ![](assets/en/MSC/MSC_restore.png)
 
-> Das automatische Wiederherstellungssystem von 4D stellt Datenbanken wieder her und integriert bei Bedarf das Logbuch der Daten.
+> Das automatische Wiederherstellungssystem von 4D stellt Anwendungen wieder her und integriert bei Bedarf das Logbuch der Daten.
 
-Der linke Bereich enthält die vorhandenen Backups der Datenbank. You can also click on the Browse... button found just under the area in order to open any other archive file from a different location. Es wird dann zur Liste der Archive hinzugefügt.
+Der linke Bereich enthält die vorhandenen Backups der Anwendung. Sie können auch unter dem linken Bereich auf die Schaltfläche Wählen klicken, um ein Archiv an anderer Stelle zu öffnen. Es wird dann zur Liste der Archive hinzugefügt.
 
 Wählen Sie hier ein Backup aus, erscheinen im rechten Teil des Fensters Informationen über dieses Backup:
 
-- **Path**: Complete pathname of the selected backup file. Mit der Schaltfläche Anzeigen öffnen Sie die Backup-Datei in einem Systemfenster.
-- **Date and Time**: Date and time of backup.
-- **Content**: Contents of the backup file. Neben jedem Eintrag in der Liste gibt es ein Ankreuzfeld, über das Sie angeben, ob er wiederhergestellt werden soll. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored.
-- **Destination folder of the restored files**: Folder where the restored files will be placed. 4D legt die wiederhergestellten Dateien standardmäßig in einem Ordner mit Namen "Archivname" (ohne Endung) ab, der neben der Strukturdatei der Datenbank liegt. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
+- **Pfad**: Vollständiger Pfadname der gewählten Backup-Datei. Mit der Schaltfläche Anzeigen öffnen Sie die Backup-Datei in einem Systemfenster.
+- **Datum und Zeit**: Datum und Uhrzeit des Backup.
+- **Inhalt**: Inhalt der Backup-Datei. Neben jedem Eintrag in der Liste gibt es ein Ankreuzfeld, über das Sie angeben, ob er wiederhergestellt werden soll. Sie können auch die Schaltflächen** Alles aktivieren** oder **Nichts aktivieren** verwenden, um die Liste der Einträge zusammenzustellen, die Sie wiederherstellen wollen.
+- **Zielordner für wiederherstellte Dateien auswählen**: Ordner, in dem die wiederhergestellten Dateien abgelegt werden. 4D legt die wiederhergestellten Dateien standardmäßig in einem Ordner mit Namen "Archivname" (ohne Endung) ab, der neben der Strukturdatei der Datenbank liegt. Wollen Sie das Ziel ändern, klicken Sie unter dem Bereich auf die Schaltfläche **[...]** und geben einen anderen Ordner an.
 
-The **Restore** button launches the manual restoration of the selected element(s).
+Die Schaltfläche **Wiederherstellen** startet die manuelle Wiederherstellung der gewählten Elemente.
 
 ## Mehrere Logbücher der Daten nacheinander integrieren
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into a database. Haben Sie z.B. 4 Logbücher (.4BL) passend zu 4 Backups der Datenbank, können Sie das erste Backup wiederherstellen und dann die Logbücher (data log) der Reihe nach integrieren. Auf diese Weise können Sie z. B. eine Datei wiederherstellen, auch wenn die letzten Backup-Dateien fehlen.
+Mit der Option **Logbuch/Logbücher nach Wiederherstellung integrieren** können Sie mehrere Logbücher hintereinander in eine Anwendung integrieren. Haben Sie z.B. 4 Logbücher (.4BL) passend zu 4 Backups, können Sie das erste Backup wiederherstellen und dann die Logbücher (data log) der Reihe nach integrieren. Auf diese Weise können Sie z. B. eine Datei wiederherstellen, auch wenn die letzten Backup-Dateien fehlen.
 
 Ist diese Option markiert, zeigt 4D nach dem Wiederherstellen den Standard Öffnen-Dialog. Hier können Sie das entsprechende Logbuch auswählen. Der Öffnen-Dialog erscheint erneut nach jeder Integration, bis er abgebrochen wird.
 
