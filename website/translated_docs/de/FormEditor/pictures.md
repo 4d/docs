@@ -32,22 +32,22 @@ Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lä
 
 ## Hochauflösende Bilder
 
-4D supports high resolution pictures on both macOS and Windows platforms. Sie lassen sich über den Skalierungsfaktor oder dpi definieren.
+4D unterstützt hochauflösende Bilder auf den beiden Plattformen Windows und macOS. Sie lassen sich über den Skalierungsfaktor oder dpi definieren.
 
 ### Skalierungsfaktor (nur macOS)
 
-High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.).
+Hochauflösende Anzeigen haben eine höhere Pixeldichte als herkömmliche Standardanzeigen. Damit Bilder auf hochauflösenden Anzeigen korrekt dargestellt werden, muss die Anzahl der Pixel im Bild mit dem *Skalierungsfaktor* multipliziert werden (*d.h.*, zwei Mal größer, drei Mal größer usw.).
 
-When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In the table below, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*.
+When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In der Tabelle unten sehen Sie, dass der Skalierungsfaktor in den Namen der hochauflösenden Bilder, *circle@2x.png* und *circle@3x.png*, angegeben ist.
 
-| Display Type        | Scale Factor                                   | Beispiel                                                                 |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------ |
-| Standard Resolution | 1:1 pixel density.                             | **1x**<br>![](assets/en/FormEditor/pictureScale1.png) *circle.png* |
-| High Resolution     | Pixel density increased by a factor of 2 or 3. | <table><th>2x</th><th>3x</th><tr><td>![](assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](assets/en/FormEditor/pictureScale3.png)<br>*circle@3x.png*</td></tr></table>                                                |
+| Anzeigetyp        | Skalierungsfaktor                          | Beispiel                                                                 |
+| ----------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
+| Standardauflösung | 1:1 Pixel Dichte                           | **1x**<br>![](assets/en/FormEditor/pictureScale1.png) *circle.png* |
+| Hohe Auflösung    | Um den Faktor 2 oder 3 erhöhte Pixeldichte | <table><th>2x</th><th>3x</th><tr><td>![](assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](assets/en/FormEditor/pictureScale3.png)<br>*circle@3x.png*</td></tr></table>                                                |
 
 
 
-High resolution pictures with the @nx convention can be used in the following objects:
+Hochauflösende Bilder mit der @nx-Konvention lassen sich in folgenden Objekten verwenden:
 
 *   [Static pictures](FormObjects/staticPicture.md)
 *   [Buttons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[check boxes](FormObjects/checkbox_overview.md)
@@ -58,19 +58,19 @@ High resolution pictures with the @nx convention can be used in the following ob
 
 
 
-4D automatically prioritizes pictures with the highest resolution. <br><br> **Example**: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D  automatically renders the highest possible resolution of the picture. Even if a command or property specifies *circle.png*, *circle@3x.png* will be used (if it exists).
-> Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.
+4D priorisiert automatisch die Bilder mit der höchsten Auflösung. <br><br> **Beispiel**: Wenn Sie zwei Bildschirme verwenden (ein hochauflösendes Display, ein Standard-Display) und Sie ein Formular von einem Bildschirm auf den anderen verschieben, rendert 4D automatisch die höchstmögliche Auflösung des Bildes. Selbst wenn ein Befehl oder eine Eigenschaft *circle.png* angibt, wird *circle@3x.png* verwendet (wenn es existiert).
+> Beachten Sie, dass die Priorisierung der Auflösung nur für die Anzeige von Bildern auf dem Bildschirm erfolgt, beim Drucken wird keine automatische Priorisierung vorgenommen.
 
 
 
-### DPI (macOs and Windows)
+### DPI (macOS und Windows)
 
 While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
 
-| Operation                                                                                                                                | Behavior                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Drop or Paste                                                                                                                            | If the picture has:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li> |
-| [Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu) | If the picture's display format  is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>                                  |
+| Operation                                                                                                                                | Verhalten                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Drop or Paste                                                                                                                            | Hat das Bild:<ul><li>**72dpi oder 96dpi** - Das Bild ist "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatiert und das Objekt, das das Bild enthält, hat die gleiche Anzahl von Pixel.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li> |
+| [Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu) | If the picture's display format  is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul><p>                            |
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
