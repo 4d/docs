@@ -3,87 +3,115 @@ id: authUsers
 title: Sessions et utilisateurs
 ---
 
+REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
+
 As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
 
 
 ## Authentification des utilisateurs
 
-Connectez un utilisateur à votre application en passant le nom et le mot de passe de l'utilisateur dans [`$directory/login`]($directory.md#directorylogin).
+You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
 
-Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
+## Ouverture des sessions
 
-The session will automatically be closed once the timeout is reached.
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/sessionClass.md). Subsequent REST requests will reuse the same session cookie.
 
-## Cookie de session
+If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 
-Chaque requête REST est gérée via une session spécifique sur le serveur 4D.
 
-Lorsqu'une première requête REST valide est reçue, le serveur crée la session et envoie un cookie de session nommé `WASID4D` dans l'**en-tête de réponse "Set-Cookie"**, contenant l'UUID de session, par exemple :
+## Exemple
+
+In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST. The `On REST Authentication` database method is called to validate the credentials and to set the session.
+
+The HTML login page:
+
+![alt-text](assets/en/REST/login.png)
+
+
+```html
+<html><body bgcolor="#ffffff">
+
+<div id="demo">
+    <FORM name="myForm">
+Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><BR>
+Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
+<button type="button" onclick="onClick()">
+Login
+</button>
+<div id="authenticationFailed"  style="visibility:hidden;">Authentication failed</div>
+</FORM>
+</div>
+
+<script>
+function sendData(data) {
+  var XHR = new XMLHttpRequest();
+
+  XHR.onreadystatechange = function() {
+    if (this.status == 200) {
+      //document.getElementById("demo").innerHTML =
+      //'Authentication successful'; 
+
+      window.location = "authenticationOK.shtml"; 
+      }
+      else {
+      document.getElementById("authenticationFailed").style.visibility = "visible";
+      }
+  };
+
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
+
+  XHR.setRequestHeader('username-4D', data.userId);
+  XHR.setRequestHeader('password-4D', data.password);
+  XHR.setRequestHeader('session-4D-length', data.timeout);
+
+  XHR.send();
+};
+function onClick()
+{
+sendData({userId:document.forms['myForm'].elements['userId'].value , password:document.forms['myForm'].elements['password'].value , timeout:120})
+}
+</script></body></html>
 
 ```
-WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
-```
 
-Assurez-vous, dans les requêtes REST, que ce cookie est inclus dans **l'en-tête "Cookie"** afin de réutiliser la même session. Sinon, une nouvelle session sera ouverte et une autre licence utilisée.
-
-### Exemple
-
-La gestion des cookies de session dépend de votre client HTTP. Cet exemple montre comment extraire et renvoyer le cookie de session dans le contexte des requêtes traitées via la commande 4D `HTTP Request`.
+When the login page is sent to the server, the `On REST Authentication` database method is called:
 
 ```4d
-// Créer des en-têtes
-ARRAY TEXT(headerNames;0)
-ARRAY TEXT(headerValues;0)
+    //On REST Authentication
 
-APPEND TO ARRAY(headerNames;"username-4D")
-APPEND TO ARRAY(headerNames;"session-4D-length")
-APPEND TO ARRAY(headerNames;"hashed-password-4D")
+#DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
+var $sales : cs.SalesPersonsEntity
 
-APPEND TO ARRAY(headerValues;"kind user")
-APPEND TO ARRAY(headerValues;"60")
-APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
+$Accepted:=False
 
-C_OBJECT($response)
-$response:=New object
-
-//Cette requête ouvre une session à l'utilisateur "kind user"
-$result:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/$directory/login";"";\  
-    $response;headerNames;headerValues;*)
-
-
-//Créer de nouveaux tableaux pour les en-têtes uniquement avec le cookie WASID4D
-buildHeader(->headerNames;->headerValues)
-
-//Cette autre requête n'ouvrira pas une nouvelle session
-$result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\  
-    $response;headerNames;headerValues;*)
+    //A '/rest' URL has been called with headers username-4D and password-4D
+If ($userId#"")
+    $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
+    If ($sales#Null)
+        If (Verify password hash($password; $sales.password))
+            fillSession($sales)
+            $Accepted:=True
+        End if 
+    End if 
+End if 
 ```
+
+> As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
+
+The `fillSession` project method initializes the user session, for example:
 
 ```4d
-// méthode projet buildHeader  
+#DECLARE($sales : cs.SalesPersonsEntity)
+var $info : Object
 
-C_POINTER($pointerNames;$1;$pointerValues;$2)
-ARRAY TEXT($headerNames;0)
-ARRAY TEXT($headerValues;0)
+$info:=New object()
+$info.userName:=$sales.firstname+" "+$sales.lastname
 
-COPY ARRAY($1->;$headerNames)
-COPY ARRAY($2->;$headerValues)
+Session.setPrivileges($info)
 
-$indexCookie:=Find in array($headerValues;"WASID4D@")
-$cookie:=$headerValues{$indexCookie}
-$start:=Position("WASID4D";$cookie)
-$end:=Position(";";$cookie)
-$uuid:= Substring($cookie;$start;$end-$start)
-
-ARRAY TEXT($headerNames;1)
-ARRAY TEXT($headerValues;1)
-
-$headerNames{1}:="Cookie"
-$headerValues{1}:=$uuid
-
-COPY ARRAY($headerNames;$1->)
-COPY ARRAY($headerValues;$2->)
+Use (Session.storage)
+    If (Session.storage.myTop3=Null)
+        Session.storage.myTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
+    End if 
+End use
 ```
-
-
-
