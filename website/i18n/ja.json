@@ -674,13 +674,16 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "Working with a project"
+        "title": "プロジェクトを開発する"
       },
       "Project/documentation": {
         "title": "ドキュメンテーション"
       },
       "Project/overview": {
         "title": "概要"
+      },
+      "ReleaseNotes/whatsNew": {
+        "title": "新着情報"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -822,6 +825,7 @@
       }
     },
     "links": {
+      "Whats New": "Whats New",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
