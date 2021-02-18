@@ -65,7 +65,7 @@ Hochauflösende Bilder mit der @nx-Konvention lassen sich in folgenden Objekten 
 
 ### DPI (macOS und Windows)
 
-While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
+Auch wenn 4D automatisch die höchste Auflösung priorisiert, gibt es jedoch einige Unterschiede im Verhalten je nach dpi von Bildschirm und Bild*(\*)* und Bildformat:
 
 | Operation                                                                                                                                           | Verhalten                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
