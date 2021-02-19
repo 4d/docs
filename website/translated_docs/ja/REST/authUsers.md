@@ -3,87 +3,112 @@ id: authUsers
 title: ユーザーとセッション
 ---
 
+REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
+
 4D Server上で RESTセッションを開くには、まずリクエストを送信するユーザーが認証されなければなりません。
 
 
 ## ユーザー認証
 
-アプリケーションにユーザーをログインするには、ユーザー名とパスワードを [`$directory/login`]($directory.md#directorylogin) に送信します。
+You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
 
-ユーザーのログインと同時にセッションが開かれます。 以降のクライアントリクエストにおけるセッションcookie の扱い方については、後述を参照ください。
+## セッションの開始
 
-セッションは、タイムアウトすると自動終了します。
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/sessionClass.md). Subsequent REST requests will reuse the same session cookie.
 
-## セッションcookie
+If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 
-4D Server上では、各 RESTリクエストは専用セッションを介して処理されます。
 
-最初の有効な RESTリクエストを受信すると、サーバーはセッションを生成し、**"Set-Cookie" レスポンスヘッダー** に、セッションUUID を格納した `WASID4D` という名前のセッションcookie を返します。例:
+## 例題
+
+In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
+
+The HTML login page:
+
+![alt-text](assets/en/REST/login.png)
+
+
+```html
+<html><body bgcolor="#ffffff">
+
+<div id="demo">
+    <FORM name="myForm">
+Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><BR>
+Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
+<button type="button" onclick="onClick()">
+Login
+</button>
+<div id="authenticationFailed" style="visibility:hidden;">Authentication failed</div>
+</FORM>
+</div>
+
+<script>
+function sendData(data) {
+  var XHR = new XMLHttpRequest();
+
+  XHR.onreadystatechange = function() {
+    if (this.status == 200) {      
+      window.location = "authenticationOK.shtml"; 
+      }
+      else {
+      document.getElementById("authenticationFailed").style.visibility = "visible";
+      }
+  };
+
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
+
+  XHR.setRequestHeader('username-4D', data.userId);
+  XHR.setRequestHeader('password-4D', data.password);
+  XHR.setRequestHeader('session-4D-length', data.timeout);
+
+  XHR.send();
+};
+function onClick()
+{
+sendData({userId:document.forms['myForm'].elements['userId'].value , password:document.forms['myForm'].elements['password'].value , timeout:120})
+}
+</script></body></html>
 
 ```
-WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
-```
 
-以降の RESTリクエストにおいては、**"Cookie" リクエストヘッダー** にこの cookie を含めるようにします。これにより、同じセッションを利用し続けることができます。 そうしない場合には新規セッションが開かれることとなり、したがってライセンスが別途消費されます。
-
-### 例題
-
-実際のところ、セッションcookie の扱いは HTTPクライアントに寄ります。 この例題では、4D の `HTTP Request` コマンドを使ってリクエストを処理する場合に、セッションcookie を抽出し、再送信する方法を示します:
+When the login page is sent to the server, the `On REST Authentication` database method is called:
 
 ```4d
-// ヘッダーを作成します
-ARRAY TEXT(headerNames;0)
-ARRAY TEXT(headerValues;0)
+    //On REST Authentication
 
-APPEND TO ARRAY(headerNames;"username-4D")
-APPEND TO ARRAY(headerNames;"session-4D-length")
-APPEND TO ARRAY(headerNames;"hashed-password-4D")
+#DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
+var $sales : cs.SalesPersonsEntity
 
-APPEND TO ARRAY(headerValues;"kind user")
-APPEND TO ARRAY(headerValues;"60")
-APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
+$Accepted:=False
 
-C_OBJECT($response)
-$response:=New object
-
-// このリクエストは "kind user" というユーザーのセッションを開きます
-$result:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/$directory/login";"";\  
-    $response;headerNames;headerValues;*)
-
-
-// 以降のリクエストヘッダー用に cookie WASID4D のみを格納した配列を作成します
-buildHeader(->headerNames;->headerValues)
-
-// 次のリクエストは新規セッションを開きません
-$result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\  
-    $response;headerNames;headerValues;*)
+    //A '/rest' URL has been called with headers username-4D and password-4D
+If ($userId#"")
+    $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
+    If ($sales#Null)
+        If (Verify password hash($password; $sales.password))
+            fillSession($sales)
+            $Accepted:=True
+        End if 
+    End if 
+End if 
 ```
+
+> As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
+
+The `fillSession` project method initializes the user session, for example:
 
 ```4d
-// buildHeader プロジェクトメソッド  
+#DECLARE($sales : cs.SalesPersonsEntity)
+var $info : Object
 
-C_POINTER($pointerNames;$1;$pointerValues;$2)
-ARRAY TEXT($headerNames;0)
-ARRAY TEXT($headerValues;0)
+$info:=New object()
+$info.userName:=$sales.firstname+" "+$sales.lastname
 
-COPY ARRAY($1->;$headerNames)
-COPY ARRAY($2->;$headerValues)
+Session.setPrivileges($info)
 
-$indexCookie:=Find in array($headerValues;"WASID4D@")
-$cookie:=$headerValues{$indexCookie}
-$start:=Position("WASID4D";$cookie)
-$end:=Position(";";$cookie)
-$uuid:= Substring($cookie;$start;$end-$start)
-
-ARRAY TEXT($headerNames;1)
-ARRAY TEXT($headerValues;1)
-
-$headerNames{1}:="Cookie"
-$headerValues{1}:=$uuid
-
-COPY ARRAY($headerNames;$1->)
-COPY ARRAY($headerValues;$2->)
+Use (Session.storage)
+    If (Session.storage.myTop3=Null)
+        Session.storage.myTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
+    End if 
+End use
 ```
-
-
-

@@ -38,7 +38,7 @@ Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lä
 
 Hochauflösende Anzeigen haben eine höhere Pixeldichte als herkömmliche Standardanzeigen. Damit Bilder auf hochauflösenden Anzeigen korrekt dargestellt werden, muss die Anzahl der Pixel im Bild mit dem *Skalierungsfaktor* multipliziert werden (*d.h.*, zwei Mal größer, drei Mal größer usw.).
 
-When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In der Tabelle unten sehen Sie, dass der Skalierungsfaktor in den Namen der hochauflösenden Bilder, *circle@2x.png* und *circle@3x.png*, angegeben ist.
+Bei hochauflösenden Bildern können Sie den Skalierungsfaktor durch Hinzufügen von "@nx" im Bildnamen angeben (*n* bezeichnet den Skalierungsfaktor). In der Tabelle unten sehen Sie, dass der Skalierungsfaktor in den Namen der hochauflösenden Bilder, *circle@2x.png* und *circle@3x.png*, angegeben ist.
 
 | Anzeigetyp        | Skalierungsfaktor                          | Beispiel                                                                 |
 | ----------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
@@ -65,7 +65,7 @@ Hochauflösende Bilder mit der @nx-Konvention lassen sich in folgenden Objekten 
 
 ### DPI (macOS und Windows)
 
-While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
+Auch wenn 4D automatisch die höchste Auflösung priorisiert, gibt es jedoch einige Unterschiede im Verhalten je nach dpi von Bildschirm und Bild*(\*)* und Bildformat:
 
 | Operation                                                                                                                                           | Verhalten                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
