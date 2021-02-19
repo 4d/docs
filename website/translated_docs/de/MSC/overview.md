@@ -13,7 +13,7 @@ Es gibt verschiedene Wege, das MSC-Fenster zu öffnen. Die Art des Zugriffs best
 
 ## Anzeige im Wartungsmodus
 
-Im Wartungsmodus erscheint nur das MSC-Fenster, d. h. die Datenbank wird nicht vom 4D Programm geöffnet. Das bedeutet, dass auch Zugriff auf Datenbanken möglich ist, die sich wegen Beschädigung nicht im Standardmodus öffnen lassen. Außerdem müssen Sie für bestimmte Operationen, wie Komprimieren, Reparieren u. ä. die Datenbank im Wartungsmodus öffnen (siehe unter [Verfügbarkeit der Funktionen](#feature-availability)).
+Im Wartungsmodus erscheint nur das MSC-Fenster, d. h. die Datenbank wird nicht vom 4D Programm geöffnet. Das bedeutet, dass auch Zugriff auf Datenbanken möglich ist, die sich wegen Beschädigung nicht im Standardmodus öffnen lassen. Außerdem müssen Sie für bestimmte Operationen, wie Komprimieren, Reparieren u. ä. die Datenbank im Wartungsmodus öffnen (siehe unter [Verfügbarkeit der Funktionen](#verfügbarkeit-der-funktionen)).
 
 Es gibt zwei Stellen, das MSC im Wartungsmodus zu öffnen:
 
