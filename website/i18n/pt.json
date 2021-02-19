@@ -781,6 +781,9 @@
       "REST/REST_requests": {
         "title": "About REST Requests"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "Managing 4D users and groups"
       },
