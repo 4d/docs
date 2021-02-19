@@ -3,7 +3,7 @@ id: templates
 title: Template pages
 ---
 
-4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of transformation tags such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
+4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
 
 When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing. 
 
@@ -30,7 +30,7 @@ The following 4D tags are available:
 - 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
 - 4DLOOP and 4DENDLOOP, to make loops in the HTML code.
 
-These tags are described in the [4D Transformation Tags](https://doc.4d.com/4Dv18R5/4D/18-R5/4D-Transformation-Tags.300-5128433.en.html) page on doc.4d.com.
+These tags are described in the [4D Transformation Tags](Tags/tags.md) page.
 
 > For security reasons, any 4D project method called from a 4D tag must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
 

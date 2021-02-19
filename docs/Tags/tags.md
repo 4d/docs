@@ -1,6 +1,6 @@
 ---
 id: tags
-title: 4D Transformation tags
+title: Transformation tags
 ---
 
 4D provides a set of transformation tags which allow you to insert references to 4D variables or expressions, or to perform different types of processing within a source text, referred to as a "template". These tags are interpreted when the source text is executed and generate an output text.
@@ -218,7 +218,7 @@ The number of loops is based on the number of elements of the collection. At eac
         
           <!--#4DEACH $name in getNames-->
         <tr>
-            <td ><!--#4DTEXT $name--></td>
+            <td><!--#4DTEXT $name--></td>
         </tr>
           <!--#4DENDEACH-->
     </table>
@@ -237,9 +237,9 @@ The number of loops is based on the number of elements of the collection. At eac
 
           <!--#4DEACH $salesPerson in $salePersons-->
         <tr>
-            <td ><!--#4DTEXT $salesPerson.ID--></td>
-            <td ><!--#4DTEXT $salesPerson.firstname--></td>
-            <td ><!--#4DTEXT $salesPerson.lastname--></td>
+            <td><!--#4DTEXT $salesPerson.ID--></td>
+            <td><!--#4DTEXT $salesPerson.firstname--></td>
+            <td><!--#4DTEXT $salesPerson.lastname--></td>
         </tr>
           <!--#4DENDEACH-->
     </table>
@@ -264,9 +264,9 @@ The number of loops is based on the number of entities of the entity selection. 
 
           <!--#4DEACH $customer in ds.Customers.all()-->
         <tr>
-            <td ><!--#4DTEXT $customer.ID--></td>
-            <td ><!--#4DTEXT $customer.name--></td>
-            <td ><center><!--#4DTEXT String($customer.totalPurchase;"$###,##0")--></center></td>
+            <td><!--#4DTEXT $customer.ID--></td>
+            <td><!--#4DTEXT $customer.name--></td>
+            <td><center><!--#4DTEXT String($customer.totalPurchase;"$###,##0")--></center></td>
         </tr>
           <!--#4DENDEACH-->
     </table>
