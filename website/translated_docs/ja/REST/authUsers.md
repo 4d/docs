@@ -21,7 +21,7 @@ If the `On REST Authentication` database method has not been defined, a `guest` 
 
 ## 例題
 
-In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST. The `On REST Authentication` database method is called to validate the credentials and to set the session.
+In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
 
 The HTML login page:
 
@@ -38,7 +38,7 @@ Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
 <button type="button" onclick="onClick()">
 Login
 </button>
-<div id="authenticationFailed"  style="visibility:hidden;">Authentication failed</div>
+<div id="authenticationFailed" style="visibility:hidden;">Authentication failed</div>
 </FORM>
 </div>
 
@@ -47,10 +47,7 @@ function sendData(data) {
   var XHR = new XMLHttpRequest();
 
   XHR.onreadystatechange = function() {
-    if (this.status == 200) {
-      //document.getElementById("demo").innerHTML =
-      //'Authentication successful'; 
-
+    if (this.status == 200) {      
       window.location = "authenticationOK.shtml"; 
       }
       else {
