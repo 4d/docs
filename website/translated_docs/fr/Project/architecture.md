@@ -45,7 +45,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 Le fichier de développement de projet, utilisé pour désigner et lancer le projet. Ce fichier peut être ouvert par :
 
 - 4D
-- 4D Server (lecture seule, voir [Développer un projet](developing.md))
+- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
 
 > Dans les projets 4D, le développement est réalisé avec 4D et le développement multi-utilisateurs est géré par des outils de contrôle de version. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
 
@@ -213,7 +213,7 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 
 Ce dossier contient les composants disponibles dans le projet d'application uniquement. Il doit être stocké au même niveau que le dossier Project.
 
-> Une application projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components du projet hôte. - à des fins de déploiement : [créer le composant](Admin/building.md#build-component) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de l'application hôte.
+> Une application projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components du projet hôte. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## Dossier Plugins
