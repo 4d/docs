@@ -3,11 +3,11 @@ id: checkboxOverview
 title: チェックボックス
 ---
 
-チェックボックスはボタンの一種で、バイナリ (true-false) データの入力や表示をおこないます。 基本的に、チェックボックスの状態は選択または未選択のいずれかになりますが、3つめの状態を定義することもできます (後述参照)。
+チェックボックスはボタンの一種で、バイナリ (true-false) データの入力や表示をおこないます。 基本的に、チェックボックスの状態は選択または未選択のいずれかになりますが、[3つめの状態](#スリーステートチェックボックス) を定義することもできます。
 
 ![](assets/en/FormObjects/checkbox.png)
 
-チェックボックスはメソッドにより制御されます。 他のボタンと同じように、フォームが初めて開かれると、チェックボックスの変数は 0 に初期化されます。 チェックボックスが選択されると、チェックボックスに割り当てられたメソッドが実行されます。
+チェックボックスは、メソッドまたは [標準アクション](#標準アクションの使用) を使って管理します。 チェックボックスが選択されると、チェックボックスに割り当てられたメソッドが実行されます。 他のボタンと同じように、フォームが初めて開かれると、チェックボックスの変数は 0 に初期化されます。
 
 チェックボックスは小さな四角形の右側にテキストを表示します。 このテキストはチェックボックスの [タイトル](properties_Object.md#title) プロパティで設定します。 タイトルには、XLIFF参照を入れることもできます ([付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) 参照)。
 
@@ -374,7 +374,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 
 カスタムスタイルのチェックボックスは、背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます:
 
--  [背景パス名](properties_TextAndPicture.md#背景パス名)
+- [背景パス名](properties_TextAndPicture.md#背景パス名)
 - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット)
 - [横方向マージン](properties_TextAndPicture.md#横方向マージン) と [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
 
@@ -408,7 +408,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 すべてのチェックボックスは次の基本プロパティを共有します:
 
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [値を記憶](properties_Object.md#値を記憶) - [CSSクラス](properties_Object.md#CSSクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプTips) - [標準アクション](properties_Action.md#標準アクション)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [値を記憶](properties_Object.md#値を記憶) - [CSSクラス](properties_Object.md#CSSクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [入力可](properties_Entry.md#入力可) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプTips) - [標準アクション](properties_Action.md#標準アクション)
 
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:

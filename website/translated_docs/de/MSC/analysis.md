@@ -1,10 +1,10 @@
 ---
-id: Analyse
+id: analysis
 title: Seite Aktivität Analyse
 sidebar_label: Seite Aktivität Analyse
 ---
 
-Auf der Seite Aktivität Analyse des MSC können Sie den Inhalt des aktuellen Logbuchs betrachten. This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
+Auf der Seite Aktivität Analyse des MSC können Sie den Inhalt des aktuellen Logbuchs betrachten. Diese Funktion ist hilfreich, um die Verwendung einer Anwendung zu analysieren oder die Operationen herauszufinden, die Fehler verursachen oder die Funktionsweise beeinträchtigen. Läuft die Anwendung im Client-/Server-Modus, können Sie auch die Operationen auf jedem Client-Rechner überprüfen.
 > Sie können die in den Daten der Anwendung ausgeführten Operationen auch zurückfahren (rollback). Weitere Informationen dazu finden Sie auf der [Seite Zurückfahren](rollback.md).
 
 ![](assets/en/MSC/MSC_analysis.png)
@@ -13,8 +13,8 @@ Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten lie
 
 Über diese Informationen können Sie die Quelle und den Kontext jeder Operation identifizieren:
 
-- **Operation**: Sequence number of operation in the log file.
-- **Action**: Type of operation performed on the data. Diese Spalte kann eine der nachfolgenden Operationen anzeigen:
+- **Operation**: Sequenznummer der Operation im Logbuch.
+- **Aktion**: Art der in den Daten ausgeführten Operation. Diese Spalte kann eine der nachfolgenden Operationen anzeigen:
     - Öffnen der Datendatei: Datendatei öffnen
     - Schließen der Datendatei: Eine geöffnete Datendatei wird geschlossen
     - Erstellen eines Kontexts: Einen Prozess erstellen, der einen Ausführungskontext angibt
@@ -26,18 +26,18 @@ Jede im Logbuch gespeicherte Operation erscheint als eine Zeile. Die Spalten lie
     - Starten der Transaktion: Transaktion gestartet
     - Bestätigen der Transaktion: Transaktion bestätigt
     - Abbrechen der Transaktion: Transaktion annulliert
-    - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
+    - Update Kontext: Änderung in extra Daten (z.B. Aufruf von `CHANGE CURRENT USER` oder `SET USER ALIAS`)
 
-- **Table**: Table to which the added/deleted/modified record or BLOB belongs.
-- **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
-- **Process**: Internal number of process in which the operation was carried out. Diese interne Nummer entspricht dem Kontext der Operation.
-- **Size**: Size (in bytes) of data processed by the operation.
-- **Date and Hour**: Date and hour when the operation was performed.
-- **System User**: System name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the session name of the user is displayed.
-- **4D User**: 4D user name of the user that performed the operation. If an alias is defined for the user, the alias is displayed instead of the 4D user name.
-- **Werte**: Werte der Felder für den Datensatz bei Hinzufügen oder Ändern. Die Werte werden durch “;” voneinander getrennt. Only values represented in alphanumeric form are displayed.  
-  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
-- **Records**: Record number.
+- **Tabelle**: Tabelle, zu welcher der hinzugefügte/gelöschte/geänderte Datensatz bzw. das BLOB gehören.
+- **Primärschlüssel/BLOB**: Inhalt des Primärschlüssels für jeden Datensatz (besteht der Primärschlüssel aus mehreren Feldern, sind die einzelnen Werte durch Strichpunkte voneinander getrennt) oder Sequenznummer des BLOB, welche an der Operation beteiligt ist.
+- **Prozess**: Interne Nummer des Prozesses, in dem die Operation ausgeführt wurde. Diese interne Nummer entspricht dem Kontext der Operation.
+- **Größe**: Größe (in Bytes) der Daten, die durch die Operation bearbeitet werden.
+- **Datum und Uhrzeit**: Datum und Uhrzeit, zu der die Operation ausgeführt wurde.
+- **System Benutzer**: Systemname des Anwenders, der die Operation ausgeführt hat. Im Client-/Server-Modus erscheint der Name des client-seitigen Rechners; im Einzelplatz der Sitzungsname des Anwenders.
+- **4D Benutzer**: 4D Benutzername des Anwenders, der die Operation ausgeführt hat. Wurde ein Alias für den Anwender definiert, wird das Alias anstelle des 4D Anwendernamens angezeigt.
+- **Werte**: Werte der Felder für den Datensatz bei Hinzufügen oder Ändern. Die Werte werden durch “;” voneinander getrennt. Nur Werte in alphanumerischer Form erscheinen.  
+  ***Hinweis:** Ist die Anwendung verschlüsselt und wurde kein gültiger Verschlüsselungscode zum geöffneten Logbuch geliefert, werden verschlüsselte Werte in dieser Spalte nicht angezeigt.*
+- **Datensätze**: Datensatznummer
 
-Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. Mit der Schaltfläche **Exportieren** exportieren Sie den Inhalt der Datei als Text.
+Klicken Sie am unteren Rand auf die Schaltfläche **Analysieren**, um den Inhalt des aktuellen Logbuchs der ausgewählten Anwendung anzuzeigen. Es hat in 4D standardmäßig den Namen dataname.journal. Mit der Schaltfläche Anzeigen wählen und öffnen Sie ein anderes Logbuch der Anwendung. Mit der Schaltfläche **Exportieren** exportieren Sie den Inhalt der Datei als Text.
 

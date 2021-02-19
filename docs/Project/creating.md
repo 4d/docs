@@ -1,13 +1,16 @@
 ---
 id: creating
-title: Creating or opening a project
+title: Working with a project
 ---
 
-All projects are handled through **4D** in local or remote mode, or **4D Server**.  
+4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects. 
+
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications. 
+
 
 ## Creating a project
 
-New 4D application projects can be created from **4D** or **4D Server** (see [Developing a project](Project/developing.md)). In any case, project files are stored on the local machine. 
+New 4D application projects can be created from **4D** or **4D Server**. In any case, project files are stored on the local machine. 
 
 To create a new project:
 
@@ -26,9 +29,9 @@ When you validate the **Save** dialog, 4D closes the current project (if any), c
 You can then start developing your project. 
 
 
-## Opening a local project
+## Opening a project
 
-To open an existing project locally from 4D:
+To open an existing project from 4D:
 
 1. Select **Open a local application project** in the Welcome Wizard dialog, <p>OR<p>
 Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> 
@@ -52,39 +55,6 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 - **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected. 
 
 
-## Opening a remote project
-
-The first time you connect to a 4D Server project via a remote 4D, you will usually use the standard connection dialog. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file ([see below](#project-opening-shortcuts)).
-
-To connect remotely to a 4D Server project:
-
-1. Select **Connect to 4D Server** in the Welcome Wizard dialog, <p>OR<p>
-Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button. 
-
-The 4D Server connection dialog appears. This dialog has three tabs: **Recent**, **Available**, and **Custom**. 
-
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically. 
-
-![](assets/en/getStart/serverConnect.png)
-
-To connect to a server from the list, double-click on its name or select it and click the **OK** button.
-
-> A circumflex accent (^) is placed before the name of projects published with the encryption option enabled.
-
-If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name. 
-
-![](assets/en/getStart/serverConnect2.png)
-
-
-- **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings. 
-
-Once this page assigns a server, clicking the **OK** button will allow you to connect to the server. 
-
-> If the project is published with the encryption option enabled, you must add a circumflex accent (^) before the name, otherwise the connection will be refused. For more information, refer to the Encrypting Client/Server Connections section.
-
-Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
-
 
 
 ## Project opening shortcuts 
@@ -97,3 +67,22 @@ Once a connection to the server has been established, the remote project will be
 
 - via preferences:
 	-	Set the **At startup** general preference to **Open last used project**. 
+	
+
+## File saving
+
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus. 
+
+Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+
+The 4D development framework includes a file access manager to control concurrent access:
+
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor: 
+![](assets/en/Project/lockicon.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
+![](assets/en/Project/projectReload.png)  
+	- **Yes**: discard editor changes and reload the modified version
+	- **No**: save changes and overwrite the other version
+	- **Cancel**: do not save
+
+This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).

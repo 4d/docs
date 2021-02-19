@@ -245,7 +245,7 @@ title: '$catalog'
 | indexed     | 文字列 | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                      |
 | type        | 文字列 | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
 | identifying | ブール | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                  |
-| path        | 文字列 | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                 |
+| path        | 文字列 | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                     |
 | foreignKey  | 文字列 | relatedEntity 属性の場合、リレート先の属性名                                                                                                 |
 | inverseName | 文字列 | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                               |
 

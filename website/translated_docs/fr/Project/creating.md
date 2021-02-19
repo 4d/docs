@@ -1,13 +1,16 @@
 ---
 id: creating
-title: Créer ou ouvrir un projet
+title: Working with a project
 ---
 
-Tous les projets sont gérés via **4D** en mode local ou distant, ou via **4D Server**.
+4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
+
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+
 
 ## Créer un projet
 
-De nouveaux projets d'application 4D peuvent être créés à partir de **4D** ou de **4D Server** (voir [Développer un projet](Project/developing.md)). Dans tous les cas, les fichiers de projet sont stockés sur la machine locale.
+New 4D application projects can be created from **4D** or **4D Server**. Dans tous les cas, les fichiers de projet sont stockés sur la machine locale.
 
 Pour créer un nouveau projet :
 
@@ -25,9 +28,9 @@ Lorsque vous validez la boîte de dialogue **Enregistrer**, 4D ferme le projet e
 Vous pouvez alors commencer à développer votre projet.
 
 
-## Ouvrir un projet local
+## Opening a project
 
-Pour ouvrir un projet existant en local depuis 4D :
+To open an existing project from 4D:
 
 1. Sélectionnez **Ouvrir un projet d'application local** dans la boite de dialogue de l'Assistant de bienvenue <p>OU<p> Sélectionnez **Ouvrir > Projet local...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.<p> La boîte de dialogue standard d’ouverture de fichiers apparaît.
 
@@ -48,38 +51,6 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 - **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée.
 
 
-## Ouvrir un projet distant
-
-La première fois que vous vous connectez à un projet 4D Server via un 4D distant, vous utiliserez généralement la boîte de dialogue de connexion standard. Par la suite, vous pourrez vous connecter directement en utilisant le menu **Ouvrir projets récents** ou un fichier de raccourci 4DLink ([voir ci-dessous](#project-opening-shortcuts)).
-
-Pour vous connecter à distance à un projet 4D Server :
-
-1. Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue, <p>OU<p> Sélectionnez **Ouvrir > Projet distant...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.
-
-La boîte de dialogue de connexion à 4D Server apparaît. Cette boîte de dialogue comporte trois onglets : **Récent**, **Disponible** et **Personnalisé**.
-
-Si 4D Server est connecté au même réseau que le 4D distant, sélectionnez **Disponible**. 4D Server inclut un système de diffusion TCP/IP intégré qui, par défaut, publie le nom des projets 4D Server disponibles sur le réseau. La liste est triée par ordre d'apparition et est mise à jour dynamiquement.
-
-![](assets/en/getStart/serverConnect.png)
-
-Pour vous connecter à un serveur de la liste, double-cliquez sur son nom ou sélectionnez-le et cliquez sur le bouton **OK**.
-
-> Un accent circonflexe (^) est placé avant le nom des projets publiés avec l'option de chiffrement activée.
-
-Si le projet publié n'est pas affiché dans la liste **Disponible**, sélectionnez **Personnalisé**. La page Personnalisé vous permet de vous connecter à un serveur publié sur le réseau en utilisant son adresse réseau et en lui attribuant un nom personnalisé.
-
-![](assets/en/getStart/serverConnect2.png)
-
-
-- **Nom du projet** : définit le nom local du projet 4D Server. Ce nom sera utilisé dans la page **Récent** pour faire référence au projet.
-- **Adresse réseau** : L'adresse IP de la machine sur laquelle le 4D Server a été lancé. <p>Si deux serveurs sont exécutés simultanément sur la même machine, l'adresse IP doit être suivie de deux points et d'un numéro de port, par exemple : `192.168.92.104:19814`. <p>Par défaut, le port de publication d'un 4D Server est 19813. Ce numéro peut être modifié dans les paramètres du projet.
-
-Une fois que cette page attribue un serveur, cliquez sur le bouton **OK** pour vous connecter au serveur.
-
-> Si le projet est publié avec l'option de chiffrement activée, vous devez ajouter un accent circonflexe (^) avant le nom, sinon la connexion sera refusée. Pour plus d'informations, reportez-vous à la section Chiffrement des connexions client/serveur.
-
-Une fois la connexion au serveur établie, le projet distant sera répertorié dans l'onglet **Récent**.
-
 
 
 ## Raccourcis d’ouverture des projets
@@ -91,4 +62,21 @@ Une fois la connexion au serveur établie, le projet distant sera répertorié d
     -   *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
 
 - via les préférences :
-    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**. 
+    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
+
+
+## Enregistrement des fichiers
+
+Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur disque lorsque vous sélectionnez un élément de menu **Sauvegarde**, ou lorsque la fenêtre de l'éditeur pert ou récupère le focus.
+
+Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
+
+Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
+
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:![](assets/en/Project/projectReload.png)
+    - **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
+    - **Non** : enregistrer les modifications et écraser l'autre version
+    - **Annuler** : ne pas enregistrer
+
+Cette fonctionnalité est activée pour tous les éditeurs 4D intégrés (Structure, Formulaire, Méthode, Paramètres et Boite à outils).

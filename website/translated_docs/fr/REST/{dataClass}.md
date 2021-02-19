@@ -50,7 +50,7 @@ Chaque entité contient les propriétés suivantes :
 | __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
 | __STAMP     | Nombre | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
-Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
+Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company/name,address`
 
@@ -152,7 +152,7 @@ En passant la dataclass et une clé, vous pouvez récupérer toutes les informat
 
 Pour plus d'informations sur les données retournées, reportez-vous à [{datastoreClass}](#datastoreclass).
 
-Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
+Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company(1)/name,address`
 
@@ -201,7 +201,7 @@ En passant la *dataClass* et un *attribut* avec une valeur, vous pouvez récupé
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple:
+Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

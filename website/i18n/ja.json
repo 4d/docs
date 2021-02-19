@@ -5,11 +5,11 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
-      "Admin/building": {
-        "title": "プロジェクトパッケージのビルド"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
+      },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
@@ -45,7 +45,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Email"
+        "title": "Emails and Attachments"
       },
       "API/entityClass": {
         "title": "エンティティ"
@@ -197,6 +197,12 @@
       },
       "Concepts/variables": {
         "title": "変数"
+      },
+      "Desktop/building": {
+        "title": "プロジェクトパッケージのビルド"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -388,10 +394,10 @@
         "title": "フォームエディター"
       },
       "FormEditor/forms": {
-        "title": "About 4D Forms"
+        "title": "4D フォームについて"
       },
       "FormEditor/macros": {
-        "title": "Form Editor Macros"
+        "title": "フォームエディターマクロ"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -403,7 +409,7 @@
         "title": "動作"
       },
       "FormEditor/propertiesForm": {
-        "title": "Form Properties"
+        "title": "フォームプロパティ"
       },
       "FormEditor/formSize": {
         "title": "Form Size"
@@ -421,7 +427,7 @@
         "title": "印刷"
       },
       "FormEditor/windowSize": {
-        "title": "Window Size"
+        "title": "ウィンドウサイズ"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -668,16 +674,16 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "プロジェクトの作成・開始"
-      },
-      "Project/developing": {
-        "title": "プロジェクトの開発"
+        "title": "プロジェクトを開発する"
       },
       "Project/documentation": {
         "title": "ドキュメンテーション"
       },
       "Project/overview": {
         "title": "概要"
+      },
+      "ReleaseNotes/whatsNew": {
+        "title": "新着情報"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -758,7 +764,7 @@
         "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
-        "title": "Calling ORDA class functions"
+        "title": "ORDAクラス関数の呼び出し"
       },
       "REST/configuration": {
         "title": "サーバー設定"
@@ -815,10 +821,11 @@
         "title": "バックアップ設定"
       },
       "WebServer/webServerObject": {
-        "title": "Web Server object"
+        "title": "Webサーバーオブジェクト"
       }
     },
     "links": {
+      "What's New": "新着情報",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
@@ -836,12 +843,14 @@
       "Web Server": "Web サーバー",
       "Web Development": "Web Development",
       "REST Server": "REST サーバー",
+      "Client/Server": "Client/Server",
       "Forms": "Forms",
-      "Form Properties": "Form Properties",
+      "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
-      "Menus": "メニュー"
+      "Menus": "メニュー",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -852,7 +861,7 @@
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "Forms",
-    "Form Properties|no description given": "Form Properties",
+    "Form Properties|no description given": "フォームプロパティ",
     "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
@@ -865,6 +874,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",

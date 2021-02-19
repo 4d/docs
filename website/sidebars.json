@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/developing","Project/documentation"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -50,7 +50,7 @@
 	"API/zipFolderClass"
 	],
   "Access Rights":["Users/overview","Users/editing"],
-  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/building","Admin/tls"],
+  "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/licenses","Admin/tls","Admin/debugLogFiles"],
 	"MSC":["MSC/overview","MSC/information","MSC/analysis","MSC/verify","MSC/backup","MSC/compact","MSC/rollback","MSC/restore","MSC/repair","MSC/encrypt"],
 	"Backup and Restore":["Backup/overview","Backup/backup","Backup/settings","Backup/log","Backup/restore"],
   "Web Server":["WebServer/webServer",
@@ -87,6 +87,7 @@
 		  ]
 		}
 	],
+  "Client/Server":["Desktop/clientServer"],
   "Forms":["FormEditor/forms","FormEditor/formEditor","FormEditor/macros","FormEditor/objectLibrary","FormEditor/stylesheets","FormEditor/pictures"],
  	"Form Properties":["FormEditor/jsonReference","FormEditor/action","FormEditor/propertiesForm","FormEditor/formSize","FormEditor/markers","FormEditor/menu","FormEditor/print","FormEditor/windowSize"],
  "Form Objects":["FormObjects/formObjectsOverview",
@@ -204,7 +205,9 @@
 			"Events/onVpRangeChanged",
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
-  "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"]
+  "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
+   "Build application":["Desktop/building"]
+
 
   }
 }

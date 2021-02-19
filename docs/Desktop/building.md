@@ -3,7 +3,7 @@ id: building
 title: Building a project package
 ---
 
-4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications. 
+4D includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications. 
 
 The application builder allows you to:
 
@@ -14,6 +14,7 @@ The application builder allows you to:
 *	Build client-server applications with automatic updating of client and server parts.
 *	Save your build settings for future use (*Save settings* button).
 
+> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible in compiled applications. 
 
 
 ## Build application overview
@@ -84,7 +85,7 @@ This feature creates a *.4dz* file within a *Compiled Database/\<project name>* 
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer (4D). The compact and optimized size of .4dz files makes project packages easy to deploy.
+> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. The compact and optimized size of .4dz files makes project packages easy to deploy.  
 
 
 #### Include related folders

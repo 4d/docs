@@ -5,11 +5,11 @@
     "previous": "Précédent",
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
-      "Admin/building": {
-        "title": "Générer un package projet"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
+      },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
       },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
@@ -45,7 +45,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Emails"
+        "title": "Emails and Attachments"
       },
       "API/entityClass": {
         "title": "Entity"
@@ -197,6 +197,12 @@
       },
       "Concepts/variables": {
         "title": "Variables"
+      },
+      "Desktop/building": {
+        "title": "Générer un package projet"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
       },
       "Events/onActivate": {
         "title": "Sur activation"
@@ -668,16 +674,16 @@
         "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Créer ou ouvrir un projet"
-      },
-      "Project/developing": {
-        "title": "Développer un projet"
+        "title": "Working with a project"
       },
       "Project/documentation": {
         "title": "Documenter un projet"
       },
       "Project/overview": {
         "title": "Aperçu"
+      },
+      "ReleaseNotes/whatsNew": {
+        "title": "What's New"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -819,6 +825,7 @@
       }
     },
     "links": {
+      "What's New": "What's New",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
@@ -836,12 +843,14 @@
       "Web Server": "Serveur Web",
       "Web Development": "Web Development",
       "REST Server": "Serveur REST",
+      "Client/Server": "Client/Server",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
-      "Menus": "Menus"
+      "Menus": "Menus",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -865,6 +874,7 @@
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",

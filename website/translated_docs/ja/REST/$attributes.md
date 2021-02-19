@@ -3,17 +3,17 @@ id: attributes
 title: '$attributes'
 ---
 
-Allows selecting the related attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
+データクラスから取得するリレート属性を選択するのに使います (*例:* `Company(1)?$attributes=employees.lastname`、 `Employee?$attributes=employer.name`)。
 
 
 ## 説明
 
-When you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+データクラスにリレーション属性が含まれていて、リレート先のエンティティまたはエンティティセレクションの属性のうち値を取得するものを選択したい場合、そのパスを指定するのに `$attributes` を使用します。
 
-You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity selection (*e.g.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
+`$attributes` はエンティティ (*例:* People(1)) またはエンティティセレクション (*例:* People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) に対して適用できます。
 
 
-- If `$attributes` is not specified in a query, or if the "*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
+- クエリに `$attributes` が指定されていない場合、または "*" が渡された場合、すべての取得可能な属性が取得されます。 **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
 
 - If `$attributes` is specified for **related entity** attributes:
     - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
@@ -33,7 +33,7 @@ If we pass the following REST request for our Company dataclass (which has a rel
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**レスポンス**:
 
 ```
 {
@@ -80,7 +80,7 @@ If we pass the following REST request for our Employee dataclass (which has seve
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**レスポンス**:
 
 ```
 {

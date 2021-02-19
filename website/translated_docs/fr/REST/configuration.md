@@ -8,7 +8,8 @@ Using standard HTTP requests, the 4D REST Server allows external applications to
 Pour commencer à utiliser les fonctionnalités REST, vous devez démarrer et configurer le serveur 4D REST.
 
 > - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D gratuite disponible.<br>
-> - Sur 4D monoposte, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test. Vous devez gérer le [cookie de session](authUsers.md#session-cookie) pour utiliser la même session pour votre application.
+> - On 4D single-user, you can open up to three REST sessions for testing purposes.
+> - You need to manage the [session](authUsers.md) for your requesting application.
 
 
 
