@@ -20,7 +20,7 @@
           "Concepts/control-flow","Concepts/branching","Concepts/looping"
         ]
       },
-	"Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
+	"Tags/tags","Concepts/error-handling","Concepts/interpreted-compiled","Concepts/components","Concepts/plug-ins","Concepts/identifiers"
 	],
 
   "ORDA":["ORDA/overview","ORDA/dsmapping","ORDA/ordaClasses","ORDA/entities","ORDA/datastores","ORDA/glossary"],

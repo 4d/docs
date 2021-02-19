@@ -682,6 +682,9 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "ReleaseNotes/whatsNew": {
+        "title": "What's New"
+      },
       "REST/{dataClass}": {
         "title": "{dataClass}"
       },
@@ -778,6 +781,9 @@
       "REST/REST_requests": {
         "title": "About REST Requests"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "Managing 4D users and groups"
       },
@@ -822,6 +828,7 @@
       }
     },
     "links": {
+      "What's New": "What's New",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"

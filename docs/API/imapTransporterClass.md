@@ -718,10 +718,10 @@ $name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
 $status:=$transporter.deleteBox($name)
 
 If ($status.success)
-ALERT("Mailbox deletion successful!")
-Else
-ALERT("Error: "+$status.statusText)
-End if
+	ALERT("Mailbox deletion successful!")
+	Else
+	ALERT("Error: "+$status.statusText)
+	End if
 End if
 ```
 
@@ -1579,10 +1579,10 @@ $transporter:=IMAP New transporter($options)
 $status:=$transporter.renameBox("Invoices"; "Bills")
 
 If ($status.success)
-ALERT("Mailbox renaming successful!")
-Else
-ALERT("Error: "+$status.statusText)
-End if
+   ALERT("Mailbox renaming successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
 End if
 ```
 
@@ -1874,10 +1874,10 @@ $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
 $status:=$transporter.subscribe($name)
 
 If ($status.success)
-ALERT("Mailbox subscription successful!")
-Else
-ALERT("Error: "+$status.statusText)
-End if
+   ALERT("Mailbox subscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
 End if
 ```
 
@@ -1947,10 +1947,10 @@ $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
 $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
-ALERT("Mailbox unsubscription successful!")
-Else
-ALERT("Error: "+$status.statusText)
-End if
+   ALERT("Mailbox unsubscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
 End if
 ```
 
