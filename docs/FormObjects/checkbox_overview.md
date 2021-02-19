@@ -3,11 +3,11 @@ id: checkboxOverview
 title: Check Box
 ---
 
-A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a third state can be defined (see below).
+A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a [third state](#three-states-check-box) can be defined.
 
 ![](assets/en/FormObjects/checkbox.png)
 
-Check boxes are controlled by methods. Like all buttons, a check box variable is set to 0 when the form is first opened. The method associated with it executes when the check box is selected.
+Check boxes are controlled by methods or [standard actions](#using-a-standard-action). The method associated with it executes when the check box is selected. Like all buttons, a check box variable is set to 0 when the form is first opened. 
 
 A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)). 
 
@@ -375,7 +375,7 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
 
 The Custom button style accepts a personalized background picture and allows managing specific properties:
 
--  [Background pathname](properties_TextAndPicture.md#backgroundPathname)
+- [Background pathname](properties_TextAndPicture.md#backgroundPathname)
 - [Icon Offset](properties_TextAndPicture.md#icon-offset)
 - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) and [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
 
