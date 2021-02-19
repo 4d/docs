@@ -155,6 +155,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
+
 ---
 ## Expression Type
 
@@ -340,7 +341,7 @@ There are several types of calculations available. The following table shows whi
 |---|---|---|---|---|---|---|---|
 |Minimum|X|X|X|X|X||Same as column type|
 |Maximum|X|X|X|X|X||Same as column type|  
-|Sum|X||X||X||Same as column type|  
+|Sum|X|||X|X||Same as column type|  
 |Count|X|X|X|X|X|X|Longint|  
 |Average|X|||X|||Real|    
 |Standard deviation(*)|X|||X|||Real|
@@ -358,9 +359,11 @@ If the column contains different types of values (collection-based column for ex
 - Average and Sum only take numerical elements into account (other element types are ignored).
 - Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/collectionClass.md#sort) function.
 
+> For performance reasons, it is not recommended to use automatic calculations with entity selection/collection columns when the column expression is already a calculation (e.g. `this.price*this.quantity`).
+
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 
-> Automatic calculations are not supported with footers of columns based on formulas. You need to use custom calculations. 
+> Automatic calculations are not supported with footers of columns based on formulas in array/selection list boxes. You need to use custom calculations. 
 
 #### JSON Grammar
 
