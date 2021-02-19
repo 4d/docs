@@ -131,6 +131,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | 0    | wdl disable | Web HTTP debug log is disabled |
 
 
+
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|
 
 
@@ -573,7 +574,7 @@ Name of the cookie used for saving the session ID. Default = "4DSID".
 
 | Can be set with  | Name                                                                   | Kommentare |
 | ---------------- | ---------------------------------------------------------------------- | ---------- |
-| webServer object | [`sessionCookieSameSite`](API/webServerClass.md#sessionCookieSameSite) |            |
+| webServer object | [`sessionCookieSameSite`](API/webServerClass.md#sessioncookiesamesite) |            |
 
 Value of the `SameSite` attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) attacks.
 
