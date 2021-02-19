@@ -781,6 +781,9 @@
       "REST/REST_requests": {
         "title": "RESTリクエストについて"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
       },
