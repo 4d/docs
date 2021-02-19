@@ -130,6 +130,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | ----- | ----------- | ------------------------------ |
 | 0     | wdl disable | Web HTTP debug log is disabled |
 
+
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|
 
 
@@ -567,6 +568,27 @@ Name of the cookie used for saving the session ID. Default = "4DSID".
 | `WEB SET OPTION` | `Web session cookie path`                                      |          |
 
 "path" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
+
+## Session Cookie SameSite
+
+| Can be set with  | Name                                                                   | Comments |
+| ---------------- | ---------------------------------------------------------------------- | -------- |
+| webServer object | [`sessionCookieSameSite`](API/webServerClass.md#sessionCookieSameSite) |          |
+
+Value of the `SameSite` attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) attacks.
+
+> For a detailed description of the `SameSite` attribute, please refer to the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) or [this web.dev page](https://web.dev/samesite-cookies-explained/).
+
+Three values are available:
+
+- "Strict" (default `SameSite` attribute value for 4D session cookies): cookies will only be sent in the first-party context, i.e. context matching the domain of the current site, and never to third-party websites.
+- "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).
+- "None": Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
+
+The `Secure` attribute value of the session cookie is automatically set to "True" if the connection is HTTPS (whatever the `SameSite` attribute value).
+
+> It is not recommended to set `SameSite=None` on a HTTP server since the `Secure` attribute will be missing (used in HTTPS only) and cookies will be blocked.
+
 
 
 ## Session IP Address Validation
