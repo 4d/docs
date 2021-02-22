@@ -73,7 +73,7 @@ Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coc
 | visibleReferences                   |                                           |
 | widowAndOrphanControlEnabled        | Zones 4D Write Pro uniquement             |
 
-Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).
+For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
 
 ## Styles des boutons "Case à cocher"
 
