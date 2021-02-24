@@ -14,15 +14,17 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
     - Boolean
     - Zeiger (als solcher gespeichert, wird beim Verwenden der Funktion `JSON Stringify` oder beim Kopieren bewertet)
     - Datum (Datumstyp oder ISO Datumsformat)
-    - Objekt (Objekte können in mehrere Stufen verschachtelt sein)
-    - Bild (*)
+    - Objekt(1) (Objekte können in mehrere Stufen verschachtelt sein)
+    - Bild(2)
     - collection
 
-(*) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
+(1) ORDA Objekte wie [Entities](ORDA/dsMapping.md#entity) oder [Entity Selections](ORDA/dsMapping.md#entity-selection) lassen sich nicht in **Feldern vom Typ Objekt** speichern; sie werden jedoch voll in **Objektvariablen** im Speicher unterstützt.
+
+(2) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
 
 **Warnung:** Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.
 
-Variablen, Felder oder Ausdrücke vom Typ Objekt verwalten Sie über Befehle im Kapitel **Objekte (Sprache**), oder über die Objektnotation (siehe [Grundlagen der Syntax](dt_object.md#grundlagen-der-syntax)). Über spezifische Befehle im Kapitel Suchen wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
+Sie verwalten Variablen, Felder oder Ausdrücke vom Typ Objekt mit der [Objektnotation](dt_object.md#grundlagen-der-syntax) oder über die klassischen Befehle im **Kapitel Objekte des Handbuchs 4D Programmiersprache**. Über spezifische Befehle im Kapitel **Suchen** wie `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` oder `ORDER BY ATTRIBUTE` können Sie mit Objektfeldern arbeiten.
 
 Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 

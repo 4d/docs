@@ -148,6 +148,11 @@ title: オブジェクト
 
 
 
+
+
+
+
+
 ---
 ## 式の型/式タイプ
 
@@ -165,9 +170,9 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                         |
-| ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**リストボックス列:** "boolean", "number", "picture", "text", date", (*配列/セレクションリストボックスのみ* "integer", "time", "object") |
+| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object" |
 
 #### 対象オブジェクト
 
@@ -327,9 +332,9 @@ title: オブジェクト
 
 | 計算タイプ                 | Num | テキスト | 日付 | 時間 | Bool | ピクチャー | フッター変数の型 |
 | --------------------- | --- | ---- | -- | -- | ---- | ----- | -------- |
-| 最小                    | ○   |      | ○  | ○  | ○    |       | 列の型と同じ   |
-| 最大                    | ○   |      | ○  | ○  | ○    |       | 列の型と同じ   |
-| 合計                    | ○   |      | ○  |    | ○    |       | 列の型と同じ   |
+| 最小                    | ○   | ○    | ○  | ○  | ○    |       | 列の型と同じ   |
+| 最大                    | ○   | ○    | ○  | ○  | ○    |       | 列の型と同じ   |
+| 合計                    | ○   |      |    | ○  | ○    |       | 列の型と同じ   |
 | カウント                  | ○   | ○    | ○  | ○  | ○    | ○     | 倍長整数     |
 | 平均                    | ○   |      |    | ○  |      |       | 実数       |
 | 標準偏差(*)               | ○   |      |    | ○  |      |       | 実数       |
@@ -339,10 +344,23 @@ title: オブジェクト
 
 (*) 配列型のリストボックスのみ
 
-計算が選択されると、リストボックス列内のすべての値が自動計算の対象となります。 リストボックス行の表示/非表示状態は考慮されません。 表示行だけを計算対象にしたい場合、カスタムを選択してプログラムコードで計算しなくてはなりません。
+Automatic calculations ignore the shown/hidden state of list box rows. 表示行だけを計算対象にしたい場合、カスタムを選択してプログラムコードで計算しなくてはなりません。
+
+*Null* values are not taken into account for any calculations.
+
+If the column contains different types of values (collection-based column for example):
+
+- Average and Sum only take numerical elements into account (other element types are ignored).
+- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/collectionClass.md#sort) function.
+
+Using automatic calculations in footers of columns based upon expressions has the following limitations:
+
+- it is **supported** with all list box types when the expression is "simple" (such as `[table]field` or `this.attribute`),
+- it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
+- it is **not supported** with current selection/named selection list boxes when the expression is "complex". これらの場合には、カスタム計算を使用する必要があります。
 
 **カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
-> 以下のフッターに対しては自動計算を関連付けることができません:<br /> ・フォーミュラを割り当てた列のフッター<br /> ・[コレクションまたはエンティティセレクションリストボックス](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) のフッター これらの場合には、カスタム計算を使用する必要があります。
+
 
 #### JSON 文法
 
