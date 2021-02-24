@@ -11,7 +11,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|alternateFill|string|any css value; "transparent"; "automatic"|
+|alternateFill|string|any css value; "transparent"; "automatic"; "automatic2"|
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
