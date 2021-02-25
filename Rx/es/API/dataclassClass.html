@@ -297,7 +297,6 @@
  <span class="hljs-variable">$emp</span>.__NEW:=<span class="hljs-literal">True</span>
  <span class="hljs-variable">$empsCollection</span>.<span class="hljs-function">push</span>(<span class="hljs-variable">$emp</span>)
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">fromCollection</span>(<span class="hljs-variable">$empsCollection</span>)
-
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-5"></a><a href="#example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 5</h4>
 <p>We want to create an entity. The __NEW property is omitted, the employee primary key is given and does not exist:</p>
@@ -611,14 +610,20 @@
 <p><em>You cannot use directly attributes whose name contains special characters such as &quot;.&quot;, &quot;[ ]&quot;, or &quot;=&quot;, &quot;&gt;&quot;, &quot;#&quot;..., because they will be incorrectly evaluated in the query string. If you need to query on such attributes, you must consider using placeholders, which allow an extended range of characters in attribute paths (see</em> <strong>Using placeholders</strong> <em>below).</em></p>
 </blockquote>
 <ul>
-<li><p><strong>formula</strong>: a valid formula (see <a href="/docs/Rx/es/API/formulaClass.html">Formulas</a> passed as <code>Text</code> or <code>Object</code>. The formula will be evaluated for each processed entity(*) and must return a boolean value. Within the formula, the entity is available through the <code>This</code> object.</p>
+<li><p><strong>formula</strong>: a valid formula passed as <code>Text</code> or <code>Object</code>. The formula will be evaluated for each processed entity and must return a boolean value. Within the formula, the entity is available through the <code>This</code> object.</p>
 <ul>
 <li><strong>Text</strong>: the formula string must be preceeded by the <code>eval( )</code> statement, so that the query parser evaluates the expression correctly. For example: <em>&quot;eval(length(This.lastname) &gt;=30)&quot;</em></li>
-<li><strong>Object</strong>: the formula object is passed as a <strong>placeholder</strong> (see below). The formula must have been created using the <code>Formula</code> or <code>Formula from string</code> command.</li>
+<li><strong>Object</strong>: the <a href="/docs/Rx/es/API/formulaClass.html">formula object</a> is passed as a <strong>placeholder</strong> (see below). The formula must have been created using the <a href="/docs/Rx/es/API/formulaClass.html#formula"><code>Formula</code></a> or <a href="/docs/Rx/es/API/formulaClass.html#formula-from-string"><code>Formula from string</code></a> command.</li>
+</ul></li>
 </ul>
-<p>(*) if the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.</p>
-<p>Formulas in queries can receive parameters through $1. This point is detailed in the <strong>formula parameter</strong> paragraph below.</p></li>
+<blockquote>
+<ul>
+<li>Keep in mind that 4D formulas only support <code>&amp;</code> and <code>|</code> symbols as logical operators.</li>
+<li>If the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.</li>
 </ul>
+</blockquote>
+<pre><code class="hljs">Formulas in queries can receive parameters through $1. This point is detailed in the **formula parameter** paragraph below.
+</code></pre>
 <blockquote>
 <ul>
 <li>You can also pass directy a <code>formula</code> parameter object instead of the <code>queryString</code> parameter (recommended when formulas are more complex). See <strong>formula parameter</strong> paragraph below.</li>
