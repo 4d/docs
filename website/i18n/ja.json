@@ -5,14 +5,14 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
-      "Admin/building": {
-        "title": "プロジェクトパッケージのビルド"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
       },
       "Admin/webAdmin": {
         "title": "Web Administration"
@@ -671,13 +671,16 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "Working with a project"
+        "title": "プロジェクトを開発する"
       },
       "Project/documentation": {
         "title": "ドキュメンテーション"
       },
       "Project/overview": {
         "title": "概要"
+      },
+      "ReleaseNotes/whatsNew": {
+        "title": "新着情報"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -781,14 +784,45 @@
       "Users/overview": {
         "title": "概要"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "はじめに"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
       "WebServer/sessions": {
         "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "概要"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "データベース管理"
+      },
+      "WebServer/webServerConfig": {
+        "title": "バックアップ設定"
       },
       "WebServer/webServerObject": {
         "title": "Webサーバーオブジェクト"
       }
     },
     "links": {
+      "What's New": "新着情報",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
@@ -804,6 +838,7 @@
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
+      "Web Development": "Web Development",
       "REST Server": "REST サーバー",
       "Client/Server": "Client/Server",
       "Forms": "Forms",
@@ -829,6 +864,7 @@
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web サーバー",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
@@ -836,6 +872,7 @@
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
     "Client/Server|no description given": "Client/Server",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",

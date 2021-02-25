@@ -1,16 +1,16 @@
 ---
 id: creating
-title: Working with a project
+title: プロジェクトを開発する
 ---
 
-4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
+4Dプロジェクトは、包括的な統合開発環境 (IDE) を提供する **4D** アプリケーションを使って作成・開発します。 **4D Server** も、空のプロジェクトを新規作成することができます。
 
 マルチユーザー開発は標準的な **ソース管理** リポジトリツール (Perforce, Git, SVN 等) を使っておこないます。これによって、異なるブランチで開発し、比較してマージまたは変更を戻すといった処理が可能になります。
 
 
 ## プロジェクトの作成
 
-New 4D application projects can be created from **4D** or **4D Server**. いずれの場合も、プロジェクトファイルはローカルマシン上に保存します。
+新規の 4Dアプリケーションプロジェクトは **4D** または **4D Server** アプリケーションを使って作成します。 いずれの場合も、プロジェクトファイルはローカルマシン上に保存します。
 
 新規プロジェクトを作成するには:
 
@@ -28,9 +28,9 @@ New 4D application projects can be created from **4D** or **4D Server**. いず�
 これで、プロジェクトの開発を始めることができます。
 
 
-## Opening a project
+## プロジェクトを開く
 
-To open an existing project from 4D:
+既存のプロジェクトを 4D で開くには:
 
 1. Welcome ウィザードにて **ローカルアプリケーションプロジェクトを開く** を選択します。 <p>OR<p> **ファイル** メニューより **開く ＞ ローカルプロジェクト...**を選択するか、**開く** ツールバーボタンより同様に選択します。<p> 標準のファイルを開くためのダイアログが表示されます。
 

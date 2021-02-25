@@ -14,17 +14,17 @@ title: オブジェクト
     - boolean
     - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
     - 日付 (日付型あるいは ISO日付フォーマット文字列)
-    - object(1) (objects can be nested on several levels)
-    - picture(2)
+    - オブジェクト(1) (オブジェクトは入れ子にすることができます)
+    - ピクチャー(2)
     - collection
 
-(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.
+(1) [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクトは **オブジェクトフィールド** には保存することができませんが、メモリ内の **オブジェクト変数** に保存することは可能です。
 
-(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
 **警告:** 属性名は大文字と小文字を区別するという点に注意してください。
 
-You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+オブジェクト型の変数・フィールド・式を操作するには [オブジェクト記法](dt_object.md#オブジェクト記法の使用) を用いるか、**オブジェクト (ランゲージ)** テーマが提供する従来のコマンドを使用します。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、**クエリ** テーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 

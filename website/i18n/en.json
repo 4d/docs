@@ -679,6 +679,9 @@
       "Project/overview": {
         "title": "Overview"
       },
+      "ReleaseNotes/whatsNew": {
+        "title": "What's New"
+      },
       "REST/{dataClass}": {
         "title": "{dataClass}"
       },
@@ -819,6 +822,7 @@
       }
     },
     "links": {
+      "What's New": "What's New",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
