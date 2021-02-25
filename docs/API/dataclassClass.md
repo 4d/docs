@@ -290,7 +290,6 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  $emp.__NEW:=True
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
-
 ```
 
 #### Example 5
@@ -688,12 +687,13 @@ where:
 
 	>*You cannot use directly attributes whose name contains special characters such as ".", "\[ ]", or "=", ">", "#"..., because they will be incorrectly evaluated in the query string. If you need to query on such attributes, you must consider using placeholders, which allow an extended range of characters in attribute paths (see* **Using placeholders** *below).*
 
-*	**formula**: a valid formula (see [Formulas](formulaClass.md) passed as `Text` or `Object`. The formula will be evaluated for each processed entity(*) and must return a boolean value. Within the formula, the entity is available through the `This` object.  
+*	**formula**: a valid formula passed as `Text` or `Object`. The formula will be evaluated for each processed entity and must return a boolean value. Within the formula, the entity is available through the `This` object.  
 
 	*	**Text**: the formula string must be preceeded by the `eval( )` statement, so that the query parser evaluates the expression correctly. For example: *"eval(length(This.lastname) >=30)"*
-	*	**Object**: the formula object is passed as a **placeholder** (see below). The formula must have been created using the `Formula` or `Formula from string` command.
+	*	**Object**: the [formula object](formulaClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](formulaClass.md#formula) or [`Formula from string`](formulaClass.md#formula-from-string) command.
 
-	(*) if the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.
+	>* Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+	>* If the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.   
 
 	Formulas in queries can receive parameters through $1. This point is detailed in the **formula parameter** paragraph below.
 
