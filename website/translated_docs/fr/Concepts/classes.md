@@ -363,7 +363,7 @@ Class constructor ($side : Integer)
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Parameter
@@ -504,7 +504,7 @@ Function description()
 
 Ensuite, vous pouvez écrire dans une méthode projet :
 
-<code class="4d" spaces="0" spaces-closing-marker="0" marker="```" spaces-after-opening-marker="0" line-breaks-before="2">var $square : Object
+<code class="4d" spaces="0" spaces-closing-marker="0" marker="```" spaces-after-opening-marker="0">var $square : Object
 var $message : Text
 $square:=cs.Square.new()
 $message:=$square.description() //Je possède 4 côtés qui sont tous égaux
