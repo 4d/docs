@@ -392,7 +392,7 @@ This property enables the possibility of using specific styles in the selected a
   JSON Grammar
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Name
@@ -446,7 +446,7 @@ This property enables the possibility of using specific styles in the selected a
   Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
 </p>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Orientation value
@@ -509,7 +509,7 @@ This property enables the possibility of using specific styles in the selected a
   JSON Grammar
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Name
@@ -572,7 +572,7 @@ This property enables the possibility of using specific styles in the selected a
   JSON Grammar
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Name
@@ -636,7 +636,7 @@ This property enables the possibility of using specific styles in the selected a
   JSON Grammar
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Name
@@ -711,7 +711,7 @@ This property enables the possibility of using specific styles in the selected a
   JSON Grammar
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Name

@@ -8,7 +8,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 - Un nom de propriété est toujours un texte, par exemple "Nom".
 
 - Une valeur de propriété peut être du type suivant :
-    - Nombre (réel, entier long, etc.)
+    - Numérique (réel, entier long, etc.)
     - Texte
     - null
     - Booléen
