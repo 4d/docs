@@ -109,7 +109,7 @@ La structure du fichier `formMacros.json` est la suivante :
 
 Voici la description du contenu du fichier JSON :
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Attribut
