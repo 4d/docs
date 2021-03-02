@@ -71,14 +71,15 @@ Used to set the number of passes performed by the compiler and thus the duration
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
 
 - **Intel/AMD** processors (all machines),
-- **Apple Silicon** (aka **M1**) processors.
+- **Apple Silicon** processors.
 
-Two target options are proposed. The result depends on the processor on which 4D is running.
+Two target options are proposed. The result depends on the processor of the machine on which 4D is running.
 
-|Code produced on|**My processor** (*Processor family*)|**All processors**|
+|*Option*|*Selected on Intel/AMD machine*|*Selected on Silicon machine*|  
 |---|---|---|
-|Apple machine with Apple Silicon processor|For Apple Silicon processor|For Apple Silicon processor + For Intel/AMD processor<br>*Two applications will be available*|
-|Machine with Intel/AMD processor|For Intel/AMD processor|For Intel/AMD processor<br>*It is not possible to produce Apple Silicon code from an Intel/AMD machine*|
+|**All processors (Intel/AMD and Apple Silicon)**|Code for Intel/AMD processor<br>*It is not possible to produce Apple Silicon code from an Intel/AMD machine*|Code for Apple Silicon processor + Code for Intel/AMD processor<br>*Two applications will be available*|
+|**My processor (Intel/AMD)**|Code for Intel/AMD processor|n/a|
+|**My processor (Apple Silicon)**|n/a|Code for Apple Silicon processor|
 
 
 > Apple Silicon compiler target requires that the **clang** application be installed on your machine. If it is missing, 4D will provide instructions about how to get it. 
