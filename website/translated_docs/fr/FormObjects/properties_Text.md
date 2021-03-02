@@ -392,7 +392,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
   Grammaire JSON
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Nom
@@ -446,7 +446,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
   Modifie l'orientation (rotation) d'une zone de texte. Les zones de texte peuvent être pivotées par incréments de 90°. Chaque valeur d'orientation est appliquée tout en conservant le même point de départ inférieur gauche pour l'objet :
 </p>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Valeur d'orientation
@@ -509,7 +509,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
   Grammaire JSON
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Nom
@@ -572,7 +572,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
   Grammaire JSON
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Nom
@@ -636,7 +636,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
   Grammaire JSON
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Nom
@@ -711,7 +711,7 @@ Cette propriété permet d'utiliser des styles spécifiques dans la zone sélect
   Grammaire JSON
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Nom
