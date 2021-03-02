@@ -320,7 +320,7 @@ The `.keywords` property contains a <!-- REF #emailObjectClass.keywords.Summary 
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       Propriété

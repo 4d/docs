@@ -109,7 +109,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 JSONファイルの説明です:
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       属性
