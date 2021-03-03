@@ -170,9 +170,9 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object" |
+| 名                  | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                                                        |
+| ------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**標準のオブジェクト:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time") *配列/セレクションリストボックスのみ*: "integer", "object" |
 
 #### 対象オブジェクト
 
@@ -344,9 +344,9 @@ title: オブジェクト
 
 (*) 配列型のリストボックスのみ
 
-Automatic calculations ignore the shown/hidden state of list box rows. 表示行だけを計算対象にしたい場合、カスタムを選択してプログラムコードで計算しなくてはなりません。
+自動計算の際、リストボックス行の表示/非表示状態は考慮されません。 表示行だけを計算対象にしたい場合、カスタムを選択してプログラムコードで計算しなくてはなりません。
 
-*Null* values are not taken into account for any calculations.
+*Null* 値は計算において無視されます。
 
 If the column contains different types of values (collection-based column for example):
 
