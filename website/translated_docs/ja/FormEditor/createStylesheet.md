@@ -22,7 +22,7 @@ title: スタイルシート
 | styleSheets_mac.css     | macOS 専用の属性スタイル定義用                   |
 | styleSheets_windows.css | Windows 専用の属性スタイル定義用                 |
 
-これらのファイルはプロジェクトの "/SOURCES" フォルダーに格納されます。 They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
+これらのファイルはプロジェクトの "/SOURCES" フォルダーに格納されます。 また、フォームエディターのツールバーにある、[スタイルシートプレビュー](formEditor.md#スタイルシートプレビュー) から直接アクセスすることもできます。
 
 
 ## スタイルシートアーキテクチャー
@@ -229,8 +229,8 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 
 - `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` および `verticalLineStroke` の属性は 3種類のシンタックスを受け付けます:
 
-    - CSS color name: `fill: red;`
-    - Hexa value: `fill: #FF0000;`
+    - CSS カラーネーム: `fill: red;`
+    - 16進数カラーコード: `fill: #FF0000;`
     - `rgb()` 関数: `fill:rgb(255,0,0)`
 
 - CSS では禁じられている文字を使用している文字列については、その文字列を単一引用符または二重引用符でくくることができます。 たとえば:
