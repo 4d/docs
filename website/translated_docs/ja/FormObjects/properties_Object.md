@@ -350,14 +350,14 @@ title: オブジェクト
 
 異なる型の値がカラムに含まれる場合 (コレクションに基づいている場合など):
 
-- Average and Sum only take numerical elements into account (other element types are ignored).
-- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/collectionClass.md#sort) function.
+- 平均と合計は数値のみを計算に含めます (他の型の値は無視されます)。
+- 最小と最大は、[collection.sort()](API/collectionClass.md#sort) 関数にて定義されるのと同じ最小値と最大値を返します。
 
-Using automatic calculations in footers of columns based upon expressions has the following limitations:
+式に基づいている列のフッターにおいて自動計算を使用するにあたっては、次の制限があります:
 
-- it is **supported** with all list box types when the expression is "simple" (such as `[table]field` or `this.attribute`),
-- it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
-- it is **not supported** with current selection/named selection list boxes when the expression is "complex". これらの場合には、カスタム計算を使用する必要があります。
+- 式が "単純" なものの場合 (`[table]field` や `this.attribute` など) には、すべてのリストボックスタイプで **サポートされます**
+- 式が "複雑" (つまり、`this.attribute` 以外) で、かつリストボックスの行数が多い場合には、コレクション/エンティティセレクションリストボックスにおいて **サポートはされるものの**、パフォーマンス上の理由により **推奨されません**。
+- 式が "複雑" な場合には、カレントセレクション/命名セレクションリストボックスにおいて **サポートされません**。 これらの場合には、カスタム計算を使用する必要があります。
 
 **カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
 
