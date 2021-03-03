@@ -3,12 +3,12 @@ id: directory
 title: '$directory'
 ---
 
-The directory handles user access through REST requests.
+ディレクトリは RESTリクエストを介したユーザーアクセスに対応します。
 
 
 ## $directory/login
 
-Opens a REST session on your 4D application and logs in the user.
+4Dアプリケーション上で RESTセッションを開き、ユーザーをログインします。
 
 ### 説明
 Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
