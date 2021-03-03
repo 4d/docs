@@ -3,23 +3,23 @@ id: directory
 title: '$directory'
 ---
 
-The directory handles user access through REST requests.
+ディレクトリは RESTリクエストを介したユーザーアクセスに対応します。
 
 
 ## $directory/login
 
-Opens a REST session on your 4D application and logs in the user.
+4Dアプリケーション上で RESTセッションを開き、ユーザーをログインします。
 
 ### 説明
-Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
+RESTを介して 4Dアプリケーション上でセッションを開き、ユーザーをログインするには、`$directory/login` を使います。 デフォルトの 4Dセッションタイムアウトを変更することもできます。
 
-All parameters must be passed in **headers** of a POST method:
+パラメーターはすべて、POST の **ヘッダー** に渡す必要があります:
 
-| Header key         | Header value                                                                 |
+| ヘッダーキー             | ヘッダー値                                                                        |
 | ------------------ | ---------------------------------------------------------------------------- |
-| username-4D        | User - Not mandatory                                                         |
-| password-4D        | Password - Not mandatory                                                     |
-| hashed-password-4D | Hashed password - Not mandatory                                              |
+| username-4D        | ユーザー (任意)                                                                    |
+| password-4D        | パスワード (任意)                                                                   |
+| hashed-password-4D | ハッシュ化パスワード (任意)                                                              |
 | session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
 
 
