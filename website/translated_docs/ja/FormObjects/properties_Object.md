@@ -348,7 +348,7 @@ title: オブジェクト
 
 *Null* 値は計算において無視されます。
 
-If the column contains different types of values (collection-based column for example):
+異なる型の値がカラムに含まれる場合 (コレクションに基づいている場合など):
 
 - Average and Sum only take numerical elements into account (other element types are ignored).
 - Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/collectionClass.md#sort) function.
