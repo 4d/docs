@@ -29,7 +29,7 @@ title: '$attributes'
 
 ## リレートエンティティズの例
 
-If we pass the following REST request for our Company dataclass (which has a relation attribute "employees"):
+"employees" 1対Nリレーションを持つ Company データクラスに対して次の RESTリクエストをおこなうと:
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
@@ -75,7 +75,7 @@ employees の属性をすべて取得するには:
 
 ## リレートエンティティの例
 
-If we pass the following REST request for our Employee dataclass (which has several relation attributes, including "employer"):
+"employer" N対1リレーションを持つ Employee データクラスに対して次の RESTリクエストをおこなうと:
 
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
