@@ -8,10 +8,10 @@ title: '$entityset'
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                                                     | 例題                                                                                 | 説明                                                           |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Retrieves an existing entity set                             |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Creates a new entity set from comparing existing entity sets |
+| シンタックス                                                                                                     | 例題                                                                                 | 説明                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------- |
+| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | 既存のエンティティセットを取得します                |
+| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します |
 
 
 
@@ -49,21 +49,21 @@ title: '$entityset'
 
 ### 説明
 
-`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$operator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$operator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 The two entity sets must be in the same dataclass.
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$operator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$operator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
 このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 
 下記は、論理演算子の一覧です:
 
-| 演算子       | 説明                                                                                                                                                         |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | 両方のエンティティセットに共通して含まれるエンティティのみを返します。                                                                                                                        |
-| OR        | 両エンティティセットのいずれか、あるいは両方に含まれているエンティティを返します。                                                                                                                  |
-| EXCEPT    | エンティティセット#1 から、エンティティセット#2にも含まれているエンティティを除外した残りを返します。                                                                                                      |
-| INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
-> The logical operators are not case-sensitive, so you can write "AND" or "and".
+| 演算子       | 説明                                                     |
+| --------- | ------------------------------------------------------ |
+| AND       | 両方のエンティティセットに共通して含まれるエンティティのみを返します。                    |
+| OR        | 両エンティティセットのいずれか、あるいは両方に含まれているエンティティを返します。              |
+| EXCEPT    | エンティティセット#1 から、エンティティセット#2にも含まれているエンティティを除外した残りを返します。  |
+| INTERSECT | 両方のエンティティセットに共通して含まれるエンティティがあれば true、なければ false を返します。 |
+> 論理演算子の文字の大小は区別されないため、"AND" とも "and" とも書けます。
 
-Below is a representation of the logical operators based on two entity sets. The red section is what is returned.
+2つのエンティティセットを対象に論理演算子を使用した場合のベン図は下のとおりです。 赤く塗られた部分が返されるものです。
 
 **AND**
 
@@ -78,21 +78,21 @@ Below is a representation of the logical operators based on two entity sets. The
 ![](assets/en/REST/except.png)
 
 
-The syntax is as follows:
+シンタックスは次のとおりです:
 
  `GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
 
 ### 例題
-In the example below, we return the entities that are in both entity sets since we are using the AND logical operator:
+次の例では AND論理演算子を使用するため、両方のエンティティセットに共通して含まれるエンティティが返されます:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-If we want to know if the two entity sets intersect, we can write the following:
+2つのエンティティセットが交差するかどうかを確認するには、次のように書きます:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-If there is an intersection, this query returns true. Otherwise, it returns false.
+共通のエンティティが存在する場合、このクエリは true を返します。 それ以外の場合は false を返します。
 
-In the following example we create a new entity set that combines all the entities in both entity sets:
+次の例では、2つのエンティティセットのいずれかあるいは両方に含まれているエンティティすべてを格納した新しいエンティティセットを作成します:
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=OR&$otherCollection=C05A0D887C664D4DA1B38366DD21629B&$method=entityset`
