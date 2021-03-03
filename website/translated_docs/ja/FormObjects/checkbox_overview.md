@@ -73,7 +73,7 @@ true/false ステータスで表すことのできるアクション ("checkable
 | visibleReferences                   |                   |
 | widowAndOrphanControlEnabled        | 4D Write Proエリアのみ |
 
-For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
+これらのアクションについての詳細は、[標準アクション](properties_Action.md#標準アクション) の章を参照してください。
 
 ## チェックボックスのボタンスタイル
 
