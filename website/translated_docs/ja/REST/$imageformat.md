@@ -3,11 +3,11 @@ id: imageformat
 title: '$imageformat'
 ---
 
-Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)
+画像取得の際に使用する画像形式を指定します (*例*: `$imageformat=png`)
 
 ## 説明
 
-Define which format to use to display images. By default, the best format for the image will be chosen. You can, however, select one of the following formats:
+画像の表示に使う形式を指定します。 デフォルトでは、画像に最適な形式が選択されます。 指定する場合は、次の形式が指定できます:
 
 | タイプ  | 説明                             |
 | ---- | ------------------------------ |
