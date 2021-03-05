@@ -649,6 +649,9 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
       "ORDA/dsmapping": {
         "title": "Data Model Objects"
       },
@@ -681,9 +684,6 @@
       },
       "Project/overview": {
         "title": "Aperçu"
-      },
-      "ReleaseNotes/whatsNew": {
-        "title": "What's New"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -828,7 +828,6 @@
       }
     },
     "links": {
-      "What's New": "What's New",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
@@ -888,6 +887,7 @@
     "Web applications|no description given": "Applications Web",
     "Mobile applications|no description given": "Applications Mobile",
     "Desktop applications|no description given": "Applications Desktop",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"
