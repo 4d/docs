@@ -149,7 +149,12 @@ class Index extends React.Component {
               layout="threeColumn"
             />
           </Container>
-        </div>
+ 		<div className="doc-updates">
+          <a
+            href={`${siteConfig.baseUrl}${language}/Notes/updates`}>
+            <translate>Documentation updates</translate>
+          </a></div>
+       </div>
       </div>
     );
   }
