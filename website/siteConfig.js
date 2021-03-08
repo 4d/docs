@@ -39,7 +39,6 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
   //customDocsPath: 'docsPostProcessed', //uniquement local
   docsUrl:'',
-  customDocsPath:'docsPostProcessed',
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
 
