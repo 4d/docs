@@ -18,7 +18,7 @@ Ein einmaliger, globaler Katalog, der vom Befehl `Storage` zurückgegeben wird, 
 
 ## Shared Objects oder Collections verwenden
 
-Ist mit den Befehlen `New shared object` oder `de>New shared collection` eine Instanz von shared object/collection erstellt, lassen sich ihre jeweiligen Eigenschaften und Elemente in jedem Prozess ändern oder lesen.
+Ist mit den Befehlen `New shared object` oder `New shared collection` eine Instanz von shared object/collection erstellt, lassen sich ihre jeweiligen Eigenschaften und Elemente in jedem Prozess ändern oder lesen.
 
 ### Ändern
 
