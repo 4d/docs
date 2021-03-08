@@ -32,22 +32,22 @@ title: '$info'
 
 エンティティセットを作成する方法についての詳細は `$method=entityset` を参照ください。 4D Server のキャッシュからエンティティセットを削除したい場合には `$method=release` を使います。
 > 最適化のため、4D は独自のエンティティセットを生成します。つまり、`$method=entityset` で作成した以外のエンティティセットも返されます。
-> **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+> **重要** プロジェクトにおいて、4D の **パスワードアクセスシステム** を起動している場合には、Adminグループのユーザーとしてログインしている必要があります。
 
 ### sessionInfo
 
-For each user session, the following information is returned in the *sessionInfo* collection:
+各ユーザーセッションについては、次の情報が *sessionInfo* コレクションに返されます:
 
-| プロパティ      | タイプ | 説明                                                           |
-| ---------- | --- | ------------------------------------------------------------ |
-| sessionID  | 文字列 | A UUID that references the session.                          |
-| userName   | 文字列 | The name of the user who runs the session.                   |
-| lifeTime   | 数値  | The lifetime of a user session in seconds (3600 by default). |
-| expiration | 日付  | The current expiration date and time of the user session.    |
+| プロパティ      | タイプ | 説明                             |
+| ---------- | --- | ------------------------------ |
+| sessionID  | 文字列 | セッションを参照する UUID                |
+| userName   | 文字列 | セッションを実行中のユーザー名                |
+| lifeTime   | 数値  | ユーザーセッションのタイムアウト (デフォルトは 3600) |
+| expiration | 日付  | ユーザーセッションの有効期限                 |
 
 ## 例題
 
-Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
+4D Server のキャッシュに保存されているエンティティセットおよびユーザーセッションの情報を取得します。
 
 `GET /rest/$info`
 
@@ -114,4 +114,4 @@ sessionInfo: [
 ]
 }
 ```
-> The progress indicator information listed after the entity selections is used internally by 4D.
+> エンティティセットに続く進捗インジケーターの情報は、4Dによって内部的に使用されます。
