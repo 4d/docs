@@ -128,7 +128,7 @@ Creates an entity set in 4D Server's cache based on the collection of related en
 
 `$method=subentityset` allows you to sort the data returned by the relation attribute defined in the REST request.
 
-To sort the data, you use the `$subOrderby` property. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. By default, the data is sorted in ascending order.
+To sort the data, you use the `$subOrderby` property. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. デフォルトでは、データは昇順に並べ替えられます。
 
 If you want to specify multiple attributes, you can delimit them with a comma, µ, `$subOrderby="lastName desc, firstName asc"`.
 
