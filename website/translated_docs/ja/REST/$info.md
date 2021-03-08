@@ -3,16 +3,16 @@ id: info
 title: '$info'
 ---
 
-Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions
+4D Server のキャッシュに保存されているエンティティセットおよびユーザーセッションの情報を返します。
 
 ## 説明
-When you call this request for your project, you retrieve information in the following properties:
+プロジェクトに対してこのリクエストを送信すると、次のプロパティに情報を取得します:
 
 | プロパティ          | タイプ    | 説明                                                                                  |
 | -------------- | ------ | ----------------------------------------------------------------------------------- |
-| cacheSize      | 数値     | 4D Server's cache size.                                                             |
-| usedCache      | 数値     | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | 数値     | Number of entity selections.                                                        |
+| cacheSize      | 数値     | 4D Server のキャッシュサイズ                                                                 |
+| usedCache      | 数値     | 4D Server のキャッシュ使用量                                                                 |
+| entitySetCount | 数値     | エンティティセットの数                                                                         |
 | entitySet      | コレクション | A collection in which each object contains information about each entity selection. |
 | ProgressInfo   | コレクション | A collection containing information about progress indicator information.           |
 | sessionInfo    | コレクション | A collection in which each object contains information about each user session.     |
