@@ -5,39 +5,39 @@ title: '$filter'
 
 
  
-Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!='' AND salary>30000"`)
+データクラスまたはメソッドが返すデータをフィルターします *(例*: `$filter="firstName!='' AND salary>30000"`)
 
 
 ## 説明
 
-This parameter allows you to define the filter for your dataclass or method.
+このパラメーターを使って、データクラスまたはメソッドが返すデータに対するフィルターを定義することができます。
 
-### Using a simple filter
+### 単純なフィルターの利用
 
-A filter is composed of the following elements:
+フィルターは次の要素で構成されます:
 
 **{attribute} {comparator} {value}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+たとえば `$filter="firstName=john"` の場合、`firstName` は **属性 (attribute)**、`=` は **比較演算子 (comparator)**、`john` は **値 (value)** にあたります。
 
-### Using a complex filter
+### 複雑なフィルターの利用
 
-A more compex filter is composed of the following elements, which joins two queries:
+複雑なフィルターは複数の単純なフィルターの組み合わせで構成されます:
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
 
-For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
+たとえば: `$filter="firstName=john AND salary>20000"` （`firstName` および `salary` は Employee データクラスの属性です)。
 
-### Using the params property
+### paramsプロパティの使用
 
-You can also use 4D's params property.
+4D の paramsプロパティを使うこともできます。
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
+たとえば: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` (firstName および salary は Employee データクラスの属性です)。
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentation.
+4D においてデータをクエリする方法についての詳細は、[dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.ja.html) ドキュメンテーションを参照ください。
 > When inserting quotes (') or double quotes ("), you must escape them using using their character code:
 > 
 > <li>Quotes ('):    \u0027 <li>Double quotes ("): \u0022
