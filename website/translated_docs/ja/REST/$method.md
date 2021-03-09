@@ -3,17 +3,17 @@ id: method
 title: '$method'
 ---
 
-This parameter allows you to define the operation to execute with the returned entity or entity selection.
+このパラメーターは、返されたエンティティまたはエンティティセレクションに対して実行する処理を指定するのに使います。
 
 ## 使用可能なシンタックス
 
-| シンタックス                                          | 例題                                                                                              | 説明                                                                                                         |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Deletes the current entity, entity collection, or entity selection                                         |
-| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Releases an existing entity set stored in 4D Server's cache                                                |
-| [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Creates an entity set based on the collection of related entities defined in the REST request              |
-| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Updates and/or creates one or more entities                                                                |
+| シンタックス                                          | 例題                                                                                              | 説明                                                                 |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | エンティティまたはエンティティセレクションを削除します                                        |
+| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | RESTリクエストで定義されたエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します |
+| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | 4D Server のキャッシュからエンティティセットを削除します                                  |
+| [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | RESTリクエストで定義されたリレートエンティティのコレクションに基づいて、エンティティセットを作成します              |
+| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | 一つ以上のエンティティを更新または作成します                                             |
 
 
 
@@ -21,12 +21,12 @@ This parameter allows you to define the operation to execute with the returned e
 
 ## $method=delete
 
-Deletes the current entity, entity collection, or entity selection (created through REST)
+エンティティまたは (RESTで作成された) エンティティセレクションを削除します
 
 
 ### 説明
 
-With `$method=delete`, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
 
 You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
@@ -55,7 +55,7 @@ You can also delete an entity set using $entityset/{entitySetID}:
 
 ## $method=entityset
 
-Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request
+RESTリクエストで定義されたエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します
 
 ### 説明
 
@@ -186,7 +186,7 @@ If you want to retrieve only the related entities for a specific entity, you can
 ## $method=update
 
 
-Updates and/or creates one or more entities
+一つ以上のエンティティを更新または作成します
 
 ### 説明
 
