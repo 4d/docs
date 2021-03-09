@@ -199,7 +199,7 @@
         "title": "プロジェクトパッケージのビルド"
       },
       "Desktop/clientServer": {
-        "title": "Client/Server Management"
+        "title": "クライアント/サーバー管理"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -840,14 +840,14 @@
       "Web Server": "Web サーバー",
       "Web Development": "Web Development",
       "REST Server": "REST サーバー",
-      "Client/Server": "Client/Server",
+      "Client/Server": "クライアント/サーバー",
       "Forms": "Forms",
       "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
       "Menus": "メニュー",
-      "Build application": "Build application"
+      "Build application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
@@ -871,7 +871,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
-    "Client/Server|no description given": "Client/Server",
+    "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",

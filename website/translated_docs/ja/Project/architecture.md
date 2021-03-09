@@ -6,8 +6,8 @@ title: プロジェクトのアーキテクチャー
 4D プロジェクトは、一つの親アプリケーションフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 たとえば:
 
 - MyProject
-    - コンポーネント
-    - データ
+    - Components
+    - Data
         - Logs
         - Settings
     - Documentation
@@ -30,9 +30,9 @@ title: プロジェクトのアーキテクチャー
 
 - *applicationName*.4DProject ファイル
 - Sources
-    + クラス
+    + Classes
     + DatabaseMethods
-    + メソッド
+    + Methods
     + Forms
     + TableForms
     + Triggers
@@ -45,7 +45,7 @@ title: プロジェクトのアーキテクチャー
 プロジェクトを定義し、起動するためのプロジェクト開発ファイルです。 このファイルを開くには次のいずれかが必要です:
 
 - 4D
-- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
+- 4D Server (読み取り専用；[リモートプロジェクトを開く](Desktop/clientServer.md#リモートプロジェクトを開く) 参照)
 
 > 4D プロジェクトの開発は 4D によっておこない、マルチユーザー開発はソース管理ツールによって管理します。 4D Server は .4DProject ファイルを開くことができますが、クライアントからの開発はおこなえません。
 
@@ -120,7 +120,7 @@ title: プロジェクトのアーキテクチャー
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
-- メソッド
+- Methods
 - Forms
 - TableForms
 
@@ -213,7 +213,7 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 アプリケーションプロジェクトが利用するコンポーネントを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
-> アプリケーションプロジェクトはコンポーネントとして利用することができます:<br /> - 開発においては、ホストプロジェクトの Components フォルダーに .4dproject ファイルのエイリアスを置きます。 - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> アプリケーションプロジェクトはコンポーネントとして利用することができます:<br /> - 開発においては、ホストプロジェクトの Components フォルダーに .4dproject ファイルのエイリアスを置きます。 - 運用時においては、[コンポーネントをビルド](Desktop/building.md#コンポーネントをビルド) し、生成された .4dz ファイルを .4dbase フォルダーに格納し、それをホストアプリケーションの Components フォルダーに置きます。
 
 
 ## Plugins フォルダー
