@@ -673,6 +673,24 @@
       "ORDA/datastores": {
         "title": "リモートデータストアの利用"
       },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "概要"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
+      },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"
       },
@@ -839,6 +857,7 @@
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
       "Access Rights": "アクセス権限",
+      "Preferences": "Preferences",
       "Administration": "データベース管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
@@ -881,6 +900,7 @@
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "データベース管理",
