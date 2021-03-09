@@ -15,7 +15,7 @@ Web server user sessions allow to:
 > **Note:** The current implementation (v18 R6) is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
 
 
-## Enabling sessions
+## セッションの有効化
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 

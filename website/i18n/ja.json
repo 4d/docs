@@ -202,7 +202,7 @@
         "title": "プロジェクトパッケージのビルド"
       },
       "Desktop/clientServer": {
-        "title": "Client/Server Management"
+        "title": "クライアント/サーバー管理"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -649,6 +649,9 @@
         "title": "検査ページ",
         "sidebar_label": "検査ページ"
       },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
       },
@@ -681,9 +684,6 @@
       },
       "Project/overview": {
         "title": "概要"
-      },
-      "ReleaseNotes/whatsNew": {
-        "title": "新着情報"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -781,6 +781,9 @@
       "REST/REST_requests": {
         "title": "RESTリクエストについて"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
       },
@@ -825,7 +828,6 @@
       }
     },
     "links": {
-      "What's New": "新着情報",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
@@ -843,14 +845,14 @@
       "Web Server": "Web サーバー",
       "Web Development": "Web Development",
       "REST Server": "REST サーバー",
-      "Client/Server": "Client/Server",
+      "Client/Server": "クライアント/サーバー",
       "Forms": "Forms",
       "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
       "Menus": "メニュー",
-      "Build application": "Build application"
+      "Build application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
@@ -874,7 +876,7 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
-    "Client/Server|no description given": "Client/Server",
+    "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
@@ -885,6 +887,7 @@
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

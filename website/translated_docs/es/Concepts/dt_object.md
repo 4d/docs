@@ -11,18 +11,20 @@ Variables, fields or expressions of the Object type can contain various types of
     - number (Real, Integer, etc.)
     - text
     - null
-    - Boolean
+    - boolean
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
-    - object (objects can be nested on several levels)
-    - picture(*)
+    - object(1) (objects can be nested on several levels)
+    - picture(2)
     - collection
 
-(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.
+
+(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
 **Warning:** Keep in mind that attribute names differentiate between upper and lower case.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
 
 Each property value accessed through the object notation is considered an expression. You can use such values wherever 4D expressions are expected:
 
