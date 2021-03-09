@@ -12,7 +12,7 @@ This group of options sets parameters for moving objects using the keyboard or t
 
 ### Step using keyboard  
 
-This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the Shift key.
+This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the **Shift** key.
 
 ### When moving beyond window limits  
 
@@ -27,10 +27,9 @@ You can configure this option depending on your work habits and development need
 
 This option activates auto alignment by default in each new window of the Form editor. It is possible to modify this option individually in each window (refer to [Using the magnetic grid](FormEditor/formEditor.md#using-the-magnetic-grid)).
 
-## Default Display  
+## New form default display  
 
-These options sets the items that are displayed or hidden by default in each new window of the Form editor. It is possible to modify the display of each window individually using the Display hierarchical menu of the Form editor. 
-
-*	**Default display shield**: This option sets which shields to display by default in each new window of the Form editor. For more information about shields, refer to [Using shields](FormEditor/formEditor.md#using-shields).
-*	**Color for marker lines**: This option modifies the color of the marker lines used in the Form editor to define the different areas (header, breaks, detail and footer, etc.). For more information about markers, refer to [Using output control lines](https://doc.4d.com/4Dv18R6/4D/18-R6/Using-output-control-lines.300-5217678.en.html).
+- **Limits**, **Rulers**, ...: check items that must be displayed by default in each new window of the Form editor. It is possible to modify the display of each window individually using the **Display** hierarchical menu of the Form editor. 
+- **Color for marker lines**: modifies the color of the marker lines used in the Form editor to define the different areas (header, breaks, detail and footer, etc.). For more information about markers, refer to [Using output control lines](https://doc.4d.com/4Dv18R6/4D/18-R6/Using-output-control-lines.300-5217678.en.html).
+- **Default display shield**: sets which shields to display by default in each new window of the Form editor. For more information about shields, refer to [Using shields](FormEditor/formEditor.md#using-shields).
 
