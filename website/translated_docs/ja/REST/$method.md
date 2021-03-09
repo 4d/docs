@@ -134,7 +134,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 ### 例題
 
-If you want to retrieve only the related entities for a specific entity, you can make the following REST request where staff is the relation attribute in the Company dataclass linked to the Employee dataclass:
+あるエンティティのリレートエンティティだけを取得したいとき、たとえば Company データクラスの staff リレーション名が Employee データクラスにリンクしている場合には、次の RESTリクエストが書けます:
 
 `GET  /rest/Company(1)/staff?$expand=staff&$method=subentityset&$subOrderby=lastName ASC`
 
@@ -190,21 +190,21 @@ If you want to retrieve only the related entities for a specific entity, you can
 
 ### 説明
 
-`$method=update` allows you to update and/or create one or more entities in a single **POST**. If you update and/or create one entity, it is done in an object with each property an attribute with its value, *e.g.*, `{ lastName: "Smith" }`. If you update and/or create multiple entities, you must create a collection of objects.
+`$method=update` を使うと、一つの **POST** で一つ以上のエンティティを更新または作成することができます。 エンティティの更新・作成をおこなうには、オブジェクトのプロパティ/値としてエンティティの属性/値を指定します (*例*: `{ lastName: "Smith" }`)。 複数のエンティティを更新・作成するには、各エンティティに対応するオブジェクトをコレクションにまとめます。
 
-In any cases, you must set the **POST** data in the **body** of the request.
+いずれの場合も、リクエストの本文 (**body**) に **POST** データ **body** を格納します。
 
-To update an entity, you must pass the `__KEY` and `__STAMP` parameters in the object along with any modified attributes. If both of these parameters are missing, an entity will be added with the values in the object you send in the body of your **POST**.
+エンティティを更新するには、更新する属性だけでなく、`__KEY` および `__STAMP` パラメーターをオブジェクト内に指定しなくてはなりません。 これらのパラメーターがない場合、**POST** の本文に格納したオブジェクトの値をもとに新規エンティティが追加されます。
 
-Triggers are executed immediately when saving the entity to the server. The response contains all the data as it exists on the server.
+エンティティをサーバーに保存すると同時にトリガーが実行されます。 レスポンスにはすべてのデータが、サーバー上に存在するとおりに格納されます。
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atonce`. If any errors occur during data validation, none of the entities are saved. You can also use $method=validate to validate the entities before creating or updating them.
+`$atomic/$atonce` を使うと、エンティティを作成・更新するリクエストをトランザクション内で実行できます。 データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 また、`$method=validate` を使うと、作成・更新の前にエンティティを検証することができます。
 
-If a problem arises while adding or modifying an entity, an error will be returned to you with that information.
-> Notes for specific attribute types:
+エンティティを追加または更新する際に問題が発生すると、その情報を格納したエラーが返されます。
+> 属性の型に関する注記:
 > 
-> * **Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).
-> * **Booleans** are either true or false.
+> * **日付** は JavaScript 形式で表す必要があります: YYYY-MM-DDTHH:MM:SSZ (例: "2010-10-05T23:00:00Z")。 日付属性のためだけに日付プロパティを指定した場合、タイムゾーンおよび時刻 (時間・分・秒) の情報は削除されます。 この場合、レスポンスの形式 dd!mm!yyyy (例: 05!10!2013) を使って日付を送信することも可能です。
+> * **ブール** は true または false です。
 > * Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format { "ID": "D507BC03E613487E9B4C2F6A0512FE50"}
 
 ### 例題
