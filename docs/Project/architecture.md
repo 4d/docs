@@ -197,7 +197,7 @@ BuildApp.4DSettings|Build settings file, created automatically when using the ap
 
 ## userPreferences.*userName* folder
 
-This folder contains files that memorize user configurations, e.g. break point positions. You can just ignore this folder. It contains for example:
+This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
 
 Contents|Description|Format
 --------|-------|----
@@ -207,7 +207,7 @@ formWindowPositions.json|Current user window positions for forms|JSON
 workspace.json|List of opened windows; on macOS, order of tab windows|JSON
 debuggerCatches.json|Caught calls to commands|JSON
 recentTables.json|Ordered list of tables|JSON
-preferencesv15.4DPreferences|User preferences|JSON  
+preferences.4DPreferences|Current data path and main window positions|XML  
 
 
 ## Components folder
