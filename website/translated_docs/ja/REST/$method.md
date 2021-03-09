@@ -26,20 +26,20 @@ title: '$method'
 
 ### 説明
 
-`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 たとえば、[`$filter`]($filter.md) を使って定義したエンティティセレクションや、[`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(例*: /Employee(22)) のように直接特定したエンティティが対象です。
 
-You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
+[`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid) のようにエンティティセットを呼び出して、そこに含まれるエンティティを削除することもできます。
 
 ## 例題
-You can then write the following REST request to delete the entity whose key is 22:
+キーが 22であるエンティティを削除するには、次の RESTリクエストが書けます:
 
  `POST  /rest/Employee(22)/?$method=delete`
 
-You can also do a query as well using $filter:
+[`$filter`]($filter.md) を使ったクエリも可能です:
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-You can also delete an entity set using $entityset/{entitySetID}:
+[`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid) で呼び出したエンティティセットを削除する場合は次のように書きます:
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
@@ -59,24 +59,24 @@ RESTリクエストで定義されたエンティティのコレクションに�
 
 ### 説明
 
-When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to `$entityset/{entitySetID}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.
+RESTでエンティティのコレクションを作成した場合、これをエンティティセットとして 4D Server のキャッシュに保存することができます。 エンティティセットには参照番号が付与されます。これを `$entityset/{entitySetID}` に渡すと、当該エンティティセットにアクセスできます。 デフォルトで、エンティティセットは 2時間有効です。$timeout に値 (秒単位) を渡すことで、有効時間を変更できます。
 
-If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$filter` and/or `$orderby`) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.
+エンティティセットを作成する際に、`$filter` や `$orderby` と同時に`$savedfilter` や `$savedorderby` も使用していた場合には、4D Server のキャッシュからエンティティセットが削除されていても、同じ参照IDで再作成できます。
 
 ### 例題
 
-To create an entity set, which will be saved in 4D Server's cache for two hours, add `$method=entityset` at the end of your REST request:
+4D Server のキャッシュに2時間保存されるエンティティセットを作成するには、RESTリクエストの最後に `$method=entityset` を追加します:
 
  `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to `$timeout`:
+保存時間が 10分のエンティティセットを作成するには、次のように `$timeout` に値を渡します:
 
  `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
-> `$skip` and `$top/$limit` are not taken into consideration when saving an entity set.
+フィルターや並べ替えの情報を保存するには、`$savedfilter` や `$savedorderby` に true を渡します。
+> エンティティセットを作成する際には、`$skip` および `$top/$limit` は無視されます。
 
-After you create an entity set, the first element, `__ENTITYSET`, is added to the object returned and indicates the URI to use to access the entity set:
+エンティティセットを作成すると、返されるオブジェクトの先頭に `__ENTITYSET` という要素が追加され、エンティティセットにアクセスするための URI を提供します:
 
 `__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
 
@@ -85,27 +85,27 @@ After you create an entity set, the first element, `__ENTITYSET`, is added to th
 
 ## $method=release
 
-Releases an existing entity set stored in 4D Server's cache.
+4D Server のキャッシュからエンティティセットを削除します。
 
 ### 説明
 
-You can release an entity set, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+[`$method=entityset`](#methodentityset) によって作成したエンティティセットを、4D Server のキャッシュから削除することができます。
 
 ### 例題
 
-Release an existing entity set:
+既存のエンティティセットを削除します:
 
 `GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
 
 #### レスポンス:
 
-If the request was successful, the following response is returned:
+リクエストが成功した場合のレスポンス:
 
 ```
 {
     "ok": true
 }
-If the entity set wasn't found, an error is returned:
+エンティティセットが見つからなかった場合には、エラーが返されます
 
 {
     "__ERROR": [
@@ -121,7 +121,7 @@ If the entity set wasn't found, an error is returned:
 
 ## $method=subentityset
 
-Creates an entity set in 4D Server's cache based on the collection of related entities defined in the REST request
+RESTリクエストで定義されたリレートエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します
 
 
 ### 説明
