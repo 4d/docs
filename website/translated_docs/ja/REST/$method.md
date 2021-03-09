@@ -126,11 +126,11 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 ### 説明
 
-`$method=subentityset` allows you to sort the data returned by the relation attribute defined in the REST request.
+`$method=subentityset` を使うことで、RESTリクエストが定義されたリレーション属性によって返されるデータを並べ替えることができます。
 
-To sort the data, you use the `$subOrderby` property. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. デフォルトでは、データは昇順に並べ替えられます。
+データを並べ替えるには `$subOrderby` を使います。 並べ替えの基準とする各属性について、並べ替え順を指定します。ASC ( asc) が昇順、DESC (desc) が降順です。 デフォルトでは、データは昇順に並べ替えられます。
 
-If you want to specify multiple attributes, you can delimit them with a comma, µ, `$subOrderby="lastName desc, firstName asc"`.
+複数の属性を指定するには、カンマ区切りにします (`例`: $subOrderby="lastName desc, firstName asc")。
 
 ### 例題
 
