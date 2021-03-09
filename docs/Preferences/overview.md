@@ -11,7 +11,7 @@ User preferences specify default behavior options affecting your working environ
 
 ## Access 
  
-You can access the Preferences dialog box from the **Edit > Preferences...** menu (Windows) or the 4D Application menu (Mac OS):
+You can access the Preferences dialog box from the **Edit > Preferences...** menu (Windows) or the 4D Application menu (macOS):
 
 ![](assets/en/Preferences/overviewAccess.png) 
 
@@ -26,7 +26,7 @@ Settings made in the Preferences dialog box are saved in an XML format preferenc
 *	Windows 7 and higher: {disk}\Users\{UserName}\AppData\Roaming\4D
 *	macOS: {disk}:Users:{UserName}:Library:Application Support:4D
 
->*XX* indicates the main version number of 4D. In version 17 for example, the file is named 4D Preferences v17.4DPreferences. For more information, see [userPreferences.userName folder](Project/architecture.html#userpreferencesusername-folder).
+>*XX* indicates the main version number of 4D. In version 17 for example, the file is named 4D Preferences v17.4DPreferences. For more information, see [userPreferences.userName folder](Project/architecture.md#userpreferencesusername-folder).
 
 
 ## Customizing parameters and "Factory settings"  

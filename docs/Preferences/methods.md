@@ -35,28 +35,20 @@ This area configures Method editor theme options. A theme allows you to define t
 
 All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
 
-*	**Default Light Theme**: 
-
-*	**Default Dark Theme**: 
+*	**Default Light Theme**
+*	**Default Dark Theme**
 
 >Default themes cannot be modified or deleted.
 
 ### Creating custom themes
 
-You can create custom themes by clicking on the **+** at the bottom of the theme list and duplicating a default theme. 
+You can create custom themes. In the Preferences window, just select an existing theme and click on the **+** at the bottom of the theme list. You can customize the duplicated theme.
 
-The JSON file for custom themes are stored in the Active 4D folder:
+The JSON files for custom themes are stored in the `4DEditorTheme` folder of the [active 4D folder](https://doc.4d.com/4Dv18R6/4D/18-R6/Get-4D-folder.301-5198423.en.html).
 
-*	**macOS** <br>"<diskName>/Users/<userName>Application Support/4D/4DEditorTheme/<themeName>.json" 
+If key values are not defined in a custom theme, they default to the values from the *Default Light Theme*. If a JSON theme file is invalid, the *Default Light Theme* is loaded and an error is generated. 
 
-*	**Windows** <br>"<diskName>:\Users\<userName>\AppData\Roaming\4D\4DEditorTheme\<themeName>.json"
-
->*	If a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account. 
->*	If key values are not defined in the custom theme will default to the values from the *Default Light Theme*. 
->*	If a JSON theme file is invalid, an error will be generated and the *Default Light Theme* will be loaded. 
-
-
-
+> When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account. 
 
 
 ## Options  
@@ -72,7 +64,7 @@ This area configures Method editor display options.
 
 ||Option|Description|
 |---|---|---|
-|4D Programming Language|Use regional system settings|Allows you to disable/enable the "international" code settings for the local 4D application:<ul><li> **unchecked**<br> (default value in 4D v15 and higher) English-US settings and the English programming language are used in 4D methods.</li><li>**checked**<br> Regional settings are used in 4D methods, as in previous 4D versions.</li></ul><p><p>If you modify this option, you need to restart the 4D application so that the change is taken into account.<p><p>For a detailed description of this option's effects, refer to the `OLD RELATED MANY` command.|
+|4D Programming Language|Use regional system settings|Allows you to disable/enable the "international" code settings for the local 4D application:<ul><li> **unchecked**<br> (default value) English-US settings and the English programming language are used in 4D methods.</li><li>**checked**<br> Regional settings are used in 4D methods.</li></ul><p><p>If you modify this option, you need to restart the 4D application so that the change is taken into account.|
 |Indentation|Points|Changes the indentation value for the 4D code in the Method editor. The width must be specified in points (10 by default).<p><p>4D code is automatically indented in order to reveal its structure:<p><p>![](assets/en/Preferences/optionsIndent.png)<p><p>**Note**:Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Narrower indentation can be used in order to limit horizontal scrolling.|
 ||Show Line Numbers|Lets you display the line numbers by default in each window of the Method editor. You can also show/hide line numbers for the current window directly from the Method editor.|
 ||Show Lists|Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. You can also show or hide each list directly from the Method editor.|

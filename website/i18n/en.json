@@ -670,6 +670,24 @@
       "ORDA/datastores": {
         "title": "Using a remote datastore"
       },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "Overview"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
+      },
       "Project/architecture": {
         "title": "Architecture of a project"
       },
@@ -840,6 +858,7 @@
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
       "Access Rights": "Access Rights",
+      "User Preferences": "User Preferences",
       "Administration": "Administration",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
