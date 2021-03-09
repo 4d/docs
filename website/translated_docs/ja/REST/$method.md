@@ -205,15 +205,15 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 > 
 > * **日付** は JavaScript 形式で表す必要があります: YYYY-MM-DDTHH:MM:SSZ (例: "2010-10-05T23:00:00Z")。 日付属性のためだけに日付プロパティを指定した場合、タイムゾーンおよび時刻 (時間・分・秒) の情報は削除されます。 この場合、レスポンスの形式 dd!mm!yyyy (例: 05!10!2013) を使って日付を送信することも可能です。
 > * **ブール** は true または false です。
-> * Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format { "ID": "D507BC03E613487E9B4C2F6A0512FE50"}
+> * `$upload` を使ってアップロードしたファイルは、{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"} のような形式で返されるオブジェクトを渡すことで、ピクチャー型やBLOB型の属性に適用できます。
 
 ### 例題
 
-To update a specific entity, you use the following URL:
+特定のエンティティを更新するには、次のようなリクエストをします:
 
  `POST  /rest/Person/?$method=update`
 
-**POST data:**
+**POST データ:**
 
 ```
 {
@@ -224,13 +224,13 @@ To update a specific entity, you use the following URL:
 }
 ```
 
-The firstName and lastName attributes in the entity indicated above will be modified leaving all other attributes (except calculated ones based on these attributes) unchanged.
+この場合、渡した firstName および lastName 属性だけが変更され、当該エンティティのその他の属性はそのままです (変更した属性に基づいて計算される属性を除く)。
 
-If you want to create an entity, you can POST the attributes using this URL:
+エンティティを作成するには、次のように書きます:
 
  `POST  /rest/Person/?$method=update`
 
-**POST data:**
+**POST データ:**
 
 ```
 { 
@@ -239,11 +239,11 @@ If you want to create an entity, you can POST the attributes using this URL:
 }
 ```
 
-You can also create and update multiple entities at the same time using the same URL above by passing multiple objects in an array to the POST:
+同じ URL を使って、複数のエンティティを作成・更新することもできます。その場合には、POST データに複数オブジェクトのコレクションを渡します:
 
  `POST  /rest/Person/?$method=update`
 
-**POST data:**
+**POST データ:**
 
 ```
 [{ 
@@ -260,7 +260,7 @@ You can also create and update multiple entities at the same time using the same
 
 **レスポンス:**
 
-When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:
+エンティティを追加・更新した場合、そのエンティティは変更後の内容で返されます。 たとえば、新規の Employee エンティティを作成した場合、次のようなレスポンスが返されます:
 
 ```
 {
@@ -274,7 +274,7 @@ When you add or modify an entity, it is returned to you with the attributes that
 }
 ```
 
-If, for example, the stamp is not correct, the following error is returned:
+スタンプが正しくない場合には、次のようなエラーが返されます:
 
 ```
 {
