@@ -6,13 +6,13 @@ title: ORDAクラス関数の呼び出し
 
 RESTリクエストを使って、ORDAデータモデルに定義されている [データモデルクラス関数](ORDA/ordaClasses.md) を呼び出すことで、ターゲット 4Dアプリケーションの公開API を活用できます。
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
+関数を呼び出すには () を省き、適切な ORDA のコンテキストにおいて POST リクエストでおこないます。 たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 `/rest/City/getCity`
 
-with data in the body of the POST request: `["Aguada"]`
+POST リクエストの本文に関数に渡す引数を含めます: `["Aguada"]`
 
-In 4D language, this call is equivalent to, :
+この呼び出しは、4Dランゲージでは次のステートメントに相当します:
 
 ```4d
 $city:=ds.City.getCity("Aguada")
@@ -22,52 +22,52 @@ $city:=ds.City.getCity("Aguada")
 
 ## 関数の呼び出し
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+関数は必ず REST の **POST** リクエストで呼び出さなくてはなりません (GETリクエストの場合はエラーが返されます)。
 
-Functions are called on the corresponding object on the server datastore.
+サーバーのデータストアーの対応するオブジェクトを対象に、関数は呼び出されます。
 
-| クラス関数                                                              | シンタックス                                                                      |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/datastoreClassFunction`                                     |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
+| クラス関数                                                            | シンタックス                                                                      |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [DataStore クラス](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/datastoreClassFunction`                                     |
+| [DataClass クラス](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
+| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [Entity クラス](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
 
 
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).   
-> The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
+> `/rest/{dataClass}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/{dataClass}` はデータクラスの全エンティティをエンティティセレクションに返します)。   
+> EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
 
 
 ## 引数
 
 
 
-You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
+ORDAユーザークラスに定義された関数には、引数を渡すことができます。 サーバーサイドでこれらの引数は、クラス関数の $1, $2 などのパラメーターに受け渡されます。
 
 次のルールが適用されます:
 
-- Parameters must be passed in the **body of the POST request**
-- Parameters must be enclosed within a collection (JSON format)
-- All scalar data types supported in JSON collections can be passed as parameters.
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
+- 引数はすべて、**POSTリクエストの本文** に渡す必要があります:
+- 引数はコレクション (JSON形式) の中に格納する必要があります。
+- JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
+- エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (__DATACLASS, __ENTITY, __ENTITIES, __DATASET) を JSONオブジェクトに含めなくてはなりません。
 
-See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
-
-
-### Scalar value parameter
-
-Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
-
-**Parameters in body:** ["Aguada","Paris"]
-
-All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
+[エンティティを引数として受け取る例題](#エンティティを引数として受け取る) と [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
 
 
-### Entity parameter
+### スカラー値の引数
+
+引数は、本文に定義されたコレクションに格納します。 たとえば、DataClass クラス関数 `getCities()` はがテキスト引数を受け取る場合: `/rest/City/getCities`
+
+**本文の引数:** ["Aguada","Paris"]
+
+引数としてサポートされるのは、JSONポインターを含むすべての JSON のデータ型です。 日付は ISO 8601形式の文字列として渡せます (例: "2020-08-22T22:00:000Z")。
+
+
+### エンティティ引数
 
 Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
 
@@ -488,7 +488,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 ```
 
 
-### Receiving an entity selection as parameter
+### エンティティセレクションを引数として受け取る
 
 In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
 

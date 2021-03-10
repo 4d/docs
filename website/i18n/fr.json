@@ -673,6 +673,24 @@
       "ORDA/datastores": {
         "title": "Utiliser un datastore distant"
       },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "Aperçu"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
+      },
       "Project/architecture": {
         "title": "Architecture of a project"
       },
@@ -839,6 +857,7 @@
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
       "Access Rights": "Droits d'accès",
+      "Preferences": "Preferences",
       "Administration": "Administration",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
@@ -881,6 +900,7 @@
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",
