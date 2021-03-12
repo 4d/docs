@@ -546,7 +546,7 @@ exposed Function setFinalExam()
 
 #### 戻り値
 
-The entities with primary keys 1 and 2 have been updated.
+プライマリーキー 1と2 のエンティティが更新されました:
 
 ```
 {
@@ -557,9 +557,9 @@ The entities with primary keys 1 and 2 have been updated.
 }
 ```
 
-### Using an entity selection updated on the client
+### クライアント側で更新されたエンティティセレクションを使用する
 
-Using the `getAgeAverage()` function [defined above](#using-an-entityselection-class-function-and-an-entityset).
+[前述](#EntitySelectionクラス関数とエンティティセットを使用する) の `getAgeAverage()` 関数を使います。
 
 ```4d
 var $remoteDS, $newStudent, $students : Object
@@ -567,7 +567,7 @@ var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 
-// $newStudent is a student entity to procees
+// $newStudent は処理する Studentsエンティティです
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
 // We add an entity to the $students entity selection on the client
