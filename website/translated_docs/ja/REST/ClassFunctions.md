@@ -26,15 +26,15 @@ $city:=ds.City.getCity("Aguada")
 
 サーバーのデータストアーの対応するオブジェクトを対象に、関数は呼び出されます。
 
-| クラス関数                                                            | シンタックス                                                                      |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [DataStore クラス](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/datastoreClassFunction`                                     |
-| [DataClass クラス](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
-| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
-|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
-|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
-| [Entity クラス](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
+| クラス関数                                                          | シンタックス                                                                      |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [DataStore クラス](ORDA/ordaClasses.md#datastore-クラス)             | `/rest/$catalog/datastoreClassFunction`                                     |
+| [DataClass クラス](ORDA/ordaClasses.md#dataclass-クラス)             | `/rest/{dataClass}/dataClassClassFunction`                                  |
+| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-クラス) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [Entity クラス](ORDA/ordaClasses.md#entity-クラス)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
 
 
 
@@ -570,10 +570,10 @@ $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 // $newStudent は処理する Studentsエンティティです
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// We add an entity to the $students entity selection on the client
+// クライアント側で $students エンティティセレクションにエンティティを追加します
 $students.add($newStudent) 
 
-// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
-// The function is executed on the server on the updated $students entity selection which included the student added from the client
+// StudentsSelectionクラスに対して、同セレクション内の生徒エンティティの平均年齢を返す関数を呼び出します
+// この関数は、クライアント側の追加エンティティを含む更新された内容の $students エンティティセレクションに対して、サーバー上で実行されます
 $ageAverage:=$students.getAgeAverage()
 ```
