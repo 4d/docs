@@ -3,7 +3,7 @@ id: pictures
 title: ピクチャー
 ---
 
-4D includes specific support for pictures used in your forms.
+フォーム上で使用されるピクチャーについて、4Dは次のようにサポートしています。
 
 
 ## サポートされるネイティブフォーマット

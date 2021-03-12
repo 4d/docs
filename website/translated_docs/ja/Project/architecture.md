@@ -45,7 +45,7 @@ title: プロジェクトのアーキテクチャー
 プロジェクトを定義し、起動するためのプロジェクト開発ファイルです。 このファイルを開くには次のいずれかが必要です:
 
 - 4D
-- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
+- 4D Server (読み取り専用；[リモートプロジェクトを開く](Desktop/clientServer.md#リモートプロジェクトを開く) 参照)
 
 > 4D プロジェクトの開発は 4D によっておこない、マルチユーザー開発はソース管理ツールによって管理します。 4D Server は .4DProject ファイルを開くことができますが、クライアントからの開発はおこなえません。
 
@@ -196,24 +196,24 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 ## userPreferences.*userName* フォルダー
 
-ブレークポイントの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:
+ブレークポイントやウィンドウの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:
 
-| 内容                           | 説明                                 | 形式   |
-| ---------------------------- | ---------------------------------- | ---- |
-| methodPreferences.json       | カレントユーザーのメソッドエディター環境設定             | JSON |
-| methodWindowPositions.json   | カレントユーザーのメソッドのウィンドウポジション           | JSON |
-| formWindowPositions.json     | カレントユーザーのフォームのウィンドウポジション           | JSON |
-| workspace.json               | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序 | JSON |
-| debuggerCatches.json         | キャッチコマンドリスト                        | JSON |
-| recentTables.json            | 最近開かれたテーブルのリスト                     | JSON |
-| preferencesv15.4DPreferences | ユーザー環境設定                           | JSON |
+| 内容                         | 説明                                 | 形式   |
+| -------------------------- | ---------------------------------- | ---- |
+| methodPreferences.json     | カレントユーザーのメソッドエディター環境設定             | JSON |
+| methodWindowPositions.json | カレントユーザーのメソッドのウィンドウポジション           | JSON |
+| formWindowPositions.json   | カレントユーザーのフォームのウィンドウポジション           | JSON |
+| workspace.json             | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序 | JSON |
+| debuggerCatches.json       | キャッチコマンドリスト                        | JSON |
+| recentTables.json          | 最近開かれたテーブルのリスト                     | JSON |
+| preferences.4DPreferences  | カレントデータパスおよび主なウィンドウの位置             | XML  |
 
 
 ## Components フォルダー
 
 アプリケーションプロジェクトが利用するコンポーネントを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
-> アプリケーションプロジェクトはコンポーネントとして利用することができます:<br /> - 開発においては、ホストプロジェクトの Components フォルダーに .4dproject ファイルのエイリアスを置きます。 - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> アプリケーションプロジェクトはコンポーネントとして利用することができます:<br /> - 開発においては、ホストプロジェクトの Components フォルダーに .4dproject ファイルのエイリアスを置きます。 - 運用時においては、[コンポーネントをビルド](Desktop/building.md#コンポーネントをビルド) し、生成された .4dz ファイルを .4dbase フォルダーに格納し、それをホストアプリケーションの Components フォルダーに置きます。
 
 
 ## Plugins フォルダー
