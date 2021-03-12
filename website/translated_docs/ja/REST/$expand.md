@@ -4,9 +4,9 @@ title: '$expand'
 ---
 
 
-Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br> or<br> Expands an BLOB attribute to save it.
+画像属性に保存されているピクチャーを展開します (*例*: `Employee(1)/photo?$imageformat=best&$expand=photo`)<br> または<br> 保存するために BLOB属性を展開します。
 
-> **Compatibility**: For compatibility reasons, $expand can be used to expand a relational attribute (*e.g.*, `Company(1)?$expand=staff` or `Employee/?$filter="firstName BEGIN a"&$expand=employer`). It is however recommended to use [`$attributes`]($attributes.md) for this feature.
+> **互換性に関する注記**: 互換性のため、$expand はリレーション属性を展開するのに使用できます (*例*: `Company(1)?$expand=staff` または `Employee/?$filter="firstName BEGIN a"&$expand=employer`)。 しかしながら、これらの場合には [`$attributes`]($attributes.md) を使用するのが推奨されます。
 
 
 
@@ -20,6 +20,6 @@ Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$image
 
 ## BLOB属性のディスク保存
 
-If you want to save a BLOB stored in your dataclass, you can write the following by also passing "true" to $binary:
+データクラスに保存されている BLOB をディスクに保存するには、$binary に "true" を渡すことで、次のように書けます:
 
   `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`

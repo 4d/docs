@@ -198,17 +198,17 @@ Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour 
 
 ## Dossier userPreferences.*userName*
 
-Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
+This folder contains files that memorize user configurations, e.g. break point or window positions. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
 
-| Contenu                      | Description                                                           | Format |
-| ---------------------------- | --------------------------------------------------------------------- | ------ |
-| methodPreferences.json       | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
-| methodWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
-| formWindowPositions.json     | Position de la fenêtre de l'utilisateur courant pour les formulaires  | JSON   |
-| workspace.json               | Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets | JSON   |
-| debuggerCatches.json         | Appels vers commandes                                                 | JSON   |
-| recentTables.json            | Liste ordonée de tables                                               | JSON   |
-| preferencesv15.4DPreferences | Préférences utilisateur                                               | JSON   |
+| Contenu                    | Description                                                           | Format |
+| -------------------------- | --------------------------------------------------------------------- | ------ |
+| methodPreferences.json     | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
+| methodWindowPositions.json | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
+| formWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les formulaires  | JSON   |
+| workspace.json             | Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets | JSON   |
+| debuggerCatches.json       | Appels vers commandes                                                 | JSON   |
+| recentTables.json          | Liste ordonée de tables                                               | JSON   |
+| preferences.4DPreferences  | Current data path and main window positions                           | XML    |
 
 
 ## Dossier Components

@@ -18,7 +18,7 @@ Zum Ändern von "shared object/collection" muss die Struktur **Use...End use** a
 Ein einmaliger, globaler Katalog, der vom Befehl `Storage` zurückgegeben wird, ist immer in der gesamten Anwendung und ihren Komponenten verfügbar. Darin lassen sich alle "shared objects/collections" speichern.
 
 ## Shared Objects oder Collections verwenden
-Ist mit den Befehlen `New shared object` oder `de>New shared collection` eine Instanz von shared object/collection erstellt, lassen sich ihre jeweiligen Eigenschaften und Elemente in jedem Prozess ändern oder lesen.
+Ist mit den Befehlen `New shared object` oder `New shared collection` eine Instanz von shared object/collection erstellt, lassen sich ihre jeweiligen Eigenschaften und Elemente in jedem Prozess ändern oder lesen.
 
 ### Ändern
 Sie können shared objects/collections folgendermaßen bearbeiten:
