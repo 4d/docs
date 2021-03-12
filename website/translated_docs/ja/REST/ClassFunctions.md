@@ -307,7 +307,7 @@ exposed Function getLastSummary
 ### エンティティを作成する
 
 
-The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. The `checkData()` method runs some controls. If they are OK, the entity is saved and returned.
+`Students` DataClassクラスは、データを含むエンティティをクライアントから受け取る `pushData()` 関数を持ちます。 `checkData()` メソッドはいくつかの検証を実行します。 問題がなければ、エンティティは保存されて返されます。
 
 ```
 // cs.Students クラス
@@ -332,11 +332,11 @@ exposed Function pushData
 
 ```
 
-You run this request:
+次のリクエストを実行します:
 
 **POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+リクエストのボディ:
 
 ```
 [{
@@ -347,7 +347,7 @@ Body of the request:
 }]
 ```
 
-Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
+`__KEY` が提供されていないため、サーバー上では **クライアントから受け取った属性を持つ** 新規の Studentsエンティティが読み込まれます。 `pushData()` 関数が `save()` を実行するため、この新規エンティティは保存されます。
 
 
 #### 戻り値
@@ -369,13 +369,13 @@ Since no `__KEY` is given, a new Students entity is loaded on the server **with 
 
 ### エンティティを更新する
 
-Same as above but with a __KEY attribute
+__KEY 属性を使って、上の例題と同じことをおこなうと、エンティティを更新します。
 
-You run this request:
+次のリクエストを実行します:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+リクエストのボディ:
 ```
 [{
 "__DATACLASS":"Students",
@@ -385,7 +385,7 @@ Body of the request:
 }]
 ```
 
-Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
+`__KEY` が提供されているため、**クライアントから受け取った lastname属性値を持つ** プライマリーキーが 55 の Studentsエンティティが読み込まれます。 pushData() 関数が `save()` を実行するため、このエンティティは更新されます。
 
 #### 戻り値
 
@@ -406,13 +406,13 @@ Since `__KEY` is given, the Students entity with primary key 55 is loaded **with
 
 ### リレートエンティティを持つエンティティを作成する
 
-In this example, we create a new Students entity with the Schools entity having primary key 2.
+プライマリーキー 2 を持つ Schoolsエンティティをリレートエンティティとして、新規 Studentsエンティティを作成します。
 
-You run this request:
+次のリクエストを実行します:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+リクエストのボディ:
 ```
 [{
 "__DATACLASS":"Students",
@@ -448,7 +448,7 @@ Body of the request:
 
 ### リレートエンティティを持つエンティティを更新する
 
-In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
+既存の Schools エンティティを既存の Studentsエンティティに紐付けます。 `StudentsEntity` クラスは次の API を提供しています:
 
 ```
 // cs.StudentsEntity クラス
@@ -458,9 +458,9 @@ Class extends Entity
 exposed Function putToSchool()
     var $1, $school , $0, $status : Object
 
-        // $1 は School エンティティ
+        // $1 は Schools エンティティ
     $school:=$1
-        // School リレートエンティティをカレントの Student エンティティに紐付けます
+        // Schools リレートエンティティをカレントの Students エンティティに紐付けます
     This.school:=$school // このとき、school は N対1リレーション名です
 
     $status:=This.save()
@@ -468,7 +468,7 @@ exposed Function putToSchool()
     $0:=$status
 ```
 
-You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
+Studentsエンティティを対象に次のリクエストを実行します: <br /> **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool`<br /> リクエストのボディ:
 ```
 [{
 "__DATACLASS":"Schools",
@@ -490,7 +490,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 
 ### エンティティセレクションを引数として受け取る
 
-In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
+`Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
 // cs.Students クラス
@@ -523,15 +523,15 @@ exposed Function setFinalExam()
     $0:=$keys
 ```
 
-An entity set is first created with this request:
+次のようなリクエストでエンティティセットをあらかじめ作成します:
 
 `http://127.0.0.1:8044/rest/Students/?$filter="ID<3"&$method=entityset`
 
-Then you can run this request:
+次のリクエストを実行します:
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
-Body of the request:
+リクエストのボディ:
 
 ```
 [
