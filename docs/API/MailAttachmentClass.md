@@ -1,5 +1,5 @@
 ---
-id: MailAttachment
+id: MailAttachmentClass
 title: Mail Attachment
 ---
 
@@ -44,11 +44,11 @@ Attachment objects provide the following read-only properties and functions:
 
 The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](emailObjectClass.md#email-object)<!-- END REF -->.
 
-You can pass either a path or a Blob as the contents of the attachment.
+You can pass either a path or a Blob to define the attachment.
 
-- In *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. You can pass a full path name or a simple file name (in which case 4D will search for the file in the same directory as the project file).
+- If you use a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. You can pass a full path name or a simple file name (in which case 4D will search for the file in the same directory as the project file).
 
-- In *blob*, pass a **BLOB** value containing the attachment itself.
+- If you use a *blob*, pass a **BLOB** value containing the attachment itself.
 
 The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. If *name* is omitted and:
 
@@ -92,6 +92,71 @@ By default, if the *disposition* parameter is omitted:
 *	if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
 *	if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
 
+#### Example 1
+
+You want to send an email with a user-selected file as an attachment and an image embedded in the HTML body:
+
+```4d
+$doc:=Select document("";"*";"Please select a file to attach";0)
+If (OK=1) //If a document was selected
+
+C_OBJECT($email;$server;$transporter)
+
+$server:=New object
+$server.host:="smtp.mail.com"
+$server.user:="test_user@mail.com"
+$server.password:="p@ssw@rd"
+$transporter:=SMTP New transporter($server)
+
+$email:=New object
+$email.from:="test_user@mail.com"
+$email.to:="test_user@mail.com"
+$email.subject:="This is a test message with attachments"
+
+//add a link to download file
+$email.attachments:=New collection(MAIL New attachment(Document))
+//insert an inline picture (use a cid)
+$email.attachments[1]:=MAIL New attachment("c:\\Pictures\\4D.jpg";"";"4D")
+
+$email.htmlBody:="<html>"+\
+"<body>Hello World!"+\
+"<img src='cid:4D' >"+\
+"</body>"+\
+"</head>"+\
+"</html>"
+
+$transporter.send($email) //send mail
+
+End if
+```
+
+#### Example 2
+
+You want to send an email with a 4D Write Pro area as an attachment:
+
+```4d
+C_BLOB($blob)
+WP EXPORT VARIABLE(WPArea;$blob;wk docx)
+
+C_OBJECT($email;$server;$transporter)
+
+$server:=New object
+$server.host:="smtp.mail.com"
+$server.user:="user@mail.com"
+$server.password:="p@ssw@rd"
+$transporter:=SMTP New transporter($server)
+
+$email:=New object
+$email.from:="user@mail.com"
+$email.to:="customer@mail.com"
+$email.subject:="New annual report"
+$email.textBody:="Please find enclosed our latest annual report."
+$email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx"))
+
+$transporter.send($email)
+```
+
+
 
 ## .cid
 
@@ -133,71 +198,6 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 #### Description
 
 The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a BLOB<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
-
-### Example 1
-
-You want to send an email with a user-selected file as an attachment and an image embedded in the HTML body:
-
-```4d
-$doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
-
-C_OBJECT($email;$server;$transporter)
-
-$server:=New object
-$server.host:="smtp.mail.com"
-$server.user:="test_user@mail.com"
-$server.password:="p@ssw@rd"
-$transporter:=SMTP New transporter($server)
-
-$email:=New object
-$email.from:="test_user@mail.com"
-$email.to:="test_user@mail.com"
-$email.subject:="This is a test message with attachments"
-
-//add a link to download file
-$email.attachments:=New collection([#current_title_incode](Document))
-//insert an inline picture (use a cid)
-$email.attachments[1]:=[#current_title_incode]("c:\\Pictures\\4D.jpg";"";"4D")
-
-$email.htmlBody:="<html>"+\
-"<body>Hello World!"+\
-"<img src='cid:4D' >"+\
-"</body>"+\
-"</head>"+\
-"</html>"
-
-$transporter.send($email) //send mail
-
-End if
-```
-
-### Example 2
-
-You want to send an email with a 4D Write Pro area as an attachment:
-
-```4d
-C_BLOB($blob)
-WP EXPORT VARIABLE(WPArea;$blob;wk docx)
-
-C_OBJECT($email;$server;$transporter)
-
-$server:=New object
-$server.host:="smtp.mail.com"
-$server.user:="user@mail.com"
-$server.password:="p@ssw@rd"
-$transporter:=SMTP New transporter($server)
-
-$email:=New object
-$email.from:="user@mail.com"
-$email.to:="customer@mail.com"
-$email.subject:="New annual report"
-$email.textBody:="Please find enclosed our latest annual report."
-$email.attachments:=New collection([#current_title_incode]($blob;"Annual report.docx"))
-
-$transporter.send($email)
-```
-
 
 
 

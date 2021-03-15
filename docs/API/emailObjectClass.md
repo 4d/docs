@@ -1,14 +1,27 @@
 ---
 id: emails
-title: Emails and Attachments
+title: Email
 ---
 
-Creating, sending or receiving emails in 4D is done by handling an `Email` object. This object is used by the following commands and methods:
+Creating, sending or receiving emails in 4D is done by handling an `Email` object. 
+
+## Basics
+
+### Creating an Email
+
+To create a new `Email` object, you usually simply create a new, blank object using the [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4D command, and then fill it with [Email object properties](#email-object). 
+
+You can also create an `Email` object using the [`MAIL Convert from MIME`](#mail-convert-from-mime).  
+
+### Sending or receiving an Email
+
+Email objects are send or received by *transporter* class functions:
 
 - SMTP - [`.send()`](smtpTransporterClass.md#send) function to send an email through SMTP
 - POP3 - [`.getMail()`](pop3TransporterClass.md#getmail) function to get an email from a POP3 server
 - IMAP - [`.getMail()`](imapTransporterClass.md#getmail) and [`.getMails()`](imapTransporterClass.md#getmails) functions to get emails from an IMAP server.
-- [`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands to convert emails
+
+[`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert emails to and from MIME contents.
 
 
 ### Email Object
@@ -66,7 +79,7 @@ An object with two properties:
 
 A collection of address objects.
 
-## Handling body part
+### Handling body part
 
 The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used with the [SMTP.send()](smtpTransporterClass.md#send) function to allow sending simple mails. When both property are filled, the MIME content-type multipart/alternative is used. The email client should then recognize the multipart/alternative part and display the text part or html part as necessary.
 
@@ -115,7 +128,7 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->.
 
-Attachment objects are defined through the [`MAIL New attachment`](https://doc.4d.com/4dv18/help/command/en/page1644.html) command.
+Attachment objects are defined through the [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md). 
 
 
 
