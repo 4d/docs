@@ -5,23 +5,16 @@ title: Email
 
 Creating, sending or receiving emails in 4D is done by handling an `Email` object. 
 
-## Basics
+`Email` objects are created when receiving mails through a *transporter* class function:
 
-### Creating an Email
+- IMAP - [`.getMail()`](imapTransporterClass.md#getmail) and [`.getMails()`](imapTransporterClass.md#getmails) functions to get emails from an IMAP server
+- POP3 - [`.getMail()`](pop3TransporterClass.md#getmail) function to get an email from a POP3 server.
 
-To create a new `Email` object, you usually simply create a new, blank object using the [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4D command, and then fill it with [Email object properties](#email-object). 
+> You can also create a new, blank `Email` object by calling the [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4D command, and then fill it with [Email object properties](#email-object). 
 
-You can also create an `Email` object using the [`MAIL Convert from MIME`](#mail-convert-from-mime).  
+You send `Email` objects using the SMTP [`.send()`](smtpTransporterClass.md#send) function.
 
-### Sending or receiving an Email
-
-Email objects are send or received by *transporter* class functions:
-
-- SMTP - [`.send()`](smtpTransporterClass.md#send) function to send an email through SMTP
-- POP3 - [`.getMail()`](pop3TransporterClass.md#getmail) function to get an email from a POP3 server
-- IMAP - [`.getMail()`](imapTransporterClass.md#getmail) and [`.getMails()`](imapTransporterClass.md#getmails) functions to get emails from an IMAP server.
-
-[`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert emails to and from MIME contents.
+[`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
 
 ### Email Object
@@ -347,7 +340,6 @@ Reserved keywords:
 #### Example
 
 ```
- var $mail : Object
  $mail.keywords["$flagged"]:=True
  $mail.keywords["4d"]:=True
 ```
@@ -670,3 +662,4 @@ $mime:=[#current_title_incode]($mail)
 ```
 
 
+<style> h2 { background: #d9ebff;}</style>
