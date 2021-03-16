@@ -1,14 +1,20 @@
 ---
 id: emails
-title: Emails and Attachments
+title: Email
 ---
 
-Creating, sending or receiving emails in 4D is done by handling an `Email` object. This object is used by the following commands and methods:
+Creating, sending or receiving emails in 4D is done by handling an `Email` object.
 
-- SMTP - [`.send()`](smtpTransporterClass.md#send) function to send an email through SMTP
-- POP3 - [`.getMail()`](pop3TransporterClass.md#getmail) function to get an email from a POP3 server
-- IMAP - [`.getMail()`](imapTransporterClass.md#getmail) and [`.getMails()`](imapTransporterClass.md#getmails) functions to get emails from an IMAP server.
-- [`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands to convert emails
+`Email` objects are created when receiving mails through a *transporter* class function:
+
+- IMAP - [`.getMail()`](imapTransporterClass.md#getmail) and [`.getMails()`](imapTransporterClass.md#getmails) functions to get emails from an IMAP server
+- POP3 - [`.getMail()`](pop3TransporterClass.md#getmail) function to get an email from a POP3 server.
+
+> You can also create a new, blank `Email` object by calling the [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4D command, and then fill it with [Email object properties](#email-object).
+
+You send `Email` objects using the SMTP [`.send()`](smtpTransporterClass.md#send) function.
+
+[`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
 
 ### Email Object
@@ -66,7 +72,7 @@ An object with two properties:
 
 A collection of address objects.
 
-## Handling body part
+### Handling body part
 
 The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used with the [SMTP.send()](smtpTransporterClass.md#send) function to allow sending simple mails. When both property are filled, the MIME content-type multipart/alternative is used. The email client should then recognize the multipart/alternative part and display the text part or html part as necessary.
 
@@ -115,12 +121,12 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->.
 
-Attachment objects are defined through the [`MAIL New attachment`](#mail-new-attachment) command.
+Attachment objects are defined through the [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md).
 
 
 
 
-## .bcc 
+## .bcc
 
 <!-- REF #emailObjectClass.bcc.Syntax -->
 **.bcc** : Text<br>**.bcc** : Object<br>**.bcc** : Collection<!-- END REF -->
@@ -180,7 +186,7 @@ The `.bodyValues` object contains the following properties:
 
 
 
-## .cc 
+## .cc
 
 <!-- REF #emailObjectClass.cc.Syntax -->
 **.cc** : Text<br>**.cc** : Object<br>**.cc** : Collection<!-- END REF -->
@@ -212,7 +218,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 
 
-## .from 
+## .from
 
 <!-- REF #emailObjectClass.from.Syntax -->
 **.from** : Text<br>**.from** : Object<br>**.from** : Collection<!-- END REF -->
@@ -334,7 +340,6 @@ Reserved keywords:
 #### Example
 
 ```
- var $mail : Object
  $mail.keywords["$flagged"]:=True
  $mail.keywords["4d"]:=True
 ```
@@ -356,7 +361,7 @@ This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com
 
 
 
-## .receivedAt 
+## .receivedAt
 
 <!-- REF #emailObjectClass.receivedAt.Syntax -->
 **.receivedAt** : Text<!-- END REF -->
@@ -388,7 +393,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 
 
-## .replyTo 
+## .replyTo
 
 <!-- REF #emailObjectClass.replyTo.Syntax -->
 **.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection<!-- END REF -->
@@ -415,7 +420,7 @@ The `.sendAt` property contains the <!-- REF #emailObjectClass.sendAt.Summary --
 
 
 
-## .sender 
+## .sender
 
 <!-- REF #emailObjectClass.sender.Syntax -->
 **.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection<!-- END REF -->
@@ -436,7 +441,7 @@ For better deliverability, it is recommended to use the same from and sender add
 
 
 
-## .size 
+## .size
 
 <!-- REF #emailObjectClass.size.Syntax -->
 **.size** : Integer<!-- END REF -->
@@ -477,7 +482,7 @@ The `.textBody` property contains the <!-- REF #emailObjectClass.textBody.Summar
 
 
 
-## .to 
+## .to
 
 <!-- REF #emailObjectClass.to.Syntax -->
 **.to** : Text<br>**.to** : Object<br>**.to** : Collection<!-- END REF -->
@@ -603,10 +608,10 @@ In *mail*, pass the content and the structure details of the email to convert. T
 
 In *options*, you can set a specific charset and encoding configuration for the mail. The following properties are available:
 
-| Property      | Type | Description                                                                                                                                                                                                                 |
-| ------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property      | Type | Description                                                                                                                                                                                                               |
+| ------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | headerCharset | Text | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values:<p><p><table><tr><th>Constant</th><th>Value</th><th>Comment</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
-| bodyCharset   | Text | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                          |
+| bodyCharset   | Text | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                        |
 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
 
@@ -652,260 +657,6 @@ $mime:=[#current_title_incode]($mail)
 //
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
-```
-
-
-
-## MAIL New attachment
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
-</details>
-
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *value* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : Object<br>**MAIL New attachment**( *value* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : Object<!-- END REF -->
-
-<!-- REF #_command_.MAIL_New_attachment.Params -->
-
-| Parameter   | Type       |    | Description                                                                           |
-| ----------- | ---------- |:--:| ------------------------------------------------------------------------------------- |
-| value       | Object     | -> | Path of the attachment file (text), or<br>Blob containing the attachment (BLOB) |
-| name        | Text, Blob | -> | Name + extension used by the mail client to designate the attachment                  |
-| cid         | Text       | -> | ID of attachment (HTML messages only), or " " if no cid is required                   |
-| type        | Text       | -> | Value of the content-type header                                                      |
-| disposition | Text       | -> | Value of the content-disposition header: "inline" or "attachment".                    |
-| Result      | Object     | <- | Attachment object                                                                     |
-<!-- END REF -->
-
-
-#### Description
-
-The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an Email object (see [SMTP_transporter.send( )](API/smtpTransporterClass.md#send))<!-- END REF -->.
-
-In *value*, pass the contents of the attachment. You can pass either:
-
-*   a **text** value containing the path of the attachment file, expressed with the system syntax. You can pass a full path name or a simple file name (in which case 4D will search for the file in the same directory as the database structure file).
-*   or a **BLOB** value containing the attachment itself.
-
-The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. If *name* is omitted and:
-
-*   value is a file path, the name and extension of the file is used,
-*   value is a BLOB, a random name without extension is automatically generated.
-
-The optional *cid* parameter lets you pass an internal ID for the attachment. This ID is the value of the Content-Id header, it will be used in HTML messages only. The cid associates the attachment with a reference defined in the message body using an HTML tag such as **\<img src="cid:ID" />**. This means that the contents of the attachment (e.g., a picture) should be displayed within the message on the mail client. The final result may vary depending on the mail client. You can pass an empty string in *cid* if you do not want to use this parameter.
-
-You can use the optional *type* parameter to explicitly set the content-type of the attachment file. For example, you can pass a string defining a MIME type ("video/mpeg"). This content-type value will be set for the attachment, regardless of its extension. For more information about MIME types, please refer to the [MIME type page on Wikipedia](https://en.wikipedia.org/wiki/MIME).
-
-By default, if the *type* parameter is omitted or contains an empty string, the content-type of the attachment file is based on its extension. The following rules are applied for the main MIME types:
-
-| Extension | Content Type                  |
-| --------- | ----------------------------- |
-| jpg, jpeg | image/jpeg                    |
-| png       | image/png                     |
-| gif       | image/gif                     |
-| pdf       | application/pdf               |
-| doc       | application/msword            |
-| xls       | application/vnd.ms-excel      |
-| ppt       | application/vnd.ms-powerpoint |
-| zip       | application/zip               |
-| gz        | application/gzip              |
-| json      | application/json              |
-| js        | application/javascript        |
-| ps        | application/postscript        |
-| xml       | application/xml               |
-| htm, html | text/html                     |
-| mp3       | audio/mpeg                    |
-| *other*   | application/octet-stream      |
-
-The optional disposition parameter lets you pass the content-disposition header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
-
-| Constant                    | Value      | Comment                                                                                                                                                                                              |
-| --------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mail disposition attachment | attachment | Set the Content-disposition header value to "attachment", which means that the attachment file must be provided as a link in the message.                                                            |
-| mail disposition inline     | inline     | Set the Content-disposition header value to "inline", which means that the attachment must be rendered within the message contents, at the "cid" location. The rendering depends on the mail client. |
-
-By default, if the *disposition* parameter is omitted:
-
-*   if the *cid* parameter is used, the Content-disposition header is set to "inline",
-*   if the *cid* parameter is not passed or empty, the Content-disposition header is set to "attachment".
-
-
-#### Attachment object
-
-`MAIL New attachment` returns a new attachment object that you can add to the attachments collection of the mail object handled by the [SMTP_transporter.send( )](API/smtpTransporterClass.md#send) method. The object contains the following read-only properties and methods:
-
-### .cid
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
-</details>
-
-<!-- REF #emailObjectClass.cid.Syntax -->
-**.cid** : Text<!-- END REF -->
-
-
-#### Description
-
-The `.cid` property contains <!-- REF #emailObjectClass.cid.Summary --> the ID of the attachment<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
-
-
-### .disposition
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
-</details>
-
-<!-- REF #emailObjectClass.disposition.Syntax -->
-**.disposition** : Text<!-- END REF -->
-
-
-#### Description
-
-The `.disposition` property contains <!-- REF #emailObjectClass.disposition.Summary -->the value of the Content-Disposition header<!-- END REF -->. Two values are available:
-
-*   "inline": the attachment is rendered within the message contents, at the "cid" location. The rendering depends on the mail client.
-*   "attachment": the attachment is provided as a link in the message.
-
-### .name
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
-</details>
-
-<!-- REF #emailObjectClass.name.Syntax -->
-**.name** : Text<!-- END REF -->
-
-
-#### Description
-
-The `.name` property contains <!-- REF #emailObjectClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](#mail-new-attachment) command.
-
-### .path
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
-</details>
-
-<!-- REF #emailObjectClass.path.Syntax -->
-**.path** : Text<!-- END REF -->
-
-
-#### Description
-
-The `.path` property contains <!-- REF #emailObjectClass.path.Summary -->the full path of the attachment, if it exists<!-- END REF -->.
-
-
-### .type
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
-</details>
-
-<!-- REF #emailObjectClass.type.Syntax -->
-**.type** : Text<!-- END REF -->
-
-
-#### Description
-
-The `.type` property contains <!-- REF #emailObjectClass.type.Summary -->the content-type of the attachment file<!-- END REF -->.  If this type is not explicitly passed to the [`MAIL New attachment`](#mail-new-attachment) command, the content-type is based on its file extension.
-
-
-### .getContent()
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v18     | Added   |
-</details>
-
-<!-- REF #emailObjectClass.getContent().Syntax -->
-**.getContent()** : Blob<!-- END REF -->
-
-<!-- REF #emailObjectClass.getContent().Params -->
-| Parameter | Type |    | Description               |
-| --------- | ---- |:--:| ------------------------- |
-| Result    | Blob | <- | Content of the attachment |
-<!-- END REF -->
-
-
-#### Description
-
-The `.getContent()` function <!-- REF #emailObjectClass.getContent().Summary -->returns the contents of the attachment object in a BLOB<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
-
-### Example 1
-
-You want to send an email with a user-selected file as an attachment and an image embedded in the HTML body:
-
-```4d
-$doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
-
-C_OBJECT($email;$server;$transporter)
-
-$server:=New object
-$server.host:="smtp.mail.com"
-$server.user:="test_user@mail.com"
-$server.password:="p@ssw@rd"
-$transporter:=SMTP New transporter($server)
-
-$email:=New object
-$email.from:="test_user@mail.com"
-$email.to:="test_user@mail.com"
-$email.subject:="This is a test message with attachments"
-
-//add a link to download file
-$email.attachments:=New collection([#current_title_incode](Document))
-//insert an inline picture (use a cid)
-$email.attachments[1]:=[#current_title_incode]("c:\\Pictures\\4D.jpg";"";"4D")
-
-$email.htmlBody:="<html>"+\
-"<body>Hello World!"+\
-"<img src='cid:4D' >"+\
-"</body>"+\
-"</head>"+\
-"</html>"
-
-$transporter.send($email) //send mail
-
-End if 
-```
-
-### Example 2
-
-You want to send an email with a 4D Write Pro area as an attachment:
-
-```4d
-C_BLOB($blob)
-WP EXPORT VARIABLE(WPArea;$blob;wk docx)
-
-C_OBJECT($email;$server;$transporter)
-
-$server:=New object
-$server.host:="smtp.mail.com"
-$server.user:="user@mail.com"
-$server.password:="p@ssw@rd"
-$transporter:=SMTP New transporter($server)
-
-$email:=New object
-$email.from:="user@mail.com"
-$email.to:="customer@mail.com"
-$email.subject:="New annual report"
-$email.textBody:="Please find enclosed our latest annual report."
-$email.attachments:=New collection([#current_title_incode]($blob;"Annual report.docx"))
-
-$transporter.send($email)
 ```
 
 <style> h2 { background: #d9ebff;}</style>
