@@ -5,6 +5,22 @@ title: Propriétés des formulaires
 
 ---
 
+## Color Scheme
+
+This property defines the color scheme for the form. By default the value for a color scheme is "undefined" (displayed as "inherited"). This can be changed to one of the following two options:
+
+*   dark - light text on a dark background
+*   light - dark text on a light background
+> A defined color scheme can not be overridden by a CSS.
+
+#### Grammaire JSON
+
+| Nom         | Type de données | Valeurs possibles |
+| ----------- | --------------- | ----------------- |
+| colorScheme | string          | "dark", "light"   |
+
+---
+
 ## Pages
 
 Chaque formulaire est composé d'au moins deux pages :
