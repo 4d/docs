@@ -95,7 +95,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 
 
-### Summary
+### 概要
 
 
 |                                                                                                                                                                             |
@@ -426,7 +426,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 The `.source` property <!-- REF #formulaClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
 
-This property is **read-only**.
+このプロパティは **読み込み専用** です。
 
 #### 例題
 
