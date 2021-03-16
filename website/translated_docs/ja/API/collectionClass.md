@@ -1,6 +1,6 @@
 ---
 id: collectionClass
-title: コレクション
+title: Collection
 ---
 
 
