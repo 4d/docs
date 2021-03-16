@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Class API Overview
+title: クラス API の概要
 ---
 
 This section describes the built-in 4D class API as well as the associated constructor commands. 4D class functions and properties are available through class instance objects.
