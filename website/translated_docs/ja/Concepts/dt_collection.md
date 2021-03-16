@@ -47,8 +47,8 @@ collectionRef[expression]
 例:
 
 ```4d
- var $colVar : Collection //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ var $colVar : Collection // コレクション型の 4D変数の宣言
+ $colVar:=New collection // コレクションの初期化と 4D変数への代入
 ```
 
 ### 通常コレクションと共有コレクション
