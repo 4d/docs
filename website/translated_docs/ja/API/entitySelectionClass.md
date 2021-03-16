@@ -204,7 +204,7 @@ Projection of related entity:
 
 The resulting object is an entity selection of Company with duplications removed (if any).
 
-#### Example 3
+#### 例題 3
 
 Projection of related entities:
 
@@ -1966,7 +1966,7 @@ Returns:
     }]
 ```
 
-#### Example 3
+#### 例題 3
 
 Example with slicing and filtering on properties:
 
