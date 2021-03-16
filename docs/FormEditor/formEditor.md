@@ -73,7 +73,7 @@ The object bar contains all the active and inactive objects that can be used in 
 |![](assets/en/FormEditor/radio.png)|[Radio Button](FormObjects/radio_overview.md)|	R|
 |![](assets/en/FormEditor/checkbox.png)|[Check Box](FormObjects/checkbox_overview.md)|C|
 |![](assets/en/FormEditor/indicator.png)|[Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)|	I
-|![](assets/en/FormEditor/rectangle.png)|	[Rectangle](FormObjects/shapesOverview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval) |S|
+|![](assets/en/FormEditor/rectangle.png)|	[Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval) |S|
 |![](assets/en/FormEditor/splitter.png)|[Splitter](FormObjects/splitters.md) / [Tab Control](FormObjects/tabControl.md)|	D|
 |![](assets/en/FormEditor/plugin.png)|	[Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md)|	X|
 
