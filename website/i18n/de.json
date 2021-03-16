@@ -45,7 +45,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Emails and Attachments"
+        "title": "Email"
       },
       "API/entityClass": {
         "title": "Entity"
@@ -64,6 +64,9 @@
       },
       "API/imapTransporterClass": {
         "title": "IMAPTransporter"
+      },
+      "API/MailAttachmentClass": {
+        "title": "Mail Attachment"
       },
       "API/overview": {
         "title": "Class API Overview"
