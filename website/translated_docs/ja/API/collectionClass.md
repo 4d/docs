@@ -4,9 +4,9 @@ title: Collection
 ---
 
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
+Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変数を扱います。
 
-A collection is initialized with:
+コレクションは次のように初期化します:
 
 |                                                                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,8 +17,8 @@ A collection is initialized with:
 ### 例題
 
 ```4d
- var $colVar : Collection //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ var $colVar : Collection // コレクション型の 4D変数の宣言
+ $colVar:=New collection // コレクションの初期化と 4D変数への代入
 ```
 
 
@@ -81,73 +81,73 @@ A collection is initialized with:
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| 参照    | タイプ                                                                     |    | 説明                    |
-| ----- | ----------------------------------------------------------------------- |:--:| --------------------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s) |
-| 戻り値   | コレクション                                                                  | <- | New collection        |
+| 参照    | タイプ                                         |    | 説明        |
+| ----- | ------------------------------------------- |:--:| --------- |
+| value | 数値、テキスト、日付、時間、ブール、オブジェクト、コレクション、ピクチャー、ポインター | -> | コレクションの値  |
+| 戻り値   | コレクション                                      | <- | 新しいコレクション |
 <!-- END REF -->
 
 
 #### 説明
 
-The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+`New collection` コマンドは、 <!-- REF #_command_.New collection.Summary --> 空の、あるいは値の入った新しいコレクションを作成します<!-- END REF --> 。戻り値は、作成された新しいコレクションへの参照です。
 
-If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
+引数を渡さなかった場合、`New collection` は空のコレクションを作成し、その参照を返します。
 
-You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+返された参照は、コレクション型の 4D変数に代入する必要があります。
+> `var : Collection` や `C_COLLECTION` ステートメントはコレクション型の変数を宣言しますが、コレクション自体は作成しないという点に注意してください。
 
-Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
+任意で、一つ以上の *value* 引数を渡すことで、あらかじめ値の入った新しいコレクションを作成することができます。
 
-Otherwise, you can add or modify elements subsequently through assignment. たとえば:
+または、あとから代入によって要素を一つずつ追加・編集していくことができます。 たとえば:
 
 ```4d
  myCol[10]:="My new element"
 ```
 
-If the new element index is beyond the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+コレクションの最終要素を超える要素番号 (インデックス) を指定した場合、コレクションは自動的にリサイズされ、合い間の要素にはすべて null 値が割り当てられらます。
 
-You can pass any number of values of any supported type (number, text, date, picture, pointer, object, collection...). Unlike arrays, collections can mix data of different types.
+サポートされている型 (数値、テキスト、日付、ピクチャー、ポインター、オブジェクト、コレクション等) であれば、個数に制限なく値を渡すことができます。 配列とは異なり、コレクションでは異なる型のデータを混ぜることができます。
 
-You must pay attention to the following conversion issues:
+ただし以下の変換問題については注意する必要があります:
 
-*   If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
-*   Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
-*   If you pass a time, it is stored as a number of milliseconds (Real).
+*   渡されたポインターは、そのまま保存されます。ポインターは `JSON Stringify` コマンドを使用することで評価されます。
+*   日付は、"dates inside objects" データベース設定に応じて、"yyyy-mm-dd" という日付、または "YYYY-MM-DDTHH:mm:ss.SSSZ" というフォーマットの文字列で保存されます。 コレクションに保存する前に 4D日付をテキストに変換した場合、プログラムはデフォルトでローカルのタイムゾーンを使用します。 このふるまいは `SET DATABASE PARAMETER` コマンドで `Dates inside objects` セレクターを使用することで変更可能です。
+*   時間を渡した場合、それはミリ秒の数 (実数) として保存されます。
 
 #### 例題 1
 
 
 
-You want to create a new empty collection and assign it to a 4D collection variable:
+新しい空のコレクションを作成し、それを 4Dコレクション変数に代入します:
 
 ```4d
  var $myCol : Collection
  $myCol:=New collection
-  //$myCol=[]
+  // $myCol=[]
 ```
 
 #### 例題 2
 
-You want to create a prefilled collection:
+あらかじめ値の入ったコレクションを作成します:
 
 ```4d
  var $filledColl : Collection
  $filledColl:=New collection(33;"mike";"november";->myPtr;Current date)
-  //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
+  // $filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-#### Example 3
+#### 例題 3
 
-You create a new collection and then add a new element:
+新しいコレクションを作成し、そこに新しい要素を追加します:
 
 ```4d
  var $coll : Collection
  $coll:=New collection("a";"b";"c")
-  //$coll=["a","b","c"]
- $coll[9]:="z" //add a 10th element with value "z"
- $vcolSize:=$coll.length //10
-  //$coll=["a","b","c",null,null,null,null,null,null,"z"]
+  // $coll=["a","b","c"]
+ $coll[9]:="z" // 値 "z" を10番目の要素として追加します
+ $vcolSize:=$coll.length // 10
+  // $coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
 
@@ -181,8 +181,8 @@ Adding an element to this collection must be surrounded by the [`Use...End`](Con
 
 If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
 
-You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+返された参照は、コレクション型の 4D変数に代入する必要があります。
+> `var : Collection` や `C_COLLECTION` ステートメントはコレクション型の変数を宣言しますが、コレクション自体は作成しないという点に注意してください。
 
 Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Otherwise, you can add or modify elements subsequently through object notation assignment (see example).
 
@@ -487,7 +487,7 @@ $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
  End use
 ```
 
-#### Example 3
+#### 例題 3
 
 We have a regular collection (*$lastnames*) and we want to put it in the **Storage** of the application. To do this, we must create a shared copy beforehand (*$sharedLastnames*).
 
@@ -644,7 +644,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 ```
 
 
-#### Example 3
+#### 例題 3
 
 ```4d
  var $numbers; $letters : Collection
@@ -1846,7 +1846,7 @@ Ordering a collection of objects with a property path:
 ```
 
 
-#### Example 3
+#### 例題 3
 
 Ordering a collection of objects using a collection of criteria objects:
 
@@ -1957,7 +1957,7 @@ Here is the code for ***WordLength***:
  $1.result:=Length(String($1.value))>Length(String($1.value2))
 ```
 
-#### Example 3
+#### 例題 3
 
 You want to sort a collection by character code or language:
 
@@ -2193,7 +2193,7 @@ This example returns persons hired more than 90 days ago:
 ```
 
 
-#### Example 3
+#### 例題 3
 
 More examples of queries can be found in the `dataClass.query()` page. 
 
@@ -2694,7 +2694,7 @@ If the collection contains elements of different types, they are first grouped b
  $col2:=$col.push(5;3;1;4;6;2).sort() //$col2=[1,2,3,4,5,6,10,20]
 ```
 
-#### Example 3
+#### 例題 3
 
 ```4d
  var $col; $col2; $col3 : Collection
