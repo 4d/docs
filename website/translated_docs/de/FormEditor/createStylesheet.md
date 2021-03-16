@@ -190,6 +190,43 @@ text[text|=Hello]
 
 ## Style Sheet Declarations
 
+### Media Queries
+
+Media queries are used to apply color schemes to an application.
+
+A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+
+
+Available media features:
+
+*   `prefers-color-scheme`
+
+
+Available media feature expressions:
+
+*   **light**<br>For using a light theme
+*   **dark**<br>For using a dark theme
+> Media queries are case-insensitive.
+
+##### Beispiel
+
+```
+ .textTheme {
+  fill: white;
+  stroke: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .textTheme {
+    fill: black;
+    stroke: white;
+  }
+}
+```
+
+
+### Object Attributes
+
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
     - "method"
     - "type"
@@ -199,7 +236,7 @@ The majority of form object attributes can be defined within a style sheet, exce
 
 Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
 
-### Attribute Mapping
+#### Attribute Mapping
 
 The attributes listed below are able to accept either the 4D name or the CSS name.
 
@@ -218,7 +255,7 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 > 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
 
 
-### Specific Attribute Values
+#### Specific Attribute Values
 
 - For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
 
