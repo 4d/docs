@@ -190,6 +190,43 @@ text[text|=Hello]
 
 ## スタイルシート宣言
 
+### Media Queries
+
+Media queries are used to apply color schemes to an application.
+
+A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+
+
+Available media features:
+
+*   `prefers-color-scheme`
+
+
+Available media feature expressions:
+
+*   **light**<br>For using a light theme
+*   **dark**<br>For using a dark theme
+> Media queries are case-insensitive.
+
+##### 例題
+
+```
+ .textTheme {
+  fill: white;
+  stroke: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .textTheme {
+    fill: black;
+    stroke: white;
+  }
+}
+```
+
+
+### Object Attributes
+
 多くのフォームオブジェクト属性をスタイルシートによって指定することができますが、次の属性は除外されます:
     - "method"
     - "type"
@@ -199,7 +236,7 @@ text[text|=Hello]
 
 フォームオブジェクトの属性は、それらの JSON 名を使って CSS 属性のように指定できます (オブジェクトタイプやメソッド、イベント、リストなどの属性を除く)。 詳細についてはデザインリファレンスの [ダイナミックフォーム ](https://doc.4d.com/4Dv18/4D/18/Dynamic-Forms.300-4575729.ja.html) を参照ください。
 
-### 属性マッピング
+#### 属性マッピング
 
 次の属性については、4D の名称または CSS の名称を使用することができます:
 
@@ -218,7 +255,7 @@ text[text|=Hello]
 > CSS の属性名を使用する場合、4D に特有の値 (*例* "sunken" (くぼみ)) はサポートされません。
 
 
-### 特殊な属性値
+#### 特殊な属性値
 
 - `icon`, `picture`, および `customBackgroundPicture` のように、値として画像のパスを受け付ける属性の場合、次のように書きます:
 
