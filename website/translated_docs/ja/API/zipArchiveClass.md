@@ -200,7 +200,7 @@ To compress a `4D.Folder` without the folder itself:
 
 
 
-#### Example 3
+#### 例題 3
 
 To compress a ZIP archive structure with a password and progress bar:
 
