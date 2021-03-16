@@ -61,7 +61,8 @@ class Index extends React.Component {
     tls: <translate>TLS Protocol (HTTPS)</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
 	langRef: <translate>Language Reference (4D Doc Center)</translate>,
-	  users: <translate>Access Rights</translate>
+	  users: <translate>Access Rights</translate>,
+	  preferences:<translate>Preferences</translate>
     };
 
 
@@ -84,10 +85,11 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)<br>
                   [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
-				  [${subContents.langRef}](https://doc.4d.com/4Dv18R5/4D/18-R5/4D-Language-Reference.100-5127708.en.html)<br>
+				  [${subContents.langRef}](https://doc.4d.com/4Dv18R6/4D/18-R6/4D-Language-Reference.100-5197421.en.html)<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
-                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
+                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
+				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
@@ -149,7 +151,12 @@ class Index extends React.Component {
               layout="threeColumn"
             />
           </Container>
-        </div>
+ 		<div className="doc-updates">
+          <a
+            href={`${siteConfig.baseUrl}${language}/Notes/updates`}>
+            <translate>Documentation updates</translate>
+          </a></div>
+       </div>
       </div>
     );
   }

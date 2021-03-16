@@ -13,23 +13,23 @@ title: '$attributes'
 `$attributes` はエンティティ (*例:* People(1)) またはエンティティセレクション (*例:* People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) に対して適用できます。
 
 
-- クエリに `$attributes` が指定されていない場合、または "*" が渡された場合、すべての取得可能な属性が取得されます。 **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
+- クエリに `$attributes` が指定されていない場合、または "*" が渡された場合、すべての取得可能な属性が取得されます。 **リレートエンティティ** 属性は、`__KEY` (プライマリーキー) と `URI` プロパティを持つオブジェクトという簡単な形で抽出されます。 **リレートエンティティズ** 属性は抽出されません。
 
-- If `$attributes` is specified for **related entity** attributes:
-    - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
-    - `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
-    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
-
-
-- If `$attributes` is specified for **related entities** attributes:
-    - `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
-    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
+- **リレートエンティティ** 属性を対象に `$attributes` が指定された場合:
+    - `$attributes=relatedEntity`: リレートエンティティは簡単な形で返されます (`__KEY` (プライマリーキー) と `URI` プロパティを持つ deferred オブジェクト)
+    - `$attributes=relatedEntity.*`: リレートエンティティの属性がすべて返されます。
+    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: リレートエンティティの指定された属性だけが返されます。
 
 
+- **リレートエンティティズ** 属性を対象に `$attributes` が指定された場合:
+    - `$attributes=relatedEntities.*`: リレートエンティティズの属性がすべて返されます。
+    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: リレートエンティティズの指定された属性だけが返されます。
 
-## Example with related entities
 
-If we pass the following REST request for our Company dataclass (which has a relation attribute "employees"):
+
+## リレートエンティティズの例
+
+"employees" 1対Nリレーションを持つ Company データクラスに対して次の RESTリクエストをおこなうと:
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
@@ -64,18 +64,18 @@ If we pass the following REST request for our Company dataclass (which has a rel
 }
 ```
 
-If you want to get all attributes from employees:
+employees の属性をすべて取得するには:
 
  `GET  /rest/Company(1)/?$attributes=employees.*`
 
-If you want to get last name and job name attributes from employees:
+また、employees の lastname属性と jobname属性を取得するには:
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
 
-## Example with related entity
+## リレートエンティティの例
 
-If we pass the following REST request for our Employee dataclass (which has several relation attributes, including "employer"):
+"employer" N対1リレーションを持つ Employee データクラスに対して次の RESTリクエストをおこなうと:
 
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
@@ -97,10 +97,10 @@ If we pass the following REST request for our Employee dataclass (which has seve
 }
 ```
 
-If you want to get all attributes of the employer:
+employer の属性をすべて取得するには:
 
  `GET  /rest/Employee(1)?$attributes=employer.*`
 
-If you want to get the last names of all employees of the employer:
+また、employer の全employees の lastname属性を取得するには:
 
  `GET  /rest/Employee(1)?$attributes=employer.employees.lastname`

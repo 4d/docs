@@ -73,7 +73,7 @@ Only actions that can represent a true/false status ("checkable" actions) are su
 | visibleReferences                   |                          |
 | widowAndOrphanControlEnabled        | 4D Write Pro areas only  |
 
-For detailed information on these actions, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
+For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
 
 ## Check box button styles
 

@@ -66,7 +66,7 @@
         "title": "IMAPTransporter"
       },
       "API/overview": {
-        "title": "Class API Overview"
+        "title": "クラス API の概要"
       },
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
@@ -202,7 +202,7 @@
         "title": "プロジェクトパッケージのビルド"
       },
       "Desktop/clientServer": {
-        "title": "Client/Server Management"
+        "title": "クライアント/サーバー管理"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -412,7 +412,7 @@
         "title": "フォームプロパティ"
       },
       "FormEditor/formSize": {
-        "title": "Form Size"
+        "title": "フォームサイズ"
       },
       "FormEditor/jsonReference": {
         "title": "JSON プロパティリスト"
@@ -649,6 +649,9 @@
         "title": "検査ページ",
         "sidebar_label": "検査ページ"
       },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
       },
@@ -665,10 +668,28 @@
         "title": "ORDAとは何か"
       },
       "ORDA/quickTour": {
-        "title": "A Quick Tour in ORDA"
+        "title": "ORDA の概要"
       },
       "ORDA/datastores": {
         "title": "リモートデータストアの利用"
+      },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "概要"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
       },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"
@@ -681,9 +702,6 @@
       },
       "Project/overview": {
         "title": "概要"
-      },
-      "ReleaseNotes/whatsNew": {
-        "title": "新着情報"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -781,6 +799,9 @@
       "REST/REST_requests": {
         "title": "RESTリクエストについて"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
       },
@@ -825,7 +846,6 @@
       }
     },
     "links": {
-      "What's New": "新着情報",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
@@ -837,20 +857,21 @@
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
       "Access Rights": "アクセス権限",
+      "Preferences": "Preferences",
       "Administration": "データベース管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
       "Web Development": "Web Development",
       "REST Server": "REST サーバー",
-      "Client/Server": "Client/Server",
-      "Forms": "Forms",
+      "Client/Server": "クライアント/サーバー",
+      "Forms": "フォーム",
       "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
       "Menus": "メニュー",
-      "Build application": "Build application"
+      "Build application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
@@ -860,7 +881,7 @@
     "Project Management|in index page Getting started": "プロジェクト管理",
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
-    "Forms|no description given": "Forms",
+    "Forms|no description given": "フォーム",
     "Form Properties|no description given": "フォームプロパティ",
     "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
@@ -874,17 +895,19 @@
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
-    "Client/Server|no description given": "Client/Server",
+    "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "データベース管理",
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

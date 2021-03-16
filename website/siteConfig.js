@@ -39,16 +39,14 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
   //customDocsPath: 'docsPostProcessed', //uniquement local
   docsUrl:'',
-
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
 
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
-    {doc: 'ReleaseNotes/whatsNew', label:"What's New"},
-    {href: 'https://developer.4d.com/docs', label:'v18 R6 BETA'},
-    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R5'},
-    {href: 'https://developer.4d.com/docs/18', label:'v18'},
+    {href: 'https://developer.4d.com/docs', label:'v18 R6 BETA', version :'18R6'},
+    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R5', version:'18R5'},
+    {href: 'https://developer.4d.com/docs/18', label:'v18', version:'18'},
     //{href: 'https://developer.4d.com/', label:'Developer Center'},
     //{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},

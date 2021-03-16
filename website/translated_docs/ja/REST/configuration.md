@@ -8,8 +8,8 @@ title: サーバー設定
 REST機能を使い始めるまえに、まずは 4D REST サーバーの設定をおこない、これを起動させる必要があります。
 
 > - 4D Server上では、開かれる RESTセッションにつき、4D Client ライセンスが1消費されます。<br>
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.
-> - You need to manage the [session](authUsers.md) for your requesting application.
+> - シングルユーザーの4D上では、テスト目的で RESTセッションを 3つ開くことができます。
+> - リクエストをおこなうアプリケーションの [セッション](authUsers.md) は別途管理する必要があります。
 
 
 
