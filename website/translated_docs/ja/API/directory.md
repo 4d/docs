@@ -23,7 +23,7 @@ title: Directory クラス
 
 The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
  
@@ -47,7 +47,7 @@ The `.creationDate` property returns <!-- REF #directory.creationDate.Summary --
 
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -71,7 +71,7 @@ The `.creationTime` property returns <!-- REF #directory.creationTime.Summary --
 
 The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -96,7 +96,7 @@ The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the
 
 The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -120,7 +120,7 @@ The `.extension` property <!-- REF #directory.extension.Summary -->returns the e
 
 The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -144,7 +144,7 @@ The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the ful
 
 The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -169,7 +169,7 @@ The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if th
 
 The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -192,7 +192,7 @@ The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **
 
 The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -215,7 +215,7 @@ The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **fa
 
 The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -240,7 +240,7 @@ The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true 
 
 On Windows, `.isPackage` always returns **false**.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -264,7 +264,7 @@ On Windows, `.isPackage` always returns **false**.
 
 The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -288,7 +288,7 @@ The `.modificationDate` property returns <!-- REF #directory.modificationDate.Su
 
 The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -313,7 +313,7 @@ The `.modificationTime` property returns <!-- REF #directory.modificationTime.Su
 
 The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -336,7 +336,7 @@ The `.name` property returns <!-- REF #directory.name.Summary --> the name of th
 
 The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。
+このプロパティは **読み取り専用** です。
 > This property is available on folders to allow generic code to process folders or files.
 
 <!-- END REF -->
@@ -363,7 +363,7 @@ The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent 
 
 If the folder does not have a parent (root), the null value is returned.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -387,7 +387,7 @@ If the folder does not have a parent (root), the null value is returned.
 
 The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -410,7 +410,7 @@ The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path 
 
 The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
