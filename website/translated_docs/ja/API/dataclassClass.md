@@ -270,7 +270,7 @@ We want to simply create a new entity from a collection:
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 4
+#### 例題 4
 
 We want to create an entity. The \_\_NEW property is True, the employee primary key is not given:
 
