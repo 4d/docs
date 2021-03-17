@@ -341,12 +341,12 @@ $vSize:=$col.length //$vSize=0
 `.combine()` 関数は、 <!-- REF #collection.combine().Summary -->コレクションインスタンスの最後、あるいは *index* で指定した位置に *col2* の要素を挿入し、変更された元のコレクションを返します<!-- END REF -->。 `.insert()` 関数とは異なり、`.combine()` は *col2* の各要素を元のコレクション追加します (*col2* 自体を単一のコレクション要素としては挿入しません)。
 > このコマンドは、元のコレクションを変更します。
 
-デフォルトでは、*col2* の要素は元のコレクションの最後に追加されます。 You can pass in *index* the position where you want the *col2* elements to be inserted in the collection.
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+デフォルトでは、*col2* の要素は元のコレクションの最後に追加されます。 *index* に引数を渡すことで、*col2* の要素を挿入する位置を指定することができます。
+> **警告**: コレクション要素は 0 起点である点に注意してください。
 
-*   If *index* > the length of the collection, the actual starting *index* will be set to the length of the collection.
-*   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value is negative, *index* is set to 0.
+*   指定した *index* がコレクションの length より大きい場合、実際の開始インデックスはコレクションの length に設定されます。
+*   *index* < 0 の場合、*index:=index+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
+*   計算結果も負の値である場合、*index* は 0 に設定されます。
 
 
 #### 例題
@@ -377,19 +377,19 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 **.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
-| 参照    | タイプ                                                            |    | 説明                                                                                                                |
-| ----- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| value | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection |
-| 戻り値   | コレクション                                                         | <- | New collection with value(s) added to the original collection                                                     |
+| 参照    | タイプ                                   |    | 説明                                                    |
+| ----- | ------------------------------------- |:--:| ----------------------------------------------------- |
+| value | 数値、テキスト、日付、時間、ブール、オブジェクト、コレクション、ピクチャー | -> | 連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。 |
+| 戻り値   | コレクション                                | <- | 元のコレクションに値が追加された新規コレクション                              |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new collection containing the elements of the original collection with all elements of the *value* parameter added to the end<!-- END REF -->.
-> This function does not modify the original collection.
+`.concat()` 関数は、 <!-- REF #collection.concat().Summary -->*value* に指定した要素を元のコレクションの最後に追加した、新しいコレクションを返します<!-- END REF -->。
+> このコマンドは、元のコレクションを変更しません。
 
-If *value* is a collection, all its elements are added as new elements at the end of the original collection. If *value* is not a collection, it is added itself as a new element.
+*value* がコレクションの場合、その全要素が新しい要素として元のコレクションの最後に追加されます。 *value* がコレクションでない場合、それ自体が新しい要素として追加されます。
 
 
 #### 例題
@@ -412,10 +412,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 ## .copy()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                                 |
-| ------ | -------------------------------------------------- |
-| v18 R3 | New *ck shared* option. New *groupWith* parameters |
-| v16 R6 | 追加                                                 |
+| バージョン  | 内容                                           |
+| ------ | -------------------------------------------- |
+| v18 R3 | *ck shared* オプションの追加。 *groupWith* パラメーターの追加。 |
+| v16 R6 | 追加                                           |
 </details>
 
 <!-- REF #collection.copy().Syntax -->
@@ -423,19 +423,19 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 <!-- REF #collection.copy().Params -->
-| 参照           | タイプ    |    | 説明                                                                                                       |
-| ------------ | ------ |:--:| -------------------------------------------------------------------------------------------------------- |
-| option       | 整数     | -> | `ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection |
-| groupWithCol | コレクション | -> | Shared collection to be grouped with the resulting collection                                            |
-| groupWithObj | オブジェクト | -> | Shared object to be grouped with the resulting collection                                                |
-| 戻り値          | コレクション | <- | Deep copy of the original collection                                                                     |
+| 参照           | タイプ    |    | 説明                                                                       |
+| ------------ | ------ |:--:| ------------------------------------------------------------------------ |
+| option       | 整数     | -> | `ck resolve pointers`: コピー前にポインターを解決する<br>`ck shared`: 共有コレクションを返す |
+| groupWithCol | コレクション | -> | Shared collection to be grouped with the resulting collection            |
+| groupWithObj | オブジェクト | -> | Shared object to be grouped with the resulting collection                |
+| 戻り値          | コレクション | <- | Deep copy of the original collection                                     |
 <!-- END REF -->
 
 
 #### 説明
 
 The `.copy()` function <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 If passed, the *option* parameter can contain one of the following constants (or both):
 
@@ -617,7 +617,7 @@ You can pass in *value*:
 For an element to be found, the type of *value* must be equivalent to the type of the element; the method uses the equality operator.
 
 The optional *propertyPath* parameter allows you to count values inside a collection of objects: pass in *propertyPath* the path of the property whose values you want to count.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 #### 例題 1
 
@@ -688,7 +688,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 #### 説明
 
 The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 The returned collection is automatically sorted. **Null** values are not returned.
 
@@ -896,7 +896,7 @@ End if
 #### 説明
 
 The `.extract()` function <!-- REF #collection.extract().Summary -->creates and returns a new collection containing *propertyPath* values extracted from the original collection of objects<!-- END REF -->.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 The contents of the returned collection depends on the *targetPath* parameter:
 
@@ -1027,7 +1027,7 @@ In case of inconsistency, the following rules apply:
 #### 説明
 
 The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which *methodName* method result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
 
@@ -1121,7 +1121,7 @@ The code for ***TypeLookUp*** is:
 #### 説明
 
 The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
@@ -1220,7 +1220,7 @@ The code for ***FindCity*** is:
 #### 説明
 
 The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
@@ -1297,7 +1297,7 @@ The code for ***FindCity*** method is:
 #### 説明
 
 The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *toSearch*, pass the expression to find in the collection. You can pass:
 
@@ -1357,7 +1357,7 @@ Optionally, you can pass the index of collection from which to start the search 
 #### 説明
 
 The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 The *queryString* parameter uses the following syntax:
 
@@ -1415,7 +1415,7 @@ The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *elem
 > このコマンドは、元のコレクションを変更します。
 
 In *index*, pass the position where you want the element to be inserted in the collection.
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+> **警告**: コレクション要素は 0 起点である点に注意してください。
 
 *   If *index* > the length of the collection, actual starting index will be set to the length of the collection.
 *   If *index* <0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
@@ -1463,7 +1463,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 #### 説明
 
 The `.join()` function <!-- REF #collection.join().Summary -->converts all elements of the collection to strings and concatenates them using the specified *delimiter* string as separator<!-- END REF -->.The function returns the resulting string.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 By default, null or empty elements of the collection are returned in the resulting string. Pass the `ck ignore null or empty` constant in the *option* parameter if you want to remove them from the resulting string.
 
@@ -1507,7 +1507,7 @@ By default, null or empty elements of the collection are returned in the resulti
 #### 説明
 
 The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *toSearch*, pass the expression to find in the collection. You can pass:
 
@@ -1601,7 +1601,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 #### 説明
 
 The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
 
@@ -1665,7 +1665,7 @@ Here is the ***Percentage*** method:
 #### 説明
 
 The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
 
@@ -1715,7 +1715,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 #### 説明
 
 The `.min()` function <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 If the collection contains different types of values, the `.min()` function will return the minimum value within the first element type in the type list order (see [`.sort()`](#sort) description).
 
@@ -1770,7 +1770,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
 
 This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned unordered). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
 
@@ -1907,7 +1907,7 @@ Ordering with a property path:
 The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *methodName* method<!-- END REF -->.
 
 This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
 
@@ -2122,7 +2122,7 @@ You want to sort the resutling collection:
 #### 説明
 
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 The *queryString* parameter uses the following syntax:
 
@@ -2230,7 +2230,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *methodName* callback method against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in param (optional). *methodName* takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
@@ -2321,9 +2321,9 @@ The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or
 > このコマンドは、元のコレクションを変更します。
 
 In *index*, pass the position where you want the element to be removed from the collection.
-> **Warning**: Keep in mind that collection elements are numbered from 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **警告**: コレクション要素は 0 起点である点に注意してください。 If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
 
-*   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
+*   *index* < 0 の場合、*index:=index+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
 *   If the calculated value < 0, *index* is set to 0.
 *   If the calculated value > the length of the collection, *index* is set to the length.
 
@@ -2433,7 +2433,7 @@ By default, new elements are filled will **null** values. You can specify the va
 #### 説明
 
 The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 #### 例題
 
@@ -2518,7 +2518,7 @@ If the collection is empty, this method does nothing.
 #### 説明
 
 The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. If the original collection is a shared collection, the returned collection is also a shared collection.
-> This function does not modify the original collection.
+> このコマンドは、元のコレクションを変更しません。
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
 
