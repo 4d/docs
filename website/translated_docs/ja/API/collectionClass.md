@@ -426,22 +426,22 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | 参照           | タイプ    |    | 説明                                                                       |
 | ------------ | ------ |:--:| ------------------------------------------------------------------------ |
 | option       | 整数     | -> | `ck resolve pointers`: コピー前にポインターを解決する<br>`ck shared`: 共有コレクションを返す |
-| groupWithCol | コレクション | -> | Shared collection to be grouped with the resulting collection            |
-| groupWithObj | オブジェクト | -> | Shared object to be grouped with the resulting collection                |
-| 戻り値          | コレクション | <- | Deep copy of the original collection                                     |
+| groupWithCol | コレクション | -> | 結果のコレクションとグループする共有コレクション                                                 |
+| groupWithObj | オブジェクト | -> | 結果のコレクションとグループする共有オブジェクト                                                 |
+| 戻り値          | コレクション | <- | 元のコレクションのディープ・コピー                                                        |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.copy()` function <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
+`.copy()` 関数は、 <!-- REF #collection.copy().Summary --> コレクションインスタンスのディープ・コピーを返します<!-- END REF -->。***ディープ・コピー*** とは、元のコレクション内のオブジェクトやコレクションは複製されることを意味し、返されたコレクションと元のコレクションは参照を共有しないということを意味します。
 > このコマンドは、元のコレクションを変更しません。
 
-If passed, the *option* parameter can contain one of the following constants (or both):
+任意の *option* パラメーターには、以下のどちらか (あるいは両方) の定数を渡すことができます:
 
-| option                | 説明                                                                                                                                                                                                                                                                                                                  |
+| オプション                 | 説明                                                                                                                                                                                                                                                                                                                  |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | If the original collection contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing the ck resolve pointers. In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.      |
+| `ck resolve pointers` | オリジナルのコレクションがポインター型の値を格納している場合、デフォルトではコピー先のオブジェクトもポインターを格納します。 しかしながら、`ck resolve pointers` 定数を渡すことで、コピー時にポインターを解決することができます。 In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.                                                                     |
 | `ck shared`           | By default, copy() returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the ck shared constant to create a shared collection. In this case, you can use the groupWith parameter to associate the shared collection with another collection or object (see below). |
 
 The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
