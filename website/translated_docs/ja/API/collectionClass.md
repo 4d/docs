@@ -243,7 +243,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 計算の対象となるのは数値のみです (他の型の要素は無視されます)。
 
-コレクションがオブジェクトを格納している場合には、計算をしたいオブジェクトプロパティを *propertyPath* に渡します。
+コレクションがオブジェクトを格納している場合には、計算するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
 `.average()` は以下の場合には `undefined` を返します:
 
@@ -439,17 +439,17 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 任意の *option* パラメーターには、以下のどちらか (あるいは両方) の定数を渡すことができます:
 
-| オプション                 | 説明                                                                                                                                                                                                                                                                                                                  |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | オリジナルのコレクションがポインター型の値を格納している場合、デフォルトではコピー先のオブジェクトもポインターを格納します。 しかしながら、`ck resolve pointers` 定数を渡すことで、コピー時にポインターを解決することができます。 In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.                                                                     |
-| `ck shared`           | By default, copy() returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the ck shared constant to create a shared collection. In this case, you can use the groupWith parameter to associate the shared collection with another collection or object (see below). |
+| オプション                 | 説明                                                                                                                                                                            |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck resolve pointers` | オリジナルのコレクションがポインター型の値を格納している場合、デフォルトではコピー先のオブジェクトもポインターを格納します。 しかしながら、`ck resolve pointers` 定数を渡すことで、コピー時にポインターを解決することができます。 この場合、コレクション内の各ポインターはコピー時に解決され、解決済みの値が使用されます。     |
+| `ck shared`           | 共有コレクションに対して適用された場合でも、`copy()` はデフォルトで通常の (非共有の) コレクションを返します。 共有コレクションを作成するには、`ck shared` 定数を渡します。 この場合には、`groupWith` パラメーターに引数を渡して他の共有オブジェクトまたは共有コレクションに関連づけることもできます (以下参照)。 |
 
-The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
+*groupWithCol* または *groupWithObj* 引数を渡すと、結果のコレクションを関連づけるコレクションまたはオブジェクトを指定できます。
 
 
 #### 例題 1
 
-We want to copy the *$lastnames* regular (non shared) collection into the *$sharedObject* shared object. To do this, we must create a shared copy of the collection (*$sharedLastnames*).
+通常の (非共有の) コレクション *$lastnames * を、共有オブジェクト *$sharedObject* 内にコピーします。 このためには、まず共有コレクション (*$sharedLastnames*) を作成する必要があります。
 
 ```4d
 var $sharedObject : Object
@@ -459,11 +459,11 @@ var $text : Text
 $sharedObject:=New shared object
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) // $lastnames は通常のコレクションです
 
-$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames is a shared collection
+$sharedLastnames:=$lastnames.copy(ck shared) // $sharedLastnames は共有コレクションです
 
-//Now we can put $sharedLastnames into $sharedObject
+// $sharedLastnames は $sharedObject の中に入れられます
 Use($sharedObject)
     $sharedObject.lastnames:=$sharedLastnames
 End use
@@ -472,7 +472,7 @@ End use
 
 #### 例題 2
 
-We want to combine *$sharedColl1* and *$sharedColl2*. Since they belong to different shared groups, a direct combination would result in an error. Therefore, we must make a shared copy of *$sharedColl1* and designate *$sharedColl2* as a shared group for the copy.
+どちらも共有コレクションである *$sharedColl1* と*$sharedColl2* を結合します。 これらは異なる共有グループに所属しているため、直接結合した場合にはエラーが生成されます。 そこで、 *$sharedColl1* のコピーを作成し、*$sharedColl2* をそのコピーの共有グループ先に指定します。
 
 ```4d
 var $sharedColl1;$sharedColl2;$copyColl : Collection
@@ -480,7 +480,7 @@ var $sharedColl1;$sharedColl2;$copyColl : Collection
 $sharedColl1:=New shared collection(New shared object("lastname";"Smith"))
 $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
 
-//$copyColl belongs to the same shared group as $sharedColl2
+// $copyColl を $sharedColl2  と同じ共有グループに所属させます
  $copyColl:=$sharedColl1.copy(ck shared;$sharedColl2)
  Use($sharedColl2)
     $sharedColl2.combine($copyColl)
@@ -489,25 +489,25 @@ $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
 
 #### 例題 3
 
-We have a regular collection (*$lastnames*) and we want to put it in the **Storage** of the application. To do this, we must create a shared copy beforehand (*$sharedLastnames*).
+通常のコレクション (*$lastnames*) があり、それをアプリケーションの **Storage** に入れます。 これには、先に共有コレクション (*$sharedLastnames*) を作成しておく必要があります。
 
 ```4d
 var $lastnames;$sharedLastnames : Collection
 var $text : Text
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) // $lastnames は通常の (非共有) コレクションです
 
-$sharedLastnames:=$lastnames.copy(ck shared) // shared copy
+$sharedLastnames:=$lastnames.copy(ck shared) // 共有コピー
 
 Use(Storage)
     Storage.lastnames:=$sharedLastnames
 End use
 ```
 
-#### Example 4
+#### 例題 4
 
-This example illustrates the use of the `ck resolve pointers` option:
+`ck resolve pointers` オプションを使用した場合のふるまいです:
 
 ```4d
  var $col : Collection
@@ -520,11 +520,11 @@ This example illustrates the use of the `ck resolve pointers` option:
 
  $col2:=$col.copy()
  $col2[1].beta:="World!"
- ALERT($col[0].alpha+" "+$col2[1].beta) //displays "Hello World!"
+ ALERT($col[0].alpha+" "+$col2[1].beta) // "Hello world!" を表示します
 
  $what:="You!"
  $col3:=$col2.copy(ck resolve pointers)
- ALERT($col3[0].alpha+" "+$col3[1].what) //displays "Hello You!"
+ ALERT($col3[0].alpha+" "+$col3[1].what) // "Hello You!" を表示します
 ``` 
 
 
@@ -548,18 +548,18 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 
 <!-- REF #collection.count().Params -->
-| 参照           | タイプ  |    | 説明                                   |
-| ------------ | ---- |:--:| ------------------------------------ |
-| propertyPath | テキスト | -> | 計算に使用するオブジェクトプロパティのパス                |
-| 戻り値          | 実数   | <- | Number of elements in the collection |
+| 参照           | タイプ  |    | 説明                    |
+| ------------ | ---- |:--:| --------------------- |
+| propertyPath | テキスト | -> | 計算に使用するオブジェクトプロパティのパス |
+| 戻り値          | 実数   | <- | コレクション内の要素の数          |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.count()` function <!-- REF #collection.count().Summary -->returns the number of non-null elements in the collection<!-- END REF -->.
+`.count()` 関数は、 <!-- REF #collection.count().Summary -->コレクション内の、null ではない要素の個数を返します<!-- END REF -->。
 
-If the collection contains objects, you can pass the *propertyPath* parameter. In this case, only elements that contain the *propertyPath* are taken into account.
+コレクションがオブジェクトを含んでいる場合、*propertyPath* 引数を渡すことができます。 この場合、*propertyPath* で指定したパスを含む要素のみがカウントされます。
 
 #### 例題
 
@@ -571,8 +571,8 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
  $col.push(New object("name";"Wesson";"salary";50000))
  $col.push(New object("name";"Gross";"salary";10500))
  $col.push(New object("lastName";"Henry";"salary";12000))
- $count1:=$col.count() //$count1=7
- $count2:=$col.count("name") //$count2=3
+ $count1:=$col.count() // $count1=7
+ $count2:=$col.count("name") // $count2=3
 
 ``` 
 
@@ -596,27 +596,27 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 
 <!-- REF #collection.countValues().Params -->
-| 参照           | タイプ                                             |    | 説明                                 |
-| ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
-| value        | Text, Number, Boolean, Date, Object, Collection | -> | Value to count                     |
-| propertyPath | テキスト                                            | -> | 計算に使用するオブジェクトプロパティのパス              |
-| 戻り値          | 実数                                              | <- | Number of occurrences of the value |
+| 参照           | タイプ                          |    | 説明                    |
+| ------------ | ---------------------------- |:--:| --------------------- |
+| value        | 数値、テキスト、日付、ブール、オブジェクト、コレクション | -> | 数える値                  |
+| propertyPath | テキスト                         | -> | 計算に使用するオブジェクトプロパティのパス |
+| 戻り値          | 実数                           | <- | 値の出現回数                |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.countValues()` function <!-- REF #collection.countValues().Summary -->returns the number of times value is found in the collection<!-- END REF -->.
+`.countValues()` 関数は、 <!-- REF #collection.countValues().Summary -->`value` 引数に指定した値がコレクション内において見つかった回数を返します<!-- END REF -->。
 
-You can pass in *value*:
+*value* には、以下のいずれかを渡すことができます:
 
-*   a scalar value (text, number, boolean, date),
-*   an object or a collection reference.
+*   スカラー値 (テキスト、数値、ブール、日付)
+*   オブジェクトあるいはコレクションの参照
 
 
-For an element to be found, the type of *value* must be equivalent to the type of the element; the method uses the equality operator.
+要素が検出されるためには、*value* 引数の型が要素の型と合致している必要があります。このファンクションは等号演算子を使用します。
 
-The optional *propertyPath* parameter allows you to count values inside a collection of objects: pass in *propertyPath* the path of the property whose values you want to count.
+任意の *propertyPath* 引数を渡すと、オブジェクトのコレクションにおける値の個数を数えることができます。 *propertyPath* には値を検索するプロパティパスを渡します。
 > このコマンドは、元のコレクションを変更しません。
 
 #### 例題 1
@@ -677,24 +677,24 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 <!-- REF #collection.distinct().Params -->
-| 参照           | タイプ    |    | 説明                                                               |
-| ------------ | ------ |:--:| ---------------------------------------------------------------- |
-| option       | 整数     | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| propertyPath | テキスト   | -> | Path of attribute whose distinct values you want to get          |
-| 戻り値          | コレクション | <- | New collection with only distinct values                         |
+| 参照           | タイプ    |    | 説明                                                       |
+| ------------ | ------ |:--:| -------------------------------------------------------- |
+| option       | 整数     | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
+| propertyPath | テキスト   | -> | 重複しない値を取得する属性のパス                                         |
+| 戻り値          | コレクション | <- | 重複しない値のみを格納した新規コレクション                                    |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
+`.distinct()` 関数は、 <!-- REF #collection.distinct().Summary -->元のコレクションから重複しない (異なる) 値のみを格納した新しいコレクションを返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-The returned collection is automatically sorted. **Null** values are not returned.
+返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the *option* parameter.
+デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、*option* に `ck diacritical` 定数を渡します。
 
-If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
+コレクションがオブジェクトを格納している場合には、重複しない値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
 
 
@@ -731,11 +731,11 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 **.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.equal().Params -->
-| 参照          | タイプ    |    | 説明                                                               |
-| ----------- | ------ |:--:| ---------------------------------------------------------------- |
-| collection2 | コレクション | -> | Collection to compare                                            |
-| option      | 整数     | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example) |
-| 戻り値         | ブール    | <- | True if collections are identical, false otherwise               |
+| 参照          | タイプ    |    | 説明                                                       |
+| ----------- | ------ |:--:| -------------------------------------------------------- |
+| collection2 | コレクション | -> | 比較するコレクション                                               |
+| option      | 整数     | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
+| 戻り値         | ブール    | <- | True if collections are identical, false otherwise       |
 <!-- END REF -->
 
 
@@ -743,7 +743,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
+デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 > Elements with **Null** values are not equal to Undefined elements.
 
 #### 例題
@@ -1301,9 +1301,9 @@ The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the
 
 In *toSearch*, pass the expression to find in the collection. You can pass:
 
-*   a scalar value (text, number, boolean, date),
+*   スカラー値 (テキスト、数値、ブール、日付)
 *   the null value,
-*   an object or a collection reference.
+*   オブジェクトあるいはコレクションの参照
 
 *toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
 
@@ -1511,9 +1511,9 @@ The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->sear
 
 In *toSearch*, pass the expression to find in the collection. You can pass:
 
-*   a scalar value (text, number, boolean, date),
+*   スカラー値 (テキスト、数値、ブール、日付)
 *   the null value,
-*   an object or a collection reference.
+*   オブジェクトあるいはコレクションの参照
 
 *toSearch* must match exactly the element to find (the same rules as for the equality operator are applied).
 
@@ -2740,7 +2740,7 @@ The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for 
 
 計算の対象となるのは数値のみです (他の型の要素は無視されます)。
 
-コレクションがオブジェクトを格納している場合には、計算をしたいオブジェクトプロパティを *propertyPath* に渡します。
+コレクションがオブジェクトを格納している場合には、計算するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
 `.sum()` returns 0 if:
 
