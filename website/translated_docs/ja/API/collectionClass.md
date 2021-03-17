@@ -814,13 +814,13 @@ End use
 *   *$1.result* (ブール): 要素の値の評価がすべて成功した場合には **true** 、それ以外は **false**
 *   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
-In all cases, at the point when the `.every()` function encounters the first collection element returning **false** in *$1.result*, it stops calling *methodName* and returns **false**.
+`.every()` 関数は、*$1.result* に **false** を返すコレクション要素を発見すると、*methodName* メソッドの呼び出しをやめて **false** を返します。
 
-By default, `.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
+デフォルトでは、`.every()` はコレクション全体をテストします。 任意で、*startFrom* にテストを開始する要素のインデックスを渡すこともできます。
 
-*   If *startFrom* >= the collection's length, **false** is returned, which means the collection is not tested.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection ( *startFrom:=startFrom+length*).
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   *startFrom* がコレクションの length 以上だった場合、**false** が返されます。これはコレクションがテストされていないことを意味します。
+*   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。
+*   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 
 #### 例題 1
@@ -830,12 +830,12 @@ var $c : Collection
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") // true を返します
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") // false を返します
 ```
 
-With the following ***NumberGreaterThan0*** method:
+***NumberGreaterThan0*** メソッドの中身は以下のとおりです:
 
 ```4d
 $1.result:=$1.value>0
@@ -843,7 +843,7 @@ $1.result:=$1.value>0
 
 #### 例題 2
 
-This example tests that all elements of a collection are of the real type:
+コレクション要素がすべて実数型であるかをテストします:
 
 ```4d
 var $c : Collection
@@ -856,7 +856,7 @@ $c:=$c.push(New object("name";"Blountsville";"zc";35031))
 $b:=$c.every("TypeLookUp";Is real) //$b=false
 ```
 
-With the following ***TypeLookUp*** method:
+***TypeLookUp*** メソッドの中身は以下のとおりです:
 
 ```4d
 #DECLARE ($toEval : Object ; $param : Integer) //$1; $2
@@ -1140,7 +1140,7 @@ By default, `.find()` searches in the whole collection. Optionally, you can pass
 
 *   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 
 #### 例題 1
@@ -1239,7 +1239,7 @@ By default, `.findIndex()` searches in the whole collection. Optionally, you can
 
 *   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
 
@@ -1311,7 +1311,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 *   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
 
@@ -2592,7 +2592,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 
 *   If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 
 #### 例題
