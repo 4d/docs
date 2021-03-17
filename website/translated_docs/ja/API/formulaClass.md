@@ -197,7 +197,7 @@ A simple formula using parameters:
 ```
 
 
-#### Example 4
+#### 例題 4
 
 A formula using a project method with parameters:
 
