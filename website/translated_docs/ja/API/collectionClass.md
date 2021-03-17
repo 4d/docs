@@ -735,16 +735,16 @@ End use
 | ----------- | ------ |:--:| -------------------------------------------------------- |
 | collection2 | コレクション | -> | 比較するコレクション                                               |
 | option      | 整数     | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
-| 戻り値         | ブール    | <- | True if collections are identical, false otherwise       |
+| 戻り値         | ブール    | <- | コレクションが同一の場合には true、それ以外は false                          |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
+`.equal()` 関数は、 <!-- REF #collection.equal().Summary -->コレクションを *collection2* とディープ比較し、同一の場合には **true** を返します <!-- END REF -->。
 
-デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
-> Elements with **Null** values are not equal to Undefined elements.
+デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、option に `ck diacritical` 定数を渡します。
+> **Null**値の要素は undefined要素と同じとはみなされません。
 
 #### 例題
 
@@ -787,32 +787,32 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->compares the col
 **.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
-| 参照         | タイプ   |    | 説明                                                |
-| ---------- | ----- |:--:| ------------------------------------------------- |
-| startFrom  | 整数    | -> | Index to start the test at                        |
-| methodName | テキスト  | -> | Name of the method to call for the test           |
-| param      | Mixed | -> | Parameter(s) to pass to methodName                |
-| 戻り値        | ブール   | <- | True if all elements successfully passed the test |
+| 参照         | タイプ  |    | 説明                    |
+| ---------- | ---- |:--:| --------------------- |
+| startFrom  | 整数   | -> | テストを開始するインデックス        |
+| methodName | テキスト | -> | テストに呼び出すメソッド名         |
+| param      | 混合   | -> | methodName に渡す引数      |
+| 戻り値        | ブール  | <- | すべての要素がテストをパスすれば true |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *methodName* method<!-- END REF -->.
+`.every()` 関数は、 <!-- REF #collection.every().Summary -->コレクション内の全要素が、*methodName* に指定したメソッドで実装されたテストにパスした場合には **true** を返します<!-- END REF -->。
 
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to true for every element fulfilling the test.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、テストをパスした要素の *$1.result* を true に設定しなければなりません。
 
-*methodName* receives the following parameters:
+*methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   in *$1.value*: element value to be evaluated
-*   in *$2*: param
-*   in *$N...*: paramN...
+*   *$1.value*: 評価する要素の値
+*   *$2*: param
+*   *$N...*: paramN...
 
-*methodName* sets the following parameter(s):
+*methodName* で指定したメソッドでは、以下の引数を設定します:
 
-*   *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
-*   *$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.result* (ブール): 要素の値の評価がすべて成功した場合には **true** 、それ以外は **false**
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 In all cases, at the point when the `.every()` function encounters the first collection element returning **false** in *$1.result*, it stops calling *methodName* and returns **false**.
 
@@ -1019,7 +1019,7 @@ In case of inconsistency, the following rules apply:
 | 参照         | タイプ    |    | 説明                                                         |
 | ---------- | ------ |:--:| ---------------------------------------------------------- |
 | methodName | テキスト   | -> | Name of the function to call to filter the collection      |
-| param      | Mixed  | -> | Parameter(s) to pass to *methodName*                       |
+| param      | 混合     | -> | Parameter(s) to pass to *methodName*                       |
 | 戻り値        | コレクション | <- | New collection containing filtered elements (shallow copy) |
 <!-- END REF -->
 
@@ -1029,18 +1029,18 @@ In case of inconsistency, the following rules apply:
 The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which *methodName* method result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
 > このコマンドは、元のコレクションを変更しません。
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
 
-*methodName* receives the following parameters:
+*methodName* で指定したメソッドは以下の引数を受け取ります:
 
 *   in *$1.value*: element value to be filtered
 *   in *$2*: *param*
 *   in *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
 
 
 #### 例題 1
@@ -1123,18 +1123,18 @@ The code for ***TypeLookUp*** is:
 The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* で指定したメソッドは以下の引数を受け取ります:
 
 *   in *$1.value:* element value to be evaluated
 *   in *$2: param*
 *   in *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
 
 By default, `.find()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
 
@@ -1222,18 +1222,18 @@ The code for ***FindCity*** is:
 The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   in *$1.value*: element value to be evaluated
+*   *$1.value*: 評価する要素の値
 *   in *$2: param*
 *   in *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
 
 By default, `.findIndex()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
 
@@ -1603,19 +1603,19 @@ The `.length` property is initialized when the collection is created. Adding or 
 The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
 > このコマンドは、元のコレクションを変更しません。
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* can perform any operation, with or without the parameter(s).
 
-*methodName* receives the following parameters:
+*methodName* で指定したメソッドは以下の引数を受け取ります:
 
 *   in *$1.value* (any type): element value to be mapped
 *   in *$2* (any type): *param*
 *   in *$N...* (any type): *paramN...*
 
-*methodName* sets the following parameter(s):
+*methodName* で指定したメソッドでは、以下の引数を設定します:
 
 
 *   *$1.result* (any type): new transformed value to add to the resulting collection
-*   *$1.stop* (boolean): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.stop* (boolean): **true** to stop the method callback. 返された値は最後に計算されたものです。
 
 #### 例題
 
@@ -2052,7 +2052,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 <!-- REF #collection.push().Params -->
 | 参照      | タイプ    |    | 説明                                            |
 | ------- | ------ |:--:| --------------------------------------------- |
-| element | Mixed  | -> | Element(s) to add to the collection           |
+| element | 混合     | -> | Element(s) to add to the collection           |
 | 戻り値     | コレクション | <- | Original collection containing added elements |
 <!-- END REF -->
 
@@ -2113,7 +2113,7 @@ You want to sort the resutling collection:
 | 参照            | タイプ    |    | 説明                                                |
 | ------------- | ------ |:--:| ------------------------------------------------- |
 | queryString   | テキスト   | -> | Search criteria                                   |
-| value         | Mixed  | -> | Value(s) to compare when using placeholder(s)     |
+| value         | 混合     | -> | Value(s) to compare when using placeholder(s)     |
 | querySettings | オブジェクト | -> | Query options: parameters, attributes             |
 | 戻り値           | コレクション | <- | Element(s) matching queryString in the collection |
 <!-- END REF -->
@@ -2236,16 +2236,16 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
 
-*methodName* receives the following parameters:
+*methodName* で指定したメソッドは以下の引数を受け取ります:
 
 *   in *$1.value*: element value to be processed
 *   in *$2: param*
 *   in *$N...*: *paramN...*
 
-*methodName* sets the following parameter(s):
+*methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
 
 
 #### 例題 1
@@ -2559,12 +2559,12 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
-| 参照         | タイプ   |    | 説明                                                        |
-| ---------- | ----- |:--:| --------------------------------------------------------- |
-| startFrom  | 整数    | -> | Index to start the test at                                |
-| methodName | テキスト  | -> | Name of the method to call for the test                   |
-| param      | Mixed | -> | Parameter(s) to pass to *methodName*                      |
-| 戻り値        | ブール   | <- | True if at least one element successfully passed the test |
+| 参照         | タイプ  |    | 説明                                                        |
+| ---------- | ---- |:--:| --------------------------------------------------------- |
+| startFrom  | 整数   | -> | テストを開始するインデックス                                            |
+| methodName | テキスト | -> | テストに呼び出すメソッド名                                             |
+| param      | 混合   | -> | Parameter(s) to pass to *methodName*                      |
+| 戻り値        | ブール  | <- | True if at least one element successfully passed the test |
 <!-- END REF -->
 
 
@@ -2573,18 +2573,18 @@ The returned collection contains the element specified by *startFrom* and all su
 The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
 
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **True** for every element fulfilling the test.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 This method receives an `Object` as first parameter ($1) and must set *$1.result* to **True** for every element fulfilling the test.
 
-*methodName* receives the following parameters:
+*methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   in *$1.value*: element value to be evaluated
-*   in *$2*: param
+*   *$1.value*: 評価する要素の値
+*   *$2*: param
 *   in *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
 
 In any case, at the point where `.some()` function encounters the first collection element returning true in *$1.result*, it stops calling *methodName* and returns **true**.
 
