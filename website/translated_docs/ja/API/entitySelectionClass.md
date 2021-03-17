@@ -579,7 +579,7 @@ Then this entity selection is updated with products and you want to share the pr
 <!-- REF #entitySelectionClass.distinct().Params -->
 | 参照            | タイプ    |    | 説明                                                               |
 | ------------- | ------ |:--:| ---------------------------------------------------------------- |
-| attributePath | テキスト   | -> | Path of attribute whose distinct values you want to get          |
+| attributePath | テキスト   | -> | 重複しない値を取得する属性のパス                                                 |
 | option        | 整数     | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
 | 戻り値           | コレクション | <- | Collection with only distinct values                             |
 <!-- END REF -->
@@ -588,7 +588,7 @@ Then this entity selection is updated with products and you want to share the pr
 
 The `.distinct()` function <!-- REF #entitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
 
-The returned collection is automatically sorted. **Null** values are not returned.
+返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
 In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* is an object attribute that contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
 
@@ -597,7 +597,7 @@ In the *attributePath* parameter, pass the entity attribute whose distinct value
 3.  numbers
 4.  dates
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
+デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
 
 An error is returned if:
 
@@ -2000,7 +2000,7 @@ Returns:
 ```
 
 
-#### Example 4
+#### 例題 4
 
 Example with `relatedEntity` type with simple form:
 
