@@ -187,7 +187,7 @@ A formula using local variables:
 ```
 
 
-#### Example 3
+#### 例題 3
 
 A simple formula using parameters:
 
@@ -197,7 +197,7 @@ A simple formula using parameters:
 ```
 
 
-#### Example 4
+#### 例題 4
 
 A formula using a project method with parameters:
 
@@ -426,7 +426,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 The `.source` property <!-- REF #formulaClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。
+このプロパティは **読み取り専用** です。
 
 #### 例題
 

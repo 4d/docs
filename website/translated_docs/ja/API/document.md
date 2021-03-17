@@ -23,7 +23,7 @@ title: Document Class
 
 The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
  
@@ -45,7 +45,7 @@ The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->
 
 The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -69,7 +69,7 @@ The `.creationTime` property  returns <!-- REF #document.creationTime.Summary --
 
 The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -94,7 +94,7 @@ The `.exists` property returns <!-- REF #document.exists.Summary -->true if the 
 
 The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -118,7 +118,7 @@ The `.extension` property returns <!-- REF #document.extension.Summary -->the ex
 
 The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -142,7 +142,7 @@ The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full
 
 The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -166,7 +166,7 @@ The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the 
 
 The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -189,7 +189,7 @@ The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if th
 
 The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -212,7 +212,7 @@ The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true 
 
 The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -237,7 +237,7 @@ The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always f
 The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
 
-このプロパティは **読み込み専用** です。
+このプロパティは **読み取り専用** です。
 
 **例題**
 
@@ -270,7 +270,7 @@ The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true
 
 The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ The `.modificationDate` property returns <!-- REF #document.modificationDate.Sum
 
 The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -317,7 +317,7 @@ The `.modificationTime` property returns <!-- REF #document.modificationTime.Sum
 
 The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -344,7 +344,7 @@ The `.original` property returns <!-- REF #document.original.Summary -->the targ
 
 For non-alias files, the property returns the same file object as the file.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -368,7 +368,7 @@ For non-alias files, the property returns the same file object as the file.
 
 The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -392,7 +392,7 @@ The `.parent` property returns <!-- REF #document.parent.Summary -->the parent f
 
 The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -415,7 +415,7 @@ The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path o
 
 The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -439,7 +439,7 @@ The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->
 
 The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 

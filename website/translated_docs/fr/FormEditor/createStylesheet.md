@@ -190,6 +190,43 @@ text[text|=Hello]
 
 ## Déclarations de feuilles de style
 
+### Media Queries
+
+Media queries are used to apply color schemes to an application.
+
+A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+
+
+Available media features:
+
+*   `prefers-color-scheme`
+
+
+Available media feature expressions:
+
+*   **light**<br>For using a light theme
+*   **dark**<br>For using a dark theme
+> Media queries are case-insensitive.
+
+##### Exemple
+
+```
+ .textTheme {
+  fill: white;
+  stroke: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .textTheme {
+    fill: black;
+    stroke: white;
+  }
+}
+```
+
+
+### Object Attributes
+
 La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
     - "method"
     - "type"
@@ -199,7 +236,7 @@ La majorité des attributs d'objet formulaire peuvent être définis dans une fe
 
 Les attributs d'objet formulaire peuvent être déclarés avec leur nom JSON en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes). Pour plus d'informations, voir la page **Formulaires dynamiques** dans le manuel du mode Développement.
 
-### Mappage d'attributs
+#### Mappage d'attributs
 
 Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 
@@ -218,7 +255,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 > Les valeurs spécifiques à 4D (*ex :* "enfoncées") ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
 
 
-### Valeurs d'attributs spécifiques
+#### Valeurs d'attributs spécifiques
 
 - Pour les attributs `icon`, `picture`, et `customBackgroundPicture` qui prennent en charge un chemin vers une image, la syntaxe est la suivante :
 

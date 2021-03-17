@@ -200,7 +200,7 @@ To compress a `4D.Folder` without the folder itself:
 
 
 
-#### Example 3
+#### 例題 3
 
 To compress a ZIP archive structure with a password and progress bar:
 
@@ -239,7 +239,7 @@ To compress a ZIP archive structure with a password and progress bar:
 
 
 
-#### Example 4
+#### 例題 4
 
 You want to pass a collection of folders and files to compress to the *zipStructure* object:
 
@@ -372,6 +372,6 @@ The `.root` property contains <!-- REF #zipArchiveClass.root.Summary -->a virtua
 
 The `root` folder and its contents can be manipulated with the [ZipFile](zipFileClass.md) and [ZipFolder](zipFolderClass.md) functions and properties.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <style> h2 { background: #d9ebff;}</style>

@@ -36,7 +36,7 @@ title: Class
 
 `.name` プロパティは、 <!-- REF #classClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->。 クラス名の大文字・小文字は区別されます。
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -121,26 +121,26 @@ $person:=cs.Person.new("John";"Doe";40)
 
 `.superclass` プロパティは、 <!-- REF #classClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
+ユーザークラスのスーパークラスは、[`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) キーワードを使ってクラス内で定義されます。
 
-このプロパティは **読み込み専用** です。
+このプロパティは **読み取り専用** です。
 
 #### 例題
 
 ```4d
-$sup:=4D.File.superclass //Document
-$sup:=4D.Document.superclass //Object
-$sup:=4D.Object.superclass //null
+$sup:=4D.File.superclass // Document
+$sup:=4D.Document.superclass // Object
+$sup:=4D.Object.superclass // null
 
-// If you created a MyFile class  
-// with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
+// `Class extends File` を使って
+// MyFile クラスを作成した場合  
+$sup:=cs.MyFile.superclass // File 
 
 ```
 
 
 
-**See also:** [Super](Concepts/classes.md#super)
+**参照:** [Super](Concepts/classes.md#super)
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -207,7 +207,7 @@ This property is **read-write**.
 
 The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 

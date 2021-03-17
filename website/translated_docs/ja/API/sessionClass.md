@@ -136,7 +136,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 The `.expirationDate` property contains <!-- REF #sessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-このプロパティは **読み込み専用** です。 It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+このプロパティは **読み取り専用** です。 It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### 例題
 
