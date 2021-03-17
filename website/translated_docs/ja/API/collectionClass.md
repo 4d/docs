@@ -90,7 +90,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 #### 説明
 
-`New collection` コマンドは、 <!-- REF #_command_.New collection.Summary --> 空の、あるいは値の入った新しいコレクションを作成します<!-- END REF --> 。戻り値は、作成された新しいコレクションへの参照です。
+`New collection` コマンドは、 <!-- REF #_command_.New collection.Summary --> 空の、あるいは値の入った新規コレクションを作成し、その参照を返します<!-- END REF --> 。
 
 引数を渡さなかった場合、`New collection` は空のコレクションを作成し、その参照を返します。
 
@@ -165,18 +165,18 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| 参照    | タイプ                                                                 |    | 説明                           |
-| ----- | ------------------------------------------------------------------- |:--:| ---------------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s) |
-| 戻り値   | コレクション                                                              | <- | New shared collection        |
+| 参照    | タイプ                                 |    | 説明          |
+| ----- | ----------------------------------- |:--:| ----------- |
+| value | 数値、テキスト、日付、時間、ブール、共有オブジェクト、共有コレクション | -> | 共有コレクションの値  |
+| 戻り値   | コレクション                              | <- | 新規の共有コレクション |
 <!-- END REF -->
 
 
 #### 説明
 
-The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+`New shared collection` コマンドは、 <!-- REF #_command_.New shared collection.Summary --> 空の、あるいは値が入った新規コレクションを作成し、その参照を返します<!-- END REF --> 。
 
-Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
+このコレクションに要素を追加する場合には [`Use...End use`](Concepts/shared.md#useend-use) 構造でくくる必要があり、そうしない場合にはエラーが返されます。 Reading an element without a structure is, however, possible.
 > For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
 
 If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
