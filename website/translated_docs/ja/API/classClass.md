@@ -36,7 +36,7 @@ title: Class
 
 `.name` プロパティは、 <!-- REF #classClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->。 クラス名の大文字・小文字は区別されます。
 
-このプロパティは **読み込み専用** です。 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -123,7 +123,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 ユーザークラスのスーパークラスは、[`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) キーワードを使ってクラス内で定義されます。
 
-このプロパティは **読み込み専用** です。
+このプロパティは **読み取り専用** です。
 
 #### 例題
 
