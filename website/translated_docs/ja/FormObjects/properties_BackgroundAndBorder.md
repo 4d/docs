@@ -10,9 +10,9 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名             | データタイプ | とりうる値                                                           |
-| ------------- | ------ | --------------------------------------------------------------- |
-| alternateFill | string | any css value; "transparent"; "automatic"; "automaticAlternate" |
+| 名             | データタイプ | とりうる値                                                      |
+| ------------- | ------ | ---------------------------------------------------------- |
+| alternateFill | string | 任意の CSS値; "transparent"; "automatic"; "automaticAlternate" |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
