@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
