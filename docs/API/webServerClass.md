@@ -29,6 +29,7 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #webServerClass.HSTSEnabled.Syntax -->](#hstsenabled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HSTSEnabled.Summary --> |
 |[<!-- INCLUDE #webServerClass.HSTSMaxAge.Syntax -->](#hstsmaxage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HSTSMaxAge.Summary -->|
 
+
 |[<!-- INCLUDE #webServerClass.HTTPCompressionLevel.Syntax -->](#httpcompressionlevel)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPCompressionLevel.Summary -->|
 |[<!-- INCLUDE #webServerClass.HTTPCompressionThreshold.Syntax -->](#httpcompressionthreshold)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPCompressionThreshold.Summary -->|
 |[<!-- INCLUDE #webServerClass.HTTPEnabled.Syntax -->](#httpenabled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.HTTPEnabled.Summary -->|
@@ -54,6 +55,7 @@ They provide the following properties and functions:
 [<!-- INCLUDE #webServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookieDomain.Summary -->|
 |[<!-- INCLUDE #webServerClass.sessionCookieName.Syntax -->](#sessioncookiename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookieName.Summary -->|
 |[<!-- INCLUDE #webServerClass.sessionCookiePath.Syntax -->](#sessioncookiepath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookiePath.Summary -->|
+|[<!-- INCLUDE #webServerClass.sessionCookieSameSite.Syntax -->](#sessionCookieSameSite)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionCookieSameSite.Summary -->|
 |[<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.sessionIPAddressValidation.Summary -->|
 |[<!-- INCLUDE #webServerClass.start().Syntax -->](#start)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.start().Summary -->|
 |[<!-- INCLUDE #webServerClass.stop().Syntax -->](#stop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.stop().Summary -->|
@@ -65,7 +67,9 @@ They provide the following properties and functions:
 <details><summary>History</summary>
 |Version|Changes|
 |---|---|
-|v18 R3|Added
+|v18 R3|Added|
+|v19|support for .sessionCookieSameSite|
+
 </details>
 
 <!-- REF #_command_.WEB Server.Syntax -->
@@ -170,6 +174,7 @@ The **.accessKeyDefined** property contains <!-- REF #webServerClass.accessKeyDe
 <!-- REF webServerClass.certificateFolder.Desc -->
 
 ## .certificateFolder
+
 
 
 <!-- REF #webServerClass.certificateFolder.Syntax -->
@@ -600,6 +605,7 @@ Possible values:
 *	1 = TLSv1_0
 *	2 = TLSv1_1
 *	3 = TLSv1_2 (default)
+*	4 = TLSv1_3
 
 If modified, the server must be restarted to use the new value.
 
@@ -723,6 +729,32 @@ The <!-- REF #webServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 <!-- END REF -->
 
+<!-- REF webServerClass.sessionCookieSameSite.Desc -->
+
+## .sessionCookieSameSite
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v19|Added|
+</details>
+
+<!-- REF #webServerClass.sessionCookieSameSite.Syntax -->
+**.sessionCookieSameSite** : Text<!-- END REF -->
+
+
+The <!-- REF #webServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
+
+|Constant|Value|Description|
+|---|---|---|
+|Web SameSite Strict|"Strict"|*Default value* - Cookies are only sent in a first-party context|
+|Web SameSite Lax|"Lax"|Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link).|
+|Web SameSite None|"None"|Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. 
+
+See the [Session Cookie SameSite](webServerConfig.md#session-cookie-samesite) description for detailed information.
+
+
+<!-- END REF -->
 
 <!-- REF webServerClass.sessionIPAddressValidation.Desc -->
 

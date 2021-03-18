@@ -37,7 +37,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |<a name="a">**a**</a>|||
 |[action](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
 |[allowFontColorPicker](properties_Text.md#allow-font-color-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
-|[alternateFill](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"|
+|[alternateFill](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"; "automaticAlternate"|
 |[automaticInsertion](properties_DataSource.md#automatic-insertion)|Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.|true, false<a name="b"></a>|
 |**b**|||
 |[booleanFormat](properties_Display.md#text-when-false-text-when-true)|Specifies only two possible values.|true, false|

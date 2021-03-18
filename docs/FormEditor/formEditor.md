@@ -65,17 +65,17 @@ The object bar contains all the active and inactive objects that can be used in 
 
 |Button	|Group	|Key|
 |---|---|:---:|
-|![](assets/en/FormEditor/text.png)|[Text](../FormObjects/text.md) / [Group Box](../FormObjects/groupBox.md)|T|
-|![](assets/en/FormEditor/input.png)|[Input](../FormObjects/input_overview.md)|F|
-|![](assets/en/FormEditor/listbox.png)|[Hierarchical List](../FormObjects/list_overview.md) / [List Box](../FormObjects/listbox_overview.md)|L|
-|![](assets/en/FormEditor/combo.png)|[Combo Box](../FormObjects/comboBox_overview.md) / [Drop-down List](../FormObjects/dropdownList_overview.md) / [Picture Pop-up Menu](../FormObjects/picturePopupMenu_overview.md)|P|
-|![](assets/en/FormEditor/button.png)|	[Button](../FormObjects/button_overview.md) / [Picture Button](../FormObjects/pictureButton_overview.md) / [Button Grid](../FormObjects/buttonGrid_overview.md)|B|
-|![](assets/en/FormEditor/radio.png)|[Radio Button](../FormObjects/radio_overview.md)|	R|
-|![](assets/en/FormEditor/checkbox.png)|[Check Box](../FormObjects/checkbox_overview.md)|C|
-|![](assets/en/FormEditor/indicator.png)|[Progress Indicator](../FormObjects/progressIndicator.md) / [Ruler](../FormObjects/ruler.md) / [Stepper](../FormObjects/stepper.md) / [Spinner](../FormObjects/spinner.md)|	I
-|![](assets/en/FormEditor/rectangle.png)|	[Rectangle](../FormObjects/shapesOverview.html#rectangle) / [Line](../FormObjects/shapesOverview.html#line) / [Oval](../FormObjects/shapesOverview.html#oval) |S|
-|![](assets/en/FormEditor/splitter.png)|[Splitter](../en/FormObjects/splitters.md) / [Tab Control](../FormObjects/tabControl.md)|	D|
-|![](assets/en/FormEditor/plugin.png)|	[Plug-in Area](../FormObjects/pluginArea_overview.md) / [Subform](../FormObjects/subform_overview.md) / [Web Area](../FormObjects/webArea_overview.md) / [4D Write Pro](../FormObjects/writeProArea_overview.md) / [4D View Pro](../FormObjects/viewProArea_overview.md)|	X|
+|![](assets/en/FormEditor/text.png)|[Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)|T|
+|![](assets/en/FormEditor/input.png)|[Input](FormObjects/input_overview.md)|F|
+|![](assets/en/FormEditor/listbox.png)|[Hierarchical List](FormObjects/list_overview.md) / [List Box](FormObjects/listbox_overview.md)|L|
+|![](assets/en/FormEditor/combo.png)|[Combo Box](FormObjects/comboBox_overview.md) / [Drop-down List](FormObjects/dropdownList_Overview.md) / [Picture Pop-up Menu](FormObjects/picturePopupMenu_overview.md)|P|
+|![](assets/en/FormEditor/button.png)|	[Button](FormObjects/button_overview.md) / [Picture Button](FormObjects/pictureButton_overview.md) / [Button Grid](FormObjects/buttonGrid_overview.md)|B|
+|![](assets/en/FormEditor/radio.png)|[Radio Button](FormObjects/radio_overview.md)|	R|
+|![](assets/en/FormEditor/checkbox.png)|[Check Box](FormObjects/checkbox_overview.md)|C|
+|![](assets/en/FormEditor/indicator.png)|[Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)|	I
+|![](assets/en/FormEditor/rectangle.png)|	[Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval) |S|
+|![](assets/en/FormEditor/splitter.png)|[Splitter](FormObjects/splitters.md) / [Tab Control](FormObjects/tabControl.md)|	D|
+|![](assets/en/FormEditor/plugin.png)|	[Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md)|	X|
 
 To draw an object type, select the corresponding button and then trace the object in the form. After creating an object, you can modify its type using the Property List. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
 

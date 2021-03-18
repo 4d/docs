@@ -63,7 +63,7 @@ Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et
 
 Les références de collections 4D bénéficient de fonctions de classe spécifiques (souvent appelées *fonctions méthodes*). Les fonctions de collection sont répertoriées dans la section [Class API Reference](API/collectionClass.md).
 
-Par exemple:
+Par exemple :
 
 ```4d
 $newCol:=$col.copy() //copie de $col vers $newCol

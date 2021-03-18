@@ -1707,7 +1707,7 @@ The `.unlock()` function <!-- REF #entityClass.unlock().Summary -->removes the p
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 
 A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).
-> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Par exemple:
+> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Par exemple :
 
 ```4d
  $e1:=ds.Emp.all()[0]

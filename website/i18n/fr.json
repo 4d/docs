@@ -5,14 +5,17 @@
     "previous": "Précédent",
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
-      "Admin/building": {
-        "title": "Générer un package projet"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
+      },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
       },
       "Admin/webAdmin": {
         "title": "Web Administration"
@@ -42,7 +45,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Emails"
+        "title": "Emails and Attachments"
       },
       "API/entityClass": {
         "title": "Entity"
@@ -194,6 +197,12 @@
       },
       "Concepts/variables": {
         "title": "Variables"
+      },
+      "Desktop/building": {
+        "title": "Générer un package projet"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
       },
       "Events/onActivate": {
         "title": "Sur activation"
@@ -640,6 +649,9 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
       "ORDA/dsmapping": {
         "title": "Data Model Objects"
       },
@@ -661,14 +673,29 @@
       "ORDA/datastores": {
         "title": "Utiliser un datastore distant"
       },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "Aperçu"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
+      },
       "Project/architecture": {
         "title": "Architecture of a project"
       },
       "Project/creating": {
-        "title": "Créer ou ouvrir un projet"
-      },
-      "Project/developing": {
-        "title": "Développer un projet"
+        "title": "Working with a project"
       },
       "Project/documentation": {
         "title": "Documenter un projet"
@@ -772,22 +799,55 @@
       "REST/REST_requests": {
         "title": "A propos des requêtes REST"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "Gestion des groupes et utilisateurs 4D"
       },
       "Users/overview": {
         "title": "Aperçu"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "Prise en main"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
       "WebServer/sessions": {
         "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "Aperçu"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "Administration"
+      },
+      "WebServer/webServerConfig": {
+        "title": "Configuration"
       },
       "WebServer/webServerObject": {
         "title": "Objet Serveur Web"
       }
     },
     "links": {
-      "v18 R5 BETA": "v18 R5 BETA",
-      "v18 R4": "v18 R4",
+      "v18 R6 BETA": "v18 R6 BETA",
+      "v18 R5": "v18 R5",
       "v18": "v18"
     },
     "categories": {
@@ -797,17 +857,21 @@
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
       "Access Rights": "Droits d'accès",
+      "Preferences": "Preferences",
       "Administration": "Administration",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
+      "Web Development": "Web Development",
       "REST Server": "Serveur REST",
+      "Client/Server": "Client/Server",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
-      "Menus": "Menus"
+      "Menus": "Menus",
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
@@ -824,21 +888,26 @@
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Serveur Web",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
     "License Management|no description given": "Gestion des licences",
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",
     "Web applications|no description given": "Applications Web",
     "Mobile applications|no description given": "Applications Mobile",
     "Desktop applications|no description given": "Applications Desktop",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"

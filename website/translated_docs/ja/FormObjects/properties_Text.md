@@ -472,7 +472,7 @@ End case
   JSON 文法
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -532,7 +532,7 @@ End case
   テキストエリアの角度 (回転) を変更します。 テキストエリアは、90°単位で回転させることができます。 それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
 </p>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       回転角度
@@ -597,7 +597,7 @@ End case
   JSON 文法
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -668,7 +668,7 @@ End case
   JSON 文法
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -740,7 +740,7 @@ End case
   JSON 文法
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -823,7 +823,7 @@ End case
   JSON 文法
 </h4>
 
-<table spaces-before="0" line-breaks-before="2">
+<table spaces-before="0">
   <tr>
     <th>
       名

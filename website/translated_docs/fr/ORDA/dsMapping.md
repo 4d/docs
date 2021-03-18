@@ -135,7 +135,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 ### Attribut
 
-Les propriétés de dataclass sont des objets attribut décrivant les champs ou relations sous-jacents. Par exemple:
+Les propriétés de dataclass sont des objets attribut décrivant les champs ou relations sous-jacents. Par exemple :
 
 ```4d 
  $nameAttribute:=ds.Company.name //référence à un attribut de classe

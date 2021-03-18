@@ -5,14 +5,17 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
-      "Admin/building": {
-        "title": "プロジェクトパッケージのビルド"
-      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
+      },
       "Admin/licenses": {
         "title": "4D ライセンスの管理"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
       },
       "Admin/webAdmin": {
         "title": "Web Administration"
@@ -42,7 +45,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Email"
+        "title": "Emails and Attachments"
       },
       "API/entityClass": {
         "title": "エンティティ"
@@ -63,7 +66,7 @@
         "title": "IMAPTransporter"
       },
       "API/overview": {
-        "title": "Class API Overview"
+        "title": "クラス API の概要"
       },
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
@@ -194,6 +197,12 @@
       },
       "Concepts/variables": {
         "title": "変数"
+      },
+      "Desktop/building": {
+        "title": "プロジェクトパッケージのビルド"
+      },
+      "Desktop/clientServer": {
+        "title": "クライアント/サーバー管理"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -385,10 +394,10 @@
         "title": "フォームエディター"
       },
       "FormEditor/forms": {
-        "title": "About 4D Forms"
+        "title": "4D フォームについて"
       },
       "FormEditor/macros": {
-        "title": "Form Editor Macros"
+        "title": "フォームエディターマクロ"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -400,10 +409,10 @@
         "title": "動作"
       },
       "FormEditor/propertiesForm": {
-        "title": "Form Properties"
+        "title": "フォームプロパティ"
       },
       "FormEditor/formSize": {
-        "title": "Form Size"
+        "title": "フォームサイズ"
       },
       "FormEditor/jsonReference": {
         "title": "JSON プロパティリスト"
@@ -418,7 +427,7 @@
         "title": "印刷"
       },
       "FormEditor/windowSize": {
-        "title": "Window Size"
+        "title": "ウィンドウサイズ"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -640,6 +649,9 @@
         "title": "検査ページ",
         "sidebar_label": "検査ページ"
       },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
       "ORDA/dsmapping": {
         "title": "データモデルオブジェクト"
       },
@@ -656,19 +668,34 @@
         "title": "ORDAとは何か"
       },
       "ORDA/quickTour": {
-        "title": "A Quick Tour in ORDA"
+        "title": "ORDA の概要"
       },
       "ORDA/datastores": {
         "title": "リモートデータストアの利用"
+      },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "概要"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
       },
       "Project/architecture": {
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/creating": {
-        "title": "プロジェクトの作成・開始"
-      },
-      "Project/developing": {
-        "title": "プロジェクトの開発"
+        "title": "プロジェクトを開発する"
       },
       "Project/documentation": {
         "title": "ドキュメンテーション"
@@ -755,7 +782,7 @@
         "title": "ユーザーとセッション"
       },
       "REST/classFunctions": {
-        "title": "Calling ORDA class functions"
+        "title": "ORDAクラス関数の呼び出し"
       },
       "REST/configuration": {
         "title": "サーバー設定"
@@ -772,22 +799,55 @@
       "REST/REST_requests": {
         "title": "RESTリクエストについて"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "4Dユーザー＆グループの管理"
       },
       "Users/overview": {
         "title": "概要"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "はじめに"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
       "WebServer/sessions": {
         "title": "User sessions"
       },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "概要"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "データベース管理"
+      },
+      "WebServer/webServerConfig": {
+        "title": "バックアップ設定"
+      },
       "WebServer/webServerObject": {
-        "title": "Web Server object"
+        "title": "Webサーバーオブジェクト"
       }
     },
     "links": {
-      "v18 R5 BETA": "v18 R5 BETA",
-      "v18 R4": "v18 R4",
+      "v18 R6 BETA": "v18 R6 BETA",
+      "v18 R5": "v18 R5",
       "v18": "v18"
     },
     "categories": {
@@ -797,17 +857,21 @@
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
       "Access Rights": "アクセス権限",
+      "Preferences": "Preferences",
       "Administration": "データベース管理",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
       "Web Server": "Web サーバー",
+      "Web Development": "Web Development",
       "REST Server": "REST サーバー",
-      "Forms": "Forms",
-      "Form Properties": "Form Properties",
+      "Client/Server": "クライアント/サーバー",
+      "Forms": "フォーム",
+      "Form Properties": "フォームプロパティ",
       "Form Objects": "フォームオブジェクト",
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
-      "Menus": "メニュー"
+      "Menus": "メニュー",
+      "Build application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
@@ -817,28 +881,33 @@
     "Project Management|in index page Getting started": "プロジェクト管理",
     "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
     "Class API Reference|no description given": "クラス API リファレンス",
-    "Forms|no description given": "Forms",
-    "Form Properties|no description given": "Form Properties",
+    "Forms|no description given": "フォーム",
+    "Form Properties|no description given": "フォームプロパティ",
     "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
     "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
     "Menus|no description given": "メニュー",
     "Web Server|no description given": "Web サーバー",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
     "License Management|no description given": "ライセンス管理",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "クライアント/サーバー",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "データベース管理",
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

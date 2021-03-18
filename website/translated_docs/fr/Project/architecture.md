@@ -3,7 +3,7 @@ id: architecture
 title: Architecture of a project
 ---
 
-Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de l'application (dossier package). Par exemple:
+Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de l'application (dossier package). Par exemple :
 
 - MonProjet
     - Composants
@@ -45,7 +45,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 Le fichier de développement de projet, utilisé pour désigner et lancer le projet. Ce fichier peut être ouvert par :
 
 - 4D
-- 4D Server (lecture seule, voir [Développer un projet](developing.md))
+- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
 
 > Dans les projets 4D, le développement est réalisé avec 4D et le développement multi-utilisateurs est géré par des outils de contrôle de version. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
 
@@ -196,24 +196,24 @@ Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour 
 
 ## Dossier userPreferences.*userName*
 
-Ce dossier contient des fichiers qui mémorisent les configurations utilisateur, par exemple la position des points de rupture. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
+This folder contains files that memorize user configurations, e.g. break point or window positions. Vous pouvez simplement ignorer ce dossier. Il contient par exemple :
 
-| Contenu                      | Description                                                           | Format |
-| ---------------------------- | --------------------------------------------------------------------- | ------ |
-| methodPreferences.json       | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
-| methodWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
-| formWindowPositions.json     | Position de la fenêtre de l'utilisateur courant pour les formulaires  | JSON   |
-| workspace.json               | Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets | JSON   |
-| debuggerCatches.json         | Appels vers commandes                                                 | JSON   |
-| recentTables.json            | Liste ordonée de tables                                               | JSON   |
-| preferencesv15.4DPreferences | Préférences utilisateur                                               | JSON   |
+| Contenu                    | Description                                                           | Format |
+| -------------------------- | --------------------------------------------------------------------- | ------ |
+| methodPreferences.json     | Préférences de l'éditeur de méthodes de l'utilisateur courant         | JSON   |
+| methodWindowPositions.json | Position de la fenêtre de l'utilisateur courant pour les méthodes     | JSON   |
+| formWindowPositions.json   | Position de la fenêtre de l'utilisateur courant pour les formulaires  | JSON   |
+| workspace.json             | Liste de fenêtres ouvertes : sous macOS, ordre des fenêtres à onglets | JSON   |
+| debuggerCatches.json       | Appels vers commandes                                                 | JSON   |
+| recentTables.json          | Liste ordonée de tables                                               | JSON   |
+| preferences.4DPreferences  | Current data path and main window positions                           | XML    |
 
 
 ## Dossier Components
 
 Ce dossier contient les composants disponibles dans le projet d'application uniquement. Il doit être stocké au même niveau que le dossier Project.
 
-> Une application projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components du projet hôte. - à des fins de déploiement : [créer le composant](Admin/building.md#build-component) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de l'application hôte.
+> Une application projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components du projet hôte. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## Dossier Plugins

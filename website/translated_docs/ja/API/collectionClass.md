@@ -1,6 +1,6 @@
 ---
 id: collectionClass
-title: コレクション
+title: Collection
 ---
 
 
@@ -22,7 +22,7 @@ A collection is initialized with:
 ```
 
 
-### Summary
+### 概要
 
 
 |                                                                                                                                                                                                  |

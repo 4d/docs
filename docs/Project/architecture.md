@@ -45,7 +45,7 @@ The Project folder typically contains the following hierarchy:
 Project development file, used to designate and launch the project. This file can be opened by:
 
 - 4D
-- 4D Server (read-only, see [Developing a project](developing.md))
+- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
 
 > In 4D projects, development is done with 4D and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
 
@@ -197,7 +197,7 @@ BuildApp.4DSettings|Build settings file, created automatically when using the ap
 
 ## userPreferences.*userName* folder
 
-This folder contains files that memorize user configurations, e.g. break point positions. You can just ignore this folder. It contains for example:
+This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
 
 Contents|Description|Format
 --------|-------|----
@@ -207,7 +207,7 @@ formWindowPositions.json|Current user window positions for forms|JSON
 workspace.json|List of opened windows; on macOS, order of tab windows|JSON
 debuggerCatches.json|Caught calls to commands|JSON
 recentTables.json|Ordered list of tables|JSON
-preferencesv15.4DPreferences|User preferences|JSON  
+preferences.4DPreferences|Current data path and main window positions|XML  
 
 
 ## Components folder
@@ -216,7 +216,7 @@ This folder contains the components to be available in the application project o
 
 > An application project can be used itself as a component:
 > - for development: put an alias of the .4dproject file in the Components folder of the host project.
-> - for deployment: [build the component](Admin/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application. 
+> - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application. 
 
 
 ## Plugins folder

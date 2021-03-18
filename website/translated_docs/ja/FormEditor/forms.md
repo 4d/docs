@@ -1,10 +1,10 @@
 ---
 id: forms
-title: About 4D Forms
+title: 4D フォームについて
 ---
 
 
-Forms provide the interface through which information is entered, modified, and printed in a desktop application. Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
+フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。 Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
 
 ![](assets/en/FormObjects/form1.png)
 
