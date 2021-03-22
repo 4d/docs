@@ -204,22 +204,27 @@ Available media features:
 
 Available media feature expressions:
 
-*   **light**<br>For using a light theme
-*   **dark**<br>For using a dark theme
-> Media queries are case-insensitive.
+*   **light**<br>For using a light scheme
+*   **dark**<br>For using a dark scheme
+
+> Color schemes are only supported on macOS.
 
 ##### Exemple
 
+This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+
 ```
- .textTheme {
-  fill: white;
-  stroke: black;
+@media (prefers-color-scheme: light) {
+ .textScheme {
+   fill: LightGrey;
+   stroke: Black;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  .textTheme {
-    fill: black;
-    stroke: white;
+  .textScheme {
+    fill: DarkSlateGray;
+    stroke: LightGrey;
   }
 }
 ```
@@ -228,31 +233,31 @@ Available media feature expressions:
 ### Object Attributes
 
 La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
-    - "method"
-    - "type"
-    - "type"
-    - "class"
-    - choiceList, excludedList, labels, list, requiredList (type liste)
+    - `method`
+    - `type`
+    - `class`
+    - `event`
+    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
-Les attributs d'objet formulaire peuvent être déclarés avec leur nom JSON en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes). Pour plus d'informations, voir la page **Formulaires dynamiques** dans le manuel du mode Développement.
+Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
 #### Mappage d'attributs
 
 Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 
-| 4D             | CSS              |
-| -------------- | ---------------- |
-| borderStyle    | border-style     |
-| border-style   | background-color |
-| fontFamily     | font-family      |
-| fontSize       | font-size        |
-| fontStyle      | font-style       |
-| fontWeight     | font-weight      |
-| stroke         | color            |
-| textAlign      | text-align       |
-| textDecoration | text-decoration  |
-| verticalAlign  | vertical-align   |
-> Les valeurs spécifiques à 4D (*ex :* "enfoncées") ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
+| 4D               | CSS                |
+| ---------------- | ------------------ |
+| `borderStyle`    | `border-style`     |
+| `border-style`   | `background-color` |
+| `fontFamily`     | `font-family`      |
+| `fontSize`       | `font-size`        |
+| `fontStyle`      | `font-style`       |
+| `fontWeight`     | `font-weight`      |
+| `stroke`         | `color`            |
+| `textAlign`      | `text-align`       |
+| `textDecoration` | `text-decoration`  |
+| `verticalAlign`  | `vertical-align`   |
+> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
 
 
 #### Valeurs d'attributs spécifiques

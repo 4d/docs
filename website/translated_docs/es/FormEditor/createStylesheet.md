@@ -204,22 +204,27 @@ Available media features:
 
 Available media feature expressions:
 
-*   **light**<br>For using a light theme
-*   **dark**<br>For using a dark theme
-> Media queries are case-insensitive.
+*   **light**<br>For using a light scheme
+*   **dark**<br>For using a dark scheme
+
+> Color schemes are only supported on macOS.
 
 ##### Example
 
+This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+
 ```
- .textTheme {
-  fill: white;
-  stroke: black;
+@media (prefers-color-scheme: light) {
+ .textScheme {
+   fill: LightGrey;
+   stroke: Black;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  .textTheme {
-    fill: black;
-    stroke: white;
+  .textScheme {
+    fill: DarkSlateGray;
+    stroke: LightGrey;
   }
 }
 ```
@@ -228,31 +233,31 @@ Available media feature expressions:
 ### Object Attributes
 
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
-    - "method"
-    - "type"
-    - "class"
-    - "event"
-    - choiceList, excludedList, labels, list, requiredList (list type)
+    - `method`
+    - `type`
+    - `class`
+    - `event`
+    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
-Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
+Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
 #### Attribute Mapping
 
 The attributes listed below are able to accept either the 4D name or the CSS name.
 
-| 4D             | CSS              |
-| -------------- | ---------------- |
-| borderStyle    | border-style     |
-| fill           | background-color |
-| fontFamily     | font-family      |
-| fontSize       | font-size        |
-| fontStyle      | font-style       |
-| fontWeight     | font-weight      |
-| stroke         | color            |
-| textAlign      | text-align       |
-| textDecoration | text-decoration  |
-| verticalAlign  | vertical-align   |
-> 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
+| 4D               | CSS                |
+| ---------------- | ------------------ |
+| `borderStyle`    | `border-style`     |
+| `fill`           | `background-color` |
+| `fontFamily`     | `font-family`      |
+| `fontSize`       | `font-size`        |
+| `fontStyle`      | `font-style`       |
+| `fontWeight`     | `font-weight`      |
+| `stroke`         | `color`            |
+| `textAlign`      | `text-align`       |
+| `textDecoration` | `text-decoration`  |
+| `verticalAlign`  | `vertical-align`   |
+> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
 
 
 #### Specific Attribute Values
