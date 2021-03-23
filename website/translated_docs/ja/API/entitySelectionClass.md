@@ -590,12 +590,12 @@ The `.distinct()` function <!-- REF #entitySelectionClass.distinct().Summary -->
 
 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
-In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* is an object attribute that contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* is an object attribute that contains values of different types, they are first grouped by type and sorted afterwards. 型は以下の順番で返されます:
 
-1.  booleans
-2.  strings
-3.  numbers
-4.  dates
+1.  ブール
+2.  文字列
+3.  数値
+4.  日付
 
 デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
 
@@ -1308,7 +1308,7 @@ If the original entity selection and the parameter are not related to the same d
 | 参照          | タイプ                |    | 説明                                                                    |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
 | pathString  | テキスト               | -> | Attribute path(s) and sorting instruction(s) for the entity selection |
-| pathObjects | コレクション             | -> | Collection of criteria objects                                        |
+| pathObjects | コレクション             | -> | 条件オブジェクトのコレクション                                                       |
 | 戻り値         | 4D.EntitySelection | <- | New entity selection in the specified order                           |
 <!-- END REF -->
 
@@ -1326,7 +1326,7 @@ You must use a criteria parameter to define how the entities must be sorted. Two
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
 ```
 
-The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
+The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. 並び順を設定するには、プロパティパスの後に半角スペースで区切ったあとに、昇順を指定するには "asc"、降順を指定するには "desc" を渡します。
 
 *   *pathObjects* (collection): each element of the collection contains an object structured in the following way:
 
