@@ -674,7 +674,7 @@ If no matching entities are found, an empty `EntitySelection` is returned.
 
 **queryString parameter**
 
-The *queryString* parameter uses the following syntax:
+*queryString* 引数には、以下のシンタックスを使用します:
 
 ```4d
 attributePath|formula comparator value   
