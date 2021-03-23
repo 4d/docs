@@ -726,7 +726,7 @@ By default, entities for which *attributePath* is *null* or undefined are ignore
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-With this syntax, `.extract()` populates the returned collection with the *attributePath* properties. Each element of the returned collection is an object with *targetPath* properties filled with the corresponding *attributePath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+With this syntax, `.extract()` populates the returned collection with the *attributePath* properties. Each element of the returned collection is an object with *targetPath* properties filled with the corresponding *attributePath* properties. Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
 If several *attributePath* are given, a *targetPath* must be given for each. Only valid pairs \[*attributePath*, *targetPath*] are extracted.
 
@@ -1689,7 +1689,7 @@ A list box displays the Form.students entity selection and several clients work 
 | 参照        | タイプ                |    | 説明                                                             |
 | --------- | ------------------ |:--:| -------------------------------------------------------------- |
 | startFrom | 整数                 | -> | Index to start the operation at (included)                     |
-| end       | 整数                 | -> | End index (not included)                                       |
+| end       | 整数                 | -> | 終了インデックス (含まれない)                                               |
 | 戻り値       | 4D.EntitySelection | <- | New entity selection containing sliced entities (shallow copy) |
 <!-- END REF -->
 
