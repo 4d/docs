@@ -884,18 +884,18 @@ End if
 
 
 <!-- REF #collection.extract().Params -->
-| 参照           | タイプ    |    | 説明                                                                                                                                 |
-| ------------ | ------ |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
-| propertyPath | テキスト   | -> | 新しいコレクションに抽出する値のオブジェクトプロパティパス                                                                                                      |
-| targetpath   | テキスト   | -> | 抽出先のプロパティパスあるいはプロパティ名                                                                                                              |
-| option       | 整数     | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
-| 戻り値          | コレクション | <- | New collection containing extracted values                                                                                         |
+| 参照           | タイプ    |    | 説明                                                                                              |
+| ------------ | ------ |:--:| ----------------------------------------------------------------------------------------------- |
+| propertyPath | テキスト   | -> | 新しいコレクションに抽出する値のオブジェクトプロパティパス                                                                   |
+| targetpath   | テキスト   | -> | 抽出先のプロパティパスあるいはプロパティ名                                                                           |
+| option       | 整数     | -> | `ck keep null`: 返されるコレクションに null プロパティを含めます (デフォルトでは無視されます)。 *targetPath* を渡した場合には、この引数は無視されます。 |
+| 戻り値          | コレクション | <- | 抽出した値を格納した新しいコレクション                                                                             |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.extract()` function <!-- REF #collection.extract().Summary -->creates and returns a new collection containing *propertyPath* values extracted from the original collection of objects<!-- END REF -->.
+`.extract()` 関数は、 <!-- REF #collection.extract().Summary -->元のオブジェクトのコレクションから、*propertyPath* 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
 The contents of the returned collection depends on the *targetPath* parameter:
