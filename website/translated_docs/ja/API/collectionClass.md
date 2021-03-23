@@ -1671,7 +1671,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 コレクションがオブジェクトを格納している場合には、最大値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
-If the collection is empty, `.max()` returns *Undefined*.
+コレクションが空での場合、 `.max()` は *Undefined* を返します。
 
 #### 例題
 
@@ -1705,23 +1705,23 @@ If the collection is empty, `.max()` returns *Undefined*.
 **.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
-| 参照           | タイプ                          |    | 説明                              |
-| ------------ | ---------------------------- |:--:| ------------------------------- |
-| propertyPath | テキスト                         | -> | 評価するオブジェクトプロパティのパス              |
-| 戻り値          | ブール、テキスト、数値、オブジェクト、コレクション、日付 | <- | Minimum value in the collection |
+| 参照           | タイプ                          |    | 説明                 |
+| ------------ | ---------------------------- |:--:| ------------------ |
+| propertyPath | テキスト                         | -> | 評価するオブジェクトプロパティのパス |
+| 戻り値          | ブール、テキスト、数値、オブジェクト、コレクション、日付 | <- | コレクション内の最小値        |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.min()` function <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+`.min()` 関数は、 <!-- REF #collection.min().Summary -->コレクション内の最小値を持つ要素を返します<!-- END REF --> ([`.sort()`](#sort) 関数を使用して昇順に並べ替えたときのコレクションの先頭の要素が最小値の要素です)。
 > このコマンドは、元のコレクションを変更しません。
 
-If the collection contains different types of values, the `.min()` function will return the minimum value within the first element type in the type list order (see [`.sort()`](#sort) description).
+コレクションが異なる型の値を格納している場合、`.min()` 関数は型のリスト順の、最初の型の最小値を返します ([`.sort()`](#sort) 参照)。
 
-If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose minimum value you want to get.
+コレクションがオブジェクトを格納している場合には、最小値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
-If the collection is empty, `.min()` returns *Undefined*.
+コレクションが空での場合、 `.min()` は *Undefined* を返します。
 
 #### 例題
 
@@ -1756,57 +1756,57 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
-| 参照          | タイプ    |    | 説明                                                |
-| ----------- | ------ |:--:| ------------------------------------------------- |
-| pathStrings | テキスト   | -> | Property path(s) on which to order the collection |
-| pathObjects | コレクション | -> | Collection of criteria objects                    |
-| ascOrDesc   | 整数     | -> | `ck ascending` or `ck descending` (scalar values) |
-| 戻り値         | コレクション | <- | Ordered copy of the collection (shallow copy)     |
+| 参照          | タイプ    |    | 説明                                         |
+| ----------- | ------ |:--:| ------------------------------------------ |
+| pathStrings | テキスト   | -> | コレクションの並べ替え基準とするプロパティパス                    |
+| pathObjects | コレクション | -> | 条件オブジェクトのコレクション                            |
+| ascOrDesc   | 整数     | -> | `ck ascending` または `ck descending` (スカラー値) |
+| 戻り値         | コレクション | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー)               |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
+`.orderBy()` 関数は、 <!-- REF #collection.orderBy().Summary -->コレクションの要素を指定順に並べ替えた新しいコレクションを返します<!-- END REF -->。
 
-This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+この関数は *シャロウ・コピー* を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
-If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned unordered). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
+引数を渡さなかった場合、メソッドはコレクション内のスカラー値を昇順に並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。 この自動並べ替え順は、*ascOrDesc* パラメーターに `ck ascending` あるいは `ck descending` 定数を渡すことで変更できます (以下参照)。
 
-You can also pass a criteria parameter to define how the collection elements must be sorted. Three syntaxes are supported for this parameter:
+また、引数を渡すことで、コレクション要素をどのように並べ替えるかを指定することもできます。 次の 3つのシンタックスがサポートされています:
 
-*   *pathStrings* : Text (formula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. The order in which the properties are passed determines the sorting priority of the collection elements. By default, properties are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
+*   *pathStrings* : Text (フォーミュラ)。 **シンタックス**: `propertyPath1 {desc または asc}, propertyPath2 {desc または asc},...` (デフォルトの並び順: asc)。 *pathStrings* はカンマで区切られた、1〜n のプロパティパスと並び順 (任意) で構成されたフォーミュラを格納します。 プロパティを渡す順番が、コレクション要素の並べ替えの優先順位を決定します。 デフォルトでは、プロパティは昇順に並べ替えられます。 並び順を設定するには、プロパティパスの後に半角スペースで区切ったあとに、昇順を指定するには "asc"、降順を指定するには "desc" を渡します。
 
-*   *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:
+*   *pathObjects* : Collection。 *pathObjects* コレクションには必要な数だけオブジェクトを追加することができます。 デフォルトでは、プロパティは昇順に並べ替えられます ("descending" は false)。 コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
 
 ```4d
     {"*propertyPath*": string,
     "*descending*": boolean}  
 ```
 
-*   *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
+*   *ascOrDesc* : Integer。 **Objects and collections** テーマから、以下の定数のいずれか一つを渡します:
 
-    | 定数            | タイプ  | 結果 | 説明                                                |
-    | ------------- | ---- | -- | ------------------------------------------------- |
-    | ck ascending  | 倍長整数 | 0  | Elements are ordered in ascending order (default) |
-    | ck descending | 倍長整数 | 1  | Elements are ordered in descending order          |
+    | 定数            | タイプ  | 結果 | 説明                   |
+    | ------------- | ---- | -- | -------------------- |
+    | ck ascending  | 倍長整数 | 0  | 要素は昇順に並べられます (デフォルト) |
+    | ck descending | 倍長整数 | 1  | 要素は降順に並べられます         |
 
-    This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+    このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。
 
-If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
 1.  null
-2.  booleans
-3.  strings
-4.  numbers
-5.  objects
-6.  collections
-7.  dates
+2.  ブール
+3.  文字列
+4.  数値
+5.  オブジェクト
+6.  コレクション
+7.  日付
 
 #### 例題 1
 
-Ordering a collection of numbers in ascending and descending order:
+数値のコレクションを昇順および降順に並べ替えます:
 
 ```4d
  var $c; $c2; $3 : Collection 
@@ -1821,7 +1821,7 @@ Ordering a collection of numbers in ascending and descending order:
 
 #### 例題 2
 
-Ordering a collection of objects based on a text formula with property names:
+オブジェクトのコレクションを、テキストフォーミュラに指定したプロパティ名に基づいて並べ替えます:
 
 ```4d
  var $c; $c2 : Collection
@@ -1834,7 +1834,7 @@ Ordering a collection of objects based on a text formula with property names:
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Ordering a collection of objects with a property path:
+オブジェクトのコレクションをプロパティパスで並べ替えます:
 
 ```4d
  var $c; $c2 : Collection
@@ -1848,10 +1848,10 @@ Ordering a collection of objects with a property path:
 
 #### 例題 3
 
-Ordering a collection of objects using a collection of criteria objects:
+オブジェクトのコレクションを、*pathObjects* コレクションを使用して並べ替えます:
 
 ```4d
- var $crit; $c; $c2 : COllection
+ var $crit; $c; $c2 : Collection
  $crit:=New collection
  $c:=New collection
  For($vCounter;1;10)
@@ -1862,7 +1862,7 @@ Ordering a collection of objects using a collection of criteria objects:
  $c2:=$c.orderBy($crit)
 ```
 
-Ordering with a property path:
+プロパティパスで並べ替えます:
 
 ```4d
  var $crit; $c; $c2 : Collection
@@ -1906,7 +1906,7 @@ Ordering with a property path:
 
 The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *methodName* method<!-- END REF -->.
 
-This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+この関数は *シャロウ・コピー* を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
@@ -2666,15 +2666,15 @@ If you want to sort the collection elements in some other order or sort any type
 *methodName* sets the following parameter:
     *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
 
-If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
 1.  null
-2.  booleans
-3.  strings
-4.  numbers
-5.  objects
-6.  collections
-7.  dates
+2.  ブール
+3.  文字列
+4.  数値
+5.  オブジェクト
+6.  コレクション
+7.  日付
 
 #### 例題 1
 
