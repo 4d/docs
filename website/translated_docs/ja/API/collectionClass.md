@@ -1286,28 +1286,28 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 **.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.indexOf().Params -->
-| 参照        | タイプ        |    | 説明                                                                           |
-| --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
-| toSearch  | expression | -> | Expression to search in the collection                                       |
-| startFrom | 整数         | -> | 検索を開始するインデックス                                                                |
-| 戻り値       | 整数         | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
+| 参照        | タイプ |    | 説明                                        |
+| --------- | --- |:--:| ----------------------------------------- |
+| toSearch  | 式   | -> | コレクション内を検索する式                             |
+| startFrom | 整数  | -> | 検索を開始するインデックス                             |
+| 戻り値       | 整数  | <- | 最初に見つかった toSearch のインデックス。見つからなかった場合には -1 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
+`.indexOf()` 関数は、 <!-- REF #collection.indexOf().Summary -->*toSearch* 引数の式をコレクション要素の中から検索し、最初に見つかった要素のインデックス (見つからなかった場合には -1) を返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-In *toSearch*, pass the expression to find in the collection. You can pass:
+*toSearch* パラメーターには、コレクション内で検索する式を渡します。 以下のものを渡すことができます:
 
 *   スカラー値 (テキスト、数値、ブール、日付)
-*   the null value,
+*   null 値
 *   オブジェクトあるいはコレクションの参照
 
-*toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
+*toSearch* 引数は検出すべき要素と完全に一致している必要があります (等号演算子と同じルールが適用されます)。
 
-Optionally, you can pass the index of collection from which to start the search in *startFrom*.
+オプションとして、*startFrom* 引数を渡すことで、検索を開始するコレクション要素のインデックスを指定することができます。
 
 *   *startFrom* がコレクションの length 以上だった場合、-1 が返されます。これはコレクションが検索されていないことを意味します。
 *   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。 **注:** *startFrom* が負の値であっても、コレクションは左から右へと検索されます。
@@ -1346,26 +1346,26 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 <!-- REF #collection.indices().Params -->
-| 参照          | タイプ    |    | 説明                                                       |
-| ----------- | ------ |:--:| -------------------------------------------------------- |
-| queryString | テキスト   | -> | Search criteria                                          |
-| value       | any    | -> | Value(s) to compare when using placeholder(s)            |
-| 戻り値         | コレクション | <- | Element index(es) matching queryString in the collection |
+| 参照          | タイプ    |    | 説明                               |
+| ----------- | ------ |:--:| -------------------------------- |
+| queryString | テキスト   | -> | 検索条件                             |
+| value       | any    | -> | プレースホルダー使用時: 比較する値               |
+| 戻り値         | コレクション | <- | queryString に合致するコレクション要素のインデックス |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
+`.indices()` 関数は [`.query()`](#query) 関数と同様に機能しますが、 <!-- REF #collection.indices().Summary -->*queryString* 引数の検索条件に合致する、元のコレクション要素のインデックスを返します<!-- END REF -->(コレクション要素自体は返しません)。 インデックスは、昇順に返されます。
 > このコマンドは、元のコレクションを変更しません。
 
-The *queryString* parameter uses the following syntax:
+*queryString* 引数には、以下のシンタックスを使用します:
 
 ```4d
-propertyPath comparator value {logicalOperator propertyPath comparator value}
+propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 値}
 ```
 
-For a detailed description of the *queryString* and *value* parameters, please refer to the `dataClass.query()` function.
+*queryString* および *value* パラメーターの詳細については、[`dataClass.query()`](dataclassClass.md#query) 関数を参照ください。
 
 #### 例題
 
@@ -1401,27 +1401,27 @@ For a detailed description of the *queryString* and *value* parameters, please r
 **.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
 <!-- REF #collection.insert().Params -->
-| 参照      | タイプ    |    | 説明                                              |
-| ------- | ------ |:--:| ----------------------------------------------- |
-| index   | 整数     | -> | Where to insert the element                     |
-| element | any    | -> | Element to insert in the collection             |
-| 戻り値     | コレクション | <- | Original collection containing inserted element |
+| 参照      | タイプ    |    | 説明               |
+| ------- | ------ |:--:| ---------------- |
+| index   | 整数     | -> | 要素の挿入位置          |
+| element | any    | -> | コレクションに挿入する要素    |
+| 戻り値     | コレクション | <- | 要素の挿入された元のコレクション |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
+`.insert()` 関数は、 <!-- REF #collection.insert().Summary --> *index* で指定したコレクションインスタンスの位置に *element* 要素を挿入し、変更された元のコレクションを返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更します。
 
-In *index*, pass the position where you want the element to be inserted in the collection.
+*index* パラメーターには、コレクション内で要素を挿入する位置を渡します。
 > **警告**: コレクション要素は 0 起点である点に注意してください。
 
-*   If *index* > the length of the collection, actual starting index will be set to the length of the collection.
-*   If *index* <0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value is negative, index is set to 0.
+*   指定した *index* がコレクションの length より大きい場合、実際の開始インデックスはコレクションの length に設定されます。
+*   *index* < 0 の場合、*index:=index+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
+*   計算結果も負の値である場合、index は 0 に設定されます。
 
-Any type of element accepted by a collection can be inserted, even another collection.
+コレクションが受け入れるものであれば、どんな型の要素も (たとえば他のコレクションでも) 挿入可能です。
 
 #### 例題
 
@@ -1452,20 +1452,20 @@ Any type of element accepted by a collection can be inserted, even another colle
 **.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
 <!-- REF #collection.join().Params -->
-| 参照        | タイプ  |    | 説明                                                                       |
-| --------- | ---- |:--:| ------------------------------------------------------------------------ |
-| delimiter | テキスト | -> | Separator to use between elements                                        |
-| option    | 整数   | -> | `ck ignore null or empty`: ignore null and empty strings in the result   |
-| 戻り値       | テキスト | <- | String containing all elements of the collection, separated by delimiter |
+| 参照        | タイプ  |    | 説明                                               |
+| --------- | ---- |:--:| ------------------------------------------------ |
+| delimiter | テキスト | -> | 要素間に用いる区切り文字                                     |
+| option    | 整数   | -> | `ck ignore null or empty`: 戻り値に null と空の文字列を含めない |
+| 戻り値       | テキスト | <- | 区切り文字を使ってコレクションの全要素をつなげた文字列                      |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.join()` function <!-- REF #collection.join().Summary -->converts all elements of the collection to strings and concatenates them using the specified *delimiter* string as separator<!-- END REF -->.The function returns the resulting string.
+`.join()` 関数は、 <!-- REF #collection.join().Summary -->*delimiter* に渡した文字列を区切り文字として、コレクションの全要素を一つの文字列につなげます<!-- END REF -->。戻り値はつなげられた文字列です。
 > このコマンドは、元のコレクションを変更しません。
 
-By default, null or empty elements of the collection are returned in the resulting string. Pass the `ck ignore null or empty` constant in the *option* parameter if you want to remove them from the resulting string.
+デフォルトで、コレクションの null あるいは空の要素も戻り値の文字列に含めます。 これらを戻り値の文字列に含めたくない場合は、*option* パラメーターに `ck ignore null or empty` 定数を渡します。
 
 #### 例題
 
@@ -1496,32 +1496,32 @@ By default, null or empty elements of the collection are returned in the resulti
 **.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.lastIndexOf().Params -->
-| 参照        | タイプ        |    | 説明                                                                      |
-| --------- | ---------- |:--:| ----------------------------------------------------------------------- |
-| toSearch  | expression | -> | The element that is to be searched for within the collection            |
-| startFrom | 整数         | -> | 検索を開始するインデックス                                                           |
-| 戻り値       | 整数         | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
+| 参照        | タイプ |    | 説明                                        |
+| --------- | --- |:--:| ----------------------------------------- |
+| toSearch  | 式   | -> | コレクション内を検索する要素                            |
+| startFrom | 整数  | -> | 検索を開始するインデックス                             |
+| 戻り値       | 整数  | <- | 最後に見つかった toSearch のインデックス。見つからなかった場合には -1 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
+`.lastIndexOf()` 関数は、 <!-- REF #collection.lastIndexOf().Summary -->*toSearch* 引数の式をコレクション要素の中から検索し、最後に見つかった要素のインデックス (見つからなかった場合には -1) を返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-In *toSearch*, pass the expression to find in the collection. You can pass:
+*toSearch* パラメーターには、コレクション内で検索する式を渡します。 以下のものを渡すことができます:
 
 *   スカラー値 (テキスト、数値、ブール、日付)
-*   the null value,
+*   null 値
 *   オブジェクトあるいはコレクションの参照
 
-*toSearch* must match exactly the element to find (the same rules as for the equality operator are applied).
+*toSearch* 引数は検出すべき要素と完全に一致している必要があります (等号演算子と同じルールが適用されます)。
 
-Optionally, you can pass the index of collection from which to start a reverse search in *startFrom*.
+オプションとして、*startFrom* 引数を渡すことで、逆順検索を開始するコレクション要素のインデックスを指定することができます。
 
-*   If *startFrom* >= the collection's length minus one (coll.length-1), the whole collection is searched (default).
-*   *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
-*   If *startFrom* = 0, -1 is returned, which means the collection is not searched.
+*   *startFrom* が、コレクションの length から 1を引いた数字 (coll.length-1) 以上の場合、コレクション全体が検索されます (デフォルト)。
+*   *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 計算結果も負の値である場合、-1 が返されます。これはコレクションが検索されていないことを意味します。 **注:** *startFrom* が負の値であっても、コレクションは右から左へと検索されます。
+*   *startFrom* = 0 の場合、-1 が返されます。これはコレクションが検索されていないことを意味します。
 
 #### 例題
 
@@ -1530,11 +1530,11 @@ Optionally, you can pass the index of collection from which to start a reverse s
  var $col : Collection
  var $pos1;$pos2;$pos3;$pos4;$pos5 : Integer 
  $col:=Split string("a,b,c,d,e,f,g,h,i,j,e,k,e";",") //$col.length=13
- $pos1:=$col.lastIndexOf("e") //returns 12
- $pos2:=$col.lastIndexOf("e";6) //returns 4
- $pos3:=$col.lastIndexOf("e";15) //returns 12
- $pos4:=$col.lastIndexOf("e";-2) //returns 10
- $pos5:=$col.lastIndexOf("x") //returns -1
+ $pos1:=$col.lastIndexOf("e") // 戻り値: 12
+ $pos2:=$col.lastIndexOf("e";6) // 戻り値: 4
+ $pos3:=$col.lastIndexOf("e";15) // 戻り値: 12
+ $pos4:=$col.lastIndexOf("e";-2) // 戻り値: 10
+ $pos5:=$col.lastIndexOf("x") // 戻り値: -1
 ``` 
 
 <!-- END REF -->
@@ -1558,17 +1558,17 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 #### 説明
 
-The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
+`.length` プロパティは、 <!-- REF #collection.length.Summary -->コレクション内の要素数を返します<!-- END REF -->。
 
-The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
+`.length` プロパティは、コレクション作成時に初期化されます。 要素を追加・削除すると、必要に応じて length は更新されます。 このプロパティは **読み取り専用** です (これを使用してコレクションのサイズを設定することはできません)。
 
 #### 例題
 
 ```4d
- var $col : Collection //$col.length initialized to 0
- $col:=New collection("one";"two";"three") //$col.length updated to 3
- $col[4]:="five" //$col.length updated to 5
- $vSize:=$col.remove(0;3).length //$vSize=2
+ var $col : Collection // $col.length が 0 に初期化されます
+ $col:=New collection("one";"two";"three") // $col.length が 3 に更新されます
+ $col[4]:="five" // $col.length が 5 に更新されます
+ $vSize:=$col.remove(0;3).length // $vSize=2
 ``` 
 
 <!-- END REF -->
@@ -1894,11 +1894,11 @@ Ordering with a property path:
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| 参照         | タイプ        |    | 説明                                               |
-| ---------- | ---------- |:--:| ------------------------------------------------ |
-| methodName | テキスト       | -> | Name of method used to specify the sorting order |
-| extraParam | expression | -> | Parameter(s) for the method                      |
-| 戻り値        | コレクション     | <- | Sorted copy of the collection (shallow copy)     |
+| 参照         | タイプ    |    | 説明                                               |
+| ---------- | ------ |:--:| ------------------------------------------------ |
+| methodName | テキスト   | -> | Name of method used to specify the sorting order |
+| extraParam | 式      | -> | Parameter(s) for the method                      |
+| 戻り値        | コレクション | <- | Sorted copy of the collection (shallow copy)     |
 <!-- END REF -->
 
 
@@ -2112,8 +2112,8 @@ You want to sort the resutling collection:
 <!-- REF #collection.query().Params -->
 | 参照            | タイプ    |    | 説明                                                |
 | ------------- | ------ |:--:| ------------------------------------------------- |
-| queryString   | テキスト   | -> | Search criteria                                   |
-| value         | 混合     | -> | Value(s) to compare when using placeholder(s)     |
+| queryString   | テキスト   | -> | 検索条件                                              |
+| value         | 混合     | -> | プレースホルダー使用時: 比較する値                                |
 | querySettings | オブジェクト | -> | Query options: parameters, attributes             |
 | 戻り値           | コレクション | <- | Element(s) matching queryString in the collection |
 <!-- END REF -->
@@ -2124,10 +2124,10 @@ You want to sort the resutling collection:
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
-The *queryString* parameter uses the following syntax:
+*queryString* 引数には、以下のシンタックスを使用します:
 
 ```4d
-propertyPath comparator value {logicalOperator propertyPath comparator value}
+propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 値}
 ```
 
 For detailed information on how to build a query using , value and *querySettings* parameters, please refer to the **dataClass** `.query()` function description.
@@ -2221,7 +2221,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
 | methodName | テキスト                                            | -> | Name of the function to call to process collection elements          |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
-| param      | expression                                      | -> | *methodName* に渡す引数                                                   |
+| param      | 式                                               | -> | *methodName* に渡す引数                                                   |
 | 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
 <!-- END REF -->
 
