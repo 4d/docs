@@ -1590,32 +1590,32 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.map().Params -->
-| 参照         | タイプ    |    | 説明                                                       |
-| ---------- | ------ |:--:| -------------------------------------------------------- |
-| methodName | テキスト   | -> | Name of method used to transform the collection elements |
-| param      | any    | -> | Parameter(s) for the method                              |
-| 戻り値        | コレクション | <- | Collection of transformed values                         |
+| 参照         | タイプ    |    | 説明                       |
+| ---------- | ------ |:--:| ------------------------ |
+| methodName | テキスト   | -> | コレクション要素を変換するのに使用するメソッド名 |
+| param      | any    | -> | methodName に渡す引数         |
+| 戻り値        | コレクション | <- | 変換された値を格納する新しいコレクション     |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
+`.map()` 関数は、 <!-- REF #collection.map().Summary -->元のコレクションの各要素に対して *methodName* メソッドを呼び出した結果に基づいた、新しいコレクションを作成します<!-- END REF -->。 オプションで、*param* パラメーターに、*methodName* に渡す引数を指定することができます。 `.map()` は常に、元のコレクションと同じサイズのコレクションを返します。
 > このコマンドは、元のコレクションを変更しません。
 
-*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* can perform any operation, with or without the parameter(s).
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんな処理でも実行でき、引数はあってもなくても構いません。
 
 *methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   in *$1.value* (any type): element value to be mapped
-*   in *$2* (any type): *param*
-*   in *$N...* (any type): *paramN...*
+*   *$1.value* (どんな型でも可): マップする要素の値
+*   in *$2* (どんな型でも可): *param*
+*   in *$N...* (どんな型でも可): *paramN...*
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
 
-*   *$1.result* (any type): new transformed value to add to the resulting collection
-*   *$1.stop* (boolean): **true** to stop the method callback. 返された値は最後に計算されたものです。
+*   *$1.result* (どんな型でも可): 結果のコレクションに追加する、変換された値
+*   *$1.stop* (ブール): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 #### 例題
 
@@ -1627,7 +1627,7 @@ The `.map()` function <!-- REF #collection.map().Summary -->creates a new collec
   //$c2=[2.27,9.09,20.45,22.73,45.45]
 ```
 
-Here is the ***Percentage*** method:
+***Percentage*** メソッドのコードは以下のとおりです:
 
 ```4d
  var $1 : Object
@@ -1655,21 +1655,21 @@ Here is the ***Percentage*** method:
 **.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.max().Params -->
-| 参照           | タイプ                                             |    | 説明                                             |
-| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
-| propertyPath | テキスト                                            | -> | Object property path to be used for evaluation |
-| 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection                |
+| 参照           | タイプ                          |    | 説明                 |
+| ------------ | ---------------------------- |:--:| ------------------ |
+| propertyPath | テキスト                         | -> | 評価するオブジェクトプロパティのパス |
+| 戻り値          | ブール、テキスト、数値、オブジェクト、コレクション、日付 | <- | コレクション内の最大値        |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+`.max()` 関数は、 <!-- REF #collection.max().Summary -->コレクション内の最大値を持つ要素を返します<!-- END REF --> ([`.sort()`](#sort) 関数を使用して昇順に並べ替えたときのコレクションの最後の要素が最大値の要素です)。
 > このコマンドは、元のコレクションを変更しません。
 
-If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
+コレクションが異なる型の値を格納している場合、`.max()` 関数は型のリスト順の、最後の型の最大値を返します ([`.sort()`](#sort) 参照)。
 
-If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose maximum value you want to get.
+コレクションがオブジェクトを格納している場合には、最大値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
 If the collection is empty, `.max()` returns *Undefined*.
 
@@ -1705,10 +1705,10 @@ If the collection is empty, `.max()` returns *Undefined*.
 **.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
-| 参照           | タイプ                                             |    | 説明                                             |
-| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------- |
-| propertyPath | テキスト                                            | -> | Object property path to be used for evaluation |
-| 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection                |
+| 参照           | タイプ                          |    | 説明                              |
+| ------------ | ---------------------------- |:--:| ------------------------------- |
+| propertyPath | テキスト                         | -> | 評価するオブジェクトプロパティのパス              |
+| 戻り値          | ブール、テキスト、数値、オブジェクト、コレクション、日付 | <- | Minimum value in the collection |
 <!-- END REF -->
 
 
@@ -1897,7 +1897,7 @@ Ordering with a property path:
 | 参照         | タイプ    |    | 説明                                               |
 | ---------- | ------ |:--:| ------------------------------------------------ |
 | methodName | テキスト   | -> | Name of method used to specify the sorting order |
-| extraParam | 式      | -> | Parameter(s) for the method                      |
+| extraParam | 式      | -> | methodName に渡す引数                                 |
 | 戻り値        | コレクション | <- | Sorted copy of the collection (shallow copy)     |
 <!-- END REF -->
 
@@ -2643,7 +2643,7 @@ With the following *NumberGreaterThan0* method:
 | 参照         | タイプ    |    | 説明                                               |
 | ---------- | ------ |:--:| ------------------------------------------------ |
 | methodName | テキスト   | -> | Name of method used to specify the sorting order |
-| extraParam | any    | -> | Parameter(s) for the method                      |
+| extraParam | any    | -> | methodName に渡す引数                                 |
 | 戻り値        | コレクション | <- | Original collection sorted                       |
 <!-- END REF -->
 
