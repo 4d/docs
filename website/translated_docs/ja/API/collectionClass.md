@@ -1016,36 +1016,36 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.filter().Params -->
-| 参照         | タイプ    |    | 説明                                                         |
-| ---------- | ------ |:--:| ---------------------------------------------------------- |
-| methodName | テキスト   | -> | Name of the function to call to filter the collection      |
-| param      | 混合     | -> | Parameter(s) to pass to *methodName*                       |
-| 戻り値        | コレクション | <- | New collection containing filtered elements (shallow copy) |
+| 参照         | タイプ    |    | 説明                                 |
+| ---------- | ------ |:--:| ---------------------------------- |
+| methodName | テキスト   | -> | コレクションをフィルターするために呼び出すメソッド名         |
+| param      | 混合     | -> | *methodName* に渡す引数                 |
+| 戻り値        | コレクション | <- | フィルターされた要素を格納した新しいコレクション(シャロウ・コピー) |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which *methodName* method result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+`.filter()` 関数は、 <!-- REF #collection.filter().Summary -->元のコレクション要素のうち、*methodName* パラメーターに指定したメソッドの結果が **true** になる要素をすべて格納した新しいコレクションを返します<!-- END REF -->。 この関数は ***シャロウ・コピー*** を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
-*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、メソッドの条件を満たして新規コレクションに代入されるべき要素の *$1.result* を **true** に設定しなければなりません。
 
 *methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   in *$1.value*: element value to be filtered
-*   in *$2*: *param*
-*   in *$N...*: param2...paramN
+*   *$1.value*: フィルターする要素の値
+*   *$2*: *param*
+*   *$N...*: param2...paramN
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
-*   *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+*   *$1.result* (ブール): 要素の値がフィルターの条件に合致し、新コレクションに代入すべき場合に **true**
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 
 #### 例題 1
 
-You want to get the collection of text elements whose length is smaller than 6:
+コレクションから、長さが 6未満であるテキスト要素を取得します:
 
 ```4d
  var $col;$colNew : Collection
@@ -1054,7 +1054,7 @@ You want to get the collection of text elements whose length is smaller than 6:
   //$colNew=["hello","world","tim","miami"]
 ```
 
-The code for ***LengthLessThan*** method is:
+***LengthLessThan*** メソッドのコードは以下のとおりです:
 
 ```4d
  C_OBJECT($1)
@@ -1066,7 +1066,7 @@ The code for ***LengthLessThan*** method is:
 
 #### 例題 2
 
-You want to filter elements according to their value type:
+値の型に応じて要素をフィルターします:
 
 ```4d
  var $c;$c2;$c3 : Collection
@@ -1078,7 +1078,7 @@ You want to filter elements according to their value type:
   // $c3=[{name:Cleveland,zc:35049},{name:Blountsville,zc:35031}]
 ```
 
-The code for ***TypeLookUp*** is:
+***TypeLookUp*** メソッドのコードは以下のとおりです:
 
 ```4d
  C_OBJECT($1)
@@ -1111,9 +1111,9 @@ The code for ***TypeLookUp*** is:
 <!-- REF #collection.find().Params -->
 | 参照         | タイプ  |    | 説明                                           |
 | ---------- | ---- |:--:| -------------------------------------------- |
-| startFrom  | 整数   | -> | Index to start the search at                 |
-| methodName | テキスト | -> | Name of the function to call for the find    |
-| param      | any  | -> | Parameter(s) to pass to *methodName*         |
+| startFrom  | 整数   | -> | 検索を開始するインデックス                                |
+| methodName | テキスト | -> | 検索用に呼び出すメソッド名                                |
+| param      | any  | -> | *methodName* に渡す引数                           |
 | 戻り値        | any  | <- | First value found, or Undefined if not found |
 <!-- END REF -->
 
@@ -1129,12 +1129,12 @@ The `.find()` function <!-- REF #collection.find().Summary -->returns the first 
 
 *   in *$1.value:* element value to be evaluated
 *   in *$2: param*
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 By default, `.find()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
 
@@ -1153,7 +1153,7 @@ You want to get the first element with a length smaller than 5:
  $value:=$col.find("LengthLessThan";5) //$value="tim"
 ```
 
-The code for ***LengthLessThan*** method is:
+***LengthLessThan*** メソッドのコードは以下のとおりです:
 
 ```4d
  var $1 : Object
@@ -1210,9 +1210,9 @@ The code for ***FindCity*** is:
 <!-- REF #collection.findIndex().Params -->
 | 参照         | タイプ  |    | 説明                                             |
 | ---------- | ---- |:--:| ---------------------------------------------- |
-| startFrom  | 整数   | -> | Index to start the search at                   |
-| methodName | テキスト | -> | Name of the function to call for the find      |
-| param      | any  | -> | Parameter(s) to pass to *methodName*           |
+| startFrom  | 整数   | -> | 検索を開始するインデックス                                  |
+| methodName | テキスト | -> | 検索用に呼び出すメソッド名                                  |
+| param      | any  | -> | *methodName* に渡す引数                             |
 | 戻り値        | 整数   | <- | Index of first value found, or -1 if not found |
 <!-- END REF -->
 
@@ -1228,12 +1228,12 @@ The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns 
 
 *   *$1.value*: 評価する要素の値
 *   in *$2: param*
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 By default, `.findIndex()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
 
@@ -1289,7 +1289,7 @@ The code for ***FindCity*** method is:
 | 参照        | タイプ        |    | 説明                                                                           |
 | --------- | ---------- |:--:| ---------------------------------------------------------------------------- |
 | toSearch  | expression | -> | Expression to search in the collection                                       |
-| startFrom | 整数         | -> | Index to start the search at                                                 |
+| startFrom | 整数         | -> | 検索を開始するインデックス                                                                |
 | 戻り値       | 整数         | <- | Index of the first occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
@@ -1499,7 +1499,7 @@ By default, null or empty elements of the collection are returned in the resulti
 | 参照        | タイプ        |    | 説明                                                                      |
 | --------- | ---------- |:--:| ----------------------------------------------------------------------- |
 | toSearch  | expression | -> | The element that is to be searched for within the collection            |
-| startFrom | 整数         | -> | Index to start the search at                                            |
+| startFrom | 整数         | -> | 検索を開始するインデックス                                                           |
 | 戻り値       | 整数         | <- | Index of last occurrence of toSearch in the collection, -1 if not found |
 <!-- END REF -->
 
@@ -1769,7 +1769,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
 
-This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned unordered). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
@@ -1906,7 +1906,7 @@ Ordering with a property path:
 
 The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *methodName* method<!-- END REF -->.
 
-This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 In *methodName*, pass a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
@@ -2121,7 +2121,7 @@ You want to sort the resutling collection:
 
 #### 説明
 
-The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 The *queryString* parameter uses the following syntax:
@@ -2221,7 +2221,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
 | methodName | テキスト                                            | -> | Name of the function to call to process collection elements          |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
-| param      | expression                                      | -> | Parameter(s) to pass to *methodName*                                 |
+| param      | expression                                      | -> | *methodName* に渡す引数                                                   |
 | 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
 <!-- END REF -->
 
@@ -2245,7 +2245,7 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 
 #### 例題 1
@@ -2432,7 +2432,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 #### 説明
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 #### 例題
@@ -2517,7 +2517,7 @@ If the collection is empty, this method does nothing.
 
 #### 説明
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
@@ -2563,7 +2563,7 @@ The returned collection contains the element specified by *startFrom* and all su
 | ---------- | ---- |:--:| --------------------------------------------------------- |
 | startFrom  | 整数   | -> | テストを開始するインデックス                                            |
 | methodName | テキスト | -> | テストに呼び出すメソッド名                                             |
-| param      | 混合   | -> | Parameter(s) to pass to *methodName*                      |
+| param      | 混合   | -> | *methodName* に渡す引数                                        |
 | 戻り値        | ブール  | <- | True if at least one element successfully passed the test |
 <!-- END REF -->
 
@@ -2579,12 +2579,12 @@ The `.some()` function <!-- REF #collection.some().Summary -->returns true if at
 
 *   *$1.value*: 評価する要素の値
 *   *$2*: param
-*   in *$N...*: param2...paramN
+*   *$N...*: param2...paramN
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
 *   *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. 返された値は最後に計算されたものです。
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 In any case, at the point where `.some()` function encounters the first collection element returning true in *$1.result*, it stops calling *methodName* and returns **true**.
 
