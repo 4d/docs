@@ -898,14 +898,14 @@ End if
 `.extract()` 関数は、 <!-- REF #collection.extract().Summary -->元のオブジェクトのコレクションから、*propertyPath* 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-The contents of the returned collection depends on the *targetPath* parameter:
+戻り値のコレクションの中身は、*targetPath* 引数によります:
 
-*   If the *targetPath* parameter is omitted, `.extract()` populates the new collection with the *propertyPath* values of the original collection.
+*   *targetPath* が省略された場合、`.extract()` は元のコレクションの *propertyPath* と同じパスを使って、新しいコレクションに値を格納します。
 
-    By default, elements for which *propertyPath* is null or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as null elements in the returned collection.
+    デフォルトでは、*propertyPath* のパスの要素が null あるいは undefined であった場合には、その要素は無視され、返されるコレクションに格納されません。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの要素は返されるコレクションに null 要素として格納されます。
 
 
-*   If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+*   一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、対応する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
 
 #### 例題 1
@@ -960,29 +960,29 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| 参照        | タイプ                                             |    | 説明                                     |
-| --------- | ----------------------------------------------- |:--:| -------------------------------------- |
-| value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                          |
-| startFrom | 整数                                              | -> | Start index (included)                 |
-| end       | 整数                                              | -> | End index (not included)               |
-| 戻り値       | collection                                      | <- | Original collection with filled values |
+| 参照        | タイプ                          |    | 説明               |
+| --------- | ---------------------------- |:--:| ---------------- |
+| value     | 数値、テキスト、日付、ブール、オブジェクト、コレクション | -> | 代入する値            |
+| startFrom | 整数                           | -> | 開始インデックス (含まれる)  |
+| end       | 整数                           | -> | 終了インデックス (含まれない) |
+| 戻り値       | collection                   | <- | 値が代入された元のコレクション  |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
+`.fill()` 関数は、 <!-- REF #collection.fill().Summary -->コレクションを *value* 引数の値で満たし、同コレクションを返します。オプションとして、*startFrom* および *end* インデックスを渡して代入開始位置および終了位置を指定することもできます<!-- END REF -->。
 > このコマンドは、元のコレクションを変更します。
 
-*   If the *startFrom* parameter is omitted, *value* is set to all collection elements (*startFrom*=0).
-*   If the *startFrom* parameter is passed and *end* omitted, *value* is set to collection elements starting at *startFrom* to the last element of the collection (*end*=length).
-*   If both the *startFrom* parameter and *end* are passed, *value* is set to collection elements starting at *startFrom* to the element *end*.
+*   *startFrom* 引数が渡されなかった場合、*value* 引数の値はコレクションの全要素に代入されます (つまり、*startFrom*=0)。
+*   *startFrom* 引数が渡され、かつ *end* 引数が省略された場合には、*value* 引数の値はコレクションの最後の要素まで設定されます (つまり、*end*=length)。
+*   *startFrom* と *end* 引数が両方渡された場合には、*startFrom* から *end* までの要素に *value* が代入されます。
 
-In case of inconsistency, the following rules apply:
+引数に矛盾がある場合、次のように解釈されます:
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, *startFrom* is set to 0.
-*   If *end* < 0 , it is recalculated as *end:=end+length*.
-*   If *end* < *startFrom* (passed or calculated values), the method does nothing.
+*   *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
+*   *end* < 0 の場合、それは *end:=end+length* として再計算されます。
+*   渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
 
 #### 例題
@@ -1520,7 +1520,7 @@ In *toSearch*, pass the expression to find in the collection. You can pass:
 Optionally, you can pass the index of collection from which to start a reverse search in *startFrom*.
 
 *   If *startFrom* >= the collection's length minus one (coll.length-1), the whole collection is searched (default).
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
+*   *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
 *   If *startFrom* = 0, -1 is returned, which means the collection is not searched.
 
 #### 例題
@@ -2510,7 +2510,7 @@ If the collection is empty, this method does nothing.
 | 参照        | タイプ    |    | 説明                                                       |
 | --------- | ------ |:--:| -------------------------------------------------------- |
 | startFrom | 整数     | -> | Index to start the search at (included)                  |
-| end       | 整数     | -> | End index (not included)                                 |
+| end       | 整数     | -> | 終了インデックス (含まれない)                                         |
 | 戻り値       | コレクション | <- | New collection containing sliced elements (shallow copy) |
 <!-- END REF -->
 
@@ -2522,9 +2522,9 @@ The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portio
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection).
+*   *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
 *   If the calculated value < 0, *startFrom* is set to 0.
-*   If *end* < 0 , it is recalculated as *end:=end+length*.
+*   *end* < 0 の場合、それは *end:=end+length* として再計算されます。
 *   If *end < startFrom* (passed or calculated values), the method does nothing.
 
 #### 例題
