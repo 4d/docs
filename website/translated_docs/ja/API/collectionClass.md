@@ -1109,43 +1109,43 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.find().Params -->
-| 参照         | タイプ  |    | 説明                                           |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| startFrom  | 整数   | -> | 検索を開始するインデックス                                |
-| methodName | テキスト | -> | 検索用に呼び出すメソッド名                                |
-| param      | any  | -> | *methodName* に渡す引数                           |
-| 戻り値        | any  | <- | First value found, or Undefined if not found |
+| 参照         | タイプ  |    | 説明                               |
+| ---------- | ---- |:--:| -------------------------------- |
+| startFrom  | 整数   | -> | 検索を開始するインデックス                    |
+| methodName | テキスト | -> | 検索用に呼び出すメソッド名                    |
+| param      | any  | -> | *methodName* に渡す引数               |
+| 戻り値        | any  | <- | 最初に見つかった値。見つからなかった場合には Undefined |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
+`.find()` 関数は、 <!-- REF #collection.find().Summary -->*methodName* 引数のメソッドを各コレクション要素に適用して、**true** を返す最初の要素を返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、条件を満たす最初の要素の *$1.result* を **true** に設定しなければなりません。
 
 *methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   in *$1.value:* element value to be evaluated
+*   *$1.value*: 評価する要素の値
 *   in *$2: param*
 *   *$N...*: param2...paramN
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
-*   *$1.result* (boolean): **true** if the element value matches the search condition.
+*   *$1.result* (ブール): 要素の値が検索条件に合致する場合に **true**
 *   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
-By default, `.find()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
+デフォルトでは、`.find()` はコレクション全体をテストします。 任意で、*startFrom* に検索を開始する要素のインデックスを渡すこともできます。
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+*   *startFrom* がコレクションの length 以上だった場合、-1 が返されます。これはコレクションが検索されていないことを意味します。
+*   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。 **注:** *startFrom* が負の値であっても、コレクションは左から右へと検索されます。
 *   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 
 #### 例題 1
 
-You want to get the first element with a length smaller than 5:
+長さが 5未満の最初のテキスト要素を取得します:
 
 ```4d
  var $col : Collection
@@ -1165,7 +1165,7 @@ You want to get the first element with a length smaller than 5:
 
 #### 例題 2
 
-You want to find a city name within a collection:
+コレクション内を都市名で検索します:
 
 ```4d
  var $c; $c2 : Collection
@@ -1178,12 +1178,12 @@ You want to find a city name within a collection:
  $c2:=$c.find("FindCity";"Clanton") //$c2={name:Clanton,zc:35046}
 ```
 
-The code for ***FindCity*** is:
+***FindCity*** メソッドのコードは以下のとおりです:
 
 ```4d
  var $1 : Object
  var $2 : Text
- $1.result:=$1.value.name=$2 //name is a property name of objects in the collection
+ $1.result:=$1.value.name=$2 // name は、コレクションのオブジェクト要素内のプロパティ名です
 ``` 
 
 <!-- END REF -->
@@ -1208,21 +1208,21 @@ The code for ***FindCity*** is:
 
 
 <!-- REF #collection.findIndex().Params -->
-| 参照         | タイプ  |    | 説明                                             |
-| ---------- | ---- |:--:| ---------------------------------------------- |
-| startFrom  | 整数   | -> | 検索を開始するインデックス                                  |
-| methodName | テキスト | -> | 検索用に呼び出すメソッド名                                  |
-| param      | any  | -> | *methodName* に渡す引数                             |
-| 戻り値        | 整数   | <- | Index of first value found, or -1 if not found |
+| 参照         | タイプ  |    | 説明                               |
+| ---------- | ---- |:--:| -------------------------------- |
+| startFrom  | 整数   | -> | 検索を開始するインデックス                    |
+| methodName | テキスト | -> | 検索用に呼び出すメソッド名                    |
+| param      | any  | -> | *methodName* に渡す引数               |
+| 戻り値        | 整数   | <- | 最初に見つかった値のインデックス。見つからなかった場合には -1 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *methodName*, applied on each element, returns **true**<!-- END REF -->.
+`.findIndex()` 関数は、 <!-- REF #collection.findIndex().Summary -->*methodName* 引数のメソッドを各コレクション要素に適用して、**true** を返す最初の要素のインデックスを返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、条件を満たす最初の要素の *$1.result* を **true** に設定しなければなりません。
 
 *methodName* で指定したメソッドは以下の引数を受け取ります:
 
@@ -1232,18 +1232,18 @@ The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns 
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
-*   *$1.result* (boolean): **true** if the element value matches the search condition.
+*   *$1.result* (ブール): 要素の値が検索条件に合致する場合に **true**
 *   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
-By default, `.findIndex()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
+デフォルトでは、`.findIndex()` はコレクション全体をテストします。 任意で、*startFrom* に検索を開始する要素のインデックスを渡すこともできます。
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+*   *startFrom* がコレクションの length 以上だった場合、-1 が返されます。これはコレクションが検索されていないことを意味します。
+*   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。 **注:** *startFrom* が負の値であっても、コレクションは左から右へと検索されます。
 *   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
 
-You want to find the position of the first city name within a collection:
+コレクション内で最初に合致する都市名の位置を探します:
 
 ```4d
  var $c : Collection
@@ -1258,7 +1258,7 @@ You want to find the position of the first city name within a collection:
  $val3:=$c.findIndex($val2+1;"FindCity";"Clanton") //$val3=4
 ```
 
-The code for ***FindCity*** method is:
+***FindCity*** メソッドのコードは以下のとおりです:
 
 ```4d
  var $1 : Object
@@ -1309,8 +1309,8 @@ In *toSearch*, pass the expression to find in the collection. You can pass:
 
 Optionally, you can pass the index of collection from which to start the search in *startFrom*.
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+*   *startFrom* がコレクションの length 以上だった場合、-1 が返されます。これはコレクションが検索されていないことを意味します。
+*   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。 **注:** *startFrom* が負の値であっても、コレクションは左から右へと検索されます。
 *   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
