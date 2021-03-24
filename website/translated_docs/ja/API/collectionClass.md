@@ -2368,23 +2368,23 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 **.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
-| 参照           | タイプ                          |    | 説明                                 |
-| ------------ | ---------------------------- |:--:| ---------------------------------- |
-| size         | 整数                           | -> | New size of the collection         |
-| defaultValue | 数値、テキスト、日付、ブール、オブジェクト、コレクション | -> | Default value to fill new elements |
-| 戻り値          | コレクション                       | <- | Resized original collection        |
+| 参照           | タイプ                          |    | 説明              |
+| ------------ | ---------------------------- |:--:| --------------- |
+| size         | 整数                           | -> | コレクションの新しいサイズ   |
+| defaultValue | 数値、テキスト、日付、ブール、オブジェクト、コレクション | -> | 新規要素のデフォルト値     |
+| 戻り値          | コレクション                       | <- | リサイズされた元のコレクション |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+`.resize()` 関数は、 <!-- REF #collection.resize().Summary -->コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更します。
 
-*   If *size* < collection length, exceeding elements are removed from the collection.
-*   If *size* > collection length, the collection length is increased to size.
+*   *size* < lengthの場合、余分な要素はコレクションから削除されます。
+*   *size* > lengthの場合、不足分の要素がコレクションに追加されます。
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+デフォルトで、新規要素には **null** 値が格納されます。 *defaultValue* に引数を渡すことで、新規要素の値を指定することができます。
 
 #### 例題
 
@@ -2424,15 +2424,15 @@ By default, new elements are filled will **null** values. You can specify the va
 **.reverse( )** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
-| 参照  | タイプ    |    | 説明                              |
-| --- | ------ |:--:| ------------------------------- |
-| 戻り値 | コレクション | <- | Inverted copy of the collection |
+| 参照  | タイプ    |    | 説明                  |
+| --- | ------ |:--:| ------------------- |
+| 戻り値 | コレクション | <- | 逆順に要素を格納した新しいコレクション |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+`.reverse()` 関数は、 <!-- REF #collection.reverse().Summary -->全要素が逆順になった、コレクションのディープ・コピーを返します<!-- END REF -->。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 #### 例題
@@ -2463,18 +2463,18 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 **.shift()** : any<!-- END REF -->
 
 <!-- REF #collection.shift().Params -->
-| 参照  | タイプ |    | 説明                          |
-| --- | --- |:--:| --------------------------- |
-| 戻り値 | any | <- | First element of collection |
+| 参照  | タイプ |    | 説明          |
+| --- | --- |:--:| ----------- |
+| 戻り値 | any | <- | コレクションの先頭要素 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+`.shift()` 関数は、 <!-- REF #collection.shift().Summary -->コレクションの先頭要素を取り除き、それを戻り値として返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更します。
 
-If the collection is empty, this method does nothing.
+コレクションが空の場合、 関数はなにもしません。
 
 #### 例題
 
@@ -2507,25 +2507,25 @@ If the collection is empty, this method does nothing.
 **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.slice().Params -->
-| 参照        | タイプ    |    | 説明                                                       |
-| --------- | ------ |:--:| -------------------------------------------------------- |
-| startFrom | 整数     | -> | Index to start the search at (included)                  |
-| end       | 整数     | -> | 終了インデックス (含まれない)                                         |
-| 戻り値       | コレクション | <- | New collection containing sliced elements (shallow copy) |
+| 参照        | タイプ    |    | 説明                           |
+| --------- | ------ |:--:| ---------------------------- |
+| startFrom | 整数     | -> | 開始インデックス (含まれる)              |
+| end       | 整数     | -> | 終了インデックス (含まれない)             |
+| 戻り値       | コレクション | <- | 抜粋要素を格納した新しいコレクション(シャロウ・コピー) |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+`.slice()` 関数は、*startFrom* の位置 (含まれる) から *end* の位置 (含まれない) までの <!-- REF #collection.slice().Summary -->コレクションの一部を、新しいコレクションの中に返します<!-- END REF -->。 この関数は *シャロウ・コピー* を返します。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
-The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+戻り値のコレクションには、*startFrom* 引数で指定した要素 (含まれる) から、*end* 引数で指定した要素まで (含まれない) の全要素が格納されます。 *startFrom* 引数のみを渡した場合には、*startFrom* 引数で指定した要素から最後の要素までが戻り値のコレクションに格納されます。
 
 *   *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
-*   If the calculated value < 0, *startFrom* is set to 0.
+*   再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
 *   *end* < 0 の場合、それは *end:=end+length* として再計算されます。
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
 #### 例題
 
@@ -2559,12 +2559,12 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
-| 参照         | タイプ  |    | 説明                                                        |
-| ---------- | ---- |:--:| --------------------------------------------------------- |
-| startFrom  | 整数   | -> | テストを開始するインデックス                                            |
-| methodName | テキスト | -> | テストに呼び出すメソッド名                                             |
-| param      | 混合   | -> | *methodName* に渡す引数                                        |
-| 戻り値        | ブール  | <- | True if at least one element successfully passed the test |
+| 参照         | タイプ  |    | 説明                        |
+| ---------- | ---- |:--:| ------------------------- |
+| startFrom  | 整数   | -> | テストを開始するインデックス            |
+| methodName | テキスト | -> | テストに呼び出すメソッド名             |
+| param      | 混合   | -> | *methodName* に渡す引数        |
+| 戻り値        | ブール  | <- | 少なくとも一つの要素がテストをパスすれば true |
 <!-- END REF -->
 
 
