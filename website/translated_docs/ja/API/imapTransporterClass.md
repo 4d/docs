@@ -126,9 +126,6 @@ End if
 #### 説明
 
 The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->. It is identical to the [`IMAP New transporter`](#imap-new-transporter) command (shortcut).
-
-> It is recommended to use the [`IMAP New transporter`](#imap-new-transporter) shortcut command instead of `4D.IMAPTransporter.new()`.
-
  
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
