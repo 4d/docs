@@ -2189,13 +2189,13 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] (今日が 01/10/2018 の場合)
 ```
 
 
 #### 例題 3
 
-More examples of queries can be found in the `dataClass.query()` page. 
+追加のクエリ例については、[`dataClass.query()`](dataclassClass.md#query) を参照してください。 
 
 <!-- END REF -->
 
@@ -2217,34 +2217,34 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 <!-- REF #collection.reduce().Params -->
-| 参照         | タイプ                                             |    | 説明                                                                   |
-| ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
-| methodName | テキスト                                            | -> | Name of the function to call to process collection elements          |
-| initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
-| param      | 式                                               | -> | *methodName* に渡す引数                                                   |
-| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                      |
+| 参照         | タイプ                          |    | 説明                                  |
+| ---------- | ---------------------------- |:--:| ----------------------------------- |
+| methodName | テキスト                         | -> | コレクション要素を処理するのに使用するメソッド名            |
+| initValue  | 数値、テキスト、日付、ブール、オブジェクト、コレクション | -> | *methodName* の最初の呼び出しに最初の引数として使用する値 |
+| param      | 式                            | -> | *methodName* に渡す引数                  |
+| 戻り値        | 数値、テキスト、日付、ブール、オブジェクト、コレクション | <- | アキュムレーター値の結果                        |
 <!-- END REF -->
 
 
 #### 説明
 
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *methodName* callback method against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+`.reduce()` 関数は、 <!-- REF #collection.reduce().Summary -->*methodName* コールバックメソッドをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in param (optional). *methodName* takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* はコレクションの各要素を受け取り、任意の処理を実行して、結果を *$1.accumulator* に蓄積します。この値は最終的に *$1.value* に返されます。
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+*initValue* に引数を渡すことで、アキュムレーターを初期化することができます。 省略された場合は、*$1.accumulator* は *Undefined* から開始されます。
 
 *methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   in *$1.value*: element value to be processed
+*   *$1.value*: 処理する要素の値
 *   in *$2: param*
 *   in *$N...*: *paramN...*
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
-*   *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+*   *$1.accumulator*: メソッドで変更する値。*initValue* によって初期化します。
 *   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 
@@ -2254,10 +2254,10 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
 ```4d
  C_COLLECTION($c)
  $c:=New collection(5;3;5;1;3;4;4;6;2;2)
- $r:=$c.reduce("Multiply";1) //returns 86400
+ $r:=$c.reduce("Multiply";1) // 戻り値は 86400 です
 ```
 
-With the following ***Multiply*** method:
+***Multiply*** メソッドのコードは以下のとおりです:
 
 ```4d
  If(Value type($1.value)=Is real)
@@ -2267,7 +2267,7 @@ With the following ***Multiply*** method:
 
 #### 例題
 
-This example allows reducing several collection elements to a single one:
+複数のコレクション要素を単一の値にまとめます:
 
 ```4d
  var $c;$r : Collection
@@ -2279,7 +2279,7 @@ This example allows reducing several collection elements to a single one:
  $r:=$c.reduce("Flatten") //$r=[0,1,2,3,4,5,6,7]
 ```
 
-With the following ***Flatten*** method:
+***Flatten*** メソッドのコードは以下のとおりです:
 
 ```4d
  If($1.accumulator=Null)
@@ -2307,30 +2307,30 @@ With the following ***Flatten*** method:
 
 
 <!-- REF #collection.remove().Params -->
-| 参照      | タイプ    |    | 説明                                                    |
-| ------- | ------ |:--:| ----------------------------------------------------- |
-| index   | 整数     | -> | Element at which to start removal                     |
-| howMany | 整数     | -> | Number of elements to remove, or 1 element if omitted |
-| 戻り値     | コレクション | <- | Original collection without removed element(s)        |
+| 参照      | タイプ    |    | 説明                   |
+| ------- | ------ |:--:| -------------------- |
+| index   | 整数     | -> | 削除を開始する要素の位置         |
+| howMany | 整数     | -> | 削除する要素の数、省略時は 1要素を削除 |
+| 戻り値     | コレクション | <- | 要素が削除された元のコレクション     |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+`.remove()` 関数は、 <!-- REF #collection.remove().Summary -->*index* で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更します。
 
-In *index*, pass the position where you want the element to be removed from the collection.
-> **警告**: コレクション要素は 0 起点である点に注意してください。 If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+*index* パラメーターには、削除するコレクション要素の位置を渡します。
+> **警告**: コレクション要素は 0 起点である点に注意してください。 指定した *index* がコレクションの length より大きい場合、実際の開始インデックスはコレクションの length に設定されます。
 
 *   *index* < 0 の場合、*index:=index+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
-*   If the calculated value < 0, *index* is set to 0.
-*   If the calculated value > the length of the collection, *index* is set to the length.
+*   計算結果も負の値である場合、*index* は 0 に設定されます。
+*   計算結果がコレクションの length より大きい場合には、*index* は length に設定されます。
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+*howMany* には、*index* の位置から削除する要素の数を渡します。 *howMany* が省略された場合、1つの要素のみが削除されます。
 
 
-If you try to remove an element from an empty collection, the method does nothing (no error is generated).
+空のコレクションから要素を削除しようとした場合、関数は何もしません (エラーは生成されません)。
 
 
 #### 例題
@@ -2368,11 +2368,11 @@ If you try to remove an element from an empty collection, the method does nothin
 **.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
-| 参照           | タイプ                                             |    | 説明                                 |
-| ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
-| size         | 整数                                              | -> | New size of the collection         |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements |
-| 戻り値          | コレクション                                          | <- | Resized original collection        |
+| 参照           | タイプ                          |    | 説明                                 |
+| ------------ | ---------------------------- |:--:| ---------------------------------- |
+| size         | 整数                           | -> | New size of the collection         |
+| defaultValue | 数値、テキスト、日付、ブール、オブジェクト、コレクション | -> | Default value to fill new elements |
+| 戻り値          | コレクション                       | <- | Resized original collection        |
 <!-- END REF -->
 
 
