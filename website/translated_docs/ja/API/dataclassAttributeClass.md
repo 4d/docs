@@ -3,18 +3,18 @@ id: dataclassAttributeClass
 title: DataClassAttribute
 ---
 
-Dataclass attributes are available as properties of their respective classes. たとえば:
+データクラス属性は、それぞれのクラスのプロパティとして利用可能です。 たとえば:
 
 ```4d
- nameAttribute:=ds.Company.name //reference to class attribute
- revenuesAttribute:=ds.Company["revenues"] //alternate way
+ nameAttribute:=ds.Company.name // クラス属性への参照
+ revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 To handle values, you need to go through [**Entities**](entityClass.md).
+このコードは、*nameAttribute* および *revenuesAttribute* 変数に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 値を管理するには、[**エンティティ**](entityClass.md) を使用する必要があります。
 
-`DataClassAttribute` objects have properties that you can read to get information about your dataclass attributes.
+`DataClassAttribute` オブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 
-> Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
+> データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
 
 ### 概要
 
@@ -51,10 +51,10 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 #### 説明
 
-The `.autoFilled` property <!-- REF dataclassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
+`.autoFilled` プロパティは、 <!-- REF dataclassAttributeClass.autoFilled.Summary -->属性値が 4Dによって自動生成される場合には true<!-- END REF -->です。 このプロパティは以下の 4Dフィールドプロパティに対応しています:
 
-*   "Autoincrement", for numeric type fields
-*   "Auto UUID", for UUID (alpha type) fields.
+*   数値型フィールドの "自動インクリメント"
+*   UUID (文字型)フィールドの "自動UUID"
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 > For generic programming, you can use **Bool**(dataClassAttribute.autoFilled) to get a valid value (false) even if `.autoFilled` is not returned. 
