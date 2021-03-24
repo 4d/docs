@@ -12,9 +12,9 @@ The compilation process is entirely automatic; however, compilation requires gre
 4D contains two compilers:
 
 - the "classic" compiler, used to compile native code for Intel/AMD processors;
-- the "Silicon" compiler, used to compile native code for Apple Silicon processors.
+- the Silicon compiler, used to compile native code for Apple Silicon processors.
 
-Both compilers are integrated into 4D. The selected compiler is automatically selected depending on the [compilation target](#compilation-target) option. Other [**compilation options**](#compilation-options), are also available on the Compiler page of the Settings.  
+Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option. Other [**compilation options**](#compilation-options), are also available on the Compiler page of the Settings.  
 
 Whatever the selected compiler, project compilation is carried out using the following window:
 
@@ -49,13 +49,6 @@ Used to generate an ASCII type file containing the list of variables along with 
 #### Generate error file
 
 Used to generate the error file at the time of syntax checking. It lists general errors as well as errors linked to a specific line, and warnings. Any errors detected by the compiler are automatically accessible in the **Method** menu of 4D. However, having an error file that can be transmitted from one machine to another can be useful. The error file is generated in XML format in order to facilitate automatic parsing of its contents. It also allows the creation of customized error display interfaces. The error file is automatically named ProjectName_errors.xml and is created in the project folder. For more information about the error file, refer to Error file.
-
-#### Initialize local variables
-
-Used to set the local variable initialization mode at the beginning of methods:
-- **to "zero"**: Variables are reset to zero by default (empty string for character strings, 0 for numbers, etc.)
-- **to a random value**: The compiler assigns a random value, always the same, (1919382119 for longints, “rgrg” for character strings, True for Booleans...) to variables. This option enables you to pinpoint local variables that you have forgotten to initialize.
-- **no**: The compiler does not initialize the variables. In this way, you gain time during application execution, provided that your initialization was correct.
 
 
 #### Compilation Path
@@ -93,7 +86,29 @@ Two target options are proposed. The result depends on the processor of the mach
 
 ## Silicon Compiler
 
-The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*, from 4D projects. This compiler can only be run from an Apple machine with a Silicon processor. 
+The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*. 
+
+### Requirements
+
+#### Apple Silicon machine
+
+The 4D Silicon compiler can only be run from an Apple machine. 
+
+#### Projects
+
+The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
+
+#### Xcode or Developer Tools
+
+The Silicon compiler calls the **clang** open-source macOS compiler to compile the project from C++ code at the [second step](#two-step-incremental-compiler) of compilation. *clang* requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.  
+
+- **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements. 
+- **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site:
+	- We recommend to install **Xcode**, which is more simple to install. However, it is a large library with a lot of unnecessary components.
+	- You can decide to install **Developer Tools** instead. This library is more compact, however its installation is a little more complex. 
+
+In any cases, the 4D Silicon compiler will warn you if your configuration does not comply with its requirements. 
+
 
 ### Two-step, incremental compiler
 
@@ -117,20 +132,6 @@ The Silicon compiler is incremental:
 #### User preferences
 
 `.cpp` and `.o` files are stored per project and per user in the user preferences folder. This local cache allows several developers to work on the same project.   
-
-
-
-### Requirements
-
-The Silicon compiler calls the **clang** open-source macOS compiler to compile the project from C++ code. This tool requires Apple native libraries, which are provided in either the **Xcode** or **Developer Tools** package.  
-
-
-- **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements. 
-- **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site:
-	- We recommend to install **Xcode**, which is more simple to install. However, it is a large library with a lot of unnecessary components.
-	- You can decide to install **Developer Tools** instead. This library is more compact, however its installation is a little more complex. 
-
-In any cases, the 4D Silicon compiler will warn you if your configuration does not comply with its requirements. 
 
 
 
