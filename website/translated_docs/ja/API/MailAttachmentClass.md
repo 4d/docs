@@ -1,6 +1,6 @@
 ---
 id: MailAttachmentClass
-title: Mail Attachment
+title: MailAttachment
 ---
 
 Attachment objects allow referencing files within a [`Email`](emailObjectClass.md) object. Attachment objects are created using the [`MAIL New attachment`](#mail-new-attachment) command.

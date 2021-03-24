@@ -42,7 +42,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 The attributes of dataclasses are <!-- REF dataclassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
 The returned objects are of the [`DataClassAttribute`](dataclassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
-> Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
+> データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
 
 #### 例題 1
 
@@ -674,7 +674,7 @@ If no matching entities are found, an empty `EntitySelection` is returned.
 
 **queryString parameter**
 
-The *queryString* parameter uses the following syntax:
+*queryString* 引数には、以下のシンタックスを使用します:
 
 ```4d
 attributePath|formula comparator value   

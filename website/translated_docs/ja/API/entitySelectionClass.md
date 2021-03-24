@@ -590,12 +590,12 @@ The `.distinct()` function <!-- REF #entitySelectionClass.distinct().Summary -->
 
 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
-In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* is an object attribute that contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* is an object attribute that contains values of different types, they are first grouped by type and sorted afterwards. 型は以下の順番で返されます:
 
-1.  booleans
-2.  strings
-3.  numbers
-4.  dates
+1.  ブール
+2.  文字列
+3.  数値
+4.  日付
 
 デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
 
@@ -726,7 +726,7 @@ By default, entities for which *attributePath* is *null* or undefined are ignore
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-With this syntax, `.extract()` populates the returned collection with the *attributePath* properties. Each element of the returned collection is an object with *targetPath* properties filled with the corresponding *attributePath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+With this syntax, `.extract()` populates the returned collection with the *attributePath* properties. Each element of the returned collection is an object with *targetPath* properties filled with the corresponding *attributePath* properties. Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
 If several *attributePath* are given, a *targetPath* must be given for each. Only valid pairs \[*attributePath*, *targetPath*] are extracted.
 
@@ -738,7 +738,7 @@ If several *attributePath* are given, a *targetPath* must be given for each. Onl
 
 #### 例題
 
-Given the following table and relation:
+以下のテーブルとリレーションを前提とします:
 
 ![](assets/en/API/entityselection.PNG)
 
@@ -1308,7 +1308,7 @@ If the original entity selection and the parameter are not related to the same d
 | 参照          | タイプ                |    | 説明                                                                    |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
 | pathString  | テキスト               | -> | Attribute path(s) and sorting instruction(s) for the entity selection |
-| pathObjects | コレクション             | -> | Collection of criteria objects                                        |
+| pathObjects | コレクション             | -> | 条件オブジェクトのコレクション                                                       |
 | 戻り値         | 4D.EntitySelection | <- | New entity selection in the specified order                           |
 <!-- END REF -->
 
@@ -1326,7 +1326,7 @@ You must use a criteria parameter to define how the entities must be sorted. Two
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
 ```
 
-The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
+The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. 並び順を設定するには、プロパティパスの後に半角スペースで区切ったあとに、昇順を指定するには "asc"、降順を指定するには "desc" を渡します。
 
 *   *pathObjects* (collection): each element of the collection contains an object structured in the following way:
 
@@ -1689,7 +1689,7 @@ A list box displays the Form.students entity selection and several clients work 
 | 参照        | タイプ                |    | 説明                                                             |
 | --------- | ------------------ |:--:| -------------------------------------------------------------- |
 | startFrom | 整数                 | -> | Index to start the operation at (included)                     |
-| end       | 整数                 | -> | End index (not included)                                       |
+| end       | 整数                 | -> | 終了インデックス (含まれない)                                               |
 | 戻り値       | 4D.EntitySelection | <- | New entity selection containing sliced entities (shallow copy) |
 <!-- END REF -->
 
@@ -1700,10 +1700,10 @@ The `.slice()` function <!-- REF #entitySelectionClass.slice().Summary -->return
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
+*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
 *   If *startFrom >= length*, the function returns an empty entity selection.
 *   If *end* < 0, it is recalculated as *end:=end+length*.
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
 If the entity selection contains entities that were dropped in the meantime, they are also returned.
 

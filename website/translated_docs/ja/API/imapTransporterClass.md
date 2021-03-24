@@ -373,7 +373,7 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 
 The `.copy()` function <!-- REF #imapTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+以下のものを渡すことができます:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
@@ -563,7 +563,7 @@ End if
 
 The `.delete()` function <!-- REF #imapTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
 
-You can pass:
+以下のものを渡すことができます:
 
 - in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
 - in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
@@ -872,7 +872,7 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getBoxList()` function <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. You can pass:
+In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. 以下のものを渡すことができます:
 
 | プロパティ        | タイプ | 説明                                                   |
 | ------------ | --- | ---------------------------------------------------- |
@@ -1189,7 +1189,7 @@ In the first parameter, you can pass either:
 *   *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 *   *msgID*, a *text* value indicating the unique ID of the message to retrieve.
 
-The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. You can pass:
+The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. 以下のものを渡すことができます:
 
 *   **True** - to mark the message as "seen" (indicating the message has been read)
 *   **False** - to leave the message's "seen" status untouched
@@ -1268,7 +1268,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 The `.move()` function <!-- REF #imapTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+以下のものを渡すことができます:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
@@ -1599,7 +1599,7 @@ End if
 <!-- REF #imapTransporterClass.searchMails().Params -->
 | 参照             | タイプ    |    | 説明                            |
 | -------------- | ------ |:--:| ----------------------------- |
-| searchCriteria | テキスト   | -> | Search criteria               |
+| searchCriteria | テキスト   | -> | 検索条件                          |
 | 戻り値            | コレクション | <- | Collection of message numbers |
 <!-- END REF -->
 
