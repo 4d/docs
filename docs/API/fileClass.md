@@ -571,6 +571,8 @@ The `.setAppInfo()` function <!-- REF #fileClass.setAppInfo().Summary -->writes 
 
 The function can only be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated). 
 
+> The function only supports .plist files in xml format. An error is returned if the function is used with a .plist file in a binary format. 
+
 ***info* parameter object with a .exe file**
 
 > Writing a .exe file information is only possible on Windows.
@@ -593,19 +595,13 @@ If you pass a null or empty text as value, an empty string is written in the pro
 
 ***info* parameter object with a .plist file**
 
-The .plist file keys are replaced with the properties and values set in the *info* parameter (existing keys are removed).
+Each valid property set in the *info* object parameter is written in the .plist file. 
 
-Any property name is accepted and basic value types are preserved or converted, according to the following rules:
+If a property set in the *info* parameter is already defined in the .plist file, its value is updated. Other existing keys in the .plist file are left untouched. 
+ 
+Any property name is accepted. Value types are preserved when possible. 
 
-|Value type|Written as|Comment|
-|---|---|---|
-|Number without decimal|Integer||
-|Number with decimal|Real||
-|Date|Date|Use ISO UTC date format json string without milliseconds|
-|Binary|`CDATA=<Base64>`|Use json string prefixed with "CDATA=" and followed by Base64 encoded data|
-|Boolean|Boolean||
-|Text|Text||
-
+> To define a Date type value, the format to use is a json string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor. 
 
 #### Example
 
