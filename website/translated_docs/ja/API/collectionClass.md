@@ -1026,7 +1026,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### 説明
 
-`.filter()` 関数は、 <!-- REF #collection.filter().Summary -->元のコレクション要素のうち、*methodName* パラメーターに指定したメソッドの結果が **true** になる要素をすべて格納した新しいコレクションを返します<!-- END REF -->。 この関数は ***シャロウ・コピー*** を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+`.filter()` 関数は、 <!-- REF #collection.filter().Summary -->元のコレクション要素のうち、*methodName* メソッドの結果が **true** になる要素をすべて格納した新しいコレクションを返します<!-- END REF -->。 この関数は ***シャロウ・コピー*** を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、メソッドの条件を満たして新規コレクションに代入されるべき要素の *$1.result* を **true** に設定しなければなりません。
@@ -1607,14 +1607,14 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 *methodName* で指定したメソッドは以下の引数を受け取ります:
 
-*   *$1.value* (どんな型でも可): マップする要素の値
-*   in *$2* (どんな型でも可): *param*
-*   in *$N...* (どんな型でも可): *paramN...*
+*   *$1.value* (任意の型): マップする要素の値
+*   in *$2* (任意の型): *param*
+*   in *$N...* (任意の型): *paramN...*
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
 
-*   *$1.result* (どんな型でも可): 結果のコレクションに追加する、変換された値
+*   *$1.result* (任意の型): 結果のコレクションに追加する、変換された値
 *   *$1.stop* (ブール): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
 #### 例題
@@ -1671,7 +1671,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 コレクションがオブジェクトを格納している場合には、最大値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
-コレクションが空での場合、 `.max()` は *Undefined* を返します。
+コレクションが空の場合、 `.max()` は *Undefined* を返します。
 
 #### 例題
 
@@ -1721,7 +1721,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 コレクションがオブジェクトを格納している場合には、最小値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
-コレクションが空での場合、 `.min()` は *Undefined* を返します。
+コレクションが空の場合、 `.min()` は *Undefined* を返します。
 
 #### 例題
 
@@ -1894,44 +1894,44 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| 参照         | タイプ    |    | 説明                                               |
-| ---------- | ------ |:--:| ------------------------------------------------ |
-| methodName | テキスト   | -> | Name of method used to specify the sorting order |
-| extraParam | 式      | -> | methodName に渡す引数                                 |
-| 戻り値        | コレクション | <- | Sorted copy of the collection (shallow copy)     |
+| 参照         | タイプ    |    | 説明                           |
+| ---------- | ------ |:--:| ---------------------------- |
+| methodName | テキスト   | -> | 並べ替え順の指定に使用するメソッド名           |
+| extraParam | 式      | -> | methodName に渡す引数             |
+| 戻り値        | コレクション | <- | 並べ替えられたコレクションのコピー (シャロウ・コピー) |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *methodName* method<!-- END REF -->.
+`.orderByMethod()` 関数は、 <!-- REF #collection.orderByMethod().Summary -->*methodName* メソッドを通して定義された順番でコレクション要素を並べ替えた新しいコレクションを返します<!-- END REF -->。
 
 この関数は *シャロウ・コピー* を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
-In *methodName*, pass a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
+*methodName* には、二つの値を比較して、最初の値が二つ目の値より低い場合に *$1.result* に **true** を返す比較メソッドの名称を渡します。 必要であれば *methodName* に追加の引数を渡すこともできます。
 
-*   *methodName* will receive the following parameters:
-    *   $1 (object), where:
-        *   *$1.value* (any type): first element value to be compared
-        *   *$1.value2* (any type): second element value to be compared
-    *   $2...$N (any type): extra parameters
-*   *methodName* sets the following parameter:
-    *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
+*   *methodName* で指定したメソッドは以下の引数を受け取ります:
+    *   $1 (オブジェクト):
+        *   *$1.value* (任意の型): 比較する一つ目の要素の値
+        *   *$1.value2* (任意の型): 比較する二つ目の要素の値
+    *   $2...$N (任意の型): 追加の引数
+*   *methodName* で指定したメソッドでは、以下の引数を設定します:
+    *   *$1.result* (ブール): *$1.value < $1.value2* の場合は **true**、それ以外は **false**
 
 #### 例題 1
 
-You want to sort a collection of strings in numerical order rather than alphabetical order:
+文字列のコレクションをアルファベット順ではなく、数値順に並べ替えます:
 
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
  $c.push("33";"4";"1111";"222")
- $c2:=$c.orderBy() //$c2=["1111","222","33","4"], alphabetical order
+ $c2:=$c.orderBy() //$c2=["1111","222","33","4"], アルファベット順
  $c3:=$c.orderByMethod("NumAscending") // $c3=["4","33","222","1111"]
 ```
 
- Here is the code for ***NumAscending***:
+ ***NumAscending*** メソッドのコードは以下のとおりです:
 
 
 ```4d
@@ -1942,7 +1942,7 @@ You want to sort a collection of strings in numerical order rather than alphabet
 
 #### 例題 2
 
-You want to sort a collection of strings on their length:
+文字列のコレクションを、文字列の長さを基準に並べ替えます:
 
 ```4d
  var $fruits; $c2 : Collection
@@ -1951,7 +1951,7 @@ You want to sort a collection of strings on their length:
   //$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]
 ```
 
-Here is the code for ***WordLength***:
+***WordLength*** メソッドのコードは以下のとおりです:
 
 ```4d
  $1.result:=Length(String($1.value))>Length(String($1.value2))
@@ -1959,26 +1959,26 @@ Here is the code for ***WordLength***:
 
 #### 例題 3
 
-You want to sort a collection by character code or language:
+文字コード順またはアルファベット順にコレクション要素を並べ替えます:
 
 ```4d
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+// 文字コード順:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
-// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// 結果 : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+// アルファベット順:
 $strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+// 結果 : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-The ***sortCollection*** method:
+***sortCollection*** メソッドのコードは以下のとおりです:
 
 ```4d
 var$1Object
-var$2Integer // sort option
+var$2Integer // 並べ替えオプション
 
 $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ``` 
@@ -2003,15 +2003,15 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 **.pop()** : any <!-- END REF -->
 
 <!-- REF #collection.pop().Params -->
-| 参照  | タイプ |    | 説明                         |
-| --- | --- |:--:| -------------------------- |
-| 戻り値 | any | <- | Last element of collection |
+| 参照  | タイプ |    | 説明           |
+| --- | --- |:--:| ------------ |
+| 戻り値 | any | <- | コレクションの最後の要素 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
+`.pop()` 関数は、 <!-- REF #collection.pop().Summary -->コレクションから最後の要素を取り除き、それを戻り値として返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更します。
 
 When applied to an empty collection, `.pop()` returns ***undefined***.
@@ -2640,11 +2640,11 @@ With the following *NumberGreaterThan0* method:
 
 
 <!-- REF #collection.sort().Params -->
-| 参照         | タイプ    |    | 説明                                               |
-| ---------- | ------ |:--:| ------------------------------------------------ |
-| methodName | テキスト   | -> | Name of method used to specify the sorting order |
-| extraParam | any    | -> | methodName に渡す引数                                 |
-| 戻り値        | コレクション | <- | Original collection sorted                       |
+| 参照         | タイプ    |    | 説明                         |
+| ---------- | ------ |:--:| -------------------------- |
+| methodName | テキスト   | -> | 並べ替え順の指定に使用するメソッド名         |
+| extraParam | any    | -> | methodName に渡す引数           |
+| 戻り値        | コレクション | <- | Original collection sorted |
 <!-- END REF -->
 
 
@@ -2655,16 +2655,16 @@ The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements
 
 If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Elements are sorted by default in ascending order, according to their type.
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
+If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. 必要であれば *methodName* に追加の引数を渡すこともできます。
 
-*   *methodName* will receive the following parameters:
-    *   $1 (object), where:
-        *   *$1.value* (any type): first element value to be compared
-        *   *$1.value2* (any type): second element value to be compared
-    *   $2...$N (any type): extra parameters
+*   *methodName* で指定したメソッドは以下の引数を受け取ります:
+    *   $1 (オブジェクト):
+        *   *$1.value* (任意の型): 比較する一つ目の要素の値
+        *   *$1.value2* (任意の型): 比較する二つ目の要素の値
+    *   $2...$N (任意の型): 追加の引数
 
-*methodName* sets the following parameter:
-    *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
+*methodName* で指定したメソッドでは、以下の引数を設定します:
+    *   *$1.result* (ブール): *$1.value < $1.value2* の場合は **true**、それ以外は **false**
 
 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
