@@ -14,6 +14,10 @@ The compilation process is entirely automatic; however, compilation requires gre
 - the "classic" compiler, used to compile native code for Intel/AMD processors;
 - the Silicon compiler, used to compile native code for Apple Silicon processors.
 
+The "classic" compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
+
+![](assets/en/Project/compileModes.png)
+
 Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option. Other [**compilation options**](#compilation-options), are also available on the Compiler page of the Settings.  
 
 Whatever the selected compiler, project compilation is carried out using the following window:
@@ -74,64 +78,56 @@ This setting allows you to select the processor family for which your 4D project
 
 Two target options are proposed. The result depends on the processor of the machine on which 4D is running.
 
-|*Option*|*Selected on Intel/AMD machine*|*Selected on Silicon machine*|  
-|---|---|---|
-|**All processors (Intel/AMD and Apple Silicon)**|Code for Intel/AMD processor<br>*It is not possible to produce Apple Silicon code from an Intel/AMD machine*|Code for Apple Silicon processor + Code for Intel/AMD processor<br>*Two applications will be available*|
-|**My processor (Intel/AMD)**|Code for Intel/AMD processor|n/a|
-|**My processor (Apple Silicon)**|n/a|Code for Apple Silicon processor|
+|*Option*|*on Windows Intel/AMD*|*on macOS Intel/AMD*|*on macOS Silicon*|  
+|---|---|---|---|
+|**All processors (Intel/AMD and Apple Silicon)**|Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows*|Code for Apple Silicon + Code for Intel/AMD<br>*Two applications will be available*|Code for Apple Silicon + Code for Intel/AMD<br>*Two applications will be available*|
+|**My processor (processor)**|Code for Intel/AMD|Code for Intel/AMD|Code for Apple Silicon|
 
-
-> Apple Silicon compiler target requires that the **clang** application be installed on your machine. If it is missing, 4D will provide instructions about how to get it. 
+> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of XCode. If it is missing, 4D will provide instructions about how to get it. 
 
 
 ## Silicon Compiler
 
-The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*. 
+The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*. This compiler has specific requirements and features.
 
 ### Requirements
 
-#### Apple Silicon machine
-
-The 4D Silicon compiler can only be run from an Apple machine. 
-
-#### Projects
-
-The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
-
-#### Xcode or Developer Tools
-
-The Silicon compiler calls the **clang** open-source macOS compiler to compile the project from C++ code at the [second step](#two-step-incremental-compiler) of compilation. *clang* requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.  
-
-- **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements. 
-- **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site:
-	- We recommend to install **Xcode**, which is more simple to install. However, it is a large library with a lot of unnecessary components.
-	- You can decide to install **Developer Tools** instead. This library is more compact, however its installation is a little more complex. 
+- **Apple machine**: The Silicon compiler can only be run from an Apple machine. 
+- **4D Project architecture**: The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
+- **Xcode or Developer Tools**: The Silicon compiler calls the **clang** open-source macOS compiler to compile the project from C++ code at the [second step](#two-step-incremental-compiler) of compilation. *clang* requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.
+	- **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements. 
+	- **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site.
+	
+> We recommend to install **Xcode**, which is more simple to install. However, it is a large library with a lot of unnecessary components. You can decide to install **Developer Tools** which is more compact, however its installation is a little more complex. 
 
 In any cases, the 4D Silicon compiler will warn you if your configuration does not comply with its requirements. 
 
 
-### Two-step, incremental compiler
+### Two-step compiler
 
 The Silicon compiler is a two-step compiler:
 
-1. As a first step, it translates the 4D code into C++ source files. 
-2. Then, it compiles the C++ result into Silicon code using **clang**, an open-source macOS compiler. 
+1. At a first step, it translates the 4D code into C++ source files. 
+2. Then, it compiles the C++ result into Silicon code using **clang**. 
 
-The compilation results are stored in the **Library** folder, within the project folder:
+The compilation results are stored in the **Libraries** folder, within the project folder:
 
 XXX
 
-- `.cpp` (text) files contain C++ code,
+This folder contains the system library `lib4d-arm64.dylib`, with hosts your application compiled code.
+
+### Incremental compiler
+
+The Silicon compiler is incremental, which means that during the [first compilation step](#two-step-compiler), only **new or modified methods** are translated into C++, thus reducing drastically the compilation time. 
+
+> In the initial compilation, **all** 4D methods are translated into C++; on large applications, it could take a certain time.
+
+#### Local cache for compilation files
+
+The files generated during the compilation are stored per project and per user in the user's preferences folder. Two sets of files are generated:
+
+- `.cpp` (text) files, containing C++ code,
 - `.o` files are binary objects, generated by clang.
-
-The Silicon compiler is incremental: 
-
-- The initial compilation requires that during the first step, **all** 4D methods be translated into C++; on large applications, it could take a certain time.
-- Subsequent compilations will only translate **new or modified methods**, thus reducing drastically the compilation time.
-
-#### User preferences
-
-`.cpp` and `.o` files are stored per project and per user in the user preferences folder. This local cache allows several developers to work on the same project.   
 
 
 
