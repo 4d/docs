@@ -135,8 +135,6 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 
 The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
 
-> It is recommended to use the [`SMTP New transporter`](#smtp-new-transporter) shortcut command instead of `4D.SMTPTransporter.new()`. 
-
 
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
