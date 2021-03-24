@@ -212,7 +212,7 @@ preferences.4DPreferences|Current data path and main window positions|XML
 
 ## Components folder
 
-This folder contains the components to be available in the application project only. It must be stored at the same level as the Project folder.
+This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
 
 > An application project can be used itself as a component:
 > - for development: put an alias of the .4dproject file in the Components folder of the host project.
@@ -221,7 +221,7 @@ This folder contains the components to be available in the application project o
 
 ## Plugins folder
 
-This folder contains the plug-ins to be available in the application project only. It must be stored at the same level as the Project folder.
+This folder contains the plug-ins to be available in the application project. It must be stored at the same level as the Project folder.
 
 
 ## Documentation folder
