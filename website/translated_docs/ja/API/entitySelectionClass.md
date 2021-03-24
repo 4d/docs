@@ -738,7 +738,7 @@ If several *attributePath* are given, a *targetPath* must be given for each. Onl
 
 #### 例題
 
-Given the following table and relation:
+以下のテーブルとリレーションを前提とします:
 
 ![](assets/en/API/entityselection.PNG)
 
