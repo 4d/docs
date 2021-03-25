@@ -11,14 +11,14 @@ The compilation process is entirely automatic; however, compilation requires gre
 
 4D contains two compilers:
 
-- the "classic" compiler, used to compile native code for Intel/AMD processors;
-- the Silicon compiler, used to compile native code for Apple Silicon processors.
+- a "classic" compiler, used to compile native code for Intel/AMD processors;
+- a Silicon compiler, used to compile native code for Apple Silicon processors.
 
 The "classic" compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
 
 ![](assets/en/Project/compileModes.png)
 
-Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option. Other [**compilation options**](#compilation-options), are also available on the Compiler page of the Settings.  
+Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option. Other [**compilation options**](#compilation-options) are also available on the Compiler page of the Settings.  
 
 Whatever the selected compiler, project compilation is carried out using the following window:
 
@@ -35,12 +35,95 @@ If you modify your project in interpreted mode, you must recompile it in order t
 
 ## Compiler Window
 
+To display the compiler window, select the **Compiler...** command in the **Design** menu. You can also use the **Compiler** toolbar button:
+
+![](assets/en/Project/compilerWin1.png)
+
+> These commands are disabled if the project does not contain at least one method.
+
+This window is used for launching the compilation of the project or checking the syntax of the methods and classes. In addition, buttons can be used for generating/regenerating Typing methods, clearing the compiled code, displaying/hiding warnings, and accessing the [compiler settings window](#compiler-settings).
+
+
+> Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
+
+### Compiler
+
+The **Compiler** button causes the immediate launching of the compilation process. It is the exact equivalent of the **Start Compilation** command in the **Design** menu. If the project has already been compiled, the new code compiled will replace the former. Initially, different passes are carried out for checking, typing and initialization, in accordance with the configuration set on the [compiler settings window](#compiler-settings).
+
+If no errors are detected, the actual compilation begins. If errors are detected, the process is stopped and the information area of the window displays the method names and line numbers concerned in a hierarchical list:
+
+![](assets/en/Project/compilerWin2.png)
+
+Double-click on each error detected in order to open the method or class concerned directly in the 4D method editor; the line containing the error is highlighted and the type of error is displayed in the syntax area of the window. The **Previous Error** / **Next Error** commands of the **Method** menu allow you to navigate among the lines containing errors.
+
+> The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a precise diagnosis of the errors in order to help you correct them.
+
+### Check Syntax
+
+The **Check Syntax** button starts the execution of the syntax-checking phase. At the end of checking, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method.
+
+Syntax checking can also be launched directly using the **Check Syntax** command associated with the **Compiler** toolbar button. This option is the only one available if you do not have a suitable license to allow the compilation of applications.
+
+### Generate Typing
+
+The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, which accelerates compilation. If these methods already exist, their contents are updated.
+
+The name of these methods must mandatorily begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-settings) (see Compiler Methods for...). The compiler methods that are generated and maintained by 4D automatically have the Invisible attribute:
+
+![](assets/en/Project/compilerWin3.png)
+
+Only the necessary compiler methods (i.e., those for which items already exist in the project) are generated. 
+
+The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Method editor. 
+
+
+### Clear compiled code
+
+The **Clear compiled code** button deletes the compiled code of the project. When you click on it, all of the code generated during compilation is deleted. 
+
+The **Restart Compiled** command of the **Run** menu is then disabled and the "Compiled Project" option is not available at startup.  
+
+
+### Show warnings
+
+Warnings are specific messages generated by the compiler when it checks the syntax. These messages are intended to draw your attention to statements that might lead to execution errors. They do not prevent compilation. 
+
+Depending on circumstances and the programming style used, these warnings may be more or less relevant. You have an option for displaying or hiding the warnings in the information area of the compiler window.
+
+![](assets/en/Project/compilerWin4.png)
+
+When this option is checked, the warnings (if any) are displayed in the window, after the other error types. They appear in italics:
+
+![](assets/en/Project/compilerWin5.png)
+
+Double-clicking a warning opens the corresponding method.
+
+#### Disabling warnings during compilation
+
+You can selectively disable certain warnings during compilation by inserting the following into the code of a 4D method:
+
+```4d
+  //%W-<warning number>
+```
+
+Only warnings with numbers can be disabled. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning: 
+
+*1: Pointer in an array declaration (518.5)*
+
+... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
+
+```4d
+  //%W-518.5
+```
 
 
 
 ## Compiler Settings
 
-The "Compiler" page of the Settings lets you set parameters relating to project compilation. 
+The "Compiler" page of the Settings lets you set parameters relating to project compilation. You can directly open this page from the [compiler window](#compiler-window) by clicking on the Compiler Preferences button:
+
+![](assets/en/Project/compilerWin6.png)
+
 
 ### Compilation options
 
@@ -80,11 +163,16 @@ Two target options are proposed. The result depends on the processor of the mach
 
 |*Option*|*on Windows Intel/AMD*|*on macOS Intel/AMD*|*on macOS Silicon*|  
 |---|---|---|---|
-|**All processors (Intel/AMD and Apple Silicon)**|Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows*|Code for Apple Silicon + Code for Intel/AMD<br>*Two applications will be available*|Code for Apple Silicon + Code for Intel/AMD<br>*Two applications will be available*|
+|**All processors (Intel/AMD and Apple Silicon)**|Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows*|Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available*|Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available*|
 |**My processor (processor)**|Code for Intel/AMD|Code for Intel/AMD|Code for Apple Silicon|
 
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of XCode. If it is missing, 4D will provide instructions about how to get it. 
 
+## Classic Compiler
+
+The classic compiler generates native compiled code for Intel/AMD processors on any machines. It does not require any specific configuration. 
+
+Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata-folder) folder of the project.  
 
 ## Silicon Compiler
 
@@ -110,24 +198,20 @@ The Silicon compiler is a two-step compiler:
 1. At a first step, it translates the 4D code into C++ source files. 
 2. Then, it compiles the C++ result into Silicon code using **clang**. 
 
-The compilation results are stored in the **Libraries** folder, within the project folder:
+The resulting code is stored in the [Libraries folder](architecture.md#libraries-folder), within the project folder.
 
-XXX
+The files generated during the compilation are stored per project and per user in the [user preferences folder](architecture.md#userpreferencesusername-folder). Two sets of files are generated:
 
-This folder contains the system library `lib4d-arm64.dylib`, with hosts your application compiled code.
+- `.cpp` (text) files, containing C++ code,
+- `.o` files are binary objects, generated by clang.
+
 
 ### Incremental compiler
 
 The Silicon compiler is incremental, which means that during the [first compilation step](#two-step-compiler), only **new or modified methods** are translated into C++, thus reducing drastically the compilation time. 
 
-> In the initial compilation, **all** 4D methods are translated into C++; on large applications, it could take a certain time.
+> In the initial compilation, **all** 4D methods are translated into C++; on large applications, it could take a certain time. However this step only occurs once. 
 
-#### Local cache for compilation files
-
-The files generated during the compilation are stored per project and per user in the user's preferences folder. Two sets of files are generated:
-
-- `.cpp` (text) files, containing C++ code,
-- `.o` files are binary objects, generated by clang.
 
 
 
