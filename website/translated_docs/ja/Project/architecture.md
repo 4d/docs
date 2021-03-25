@@ -211,14 +211,14 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 ## Components フォルダー
 
-This folder contains the components to be available in the application project. このフォルダーは、Project フォルダーと同じ階層に置きます。
+アプリケーションプロジェクトが利用するコンポーネントを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
 > アプリケーションプロジェクトはコンポーネントとして利用することができます:<br /> - 開発においては、ホストプロジェクトの Components フォルダーに .4dproject ファイルのエイリアスを置きます。 - 運用時においては、[コンポーネントをビルド](Desktop/building.md#コンポーネントをビルド) し、生成された .4dz ファイルを .4dbase フォルダーに格納し、それをホストアプリケーションの Components フォルダーに置きます。
 
 
 ## Plugins フォルダー
 
-This folder contains the plug-ins to be available in the application project. このフォルダーは、Project フォルダーと同じ階層に置きます。
+アプリケーションプロジェクトが利用するプラグインを格納するフォルダーです。 このフォルダーは、Project フォルダーと同じ階層に置きます。
 
 
 ## Documentation フォルダー
