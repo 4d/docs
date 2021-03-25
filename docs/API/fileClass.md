@@ -340,7 +340,9 @@ You want to delete a specific file in the database folder:
 
 The `.getAppInfo()` function <!-- REF #fileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
 
-The function can only be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated). 
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated). 
+
+> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.  
 
 **Returned object with a .exe file**
 
@@ -361,7 +363,7 @@ All property values are Text.
 
 **Returned object with a .plist file**
 
-The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number, date). 
+The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
 
 #### Example
 
@@ -378,7 +380,7 @@ var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File(Folder("/RESOURCES").path+"info.plist")
 $info:=$infoPlistFile.getAppInfo()
-ALERT($info.NSHumanReadableCopyright)
+ALERT($info.Copyright)
 ```
 
 #### See also
@@ -569,9 +571,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #fileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
 
-The function can only be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated). 
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated). 
 
-> The function only supports .plist files in xml format. An error is returned if the function is used with a .plist file in a binary format. 
+> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format. 
 
 ***info* parameter object with a .exe file**
 
@@ -595,13 +597,11 @@ If you pass a null or empty text as value, an empty string is written in the pro
 
 ***info* parameter object with a .plist file**
 
-Each valid property set in the *info* object parameter is written in the .plist file. 
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible. 
 
-If a property set in the *info* parameter is already defined in the .plist file, its value is updated. Other existing keys in the .plist file are left untouched. 
- 
-Any property name is accepted. Value types are preserved when possible. 
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.  
 
-> To define a Date type value, the format to use is a json string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor. 
+> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor. 
 
 #### Example
 
@@ -624,7 +624,7 @@ $infoPlistFile:=File(Folder("/RESOURCES").path+"info.plist")
 $info:=New object
 $info.Copyright:="Copyright 4D 2021" //text
 $info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2021-04-22T06:00:00Z" //date
+$info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
 $infoPlistFile.setAppInfo($info)
 ```
 
