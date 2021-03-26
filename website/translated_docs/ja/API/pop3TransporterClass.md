@@ -287,7 +287,7 @@ The method returns Null if:
 *   the message was marked for deletion using `.delete( )`.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 `.getMail()` returns an [`Email` object](emailObjectClass.md#email-object).
 
