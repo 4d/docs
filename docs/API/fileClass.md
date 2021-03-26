@@ -378,7 +378,7 @@ ALERT($info.LegalCopyright)
   // display copyright info of an info.plist (any platform)
 var $infoPlistFile : 4D.File
 var $info : Object
-$infoPlistFile:=File(Folder("/RESOURCES").path+"info.plist")
+$infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=$infoPlistFile.getAppInfo()
 ALERT($info.Copyright)
 ```
@@ -620,7 +620,7 @@ $exeFile.setAppInfo($info)
   // set some keys in an info.plist file (all platforms)
 var $infoPlistFile : 4D.File
 var $info : Object
-$infoPlistFile:=File(Folder("/RESOURCES").path+"info.plist")
+$infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
 $info.Copyright:="Copyright 4D 2021" //text
 $info.ProductVersion:=12 //integer
