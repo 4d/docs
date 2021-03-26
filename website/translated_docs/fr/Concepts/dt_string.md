@@ -137,7 +137,7 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
  "Alpha,Bravo,Charlie"%"Alpha" // Retourne Vrai
  "Software and Computers"%"comput@" // Retourne Vrai
 ```
-> **Notes :** - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs <>=#) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, reportez-vous à l'adresse http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
+> **Notes :** - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs <>=#) et la détection des mots-clés. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
 Les symboles d'indice de chaîne sont les suivants : [[...]]
