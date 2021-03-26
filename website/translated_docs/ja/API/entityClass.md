@@ -1493,7 +1493,7 @@ Returns:
 }
 ```
 
-#### Example 5
+#### 例題 5
 
 Extracting a `relatedEntity` with simple form:
 
@@ -1513,7 +1513,7 @@ Returns:
 }
 ```
 
-#### Example 6
+#### 例題 6
 
 Extracting all the properties of a `relatedEntity`:
 
