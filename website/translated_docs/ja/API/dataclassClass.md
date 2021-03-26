@@ -4,7 +4,7 @@ title: DataClass
 ---
 
 
-A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a database table. All dataclasses in a 4D application are available as a property of the `ds` [datastore](ORDA/dsMapping.md#datastore).
+[データクラス](ORDA/dsMapping.md#データクラス) はデータベーステーブルへのオブジェクトインターフェースを提供します。 4Dアプリケーション内のデータクラスはすべて、`ds` [データストア](ORDA/dsMapping.md#データストア) のプロパティとして利用可能です。
 
 
 
@@ -39,22 +39,22 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 #### 説明
 
-The attributes of dataclasses are <!-- REF dataclassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+データクラスの属性は、データクラスの <!-- REF dataclassClass.attributeName.Summary -->プロパティとして直接利用可能なオブジェクト<!-- END REF --> です。
 
-The returned objects are of the [`DataClassAttribute`](dataclassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
+戻り値は [`DataClassAttribute`](dataclassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 > データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
 
 #### 例題 1
 
 ```4d
-$salary:=ds.Employee.salary //returns the salary attribute in the Employee dataclass
-$compCity:=ds.Company["city"] //returns the city attribute in the Company dataclass
+$salary:=ds.Employee.salary // Employeeデータクラスの salary属性を返します
+$compCity:=ds.Company["city"] // Companyデータクラスの city属性を返します
 ```
 
 
 #### 例題 2
 
-Considering the following database structure:
+以下のストラクチャーを前提とします:
 
 ![](assets/en/API/dataclassAttribute.png)
 
@@ -79,7 +79,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 例題 3
 
-Considering the following table properties:
+以下のテーブルプロパティを前提とします:
 
 ![](assets/en/API/dataclassAttribute2.png)
 
@@ -99,10 +99,10 @@ Considering the following table properties:
 ## .all()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                  |
-| ------ | ----------------------------------- |
-| v17 R5 | Support of the *settings* parameter |
-| v17    | 追加                                  |
+| バージョン  | 内容                   |
+| ------ | -------------------- |
+| v17 R5 | *settings* パラメーターを追加 |
+| v17    | 追加                   |
 </details>
 
 
@@ -110,30 +110,30 @@ Considering the following table properties:
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #dataclassClass.all().Params -->
-| 参照       | タイプ                |    | 説明                                                  |
-| -------- | ------------------ |:--:| --------------------------------------------------- |
-| settings | オブジェクト             | -> | Build option: context                               |
-| 戻り値      | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
+| 参照       | タイプ                |    | 説明                |
+| -------- | ------------------ |:--:| ----------------- |
+| settings | オブジェクト             | -> | ビルドオプション: context |
+| 戻り値      | 4D.EntitySelection | <- | データクラスの全エンティティの参照 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.all( )` function <!-- REF #dataclassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+`.all( )` 関数はデータストアをクエリして、 <!-- REF #dataclassClass.all().Summary -->データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
 
-The entities are returned in the default order, which is initially the order in which they were created. Note however that, if entities have been deleted and new ones added, the default order does not reflect the creation order anymore.
+エンティティはデフォルトの順番で返され、通常は作成順になっています。 ただし、エンティティ削除後に新規追加した場合には、デフォルトの順番は作成順を反映しない点に留意が必要です。
 
-If no corresponding entity is found, an empty entity selection is returned.
+エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
-Lazy loading is applied.
+この関数には、レイジーローディングが適用されます。
 
 **settings**
 
-In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
+任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                                                                                                                                                   |
-| ------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | テキスト | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| プロパティ   | タイプ  | 説明                                                                                                                                                                 |
+| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けることができます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 
 #### 例題
@@ -152,10 +152,10 @@ In the optional *settings* parameter, you can pass an object containing addition
 ## .fromCollection()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                  |
-| ------ | ----------------------------------- |
-| v17 R5 | Support of the *settings* parameter |
-| v17    | 追加                                  |
+| バージョン  | 内容                   |
+| ------ | -------------------- |
+| v17 R5 | *settings* パラメーターを追加 |
+| v17    | 追加                   |
 </details>
 
 <!-- REF #dataclassClass.fromCollection().Syntax -->
@@ -163,11 +163,11 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 
 <!-- REF #dataclassClass.fromCollection().Params -->
-| 参照        | タイプ                |    | 説明                                               |
-| --------- | ------------------ |:--:| ------------------------------------------------ |
-| objectCol | コレクション             | -> | Collection of objects to be mapped with entities |
-| settings  | オブジェクト             | -> | Build option: context                            |
-| 戻り値       | 4D.EntitySelection | <- | Entity selection filled from the collection      |
+| 参照        | タイプ                |    | 説明                        |
+| --------- | ------------------ |:--:| ------------------------- |
+| objectCol | コレクション             | -> | エンティティにマップするオブジェクトのコレクション |
+| settings  | オブジェクト             | -> | ビルドオプション: context         |
+| 戻り値       | 4D.EntitySelection | <- | コレクションから作成したエンティティセレクション  |
 <!-- END REF -->
 
 
@@ -206,11 +206,11 @@ If a \_\_STAMP attribute is given, a check is performed with the stamp in the da
 
 **settings**
 
-In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
+任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                                                                                                                                                   |
-| ------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | テキスト | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| プロパティ   | タイプ  | 説明                                                                                                                                                                 |
+| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けることができます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 
 #### 例題 1
@@ -364,7 +364,7 @@ In this example, the first entity will be created and saved but the second will 
 | 参照         | タイプ             |    | 説明                                          |
 | ---------- | --------------- |:--:| ------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| settings   | オブジェクト          | -> | Build option: context                       |
+| settings   | オブジェクト          | -> | ビルドオプション: context                           |
 | 戻り値        | 4D.Entity       | <- | Entity matching the designated primary key  |
 <!-- END REF -->
 
@@ -380,11 +380,11 @@ Lazy loading is applied, which means that related data is loaded from disk only 
 
 **settings**
 
-In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
+任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                                                                                                                                                  |
-| ------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | テキスト | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| プロパティ   | タイプ  | 説明                                                                                                                                                                                                                                                                   |
+| ------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context | テキスト | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 
 
@@ -668,7 +668,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 #### 説明
 
-The `.query( )` function <!-- REF #dataclassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query( )` function <!-- REF #dataclassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. この関数には、レイジーローディングが適用されます。
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 
@@ -899,7 +899,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 | attributes    | オブジェクト | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>文字列</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
 | args          | オブジェクト | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | allowFormulas | ブール    | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| context       | テキスト   | Label for the automatic optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                |
+| context       | テキスト   | Label for the automatic optimization context applied to the entity selection. エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けることができます。 This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                                                                                  |
 | queryPlan     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                               |
 | queryPath     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                             |
 
