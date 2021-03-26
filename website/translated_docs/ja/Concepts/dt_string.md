@@ -138,7 +138,7 @@ Character code("A")=Character code("a")
      "Alpha,Bravo,Charlie"%"Alpha" // true
      "Software and Computers"%"comput@" // true
 ```
-> **注:**<br /> - 4Dは、<>=# 演算子を使った文字列比較や、キーワードの検出にICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照して下さい: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries) <br />- 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照してください。
+> **注:**<br /> - 4Dは、<>=# 演算子を使った文字列比較や、キーワードの検出にICUライブラリを使用しています。 For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries. <br />- 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照してください。
 
 ## 文字参照記号
 文字参照記号: [[...]]
