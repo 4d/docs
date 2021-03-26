@@ -3,7 +3,7 @@ id: onColumnResize
 title: On Column Resize
 ---
 
-| Code | Can be called by                                                                                                                                                            | Definition                                                                                     |
+| Code | Can be called by                                                                                                                                                            | 定義                                                                                             |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | 33   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The width of a column is modified directly by the user or consequently to a form window resize |
 
