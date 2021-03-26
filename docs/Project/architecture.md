@@ -132,6 +132,11 @@ Within these folders, deleted element names are in parentheses, e.g. "(myMethod)
 
 The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder. 
 
+## Libraries folder
+
+> This folder is used on macOS only.
+
+The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
 
 ## Resources folder
 
