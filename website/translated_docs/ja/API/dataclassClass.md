@@ -131,9 +131,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                 |
-| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けることができます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
+| プロパティ   | タイプ  | 説明                                                                                                                                                           |
+| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 
 #### 例題
@@ -195,27 +195,27 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 **リレートエンティティ**
 
-The objects of *objectCol* may contain one or more nested object(s) featuring one or more related entities, which can be useful to create or update links between entities.
+*objectCol* 引数のオブジェクトは、一つ以上のリレートエンティティに対応するオブジェクトをネストすることができます。これはエンティティ間のリンクを作成・更新するのに有用です。
 
-The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
-> The content of the related entities cannot be created / updated through this mechanism.
+リレートエンティティに相当するネストされたオブジェクトは、リレートエンティティのプライマリーキー値を格納した "\_\_KEY" プロパティあるいはプライマリーキー属性を格納している必要があります。 ”\_\_KEY” プロパティを使用すると、プライマリーキー属性名に依存する必要がありません。
+> この機構によって、リレートエンティティの中身を作成・更新することはできません。
 
-**記号**
+**スタンプ**
 
-If a \_\_STAMP attribute is given, a check is performed with the stamp in the datastore and an error can be returned ("Given stamp does not match current one for record# XX of table XXXX"). For more information, see [Entity locking](ORDA/entities.md#entity-locking).
+"\_\_STAMP" プロパティが指定された場合、データストアのスタンプとのチェックがおこなわれ、エラーが返されることがあります ("与えられたスタンプはテーブルXXX のレコード# XXのカレントのものと合致しません")。 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
 **settings**
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                 |
-| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けることができます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
+| プロパティ   | タイプ  | 説明                                                                                                                                                           |
+| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 
 #### 例題 1
 
-We want to update an existing entity. The \_\_NEW property is not given, the employee primary key is given and exists:
+既存のエンティティを更新します。 \_\_NEW プロパティはなく、従業員のプライマリーキーは属性に実在の値を指定して渡します:
 
 ```4d
  var $empsCollection : Collection
@@ -224,18 +224,18 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
 
  $empsCollection:=New collection
  $emp:=New object
- $emp.ID:=668 //Existing PK in Employee table
+ $emp.ID:=668 // Employeeテーブルの実在する主キー
  $emp.firstName:="Arthur"
  $emp.lastName:="Martin"
- $emp.employer:=New object("ID";121) //Existing PK in the related dataClass Company
-  // For this employee, we can change the Company by using another existing PK in the related dataClass Company
+ $emp.employer:=New object("ID";121) // リレートデータクラス Company の実在する主キー
+  // リレートデータクラス Company に実在する別の主キーを指定すれば、会社を変更することができます
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
 #### 例題 2
 
-We want to update an existing entity. The \_\_NEW property is not given, the employee primary key is with the \_\_KEY attribute and exists:
+既存のエンティティを更新します。 \_\_NEW プロパティはなく、従業員のプライマリーキーは \_\_KEY プロパティに実在の値を指定して渡します:
 
 ```4d
  var $empsCollection : Collection
@@ -244,18 +244,18 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
 
  $empsCollection:=New collection
  $emp:=New object
- $emp.__KEY:=1720 //Existing PK in Employee table
+ $emp.__KEY:=1720 // Employeeテーブルの実在する主キー
  $emp.firstName:="John"
  $emp.lastName:="Boorman"
- $emp.employer:=New object("ID";121) //Existing PK in the related dataClass Company
-  // For this employee, we can change the Company by using another existing PK in the related dataClass Company
+ $emp.employer:=New object("ID";121) // リレートデータクラス Company の実在する主キー
+  // リレートデータクラス Company に実在する別の主キーを指定すれば、会社を変更することができます
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
 #### 例題 3
 
-We want to simply create a new entity from a collection:
+単純に、コレクションから新しいエンティティを作成します:
 
 ```4d
  var $empsCollection : Collection
@@ -272,7 +272,7 @@ We want to simply create a new entity from a collection:
 
 #### 例題 4
 
-We want to create an entity. The \_\_NEW property is True, the employee primary key is not given:
+新規エンティティを作成します。 \_\_NEW プロパティは true で、従業員のプライマリーキーは指定しません:
 
 ```4d
  var $empsCollection : Collection
@@ -283,7 +283,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  $emp:=New object
  $emp.firstName:="Mary"
  $emp.lastName:="Smith"
- $emp.employer:=New object("__KEY";121) //Existing PK in the related dataClass Company
+ $emp.employer:=New object("__KEY";121) // リレートデータクラス Company の実在する主キー
  $emp.__NEW:=True
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
@@ -293,9 +293,9 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
 
 ```
 
-#### Example 5
+#### 例題 5
 
-We want to create an entity. The \_\_NEW property is omitted, the employee primary key is given and does not exist:
+新規エンティティを作成します。 \_\_NEW プロパティはなく、従業員のプライマリーキー属性を指定しますが、その値は実在しません:
 
 ```4d
  var $empsCollection : Collection
@@ -304,16 +304,16 @@ We want to create an entity. The \_\_NEW property is omitted, the employee prima
 
  $empsCollection:=New collection
  $emp:=New object
- $emp.ID:=10000 //Unexisting primary key
+ $emp.ID:=10000 // 実在しない主キー
  $emp.firstName:="Françoise"
  $emp.lastName:="Sagan"
  $empsCollection.push($emp)
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 6
+#### 例題 6
 
-In this example, the first entity will be created and saved but the second will fail since they both use the same primary key:
+2つのエンティティが同じプライマリーキーを持つ場合、最初のエンティティは作成・保存されますが、2つめのエンティティの処理は失敗します:
 
 ```4d
  var $empsCollection : Collection
@@ -322,21 +322,21 @@ In this example, the first entity will be created and saved but the second will 
 
  $empsCollection:=New collection
  $emp:=New object
- $emp.ID:=10001 // Unexisting primary key
+ $emp.ID:=10001 // 実在しない主キー
  $emp.firstName:="Simone"
  $emp.lastName:="Martin"
  $emp.__NEW:=True
  $empsCollection.push($emp)
 
  $emp2:=New object
- $emp2.ID:=10001 // Same primary key, already existing
+ $emp2.ID:=10001 // 上と同じ主キー
  $emp2.firstName:="Marc"
  $emp2.lastName:="Smith"
  $emp2.__NEW:=True
  $empsCollection.push($emp2)
  $employees:=ds.Employee.fromCollection($empsCollection)
-  //first entity is created
-  //duplicated key error for the second entity
+  // 最初のエンティティは作成されます
+  // 2つめのエンティティは重複キーエラーになります
 ```
 
 #### 参照
@@ -361,30 +361,30 @@ In this example, the first entity will be created and saved but the second will 
 
 
 <!-- REF #dataclassClass.get().Params -->
-| 参照         | タイプ             |    | 説明                                          |
-| ---------- | --------------- |:--:| ------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| settings   | オブジェクト          | -> | ビルドオプション: context                           |
-| 戻り値        | 4D.Entity       | <- | Entity matching the designated primary key  |
+| 参照         | タイプ       |    | 説明                      |
+| ---------- | --------- |:--:| ----------------------- |
+| primaryKey | 整数または文字列  | -> | 取得するエンティティのプライマリーキー値    |
+| settings   | オブジェクト    | -> | ビルドオプション: context       |
+| 戻り値        | 4D.Entity | <- | 指定したプライマリーキーに合致するエンティティ |
 <!-- END REF -->
 
 #### 説明
 
-The `.get()` function <!-- REF #dataclassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+`.get()` 関数はデータクラスをクエリして、 <!-- REF #dataclassClass.get().Summary -->*primaryKey* に渡したプライマリーキーに合致するエンティティを返します<!-- END REF -->。
 
-In *primaryKey*, pass the primary key value of the entity to retrieve. The value type must match the primary key type set in the datastore (Integer or Text). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](entityClass.md#getkey) function with the `dk key as string` parameter.
+*primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 [`.getKey()`](entityClass.md#getkey) 関数に `dk key as string` 引数を渡すと、プライマリーキーの値が常にテキスト型で返されるように指定することができます。
 
-If no entity is found with *primaryKey*, a **Null** entity is returned.
+*primaryKey* 引数のプライマリーキーを持つエンティティが見つからない場合、**Null** エンティティが返されます。
 
-Lazy loading is applied, which means that related data is loaded from disk only when it is required.
+この関数にはレイジーローディングが適用され、リレートデータは必要な時にのみディスクから読み込まれます。
 
 **settings**
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                                                                                                                   |
-| ------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | テキスト | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
+| プロパティ   | タイプ  | 説明                                                                                                                                                        |
+| ------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context | テキスト | エンティティに適用されている自動の最適化コンテキストのラベル。 エンティティを読み込む以降のコードは、このコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 
 
@@ -393,13 +393,13 @@ Lazy loading is applied, which means that related data is loaded from disk only 
 ```4d
  var $entity : cs.EmployeeEntity  
  var $entity2 : cs.InvoiceEntity
- $entity:=ds.Employee.get(167) // return the entity whose primary key value is 167
- $entity2:=ds.Invoice.get("DGGX20030") // return the entity whose primary key value is "DGGX20030"
+ $entity:=ds.Employee.get(167) // プライマリーキーの値が 167のエンティティを返します
+ $entity2:=ds.Invoice.get("DGGX20030") // プライマリーキーの値が "DGGX20030" のエンティティを返します
 ```
 
 #### 例題 2
 
-This example illustrates the use of the *context* property:
+*context* プロパティの使用について紹介します:
 
 ```4d
  var $e1; $e2; $e3; $e4 : cs.EmployeeEntity
@@ -409,16 +409,16 @@ This example illustrates the use of the *context* property:
  $settings2:=New object("context";"summary")
 
  $e1:=ds.Employee.get(1;$settings)
- completeAllData($e1) // In completeAllData method, an optimization is triggered and associated to context "detail"
+ completeAllData($e1) // completeAllData メソッドにおいて最適化がトリガーされ、"detail" コンテキストが割り当てられます
 
  $e2:=ds.Employee.get(2;$settings)
- completeAllData($e2) // In completeAllData method, the optimization associated to context "detail" is applied
+ completeAllData($e2) // completeAllData メソッドには、"detail" コンテキストに付随する最適化が適用されます
 
  $e3:=ds.Employee.get(3;$settings2)
- completeSummary($e3) //In completeSummary method, an optimization is triggered and associated to context "summary"
+ completeSummary($e3) // completeSummary メソッドにおいて最適化がトリガーされ、"summary" コンテキストが割り当てられます
 
  $e4:=ds.Employee.get(4;$settings2)
- completeSummary($e4) //In completeSummary method, the optimization associated to context "summary" is applied
+ completeSummary($e4) // completeSummary メソッドには、"summary" コンテキストに付随する最適化が適用されます
 ``` 
  
 
@@ -438,34 +438,34 @@ This example illustrates the use of the *context* property:
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #dataclassClass.getDataStore().Params -->
-| 参照  | タイプ          |    | 説明                         |
-| --- | ------------ |:--:| -------------------------- |
-| 戻り値 | cs.DataStore | <- | Datastore of the dataclass |
+| 参照  | タイプ          |    | 説明                 |
+| --- | ------------ |:--:| ------------------ |
+| 戻り値 | cs.DataStore | <- | データクラスが属しているデータストア |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getDataStore( )` function <!-- REF #dataclassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+`.getDataStore( )` 関数は、 <!-- REF #dataclassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
 
-The datastore can be:
+返されるデータストアは次のいずれかです:
 
-*   the main datastore, as returned by the `ds` command.
-*   a remote datastore, opened using the `Open datastore` command.
+*   `ds` コマンドによって返されるメインデータストア
+*   `Open datastore` コマンドを使用して開かれたリモートデータストア
 
 
 #### 例題
 
-The ***SearchDuplicate*** project method searches for duplicated values in any dataclass.
+***SearchDuplicate*** プロジェクトメソッドは、任意のデータクラス内の重複した値を検索します。
 
 ```4d
  var $pet : cs.CatsEntity
- $pet:=ds.Cats.all().first() //get an entity
+ $pet:=ds.Cats.all().first() // エンティティを取得します
  SearchDuplicate($pet;"Dogs")
 ```
 
 ```4d
-  // SearchDuplicate method
+  // SearchDuplicate メソッド
   // SearchDuplicate(entity_to_search;dataclass_name)
 
  #DECLARE ($pet : Object ; $dataClassName : Text)
@@ -492,23 +492,23 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 **.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #dataclassClass.getInfo().Params -->
-| 参照  | タイプ    |    | 説明                           |
-| --- | ------ | -- | ---------------------------- |
-| 戻り値 | オブジェクト | <- | Information on the dataclass |
+| 参照  | タイプ    |    | 説明        |
+| --- | ------ | -- | --------- |
+| 戻り値 | オブジェクト | <- | データクラスの情報 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
+`.getInfo( )` 関数は、 <!-- REF #dataclassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
-**Returned object**
+**返されるオブジェクト**
 
-| プロパティ       | タイプ  | 説明                                       |
-| ----------- | ---- | ---------------------------------------- |
-| name        | テキスト | データクラスの名称                                |
-| primaryKey  | テキスト | Name of the primary key of the dataclass |
-| tableNumber | 整数   | Internal 4D table number                 |
+| プロパティ       | タイプ  | 説明                   |
+| ----------- | ---- | -------------------- |
+| name        | テキスト | データクラスの名称            |
+| primaryKey  | テキスト | データクラスのプライマリーキー属性の名称 |
+| tableNumber | 整数   | 内部的な 4Dテーブル番号        |
 
 
 
@@ -518,11 +518,11 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
  #DECLARE ($entity : Object)  
  var $status : Object
 
- computeEmployeeNumber($entity) //do some actions on entity
+ computeEmployeeNumber($entity) // エンティティに対する何らかの操作
 
  $status:=$entity.save()
  if($status.success)
-    ALERT("Record updated in table "+$entity.getDataClass().getInfo().name)
+    ALERT("テーブル "+$entity.getDataClass().getInfo().name+" のレコードが更新されました。")
  End if
 ```
 
@@ -545,7 +545,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
  var $dataClassAttribute : Object
 
  $pk:=ds.Employee.getInfo().primaryKey
- $dataClassAttribute:=ds.Employee[$pk] // If needed the attribute matching the primary key is accessible
+ $dataClassAttribute:=ds.Employee[$pk] // 必要に応じてプライマリーキー属性へのアクセスが可能です
 ```
 
 <!-- END REF -->
@@ -565,29 +565,29 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
 **.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #dataclassClass.new().Params -->
-| 参照  | タイプ       |    | 説明                                |
-| --- | --------- | -- | --------------------------------- |
-| 戻り値 | 4D.Entity | <- | New entity matching the Dataclass |
+| 参照  | タイプ       |    | 説明              |
+| --- | --------- | -- | --------------- |
+| 戻り値 | 4D.Entity | <- | データクラスの新規エンティティ |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.new( )` function <!-- REF #dataclassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+`.new( )` 関数は、 <!-- REF #dataclassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
 
-The entity object is created in memory and is not saved in the database until the [`.save( )`](entityClass.md#save) function is called. If the entity is deleted before being saved, it cannot be recovered.
+エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](entityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
 
-**4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
+**4D Server**: クライアント/サーバーにおいては、対応するテーブルのプライマリーキーが自動インクリメントであった場合、エンティティがサーバー側に保存されたときに計算されます。
 
 #### 例題
 
-This example creates a new entity in the "Log" Dataclass and records information in the "info" attribute:
+以下のコードは "Log" データクラスに新しいエンティティを作成し、"info" 属性に情報を記録します:
 
 ```4d 
  var $entity : cs.LogEntity
- $entity:=ds.Log.new() //create a reference
- $entity.info:="New entry" //store some information
- $entity.save() //save the entity
+ $entity:=ds.Log.new() // 参照を作成します
+ $entity.info:="New entry" // 情報を格納します
+ $entity.save() // エンティティを保存します
 ```
  
 <!-- END REF -->
@@ -608,10 +608,10 @@ This example creates a new entity in the "Log" Dataclass and records information
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #dataclassClass.newSelection().Params -->
-| 参照        | タイプ                |    | 説明                                                                                                                                            |
-| --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder | 整数                 | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-| 戻り値       | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
+| 参照        | タイプ                |    | 説明                                                                                                      |
+| --------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------- |
+| keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
+| 戻り値       | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                     |
 <!-- END REF -->
 
 
@@ -899,7 +899,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 | attributes    | オブジェクト | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>文字列</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
 | args          | オブジェクト | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | allowFormulas | ブール    | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| context       | テキスト   | Label for the automatic optimization context applied to the entity selection. エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けることができます。 This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                                                                                  |
+| context       | テキスト   | Label for the automatic optimization context applied to the entity selection. エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                                                                                        |
 | queryPlan     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                               |
 | queryPath     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                             |
 
