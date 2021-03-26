@@ -181,17 +181,17 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 **作成モードと更新モード**
 
-For each object of *objectCol*:
+*objectCol* 引数の各オブジェクトついて:
 
-*   If the object contains a boolean property "\_\_NEW" set to false (or does not contain a boolean "\_\_NEW" property), the entity is updated or created with the corresponding values of the properties from the object. No check is performed in regards to the primary key:
-    *   If the primary key is given and exists, the entity is updated. In this case, the primary key can be given as is or with a "\_\_KEY" property (filled with the primary key value).
-    *   If the primary key is given (as is) and does not exist, the entity is created
-    *   If the primary key is not given, the entity is created and the primary key value is assigned with respect to standard database rules.
-*   If the object contains a boolean property "\_\_NEW" set to **true**, the entity is created with the corresponding values of the attributes from the object. A check is performed in regards to the primary key:
-    *   If the primary key is given (as is) and exists, an error is sent
-    *   If the primary key is given (as is) and does not exist, the entity is created
-    *   If the primary is not given, the entity is created and the primary key value is assigned with respect to standard database rules.
-> The "\_\_KEY" property containing a value is taken into account only when the "\_\_NEW" property is set to **false** (or is omitted) and a corresponding entity exists. In all other cases, the "\_\_KEY" property value is ignored, primary key value must be passed "as is".
+*   オブジェクトがブール型の "\_\_NEW" プロパティを含み、それが **false** に設定されている場合(あるいは "\_\_NEW" プロパティが含まれていない場合)、オブジェクトの対応する値でエンティティが更新あるいは作成されます。 プライマリーキーに関するチェックはおこなわれません:
+    *   プライマリーキーが指定されていて実在する場合、エンティティは更新されます。 この場合、プライマリーキーはそのまま、あるいは "\_\_KEY" プロパティを (プライマリーキー値とともに) 使って指定することができます。
+    *   そのまま指定したプライマリーキーが実在しない場合、エンティティは作成されます。
+    *   プライマリーキーを指定していない場合、エンティティは作成され、標準のデータベースのルールに基づいてプライマリーキー値が割り当てられます。
+*   オブジェクトがブール型の "\_\_NEW" プロパティを含み、それが **true** に設定されている場合、オブジェクトの対応する値でエンティティが作成されます。 プライマリーキーに関するチェックがおこなわれます:
+    *   そのまま指定したプライマリーキーが実在する場合、エラーが返されます。
+    *   そのまま指定したプライマリーキーが実在しない場合、エンティティは作成されます。
+    *   プライマリーキーを指定していない場合、エンティティは作成され、標準のデータベースのルールに基づいてプライマリーキー値が割り当てられます。
+> 値を格納している"\_\_KEY" プロパティは、"\_\_NEW" プロパティが **false** に設定 (あるいは省略) されていて、かつ対応するエンティティが存在する場合のみ、考慮されます。 それ以外の場合には、"\_\_KEY" プロパティ値は無視されるため、プライマリーキーの値はそのまま渡さなければなりません。
 
 **リレートエンティティ**
 
