@@ -359,8 +359,8 @@ title: DataClassAttribute
 | dataClassAttribute.kind | type                                                  | 説明                                                                       |
 | ----------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------ |
 | storage                 | "number", "date", "object", "bool", "image", "string" | 数値型の場合 "number" が返されます (期間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 |
-| relatedEntity           | related dataClass name                                | Ex: "Companies"                                                          |
-| relatedEntities         | related dataClass name + "Selection" suffix           | Ex: "EmployeeSelection"                                                  |
+| relatedEntity           | リレートされたデータクラス名                                        | 例: "Companies"                                                           |
+| relatedEntities         | リレートされたデータクラス名 + "Selection"                          | 例: "EmployeeSelection"                                                   |
 
 <!-- END REF -->
 
@@ -383,10 +383,10 @@ title: DataClassAttribute
 
 #### 説明
 
-The `.unique` property <!-- REF dataclassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. This property corresponds to the "Unique" 4D field property.
+`.unique` プロパティは、 <!-- REF dataclassAttributeClass.unique.Summary -->属性値が重複不可の場合に true<!-- END REF -->です。 このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
-> For generic programming, you can use **Bool**(dataClassAttribute.unique) to get a valid value (false) even if `.unique` is not returned. 
+> 汎用的なプログラミングのために、`.unique` が返されない場合でも **Bool** (dataClassAttribute.unique) と書くことで、有効な値 (false) を受け取ることができます。 
 
 <!-- END REF -->
 
