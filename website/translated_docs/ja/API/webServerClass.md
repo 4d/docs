@@ -773,7 +773,7 @@ All settings of [Web Server objects](#web-server-object) can be customized, exce
 Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
 
-#### Returned object
+#### 返されるオブジェクト
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
