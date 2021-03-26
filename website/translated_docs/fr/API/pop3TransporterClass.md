@@ -115,8 +115,6 @@ La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). 
 
 La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary -->crée et retourne un nouvel objet de type `4D.POP3Transporter`<!-- END REF -->. Elle est identique à la commande [`POP3 New transporter`](#pop3-new-transporter) (raccourci).
 
-> Il est recommandé d'utiliser la commande de raccourci [`POP3 New transporter`](#pop3-new-transporter) au lieu de `4D.POP3Transporter.new()`. 
-
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 

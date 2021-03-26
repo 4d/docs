@@ -284,7 +284,7 @@ title: DataClassAttribute
 
 #### 説明
 
-The `.name` property <!-- REF dataclassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
+`.name` プロパティは、 <!-- REF dataclassAttributeClass.name.Summary -->`dataClassAttribute` オブジェクトの名称<!-- END REF -->を文字列として返します。
 
 #### 例題
 
@@ -313,13 +313,13 @@ The `.name` property <!-- REF dataclassAttributeClass.name.Summary -->returns th
 
 
 #### 説明
-> This property is only available with attributes of the "relatedEntity" or "relatedEntities" [`.kind`](#kind) property.
+> このプロパティは、[`.kind`](#kind) プロパティ値が "relatedEntity" または "relatedEntities" である属性においてのみ利用可能です。
 
-The `.relatedDataClass` property <!-- REF dataclassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
+`.relatedDataClass` プロパティ、 <!-- REF dataclassAttributeClass.relatedDataClass.Summary -->属性にリレートされているデータクラスの名称<!-- END REF -->を返します。
 
 #### 例題
 
-Given the following tables and relations:
+以下のテーブルとリレーションを前提とします:
 
 
 ![](assets/en/API/dataclassAttribute4.png)
@@ -350,17 +350,17 @@ Given the following tables and relations:
 
 #### 説明
 
-The `.type` property <!-- REF dataclassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
+`.type` プロパティは、 <!-- REF dataclassAttributeClass.type.Summary -->属性の概念的な値タイプ<!-- END REF -->が格納されており、汎用的なプログラミングに有用です。
 
-The conceptual value type depends on the attribute [`.kind`](#kind).
+この概念的な値タイプは属性の種類 ([`.kind`](#kind)) によります。
 
 **とりうる値:**
 
-| dataClassAttribute.kind | type                                                     | 説明                                                                                                                       |
-| ----------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| storage                 | "number", "date", "object", "bool", "image", or "string" | "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types |
-| relatedEntity           | related dataClass name                                   | Ex: "Companies"                                                                                                          |
-| relatedEntities         | related dataClass name + "Selection" suffix              | Ex: "EmployeeSelection"                                                                                                  |
+| dataClassAttribute.kind | type                                                  | 説明                                                                       |
+| ----------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------ |
+| storage                 | "number", "date", "object", "bool", "image", "string" | 数値型の場合 "number" が返されます (期間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 |
+| relatedEntity           | リレートされたデータクラス名                                        | 例: "Companies"                                                           |
+| relatedEntities         | リレートされたデータクラス名 + "Selection"                          | 例: "EmployeeSelection"                                                   |
 
 <!-- END REF -->
 
@@ -383,10 +383,10 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 #### 説明
 
-The `.unique` property <!-- REF dataclassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. This property corresponds to the "Unique" 4D field property.
+`.unique` プロパティは、 <!-- REF dataclassAttributeClass.unique.Summary -->属性値が重複不可の場合に true<!-- END REF -->です。 このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
-> For generic programming, you can use **Bool**(dataClassAttribute.unique) to get a valid value (false) even if `.unique` is not returned. 
+> 汎用的なプログラミングのために、`.unique` が返されない場合でも **Bool** (dataClassAttribute.unique) と書くことで、有効な値 (false) を受け取ることができます。 
 
 <!-- END REF -->
 

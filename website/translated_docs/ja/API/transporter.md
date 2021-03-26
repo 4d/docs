@@ -375,7 +375,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
 
-#### Returned object
+#### 返されるオブジェクト
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 

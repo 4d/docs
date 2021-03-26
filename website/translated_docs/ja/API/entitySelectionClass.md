@@ -53,7 +53,7 @@ Entity selections can be created from existing selections using various function
 | 参照       | タイプ                |    | 説明                                                                                          |
 | -------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
 | dsTable  | テーブル               | -> | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings | オブジェクト             | -> | Build option: context                                                                       |
+| settings | オブジェクト             | -> | ビルドオプション: context                                                                           |
 | 戻り値      | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
 <!-- END REF -->
 
@@ -1505,20 +1505,20 @@ In this example, the "marks" object field in the **Students** dataClass contains
 <!-- REF #entitySelectionClass.query().Params -->
 | 参照            | タイプ                |    | 説明                                                                                                                                                            |
 | ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | テキスト               | -> | Search criteria as string                                                                                                                                     |
-| formula       | オブジェクト             | -> | Search criteria as formula object                                                                                                                             |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
-| querySettings | オブジェクト             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
+| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                                                                                                    |
+| formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                                                                                           |
+| value         | any                | -> | プレースホルダー用の値                                                                                                                                                   |
+| querySettings | オブジェクト             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                          |
 | 戻り値           | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.query()` function <!-- REF #entitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query()` function <!-- REF #entitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. この関数には、レイジーローディングが適用されます。
 > This function does not modify the original entity selection.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
 For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](dataclassClass.md#query) function description.
 > By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
@@ -2039,7 +2039,7 @@ returns:
    ]
 ```
 
-#### Example 5
+#### 例題 5
 
 Example with *filterCol* parameter:
 
@@ -2065,7 +2065,7 @@ Returns:
 ]
 ```
 
-#### Example 6
+#### 例題 6
 
 Example with extraction of all properties of a relatedEntity:
 

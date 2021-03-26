@@ -3,7 +3,7 @@ id: onBeginUrlLoading
 title: On Begin URL Loading
 ---
 
-| Code | Can be called by                          | Definition                          |
+| Code | Can be called by                          | 定義                                  |
 | ---- | ----------------------------------------- | ----------------------------------- |
 | 47   | [Webエリア](FormObjects/webArea_overview.md) | A new URL is loaded in the Web area |
 

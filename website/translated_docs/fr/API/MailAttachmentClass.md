@@ -24,7 +24,7 @@ Attachment objects provide the following read-only properties and functions:
 ## MAIL New attachment
 
 <!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : Object<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : Object<!-- END REF -->
+**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
@@ -156,6 +156,29 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
+
+## 4D.MailAttachment.new()
+
+
+<!-- REF #4D.MailAttachment.new().Syntax -->
+**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #4D.MailAttachment.new().Params -->
+
+| Paramètres  | Type              |    | Description                                                          |
+| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
+| path        | Texte             | -> | Path of the attachment file                                          |
+| blob        | Blob              | -> | BLOB containing the attachment                                       |
+| name        | Texte             | -> | Name + extension used by the mail client to designate the attachment |
+| cid         | Texte             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
+| type        | Texte             | -> | Value of the content-type header                                     |
+| disposition | Texte             | -> | Value of the content-disposition header: "inline" or "attachment".   |
+| Résultat    | 4D.MailAttachment | <- | Attachment object                                                    |
+<!-- END REF -->
+
+#### Description
+
+The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
 
 
 ## .cid
