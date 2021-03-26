@@ -611,20 +611,20 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | 参照        | タイプ                |    | 説明                                                                                                      |
 | --------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------- |
 | keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
-| 戻り値       | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                     |
+| 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション                                                                                 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.newSelection( )` function <!-- REF #dataclassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+`.newSelection( )` 関数は、データクラスに紐づいた <!-- REF #dataclassClass.newSelection().Summary -->追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
 
-> For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 
-If you want to create an ordered entity selection, pass the `dk keep ordered` selector in the *keepOrder* parameter. By default if you omit this parameter, or if you pass the `dk non ordered` selector, the method creates an unordered entity selection. Unordered entity selections are faster but you cannot rely on entity positions. For more information, please see [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+順列ありのエンティティセレクションを作成するには、*keepOrder* に `dk keep ordered` セレクターを渡します。 この引数を省略した場合のデフォルト、あるいは `dk non ordered` セレクターを渡した場合には、関数は順列なしのエンティティセレクションを返します。 順列なしのエンティティセレクションの方が速いですが、エンティティの位置に頼ることはできません。 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
-When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](entitySelectionClass.md#add) function.
+作成された時点では、エンティティセレクションにエンティティは含まれていません(`mySelection.length` は0を返します)。 あとから [`add()`](entitySelectionClass.md#add) 関数を呼び出すことで、エンティティセレクションを徐々にビルドしていくことができます。
 
 
 #### 例題
@@ -632,8 +632,8 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 ```4d 
  var $USelection; $OSelection : cs.EmployeeSelection
- $USelection:=ds.Employee.newSelection() //create an unordered empty entity selection
- $OSelection:=ds.Employee.newSelection(dk keep ordered) //create an ordered empty entity selection
+ $USelection:=ds.Employee.newSelection() // 順列なしの空のエンティティセレクションを作成します
+ $OSelection:=ds.Employee.newSelection(dk keep ordered) // 順列ありの空のエンティティセレクションを作成します
 ```
  
 
@@ -656,35 +656,35 @@ When created, the entity selection does not contain any entities (`mySelection.l
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #dataclassClass.query().Params -->
-| 参照            | タイプ                |    | 説明                                                                                                                          |
-| ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | テキスト               | -> | Search criteria as string                                                                                                   |
-| formula       | オブジェクト             | -> | Search criteria as formula object                                                                                           |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
-| querySettings | オブジェクト             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
-| 戻り値           | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
+| 参照            | タイプ                |    | 説明                                                                                   |
+| ------------- | ------------------ | -- | ------------------------------------------------------------------------------------ |
+| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                           |
+| formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                  |
+| value         | any                | -> | プレースホルダー用の値                                                                          |
+| querySettings | オブジェクト             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
+| 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション                |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.query( )` function <!-- REF #dataclassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. この関数には、レイジーローディングが適用されます。
+`.query( )` 関数は、データクラスの全エンティティから、 <!-- REF #dataclassClass.query().Summary -->*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
-**queryString parameter**
+**queryString 引数**
 
 *queryString* 引数には、以下のシンタックスを使用します:
 
 ```4d
-attributePath|formula comparator value   
-    {logicalOperator attributePath|formula comparator value}   
+attributePath|formula 比較演算子 値   
+    {論理演算子 attributePath|formula 比較演算子 値}   
     {order by attributePath {desc | asc}}
 ```
 
-where:
+詳細は以下の通りです:
 
-*   **attributePath**: path of attribute on which you want to execute the query. This parameter can be a simple name (for example "country") or any valid attribute path (for example "country.name".) In case of an attribute path whose type is `Collection`, \[ ] notation is used to handle all the occurences (for example "children\[ ].age"). You can also use a **placeholder** (see below).
+*   **attributePath**: クエリの実行対象となる属性パス。 この引数は、単純な名前 ("country" など) のほか、あらゆる有効な属性パス ("country.name" など) の形をとることができます。 属性パスが `Collection` 型である場合、すべてのオカレンスを管理するには\[ ] 記法を使用してください (例: "children\[ ].age" など)。 また、**プレースホルダー** を使用することもできます(後述参照)。
 > *You cannot use directly attributes whose name contains special characters such as ".", "\[ ]", or "=", ">", "#"..., because they will be incorrectly evaluated in the query string. If you need to query on such attributes, you must consider using placeholders, which allow an extended range of characters in attribute paths (see* **Using placeholders** *below).*
 
 *   **formula**: a valid formula passed as `Text` or `Object`. フォーミュラは処理されるエンティティごとに評価され、ブール値を返さなくてはなりません。 Within the formula, the entity is available through the `This` object.
