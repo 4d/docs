@@ -1,6 +1,6 @@
 ---
 id: MailAttachmentClass
-title: Mail Attachment
+title: MailAttachment
 ---
 
 Attachment objects allow referencing files within a [`Email`](emailObjectClass.md) object. Attachment objects are created using the [`MAIL New attachment`](#mail-new-attachment) command.
@@ -24,7 +24,7 @@ Attachment objects provide the following read-only properties and functions:
 ## MAIL New attachment
 
 <!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : Object<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : Object<!-- END REF -->
+**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
@@ -156,6 +156,29 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
+
+## 4D.MailAttachment.new()
+
+
+<!-- REF #4D.MailAttachment.new().Syntax -->
+**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #4D.MailAttachment.new().Params -->
+
+| Parameter   | Type              |    | Description                                                          |
+| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
+| path        | Text              | -> | Path of the attachment file                                          |
+| blob        | Blob              | -> | BLOB containing the attachment                                       |
+| name        | Text              | -> | Name + extension used by the mail client to designate the attachment |
+| cid         | Text              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
+| type        | Text              | -> | Value of the content-type header                                     |
+| disposition | Text              | -> | Value of the content-disposition header: "inline" or "attachment".   |
+| Result      | 4D.MailAttachment | <- | Attachment object                                                    |
+<!-- END REF -->
+
+#### Description
+
+The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
 
 
 ## .cid

@@ -3,7 +3,7 @@ id: onActivate
 title: On Activate
 ---
 
-| Code | Can be called by | Definition                                                                               |
+| Code | Can be called by | 定義                                                                                       |
 | ---- | ---------------- | ---------------------------------------------------------------------------------------- |
 | 11   | フォーム             | The form's window becomes the frontmost window or the subform's container gets the focus |
 

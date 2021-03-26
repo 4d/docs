@@ -211,14 +211,14 @@ This folder contains files that memorize user configurations, e.g. break point o
 
 ## Dossier Components
 
-Ce dossier contient les composants disponibles dans le projet d'application uniquement. Il doit être stocké au même niveau que le dossier Project.
+This folder contains the components to be available in the application project. Il doit être stocké au même niveau que le dossier Project.
 
 > Une application projet peut être elle-même un composant : - à des fins de développement : insérer un alias du fichier .4dproject dans le dossier Components du projet hôte. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## Dossier Plugins
 
-Ce dossier contient les plug-ins disponibles dans le projet d'application uniquement. Il doit être stocké au même niveau que le dossier Project.
+This folder contains the plug-ins to be available in the application project. Il doit être stocké au même niveau que le dossier Project.
 
 
 ## Dossier documentation

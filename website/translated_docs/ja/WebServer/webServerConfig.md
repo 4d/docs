@@ -438,7 +438,7 @@ Default value: 100 (pass 0 to restore the default value).
 
 Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.
 
-Possible values:
+とりうる値:
 
 - 1 = TLSv1_0
 - 2 = TLSv1_1
