@@ -2039,7 +2039,7 @@ returns:
    ]
 ```
 
-#### Example 5
+#### 例題 5
 
 Example with *filterCol* parameter:
 
@@ -2065,7 +2065,7 @@ Returns:
 ]
 ```
 
-#### Example 6
+#### 例題 6
 
 Example with extraction of all properties of a relatedEntity:
 
