@@ -53,7 +53,7 @@ Entity selections can be created from existing selections using various function
 | 参照       | タイプ                |    | 説明                                                                                          |
 | -------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
 | dsTable  | テーブル               | -> | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings | オブジェクト             | -> | Build option: context                                                                       |
+| settings | オブジェクト             | -> | ビルドオプション: context                                                                           |
 | 戻り値      | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
 <!-- END REF -->
 
@@ -1515,7 +1515,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 #### 説明
 
-The `.query()` function <!-- REF #entitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query()` function <!-- REF #entitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. この関数には、レイジーローディングが適用されます。
 > This function does not modify the original entity selection.
 
 If no matching entities are found, an empty `EntitySelection` is returned.
