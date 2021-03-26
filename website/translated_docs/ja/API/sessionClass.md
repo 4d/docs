@@ -1,13 +1,13 @@
 ---
 id: sessionClass
-title: セッション
+title: Session
 ---
 
 Session objects are returned by the [`Session`](#session) command when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). The Session object is automatically created and maintained by the 4D web server to control the session of a web client (e.g. a browser). This object provides the web developer with an interface to the user session, allowing to manage privileges, store contextual data, share information between processes, and launch session-related preemptive processes.
 
 For detailed information about the session implementation, please refer to the [web server Sessions](WebServer/sessions.md) section.
 
-### Summary
+### 概要
 
 
 |                                                                                                                                                                                                           |
@@ -136,7 +136,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 The `.expirationDate` property contains <!-- REF #sessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+このプロパティは **読み取り専用** です。 It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### 例題
 

@@ -1,6 +1,6 @@
 ---
 id: dataclassClass
-title: データクラス
+title: DataClass
 ---
 
 
@@ -8,7 +8,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 
 
-### Summary
+### 概要
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 The attributes of dataclasses are <!-- REF dataclassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
 The returned objects are of the [`DataClassAttribute`](dataclassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
-> Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
+> データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
 
 #### 例題 1
 
@@ -77,7 +77,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
   //42=Is collection
 ```
 
-#### Example 3
+#### 例題 3
 
 Considering the following table properties:
 
@@ -253,7 +253,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 3
+#### 例題 3
 
 We want to simply create a new entity from a collection:
 
@@ -270,7 +270,7 @@ We want to simply create a new entity from a collection:
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 4
+#### 例題 4
 
 We want to create an entity. The \_\_NEW property is True, the employee primary key is not given:
 
@@ -538,7 +538,7 @@ The `.getInfo( )` function <!-- REF #dataclassClass.getInfo().Summary -->returns
  $es:=ds.Clients.query(":pk in :receivedIds";$settings)
 ```
 
-#### Example 3
+#### 例題 3
 
 ```4d 
  var $pk : Text
@@ -674,7 +674,7 @@ If no matching entities are found, an empty `EntitySelection` is returned.
 
 **queryString parameter**
 
-The *queryString* parameter uses the following syntax:
+*queryString* 引数には、以下のシンタックスを使用します:
 
 ```4d
 attributePath|formula comparator value   
@@ -1130,7 +1130,7 @@ Query with named placeholders for attributes and values:
  End if
 ```
 
-#### Example 3
+#### 例題 3
 
 These examples illustrate the various ways to use formulas with or without parameters in your queries.
 

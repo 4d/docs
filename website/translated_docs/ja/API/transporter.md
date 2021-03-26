@@ -158,7 +158,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 *   attachment filename(s),
 *   email name.
 
-**Possible values:**
+**とりうる値:**
 
 | 定数                       | 結果                             | 説明                                                                                                            |
 | ------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
@@ -216,7 +216,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 *   attachment filename(s),
 *   email name.
 
-**Possible values:**
+**とりうる値:**
 
 | 定数                       | 結果                             | 説明                                                                                                        |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------- |

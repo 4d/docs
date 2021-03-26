@@ -80,7 +80,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $signal.trigger()
 ```
 
-### Summary
+### 概要
 
 
 |                                                                                                                                                                                         |
@@ -207,7 +207,7 @@ This property is **read-write**.
 
 The `.signaled` property <!-- REF #signalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 

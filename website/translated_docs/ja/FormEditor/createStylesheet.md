@@ -190,35 +190,77 @@ text[text|=Hello]
 
 ## スタイルシート宣言
 
+### Media Queries
+
+Media queries are used to apply color schemes to an application.
+
+A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+
+
+Available media features:
+
+*   `prefers-color-scheme`
+
+
+Available media feature expressions:
+
+*   **light**<br>For using a light scheme
+*   **dark**<br>For using a dark scheme
+
+> Color schemes are only supported on macOS.
+
+##### 例題
+
+This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+
+```
+@media (prefers-color-scheme: light) {
+ .textScheme {
+   fill: LightGrey;
+   stroke: Black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .textScheme {
+    fill: DarkSlateGray;
+    stroke: LightGrey;
+  }
+}
+```
+
+
+### Object Attributes
+
 多くのフォームオブジェクト属性をスタイルシートによって指定することができますが、次の属性は除外されます:
-    - "method"
-    - "type"
-    - "class"
-    - "event"
-    - choiceList, excludedList, labels, list, requiredList (リストタイプ)
+    - `method`
+    - `type`
+    - `class`
+    - `event`
+    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
-フォームオブジェクトの属性は、それらの JSON 名を使って CSS 属性のように指定できます (オブジェクトタイプやメソッド、イベント、リストなどの属性を除く)。 詳細についてはデザインリファレンスの [ダイナミックフォーム ](https://doc.4d.com/4Dv18/4D/18/Dynamic-Forms.300-4575729.ja.html) を参照ください。
+Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
-### 属性マッピング
+#### 属性マッピング
 
 次の属性については、4D の名称または CSS の名称を使用することができます:
 
-| 4D             | CSS              |
-| -------------- | ---------------- |
-| borderStyle    | border-style     |
-| fill           | background-color |
-| fontFamily     | font-family      |
-| fontSize       | font-size        |
-| fontStyle      | font-style       |
-| fontWeight     | font-weight      |
-| stroke         | color            |
-| textAlign      | text-align       |
-| textDecoration | text-decoration  |
-| verticalAlign  | vertical-align   |
-> CSS の属性名を使用する場合、4D に特有の値 (*例* "sunken" (くぼみ)) はサポートされません。
+| 4D               | CSS                |
+| ---------------- | ------------------ |
+| `borderStyle`    | `border-style`     |
+| `fill`           | `background-color` |
+| `fontFamily`     | `font-family`      |
+| `fontSize`       | `font-size`        |
+| `fontStyle`      | `font-style`       |
+| `fontWeight`     | `font-weight`      |
+| `stroke`         | `color`            |
+| `textAlign`      | `text-align`       |
+| `textDecoration` | `text-decoration`  |
+| `verticalAlign`  | `vertical-align`   |
+> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
 
 
-### 特殊な属性値
+#### 特殊な属性値
 
 - `icon`, `picture`, および `customBackgroundPicture` のように、値として画像のパスを受け付ける属性の場合、次のように書きます:
 

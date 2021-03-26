@@ -6,7 +6,7 @@ title: Entity
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
-### Summary
+### 概要
 
 |                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1248,7 +1248,7 @@ Updating an entity without `dk auto merge` option:
  End case
 ```
 
-#### Example 3
+#### 例題 3
 
 Updating an entity with `dk auto merge` option:
 
@@ -1307,7 +1307,7 @@ If no filter is specified, or if the *filterString* parameter contains an empty 
 *   attributes of the `relatedEntities` [kind](dataclassAttributeClass.md#kind): attribute is not returned.
 
 
-In the first parameter, you pass the entity attribute(s) to extract. You can pass:
+In the first parameter, you pass the entity attribute(s) to extract. 以下のものを渡すことができます:
 
 *   *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 *   *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
@@ -1397,7 +1397,7 @@ Returns:
 }
 ```
 
-#### Example 3
+#### 例題 3
 
 Expanding all the properties of `relatedEntities`:
 
@@ -1466,7 +1466,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 }
 ```
 
-#### Example 4
+#### 例題 4
 
 Extracting some properties of `relatedEntities`:
 

@@ -122,6 +122,13 @@ color: #fff;
   color: $primaryColor;
 }
 
+
+.doc-updates{
+color: $primaryColor;
+text-align: center;
+font-style: italic;
+}
+
 @keyframes jackInTheBox {
   from {
     opacity: 0;

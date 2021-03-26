@@ -45,7 +45,7 @@
         "title": "Document Class"
       },
       "API/emails": {
-        "title": "Emails and Attachments"
+        "title": "Email"
       },
       "API/entityClass": {
         "title": "Entity"
@@ -64,6 +64,9 @@
       },
       "API/imapTransporterClass": {
         "title": "IMAPTransporter"
+      },
+      "API/MailAttachmentClass": {
+        "title": "Mail Attachment"
       },
       "API/overview": {
         "title": "Class API Overview"
@@ -649,6 +652,9 @@
         "title": "Seite Prüfen",
         "sidebar_label": "Seite Prüfen"
       },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
       "ORDA/dsmapping": {
         "title": "Data Model Objects"
       },
@@ -670,8 +676,29 @@
       "ORDA/datastores": {
         "title": "Using a remote datastore"
       },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "Überblick"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
+      },
       "Project/architecture": {
         "title": "Architecture of a project"
+      },
+      "Project/compiler": {
+        "title": "Compiler"
       },
       "Project/creating": {
         "title": "Working with a project"
@@ -681,9 +708,6 @@
       },
       "Project/overview": {
         "title": "Überblick"
-      },
-      "ReleaseNotes/whatsNew": {
-        "title": "What's New"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -828,7 +852,6 @@
       }
     },
     "links": {
-      "What's New": "What's New",
       "v18 R6 BETA": "v18 R6 BETA",
       "v18 R5": "v18 R5",
       "v18": "v18"
@@ -840,6 +863,7 @@
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
       "Access Rights": "Access Rights",
+      "Preferences": "Preferences",
       "Administration": "Administration",
       "MSC": "MSC",
       "Backup and Restore": "Backup and Restore",
@@ -882,12 +906,14 @@
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Programmiersprache (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",
     "Web applications|no description given": "Web applications",
     "Mobile applications|no description given": "Mobile applications",
     "Desktop applications|no description given": "Desktop applications",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"

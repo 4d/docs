@@ -33,7 +33,7 @@ title: プロジェクトのアーキテクチャー
     + クラス
     + DatabaseMethods
     + メソッド
-    + Forms
+    + フォーム
     + TableForms
     + Triggers
 - DerivedData
@@ -121,7 +121,7 @@ title: プロジェクトのアーキテクチャー
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
 - メソッド
-- Forms
+- フォーム
 - TableForms
 
 削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
@@ -196,17 +196,17 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 ## userPreferences.*userName* フォルダー
 
-ブレークポイントの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:
+ブレークポイントやウィンドウの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:
 
-| 内容                           | 説明                                 | 形式   |
-| ---------------------------- | ---------------------------------- | ---- |
-| methodPreferences.json       | カレントユーザーのメソッドエディター環境設定             | JSON |
-| methodWindowPositions.json   | カレントユーザーのメソッドのウィンドウポジション           | JSON |
-| formWindowPositions.json     | カレントユーザーのフォームのウィンドウポジション           | JSON |
-| workspace.json               | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序 | JSON |
-| debuggerCatches.json         | キャッチコマンドリスト                        | JSON |
-| recentTables.json            | 最近開かれたテーブルのリスト                     | JSON |
-| preferencesv15.4DPreferences | ユーザー環境設定                           | JSON |
+| 内容                         | 説明                                 | 形式   |
+| -------------------------- | ---------------------------------- | ---- |
+| methodPreferences.json     | カレントユーザーのメソッドエディター環境設定             | JSON |
+| methodWindowPositions.json | カレントユーザーのメソッドのウィンドウポジション           | JSON |
+| formWindowPositions.json   | カレントユーザーのフォームのウィンドウポジション           | JSON |
+| workspace.json             | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序 | JSON |
+| debuggerCatches.json       | キャッチコマンドリスト                        | JSON |
+| recentTables.json          | 最近開かれたテーブルのリスト                     | JSON |
+| preferences.4DPreferences  | カレントデータパスおよび主なウィンドウの位置             | XML  |
 
 
 ## Components フォルダー

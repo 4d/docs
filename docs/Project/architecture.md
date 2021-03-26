@@ -197,7 +197,7 @@ BuildApp.4DSettings|Build settings file, created automatically when using the ap
 
 ## userPreferences.*userName* folder
 
-This folder contains files that memorize user configurations, e.g. break point positions. You can just ignore this folder. It contains for example:
+This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
 
 Contents|Description|Format
 --------|-------|----
@@ -207,12 +207,12 @@ formWindowPositions.json|Current user window positions for forms|JSON
 workspace.json|List of opened windows; on macOS, order of tab windows|JSON
 debuggerCatches.json|Caught calls to commands|JSON
 recentTables.json|Ordered list of tables|JSON
-preferencesv15.4DPreferences|User preferences|JSON  
+preferences.4DPreferences|Current data path and main window positions|XML  
 
 
 ## Components folder
 
-This folder contains the components to be available in the application project only. It must be stored at the same level as the Project folder.
+This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
 
 > An application project can be used itself as a component:
 > - for development: put an alias of the .4dproject file in the Components folder of the host project.
@@ -221,7 +221,7 @@ This folder contains the components to be available in the application project o
 
 ## Plugins folder
 
-This folder contains the plug-ins to be available in the application project only. It must be stored at the same level as the Project folder.
+This folder contains the plug-ins to be available in the application project. It must be stored at the same level as the Project folder.
 
 
 ## Documentation folder

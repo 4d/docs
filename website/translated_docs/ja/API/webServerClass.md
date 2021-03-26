@@ -15,7 +15,7 @@ Web server objects are instantiated with the [`WEB Server`](#web-server) command
 They provide the following properties and functions:
 
 
-### Summary
+### 概要
 |                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #webServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #webServerClass.accessKeyDefined.Summary -->|
@@ -316,7 +316,7 @@ Default value: 63072000 (2 years).
 
 The <!-- REF #webServerClass.HTTPCompressionLevel.Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed).
 
-Possible values:
+とりうる値:
 
 *   1 to 9 (where 1 is the fastest compression and 9 the highest).
 *   -1 = set a compromise between speed and rate of compression.
@@ -570,7 +570,7 @@ The <!-- REF #webServerClass.maxSessions.Summary -->maximum number of simultaneo
 
 The <!-- REF #webServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
 
-Possible values:
+とりうる値:
 
 *   1 = TLSv1_0
 *   2 = TLSv1_1

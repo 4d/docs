@@ -8,7 +8,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 *   [ds](#ds): a shortcut to the main datastore
 *   [Open datastore](#open-datastore): to open any remote datastore
 
-### Summary
+### 概要
 
 |                                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -188,7 +188,7 @@ Connection to a remote datastore with user / password / timeout / tls:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Example 3
+#### 例題 3
 
 Working with several remote datastores:
 
