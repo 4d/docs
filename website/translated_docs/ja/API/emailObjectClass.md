@@ -518,7 +518,7 @@ The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.
 
 Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
 
-#### Returned object
+#### 返されるオブジェクト
 
 Email object.
 
