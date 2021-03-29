@@ -63,7 +63,7 @@ title: ピクチャー
 
 
 
-### DPI (macOS and Windows)
+### DPI (macOS および Windows)
 
 高解像度が自動的に優先されますが、スクリーンやピクチャーの dpi *(\*)*、およびピクチャー形式によって、動作に違いが生じることがあります:
 
@@ -75,7 +75,7 @@ title: ピクチャー
 *(\*) 通常は  macOS = 72dpi, Windows = 96dpi*
 
 
-## Dark mode pictures (macOS only)
+## ダークモード (macOS のみ)
 
 You can define specific pictures and icons to be used instead of standard pictures when [forms use the dark scheme](properties_FormProperties.md#color-scheme).
 
