@@ -23,8 +23,8 @@ Here is a description of command lines and the arguments supported to launch 4D 
 
 Syntax: 
 ```
-<applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] [--opening-mode interpreted | compiled] 
-[--create-data] [--user-param <user string>] [--headless] [--webadmin-settings-file][--webadmin-access-key][--webadmin-auto-start][--webadmin-store-settings]
+<applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] [--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] 
+[--webadmin-settings-file][--webadmin-access-key][--webadmin-auto-start][--webadmin-store-settings]
 ```
 |Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Value|Description|
 |-------------|---|---|
@@ -49,81 +49,87 @@ These examples assume that your 4D application is stored on the desktop and that
 
 > The current folder of the user is reached using the "~ " command under macOS and the "%HOMEPATH%" command under Windows.
 
-- Launch application 
-macOS:
+Launch application: 
+
+*   macOS:
 ```
 open ~/Desktop/4D.app
 ```
-Windows:
+*   Windows:
 ```
 %HOMEPATH%\Desktop\4D\4D.exe
 ```
-- Launch application with a package file on macOS
+Launch application with a package file on macOS:
 ```
 open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
-- Launch application with a project file
-macOS:
+Launch application with a project file:
+
+*   macOS:
 ```
 open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 ```
-Windows:
+*   Windows:
 ```
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 ```
-- Launch application with a project file and a data file
-macOS:
+Launch application with a project file and a data file:
+
+*   macOS:
 ```
 open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD
 ```
-Windows:
+*   Windows:
 ```
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
 or:
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
-- Launch application with a .4DLink file
-macOS:
+Launch application with a .4DLink file:
+
+*   macOS:
 ```
 open ~/Desktop/4D.app MyDatabase.4DLink
 ```
 ```
 open "~/Desktop/4D Server.app" MyDatabase.4DLink
 ```
-Windows:
+*   Windows:
 ```
 %HOMEPATH%\Desktop\4D.exe MyDatabase.4DLink
 ```
 ```
 %HOMEPATH%\Desktop\4D Server.exe" MyDatabase.4DLink
 ```
-- Launch application in compiled mode and create a data file if not available
-macOS:
+Launch application in compiled mode and create a data file if not available:
+
+*   macOS:
 ```
 open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled --create-data true
 ```
-Windows:
+*   Windows:
 ```
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
-- Launch application with a project file and a data file and pass a string as a user parameter
-macOS:
+Launch application with a project file and a data file and pass a string as a user parameter:
+
+*   macOS:
 ```
 open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --user-param "Hello world"
 ```
-Windows:
+*   Windows:
 ```
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
-- Launch application without interface (headless mode)
-macOS:
+Launch application without interface (headless mode):
+*   macOS:
 ```
 open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --headless
 ```
 ```
 open ~/Desktop/MyBuiltRemoteApp −−headless
 ```
-Windows:
+*   Windows:
 ```
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --headless
 %HOMEPATH%\Desktop\4D\MyBuiltRemoteApp.exe --headless
