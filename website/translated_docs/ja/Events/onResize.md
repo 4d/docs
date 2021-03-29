@@ -3,7 +3,7 @@ id: onResize
 title: On Resize
 ---
 
-| Code | Can be called by | Definition                                                                                                                            |
+| Code | Can be called by | 定義                                                                                                                                    |
 | ---- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | 29   | フォーム             | The form's window is resized or the subform object is resized (in this case the event is generated in the form method of the subform) |
 

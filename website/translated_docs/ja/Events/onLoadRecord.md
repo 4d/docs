@@ -3,7 +3,7 @@ id: onLoadRecord
 title: On Load Record
 ---
 
-| Code | Can be called by | Definition                                                          |
+| Code | Can be called by | 定義                                                                  |
 | ---- | ---------------- | ------------------------------------------------------------------- |
 | 40   | フォーム             | During user entry in list, a record is loaded and a field is edited |
 

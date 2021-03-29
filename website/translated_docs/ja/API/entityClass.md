@@ -1307,7 +1307,7 @@ If no filter is specified, or if the *filterString* parameter contains an empty 
 *   attributes of the `relatedEntities` [kind](dataclassAttributeClass.md#kind): attribute is not returned.
 
 
-In the first parameter, you pass the entity attribute(s) to extract. You can pass:
+In the first parameter, you pass the entity attribute(s) to extract. 以下のものを渡すことができます:
 
 *   *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 *   *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
@@ -1493,7 +1493,7 @@ Returns:
 }
 ```
 
-#### Example 5
+#### 例題 5
 
 Extracting a `relatedEntity` with simple form:
 
@@ -1513,7 +1513,7 @@ Returns:
 }
 ```
 
-#### Example 6
+#### 例題 6
 
 Extracting all the properties of a `relatedEntity`:
 

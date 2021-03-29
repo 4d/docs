@@ -3,7 +3,7 @@ id: onLongClick
 title: On Long Click
 ---
 
-| Code | Can be called by                      | Definition                                                                           |
+| Code | Can be called by                      | 定義                                                                                   |
 | ---- | ------------------------------------- | ------------------------------------------------------------------------------------ |
 | 39   | [ボタン](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
 

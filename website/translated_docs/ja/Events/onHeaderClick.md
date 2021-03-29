@@ -3,7 +3,7 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Can be called by                                                                                                                                                            | Definition                        |
+| Code | Can be called by                                                                                                                                                            | 定義                                |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
 

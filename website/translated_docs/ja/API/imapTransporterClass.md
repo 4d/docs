@@ -126,9 +126,6 @@ End if
 #### 説明
 
 The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->. It is identical to the [`IMAP New transporter`](#imap-new-transporter) command (shortcut).
-
-> It is recommended to use the [`IMAP New transporter`](#imap-new-transporter) shortcut command instead of `4D.IMAPTransporter.new()`.
-
  
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -181,7 +178,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 > * The interpretation of keyword flags may vary per mail client.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -268,7 +265,7 @@ Possible charsets:
 | mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | headerCharset & bodyCharset: US-ASCII if possible, otherwise UTF-8 & base64                               |
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -373,7 +370,7 @@ The `.checkConnectionDelay` property contains <!-- REF #imapTransporterClass.che
 
 The `.copy()` function <!-- REF #imapTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+以下のものを渡すことができます:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
@@ -381,7 +378,7 @@ You can pass:
 The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -486,7 +483,7 @@ In other words, an attempt to create "Projects/IMAP/Doc" on a server in which "/
 In the `name` parameter, pass the name of the new mailbox.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -563,7 +560,7 @@ End if
 
 The `.delete()` function <!-- REF #imapTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
 
-You can pass:
+以下のものを渡すことができます:
 
 - in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
 - in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
@@ -572,7 +569,7 @@ Executing this function does not actually remove messages. Messages with the "de
 
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -673,7 +670,7 @@ In the `name` parameter, pass the name of the mailbox to delete.
 > * The ability to delete a mailbox depends on the mail server.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -749,7 +746,7 @@ End if
 
 The `.expunge()` function <!-- REF #imapTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -820,7 +817,7 @@ The `.getBoxInfo()` function <!-- REF #imapTransporterClass.getBoxInfo().Summary
 In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The `boxInfo` object returned contains the following properties:
 
@@ -872,7 +869,7 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getBoxList()` function <!-- REF #imapTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. You can pass:
+In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. 以下のものを渡すことができます:
 
 | プロパティ        | タイプ | 説明                                                   |
 | ------------ | --- | ---------------------------------------------------- |
@@ -1189,7 +1186,7 @@ In the first parameter, you can pass either:
 *   *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 *   *msgID*, a *text* value indicating the unique ID of the message to retrieve.
 
-The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. You can pass:
+The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. 以下のものを渡すことができます:
 
 *   **True** - to mark the message as "seen" (indicating the message has been read)
 *   **False** - to leave the message's "seen" status untouched
@@ -1268,7 +1265,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 The `.move()` function <!-- REF #imapTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
-You can pass:
+以下のものを渡すことができます:
 
 - in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
 - in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
@@ -1278,7 +1275,7 @@ The *destinationBox* parameter allows you to pass a text value with the name of 
 > This function is only supported by IMAP servers compliant with RFC [8474](https://tools.ietf.org/html/rfc8474).
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -1460,7 +1457,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 Note that False values are ignored.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -1530,7 +1527,7 @@ In the `currentName` parameter, pass the name of the mailbox to be renamed.
 Pass the new name for the mailbox in the `newName` parameter.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -1599,7 +1596,7 @@ End if
 <!-- REF #imapTransporterClass.searchMails().Params -->
 | 参照             | タイプ    |    | 説明                            |
 | -------------- | ------ |:--:| ----------------------------- |
-| searchCriteria | テキスト   | -> | Search criteria               |
+| searchCriteria | テキスト   | -> | 検索条件                          |
 | 戻り値            | コレクション | <- | Collection of message numbers |
 <!-- END REF -->
 
@@ -1754,7 +1751,7 @@ The optional `state` parameter defines the type of access to the mailbox. The po
 > * If there is no open connection, `.selectBox()` will open a connection.
 > * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
-**Returned object**
+**返されるオブジェクト**
 
 The `boxInfo` object returned contains the following properties:
 
@@ -1810,7 +1807,7 @@ The `.subscribe()` function <!-- REF #imapTransporterClass.subscribe().Summary -
 
 In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 
@@ -1883,7 +1880,7 @@ The `.unsubscribe()` function <!-- REF #imapTransporterClass.unsubscribe().Summa
 
 In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
 
-**Returned object**
+**返されるオブジェクト**
 
 The function returns an object describing the IMAP status:
 

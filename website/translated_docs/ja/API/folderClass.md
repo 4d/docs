@@ -232,7 +232,7 @@ By default on macOS, the function creates a standard alias. You can also create 
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
-**Returned object**
+**返されるオブジェクト**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -400,7 +400,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
-**Returned object**
+**返されるオブジェクト**
 
 The moved `Folder` object.
 
@@ -469,7 +469,7 @@ The `.rename()` function <!-- REF #folderClass.rename().Summary -->renames the f
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
 
-**Returned object**
+**返されるオブジェクト**
 
 The renamed `Folder` object.
 
