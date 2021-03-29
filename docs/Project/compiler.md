@@ -71,13 +71,11 @@ The Silicon compiler is incremental, which means that during the [first compilat
 
 ## Compiler Window
 
-Whatever the [selected compiler](#about-compilers), project compilation is carried out using the [compiler window](#compiler-window). It is possible to launch compilation directly using the current [compilation settings](#compiler-settings) via the **Start Compilation** command.
-
-To display the compiler window, select the **Compiler...** command in the **Design** menu. You can also use the **Compiler** toolbar button:
+Whatever the [selected compiler](#about-compilers), project compilation is carried out using the [compiler window](#compiler-window). To display the compiler window, select the **Compiler...** command in the **Design** menu. You can also use the **Compiler** toolbar button:
 
 ![](assets/en/Project/compilerWin1.png)
 
-> These commands are disabled if the project does not contain at least one method.
+> It is also possible to launch compilation directly using the **Start Compilation** menu item from the **Design** menu. In this case, the compiler automatically uses the current [compilation settings](#compiler-settings). 
 
 This window is used for launching the compilation of the project or checking the syntax of the methods and classes. In addition, buttons can be used for generating/regenerating Typing methods, clearing the compiled code, displaying/hiding warnings, and accessing the [compiler settings window](#compiler-settings).
 
@@ -208,7 +206,7 @@ Two target options are proposed. The result depends on the processor of the mach
 |**All processors (Intel/AMD and Apple Silicon)**|Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows*|Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available*|Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available*|
 |**My processor (processor)**|Code for Intel/AMD|Code for Intel/AMD|Code for Apple Silicon|
 
-> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. If it is missing, 4D will provide instructions about how to get it. 
+> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
 ### Default typing
 
