@@ -808,11 +808,11 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 ```
 
 
-**コレクション属性クエリ引数をリンクする**
+**コレクション要素とクエリ条件のリンク**
 
-属性を複数持つオブジェクト要素からなりたっているコレクションが、さらに親オブジェクトの属性値である場合に、当該コレクションに特定要素が存在するかを条件に親オブジェクトを検出したいケースを考えます。AND 演算子で結合された複数のクエリ引数を使用して検索するだけでは、異なるコレクション要素がそれぞれ検索条件に合致する属性値を持つ場合にも当該親オブジェクトが検出されてしまいます。 これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ引数をコレクション要素にリンクする必要があります。
+属性を複数持つオブジェクト要素からなりたっているコレクションが、さらに親オブジェクトの属性値である場合に、当該コレクションに特定要素が存在するかを条件に親オブジェクトを検出したいケースを考えます。AND 演算子で結合された複数のクエリ条件を使用して検索するだけでは、異なるコレクション要素がそれぞれ検索条件に合致する属性値を持つ場合にも当該親オブジェクトが検出されてしまいます。 これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ条件をコレクション要素にリンクする必要があります。
 
-For example, with the following two entities:
+たとえば、以下のような 2件のエンティティがあるとき:
 
 ```
 Entity 1:
@@ -835,55 +835,55 @@ ds.People.places:
             } ] }
 ```
 
-You want to find people with a "home" location kind in the city "paris". If you write:
+"locations" 属性に、"kind=home" かつ "city=paris" である要素を持つ人を探したいとします。 以下のように書いた場合:
 
 ```4d
 ds.People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
 ```
 
-... the query will return "martin" **and** "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
+... クエリは "martin" と "smith" の**両方**を返します。なぜなら "smith" も "kind=home" である "location" 要素を持っており、"city=paris" である "location" 要素をも持っているからです (ですがこれら 2つは異なる要素です)。
 
-If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. To link query arguments:
+検索条件に合致する属性が同一のコレクション要素に含まれるエンティティのみを取得するには、**クエリ条件をリンク** します。 クエリ条件をリンクするには:
 
-- Add a letter between the \[] in the first path to link and repeat the same letter in all linked arguments. For example: `locations[a].city and locations[a].kind`. You can use any letter of the Latin alphabet (not case sensitive).
-- To add different linked criteria in the same query, use another letter. You can create up to 26 combinations of criteria in a single query.
+- リンクする最初のクエリ条件にてパスの \[] 内に文字を追加し、同様に他のクエリ条件でも同じ文字を追加します。 例: `locations[a].city and locations[a].kind`。 ローマ字であればどの文字でも使用可能です (文字の大小は区別されません)。
+- 同じクエリ内に、異なるリンク条件を追加するには、別の文字を使用します。 単一のクエリ内では、最大で 26組のリンク条件を使用することができます。
 
-With the above entities, if you write:
+上記の 2件のエンティティにおいて、以下のように書いた場合:
 
 ```4d
 ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
 ```
 
-... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
+... クエリは、"kind=home" かつ "city=paris" である "locations" 要素を持つエンティティ "martin" のみを返します。 "home" と"paris" が同じコレクション要素内にない "smith" は、クエリの結果に含まれません。
 
 
 
-**formula parameter**
+**formula 引数**
 
-As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
+*queryString* 引数にフォーミュラを挿入 (上記参照) する代わりに、formula オブジェクトをブール検索条件として直接渡すことができます。 トークナイズの利点を生かせる、コードが検索しやすく読みやすい、などといった面から、クエリにおけるフォーミュラオブジェクトの使用は **推奨** されています。
 
-The formula must have been created using the `Formula` or `Formula from string` command. In this case:
+このフォーミュラは、`Formula` または `Formula from string` コマンドによって作成されたものでなくてはなりません。 In this case:
 
-*   the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
-*   within the *formula*, the entity is available through the `This` object.
-*   if the `Formula` object is **null**, the errror 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
-> For security reasons, formula calls within `query(`) member methods can be disallowed. See *querySettings* parameter description.
+*   フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
+*   処理中のエンティティはフォーミュラ内において `This` で参照されます。
+*   `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。このエラーは `ON ERR CALL` で実装したメソッドを使用して割り込み可能です。
+> セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。
 
-**Passing parameters to formulas**
+**フォーミュラに引数を渡す**
 
-Any *formula* called by the `query()` class function can receive parameters:
+`query()` クラス関数によって呼び出されるフォーミュラは、引数を受け取ることができます:
 
-*   Parameters must be passed through the **args** property (object) of the *querySettings* parameter.
-*   The formula receives this **args** object as a **$1** parameter.
+*   引数は、*querySettings* 引数の **args** プロパティ (オブジェクト) を通して渡さなければなりません。
+*   フォーミュラは **args** オブジェクトを **$1** に受け取ります。
 
-This small code shows the principles of how parameter are passed to methods:
+以下の短いコードは、引数をフォーミュラに渡す仕組みを示しています:
 
 ```4d
- $settings:=New object("args";New object("exclude";"-")) //args object to pass parameters
- $es:=ds.Students.query("eval(checkName($1.exclude))";$settings) //args is received in $1
+ $settings:=New object("args";New object("exclude";"-")) // 引数を渡すための args オブジェクト
+ $es:=ds.Students.query("eval(checkName($1.exclude))";$settings) // $1 が args を受け取ります
 ```
 
-Additional examples are provided in example 3.
+さらなる使用例は、例題3にて紹介されています。
 
 **4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
 
