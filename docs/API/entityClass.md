@@ -1,5 +1,5 @@
 ---
-id: entityClass
+id: EntityClass
 title: Entity
 ---
 
@@ -10,35 +10,35 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 ||
 |---|
-|[<!-- INCLUDE entityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE entityClass.attributeName.Summary -->|
-|[<!-- INCLUDE #entityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.clone().Summary -->|
-|[<!-- INCLUDE #entityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.diff().Summary -->|
-|[<!-- INCLUDE #entityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.drop().Summary -->|
-|[<!-- INCLUDE #entityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.first().Summary -->|
-|[<!-- INCLUDE #entityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.fromObject().Summary -->|
-|[<!-- INCLUDE #entityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getDataClass().Summary -->|
-|[<!-- INCLUDE #entityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getKey().Summary -->|
-|[<!-- INCLUDE #entityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getSelection().Summary -->|
-|[<!-- INCLUDE #entityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.getStamp().Summary -->|
-|[<!-- INCLUDE #entityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.indexOf().Summary -->|
-|[<!-- INCLUDE #entityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.isNew().Summary -->|
-|[<!-- INCLUDE #entityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.last().Summary -->|
-|[<!-- INCLUDE #entityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.lock().Summary -->|
-|[<!-- INCLUDE #entityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.next().Summary -->|
-|[<!-- INCLUDE #entityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.previous().Summary -->|
-|[<!-- INCLUDE #entityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.reload().Summary -->|
-|[<!-- INCLUDE #entityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.save().Summary -->|
-|[<!-- INCLUDE #entityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.toObject().Summary -->|
-|[<!-- INCLUDE #entityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.touched().Summary -->|
-|[<!-- INCLUDE #entityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.touchedAttributes().Summary -->|
-|[<!-- INCLUDE #entityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #entityClass.unlock().Summary -->|
+|[<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
+|[<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
+|[<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
+|[<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->|
+|[<!-- INCLUDE #EntityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->|
+|[<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
+|[<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
+|[<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
+|[<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
+|[<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
+|[<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
+|[<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->|
+|[<!-- INCLUDE #EntityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->|
+|[<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->|
+|[<!-- INCLUDE #EntityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->|
+|[<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->|
+|[<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->|
+|[<!-- INCLUDE #EntityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->|
+|[<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->|
+|[<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->|
+|[<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary -->|
+|[<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->|
 
 
 
 
 
 
-<!-- REF entityClass.attributeName.Desc -->
+<!-- REF EntityClass.attributeName.Desc -->
 ## .*attributeName*
 
 <details><summary>History</summary>
@@ -47,17 +47,17 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 |v17|Added|
 </details>
 
-<!-- REF entityClass.attributeName.Syntax -->
+<!-- REF EntityClass.attributeName.Syntax -->
 ***.attributeName*** : any<!-- END REF -->
 
 
 #### Description
 
-Any dataclass attribute is available as a property of an entity, which <!-- REF entityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
+Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
 
 >Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
-The attribute value type depends on the attribute [kind](dataclassAttributeClass.md#kind) (relation or storage):
+The attribute value type depends on the attribute [kind](DataClassAttributeClass.md#kind) (relation or storage):
 
 *	If *attributeName* kind is **storage**:
 `.attributeName` returns a value of the same type as *attributeName*.
@@ -82,7 +82,7 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 
 
 
-<!-- REF entityClass.clone().Desc -->
+<!-- REF EntityClass.clone().Desc -->
 ## .clone() 
 
 <details><summary>History</summary>
@@ -92,10 +92,10 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 </details>
 
 
-<!-- REF #entityClass.clone().Syntax -->
+<!-- REF #EntityClass.clone().Syntax -->
 **.clone()** : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.clone().Params -->
+<!-- REF #EntityClass.clone().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|New entity referencing the record	
@@ -105,7 +105,7 @@ The attribute value type depends on the attribute [kind](dataclassAttributeClass
 
 #### Description
 
-The `.clone()` function <!-- REF #entityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
+The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
 
 >Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
 
@@ -129,7 +129,7 @@ This function can only be used with entities already saved in the database. It c
 
 
 
-<!-- REF entityClass.diff().Desc -->
+<!-- REF EntityClass.diff().Desc -->
 ## .diff() 
 
 <details><summary>History</summary>
@@ -138,11 +138,11 @@ This function can only be used with entities already saved in the database. It c
 |v17|Added|
 </details>
 
-<!-- REF #entityClass.diff().Syntax -->
+<!-- REF #EntityClass.diff().Syntax -->
 **.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
 
 
-<!-- REF #entityClass.diff().Params -->
+<!-- REF #EntityClass.diff().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entityToCompare|4D.Entity|->|Entity to be compared with the original entity|	
@@ -153,7 +153,7 @@ This function can only be used with entities already saved in the database. It c
 
 #### Description
 
-The `.diff()` function <!-- REF #entityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
 In *entityToCompare*, pass the entity to be compared to the original entity.
 
@@ -169,7 +169,7 @@ The differences are returned as a collection of objects whose properties are:
 
 Only attributes with different values are included in the collection. If no differences are found, `.diff()` returns an empty collection.
 
-The function applies for properties whose [kind](dataclassAttributeClass.md#kind) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
+The function applies for properties whose [kind](DataClassAttributeClass.md#kind) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
 
 If one of the compared entities is **Null**, an error is raised.
 
@@ -333,7 +333,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 
 
-<!-- REF entityClass.drop().Desc -->
+<!-- REF EntityClass.drop().Desc -->
 ## .drop()   
 
 <details><summary>History</summary>
@@ -343,10 +343,10 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 </details>
 
-<!-- REF #entityClass.drop().Syntax -->
+<!-- REF #EntityClass.drop().Syntax -->
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.drop().Params -->
+<!-- REF #EntityClass.drop().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk force drop if stamp changed`: Forces the drop even if the stamp has changed|
@@ -355,7 +355,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 #### Description
 
-The `.drop()` function <!-- REF #entityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note that the entity remains in memory.
+The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note that the entity remains in memory.
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved. 
 
@@ -441,7 +441,7 @@ Example with `dk force drop if stamp changed` option:
 
 
 
-<!-- REF entityClass.first().Desc -->
+<!-- REF EntityClass.first().Desc -->
 ## .first()   
 
 <details><summary>History</summary>
@@ -451,10 +451,10 @@ Example with `dk force drop if stamp changed` option:
 
 </details>
 
-<!-- REF #entityClass.first().Syntax -->
+<!-- REF #EntityClass.first().Syntax -->
 **.first()**: 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.first().Params -->
+<!-- REF #EntityClass.first().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
@@ -462,7 +462,7 @@ Example with `dk force drop if stamp changed` option:
 
 #### Description
 
-The `.first()` function <!-- REF #entityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->. 
+The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->. 
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
@@ -480,7 +480,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 
 
-<!-- REF entityClass.fromObject().Desc -->
+<!-- REF EntityClass.fromObject().Desc -->
 ## .fromObject()   
 
 <details><summary>History</summary>
@@ -490,10 +490,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 </details>
 
-<!-- REF #entityClass.fromObject().Syntax -->
+<!-- REF #EntityClass.fromObject().Syntax -->
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
-<!-- REF #entityClass.fromObject().Params -->
+<!-- REF #EntityClass.fromObject().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |filler|Object|->|Object from which to fill the entity|
@@ -501,7 +501,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Description
 
-The `.fromObject()` function <!-- REF #entityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->. 
+The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->. 
 
 >This function modifies the original entity.
 
@@ -570,7 +570,7 @@ You could also use a related entity given as an object:
 
 
 
-<!-- REF entityClass.getDataClass().Desc -->
+<!-- REF EntityClass.getDataClass().Desc -->
 ## .getDataClass()   
 
 <details><summary>History</summary>
@@ -580,10 +580,10 @@ You could also use a related entity given as an object:
 
 </details>
 
-<!-- REF #entityClass.getDataClass().Syntax -->
+<!-- REF #EntityClass.getDataClass().Syntax -->
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
-<!-- REF #entityClass.getDataClass().Params -->
+<!-- REF #EntityClass.getDataClass().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.DataClass|<-|DataClass object to which the entity belongs|
@@ -591,7 +591,7 @@ You could also use a related entity given as an object:
 
 #### Description
 
-The `.getDataClass()` function <!-- REF #entityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. This function is useful when writing generic code.
+The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. This function is useful when writing generic code.
 
 
 #### Example   
@@ -617,7 +617,7 @@ The following generic code duplicates any entity:
 
 
 
-<!-- REF entityClass.getKey().Desc -->
+<!-- REF EntityClass.getKey().Desc -->
 ## .getKey()   
 
 <details><summary>History</summary>
@@ -627,10 +627,10 @@ The following generic code duplicates any entity:
 
 </details>
 
-<!-- REF #entityClass.getKey().Syntax -->
+<!-- REF #EntityClass.getKey().Syntax -->
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
-<!-- REF #entityClass.getKey().Params -->
+<!-- REF #EntityClass.getKey().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
@@ -641,7 +641,7 @@ The following generic code duplicates any entity:
 
 #### Description
 
-The `.getKey()` function <!-- REF #entityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->. 
+The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->. 
 
 Primary keys can be numbers (Integer) or strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
@@ -661,7 +661,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 
 
-<!-- REF entityClass.getSelection().Desc -->
+<!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()   
 
 <details><summary>History</summary>
@@ -671,10 +671,10 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 </details>
 
-<!-- REF #entityClass.getSelection().Syntax -->
+<!-- REF #EntityClass.getSelection().Syntax -->
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
-<!-- REF #entityClass.getSelection().Params -->
+<!-- REF #EntityClass.getSelection().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
@@ -682,7 +682,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 #### Description
 
-The `.getSelection()` function <!-- REF #entityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->. 
+The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->. 
 
 If the entity does not belong to an entity selection, the function returns Null.
 
@@ -705,7 +705,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 
 
 
-<!-- REF entityClass.getStamp().Desc -->
+<!-- REF EntityClass.getStamp().Desc -->
 ## .getStamp()   
 
 <details><summary>History</summary>
@@ -715,10 +715,10 @@ If the entity does not belong to an entity selection, the function returns Null.
 
 </details>
 
-<!-- REF #entityClass.getStamp().Syntax -->
+<!-- REF #EntityClass.getStamp().Syntax -->
 **.getStamp()** : Integer<!-- END REF -->
 
-<!-- REF #entityClass.getStamp().Params -->
+<!-- REF #EntityClass.getStamp().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|
@@ -726,7 +726,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 
 #### Description
 
-The `.getStamp()` function <!-- REF #entityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->. 
+The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->. 
 
 The internal stamp is automatically incremented by 4D each time the entity is saved. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
 
@@ -755,7 +755,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 
 
 
-<!-- REF entityClass.indexOf().Desc -->
+<!-- REF EntityClass.indexOf().Desc -->
 ## .indexOf()   
 
 <details><summary>History</summary>
@@ -765,10 +765,10 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 
 </details>
 
-<!-- REF #entityClass.indexOf().Syntax -->
+<!-- REF #EntityClass.indexOf().Syntax -->
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
-<!-- REF #entityClass.indexOf().Params -->
+<!-- REF #EntityClass.indexOf().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
@@ -777,7 +777,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 
 #### Description
 
-The `.indexOf()` function <!-- REF #entityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->. 
+The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->. 
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified *entitySelection*.
 
@@ -805,7 +805,7 @@ The resulting value is included between 0 and the length of the entity selection
 
 
 
-<!-- REF entityClass.isNew().Desc -->
+<!-- REF EntityClass.isNew().Desc -->
 ## .isNew()   
 
 <details><summary>History</summary>
@@ -815,10 +815,10 @@ The resulting value is included between 0 and the length of the entity selection
 
 </details>
 
-<!-- REF #entityClass.isNew().Syntax -->
+<!-- REF #EntityClass.isNew().Syntax -->
 **.isNew()** : Boolean<!-- END REF -->
 
-<!-- REF #entityClass.isNew().Params -->
+<!-- REF #EntityClass.isNew().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
@@ -826,7 +826,7 @@ The resulting value is included between 0 and the length of the entity selection
 
 #### Description
 
-The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Otherwise, it returns False.
+The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Otherwise, it returns False.
 
 
 #### Example   
@@ -846,7 +846,7 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 
 
 
-<!-- REF entityClass.last().Desc -->
+<!-- REF EntityClass.last().Desc -->
 ## .last()   
 
 <details><summary>History</summary>
@@ -856,10 +856,10 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 
 </details>
 
-<!-- REF #entityClass.last().Syntax -->
+<!-- REF #EntityClass.last().Syntax -->
 **.last()** : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.last().Params -->
+<!-- REF #EntityClass.last().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
@@ -867,7 +867,7 @@ The `.isNew()` function <!-- REF #entityClass.isNew().Summary --> returns True i
 
 #### Description
 
-The `.last()` function <!-- REF #entityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->. 
+The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->. 
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
@@ -887,7 +887,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 
 
-<!-- REF entityClass.lock().Desc -->
+<!-- REF EntityClass.lock().Desc -->
 ## .lock()   
 
 <details><summary>History</summary>
@@ -897,10 +897,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 </details>
 
-<!-- REF #entityClass.lock().Syntax -->
+<!-- REF #EntityClass.lock().Syntax -->
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.lock().Params -->
+<!-- REF #EntityClass.lock().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk reload if stamp changed`: Reload before locking if stamp changed|
@@ -909,7 +909,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 #### Description
 
-The `.lock()` function <!-- REF #entityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Only functions executed in the "locking" session are allowed to edit and save the attributes of the entity. The entity can be loaded as read-only by other sessions, but they will not be able to enter and save values.
 
@@ -1000,7 +1000,7 @@ Example with `dk reload if stamp changed` option:
 
 
 
-<!-- REF entityClass.next().Desc -->
+<!-- REF EntityClass.next().Desc -->
 ## .next()   
 
 <details><summary>History</summary>
@@ -1010,10 +1010,10 @@ Example with `dk reload if stamp changed` option:
 
 </details>
 
-<!-- REF #entityClass.next().Syntax -->
+<!-- REF #EntityClass.next().Syntax -->
 **.next()** : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.next().Params -->
+<!-- REF #EntityClass.next().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
@@ -1021,7 +1021,7 @@ Example with `dk reload if stamp changed` option:
 
 #### Description
 
-The `.next()` function <!-- REF #entityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->. 
+The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->. 
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
@@ -1042,7 +1042,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 <!-- END REF -->
 
 
-<!-- REF entityClass.previous().Desc -->
+<!-- REF EntityClass.previous().Desc -->
 ## .previous()   
 
 <details><summary>History</summary>
@@ -1052,10 +1052,10 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 
 </details>
 
-<!-- REF #entityClass.previous().Syntax -->
+<!-- REF #EntityClass.previous().Syntax -->
 **.previous()**  : 4D.Entity<!-- END REF -->
 
-<!-- REF #entityClass.previous().Params -->
+<!-- REF #EntityClass.previous().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
@@ -1063,7 +1063,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 
 #### Description
 
-The `.previous()` function <!-- REF #entityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->. 
+The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->. 
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
@@ -1084,7 +1084,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 
 
 
-<!-- REF entityClass.reload().Desc -->
+<!-- REF EntityClass.reload().Desc -->
 ## .reload( )   
 
 <details><summary>History</summary>
@@ -1094,10 +1094,10 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 
 </details>
 
-<!-- REF #entityClass.reload().Syntax -->
+<!-- REF #EntityClass.reload().Syntax -->
 **.reload()** : Object<!-- END REF -->
 
-<!-- REF #entityClass.reload().Params -->
+<!-- REF #EntityClass.reload().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Object|<-|Status object|
@@ -1105,7 +1105,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 
 #### Description
 
-The `.reload()` function <!-- REF #entityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
+The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
 
 **Result**
 
@@ -1147,7 +1147,7 @@ The object returned by `.reload( )` contains the following properties:
 <!-- END REF -->
 
 
-<!-- REF entityClass.save().Desc -->
+<!-- REF EntityClass.save().Desc -->
 ## .save()   
 
 <details><summary>History</summary>
@@ -1157,10 +1157,10 @@ The object returned by `.reload( )` contains the following properties:
 
 </details>
 
-<!-- REF #entityClass.save().Syntax -->
+<!-- REF #EntityClass.save().Syntax -->
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.save().Params -->
+<!-- REF #EntityClass.save().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk auto merge`: Enables the automatic merge mode|
@@ -1169,7 +1169,7 @@ The object returned by `.reload( )` contains the following properties:
 
 #### Description
 
-The `.save()` function <!-- REF #entityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
+The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
 
 The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Otherwise, the function does nothing (the trigger is not called).
 
@@ -1283,7 +1283,7 @@ Updating an entity with `dk auto merge` option:
 
 
 
-<!-- REF entityClass.toObject().Desc -->
+<!-- REF EntityClass.toObject().Desc -->
 ## .toObject()   
 
 <details><summary>History</summary>
@@ -1293,10 +1293,10 @@ Updating an entity with `dk auto merge` option:
 
 </details>
 
-<!-- REF #entityClass.toObject().Syntax -->
+<!-- REF #EntityClass.toObject().Syntax -->
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
-<!-- REF #entityClass.toObject().Params -->
+<!-- REF #EntityClass.toObject().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |filterString |Text	|->|Attribute(s) to extract (comma-separated string)|	
@@ -1307,13 +1307,13 @@ Updating an entity with `dk auto merge` option:
 
 #### Description
 
-The `.toObject()` function <!-- REF #entityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Property names in the object match attribute names of the entity.
+The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Property names in the object match attribute names of the entity.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
 
 *	all storage entity attributes
-*	attributes of the `relatedEntity` [kind](dataclassAttributeClass.md#kind): you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.
-*	attributes of the `relatedEntities` [kind](dataclassAttributeClass.md#kind): attribute is not returned.
+*	attributes of the `relatedEntity` [kind](DataClassAttributeClass.md#kind): you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.
+*	attributes of the `relatedEntities` [kind](DataClassAttributeClass.md#kind): attribute is not returned.
 
 
 In the first parameter, you pass the entity attribute(s) to extract. You can pass:
@@ -1321,13 +1321,13 @@ In the first parameter, you pass the entity attribute(s) to extract. You can pas
 *	*filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 *	*filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
 
-If a filter is specified for attributes of the relatedEntity [kind](dataclassAttributeClass.md#kind):
+If a filter is specified for attributes of the relatedEntity [kind](DataClassAttributeClass.md#kind):
 
 *	propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
 *	propertyPath = "relatedEntity.*" -> all the properties are extracted
 *	propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted
 
-If a filter is specified for attributes of the relatedEntities [kind](dataclassAttributeClass.md#kind):
+If a filter is specified for attributes of the relatedEntities [kind](DataClassAttributeClass.md#kind):
 
 *	propertyPath = "relatedEntities.*" -> all the properties are extracted
 *	propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted
@@ -1570,7 +1570,7 @@ Returns:
 
 
 
-<!-- REF entityClass.touched().Desc -->
+<!-- REF EntityClass.touched().Desc -->
 ## .touched( )   
 
 <details><summary>History</summary>
@@ -1580,10 +1580,10 @@ Returns:
 
 </details>
 
-<!-- REF #entityClass.touched().Syntax -->
+<!-- REF #EntityClass.touched().Syntax -->
 **.touched()** : Boolean<!-- END REF -->
 
-<!-- REF #entityClass.touched().Params -->
+<!-- REF #EntityClass.touched().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
@@ -1591,11 +1591,11 @@ Returns:
 
 #### Description
 
-The `.touched()` function <!-- REF #entityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
 
 If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.
 
-This function returns False for a new entity that has just been created (with [`.new( )`](dataclassClass.md#new)). Note however that if you use a function which calculates an attribute of the entity, the `.touched()` function will then return True. For example, if you call [`.getKey()`](#getkey) to calculate the primary key, `.touched()` returns True.
+This function returns False for a new entity that has just been created (with [`.new( )`](DataClassClass.md#new)). Note however that if you use a function which calculates an attribute of the entity, the `.touched()` function will then return True. For example, if you call [`.getKey()`](#getkey) to calculate the primary key, `.touched()` returns True.
 
 #### Example  
 
@@ -1614,7 +1614,7 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- END REF -->
 
 
-<!-- REF entityClass.touchedAttributes().Desc -->
+<!-- REF EntityClass.touchedAttributes().Desc -->
 ## .touchedAttributes( )   
 
 <details><summary>History</summary>
@@ -1624,10 +1624,10 @@ In this example, we check to see if it is necessary to save the entity:
 
 </details>
 
-<!-- REF #entityClass.touchedAttributes().Syntax -->
+<!-- REF #EntityClass.touchedAttributes().Syntax -->
 **.touchedAttributes()** : Collection<!-- END REF -->
 
-<!-- REF #entityClass.touchedAttributes().Params -->
+<!-- REF #EntityClass.touchedAttributes().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Collection|<-|Names of touched attributes, or empty collection|
@@ -1635,9 +1635,9 @@ In this example, we check to see if it is necessary to save the entity:
 
 #### Description
 
-The `.touchedAttributes()` function <!-- REF #entityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
+The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
-This applies for attributes of the [kind](dataclassAttributeClass.md#kind) `storage` or `relatedEntity`.
+This applies for attributes of the [kind](DataClassAttributeClass.md#kind) `storage` or `relatedEntity`.
 
 In the case of a related entity having been touched (i.e., the foreign key), the name of the related entity and its primary key's name are returned.
 
@@ -1690,7 +1690,7 @@ In this case:
 <!-- END REF -->
 
 
-<!-- REF entityClass.unlock().Desc -->
+<!-- REF EntityClass.unlock().Desc -->
 ## .unlock()   
 
 <details><summary>History</summary>
@@ -1700,10 +1700,10 @@ In this case:
 
 </details>
 
-<!-- REF #entityClass.unlock().Syntax -->
+<!-- REF #EntityClass.unlock().Syntax -->
 **.unlock()** : Object<!-- END REF -->
 
-<!-- REF #entityClass.unlock().Params -->
+<!-- REF #EntityClass.unlock().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Object|<-|Status object|
@@ -1711,7 +1711,7 @@ In this case:
 
 #### Description
 
-The `.unlock()` function <!-- REF #entityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
+The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
 
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 

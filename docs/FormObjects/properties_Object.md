@@ -359,7 +359,7 @@ Automatic calculations ignore the shown/hidden state of list box rows. If you wa
 If the column contains different types of values (collection-based column for example):
 
 - Average and Sum only take numerical elements into account (other element types are ignored).
-- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/collectionClass.md#sort) function.
+- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/CollectionClass.md#sort) function.
 
 Using automatic calculations in footers of columns based upon expressions has the following limitations:
 

@@ -1,5 +1,5 @@
 ---
-id: collectionClass
+id: CollectionClass
 title: Collection
 ---
 
@@ -71,11 +71,6 @@ A collection is initialized with:
 
 ## New collection
 
-<details><summary>History</summary>
-|Version|Changes|
-|---|---|
-|v16 R4|Added|
-</details>
 
 <!-- REF #_command_.New collection.Syntax -->
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
@@ -1099,6 +1094,7 @@ The code for ***TypeLookUp*** is:
  C_OBJECT($1)
  C_LONGINT($2)
  If(OB Get type($1;"value")=$2)
+
 
     $1.result:=True
  End if

@@ -1,5 +1,5 @@
 ---
-id: formulaClass
+id: FunctionClass
 title: Formula
 ---
 
@@ -100,9 +100,9 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 ||
 |---|
-|[<!-- INCLUDE #formulaClass.apply().Syntax -->](#apply)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.apply().Summary -->|
-|[<!-- INCLUDE #formulaClass.call().Syntax -->](#call)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.call().Summary --> |
-|[<!-- INCLUDE #formulaClass.source.Syntax -->](#source)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #formulaClass.source.Summary --> |
+|[<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.apply().Summary -->|
+|[<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.call().Summary --> |
+|[<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.source.Summary --> |
 
 
 
@@ -298,7 +298,7 @@ The following code will create a dialog accepting a formula in text format:
 
 
 
-<!-- REF formulaClass.apply().Desc -->
+<!-- REF FunctionClass.apply().Desc -->
 ## .apply()
 
 <details><summary>History</summary>
@@ -307,10 +307,10 @@ The following code will create a dialog accepting a formula in text format:
 |v17 R3|Added|
 </details>
 
-<!-- REF #formulaClass.apply().Syntax -->
+<!-- REF #FunctionClass.apply().Syntax -->
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
-<!-- REF #formulaClass.apply().Params -->
+<!-- REF #FunctionClass.apply().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
@@ -321,7 +321,7 @@ The following code will create a dialog accepting a formula in text format:
 
 #### Description
 
-The `.apply()` function <!-- REF #formulaClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
+The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
@@ -359,7 +359,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 <!-- END REF -->
 
 
-<!-- REF formulaClass.call().Desc -->
+<!-- REF FunctionClass.call().Desc -->
 ## .call()
 
 <details><summary>History</summary>
@@ -368,10 +368,10 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 |v17 R3|Added|
 </details>
 
-<!-- REF #formulaClass.call().Syntax -->
+<!-- REF #FunctionClass.call().Syntax -->
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
-<!-- REF #formulaClass.call().Params -->
+<!-- REF #FunctionClass.call().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
@@ -382,7 +382,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 #### Description
 
-The `.call()` function <!-- REF #formulaClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
+The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
@@ -410,7 +410,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 
 
-<!-- REF formulaClass.source.Desc -->
+<!-- REF FunctionClass.source.Desc -->
 ## .source
 
 <details><summary>History</summary>
@@ -419,13 +419,13 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 |v18 R2|Added|
 </details>
 
-<!-- REF #formulaClass.source.Syntax -->
+<!-- REF #FunctionClass.source.Syntax -->
 **.source** : Text <!-- END REF -->
 
 
 #### Description
 
-The `.source` property <!-- REF #formulaClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->. 
+The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->. 
 
 This property is **read-only**. 
 
