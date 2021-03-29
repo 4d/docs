@@ -12,10 +12,10 @@ You can use the macOS Terminal or the Windows console to drive your 4D applicati
 
 You can execute command lines for 4D applications using the macOS Terminal or the Windows Console.
 
-- Under macOS, you should use the open command.
+- Under macOS, you should use the `open` command.
 - Under Windows, you can just pass the arguments directly.
 
-> Under macOS, you can pass the arguments directly by going to the folder where the application is found inside the package (Contents/MacOS path), which allows to address the stderr stream. For example, if the 4D package is located in the MyFolder folder, you must write the command line as follows: /MyFolder/4D.app/Contents/MacOS/4D &. However, we recommend that you use the open command whenever you do not need to access the stderr stream.
+> Under macOS, you can pass the arguments directly by going to the folder where the application is found inside the package (Contents/MacOS path), which allows to address the stderr stream. For example, if the 4D package is located in the `MyFolder` folder, you must write the command line as follows: `/MyFolder/4D.app/Contents/MacOS/4D`. However, we recommend that you use the `open` command whenever you do not need to access the stderr stream.
 
 ## Launch a 4D application
 
