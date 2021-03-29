@@ -25,7 +25,7 @@ Syntax:
 ```
 <applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] 
 [--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] 
-[--webadmin-settings-file][--webadmin-access-key][--webadmin-auto-start][--webadmin-store-settings]
+[--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]
 ```
 |Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Value|Description|
 |-------------|---|---|
