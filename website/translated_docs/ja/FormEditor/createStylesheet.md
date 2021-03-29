@@ -190,28 +190,28 @@ text[text|=Hello]
 
 ## スタイルシート宣言
 
-### Media Queries
+### メディアクエリ
 
-Media queries are used to apply color schemes to an application.
+メディアクエリは、アプリケーションにカラースキームを適用するのに利用します。
 
-A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+メディアクエリは、メディア特性と値によって構成されます (例: \<media feature>:\<value> )。
 
 
-Available media features:
+使用可能なメディア特性:
 
 *   `prefers-color-scheme`
 
 
-Available media feature expressions:
+使用可能なメディア特性の値:
 
-*   **light**<br>For using a light scheme
-*   **dark**<br>For using a dark scheme
+*   **light**<br>ライトモード
+*   **dark**<br>ダークモード
 
-> Color schemes are only supported on macOS.
+> カラースキームは macOS でのみサポートされています。
 
 ##### 例題
 
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+ライトモード (デフォルト) およびダークモードにおける、テキストとテキスト背景の色指定を CSS によっておこないます:
 
 ```
 @media (prefers-color-scheme: light) {
@@ -230,16 +230,16 @@ This CSS defines a color combination for text and text background in the light s
 ```
 
 
-### Object Attributes
+### オブジェクト属性
 
 多くのフォームオブジェクト属性をスタイルシートによって指定することができますが、次の属性は除外されます:
     - `method`
     - `type`
     - `class`
     - `event`
-    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (リストタイプ)
 
-Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
+フォームオブジェクトの属性は、それらの [JSON名](FormObjets/properties_Reference.md)を使って CSS 属性のように指定できます (オブジェクトタイプやメソッド、イベント、リストなどの属性を除く)。
 
 #### 属性マッピング
 
@@ -257,7 +257,7 @@ Form object attributes can be declared with their [JSON name](FormObjets/propert
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
-> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+> CSS の属性名を使用する場合、4D に特有の値 (*例* `sunken` (くぼみ)) はサポートされません。
 
 
 #### 特殊な属性値
