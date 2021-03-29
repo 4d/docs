@@ -137,7 +137,7 @@ Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselw
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-> **Hinweise:** - 4D verwendet die ICU library zum Vergleichen von Strings (mit den Operatoren <>=#) und Suchen von Schlüsselwörtern. Weitere Informationen zu den Regeln bei Schlüsselwörtern finden Sie unter: http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. - In der japanischen Version verwendet 4D zum Suchen von Schlüsselwörtern anstatt ICU standardmäßig Mecab.
+> **Hinweise:** - 4D verwendet die ICU library zum Vergleichen von Strings (mit den Operatoren <>=#) und Suchen von Schlüsselwörtern. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries. - In der japanischen Version verwendet 4D zum Suchen von Schlüsselwörtern anstatt ICU standardmäßig Mecab.
 
 ## Symbole für direkten Zeichenzugriff
 Mit den Symbolen [[...]]
