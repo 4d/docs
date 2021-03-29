@@ -698,7 +698,7 @@
         "title": "プロジェクトのアーキテクチャー"
       },
       "Project/compiler": {
-        "title": "Compiler"
+        "title": "Compilation"
       },
       "Project/creating": {
         "title": "プロジェクトを開発する"

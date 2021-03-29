@@ -131,6 +131,11 @@ Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, p
 
 Le dossier DerivedData contient des données en cache utilisées en interne par 4D pour optimiser le traitement. Il est automatiquement créé ou recréé si nécessaire. Vous pouvez ignorer ce dossier.
 
+## Libraries folder
+
+> This folder is used on macOS only.
+
+The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
 
 ## Dossier Resources
 
