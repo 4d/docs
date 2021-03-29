@@ -27,6 +27,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.exists.Syntax -->](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.exists.Summary -->|
 | [<!-- INCLUDE #document.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
 | [<!-- INCLUDE #document.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
+| [<!-- INCLUDE #fileClass.getAppInfo().Syntax -->](#getappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.getAppInfo().Summary -->|
 | [<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<p><!-- INCLUDE #document.getContent().Summary -->|
 | [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 | [<!-- INCLUDE #document.getText().Syntax -->](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
@@ -45,6 +46,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->|
 | [<!-- INCLUDE #document.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.platformPath.Summary -->|
 | [<!-- INCLUDE #fileClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.rename().Summary -->|
+| [<!-- INCLUDE #fileClass.setAppInfo().Syntax -->](#setappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setAppInfo().Summary -->|
 | [<!-- INCLUDE #fileClass.setContent().Syntax -->](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setContent().Summary -->|
 | [<!-- INCLUDE #fileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setText().Summary -->|
 | [<!-- INCLUDE #document.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
@@ -317,6 +319,77 @@ You want to delete a specific file in the database folder:
 <!-- INCLUDE document.fullName.Desc -->
 
 
+<!-- REF file.getAppInfo().Desc -->
+## .getAppInfo()
+
+<details><summary>履歴</summary>
+| バージョン | 内容 |
+| ----- | -- |
+| v19   | 追加 |
+</details>
+
+<!--REF #fileClass.getAppInfo().Syntax -->
+**.getAppInfo**() : Object<!-- END REF -->
+
+<!--REF #fileClass.getAppInfo().Params -->
+| 参照  | タイプ    |    | 説明                                               |
+| --- | ------ | -- | ------------------------------------------------ |
+| 戻り値 | オブジェクト | <- | Contents of .exe version resource or .plist file |
+<!-- END REF -->
+
+
+#### 説明
+
+The `.getAppInfo()` function <!-- REF #fileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
+
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
+
+> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+
+**Returned object with a .exe file**
+
+> Reading a .exe is only possible on Windows.
+
+All property values are Text.
+
+| プロパティ            | タイプ  |
+| ---------------- | ---- |
+| InternalName     | テキスト |
+| ProductName      | テキスト |
+| CompanyName      | テキスト |
+| LegalCopyright   | テキスト |
+| ProductVersion   | テキスト |
+| FileDescription  | テキスト |
+| FileVersion      | テキスト |
+| OriginalFilename | テキスト |
+
+**Returned object with a .plist file**
+
+The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
+
+#### 例題
+
+```4d
+    // display copyright info of application .exe file (windows)
+var $exeFile : 4D.File
+var $info : Object
+$exeFile:=File(Application file; fk platform path)
+$info:=$exeFile.getAppInfo()
+ALERT($info.LegalCopyright)
+
+  // display copyright info of an info.plist (any platform)
+var $infoPlistFile : 4D.File
+var $info : Object
+$infoPlistFile:=File("/RESOURCES/info.plist")
+$info:=$infoPlistFile.getAppInfo()
+ALERT($info.Copyright)
+```
+
+#### 参照
+
+[.setAppInfo()](#setappinfo)
+
+<!-- END REF -->
 
 
 <!-- INCLUDE document.getContent().Desc -->
@@ -477,6 +550,89 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!-- END REF -->
 
 
+<!-- REF file.setAppInfo().Desc -->
+## .setAppInfo()
+
+<details><summary>履歴</summary>
+| バージョン | 内容 |
+| ----- | -- |
+| v19   | 追加 |
+</details>
+
+<!--REF #fileClass.setAppInfo().Syntax -->
+**.setAppInfo**( *info* : Object )<!-- END REF -->
+
+<!--REF #fileClass.setAppInfo().Params -->
+| 参照   | タイプ    |    | 説明                                                          |
+| ---- | ------ | -- | ----------------------------------------------------------- |
+| info | オブジェクト | -> | Properties to write in .exe version resource or .plist file |
+<!-- END REF -->
+
+
+#### 説明
+
+The `.setAppInfo()` function <!-- REF #fileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
+
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
+
+> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+
+***info* parameter object with a .exe file**
+
+> Writing a .exe file information is only possible on Windows.
+
+Each valid property set in the *info* object parameter is written in the version resource of the .exe file. Available properties are (any other property will be ignored):
+
+| プロパティ            | タイプ  |
+| ---------------- | ---- |
+| InternalName     | テキスト |
+| ProductName      | テキスト |
+| CompanyName      | テキスト |
+| LegalCopyright   | テキスト |
+| ProductVersion   | テキスト |
+| FileDescription  | テキスト |
+| FileVersion      | テキスト |
+| OriginalFilename | テキスト |
+
+If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
+
+
+***info* parameter object with a .plist file**
+
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
+
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
+
+> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
+
+#### 例題
+
+```4d
+  // set copyright and version of a .exe file (Windows)
+var $exeFile : 4D.File
+var $info : Object
+$exeFile:=File(Application file; fk platform path)
+$info:=New object
+$info.LegalCopyright:="Copyright 4D 2021" 
+$info.ProductVersion:="1.0.0" 
+$exeFile.setAppInfo($info)
+```
+
+```4d
+  // set some keys in an info.plist file (all platforms)
+var $infoPlistFile : 4D.File
+var $info : Object
+$infoPlistFile:=File("/RESOURCES/info.plist")
+$info:=New object
+$info.Copyright:="Copyright 4D 2021" //text
+$info.ProductVersion:=12 //integer
+$info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$infoPlistFile.setAppInfo($info)
+```
+
+#### 参照
+
+[.getAppInfo()](#getappinfo)
 
 <!-- REF file.setContent().Desc --> 
 ## .setContent()

@@ -795,24 +795,24 @@ attributePath|formula 比較演算子 値
 
 **null値の検索**
 
-When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
+null値を検索する場合、プレースホルダーシンタックスは使用できません。なぜならクエリエンジンは null を予期せぬ比較値としてみなすからです。 たとえば、以下のクエリを実行した場合:
 
 ```4d
-$vSingles:=ds.Person.query("spouse = :1";Null) // will NOT work
+$vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 ```
 
-You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:
+この場合 4D は null値を、引数の評価 (別のクエリから渡された属性など) に起因するエラーと解釈するため、期待した結果は得られません。 このようなクエリをおこなうには、直接的なシンタックスを使用する必要があります:
 
 ```4d
- $vSingles:=ds.Person.query("spouse = null") //correct syntax
+ $vSingles:=ds.Person.query("spouse = null") // 正しいシンタックス
 ```
 
 
-**Linking collection attribute query arguments**
+**コレクション要素とクエリ条件のリンク**
 
-When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
+属性を複数持つオブジェクト要素からなりたっているコレクションが、さらに親オブジェクトの属性値である場合に、当該コレクションに特定要素が存在するかを条件に親オブジェクトを検出したいケースを考えます。AND 演算子で結合された複数のクエリ条件を使用して検索するだけでは、異なるコレクション要素がそれぞれ検索条件に合致する属性値を持つ場合にも当該親オブジェクトが検出されてしまいます。 これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ条件をコレクション要素にリンクする必要があります。
 
-For example, with the following two entities:
+たとえば、以下のような 2件のエンティティがあるとき:
 
 ```
 Entity 1:
@@ -835,79 +835,79 @@ ds.People.places:
             } ] }
 ```
 
-You want to find people with a "home" location kind in the city "paris". If you write:
+"locations" 属性に、"kind=home" かつ "city=paris" である要素を持つ人を探したいとします。 以下のように書いた場合:
 
 ```4d
 ds.People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
 ```
 
-... the query will return "martin" **and** "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
+... クエリは "martin" と "smith" の**両方**を返します。なぜなら "smith" も "kind=home" である "location" 要素を持っており、"city=paris" である "location" 要素をも持っているからです (ですがこれら 2つは異なる要素です)。
 
-If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. To link query arguments:
+検索条件に合致する属性が同一のコレクション要素に含まれるエンティティのみを取得するには、**クエリ条件をリンク** します。 クエリ条件をリンクするには:
 
-- Add a letter between the \[] in the first path to link and repeat the same letter in all linked arguments. For example: `locations[a].city and locations[a].kind`. You can use any letter of the Latin alphabet (not case sensitive).
-- To add different linked criteria in the same query, use another letter. You can create up to 26 combinations of criteria in a single query.
+- リンクする最初のクエリ条件にてパスの \[] 内に文字を追加し、同様に他のクエリ条件でも同じ文字を追加します。 例: `locations[a].city and locations[a].kind`。 ローマ字であればどの文字でも使用可能です (文字の大小は区別されません)。
+- 同じクエリ内に、異なるリンク条件を追加するには、別の文字を使用します。 単一のクエリ内では、最大で 26組のリンク条件を使用することができます。
 
-With the above entities, if you write:
+上記の 2件のエンティティにおいて、以下のように書いた場合:
 
 ```4d
 ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
 ```
 
-... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
+... クエリは、"kind=home" かつ "city=paris" である "locations" 要素を持つエンティティ "martin" のみを返します。 "home" と"paris" が同じコレクション要素内にない "smith" は、クエリの結果に含まれません。
 
 
 
-**formula parameter**
+**formula 引数**
 
-As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
+*queryString* 引数にフォーミュラを挿入 (上記参照) する代わりに、formula オブジェクトをブール検索条件として直接渡すことができます。 トークナイズの利点を生かせる、コードが検索しやすく読みやすい、などといった面から、クエリにおけるフォーミュラオブジェクトの使用は **推奨** されています。
 
-The formula must have been created using the `Formula` or `Formula from string` command. In this case:
+このフォーミュラは、`Formula` または `Formula from string` コマンドによって作成されたものでなくてはなりません。 In this case:
 
-*   the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
-*   within the *formula*, the entity is available through the `This` object.
-*   if the `Formula` object is **null**, the errror 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
-> For security reasons, formula calls within `query(`) member methods can be disallowed. See *querySettings* parameter description.
+*   フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
+*   処理中のエンティティはフォーミュラ内において `This` で参照されます。
+*   `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。このエラーは `ON ERR CALL` で実装したメソッドを使用して割り込み可能です。
+> セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。
 
-**Passing parameters to formulas**
+**フォーミュラに引数を渡す**
 
-Any *formula* called by the `query()` class function can receive parameters:
+`query()` クラス関数によって呼び出されるフォーミュラは、引数を受け取ることができます:
 
-*   Parameters must be passed through the **args** property (object) of the *querySettings* parameter.
-*   The formula receives this **args** object as a **$1** parameter.
+*   引数は、*querySettings* 引数の **args** プロパティ (オブジェクト) を通して渡さなければなりません。
+*   フォーミュラは **args** オブジェクトを **$1** に受け取ります。
 
-This small code shows the principles of how parameter are passed to methods:
+以下の短いコードは、引数をフォーミュラに渡す仕組みを示しています:
 
 ```4d
- $settings:=New object("args";New object("exclude";"-")) //args object to pass parameters
- $es:=ds.Students.query("eval(checkName($1.exclude))";$settings) //args is received in $1
+ $settings:=New object("args";New object("exclude";"-")) // 引数を渡すための args オブジェクト
+ $es:=ds.Students.query("eval(checkName($1.exclude))";$settings) // $1 が args を受け取ります
 ```
 
-Additional examples are provided in example 3.
+さらなる使用例は、例題3にて紹介されています。
 
-**4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
+**4D Server**: クライアント/サーバーにおいては、フォーミュラはサーバー上で実行されます。 このコンテキストにおいては、`querySettings.args` オブジェクトのみがフォーミュラに送信されます。
 
 
 
-**querySettings parameter**
+**querySettings 引数**
 
-In the *querySettings* parameter, you can pass an object containing additional options. 以下のオブジェクトプロパティがサポートされています:
+*querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のオブジェクトプロパティがサポートされています:
 
-| プロパティ         | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | オブジェクト | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                   |
-| attributes    | オブジェクト | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>文字列</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
-| args          | オブジェクト | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| allowFormulas | ブール    | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| context       | テキスト   | Label for the automatic optimization context applied to the entity selection. エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                                                                                        |
-| queryPlan     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                               |
-| queryPath     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                             |
+| プロパティ         | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | オブジェクト | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                                                                                                                                                                                                                                     |
+| attributes    | オブジェクト | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>文字列</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.                                                                 |
+| args          | オブジェクト | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| allowFormulas | ブール    | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                        |
+| context       | テキスト   | Label for the automatic optimization context applied to the entity selection. エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                                            |
+| queryPlan     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                   |
+| queryPath     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions. |
 
 **About queryPlan and queryPath**
 
 The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 You may find it useful to analyze this information while developing your application(s). 一般的には、クエリプランとクエリパスの詳細は同一になるはずですが、4D はパフォーマンスの向上のために、動的な最適化をクエリ実行時に実装することがあるからです。 たとえば、その方が早いと判断した場合には、4Dエンジンはインデックス付きクエリをシーケンシャルなものへと動的に変換することがあります。 これは検索されているエンティティの数が少ないときに起こりえます。
 
-For example, if you execute the following query:
+たとえば、以下のクエリを実行した場合:
 
 ```4d
  $sel:=ds.Employee.query("salary < :1 and employer.name = :2 or employer.revenues > :3";\  
