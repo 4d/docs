@@ -795,22 +795,22 @@ attributePath|formula 比較演算子 値
 
 **null値の検索**
 
-When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
+null値を検索する場合、プレースホルダーシンタックスは使用できません。なぜならクエリエンジンは null を予期せぬ比較値としてみなすからです。 たとえば、以下のクエリを実行した場合:
 
 ```4d
-$vSingles:=ds.Person.query("spouse = :1";Null) // will NOT work
+$vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 ```
 
-You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:
+この場合 4D は null値を、引数の評価 (別のクエリから渡された属性など) に起因するエラーと解釈するため、期待した結果は得られません。 このようなクエリをおこなうには、直接的なシンタックスを使用する必要があります:
 
 ```4d
- $vSingles:=ds.Person.query("spouse = null") //correct syntax
+ $vSingles:=ds.Person.query("spouse = null") // 正しいシンタックス
 ```
 
 
-**Linking collection attribute query arguments**
+**コレクション属性クエリ引数をリンクする**
 
-When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
+属性を複数持つオブジェクト要素からなりたっているコレクションが、さらに親オブジェクトの属性値である場合に、当該コレクションに特定要素が存在するかを条件に親オブジェクトを検出したいケースを考えます。AND 演算子で結合された複数のクエリ引数を使用して検索するだけでは、異なるコレクション要素がそれぞれ検索条件に合致する属性値を持つ場合にも当該親オブジェクトが検出されてしまいます。 これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ引数をコレクション要素にリンクする必要があります。
 
 For example, with the following two entities:
 
@@ -907,7 +907,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 
 The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 You may find it useful to analyze this information while developing your application(s). 一般的には、クエリプランとクエリパスの詳細は同一になるはずですが、4D はパフォーマンスの向上のために、動的な最適化をクエリ実行時に実装することがあるからです。 たとえば、その方が早いと判断した場合には、4Dエンジンはインデックス付きクエリをシーケンシャルなものへと動的に変換することがあります。 これは検索されているエンティティの数が少ないときに起こりえます。
 
-For example, if you execute the following query:
+たとえば、以下のクエリを実行した場合:
 
 ```4d
  $sel:=ds.Employee.query("salary < :1 and employer.name = :2 or employer.revenues > :3";\  
