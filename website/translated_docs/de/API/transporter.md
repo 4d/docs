@@ -1,5 +1,5 @@
 ---
-id: transporter
+id: Transporter
 title: Transporter Class
 ---
 
