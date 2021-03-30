@@ -233,9 +233,9 @@ Depending on the event, various other fields can also be logged, such as task, s
 
 These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
 
-*	SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter) 
-*	POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
-*	IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)   
+*	SMTP - [SMTP New transporter](API/smtpTransporterClass.md#smtp-new-transporter) 
+*	POP3 - [POP3 New transporter](API/pop3TransporterClass.md#pop3-new-transporter)
+*	IMAP  - [IMAP New transporter](API/imapTransporterClass.md#imap-new-transporter)   
 
 The log files can be produced in two versions:
 
