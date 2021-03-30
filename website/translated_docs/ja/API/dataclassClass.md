@@ -936,7 +936,7 @@ queryPath:
 
 #### 例題 1
 
-この章では様々なクエリの例を紹介します。
+この例題では、様々なクエリの例を紹介します。
 
 文字列のクエリ:
 
@@ -1005,19 +1005,19 @@ $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
 ```
 
-Collection型の属性パスを用いたクエリ:
+コレクション型の属性パスを用いたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[].name = :1";"horsebackriding")
 ```
 
-Query with an attribute path of Collection type and linked attributes:
+コレクション型の属性パスとクエリ条件をリンクしたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and extraInfo.hobbies[a].level=:2";"horsebackriding";2)
 ```
 
-Query with an attribute path of Collection type and multiple linked attributes:
+コレクション型の属性パスとクエリ条件を、複数リンクしたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
@@ -1025,33 +1025,33 @@ $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
     extraInfo.hobbies[b].level = :4";"horsebackriding";2;"Tennis";5)
 ```
 
-Query with an attribute path of Object type:
+オブジェクト型の属性パスを用いたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("extra.eyeColor = :1";"blue")
 ```
 
-Query with an IN statement:
+IN節を用いたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("firstName in :1";New collection("Kim";"Dixie"))
 ```
 
-Query with a NOT (IN) statement:
+NOT (IN) 節を用いたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("not (firstName in :1)";New collection("John";"Jane"))
 ```
 
-Query with indexed placeholders for attributes:
+属性パスのインデックスプレースホルダーを使用したクエリ:
 
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name")
-  //salesperson is a related entity
+  // salesperson はリレートエンティティです
 ```
 
-Query with indexed placeholders for attributes and named placeholders for values:
+属性パスのインデックスプレースホルダーを、値の命名プレースホルダーを使用したクエリ:
 
 ```4d
 var $es : cs.EmployeeSelection
@@ -1059,25 +1059,25 @@ var $querySettings : Object
 $querySettings:=New object
 $querySettings.parameters:=New object("customerName";"Smith")
 $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"name";$querySettings)
-  //salesperson is a related entity
+  // salesperson はリレートエンティティです
 ```
 
-Query with indexed placeholders for attributes and values:
+属性パスと値のインデックスプレースホルダーを使用したクエリ:
 
 
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith")
-  //salesperson is a related entity
+  // salesperson はリレートエンティティです
 ```
 
 #### 例題 2
 
-This section illustrates queries with named placeholders for attributes.
+この例題では、属性パスの命名プレースホルダーを使用するクエリを紹介します。
 
-Given an Employee dataclass with 2 entities:
+2件のエンティティをもつ Employee データクラスを前提に考えます:
 
-Entity 1:
+エンティティ1:
 
 ```4d
 name: "Marie"
@@ -1089,7 +1089,7 @@ softwares:{
 }
 ```
 
-Entity 2:
+エンティティ2:
 
 ```4d
 name: "Sophie"
@@ -1101,7 +1101,7 @@ softwares:{
 }
 ```
 
-Query with named placeholders for attributes:
+属性パスの命名プレースホルダーを使用したクエリ:
 
 ```4d
  var $querySettings : Object
@@ -1112,19 +1112,19 @@ Query with named placeholders for attributes:
   //$es.length=1 (Employee Marie)
 ```
 
-Query with named placeholders for attributes and values:
+属性パスと値の命名プレースホルダーを使用したクエリ:
 
 ```4d
  var $querySettings : Object
  var $es : cs.EmployeeSelection
  var $name : Text
  $querySettings:=New object
-  //Named placeholders for values
-  //The user is asked for a name
- $name:=Request("Please enter the name to search:")
+  // 値の命名プレースホルダー
+  // ユーザーに検索する名前を入力してもらいます
+ $name:=Request("検索する名前を入力してください:")
  If(OK=1)
     $querySettings.parameters:=New object("givenName";$name)
-  //Named placeholders for attribute paths
+  // 属性パスの命名プレースホルダー
     $querySettings.attributes:=New object("attName";"name")
     $es:=ds.Employee.query(":attName= :givenName";$querySettings)
  End if
@@ -1132,16 +1132,16 @@ Query with named placeholders for attributes and values:
 
 #### 例題 3
 
-These examples illustrate the various ways to use formulas with or without parameters in your queries.
+この例題では、クエリにおいて、引数あり・引数なしでフォーミュラを使用する様々な方法を紹介します。
 
-The formula is given as text with `eval()` in the *queryString* parameter:
+`eval()` を使い、テキストとしてフォーミュラを *queryString* パラメーターに渡すクエリ:
 
 ```4d
  var $es : cs.StudentsSelection
  $es:=ds.Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-The formula is given as a `Formula` object through a placeholder:
+プレースホルダーを使い、`Formula`オブジェクトとしてフォーミュラを渡すクエリ:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1150,7 +1150,7 @@ The formula is given as a `Formula` object through a placeholder:
  $es:=ds.Students.query(":1 and nationality='French'";$formula)
 ```
 
-Only a `Formula` object is given as criteria:
+`Formula` オブジェクトのみを検索条件として渡したクエリ:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1159,7 +1159,7 @@ Only a `Formula` object is given as criteria:
  $es:=ds.Students.query($formula)
 ```
 
-Several formulas can be applied:
+フォーミュラを複数適用したクエリ:
 
 ```4d
  var $formula1; $1; $formula2 ;$0 : Object
@@ -1169,7 +1169,7 @@ Several formulas can be applied:
 ```
 
 
-A text formula in *queryString* receives a parameter:
+*queryString* のテキストフォーミュラが引数を受け取るクエリ:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1180,12 +1180,12 @@ A text formula in *queryString* receives a parameter:
 ```
 
 ```4d
-  //checkName method
+  // checkName メソッド
  #DECLARE($exclude : Text) -> $result : Boolean
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-Using the same ***checkName*** method, a `Formula` object as placeholder receives a parameter:
+同じ ***checkName*** メソッドを `Formula` オブジェクトに格納してプレースホルダーで渡し、引数を受け取るクエリ:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1194,11 +1194,11 @@ Using the same ***checkName*** method, a `Formula` object as placeholder receive
  $settings:=New object()
  $settings.args:=New object("filter";"-")
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
- $settings.args.filter:="*" // change the parameters without updating the $formula object
+ $settings.args.filter:="*" // $formula オブジェクトは更新せずに引数を変更します
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
-We want to disallow formulas, for example when the user enters their query:
+ユーザーがクエリを入力する場合などに、フォーミュラを禁止する場合:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1207,7 +1207,7 @@ We want to disallow formulas, for example when the user enters their query:
  $queryString:=Request("Enter your query:")
  if(OK=1)
     $settings:=New object("allowFormulas";False)
-    $es:=ds.Students.query($queryString;$settings) //An error is raised if $queryString contains a formula
+    $es:=ds.Students.query($queryString;$settings) // $queryString にフォーミュラが格納されていた場合にはエラーが生成されます
  End if
 ```
 
