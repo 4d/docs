@@ -3,10 +3,10 @@ id: datastoreClass
 title: DataStore
 ---
 
-A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
+[データストア](ORDA/dsMapping.md#datastore) とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 `Datastore` オブジェクトは以下のコマンドによって返されます:
 
-*   [ds](#ds): a shortcut to the main datastore
-*   [Open datastore](#open-datastore): to open any remote datastore
+*   [ds](#ds): メインデータストアへのショートカット
+*   [Open datastore](#open-datastore): リモートデータストアを開きます
 
 ### 概要
 
@@ -32,26 +32,26 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 ## ds
 
 <details><summary>履歴</summary>
-| バージョン | 内容                           |
-| ----- | ---------------------------- |
-| v18   | Support of localID parameter |
-| v17   | 追加                           |
+| バージョン | 内容                |
+| ----- | ----------------- |
+| v18   | localID パラメーターを追加 |
+| v17   | 追加                |
 </details>
 
 <!-- REF #_command_.ds.Syntax -->
 **ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
-| 参照      | タイプ          |    | 説明                                         |
-| ------- | ------------ | -- | ------------------------------------------ |
-| localID | テキスト         | -> | Local ID of the remote datastore to return |
-| 戻り値     | cs.DataStore | <- | Reference to the datastore                 |
+| 参照      | タイプ          |    | 説明                        |
+| ------- | ------------ | -- | ------------------------- |
+| localID | テキスト         | -> | 参照を取得したいリモートデータストアのローカルID |
+| 戻り値     | cs.DataStore | <- | データストア参照                  |
 <!-- END REF -->
 
 
 #### 説明
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+`ds` コマンドは、 <!-- REF #_command_.ds.Summary -->カレントの 4Dデータベース、または *localID* で指定したデータベースに合致するデータストアの参照を返します<!-- END REF -->。
 
 If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
 
