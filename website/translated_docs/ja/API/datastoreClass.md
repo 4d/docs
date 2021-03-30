@@ -53,23 +53,23 @@ title: DataStore
 
 `ds` コマンドは、 <!-- REF #_command_.ds.Summary -->カレントの 4Dデータベース、または *localID* で指定したデータベースに合致するデータストアの参照を返します<!-- END REF -->。
 
-If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
+*localID* を省略した (または空の文字列 "" を渡した) 場合には、ローカル4Dデータベース (4D Server でリモートデータベースを開いている場合にはそのデータベース) に合致するデータストアの参照を返します。 データストアは自動的に開かれ、`ds` を介して直接利用することができます。
 
-You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](#open-datastore) command by the current database (host or component). The local id is defined when using this command.
-> The scope of the local id is the database where the datastore has been opened.
+開かれているリモートデータストアのローカルIDを *localID* パラメーターに渡すと、その参照を取得できます。 このデータストアは、あらかじめカレントデータベース (ホストまたはコンポーネント) によって [`Open datastore`](#open-datastore) コマンドで開かれている必要があります。 このコマンドを使用したときにローカルIDが定義されます。
+> ローカルIDのスコープは、当該データストアを開いたデータベースです。
 
-If no *localID* datastore is found, the command returns **Null**.
+*localID* に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
 
-Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. The following rules are applied:
+`ds` を使用するには、データベースが **ORDAの必須要件** の章で説明されているように ORDA に準拠している必要があります。 以下のルールが適用されます:
 
-*   データストアは単一のプライマリーキーを持つテーブルのみを参照します。 Tables without a primary key or with composite primary keys are not referenced.
-*   BLOB type attributes are not managed in the datastore.
+*   データストアは単一のプライマリーキーを持つテーブルのみを参照します。 プライマリーキーがないテーブル、あるいは複合プライマリーキーがあるテーブルは参照されません。
+*   BLOB型属性はデータストアで管理されません。
 
 
 
 #### 例題 1
 
-Using the main datastore on the 4D database:
+4Dデータベースのメインデータストアを使用します:
 
 ```4d
  $result:=ds.Employee.query("firstName = :1";"S@")
