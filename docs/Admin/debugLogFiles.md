@@ -10,7 +10,7 @@ Information logged needs to be analyzed to detect and fix issues. This section p
 *	[4DRequestsLog.txt](#4drequestslogtxt)
 *	[4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 *	[HTTPDebugLog.txt](#httpdebuglogtxt)
-*	4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tablular](#4ddebuglogtxt-tabular))
+*	4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 *	[4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 *	[4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *	[4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -218,7 +218,7 @@ How to start this log:
 
 The following fields are logged for each event:
 
-|Fields Name|Description|
+|Field Name|Description|
 |---| ---|
 |sequenceNumber|Unique and sequential operation number in the logging session|
 |timestamp|Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)|
