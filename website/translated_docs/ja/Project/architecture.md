@@ -131,11 +131,11 @@ title: プロジェクトのアーキテクチャー
 
 DerivedData フォルダーには、処理を最適化するため 4D が内部的に使用するキャッシュデーターが格納されます。 これらは必要に応じて自動的に生成・再生成されます。 このフォルダーは無視してかまいません。
 
-## Libraries folder
+## Libraries フォルダー
 
-> This folder is used on macOS only.
+> このフォルダーは macOS でのみ使用されます。
 
-The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
+Libraries フォルダーには、macOS 上で [Apple Silicon用にコンパイル](compiler.md#siliconコンパイラ) された結果のファイルが格納されます。
 
 ## Resources フォルダー
 

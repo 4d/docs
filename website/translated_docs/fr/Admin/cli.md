@@ -37,11 +37,11 @@ Syntax:
 | `--opening-mode`                                                                                                                                                                             | interpreted &#124; compiled                      | Requests database to open in interpreted or compiled mode. No error is thrown if the requested mode is unavailable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `--create-data`                                                                                                                                                                              |                                                  | Automatically creates a new data file if no valid data file is found. No dialog box appears. 4D uses the file name passed in the "--data" argument if any (generates an error if a file with the same name already exists).                                                                                                                                                                                                                                                                                                                                                                       |
 | `--user-param`                                                                                                                                                                               | Custom user string                               | A string that will be available within the 4D application through the Get database parameter command (the string must not start with a "-" character, which is reserved).                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `--headless`                                                                                                                                                                                 |                                                  | Launches the 4D, 4D Server or merged application without interface (headless mode). In this mode:<li> The Design mode is not available, database starts in Application mode</li><li> No toolbar, menu bar, MDI window or splash screen is displayed</li><li>No icon is displayed in the dock or task bar</li><li>The opened database is not registered in the "Recent databases" menu</li><li>The diagnostic log is automatically started (see [SET DATABASE PARAMETER](https://doc.4d.com/4dv18/help/command/en/page642.html), selector 79)</li><li>Every call to a dialog box is intercepted and an automatic response it provided (e.g. OK for the [ALERT](https://doc.4d.com/4dv18/help/command/en/page41.html) command, Abort for an error dialog...). All intercepted commands(*) are logged in the diagnostic log.</li><br/>For maintenance needs, you can send any text to standard output streams using the [LOG EVENT](https://doc.4d.com/4dv18/help/command/en/page667.html) command. Note that headless 4D applications can only be closed by a call to [QUIT 4D](https://doc.4d.com/4dv18/help/command/en/page291.html) or using the OS task manager. |
-| `--webadmin-settings-file`                                                                                                                                                                   | File path                                        | Path of the custom WebAdmin `.4DSettings` file for the WebAdmin web server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `--webadmin-access-key`                                                                                                                                                                      | Chaine                                           | Access key for the WebAdmin web server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `--webadmin-auto-start`                                                                                                                                                                      | Booléen                                          | Status of the automatic startup for the WebAdmin web server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `--webadmin-store-settings`                                                                                                                                                                  |                                                  | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default `WebAdmin.4DSettings` file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary                                                                                                                                                                                                                                                                                              |
+| `--headless`                                                                                                                                                                                 |                                                  | Launches the 4D, 4D Server or merged application without interface (headless mode). In this mode:<li> The Design mode is not available, database starts in Application mode</li><li> No toolbar, menu bar, MDI window or splash screen is displayed</li><li>No icon is displayed in the dock or task bar</li><li>The opened database is not registered in the "Recent databases" menu</li><li>The diagnostic log is automatically started (see [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html), selector 79)</li><li>Every call to a dialog box is intercepted and an automatic response it provided (e.g. OK for the [ALERT](https://doc.4d.com/4dv19/help/command/en/page41.html) command, Abort for an error dialog...). All intercepted commands(*) are logged in the diagnostic log.</li><br/>For maintenance needs, you can send any text to standard output streams using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command. Note that headless 4D applications can only be closed by a call to [QUIT 4D](https://doc.4d.com/4dv19/help/command/en/page291.html) or using the OS task manager. |
+| `--webadmin-settings-file`                                                                                                                                                                   | File path                                        | Path of the custom WebAdmin `.4DSettings` file for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `--webadmin-access-key`                                                                                                                                                                      | Chaine                                           | Access key for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `--webadmin-auto-start`                                                                                                                                                                      | Booléen                                          | Status of the automatic startup for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `--webadmin-store-settings`                                                                                                                                                                  |                                                  | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary                                                                                                                                                                                                                                                             |
  (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the Diagnostic log file (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 
 ### Exemples
@@ -53,85 +53,135 @@ These examples assume that your 4D application is stored on the desktop and that
 Launch application:
 
 *   macOS:
-```
+
+
+```bash
 open ~/Desktop/4D.app
 ```
+
 *   Windows:
-```
+
+
+```bash
 %HOMEPATH%\Desktop\4D\4D.exe
 ```
+
 Launch application with a package file on macOS:
+
+```bash
+yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
-open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
-```
+
 Launch application with a project file:
 
 *   macOS:
+
+
+```bash
+yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 ```
-open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
-```
+
+
 *   Windows:
-```
+
+
+```bash
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 ```
+
+
+
 Launch application with a project file and a data file:
 
 *   macOS:
-```
+
+
+```bash
 open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD
 ```
+
 *   Windows:
-```
+
+
+```bash
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
 or:
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
+
 Launch application with a .4DLink file:
 
 *   macOS:
-```
+
+
+```bash
 open ~/Desktop/4D.app MyDatabase.4DLink
 ```
-```
+
+```bash
 open "~/Desktop/4D Server.app" MyDatabase.4DLink
 ```
+
 *   Windows:
-```
+
+
+```bash
 %HOMEPATH%\Desktop\4D.exe MyDatabase.4DLink
 ```
-```
+
+```bash
 %HOMEPATH%\Desktop\4D Server.exe" MyDatabase.4DLink
 ```
+
 Launch application in compiled mode and create a data file if not available:
 
 *   macOS:
-```
+
+
+```bash
 open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled --create-data true
 ```
+
 *   Windows:
-```
+
+
+```bash
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
+
 Launch application with a project file and a data file and pass a string as a user parameter:
 
 *   macOS:
-```
+
+
+```bash
 open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --user-param "Hello world"
 ```
+
 *   Windows:
-```
+
+
+```bash
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
+
 Launch application without interface (headless mode):
+
 *   macOS:
-```
+
+
+```bash
 open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --headless
 ```
-```
+
+```bash
 open ~/Desktop/MyBuiltRemoteApp −−headless
 ```
+
 *   Windows:
-```
+
+
+```bash
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --headless
 %HOMEPATH%\Desktop\4D\MyBuiltRemoteApp.exe --headless
 ```

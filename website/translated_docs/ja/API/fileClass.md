@@ -275,9 +275,9 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #fileClass.delete().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |  | ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |  | ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
