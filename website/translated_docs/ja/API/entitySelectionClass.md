@@ -1606,9 +1606,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 **.refresh()**<!-- END REF -->
 
 <!-- REF #entitySelectionClass.refresh().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 #### 説明
