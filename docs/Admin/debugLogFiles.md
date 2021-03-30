@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Description of log files 
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER] or [WEB SET OPTION] commands and are stored in the [Logs folder](Project/architecture.md#logs-folder) of the database.
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs-folder) of the database.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
@@ -21,8 +21,8 @@ Note: When a log file can be generated either on 4D Server or on the remote clie
 
 Log files share some fields so that you can establish a chronology and make connections between entries while debugging:
 
-*	*sequence_number*: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
-*	*connection_uuid*: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. It allows you to easily identify the remote client that launched each process.
+*	`sequence_number`: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
+*	`connection_uuid`: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. It allows you to easily identify the remote client that launched each process.
 
 ## 4DRequestsLog.txt  
 
@@ -114,7 +114,7 @@ For each process, the following fields are logged:
 |Field name|	Description|
 |---|---|
 |sequence_number|	Unique and sequential operation number in the logging session|
-|time|	Date and time using ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.sss"|
+|time|	Date and time using ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.mmm"|
 |process\_info_index|	Unique and sequential process number|
 |CDB4DBaseContext|	DB4D component database context UUID|
 |systemid|	System ID|
@@ -199,7 +199,7 @@ The following fields are logged for each event:
 |3|	ProcessID|Process ID|
 |4|	unique_processID|Unique process ID|
 |5|	stack_level|Stack level
-|6| operation_type|	Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by `LOG EVENT` command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the operation_type, operation and operation_parameters columns have the same value as the opening stack level logged in the stack_opening_sequence_number column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.|
+|6| operation_type|	Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.|
 |7|operation|May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>
 |8|operation_parameters|Parameters passed to commands, methods, or plugins|
 |9|form_event|Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)|
@@ -208,7 +208,7 @@ The following fields are logged for each event:
 
 ## 4DDiagnosticLog.txt
 
-This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the LOG EVENT command.
+This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
 
 How to start this log:
 
