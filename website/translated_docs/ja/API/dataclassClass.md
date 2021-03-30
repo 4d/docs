@@ -810,7 +810,7 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 
 **コレクション要素とクエリ条件のリンク**
 
-属性を複数持つオブジェクト要素からなりたっているコレクションが、さらに親オブジェクトの属性値である場合に、当該コレクションに特定要素が存在するかを条件に親オブジェクトを検出したいケースを考えます。AND 演算子で結合された複数のクエリ条件を使用して検索するだけでは、異なるコレクション要素がそれぞれ検索条件に合致する属性値を持つ場合にも当該親オブジェクトが検出されてしまいます。 これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ条件をコレクション要素にリンクする必要があります。
+プロパティを複数持つオブジェクト要素からなりたっているコレクションが、さらに親オブジェクトの属性値である場合に、当該コレクションに特定要素が存在するかを条件に親オブジェクトを検出したいケースを考えます。AND 演算子で結合された複数のクエリ条件を使用して検索するだけでは、異なるコレクション要素がそれぞれ検索条件に合致するプロパティ値を持つ場合にも当該親オブジェクトが検出されてしまいます。 これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ条件をコレクション要素にリンクする必要があります。
 
 たとえば、以下のような 2件のエンティティがあるとき:
 
@@ -893,19 +893,19 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 *querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のオブジェクトプロパティがサポートされています:
 
-| プロパティ         | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | オブジェクト | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                                                                                                                                                                                                                                     |
-| attributes    | オブジェクト | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>文字列</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query.                                                                 |
-| args          | オブジェクト | Parameter(s) to pass to formulas, if any. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| allowFormulas | ブール    | True to allow the formula calls in the query (default). Pass false to disallow formula execution. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                        |
-| context       | テキスト   | Label for the automatic optimization context applied to the entity selection. エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 This feature is designed for client/server processing; for more information, please refer to the **Client/server optimization** section.                                                                                                                                                                                                                                                                                                                                            |
-| queryPlan     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                   |
-| queryPath     | ブール    | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions. |
+| プロパティ         | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | オブジェクト | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                             |
+| attributes    | オブジェクト | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>文字列</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>文字列のコレクション</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
+| args          | オブジェクト | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                              |
+| allowFormulas | ブール    | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                         |
+| context       | テキスト   | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                                             |
+| queryPlan     | ブール    | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                             |
+| queryPath     | ブール    | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                       |
 
-**About queryPlan and queryPath**
+**queryPlan と queryPath について**
 
-The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 You may find it useful to analyze this information while developing your application(s). 一般的には、クエリプランとクエリパスの詳細は同一になるはずですが、4D はパフォーマンスの向上のために、動的な最適化をクエリ実行時に実装することがあるからです。 たとえば、その方が早いと判断した場合には、4Dエンジンはインデックス付きクエリをシーケンシャルなものへと動的に変換することがあります。 これは検索されているエンティティの数が少ないときに起こりえます。
+`queryPlan`/`queryPath` に格納される情報には、クエリの種類 (インデックスあるいはシーケンシャル)、必要なサブクエリおよびその連結演算子が含まれます。 クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 この情報は、アプリケーションの開発中に解析することで有効に活用できます。 一般的には、クエリプランとクエリパスの詳細は同一になるはずですが、4D はパフォーマンスの向上のために、動的な最適化をクエリ実行時に実装することがあるからです。 たとえば、その方が早いと判断した場合には、4Dエンジンはインデックス付きクエリをシーケンシャルなものへと動的に変換することがあります。 これは検索されているエンティティの数が少ないときに起こりえます。
 
 たとえば、以下のクエリを実行した場合:
 
@@ -936,46 +936,46 @@ queryPath:
 
 #### 例題 1
 
-This section provides various examples of queries.
+この章では様々なクエリの例を紹介します。
 
-Query on a string:
+文字列のクエリ:
 
 ```4d
 $entitySelection:=ds.Customer.query("firstName = 'S@'")
 ```
 
-Query with a NOT statement:
+NOT節を用いたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("not(firstName=Kim)")
 ```
 
-Queries with dates:
+日付のクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
 $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 ```
 
-Query with indexed placeholders for values:
+値のインデックスプレースホルダーを使用したクエリ:
 
 ```4d
 $entitySelection:=ds.Customer.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@")
 ```
 
-Query with indexed placeholders for values on a related dataclass:
+リレートデータクラス対して値のインデックスプレースホルダーを使用したクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("lastName = :1 and manager.lastName = :2";"M@";"S@")
 ```
 
-Query with indexed placeholder including a descending order by statement:
+降順の order by ステートメントを含んだ、インデックスプレースホルダーを使用したクエリ:
 
 ```4d
 $entitySelection:=ds.Student.query("nationality = :1 order by campus.name desc, lastname";"French")
 ```
 
-Query with named placeholders for values:
+値の命名プレースホルダーを使用したクエリ:
 
 ```4d
 var $querySettings : Object
@@ -985,7 +985,7 @@ $querySettings.parameters:=New object("userId";1234;"extraInfo";New object("name
 $managedCustomers:=ds.Customer.query("salesperson.userId = :userId and name = :extraInfo.name";$querySettings)
 ```
 
-Query that uses both named and indexed placeholders for values:
+値の命名プレースホルダーと、値のインデックスプレースホルダーの両方を使用したクエリ:
 
 ```4d
 var $querySettings : Object
@@ -994,18 +994,18 @@ $querySettings.parameters:=New object("userId";1234)
 $managedCustomers:=ds.Customer.query("salesperson.userId = :userId and name=:1";"Smith";$querySettings)
 ```
 
-Query with queryPlan and queryPath objects:
+queryPlan および queryPath オブジェクトを返すクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
 
-  //you can then get these properties in the resulting entity selection
+  // 戻り値のエンティティセレクションから以下のプロパティを取得できます
 var $queryPlan; $queryPath : Object
 $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
 ```
 
-Query with an attribute path of Collection type:
+Collection型の属性パスを用いたクエリ:
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[].name = :1";"horsebackriding")
