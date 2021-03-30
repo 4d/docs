@@ -94,8 +94,8 @@ title: DataStore
 ```
 
 ```4d
-  //getFirst method
-  //getFirst(localID;dataclass) -> entity
+  // getFirst メソッド
+  // getFirst(localID;dataclass) -> entity
  #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
 
  $0:=ds($localId)[$dataClassName].all().first()
@@ -116,68 +116,84 @@ title: DataStore
 **Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.Open datastore.Params -->
-| 参照             | タイプ          |    | 説明                                                                        |
-| -------------- | ------------ | -- | ------------------------------------------------------------------------- |
-| connectionInfo | オブジェクト       | -> | Connection properties used to reach the remote datastore                  |
-| localID        | テキスト         | -> | Id to assign to the opened datastore on the local application (mandatory) |
-| 戻り値            | cs.DataStore | <- | Datastore object                                                          |
+| 参照             | タイプ          |    | 説明                                         |
+| -------------- | ------------ | -- | ------------------------------------------ |
+| connectionInfo | オブジェクト       | -> | リモートデータストアへの接続に使用する接続プロパティ                 |
+| localID        | テキスト         | -> | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
+| 戻り値            | cs.DataStore | <- | データストアオブジェクト                               |
 <!-- END REF -->
 
 
 #### 説明
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
+`Open datastore` コマンドは、 <!-- REF #_command_.Open datastore.Summary -->*connectionInfo* 引数が指定する 4Dデータベースにアプリケーションを接続します<!-- END REF --> 。戻り値は、*localID* ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
 
-The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
+*connectionInfo* で指定する 4Dデータベースはリモートデーターストアとして利用可能でなければなりません。つまり、以下の条件を満たしている必要があります:
 
-*   its web server must be launched with http and/or https enabled,
-*   its [**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option must be checked,
-*   at least one client license is available.
+*   データベースの Webサーバーは、http または https が有効化された状態で開始されていなければなりません。
+*   データベースの
 
-If no matching database is found, `Open datastore` returns **Null**.
+**REST サーバーとして公開</a>** オプションがチェックされている必要があります。</li> 
+  
+  *   データベースにおいて、少なくとも 1つのクライアントライセンスが利用可能でなければなりません。</ul> 
 
-*localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
+合致するデータベースが見つからない場合、`Open datastore` は **Null** を返します。
 
-Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:
+*localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。 
+
+一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
+
+
 
 ```4d
  $myds:=Open datastore(connectionInfo;"myLocalId")
  $myds2:=ds("myLocalId")
-  //$myds and $myds2 are equivalent
+  //$myds と $myds2 は同一のものです
 ```
 
-Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| プロパティ       | タイプ  | 説明                                                                                                                                                                                                                                                                     |
-| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | テキスト | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
-| user        | テキスト | User name                                                                                                                                                                                                                                                              |
-| password    | テキスト | User password                                                                                                                                                                                                                                                          |
-| idleTimeout | 倍長整数 | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | ブール  | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | テキスト | Must be "4D Server"                                                                                                                                                                                                                                                    |
+*connectionInfo* には、接続したいリモートデータストアの詳細を格納したオブジェクトを渡します。 オブジェクトは以下のプロパティを格納することができます (*hostname* を除き、すべてのプロパティは任意です):
 
-(*) If tls is true, the HTTPS protocol is used if:
+| プロパティ       | タイプ  | 説明                                                                                                                                                                                                                            |
+| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname    | テキスト | リモートデータストアの名前または IPアドレス + ":" + ポート番号 (ポート番号は必須)                                                                                                                                                                              |
+| user        | テキスト | ユーザー名                                                                                                                                                                                                                         |
+| password    | テキスト | ユーザーパスワード                                                                                                                                                                                                                     |
+| idleTimeout | 倍長整数 | アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、[**セッションの終了**](datastores.md#セッションの終了) を参照ください。 |
+| tls         | ブール  | 安全な接続を使用します(*)。 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。                                                                                                                                                               |
+| type        | テキスト | "4D Server" でなければなりません                                                                                                                                                                                                        |
 
-*   HTTPS is enabled on the remote datastore
-*   the given port is the right HTTPS port configured in the database settings
-*   a valid certificate and private encryption key are installed in the database. Otherwise, error "1610 - A remote request to host xxx has failed" is raised
+
+(*) tls が true だった場合、以下の条件が満たされていれば、HTTPSプロトコルが使用されます:
+
+*   リモートデータストアで HTTPS が有効化されている。
+*   指定されたポート番号は、データベース設定で設定されている HTTPS ポートと合致している。
+*   データベースに有効な証明書と非公開暗号鍵がインストールされている。 条件を満たさない場合、エラー "1610 - ホスト xxx へのリモートリクエストに失敗しました" が生成されます。
+
+
 
 #### 例題 1
 
-Connection to a remote datastore without user / password:
+user / password を指定せずにリモートデータストアに接続します:
+
+
 
 ```4d
  var $connectTo : Object 
  var $remoteDS : cs.DataStore
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+ ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
 ```
+
+
+
 
 #### 例題 2
 
-Connection to a remote datastore with user / password / timeout / tls:
+user / password / timeout / tls を指定してリモートデータストアに接続します:
+
+
 
 ```4d
  var $connectTo : Object 
@@ -185,12 +201,17 @@ Connection to a remote datastore with user / password / timeout / tls:
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
     "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+ ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
 ```
+
+
+
 
 #### 例題 3
 
-Working with several remote datastores:
+複数のリモートデータストアと接続します:
+
+
 
 ```4d
  var $connectTo : Object 
@@ -202,6 +223,9 @@ Working with several remote datastores:
  ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
+
+
+
 
 #### Error management
 
@@ -227,7 +251,11 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore)data. The returned object <!-- REF datastoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
 
 
+
+
 #### 例題
+
+
 
 ```4d
  var $emp : cs.Employee
@@ -271,7 +299,9 @@ The `.cancelTransaction()` function <!-- REF #datastoreClass.cancelTransaction()
 
 The `.cancelTransaction()` function cancels any changes made to the data during the transaction.
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function.
+You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function. 
+
+
 
 
 #### 例題
@@ -306,8 +336,9 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 #### 説明
 
 The `.encryptionStatus()` function <!-- REF #datastoreClass.encryptionStatus().Summary -->returns an object providing the encryption status for the current data file<!-- END REF --> (i.e., the data file of the `ds` datastore). The status for each table is also provided.
-> Use the `Data file encryption status` command to determine the encryption status of any other data file.
 
+
+> Use the `Data file encryption status` command to determine the encryption status of any other data file.
 
 **戻り値**
 
@@ -324,15 +355,20 @@ The returned object contains the following properties:
 |             |             | isEncryptable | ブール    | True if the table is declared encryptable in the structure file                    |
 |             |             | isEncrypted   | ブール    | True if the records of the table are encrypted in the data file                    |
 
+
 (*) The encryption key can be provided:
 
 *   with the `.provideDataKey()` command,
 *   at the root of a connected device before opening the datastore,
 *   with the `Discover data key` command.
 
+
+
 #### 例題
 
 You want to know the number of encrypted tables in the current data file:
+
+
 
 ```4d
  var $status : Object
@@ -365,6 +401,7 @@ You want to know the number of encrypted tables in the current data file:
 | ----- | -- |
 | v17   | 追加 |
 
+
 </details>
 
 <!-- REF #datastoreClass.getInfo().Syntax -->
@@ -389,11 +426,16 @@ The `.getInfo()` function <!-- REF #datastoreClass.getInfo().Summary -->returns 
 | localID    | text    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
 | connection | object  | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>boolean</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
 
+
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
 
 
+
+
 #### 例題 1
+
+
 
 ```4d
  var $info : Object
@@ -405,9 +447,14 @@ The `.getInfo()` function <!-- REF #datastoreClass.getInfo().Summary -->returns 
   //{"type":"4D","networked":true,"localID":""}
 ```
 
+
+
+
 #### 例題 2
 
 On a remote datastore:
+
+
 
 ```4d
   var $remoteDS : cs.DataStore
@@ -449,15 +496,17 @@ On a remote datastore:
 
 #### 説明
 
-The `.getRequestLog()` function <!-- REF #datastoreClass.getRequestLog().Summary -->returns the ORDA requests logged in memory on the client side<!-- END REF -->. The ORDA request logging must have previously been enabled using the [`.startRequestLog()`](#startrequestlog) function.
+The `.getRequestLog()` function <!-- REF #datastoreClass.getRequestLog().Summary -->returns the ORDA requests logged in memory on the client side<!-- END REF -->. The ORDA request logging must have previously been enabled using the [`.startRequestLog()`](#startrequestlog) function. 
 
 This function must be called on a remote 4D, otherwise it returns an empty collection. It is designed for debugging purposes in client/server configurations.
 
 **戻り値**
 
-Collection of stacked request objects. The most recent request has index 0.
+Collection of stacked request objects. The most recent request has index 0. 
 
 For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
+
+
 
 
 #### 例題
@@ -488,9 +537,11 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 #### 説明
 
-The `.isAdminProtected()` function <!-- REF #datastoreClass.isAdminProtected().Summary -->returns `True` if [Data Explorer](Admin/dataExplorer.md) access has been disabled for the working session<!-- END REF -->.
+The `.isAdminProtected()` function <!-- REF #datastoreClass.isAdminProtected().Summary -->returns `True` if [Data Explorer](Admin/dataExplorer.md) access has been disabled for the working session<!-- END REF -->. 
 
-By default, the Data Explorer access is granted for `webAdmin` sessions, but it can be disabled to prevent any data access from administrators (see the [`.setAdminProtection()`](#setadminprotection) function).
+By default, the Data Explorer access is granted for `webAdmin` sessions, but it can be disabled to prevent any data access from administrators (see the [`.setAdminProtection()`](#setadminprotection) function). 
+
+
 
 #### 参照
 
@@ -522,11 +573,15 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 #### 説明
 
-The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF --> (including [remote datastores](ORDA/remoteDatastores.md)). It is intended to be used once, for example in the `On Startup` database method.
+The `.makeSelectionsAlterable()` function <!-- REF #datastoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF --> (including [remote datastores](ORDA/remoteDatastores.md)). It is intended to be used once, for example in the `On Startup` database method. 
 
 When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
-> This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used.
+
+
+> This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used. 
+
+
 
 
 > **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](entitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity. 
@@ -560,6 +615,8 @@ When this function is not called, new entity selections can be shareable, depend
 #### 説明
 
 The `.provideDataKey()` function <!-- REF #datastoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. This function can be used when opening an encrypted database, or when executing any encryption operation that requires the encryption key, such as re-encrypting the data file.
+
+
 > * The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
 > * The `.provideDataKey()` function cannot be called from a remote 4D or an encrypted remote datastore.
 
@@ -571,7 +628,6 @@ If a valid data encryption key is provided, it is added to the *keyChain* in mem
 
 *   all data modifications in encryptable tables are encrypted on disk (.4DD, .journal. 4Dindx files)
 *   all data loaded from encryptable tables is decrypted in memory
-
 
 **戻り値**
 
@@ -588,11 +644,16 @@ The result of the command is described in the returned object:
 |            | \[ ].errCode            | 数値     | Error number                                                                    |
 |            | \[ ].message            | テキスト   | Error message                                                                   |
 
+
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
 
 
 
+
+
 #### 例題
+
+
 
 ```4d 
  var $keyStatus : Object
@@ -634,20 +695,27 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 #### 説明
 
-The `.setAdminProtection()` function <!-- REF #datastoreClass.setAdminProtection().Summary -->allows disabling any data access on the [web admin port](Admin/webAdmin.md#http-port), including for the [Data Explorer](Admin/dataExplorer.md) in `WebAdmin` sessions<!-- END REF -->.
+The `.setAdminProtection()` function <!-- REF #datastoreClass.setAdminProtection().Summary -->allows disabling any data access on the [web admin port](Admin/webAdmin.md#http-port), including for the [Data Explorer](Admin/dataExplorer.md) in `WebAdmin` sessions<!-- END REF -->. 
 
-By default when the function is not called, access to data is always granted on the web administration port for a session with `WebAdmin` privilege using the Data Explorer. In some configurations, for example when the application server is hosted on a third-party machine, you might not want the administrator to be able to view your data, although they can edit the server configuration, including the [access key](Admin/webAdmin.md#access-key) settings.
+By default when the function is not called, access to data is always granted on the web administration port for a session with `WebAdmin` privilege using the Data Explorer. In some configurations, for example when the application server is hosted on a third-party machine, you might not want the administrator to be able to view your data, although they can edit the server configuration, including the [access key](Admin/webAdmin.md#access-key) settings. 
 
-In this case, you can call this function to disable the data access from Data Explorer on the web admin port of the machine, even if the user session has the `WebAdmin` privilege. When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted.
+In this case, you can call this function to disable the data access from Data Explorer on the web admin port of the machine, even if the user session has the `WebAdmin` privilege. When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted. 
+
+
 
 
 #### 例題
 
 You create a *protectDataFile* project method to call before deployments for example:
 
+
+
 ```4d
  ds.setAdminProtection(True) //Disables the Data Explorer data access
 ```
+
+
+
 
 #### 参照
 
@@ -679,13 +747,15 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 #### 説明
 
-The `.startRequestLog()` function <!-- REF #datastoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->.
+The `.startRequestLog()` function <!-- REF #datastoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->. 
 
 This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.
 
-The ORDA request log can be sent to a file or to memory, depending on the parameter type:
+The ORDA request log can be sent to a file or to memory, depending on the parameter type: 
 
 *   If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it. If `.startRequestLog( )` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+  
+  
 > A \] character must be manually appended at the end of the file to perform a JSON validation
 
 *   If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
@@ -694,9 +764,13 @@ The ORDA request log can be sent to a file or to memory, depending on the parame
 
 For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
 
+
+
 #### 例題 1
 
 You want to log ORDA client requests in a file and use the log sequence number:
+
+
 
 ```4d 
  var $file : 4D.File
@@ -711,9 +785,14 @@ You want to log ORDA client requests in a file and use the log sequence number:
  SET DATABASE PARAMETER(Client Log Recording;0)
 ```
 
+
+
+
 #### 例題 2
 
 You want to log ORDA client requests in memory:
+
+
 
 ```4d 
  var $es : cs.PersonsSelection
@@ -755,13 +834,19 @@ You want to log ORDA client requests in memory:
 
 #### 説明
 
-The `.startTransaction()` function <!-- REF #datastoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled.
+The `.startTransaction()` function <!-- REF #datastoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled. 
+
+
 > If this method is called on the main datastore (i.e. the datastore returned by the `ds` command), the transaction is applied to all operations performed on the main datastore and on the underlying database, thus including ORDA and classic languages.
 
 You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
 
 
+
+
 #### 例題
+
+
 
 
 ```4d 
@@ -823,9 +908,11 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 #### 説明
 
-The `.stopRequestLog()` function <!-- REF #datastoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (in file or in memory). It is particularly useful when logging in a file, since it actually closes the opened document on disk.
+The `.stopRequestLog()` function <!-- REF #datastoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (in file or in memory). It is particularly useful when logging in a file, since it actually closes the opened document on disk. 
 
 This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.
+
+
 
 
 #### 例題
@@ -858,11 +945,13 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 #### 説明
 
-The `.validateTransaction()` function <!-- REF #datastoreClass.validateTransaction().Summary -->accepts the transaction <!-- END REF -->that was started with [`.startTransaction()`](#starttransaction) at the corresponding level on the specified datastore.
+The `.validateTransaction()` function <!-- REF #datastoreClass.validateTransaction().Summary -->accepts the transaction <!-- END REF -->that was started with [`.startTransaction()`](#starttransaction) at the corresponding level on the specified datastore. 
 
 The function saves the changes to the data on the datastore that occurred during the transaction.
 
 You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.
+
+
 
 
 #### 例題
