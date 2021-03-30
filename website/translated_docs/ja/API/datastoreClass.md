@@ -220,16 +220,16 @@ user / password / timeout / tls を指定してリモートデータストアに
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
  $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
- ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
+ ALERT("フランスの生徒は "+String($frenchStudents.Students.all().length)+" 名です")
+ ALERT("外国の生徒は "+String($foreignStudents.Students.all().length)+" 名です")
 ```
 
 
 
 
-#### Error management
+#### エラー管理
 
-In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`. 
+エラーが起きた場合、コマンドは **Null** を返します。 リモートデータベースにアクセスできなかった場合 (アドレス違い、Webサーバーが開始されていない、http/https が有効化されていない、等)、エラー1610 "ホスト XXX へのリモートリクエストに失敗しました" が生成されます。 このエラーは `ON ERR CALL` で実装されたメソッドで割り込み可能です。 
 
 
 
@@ -248,7 +248,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 
 #### 説明
 
-Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore)data. The returned object <!-- REF datastoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
+データストアの各データクラスは [DataStore オブジェクト](ORDA/dsMapping.md#データストア) のプロパティとして利用可能です。 戻り値のオブジェクトには <!-- REF datastoreClass.dataclassName.Summary -->データクラスの詳細が格納されています<!-- END REF -->。
 
 
 
@@ -260,10 +260,10 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 ```4d
  var $emp : cs.Employee
  var $sel : cs.EmployeeSelection
- $emp:=ds.Employee //$emp contains the Employee dataclass
- $sel:=$emp.all() //gets an entity selection of all employees
+ $emp:=ds.Employee //$emp は Employeeデータクラスを格納します
+ $sel:=$emp.all() // 全従業員のエンティティセレクションを取得します
 
-  //you could also write directly:
+  // あるいは以下のように直接書くことも可能です:
  $sel:=ds.Employee.all()
 ```
 
@@ -287,26 +287,26 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 **.cancelTransaction()**<!-- END REF -->
 
 <!-- REF #datastoreClass.cancelTransaction().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.cancelTransaction()` function <!-- REF #datastoreClass.cancelTransaction().Summary -->cancels the transaction<!-- END REF --> opened by the [`.startTransaction()`](#starttransaction) function at the corresponding level in the current process for the specified datastore.
+`.cancelTransaction()` 関数は、指定データストアのカレントプロセスにおいて、[`.startTransaction()`](#starttransaction) によって開かれた <!-- REF #datastoreClass.cancelTransaction().Summary -->トランザクションをキャンセルします<!-- END REF --> 。
 
-The `.cancelTransaction()` function cancels any changes made to the data during the transaction.
+`.cancelTransaction()` 関数は、トランザクション中におこなわれたデータ変更をすべてキャンセルします。
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function. 
+複数のトランザクションをネストすること (サブトランザクション) が可能です。 メイントランザクションがキャンセルされると、サブトランザクションも (たとえ個々に[`.validateTransaction()`](#validatetransactions) 関数で承認されていても) すべてキャンセルされます。 
 
 
 
 
 #### 例題
 
-See example for the [`.startTransaction()`](#starttransaction) function.
+[`.startTransaction()`](#starttransaction) 関数の例題を参照ください。
 
 
 <!-- END REF -->
@@ -327,46 +327,46 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 
 <!-- REF #datastoreClass.encryptionStatus().Params -->
-| 参照  | タイプ    |    | 説明                                                                          |
-| --- | ------ |:--:| --------------------------------------------------------------------------- |
-| 戻り値 | オブジェクト | <- | Information about the encryption of the current datastore and of each table |
+| 参照  | タイプ    |    | 説明                           |
+| --- | ------ |:--:| ---------------------------- |
+| 戻り値 | オブジェクト | <- | カレントデータストアと、各テーブルの暗号化についての情報 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.encryptionStatus()` function <!-- REF #datastoreClass.encryptionStatus().Summary -->returns an object providing the encryption status for the current data file<!-- END REF --> (i.e., the data file of the `ds` datastore). The status for each table is also provided.
+`.encryptionStatus()` 関数は、 <!-- REF #datastoreClass.encryptionStatus().Summary -->カレントデータファイルの暗号化状態を示すオブジェクトを返します<!-- END REF --> 。カレントデータファイルとはつまり、`ds` データストアのデータファイルです。 各テーブルの状態も提供されます。
 
 
-> Use the `Data file encryption status` command to determine the encryption status of any other data file.
+> その他のデータファイルの暗号化状態を調べるには、`Data file encryption status` コマンドを使います。
 
 **戻り値**
 
-The returned object contains the following properties:
+戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ       |             |               | タイプ    | 説明                                                                                 |
-| ----------- | ----------- | ------------- | ------ | ---------------------------------------------------------------------------------- |
-| isEncrypted |             |               | ブール    | True if the data file is encrypted                                                 |
-| keyProvided |             |               | ブール    | True if the encryption key matching the encrypted data file is provided(*).        |
-| テーブル        |             |               | オブジェクト | Object containing as many properties as there are encryptable or encrypted tables. |
-|             | *tableName* |               | オブジェクト | Encryptable or Encrypted table                                                     |
-|             |             | name          | テキスト   | Name of the table                                                                  |
-|             |             | num           | 数値     | テーブル番号                                                                             |
-|             |             | isEncryptable | ブール    | True if the table is declared encryptable in the structure file                    |
-|             |             | isEncrypted   | ブール    | True if the records of the table are encrypted in the data file                    |
+| プロパティ       |             |               | タイプ    | 説明                                        |
+| ----------- | ----------- | ------------- | ------ | ----------------------------------------- |
+| isEncrypted |             |               | ブール    | データファイルが暗号化されていれば true                    |
+| keyProvided |             |               | ブール    | 暗号化されたデータファイルに合致する暗号化キーが提供されていれば true (*) |
+| tables      |             |               | オブジェクト | 暗号化可能および暗号化されたテーブルと同じ数のプロパティを持つオブジェクト     |
+|             | *tableName* |               | オブジェクト | 暗号化可能または暗号化されたテーブル                        |
+|             |             | name          | テキスト   | テーブル名                                     |
+|             |             | num           | 数値     | テーブル番号                                    |
+|             |             | isEncryptable | ブール    | ストラクチャーファイルにおいて、テーブルが暗号化可能と宣言されていれば true  |
+|             |             | isEncrypted   | ブール    | データファイルにおいて、テーブルのレコードが暗号化されていれば true      |
 
 
-(*) The encryption key can be provided:
+(*) 暗号化キーは、以下の手段のいずれかで提供されます:
 
-*   with the `.provideDataKey()` command,
-*   at the root of a connected device before opening the datastore,
-*   with the `Discover data key` command.
+*   `.provideDataKey()` コマンド
+*   データストアを開く前に接続されていたデバイスのルート
+*   `Discover data key` コマンド
 
 
 
 #### 例題
 
-You want to know the number of encrypted tables in the current data file:
+カレントデータファイル内で暗号化されているテーブルの数を知りたい場合:
 
 
 
@@ -375,7 +375,7 @@ You want to know the number of encrypted tables in the current data file:
 
  $status:=dataStore.encryptionStatus()
 
- If($status.isEncrypted) //the database is encrypted
+ If($status.isEncrypted) // データベースが暗号化されていれば
     C_LONGINT($vcount)
     C_TEXT($tabName)
     For each($tabName;$status.tables)
@@ -383,9 +383,9 @@ You want to know the number of encrypted tables in the current data file:
           $vcount:=$vcount+1
        End if
     End for each
-    ALERT(String($vcount)+" encrypted table(s) in this datastore.")
+    ALERT("データベースには "+String($vcount)+" 件の暗号化されたテーブルが存在しています。")
  Else
-    ALERT("This database is not encrypted.")
+    ALERT("このデータベースは暗号化されていません。")
  End if
 ```
 
@@ -408,20 +408,20 @@ You want to know the number of encrypted tables in the current data file:
 **.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #datastoreClass.getInfo().Params -->
-| 参照  | タイプ    |    | 説明                   |
-| --- | ------ |:--:| -------------------- |
-| 戻り値 | オブジェクト | <- | Datastore properties |
+| 参照  | タイプ    |    | 説明           |
+| --- | ------ |:--:| ------------ |
+| 戻り値 | オブジェクト | <- | データストアのプロパティ |
 <!-- END REF -->
 
 #### 説明
 
-The `.getInfo()` function <!-- REF #datastoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. このメソッドは汎用的なコードを書くのに有用です。
+`.getInfo()` 関数は、 <!-- REF #datastoreClass.getInfo().Summary -->データストアの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
 | プロパティ      | タイプ     | 説明                                                                                                                                                              |
 | ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
+| type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
 | networked  | boolean | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
 | localID    | text    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
 | connection | object  | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>boolean</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
@@ -565,9 +565,9 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 **.makeSelectionsAlterable()**<!-- END REF -->
 
 <!-- REF #datastoreClass.makeSelectionsAlterable().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
@@ -826,9 +826,9 @@ You want to log ORDA client requests in memory:
 **.startTransaction()**<!-- END REF -->
 
 <!-- REF #datastoreClass.startTransaction().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |  | ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |  | ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
@@ -839,7 +839,7 @@ The `.startTransaction()` function <!-- REF #datastoreClass.startTransaction().S
 
 > If this method is called on the main datastore (i.e. the datastore returned by the `ds` command), the transaction is applied to all operations performed on the main datastore and on the underlying database, thus including ORDA and classic languages.
 
-You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
+複数のトランザクションをネストすること (サブトランザクション) が可能です。 Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
 
 
 
@@ -900,9 +900,9 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 **.stopRequestLog()**  <!-- END REF -->
 
 <!-- REF #datastoreClass.stopRequestLog().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |  | ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |  | ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
@@ -937,9 +937,9 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 **.validateTransaction()**  <!-- END REF -->
 
 <!-- REF #datastoreClass.validateTransaction().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |  | ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |  | ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
@@ -949,7 +949,7 @@ The `.validateTransaction()` function <!-- REF #datastoreClass.validateTransacti
 
 The function saves the changes to the data on the datastore that occurred during the transaction.
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.
+複数のトランザクションをネストすること (サブトランザクション) が可能です。 If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.
 
 
 
