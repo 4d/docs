@@ -94,9 +94,9 @@ IP:port/4DACTION/action_Session
 **.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #sessionClass.clearPrivileges().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 

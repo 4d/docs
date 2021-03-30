@@ -34,7 +34,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 | $2 | テキスト | <- | HTTP headers + HTTP body (up to 32 kb limit) |
 | $3 | テキスト | <- | IP address of the web client (browser)       |
 | $4 | テキスト | <- | IP address of the server                     |
-| $5 | テキスト | <- | User name                                    |
+| $5 | テキスト | <- | ユーザー名                                        |
 | $6 | テキスト | <- | Password                                     |
 
 

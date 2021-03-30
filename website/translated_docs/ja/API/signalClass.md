@@ -226,9 +226,9 @@ The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the 
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
-| 参照 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 参照 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
 <!-- END REF -->
 
 
