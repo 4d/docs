@@ -1213,7 +1213,7 @@ softwares:{
 
 #### 参照
 
-[`.query()`](entitySelectionClass.md#query) for entity selections
+エンティティセレクションの [`.query()`](entitySelectionClass.md#query)
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
