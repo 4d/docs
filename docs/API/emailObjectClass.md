@@ -1,5 +1,5 @@
 ---
-id: emails
+id: EmailObjectClass
 title: Email
 ---
 
