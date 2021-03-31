@@ -24,7 +24,7 @@ Multi-user development is managed via standard **source control** repository too
 
 ## Final application
 
-Project files can be compiled and easily deployed. 4D allows you to create three types of applications from your projects:
+Project files can be [compiled](compiler.md) and easily deployed. 4D allows you to create three types of applications from your projects:
 
 - [web](WebServer/webServer.md) applications,
 - [mobile](https://developer.4d.com/4d-for-ios/) applications, 
