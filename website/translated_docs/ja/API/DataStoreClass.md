@@ -579,12 +579,12 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 
 
-> This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used. 
+> この関数は、`OB Copy` または [`.copy()`](#copy) に `ck shared` オプションを明示的に使用して作成されたエンティティセレクションには適用されません。 
 
 
 
 
-> **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](EntitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity. 
+> **互換性に関する注記**: このメソッドは 4D v18 R5 より前のバージョンから変換されたプロジェクトで、[.add()](EntitySelectionClass.md#add) の呼び出しを使用しているものにおいてのみ使用してください。 このコンテキストにおいては、`.makeSelectionsAlterable()` を使用することで、既存プロジェクト内で以前の 4D のふるまいを再現し、時間を節約できます。 逆に、4D v18 R5 以降のバージョンで作成された新規プロジェクトにおいては、この関数の使用は **推奨されていません**。エンティティセレクションを共有可能にできないため、パフォーマンスとスケーラビリティの観点で妨げになるからです。 
 
 
 <!-- END REF -->
@@ -604,17 +604,17 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| 参照            | タイプ    |    | 説明                                    |
-| ------------- | ------ | -- | ------------------------------------- |
-| curPassPhrase | テキスト   | -> | Current encryption passphrase         |
-| curDataKey    | オブジェクト | -> | Current data encryption key           |
-| 戻り値           | オブジェクト | <- | Result of the encryption key matching |
+| 参照            | タイプ    |    | 説明            |
+| ------------- | ------ | -- | ------------- |
+| curPassPhrase | テキスト   | -> | カレントのパスフレーズ   |
+| curDataKey    | オブジェクト | -> | カレントのデータ暗号化キー |
+| 戻り値           | オブジェクト | <- | 暗号化キーのチェックの結果 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. This function can be used when opening an encrypted database, or when executing any encryption operation that requires the encryption key, such as re-encrypting the data file.
+`.provideDataKey()` 関数は、 <!-- REF #DataStoreClass.provideDataKey().Summary -->データストアのカレントデータファイルのデータ暗号化キーを受け取り、暗号化されたデータと合致するかどうかチェックします<!-- END REF -->。 この関数は、暗号化されたデータベースを開くときや、データファイルの再暗号化など暗号化キーが必要となる暗号化オペレーションを実行する際に使用します。
 
 
 > * The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
