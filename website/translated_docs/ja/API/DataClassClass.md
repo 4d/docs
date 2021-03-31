@@ -815,7 +815,7 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 たとえば、以下のような 2件のエンティティがあるとき:
 
 ```
-Entity 1:
+エンティティ1:
 ds.People.name: "martin"
 ds.People.places: 
     { "locations" : [ {
@@ -823,7 +823,7 @@ ds.People.places:
                 "city":"paris" 
             } ] }
 
-Entity 2:
+エンティティ2:
 ds.People.name: "smith"
 ds.People.places: 
     { "locations" : [ {
