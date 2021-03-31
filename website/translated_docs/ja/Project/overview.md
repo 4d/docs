@@ -24,7 +24,7 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 
 ## アプリケーションの仕上げ
 
-プロジェクトファイルはコンパイルし、簡単に運用することができます。 プロジェクトをもとに、次の 3種のアプリケーションを作成することができます:
+Project files can be [compiled](compiler.md) and easily deployed. プロジェクトをもとに、次の 3種のアプリケーションを作成することができます:
 
 - [Web](WebServer/webServer.md) アプリケーション
 - [モバイル](https://developer.4d.com/4d-for-ios/) アプリケーション
