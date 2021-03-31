@@ -1,5 +1,5 @@
 ---
-id: fileClass
+id: FileClass
 title: File
 ---
 
@@ -19,15 +19,15 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->|
-| [<!-- INCLUDE #fileClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.create().Summary -->|
-| [<!-- INCLUDE #fileClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.createAlias().Summary -->|
+| [<!-- INCLUDE #FileClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.create().Summary -->|
+| [<!-- INCLUDE #FileClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.createAlias().Summary -->|
 | [<!-- INCLUDE #document.creationDate.Syntax -->](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationDate.Summary -->|
 | [<!-- INCLUDE #document.creationTime.Syntax -->](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationTime.Summary -->|
-| [<!-- INCLUDE #fileClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.delete().Summary -->|
+| [<!-- INCLUDE #FileClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.delete().Summary -->|
 | [<!-- INCLUDE #document.exists.Syntax -->](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.exists.Summary -->|
 | [<!-- INCLUDE #document.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
 | [<!-- INCLUDE #document.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
-| [<!-- INCLUDE #fileClass.getAppInfo().Syntax -->](#getappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.getAppInfo().Summary -->|
+| [<!-- INCLUDE #FileClass.getAppInfo().Syntax -->](#getappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.getAppInfo().Summary -->|
 | [<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<p><!-- INCLUDE #document.getContent().Summary -->|
 | [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 | [<!-- INCLUDE #document.getText().Syntax -->](#gettext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
@@ -39,16 +39,16 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
 | [<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary -->|
 | [<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
-| [<!-- INCLUDE #fileClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.moveTo().Summary -->|
+| [<!-- INCLUDE #FileClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.moveTo().Summary -->|
 | [<!-- INCLUDE #document.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.name.Summary -->|
 | [<!-- INCLUDE #document.original.Syntax -->](#original)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.original.Summary -->|
 | [<!-- INCLUDE #document.parent.Syntax -->](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.parent.Summary -->|
 | [<!-- INCLUDE #document.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->|
 | [<!-- INCLUDE #document.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.platformPath.Summary -->|
-| [<!-- INCLUDE #fileClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.rename().Summary -->|
-| [<!-- INCLUDE #fileClass.setAppInfo().Syntax -->](#setappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setAppInfo().Summary -->|
-| [<!-- INCLUDE #fileClass.setContent().Syntax -->](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setContent().Summary -->|
-| [<!-- INCLUDE #fileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #fileClass.setText().Summary -->|
+| [<!-- INCLUDE #FileClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.rename().Summary -->|
+| [<!-- INCLUDE #FileClass.setAppInfo().Syntax -->](#setappinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setAppInfo().Summary -->|
+| [<!-- INCLUDE #FileClass.setContent().Syntax -->](#setcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setContent().Summary -->|
+| [<!-- INCLUDE #FileClass.setText().Syntax -->](#settext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setText().Summary -->|
 | [<!-- INCLUDE #document.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
 
 
@@ -162,10 +162,10 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **Not available for ZIP archives**<!-- END REF -->
 
 
-<!--REF #fileClass.create().Syntax -->
+<!--REF #FileClass.create().Syntax -->
 **.create()** : Boolean <!-- END REF -->
 
-<!--REF #fileClass.create().Params -->
+<!--REF #FileClass.create().Params -->
 | Parameter | Typ     |    | Beschreibung                                               |
 | --------- | ------- | -- | ---------------------------------------------------------- |
 | Ergebnis  | Boolean | <- | True if the file was created successfully, false otherwise |
@@ -173,7 +173,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 #### Beschreibung
 
-The `.create()` function <!-- REF #fileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -205,10 +205,10 @@ Creation of a preferences file in the database folder:
 | v17 R5  | Added   |
 </details>
 
-<!--REF #fileClass.createAlias().Syntax -->
+<!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
-<!--REF #fileClass.createAlias().Params -->
+<!--REF #FileClass.createAlias().Params -->
 | Parameter         | Typ       |    | Beschreibung                                 |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
@@ -220,7 +220,7 @@ Creation of a preferences file in the database folder:
 
 #### Beschreibung
 
-The `.createAlias()` function <!-- REF #fileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -270,11 +270,11 @@ You want to create an alias to a file in your database folder:
 </details>
 
 
-<!--REF #fileClass.delete().Syntax -->
+<!--REF #FileClass.delete().Syntax -->
 **.delete( )**<!-- END REF -->
 
 
-<!-- REF #fileClass.delete().Params -->
+<!-- REF #FileClass.delete().Params -->
 | Parameter | Typ |  | Beschreibung                    |
 | --------- | --- |  | ------------------------------- |
 |           |     |  | Does not require any parameters |
@@ -283,7 +283,7 @@ You want to create an alias to a file in your database folder:
 
 #### Beschreibung
 
-The `.delete()` function <!-- REF #fileClass.delete().Summary -->deletes the file<!-- END REF -->.
+The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
 If the file is currently open, an error is generated.
 
@@ -328,10 +328,10 @@ You want to delete a specific file in the database folder:
 | v19     | Added   |
 </details>
 
-<!--REF #fileClass.getAppInfo().Syntax -->
+<!--REF #FileClass.getAppInfo().Syntax -->
 **.getAppInfo**() : Object<!-- END REF -->
 
-<!--REF #fileClass.getAppInfo().Params -->
+<!--REF #FileClass.getAppInfo().Params -->
 | Parameter | Typ    |    | Beschreibung                                     |
 | --------- | ------ | -- | ------------------------------------------------ |
 | Ergebnis  | Objekt | <- | Contents of .exe version resource or .plist file |
@@ -340,7 +340,7 @@ You want to delete a specific file in the database folder:
 
 #### Beschreibung
 
-The `.getAppInfo()` function <!-- REF #fileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
 
 The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
 
@@ -448,10 +448,10 @@ ALERT($info.Copyright)
 </details>
 
 
-<!--REF #fileClass.moveTo().Syntax -->
+<!--REF #FileClass.moveTo().Syntax -->
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
-<!--REF #fileClass.moveTo().Params -->
+<!--REF #FileClass.moveTo().Params -->
 | Parameter         | Typ       |    | Beschreibung                 |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder           |
@@ -462,7 +462,7 @@ ALERT($info.Copyright)
 
 #### Beschreibung
 
-The `.moveTo()` function <!-- REF #fileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -516,10 +516,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 </details>
 
 
-<!--REF #fileClass.rename().Syntax -->
+<!--REF #FileClass.rename().Syntax -->
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
-<!--REF #fileClass.rename().Params -->
+<!--REF #FileClass.rename().Params -->
 | Parameter | Typ     |    | Beschreibung               |
 | --------- | ------- | -- | -------------------------- |
 | newName   | Text    | -> | New full name for the file |
@@ -528,7 +528,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Beschreibung
 
-The `.rename()` function <!-- REF #fileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -559,10 +559,10 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 | v19     | Added   |
 </details>
 
-<!--REF #fileClass.setAppInfo().Syntax -->
+<!--REF #FileClass.setAppInfo().Syntax -->
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
-<!--REF #fileClass.setAppInfo().Params -->
+<!--REF #FileClass.setAppInfo().Params -->
 | Parameter | Typ    |    | Beschreibung                                                |
 | --------- | ------ | -- | ----------------------------------------------------------- |
 | info      | Objekt | -> | Properties to write in .exe version resource or .plist file |
@@ -571,7 +571,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 #### Beschreibung
 
-The `.setAppInfo()` function <!-- REF #fileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
 
 The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
 
@@ -644,10 +644,10 @@ $infoPlistFile.setAppInfo($info)
 </details>
 
 
-<!--REF #fileClass.setContent().Syntax -->
+<!--REF #FileClass.setContent().Syntax -->
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
-<!--REF #fileClass.setContent().Params -->
+<!--REF #FileClass.setContent().Params -->
 | Parameter | Typ  |    | Beschreibung              |
 | --------- | ---- | -- | ------------------------- |
 | content   | BLOB | -> | New contents for the file |
@@ -656,7 +656,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Beschreibung
 
-The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
 
 #### Beispiel
@@ -682,11 +682,11 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 </details>
 
 
-<!--REF #fileClass.setText().Syntax -->
+<!--REF #FileClass.setText().Syntax -->
 **.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
 
 
-<!--REF #fileClass.setText().Params -->
+<!--REF #FileClass.setText().Params -->
 | Parameter   | Typ      |    | Beschreibung                                               |
 | ----------- | -------- | -- | ---------------------------------------------------------- |
 | Text        | Text     | -> | Text to store in the file                                  |
@@ -698,7 +698,7 @@ The `.setContent( )` function <!-- REF #fileClass.setContent().Summary -->rewrit
 
 #### Beschreibung
 
-The `.setText()` function <!-- REF #fileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 

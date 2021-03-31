@@ -1,5 +1,5 @@
 ---
-id: document
+id: Document
 title: Document Class
 ---
 

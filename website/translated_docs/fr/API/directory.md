@@ -1,5 +1,5 @@
 ---
-id: directory
+id: Directory
 title: Classe Directory
 ---
 
