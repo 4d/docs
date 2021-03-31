@@ -3,23 +3,26 @@ id: debugLogFiles
 title: Description of log files
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the   `SET DATABASE PARAMETER` or `WEB SET OPTION` commands and are stored in the [Logs folder](Project/architecture.md#logs-folder) of the database.
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs-folder) of the database.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
 *   [4DRequestsLog.txt](#4drequestslogtxt)
 *   [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 *   [HTTPDebugLog.txt](#httpdebuglogtxt)
-*   4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tablular](#4ddebuglogtxt-tabular))
+*   4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
+*   [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 *   [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [ORDA client requests log file](#orda-client-requests)
 
-These log files share some fields so that you can establish a chronology and make connections between entries while debugging:
+Note: When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
 
-*   *sequence_number*: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
-*   *connection_uuid*: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. It allows you to easily identify the remote client that launched each process.
+Log files share some fields so that you can establish a chronology and make connections between entries while debugging:
+
+*   `sequence_number`: this number is unique over all debug logs and is incremented for each new entry whatever the log file, so that you can know the exact sequence of the operations.
+*   `connection_uuid`: for any 4D process created on a 4D client that connects to a server, this connection UUID is logged on both server and client side. It allows you to easily identify the remote client that launched each process.
 
 ## 4DRequestsLog.txt
 
@@ -58,7 +61,7 @@ For each request, the following fields are logged:
 | Field name                                 | Beschreibung                                                                                                                                                                                                     |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sequence_number                            | Unique and sequential operation number in the logging session                                                                                                                                                    |
-| time                                       | Date and time using ISO 8601 format: 'YYYY-MM-DDTHH:MM:SS.sss'                                                                                                                                                   |
+| time                                       | Date and time using ISO 8601 format: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                   |
 | systemid                                   | System ID                                                                                                                                                                                                        |
 | component                                  | Component signature (e.g., '4SQLS' or 'dbmg')                                                                                                                                                                    |
 | process\_info_                           | index   Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                       |
@@ -109,7 +112,7 @@ For each process, the following fields are logged:
 | Field name                        | Beschreibung                                                   |
 | --------------------------------- | -------------------------------------------------------------- |
 | sequence_number                   | Unique and sequential operation number in the logging session  |
-| time                              | Date and time using ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.sss" |
+| time                              | Date and time using ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.mmm" |
 | process\_info_index             | Unique and sequential process number                           |
 | CDB4DBaseContext                  | DB4D component database context UUID                           |
 | systemid                          | System ID                                                      |
@@ -165,11 +168,11 @@ The following fields are logged for each event:
 | Column # | Beschreibung                                                                                                  |
 | -------- | ------------------------------------------------------------------------------------------------------------- |
 | 1        | Unique and sequential operation number in the logging session                                                 |
-| 2        | Elapsed time in milliseconds since log startup                                                                |
+| 2        | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)                                                    |
 | 3        | Process ID (p=xx) and unique process ID (puid=xx)                                                             |
 | 4        | Stack level                                                                                                   |
 | 5        | Can be Command Name/ Method Name/Message/ Task Start Stop info/Plugin Name, event or Callback/Connection UUID |
-| 6        | Time taken for logging operation in milliseconds (different from 2nd column)                                  |
+| 6        | Time taken for logging operation in milliseconds                                                              |
 
 ## 4DDebugLog.txt (tabular)
 
@@ -187,26 +190,50 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 The following fields are logged for each event:
 
-| Column # | Beschreibung                                                                                                                                                                                                                                                                         |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1        | Unique and sequential operation number in the logging session                                                                                                                                                                                                                        |
-| 2        | Elapsed time since log startup in "hh:mm:ss:ms" format (can be preceded by a day counter. For example, if the log was started 3 days ago, the time could be "3+11:58:23:163")                                                                                                        |
-| 3        | Process ID                                                                                                                                                                                                                                                                           |
-| 4        | Unique process ID                                                                                                                                                                                                                                                                    |
-| 5        | Stack level                                                                                                                                                                                                                                                                          |
-| 6        | May represent (depending on type entry logged in the 8th column):<p><ul><li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li><li>or may contain 'starting sequence number' when closing a stack level (this should correspond to the sequence number of the current action's start)<p><p><table><tr><td>121  15:16:50:777  5  8  0  CallMethod  2  0</td></tr><tr><td>122  15:16:50:777  5  8  1  283  1  0</td></tr><tr><td>123  15:16:50:777  5  8  1  122  -1  0  3</td></tr><tr><td>124  15:16:50:777  5  8  0  121  -2  0  61</td></tr></table><p>Here in the last line (124), the 6th column's value '121' corresponds to the sequence number of the first line (stack level 0). In the line above (123), the 6th column's value '122' corresponds to the sequence number of the upper line (stack level 1) etc.</li></ul>                                                                                                                                                                 |
-| 7        | Parameters passed to commands, methods, or plugins                                                                                                                                                                                                                                   |
-| 8        | Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by `LOG EVENT` command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol><p>When a value is negative, it only means that it is the closing stack level counterpart (see 8th columns in lines 123 and 124 in the log above). |
-| 9        | Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)                                                                                                                                                        |
-| 10       | Elapsed time in micro seconds of the current logged action; only for the closing stack levels (see 10th columns in lines 123 and 124 in the log above)                                                                                                                               |
+| Column # | Field name                      | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1        | sequence_number                 | Unique and sequential operation number in the logging session                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 2        | time                            | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 3        | ProcessID                       | Process ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 4        | unique_processID                | Unique process ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 5        | stack_level                     | Stack level                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 6        | operation_type                  | Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. Beispiel:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th. |
+| 7        | operation                       | May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 8        | operation_parameters            | Parameters passed to commands, methods, or plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 9        | form_event                      | Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 10       | stack_opening_sequence_number | Only for the closing stack levels: Sequence number of the corresponding opening stack level                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 11       | stack_level_execution_time    | Only for the closing stack levels: Elapsed time in micro seconds of the current logged action; only for the closing stack levels (see 10th columns in lines 123 and 124 in the log above)                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+## 4DDiagnosticLog.txt
+
+This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
+
+How to start this log:
+
+```4d
+ SET DATABASE PARAMETER(Diagnostic log recording;1) //start recording
+```
+
+The following fields are logged for each event:
+
+| Field Name         | Beschreibung                                                  |
+| ------------------ | ------------------------------------------------------------- |
+| sequenceNumber     | Unique and sequential operation number in the logging session |
+| timestamp          | Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)    |
+| loggerID           | Optional                                                      |
+| componentSignature | Optional - internal component signature                       |
+| messageLevel       | Info, Warning, Error                                          |
+| message            | Description of the log entry                                  |
+
+Depending on the event, various other fields can also be logged, such as task, socket, etc.
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt
 
 These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
 
-*   SMTP - [SMTP New transporter](API/smtpTransporterClass.md#smtp-new-transporter)
-*   POP3 - [POP3 New transporter](API/pop3TransporterClass.md#pop3-new-transporter)
-*   IMAP  - [IMAP New transporter](API/imapTransporterClass.md#imap-new-transporter)
+*   SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
+*   POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
+*   IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
 
 The log files can be produced in two versions:
 
@@ -261,7 +288,7 @@ For each request, the following fields are logged:
 | 2        | Date and time in RFC3339 format (yyyy-mm-ddThh:mm:ss.ms)      |
 | 3        | 4D Process ID                                                 |
 | 4        | Unique process ID                                             |
-| 5        | <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul>                                     |
+| 5        | <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul>                                    |
 
 ## ORDA client requests
 

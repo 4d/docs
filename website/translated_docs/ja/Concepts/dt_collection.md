@@ -55,14 +55,14 @@ collectionRef[expression]
 
 二種類のコレクションを作成することができます:
 
-- [`New collection`](API/collectionClass.md#new-collection) コマンドを使用して作成する通常 (非共有) コレクション。 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- [`New shared collection`](API/collectionClass.md#new-shared-collection) コマンドを使用して作成する共有コレクション。 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
+- [`New collection`](API/CollectionClass.md#new-collection) コマンドを使用して作成する通常 (非共有) コレクション。 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New shared collection`](API/CollectionClass.md#new-shared-collection) コマンドを使用して作成する共有コレクション。 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
 
 詳細な情報については、[共有オブジェクトと共有コレクション](Concepts/shared.md) を参照ください。
 
 ## コレクション関数
 
-4D コレクションへの参照は、コレクションの *メンバー関数* と呼ばれる特別なクラス関数を利用することができます。 コレクション関数は [クラス API リファレンス](API/collectionClass.md) にまとめられています。
+4D コレクションへの参照は、コレクションの *メンバー関数* と呼ばれる特別なクラス関数を利用することができます。 コレクション関数は [クラス API リファレンス](API/CollectionClass.md) にまとめられています。
 
 たとえば:
 
