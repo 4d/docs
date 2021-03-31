@@ -163,7 +163,7 @@ RESTリクエストにこのパラメーターのみを渡すと、(
 
 データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
-For more information about the data returned, refer to [{DataStoreClass}](#datastoreclass).
+返されるデータについての詳細は [{DataClass}](#dataclass) を参照ください。
 
 取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 たとえば:
 
