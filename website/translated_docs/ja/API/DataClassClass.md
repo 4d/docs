@@ -1,6 +1,6 @@
 ---
 id: DataClassClass
-title: DataClass
+title: データクラス
 ---
 
 
@@ -39,9 +39,9 @@ title: DataClass
 
 #### 説明
 
-データクラスの属性は、データクラスの <!-- REF DataClassClass.attributeName.Summary -->プロパティとして直接利用可能なオブジェクト<!-- END REF --> です。
+The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
-戻り値は [`DataClassAttribute`](DataClassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
+The returned objects are of the [`DataClassAttribute`](DataClassAttributeClass.md) class. これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 > データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
 
 #### 例題 1
@@ -119,7 +119,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.all( )` 関数はデータストアをクエリして、 <!-- REF #DataClassClass.all().Summary -->データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
+The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
 
 エンティティはデフォルトの順番で返され、通常は作成順になっています。 ただし、エンティティ削除後に新規追加した場合には、デフォルトの順番は作成順を反映しない点に留意が必要です。
 
@@ -173,7 +173,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.fromCollection()` 関数は、 <!-- REF #DataClassClass.fromCollection().Summary -->*objectCol* 引数のオブジェクトのコレクションに基づいてデータクラスのエンティティを更新あるいは作成し、対応するエンティティセレクションを返します<!-- END REF -->。
+The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
 
 *objectCol* パラメーターには、データクラスの既存エンティティを更新、または新規エンティティを作成するためのオブジェクトのコレクションを渡します。 プロパティ名は、データクラスの属性名と同一である必要があります。 プロパティ名がデータクラスに存在しない場合、それは無視されます。 コレクション内で属性値が定義されていない場合、その値は null になります。
 
@@ -200,7 +200,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 リレートエンティティに相当するネストされたオブジェクトは、リレートエンティティのプライマリーキー値を格納した "\_\_KEY" プロパティあるいはプライマリーキー属性を格納している必要があります。 ”\_\_KEY” プロパティを使用すると、プライマリーキー属性名に依存する必要がありません。
 > この機構によって、リレートエンティティの中身を作成・更新することはできません。
 
-**スタンプ**
+**記号**
 
 "\_\_STAMP" プロパティが指定された場合、データストアのスタンプとのチェックがおこなわれ、エラーが返されることがあります ("与えられたスタンプはテーブルXXX のレコード# XXのカレントのものと合致しません")。 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
@@ -370,9 +370,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.get()` 関数はデータクラスをクエリして、 <!-- REF #DataClassClass.get().Summary -->*primaryKey* に渡したプライマリーキーに合致するエンティティを返します<!-- END REF -->。
+The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
 
-*primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 [`.getKey()`](EntityClass.md#getkey) 関数に `dk key as string` 引数を渡すと、プライマリーキーの値が常にテキスト型で返されるように指定することができます。
+*primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](EntityClass.md#getkey) function with the `dk key as string` parameter.
 
 *primaryKey* 引数のプライマリーキーを持つエンティティが見つからない場合、**Null** エンティティが返されます。
 
@@ -446,7 +446,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.getDataStore( )` 関数は、 <!-- REF #DataClassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
+The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
 
 返されるデータストアは次のいずれかです:
 
@@ -500,7 +500,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.getInfo( )` 関数は、 <!-- REF #DataClassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
+The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
@@ -573,9 +573,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.new( )` 関数は、 <!-- REF #DataClassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
+The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
 
-エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](EntityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
+The entity object is created in memory and is not saved in the database until the [`.save( )`](EntityClass.md#save) function is called. エンティティを保存する前に削除した場合、復元することはできません。
 
 **4D Server**: クライアント/サーバーにおいては、対応するテーブルのプライマリーキーが自動インクリメントであった場合、エンティティがサーバー側に保存されたときに計算されます。
 
@@ -617,14 +617,14 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.newSelection( )` 関数は、データクラスに紐づいた <!-- REF #DataClassClass.newSelection().Summary -->追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
+The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
 
 > 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 
 順列ありのエンティティセレクションを作成するには、*keepOrder* に `dk keep ordered` セレクターを渡します。 この引数を省略した場合のデフォルト、あるいは `dk non ordered` セレクターを渡した場合には、関数は順列なしのエンティティセレクションを返します。 順列なしのエンティティセレクションの方が速いですが、エンティティの位置に頼ることはできません。 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
-作成された時点では、エンティティセレクションにエンティティは含まれていません(`mySelection.length` は0を返します)。 あとから [`add()`](EntitySelectionClass.md#add) 関数を呼び出すことで、エンティティセレクションを徐々にビルドしていくことができます。
+作成された時点では、エンティティセレクションにエンティティは含まれていません(`mySelection.length` は0を返します)。 This method lets you build entity selections gradually by making subsequent calls to the [`add()`](EntitySelectionClass.md#add) function.
 
 
 #### 例題
@@ -668,7 +668,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.query( )` 関数は、データクラスの全エンティティから、 <!-- REF #DataClassClass.query().Summary -->*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
+The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. この関数には、レイジーローディングが適用されます。
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
@@ -690,7 +690,7 @@ attributePath|formula 比較演算子 値
 *   **formula**: テキストまたはオブジェクト形式で渡された有効なフォーミュラ。 フォーミュラは処理されるエンティティごとに評価され、ブール値を返さなくてはなりません。 処理中のエンティティはフォーミュラ内において `This` で参照されます。
 
     *   **テキスト**: フォーミュラ文字列の前に `eval( )` ステートメントが必要です。これにより、クエリが式を正しく解釈します。 例: *"eval(length(This.lastname) >=30)"*
-    *   **オブジェクト**: [フォーミュラオブジェクト](FunctionClass.md) は **プレースホルダー** (後述参照) を使って受け渡します。 このフォーミュラは、[`Formula`](FunctionClass.md#formula) または [`Formula from string`](FunctionClass.md#formula-from-string) コマンドによって作成されたものでなくてはなりません。
+    *   **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command.
 > * 4Dフォーミュラは、`&` および `|` 記号のみを論理演算子としてサポートすることに留意が必要です。
 > * フォーミュラ以外にも検索条件がある場合、クエリエンジンの最適化によってほかの検索条件 (たとえばインデックス属性) の処理が優先される場合があり、その場合はエンティティのサブセットのみがフォーミュラの評価対象となります。
 
@@ -1213,7 +1213,7 @@ softwares:{
 
 #### 参照
 
-エンティティセレクションの [`.query()`](EntitySelectionClass.md#query)
+[`.query()`](EntitySelectionClass.md#query) for entity selections
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
