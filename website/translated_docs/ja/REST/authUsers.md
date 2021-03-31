@@ -14,7 +14,7 @@ RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) �
 
 ## セッションの開始
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). 後続の RESTリクエストは同じセッションcookie を使用します。
+[スケーラブルセッションを有効化](WebServer/sessions.md#セッションの有効化) (推奨) している場合に、`On REST Authentication` データベースメソッドが `true` を返すと、ユーザーセッションは自動的に開かれ、`Session` オブジェクトおよび [Session API](API/SessionClass.md) を介して管理することができます。 後続の RESTリクエストは同じセッションcookie を使用します。
 
 `On REST Authentication` データベースメソッドが定義されてない場合には、`guest` セッションが開かれます。
 
