@@ -23,49 +23,49 @@
       "Admin/webAdmin": {
         "title": "Web Administration"
       },
-      "API/classClass": {
+      "API/ClassClass": {
         "title": "クラス"
       },
-      "API/collectionClass": {
+      "API/CollectionClass": {
         "title": "コレクション"
       },
       "API/CryptoKeyClass": {
         "title": "CryptoKey"
       },
-      "API/dataclassAttributeClass": {
+      "API/DataClassAttributeClass": {
         "title": "DataClassAttribute"
       },
-      "API/dataclassClass": {
+      "API/DataClassClass": {
         "title": "データクラス"
       },
-      "API/datastoreClass": {
+      "API/DataStoreClass": {
         "title": "DataStore"
       },
-      "API/directory": {
+      "API/Directory": {
         "title": "Directory クラス"
       },
-      "API/document": {
+      "API/Document": {
         "title": "Document Class"
       },
-      "API/emails": {
+      "API/EmailObjectClass": {
         "title": "Email"
       },
-      "API/entityClass": {
+      "API/EntityClass": {
         "title": "エンティティ"
       },
-      "API/entitySelectionClass": {
+      "API/EntitySelectionClass": {
         "title": "EntitySelection"
       },
-      "API/fileClass": {
+      "API/FileClass": {
         "title": "File"
       },
-      "API/folderClass": {
+      "API/FolderClass": {
         "title": "Folder"
       },
-      "API/formulaClass": {
+      "API/FunctionClass": {
         "title": "Formula"
       },
-      "API/imapTransporterClass": {
+      "API/IMAPTransporterClass": {
         "title": "IMAPTransporter"
       },
       "API/MailAttachmentClass": {
@@ -74,31 +74,31 @@
       "API/overview": {
         "title": "クラス API の概要"
       },
-      "API/pop3TransporterClass": {
+      "API/POP3TransporterClass": {
         "title": "POP3Transporter"
       },
-      "API/sessionClass": {
+      "API/SessionClass": {
         "title": "セッション"
       },
       "API/SignalClass": {
         "title": "Signal"
       },
-      "API/smtpTransporterClass": {
+      "API/SMTPTransporterClass": {
         "title": "SMTPTransporter"
       },
-      "API/transporter": {
+      "API/Transporter": {
         "title": "Transporter クラス"
       },
-      "API/webServerClass": {
+      "API/WebServerClass": {
         "title": "WebServer"
       },
-      "API/zipArchiveClass": {
+      "API/ZipArchiveClass": {
         "title": "ZIPArchive"
       },
-      "API/zipFileClass": {
+      "API/ZipFileClass": {
         "title": "ZIPFile"
       },
-      "API/zipFolderClass": {
+      "API/ZipFolderClass": {
         "title": "ZIPFolder"
       },
       "Backup/backup": {
