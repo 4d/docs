@@ -212,6 +212,7 @@ This folder contains files that memorize user configurations, e.g. break point o
 | debuggerCatches.json       | Appels vers commandes                                                 | JSON   |
 | recentTables.json          | Liste ordonée de tables                                               | JSON   |
 | preferences.4DPreferences  | Current data path and main window positions                           | XML    |
+| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation           | Folder |
 
 
 ## Dossier Components
