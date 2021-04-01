@@ -1,6 +1,6 @@
 ---
 id: CollectionClass
-title: Collection
+title: コレクション
 ---
 
 
@@ -69,7 +69,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## New collection
+## 新しいコレクション
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -148,7 +148,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## New shared collection
+## 新規の共有コレクション
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -186,9 +186,9 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 以下のサポートされる型であれば、いくつでも値を渡すことができます:
 
 *   数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
-*   テキスト
-*   ブール
-*   日付
+*   text
+*   boolean
+*   date
 *   時間 (ミリ秒の数 (実数) として保存されます)。
 *   null
 *   共有オブジェクト(*)
