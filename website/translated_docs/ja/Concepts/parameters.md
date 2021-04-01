@@ -345,19 +345,19 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     End if
     ...
  End if
-```
+````
 
 
 
 
-## オブジェクトプロパティを名前付き引数として使用する
+## Using object properties as named parameters 
 
-引数としてオブジェクトを渡すことによって **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。
+Using objects as parameters allow you to handle **named parameters**. このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。 
 
-たとえば、`CreatePerson` メソッドを例にとると:
+For example, using the `CreatePerson` method:
 
 ```4d
-  // CreatePerson メソッド
+  //CreatePerson
  var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
