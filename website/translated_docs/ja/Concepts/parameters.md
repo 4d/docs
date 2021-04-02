@@ -350,14 +350,14 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 
 
-## Using object properties as named parameters 
+## オブジェクトプロパティを名前付き引数として使用する
 
-Using objects as parameters allow you to handle **named parameters**. このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。 
+引数としてオブジェクトを渡すことによって **名前付き引数** を扱うことができます。 このプログラミング方法はシンプルかつ柔軟なだけでなく、コードの可読性も向上させます。 
 
-For example, using the `CreatePerson` method:
+たとえば、 `CreatePerson` メソッドを例にとると:
 
 ```4d
-  //CreatePerson
+  // CreatePerson メソッド
  var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
