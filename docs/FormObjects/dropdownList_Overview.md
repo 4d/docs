@@ -14,11 +14,11 @@ On macOS, drop-down lists are also sometimes called "pop-up menu". Both names re
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
 
-|Property|Type||Description|
-|---|---|---|---|
-|`values`|Collection|->|Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>|
-|`index`|number|\<->|Index of the currently selected item. `index` value is between 0 and `collection.length-1`|
-|`currentValue`|same as Collection|->|Currently selected object|
+|Property|Type|Description|
+|---|---|---|
+|`values`|Collection|Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>. If empty or not defined, the drop-down list is empty|
+|`index`|number|Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string|
+|`currentValue`|same as Collection|Currently selected object|
 
 If the object contains other properties, they are ignored. 
 
@@ -34,9 +34,24 @@ var myList : Object
  
 myList:=New object
 myList.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
-myList.index:=2  //select "pears" by default
-myList.currentValue:="" 
+myList.index:=-1  //currentValue is a placeholder
+myList.currentValue:="Select a fruit" 
 ```
+
+The drop-down list is displayed with the placeholder string:
+
+![](assets/en/FormObjects/fruits2.png)
+
+After the user selects a value:
+
+![](assets/en/FormObjects/fruits3.png)
+
+```4d
+myList.values // ["apples","nuts","pears","oranges","carrots"]
+myList.currentValue //"oranges"
+myList.index //3
+```
+
 
 
 ## Using an array
