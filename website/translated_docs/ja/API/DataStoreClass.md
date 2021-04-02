@@ -32,10 +32,10 @@ title: DataStore
 ## ds
 
 <details><summary>履歴</summary>
-| バージョン | 内容                |
-| ----- | ----------------- |
-| v18   | localID パラメーターを追加 |
-| v17   | 追加                |
+| バージョン | 内容                  |
+| ----- | ------------------- |
+| v18   | localID パラメーターをサポート |
+| v17   | 追加                  |
 </details>
 
 <!-- REF #_command_.ds.Syntax -->
