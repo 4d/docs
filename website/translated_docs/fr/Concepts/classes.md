@@ -111,7 +111,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Deux class s
 | ---------- | ------ | -- | ------------------------------------------------------------------- |
 | classStore | object | <- | Class store utilisateur utilisateurs pour le projet ou le composant |
 
-La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Il retourne toutes les classes utilisateurs [définies](#class-definition)>dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 #### Exemple
 
