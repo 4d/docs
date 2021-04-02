@@ -344,14 +344,14 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     End if
     ...
  End if
-```
+````
 
 
 
 
-## Using object properties as named parameters
+## Using object properties as named parameters 
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
+Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read. 
 
 For example, using the `CreatePerson` method:
 

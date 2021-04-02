@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Klassen
+title: Classes
 ---
 
 
@@ -38,7 +38,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 ## Klassen verwalten
 
-### Definition einer Klasse
+### Eine Klasse definieren
 
 Eine Benutzerklasse in 4D wird über eine spezifische Datei Methode (.4dm) definiert, die im Ordner `/Project/Sources/Classes/` gespeichert wird. Der Name der Datei ist der Klassenname.
 
@@ -50,7 +50,7 @@ Beim Benennen von Klassen müssen Sie folgende Regeln beachten:
 
 Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Datei anlegen:
 
-- Ordner Project
+- Project folder
     + Project
         * Sources
             - Classes
@@ -93,7 +93,7 @@ In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime
     - Eine Klassenfunktion ist ein Code Block
     - **Goto definition** auf ein Objekt Member sucht nach Deklarationen der Class Function; Beispiel: "$o.f()" findet "Function f".
     - **Search references** auf Deklarationen von Class Function sucht nach der Funktion, die als Objekt Member verwendet wird; Beispiel: "Function f" findet "$o.f()".
-- Im Runtime-Explorer und Debugger werden Class Functions mit dem \<ClassName> Constructor oder \<ClassName>.\<FunctionName> Format angezeigt.
+- Im Runtime-Explorer und Debugger werden Class Functions mit dem \<ClassName> Constructor oder \<ClassName> <FunctionName> Format angezeigt.
 
 ## Stores für Klassen
 
@@ -152,7 +152,7 @@ Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie 
 
 Ein Objekt class kann zusätzlich auf ein Objekt [`constructor`](#class-constructor) verweisen (optional).
 
-Ein Objekt Klasse ist ein [shared Object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
+Ein Objekt class ist ein [shared object](shared.md), d. h. es lässt sich aus verschiedenen 4D Prozessen gleichzeitig darauf zugreifen.
 
 ### Vererbung
 
@@ -237,7 +237,7 @@ Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` dekla
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter der Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
+> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. Zum Beispiel:
 > 
 > ```4d
 Function add($x : Integer)

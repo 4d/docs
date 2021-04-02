@@ -65,7 +65,7 @@ Ceci est illustré par le graphique suivant :
 
 A noter cependant que les entités font référence au même enregistrement. Dans tous les cas, si vous appelez la méthode `entity.save()`, l'enregistrement sera mis à jour (sauf en cas de conflit, voir [Verrouillage d'entité](#entity-locking)).
 
-In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Par exemple :
+De fait, `$e1` et `$e2` ne sont pas l'entité elle-même, mais une référence à l'entité. Cela signifie que vous pouvez la passer directement à n'importe quelle fonction ou méthode, et qu'elle agira comme un pointeur, et plus rapidement qu'un pointeur 4D. Par exemple :
 
 ```4d
  For each($entity;$selection)
@@ -85,7 +85,7 @@ Et la méthode est :
 ```
 
 Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et passer leurs références directement en tant que [paramètres](Concepts/parameters.md).
-> Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
+> Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [Lazy loading](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
 
 
 ## Utilisation des attributs d'entités
@@ -96,9 +96,9 @@ Les attributs d'entité stockent les données et mappent les champs correspondan
 Par exemple, pour définir un attribut de stockage :
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
+ $entity:=ds.Employee.get(1) //obtenir l'attribut d'Employee avec l'ID 1
+ $name:=$entity.lastname //obtenir le nom de l'employé, par exemple "Dupont"
+$entity.lastname:="Jones" //définir le nom de l'employé
 ```
 > Les attributs d'images ne peuvent pas être assignés directement à un chemin donné dans une entité.
 
@@ -175,11 +175,11 @@ Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associé "1"
 
 Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selection) comme suit :
 
-*   Querying the entities [in a dataclass](API/DataClassClass.md#query) or in an [existing entity selection](API/EntitySelectionClass.md#query);
-*   Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
-*   Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-*   Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
-*   Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
+*   Lancez une requête sur les entités [dans une dataclass](API/DataClassClass.md#query) ou dans une [sélection d'entités existante](API/EntitySelectionClass.md#query);
+*   Utilisez la fonction de dataclass [`.all()`](API/DataClassClass.md#all) pour sélectionner toutes les entités d'une dataclass;
+*   Utilisez la commande `Create entity selection` ou la fonction de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) pour créer une sélection d'entités vide;
+*   Utilisez la fonction [`.copy()`](API/EntitySelectionClass.md#copy) pour dupliquer une sélection d'entités existante;
+*   Utilisez l'une des diverses fonctions de [Entity selection class](API/EntitySelectionClass.md) qui retourne une nouvelle sélection d'entité, telle que [`entitySelection.or()`](API/EntitySelectionClass.md#or);
 *   Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
 
 Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.

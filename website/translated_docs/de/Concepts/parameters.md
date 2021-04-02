@@ -202,7 +202,7 @@ In diesem Beispiel wird `$0` zuerst der Wert von `$1` zugewiesen und dann als Pa
 Sie können jeden [Ausdruck](schnelle-tour.md#ausdruckstypen) als sequentiellen Parameter verwenden, außer:
 
 - Tabellen
-- Arrays
+- arrays
 
 Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](dt_pointer.md#zeiger-als-parameter-in-methoden).
 
@@ -344,16 +344,16 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     End if
     ...
  End if
-```
+````
 
 
 
 
-## Objekteigenschaften als benannte Parameter verwenden
+## Using object properties as named parameters 
 
-Bei Objekten als Parameter können Sie auch **Parameter mit Namen** verwalten. Dieser Programmierstil ist einfach, flexibel und leicht lesbar.
+Using objects as parameters allow you to handle **named parameters**. Dieser Programmierstil ist einfach, flexibel und leicht lesbar. 
 
-Wir verwenden zum Beispiel die Methode `CreatePerson`:
+For example, using the `CreatePerson` method:
 
 ```4d
   //CreatePerson

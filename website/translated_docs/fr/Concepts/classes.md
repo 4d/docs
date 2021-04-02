@@ -111,7 +111,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Deux class s
 | ---------- | ------ | -- | ------------------------------------------------------------------- |
 | classStore | object | <- | Class store utilisateur utilisateurs pour le projet ou le composant |
 
-La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Il retourne toutes les classes utilisateurs [définies](#class-definition)>dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. La commande `cs` retourne le class store utilisateur pour le projet ou le composant courant. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 #### Exemple
 
@@ -129,7 +129,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | Class store 4D |
 
-La commande `4D` retourne le class store des classes 4D intégrées disponibles. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
+La commande `4D` retourne le class store des classes 4D intégrées disponibles. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
 
 #### Exemple
 
@@ -144,11 +144,11 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## L'objet classe
 
-Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. A class is an object itself, of ["Class" class](API/ClassClass.md). Un objet class possède les propriétés et fonctions suivantes :
+Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet de la [classe "Class"](API/ClassClass.md). Un objet class possède les propriétés et fonctions suivantes :
 
-- [`name`](API/ClassClass.md#name) string
-- [`superclass`](API/ClassClass.md#superclass) object (null if none)
-- [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects.
+- chaîne [`name`](API/ClassClass.md#name)
+- objet [`superclass`](API/ClassClass.md#superclass) (nul si aucun)
+- fonction [`new()`](API/ClassClass.md#new), permettant d'instancier des objets de classe.
 
 De plus, un objet classe peut référencer un objet [`constructor`](#class-constructor) (facultatif).
 
@@ -156,9 +156,9 @@ Un objet de classe est un [objet partagé](shared.md) et est donc accessible sim
 
 ### Héritage
 
-If a class inherits from another class (i.e. the [Class extends](classes.md#class-extends-classname) keyword is used in its definition), the parent class is its [`superclass`](API/ClassClass.md#superclass).
+Si une classe hérite d'une autre classe (c'est-à-dire que le mot-clé [Class extends](classes.md#class-extends-classname) est utilisé dans sa définition), la classe parente est sa [`superclasse`](API/ClassClass.md#superclass).
 
-When 4D does not find a function or a property in a class, it searches it in its [`superclass`](API/ClassClass.md#superclass); if not found, 4D continues searching in the superclass of the superclass, and so on until there is no more superclass (all objects inherit from the "Object" superclass).
+Lorsque 4D ne trouve pas de fonction ou de propriété dans une classe, il la recherche dans sa [`superclasse`](API/ClassClass.md#superclass); s'il ne la trouve pas, 4D continue la recherche dans la superclasse de la superclasse, et ainsi de suite, jusqu'à ce qu'il n'y ait plus de superclasse (tous les objets héritent de la superclasse "Object").
 
 
 ## Mots-clés de classe
@@ -179,7 +179,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Les fonctions de classe sont des propriétés spécifiques de la classe. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class.
+Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -206,19 +206,19 @@ Pour une fonction de classe, la commande `Current method name` retourne: "*\<Cla
 
 Dans le code de l'application, les fonctions de classe sont appelées en tant que méthodes membres de l'instance d'objet et peuvent recevoir des [paramètres](#class-function-parameters) le cas échéant. Les syntaxes suivantes sont prises en charge :
 
-- utilisation de l'opérateur `()`. For example, `myObject.methodName("hello")`
-- use of a "4D.Function" class member method:
+- utilisation de l'opérateur `()`. Par exemple, `myObject.methodName("hello")`
+- utilisation d'une méthode membre de classe "4D.Function" :
     - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **Avertissement de sécurité des threads :** Si une fonction de classe n'est pas thread-safe et si elle est appelée par une méthode avec l'attribut "Can be run in preemptive process" : - le compilateur ne génère aucune erreur (ce qui est différent des méthodes classiques), - une erreur n'est générée par 4D qu'au moment de l'exécution.
 
 
 
 
-#### Parameters
+#### Paramètres
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Les paramètres de fonction sont déclarés à l'aide du nom du paramètre et du type de paramètre, séparés par deux points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
