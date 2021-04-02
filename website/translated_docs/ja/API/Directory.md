@@ -591,10 +591,10 @@ You want to get all files that are not invisible in the Documents folder:
 **.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
-| 参照   | タイプ       |    | 説明                                             |
-| ---- | --------- | -- | ---------------------------------------------- |
-| path | テキスト      | -> | ファイルのPOSIX相対パス名                                |
-| 戻り値  | 4D.Folder | <- | Created folder object (null if invalid *path*) |
+| 参照   | タイプ       |    | 説明                                            |
+| ---- | --------- | -- | --------------------------------------------- |
+| path | テキスト      | -> | ファイルのPOSIX相対パス名                               |
+| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な *path* の場合には null) |
 <!-- END REF -->
 
 #### 説明
