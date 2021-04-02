@@ -203,16 +203,16 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 ブレークポイントやウィンドウの位置など、ユーザーの環境設定を定義するファイルを格納するフォルダーです。 このフォルダーは無視してかまいません。 格納されるファイルの例です:
 
-| 内容                         | 説明                                                          | 形式     |
-| -------------------------- | ----------------------------------------------------------- | ------ |
-| methodPreferences.json     | カレントユーザーのメソッドエディター環境設定                                      | JSON   |
-| methodWindowPositions.json | カレントユーザーのメソッドのウィンドウポジション                                    | JSON   |
-| formWindowPositions.json   | カレントユーザーのフォームのウィンドウポジション                                    | JSON   |
-| workspace.json             | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序                          | JSON   |
-| debuggerCatches.json       | キャッチコマンドリスト                                                 | JSON   |
-| recentTables.json          | 最近開かれたテーブルのリスト                                              | JSON   |
-| preferences.4DPreferences  | カレントデータパスおよび主なウィンドウの位置                                      | XML    |
-| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder |
+| 内容                         | 説明                                  | 形式     |
+| -------------------------- | ----------------------------------- | ------ |
+| methodPreferences.json     | カレントユーザーのメソッドエディター環境設定              | JSON   |
+| methodWindowPositions.json | カレントユーザーのメソッドのウィンドウポジション            | JSON   |
+| formWindowPositions.json   | カレントユーザーのフォームのウィンドウポジション            | JSON   |
+| workspace.json             | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序  | JSON   |
+| debuggerCatches.json       | キャッチコマンドリスト                         | JSON   |
+| recentTables.json          | 最近開かれたテーブルのリスト                      | JSON   |
+| preferences.4DPreferences  | カレントデータパスおよび主なウィンドウの位置              | XML    |
+| CompilerIntermediateFiles  | Apple Silicon用にコンパイルした結果生成される中間ファイル | Folder |
 
 
 ## Components フォルダー
