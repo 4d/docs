@@ -60,13 +60,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| 参照             | タイプ       |    | 説明                                              |
-| -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | テキスト      | -> | フォルダーパス                                         |
-| folderConstant | 整数        | -> | 4Dフォルダー定数                                       |
-| pathType       | 整数        | -> | `fk posix path` (default) or `fk platform path` |
-| *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                    |
-| 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                   |
+| 参照             | タイプ       |    | 説明                                             |
+| -------------- | --------- |:--:| ---------------------------------------------- |
+| path           | テキスト      | -> | フォルダーパス                                        |
+| folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
+| pathType       | 整数        | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
+| 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                  |
 <!-- END REF -->
 
 
@@ -208,12 +208,12 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| 参照                | タイプ       |    | 説明                                           |
-| ----------------- | --------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | テキスト      | -> | Name of the alias or shortcut                |
-| aliasType         | 整数        | -> | Type of the alias link                       |
-| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照                      |
+| 参照                | タイプ       |    | 説明                       |
+| ----------------- | --------- | -- | ------------------------ |
+| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
+| aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | 整数        | -> | エイリアスリンクのタイプ             |
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照  |
 <!-- END REF -->
 
 
@@ -471,7 +471,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 **返されるオブジェクト**
 
-The renamed `Folder` object.
+名称変更された `Folder` オブジェクト。
 
 #### 例題
 
