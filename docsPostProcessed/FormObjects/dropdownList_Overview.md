@@ -3,11 +3,40 @@ id: dropdownListOverview
 title: Drop-down List
 ---
 
-Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action. 
+Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an object, an array, a choice list, or a standard action. 
 
 On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform: 
 
 ![](assets/en/FormObjects/popupDropdown_appearance.png)
+
+
+## Using an object
+
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
+
+|Property|Type||Description|
+|---|---|---|
+|`values`|Collection|->|Collection of scalar values. All values must be of the same type. Supported types are:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>|
+|`index`|number|<->|Index of the currently selected item. Index value is between 0 and `collection.length-1`|
+|`currentValue`|same as Collection|->|Currently selected object|
+
+Example of drop-down list initialization, for example in the [On Load](Events/onLoad.md) form event:
+
+```4d
+var myList : Object
+ 
+myList:=New object
+myList.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
+myList.index:=2  //select "pears" by default
+myList.currentValue:="" 
+```
+
+ in memory that is referenced by the name of the array. A drop-down list displays an array as a list of values when you click on it.
+
+Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
+
+* Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+
 
 
 ## Using an array
@@ -79,10 +108,12 @@ When the form is executed, 4D automatically manages the pop-up menu or combo box
 >It is not possible to combine this principle with using an array to initialize the object. If you enter a field name in the Variable Name area, then you must use a choice list.
 
 ### Save as  
+
 When you have associated a pop-up menu/drop-down list with a choice list and with a field, you can use the [Save as Value/Reference property](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved. 
 
-## Using a standard action  
-You can assign a standard action to a pop-up menu/drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the goto page action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+## Using a standard action 
+ 
+You can assign a standard action to a pop-up menu/drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the `goto page` action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
 
 For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
 
