@@ -149,7 +149,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
-The `.bodyStructure` object contains the following properties:
+`.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
 | プロパティ       | タイプ                   | 結果                                                                                                                                                      |
 | ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -176,7 +176,7 @@ The `.bodyStructure` object contains the following properties:
 
 The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
-The `.bodyValues` object contains the following properties:
+`.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
 | プロパティ                      | タイプ     | 結果                                                                                                                                          |
 | -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -324,7 +324,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
 
-This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
+このプロパティは "keywords" ヘッダーです ([RFC#4021](https://tools.ietf.org/html/rfc4021) 参照)。
 
 | プロパティ          | タイプ     | 結果                                  |
 | -------------- | ------- | ----------------------------------- |
