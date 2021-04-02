@@ -66,19 +66,19 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| 参照           | タイプ     |    | 説明                                              |
-| ------------ | ------- |:--:| ----------------------------------------------- |
-| path         | テキスト    | -> | File path                                       |
-| fileConstant | 整数      | -> | 4D file constant                                |
-| pathType     | 整数      | -> | `fk posix path` (default) or `fk platform path` |
-| *            |         | -> | * to return file of host database               |
-| 戻り値          | 4D.File | <- | New file object                                 |
+| 参照           | タイプ     |    | 説明                                             |
+| ------------ | ------- |:--:| ---------------------------------------------- |
+| path         | テキスト    | -> | ファイルパス                                         |
+| fileConstant | 整数      | -> | 4Dファイル定数                                       |
+| pathType     | 整数      | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| *            |         | -> | ホストデータベースのファイルを返すには * を渡します                    |
+| 戻り値          | 4D.File | <- | 新規ファイルオブジェクト                                   |
 <!-- END REF -->
 
 
 #### 説明
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+`File` コマンドは、 <!-- REF #_command_.File.Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 The command accepts two syntaxes:
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -140,7 +140,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 #### 説明
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+`4D.File.new()` 関数は、 <!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`File`](#file) command (shortcut).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
 
@@ -166,9 +166,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| 参照  | タイプ |    | 説明                                                         |
-| --- | --- | -- | ---------------------------------------------------------- |
-| 戻り値 | ブール | <- | True if the file was created successfully, false otherwise |
+| 参照  | タイプ |    | 説明                                   |
+| --- | --- | -- | ------------------------------------ |
+| 戻り値 | ブール | <- | ファイルが正常に作成された場合に true、それ以外の場合は false |
 <!-- END REF -->
 
 #### 説明
@@ -209,12 +209,12 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| 参照                | タイプ       |    | 説明                                           |
-| ----------------- | --------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | テキスト      | -> | Name of the alias or shortcut                |
-| aliasType         | 整数        | -> | Type of the alias link                       |
-| 戻り値               | 4D.File   | <- | Alias or shortcut file reference             |
+| 参照                | タイプ       |    | 説明                       |
+| ----------------- | --------- | -- | ------------------------ |
+| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
+| aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | 整数        | -> | エイリアスリンクのタイプ             |
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照   |
 <!-- END REF -->
 
 
@@ -452,11 +452,11 @@ ALERT($info.Copyright)
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| 参照                | タイプ       |    | 説明                           |
-| ----------------- | --------- | -- | ---------------------------- |
-| destinationFolder | 4D.Folder | -> | コピー先フォルダー                    |
-| newName           | テキスト      | -> | Full name for the moved file |
-| 戻り値               | 4D.File   | <- | Moved file                   |
+| 参照                | タイプ       |    | 説明              |
+| ----------------- | --------- | -- | --------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー         |
+| newName           | テキスト      | -> | 移動先でのファイルの完全な名称 |
+| 戻り値               | 4D.File   | <- | 移動したファイル        |
 <!-- END REF -->
 
 
@@ -471,7 +471,7 @@ By default, the file retains its name when moved. If you want to rename the move
 
 **返されるオブジェクト**
 
-The moved `File` object.
+移動後の `File` オブジェクト。
 
 #### 例題
 
@@ -520,10 +520,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| 参照      | タイプ     |    | 説明                         |
-| ------- | ------- | -- | -------------------------- |
-| newName | テキスト    | -> | New full name for the file |
-| 戻り値     | 4D.File | <- | Renamed file               |
+| 参照      | タイプ     |    | 説明            |
+| ------- | ------- | -- | ------------- |
+| newName | テキスト    | -> | ファイルの新しい完全な名称 |
+| 戻り値     | 4D.File | <- | 名称変更されたファイル   |
 <!-- END REF -->
 
 #### 説明
@@ -537,7 +537,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 **返されるオブジェクト**
 
-The renamed `File` object.
+名称変更された `File` オブジェクト。
 
 #### 例題
 
@@ -648,9 +648,9 @@ $infoPlistFile.setAppInfo($info)
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| 参照      | タイプ  |    | 説明                        |
-| ------- | ---- | -- | ------------------------- |
-| content | BLOB | -> | New contents for the file |
+| 参照      | タイプ  |    | 説明            |
+| ------- | ---- | -- | ------------- |
+| content | BLOB | -> | ファイルの新しいコンテンツ |
 <!-- END REF -->
 
 
@@ -687,12 +687,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| 参照          | タイプ  |    | 説明                                                         |
-| ----------- | ---- | -- | ---------------------------------------------------------- |
-| text        | テキスト | -> | Text to store in the file                                  |
-| charSetName | テキスト | -> | Name of character set                                      |
-| charSetNum  | 整数   | -> | Number of character set                                    |
-| breakMode   | 整数   | -> | Processing mode for line breaks|<!-- END REF -->
+| 参照          | タイプ  |    | 説明                                 |
+| ----------- | ---- | -- | ---------------------------------- |
+| text        | テキスト | -> | ファイルに保存するテキスト                      |
+| charSetName | テキスト | -> | Name of character set              |
+| charSetNum  | 整数   | -> | Number of character set            |
+| breakMode   | 整数   | -> | 改行の処理モード<!-- END REF -->
 
 |
 
