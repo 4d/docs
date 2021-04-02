@@ -203,15 +203,16 @@ This folder contains **user settings files** used for application administration
 
 This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
 
-| Inhalt                     | Beschreibung                                           | Format |
-| -------------------------- | ------------------------------------------------------ | ------ |
-| methodPreferences.json     | Current user method editor preferences                 | JSON   |
-| methodWindowPositions.json | Current user window positions for methods              | JSON   |
-| formWindowPositions.json   | Current user window positions for forms                | JSON   |
-| workspace.json             | List of opened windows; on macOS, order of tab windows | JSON   |
-| debuggerCatches.json       | Caught calls to commands                               | JSON   |
-| recentTables.json          | Ordered list of tables                                 | JSON   |
-| preferences.4DPreferences  | Current data path and main window positions            | XML    |
+| Inhalt                     | Beschreibung                                                | Format |
+| -------------------------- | ----------------------------------------------------------- | ------ |
+| methodPreferences.json     | Current user method editor preferences                      | JSON   |
+| methodWindowPositions.json | Current user window positions for methods                   | JSON   |
+| formWindowPositions.json   | Current user window positions for forms                     | JSON   |
+| workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON   |
+| debuggerCatches.json       | Caught calls to commands                                    | JSON   |
+| recentTables.json          | Ordered list of tables                                      | JSON   |
+| preferences.4DPreferences  | Current data path and main window positions                 | XML    |
+| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder |
 
 
 ## Components folder
