@@ -99,10 +99,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 ## .all()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                   |
-| ------ | -------------------- |
-| v17 R5 | *settings* パラメーターを追加 |
-| v17    | 追加                   |
+| バージョン  | 内容                     |
+| ------ | ---------------------- |
+| v17 R5 | *settings* パラメーターをサポート |
+| v17    | 追加                     |
 </details>
 
 
@@ -152,10 +152,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 ## .fromCollection()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                   |
-| ------ | -------------------- |
-| v17 R5 | *settings* パラメーターを追加 |
-| v17    | 追加                   |
+| バージョン  | 内容                     |
+| ------ | ---------------------- |
+| v17 R5 | *settings* パラメーターをサポート |
+| v17    | 追加                     |
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -645,11 +645,11 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 ## .query()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                 |
-| ------ | ---------------------------------- |
-| v17 R6 | Support of Formula parameters      |
-| v17 R5 | Support of placeholders for values |
-| v17    | 追加                                 |
+| バージョン  | 内容                  |
+| ------ | ------------------- |
+| v17 R6 | Formula パラメーターをサポート |
+| v17 R5 | 値のプレースホルダーをサポート     |
+| v17    | 追加                  |
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
