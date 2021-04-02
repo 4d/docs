@@ -62,17 +62,17 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!-- REF FolderClass.Folder.Params -->
 | 参照             | タイプ       |    | 説明                                              |
 | -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | テキスト      | -> | Folder path                                     |
-| folderConstant | 整数        | -> | 4D folder constant                              |
+| path           | テキスト      | -> | フォルダーパス                                         |
+| folderConstant | 整数        | -> | 4Dフォルダー定数                                       |
 | pathType       | 整数        | -> | `fk posix path` (default) or `fk platform path` |
-| *              |           | -> | * to return folder of host database             |
-| 戻り値            | 4D.Folder | <- | New folder object                               |
+| *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                    |
+| 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                   |
 <!-- END REF -->
 
 
 #### 説明
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+`Folder` コマンドは、 <!-- REF #_command_.Folder.Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -123,7 +123,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 #### 説明
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+`4D.Folder.new()` 関数は、 <!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`Folder`](#folder) command (shortcut).
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
 
@@ -147,9 +147,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| 参照  | タイプ |    | 説明                                                           |
-| --- | --- | -- | ------------------------------------------------------------ |
-| 戻り値 | ブール | <- | True if the folder was created successfully, false otherwise |
+| 参照  | タイプ |    | 説明                                     |
+| --- | --- | -- | -------------------------------------- |
+| 戻り値 | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
 <!-- END REF -->
 
 
@@ -213,7 +213,7 @@ End if
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | テキスト      | -> | Name of the alias or shortcut                |
 | aliasType         | 整数        | -> | Type of the alias link                       |
-| 戻り値               | 4D.File   | <- | Alias or shortcut reference                  |
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照                      |
 <!-- END REF -->
 
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| 参照    | タイプ |    | 説明                     |
-| ----- | --- | -- | ---------------------- |
-| オプション | 整数  | -> | Folder deletion option |
+| 参照    | タイプ |    | 説明            |
+| ----- | --- | -- | ------------- |
+| オプション | 整数  | -> | フォルダー削除のオプション |
 <!-- END REF -->
 
 
@@ -283,10 +283,10 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the f
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| 定数                     | 結果 | 説明                                               |
-| ---------------------- | -- | ------------------------------------------------ |
-| `Delete only if empty` | 0  | Deletes folder only when it is empty             |
-| `Delete with contents` | 1  | Deletes folder along with everything it contains |
+| 定数                     | 結果 | 説明                |
+| ---------------------- | -- | ----------------- |
+| `Delete only if empty` | 0  | フォルダーが空の場合のみ削除します |
+| `Delete with contents` | 1  | フォルダーを中身ごと削除します   |
 
 When `Delete only if empty` is passed or if you omit the option parameter:
 
@@ -384,11 +384,11 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| 参照                | タイプ       |    | 説明                             |
-| ----------------- | --------- | -- | ------------------------------ |
-| destinationFolder | 4D.Folder | -> | コピー先フォルダー                      |
-| newName           | テキスト      | -> | Full name for the moved folder |
-| 戻り値               | 4D.Folder | <- | Moved folder                   |
+| 参照                | タイプ       |    | 説明               |
+| ----------------- | --------- | -- | ---------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー          |
+| newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称 |
+| 戻り値               | 4D.Folder | <- | 移動したフォルダー        |
 <!-- END REF -->
 
 
@@ -454,10 +454,10 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
-| 参照      | タイプ       |    | 説明                           |
-| ------- | --------- | -- | ---------------------------- |
-| newName | テキスト      | -> | New full name for the folder |
-| 戻り値     | 4D.Folder | <- | Renamed folder               |
+| 参照      | タイプ       |    | 説明             |
+| ------- | --------- | -- | -------------- |
+| newName | テキスト      | -> | フォルダーの新しい完全な名称 |
+| 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー   |
 <!-- END REF -->
 
 
