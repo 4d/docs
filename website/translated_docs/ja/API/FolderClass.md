@@ -386,7 +386,7 @@ When `Delete with contents` is passed:
 <!--REF #FolderClass.moveTo().Params -->
 | 参照                | タイプ       |    | 説明                             |
 | ----------------- | --------- | -- | ------------------------------ |
-| destinationFolder | 4D.Folder | -> | Destination folder             |
+| destinationFolder | 4D.Folder | -> | コピー先フォルダー                      |
 | newName           | テキスト      | -> | Full name for the moved folder |
 | 戻り値               | 4D.Folder | <- | Moved folder                   |
 <!-- END REF -->
