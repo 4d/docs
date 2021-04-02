@@ -467,7 +467,7 @@ The `.size` property returns <!-- REF #document.size.Summary -->the size of the 
 <!-- REF #document.copyTo().Params -->
 | 参照                | タイプ       |    | 説明                                |
 | ----------------- | --------- |:--:| --------------------------------- |
-| destinationFolder | 4D.Folder | -> | コピー先フォルダー                         |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                      |
 | overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
 | 戻り値               | 4D.File   | <- | Copied file                       |
@@ -563,10 +563,10 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| 参照   | タイプ   |    | 説明                                            |
-| ---- | ----- | -- | --------------------------------------------- |
-| size | 整数    | -> | Side length for the returned picture (pixels) |
-| 戻り値  | ピクチャー | <- | Icon                                          |
+| 参照   | タイプ   |    | 説明                       |
+| ---- | ----- | -- | ------------------------ |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | ピクチャー | <- | Icon                     |
 <!-- END REF -->
 
 
