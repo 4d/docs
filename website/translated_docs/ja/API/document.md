@@ -465,12 +465,12 @@ The `.size` property returns <!-- REF #document.size.Summary -->the size of the 
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| 参照                | タイプ       |    | 説明                                          |
-| ----------------- | --------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | テキスト      | -> | Name for the copy                           |
-| overwrite         | 整数        | -> | `fk overwrite` to replace existing elements |
-| 戻り値               | 4D.File   | <- | Copied file                                 |
+| 参照                | タイプ       |    | 説明                                |
+| ----------------- | --------- |:--:| --------------------------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
+| newName           | テキスト      | -> | コピー先フォルダーの名前                      |
+| overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
+| 戻り値               | 4D.File   | <- | Copied file                       |
 <!-- END REF -->
 
 
@@ -484,9 +484,9 @@ By default, the file is copied with the name of the original file. If you want t
 
 If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| 定数             | 結果 | 説明                                  |
-| -------------- | -- | ----------------------------------- |
-| `fk overwrite` | 4  | Overwrite existing elements, if any |
+| 定数             | 結果 | 説明                 |
+| -------------- | -- | ------------------ |
+| `fk overwrite` | 4  | 既存要素があれば、それを上書きします |
 
 
 **戻り値**
@@ -563,10 +563,10 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| 参照   | タイプ   |    | 説明                                            |
-| ---- | ----- | -- | --------------------------------------------- |
-| size | 整数    | -> | Side length for the returned picture (pixels) |
-| 戻り値  | ピクチャー | <- | Icon                                          |
+| 参照   | タイプ   |    | 説明                       |
+| ---- | ----- | -- | ------------------------ |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | ピクチャー | <- | Icon                     |
 <!-- END REF -->
 
 

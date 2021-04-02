@@ -1,5 +1,5 @@
 ---
-id: folderClass
+id: FolderClass
 title: Folder
 ---
 
@@ -21,11 +21,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 |                                                                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
-| [<!-- INCLUDE #folderClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.create().Summary -->|
-| [<!-- INCLUDE #folderClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.createAlias().Summary --> |
+| [<!-- INCLUDE #FolderClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.create().Summary -->|
+| [<!-- INCLUDE #FolderClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.createAlias().Summary --> |
 | [<!-- INCLUDE #directory.creationDate.Syntax -->](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary -->|
 | [<!-- INCLUDE #directory.creationTime.Syntax -->](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary -->|
-| [<!-- INCLUDE #folderClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.delete().Summary -->|
+| [<!-- INCLUDE #FolderClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.delete().Summary -->|
 | [<!-- INCLUDE #directory.exists.Syntax -->](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
 | [<!-- INCLUDE #directory.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->|
 | [<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->|
@@ -42,8 +42,8 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | [<!-- INCLUDE #directory.parent.Syntax -->](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.parent.Summary -->|
 | [<!-- INCLUDE #directory.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary -->|
 | [<!-- INCLUDE #directory.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->|
-| [<!-- INCLUDE #folderClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.moveTo().Summary -->|
-| [<!-- INCLUDE #folderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.rename().Summary -->|
+| [<!-- INCLUDE #FolderClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.moveTo().Summary -->|
+| [<!-- INCLUDE #FolderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.rename().Summary -->|
 
 
 
@@ -59,20 +59,20 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 **Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 
-<!-- REF folderClass.Folder.Params -->
-| 参照             | タイプ       |    | 説明                                              |
-| -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | テキスト      | -> | Folder path                                     |
-| folderConstant | 整数        | -> | 4D folder constant                              |
-| pathType       | 整数        | -> | `fk posix path` (default) or `fk platform path` |
-| *              |           | -> | * to return folder of host database             |
-| 戻り値            | 4D.Folder | <- | New folder object                               |
+<!-- REF FolderClass.Folder.Params -->
+| 参照             | タイプ       |    | 説明                                             |
+| -------------- | --------- |:--:| ---------------------------------------------- |
+| path           | テキスト      | -> | フォルダーパス                                        |
+| folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
+| pathType       | 整数        | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
+| 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                  |
 <!-- END REF -->
 
 
 #### 説明
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+`Folder` コマンドは、 <!-- REF #_command_.Folder.Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -123,7 +123,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 #### 説明
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+`4D.Folder.new()` 関数は、 <!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`Folder`](#folder) command (shortcut).
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
 
@@ -143,20 +143,20 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 
 
-<!--REF #folderClass.create().Syntax -->
+<!--REF #FolderClass.create().Syntax -->
 **.create()** : Boolean<!-- END REF -->
 
-<!--REF #folderClass.create().Params -->
-| 参照  | タイプ |    | 説明                                                           |
-| --- | --- | -- | ------------------------------------------------------------ |
-| 戻り値 | ブール | <- | True if the folder was created successfully, false otherwise |
+<!--REF #FolderClass.create().Params -->
+| 参照  | タイプ |    | 説明                                     |
+| --- | --- | -- | -------------------------------------- |
+| 戻り値 | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
 <!-- END REF -->
 
 
 
 #### 説明
 
-The `.create()` function <!-- REF #folderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -203,23 +203,23 @@ End if
 
 
 
-<!--REF #folderClass.createAlias().Syntax -->
+<!--REF #FolderClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 
-<!--REF #folderClass.createAlias().Params -->
-| 参照                | タイプ       |    | 説明                                           |
-| ----------------- | --------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | テキスト      | -> | Name of the alias or shortcut                |
-| aliasType         | 整数        | -> | Type of the alias link                       |
-| 戻り値               | 4D.File   | <- | Alias or shortcut reference                  |
+<!--REF #FolderClass.createAlias().Params -->
+| 参照                | タイプ       |    | 説明                       |
+| ----------------- | --------- | -- | ------------------------ |
+| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
+| aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | 整数        | -> | エイリアスリンクのタイプ             |
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照  |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.createAlias()` function <!-- REF #folderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -265,28 +265,28 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 
-<!--REF #folderClass.delete().Syntax -->
+<!--REF #FolderClass.delete().Syntax -->
 **.delete**( { *option* : Integer } )<!-- END REF -->
 
 
-<!-- REF #folderClass.delete().Params -->
-| 参照     | タイプ |    | 説明                     |
-| ------ | --- | -- | ---------------------- |
-| option | 整数  | -> | Folder deletion option |
+<!-- REF #FolderClass.delete().Params -->
+| 参照    | タイプ |    | 説明            |
+| ----- | --- | -- | ------------- |
+| オプション | 整数  | -> | フォルダー削除のオプション |
 <!-- END REF -->
 
 
 
 #### 説明
 
-The `.delete()` function <!-- REF #folderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| 定数                     | 結果 | 説明                                               |
-| ---------------------- | -- | ------------------------------------------------ |
-| `Delete only if empty` | 0  | Deletes folder only when it is empty             |
-| `Delete with contents` | 1  | Deletes folder along with everything it contains |
+| 定数                     | 結果 | 説明                |
+| ---------------------- | -- | ----------------- |
+| `Delete only if empty` | 0  | フォルダーが空の場合のみ削除します |
+| `Delete with contents` | 1  | フォルダーを中身ごと削除します   |
 
 When `Delete only if empty` is passed or if you omit the option parameter:
 
@@ -380,21 +380,21 @@ When `Delete with contents` is passed:
 </details>
 
 
-<!--REF #folderClass.moveTo().Syntax -->
+<!--REF #FolderClass.moveTo().Syntax -->
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
-<!--REF #folderClass.moveTo().Params -->
-| 参照                | タイプ       |    | 説明                             |
-| ----------------- | --------- | -- | ------------------------------ |
-| destinationFolder | 4D.Folder | -> | Destination folder             |
-| newName           | テキスト      | -> | Full name for the moved folder |
-| 戻り値               | 4D.Folder | <- | Moved folder                   |
+<!--REF #FolderClass.moveTo().Params -->
+| 参照                | タイプ       |    | 説明               |
+| ----------------- | --------- | -- | ---------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー          |
+| newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称 |
+| 戻り値               | 4D.Folder | <- | 移動したフォルダー        |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.moveTo( )` function <!-- REF #folderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -449,29 +449,29 @@ You want to move and rename a folder:
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #folderClass.rename().Syntax -->
+<!--REF #FolderClass.rename().Syntax -->
 **.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 
-<!--REF #folderClass.rename().Params -->
-| 参照      | タイプ       |    | 説明                           |
-| ------- | --------- | -- | ---------------------------- |
-| newName | テキスト      | -> | New full name for the folder |
-| 戻り値     | 4D.Folder | <- | Renamed folder               |
+<!--REF #FolderClass.rename().Params -->
+| 参照      | タイプ       |    | 説明             |
+| ------- | --------- | -- | -------------- |
+| newName | テキスト      | -> | フォルダーの新しい完全な名称 |
+| 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー   |
 <!-- END REF -->
 
 
 
 #### 説明
 
-The `.rename()` function <!-- REF #folderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
 
 **返されるオブジェクト**
 
-The renamed `Folder` object.
+名称変更された `Folder` オブジェクト。
 
 #### 例題
 

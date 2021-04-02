@@ -1,6 +1,6 @@
 ---
 id: DataClassClass
-title: DataClass
+title: データクラス
 ---
 
 
@@ -99,10 +99,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 ## .all()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                   |
-| ------ | -------------------- |
-| v17 R5 | *settings* パラメーターを追加 |
-| v17    | 追加                   |
+| バージョン  | 内容                     |
+| ------ | ---------------------- |
+| v17 R5 | *settings* パラメーターをサポート |
+| v17    | 追加                     |
 </details>
 
 
@@ -152,10 +152,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 ## .fromCollection()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                   |
-| ------ | -------------------- |
-| v17 R5 | *settings* パラメーターを追加 |
-| v17    | 追加                   |
+| バージョン  | 内容                     |
+| ------ | ---------------------- |
+| v17 R5 | *settings* パラメーターをサポート |
+| v17    | 追加                     |
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -200,7 +200,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 リレートエンティティに相当するネストされたオブジェクトは、リレートエンティティのプライマリーキー値を格納した "\_\_KEY" プロパティあるいはプライマリーキー属性を格納している必要があります。 ”\_\_KEY” プロパティを使用すると、プライマリーキー属性名に依存する必要がありません。
 > この機構によって、リレートエンティティの中身を作成・更新することはできません。
 
-**スタンプ**
+**記号**
 
 "\_\_STAMP" プロパティが指定された場合、データストアのスタンプとのチェックがおこなわれ、エラーが返されることがあります ("与えられたスタンプはテーブルXXX のレコード# XXのカレントのものと合致しません")。 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
@@ -645,11 +645,11 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 ## .query()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                 |
-| ------ | ---------------------------------- |
-| v17 R6 | Support of Formula parameters      |
-| v17 R5 | Support of placeholders for values |
-| v17    | 追加                                 |
+| バージョン  | 内容                  |
+| ------ | ------------------- |
+| v17 R6 | Formula パラメーターをサポート |
+| v17 R5 | 値のプレースホルダーをサポート     |
+| v17    | 追加                  |
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
