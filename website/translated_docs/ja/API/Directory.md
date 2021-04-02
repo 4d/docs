@@ -436,7 +436,7 @@ If the folder does not have a parent (root), the null value is returned.
 <!-- REF #directory.copyTo().Params -->
 | 参照                | タイプ       |    | 説明                                |
 | ----------------- | --------- |:--:| --------------------------------- |
-| destinationFolder | 4D.Folder | -> | コピー先フォルダー                         |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                      |
 | overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
 | 戻り値               | 4D.Folder | <- | コピーされたフォルダー                       |
@@ -599,13 +599,13 @@ You want to get all files that are not invisible in the Documents folder:
 
 #### 説明
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+`.folder()` 関数は、 <!-- REF #directory.folder().Summary -->親の `Folder` オブジェクト内に新しい `Folder` オブジェクトを作成し、その参照を返します<!-- END REF -->。
 
 In *path*, pass a relative POSIX path to designate the folder to return. The path will be evaluated from the parent folder as root.
 
 **戻り値**
 
-A `Folder` object or null if *path* is invalid.
+`Folder` オブジェクト (無効な *path* の場合には null)。
 
 #### 例題
 
@@ -631,15 +631,15 @@ A `Folder` object or null if *path* is invalid.
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| 参照      | タイプ    |    | 説明                                    |
-| ------- | ------ | -- | ------------------------------------- |
-| options | 整数     | -> | Folder list options                   |
-| 戻り値     | コレクション | <- | Collection of children folder objects |
+| 参照      | タイプ    |    | 説明                  |
+| ------- | ------ | -- | ------------------- |
+| options | 整数     | -> | フォルダーリストのオプション      |
+| 戻り値     | コレクション | <- | 子フォルダーオブジェクトのコレクション |
 <!-- END REF -->
 
 #### 説明
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+`.folders()` 関数は、 <!-- REF #directory.folders().Summary -->親フォルダーに格納されている `Folder` オブジェクトのコレクションを返します<!-- END REF -->。
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
@@ -650,7 +650,7 @@ By default, if you omit the *options* parameter, only the folders at the first l
 
 **戻り値**
 
-Collection of `Folder` objects.
+`Folder` オブジェクトのコレクション。
 
 #### 例題
 
@@ -678,16 +678,16 @@ You want the collection of all folders and subfolders of the database folder:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| 参照   | タイプ   |    | 説明                                            |
-| ---- | ----- | -- | --------------------------------------------- |
-| size | 整数    | -> | Side length for the returned picture (pixels) |
-| 戻り値  | ピクチャー | <- | Icon                                          |
+| 参照   | タイプ   |    | 説明                       |
+| ---- | ----- | -- | ------------------------ |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | ピクチャー | <- | Icon                     |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+`.getIcon()` 関数は、 <!-- REF #directory.getIcon().Summary -->フォルダーのアイコンを返します<!-- END REF -->。
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels ("large icons") or 16x16 pixels ("small icons"). If you pass 0 or omit this parameter, the "large icon" version is returned.
 
@@ -695,7 +695,7 @@ If the folder does not exist on disk, a default blank icon is returned.
 
 **戻り値**
 
-Folder icon [picture](Concepts/dt_picture.md).
+フォルダーアイコンの [ピクチャー](Concepts/dt_picture.md)。
 
 <!-- END REF -->
 
