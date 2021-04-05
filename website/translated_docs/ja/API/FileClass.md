@@ -332,15 +332,15 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 参照  | タイプ    |    | 説明                                               |
-| --- | ------ | -- | ------------------------------------------------ |
-| 戻り値 | オブジェクト | <- | Contents of .exe version resource or .plist file |
+| 参照  | タイプ    |    | 説明                              |
+| --- | ------ | -- | ------------------------------- |
+| 戻り値 | オブジェクト | <- | .exe のバージョンリソースや .plist ファイルの中身 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
+`.getAppInfo()` 関数は、 <!-- REF #FileClass.getAppInfo().Summary -->**.exe** や **.plist** ファイルの情報をオブジェクトとして返します<!-- END REF -->。
 
 The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
 
@@ -563,15 +563,15 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| 参照   | タイプ    |    | 説明                                                          |
-| ---- | ------ | -- | ----------------------------------------------------------- |
-| info | オブジェクト | -> | Properties to write in .exe version resource or .plist file |
+| 参照   | タイプ    |    | 説明                                     |
+| ---- | ------ | -- | -------------------------------------- |
+| info | オブジェクト | -> | .exe のバージョンリソースや .plist ファイルに書き込むプロパティ |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
+`.setAppInfo()` 関数は、 <!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.plist** ファイルの情報として書き込みます<!-- END REF -->。
 
 The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
 
