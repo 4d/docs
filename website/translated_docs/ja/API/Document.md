@@ -21,7 +21,7 @@ title: Document クラス
 
 #### 説明
 
-`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日を返します<!-- END REF -->。
+`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -43,7 +43,7 @@ title: Document クラス
 
 #### 説明
 
-`.creationTime` プロパティは、 <!-- REF #document.creationTime.Summary -->ファイルの作成時刻を返します<!-- END REF --> (00:00 からの経過秒数の形式)。
+`.creationTime` プロパティは、 <!-- REF #document.creationTime.Summary -->ファイルの作成時刻<!-- END REF --> を返します (00:00 からの経過秒数の形式)。
 
 このプロパティは **読み取り専用** です。 
 
@@ -92,7 +92,7 @@ title: Document クラス
 
 #### 説明
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+`.extension` プロパティは、 <!-- REF #document.extension.Summary -->ファイル名の拡張子<!-- END REF -->を返します (あれば)。 An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
 このプロパティは **読み取り専用** です。 
 
@@ -116,7 +116,7 @@ The `.extension` property returns <!-- REF #document.extension.Summary -->the ex
 
 #### 説明
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+`.fullName` プロパティは、 <!-- REF #document.fullName.Summary -->拡張子 (あれば) を含めたファイルの完全な名称<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -140,7 +140,7 @@ The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full
 
 #### 説明
 
-The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+`.hidden` プロパティは、 <!-- REF #document.hidden.Summary -->ファイルがシステムレベルで "非表示" に設定されていれば true<!-- END REF -->を返します (それ以外の場合は false)。
 
 このプロパティは **読み取り専用** です。 
 
