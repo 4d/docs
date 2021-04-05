@@ -1,6 +1,6 @@
 ---
 id: Document
-title: Document Class
+title: Document クラス
 ---
 
 ## 説明
@@ -21,7 +21,7 @@ title: Document Class
 
 #### 説明
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
+`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日を返します<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。 
 
@@ -43,7 +43,7 @@ The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->
 
 #### 説明
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+`.creationTime` プロパティは、 <!-- REF #document.creationTime.Summary -->ファイルの作成時刻を返します<!-- END REF --> (00:00 からの経過秒数の形式)。
 
 このプロパティは **読み取り専用** です。 
 
@@ -67,7 +67,7 @@ The `.creationTime` property  returns <!-- REF #document.creationTime.Summary --
 
 #### 説明
 
-The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
+`.exists` プロパティは、 <!-- REF #document.exists.Summary -->ディスク上にファイルが存在する場合は true を返します<!-- END REF -->(それ以外の場合は false)。
 
 このプロパティは **読み取り専用** です。 
 
