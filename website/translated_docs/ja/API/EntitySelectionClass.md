@@ -50,17 +50,17 @@ Entity selections can be created from existing selections using various function
 **Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #_command_.Create entity selection.Params -->
-| 参照       | タイプ                |    | 説明                                                                                          |
-| -------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
-| dsTable  | テーブル               | -> | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings | オブジェクト             | -> | ビルドオプション: context                                                                           |
-| 戻り値      | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table                          |
+| 参照       | タイプ                |    | 説明                                            |
+| -------- | ------------------ |:--:| --------------------------------------------- |
+| dsTable  | テーブル               | -> | エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル |
+| settings | オブジェクト             | -> | ビルドオプション: context                             |
+| 戻り値      | 4D.EntitySelection | <- | 指定したテーブルに対応するデータクラスのエンティティセレクション              |
 <!-- END REF -->
 
 
 #### 説明
 
-The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+`Create entity selection` コマンドは、*dsTable* で指定したテーブルに対応するデータクラスの [追加可能な](ORDA/entities.md#共有可能追加可能なエンティティセレクション) 新規エンティティセレクションを、同テーブルのカレントセレクションに基づいてビルドして返します。
 
 If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
 
@@ -224,10 +224,10 @@ The resulting object is an entity selection of Employee with duplications remove
 ## .add()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                        |
-| ------ | ----------------------------------------- |
-| v18 R5 | Only supports alterable entity selections |
-| v17    | 追加                                        |
+| バージョン  | 内容                       |
+| ------ | ------------------------ |
+| v18 R5 | 追加可能なエンティティセレクションのみをサポート |
+| v17    | 追加                       |
 </details>
 
 
