@@ -92,9 +92,9 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 **.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.clone().Params -->
-| 参照  | タイプ       |    | 説明                                |
-| --- | --------- |:--:| --------------------------------- |
-| 戻り値 | 4D.Entity | <- | New entity referencing the record |
+| 参照  | タイプ       |    | 説明                  |
+| --- | --------- |:--:| ------------------- |
+| 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
 <!-- END REF -->
 
 
@@ -137,11 +137,11 @@ This function can only be used with entities already saved in the database. It c
 
 
 <!-- REF #EntityClass.diff().Params -->
-| 参照                  | タイプ       |    | 説明                                             |
-| ------------------- | --------- |:--:| ---------------------------------------------- |
-| entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
-| attributesToCompare | コレクション    | -> | Name of attributes to be compared              |
-| 戻り値                 | コレクション    | <- | Differences between the entities               |
+| 参照                  | タイプ       |    | 説明                  |
+| ------------------- | --------- |:--:| ------------------- |
+| entityToCompare     | 4D.Entity | -> | 対象エンティティと比較するエンティティ |
+| attributesToCompare | コレクション    | -> | 比較する属性の名称           |
+| 戻り値                 | コレクション    | <- | エンティティ間の差異          |
 <!-- END REF -->
 
 
