@@ -2119,7 +2119,7 @@ Returns:
   ]
 ```
 
-#### Example 7
+#### 例題 7
 
 Example with extraction of some properties of a relatedEntity:
 
