@@ -100,7 +100,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 
 #### 説明
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
+`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 This function allows you to update entities separately.
 > Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
 
 This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which [`.isNew()`](#isnew) returns **True**).
@@ -147,7 +147,7 @@ This function can only be used with entities already saved in the database. It c
 
 #### 説明
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+`.diff()` 関数は、 <!-- REF #EntityClass.diff().Summary -->二つのエンティティの中身を比較し、その差異を返します<!-- END REF -->。
 
 In *entityToCompare*, pass the entity to be compared to the original entity.
 
@@ -349,7 +349,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 #### 説明
 
-The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. エンティティそのものはメモリ内に残るという点に注意してください。
+`.drop()` 関数は、データクラスに対応するテーブルにおいて、 <!-- REF #EntityClass.drop().Summary -->データストアのエンティティに格納されているデータを削除します<!-- END REF -->。 エンティティそのものはメモリ内に残るという点に注意してください。
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
@@ -456,7 +456,7 @@ Example with `dk force drop if stamp changed` option:
 
 #### 説明
 
-The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
+`.first()` 関数は、 <!-- REF #EntityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -495,7 +495,7 @@ The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a refer
 
 #### 説明
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
+`.fromObject()` 関数は、 <!-- REF #EntityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->。
 > This function modifies the original entity.
 
 The mapping between the object and the entity is done on the attribute names:
@@ -584,7 +584,7 @@ You could also use a related entity given as an object:
 
 #### 説明
 
-The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. この関数は汎用的なコードを書くのに有用です。
+`.getDataClass()` 関数は、 <!-- REF #EntityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->。 この関数は汎用的なコードを書くのに有用です。
 
 
 #### 例題
@@ -634,7 +634,7 @@ The following generic code duplicates any entity:
 
 #### 説明
 
-The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
+`.getKey()` 関数は、 <!-- REF #EntityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->。
 
 Primary keys can be numbers (Integer) or strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
@@ -675,7 +675,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 #### 説明
 
-The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
+`.getSelection()` 関数は、 <!-- REF #EntityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->。
 
 対象エンティティがエンティティセレクションに所属していない場合、関数は Null値を返します。
 
@@ -719,7 +719,7 @@ The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->r
 
 #### 説明
 
-The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
+`.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->。
 
 The internal stamp is automatically incremented by 4D each time the entity is saved. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
 > For a new entity (never saved), the function returns 0. To know if an entity has just been created, it is recommended to use [.isNew()](#isnew).
@@ -769,7 +769,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 
 #### 説明
 
-The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
+`.indexOf()` 関数は、 <!-- REF #EntityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->。
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified *entitySelection*.
 
@@ -818,7 +818,7 @@ The resulting value is included between 0 and the length of the entity selection
 
 #### 説明
 
-The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. そうでない場合には、false を返します。
+`.isNew()` 関数は、 <!-- REF #EntityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->。 そうでない場合には、false を返します。
 
 
 #### 例題
@@ -859,7 +859,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 #### 説明
 
-The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
+`.last()` 関数は、 <!-- REF #EntityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -901,7 +901,7 @@ The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a referen
 
 #### 説明
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+`.lock()` 関数は、 <!-- REF #EntityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->。 The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Only functions executed in the "locking" session are allowed to edit and save the attributes of the entity. The entity can be loaded as read-only by other sessions, but they will not be able to enter and save values.
 
@@ -1013,7 +1013,7 @@ Example with `dk reload if stamp changed` option:
 
 #### 説明
 
-The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
+`.next()` 関数は、 <!-- REF #EntityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->。
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
@@ -1055,7 +1055,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 
 #### 説明
 
-The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
+`.previous()` 関数は、 <!-- REF #EntityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->。
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
@@ -1097,7 +1097,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 
 #### 説明
 
-The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
+`.reload()` 関数は、データストアのデータクラスに対応するテーブルに保存されている情報に応じて、 <!-- REF #EntityClass.reload().Summary -->エンティティの中身をメモリ内にリロードします<!-- END REF -->。 The reload is done only if the entity still exists with the same primary key.
 
 **戻り値**
 
@@ -1153,15 +1153,15 @@ The object returned by `.reload( )` contains the following properties:
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.save().Params -->
-| 参照   | タイプ    |    | 説明                                                |
-| ---- | ------ |:--:| ------------------------------------------------- |
-| mode | 整数     | -> | `dk auto merge`: Enables the automatic merge mode |
-| 戻り値  | オブジェクト | <- | Result of save operation                          |
+| 参照   | タイプ    |    | 説明                               |
+| ---- | ------ |:--:| -------------------------------- |
+| mode | 整数     | -> | `dk auto merge`: 自動マージモードを有効化します |
+| 戻り値  | オブジェクト | <- | 保存の結果                            |
 <!-- END REF -->
 
 #### 説明
 
-The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
+`.save()` 関数は、データクラスに対応するテーブル内に、 <!-- REF #EntityClass.save().Summary -->エンティティの変更内容を保存します<!-- END REF --> 。 You must call this method after creating or modifying an entity if you want to save the changes made to it.
 
 The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Otherwise, the function does nothing (the trigger is not called).
 
@@ -1288,17 +1288,17 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
-| 参照           | タイプ    |    | 説明                                                                                                      |
-| ------------ | ------ |:--:| ------------------------------------------------------------------------------------------------------- |
-| filterString | テキスト   | -> | Attribute(s) to extract (comma-separated string)                                                        |
-| filterCol    | コレクション | -> | Collection of attribute(s) to extract                                                                   |
-| options      | 整数     | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
-| 戻り値          | オブジェクト | <- | Object built from the entity                                                                            |
+| 参照           | タイプ    |    | 説明                                                                                            |
+| ------------ | ------ |:--:| --------------------------------------------------------------------------------------------- |
+| filterString | テキスト   | -> | 取得する属性 (カンマ区切り)                                                                               |
+| filterCol    | コレクション | -> | 取得する属性のコレクション                                                                                 |
+| options      | 整数     | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br>`dk with stamp`: \_\_STAMP プロパティを追加 |
+| 戻り値          | オブジェクト | <- | エンティティを元にビルドされたオブジェクト                                                                         |
 <!-- END REF -->
 
 #### 説明
 
-The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Property names in the object match attribute names of the entity.
+`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 Property names in the object match attribute names of the entity.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
 
@@ -1535,7 +1535,7 @@ Returns:
 }
 ```
 
-#### Example 7
+#### 例題 7
 
 Extracting some properties of a `relatedEntity`:
 
@@ -1575,14 +1575,14 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
-| 参照  | タイプ |    | 説明                                                                                    |
-| --- | --- |:--:| ------------------------------------------------------------------------------------- |
-| 戻り値 | ブール | <- | True if at least one entity attribute has been modified and not yet saved, else False |
+| 参照  | タイプ |    | 説明                                                   |
+| --- | --- |:--:| ---------------------------------------------------- |
+| 戻り値 | ブール | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
 <!-- END REF -->
 
 #### 説明
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
 
 If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.
 
@@ -1619,14 +1619,14 @@ In this example, we check to see if it is necessary to save the entity:
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| 参照  | タイプ    |    | 説明                                               |
-| --- | ------ |:--:| ------------------------------------------------ |
-| 戻り値 | コレクション | <- | Names of touched attributes, or empty collection |
+| 参照  | タイプ    |    | 説明                      |
+| --- | ------ |:--:| ----------------------- |
+| 戻り値 | コレクション | <- | 変更された属性の名前、あるいは空のコレクション |
 <!-- END REF -->
 
 #### 説明
 
-The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
+`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
 This applies for attributes of the [kind](DataClassAttributeClass.md#kind) `storage` or `relatedEntity`.
 
@@ -1669,7 +1669,7 @@ If no entity attribute has been touched, the method returns an empty collection.
 
  $touchedAttributes:=$emp.touchedAttributes()
 
-  //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
+  // $touchedAttributes コレクション: ["firstName","lastName","employer","employerID"]
 ```
 
 In this case:
@@ -1702,7 +1702,7 @@ In this case:
 
 #### 説明
 
-The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
+`.unlock()` 関数は、データストアおよび、データクラスに対応するテーブル内の、 <!-- REF #EntityClass.unlock().Summary -->対象エンティティが参照するレコードのペシミスティック・ロックを解除します<!-- END REF --> 。
 
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 
@@ -1733,10 +1733,10 @@ The object returned by `.unlock()` contains the following property:
 
  $employee:=ds.Employee.get(725)
  $status:=$employee.lock()
- ... //processing
+ ... // 処理
  $status:=$employee.unlock()
  If($status.success)
-    ALERT("The entity is now unlocked")
+    ALERT("エンティティのロックは解除されました。")
  End if
 ```
 
