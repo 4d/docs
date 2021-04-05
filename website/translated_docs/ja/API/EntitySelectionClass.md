@@ -252,7 +252,7 @@ The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the s
 
 *   If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
 *   If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
-> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+> 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 The modified entity selection is returned by the function, so that function calls can be chained.
 
@@ -911,7 +911,7 @@ The following generic code duplicates all entities of the entity selection:
 
 The `.isAlterable()` function <!-- REF #EntitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, and False if the entity selection is not alterable.
 
-For more information, please refer to [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections).
+詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 #### 例題
 
@@ -944,9 +944,9 @@ Form.products.add(Form.product)
 **.isOrdered()** : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
-| 参照  | タイプ |    | 説明                                                       |
-| --- | --- |:--:| -------------------------------------------------------- |
-| 戻り値 | ブール | <- | True if the entity selection is ordered, False otherwise |
+| 参照  | タイプ |    | 説明                                        |
+| --- | --- |:--:| ----------------------------------------- |
+| 戻り値 | ブール | <- | 順列ありエンティティセレクションの場合には true、そうでない場合は false |
 <!-- END REF -->
 
 #### 説明
@@ -954,7 +954,7 @@ Form.products.add(Form.product)
 The `.isOrdered()` function <!-- REF #EntitySelectionClass.isOrdered().Summary -->returns True if the entity selection is ordered<!-- END REF -->, and False if it is unordered.
 > This function always returns True when the entity selection comes from a remote datastore.
 
-For more information, please refer to [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 
 #### 例題
@@ -997,9 +997,9 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
-| 参照  | タイプ       |    | 説明                                                                                    |
-| --- | --------- |:--:| ------------------------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | Reference to the last entity of the entity selection (Null if empty entity selection) |
+| 参照  | タイプ       |    | 説明                                        |
+| --- | --------- |:--:| ----------------------------------------- |
+| 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null) |
 <!-- END REF -->
 
 #### 説明
@@ -1012,7 +1012,7 @@ The result of this function is similar to:
  $entity:=$entitySel[length-1]
 ```
 
-If the entity selection is empty, the function returns Null.
+エンティティセレクションが空の場合、関数は null を返します。
 
 
 #### 例題
@@ -1047,9 +1047,9 @@ If the entity selection is empty, the function returns Null.
 
 #### 説明
 
-The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. If the entity selection is empty, it returns 0.
+The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. エンティティセレクションが空の場合、関数は 0 を返します。
 
-Entity selections always have a `.length` property.
+エンティティセレクションは、常に `.length` プロパティを持っています。
 
 
 #### 例題
@@ -1079,10 +1079,10 @@ Entity selections always have a `.length` property.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| 参照            | タイプ  |    | 説明                         |
-| ------------- | ---- |:--:| -------------------------- |
-| attributePath | テキスト | -> | 計算に使用する属性パス                |
-| 戻り値           | any  | <- | Highest value of attribute |
+| 参照            | タイプ  |    | 説明          |
+| ------------- | ---- |:--:| ----------- |
+| attributePath | テキスト | -> | 計算に使用する属性パス |
+| 戻り値           | any  | <- | 属性の最大値      |
 <!-- END REF -->
 
 #### 説明
@@ -1131,10 +1131,10 @@ We want to find the highest salary among all the female employees:
 **.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.min().Params -->
-| 参照            | タイプ  |    | 説明                        |
-| ------------- | ---- |:--:| ------------------------- |
-| attributePath | テキスト | -> | 計算に使用する属性パス               |
-| 戻り値           | any  | <- | Lowest value of attribute |
+| 参照            | タイプ  |    | 説明          |
+| ------------- | ---- |:--:| ----------- |
+| attributePath | テキスト | -> | 計算に使用する属性パス |
+| 戻り値           | any  | <- | 属性の最小値      |
 <!-- END REF -->
 
 #### 説明
@@ -1179,11 +1179,11 @@ In this example, we want to find the lowest salary among all the female employee
 **.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.minus().Params -->
-| 参照              | タイプ                |    | 説明                                                                       |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------------ |
-| entity          | 4D.Entity          | -> | Entity to substract                                                      |
-| entitySelection | 4D.EntitySelection | -> | Entity selection to substract                                            |
-| 戻り値             | 4D.EntitySelection | <- | New entity selection or a new reference on the existing entity selection |
+| 参照              | タイプ                |    | 説明                                         |
+| --------------- | ------------------ |:--:| ------------------------------------------ |
+| entity          | 4D.Entity          | -> | 除外するエンティティ                                 |
+| entitySelection | 4D.EntitySelection | -> | 除外するエンティティセレクション                           |
+| 戻り値             | 4D.EntitySelection | <- | 新しいエンティティセレクション、あるいは既存のエンティティセレクションへの新しい参照 |
 <!-- END REF -->
 
 #### 説明
@@ -1245,11 +1245,11 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 **.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.or().Params -->
-| 参照              | タイプ                |    | 説明                                                                     |
-| --------------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | 交差するエンティティ                                                             |
-| entitySelection | 4D.EntitySelection | -> | 交差するエンティティセレクション                                                       |
-| 戻り値             | 4D.EntitySelection | <- | New entity selection or new reference to the original entity selection |
+| 参照              | タイプ                |    | 説明                                        |
+| --------------- | ------------------ |:--:| ----------------------------------------- |
+| entity          | 4D.Entity          | -> | 交差するエンティティ                                |
+| entitySelection | 4D.EntitySelection | -> | 交差するエンティティセレクション                          |
+| 戻り値             | 4D.EntitySelection | <- | 新しいエンティティセレクション、あるいは元のエンティティセレクションへの新しい参照 |
 <!-- END REF -->
 
 #### 説明
@@ -1305,18 +1305,18 @@ If the original entity selection and the parameter are not related to the same d
 **.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| 参照          | タイプ                |    | 説明                                                                    |
-| ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
-| pathString  | テキスト               | -> | Attribute path(s) and sorting instruction(s) for the entity selection |
-| pathObjects | コレクション             | -> | 条件オブジェクトのコレクション                                                       |
-| 戻り値         | 4D.EntitySelection | <- | New entity selection in the specified order                           |
+| 参照          | タイプ                |    | 説明                            |
+| ----------- | ------------------ |:--:| ----------------------------- |
+| pathString  | テキスト               | -> | エンティティセレクションの属性パスと並べ替えの指定     |
+| pathObjects | コレクション             | -> | 条件オブジェクトのコレクション               |
+| 戻り値         | 4D.EntitySelection | <- | 指定された順番に並べ替えられた新規エンティティセレクション |
 <!-- END REF -->
 
 #### 説明
 
 The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
-> * This method does not modify the original entity selection.
-*   For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+> * この関数は、エンティティセレクションを変更しません。
+*   詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
 
@@ -1380,13 +1380,13 @@ You can add as many objects in the criteria collection as necessary.
 **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
-| 参照            | タイプ                |    | 説明                                          |
-| ------------- | ------------------ |:--:| ------------------------------------------- |
-| formulaString | テキスト               | -> | Formula string                              |
-| formulaObj    | オブジェクト             | -> | Formula object                              |
-| sortOrder     | 整数                 | -> | `dk ascending` (default) or `dk descending` |
-| settings      | オブジェクト             | -> | Parameter(s) for the formula                |
-| 戻り値           | 4D.EntitySelection | <- | New ordered entity selection                |
+| 参照            | タイプ                |    | 説明                                         |
+| ------------- | ------------------ |:--:| ------------------------------------------ |
+| formulaString | テキスト               | -> | フォーミュラ文字列                                  |
+| formulaObj    | オブジェクト             | -> | フォーミュラオブジェクト                               |
+| sortOrder     | 整数                 | -> | `dk ascending` (デフォルト) または `dk descending` |
+| settings      | オブジェクト             | -> | フォーミュラに渡す引数                                |
+| 戻り値           | 4D.EntitySelection | <- | 順列ありの新規エンティティセレクション                        |
 <!-- END REF -->
 
 #### 説明
@@ -1404,10 +1404,10 @@ The *formulaString* or *formulaObj* is executed for each entity of the entity se
 
 By default if you omit the *sortOrder* parameter, the resulting entity selection is sorted in ascending order. Optionnally, you can pass one of the following values in the *sortOrder* parameter:
 
-| 定数            | 結果 | 説明                             |
-| ------------- | -- | ------------------------------ |
-| dk ascending  | 0  | Ascending sort order (default) |
-| dk descending | 1  | Descending sort order          |
+| 定数            | 結果 | 説明         |
+| ------------- | -- | ---------- |
+| dk ascending  | 0  | 昇順 (デフォルト) |
+| dk descending | 1  | 降順         |
 
 Within the *formulaString* or *formulaObj*, the processed entity and thus its attributes are available through the `This` command (for example, `This.lastName`).
 
@@ -1503,13 +1503,13 @@ In this example, the "marks" object field in the **Students** dataClass contains
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.query().Params -->
-| 参照            | タイプ                |    | 説明                                                                                                                                                            |
-| ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                                                                                                    |
-| formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                                                                                           |
-| value         | any                | -> | プレースホルダー用の値                                                                                                                                                   |
-| querySettings | オブジェクト             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                          |
-| 戻り値           | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
+| 参照            | タイプ                |    | 説明                                                                                                              |
+| ------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------- |
+| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                                                      |
+| formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                                             |
+| value         | any                | -> | プレースホルダー用の値                                                                                                     |
+| querySettings | オブジェクト             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                            |
+| 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション|<!-- END REF -->
 
 |
 
@@ -1612,7 +1612,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 <!-- END REF -->
 
 #### 説明
-> This function only works with a remote datastore (client / server or `Open datastore` connection).
+> このメソッドはリモートデータストア (クライアント/サーバーモード、または`Open datastore` 接続) においてのみ動作します。
 
 The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
