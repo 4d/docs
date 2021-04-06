@@ -4,15 +4,15 @@ title: WebServer
 ---
 
 
-The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). このクラスは `4D` クラスストアより提供されます。
+`WebServer` クラス API を使って、メイン (ホスト) アプリケーションおよび、各コンポーネントの Webサーバーを開始・モニターすることができます ([Webサーバーオブジェクト](WebServer/webServerObject.md) 参照)。 このクラスは `4D` クラスストアより提供されます。
 
 
 
 ### Webサーバーオブジェクト
 
-Web server objects are instantiated with the [`WEB Server`](#web-server) command.
+Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドによってインスタンス化されます。
 
-They provide the following properties and functions:
+これらは、次のプロパティや関数を持ちます:
 
 
 ### 概要
@@ -72,31 +72,31 @@ They provide the following properties and functions:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| 参照    | タイプ          |    | 説明                                                             |
-| ----- | ------------ | -- | -------------------------------------------------------------- |
-| オプション | 整数           | -> | Web server to get (default if omitted = `Web server database`) |
-| 戻り値   | 4D.WebServer | <- | Web server object                                              |
+| 参照    | タイプ          |    | 説明                                               |
+| ----- | ------------ | -- | ------------------------------------------------ |
+| オプション | 整数           | -> | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
+| 戻り値   | 4D.WebServer | <- | WebServer オブジェクト                                 |
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
+`WEB Server` コマンドは、 <!-- REF #_command_.WEB Server.Summary -->デフォルトの Webサーバーオブジェクト、または *option* 引数で指定された Webサーバーオブジェクトを返します<!-- END REF -->。
 
-By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
+*option*が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。 取得する Webサーバーを指定するには、*option* に以下の定数のいずれか一つを渡してください:
 
-| 定数                             | 結果 | 説明                                                       |
-| ------------------------------ | -- | -------------------------------------------------------- |
-| `Web server database`          | 1  | Current database Web server (default if omitted)         |
-| `Web server host database`     | 2  | Web server of the host database of a component           |
-| `Web server receiving request` | 3  | Web server that received the request (target Web server) |
+| 定数                             | 結果 | 説明                                 |
+| ------------------------------ | -- | ---------------------------------- |
+| `Web server database`          | 1  | カレントデータベースの Webサーバー( 省略時のデフォルト)    |
+| `Web server host database`     | 2  | コンポーネントのホストデータベースの Webサーバー         |
+| `Web server receiving request` | 3  | リクエストを受け取った Webサーバー (ターゲットWebサーバー) |
 
-The returned Web server object contains the current values of the Web server properties.
+返される Webサーバーオブジェクトには、Webサーバープロパティのカレント値が格納されています。
 
 #### 例題
 
-From your component, you want to know if the Web server of the host database is started:
+コンポーネント内から、ホストデータベースの Webサーバーが開始されているかどうかを確認します:
 
 ```4d
-  // Method of a component
+  // コンポーネントのメソッド
  var $hostWS : 4D.WebServer
  $hostWS:=WEB Server(Web server host database)
  If($hostWS.isRunning)
@@ -118,22 +118,22 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| 参照  | タイプ    |    | 説明                                             |
-| --- | ------ | -- | ---------------------------------------------- |
-| 戻り値 | コレクション | <- | Collection of the available Web server objects |
+| 参照  | タイプ    |    | 説明                         |
+| --- | ------ | -- | -------------------------- |
+| 戻り値 | コレクション | <- | 利用可能な Webサーバーオブジェクトのコレクション |
 
 <!-- END REF -->
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+`WEB Server list` コマンドは、 <!-- REF #_command_.WEB Server list.Summary -->4Dアプリケーション内で利用可能な Webサーバーオブジェクトのコレクションを返します<!-- END REF -->。
 
-A 4D application can contain anywhere from one to several Web servers:
+4Dアプリケーションは一つ以上の Webサーバーを持つことが可能です:
 
-- one Web server for the host database (default Web server)
-- one Web server for each component.
+- ホストデータベースの Webサーバーを1つ (デフォルトWebサーバー)
+- コンポーネント毎の Webサーバー各1つ
 
-All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
+サーバーが実際に実行中か否かに関わらず、`WEB Server list` コマンドは利用可能な Webサーバーをすべて返します。
 
-> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
+> デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。 On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
 
 You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
