@@ -8,7 +8,7 @@ The `POP3Transporter` class allows you to retrieve messages from a POP3 email se
 
 ### POP3 Transporter object
 
-POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. They provide the following properties and functions:
+POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. これらは、次のプロパティや関数を持ちます:
 
 
 |                                                                                                                                                                                                                                |
