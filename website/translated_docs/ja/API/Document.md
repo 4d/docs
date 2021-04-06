@@ -612,7 +612,7 @@ If the file does not exist on disk, a default blank icon is returned.
 
 
 #### 説明
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+`.getText()` 関数は、 <!-- REF #document.getText().Summary -->ファイルのコンテンツをテキストとして返します <!-- END REF -->。
 
 Optionally, you can designate the character set to be used for reading the contents. You can pass either:
 
@@ -637,7 +637,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 **戻り値**
 
-Text of the file.
+ファイルのテキスト。
 
 #### 例題
 
