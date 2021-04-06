@@ -7,22 +7,20 @@ title: Data Source
 
 When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory. 
 
-You can associate choice lists to objects using:
-- the [Choice List](properties_DataSource.md#choice-list) JSON property
-- the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
-- the form editor's Property List.
+When the **automatic insertion** option is not set (default), the value entered is stored in the object but not in the list in memory.
+
+This property is supported by:
+
+- [Combo box](comboBox_overview.md) and [list box column](listbox_overview.md#list-box-columns) objects associated to a [choice list](#choice-list).
+- [Combo box](comboBox_overview.md) objects whose associated list is filled by their array or object datasource. 
 
 For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
 
 ![](assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
+> If the choice list was created from a list defined in Design mode, the original list is not modified.
 
->If the list was created from a list defined in Design mode, the original list is not modified.
 
-When the **automatic insertion** option is not selected (default), the value entered is stored in the object but not in the list in memory.
-
-> This property is also supported by combo boxes whose associated list is filled by their array or object datasource: the value entered is added to the associated datasource in memory. 
 
 #### JSON Grammar
 
@@ -41,6 +39,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 ## Choice List
 
 Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values. 
+
+You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
+
 
 #### JSON Grammar
 

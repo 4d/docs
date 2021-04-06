@@ -11,7 +11,7 @@ The following multi-page form uses a tab control object:
 
 To navigate from screen to screen, the user simply clicks the desired tab. 
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab. 
+The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab. 
 
 Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
 
@@ -43,10 +43,29 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 ## Adding labels to a tab control  
 
-There are several ways to supply the labels for a tab control:
+To supply the labels for a tab control, you can use:
 
-*	You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
-*	You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.  
+- an object
+- a choice list
+- an array
+
+### Using an object
+
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+|`values`|Collection|Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty|
+|`index`|number|Index of the currently selected page (value between 0 and `collection.length-1`)|
+|`currentValue`|Text|Currently selected value|
+
+### Using a choice list
+
+You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
+
+### Using a Text array
+
+You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.  
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -55,20 +74,20 @@ There are several ways to supply the labels for a tab control:
  arrPages{3}:="Notes"  
 ```
 
->You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
+>You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
 
 
 ## Managing tabs programmatically  
 
 ### FORM GOTO PAGE command
 
-You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
+You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
 
 Here is an example object method:
 
