@@ -167,7 +167,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns. 
 
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of project compilation, you must use the 4D language commands of the `Compiler` theme.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of project compilation, you must [declare the variable](Concepts/variables.md#declaring-variables).
 
 However, this property has a typing function in the following specific cases:
 

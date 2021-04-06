@@ -5,9 +5,11 @@ title: Data Source
 ---
 ## Automatic Insertion
 
-When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
+When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory. 
+
+You can associate choice lists to objects using:
 - the [Choice List](properties_DataSource.md#choice-list) JSON property
-- the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-NAME.301-4128227.en.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-REFERENCE.301-4128237.en.html) commands.
+- the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
 - the form editor's Property List.
 
 For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
@@ -19,6 +21,8 @@ Naturally, the value entered must not belong to the list of [excluded values](pr
 >If the list was created from a list defined in Design mode, the original list is not modified.
 
 When the **automatic insertion** option is not selected (default), the value entered is stored in the object but not in the list in memory.
+
+> This property is also supported by combo boxes whose associated list is filled by their array or object datasource: the value entered is added to the associated datasource in memory. 
 
 #### JSON Grammar
 
