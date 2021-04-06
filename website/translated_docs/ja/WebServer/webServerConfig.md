@@ -82,7 +82,7 @@ List of allowed hosts and methods for the CORS service.
 
 #### Domain names (host property)
 
-Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. Several syntaxes are supported:
+Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. 複数のドメインを追加してホワイトリストを作成することができます。 複数のシンタックスがサポートされています:
 
 - 192.168.5.17:8081
 - 192.168.5.17
@@ -109,7 +109,7 @@ Accepted HTTP method(s) for the corresponding CORS host. The following HTTP meth
 - TRACE
 - PATCH
 
-Separate each method with a ";" (e,g,: "post;get"). If methods is empty, null, or undefined, all methods are enabled.
+メソッド名はセミコロン区切りで指定します(例: "post;get")。 If methods is empty, null, or undefined, all methods are enabled.
 
 #### 参照
 
@@ -223,7 +223,7 @@ HSTS allows the 4D web server to declare that browsers should only interact with
 | webServer object | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | number in seconds |
 | `WEB SET OPTION` | `Web HSTS max age`                               | number in seconds |
 
-Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration. Default value is 63072000 (2 years)
+Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. この情報はクライアント側で指定された時間のあいだ保存されます。 Default value is 63072000 (2 years)
 
 > **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.
 
