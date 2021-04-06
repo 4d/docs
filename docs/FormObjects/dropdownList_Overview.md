@@ -26,7 +26,7 @@ To initialize the object associated to the drop-down list, you can:
 
 * Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an object automatically. You can refer to the object using the name of the variable associated with the drop-down list.
 
-* Execute code that creates the object and its properties. For example, if "myList" is the [Variable or Expression](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
+* Execute code that creates the object and its properties. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
 
 ```4d
 var myList : Object
@@ -74,7 +74,7 @@ To initialize the array associated to the drop-down list, you can:
   aCities{6}:="Green Bay" 
 ```
 
-In this case, the name of the variable associated with the object in the form must be *aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
+In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code could be placed in the form method and be executed when the `On Load` form event runs.
   
 *  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. For example:
 
@@ -82,7 +82,7 @@ In this case, the name of the variable associated with the object in the form mu
    LIST TO ARRAY("Cities";aCities)
 ```
      
- In this case also, the name of the variable associated with the object in the form must be *aCities*. This code would be run in place of the assignment statements shown above.
+ In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be *aCities*. This code would be run in place of the assignment statements shown above.
  
 If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:
 
@@ -104,7 +104,7 @@ If you need to save the user’s choice into a field, you would use an assignmen
  End case
 ```
   
-You must select each [event] that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
+You must select each event that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
 
 
 ## Using a choice list  
