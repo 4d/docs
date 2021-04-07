@@ -82,7 +82,7 @@ In this case, the name of the [variable](properties_Object.md#variable-or-expres
    LIST TO ARRAY("Cities";aCities)
 ```
      
- In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be *aCities*. This code would be run in place of the assignment statements shown above.
+In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code would be run in place of the assignment statements shown above.
  
 If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:
 
@@ -123,15 +123,20 @@ When the form is executed, 4D automatically manages the pop-up menu or combo box
 
 >It is not possible to combine this principle with using an object or an array to initialize the object. If you enter a field name in the Variable Name area, then you must use a choice list.
 
-### Save as  
+### Selected item value or reference
 
-When you have associated a drop-down list with a choice list and with a field, you can use the [Save as Value/Reference property](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved. 
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the **Data Type** property to [Selected item value or Selected item reference](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved. 
 
 ## Using a standard action 
  
-You can assign a standard action to a drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the `goto page` action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+You can assign a [standard action](properties_Action.md#standard-action) to a drop-down list. This feature is supported in two contexts:
 
-For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
+- Use of the `gotoPage` standard action. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). 
+
+- Use of a standard action that displays a sublist of items, for example `backgroundColor`. At runtime the object will display an automatic list of background colors. You can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action. 
+This feature requires that:
+	- a target styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form to execute the standard action. 
+	+ the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list. 
 
 ## Supported Properties
 
