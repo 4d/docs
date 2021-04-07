@@ -377,7 +377,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 #### 返されるオブジェクト
 
-The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
+The function sends a request to the mail server and returns an object describing the mail status. このオブジェクトには、次のプロパティが格納されることがあります:
 
 | プロパティ      |                          | タイプ        | 説明                                                                                                           |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
@@ -385,9 +385,9 @@ The function sends a request to the mail server and returns an object describing
 | status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
 | statusText |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
 | errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |
-|            | \[ ].errCode            | number     | 4D error code                                                                                                |
-|            | \[ ].message            | text       | Description of the 4D error                                                                                  |
-|            | \[ ].componentSignature | text       | Signature of the internal component which returned the error                                                 |
+|            | \[ ].errCode            | number     | 4Dエラーコード                                                                                                     |
+|            | \[ ].message            | text       | 4Dエラーの詳細                                                                                                     |
+|            | \[ ].componentSignature | text       | エラーを返した内部コンポーネントの署名                                                                                          |
 
 
 
