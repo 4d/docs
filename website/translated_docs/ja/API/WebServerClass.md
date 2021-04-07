@@ -508,9 +508,9 @@ The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- E
 **.keepSession** : Boolean<!-- END REF -->
 
 
-<!-- REF #WebServerClass.keepSession.Summary -->True if legacy sessions are enabled in the web server, False otherwise<!-- END REF -->.
+<!-- REF #WebServerClass.keepSession.Summary -->Webサーバーで旧式セッションが有効されている場合に true、それ以外は false<!-- END REF -->。
 
-##### See also:
+##### 参照:
 [.scalableSession](#scalablesession)
 
 <!-- END REF -->
@@ -676,7 +676,7 @@ The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folde
 
 <!-- REF #WebServerClass.scalableSession.Summary -->True if scalable sessions are used in the web server, and False otherwise<!-- END REF -->.
 
-##### See also:
+##### 参照:
 [.keepSession](#keepsession)
 <!-- END REF -->
 
