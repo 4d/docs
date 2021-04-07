@@ -723,15 +723,15 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.sessionCookieSameSite** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
+<!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "SameSite" 属性の値<!-- END REF -->。 とりうる値 (定数使用):
 
-| 定数                  | 結果       | 説明                                                                                                                                  |
-| ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                    |
-| Web SameSite Lax    | "Lax"    | Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link). |
-| Web SameSite None   | "None"   | Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests.                                   |
+| 定数                  | 結果       | 説明                                                              |
+| ------------------- | -------- | --------------------------------------------------------------- |
+| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティーのコンテキストでのみ cookie が送信されます。                 |
+| Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
+| Web SameSite None   | "None"   | ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。      |
 
-See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) description for detailed information.
+詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) を参照ください。
 
 
 <!-- END REF -->
@@ -745,7 +745,7 @@ See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-sa
 **.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して Webサーバーはデフォルトで IPアドレスを検証します。このアドレスが、cookie作成時の IPアドレスと合致しない場合、リクエストは拒否されます。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 3G/4G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可できます (アプリケーションのセキュリティレベルは下がります)。
+ <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->セッションcookie の IP アドレス検証<!-- END REF -->。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して Webサーバーはデフォルトで IPアドレスを検証します。このアドレスが、cookie作成時の IPアドレスと合致しない場合、リクエストは拒否されます。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 3G/4G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可できます (アプリケーションのセキュリティレベルは下がります)。
 
 <!-- END REF -->
 
@@ -775,7 +775,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
+`.start()` 関数は、任意の *settings* オブジェクト引数に設定したプロパティを使用して、 <!-- REF #WebServerClass.start().Summary -->対象の Webサーバーを開始させます<!-- END REF -->。
 
 プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
@@ -786,15 +786,15 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 
 #### 返されるオブジェクト
 
-関数は Webサーバーの開始ステータスを表すオブジェクトを返します。 This object can contain the following properties:
+関数は Webサーバーの開始ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ   |                         | タイプ    | 説明                                                           |
-| ------- | ----------------------- | ------ | ------------------------------------------------------------ |
-| success |                         | ブール    | Webサーバーが正常に開始された場合には true、それ以外は false                        |
-| errors  |                         | コレクション | エラースタック (Webサーバーが正常に開始された場合には返されません)                         |
-|         | \[].errCode            | 数値     | 4D error code                                                |
-|         | \[].message            | テキスト   | Description of the 4D error                                  |
-|         | \[].componentSignature | テキスト   | Signature of the internal component which returned the error |
+| プロパティ   |                         | タイプ    | 説明                                    |
+| ------- | ----------------------- | ------ | ------------------------------------- |
+| success |                         | ブール    | Webサーバーが正常に開始された場合には true、それ以外は false |
+| errors  |                         | コレクション | エラースタック (Webサーバーが正常に開始された場合には返されません)  |
+|         | \[].errCode            | 数値     | 4Dエラーコード                              |
+|         | \[].message            | テキスト   | 4Dエラーの詳細                              |
+|         | \[].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名                   |
 > Webサーバーが既に起動していた場合、エラーが返されます。
 
 #### 例題
@@ -836,7 +836,7 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 
  <!-- END REF -->
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+`.stop()` 関数は、 <!-- REF #WebServerClass.stop().Summary -->対象の Webサーバーを停止します<!-- END REF -->。
 
 Webサーバーが開始されている場合は、処理中のリクエストが完了次第、すべての Web接続と Webプロセスが閉じられます。 Webサーバーが開始されていなかった場合、関数はなにもしません。
 > この関数は、[`.start()`](#start) 関数の *settings* 引数を使用してセッションに対して定義したカスタマイズされた Web設定があった場合、それらをリセットします。
