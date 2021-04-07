@@ -249,7 +249,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 | webServer object | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |      |
 | `WEB SET OPTION` | `Web HTTP compression threshold`                                             |      |
 
-In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.
+In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
 
 Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
 
@@ -315,7 +315,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 | webServer object | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |      |
 | `WEB SET OPTION` | `Web inactive session timeout`                                           |      |
 
-Life duration (in minutes) of inactive sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
+Life duration (in minutes) of inactive sessions (duration set in cookie). タイムアウト時間が経過するとセッションcookie が無効になり、HTTPクライアントによって送信されなくなります。
 
 Default: 480 minutes (pass 0 to restore the default value)
 
