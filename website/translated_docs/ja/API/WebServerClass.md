@@ -162,7 +162,7 @@ Webサーバオブジェクトの [.name](#name) プロパティを使用する�
 **.accessKeyDefined** : Boolean<!-- END REF -->
 
 
-The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. このプロパティは WebAdmin Webサーバーによって、管理インターフェースのセキュリティ設定を有効化するのに使用されます。
+**.accessKeyDefined** プロパティは、 <!-- REF #WebServerClass.accessKeyDefined.Summary -->Webサーバーの設定にアクセスキーが定義されていれば true<!-- END REF -->を格納します。 このプロパティは WebAdmin Webサーバーによって、管理インターフェースのセキュリティ設定を有効化するのに使用されます。
 
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
@@ -175,7 +175,7 @@ The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDe
 **.certificateFolder** : Text<!-- END REF -->
 
 
-Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. パスは、ファイルシステムを使用した POSIXフルパスの形式です。 When using this property in the `settings` parameter of the [`.start()`](#start) function, it can be a [`Folder` object](FolderClass.md).
+ <!-- REF #WebServerClass.certificateFolder.Summary -->認証ファイルが保存されているフォルダー<!-- END REF -->のパス。 パスは、ファイルシステムを使用した POSIXフルパスの形式です。 [`.start()`](#start) 関数に渡す `settings` 引数内でこのプロパティを使用する場合、[`Folder` オブジェクト](FolderClass.md) も使用可能です。
 
 <!-- END REF -->
 
@@ -189,7 +189,7 @@ Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where t
 **.characterSet** : Number<br>**.characterSet** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. デフォルト値は OS の言語に依存します。 値には、MIBenum 整数や名称の文字列、[IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml) が定義する識別子を使用できます。 以下は、4D Webサーバーがサポートしている文字セットに対応する識別子のリストです:
+ <!-- REF #WebServerClass.characterSet.Summary -->アプリケーションに接続してくるブラウザーとの通信に 4D Webサーバーが使用すべき文字セット<!-- END REF -->。 デフォルト値は OS の言語に依存します。 値には、MIBenum 整数や名称の文字列、[IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml) が定義する識別子を使用できます。 以下は、4D Webサーバーがサポートしている文字セットに対応する識別子のリストです:
 
 *   4 = ISO-8859-1
 *   12 = ISO-8859-9
@@ -217,7 +217,7 @@ The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D W
 **.cipherSuite** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. これは、4D Webサーバーが実装する暗号化アルゴリズムの優先順位を設定します。 コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
+ <!-- REF #WebServerClass.cipherSuite.Summary -->保護されたプロトコルのために使用される暗号スイートリスト<!-- END REF -->。 これは、4D Webサーバーが実装する暗号化アルゴリズムの優先順位を設定します。 コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
 
 <!-- END REF -->
 
@@ -231,7 +231,7 @@ The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the sec
 **.CORSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合 (true)、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。後述の `CORSSettings` 参照)。 無効化されている場合 (false、デフォルト) には、CORS で送信されたサイト間リクエストはすべて無視されます。 有効時 (true) に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
+ <!-- REF #WebServerClass.CORSEnabled.Summary -->Web サーバーの CORS (*Cross-origin resource sharing*、オリジン間リソース共有) サービス状態<!-- END REF -->。 セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合 (true)、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。後述の `CORSSettings` 参照)。 無効化されている場合 (false、デフォルト) には、CORS で送信されたサイト間リクエストはすべて無視されます。 有効時 (true) に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
 
 デフォルト: false (無効)
 
@@ -249,9 +249,9 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 **.CORSSettings** : Collection<!-- END REF -->
 
 
-A <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Each object must contain a **host** property and, optionally, a **methods** property:
+ <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ([`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。**methods** プロパティは任意です。
 
-*   **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. If *host* is not present or empty, the object is ignored. Several syntaxes are supported:
+*   **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
     -   192.168.5.17:8081
     -   192.168.5.17
     -   192.168.*
@@ -263,7 +263,7 @@ A <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and met
     -   myProject.myDomain.com
     -   \*
 
-*   **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separate each method with a ";" (e,g,: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
+*   **methods** (テキスト、任意): 対応する CORSホストに対して許可する HTTPメソッド。 メソッド名はセミコロン区切りで指定します(例: "post;get")。 *methods* が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
 
 <!-- END REF -->
 
@@ -277,13 +277,13 @@ A <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and met
 **.debugLog** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log file<!-- END REF --> (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number).
+ <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファイルの状態<!-- END REF --> (アプリケーションの"Logs" フォルダーに格納されている HTTPDebugLog_nn.txt ファイル (nn はファイル番号))。
 
-*   0 = disabled
-*   1 = enabled without body parts (body size is provided in this case)
-*   3 = enabled with body parts in response only
-*   5 = enabled with body parts in request only
-*   7 = enabled with body parts in response and request
+*   0 = 無効
+*   1 = 有効、リクエスト本文なし (本文サイズあり)
+*   3 = 有効、レスポンスの本文のみ
+*   5 = 有効、リクエストの本文のみ
+*   7 = 有効、リクエストおよびレスポンスの本文あり
 
 <!-- END REF -->
 
@@ -297,7 +297,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log 
 **.defaultHomepage** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
+ <!-- REF #WebServerClass.defaultHomepage.Summary -->デフォルトのホームページの名称<!-- END REF --> または、カスタムのホームページを送信しない場合は ""。
 
 <!-- END REF -->
 
@@ -310,7 +310,7 @@ The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home
 **.HSTSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) status<!-- END REF -->. HSTS allows the Web server to declare that browsers should only interact with it via secure HTTPS connections. Browsers will record the HSTS information the first time they receive a response from the web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the `HSTSMaxAge` property. HSTS requires that HTTPS is enabled on the server. HTTP must also be enabled to allow initial client connections.
+ <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) 状態<!-- END REF -->。 HSTS によって、Webサーバーはブラウザーに対し、セキュアな HTTPS接続のみを許可すると宣言できます。 Webサーバーからの初回レスポンスを受け取った際にブラウザーは HSTS情報を記録し、以降の HTTPリクエストは自動的に HTTPSリクエストに変換されます。 ブラウザー側でこの情報が保存される時間は `HSTSMaxAge` プロパティによって指定されます。 HSTS のためには、サーバー上で HTTPS が有効になっていなくてはなりません。 また、初回のクライアント接続を許可するために、HTTP も有効でなくてはなりません。
 
 <!-- END REF -->
 
@@ -323,9 +323,9 @@ The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Securi
 **.HSTSMaxAge** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HSTSMaxAge.Summary -->maximum length of time (in seconds) that HSTS is active for each new client connection<!-- END REF -->. This information is stored on the client side for the specified duration.
+ <!-- REF #WebServerClass.HSTSMaxAge.Summary -->新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位)<!-- END REF -->。 この情報はクライアント側で指定された時間のあいだ保存されます。
 
-Default value: 63072000 (2 years).
+デフォルト値: 63072000 (2年)。
 
 <!-- END REF -->
 
@@ -338,14 +338,14 @@ Default value: 63072000 (2 years).
 **.HTTPCompressionLevel** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed).
+ <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->4D HTTPサーバーの HTTP圧縮通信 (クライアントリクエストまたはサーバーレスポンス) における圧縮レベル<!-- END REF -->。 このセレクターを使って、実行速度を優先するか (圧縮少)、それとも圧縮レベルを優先するか (速度減) を指定し、通信を最適化することができます。
 
 とりうる値:
 
-*   1 to 9 (where 1 is the fastest compression and 9 the highest).
-*   -1 = set a compromise between speed and rate of compression.
+*   1 から 9 (1 が低圧縮、9 が高圧縮)。
+*   -1 = 圧縮速度と圧縮率の妥協点を設定する
 
-Default = 1 (faster compression).
+デフォルト = 1 (低圧縮)。
 
 <!-- END REF -->
 
@@ -358,9 +358,9 @@ Default = 1 (faster compression).
 **.HTTPCompressionThreshold** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->size threshold (bytes) for requests below which exchanges should not be compressed<!-- END REF -->. This setting is useful in order to avoid losing machine time by compressing small exchanges.
+ <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->HTTP圧縮のしきい値 (バイト単位)。このサイズ未満のリクエストについては、通信が圧縮されません<!-- END REF -->。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
 
-Default compression threshold = 1024 bytes
+デフォルトのしきい値 = 1024 バイト
 
 <!-- END REF -->
 
@@ -374,7 +374,7 @@ Default compression threshold = 1024 bytes
 **.HTTPEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->.
+ <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTPプロトコルの状態<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -389,9 +389,9 @@ The <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END 
 **.HTTPPort** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
+ <!-- REF #WebServerClass.HTTPPort.Summary -->HTTP のリッスンIPポート番号<!-- END REF -->。
 
-Default = 80
+デフォルト = 80
 
 <!-- END REF -->
 
@@ -404,7 +404,7 @@ Default = 80
 **.HTTPTrace** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
+ <!-- REF #WebServerClass.HTTPTrace.Summary -->`HTTP TRACE` の有効化状態<!-- END REF -->。 セキュリティ上の理由により、Webサーバーはデフォルトで `HTTP TRACE` リクエストをエラー405 で拒否します。 有効化されている場合、`HTTP TRACE` リクエストに対して Webサーバーは、リクエスト行、ヘッダー、および本文を返します。
 
 <!-- END REF -->
 
@@ -417,7 +417,7 @@ The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!--
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->
 **.HTTPSEnabled** : Boolean<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->.
+ <!-- REF #WebServerClass.HTTPSEnabled.Summary -->HTTPSプロトコル状態<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -430,9 +430,9 @@ The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- EN
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->
 **.HTTPSPort** : Number<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
+ <!-- REF #WebServerClass.HTTPSPort.Summary -->HTTPS のリッスンIPポート番号<!-- END REF -->。
 
-Default = 443
+デフォルト = 443
 
 <!-- END REF -->
 
@@ -444,11 +444,9 @@ Default = 443
 <!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->
 **.inactiveProcessTimeout** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->旧式セッションプロセスの非アクティブタイムアウト時間 (分単位)<!-- END REF -->。 タイムアウト時間が経過すると、サーバーはプロセスを終了します。すると、`On Web Legacy Close Session` データベースメソッドが呼び出され、旧式セッションのコンテキストは削除されます。
 
-The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
-
-Default = 480 minutes
+デフォルト = 480 分
 
 <!-- END REF -->
 
@@ -460,11 +458,9 @@ Default = 480 minutes
 <!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->
 **.inactiveSessionTimeout** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
+> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->旧式セッションの非アクティブタイムアウト時間 (分単位; cookie にて設定)<!-- END REF -->。 タイムアウト時間が経過するとセッションcookie が無効になり、HTTPクライアントによって送信されなくなります。
 
-The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
-
-Default = 480 minutes
+デフォルト = 480 分
 
 <!-- END REF -->
 
@@ -478,7 +474,7 @@ Default = 480 minutes
 **.IPAddressToListen** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which the 4D Web Server will receive HTTP requests<!-- END REF -->. By default, no specific address is defined. Both IPv6 string formats and IPv4 string formats are supported.
+ <!-- REF #WebServerClass.IPAddressToListen.Summary -->4D Webサーバーが HTTPリクエストを受信する IPアドレス<!-- END REF -->。 デフォルトでは、特定のアドレスは定義されていません。 IPv6 および IPv4 文字列形式の両方がサポートされています。
 
 <!-- END REF -->
 
@@ -493,9 +489,7 @@ The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which th
 **.isRunning** : Boolean<!-- END REF -->
 
 
-*Read-only property*
-
-The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
+*読み取り専用プロパティ* <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーの実行状態<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -508,9 +502,9 @@ The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- E
 **.keepSession** : Boolean<!-- END REF -->
 
 
-<!-- REF #WebServerClass.keepSession.Summary -->True if legacy sessions are enabled in the web server, False otherwise<!-- END REF -->.
+<!-- REF #WebServerClass.keepSession.Summary -->Webサーバーで旧式セッションが有効されている場合に true、それ以外は false<!-- END REF -->。
 
-##### See also:
+##### 参照:
 [.scalableSession](#scalablesession)
 
 <!-- END REF -->
@@ -525,13 +519,13 @@ The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- E
 **.logRecording** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
+ <!-- REF #WebServerClass.logRecording.Summary -->リクエストログ (logweb.txt) の記録オプション値<!-- END REF -->。
 
-*   0 = Do not record (default)
-*   1 = Record in CLF format
-*   2 = Record in DLF format
-*   3 = Record in ELF format
-*   4 = Record in WLF format
+*   0 = 記録しない (デフォルト)
+*   1 = CLF形式で記録する
+*   2 = DLF形式で記録する
+*   3 = ELF形式で記録する
+*   4 = WLF形式で記録する
 
 <!-- END REF -->
 
@@ -545,11 +539,11 @@ The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) r
 **.maxConcurrentProcesses** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->maximum number of concurrent web processes supported by the web server<!-- END REF -->. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.
+ <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->Webサーバーにてサポートする最大同時Webプロセス数<!-- END REF -->。 この数値 (マイナス1) に達すると、4D はプロセスを作成しなくなり、新規リクエストに対して HTTPステータス 503 - Service Unavailable を返します。
 
-Possible values: 10 - 32000
+とりうる値: 10 - 32000
 
-Default = 100
+デフォルト = 100
 
 <!-- END REF -->
 
@@ -563,9 +557,9 @@ Default = 100
 **.maxRequestSize** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passing the maximum value (2147483648) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it.
+ <!-- REF #WebServerClass.maxRequestSize.Summary -->Webサーバーが処理してよい HTTPリクエスト (POST) の最大サイズ (バイト単位)<!-- END REF -->。 最大値 (2147483648) に設定した場合、実際には制限無しということになります。 制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 リクエストのサイズが制限に達していると、Webサーバーによって拒否されます。
 
-Possible values: 500000 - 2147483648
+とりうる値: 500000 - 2147483648
 
 <!-- END REF -->
 
@@ -577,9 +571,7 @@ Possible values: 500000 - 2147483648
 <!-- REF #WebServerClass.maxSessions.Syntax -->
 **.maxSessions** : Number<!-- END REF -->
 
-> This property is not returned in [scalable sessions mode](#scalablesession).
-
-The <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
+> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.maxSessions.Summary -->旧式セッションにおける同時セッションの最大数<!-- END REF -->。 制限に達すると、Webサーバーが新規セッションを作成するときに、一番古い旧式セッションが閉じられます (`On Web Legacy Close Session` データベースメソッドが呼び出されます)。 旧式セッションの同時セッション数は、Webプロセスの合計値を超えることはできません (`maxConcurrentProcesses` プロパティ、デフォルト値は 100)。
 
 <!-- END REF -->
 
@@ -592,16 +584,16 @@ The <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneo
 **.minTLSVersion** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
+ <!-- REF #WebServerClass.minTLSVersion.Summary -->接続に必要な最低TLSバージョン<!-- END REF -->。 これよりも低いバージョンのみをサポートするクライアントからの接続は拒否されます。
 
 とりうる値:
 
 *   1 = TLSv1_0
 *   2 = TLSv1_1
-*   3 = TLSv1_2 (default)
+*   3 = TLSv1_2 (デフォルト)
 *   4 = TLSv1_3
 
-If modified, the server must be restarted to use the new value.
+変更した場合、設定を反映するには Webサーバーを再起動する必要があります。
 
 <!-- END REF -->
 
@@ -615,9 +607,7 @@ If modified, the server must be restarted to use the new value.
 **.name** : Text<!-- END REF -->
 
 
-*Read-only property*
-
-The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
+*読み取り専用プロパティ* <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -631,9 +621,7 @@ The <!-- REF #WebServerClass.name.Summary -->name of the web server application<
 **.openSSLVersion** : Text<!-- END REF -->
 
 
-*Read-only property*
-
-The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
+*読み取り専用プロパティ* <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -647,9 +635,7 @@ The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL li
 **.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
 
-*Read-only property*
-
-The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
+*読み取り専用プロパティ* <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -662,7 +648,7 @@ The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability o
 **.rootFolder** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<!-- END REF -->. パスは、ファイルシステムを使用した POSIXフルパスの形式です。 When using this property in the `settings` parameter, it can be a `Folder` object.
+ <!-- REF #WebServerClass.rootFolder.Summary -->Webサーバーのルートフォルダーのパス<!-- END REF -->。 パスは、ファイルシステムを使用した POSIXフルパスの形式です。 `settings` 引数内でこのプロパティを使用する場合、</code>Folder</code> オブジェクトも使用可能です。
 
 <!-- END REF -->
 
@@ -674,9 +660,9 @@ The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folde
 **.scalableSession** : Boolean<!-- END REF -->
 
 
-<!-- REF #WebServerClass.scalableSession.Summary -->True if scalable sessions are used in the web server, and False otherwise<!-- END REF -->.
+<!-- REF #WebServerClass.scalableSession.Summary -->Webサーバーがスケーラブルセッションを使用している場合に true、それ以外は false<!-- END REF -->。
 
-##### See also:
+##### 参照:
 [.keepSession](#keepsession)
 <!-- END REF -->
 
@@ -689,7 +675,7 @@ The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folde
 **.sessionCookieDomain** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
+ <!-- REF #WebServerClass.sessionCookieDomain.Summary -->セッションcookie の "domain" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
 
 <!-- END REF -->
 
@@ -703,9 +689,9 @@ The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of th
 **.sessionCookieName** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
+ <!-- REF #WebServerClass.sessionCookieName.Summary -->セッションID の保存に使用されるセッションcookie の名称<!-- END REF -->。
 
-*Read-only property*
+*読み取り専用プロパティ*
 
 <!-- END REF -->
 
@@ -719,7 +705,7 @@ The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie use
 **.sessionCookiePath** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
+ <!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
 <!-- END REF -->
 
@@ -737,15 +723,15 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 **.sessionCookieSameSite** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
+<!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "SameSite" 属性の値<!-- END REF -->。 とりうる値 (定数使用):
 
-| 定数                  | 結果       | 説明                                                                                                                                  |
-| ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                    |
-| Web SameSite Lax    | "Lax"    | Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link). |
-| Web SameSite None   | "None"   | Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests.                                   |
+| 定数                  | 結果       | 説明                                                              |
+| ------------------- | -------- | --------------------------------------------------------------- |
+| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティーのコンテキストでのみ cookie が送信されます。                 |
+| Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
+| Web SameSite None   | "None"   | ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。      |
 
-See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) description for detailed information.
+詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) を参照ください。
 
 
 <!-- END REF -->
@@ -759,7 +745,7 @@ See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-sa
 **.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).
+ <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->セッションcookie の IP アドレス検証<!-- END REF -->。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して Webサーバーはデフォルトで IPアドレスを検証します。このアドレスが、cookie作成時の IPアドレスと合致しない場合、リクエストは拒否されます。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 3G/4G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可できます (アプリケーションのセキュリティレベルは下がります)。
 
 <!-- END REF -->
 
@@ -782,34 +768,34 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| 参照       | タイプ    |    | 説明                                    |
-| -------- | ------ | -- | ------------------------------------- |
-| settings | オブジェクト | -> | Web server settings to set at startup |
-| 戻り値      | オブジェクト | <- | Status of the web server startup      |
+| 参照       | タイプ    |    | 説明              |
+| -------- | ------ | -- | --------------- |
+| settings | オブジェクト | -> | 開始時の Webサーバー設定  |
+| 戻り値      | オブジェクト | <- | Webサーバー開始のステータス |
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
+`.start()` 関数は、任意の *settings* オブジェクト引数に設定したプロパティを使用して、 <!-- REF #WebServerClass.start().Summary -->対象の Webサーバーを開始させます<!-- END REF -->。
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
+プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
+[Web Server オブジェクト](#webサーバーオブジェクト) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning)、[.name](#name)、[.openSSLVersion](#opensslversion)、[.perfectForwardSecrecy](#perfectforwardsecrecy)、[.sessionCookieName(#sessioncookiename)]) を除いて、すべてカスタマイズ可能です。
 
-Customized session settings will be reset when the [`.stop()`](#stop) function is called.
+カスタマイズされた設定は [`.stop()`](#stop) が呼び出されたときにリセットされます。
 
 
 #### 返されるオブジェクト
 
-The function returns an object describing the Web server launch status. This object can contain the following properties:
+関数は Webサーバーの開始ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ   |                         | タイプ    | 説明                                                                   |
-| ------- | ----------------------- | ------ | -------------------------------------------------------------------- |
-| success |                         | ブール    | True if the web server was correctly started, False otherwise        |
-| errors  |                         | コレクション | 4D error stack (not returned if the web server started successfully) |
-|         | \[].errCode            | 数値     | 4D error code                                                        |
-|         | \[].message            | テキスト   | Description of the 4D error                                          |
-|         | \[].componentSignature | テキスト   | Signature of the internal component which returned the error         |
-> If the Web server was already launched, an error is returned.
+| プロパティ   |                         | タイプ    | 説明                                    |
+| ------- | ----------------------- | ------ | ------------------------------------- |
+| success |                         | ブール    | Webサーバーが正常に開始された場合には true、それ以外は false |
+| errors  |                         | コレクション | エラースタック (Webサーバーが正常に開始された場合には返されません)  |
+|         | \[].errCode            | 数値     | 4Dエラーコード                              |
+|         | \[].message            | テキスト   | 4Dエラーの詳細                              |
+|         | \[].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名                   |
+> Webサーバーが既に起動していた場合、エラーが返されます。
 
 #### 例題
 
@@ -850,15 +836,15 @@ The function returns an object describing the Web server launch status. This obj
 
  <!-- END REF -->
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+`.stop()` 関数は、 <!-- REF #WebServerClass.stop().Summary -->対象の Webサーバーを停止します<!-- END REF -->。
 
-If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
-> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
+Webサーバーが開始されている場合は、処理中のリクエストが完了次第、すべての Web接続と Webプロセスが閉じられます。 Webサーバーが開始されていなかった場合、関数はなにもしません。
+> この関数は、[`.start()`](#start) 関数の *settings* 引数を使用してセッションに対して定義したカスタマイズされた Web設定があった場合、それらをリセットします。
 
 
 #### 例題
 
-To stop the database Web server:
+データベースWebサーバーを停止します:
 
 ```4d
  var $webServer : 4D.WebServer

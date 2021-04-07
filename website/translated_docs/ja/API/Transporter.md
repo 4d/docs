@@ -21,7 +21,7 @@ title: Transporter クラス
 
 #### 説明
 
-The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+`.acceptUnsecureConnection` プロパティは、暗号化された接続が不可能な場合に、 <!-- REF #transporter.acceptUnsecureConnection.Summary -->暗号化されていない接続の確立が許可されてれば **true**<!-- END REF --> を格納します。
 
 It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
 
@@ -56,7 +56,7 @@ Available secured ports are:
 
 #### 説明
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+`.authenticationMode` プロパティは、 <!-- REF #transporter.authenticationMode.Summary -->メールサーバーのセッションを開くのに使用される認証モード<!-- END REF -->を格納します。
 
 By default, the most secured mode supported by the server is used.
 
@@ -87,7 +87,7 @@ Possible values are:
 
 #### 説明
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+`.authenticationMode` プロパティは、メールサーバーのセッションを開くのに使用される認証モードを格納します。
 
 By default, the most secured mode supported by the server is used.
 
@@ -119,7 +119,7 @@ Possible values are:
 
 #### 説明
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+`.authenticationMode` プロパティは、メールサーバーのセッションを開くのに使用される認証モードを格納します。
 
 By default, the most secured mode supported by the server is used.
 
@@ -377,7 +377,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 #### 返されるオブジェクト
 
-The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
+The function sends a request to the mail server and returns an object describing the mail status. このオブジェクトには、次のプロパティが格納されることがあります:
 
 | プロパティ      |                          | タイプ        | 説明                                                                                                           |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
@@ -385,9 +385,9 @@ The function sends a request to the mail server and returns an object describing
 | status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
 | statusText |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
 | errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |
-|            | \[ ].errCode            | number     | 4D error code                                                                                                |
-|            | \[ ].message            | text       | Description of the 4D error                                                                                  |
-|            | \[ ].componentSignature | text       | Signature of the internal component which returned the error                                                 |
+|            | \[ ].errCode            | number     | 4Dエラーコード                                                                                                     |
+|            | \[ ].message            | text       | 4Dエラーの詳細                                                                                                     |
+|            | \[ ].componentSignature | text       | エラーを返した内部コンポーネントの署名                                                                                          |
 
 
 
