@@ -21,7 +21,7 @@ title: Transporter クラス
 
 #### 説明
 
-The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+`.acceptUnsecureConnection` プロパティは、暗号化された接続が不可能な場合に、 <!-- REF #transporter.acceptUnsecureConnection.Summary -->暗号化されていない接続の確立が許可されてれば **true**<!-- END REF --> を格納します。
 
 It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
 
@@ -56,7 +56,7 @@ Available secured ports are:
 
 #### 説明
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+`.authenticationMode` プロパティは、 <!-- REF #transporter.authenticationMode.Summary -->メールサーバーのセッションを開くのに使用される認証モード<!-- END REF -->を格納します。
 
 By default, the most secured mode supported by the server is used.
 
@@ -87,7 +87,7 @@ Possible values are:
 
 #### 説明
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+`.authenticationMode` プロパティは、メールサーバーのセッションを開くのに使用される認証モードを格納します。
 
 By default, the most secured mode supported by the server is used.
 
@@ -119,7 +119,7 @@ Possible values are:
 
 #### 説明
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+`.authenticationMode` プロパティは、メールサーバーのセッションを開くのに使用される認証モードを格納します。
 
 By default, the most secured mode supported by the server is used.
 
