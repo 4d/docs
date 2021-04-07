@@ -11,7 +11,7 @@ You initialize a combo box in exactly the same way as a drop-down list, using an
 
 When the user enters text into the combo box:
 
-- in the case of a combo box associated [with an object](dropdownListOverview.md#using-an-object), the `currentValue` property of the object gets the entered text,
+- in the case of a combo box associated [with an object](dropdownList_Overview.md#using-an-object), the `currentValue` property of the object gets the entered text,
 - in the case of a combo box associated with an array, the 0th element of the array gets the entered text. 
 
 In other respects, you treat a combo box as an enterable area that uses its object, array or a choice list as the set of default values.
