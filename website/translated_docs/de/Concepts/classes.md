@@ -129,7 +129,7 @@ $instance:=cs.myClass.new()
 | ---------- | ------ | -- | -------------------- |
 | classStore | object | <- | Store für 4D Klassen |
 
-Der Befehl `4D` gibt den Store für in 4D vorgegebene Klassen zurück. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
+Der Befehl `4D` gibt den Store für in 4D vorgegebene Klassen zurück. Er bietet Zugriff auf spezifische APIs wie [CryptoKey](API/CryptoKeyClass.md).
 
 #### Beispiel
 
@@ -144,7 +144,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## Objekt Class
 
-Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie in die 4D Programmiersprache Umgebung geladen. A class is an object itself, of ["Class" class](API/ClassClass.md). Ein Objekt class hat folgende Eigenschaften und Funktionen:
+Ist in einem Projekt eine Klasse [definiert](#eine-klasse-definieren), wird sie in die 4D Programmiersprache Umgebung geladen. Eine Klasse ist selbst ein Objekt der Klasse ["class"](API/ClassClass.md). Ein Objekt class hat folgende Eigenschaften und Funktionen:
 
 - [`name`](API/ClassClass.md#name) string
 - [`superclass`](API/ClassClass.md#superclass) object (null if none)
