@@ -587,7 +587,7 @@ Executing this function does not actually remove messages. Messages with the "de
 
 #### 例題 1
 
-選択された複数のメッセージを削除します:
+選択されたメッセージを削除します:
 
 
 ```4d
@@ -836,7 +836,7 @@ The `boxInfo` object returned contains the following properties:
  $transporter:=IMAP New transporter($server)
 
  $info:=$transporter.getBoxInfo("INBOX")
- ALERT("INBOX contains "+String($info.mailRecent)+" recent emails.")
+ ALERT("INBOX には "+String($info.mailRecent)+" 件の最近のメールがあります。")
 ```
 
 <!-- END REF -->
@@ -858,10 +858,10 @@ The `boxInfo` object returned contains the following properties:
 **.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| 参照         | タイプ    |    | 説明                            |
-| ---------- | ------ |:--:| ----------------------------- |
-| parameters | オブジェクト | -> | Parameter object              |
-| 戻り値        | コレクション | <- | Collection of mailbox objects |
+| 参照         | タイプ    |    | 説明                    |
+| ---------- | ------ |:--:| --------------------- |
+| parameters | オブジェクト | -> | Parameter object      |
+| 戻り値        | コレクション | <- | mailbox オブジェクトのコレクション |
 <!-- END REF -->
 
 
@@ -904,7 +904,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
  For each($box;$boxList)
     If($box.interesting)
        $split:=Split string($box.name;$transporter.getDelimiter())
-       ALERT("New emails are available in the box: "+$split[$split.length-1])
+       ALERT("新規メールが届いています: "+$split[$split.length-1])
     End if
  End for each
 ```
@@ -926,9 +926,9 @@ If the account does not contain any mailboxes, an empty collection is returned.
 **.getDelimiter()** : Text<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
-| 参照  | タイプ  |    | 説明                            |
-| --- | ---- |:--:| ----------------------------- |
-| 戻り値 | テキスト | <- | Hierarchy delimiter character |
+| 参照  | タイプ  |    | 説明      |
+| --- | ---- |:--:| ------- |
+| 戻り値 | テキスト | <- | 階層区切り文字 |
 <!-- END REF -->
 
 
@@ -936,15 +936,15 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 The `.getDelimiter()` function <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
 
-The delimiter is a character which can be used to:
+この区切り文字は以下のように使用することができます:
 
-*   create lower level (inferior) mailboxes
-*   search higher or lower within the mailbox hierarchy
+*   下層レベルのメールボックスを作成する
+*   メールボックスの階層内での上層・下層レベルを検索する
 
 
 #### 戻り値
 
-Mailbox name delimiter character.
+メールボックス名の区切り文字
 > * If there is no open connection, `.getDelimiter()` will open a connection.
 > * If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection()`](#checkconnection) function is automatically called.
 
@@ -962,7 +962,7 @@ Mailbox name delimiter character.
  For each($box;$boxList)
     If($box.interesting)
        $split:=Split string($box.name;$transporter.getDelimiter())
-       ALERT("New emails are available in the box: "+$split[$split.length-1])
+       ALERT("新規メールが届いています: "+$split[$split.length-1])
     End if
  End for each
 ```
@@ -986,9 +986,9 @@ Mailbox name delimiter character.
 <!-- REF #IMAPTransporterClass.getMail().Params -->
 | 参照        | タイプ    |    | 説明                                               |
 | --------- | ------ |:--:| ------------------------------------------------ |
-| msgNumber | 整数     | -> | Sequence number of the message                   |
+| msgNumber | 整数     | -> | メッセージのシーケンス番号                                    |
 | msgID     | テキスト   | -> | Unique ID of the message                         |
-| options   | オブジェクト | -> | Message handling instructions                    |
+| options   | オブジェクト | -> | メッセージ管理オプション                                     |
 | 戻り値       | オブジェクト | <- | [Email オブジェクト](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
@@ -1020,7 +1020,7 @@ The optional *options* parameter allows you pass an object defining additional i
 
 #### 例題
 
-You want to get the message with ID = 1:
+ID = 1のメッセージを取得します:
 
 ```4d
  var $server : Object
@@ -1028,18 +1028,18 @@ You want to get the message with ID = 1:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //create transporter
+  // transporter を作成します
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //メールボックスを選択します
  $boxInfo:=$transporter.selectBox("Inbox")
 
-  //get Email object with ID 1
+  // ID = 1 の Emailオブジェクトを取得します
  $mail:=$transporter.getMail(1)
 ```
 
@@ -1060,13 +1060,13 @@ You want to get the message with ID = 1:
 **.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| 参照       | タイプ    |    | 説明                                                     |
-| -------- | ------ |:--:| ------------------------------------------------------ |
-| ids      | コレクション | -> | Collection of message ID                               |
-| startMsg | 整数     | -> | Sequence number of the first message                   |
-| endMsg   | 整数     | -> | Sequence number of the last message                    |
-| options  | オブジェクト | -> | Message handling instructions                          |
-| 戻り値      | オブジェクト | <- | Object containing:<br><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul> |
+| 参照       | タイプ    |    | 説明                                                       |
+| -------- | ------ |:--:| -------------------------------------------------------- |
+| ids      | コレクション | -> | メッセージID のコレクション                                          |
+| startMsg | 整数     | -> | 先頭メッセージのシーケンス番号                                          |
+| endMsg   | 整数     | -> | 最後のメッセージのシーケンス番号                                         |
+| options  | オブジェクト | -> | メッセージ管理オプション                                             |
+| 戻り値      | オブジェクト | <- | 次のコレクションを格納したオブジェクト:<br><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul> |
 <!-- END REF -->
 
 
@@ -1074,7 +1074,7 @@ You want to get the message with ID = 1:
 
 The `.getMails()` function <!-- REF #IMAPTransporterClass.getMails().Summary -->returns an object containing a collection of `Email` objects<!-- END REF -->.
 
-**First Syntax:**
+**第一シンタックス:**
 
 ***.getMails( ids { ; options } ) -> result***
 
@@ -1084,7 +1084,7 @@ In the *ids* parameter, pass a collection of IDs for the messages to return. You
 
 The optional *options* parameter allows you to define the parts of the messages to be returned. See the **Options** table below for a description of the available properties.
 
-**Second syntax:**
+**第二シンタックス:**
 
  ***.getMails( startMsg ; endMsg { ; options } ) -> result***
 
@@ -1127,7 +1127,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
  var $transporter : 4D.IMAPTransporter 
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -1135,11 +1135,11 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
   //create transporter
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  // メールボックスを選択します
  $boxInfo:=$transporter.selectBox("INBOX")
 
   If($boxInfo.mailCount>0)
-        // retrieve the headers of the last 20 messages without marking them as read
+        // 直近20件のメッセージのヘッダーを、"既読" にせずに取得します
     $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
         New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
@@ -1166,12 +1166,12 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
-| 参照         | タイプ  |    | 説明                                                                                            |
-| ---------- | ---- |:--:| --------------------------------------------------------------------------------------------- |
-| msgNumber  | 整数   | -> | Sequence number of the message                                                                |
-| msgID      | テキスト | -> | Unique ID of the message                                                                      |
-| updateSeen | ブール  | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
-| 戻り値        | BLOB | <- | Blob of the MIME string returned from the mail server                                         |
+| 参照         | タイプ  |    | 説明                                                            |
+| ---------- | ---- |:--:| ------------------------------------------------------------- |
+| msgNumber  | 整数   | -> | メッセージのシーケンス番号                                                 |
+| msgID      | テキスト | -> | Unique ID of the message                                      |
+| updateSeen | ブール  | -> | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 |
+| 戻り値        | BLOB | <- | メールサーバーから返された MIME文字列の BLOB                                   |
 <!-- END REF -->
 
 
@@ -1215,13 +1215,13 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //create transporter
+  // transporter を作成します
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  // メールボックスを選択します
  $boxInfo:=$transporter.selectBox("Inbox")
 
-  //get BLOB
+  // BLOB を取得します
  $blob:=$transporter.getMIMEAsBlob(1)
 ```
 
@@ -1252,12 +1252,12 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 **.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.move().Params -->
-| 参照             | タイプ    |    | 説明                                |
-| -------------- | ------ |:--:| --------------------------------- |
-| msgsIDs        | コレクション | -> | メッセージの固有ID のコレクション (テキスト)         |
-| allMsgs        | 整数     | -> | `IMAP all`: 選択されたメールボックスの全メッセージ   |
-| destinationBox | テキスト   | -> | Mailbox to receive moved messages |
-| 戻り値            | オブジェクト | <- | Status of the move operation      |
+| 参照             | タイプ    |    | 説明                              |
+| -------------- | ------ |:--:| ------------------------------- |
+| msgsIDs        | コレクション | -> | メッセージの固有ID のコレクション (テキスト)       |
+| allMsgs        | 整数     | -> | `IMAP all`: 選択されたメールボックスの全メッセージ |
+| destinationBox | テキスト   | -> | メッセージの移動先のメールボックス               |
+| 戻り値            | オブジェクト | <- | move処理のステータス                    |
 <!-- END REF -->
 
 
@@ -1293,7 +1293,7 @@ The *destinationBox* parameter allows you to pass a text value with the name of 
 
 #### 例題 1
 
-To move a selection of messages:
+選択されたメッセージを移動します:
 
 ```4d
  var $server;$boxInfo;$status : Object
@@ -1301,26 +1301,26 @@ To move a selection of messages:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  // メールボックスを選択します
  $boxInfo:=$transporter.selectBox("inbox")
 
-  //get collection of message unique IDs
+  // メッセージの固有IDのコレクションを取得します
  $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
 
-  // Move found messages from the current mailbox to the "documents" mailbox
+  // カレントメールボックス内で見つかったメッセージを "documents" メールボックスに移動します
  $status:=$transporter.move($mailIds;"documents")
 ```
 
 #### 例題 2
 
-To move all messages in the current mailbox:
+カレントメールボックスの全メッセージを移動します:
 
 
 ```4d
@@ -1328,17 +1328,17 @@ To move all messages in the current mailbox:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  // メールボックスを選択します
  $boxInfo:=$transporter.selectBox("inbox")
 
-  // move all messages in the current mailbox to the "documents" mailbox
+  // カレントメールボックスの全メッセージを "documents" メールボックスに移動します
  $status:=$transporter.move(IMAP all;"documents")
 ```
 
@@ -1359,11 +1359,11 @@ To move all messages in the current mailbox:
 **.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
-| 参照       | タイプ    |    | 説明                                   |
-| -------- | ------ |:--:| ------------------------------------ |
-| startMsg | 整数     | -> | Sequence number of the first message |
-| endMsg   | 整数     | -> | Sequence number of the last message  |
-| 戻り値      | コレクション | <- | Collection of unique IDs             |
+| 参照       | タイプ    |    | 説明               |
+| -------- | ------ |:--:| ---------------- |
+| startMsg | 整数     | -> | 先頭メッセージのシーケンス番号  |
+| endMsg   | 整数     | -> | 最後のメッセージのシーケンス番号 |
+| 戻り値      | コレクション | <- | 固有ID のコレクション     |
 <!-- END REF -->
 
 
@@ -1378,7 +1378,7 @@ In the *endMsg* parameter, pass an integer value corresponding to the number of 
 
 #### 戻り値
 
-The function returns a collection of strings (unique IDs).
+メソッドは文字列 (固有ID) のコレクションを返します。
 
 #### 例題
 
