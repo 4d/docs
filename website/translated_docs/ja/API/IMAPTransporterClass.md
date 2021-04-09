@@ -357,12 +357,12 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 **.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
-| 参照             | タイプ    |    | 説明                                               |
-| -------------- | ------ |:--:| ------------------------------------------------ |
-| msgsIDs        | コレクション | -> | Collection of message unique IDs (strings)       |
-| allMsgs        | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
-| destinationBox | テキスト   | -> | Mailbox to receive copied messages               |
-| 戻り値            | オブジェクト | <- | Status of the copy operation                     |
+| 参照             | タイプ    |    | 説明                              |
+| -------------- | ------ |:--:| ------------------------------- |
+| msgsIDs        | コレクション | -> | メッセージの固有ID のコレクション (テキスト)       |
+| allMsgs        | 整数     | -> | `IMAP all`: 選択されたメールボックスの全メッセージ |
+| destinationBox | テキスト   | -> | メッセージのコピー先のメールボックス              |
+| 戻り値            | オブジェクト | <- | copy処理のステータス                    |
 <!-- END REF -->
 
 
@@ -396,7 +396,7 @@ The *destinationBox* parameter allows you to pass a text value with the name of 
 
 #### 例題 1
 
-To copy a selection of messages:
+選択されたメッセージをコピーします:
 
 
 ```4d
@@ -405,26 +405,26 @@ To copy a selection of messages:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  // メールボックスを選択します
  $boxInfo:=$transporter.selectBox("inbox")
 
-  //get collection of message unique IDs
+  //  メッセージの固有ID のコレクションを取得します
  $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
 
-  // copy found messages to the "documents" mailbox
+  // 見つかったメッセージを "documents" メールボックスへコピーします
  $status:=$transporter.copy($mailIds;"documents")
 ```
 
 #### 例題 2
 
-To copy all messages in the current mailbox:
+カレントメールボックスの全メッセージをコピーします:
 
 
 ```4d
@@ -548,11 +548,11 @@ End if
 **.delete**( *msgsIDs* : Collection ) : Object<br>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
-| 参照      | タイプ    |    | 説明                                               |
-| ------- | ------ |:--:| ------------------------------------------------ |
-| msgsIDs | コレクション | -> | Collection of message unique IDs (strings)       |
-| allMsgs | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
-| 戻り値     | オブジェクト | <- | delete処理のステータス                                   |
+| 参照      | タイプ    |    | 説明                              |
+| ------- | ------ |:--:| ------------------------------- |
+| msgsIDs | コレクション | -> | メッセージの固有ID のコレクション (テキスト)       |
+| allMsgs | 整数     | -> | `IMAP all`: 選択されたメールボックスの全メッセージ |
+| 戻り値     | オブジェクト | <- | delete処理のステータス                  |
 <!-- END REF -->
 
 
@@ -587,7 +587,7 @@ Executing this function does not actually remove messages. Messages with the "de
 
 #### 例題 1
 
-To delete a selection of messages:
+選択された複数のメッセージを削除します:
 
 
 ```4d
@@ -596,26 +596,26 @@ To delete a selection of messages:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  // メールボックスを選択します
  $boxInfo:=$transporter.selectBox("Inbox")
 
-  //get collection of message unique IDs
+  // メッセージの固有ID のコレクションを取得します
  $mailIds:=$transporter.searchMails("subject \"Reports\"")
 
-  // Delete selected messages
+  // 選択されたメッセージを削除します
  $status:=$transporter.delete($mailIds)
 ```
 
 #### 例題 2
 
-To delete all messages in the current mailbox:
+カレントメールボックスの全メッセージを削除します:
 
 
 ```4d
@@ -623,17 +623,17 @@ To delete all messages in the current mailbox:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //メールボックスを選択します
  $boxInfo:=$transporter.selectBox("Junk Email")
 
-  // delete all messages in the current mailbox
+  // カレントメールボックスの全メッセージを削除します
  $status:=$transporter.delete(IMAP all)
 ```
 
@@ -737,9 +737,9 @@ End if
 **.expunge()** : Object<!-- END REF -->
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
-| 参照  | タイプ    |    | 説明                              |
-| --- | ------ |:--:| ------------------------------- |
-| 戻り値 | オブジェクト | <- | Status of the expunge operation |
+| 参照  | タイプ    |    | 説明              |
+| --- | ------ |:--:| --------------- |
+| 戻り値 | オブジェクト | <- | expunge処理のステータス |
 <!-- END REF -->
 
 #### 説明
@@ -772,17 +772,17 @@ $options.port:=993
 $options.user:="4d@gmail.com"
 $options.password:="xxxxx"
 
-// Create transporter
+// transporter を作成します
 $transporter:=IMAP New transporter($options)
 
-// Select mailbox
+// メールボックスを選択します
 $boxInfo:=$transporter.selectBox("INBOX")
 
-// Find and delete all seen messages in INBOX
+// INBOX の既読メッセージに削除フラグを立てます
 $ids:=$transporter.searchMails("SEEN")
 $status:=$transporter.delete($ids)
 
-// Purge all messages flagged as deleted
+// "deleted" フラグがついたメッセージをすべて消去します
 $status:=$transporter.expunge()
 ```
 
@@ -793,20 +793,20 @@ $status:=$transporter.expunge()
 ## .getBoxInfo()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容               |
-| ------ | ---------------- |
-| v18 R5 | name is optional |
-| v18 R4 | 追加               |
+| バージョン  | 内容        |
+| ------ | --------- |
+| v18 R5 | name が任意に |
+| v18 R4 | 追加        |
 </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
 **.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
-| 参照   | タイプ    |    | 説明                  |
-| ---- | ------ |:--:| ------------------- |
-| name | テキスト   | -> | Name of the mailbox |
-| 戻り値  | オブジェクト | <- | boxInfo object      |
+| 参照   | タイプ    |    | 説明             |
+| ---- | ------ |:--:| -------------- |
+| name | テキスト   | -> | メールボックスの名称     |
+| 戻り値  | オブジェクト | <- | boxInfo オブジェクト |
 <!-- END REF -->
 
 
@@ -823,7 +823,7 @@ The `boxInfo` object returned contains the following properties:
 
 | プロパティ      | タイプ    | 説明                                                                  |
 | ---------- | ------ | ------------------------------------------------------------------- |
-| name       | text   | Name of the mailbox                                                 |
+| name       | text   | メールボックスの名称                                                          |
 | mailCount  | number | Number of messages in the mailbox                                   |
 | mailRecent | number | Number of messages with the "recent" flag (indicating new messages) |
 
@@ -881,7 +881,7 @@ Each object of the returned collection contains the following properties:
 
 | プロパティ            | タイプ     | 説明                                                                                                                   |
 | ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | text    | Name of the mailbox                                                                                                  |
+| \[].name        | text    | メールボックスの名称                                                                                                           |
 | \[].selectable  | boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>               |
 | \[].inferior    | boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul> |
 | \[].interesting | boolean | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>                      |
@@ -1252,12 +1252,12 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 **.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.move().Params -->
-| 参照             | タイプ    |    | 説明                                               |
-| -------------- | ------ |:--:| ------------------------------------------------ |
-| msgsIDs        | コレクション | -> | Collection of message unique IDs (strings)       |
-| allMsgs        | 整数     | -> | `IMAP all`: All messages in the selected mailbox |
-| destinationBox | テキスト   | -> | Mailbox to receive moved messages                |
-| 戻り値            | オブジェクト | <- | Status of the move operation                     |
+| 参照             | タイプ    |    | 説明                                |
+| -------------- | ------ |:--:| --------------------------------- |
+| msgsIDs        | コレクション | -> | メッセージの固有ID のコレクション (テキスト)         |
+| allMsgs        | 整数     | -> | `IMAP all`: 選択されたメールボックスの全メッセージ   |
+| destinationBox | テキスト   | -> | Mailbox to receive moved messages |
+| 戻り値            | オブジェクト | <- | Status of the move operation      |
 <!-- END REF -->
 
 
@@ -1728,9 +1728,9 @@ Search-keys may request the value to search for:
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
 | 参照    | タイプ    |    | 説明                    |
 | ----- | ------ |:--:| --------------------- |
-| name  | テキスト   | -> | Name of the mailbox   |
+| name  | テキスト   | -> | メールボックスの名称            |
 | state | 整数     | -> | Mailbox access status |
-| 戻り値   | オブジェクト | <- | boxInfo object        |
+| 戻り値   | オブジェクト | <- | boxInfo オブジェクト        |
 <!-- END REF -->
 
 
@@ -1757,7 +1757,7 @@ The `boxInfo` object returned contains the following properties:
 
 | プロパティ      | タイプ    | 説明                                        |
 | ---------- | ------ | ----------------------------------------- |
-| name       | テキスト   | Name of the mailbox                       |
+| name       | テキスト   | メールボックスの名称                                |
 | mailCount  | number | Number of messages in the mailbox         |
 | mailRecent | number | Number of messages with the "recent" flag |
 
@@ -1796,7 +1796,7 @@ The `boxInfo` object returned contains the following properties:
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 | 参照   | タイプ    |    | 説明                                |
 | ---- | ------ |:--:| --------------------------------- |
-| name | テキスト   | -> | Name of the mailbox               |
+| name | テキスト   | -> | メールボックスの名称                        |
 | 戻り値  | オブジェクト | <- | Status of the subscribe operation |
 <!-- END REF -->
 
@@ -1869,7 +1869,7 @@ End if
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 | 参照   | タイプ    |    | 説明                                  |
 | ---- | ------ |:--:| ----------------------------------- |
-| name | テキスト   | -> | Name of the mailbox                 |
+| name | テキスト   | -> | メールボックスの名称                          |
 | 戻り値  | オブジェクト | <- | Status of the unsubscribe operation |
 <!-- END REF -->
 
