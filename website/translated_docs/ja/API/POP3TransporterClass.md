@@ -271,7 +271,7 @@ The `boxInfo` object returned contains the following properties:
 | 参照        | タイプ    |    | 説明                                               |
 | --------- | ------ |:--:| ------------------------------------------------ |
 | msgNumber | 整数     | -> | リスト中のメッセージの番号                                    |
-| 戻り値       | オブジェクト | <- | [Email object](EmailObjectClass.md#email-object) |
+| 戻り値       | オブジェクト | <- | [Email オブジェクト](EmailObjectClass.md#email-object) |
 <!-- END REF -->
 
 
