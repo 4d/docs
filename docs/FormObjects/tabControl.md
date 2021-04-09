@@ -61,11 +61,10 @@ You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](C
 
 The initialization code must be executed before the form is presented to the user. 
 
-In the following example, `Form.tabControl` has been defined as tab control [expression](propertiesObject.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+In the following example, `Form.tabControl` has been defined as tab control [expression](properties_Object.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
 
 ```4d
 Form.tabControl:=New object
-Form.tabControl.currentValue:=""
 Form.tabControl.values:=New collection("Page 1"; "Page 2"; "Page 3")
 Form.tabControl.index:=2 //start on page 3
 ```
