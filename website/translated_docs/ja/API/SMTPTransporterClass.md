@@ -34,11 +34,11 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 ## SMTP New transporter
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                           |
-| ------ | -------------------------------------------- |
-| v18    | New logFile property                         |
-| v17 R5 | New bodyCharset and headerCharset properties |
-| v17 R4 | 追加                                           |
+| バージョン  | 内容                                   |
+| ------ | ------------------------------------ |
+| v18    | logFile プロパティを追加                     |
+| v17 R5 | bodyCharset と headerCharset プロパティを追加 |
+| v17 R4 | 追加                                   |
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
@@ -48,13 +48,13 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 | 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
 | server | オブジェクト             | -> | Mail server information                             |
-| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-object) |
 <!-- END REF -->
 
 
 #### 説明
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
+`SMTP New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。戻り値は、新しい *[SMTP transporter](#smtp-transporter-object)* オブジェクトです。 The returned transporter object will then usually be used to send emails.
 
 > This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.  
 > 
@@ -85,7 +85,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### 戻り値
 
-The function returns a [**SMTP transporter object**](#smtp-transporter-object). All returned properties are **read-only**.
+この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-object) を返します。 All returned properties are **read-only**.
 
 
 #### 例題
@@ -128,12 +128,12 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 | 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
 | server | オブジェクト             | -> | Mail server information                             |
-| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### 説明
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
 
 
 
