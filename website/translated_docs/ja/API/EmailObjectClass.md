@@ -508,7 +508,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 | 参照   | タイプ       |    | 説明           |
 | ---- | --------- |:--:| ------------ |
 | mime | BLOB、テキスト | -> | MIME形式のメール   |
-| 戻り値  | オブジェクト    | <- | Email object |
+| 戻り値  | オブジェクト    | <- | Email オブジェクト |
 <!-- END REF -->
 
 #### 説明
@@ -594,7 +594,7 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
 | 参照      | タイプ    |    | 説明                      |
 | ------- | ------ |:--:| ----------------------- |
-| mail    | オブジェクト | -> | Email object            |
+| mail    | オブジェクト | -> | Email オブジェクト            |
 | options | オブジェクト | -> | 文字セットとエンコーディングのメールオプション |
 | 戻り値     | テキスト   | <- | MIME に変換された Emailオブジェクト |
 <!-- END REF -->
