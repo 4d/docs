@@ -34,11 +34,11 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 ## SMTP New transporter
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                                           |
-| ------ | -------------------------------------------- |
-| v18    | New logFile property                         |
-| v17 R5 | New bodyCharset and headerCharset properties |
-| v17 R4 | 追加                                           |
+| バージョン  | 内容                                   |
+| ------ | ------------------------------------ |
+| v18    | logFile プロパティを追加                     |
+| v17 R5 | bodyCharset と headerCharset プロパティを追加 |
+| v17 R4 | 追加                                   |
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
@@ -47,14 +47,14 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 <!-- REF #_command_.SMTP New transporter.Params -->
 | 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
-| server | オブジェクト             | -> | Mail server information                             |
-| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| server | オブジェクト             | -> | メールサーバー情報                                           |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-object) |
 <!-- END REF -->
 
 
 #### 説明
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
+`SMTP New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。戻り値は、新しい *[SMTP transporter](#smtp-transporter-object)* オブジェクトです。 The returned transporter object will then usually be used to send emails.
 
 > This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.  
 > 
@@ -85,7 +85,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### 戻り値
 
-The function returns a [**SMTP transporter object**](#smtp-transporter-object). All returned properties are **read-only**.
+この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-object) を返します。 All returned properties are **read-only**.
 
 
 #### 例題
@@ -127,13 +127,13 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 | 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
-| server | オブジェクト             | -> | Mail server information                             |
-| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| server | オブジェクト             | -> | メールサーバー情報                                           |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### 説明
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
 
 
 
@@ -213,7 +213,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 #### 説明
 
-The `.keepAlive` property contains <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
+`.keepAlive` プロパティは、 <!-- REF #SMTPTransporterClass.keepAlive.Summary -->`transporter` オブジェクトが抹消されるまで、SMTP接続が維持されなければならない場合に **true**<!-- END REF -->、それ以外は **False** を格納します。 By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
 
 The SMTP connection is automatically closed:
 
@@ -238,26 +238,26 @@ The SMTP connection is automatically closed:
 ## .send()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                       |
-| ------ | ------------------------ |
-| v17 R5 | Support of mime contents |
-| v17 R4 | 追加                       |
+| バージョン  | 内容             |
+| ------ | -------------- |
+| v17 R5 | MIMEコンテンツをサポート |
+| v17 R4 | 追加             |
 </details>
 
 <!-- REF #SMTPTransporterClass.send().Syntax -->
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| 参照   | タイプ    |    | 説明                                                |
-| ---- | ------ |:--:| ------------------------------------------------- |
-| mail | オブジェクト | -> | [Email](EmailObjectClass.md#email-object) to send |
-| 戻り値  | オブジェクト | <- | SMTP status                                       |
+| 参照   | タイプ    |    | 説明                                           |
+| ---- | ------ |:--:| -------------------------------------------- |
+| mail | オブジェクト | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
+| 戻り値  | オブジェクト | <- | SMTP ステータス                                   |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
+`.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
 > The `transporter` object must have already been created using the `SMTP New transporter` command.
 
 The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the `SMTP New transporter` command description.
