@@ -46,8 +46,8 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 <!-- REF POP3TransporterClass.POP3 New transporter.Params -->
 | 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
-| server | object             | -> | Mail server information                             |
-| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-object) |
+| server | object             | -> | メールサーバー情報                                           |
+| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-オブジェクト) |
 <!-- END REF -->
 
 
@@ -107,8 +107,8 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | 参照     | タイプ                |    | 説明                                                  |
 | ------ | ------------------ |:--:| --------------------------------------------------- |
-| server | オブジェクト             | -> | Mail server information                             |
-| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-object) |
+| server | オブジェクト             | -> | メールサーバー情報                                           |
+| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-オブジェクト) |
 <!-- END REF -->
 
 #### 説明
@@ -177,7 +177,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 ##### 説明
 
-The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->flags the *msgNumber* email for deletion from the POP3 server<!-- END REF -->.
+`.delete( )` 関数は、 <!-- REF #POP3TransporterClass.delete().Summary -->*msgNumber* で指定したメールメッセージに対して、POP3サーバーから削除するためのフラグを立てます<!-- END REF -->。
 
 In the *msgNumber* parameter, pass the number of the email to delete. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
 
@@ -224,7 +224,7 @@ Executing this method does not actually remove any email. The flagged email will
 
 ##### 説明
 
-The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+`.getBoxInfo()` 関数は、 <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->対象の [`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->。 This function allows you to retrieve information about the mailbox.
 
 The `boxInfo` object returned contains the following properties:
 
@@ -241,16 +241,16 @@ The `boxInfo` object returned contains the following properties:
  var $server; $boxinfo : Object
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" // 必須
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=POP3 New transporter($server)
 
-  //mailbox info
+  // メールボックス情報
  $boxInfo:=$transporter.getBoxInfo()
- ALERT("The mailbox contains "+String($boxInfo.mailCount)+" messages.")
+ ALERT("メールボックスには "+String($boxInfo.mailCount)+" 件のメッセージがあります。")
 ```
 
 
@@ -277,7 +277,7 @@ The `boxInfo` object returned contains the following properties:
 
 ##### 説明
 
-The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. This function allows you to locally handle the email contents.
+`.getMail()` 関数は、 <!-- REF #POP3TransporterClass.getMail().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 This function allows you to locally handle the email contents.
 
 Pass in *msgNumber* the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) function.
 
@@ -289,7 +289,7 @@ The method returns Null if:
 
 **返されるオブジェクト**
 
-`.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
+`.getMail()` は [`Email` オブジェクト](EmailObjectClass.md#email-object) を返します。
 
 
 ##### 例題
@@ -302,7 +302,7 @@ You want to know the sender of the first mail of the mailbox:
  var $sender : Variant
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" // 必須
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -331,13 +331,13 @@ You want to know the sender of the first mail of the mailbox:
 | 参照        | タイプ    |    | 説明              |
 | --------- | ------ |:--:| --------------- |
 | msgNumber | 整数     | -> | リスト中のメッセージの番号   |
-| 戻り値       | オブジェクト | <- | mailInfo object |
+| 戻り値       | オブジェクト | <- | MailInfo オブジェクト |
 <!-- END REF -->
 
 
 ##### 説明
 
-The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summary -->returns a `mailInfo` object corresponding  corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. This function allows you to retrieve information about the email.
+`.getMailInfo()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfo().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールの `mailInfo` オブジェクトを返します<!-- END REF -->。 This function allows you to retrieve information about the email.
 
 In *msgNumber*, pass the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfo) method.
 
@@ -361,7 +361,7 @@ The method returns **Null** if:
  var $server; $mailInfo : Object
  var $mailNumber : Integer
 
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" // 必須
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -369,10 +369,10 @@ The method returns **Null** if:
  var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
 
-  //message info
- $mailInfo:=$transporter.getMailInfo(1) //get the first mail
+  // メッセージ情報
+ $mailInfo:=$transporter.getMailInfo(1) // 先頭メールを取得します
  If($mailInfo #Null)
-    ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+    ALERT("最初のメールのサイズは "+String($mailInfo.size)+" バイトです。")
  End if
 ```
 
@@ -391,23 +391,23 @@ The method returns **Null** if:
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| 参照  | タイプ    |    | 説明                               |
-| --- | ------ |:--:| -------------------------------- |
-| 戻り値 | コレクション | <- | Collection of `mailInfo` objects |
+| 参照  | タイプ    |    | 説明                       |
+| --- | ------ |:--:| ------------------------ |
+| 戻り値 | コレクション | <- | `mailInfo` オブジェクトのコレクション |
 <!-- END REF -->
 
 
 ##### 説明
 
-The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->returns a collection of `mailInfo` objects describing all messages in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. This function allows you to locally manage the list of messages located on the POP3 mail server.
+`.getMailInfoList()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト)が指定するメールボックス内の全メッセージについて記述した `mailInfo` オブジェクトのコレクションを返します<!-- END REF -->。 This function allows you to locally manage the list of messages located on the POP3 mail server.
 
 Each `mailInfo` object in the returned collection contains the following properties:
 
-| プロパティ        | タイプ  | 説明                                                                 |
-| ------------ | ---- | ------------------------------------------------------------------ |
-| \[ ].size   | 数値   | Message size in bytes                                              |
-| \[ ].number | 数値   | Message number                                                     |
-| \[ ].id     | テキスト | Unique ID of the message (useful if you store the message locally) |
+| プロパティ        | タイプ  | 説明                                  |
+| ------------ | ---- | ----------------------------------- |
+| \[ ].size   | 数値   | Message size in bytes               |
+| \[ ].number | 数値   | メッセージの番号                            |
+| \[ ].id     | テキスト | メッセージの固有ID (メッセージをローカルに保存する場合に有用です) |
 
 If the mailbox does not contain a message, an empty collection is returned.
 
@@ -427,7 +427,7 @@ You want to know the total number and size of emails in the mailbox:
 ```4d
  var $server : Object
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" // 必須
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -442,7 +442,7 @@ You want to know the total number and size of emails in the mailbox:
  $vNum:=$mailInfo.length
  $vSize:=$mailInfo.sum("size")
 
- ALERT("The mailbox contains "+String($vNum)+" message(s) for "+String($vSize)+" bytes.")
+ ALERT("メールボックスには "+String($vNum)+" 件のメッセージがあります。合計サイズは "+String($vSize)+" バイトです。")
 ```
 
 
@@ -469,7 +469,7 @@ You want to know the total number and size of emails in the mailbox:
 
 ##### 説明
 
-The `.getMIMEAsBlob()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* in the mailbox designated by the [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
+`.getMIMEAsBlob()` 関数は、 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->。
 
 In *msgNumber*, pass the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
 
@@ -546,7 +546,7 @@ You want to know the total number and size of emails in the mailbox:
 
 ##### 説明
 
-The `.undeleteAll()` function <!-- REF #POP3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->. 
+`.undeleteAll()` 関数は、 <!-- REF #POP3TransporterClass.undeleteAll().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) 内のメールに設定された削除フラグをすべて除去します<!-- END REF -->。 
 
 <!-- END REF -->
 
