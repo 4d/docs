@@ -460,10 +460,10 @@ You want to know the total number and size of emails in the mailbox:
 **.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| 参照        | タイプ  |    | 説明                                                    |
-| --------- | ---- |:--:| ----------------------------------------------------- |
-| msgNumber | 整数   | -> | リスト中のメッセージの番号                                         |
-| 戻り値       | BLOB | <- | Blob of the MIME string returned from the mail server |
+| 参照        | タイプ  |    | 説明                          |
+| --------- | ---- |:--:| --------------------------- |
+| msgNumber | 整数   | -> | リスト中のメッセージの番号               |
+| 戻り値       | BLOB | <- | メールサーバーから返された MIME文字列の BLOB |
 <!-- END REF -->
 
 
