@@ -500,7 +500,7 @@ In the `name` parameter, pass the name of the new mailbox.
 
 #### 例題
 
-To create a new “Invoices” mailbox:
+新しい “Invoices” メールボックスを作成します:
 
 
 ```4d
@@ -509,7 +509,7 @@ var $options; $transporter; $status : object
 
 $options:=New object
 
-$pw:=Request("Please enter your password:")
+$pw:=Request("パスワードを入力してください:")
 If(OK=1)
 $options.host:="imap.gmail.com"
 $options.user:="test@gmail.com"
@@ -520,9 +520,9 @@ $transporter:=IMAP New transporter($options)
 $status:=$transporter.createBox("Invoices")
 
 If ($status.success)
-ALERT("Mailbox creation successful!")
+ALERT("メールボックスが作成できました。")
 Else
-ALERT("Error: "+$status.statusText)
+ALERT("エラー: "+$status.statusText)
 End if
 End if
 ```
@@ -687,7 +687,7 @@ In the `name` parameter, pass the name of the mailbox to delete.
 
 #### 例題
 
-To delete the "Nova Orion Industries" child mailbox from the "Bills" mailbox hierarchy:
+"Bills" メールボックスの階層から、"Nova Orion Industries" の子メールボックスを削除します:
 
 ```4d
 var $pw; $name : text
@@ -695,7 +695,7 @@ var $options; $transporter; $status : object
 
 $options:=New object
 
-$pw:=Request("Please enter your password:")
+$pw:=Request("パスワードを入力してください:")
 
 If(OK=1) $options.host:="imap.gmail.com"
 $options.user:="test@gmail.com"
@@ -708,9 +708,9 @@ $name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
 $status:=$transporter.deleteBox($name)
 
 If ($status.success)
-    ALERT("Mailbox deletion successful!")
+    ALERT("メールボックスが削除されました。")
     Else
-    ALERT("Error: "+$status.statusText)
+    ALERT("エラー: "+$status.statusText)
     End if
 End if
 ```
