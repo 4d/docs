@@ -349,11 +349,11 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 
 
-## Using object properties as named parameters 
+## Objekteigenschaften als benannte Parameter verwenden 
 
-Using objects as parameters allow you to handle **named parameters**. Dieser Programmierstil ist einfach, flexibel und leicht lesbar. 
+Bei Objekten als Parameter können Sie auch **benannte Parameter** verwalten. Dieser Programmierstil ist einfach, flexibel und leicht lesbar. 
 
-For example, using the `CreatePerson` method:
+Wir verwenden zum Beispiel die Methode `CreatePerson`:
 
 ```4d
   //CreatePerson
