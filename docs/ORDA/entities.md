@@ -374,7 +374,9 @@ This can also be illustrated by the following code:
 
 In this example, we assign to $person1 a reference to the person entity with a key of 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
 
-When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload( )` method so that you can try to make the modification again. The `entity.save( )` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
+When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
+
+> Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
 
 ### Pessimistic lock  
 
@@ -449,6 +451,7 @@ Thanks to the optimization, this request will only get data from used attributes
 You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
 
 A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency. 
+
 
 >A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method). 
 

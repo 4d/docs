@@ -115,7 +115,7 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 The `.attachments` property contains a <!-- REF #emailObjectClass.attachments.Summary -->collection of *attachment* object(s)<!-- END REF -->.
 
-Attachment objects are defined through the `MAIL New attachment` command.
+Attachment objects are defined through the [`MAIL New attachment`](https://doc.4d.com/4dv18/help/command/en/page1644.html) command.
 
 
 

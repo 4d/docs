@@ -39,7 +39,7 @@
         "title": "Directory クラス"
       },
       "API/document": {
-        "title": "Document Class"
+        "title": "Document クラス"
       },
       "API/emails": {
         "title": "Email"
@@ -63,7 +63,7 @@
         "title": "IMAPTransporter"
       },
       "API/overview": {
-        "title": "Class API Overview"
+        "title": "クラス API の概要"
       },
       "API/pop3TransporterClass": {
         "title": "POP3Transporter"
@@ -876,12 +876,14 @@
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "データベース管理",
     "Web applications|no description given": "Web アプリ",
     "Mobile applications|no description given": "モバイルアプリ",
     "Desktop applications|no description given": "デスクトップアプリ",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

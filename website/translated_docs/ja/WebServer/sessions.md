@@ -51,6 +51,8 @@ The current `Session` object can then be accessed through the [`Session`](API/se
 
 ![alt-text](assets/en/WebServer/schemaSession.png)
 
+> Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must by cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/sessionClass.md) object when you want to keep session related information.
+
 
 ## Sharing information
 
@@ -80,7 +82,7 @@ Privileges can be associated to sessions. On the web server, you can provide spe
 
 You can assign privileges usign the [`.setPrivileges()`](API/sessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/sessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/sessionClass.md#isguest) function returns true).
 
-> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
+> 現在の実装では (v18 R6)、"WebAdmin" アクセス権のみ利用可能です。
 
 例:
 
@@ -112,7 +114,6 @@ http://localhost:8044/authenticate.shtml
 
 
 2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
-
 
 ```html
 <!DOCTYPE html>

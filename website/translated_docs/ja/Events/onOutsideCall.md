@@ -3,7 +3,7 @@ id: onOutsideCall
 title: On Outside Call
 ---
 
-| Code | Can be called by | Definition                                   |
+| Code | Can be called by | 定義                                           |
 | ---- | ---------------- | -------------------------------------------- |
 | 10   | フォーム             | The form received a `POST OUTSIDE CALL` call |
 

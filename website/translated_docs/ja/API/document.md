@@ -1,6 +1,6 @@
 ---
 id: document
-title: Document Class
+title: Document クラス
 ---
 
 ## 説明
@@ -21,9 +21,9 @@ title: Document Class
 
 #### 説明
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
+`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日<!-- END REF -->を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
  
@@ -43,9 +43,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+`.creationTime` プロパティは、 <!-- REF #document.creationTime.Summary -->ファイルの作成時刻<!-- END REF --> を返します (00:00 からの経過秒数の形式)。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -67,9 +67,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
+`.exists` プロパティは、 <!-- REF #document.exists.Summary -->ディスク上にファイルが存在する場合は true を返します<!-- END REF -->(それ以外の場合は false)。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -92,9 +92,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+`.extension` プロパティは、 <!-- REF #document.extension.Summary -->ファイル名の拡張子<!-- END REF -->を返します (あれば)。 An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -116,9 +116,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+`.fullName` プロパティは、 <!-- REF #document.fullName.Summary -->拡張子 (あれば) を含めたファイルの完全な名称<!-- END REF -->を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -140,9 +140,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+`.hidden` プロパティは、 <!-- REF #document.hidden.Summary -->ファイルがシステムレベルで "非表示" に設定されていれば true<!-- END REF -->を返します (それ以外の場合は false)。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -164,9 +164,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
+`.isAlias` プロパティは、 <!-- REF #document.isAlias.Summary -->ファイルがエイリアス、ショートカット、シンボリックリンクのいずれかである場合には true<!-- END REF -->を返し、それ以外の場合には false を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -187,9 +187,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
+`.isFile` プロパティは、 <!-- REF #document.isFile.Summary -->ファイルに対しては常に true<!-- END REF -->を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -210,9 +210,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
+`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->ファイルに対しては常に false<!-- END REF -->を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -234,10 +234,10 @@ This property is **read-only**.
 
 #### 説明
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+`.isWritable` プロパティは、 <!-- REF #document.isWritable.Summary -->ファイルがディスク上に存在し、書き込み可能な場合に true<!-- END REF -->を返します。
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
 
-This property is **read-only**.
+このプロパティは **読み取り専用** です。
 
 **例題**
 
@@ -268,9 +268,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
+`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->ファイルの最終変更日<!-- END REF -->を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -292,9 +292,9 @@ This property is **read-only**.
 
 ##### 説明
 
-The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+`.modificationTime` プロパティは、 <!-- REF #document.modificationTime.Summary -->ファイルの最終変更時刻<!-- END REF --> を返します (00:00 からの経過秒数の形式)。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -315,9 +315,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+`.name` プロパティは、 <!-- REF #document.name.Summary -->拡張子 (あれば) を含まないファイル名<!-- END REF -->を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -337,14 +337,14 @@ This property is **read-only**.
 
 #### 説明
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
+`.original` プロパティは、 <!-- REF #document.original.Summary -->エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素<!-- END REF -->を返します。 ターゲット要素は以下のいずれかです:
 
-*   a file object
-*   a folder object
+*   File オブジェクト
+*   Folder オブジェクト
 
-For non-alias files, the property returns the same file object as the file.
+エイリアスでないファイルについては、プロパティは同じファイルオブジェクトをファイルとして返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -366,9 +366,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクト<!-- END REF -->を返します。 If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -390,9 +390,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパス<!-- END REF -->を返します。 If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -413,9 +413,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
+`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたファイルのパス<!-- END REF -->を返します。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -437,9 +437,9 @@ This property is **read-only**.
 
 #### 説明
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
+`.size` プロパティは、 <!-- REF #document.size.Summary -->ファイルのサイズ (バイト単位)<!-- END REF -->を返します。 ファイルがディスク上に存在しない場合、サイズは 0 になります。
 
-This property is **read-only**. 
+このプロパティは **読み取り専用** です。 
 
 <!-- END REF -->
 
@@ -465,18 +465,18 @@ This property is **read-only**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| 参照                | タイプ       |    | 説明                                          |
-| ----------------- | --------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | テキスト      | -> | Name for the copy                           |
-| overwrite         | 整数        | -> | `fk overwrite` to replace existing elements |
-| 戻り値               | 4D.File   | <- | Copied file                                 |
+| 参照                | タイプ       |    | 説明                                |
+| ----------------- | --------- |:--:| --------------------------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
+| newName           | テキスト      | -> | コピー先フォルダーの名前                      |
+| overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
+| 戻り値               | 4D.File   | <- | Copied file                       |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
+`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします <!-- END REF -->。
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -484,14 +484,14 @@ By default, the file is copied with the name of the original file. If you want t
 
 If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
-| 定数             | 結果 | 説明                                  |
-| -------------- | -- | ----------------------------------- |
-| `fk overwrite` | 4  | Overwrite existing elements, if any |
+| 定数             | 結果 | 説明                 |
+| -------------- | -- | ------------------ |
+| `fk overwrite` | 4  | 既存要素があれば、それを上書きします |
 
 
 **戻り値**
 
-The copied `File` object.
+コピーされた `File` オブジェクト。
 
 #### 例題
 
@@ -520,19 +520,19 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getContent( )** : Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| 参照  | タイプ  |    | 説明           |
-| --- | ---- | -- | ------------ |
-| 戻り値 | BLOB | <- | File content |
+| 参照  | タイプ  |    | 説明         |
+| --- | ---- | -- | ---------- |
+| 戻り値 | BLOB | <- | ファイルのコンテンツ |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `BLOB` containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した BLOB を返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
-A `Blob`.
+`Blob`。
 
 #### 例題
 
@@ -563,16 +563,16 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| 参照   | タイプ   |    | 説明                                            |
-| ---- | ----- | -- | --------------------------------------------- |
-| size | 整数    | -> | Side length for the returned picture (pixels) |
-| 戻り値  | ピクチャー | <- | Icon                                          |
+| 参照   | タイプ   |    | 説明                       |
+| ---- | ----- | -- | ------------------------ |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | ピクチャー | <- | Icon                     |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+`.getIcon()` 関数は、 <!-- REF #document.getIcon().Summary -->ファイルのアイコンを返します<!-- END REF -->。
 
 The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
 
@@ -580,7 +580,7 @@ If the file does not exist on disk, a default blank icon is returned.
 
 **戻り値**
 
-File icon [picture](../Concepts/picture.html).
+ファイルアイコンの [ピクチャー](../Concepts/picture.html)。
 
 
 
@@ -612,7 +612,7 @@ File icon [picture](../Concepts/picture.html).
 
 
 #### 説明
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+`.getText()` 関数は、 <!-- REF #document.getText().Summary -->ファイルのコンテンツをテキストとして返します <!-- END REF -->。
 
 Optionally, you can designate the character set to be used for reading the contents. You can pass either:
 
@@ -637,7 +637,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 **戻り値**
 
-Text of the file.
+ファイルのテキスト。
 
 #### 例題
 

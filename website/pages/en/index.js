@@ -58,10 +58,11 @@ class Index extends React.Component {
     buildApp: <translate>Build Application</translate>,
     webAdmin: <translate>Web Administration</translate>,
 	cs: <translate>Client/Server</translate>,
-	tls: <translate>TLS Protocol (HTTPS)</translate>,
+    tls: <translate>TLS Protocol (HTTPS)</translate>,
     dataExplorer: <translate>Web Data Explorer</translate>,
 	langRef: <translate>Language Reference (4D Doc Center)</translate>,
-	  users: <translate>Access Rights</translate>
+	  users: <translate>Access Rights</translate>,
+	  preferences:<translate>Preferences</translate>
     };
 
 
@@ -84,10 +85,11 @@ class Index extends React.Component {
                 {
                   content: `[${subContents.projectDatabases}](${siteConfig.baseUrl}${this.props.language}/Project/overview.html)<br>
                   [${subContents.languageConcepts}](${siteConfig.baseUrl}${this.props.language}/Concepts/about.html)<br>
-				  [${subContents.langRef}](https://doc.4d.com/4Dv18R5/4D/18-R5/4D-Language-Reference.100-5127708.en.html)<br>
+				  [${subContents.langRef}](https://doc.4d.com/4Dv18R6/4D/18-R6/4D-Language-Reference.100-5197421.en.html)<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
-                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)`,
+                  [${subContents.users}](${siteConfig.baseUrl}${this.props.language}/Users/overview.html)<br>
+				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: 'top',
                   imageAlt: 'Web',
@@ -99,8 +101,8 @@ class Index extends React.Component {
 				  [${subContents.licenses}](${siteConfig.baseUrl}${this.props.language}/Admin/licenses.html)<br>
                   [${subContents.msc}](${siteConfig.baseUrl}${this.props.language}/MSC/overview.html)<br>
                   [${subContents.backup}](${siteConfig.baseUrl}${this.props.language}/Backup/overview.html)<br>
-                  [${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)`,
-				  image: `${siteConfig.baseUrl}img/illu_Administration.png`,
+				  [${subContents.tls}](${siteConfig.baseUrl}${this.props.language}/Admin/tls.html)`,
+                  image: `${siteConfig.baseUrl}img/illu_Administration.png`,
                   imageAlign: 'top',
                   imageAlt: 'Admin',
                   title: <translate>Administration</translate>,
@@ -137,7 +139,7 @@ class Index extends React.Component {
 				  [${subContents.formObjectProperties}](${siteConfig.baseUrl}${this.props.language}/FormObjects/propertiesReference.html)<br>
 				  [${subContents.events}](${siteConfig.baseUrl}${this.props.language}/Events/overview.html)<br>
 				  [${subContents.menus}](${siteConfig.baseUrl}${this.props.language}/Menus/overview.html)<br>
-                  [${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Desktop/building.html)`,
+				  [${subContents.buildApp}](${siteConfig.baseUrl}${this.props.language}/Desktop/building.html)`,
                   //image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
                   image: `${siteConfig.baseUrl}img/illu_DesktopApplication.png`,
 				  imageAlign: 'top',
@@ -149,7 +151,12 @@ class Index extends React.Component {
               layout="threeColumn"
             />
           </Container>
-        </div>
+ 		<div className="doc-updates">
+          <a
+            href={`${siteConfig.baseUrl}${language}/ReleaseNotes/whatsNew`}>
+            <translate>Documentation updates</translate>
+          </a></div>
+       </div>
       </div>
     );
   }

@@ -3,7 +3,7 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                                                        |
+| Code | Can be called by                                   | 定義                                                                                                |
 | ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | 8    | Form - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
 

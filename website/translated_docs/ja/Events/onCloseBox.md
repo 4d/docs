@@ -3,7 +3,7 @@ id: onCloseBox
 title: On Close Box
 ---
 
-| Code | Can be called by | Definition                              |
+| Code | Can be called by | 定義                                      |
 | ---- | ---------------- | --------------------------------------- |
 | 22   | フォーム             | The window’s close box has been clicked |
 

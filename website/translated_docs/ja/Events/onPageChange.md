@@ -3,7 +3,7 @@ id: onPageChange
 title: On Page Change
 ---
 
-| Code | Can be called by | Definition                              |
+| Code | Can be called by | 定義                                      |
 | ---- | ---------------- | --------------------------------------- |
 | 56   | フォーム             | The current page of the form is changed |
 
