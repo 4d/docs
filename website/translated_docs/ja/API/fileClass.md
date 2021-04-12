@@ -173,7 +173,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 #### 説明
 
-The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+`.create()` 関数は、 <!-- REF #FileClass.create().Summary -->`File` オブジェクトのプロパティに基づいてディスク上にファイルを作成します<!-- END REF -->。
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -220,7 +220,7 @@ Creation of a preferences file in the database folder:
 
 #### 説明
 
-The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+`.createAlias()` 関数は、*destinationFolder* オブジェクトで指定されたフォルダー内に、*aliasName* が指定する名称で、対象ファイルへの <!-- REF #FileClass.createAlias().Summary -->エイリアス (macOS) またはショートカット (Windows) を作成します<!-- END REF --> 。
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -283,7 +283,7 @@ You want to create an alias to a file in your database folder:
 
 #### 説明
 
-The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+`.delete()` 関数は、 <!-- REF #FileClass.delete().Summary -->ファイルを削除します<!-- END REF -->。
 
 If the file is currently open, an error is generated.
 
@@ -332,15 +332,15 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 参照  | タイプ    |    | 説明                                               |
-| --- | ------ | -- | ------------------------------------------------ |
-| 戻り値 | オブジェクト | <- | Contents of .exe version resource or .plist file |
+| 参照  | タイプ    |    | 説明                              |
+| --- | ------ | -- | ------------------------------- |
+| 戻り値 | オブジェクト | <- | .exe のバージョンリソースや .plist ファイルの中身 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
+`.getAppInfo()` 関数は、 <!-- REF #FileClass.getAppInfo().Summary -->**.exe** や **.plist** ファイルの情報をオブジェクトとして返します<!-- END REF -->。
 
 The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
 
@@ -462,7 +462,7 @@ ALERT($info.Copyright)
 
 #### 説明
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+`.moveTo()` 関数は、 <!-- REF #FileClass.moveTo().Summary -->`File` オブジェクトを *destinationFolder* が指定する移行先へと移動すると同時に、*newName* を指定した場合は名称も変更します<!-- END REF -->。
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
@@ -528,7 +528,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### 説明
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+`.rename()` 関数は、 <!-- REF #FileClass.rename().Summary -->ファイル名を *newName* に指定した名称に変更し、名称変更後の `File` オブジェクトを返します<!-- END REF -->。
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
@@ -563,15 +563,15 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| 参照   | タイプ    |    | 説明                                                          |
-| ---- | ------ | -- | ----------------------------------------------------------- |
-| info | オブジェクト | -> | Properties to write in .exe version resource or .plist file |
+| 参照   | タイプ    |    | 説明                                     |
+| ---- | ------ | -- | -------------------------------------- |
+| info | オブジェクト | -> | .exe のバージョンリソースや .plist ファイルに書き込むプロパティ |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
+`.setAppInfo()` 関数は、 <!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.plist** ファイルの情報として書き込みます<!-- END REF -->。
 
 The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
 
@@ -656,7 +656,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### 説明
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+`.setContent( )` 関数は、 <!-- REF #FileClass.setContent().Summary -->*content* 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 
 #### 例題
@@ -698,7 +698,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### 説明
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+`.setText()` 関数は、 <!-- REF #FileClass.setText().Summary -->*text* に渡されたテキストをファイルの新しいコンテンツとして書き込みます<!-- END REF -->。
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
