@@ -53,27 +53,27 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 #### 説明
 
-`POP3 New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.POP3 New transporter.Summary -->新規の POP3接続を設定します<!-- END REF -->。戻り値は、新しい *[POP3 transporter](#pop3-transporter-object)* オブジェクトです。 The returned transporter object will then usually be used to receive emails.
+`POP3 New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.POP3 New transporter.Summary -->新規の POP3接続を設定します<!-- END REF -->。戻り値は、新しい *[POP3 transporter](#pop3-transporter-object)* オブジェクトです。 返された transporter オブジェクトは、通常メールの受信に使用されます。
 
-In the *server* parameter, pass an object containing the following properties:
+*server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 
 
-| *server*                                                                                                                                                                                                                                                                                                                                                | Default value (if omitted)                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). *[SMTP transporter](#smtptransporterobject)* オブジェクトには返されません。 | none                                                                |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| none                                                                |
-| **.password** : Text<p>User password for authentication on the server. *[SMTP transporter](#smtptransporterobject)* オブジェクトには返されません。                                                                                                                                                                                              | none                                                                |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
+| *server*                                                                                                                                                                                                                                                                                      | デフォルト値 (省略時)                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                            |
+| .**accessTokenOAuth2**: Text<p>OAuth 2 認証の資格情報を表すテキスト文字列。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトには返されません。 | なし                               |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| サーバーがサポートするもっともセキュアな認証モードが使用されます |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                               |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *必須*                             |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| なし                               |
+| **.password** : Text<p>サーバーとの認証のためのユーザーパスワード *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                            | なし                               |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                              |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| なし                               |
 
 
 #### 戻り値
 
-この関数は、[**POP3 transporter オブジェクト**](#pop3-transporter-object) を返します。 返されるプロパティはすべて **読み取り専用** です。
+この関数は、[**POP3 transporter オブジェクト**](#pop3-transporter-オブジェクト) を返します。 返されるプロパティはすべて **読み取り専用** です。
 > POP3接続は、transporter オブジェクトが消去された時点で自動的に閉じられます。
 
 #### 例題
