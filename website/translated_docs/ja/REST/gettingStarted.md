@@ -3,128 +3,136 @@ id: gettingStarted
 title: はじめに
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D databases.
+4D は、4Dアプリケーションに格納されているデータへのダイレクトアクセスを可能にする強力な RESTサーバーを提供しています。
 
-The REST server is included in the 4D and 4D Server applications, it is automatically available in your 4D databases [once it is configured](configuration.md).
+RESTサーバーは 4D および 4D Server に含まれており、[設定完了後は](configuration.md) 4Dアプリケーションにて自動的に利用可能となります。
 
-This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
+この章では、簡単な例題を使用して REST機能を紹介します。 これから、実際に次のことをしてみましょう:
+- 簡単な 4Dアプリケーションプロジェクトを作成し、設定します。
+- 標準のブラウザーを開き、REST を介して 4Dプロジェクトのデータにアクセスします。
 
-- create and configure a basic 4D database
-- access data from the 4D database through REST using a standard browser.
+例題が複雑にならないよう、ここでは 4D とブラウザーを同じマシン上で使用します。 もちろん、リモートアーキテクチャーを使うことも可能です。
 
-To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Of course, you could also use a remote architecture.
 
-## Creating and configuring the 4D database
 
-1. Launch your 4D or 4D Server application and create a new database. You can name it "Emp4D", for example.
+## 4Dプロジェクトの作成と設定
 
-2. In the Structure editor, create an [Employees] table and add the following fields to it:
-    
-    - Lastname (Alpha)
-    - Firstname (Alpha)
-    - Salary (Longint)
+1. 4D または 4D Server アプリケーションを起動し、新規プロジェクトを作成します。 名前は仮に "Emp4D" とします。
+
+2. ストラクチャーエディターを開き、[Employees] テーブルを作成して、次のフィールドを追加します:
+    - Lastname (文字列)
+    - Firstname (文字列)
+    - Salary (倍長整数)
 
 ![](assets/en/REST/getstarted1.png)
 
-> The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
+> テーブルおよび各フィールドの "RESTリソースとして公開" オプションはデフォルトで選択されています。これを変更しないでください。
 
-3. Create forms, then create a few employees:
+3. フォームを作成し、何名かの社員レコードを作成します:
 
 ![](assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. ストラクチャー設定の **Web＞RESTリソース** ページを開き、[RESTサーバーとして公開](configuration.md#RESTサーバーを開始する) オプションを選択します。
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. 上部の **実行** メニューから、必要に応じて **Webサーバー開始** を選択し、次に同メニューから **Webサーバーテスト** を選択します。
 
-4D displays the default home page of the 4D Web Server.
+規定のブラウザーが開かれ、4D Webサーバーのデフォルトホームページが表示されます。
 
-## Accessing 4D data through the browser
 
-You can now read and edit data within 4D only through REST requests.
+## ブラウザーから 4D データにアクセスする
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
+これで、RESTリクエストを使った 4D のデータの読み込み・編集が可能になりました。
 
-    http://127.0.0.1/rest/$catalog
-    
+4D の REST URL リクエストは必ず、`address:port` エリアの後に入る `/rest` から始まります。 たとえば、4Dデータストアの内容を確認するには、次のように書けます:
 
-The REST server replies:
+```
+http://127.0.0.1/rest/$catalog
+```
 
-    {
-        "__UNIQID": "96A49F7EF2ABDE44BF32059D9ABC65C1",
-        "dataClasses": [
-            {
-                "name": "Employees",
-                "uri": "/rest/$catalog/Employees",
-                "dataURI": "/rest/Employees"
-            }
-        ]
-    }
-    
+RESTサーバーの応答です:
 
-It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:
+```
+{
+    "__UNIQID": "96A49F7EF2ABDE44BF32059D9ABC65C1",
+    "dataClasses": [
+        {
+            "name": "Employees",
+            "uri": "/rest/$catalog/Employees",
+            "dataURI": "/rest/Employees"
+        }
+    ]
+}
+```
 
-    /rest/$catalog/Employees
-    
+これは、データストアに Employees データクラスが格納されていることを意味します。 データクラス属性を確認するには、次のように書きます:
 
-If you want to get all entities of the Employee dataclass, you write:
+```
+/rest/$catalog/Employees
+```
 
-    /rest/Employees
-    
+また、Employees データクラスの全エンティティを取得するには:
 
-**Response:**
+```
+/rest/Employees
+```
 
-    {
-        "__entityModel": "Employees",
-        "__GlobalStamp": 0,
-        "__COUNT": 3,
-        "__FIRST": 0,
-        "__ENTITIES": [
-            {
-                "__KEY": "1",
-                "__TIMESTAMP": "2020-01-07T17:07:52.467Z",
-                "__STAMP": 2,
-                "ID": 1,
-                "Lastname": "Brown",
-                "Firstname": "Michael",
-                "Salary": 25000
-            },
-            {
-                "__KEY": "2",
-                "__TIMESTAMP": "2020-01-07T17:08:14.387Z",
-                "__STAMP": 2,
-                "ID": 2,
-                "Lastname": "Jones",
-                "Firstname": "Maryanne",
-                "Salary": 35000
-            },
-            {
-                "__KEY": "3",
-                "__TIMESTAMP": "2020-01-07T17:08:34.844Z",
-                "__STAMP": 2,
-                "ID": 3,
-                "Lastname": "Smithers",
-                "Firstname": "Jack",
-                "Salary": 41000
-            }
-        ],
-        "__SENT": 3
-    }
-    
+**レスポンス:**
 
-You have many possibilities to filter data to receive. For example, to get only the "Lastname" attribute value from the 2nd entity, you can just write:
+```
+{
+    "__entityModel": "Employees",
+    "__GlobalStamp": 0,
+    "__COUNT": 3,
+    "__FIRST": 0,
+    "__ENTITIES": [
+        {
+            "__KEY": "1",
+            "__TIMESTAMP": "2020-01-07T17:07:52.467Z",
+            "__STAMP": 2,
+            "ID": 1,
+            "Lastname": "Brown",
+            "Firstname": "Michael",
+            "Salary": 25000
+        },
+        {
+            "__KEY": "2",
+            "__TIMESTAMP": "2020-01-07T17:08:14.387Z",
+            "__STAMP": 2,
+            "ID": 2,
+            "Lastname": "Jones",
+            "Firstname": "Maryanne",
+            "Salary": 35000
+        },
+        {
+            "__KEY": "3",
+            "__TIMESTAMP": "2020-01-07T17:08:34.844Z",
+            "__STAMP": 2,
+            "ID": 3,
+            "Lastname": "Smithers",
+            "Firstname": "Jack",
+            "Salary": 41000
+        }
+    ],
+    "__SENT": 3
+}
+```
 
-    /rest/Employees(2)/Lastname
-    
+取得するデータを様々な条件でフィルターすることも可能です。 たとえば、2番目のエンティティの "Lastname" 属性値のみを取得するには、次のように書きます:
 
-**Response:**
+```
+/rest/Employees(2)/Lastname
+```
 
-    {
-        "__entityModel": "Employees",
-        "__KEY": "2",
-        "__TIMESTAMP": "2020-01-07T17:08:14.387Z",
-        "__STAMP": 2,
-        "Lastname": "Jones"
-    }
-    
+**レスポンス:**
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D database.
+```
+{
+    "__entityModel": "Employees",
+    "__KEY": "2",
+    "__TIMESTAMP": "2020-01-07T17:08:14.387Z",
+    "__STAMP": 2,
+    "Lastname": "Jones"
+}
+```
+
+4D の [REST API](REST_requests.md) は、4Dアプリケーションを操作するためのコマンドを多数提供しています。  

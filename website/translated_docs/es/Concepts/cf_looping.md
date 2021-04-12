@@ -3,22 +3,22 @@ id: looping
 title: Looping structures
 ---
 
+Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
+
+
 ## While...End while
 
 The formal syntax of the `While...End while` control flow structure is:
-
 ```4d
  While(Boolean_Expression)
     statement(s)
  End while
 ```
-
 A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. It tests the Boolean expression at the beginning of the loop and does not enter the loop at all if the expression is FALSE.
 
 It is common to initialize the value tested in the Boolean expression immediately before entering the `While...End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While...End while` executes the loop.
 
-The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because *NeverStop* is always TRUE:
-
+The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because _NeverStop_ is always TRUE:
 ```4d
  NeverStop:=True
  While(NeverStop)
@@ -41,13 +41,11 @@ In this example, the `OK` system variable is set by the `CONFIRM` command before
 ## Repeat...Until
 
 The formal syntax of the `Repeat...Until` control flow structure is:
-
 ```4d
  Repeat
     statement(s)
  Until(Boolean_Expression)
 ```
-
 A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
 
 The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
@@ -129,7 +127,7 @@ The `For...End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-Most of the `For...End for` loops you will write in your databases will look like the ones listed in these examples.
+Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
 
 ### Decrementing variable counter
 
@@ -189,10 +187,10 @@ If you need to, you can use an *Increment_Expression* (positive or negative) who
  End for
 ```
 
+
 ### Comparing looping structures
 
 Let's go back to the first `For...End for` example. The following example executes 100 iterations:
-
 ```4d
  For(vCounter;1;100)
   //Do something
@@ -200,7 +198,6 @@ Let's go back to the first `For...End for` example. The following example execut
 ```
 
 It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
-
 ```4d
  $i:=1 //Initialize the counter
  While($i<=100) //Loop 100 times
@@ -210,7 +207,6 @@ It is interesting to see how the `While...End while` loop and `Repeat...Until` l
 ```
 
 Here is the equivalent `Repeat...Until` loop:
-
 ```4d
  $i:=1 //Initialize the counter
  Repeat
@@ -218,7 +214,6 @@ Here is the equivalent `Repeat...Until` loop:
     $i:=$i+1 //Need to increment the counter
  Until($i=100) //Loop 100 times
 ```
-
 **Tip:** The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For...End for` loop whenever possible.
 
 ### Optimizing the execution of the For...End for loops
@@ -300,30 +295,28 @@ The following table compares the three types of `For each...End for each`:
 | Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
 | Support of begin / end parameters | Yes                                              | Yes                                 | No                          |
 
-
 - The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
-- By default, the enclosed *statement(s)* are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
+- By default, the enclosed _statement(s)_ are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
 - The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords: 
+- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
     - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required. 
+    - within the loop when only some elements/properties need to be modified and no integrity management is required.
 
 ### Loop through collections
 
-When `For each...End for each` is used with an *Expression* of the *Collection* type, the *Current_Item* parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
+When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
 
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the *Current_Item* variable is assigned the first mismatched value type.
+The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
 
-At each loop iteration, the *Current_Item* variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. The following points must be taken into account:
 
-- If the *Current_Item* variable is of the object type or collection type (i.e. if *Expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
-- The *Current_Item* variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a **Null** value, an error will be generated if the *Current_Item* variable type does not support **Null** values (such as longint variables).
+- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
+- The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
+- If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
 
 #### Example
 
 You want to compute some statistics for a collection of numbers:
-
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -347,7 +340,7 @@ You want to compute some statistics for a collection of numbers:
 
 ### Loop through entity selections
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
 
 The number of loops is based on the number of entities in the entity selection. On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
 
@@ -358,7 +351,6 @@ Keep in mind that any modifications applied on the current entity must be saved 
 #### Example
 
 You want to raise the salary of all British employees in an entity selection:
-
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -376,7 +368,6 @@ The properties of the object are processed according to their order of creation.
 #### Example
 
 You want to switch the names to uppercase in the following object:
-
 ```4d
 {
     "firstname": "gregory",
@@ -384,9 +375,7 @@ You want to switch the names to uppercase in the following object:
     "age": 20
 }
 ```
-
 You can write:
-
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -394,14 +383,13 @@ You can write:
     End if
  End for each
 ```
-
-    {
-        "firstname": "GREGORY",
-        "lastname": "BADIKORA",
-        "age": 20
-    }
-    
-
+```
+{
+    "firstname": "GREGORY",
+    "lastname": "BADIKORA",
+    "age": 20
+}
+```
 ### begin / end parameters
 
 You can define bounds to the iteration using the optional begin and end parameters.
@@ -409,15 +397,14 @@ You can define bounds to the iteration using the optional begin and end paramete
 **Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
 
 - In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded). 
+- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
 
 If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
 
 For example:
-
 - a collection contains 10 elements (numbered from 0 to 9)
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element. 
+- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
 
 #### Example
 
@@ -462,3 +449,4 @@ You can pass either keyword depending on your needs:
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
+

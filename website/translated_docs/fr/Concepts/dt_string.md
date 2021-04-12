@@ -21,7 +21,6 @@ Une constante littérale de type chaîne est incluse entre des guillemets droits
 Une chaîne vide est spécifiée par la succession de deux guillemets ("").
 
 ### Séquences d’échappement
-
 Les séquences d’échappement suivantes peuvent être utilisées dans les chaînes :
 
 | Séquence d’échappement | Caractère remplacé          |
@@ -32,31 +31,29 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 | \\\                 | \ (Barre oblique inversée) |
 | \\"                  | " (Guillemets)              |
 
-
 **Note:** Le caractère \ est utilisé comme séparateur dans les chemins d’accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe                   | Retourne | Expression              | Valeur   |
-| ------------------- | ------------------------- | -------- | ----------------------- | -------- |
-| Concaténation       | Chaîne + Chaîne           | Chaine   | "abc" + "def"           | "abcdef" |
-| Répétition          | Chaîne * Nombre           | Chaine   | "ab" * 3                | "ababab" |
-| Egalité             | Chaîne = Chaîne           | Booléen  | "abc" = "abc"           | Vrai     |
-|                     |                           |          | "abc" = "abd"           | Faux     |
-| Inégalité           | Chaîne # Chaîne           | Booléen  | "abc" # "abd"           | Vrai     |
-|                     |                           |          | "abc" # "abc"           | Faux     |
-| Supérieur à         | Chaîne > Chaîne           | Booléen  | "abd" > "abc"           | Vrai     |
-|                     |                           |          | "abc" > "abc"           | Faux     |
-| Inférieur à         | Chaîne < Chaîne           | Booléen  | "abc" < "abd"           | Vrai     |
-|                     |                           |          | "abc" < "abc"           | Faux     |
-| Supérieur ou égal à | Chaîne >= Chaîne          | Booléen  | "abd" >= "abc"          | Vrai     |
-|                     |                           |          | "abc" >= "abd"          | Faux     |
-| Inférieur ou égal à | Chaîne <= Chaîne<= String | Booléen  | "abc" <= "abd"<= "abd"  | Vrai     |
-|                     |                           |          | "abd" <= "abc"<= "abc"  | Faux     |
-| Contient mot-clé    | Chaîne % Chaîne           | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
-|                     |                           |          | "Alpha Bravo" % "ravo"  | Faux     |
-|                     | Image % Chaîne            | Booléen  | Expr_image % "Mer"      | True (*) |
-
+| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
+| ------------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concaténation       | Chaîne + Chaîne  | Chaine   | "abc" + "def"           | "abcdef" |
+| Répétition          | Chaîne * Nombre  | Chaine   | "ab" * 3                | "ababab" |
+| Egalité             | Chaîne = Chaîne  | Booléen  | "abc" = "abc"           | Vrai     |
+|                     |                  |          | "abc" = "abd"           | Faux     |
+| Inégalité           | Chaîne # Chaîne  | Booléen  | "abc" # "abd"           | Vrai     |
+|                     |                  |          | "abc" # "abc"           | Faux     |
+| Supérieur à         | Chaîne > Chaîne  | Booléen  | "abd" > "abc"           | Vrai     |
+|                     |                  |          | "abc" > "abc"           | Faux     |
+| Inférieur à         | Chaîne < Chaîne  | Booléen  | "abc" < "abd"           | Vrai     |
+|                     |                  |          | "abc" < "abc"           | Faux     |
+| Supérieur ou égal à | Chaîne >= Chaîne | Booléen  | "abd" >= "abc"          | Vrai     |
+|                     |                  |          | "abc" >= "abd"          | Faux     |
+| Inférieur ou égal à | Chaîne <= Chaîne | Booléen  | "abc" <= "abd"          | Vrai     |
+|                     |                  |          | "abd" <= "abc"          | Faux     |
+| Contient mot-clé    | Chaîne % Chaîne  | Booléen  | "Alpha Bravo" % "Bravo" | Vrai     |
+|                     |                  |          | "Alpha Bravo" % "ravo"  | Faux     |
+|                     | Image % Chaîne   | Booléen  | Expr_image % "Mer"      | True (*) |
 
 (*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
 
@@ -68,7 +65,6 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 ```4d
 Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 ```
-
 - Lors d'une comparaison de chaînes, les caractères diacritiques sont comparés à l'aide de la table de comparaison des caractères de votre machine. Par exemple, les expressions suivantes retournent `VRAI` :
 
 ```4d
@@ -82,7 +78,7 @@ Code de caractere("A")=Code de caractere("a") // 65 n'est pas égal à 97
 
 ### Le joker (@)
 
-Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Il remplace un ou plusieurs caractères. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
+Le langage 4D prend en charge **@** en tant que joker. Ce caractère peut être utilisé dans toute comparaison de chaînes. Ainsi, par exemple, l'expression suivante est évaluée à `TRUE` :
 
 ```4d
 "abcdefghij"="abc@"
@@ -128,7 +124,6 @@ L'expression suivante sera correctement évaluée :
 ```4d
 (Code de caractere($vaValeur[[Longueur($vaValeur)]])#64)  
 ```
-
 **Note :** Une option 4D du mode Développement vous permet de paramétrer le mode d’interprétation du caractère @ lorsque celui-ci est inclus dans une chaîne de caractères.
 
 ### Mots-clés
@@ -142,11 +137,9 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
  "Alpha,Bravo,Charlie"%"Alpha" // Retourne Vrai
  "Software and Computers"%"comput@" // Retourne Vrai
 ```
-
-> **Notes :** - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs <>=#) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, reportez-vous à l'adresse http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
+> **Notes :** - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs <>=#) et la détection des mots-clés. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries. En version japonaise, 4D utilise par défaut la librairie Mecab en lieu et place de ICU pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
-
 Les symboles d'indice de chaîne sont les suivants : [[...]]
 
 Ces symboles sont utilisés pour désigner un caractère particulier dans une chaîne. Cette syntaxe vous permet de référencer un caractère dans un champ ou une variable de type Alpha ou Texte.
@@ -159,7 +152,7 @@ If(vsNom#"")
 End if
 ```
 
-Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple:
+Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :
 
 ```4d
 //L'exemple suivant teste si le dernier caractère de vtText est le caractère "@"
@@ -185,10 +178,11 @@ Lorsque vous utilisez les symboles d'indice de chaîne, il est de votre responsa
 - Ne pas respecter cette condition en mode compilé (sans options) peut entraîner une "corruption" de la mémoire, si, par exemple, vous écrivez un caractère au-delà de la fin d'une chaîne ou d'un texte.
 - Ne pas respecter cette condition en mode compilé est signalé lorsque le contrôle d'exécution est activé. Si, par exemple, vous exécutez le code suivant :
 
-    //Ne pas faire ça !
-     vsAnyText:=""
-     vsAnyText[[1]]:="A"
-    
+```
+//Ne pas faire ça !
+ vsAnyText:=""
+ vsAnyText[[1]]:="A"
+```
 
 L'alerte suivante s'affichera en mode compilé :
 
@@ -196,13 +190,14 @@ L'alerte suivante s'affichera en mode compilé :
 
 ### Exemple
 
+
 La méthode projet suivante ajoute une lettre capitale à tous les mots du texte passé en paramètre et retourne le texte modifié :
 
 ```4d
   // Méthode projet de passage en capitale
   // PasserEnCap ( Texte ) -> Texte
   // PasserEnCap ( Texte source ) -> Texte avec des lettres capitales
- 
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)
@@ -221,6 +216,6 @@ Une fois cette méthode placée dans la base, la ligne :
 ALERT(Capitalize_text("Bonjour, mon nom est Jean Bon et je me présente aux présidentielles !"))
 ```
 
-... affiche l'alerte suivante :
+affiche l'alerte suivante :
 
 ![alt-text](assets/en/Concepts/Jane_doe.en.png)

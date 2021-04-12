@@ -3,13 +3,12 @@ id: sdi
 title: SDI mode on Windows
 ---
 
-## Overview
 
 On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar. SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window.
 
 > The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
 
-### SDI mode availabilty
+## SDI mode availability
 
 The SDI mode is available in the following execution environment only:
 
@@ -20,7 +19,7 @@ The SDI mode is available in the following execution environment only:
 
 Enabling and using the SDI mode in your application require the following steps:
 
-1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Database Settings dialog box.
+1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
 2. Build a merged application (standalone and/or client application).
 
 Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
@@ -41,7 +40,7 @@ Windows can therefore be used in MDI or SDI modes without having to recalculate 
 
 #### About the splash screen
 
-- If the **Splash screen** interface option was selected in the Database Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
+- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
 - If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
 
 ### Automatic quit

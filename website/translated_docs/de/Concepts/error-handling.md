@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Error handling
+title: Fehlerverwaltung
 ---
 
 Fehlerverwaltung bedeutet das Vorwegnehmen und Reagieren auf Fehler, die in Ihrer Anwendung auftreten können. 4D bietet umfassende Unterstützung zum Abfangen und Melden von Fehlern zur Laufzeit und zum Untersuchen der Fehlerursachen.
@@ -8,9 +8,16 @@ Fehlerverwaltung bedeutet das Vorwegnehmen und Reagieren auf Fehler, die in Ihre
 Die Fehlerverwaltung erfüllt zwei Hauptanforderungen:
 
 - potenzielle Fehler und Bugs in Ihrem Code während der Entwicklungsphase herausfinden und beheben,
-- Unerwartete Fehler in Anwendungen im Einsatz abfangen und beseitigen; insbesondere können Sie Fehlermeldungen des Systems (Festplatte voll, fehlende Datei usw.) durch Ihre eigene Oberfläche ersetzen. 
-
+- Unerwartete Fehler in Anwendungen im Einsatz abfangen und beseitigen; insbesondere können Sie Fehlermeldungen des Systems (Festplatte voll, fehlende Datei usw.) durch Ihre eigene Oberfläche ersetzen.
 > Es wird dringend empfohlen, auf 4D Server eine Fehlerverwaltungsmethode für den gesamten auf dem Server laufenden Code zu installieren. Denn solch eine Methode kann vermeiden, dass unerwartete Dialogfenster auf dem Serverrechner erscheinen, und außerdem Fehler in einer speziellen Datei für weitere Analysen protokollieren.
+
+
+## Fehler oder Status
+
+Viele Class Functions von 4D, wie `entity.save()` oder `transporter.send()`, geben ein Objekt *status* zurück. Dieses Objekt dient zum Speichern "vorhersehbarer" Fehler in der Runtime-Umgebung, z.B. ungültiges Kennwort, gesperrte Entity, etc., welche die Ausführung des Programms nicht stoppen. Diese Art von Fehlern lässt sich über regulären Code verwalten.
+
+Andere Fehler, wie Fehler beim Schreiben auf die Festplatte, Netzwerkfehler oder allgemein jede unerwartete Unterbrechung, sind "nicht-vorhersehbar". Diese Art von Fehlern erzeugt Ausnahmen und müssen über eine Fehlerverwaltungsmethode behandelt werden.
+
 
 ## Fehlerverwaltungsmethode installieren
 
@@ -23,18 +30,11 @@ ON ERR CALL("IO_ERRORS") //Installs the error-handling method
 ```
 
 Wollen Sie das Auffinden von Fehlern abbrechen und wieder an 4D übergeben, rufen Sie `ON ERR CALL` mit einem leeren String auf:
-
 ```4d
 ON ERR CALL("") //gives back control to 4D
 ```
 
-### Reichweite und Komponenten
-
-Sie können eine einzige Fehlerverwaltungsmethode für die gesamte Anwendung definieren oder für jedes Modul eine eigene Methode. Sie können jedoch immer nur eine Methode pro Prozess installieren.
-
-Eine Fehlerverwaltungsmethode, die über den Befehl `ON ERR CALL` eingerichtet wurde, gilt nur für die laufende Anwendung. Erzeugt eine **Komponente** einen Fehler, wird nicht die Fehlerverwaltungsmethode `ON ERR CALL` der Host-Datenbank aufgerufen, und umgekehrt.
-
-Mit dem Befehl `Method called on error` erfahren Sie den Namen der Methode, die über den Befehl `ON ERR CALL` für den aktuellen Prozess installiert wurde. Er ist besonders hilfreich im Zusammenhang mit Komponenten, da Sie damit die Fehlerverwaltungsmethode der Host Datenbank zeitweise ändern und dann wiederherstellen können:
+Mit dem Befehl `Method called on error` erfahren Sie den Namen der Methode, die über den Befehl `ON ERR CALL` für den aktuellen Prozess installiert wurde. Er ist besonders hilfreich bei generischem Code, da Sie damit die Fehlerverwaltungsmethode zeitweise ändern und dann wiederherstellen können:
 
 ```4d
  $methCurrent:=Method called on error
@@ -46,20 +46,29 @@ Mit dem Befehl `Method called on error` erfahren Sie den Namen der Methode, die 
 
 ```
 
+### Reichweite und Komponenten
+
+Sie können eine einzige Fehlerverwaltungsmethode für die gesamte Anwendung definieren oder für jedes Modul eine eigene Methode. Sie können jedoch immer nur eine Methode pro Prozess installieren.
+
+Eine Fehlerverwaltungsmethode, die über den Befehl `ON ERR CALL` eingerichtet wurde, gilt nur für die laufende Anwendung. Erzeugt eine **Komponente** einen Fehler, wird nicht die Fehlerverwaltungsmethode `ON ERR CALL` der Host-Datenbank aufgerufen, und umgekehrt.
+
+
 ### Fehlerverwaltung in der Methode
 
 In einer eigenen Fehlermethode erhalten Sie verschiedene Angaben, die zum Identifizieren des Fehlers dienen:
 
 - Spezifische Systemvariablen (*):
-    
+
   - `Error` (Lange Ganzzahl): Fehlernummer
   - `Error method` (Text): Namen der Methode, die den Fehler ausgelöst hat
   - `Error line` (Lange Ganzzahl): Zeilennummer in der Methode, die den Fehler ausgelöst hat.
-  - `Error formula` (Text): Formel des 4D Code (Rohtext), der den Fehler verursacht hat. 
+  - `Error formula` (Text): Formel des 4D Code (Rohtext), der den Fehler verursacht hat.
 
-(*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.</p> 
+(*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.</p>
 
-- Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück. 
+- Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück.
+- Der Befehl `Get call chain` gibt eine Collection von Objekten zurück, die jeden Schritt der Aufruffolge der Methode im aktuellen Prozess beschreiben.
+
 
 #### Beispiel
 
@@ -91,3 +100,5 @@ If (Error=-43)
 End if
 ON ERR CALL("")
 ```
+
+

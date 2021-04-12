@@ -3,7 +3,6 @@ id: ruler
 title: Ruler
 ---
 
-## Overview
 
 The ruler is a standard interface object used to set or get values using a cursor moved along its graduations.
 
@@ -19,5 +18,5 @@ For more information, please refer to [Using indicators](progressIndicator.md#us
 
 ## See also
 
-- [progress indicators](progressIndicator.md) 
+- [progress indicators](progressIndicator.md)
 - [steppers](stepper.md)

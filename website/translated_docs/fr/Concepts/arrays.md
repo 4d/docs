@@ -7,6 +7,7 @@ Un **tableau** est une série ordonnée de **variables** de même type. Chaque v
 
 > Généralement, il est recommandé d'utiliser des **collections** plutôt que des **tableaux**. Les collections sont plus souples et fournissent un large éventail de méthodes spécifiques. Pour plus d'informations, veuillez consutler la section [Collection](Concepts/dt_collection.md).
 
+
 ## Créer des tableaux
 
 Vous créez un tableau au moyen de l'une des commandes de déclaration du thème "Tableaux". Chaque commande de déclaration de tableau peut créer ou redimensionner des tableaux à une ou à deux dimensions. Pour plus d'informations sur les tableaux à deux dimensions, reportez-vous à la section [Tableaux à deux dimensions](#two-dimensional-arrays).
@@ -18,20 +19,18 @@ Cette ligne de code crée (déclare) un tableau d'entiers de 10 éléments :
 ```
 
 Ensuite, cette ligne de code redimensionne le même tableau à 20 éléments :
-
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 Enfin, cette ligne de code redimensionne le même tableau à 0 élément :
-
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
 
 ## Affecter des valeurs dans un tableau
 
-Vous référencez les éléments d'un tableau en utilisant des accolades ({…} ). Un nombre entre accolades donne accès à l'adresse d'un élément particulier. Ce nombre est appelé numéro de l'élément. L'exemple ci-dessous place cinq noms dans le tableau nommé atNoms et les affiche ensuite dans une fenêtre d'alerte :
+Vous référencez les éléments d'un tableau en utilisant des accolades ({…} ). Un nombre entre accolades donne accès à l'adresse d'un élément particulier. L'exemple ci-dessous place cinq noms dans le tableau nommé atNoms et les affiche ensuite dans une fenêtre d'alerte :
 
 ```4d
  ARRAY TEXT(atNames;5)
@@ -44,48 +43,49 @@ Vous référencez les éléments d'un tableau en utilisant des accolades ({…} 
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
-
 Notez la syntaxe atNoms{$vlElem}. Au lieu de spécifier un nombre littéral comme atNoms{3}, vous pouvez utiliser une variable numérique indiquant à quel élément d'un tableau vous accédez. Si vous utilisez les itérations permises par les structures répétitives (`For...End for`, `Repeat...Until` or `While...End while`), vous pouvez accéder à tout ou partie des éléments d'un tableau avec très peu de code.
 
 **Important :** Veillez à ne pas confondre l'opérateur d'affectation (:=) avec l'opérateur de comparaison égal (=). L'affectation et la comparaison sont deux opérations totalement différentes.
 
-### Affecter un tableau à un autre
 
+### Affecter un tableau à un autre
 Contrairement à ce que vous pouvez faire avec des variables de type Texte ou Chaîne, vous ne pouvez pas affecter un tableau à un autre tableau. Pour copier (affecter) un tableau à un autre, utilisez la fonction `COPY ARRAY`.
+
 
 ## Utiliser l'élément zéro d'un tableau
 
 Un tableau a toujours un élément zéro. Même si l'élément zéro n'est pas affiché lorsqu'un tableau est utilisé pour remplir un objet de formulaire, vous pouvez l'utiliser sans réserve(*) dans le langage.
 
-Here is another example: you want to initialize a form object with a text value but without setting a default value. You can use the element zero of the array:
+Voici un autre exemple : vous souhaitez initialiser un objet de formulaire avec une valeur texte mais sans définir de valeur par défaut. Vous pouvez utiliser l'élément zéro du tableau :
 
 ```4d
-  // method for a combo box or drop-down list  
-  // bound to atName variable array
+  // // méthode pour une combo box ou une liste déroulante  
+  // liée au tableau de variables atName
  Case of
-    :(Form event code=On Load)
-  // Initialize the array (as shown further above)  
-  // But use the element zero
+    : Form event code=On Load)
+  // Initialise le tableau (comme indiqué ci-dessus)
+  // Mais utilise l'élément zéro
         ARRAY TEXT(atName;5)
-        atName{0}:=Please select an item"
+        atName{0}:=Veuillez sélectionner un élément"
         atName{1}:="Text1"
         atName{2}:="Text2"
         atName{3}:="Text3"
         atName{4}:="Text4"
         atName{5}:="Text5"
-    // Position the array to element 0
-        atName:=0
+    // Positionne le tableau sur l'élément 0
+        atName: = 0
  End case
 ```
 
 (*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
+
 
 ## Tableaux à deux dimensions
 
 Chaque commande de déclaration de tableau permet de créer ou de redimensionner des tableaux à une ou à deux dimensions. Exemple :
 
 ```4d
-<br /><br /> ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
+ ARRAY TEXT(atTopics;100;50) // Créer un tableau texte composé de 100 lignes de 50 colonnes
 ```
 
 Les tableaux à deux dimensions sont essentiellement des objets de langage ; vous ne pouvez ni les afficher ni les imprimer.
@@ -95,8 +95,8 @@ Dans l'exemple prédédent :
 - atTopics est un tableau à deux dimensions
 - atTopics{8}{5} est le 5e élément (5e colonne...) de la 8e ligne
 - atTopics{20} est la 20e ligne et est elle-même un tableau à une dimension
-- `Size of array(atTopics)` returns 100, which is the number of rows
-- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
+- `Size of array(atTopics)` retourne 100, qui est le nombre de lignes
+- `Size of array(atTopics{17})` retourne 50, qui est le nombre de colonnes de la 17e ligne
 
 Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base est stocké dans un tableau à deux dimensions :
 
@@ -173,7 +173,6 @@ Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux co
 | Texte           | (1+nombre d'éléments) * 20 + (somme de la taille de chaque texte) * 2 |
 | Heure           | (1+nombre d'éléments) * 4                                               |
 | Deux dimensions | (1+nombre d'éléments) * 16 + somme de la taille de chaque tableau       |
-
 
 **Notes :**
 

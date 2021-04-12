@@ -3,14 +3,14 @@ id: objectLibrary
 title: Object libraries
 ---
 
-## Overview
 
 You can use object librairies in your forms. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
 
 4D proposes two kinds of object libraries:
 
-- a standard, preconfigured object library, available in all your projects. 
+- a standard, preconfigured object library, available in all your projects.
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
+
 
 ## Using the standard object library
 
@@ -25,13 +25,14 @@ The window has the following main features:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
 - You can filter the window contents by using the **Categories** menu: ![](assets/en/FormEditor/library3.png)
-- To use an object from the library to your form, you can either: 
+- To use an object from the library to your form, you can either:
     - right-click on an object and select **Copy** in the contextual menu
-    - or drag and drop the object from the library The object is then added to the form. 
+    - or drag and drop the object from the library The object is then added to the form.
 
 This library is read-only. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
 
 All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+
 
 ## Creating and using custom object libraries
 
@@ -40,6 +41,7 @@ You can create and use custom object libraries in 4D. A custom object library is
 Objects are stored with all their properties, including their object methods. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
 
 Using libraries, you can build form object backgrounds grouped by graphic families, by behavior, etc.
+
 
 ### Creating an object library
 
@@ -53,10 +55,9 @@ You can create as many libraries as desired per project. A library created and b
 
 ### Opening an object library
 
-A given object library can only be opened by one database at a time. However, several different libraries can be opened in the same database.
+A given object library can only be opened by one project at a time. However, several different libraries can be opened in the same project.
 
 To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. A standard open file dialog box appears, which allows you to select the object library to open. You can select the following file types:
-
 - **.4dproject**
 - **.4dz**
 
@@ -64,6 +65,7 @@ In fact, custom object libraries are regular 4D projects. Only the following par
 
 - project forms
 - form pages 1
+
 
 ### Building an object library
 
@@ -78,7 +80,8 @@ Basic operations are available in the context menu or the options menu of the wi
 - **Cut** or **Copy** to the pasteboard
 - **Paste** an object from the pasteboard
 - **Clear** - deletes the object from the library
-- **Rename** - a dialog box appears allowing you to rename the item. Note that object names must be unique in a library. 
+- **Rename** - a dialog box appears allowing you to rename the item. Note that object names must be unique in a library.
+
 
 You can place individual objects (including subforms) or sets of objects in an object library. Each object or set is grouped into a single item:
 
@@ -89,13 +92,13 @@ An object library can contain up to 32,000 items.
 Objects are copied with all their properties, both graphic and functional, including their methods. These properties are kept in full when the item is copied into a form or another library.
 
 #### Dependent objects
-
 Using copy-paste or drag-and-drop with certain library objects also causes their dependent objects to be copied. For example, copying a button will cause the object method that may be attached to be copied as well. These dependent objects cannot be copied or dragged and dropped directly.
 
 The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
 
 - Lists
 - Formats/Filters
-- Pictures
+- Bilder
 - Help Tips (linked to a field)
 - Object methods
+

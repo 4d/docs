@@ -3,55 +3,48 @@ id: propertiesText
 title: テキスト
 ---
 
-* * *
+---
+## ピッカーの使用を許可
 
-## Allow font/color picker
+このプロパティが有効化されていると、[OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.ja.html) または [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.ja.html) を使用してユーザーがフォントピッカー/カラーピッカーを呼び出すことを許可します。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
 
-When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
 #### JSON 文法
 
-| プロパティ                | データタイプ  | とりうる値                 |
-| -------------------- | ------- | --------------------- |
-| allowFontColorPicker | boolean | false (default), true |
-
+| プロパティ                | データタイプ  | とりうる値               |
+| -------------------- | ------- | ------------------- |
+| allowFontColorPicker | boolean | false (デフォルト), true |
 
 #### 対象オブジェクト
 
 [入力](input_overview.md)
 
-* * *
-
+---
 ## 太字
 
-Sets the selected text to appear darker and heavier.
+選択テキストの線を太くし、濃く見えるようにします。
 
-You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
-
-> This is normal text.  
-> **This is bold text.**
+このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+> これは通常のテキストです。<br> **これは太字のテキストです。**
 
 #### JSON 文法
 
 | プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
-| fontWeight | テキスト   | "normal", "bold" |
-
+| fontWeight | text   | "normal", "bold" |
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
-* * *
 
+---
 ## イタリック
 
-Sets the selected text to slant slightly to the right.
+選択テキストの線を右斜めに傾けます。
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
-
-> This is normal text.  
-> *This is text in italics.*
+このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+> これは通常のテキストです。<br> *これはイタリックのテキストです。*
 
 #### JSON 文法
 
@@ -59,19 +52,17 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 | --------- | ------ | ------------------ |
 | fontStyle | string | "normal", "italic" |
 
-
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
-* * *
 
+
+
+---
 ## 下線
-
-Sets the text to have a line running beneath it.
-
-> This is normal text.  
-> This is <span style="text-decoration:underline">underlined</span> text.
+選択テキストの下に線を引きます。
+> これは通常のテキストです。<br> <span style="text-decoration:underline">これは下線の付いたテキストです。</span>
 
 #### JSON 文法
 
@@ -79,37 +70,41 @@ Sets the text to have a line running beneath it.
 | -------------- | ------ | --------------------- |
 | textDecoration | string | "normal", "underline" |
 
-
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
-* * *
 
+
+
+
+
+---
 ## フォント
 
-This property allows you to specify either the **font theme** or the **font family** used in the object.
+このプロパティは、オブジェクトで使用される **フォントテーマ** または **フォントファミリー** を指定します。
+> **フォントテーマ** と **フォントファミリー** プロパティは、どちらか一方しか指定できません。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。
 
-> **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
 
 ### フォントテーマ
 
-The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
+フォントテーマプロパティには、自動スタイルの名前を指定します。 自動スタイルは、オブジェクトに使われるフォントファミリー・フォントサイズ・フォントカラーをシステムパラメーターに応じて動的に定めます。 これらのパラメーターは次に依存します:
 
-- the platform,
-- the system language,
-- and the type of form object.
+- プラットフォーム
+- システム言語
+- フォームオブジェクトのタイプ
 
-With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
+フォントテーマを使うことで、システムの現インターフェース標準に沿うようにタイトルが表示されることが保証されます。 ただし、マシンごとにサイズが変わるかもしれません。
 
-Three font themes are available:
-
-- **normal**: automatic style, applied by default to any new object created in the Form editor.
-- **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
+3つのフォントテーマが提供されています:
+- **normal**: フォームエディター内で作成された新規オブジェクトにデフォルトで適用される自動スタイルです。
+- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します:
 
 ![](assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> フォントテーマはフォントだけでなく、サイズやカラーも定めます。 一部のカスタムスタイルプロパティ (太字、イタリック、下線) は動作に影響なく適用することができます。
+
+
 
 #### JSON 文法
 
@@ -120,145 +115,185 @@ Three font themes are available:
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
-### Font Family
 
-There are two types of font family names:
 
-* *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
-* *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+### フォントファミリー
 
-> <span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span>  
-> <span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span>  
-> <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
+次の 2種類のフォントファミリーが存在します:
+
+* *フォントファミリー:* "times", "courier", "arial" などのフォントファミリーの名称。
+* *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
+
+このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
+> <span style="font-family:YuGothic; font-size:20pt"> これは 游ゴシック フォントです。</span><br> <span style="font-family:YuMincho; font-size:20pt"> これは 游明朝 フォントです。</span>
+
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                |
-| ---------- | ------ | -------------------- |
-| fontFamily | string | CSS font family name |
-
-
-> 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
+| 名          | データタイプ | とりうる値          |
+| ---------- | ------ | -------------- |
+| fontFamily | string | CSS フォントファミリー名 |
+> 4D では [Webセーフ](https://www.w3schools.com/cssref/css_websafe_fonts.asp) フォントだけを使うことを推奨しています。
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
-* * *
 
+
+---
 ## フォントサイズ
 
-Allows defining the object's font size in points.
+文字の大きさをポイントで指定します。
 
 #### JSON 文法
 
-| 名        | データタイプ  | とりうる値                       |
-| -------- | ------- | --------------------------- |
-| fontSize | integer | Font size in points. 最小値: 0 |
-
+| 名        | データタイプ  | とりうる値                   |
+| -------- | ------- | ----------------------- |
+| fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 |
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
-* * *
 
+---
 ## フォントカラー
 
-Designates the font color.
+文字の色を指定します。
 
-> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
+> オブジェクトの [境界線スタイル](properties_backgrounandborder.md#境界線スタイル) に "標準" または "ドット" を選択している場合、このプロパティはその境界線の色も指定します。
 
-The color can be specified by:
+カラーは次の方法で指定できます:
 
-* a color name - like "red"
-* a HEX value - like "#ff0000"
-* an RGB value - like "rgb(255,0,0)"
+* カラーネーム - 例: "red"
+* 16進数値 - 例: "#ff0000"
+* RGB値 - 例: "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+このプロパティはOBJECT SET RGB COLORS** コマンドによって設定することができます。 </p> 
+
+
+
 
 #### JSON 文法
 
-| 名      | データタイプ | とりうる値                                     |
-| ------ | ------ | ----------------------------------------- |
-| stroke | string | any css value, "transparent", "automatic" |
+| 名      | データタイプ | とりうる値                                |
+| ------ | ------ | ------------------------------------ |
+| stroke | string | 任意の css値; "transparent"; "automatic" |
+
+
 
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
-* * *
+
+
+
+
+---
+
+
 
 ## フォントカラー式
 
-`Selection and collection/entity selection type list boxes`
+`セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
-Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
+リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 この点に関する詳細は 4Dランゲージリファレンスマニュアルの [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.ja.html) コマンドの説明を参照してください。
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+式または変数 (配列を除く) を入力します。 表示される行ごとに式や変数は評価されます。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
+また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk font color expression` 定数を指定して設定することもできます。
 
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
-The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
+> このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
+
+以下の例は変数名を使用しています。**フォントカラー式** に *CompanyColor* を入力し、フォームメソッドに以下のコードを書きます:
+
+
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
 Foreground color;Dark shadow color)
 ```
 
+
+
+
 #### JSON 文法
 
-| 名               | データタイプ | とりうる値                 |
-| --------------- | ------ | --------------------- |
-| rowStrokeSource | string | Font color expression |
+| 名               | データタイプ | とりうる値    |
+| --------------- | ------ | -------- |
+| rowStrokeSource | string | フォントカラー式 |
+
+
 
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md) 
 
-* * *
+
+
+---
+
 
 ## スタイル式
 
-`Selection and collection/entity selection type list boxes`
+`セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
-Used to apply a custom character style to each row of the list box or each cell of the column.
+リストボックスの各行にカスタマイズされた文字スタイルを適用するために使用します。
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 ここでは [Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます。
 
 例: 
+
+
 
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
 
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk font style expression` 定数を指定して設定することもできます。
+
+
+> このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
+
+
+
 
 #### JSON 文法
 
-| 名              | データタイプ | とりうる値                                           |
-| -------------- | ------ | ----------------------------------------------- |
-| rowStyleSource | string | Style expression to evaluate for each row/cell. |
+| 名              | データタイプ | とりうる値                   |
+| -------------- | ------ | ----------------------- |
+| rowStyleSource | string | 表示される行/セルごとに評価されるスタイル式。 |
+
+
 
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
-* * *
+
+
+
+
+
+
+
+---
+
 
 ## 横揃え
 
-Horizontal location of text within the area that contains it.
+エリア中のテキストの横位置を指定します。
+
+
 
 #### JSON 文法
 
@@ -267,22 +302,31 @@ Horizontal location of text within the area that contains it.
 | textAlign | string | "automatic", "right", "center", "justify", "left" |
 
 
+
+
 #### 対象オブジェクト
 
-[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Header](listbox_overview.md#list-box-footers) - [Text Area](text.md)
+[グループボックス](groupBox.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [テキストエリア](text.md)
 
-* * *
+
+
+
+---
+
 
 ## 縦揃え
 
-Vertical location of text within the area that contains it.
+エリア中のテキストの縦位置を指定します。
 
-The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
+**デフォルト** オプション (JSON値: `automatic`) の場合は、各列のデータ型に基づき整列方向が決定されます: 
 
-- `bottom` for all data (except pictures) and 
-- `top` for picture type data.
+- ピクチャーを除き、すべて `下` です。
+- ピクチャーは `上` です。
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
+このプロパティは、[OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.ja.html) と [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.ja.html) コマンドを使用して設定することもできます。
+
+
+
 
 #### JSON 文法
 
@@ -291,51 +335,59 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 | verticalAlign | string | "automatic", "top", "middle", "bottom" |
 
 
+
+
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
-
-* * *
-
-## Meta Info Expression
-
-`Collection or entity selection type list boxes`
-
-Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
-
-| Property name       | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
-| fill                | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
-| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
-| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
-| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable        | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
-| 無効                  | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
-| cell.\<columnName> | object  | Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                       |
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)
 
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-The following example uses the *Color* project method.
 
-In the form method, write the following code:
+
+
+
+
+
+
+
+---
+
+
+## メタ情報式
+
+`コレクションまたはエンティティセレクション型リストボックス`
+
+表示される行ごとに評価される式あるいは変数を指定します。 行テキスト属性全体を定義することができます。 **オブジェクト変数**、あるいは **オブジェクトを返す式** を指定する必要があります。 以下のオブジェクトプロパティがサポートされています:
+
+| プロパティ名              | タイプ     | 説明                                                                                                                                                                                                                   |
+| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke              | string  | フォントカラー。 任意の CSSカラー (例: "#FF00FF"), "automatic", "transparent"                                                                                                                                                       |
+| fill                | string  | 背景色。 任意の CSSカラー (例: "#F00FFF"), "automatic", "transparent"                                                                                                                                                           |
+| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                    |
+| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                      |
+| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                 |
+| unselectable        | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。 このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。 チェックボックスやリストといったコントロール類は引き続き稼働します。 この設定はリストボックスの選択モードが "なし" の場合には無視されます。 デフォルト値: false |
+| disabled            | boolean | 対応する行を無効化します。 このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。 テキストや、(チェックボックス、リストなどの) コントロール類は暗くなっているかグレーアウトされます。 デフォルト値: false                                                                                                |
+| cell.\<columnName> | object  | プロパティを単一のカラムに適用するときに使用します。 \<columnName> には、リストボックスカラムのオブジェクト名を渡します。 **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。                                                       |
+
+
+
+
+> このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
+
+**例題**
+
+*Color* プロジェクトメソッドには、以下のコードを書きます:
+
+
 
 ```4d
-//form method
-Case of
-  :(Form event=On Load)
-   Form.meta:=New object
-End case
-```
-
-In the *Color* method, write the following code:
-
-```4d
-//Color method
-//Sets font color for certain rows and the background color for a specific column:
+// Color メソッド
+// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
 C_OBJECT($0)
-If(This.ID>5) //ID is an attribute of collection objects/entities
+Form.meta:=New object
+If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
@@ -344,34 +396,83 @@ End if
 $0:=Form.meta
 ```
 
-> See also the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command.
+
+**ベストプラクティス:** このような場合には最適化のため、フォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
+
+
+
+```4d
+  // フォームメソッド
+Case of
+  :(Form event code=On Load)
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
+End case
+```
+
+
+*Color* メソッドには、以下のコードを書きます:
+
+
+
+```4d
+  // Color メソッド
+ ...
+ If(This.ID>5)
+    Form.meta.stroke:="purple"
+    Form.meta.cell:=Form.colStyle // より良いパフォーマンスのため、同じオブジェクトを再利用します
+ ...
+```
+
+
+
+> [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドも参照してください。
+
+
+
+
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                            |
-| ---------- | ------ | ------------------------------------------------ |
-| metaSource | string | Object expression to evaluate for each row/cell. |
+| 名          | データタイプ | とりうる値                     |
+| ---------- | ------ | ------------------------- |
+| metaSource | string | 表示される行/セルごとに評価されるオブジェクト式。 |
+
+
 
 
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
 
-* * *
 
-## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.</p> 
 
-<p>
-  By default, this option is not enabled.
+
+
+
+
+
+
+---
+
+
+## マルチスタイル
+
+このプロパティは、選択エリアでスタイルの利用を可能にするかどうかを指定するものです。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の \<SPAN> HTMLタグをスタイル属性として解釈します。 </p> 
+
+<p spaces-before="0">
+  デフォルトでは、このオプションは有効化されていません。
 </p>
 
-<h4>
+
+
+
+
+<h4 spaces-before="0">
   JSON 文法
 </h4>
 
-<table>
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -401,38 +502,50 @@ This property enables the possibility of using specific styles in the selected a
   </tr>
 </table>
 
-<h4>
+
+
+<h4 spaces-before="0">
   対象オブジェクト
 </h4>
 
-<p>
-  <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="input_overview.md">Input</a>
+<p spaces-before="0">
+  <a href="listbox_overview.md#リストボックス列">リストボックス列</a> - <a href="input_overview.md">入力</a>
 </p>
+
+
+
+
+
+
+
+
+
 
 <hr />
 
-<h2>
-  Orientation
+
+<h2 spaces-before="0">
+  方向
 </h2>
 
-<p>
-  Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
+<p spaces-before="0">
+  テキストエリアの角度 (回転) を変更します。 テキストエリアは、90°単位で回転させることができます。 それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
 </p>
 
-<table>
+<table spaces-before="0">
   <tr>
     <th>
-      Orientation value
+      回転角度
     </th>
     
     <th>
-      Result
+      戻り値
     </th>
   </tr>
   
   <tr>
     <td>
-      0 (default)
+      0 (デフォルト)
     </td>
     
     <td>
@@ -471,15 +584,20 @@ This property enables the possibility of using specific styles in the selected a
   </tr>
 </table>
 
-<p>
-  In addition to <a href="text.md">static text areas</a>, <a href="input_overview.md">input</a> text objects can be rotated when they are non-<a href="properties_Entry.md#enterable">enterable</a>. When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
+<p spaces-before="0">
+  <a href="text.md">スタティックなテキストエリア</a> のほかに、<a href="properties_Entry.md#入力可">入力不可</a> に設定された <a href="input_overview.md">入力オブジェクト</a> も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。 
 </p>
 
-<h4>
+
+
+
+
+
+<h4 spaces-before="0">
   JSON 文法
 </h4>
 
-<table>
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -509,37 +627,48 @@ This property enables the possibility of using specific styles in the selected a
   </tr>
 </table>
 
-<h4>
+
+
+<h4 spaces-before="0">
   対象オブジェクト
 </h4>
 
-<p>
-  <a href="input_overview.md">Input</a> (non-enterable) - <a href="text.md">Text Area</a>
+<p spaces-before="0">
+  <a href="input_overview.md">入力</a> (入力不可) - <a href="text.md">テキストエリア</a>
 </p>
+
+
+
+
+
+
 
 <hr />
 
-<h2>
+
+<h2 spaces-before="0">
   行フォントカラー配列
 </h2>
 
-<p>
-  <code>Array type list boxes</code>
+<p spaces-before="0">
+  <code>配列型リストボックス</code>
 </p>
 
-<p>
-  Allows setting a custom font color to each row of the list box or cell of the column.
+<p spaces-before="0">
+  リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。 
 </p>
 
-<p>
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+<p spaces-before="0">
+  倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは <a href="https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html">SET RGB COLORS</a> テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 </p>
 
-<h4>
+
+
+<h4 spaces-before="0">
   JSON 文法
 </h4>
 
-<table>
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -564,42 +693,54 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      The name of a longint array
+      倍長整数型配列の名前
     </td>
   </tr>
 </table>
 
-<h4>
+
+
+<h4 spaces-before="0">
   対象オブジェクト
 </h4>
 
-<p>
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+<p spaces-before="0">
+  <a href="listbox_overview.md">リストボックス</a> - <a href="listbox_overview.md#リストボックス列">リストボックス列</a>
 </p>
+
+
+
+
+
+
 
 <hr />
 
-<h2>
+
+<h2 spaces-before="0">
   行スタイル配列
 </h2>
 
-<p>
-  <code>Array type list boxes</code>
+<p spaces-before="0">
+  <code>配列型リストボックス</code>
 </p>
 
-<p>
-  Allows setting a custom font style to each row of the list box or each cell of the column.
+<p spaces-before="0">
+  リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
 </p>
 
-<p>
-  The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Font Styles</a> theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+<p spaces-before="0">
+  倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 配列へは、<a href="https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html">Font Styles</a> テーマの定数を使用することができます (メソッドを使用しての入力も可能)。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 </p>
 
-<h4>
+
+
+
+<h4 spaces-before="0">
   JSON 文法
 </h4>
 
-<table>
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -624,56 +765,65 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      The name of a longint array.
+      倍長整数型配列の名前
     </td>
   </tr>
 </table>
 
-<h4>
+
+
+<h4 spaces-before="0">
   対象オブジェクト
 </h4>
 
-<p>
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+<p spaces-before="0">
+  <a href="listbox_overview.md">リストボックス</a> - <a href="listbox_overview.md#リストボックス列">リストボックス列</a>
 </p>
+
+
+
+
 
 <hr />
 
-<h2>
-  Store with default style tags
+
+<h2 spaces-before="0">
+  スタイルタグを全て保存
 </h2>
 
-<p>
-  This property is only available for a <a href="#multi-style">Multi-style</a> input area. When this property is enabled, the area will store the style tags with the text, even if no modification has been made. In this case, the tags correspond to the default style. When this property is disabled, only modified style tags are stored.
+<p spaces-before="0">
+  このプロパティは <a href="#マルチスタイル">マルチスタイル</a> 入力エリアの場合にのみ提供されます。 このオプションがチェックされている場合には、たとえ変更がおこなわれていなくても、エリアはテキストとともにスタイルタグを格納します。 この場合、タグはデフォルトスタイルが適用されます。 このオプションがチェックされていないと、変更されたスタイルタグのみが格納されます。
 </p>
 
-<p>
-  For example, here is a text that includes a style modification:
+<p spaces-before="0">
+  たとえば、以下のようにスタイルが変更されたテキストがあります:
 </p>
 
-<p>
+<p spaces-before="0">
   <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
 </p>
 
-<p>
-  When the property is disabled, the area only stores the modification. The stored contents are therefore:
+<p spaces-before="0">
+  このプロパティが無効な場合、エリアは更新されたスタイルのみを格納します。 つまり、格納される内容は以下のようになります:
 </p>
 
 <pre><code>What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!
 </code></pre>
 
-<p>
-  When the property is enabled, the area stores all the formatting information. The first generic tag describes the default style then each variation is the subject of a pair of nested tags. The contents stored in the area are therefore:
+<p spaces-before="0">
+  同プロパティが有効な場合には、エリアはすべてのフォーマット情報を格納します。 先頭の汎用タグはデフォルトスタイルを定義し、変更されたスタイルはネストされたタグに書き込まれます。 格納される内容は以下のようになります:
 </p>
 
 <pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
 </code></pre>
 
-<h4>
+
+
+<h4 spaces-before="0">
   JSON 文法
 </h4>
 
-<table>
+<table spaces-before="0">
   <tr>
     <th>
       名
@@ -698,15 +848,38 @@ This property enables the possibility of using specific styles in the selected a
     </td>
     
     <td>
-      true, false (default).
+      true, false (デフォルト)
     </td>
   </tr>
 </table>
 
-<h4>
+
+
+<h4 spaces-before="0">
   対象オブジェクト
 </h4>
 
-<p>
+<p spaces-before="0">
   <a href="input_overview.md">入力</a>
 </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,22 +3,22 @@ id: looping
 title: Schleifenstrukturen
 ---
 
+Schleifenstrukturen wiederholen eine Abfolge von Anweisungen, bis eine Bedingung gefunden wird oder eine Anzahl an Durchläufen erreicht ist.
+
+
 ## While...End while
 
 Die formale Syntax der Abfragefolge `While...End while` lautet:
-
 ```4d
  While(Boolean_Expression)
     statement(s)
  End while
 ```
-
 Eine Schleife `While...End while` führt die Anweisung innerhalb der Schleife solange aus, wie der Boolean Ausdruck wahr ist. Sie prüft den Boolean Ausdruck am Beginn der Schleife und tritt gar nicht in die Schleife ein, wenn der Ausdruck FALSE ist.
 
 Es ist üblich, den getesteten Wert im Boolean Ausdruck direkt vor Eintreten in die Schleife `While...End while` zu initialisieren. Den Wert initialisieren heißt, Sie setzen etwas Passendes, so dass der Boolean Ausdruck TRUE ist und `While...End while` die Schleife ausführt.
 
-Sie müssen dem Boolean Ausdruck in der Schleife einen sinnvollen Wert zuweisen, da sonst die Schleife endlos läuft. Nachfolgende Schleife läuft endlos, da *NeverStop* immer wahr ist:
-
+Sie müssen dem Boolean Ausdruck in der Schleife einen sinnvollen Wert zuweisen, da sonst die Schleife endlos läuft. Nachfolgende Schleife läuft endlos, da _NeverStop_ immer wahr ist:
 ```4d
  NeverStop:=True
  While(NeverStop)
@@ -36,18 +36,16 @@ In solch einer Situation, also bei einer unkontrolliert ablaufenden Methode kön
  End while //The loop always ends with End while
 ```
 
-In diesem Beispiel wird die Systemvariable `OK` über den Befehl `CONFIRM` gesetzt, bevor die Schleife startet. Klickt der Benutzer im Dialogfenster Bestätigen auf die Schaltfläche **OK**, wird die Systemvariable `OK` auf 1 gesetzt und die Schleife startet. Ansonsten wird die Systemvariable `OK` auf 0 gesetzt und die Schleife übersprungen. Sobald die Schleife läuft, sorgt der Befehl `ADD RECORD` dafür, dass sie weiterläuft, da er die Systemvariable `OK` auf 1 setzt, wenn der Benutzer den Datensatz sichert. Annulliert der Benutzer den letzten Datensatz, d.h. er sichert ihn nicht, wird die Systemvariable `OK` auf 0 gesetzt und die Schleife stoppt.
+In diesem Beispiel wird die Systemvariable `OK` über den Befehl `CONFIRM` gesetzt, bevor die Schleife startet. Klickt der Benutzer im Dialogfenster Bestätigen auf die Schaltfläche **OK**, wird die Systemvariable `OK` auf 1 gesetzt und die Schleife startet. Ansonsten wird die Systemvariable `OK` auf 0 gesetzt und die Schleife übersprungen. Sobald die Schleife läuft, sorgt der Befehl `ADD RECORD` dafür, dass sie weiterläuft, da er die Systemvariable `OK` auf 1 setzt, wenn der Benutzer den Datensatz sichert. Annulliert der Benutzer den letzten Datensatz,  d.h. er sichert ihn nicht, wird die Systemvariable `OK` auf 0 gesetzt und die Schleife stoppt.
 
 ## Repeat...Until
 
 Die formale Syntax der Abfragefolge `Repeat...Until` lautet:
-
 ```4d
  Repeat
     statement(s)
  Until(Boolean_Expression)
 ```
-
 Die Schleife `Repeat...Until` arbeitet ähnlich wie die Schleife [While...End while](flow-control#whileend-while), mit dem Unterschied, dass der Boolean Ausdruck nicht vor, sondern nach der Schleife getestet wird. So führt `Repeat...Until` die Schleife immer einmal aus, während `While...End while` die Schleife gar nicht ausführt, wenn am Anfang der Boolean Ausdruck falsch ist.
 
 Ein weiterer Unterschied ist, dass `Repeat...Until` weiterläuft, bis der Boolean Ausdruck TRUE ist.
@@ -75,7 +73,7 @@ Die formale Syntax der Abfragefolge `For..End for` lautet:
 Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
 
 - *Counter_Variable* ist eine numerische Variable vom Typ Zahl oder Lange Ganzzahl. Sie wird von der Schleife `For...End for` auf den in *Start_Expression* festgelegten Wert initialisiert.
-- Die Zählervariable wird nach jedem Durchlaufen der Schleife um den optionalen Wert, der in *Increment_Expression* angegeben ist, erhöht. Tragen Sie hier keinen Wert ein, wird die Zählervariable standardmäßig um Eins (1) erhöht.
+- Die Zählervariable wird nach jedem Durchlaufen der Schleife um den optionalen Wert erhöht, der in *Increment_Expression* angegeben ist. Geben Sie *Increment_Expression* nicht an, wird die Zählervariable standardmäßig um Eins (1) erhöht.
 - Sobald die Zählervariable *End_Expression* durchläuft, stoppt die Schleife.
 
 **Wichtig:** Die numerischen Ausdrücke *Start_Expression*, *End_Expression* und *Increment_Expression* werden einmal am Schleifenbeginn gewertet. Sind diese Ausdrücke Variablen, und ändern Sie eine dieser Variablen innerhalb der Schleife, hat das keine Auswirkung auf die Schleife.
@@ -129,7 +127,7 @@ Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
  End for
 ```
 
-Die meisten der Schleifen `For...End for` in Ihrer Datenbank sehen wie in den oben aufgeführten Beispielen aus.
+Die meisten der Schleifen `For...End for` in Ihren Projekten sehen wie in den oben aufgeführten Beispielen aus.
 
 ### Variablenzähler verringern
 
@@ -189,10 +187,10 @@ Bei Bedarf können Sie *Increment_Expression* (positiv oder negativ) für absolu
  End for
 ```
 
+
 ### Die Strukturen der Schleifen vergleichen
 
 Gehen wir zurück zum ersten Beispiel in `For...End for`. Folgendes Beispiel führt 100 Durchläufe aus:
-
 ```4d
  For(vCounter;1;100)
   //Do something
@@ -200,7 +198,6 @@ Gehen wir zurück zum ersten Beispiel in `For...End for`. Folgendes Beispiel fü
 ```
 
 Es ist interessant zu vergleichen, wie die Schleifen `While...End while` und `Repeat...Until` dieselbe Aktion durchführen. Ausführung mit der Schleife `While...End while`:
-
 ```4d
  $i:=1 //Initialize the counter
  While($i<=100) //Loop 100 times
@@ -210,7 +207,6 @@ Es ist interessant zu vergleichen, wie die Schleifen `While...End while` und `Re
 ```
 
 Ausführung mit der Schleife `Repeat...Until`:
-
 ```4d
  $i:=1 //Initialize the counter
  Repeat
@@ -218,7 +214,6 @@ Ausführung mit der Schleife `Repeat...Until`:
     $i:=$i+1 //Need to increment the counter
  Until($i=100) //Loop 100 times
 ```
-
 **Tipp:** Die Schleife `For...End for` ist normalerweise schneller als die Schleifen `While...End while` und `Repeat...Until`, da 4D die Bedingung für jeden Schleifenzyklus intern abfragt und dann den Zähler erhöht. Verwenden Sie deshalb möglichst die Schleife `For...End for`.
 
 ### Die Ausführung der Schleife For...End for optimieren
@@ -300,30 +295,28 @@ Folgende Tabelle vergleicht drei Typen von `For each...End for each`:
 | Anzahl Schleifen (standardmäßig)        | Anzahl der Collection Elemente                    | Anzahl Entities in der Selection | Anzahl der Objekteigenschaften |
 | Unterstützung der Parameter begin / end | Ja                                                | Ja                               | Nein                           |
 
-
 - Die Anzahl Schleifen wird beim Starten berechnet und ändert sich nicht während der Durchführung. Einträge während der Schleife hinzufügen oder entfernen wird generell nicht empfohlen, da dies zu fehlenden oder überflüssigen Wiederholungen führen kann.
-- Standardmäßig werden die angegebenen *Anweisungen* für jeden Wert in *Expression* ausgeführt. Es ist jedoch möglich, die Schleife durch Testen einer Bedingung entweder am Anfang (`While`) oder am Ende der Schleife (`Until`) zu verlassen.
+- Standardmäßig werden die angegebenen _Anweisungen_ für jeden Wert in *Expression* ausgeführt. Es ist jedoch möglich, die Schleife durch Testen einer Bedingung entweder am Anfang (`While`) oder am Ende der Schleife (`Until`) zu verlassen.
 - Über die optionalen Parameter *begin* und *end* lassen sich in Collections und Entity-Selections Grenzen für die Schleife definieren.
-- Die Schleife `For each...End for each` lässt sich für eine **shared collection** oder ein **shared object** verwenden. Muss Ihr Code ein oder mehrere Elemente der Collection oder Objekteigenschaften ändern, müssen Sie `Use...End use` verwenden. Sie können `Use...End use` je nach Bedarf wie folgt aufrufen: 
+- Die Schleife `For each...End for each` lässt sich für eine **shared collection** oder ein **shared object** verwenden. Muss Ihr Code ein oder mehrere Elemente der Collection oder Objekteigenschaften ändern, müssen Sie `Use...End use` verwenden. Sie können `Use...End use` je nach Bedarf wie folgt aufrufen:
     - Vor Eintreten in die Schleife, wenn Einträge zur Wahrung der Integrität gemeinsman geändert werden sollen, oder
-    - Innerhalb der Schleife, wenn nur ein paar Elemente/Eigenschaften geändert werden müssen und kein Verwalten der Integrität erforderlich ist. 
+    - Innerhalb der Schleife, wenn nur ein paar Elemente/Eigenschaften geändert werden müssen und kein Verwalten der Integrität erforderlich ist.
 
 ### Schleife durch Collections
 
-Beim Verwenden von `For each...End for each` mit einer *Expression* vom Typ *Collection* ist der Parameter *Current_Item* eine Variable vom gleichen Typ wie die Collection Elemente. Die Anzahl Schleifen basiert standardmäßig auf der Anzahl Einträge in der Collection.
+Beim Verwenden von `For each...End for each` mit einer _Expression_ vom Typ _Collection_ ist der Parameter _Current_Item_ eine Variable vom gleichen Typ wie die Collection Elemente. Die Anzahl Schleifen basiert standardmäßig auf der Anzahl Einträge in der Collection.
 
-Die Collection darf nur Elemente vom gleichen Typ enthalten, sonst wird ein Fehler zurückgegeben, sobald die Variable *Current_Item* dem ersten Wert mit einem unpassenden Typ zugewiesen wird.
+Die Collection darf nur Elemente vom gleichen Typ enthalten, sonst wird ein Fehler zurückgegeben, sobald die Variable _Current_Item_ dem ersten Wert mit einem unpassenden Typ zugewiesen wird.
 
-Bei jeder Wiederholung der Schleife wird die Variable *Current_Item* automatisch mit dem passenden Element der Collection gefüllt. Dabei müssen Sie folgende Punkte berücksichtigen:
+Bei jeder Wiederholung der Schleife wird die Variable _Current_Item_ automatisch mit dem passenden Element der Collection gefüllt. Dabei müssen Sie folgende Punkte berücksichtigen:
 
-- Ist die Variable *Current_Item* vom Typ Objekt oder Collection (z.B. wenn *Expression* eine Collection von Objekten oder von Collections ist), wird durch Ändern dieser Variablen automatisch das zutreffende Element der Collection geändert (weil Objekte und Collections beide dieselbe Referenz nutzen). Bei einer Variablen mit einem skalaren Typ wird nur die Variable geändert.
-- Die Variable *Current_Item* muss vom gleichen Typ wie die Elemente der Collection sein. Ist ein Element davon nicht vom gleichen Typ wie die Variable, wird ein Fehler generiert und die Schleife stoppt.
-- Enthält die Collection Elemente mit einem Wert **Null**, wird ein Fehler generiert, wenn der Variablentyp von *Current_Item* keine **Null** Werte unterstützt, wie z. B. der Typ Lange Ganzzahl.
+- Ist die Variable _Current_Item_ vom Typ Objekt oder Collection (z.B. wenn _Expression_ eine Collection von Objekten oder von Collections ist), wird durch Ändern dieser Variablen automatisch das zutreffende Element der Collection geändert (weil Objekte und Collections beide dieselbe Referenz nutzen). Bei einer Variablen mit einem skalaren Typ wird nur die Variable geändert.
+- Die Variable _Current_Item_ muss vom gleichen Typ wie die Elemente der Collection sein. Ist ein Element davon nicht vom gleichen Typ wie die Variable, wird ein Fehler generiert und die Schleife stoppt.
+- Enthält die Collection Elemente mit einem Wert **Null**, wird ein Fehler generiert, wenn der Variablentyp von _Current_Item_ keine **Null** Werte unterstützt, wie z. B. der Typ Lange Ganzzahl.
 
 #### Beispiel
 
 Sie wollen für eine Collection mit Zahlen ein paar Statistiken berechnen:
-
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -347,7 +340,7 @@ Sie wollen für eine Collection mit Zahlen ein paar Statistiken berechnen:
 
 ### Schleife durch Entity-Selections
 
-Beim Verwenden von `For each...End for each` mit einer *Expression* vom Typ *Entity-Selection* ist der Parameter *Current_Item* die Entity, die gerade bearbeitet wird.
+Beim Verwenden von `For each...End for each` mit einer _Expression_ vom Typ _Entity-Selection_ ist der Parameter _Current_Item_ die Entity, die gerade bearbeitet wird.
 
 Die Anzahl Schleifen basiert auf der Anzahl Entities in der Entity-Selection. Bei jeder Wiederholung der Schleife wird der Parameter *Current_Item* automatisch mit der Entity der Entity-Selection gefüllt, die gerade bearbeitet wird.
 
@@ -358,7 +351,6 @@ Beachten Sie, dass jede Änderung in der aktuellen Entity explizit mit `entity.s
 #### Beispiel
 
 Sie wollen das Gehalt aller britischen Angestellten in einer Entity-Selection erhöhen:
-
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -376,7 +368,6 @@ Die Eigenschaften des Objekts werden in der Reihenfolge ihrer Erstellung bearbei
 #### Beispiel
 
 Sie wollen die Namen in folgendem Objekt auf Großschreibung umstellen:
-
 ```4d
 {
     "firstname": "gregory",
@@ -384,9 +375,7 @@ Sie wollen die Namen in folgendem Objekt auf Großschreibung umstellen:
     "age": 20
 }
 ```
-
 Sie schreiben:
-
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -394,14 +383,13 @@ Sie schreiben:
     End if
  End for each
 ```
-
-    {
-        "firstname": "GREGORY",
-        "lastname": "BADIKORA",
-        "age": 20
-    }
-    
-
+```
+{
+    "firstname": "GREGORY",
+    "lastname": "BADIKORA",
+    "age": 20
+}
+```
 ### Parameter begin / end
 
 Mit den optionalen Parametern begin und end können Sie Grenzen für die Wiederholung der Schleife definieren.
@@ -409,15 +397,14 @@ Mit den optionalen Parametern begin und end können Sie Grenzen für die Wiederh
 **Hinweis:** Die Parameter *begin* und *end* sind nur für Schleifen in Collections und Entity-Selections möglich, in Objekteigenschaften werden sie ignoriert.
 
 - Im Parameter *begin* übergeben Sie die Position des Elements in *Expression*, bei der der Durchlauf startet (inkl. *begin*).
-- Im Parameter *end* übergeben Sie die Position des Elements in *Expression*, bei der Durchlauf stoppt (exkl. *end*). 
+- Im Parameter *end* übergeben Sie die Position des Elements in *Expression*, bei der Durchlauf stoppt (exkl. *end*).
 
 Wird *end* weggelassen oder ist *end* größer als die Anzahl Elemente in *Expression*, werden Elemente ab *begin* bis zum letzten Element einschließlich durchlaufen. Sind die Parameter *begin* und *end* positive Werte, geben sie die aktuellen Positionen der Elemente in *Expression* an. Ist *begin* ein negativer Wert, wird er als `begin:=begin+Expression size` berechnet (=Versatz vom Ende der *Expression*). Ist der berechnete Wert negativ, wird *begin* auf 0 gesetzt. **Hinweis:** Auch wenn *begin* negativ ist, erfolgt der Durchlauf in der standardmäßigen Reihenfolge. Ist *end* ein negativer Wert, wird er berechnet als `end:=end+Expression size`
 
 Beispiel:
-
 - Eine Collection enthält 10 Elemente (nummeriert von 0 bis 9)
-- begin=-4 -> begin=-4+10=6 -> der Durchlauf startet mit dem 6. Element (#5)
-- end=-2 -> end=-2+10=8 -> der Durchlauf stoppt vor dem 8. Element (#7), z.B. beim 7. Element. 
+- begin=-4 > -> begin=-4+10=6 >-> der Durchlauf startet mit dem 6. Element (#5)
+- end=-2 > end=-2+10=8 > der Durchlauf stoppt vor dem 8. Element (#7), z.B. beim 7. Element.
 
 #### Beispiel
 
@@ -462,3 +449,4 @@ Sie können je nach Bedarf ein anderes Schlüsselwort verwenden:
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
+

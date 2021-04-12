@@ -14,6 +14,6 @@ This event is generated when an error is detected during the loading of a URL.
 
 You can call the `WA GET LAST URL ERROR` command in order to get information about the error.
 
-### See also
 
+### See also
 [`On Open External Link`](onOpenExternalLink.md)

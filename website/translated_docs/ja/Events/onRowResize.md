@@ -3,7 +3,7 @@ id: onRowResize
 title: On Row Resize
 ---
 
-| Code | Can be called by                                        | Definition                                               |
+| Code | Can be called by                                        | 定義                                                       |
 | ---- | ------------------------------------------------------- | -------------------------------------------------------- |
 | 60   | [4D View Pro Area](FormObjects/viewProArea_overview.md) | The height of a row is modified by a user with the mouse |
 
@@ -12,15 +12,14 @@ title: On Row Resize
 
 This event is generated when the height of a row is modified by a user in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| プロパティ       | 型       | 説明                                                               |
+| プロパティ       | タイプ     | 説明                                                               |
 | ----------- | ------- | ---------------------------------------------------------------- |
 | code        | 倍長整数    | 60                                                               |
-| description | テキスト    | "On Row Resize"                                                  |
-| objectName  | テキスト    | 4D View Pro area name                                            |
-| sheetName   | テキスト    | Name of the sheet of the event                                   |
+| description | text    | "On Row Resize"                                                  |
+| objectName  | text    | 4D View Pro area name                                            |
+| sheetName   | text    | Name of the sheet of the event                                   |
 | range       | object  | Cell range of the rows whose heights have changed                |
 | header      | boolean | True if the column header row (first row) is resized, else false |
-
 
 #### 例題
 

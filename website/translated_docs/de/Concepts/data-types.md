@@ -5,28 +5,27 @@ title: Überblick über Datentypen
 
 In 4D werden Daten je nach Typ an zwei Stellen verwaltet: Datenfeld der Datenbank und 4D Programmiersprache.
 
-Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Datenbankebene nicht direkt in der Programmiersprache verfügbar und werden automatisch konvertiert. Dagegen lassen sich bestimmte Datentypen nur über die Programmiersprache verwalten. Nachfolgende Übersicht zeigt alle verfügbaren Datentypen und wie sie unterstützt bwz. deklariert werden:
+Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Datenbankebene nicht direkt in der Programmiersprache verfügbar und werden automatisch konvertiert. Dagegen lassen sich bestimmte Datentypen nur über die Programmiersprache verwalten. Nachfolgende Übersicht zeigt alle verfügbaren Datentypen und wie sie unterstützt bzw. deklariert werden:
 
-| Datentypen                                      | Datenbank Unterstützung (1) | Programmiersprache Unterstützung | Variable Deklaration         |
-| ----------------------------------------------- | --------------------------- | -------------------------------- | ---------------------------- |
-| [Alphanumerisch](dt_string.md)                  | Ja                          | Konvertiert in Text              | -                            |
-| [Text](Concepts/dt_string.md)                   | Ja                          | Ja                               | `C_TEXT`, `ARRAY TEXT`       |
-| [Datum](Concepts/dt_date.md)                    | Ja                          | Ja                               | `C_DATE`, `ARRAY DATE`       |
-| [Zeit](Concepts/dt_time.md)                     | Ja                          | Ja                               | `C_TIME`, `ARRAY TIME`       |
-| [Boolean](Concepts/dt_boolean.md)               | Ja                          | Ja                               | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Ganzzahl](Concepts/dt_number.md)               | Ja                          | Konvertiert in Lange Ganzzahl    | `ARRAY INTEGER`              |
-| [Lange Ganzzahl](Concepts/dt_number.md)         | Ja                          | Ja                               | `C_LONGINT`, `ARRAY LONGINT` |
-| [lange Ganzzahl 64 bits](Concepts/dt_number.md) | Ja (SQL)                    | Konvertiert in Zahl              | -                            |
-| [Zahl](Concepts/dt_number.md)                   | Ja                          | Ja                               | `C_REAL`, `ARRAY REAL`       |
-| [Undefiniert](Concepts/dt_null_undefined.md)    | -                           | Ja                               | -                            |
-| [Null](Concepts/dt_null_undefined.md)           | -                           | Ja                               | -                            |
-| [Zeiger](Concepts/dt_pointer.md)                | -                           | Ja                               | `C_POINTER`, `ARRAY POINTER` |
-| [Bild](Concepts/dt_picture.md)                  | Ja                          | Ja                               | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)                     | Ja                          | Ja                               | `C_BLOB`, `ARRAY BLOB`       |
-| [Objekt](Concepts/dt_object.md)                 | Ja                          | Ja                               | `C_OBJECT`, `ARRAY OBJECT`   |
-| [Collection](Concepts/dt_collection.md)         | -                           | Ja                               | `C_COLLECTION`               |
-| [Variant](Concepts/dt_variant.md)(2)            | -                           | Ja                               | `C_VARIANT`                  |
-
+| Datentypen                                      | Datenbank Unterstützung (1) | Programmiersprache Unterstützung | [`var` Deklaration](variables.md#using-the-var-keyword) | [`C_` oder `ARRAY` Deklaration](variables.md#using-a-c_-directive) |
+| ----------------------------------------------- | --------------------------- | -------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------ |
+| [Alphanumerisch](dt_string.md)                  | Ja                          | Konvertiert in Text              | -                                                       | -                                                                  |
+| [Text](Concepts/dt_string.md)                   | Ja                          | Ja                               | Text                                                    | `C_TEXT`, `ARRAY TEXT`                                             |
+| [Datum](Concepts/dt_date.md)                    | Ja                          | Ja                               | Datum                                                   | `C_DATE`, `ARRAY DATE`                                             |
+| [Zeit](Concepts/dt_time.md)                     | Ja                          | Ja                               | Zeit                                                    | `C_TIME`, `ARRAY TIME`                                             |
+| [Boolean](Concepts/dt_boolean.md)               | Ja                          | Ja                               | Boolean                                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                                       |
+| [Ganzzahl](Concepts/dt_number.md)               | Ja                          | Konvertiert in Lange Ganzzahl    | Ganzzahl                                                | `ARRAY INTEGER`                                                    |
+| [Lange Ganzzahl](Concepts/dt_number.md)         | Ja                          | Ja                               | Ganzzahl                                                | `C_LONGINT`, `ARRAY LONGINT`                                       |
+| [Lange Ganzzahl 64 bits](Concepts/dt_number.md) | Ja (SQL)                    | Konvertiert in Zahl              | -                                                       | -                                                                  |
+| [Zahl](Concepts/dt_number.md)                   | Ja                          | Ja                               | Zahl                                                    | `C_REAL`, `ARRAY REAL`                                             |
+| [Undefiniert](Concepts/dt_null_undefined.md)    | -                           | Ja                               | -                                                       | -                                                                  |
+| [Null](Concepts/dt_null_undefined.md)           | -                           | Ja                               | -                                                       | -                                                                  |
+| [Zeiger](Concepts/dt_pointer.md)                | -                           | Ja                               | Zeiger                                                  | `C_POINTER`, `ARRAY POINTER`                                       |
+| [Bild](Concepts/dt_picture.md)                  | Ja                          | Ja                               | Bild                                                    | `C_PICTURE`, `ARRAY PICTURE`                                       |
+| [BLOB](Concepts/dt_blob.md)                     | Ja                          | Ja                               | Blob                                                    | `C_BLOB`, `ARRAY BLOB`                                             |
+| [Objekt](Concepts/dt_object.md)                 | Ja                          | Ja                               | Objekt                                                  | `C_OBJECT`, `ARRAY OBJECT`                                         |
+| [Collection](Concepts/dt_collection.md)         | -                           | Ja                               | Collection                                              | `C_COLLECTION`                                                     |
+| [Variant](Concepts/dt_variant.md)(2)            | -                           | Ja                               | Variant                                                 | `C_VARIANT`                                                        |
 
 (1) Beachten Sie, dass ORDA die Datenfelder über Objekte (entities) verwaltet und deshalb nur Datentypen unterstützt, die für diese Objekte verfügbar sind. Weitere Informationen dazu finden Sie unter [Objekt](Concepts/dt_object.md).
 
@@ -38,13 +37,13 @@ Werden Variablen über eine Compiler Direktive typisiert, empfangen sie einen St
 
 Der Standardwert richtet sich nach Typ und Kategorie der Variablen, der Kontext seiner Ausführung (interpretiert oder kompiliert), sowie im kompilierten Modus die Optionen, die auf der Seite Compiler der Datenbank-Eigenschaften definiert wurden:
 
-- Prozess- und Interprozessvariablen werden immer "auf Null" gesetzt, d.h. "0" ist je nach Fall ein leerer String, ein leeres BLOB, ein Zeiger Nil, ein leeres Datum (00-00-00), etc.
-- Lokale Variablen werden wie folgt gesetzt: 
-    - Im interpretierten Modus: auf Null (siehe oben)
-    - Im kompilierten Modus je nach der Option **Lokale Variablen initialisieren** auf der Seite Compiler der Einstellungen: 
-        - "auf Null": auf Null (siehe oben)
+- Prozess- und Interprozessvariablen werden immer "auf Leer" gesetzt, d.h. je nach Fall ein leerer String, ein leeres BLOB, ein Zeiger Nil, ein leeres Datum (00-00-00), 0 für Zahl, etc.
+- Lokale Variablen werden wie folgt gesetzt:
+    - Im interpretierten Modus: auf Leer
+    - Im kompilierten Modus je nach der Option **Lokale Variablen initialisieren** auf der Seite Compiler der Einstellungen:
+        - "auf Leer": auf Leer (siehe oben)
         - " auf zufälligen Wert": 0x72677267 für Zahlen und Uhrzeiten, immer Wahr für Boolean, dasselbe wie "auf Null" für die anderen
-        - "Nein": keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. **Hinweis:** 4D empfiehlt, " auf Null" zu verwenden.
+        - "Nein": keine Initialisierung, d.h. das was in RAM ist, wird für die Variablen verwendet, analog zu Werten, die vor anderen Variablen verwendet werden. **Hinweis:** 4D empfiehlt, "auf Leer" zu verwenden.
 
 Nachfolgende Übersicht erläutert diese Standardwerte:
 
@@ -77,7 +76,6 @@ Nachfolgende Liste zeigt die wichtigsten Datentypen, in welchen Typ sie konverti
 | Datum                     | String    |         |          |         | Bool       |
 | Zeit                      | String    |         |          |         | Bool       |
 | Boolean                   |           | Num     |          |         |            |
-
 
 (1) In JSON formatierte Strings lassen sich über die Funktion `JSON Parse` in skalare Daten, Objekte oder Collections konvertieren.
 

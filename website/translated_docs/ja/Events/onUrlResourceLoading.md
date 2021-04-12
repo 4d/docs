@@ -3,9 +3,9 @@ id: onUrlResourceLoading
 title: On URL Resource Loading
 ---
 
-| Code | Can be called by                            | Definition                               |
-| ---- | ------------------------------------------- | ---------------------------------------- |
-| 48   | [Web Area](FormObjects/webArea_overview.md) | A new resource is loaded in the Web area |
+| Code | Can be called by                          | 定義                                       |
+| ---- | ----------------------------------------- | ---------------------------------------- |
+| 48   | [Webエリア](FormObjects/webArea_overview.md) | A new resource is loaded in the Web area |
 
 
 ## 説明
@@ -14,6 +14,6 @@ This event is generated each time a new resource (picture, frame, etc.) is loade
 
 The [Progression](FormObjects/properties_WebArea.md#progression) variable associated with the area lets you find out the current state of the loading.
 
-### See also
 
+### 参照
 [`On Open External Link`](onOpenExternalLink.md)

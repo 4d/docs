@@ -5,11 +5,16 @@ title: '$skip'
 
 Démarre l'entité définie par ce numéro dans la collection (par exemple, `$skip=10`)
 
+
 ## Description
 
 `$skip` définit l'entité de la collection par laquelle commencer. Par défaut, la collection envoyée commence par la première entité. Pour commencer avec la 10e entité de la collection, passez 10.
 
-`$skip` est généralement utilisé avec [`$top/$limit`]($top_$limit.md) pour naviguer dans une entity collection.</p> 
+`$skip` est généralement utilisé avec
+
+ [`$top/$limit`]($top_$limit.md) pour naviguer dans une entity collection.</p> 
+
+
 
 ## Exemple
 

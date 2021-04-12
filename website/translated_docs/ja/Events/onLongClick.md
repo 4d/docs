@@ -3,7 +3,7 @@ id: onLongClick
 title: On Long Click
 ---
 
-| Code | Can be called by                      | Definition                                                                           |
+| Code | Can be called by                      | 定義                                                                                   |
 | ---- | ------------------------------------- | ------------------------------------------------------------------------------------ |
 | 39   | [ボタン](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
 
@@ -26,6 +26,5 @@ This event can be generated for the following button styles:
 
 This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
 
-### See also
-
+### 参照
 [`On Alternative Click`](onAlternativeClick.md)

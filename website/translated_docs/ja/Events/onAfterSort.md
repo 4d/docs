@@ -3,7 +3,7 @@ id: onAfterSort
 title: On After Sort
 ---
 
-| Code | Can be called by                                                                                                  | Definition                                                      |
+| Code | Can be called by                                                                                                  | 定義                                                              |
 | ---- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | 30   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A standard sort has just been carried out in a list box column. |
 

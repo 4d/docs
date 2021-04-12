@@ -3,7 +3,7 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Can be called by                                                                                                                                                            | Definition                        |
+| Code | Can be called by                                                                                                                                                            | 定義                                |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
 
@@ -13,8 +13,6 @@ title: On Header Click
 ### リストボックス
 
 This event is generated when a click occurs on the header of a column in the list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
-
-> The [`On Clicked`](onClicked.md) event is generated when a right click (Windows) or Ctrl+click (macOS) occurs on a column or column header. You can test the number of clicks made by the user by means of the `Clickcount` command.
 
 If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
 
@@ -27,117 +25,14 @@ If the [Sortable](FormObjects/properties_Action.md#sortable) property is not sel
 
 This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-<table>
-  <tr>
-    <th>
-      プロパティ
-    </th>
-    
-    <th>
-      型
-    </th>
-    
-    <th>
-      説明
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      code
-    </td>
-    
-    <td>
-      倍長整数
-    </td>
-    
-    <td>
-      42
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      description
-    </td>
-    
-    <td>
-      テキスト
-    </td>
-    
-    <td>
-      "On Header Click"
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      objectName
-    </td>
-    
-    <td>
-      テキスト
-    </td>
-    
-    <td>
-      4D View Pro area name
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      sheetName
-    </td>
-    
-    <td>
-      テキスト
-    </td>
-    
-    <td>
-      Name of the sheet of the event
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      range
-    </td>
-    
-    <td>
-      object
-    </td>
-    
-    <td>
-      Cell range
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      sheetArea
-    </td>
-    
-    <td>
-      倍長整数
-    </td>
-    
-    <td>
-      The sheet location where the event took place:<br />
-      
-      <li>
-        0: The crossing area between column number/letter headers (top left of the sheet)
-      </li>
-      
-      <li>
-        1: The column headers (area indicating the column numbers/letters)
-      </li>
-      
-      <li>
-        2: The row headers (area indicating the row numbers)
-      </li>
-    </td>
-  </tr>
-</table>
+| プロパティ       | タイプ    | 説明                                                                                                                                  |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| code        | 倍長整数   | 42                                                                                                                                  |
+| description | text   | "On Header Click"                                                                                                                   |
+| objectName  | text   | 4D View Pro area name                                                                                                               |
+| sheetName   | text   | Name of the sheet of the event                                                                                                      |
+| range       | object | Cell range                                                                                                                          |
+| sheetArea   | 倍長整数   | The sheet location where the event took place:<br><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 
 #### 例題
 

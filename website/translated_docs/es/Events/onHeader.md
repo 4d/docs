@@ -16,7 +16,7 @@ The `On Header` event is called when a record is about to be displayed in a list
 
 In this context, the following sequence of calls to methods and form events is triggered:
 
-- For each object in the header area: 
+- For each object in the header area:
     - Object method with `On Header` event
     - Form method with `On Header` event
 

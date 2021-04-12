@@ -5,20 +5,116 @@
     "previous": "前へ",
     "tagline": " 4D 開発リファレンス",
     "docs": {
+      "Admin/cli": {
+        "title": "Command Line Interface"
+      },
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
+      },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
+      },
+      "Admin/licenses": {
+        "title": "4D ライセンスの管理"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
+      },
+      "API/ClassClass": {
+        "title": "クラス"
+      },
+      "API/CollectionClass": {
+        "title": "コレクション"
+      },
+      "API/CryptoKeyClass": {
+        "title": "CryptoKey"
+      },
+      "API/DataClassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/DataClassClass": {
+        "title": "データクラス"
+      },
+      "API/DataStoreClass": {
+        "title": "DataStore"
+      },
+      "API/Directory": {
+        "title": "Directory クラス"
+      },
+      "API/Document": {
+        "title": "Document クラス"
+      },
+      "API/EmailObjectClass": {
+        "title": "Email"
+      },
+      "API/EntityClass": {
+        "title": "エンティティ"
+      },
+      "API/EntitySelectionClass": {
+        "title": "EntitySelection"
+      },
+      "API/FileClass": {
+        "title": "File"
+      },
+      "API/FolderClass": {
+        "title": "Folder"
+      },
+      "API/FunctionClass": {
+        "title": "Formula"
+      },
+      "API/IMAPTransporterClass": {
+        "title": "IMAPTransporter"
+      },
+      "API/MailAttachmentClass": {
+        "title": "MailAttachment"
+      },
+      "API/overview": {
+        "title": "クラス API の概要"
+      },
+      "API/POP3TransporterClass": {
+        "title": "POP3Transporter"
+      },
+      "API/SessionClass": {
+        "title": "セッション"
+      },
+      "API/SignalClass": {
+        "title": "Signal"
+      },
+      "API/SMTPTransporterClass": {
+        "title": "SMTPTransporter"
+      },
+      "API/Transporter": {
+        "title": "Transporter クラス"
+      },
+      "API/WebServerClass": {
+        "title": "WebServer"
+      },
+      "API/ZipArchiveClass": {
+        "title": "ZIPArchive"
+      },
+      "API/ZipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/ZipFolderClass": {
+        "title": "ZIPFolder"
+      },
       "Backup/backup": {
-        "title": "Backup"
+        "title": "バックアップ"
       },
       "Backup/log": {
-        "title": "Log file (.journal)"
+        "title": "ログファイル (.journal)"
       },
       "Backup/overview": {
         "title": "概要"
       },
       "Backup/restore": {
-        "title": "Restore"
+        "title": "復元"
       },
       "Backup/settings": {
-        "title": "Backup Settings"
+        "title": "バックアップ設定"
       },
       "Concepts/about": {
         "title": "4D ランゲージについて"
@@ -107,6 +203,12 @@
       },
       "Concepts/variables": {
         "title": "変数"
+      },
+      "Desktop/building": {
+        "title": "プロジェクトパッケージのビルド"
+      },
+      "Desktop/clientServer": {
+        "title": "クライアント/サーバー管理"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -279,6 +381,9 @@
       "Events/onValidate": {
         "title": "On Validate"
       },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
+      },
       "Events/onVpReady": {
         "title": "On VP Ready"
       },
@@ -295,7 +400,10 @@
         "title": "フォームエディター"
       },
       "FormEditor/forms": {
-        "title": "About 4D Forms"
+        "title": "4D フォームについて"
+      },
+      "FormEditor/macros": {
+        "title": "フォームエディターマクロ"
       },
       "FormEditor/objectLibrary": {
         "title": "オブジェクトライブラリ"
@@ -307,25 +415,25 @@
         "title": "動作"
       },
       "FormEditor/propertiesForm": {
-        "title": "Form Properties"
+        "title": "フォームプロパティ"
       },
       "FormEditor/formSize": {
-        "title": "Form Size"
+        "title": "フォームサイズ"
       },
       "FormEditor/jsonReference": {
-        "title": "JSON property list"
+        "title": "JSON プロパティリスト"
       },
       "FormEditor/markers": {
         "title": "Markers"
       },
       "FormEditor/menu": {
-        "title": "Menu"
+        "title": "メニュー"
       },
       "FormEditor/print": {
-        "title": "Print"
+        "title": "印刷"
       },
       "FormEditor/windowSize": {
-        "title": "Window Size"
+        "title": "ウィンドウサイズ"
       },
       "FormObjects/buttonOverview": {
         "title": "ボタン"
@@ -358,64 +466,64 @@
         "title": "リストボックス"
       },
       "FormObjects/pictureButtonOverview": {
-        "title": "Picture Button"
+        "title": "ピクチャーボタン"
       },
       "FormObjects/picturePopupMenuOverview": {
-        "title": "Picture Pop-up Menu"
+        "title": "ピクチャーポップアップメニュー"
       },
       "FormObjects/pluginAreaOverview": {
-        "title": "Plug-in Area"
+        "title": "プラグインエリア"
       },
       "FormObjects/progressIndicator": {
-        "title": "Progress Indicator"
+        "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
         "title": "動作"
       },
       "FormObjects/propertiesAnimation": {
-        "title": "Animation"
+        "title": "アニメーション"
       },
       "FormObjects/propertiesAppearance": {
         "title": "アピアランス"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
-        "title": "Background and Border"
+        "title": "背景色と境界線"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
-        "title": "Coordinates & Sizing"
+        "title": "座標とサイズ"
       },
       "FormObjects/propertiesCrop": {
-        "title": "Crop"
+        "title": "行列数"
       },
       "FormObjects/propertiesDataSource": {
         "title": "データソース"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "表示フォーマット"
       },
       "FormObjects/propertiesEntry": {
-        "title": "Entry"
+        "title": "入力"
       },
       "FormObjects/propertiesFooters": {
-        "title": "Footers"
+        "title": "フッター"
       },
       "FormObjects/propertiesGridlines": {
-        "title": "Gridlines"
+        "title": "グリッド線"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "ヘッダー"
       },
       "FormObjects/propertiesHelp": {
         "title": "ヘルプ"
       },
       "FormObjects/propertiesHierarchy": {
-        "title": "Hierarchy"
+        "title": "階層"
       },
       "FormObjects/propertiesListBox": {
         "title": "リストボックス"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "オブジェクト"
       },
       "FormObjects/propertiesPicture": {
         "title": "ピクチャー"
@@ -424,22 +532,22 @@
         "title": "プラグイン"
       },
       "FormObjects/propertiesPrint": {
-        "title": "Print"
+        "title": "印刷"
       },
       "FormObjects/propertiesRangeOfValues": {
-        "title": "Range of Values"
+        "title": "値の範囲"
       },
       "FormObjects/propertiesReference": {
-        "title": "JSON property list"
+        "title": "JSON プロパティリスト"
       },
       "FormObjects/propertiesResizingOptions": {
-        "title": "Resizing Options"
+        "title": "リサイズオプション"
       },
       "FormObjects/propertiesScale": {
-        "title": "Scale"
+        "title": "スケール"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "サブフォーム"
       },
       "FormObjects/propertiesText": {
         "title": "テキスト"
@@ -448,122 +556,161 @@
         "title": "テキスト、ピクチャー"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/radiobuttonOverview": {
-        "title": "Radio Button"
+        "title": "ラジオボタン"
       },
       "FormObjects/ruler": {
-        "title": "Ruler"
+        "title": "ルーラー"
       },
       "FormObjects/shapesOverview": {
-        "title": "Shapes"
+        "title": "図形"
       },
       "FormObjects/spinner": {
-        "title": "Spinner"
+        "title": "スピナー"
       },
       "FormObjects/splitters": {
-        "title": "Splitter"
+        "title": "スプリッター"
       },
       "FormObjects/staticPicture": {
-        "title": "Static picture"
+        "title": "スタティックピクチャー"
       },
       "FormObjects/stepper": {
-        "title": "Stepper"
+        "title": "ステッパー"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "サブフォーム"
       },
       "FormObjects/tabControl": {
-        "title": "Tab Controls"
+        "title": "タブコントロール"
       },
       "FormObjects/text": {
         "title": "テキスト"
       },
       "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+        "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Webエリア"
       },
       "FormObjects/writeProAreaOverview": {
-        "title": "4D Write Pro area"
+        "title": "4D Write Pro エリア"
+      },
+      "GettingStarted/installation": {
+        "title": "インストール"
       },
       "Menus/bars": {
-        "title": "Menu bar features"
+        "title": "メニューバーの管理"
       },
       "Menus/creating": {
-        "title": "Creating menus and menu bars"
+        "title": "メニューとメニューバーの作成"
       },
       "Menus/overview": {
         "title": "概要"
       },
       "Menus/properties": {
-        "title": "Menu item properties"
+        "title": "メニュープロパティ"
       },
       "Menus/sdi": {
-        "title": "SDI mode on Windows"
+        "title": "Windows での SDIモード"
       },
       "MSC/analysis": {
-        "title": "Activity analysis Page",
-        "sidebar_label": "Activity analysis Page"
+        "title": "ログ解析ページ",
+        "sidebar_label": "ログ解析ページ"
       },
       "MSC/backup": {
-        "title": "Backup Page",
-        "sidebar_label": "Backup Page"
+        "title": "バックアップページ",
+        "sidebar_label": "バックアップページ"
       },
       "MSC/compact": {
-        "title": "Compact Page",
-        "sidebar_label": "Compact Page"
+        "title": "圧縮ページ",
+        "sidebar_label": "圧縮ページ"
       },
       "MSC/encrypt": {
-        "title": "Encrypt Page",
-        "sidebar_label": "Encrypt Page"
+        "title": "暗号化ページ",
+        "sidebar_label": "暗号化ページ"
       },
       "MSC/information": {
-        "title": "Information Page",
-        "sidebar_label": "Information Page"
+        "title": "情報ページ",
+        "sidebar_label": "情報ページ"
       },
       "MSC/overview": {
         "title": "概要",
         "sidebar_label": "概要"
       },
       "MSC/repair": {
-        "title": "Repair Page",
-        "sidebar_label": "Repair Page"
+        "title": "修復ページ",
+        "sidebar_label": "修復ページ"
       },
       "MSC/restore": {
-        "title": "Restore Page",
-        "sidebar_label": "Restore Page"
+        "title": "復元ページ",
+        "sidebar_label": "復元ページ"
       },
       "MSC/rollback": {
-        "title": "Rollback Page",
-        "sidebar_label": "Rollback Page"
+        "title": "ロールバックページ",
+        "sidebar_label": "ロールバックページ"
       },
       "MSC/verify": {
-        "title": "Verify Page",
-        "sidebar_label": "Verify Page"
+        "title": "検査ページ",
+        "sidebar_label": "検査ページ"
+      },
+      "Notes/updates": {
+        "title": "Documentation updates"
+      },
+      "ORDA/dsmapping": {
+        "title": "データモデルオブジェクト"
+      },
+      "ORDA/entities": {
+        "title": "データ操作"
+      },
+      "ORDA/glossary": {
+        "title": "用語集"
+      },
+      "ORDA/ordaClasses": {
+        "title": "データモデルクラス"
+      },
+      "ORDA/overview": {
+        "title": "ORDAとは何か"
+      },
+      "ORDA/quickTour": {
+        "title": "ORDA の概要"
+      },
+      "ORDA/datastores": {
+        "title": "リモートデータストアの利用"
+      },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "概要"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
       },
       "Project/architecture": {
-        "title": "4D プロジェクトのアーキテクチャー"
+        "title": "プロジェクトのアーキテクチャー"
       },
-      "Project/building": {
-        "title": "プロジェクトパッケージのビルド"
+      "Project/compiler": {
+        "title": "Compilation"
       },
       "Project/creating": {
-        "title": "4D プロジェクトの作成"
-      },
-      "Project/developing": {
-        "title": "プロジェクトの開発"
+        "title": "プロジェクトを開発する"
       },
       "Project/documentation": {
-        "title": "プロジェクトのドキュメンテーション"
+        "title": "ドキュメンテーション"
       },
       "Project/overview": {
         "title": "概要"
-      },
-      "Project/pictures": {
-        "title": "ピクチャー"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -641,69 +788,137 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "ユーザーとセッション"
+      },
+      "REST/classFunctions": {
+        "title": "ORDAクラス関数の呼び出し"
       },
       "REST/configuration": {
-        "title": "Server Configuration"
+        "title": "サーバー設定"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "サーバー情報の取得"
       },
       "REST/gettingStarted": {
         "title": "はじめに"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "データ操作"
       },
       "REST/REST_requests": {
-        "title": "About REST Requests"
+        "title": "RESTリクエストについて"
+      },
+      "Tags/tags": {
+        "title": "Transformation tags"
       },
       "Users/editing": {
-        "title": "Managing 4D users and groups"
+        "title": "4Dユーザー＆グループの管理"
       },
       "Users/overview": {
         "title": "概要"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "はじめに"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "概要"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "データベース管理"
+      },
+      "WebServer/webServerConfig": {
+        "title": "バックアップ設定"
+      },
       "WebServer/webServerObject": {
-        "title": "Web Server object"
+        "title": "Webサーバーオブジェクト"
       }
     },
-    "links": {},
+    "links": {
+      "v18 R6 BETA": "v18 R6 BETA",
+      "v18 R5": "v18 R5",
+      "v18": "v18"
+    },
     "categories": {
+      "Getting Started": "はじめに",
+      "Project Management": "プロジェクト管理",
       "4D Language Concepts": "ランゲージのコンセプト",
-      "Project Databases": "プロジェクトデータベース",
-      "Forms": "フォーム",
-      "Form Properties": "Form Properties",
-      "Form Objects": "フォームオブジェクト",
-      "Form Object Properties": "Form Object Properties",
-      "Form Events": "Form Events",
-      "Menus": "Menus",
+      "ORDA": "ORDA",
+      "Class API Reference": "クラス API リファレンス",
+      "Access Rights": "アクセス権限",
+      "Preferences": "Preferences",
+      "Administration": "データベース管理",
       "MSC": "MSC",
-      "Backup and Restore": "Backup and Restore",
-      "Users and Groups": "Users and Groups",
-      "Web Server": "Web Server",
-      "REST Server": "REST Server"
+      "Backup and Restore": "バックアップと復元",
+      "Web Server": "Web サーバー",
+      "Web Development": "Web Development",
+      "REST Server": "REST サーバー",
+      "Client/Server": "クライアント/サーバー",
+      "Forms": "フォーム",
+      "Form Properties": "フォームプロパティ",
+      "Form Objects": "フォームオブジェクト",
+      "Form Object Properties": "フォームオブジェクトプロパティ",
+      "Form Events": "フォームイベント",
+      "Menus": "メニュー",
+      "Build application": "アプリケーションビルド"
     }
   },
   "pages-strings": {
-    "Language Concepts|in index page Getting started": "Language Concepts",
-    "Project databases|in index page Getting started": "Project databases",
+    "Installation|in index page Getting started": "インストール",
+    "Starting 4D|in index page Getting started": "4D を始める",
+    "Language Concepts|in index page Getting started": "ランゲージのコンセプト",
+    "Project Management|in index page Getting started": "プロジェクト管理",
+    "Object Relational Data Access (ORDA)|in index page Getting started": "ORDA",
+    "Class API Reference|no description given": "クラス API リファレンス",
     "Forms|no description given": "フォーム",
-    "Form Properties|no description given": "Form Properties",
-    "Form Events|no description given": "Form Events",
+    "Form Properties|no description given": "フォームプロパティ",
+    "Form Events|no description given": "フォームイベント",
     "Form Objects|no description given": "フォームオブジェクト",
-    "Form Object Properties|no description given": "Form Object Properties",
-    "Menus|no description given": "Menus",
-    "Web Server|no description given": "Web Server",
-    "REST Server|no description given": "REST Server",
-    "Maintenance and Security Center|no description given": "Maintenance ＆ Security Center",
-    "Backup and Restore|no description given": "Backup and Restore",
-    "Users and Groups|no description given": "Users and Groups",
+    "Form Object Properties|no description given": "フォームオブジェクトプロパティ",
+    "Menus|no description given": "メニュー",
+    "Web Server|no description given": "Web サーバー",
+    "Web Development|no description given": "Web Development",
+    "REST Server|no description given": "REST サーバー",
+    "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
+    "Backup and Restore|no description given": "バックアップと復元",
+    "License Management|no description given": "ライセンス管理",
+    "Build Application|no description given": "アプリケーションビルド",
+    "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "クライアント/サーバー",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
+    "Access Rights|no description given": "アクセス権限",
+    "Description of log files|no description given": "Description of log files",
+    "Command Line Interface|no description given": "Command Line Interface",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "はじめに",
-    "Developing a Desktop application|no description given": "デスクトップアプリの開発",
-    "Developing a Web application|no description given": "Web アプリの開発",
-    "Developing a Mobile application|no description given": "モバイルアプリの開発",
+    "Core Development|no description given": "コア開発",
     "Administration|no description given": "データベース管理",
+    "Web applications|no description given": "Web アプリ",
+    "Mobile applications|no description given": "モバイルアプリ",
+    "Desktop applications|no description given": "デスクトップアプリ",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "翻訳を手伝う",
     "Edit this Doc|recruitment message asking to edit the doc source": "編集",
     "Translate this Doc|recruitment message asking to translate the docs": "翻訳"

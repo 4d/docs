@@ -20,12 +20,30 @@ em,i {font-style:italic}
 
 
 a {
-text-decoration: none; /* Les liens ne seront plus soulignés */
-color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
+text-decoration: none; /* Les liens ne seront plus soulignï¿½s */
+color: #1E90FF;  /*Les liens seront en rouge au lieu de bleu */
+/*color: #004289; bleu 4d*/
 }
 
+summary {
 
+	color:grey;
+	font-size: 12px;
 
+}
+
+details {
+		font-size: 12px;
+	 font-color:grey;
+
+}
+summary::-webkit-details-marker {
+	color:grey;
+}
+
+.headerTitle{
+background: none;
+}
 
 .copyright{
 font-size: 12px;
@@ -102,6 +120,13 @@ color: #fff;
 
 .index-hero-project-keywords {
   color: $primaryColor;
+}
+
+
+.doc-updates{
+color: $primaryColor;
+text-align: center;
+font-style: italic;
 }
 
 @keyframes jackInTheBox {
@@ -191,12 +216,12 @@ color: #fff;
   .gridBlock .blockElement.imageAlignTop {
     margin-bottom: 80px;
   }
- 
+
 }
 
 .docImage {
   margin: 3rem auto;
-  
+
   max-width: 400px;
 
 }

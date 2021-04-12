@@ -1,5 +1,5 @@
 ---
-id: boolean
+id: Boolean
 title: Boolean
 ---
 
@@ -40,7 +40,6 @@ myBoolean:=(myButton=1)
 |           |                        |         | ("A" = "B") &#124; (15 # 3) | Wahr   |
 |           |                        |         | ("A" = "B") &#124; (15 # 3) | Falsch |
 
-
 Für das logische UND gilt:
 
 | Expr1  | Expr2  | Expr1 & Expr2 |
@@ -50,7 +49,6 @@ Für das logische UND gilt:
 | Falsch | Wahr   | Falsch        |
 | Falsch | Falsch | Falsch        |
 
-
 Für das logische ODER gilt:
 
 | Expr1  | Expr2  | Expr1 &#124; Expr2 |
@@ -59,7 +57,6 @@ Für das logische ODER gilt:
 | Wahr   | Falsch | Wahr               |
 | Falsch | Wahr   | Wahr               |
 | Falsch | Falsch | Falsch             |
-
 
 **Tipp:** Zum Berechnen eines ausschließenden ODER zwischen Expr1 and Expr2 schreiben Sie:
 

@@ -5,29 +5,30 @@ title: Object
 
 Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
 
-- A property name is always a text, for example "Name".
+- A property name is always a text, for example "Name". It must follow [specific rules](identifiers.md#object-properties).
 
 - A property value can be of the following type:
-    
     - number (Real, Integer, etc.)
     - text
     - null
-    - Boolean
+    - boolean
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
-    - object (objects can be nested on several levels)
-    - picture(*)
+    - object(1) (objects can be nested on several levels)
+    - picture(2)
     - collection
 
-(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.
+
+(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
 **Warning:** Keep in mind that attribute names differentiate between upper and lower case.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
 
-Each property value accessed through the object notation is considered an expression. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
+Each property value accessed through the object notation is considered an expression. You can use such values wherever 4D expressions are expected:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by PROCESS 4D TAGS or the Web Server, export files, 4D Write Pro documents...),
+- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
@@ -36,7 +37,6 @@ Each property value accessed through the object notation is considered an expres
 Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
 Example:
-
 ```4d
  C_OBJECT($obVar) //creation of an object type 4D variable
  $obVar:=New object //initialization of the object and assignment to the 4D variable
@@ -46,8 +46,9 @@ Example:
 
 You can create two types of objects:
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
+- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
 - shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+
 
 ## Syntax basics
 
@@ -60,7 +61,6 @@ With object notation, object properties can be accessed in two ways:
 - using a "dot" symbol: > object.propertyName
 
 Example:
-
 ```4d
      employee.name:="Smith"
 ```
@@ -68,7 +68,6 @@ Example:
 - using a string within square brackets: > object["propertyName"]
 
 Examples:
-
 ```4d
      $vName:=employee["name"]
      //or also:
@@ -78,11 +77,9 @@ Examples:
 ```
 
 Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
-
 ```4d
  $vAge:=employee.children[2].age
 ```
-
 Object notation is available on any language element that can contains or returns an object, i.e:
 
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
@@ -94,8 +91,8 @@ Object notation is available on any language element that can contains or return
      $pop:=$aObjCountries{2}.population //object array
      $val:=$myCollection[3].subvalue //collection element
 ```
-
 - **4D commands** that return objects. Example:
+
 
 ```4d
      $measures:=Get database measures.DB.tables
@@ -125,12 +122,10 @@ Object notation is available on any language element that can contains or return
 Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
 
 - Direct access:
-    
-    > pointerOnObject->propertyName
+> pointerOnObject->propertyName
 
 - Access by name:
-    
-    > pointerOnObject->["propertyName"]
+> pointerOnObject->["propertyName"]
 
 Example:
 
@@ -197,7 +192,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
      End case
 ```
 
-- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type: 
+- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
  - Object, collection, pointer: Null
  - Picture: Empty picture
  - Boolean: False
@@ -222,18 +217,6 @@ When expressions of a given type are expected in your 4D code, you can make sure
   //to avoid errors in the code
 ```
 
-## Object property identifiers
-
-Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see ECMA Script standard):
-
-- the first character must be a letter, an underscore (_), or a dollar sign ($),
-- subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
-- they are case sensitive.
-
-**Note:**
-
-- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
-- Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
 ## Examples
 
@@ -276,8 +259,7 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-
-- You can access properties as strings using the [ ] operator 
+- You can access properties as strings using the [ ] operator
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

@@ -37,17 +37,16 @@ const siteConfig = {
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
-
+  // customDocsPath: 'docsPostProcessed', //uniquement local
   docsUrl:'',
-
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
 
     //{doc: 'Concepts/about', label: 'Docs'},
     //{doc: 'REST/gettingStarted', label: 'REST'},
-    {href: 'https://developer.4d.com/docs', label:'v18 R3 BETA'},
-    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R2'},
-    {href: 'https://developer.4d.com/docs/18', label:'v18'},
+    {href: 'https://developer.4d.com/docs', label:'v18 R6 BETA', version :'18R6'},
+    {href: 'https://developer.4d.com/docs/Rx', label:'v18 R5', version:'18R5'},
+    {href: 'https://developer.4d.com/docs/18', label:'v18', version:'18'},
     //{href: 'https://developer.4d.com/', label:'Developer Center'},
     //{href: 'http://kb.4d.com/', label: 'knowledgebase'},
     //{page: 'help', label: 'Help'},
@@ -111,11 +110,13 @@ const siteConfig = {
       hljs.registerLanguage("4d", hljsRobotsTxt);
     }
   },
-
+  
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js',
+  scripts: ['https://code.jquery.com/jquery-3.5.1.min.js','/docs/alpha/js/comment.js',
+  'https://buttons.github.io/buttons.js',
   'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
   '/docs/js/code-blocks-buttons.js'],
+
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',

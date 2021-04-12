@@ -6,7 +6,7 @@ title: '$timeout'
 
 Defines the number of seconds to save an entity set in 4D Server's cache (*e.g.*, `$timeout=1800`)
 
-## Description
+## Beschreibung
 
 To define a timeout for an entity set that you create using [`$method=entityset`]($method.md#methodentityset), pass the number of seconds to `$timeout`. For example, if you want to set the timeout to 20 minutes, pass 1200. By default, the timeout is two (2) hours.
 

@@ -10,11 +10,12 @@ You can get several information from the REST server:
 
 ## Catalog
 
-Use the [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed datastore classes and their attributes](configuration.md#exposing-tables-and-fields).
+Use the [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed dataclasses and their attributes](configuration.md#exposing-tables-and-fields).
 
 To get the collection of all exposed dataclasses along with their attributes:
 
 `GET /rest/$catalog/$all`
+
 
 ## Cache info
 
@@ -29,7 +30,6 @@ Beispiel:
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
 These properties are objects that contain information about how the server performs composite queries internally through dataclasses and relations:
-
 - **queryPlan**: object containing the detailed description of the query just before it was executed (i.e., the planned query).
 - **queryPath**: object containing the detailed description of the query as it was actually performed.
 

@@ -8,7 +8,7 @@ title: On Begin URL Loading
 | 47   | [Web Area](FormObjects/webArea_overview.md) | A new URL is loaded in the Web area |
 
 
-## Description
+## Beschreibung
 
 This event is generated at the start of loading a new URL in the Web area. The `URL` variable associated with the Web area can be used to find out the URL being loaded.
 

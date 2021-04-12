@@ -8,22 +8,22 @@ Variant est un type de variable qui permet d'encapsuler des données de type val
 Une variable de type variant peut contenir une valeur des types de données suivants :
 
 - BLOB
-- booléen
+- boolean
 - collection
 - date
 - entier long
-- objet
-- image
-- pointeur
+- object
+- picture
+- pointer
 - réel
-- texte
-- heure
+- Texte
+- time
 - null
 - indéfini
 
 > Les tableaux ne peuvent pas être stockés dans des variables de type variant.
 
-En modes interprété et compilé, le même contenu peut être affecté à une même variable variant. Contrairement aux types de variable standard, le type de contenu des variable de type variant est différent du type de variable variant lui-même. Par exemple:
+En modes interprété et compilé, le même contenu peut être affecté à une même variable variant. Contrairement aux types de variable standard, le type de contenu des variable de type variant est différent du type de variable variant lui-même. Par exemple :
 
 ```4d
 C_VARIANT($variant)
@@ -37,7 +37,7 @@ $vtype:=Type($variant) // 12 (Is variant)
 $vtypeVal:=Value type($variant) // 1 (Is real)
 ```
 
-Vous pouvez utiliser des variables variant chaque fois qu'elles sont attendues. Vous devez simplement vous assurer que le type de données du contenu de la variable est du type attendu. Lorsque vous accédez à des variables de type variant, seule leur valeur courante est prise en compte. Par exemple:
+Vous pouvez utiliser des variables variant chaque fois qu'elles sont attendues. Vous devez simplement vous assurer que le type de données du contenu de la variable est du type attendu. Lorsque vous accédez à des variables de type variant, seule leur valeur courante est prise en compte. Par exemple :
 
 ```4d
 C_VARIANT($v)
@@ -57,7 +57,8 @@ Case of
 ...
 : (Value type($1)=Is text)
 ...
-End case
+//déclaration(s)
+ End case
 ```
 
-> Lorsque des variables variant ne sont pas nécessaires (c'est-à-dire lorsque le type de données est connu), il est recommandé d'utiliser des variables typées standard. Les variables typées standard fournissent de meilleures performances, un code plus clair et permettent au compilateur d'éviter les bugs liés à des types de données passés qui sont inattendus.
+> Lorsque des variables variant ne sont pas nécessaires (c'est-à-dire lorsque le type de données est connu), il est recommandé d'utiliser des variables typées standard. Les variables typées standard fournissent de meilleures performances, un code plus clair et permettent au compilateur d'éviter les bugs liés à des types de données passés qui sont inattendus. 

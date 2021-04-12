@@ -5,6 +5,102 @@
     "previous": "Précédent",
     "tagline": "Documentation pour Développeurs 4D",
     "docs": {
+      "Admin/cli": {
+        "title": "Command Line Interface"
+      },
+      "Admin/dataExplorer": {
+        "title": "Web Data Explorer"
+      },
+      "Admin/debugLogFiles": {
+        "title": "Description of log files"
+      },
+      "Admin/licenses": {
+        "title": "Gestion des licences 4D"
+      },
+      "Admin/tls": {
+        "title": "TLS Protocol (HTTPS)"
+      },
+      "Admin/webAdmin": {
+        "title": "Web Administration"
+      },
+      "API/ClassClass": {
+        "title": "Class"
+      },
+      "API/CollectionClass": {
+        "title": "Collection"
+      },
+      "API/CryptoKeyClass": {
+        "title": "CryptoKey"
+      },
+      "API/DataClassAttributeClass": {
+        "title": "DataClassAttribute"
+      },
+      "API/DataClassClass": {
+        "title": "DataClass"
+      },
+      "API/DataStoreClass": {
+        "title": "DataStore"
+      },
+      "API/Directory": {
+        "title": "Classe Directory"
+      },
+      "API/Document": {
+        "title": "Document Class"
+      },
+      "API/EmailObjectClass": {
+        "title": "Email"
+      },
+      "API/EntityClass": {
+        "title": "Entity"
+      },
+      "API/EntitySelectionClass": {
+        "title": "EntitySelection"
+      },
+      "API/FileClass": {
+        "title": "File"
+      },
+      "API/FolderClass": {
+        "title": "Folder"
+      },
+      "API/FunctionClass": {
+        "title": "Formula"
+      },
+      "API/IMAPTransporterClass": {
+        "title": "IMAPTransporter"
+      },
+      "API/MailAttachmentClass": {
+        "title": "MailAttachment"
+      },
+      "API/overview": {
+        "title": "Aperçu - API des classes"
+      },
+      "API/POP3TransporterClass": {
+        "title": "POP3Transporter"
+      },
+      "API/SessionClass": {
+        "title": "Session"
+      },
+      "API/SignalClass": {
+        "title": "Signal"
+      },
+      "API/SMTPTransporterClass": {
+        "title": "SMTPTransporter"
+      },
+      "API/Transporter": {
+        "title": "Classe Transporter"
+      },
+      "API/WebServerClass": {
+        "title": "WebServer"
+      },
+      "API/ZipArchiveClass": {
+        "title": "ZIPArchive"
+      },
+      "API/ZipFileClass": {
+        "title": "ZIPFile"
+      },
+      "API/ZipFolderClass": {
+        "title": "ZIPFolder"
+      },
       "Backup/backup": {
         "title": "Sauvegarde"
       },
@@ -107,6 +203,12 @@
       },
       "Concepts/variables": {
         "title": "Variables"
+      },
+      "Desktop/building": {
+        "title": "Générer un package projet"
+      },
+      "Desktop/clientServer": {
+        "title": "Client/Server Management"
       },
       "Events/onActivate": {
         "title": "Sur activation"
@@ -235,7 +337,7 @@
         "title": "Sur changement page"
       },
       "Events/onPlugInArea": {
-        "title": "Sur appel zone du plug in\t"
+        "title": "Sur appel zone du plug in"
       },
       "Events/onPrintingBreak": {
         "title": "On Printing Break"
@@ -279,6 +381,9 @@
       "Events/onValidate": {
         "title": "Sur validation"
       },
+      "Events/onVpRangeChanged": {
+        "title": "On VP Range Changed"
+      },
       "Events/onVpReady": {
         "title": "On VP Ready"
       },
@@ -296,6 +401,9 @@
       },
       "FormEditor/forms": {
         "title": "A propos des formulaires 4D"
+      },
+      "FormEditor/macros": {
+        "title": "Form Editor Macros"
       },
       "FormEditor/objectLibrary": {
         "title": "Bibliothèques d'objets"
@@ -352,7 +460,7 @@
         "title": "Input"
       },
       "FormObjects/listOverview": {
-        "title": "Hierarchical List"
+        "title": "Liste hiérarchique"
       },
       "FormObjects/listboxOverview": {
         "title": "List Box"
@@ -379,7 +487,7 @@
         "title": "Apparence"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
-        "title": "Background and Border"
+        "title": "Fond et bordure"
       },
       "FormObjects/propertiesCoordinatesAndSizing": {
         "title": "Coordonnées et dimensions"
@@ -391,7 +499,7 @@
         "title": "Source de données"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "Affichage"
       },
       "FormObjects/propertiesEntry": {
         "title": "Saisie"
@@ -439,7 +547,7 @@
         "title": "Echelle"
       },
       "FormObjects/propertiesSubform": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/propertiesText": {
         "title": "Texte"
@@ -472,7 +580,7 @@
         "title": "Stepper"
       },
       "FormObjects/subformOverview": {
-        "title": "Subform"
+        "title": "Sous-formulaire"
       },
       "FormObjects/tabControl": {
         "title": "Onglets"
@@ -481,13 +589,16 @@
         "title": "Texte"
       },
       "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+        "title": "Zone 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Zone Web"
       },
       "FormObjects/writeProAreaOverview": {
-        "title": "4D Write Pro area"
+        "title": "Zone 4D Write Pro"
+      },
+      "GettingStarted/installation": {
+        "title": "Installation"
       },
       "Menus/bars": {
         "title": "Barres de menus"
@@ -544,26 +655,62 @@
         "title": "Page Vérification",
         "sidebar_label": "Page Vérification"
       },
-      "Project/architecture": {
-        "title": "Architecture d'un projet 4D"
+      "Notes/updates": {
+        "title": "Documentation updates"
       },
-      "Project/building": {
-        "title": "Générer un package projet"
+      "ORDA/dsmapping": {
+        "title": "Data Model Objects"
+      },
+      "ORDA/entities": {
+        "title": "Travailler avec des données"
+      },
+      "ORDA/glossary": {
+        "title": "Glossaire"
+      },
+      "ORDA/ordaClasses": {
+        "title": "Classes du modèle de données"
+      },
+      "ORDA/overview": {
+        "title": "Que signifie ORDA ?"
+      },
+      "ORDA/quickTour": {
+        "title": "Tour d'horizon d'ORDA"
+      },
+      "ORDA/datastores": {
+        "title": "Utiliser un datastore distant"
+      },
+      "Preferences/forms": {
+        "title": "Forms Page"
+      },
+      "Preferences/general": {
+        "title": "General Page"
+      },
+      "Preferences/methods": {
+        "title": "Methods Page"
+      },
+      "Preferences/overview": {
+        "title": "Aperçu"
+      },
+      "Preferences/shortcuts": {
+        "title": "Shortcuts Page"
+      },
+      "Preferences/structure": {
+        "title": "Structure Page"
+      },
+      "Project/architecture": {
+        "title": "Architecture of a project"
+      },
+      "Project/compiler": {
+        "title": "Compilation"
       },
       "Project/creating": {
-        "title": "Créer un projet 4D"
-      },
-      "Project/developing": {
-        "title": "Développer un projet"
+        "title": "Working with a project"
       },
       "Project/documentation": {
         "title": "Documenter un projet"
       },
       "Project/overview": {
         "title": "Aperçu"
-      },
-      "Project/pictures": {
-        "title": "Images"
       },
       "REST/{dataClass}": {
         "title": "{dataClass}"
@@ -641,7 +788,10 @@
         "title": "$version"
       },
       "REST/authUsers": {
-        "title": "Users and sessions"
+        "title": "Sessions et utilisateurs"
+      },
+      "REST/classFunctions": {
+        "title": "Appeler des fonctions de classe ORDA"
       },
       "REST/configuration": {
         "title": "Configuration du serveur"
@@ -658,36 +808,88 @@
       "REST/REST_requests": {
         "title": "A propos des requêtes REST"
       },
+      "Tags/tags": {
+        "title": "Transformation tags"
+      },
       "Users/editing": {
         "title": "Gestion des groupes et utilisateurs 4D"
       },
       "Users/overview": {
         "title": "Aperçu"
       },
+      "WebServer/allowProject": {
+        "title": "Allowing project methods"
+      },
+      "WebServer/authentication": {
+        "title": "Authentication"
+      },
+      "WebServer/errorPages": {
+        "title": "Custom HTTP Error Pages"
+      },
+      "WebServer/gettingStarted": {
+        "title": "Prise en main"
+      },
+      "WebServer/httpRequests": {
+        "title": "Processing HTTP requests"
+      },
+      "WebServer/preemptiveWeb": {
+        "title": "Using preemptive web processes"
+      },
+      "WebServer/sessions": {
+        "title": "User sessions"
+      },
+      "WebServer/templates": {
+        "title": "Template pages"
+      },
+      "WebServer/webServer": {
+        "title": "Aperçu"
+      },
+      "WebServer/webServerAdmin": {
+        "title": "Administration"
+      },
+      "WebServer/webServerConfig": {
+        "title": "Configuration"
+      },
       "WebServer/webServerObject": {
         "title": "Objet Serveur Web"
       }
     },
-    "links": {},
+    "links": {
+      "v18 R6 BETA": "v18 R6 BETA",
+      "v18 R5": "v18 R5",
+      "v18": "v18"
+    },
     "categories": {
+      "Getting Started": "Prise en main",
+      "Project Management": "Gestion de projet",
       "4D Language Concepts": "Concepts du langage 4D",
-      "Project Databases": "Bases projet",
+      "ORDA": "ORDA",
+      "Class API Reference": "Classes API",
+      "Access Rights": "Droits d'accès",
+      "Preferences": "Preferences",
+      "Administration": "Administration",
+      "MSC": "CSM",
+      "Backup and Restore": "Sauvegarde et restitution",
+      "Web Server": "Serveur Web",
+      "Web Development": "Web Development",
+      "REST Server": "Serveur REST",
+      "Client/Server": "Client/Server",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
       "Menus": "Menus",
-      "MSC": "CSM",
-      "Backup and Restore": "Sauvegarde et restitution",
-      "Users and Groups": "Groupes et utilisateurs",
-      "Web Server": "Serveur Web",
-      "REST Server": "Serveur REST"
+      "Build application": "Build application"
     }
   },
   "pages-strings": {
+    "Installation|in index page Getting started": "Installation",
+    "Starting 4D|in index page Getting started": "Démarrer 4D",
     "Language Concepts|in index page Getting started": "Concepts du langage",
-    "Project databases|in index page Getting started": "Bases projets",
+    "Project Management|in index page Getting started": "Gestion de projet",
+    "Object Relational Data Access (ORDA)|in index page Getting started": "Object Relational Data Access (ORDA)",
+    "Class API Reference|no description given": "Classes API",
     "Forms|no description given": "Formulaires",
     "Form Properties|no description given": "Propriétés des formulaires",
     "Form Events|no description given": "Evénements formulaire",
@@ -695,15 +897,28 @@
     "Form Object Properties|no description given": "Propriétés des objets formulaire",
     "Menus|no description given": "Menus",
     "Web Server|no description given": "Serveur Web",
+    "Web Development|no description given": "Web Development",
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
-    "Users and Groups|no description given": "Groupes et utilisateurs",
+    "License Management|no description given": "Gestion des licences",
+    "Build Application|no description given": "Générateur d'application",
+    "Web Administration|no description given": "Web Administration",
+    "Client/Server|no description given": "Client/Server",
+    "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
+    "Web Data Explorer|no description given": "Web Data Explorer",
+    "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
+    "Access Rights|no description given": "Droits d'accès",
+    "Description of log files|no description given": "Description of log files",
+    "Command Line Interface|no description given": "Command Line Interface",
+    "Preferences|no description given": "Preferences",
     "Getting started|no description given": "Prise en main",
-    "Developing a Desktop application|no description given": "Développer une application Desktop",
-    "Developing a Web application|no description given": "Développer une application web",
-    "Developing a Mobile application|no description given": "Développer une application mobile",
+    "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",
+    "Web applications|no description given": "Applications Web",
+    "Mobile applications|no description given": "Applications Mobile",
+    "Desktop applications|no description given": "Applications Desktop",
+    "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"

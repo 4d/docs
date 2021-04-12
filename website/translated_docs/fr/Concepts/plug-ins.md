@@ -18,20 +18,19 @@ La nature modulaire de l'environnement 4D permet la création d'applications de 
 Un plug-in est un morceau de code que 4D lance au démarrage. Il ajoute des fonctionnalités à 4D et augmente ainsi sa capacité.
 
 Habituellement, un plug-in fait des choses :
-
 - Que 4D ne peut pas effectuer (c'est-à-dire une technologie de plate-forme spécifique),
 - Qui sera très difficile à écrire en utilisant uniquement 4D,
 - Qui sont uniquement disponibles en tant que point d'entrée de plug-in
 
 Un plug-in contient généralement un ensemble de routines données au développeur 4D. Il peut gérer une zone externe et exécuter un processus externe.
 
-- Une **routine de plug-in** est une routine écrite en langage natif (généralement C ou C ++) qui déclenche une action. 
+- Une **routine de plug-in** est une routine écrite en langage natif (généralement C ou C ++) qui déclenche une action.
 - Une **zone externe** est une partie d'un formulaire pouvant presque tout afficher et interagir avec l'utilisateur si nécessaire.
-- Un **processus externe** est un processus qui s'exécute seul, généralement en boucle, et qui fait quasiment tout ce qu'il souhaite. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process. 
+- Un **processus externe** est un processus qui s'exécute seul, généralement en boucle, et qui fait quasiment tout ce qu'il souhaite. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process.
 
 ### Note importante
 
-Un plug-in peut être très simple, avec une seule routine effectuant une très petite tâche, ou très complexe, impliquant une centaine de routines et de domaines. Les capacités d'un plug-in sont pratiquement sans limite. Cependant, chaque développeur de plug-in doit se rappeler qu'un plug-in est un "échantillon" de code. C'est le plug-in qui s'exécute dans 4D, et non l'inverse. En tant que morceau de code, c'est l'hôte de 4D; ce n'est pas une application autonome. Il partage le temps CPU et la mémoire avec 4D et d'autres plug-ins. Il doit donc s'agir d'un code poli, qui utilise exactement ce qui est nécessaire à son fonctionnement. Par exemple, dans les longues boucles, un plug-in doit appeler `PA_Yield ()` pour donner du temps au planificateur 4D, à moins que sa tâche ne soit critique aussi bien pour lui que pour la base de données.
+Un plug-in peut être très simple, avec une seule routine effectuant une très petite tâche, ou très complexe, impliquant une centaine de routines et de domaines. Cependant, chaque développeur de plug-in doit se rappeler qu'un plug-in est un "échantillon" de code. C'est le plug-in qui s'exécute dans 4D, et non l'inverse. En tant que morceau de code, c'est l'hôte de 4D; ce n'est pas une application autonome. Il partage le temps CPU et la mémoire avec 4D et d'autres plug-ins. Il doit donc s'agir d'un code poli, qui utilise exactement ce qui est nécessaire à son fonctionnement. Par exemple, dans les longues boucles, un plug-in doit appeler `PA_Yield ()` pour donner du temps au planificateur 4D, à moins que sa tâche ne soit critique aussi bien pour lui que pour l'application.
 
 ## Comment créer un plug-in ?
 
@@ -44,18 +43,17 @@ Sur GitHub, 4D fournit un [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK)
 
 L’installation des plug-ins et composants dans l’environnement 4D s’effectue par simple copie des fichiers des plug-ins ou des composants dans des dossiers appropriés.
 
-Les dossiers “NomPlugin.bundle” (appelés paquets ou packages sous Mac Os) contiennent à la fois les versions Windows et Mac Os des plug-ins 4D. Leur architecture interne spécifique permet notamment à 4D Server de charger la version adéquate en fonction de la plate-forme d’exécution du poste client. Pour installer un plug-in dans votre environnement, il vous suffit de placer le dossier ou progiciel “NomPlugin.bundle” concerné dans le dossier **PlugIns** souhaité.
+Les dossiers “NomPlugin.bundle” (appelés paquets ou packages sous Mac Os) contiennent à la fois les versions Windows et Mac Os des plug-ins 4D. Leur architecture interne spécifique permet notamment à 4D Server de charger la version adéquate en fonction de la plate-forme d’exécution du poste client. Pour installer un plug-in dans votre environnement, il vous suffit de placer le dossier ou progiciel “NomPlugin.bundle” concerné dans le dossier **Plugins** souhaité.
 
-Vous pouvez placer les dossiers PlugIns et Components à deux endroits :
+Vous pouvez placer les dossiers Plugins et Components à deux endroits :
 
-- Au niveau de l’application 4D exécutable, c'est-à-dire .: 
+- Au niveau de l’application 4D exécutable, c'est-à-dire .:
   - Sous Windows : à côté du fichier .exe
-  - Sous Mac Os : au premier niveau du dossier Contents, à l’intérieur du package de l’application.  
-    Dans ce cas, les plug-ins et les composants sont disponibles dans toutes les bases de données ouvertes par cette application. 
-- Au même niveau que le fichier de structure de la base. Dans ce cas, les plug-ins et les composants sont disponibles dans cette base de données uniquement. 
+  - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
+- At the same level as the Project folder. Dans ce cas, les plug-ins et les composants sont disponibles dans cette application uniquement.
 
 Le choix de l’emplacement dépend de votre mode d’utilisation du plug-in ou du composant.
 
 Si un même plug-in ou un même composant est placé aux deux endroits, 4D charge uniquement celui situé à côté de la structure. Dans le cas d’une application compilée et fusionnée avec 4D Volume Desktop, la présence de plusieurs instances d’un même plug-in ou d'un même composant empêchera l’ouverture de l’application.
 
-Les plug-ins et les composants sont chargés par 4D lors du lancement de l’application. Vous devez donc quitter votre application 4D avant d’effectuer vos copies de fichiers ou dossiers. Ouvrez ensuite votre base de données avec 4D. Si l’utilisation d'un plug-in nécessite une licence spécifique, le plug-in est chargé mais n’est pas actif.
+Les plug-ins et les composants sont chargés par 4D lors du lancement de l’application. Vous devez donc quitter votre application 4D avant d’effectuer vos copies de fichiers ou dossiers. Ouvrez ensuite votre projet avec 4D. Si l’utilisation d'un plug-in nécessite une licence spécifique, le plug-in est chargé mais n’est pas actif.

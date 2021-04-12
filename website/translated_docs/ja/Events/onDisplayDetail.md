@@ -3,7 +3,7 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                                                        |
+| Code | Can be called by                                   | 定義                                                                                                |
 | ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | 8    | Form - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
 
@@ -20,8 +20,8 @@ A record is about to be displayed in a list form displayed via `DISPLAY SELECTIO
 
 In this context, the following sequence of calls to methods and form events is triggered:
 
-- For each record: 
-    - For each object in the detail area: 
+- For each record:
+    - For each object in the detail area:
         - Object method with `On Display Detail` event
     - Form method with `On Display Detail` event
 
@@ -29,9 +29,11 @@ In this context, the following sequence of calls to methods and form events is t
 
 Calling a 4D command that displays a dialog box from the `On Display Detail` event is not allowed and will cause a syntax error to occur. More particularly, the commands concerned are: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, and `MODIFY SELECTION`.
 
+
 ### セレクションリストボックス
 
 This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
+
 
 ### Displayed line number
 

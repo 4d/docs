@@ -3,7 +3,7 @@ id: onAfterEdit
 title: On After Edit
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                                                                                                                                      | Definition                                                                     |
+| Code | Can be called by                                                                                                                                                                                                                                                                                                                                                                      | 定義                                                                             |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | 45   | [4D View Pro area](FormObjects/viewProArea_overview) - [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The contents of the enterable object that has the focus has just been modified |
 
@@ -25,28 +25,26 @@ When it is used, this event is generated after each change made to the contents 
 
 The object returned by the `FORM Event` command contains:
 
-| プロパティ       | 型    | 説明                                                                                                  |
+| プロパティ       | タイプ  | 説明                                                                                                  |
 | ----------- | ---- | --------------------------------------------------------------------------------------------------- |
 | code        | 倍長整数 | On After Edit                                                                                       |
-| description | テキスト | "On After Edit"                                                                                     |
-| objectName  | テキスト | 4D View Pro area name                                                                               |
-| sheetName   | テキスト | Name of the sheet of the event                                                                      |
-| action      | テキスト | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
-
+| description | text | "On After Edit"                                                                                     |
+| objectName  | text | 4D View Pro area name                                                                               |
+| sheetName   | text | Name of the sheet of the event                                                                      |
+| action      | text | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
 #### action = editChange
 
-| プロパティ       | 型       | 説明                                |
+| プロパティ       | タイプ     | 説明                                |
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
-
 #### action = valueChanged
 
-| プロパティ    | 型       | 説明                          |
+| プロパティ    | タイプ     | 説明                          |
 | -------- | ------- | --------------------------- |
 | range    | object  | Cell range                  |
 | oldValue | variant | Value of cell before change |
@@ -55,7 +53,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| プロパティ     | 型       | 説明                                                  |
+| プロパティ     | タイプ     | 説明                                                  |
 | --------- | ------- | --------------------------------------------------- |
 | fromRange | object  | Range of source cell range (being dragged)          |
 | toRange   | object  | Range of the destination cell range (drop location) |
@@ -65,110 +63,46 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragFillBlock
 
-| プロパティ     | 型      | 説明                  |
+| プロパティ     | タイプ    | 説明                  |
 | --------- | ------ | ------------------- |
 | fillRange | object | Range used for fill |
- autoFillType|longint|Value used for the fill.
+ autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
 
-- 0: Cells are filled with all data (values, formatting, and formulas)
-    - 1: Cells are filled with automatically sequential data
-        - 2: Cells are filled with formatting only
-            - 3: Cells are filled with values but not formatting
-                - 4: Values are removed from the cells
-                    - 5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.
-                        - 0: The cells to the left are filled
-                            - 1: The cells to the right are filled
-                                - 2: The cells above are filled
-                                    - 3: The cells below are filled| 
-                                        #### action = formulaChanged
-                                        
-                                        | プロパティ   | 型      | 説明                  |
-                                        | ------- | ------ | ------------------- |
-                                        | range   | object | Cell range          |
-                                        | formula | テキスト   | The formula entered |
 
-                                        
-                                        #### action = clipboardPasted
-                                        
-                                        <table>
-                                          <tr>
-                                            <th>
-                                              プロパティ
-                                            </th>
-                                            
-                                            <th>
-                                              型
-                                            </th>
-                                            
-                                            <th>
-                                              説明
-                                            </th>
-                                          </tr>
-                                          
-                                          <tr>
-                                            <td>
-                                              range
-                                            </td>
-                                            
-                                            <td>
-                                              object
-                                            </td>
-                                            
-                                            <td>
-                                              Cell range
-                                            </td>
-                                          </tr>
-                                          
-                                          <tr>
-                                            <td>
-                                              pasteOption
-                                            </td>
-                                            
-                                            <td>
-                                              倍長整数
-                                            </td>
-                                            
-                                            <td>
-                                              Specifies what is pasted from the clipboard:
-                                              
-                                              <li>
-                                                0: Everything is pasted (values, formatting, and formulas)<li>
-                                                  1: Only values are pasted<li>
-                                                    2: Only the formatting is pasted<li>
-                                                      3: Only formulas are pasted<li>
-                                                        4: Values and formatting are pasted (not formulas)<li>
-                                                          5: Formulas and formatting are pasted (not values)</td> </tr> <tr>
-                                                            <td>
-                                                              pasteData
-                                                            </td>
-                                                            
-                                                            <td>
-                                                              object
-                                                            </td>
-                                                            
-                                                            <td>
-                                                              The data from the clipboard to be pasted
-                                                              
-                                                              <li>
-                                                                "text" (text): The text from the clipboard<li>
-                                                                  "html" (text): The HTML from the clipboard</td> </tr> </tbody> </table> <h4>
-                                                                    例題
-                                                                  </h4>
-                                                                  <p>
-                                                                    Here is an example handling an <code>On After Edit</code> event:
-                                                                  </p>
-                                                                  <pre><code class="4d"> If(FORM Event.code=On After Edit)
+#### action = formulaChanged
+
+| プロパティ   | タイプ    | 説明                  |
+| ------- | ------ | ------------------- |
+| range   | object | Cell range          |
+| formula | text   | The formula entered |
+
+#### action = clipboardPasted
+
+| プロパティ       | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object | Cell range                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| pasteOption | 倍長整数   | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values) |
+| pasteData   | object | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard                                                                                                                                                                                                                                                                           |
+
+
+#### 例題
+
+Here is an example handling an `On After Edit` event:
+
+```4d
+ If(FORM Event.code=On After Edit)
     If(FORM Event.action="valueChanged")
        ALERT("WARNING: You are currently changing the value\  
        from "+String(FORM Event.oldValue)+\  
        " to "+String(FORM Event.newValue)+"!")
     End if
  End if
-</code></pre>
-                                                                  <p>
-                                                                    The above example could generate an event object like this:
-                                                                  </p>
-                                                                  <pre><code>{
+```
+
+The above example could generate an event object like this:
+
+```
+{
 
 "code":45;
 "description":"On After Edit";
@@ -179,4 +113,4 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 "oldValue":"The quick brown fox";
 "newValue":"jumped over the lazy dog";
 }
-</code></pre>
+```

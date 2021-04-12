@@ -4,251 +4,114 @@ title: Form Size
 ---
 
  
-4D lets you set the size of both the form and the [window](properties_WindowSize.md). These properties are interdependent and your application interface results from their interaction.
+4D vous permet de définir la taille du formulaire et de la [fenêtre](properties_WindowSize.md). Ces propriétés sont interdépendantes et l'interface de votre application résulte de leur interaction.
 
-Size options depend on the value of the **Size based on** option.
+Les options de taille dépendent de la valeur de l'option **Taille basée sur**.
 
-* * *
+---
+## Taille basée sur
 
-## Size based on
 
-* **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor. Margin**](#hor-margin) and [**Vert. Margin**](#vert-margin) fields. 
+*   **Taille automatique** : La taille du formulaire permettra d'afficher tous les objets, auxquels s'ajouteront les valeurs de marge (en pixels) saisies dans
 
-<
+**les champs **Marge [hor.](#hor-margin) et Marge **ver.**   <p> Vous pouvez choisir cette option lorsque vous souhaitez utiliser des objets actifs placés dans une zone hors écran (c'est-à-dire en dehors du rectangle de délimitation de la fenêtre) avec une fenêtre de taille automatique. Grâce à cette option, la présence de ces objets ne modifiera pas la taille de la fenêtre.</p></li> 
+  
+  *   **Fixer taille :** La taille du formulaire sera basée sur ce que vous entrez (en pixels) dans les champs [**Largeur**](#width) et [**Hauteur**](#height).
 
-p> You can choose this option when you want to use active objects placed in an offscreen area (*i.e.*, outside the bounding rectangle of the window) with an automatic size window. Thanks to this option, the presence of these objects will not modify the size of the window.
+*   **\<object name>** : La taille du formulaire sera basée sur la position de l'objet de formulaire sélectionné. Par exemple, si vous choisissez un objet qui est placé dans la partie inférieure droite de la zone à afficher, la taille du formulaire sera constituée d'un rectangle dont le coin supérieur gauche sera l'origine du formulaire et le coin inférieur droit correspondra à celle de l'objet sélectionné, plus les éventuelles valeurs de marge.</ul> 
 
-* **Set Size**: The size of the form will be based on what you enter (in pixels) in the [**Width**](#width) and [**Height**](#height) fields.
 
-* **\
-    
-    <object name>
-      </strong>: The size of the form will be based on the position of the selected form object. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.</p></li> </ul> 
-      
-      <blockquote>
-        <p>
-          For output forms, only the <a href="#hor-margin"><strong>Hor. margin</strong></a> or <a href="width"><strong>Width</strong></a> fields are available.
-        </p>
-      </blockquote>
-      
-      <h4>
-        Grammaire JSON
-      </h4>
-      
-      <table>
-        <tr>
-          <th>
-            Nom
-          </th>
-          
-          <th>
-            Type de données
-          </th>
-          
-          <th>
-            Valeurs possibles
-          </th>
-        </tr>
-        
-        <tr>
-          <td>
-            formSizeAnchor
-          </td>
-          
-          <td>
-            string
-          </td>
-          
-          <td>
-            Name of object to use to defined the size of the form
-          </td>
-        </tr>
-      </table>
-      
-      <hr />
-      
-      <h2>
-        Height
-      </h2>
-      
-      <p>
-        Height of the form (in pixels) when the <a href="#size-based-on">form size</a> is <strong>Set size</strong>.
-      </p>
-      
-      <h4>
-        Grammaire JSON
-      </h4>
-      
-      <table>
-        <tr>
-          <th>
-            Nom
-          </th>
-          
-          <th>
-            Type de données
-          </th>
-          
-          <th>
-            Valeurs possibles
-          </th>
-        </tr>
-        
-        <tr>
-          <td>
-            height
-          </td>
-          
-          <td>
-            number
-          </td>
-          
-          <td>
-            integer value
-          </td>
-        </tr>
-      </table>
-      
-      <hr />
-      
-      <h2>
-        Hor. Margin
-      </h2>
-      
-      <p>
-        Value to add (in pixels) to the right margin of the form when the <a href="#size-based-on">form size</a> is <strong>Automatic size</strong> or <strong>\
-        
-        <object name>
-          </strong></p> 
-          
-          <p>
-            This value also determines the right-hand margins of forms used in the Label editor.
-          </p>
-          
-          <h4>
-            Grammaire JSON
-          </h4>
-          
-          <table>
-            <tr>
-              <th>
-                Nom
-              </th>
-              
-              <th>
-                Type de données
-              </th>
-              
-              <th>
-                Valeurs possibles
-              </th>
-            </tr>
-            
-            <tr>
-              <td>
-                rightMargin
-              </td>
-              
-              <td>
-                number
-              </td>
-              
-              <td>
-                integer value
-              </td>
-            </tr>
-          </table>
-          
-          <hr />
-          
-          <h2>
-            Vert. Margin
-          </h2>
-          
-          <p>
-            Value to add (in pixels) to the bottom margin of the form when the <a href="#size-based-on">form size</a> is <strong>Automatic size</strong> or <strong>\
-            
-            <object name>
-              </strong>.</p> 
-              
-              <p>
-                This value also determines the top margins of forms used in the Label editor.
-              </p>
-              
-              <h4>
-                Grammaire JSON
-              </h4>
-              
-              <table>
-                <tr>
-                  <th>
-                    Nom
-                  </th>
-                  
-                  <th>
-                    Type de données
-                  </th>
-                  
-                  <th>
-                    Valeurs possibles
-                  </th>
-                </tr>
-                
-                <tr>
-                  <td>
-                    bottomMargin
-                  </td>
-                  
-                  <td>
-                    number
-                  </td>
-                  
-                  <td>
-                    integer value
-                  </td>
-                </tr>
-              </table>
-              
-              <hr />
-              
-              <h2>
-                Largeur
-              </h2>
-              
-              <p>
-                Width of the form (in pixels) when the <a href="#size-based-on">form size</a> is <strong>Set size</strong>.
-              </p>
-              
-              <h4>
-                Grammaire JSON
-              </h4>
-              
-              <table>
-                <tr>
-                  <th>
-                    Nom
-                  </th>
-                  
-                  <th>
-                    Type de données
-                  </th>
-                  
-                  <th>
-                    Valeurs possibles
-                  </th>
-                </tr>
-                
-                <tr>
-                  <td>
-                    width
-                  </td>
-                  
-                  <td>
-                    number
-                  </td>
-                  
-                  <td>
-                    integer value
-                  </td>
-                </tr>
-              </table>
+
+
+> Pour les formulaires de sortie, seul les champs Marge [**hor. **](#hor-margin) ou [**Largeur**](width) sont disponibles.
+
+
+
+
+#### Grammaire JSON
+
+| Nom            | Type de données | Valeurs possibles                                              |
+| -------------- | --------------- | -------------------------------------------------------------- |
+| formSizeAnchor | string          | Nom de l'objet à utiliser pour définir la taille du formulaire |
+
+
+
+
+--- 
+
+
+## Hauteur
+
+Hauteur du formulaire (en pixels) lorsque la [taille du formulaire](#size-based-on) est définie sur **Fixer taille**.  
+
+
+
+
+#### Grammaire JSON
+
+| Nom    | Type de données | Valeurs possibles  |
+| ------ | --------------- | ------------------ |
+| height | number          | valeur entier long |
+
+
+
+
+
+--- 
+
+
+## Marge hor.
+
+Valeur à ajouter (en pixels) à la marge droite du formulaire lorsque la [taille du formulaire](#size-based-on) est définie sur **Taille automatique** ou **\<object name>**
+
+Cette valeur détermine également les marges droites des formulaires utilisés dans l'éditeur d'étiquettes.
+
+
+
+#### Grammaire JSON
+
+| Nom         | Type de données | Valeurs possibles  |
+| ----------- | --------------- | ------------------ |
+| rightMargin | number          | valeur entier long |
+
+
+
+
+
+---
+
+
+
+## Marge hor.
+
+Valeur à ajouter (en pixels) à la marge inférieure du formulaire lorsque la [taille du formulaire](#size-based-on) est définie sur **Taille automatique** ou **\<object name>**. 
+
+Cette valeur détermine également les marges supérieures des formulaires utilisés dans l'éditeur d'étiquettes.
+
+
+
+#### Grammaire JSON
+
+| Nom          | Type de données | Valeurs possibles  |
+| ------------ | --------------- | ------------------ |
+| bottomMargin | number          | valeur entier long |
+
+
+
+
+
+--- 
+
+
+## Largeur
+
+Largeur du formulaire (en pixels) lorsque la [taille du formulaire](#size-based-on) est définie sur **Fixer taille**.  
+
+
+
+
+#### Grammaire JSON
+
+| Nom   | Type de données | Valeurs possibles  |
+| ----- | --------------- | ------------------ |
+| width | number          | valeur entier long |

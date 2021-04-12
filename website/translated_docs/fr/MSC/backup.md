@@ -10,8 +10,8 @@ La page Sauvegarde du CSM permet de visualiser les paramètres de sauvegarde de 
 
 Cette page est constituée des zones suivantes :
 
-- **Emplacement du fichier de sauvegarde** : affiche les informations relatives à l’emplacement du fichier de sauvegarde de la base. Elle indique également l’espace occupé et l’espace disponible sur le volume de sauvegarde.
-- **Informations sur la dernière sauvegarde** : fournit la date et l’heure de la dernière sauvegarde (automatique ou manuelle) réalisée sur la base.
+- **Emplacement du fichier de sauvegarde** : affiche les informations relatives à l’emplacement du fichier de sauvegarde de l'application. Elle indique également l’espace occupé et l’espace disponible sur le volume de sauvegarde.
+- **Informations sur la dernière sauvegarde** : fournit la date et l’heure de la dernière sauvegarde (automatique ou manuelle) réalisée sur l'application.
 - **Contenu du fichier de sauvegarde** : liste les fichiers et dossiers inclus dans le fichier de sauvegarde.
 
 Le bouton **Sauvegarde** permet de lancer une sauvegarde manuelle.

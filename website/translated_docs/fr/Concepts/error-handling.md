@@ -8,33 +8,33 @@ Le traitement des erreurs consiste à anticiper les erreurs pouvant survenir dan
 La gestion des erreurs répond à deux besoins principaux :
 
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
-- détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface. 
+- détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
+> > Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
 
-> Il est fortement recommandé d'installer une méthode de gestion des erreurs sur 4D Server, pour tout le code exécuté sur le serveur. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
+
+## Erreur ou statut
+
+De nombreuses fonctions de classe 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
+
+D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être traitée par une méthode de gestion des erreurs.
+
 
 ## Installer une méthode de gestion des erreurs
 
 Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
 
-Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple:
+Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple :
 
 ```4d
 APPELER SUR ERREUR("IO_ERRORS") //Installe la méthode de gestion des erreurs
 ```
 
 Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la méthode `ON ERR CALL` à l'aide d'une chaîne vide :
-
 ```4d
 ON ERR CALL("") //redonne le contrôle à 4D
 ```
 
-### Portée et composants
-
-Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
-
-Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à la base de données en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de la base hôte n'est pas appelée, et inversement.
-
-La commande `Method called on error` permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le processus en cours. Cela est particulièrement utile dans le contexte des composants car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur de la base de données hôte :
+La commande `Method called on error` permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le processus en cours. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
 
 ```4d
  $methCurrent:=Method called on error
@@ -46,28 +46,37 @@ La commande `Method called on error` permet de connaître le nom de la méthode 
 
 ```
 
+### Portée et composants
+
+Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
+
+Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à l'application en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de l'application hôte n'est pas appelée, et inversement.
+
+
 ### Gérer les erreurs dans une méthode
 
 Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
 
 - Variables système (*) :
-    
+
   - `Error` (entier long): Code d'erreur
   - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
   - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
-  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur. 
+  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
 
 (*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
 
-- La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D. 
+- La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
+- la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
+
 
 #### Exemple
 
 Voici un système de gestion des erreurs simple :
 
 ```4d
-//installer la méthode de gestion des erreurs
- ON ERR CALL("errorMethod")
+//installer la méthode de gestion d'erreur
+ON ERR CALL("errorMethod")
  //... exécuter le code
  ON ERR CALL("") //redonner le contrôle à 4D
 ```
@@ -89,5 +98,9 @@ $doc:=Open document( "myFile.txt")
 If (Error=-43)
     ALERT("File not found.")
 End if
-ON ERR CALL("")
+ON ERR CALL.("")
+End if
+ON ERR CALL.("")
 ```
+
+

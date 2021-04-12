@@ -28,7 +28,6 @@ This event is generated when the user doubl-clicks anywhere on a 4D View Pro doc
 | sheetName   | text    | Name of the sheet of the event |
 | range       | object  | Cell range                     |
 
-
 #### Example
 
 ```4d

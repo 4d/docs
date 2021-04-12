@@ -13,7 +13,11 @@ Utilisez `$savedfilter` pour enregistrer le filtre que vous avez défini lors de
 
 Si l'ensemble d'entités n'est plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
-Si vous avez utilisé à la fois `$savedfilter` et [`$savedorderby`]($savedorderby.md) dans votre appel lors de la création d'un ensemble d'entités et que vous en omettez un, le nouvel ensemble d'entités, qui aura le même numéro de référence, le reflétera.</p> 
+Si vous avez utilisé à la fois `$savedfilter` et
+
+[`$savedorderby`]($savedorderby.md) dans votre appel lors de la création d'un ensemble d'entités et que vous en omettez un, le nouvel ensemble d'entités, qui aura le même numéro de référence, le reflétera.</p> 
+
+
 
 ## Exemple
 

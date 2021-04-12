@@ -3,27 +3,27 @@ id: variant
 title: Variant
 ---
 
-Variant ist ein Variablentyp, um Daten von beliebigem festen Typ in eine Variable zu setzen. Dieser Typ lässt sich z.B. zum Schreiben von generischem Code verwenden, der Werte von nicht bekanntem Typ zurückgibt oder empfängt. Das ist beispielsweise bei Code zum Verwalten von Objektattributen der Fall.
+Variant ist ein Variablentyp, um Daten von beliebigem regulären Typ in eine Variable zu setzen. Dieser Typ lässt sich z.B. zum Schreiben von generischem Code verwenden, der Werte von nicht bekanntem Typ zurückgibt oder empfängt. Das ist beispielsweise bei Code zum Verwalten von Objektattributen der Fall.
 
 Eine Variable vom Typ Variant kann einen Wert in folgenden Datentypen enthalten:
 
 - BLOB
 - Boolean
-- Collection
-- Datum
+- collection
+- date
 - Lange Ganzzahl
-- Objekt
-- Bild
-- Zeiger
+- object
+- picture
+- pointer
 - Zahl
 - Text
-- Zeit
+- time
 - Null
 - Undefiniert
 
 > Arrays lassen sich nicht in Variablen vom Typ Variant speichern.
 
-Im interpretierten und im kompilierten Modus kann derselben Variablen vom Typ Variant Inhalt mit unterschiedlichen Typen zugewiesen werden. Im Gegensatz zu festen Variablentypen ist der Inhaltstyp von Variant unterschiedlich von der Variable selbst. Beispiel:
+Sowohl im interpretierten als auch im kompilierten Modus kann derselben Variablen vom Typ Variant Inhalt mit unterschiedlichen Typen zugewiesen werden. Im Gegensatz zu festen Variablentypen ist der Inhaltstyp von Variant unterschiedlich von der Variable selbst. Beispiel:
 
 ```4d
 C_VARIANT($variant)
@@ -60,4 +60,4 @@ Case of
 End case
 ```
 
-> Sind Variablen vom Typ Variant nicht erforderlich (z.B. wenn der Datentyp bekannt ist), empfehlen wir, Variablen mit festen Typen zu verwenden. Denn sie bieten bessere Performance, klareren Code und sind für den Compiler hilfreich, da sie Fehler durch Übergeben unerwarteter Datentypen vermeiden.
+> Sind Variablen vom Typ Variant nicht erforderlich (z.B. wenn der Datentyp bekannt ist), empfehlen wir, Variablen mit festen Typen zu verwenden. Denn sie bieten bessere Performance, klareren Code und sind für den Compiler hilfreich, da sie Fehler durch Übergeben unerwarteter Datentypen vermeiden. 

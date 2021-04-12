@@ -4,55 +4,57 @@ title: '$upload'
 ---
 
 
-Returns an ID of the file uploaded to the server
+サーバーにアップロードしたファイルの ID を返します
 
 ## 説明
+サーバーにアップロードしたいファイルがある場合にこのリクエストを POST します。 画像の場合には `$rawPict=true` を渡します。 その他のファイルの場合は `$binary=true` を渡します。
 
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+デフォルトのタイムアウトは 120秒ですが、`$timeout` パラメーターに任意の数値を渡してタイムアウトを変更できます。
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
+## 画像アップロードの例
+画像をアップロードする前に、Webアプリケーションからのファイルの使用のための HTML 5 ビルトイン API を使ってクライアント上で対象となるファイルオブジェクトを選択しておく必要があります。 ファイルを適切に扱うため、4D はファイルオブジェクトの MIMEタイプ属性を使います。
 
-## Image upload example
+次に、4D Server に選択した画像をアップロードします:
 
-To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. 4D uses the MIME type attribute of the file object so it can handle it appropriately.
+ `POST  /rest/$upload?$rawPict=true`
 
-Then, we upload the selected image to 4D Server:
-
-`POST  /rest/$upload?$rawPict=true`
-
-**Result**:
+**結果**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity:
+ この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します:
 
-`POST  /rest/Employee/?$method=update`
+ `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**POST データ**:
 
+````
+{
+    __KEY: "12",
+    __STAMP: 4,
+    photo: { "ID": "D507BC03E613487E9B4C2F6A0512FE50" } 
+}
+````
+
+**レスポンス**:
+
+更新後のエンティティが返されます:
+
+````
+{
+    "__KEY": "12", 
+    "__STAMP": 5, 
+    "uri": "http://127.0.0.1:8081/rest/Employee(12)", 
+    "ID": 12, 
+    "firstName": "John", 
+    "firstName": "Smith",
+    "photo":
     {
-        __KEY: "12",
-        __STAMP: 4,
-        photo: { "ID": "D507BC03E613487E9B4C2F6A0512FE50" } 
-    }
-    
-
-**Response**:
-
-The modified entity is returned:
-
-    {
-        "__KEY": "12", 
-        "__STAMP": 5, 
-        "uri": "http://127.0.0.1:8081/rest/Employee(12)", 
-        "ID": 12, 
-        "firstName": "John", 
-        "firstName": "Smith",
-        "photo":
+        "__deferred":
         {
-            "__deferred":
-            {
-                "uri": "/rest/Employee(12)/photo?$imageformat=best&$version=1&$expand=photo",
-                "image": true
-            }
-        },}
+            "uri": "/rest/Employee(12)/photo?$imageformat=best&$version=1&$expand=photo",
+            "image": true
+        }
+    },}
+````
+ 

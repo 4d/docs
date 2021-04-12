@@ -3,65 +3,28 @@ id: onAlternativeClick
 title: Sur clic alternatif
 ---
 
-<table>
-  <tr>
-    <th>
-      Code
-    </th>
-    
-    <th>
-      Peut être appelé par
-    </th>
-    
-    <th>
-      Définition
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      38
-    </td>
-    
-    <td>
-      <a href="FormObjects/button_overview.md">Button</a> - <a href="FormObjects/listbox_overview.md">List Box</a> - <a href="FormObjects/listbox_overview.md#list-box-columns">List Box Column</a>
-    </td>
-    
-    <td>
-      <li>
-        Buttons: The "arrow" area of a button is clicked<li>
-          List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</td> </tr> </tbody> </table> <h2>
-            Description
-          </h2>
-          <h3>
-            Buttons
-          </h3>
-          <p>
-            Some button styles can be <a href="FormObjects/properties_TextAndPicture.md#with-pop-up-menu">linked to a pop-up menu</a> and display an triangle. Clicking on this triangle causes a selection pop-up to appear that provides a set of alternative actions in relation to the primary button action.
-          </p>
-          <p>
-            4D allows you to manage this type of button using the <code>On Alternative Click</code> event. This event is generated when the user clicks on the triangle (as soon as the mouse button is held down):
-          </p>
-          <ul spaces="0" level="0" marker="-">
-            <li level="0">
-              If the pop-up menu is <strong>separated</strong>,the event is only generated when a click occurs on the portion of the button with the arrow.
-            </li>
-            <li level="0">
-              If the pop-up menu is <strong>linked</strong>, the event is generated when a click occurs on any part of the button. Note that the <a href="onLongClick.md"><code>On Long Click</code></a> event cannot be generated with this type of button.
-            </li>
-          </ul>
-          <p>
-            <img src="assets/en/Events/clickevents.png" alt="" />
-          </p>
-          <h3>
-            List box
-          </h3>
-          <p>
-            This event is generated in columns of <a href="FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro">object array type list boxes</a>, when the user clicks on a widget ellipsis button ("alternateButton" attribute).
-          </p>
-          <p>
-            <img src="assets/en/FormObjects/listbox_column_objectArray_alternateButton.png" alt="" />
-          </p>
-          <p>
-            See the <a href="FormObjects/listbox_overview.md#alternatebutton">description of the "alternateButton" attribute</a>.
-          </p>
+| Code | Peut être appelé par                                                                                                                                             | Définition                                                                                                                                                                                                   |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 38   | [Bouton](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Boutons : la zone "flèche" d'un bouton est cliquée<li>List box : dans une colonne d'un tableau, un bouton de sélection (attribut "alternateButton") est cliqué |
+
+
+## Description
+
+### Boutons
+
+Certains styles de boutons peuvent être [liés à un menu contextuel](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) et afficher un triangle. En cliquant sur ce triangle, une fenêtre contextuelle de sélection apparait et fournit un ensemble d'actions alternatives en relation avec l'action du bouton principal.
+
+4D vous permet de gérer ce type de bouton à l'aide de l'événement `On Alternative Click`. Cet événement est généré lorsque l'utilisateur clique sur le triangle (dès que le bouton de la souris est maintenu enfoncé) :
+
+- Si le menu pop-up est **séparé**, l'événement n'est généré que lorsqu'un clic se produit sur la partie du bouton avec la flèche.
+- Si le pop-up menu est **lié**, l'événement est généré lorsqu'un clic se produit sur n'importe quelle partie du bouton. A noter que l'événement [`On Long Click`](onLongClick.md) ne peut pas être généré avec ce type de bouton.
+
+![](assets/en/Events/clickevents.png)
+
+### List box
+
+Cet événement est généré dans des colonnes de [list box de type tableau objets](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), lorsque l'utilisateur clique sur un bouton de sélection de widget (attribut "AlternateButton").
+
+![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
+
+Voir la [description de l'attribut "alternateButton"](FormObjects/listbox_overview.md#alternatebutton). 

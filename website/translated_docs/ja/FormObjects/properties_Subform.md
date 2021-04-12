@@ -1,88 +1,81 @@
 ---
 id: propertiesSubform
-title: Subform
+title: サブフォーム
 ---
 
-* * *
+---
+## 削除を許可
 
-## Allow Deletion
-
-Specifies if the user can delete subrecords in a list subform.
-
-#### JSON 文法
-
-| 名               | データタイプ  | とりうる値                       |
-| --------------- | ------- | --------------------------- |
-| deletableInList | boolean | true, false (default: true) |
-
-
-#### 対象オブジェクト
-
-[Subform](subform_overview.md)
-
-* * *
-
-## Detail Form
-
-You use this property to declare the detail form to use in the subform. It can be:
-
-- a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.  
-    You can select a component form name when it is published in the component.
-
-> You can generate [components](Concepts/components.md) providing additional functionalities through subforms.
-
-- the detail form to associate a with the [list subform](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
+リストサブフォーム内でユーザーがサブレコードを削除できるかどうかを指定します。
 
 #### JSON 文法
 
-| 名          | データタイプ | とりうる値                                                                                                                               |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
-
+| 名               | データタイプ  | とりうる値                     |
+| --------------- | ------- | ------------------------- |
+| deletableInList | boolean | true, false (デフォルトは true) |
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
-* * *
 
-## Double-click on empty row
+---
+## 詳細フォーム
 
-Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
+このプロパティを使用して、サブフォームで使用する詳細フォームを割り当てます。 以下のものを使用できます:
 
-- Do nothing: Ignores double-click.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
+- ウィジェット (ページタイプのサブフォームで、特定の機能を実現するために作成されています)。 この場合、[リストフォーム](#リストフォーム) および [ソース](#ソース) プロパティは存在しないか、空でなくてはいけません。   
+  コンポーネントで公開されていれば、コンポーネントフォーム名を選べます。
+> サブフォームを介して追加の機能を提供する [コンポーネント](Concepts/components.md) を作成することが可能です。
+
+- [リストサブフォーム](#リストフォーム) に関連づける詳細フォーム。 詳細フォームはサブレコードを入力したり表示したりするために使用します。 通常、詳細フォームにはリストサブフォームより多くの情報が含まれています。 詳細フォームは、サブフォームと同じテーブルに属していなければなりません。 典型的には、出力フォームをリストフォーム に、入力フォームを詳細フォームに指定します。 詳細フォームを指定しない場合、4Dは自動でテーブルのデフォルト入力フォームを使用します。
+
 
 #### JSON 文法
 
-| 名                            | データタイプ | とりうる値                              |
-| ---------------------------- | ------ | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string | "addSubrecord" or "" to do nothing |
-
+| 名          | データタイプ | とりうる値                                                                                 |
+| ---------- | ------ | ------------------------------------------------------------------------------------- |
+| detailForm | string | テーブルまたはプロジェクトフォームの名前 (文字列), フォームを定義する .json ファイルへの POSIX パス (文字列), またはフォームを定義するオブジェクト |
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
-#### See also
+---
+## 空行をダブルクリック
 
-[Double click on row](#double-click-on-row)
+リストサブフォームの空行がダブルクリックされた際に実行されるアクションを指定します。 次のオプションから選択することができます:
+- 何もしない: ダブルクリックを無視します。
+- レコード追加: サブフォーム中に新規レコードを作成し、編集モードにします。 "リスト更新可" オプションが選択されている場合、レコードは直接リスト内に作成されます。 選択されていない場合、レコードはサブフォームに割り当てられた [詳細フォーム](#詳細フォーム) 上に作成されます。
 
-* * *
 
+#### JSON 文法
+
+| 名                            | データタイプ | とりうる値                       |
+| ---------------------------- | ------ | --------------------------- |
+| doubleClickInEmptyAreaAction | string | "addSubrecord", 何もしない場合は "" |
+
+#### 対象オブジェクト
+
+[サブフォーム](subform_overview.md)
+
+#### 参照
+[行をダブルクリック](#行をダブルクリック)
+
+---
 ## 行をダブルクリック
 
-`List subform`
+`リストサブフォーム`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
+ユーザーがリストサブフォームの行をダブルクリックした際に実行されるアクションを指定します。 選択可能なオプションは以下の通りです:
 
-* **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-* **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). The record is opened in read-write mode so it can be modified.
-* **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified. 
+*   **何もしない** (デフォルト): 行をダブルクリックしても自動アクションは発動しません。
+*   **レコード編集**: 行をダブルクリックすると、リストサブフォームに設定された [詳細フォーム](#詳細フォーム) に当該レコードが表示されます。 レコードは読み書き可能モードで開かれるので、編集が可能です。
+*   **レコード表示**: レコード編集と同様の挙動をしますが、レコードは読み取り専用モードで開かれるため、編集はできません。
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+選択されているアクションに関わらず、`On Double Clicked` フォームイベントが生成されます。
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+「レコード編集」「レコード表示」のアクションに関しては `On Open Detail` フォームイベントも生成されます。 リストボックスに関連付けられた詳細フォームに表示されたレコードが閉じられる際には `On Close Detail` フォームイベントが生成されます (レコードが編集されたかどうかは問いません)。
 
 #### JSON 文法
 
@@ -90,22 +83,21 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 | ---------------------- | ------ | ----------------------------------- |
 | doubleClickInRowAction | string | "editSubrecord", "displaySubrecord" |
 
-
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
-#### See also
 
-[Double click on empty row](#double-click-on-empty-row)
+#### 参照
+[空行をダブルクリック](#空行をダブルクリック)
 
-* * *
+---
+## リスト更新可
 
-## Enterable in list
+リストサブフォームでこのプロパティが有効化されていると、ユーザーはリスト内で直接レコードデータを更新できます (この場合、関連づけられている [詳細フォーム](#詳細フォーム) は開きません)。
 
-When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
+> これをおこなうには、更新するフィールド上で 2回クリックをおこない、編集モードにします (ダブルクリックにならないようクリックの間隔をあけなければなりません)。
 
-> To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
 
 #### JSON 文法
 
@@ -116,59 +108,55 @@ When a list subform has this property enabled, the user can modify record data d
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
-* * *
 
-## List Form
+---
+## リストフォーム
 
-You use this property to declare the list form to use in the subform. A list subform lets you enter, view, and modify data in other tables.
+このプロパティを使用して、サブフォームで使用するリストフォームを割り当てます。 リストサブフォームを使うことで、他のテーブルのデータを入力、表示、および更新することができます。
 
-List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. The input form is referred to as the Detail form.
-
-You can also allow the user to enter data in the List form.
+リストサブフォームをデータ入力に使用するには 2つの方法があります。一つはユーザーがサブフォームに直接データを入力する方法です。もう一つは [入力フォーム](#詳細フォーム) を開いてデータを入力する方法です。 後者の設定では、サブフォームとして使用されるフォームがリストフォーム、 入力のために使用されるフォームが詳細フォームとなります。
 
 #### JSON 文法
 
-| 名        | データタイプ | とりうる値                                                                                                                               |
-| -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
-
+| 名        | データタイプ | とりうる値                                                                                 |
+| -------- | ------ | ------------------------------------------------------------------------------------- |
+| listForm | string | テーブルまたはプロジェクトフォームの名前 (文字列), フォームを定義する .json ファイルへの POSIX パス (文字列), またはフォームを定義するオブジェクト |
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
-* * *
 
-## Source
 
-Specifies the table that the list subform belongs to (if any).
+---
+## ソース
+
+リストサブフォームが属するテーブル (あれば) を指定します。
 
 #### JSON 文法
 
-| 名     | データタイプ | とりうる値                             |
-| ----- | ------ | --------------------------------- |
-| table | string | 4D table name, or "" if no table. |
-
+| 名     | データタイプ | とりうる値                   |
+| ----- | ------ | ----------------------- |
+| table | string | 4D テーブル名, テーブルなしの場合は "" |
 
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)
 
-* * *
-
+---
 ## 選択モード
 
-Designates the option for allowing users to select rows:
+リストボックス行の選択モードを指定します:
+- **なし**: 行を選択することはできません。 [リスト更新可](properties_Entry.md#リスト更新可) オプションがチェックされている場合を除き、リストをクリックしても効果はありません。 ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
+- **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります。  
+  上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 カレントの行が変更されるたびに、`On Selection Change` フォームイベントが生成されます。
+- **複数**: 標準のショートカットを使用して複数行を同時に選択できます。
+    - 選択されたサブレコードは `GET HIGHLIGHTED RECORDS` で取得できます。
+    - レコードはクリックにより選択されますが、カレントレコードは変更されません。
+    - **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象レコードの選択状態 (選択・非選択) が切り替わります。 上下キーを使うとリストの前後のレコードが選択されます。 その他のナビゲーションキーはリストをスクロールします。 選択レコードが変更されるたびに、`On Selection Change` フォームイベントが生成されます。
 
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated. 
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-    The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode. 
-    - The selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command.
-    - Clicking on the record will select it, but it does not modify the current record. 
-    - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the selected record is changed.
 
 #### JSON 文法
 
@@ -176,7 +164,6 @@ Designates the option for allowing users to select rows:
 | ------------- | ------ | ---------------------------- |
 | selectionMode | string | "multiple", "single", "none" |
 
-
 #### 対象オブジェクト
 
-[Subform](subform_overview.md)
+[サブフォーム](subform_overview.md)

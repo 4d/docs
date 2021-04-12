@@ -3,6 +3,8 @@ id: null-undefined
 title: Null und Undefiniert
 ---
 
+Null und Undefiniert werden verwendet, wenn der Wert eines Ausdrucks unbekannt ist.
+
 ## Null
 
 Null ist ein spezieller Datentyp mit nur einem möglichen Wert: **Null**. Dieser Wert wird von einem Ausdruck zurückgegeben, der gar keinen Wert enthält.

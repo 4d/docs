@@ -3,6 +3,9 @@ id: branching
 title: Abfragestrukturen
 ---
 
+Über eine Abfragestruktur können Methoden eine Bedingung testen und je nach Ergebnis alternative Wege einschlagen.
+
+
 ## If...Else...End if
 
 Die formale Syntax der Abfragefolge `If...Else...End if` lautet:
@@ -16,7 +19,6 @@ Die formale Syntax der Abfragefolge `If...Else...End if` lautet:
 ```
 
 Beachten Sie, dass der Teil `Else` optional ist; Sie können schreiben:
-
 ```4d
  If(Boolean_Expression)
     statement(s)
@@ -33,7 +35,7 @@ Beachten Sie, dass der Boolean Ausdruck immer voll gewertet wird. Siehe hierzu f
  End if
 ```
 
-Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. Jedoch, selbst wenn *MethodA* FALSE zurückgibt, bewertet 4D weiter *MethodB*, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
+Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. Jedoch, selbst wenn _MethodA_ FALSE zurückgibt, bewertet 4D weiter _MethodB_, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
 
 ```4d
  If(MethodA)
@@ -43,7 +45,7 @@ Der Ausdruck ist nur WAHR, wenn beide Methoden WAHR sind. Jedoch, selbst wenn *M
  End if
 ```
 
-Das Ergebnis ist gleich, und *MethodB* wird nur bei Bedarf bewertet.
+Das Ergebnis ist gleich, und _MethodB_ wird nur bei Bedarf bewertet.
 
 ### Beispiel
 
@@ -57,7 +59,7 @@ Das Ergebnis ist gleich, und *MethodB* wird nur bei Bedarf bewertet.
  End if 
 ```
 
-**Tipp:** Für bestimmte Fälle können Sie Abfragen auch ohne Befehlsfolge ausführen. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
+**Tipp:** In spezifischen Fällen können Sie auch Abfragen ohne Befehlsfolge einrichten. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
 
 ```4d
  If(Boolean_Expression)
@@ -65,7 +67,6 @@ Das Ergebnis ist gleich, und *MethodB* wird nur bei Bedarf bewertet.
     statement(s)
  End if
 ```
-
 oder:
 
 ```4d
@@ -78,7 +79,6 @@ oder:
 ## Case of...Else...End case
 
 Die formale Syntax der Abfragefolge `Case of...Else...End case` lautet:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -97,7 +97,6 @@ Die formale Syntax der Abfragefolge `Case of...Else...End case` lautet:
 ```
 
 Beachten Sie, dass der Teil `Else` optional ist; Sie können schreiben:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -112,7 +111,6 @@ Beachten Sie, dass der Teil `Else` optional ist; Sie können schreiben:
        statement(s)
  End case
 ```
-
 Wie bei der Struktur `If...Else...End if` kann Ihre Methode auch mit der Struktur `Case of...Else...End case` zwischen alternativen Aktionen wählen. Im Gegensatz zur Struktur `If...Else...End` kann die Struktur `Case of...Else...End case` eine vernünftige unbegrenzte Anzahl von Boolean Ausdrücken testen und bei einer wahren Bedingung eine Aktion ausführen.
 
 Vor jedem Boolean Ausdruck steht ein Doppelpunkt (`:`). Die Kombination aus Doppelpunkt und Boolean Ausdruck kennzeichnet eine Bedingung. Zum Beispiel ist folgende Zeile eine Bedingung:
@@ -187,7 +185,6 @@ Der obige Code gelangt nicht bis zur zweiten Bedingung, da der Test "vResult=1" 
 Für hierarchisches Testen können Sie auch hierarchischen Code einsetzen.
 
 **Tipp:** In spezifischen Fällen können Sie auch Abfragen ohne Befehlsfolge einrichten. Wenn Sie einen Algorithmus oder eine spezifische Anwendung entwickeln, können Sie auch schreiben:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -202,7 +199,6 @@ Für hierarchisches Testen können Sie auch hierarchischen Code einsetzen.
 ```
 
 oder:
-
 ```4d
  Case of
     :(Boolean_Expression)
@@ -217,7 +213,6 @@ oder:
 ```
 
 oder:
-
 ```4d
  Case of
     Else

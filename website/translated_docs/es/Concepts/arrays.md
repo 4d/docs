@@ -7,6 +7,7 @@ An **array** is an ordered series of **variables** of the same type. Each variab
 
 > In most cases, it is recommended to use **collections** instead of **arrays**. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
 
+
 ## Creating Arrays
 
 You create an array with one of the array declaration commands from the "Array" theme. Each array declaration command can create or resize one-dimensional or two-dimensional arrays. For more information about two-dimensional arrays, see the [two dimensional arrays](#two-dimensional-arrays) section.
@@ -18,13 +19,11 @@ The following line of code creates (declares) an Integer array of 10 elements:
 ```
 
 Then, the following code resizes that same array to 20 elements:
-
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 Then, the following code resizes that same array to no elements:
-
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
@@ -44,14 +43,14 @@ You reference the elements in an array by using curly braces ({…}). A number i
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
-
 Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
 
 **Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). Assignment and comparison are very different operations.
 
-### Assigning an array to another array
 
+### Assigning an array to another array
 Unlike text or string variables, you cannot assign one array to another. To copy (assign) an array to another one, use `COPY ARRAY`.
+
 
 ## Using the element zero of an array
 
@@ -80,12 +79,13 @@ Here is another example: you want to initialize a form object with a text value 
 
 (*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
 
+
 ## Two-dimensional Arrays
 
 Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
 
 ```4d
-<br /><br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+ ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Two-dimensional arrays are essentially language objects; you can neither display nor print them.
@@ -153,7 +153,7 @@ Doing the same thing with arrays would be prohibitive for the following reasons:
 
 - In order to maintain the four information types (zip code, city, county, state), you would have to maintain four large arrays in memory.
 - Because an array is always held in memory in its entirety, you would have to keep all the zip codes information in memory throughout the whole working session, even though the data is not always in use.
-- Again, because an array is always held in memory in its entirety, each time the database is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- Again, because an array is always held in memory in its entirety, each time the application is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
 
 **Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.
 
@@ -173,7 +173,6 @@ However, in some circumstances, you may need to work with arrays holding hundred
 | Text            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
 | Time            | (1+number of elements) * 4                                           |
 | Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
-
 
 **Notes:**
 

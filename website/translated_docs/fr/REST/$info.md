@@ -6,42 +6,37 @@ title: '$info'
 Renvoie des informations sur les ensembles d'entités stockés couramment dans le cache de 4D Server ainsi que sur les sessions utilisateur
 
 ## Description
-
 En appelant cette requête pour votre projet, vous récupérez des informations dans les propriétés suivantes :
 
-| Propriété      | Type       | Description                                                                         |
-| -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Numérique  | 4D Server's cache size.                                                             |
-| usedCache      | Numérique  | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Numérique  | Number of entity selections.                                                        |
-| entitySet      | Collection | A collection in which each object contains information about each entity selection. |
-| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
-| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
-
+| Propriété      | Type       | Description                                                                                         |
+| -------------- | ---------- | --------------------------------------------------------------------------------------------------- |
+| cacheSize      | Nombre     | Taille du cache du serveur 4D.                                                                      |
+| usedCache      | Nombre     | La quantité de cache du serveur 4D utilisée.                                                        |
+| entitySetCount | Nombre     | Nombre de sélections d'entités.                                                                     |
+| entitySet      | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque sélection d'entités. |
+| ProgressInfo   | Collection | Une collection contenant des informations sur les indicateurs de progression.                       |
+| sessionInfo    | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur. |
 
 ### entitySet
+Pour chaque sélection d'entités stocké dans le cache de 4D Server, les informations retournées sont les suivantes :
 
-For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                   |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | Chaine  | Un UUID qui référence l'ensemble d'entités.                                                                                                                                                                                                                                                                                   |
-| dataClass     | Chaine  | Nom de la classe du datastore.                                                                                                                                                                                                                                                                                                |
-| selectionSize | Nombre  | Number of entities in the entity selection.                                                                                                                                                                                                                                                                                   |
+| dataClass     | Chaine  | Nom de la dataclass.                                                                                                                                                                                                                                                                                                          |
+| selectionSize | Nombre  | Nombre d'entités dans la sélection d'entités.                                                                                                                                                                                                                                                                                 |
 | sorted        | Booléen | Retourne vrai si l'ensemble a été trié (à l'aide de `$orderby`) ou faux s'il n'est pas trié.                                                                                                                                                                                                                                  |
 | refreshed     | Date    | Date de création de l'ensemble d'entités ou de la dernière utilisation.                                                                                                                                                                                                                                                       |
 | expires       | Date    | Date d'expiration de l'ensemble d'entités (cette date/heure change chaque fois que l'ensemble d'entités est actualisé). La différence entre actualisé et expire est le timeout d'un ensemble d'entités. Cette valeur correspond soit à deux heures par défaut, soit à la valeur que vous avez définie à l'aide de `$timeout`. |
 
-
-For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
-
-> 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
-> 
+Pour plus d'informations sur la création d'une sélection d'entités, reportez-vous à `$method=entityset`. Si vous souhaitez supprimer la sélection d'entités du cache de 4D Server, utilisez `$method=release`.
+> 4D crée également ses propres sélections d'entités à des fins d'optimisation, de sorte que ceux que vous créez avec `$method=entityset` ne soient pas les seuls à être retournés.
 > **IMPORTANT** Si votre projet est en **mode d'accès administrateur contrôlé**, vous devez d'abord vous connecter au projet en tant qu'utilisateur du groupe Admin.
 
 ### sessionInfo
 
-For each user session, the following information is returned in the *sessionInfo* collection:
+Pour chaque session utilisateur, les informations suivantes sont retournées dans la collection *sessionInfo* :
 
 | Propriété  | Type   | Description                                                       |
 | ---------- | ------ | ----------------------------------------------------------------- |
@@ -49,7 +44,6 @@ For each user session, the following information is returned in the *sessionInfo
 | userName   | Chaine | Nom de l'utilisateur qui lance la session.                        |
 | lifeTime   | Nombre | La durée d'une session utilisateur en secondes (3600 par défaut). |
 | expiration | Date   | Date et heure d'expiration courante de la session utilisateur.    |
-
 
 ## Exemple
 
@@ -59,65 +53,65 @@ Retourne des informations sur les ensembles d'entités stockés couramment dans 
 
 **Résultat** :
 
+```
+{
+cacheSize: 209715200,
+usedCache: 3136000,
+entitySetCount: 4,
+entitySet: [
     {
-    cacheSize: 209715200,
-    usedCache: 3136000,
-    entitySetCount: 4,
-    entitySet: [
-        {
-            id: "1418741678864021B56F8C6D77F2FC06",
-            tableName: "Company",
-            selectionSize: 1,
-            sorted: false,
-            refreshed: "2011-11-18T10:30:30Z",
-            expires: "2011-11-18T10:35:30Z"
-        },
-        {
-            id: "CAD79E5BF339462E85DA613754C05CC0",
-            tableName: "People",
-            selectionSize: 49,
-            sorted: true,
-            refreshed: "2011-11-18T10:28:43Z",
-            expires: "2011-11-18T10:38:43Z"
-        },
-        {
-            id: "F4514C59D6B642099764C15D2BF51624",
-            tableName: "People",
-            selectionSize: 37,
-            sorted: false,
-            refreshed: "2011-11-18T10:24:24Z",
-            expires: "2011-11-18T12:24:24Z"
-        }
-    ],
-    ProgressInfo: [
-        {
-            UserInfo: "flushProgressIndicator",
-            sessions: 0,
-            percent: 0
-        },
-        {
-            UserInfo: "indexProgressIndicator",
-            sessions: 0,
-            percent: 0
-        }
-    ],
-    sessionInfo: [ 
-        {
-            sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
-            userID: "36713176D42DB045B01B8E650E8FA9C6",
-            userName: "james",
-            lifeTime: 3600,
-            expiration: "2013-04-22T12:45:08Z"
-        },
-        {
-            sessionID: "A85F253EDE90CA458940337BE2939F6F",
-            userID: "00000000000000000000000000000000",
-            userName: "default guest",
-            lifeTime: 3600,
-            expiration: "2013-04-23T10:30:25Z"
+        id: "1418741678864021B56F8C6D77F2FC06",
+        tableName: "Company",
+        selectionSize: 1,
+        sorted: false,
+        refreshed: "2011-11-18T10:30:30Z",
+        expires: "2011-11-18T10:35:30Z"
+    },
+    {
+        id: "CAD79E5BF339462E85DA613754C05CC0",
+        tableName: "People",
+        selectionSize: 49,
+        sorted: true,
+        refreshed: "2011-11-18T10:28:43Z",
+        expires: "2011-11-18T10:38:43Z"
+    },
+    {
+        id: "F4514C59D6B642099764C15D2BF51624",
+        tableName: "People",
+        selectionSize: 37,
+        sorted: false,
+        refreshed: "2011-11-18T10:24:24Z",
+        expires: "2011-11-18T12:24:24Z"
     }
-    ]
+],
+ProgressInfo: [
+    {
+        UserInfo: "flushProgressIndicator",
+        sessions: 0,
+        percent: 0
+    },
+    {
+        UserInfo: "indexProgressIndicator",
+        sessions: 0,
+        percent: 0
     }
-    
-
-> The progress indicator information listed after the entity selections is used internally by 4D.
+],
+sessionInfo: [ 
+    {
+        sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
+        userID: "36713176D42DB045B01B8E650E8FA9C6",
+        userName: "james",
+        lifeTime: 3600,
+        expiration: "2013-04-22T12:45:08Z"
+    },
+    {
+        sessionID: "A85F253EDE90CA458940337BE2939F6F",
+        userID: "00000000000000000000000000000000",
+        userName: "default guest",
+        lifeTime: 3600,
+        expiration: "2013-04-23T10:30:25Z"
+}
+]
+}
+```
+> Les informations de l'indicateur de progression répertoriées après les sélections d'entités sont utilisées en interne par 4D.

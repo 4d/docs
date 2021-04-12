@@ -7,6 +7,7 @@ Ein **Array** ist eine sortierte Reihe von **Variablen** des gleichen Typs. Jede
 
 > In den meisten Fällen empfiehlt es sich, **Collections** anstelle von **Arrays** zu verwenden. Collections sind flexibler und bieten ein breites Spektrum an spezifischen Methoden. Weitere Informationen dazu finden Sie im Abschnitt [Collection](Concepts/dt_collection.md).
 
+
 ## Arrays erstellen
 
 Sie erstellen ein Array mit einem Befehl unter dem Thema "Array", der ein Array deklariert. Jeder dieser Befehle kann ein- oder zweidimensionale Arrays erstellen oder in der Größe anpassen. Weitere Informationen zu zweidimensionalen Arrays finden Sie im Abschnitt [zweidimensionale Arrays](#two-dimensional-arrays).
@@ -18,13 +19,11 @@ Folgende Code-Zeile erstellt (deklariert) ein Array vom Typ Ganzzahl mit 10 Elem
 ```
 
 Dann passt folgende Code-Zeile dieses Array auf 20 Elemente an:
-
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
 und folgende Code-Zeile passt dieses Array auf keine Elemente an:
-
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
@@ -44,16 +43,16 @@ Auf Elemente in einem Array verweisen Sie über geschweifte Klammern ({…}). Di
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
-
 Beachten Sie die Syntax atNames{$vlElem}. Sie können das Element auch über eine Variable vom Typ Zahl ansprechen, z. B. atNames{3}. Über eine Schleife (`For...End for`, `Repeat...Until` oder `While...End while`) können kompakte Teile des Code alle oder bestimmte Elemente in einem Array ansprechen.
 
 **Wichtig:** Achten Sie darauf, dass Sie den Zuweisungsoperator (:=) nicht mit dem Vergleichsoperator ist gleich (=) verwechseln. Zuweisen und Vergleichen sind ganz unterschiedliche Operationen.
 
-### Ein Array einem anderen Array zuweisen
 
+### Ein Array einem anderen Array zuweisen
 Im Gegensatz zu Variablen vom Typ Text oder String können Sie ein Array nicht einem anderen zuweisen. Dafür müssen Sie den Befehl `COPY ARRAY` verwenden.
 
-## Element Null eines Array verwenden
+
+## Element 0 (Null)
 
 Ein Array hat immer ein Element Null. Das Element Null erscheint zwar nicht in einem Array für ein Formularobjekt, kann jedoch ohne Einschränkung (*) in der Programmiersprache eingesetzt werden.
 
@@ -80,12 +79,13 @@ Hier ein Beispiel: Sie wollen ein Formularobjekt mit einem Textwert initialisier
 
 (*) Es gibt eine Ausnahme: In einem Array vom Typ Listbox wird das Element Null intern zum Speichern des vorigen Wertes eines Elements in Bearbeitung verwendet. Sie können es also in diesem spezifischen Kontext nicht verwenden.
 
+
 ## Zweidimensionale Arrays
 
 Jeder Befehl zum Erstellen von Arrays kann ein- oder zweidimensionale Arrays erstellen bzw. in der Größe anpassen. Beispiel:
 
 ```4d
-<br /><br /> ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+ ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
 ```
 
 Zweidimensionale Arrays sind Objekte der Programmiersprache; von daher lassen sie sich weder anzeigen noch ausdrucken.
@@ -153,7 +153,7 @@ Dieses Vorgehen ist für Arrays undenkbar. Das hat folgende Gründe:
 
 - Zum Verwalten der drei Informationstypen (Landeskennzahl, Postleitzahl, Stadt) müssten Sie drei umfangreiche Arrays im Speicher halten.
 - Da ein Array immer vollständig im Speicher gehalten wird, müssten Sie alle Informationen dieser Arrays während der ganzen Arbeitssitzung im Speicher halten, auch wenn die Daten nicht ständig in Gebrauch sind.
-- Diese Arrays müssten bei jedem Starten der Datenbank komplett geladen und dann beim Beenden auf der Festplatte gesichert werden, selbst wenn die Daten während der ganzen Arbeitssitzung weder benutzt noch verändert wurden.
+- Diese Arrays müssten bei jedem Starten der Anwendung komplett geladen und dann beim Beenden auf der Festplatte gesichert werden, selbst wenn die Daten während der ganzen Arbeitssitzung weder benutzt noch verändert wurden.
 
 **Fazit:** In Arrays sollten überschaubare Datenmengen für eine kurze Zeitspanne gehalten werden. Andererseits sind Arrays, da sie im Hauptspeicher gehalten werden, sehr schnell und leicht zu verwalten.
 
@@ -173,7 +173,6 @@ Unter bestimmten Umständen müssen Sie jedoch Arrays mit hunderten oder tausend
 | Text            | (1+Anzahl der Elemente) * 20 + (Summe der Länge jedes Textes) * 2 |
 | Zeit            | (1+Anzahl der Elemente) * 4                                         |
 | Zweidimensional | (1+Anzahl der Elemente) * 16 + Summe der Größe jedes Array          |
-
 
 **Hinweise:**
 

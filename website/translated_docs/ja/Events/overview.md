@@ -7,7 +7,7 @@ Form events are events that can lead to the execution of the form method and/or 
 
 In your code, you control the events using the `FORM Event` command, that returns the triggered event. たとえば:
 
-```4d
+```4d  
 //code of a button
 If(FORM Event.code=On Clicked) 
 // do something when the button is clicked
@@ -16,18 +16,23 @@ End if
 
 > Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
 
+
 ## Event object
 
 Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
 
-| プロパティ | 型 | 説明 |
-| ----- | - | -- |
-|       |   |    |
+| プロパティ | タイプ | 説明 |
+| ----- | --- | -- |
+|       |     |    |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
 
-`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")| 
+`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
 
-Additional properties are returned when the event occurs on specific objects. For example, the [On After Edit](onAfterEdit.md) event object returned by a [4D View Pro area](FormObjects/viewProArea_overview.md) contains `sheetName` or `action` properties.
+Additional properties are returned when the event occurs on specific objects. 特に:
+
+- [list boxes](FormObjects/listbox_overview.md#supported-form-events) and [list box columns](FormObjects/listbox_overview.md#supported-form-events-1) return [additional properties](FormObjects/listbox_overview.md#additional-properties) such as `columnName` or `isRowSelected`.
+- [4D View Pro areas](FormObjects/viewProArea_overview.md) return for example `sheetName` or `action` properties in the [On After Edit](onAfterEdit.md) event object.
+
 
 ## Events and Methods
 
@@ -58,10 +63,10 @@ The following table summarizes how object and form methods are called for each e
 | On After Edit            | ◯                                   | ◯           | Involved object only   |
 | On Getting Focus         | ◯                                   | ◯           | Involved object only   |
 | On Losing Focus          | ◯                                   | ◯           | Involved object only   |
-| On Activate              | Never                               | ◯           | None                   |
-| On Deactivate            | Never                               | ◯           | None                   |
-| On Outside Call          | Never                               | ◯           | None                   |
-| On Page Change           | Never                               | ◯           | None                   |
+| On Activate              | Never                               | ◯           | なし                     |
+| On Deactivate            | Never                               | ◯           | なし                     |
+| On Outside Call          | Never                               | ◯           | なし                     |
+| On Page Change           | Never                               | ◯           | なし                     |
 | On Begin Drag Over       | ◯                                   | ◯           | Involved object only   |
 | On Drop                  | ◯                                   | ◯           | Involved object only   |
 | On Drag Over             | ◯                                   | Never       | Involved object only   |
@@ -69,22 +74,22 @@ The following table summarizes how object and form methods are called for each e
 | On Mouse Move            | ◯                                   | ◯           | All objects            |
 | On Mouse Leave           | ◯                                   | ◯           | All objects            |
 | On Mouse Up              | ◯                                   | Never       | Involved object only   |
-| On Menu Selected         | Never                               | ◯           | None                   |
-| On Bound variable change | Never                               | ◯           | None                   |
+| On Menu Selected         | Never                               | ◯           | なし                     |
+| On Bound variable change | Never                               | ◯           | なし                     |
 | On Data Change           | ◯                                   | ◯           | Involved object only   |
 | On Plug in Area          | ◯                                   | ◯           | Involved object only   |
 | On Header                | ◯                                   | ◯           | All objects            |
 | On Printing Detail       | ◯                                   | ◯           | All objects            |
 | On Printing Break        | ◯                                   | ◯           | All objects            |
 | On Printing Footer       | ◯                                   | ◯           | All objects            |
-| On Close Box             | Never                               | ◯           | None                   |
+| On Close Box             | Never                               | ◯           | なし                     |
 | On Display Detail        | ◯                                   | ◯           | All objects            |
 | On Open Detail           | Yes (List box)                      | ◯           | None except List boxes |
 | On Close Detail          | Yes (List box)                      | ◯           | None except List boxes |
-| On Resize                | Never                               | ◯           | None                   |
+| On Resize                | Never                               | ◯           | なし                     |
 | On Selection Change      | ◯                                   | ◯           | Involved object only   |
-| On Load Record           | Never                               | ◯           | None                   |
-| On Timer                 | Never                               | ◯           | None                   |
+| On Load Record           | Never                               | ◯           | なし                     |
+| On Timer                 | Never                               | ◯           | なし                     |
 | On Scroll                | ◯                                   | Never       | Involved object only   |
 | On Before Data Entry     | Yes (List box)                      | Never       | Involved object only   |
 | On Column Moved          | Yes (List box)                      | Never       | Involved object only   |
@@ -105,10 +110,11 @@ The following table summarizes how object and form methods are called for each e
 | On End URL Loading       | Yes (Web Area)                      | Never       | Involved object only   |
 | On Open External Link    | Yes (Web Area)                      | Never       | Involved object only   |
 | On Window Opening Denied | Yes (Web Area)                      | Never       | Involved object only   |
+| On VP Range Changed      | Yes (4D View Pro Area)              | Never       | Involved object only   |
 | On VP Ready              | Yes (4D View Pro Area)              | Never       | Involved object only   |
 | On Row Resize            | Yes (4D View Pro Area)              | Never       | Involved object only   |
-
 
 Always keep in mind that, for any event, the method of a form or an object is called if the corresponding event property is selected for the form or objects. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.
 
 > WARNING: The [On Load](onLoad) and [On Unload](onUnloas) events are generated for objects if they are enabled for both the objects and the form to which the objects belong. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
+
