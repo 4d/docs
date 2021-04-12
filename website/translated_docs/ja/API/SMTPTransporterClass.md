@@ -85,7 +85,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### 戻り値
 
-この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-object) を返します。 All returned properties are **read-only**.
+この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-object) を返します。 返されるプロパティはすべて **読み取り専用** です。
 
 
 #### 例題
@@ -153,7 +153,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+SMTPステータスコードについての詳細は [こちらのページ](https://www.usps.org/info/smtp_status.html) を参照ください。
 
 #### 例題
 
@@ -163,7 +163,7 @@ For information about SMTP status codes, please refer to [this page](https://www
  var $transporter : 4D.SMTPTransporter
  $options:=New object
 
- $pw:=Request("Please enter your password:")
+ $pw:=Request("パスワードを入力してください:")
  $options.host:="smtp.gmail.com"
 
  $options.user:="test@gmail.com"
@@ -173,9 +173,9 @@ For information about SMTP status codes, please refer to [this page](https://www
 
  $status:=$transporter.checkConnection()
  If($status.success=True)
-    ALERT("SMTP connection check successful!")
+    ALERT("SMTP接続チェックに成功しました。")
  Else
-    ALERT("Error # "+String($status.status)+", "+$status.statusText)
+    ALERT("エラー # "+String($status.status)+", "+$status.statusText)
  End if
 ```
 
@@ -213,12 +213,12 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 #### 説明
 
-`.keepAlive` プロパティは、 <!-- REF #SMTPTransporterClass.keepAlive.Summary -->`transporter` オブジェクトが抹消されるまで、SMTP接続が維持されなければならない場合に **true**<!-- END REF -->、それ以外は **False** を格納します。 By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
+`.keepAlive` プロパティは、 <!-- REF #SMTPTransporterClass.keepAlive.Summary -->`transporter` オブジェクトが抹消されるまで、SMTP接続が維持されなければならない場合に **true**<!-- END REF -->、それ以外は **False** を格納します。 `SMTP New transporter` コマンドで `transporter` オブジェクトを作成する際に使用する `server` オブジェクトにおいて、 `keepAlive` プロパティが指定されなかった場合のデフォルトは **true** です。
 
-The SMTP connection is automatically closed:
+SMTP接続は、以下の場合に自動的に閉じられます:
 
-*   when the `transporter` object is destroyed if the `.keepAlive` property is true,
-*   after each `.send( )` function execution if the `.keepAlive` property is set to false.
+*   `.keepAlive` プロパティが true (デフォルト) の場合には、`transporter` オブジェクトが消去された時。
+*   `.keepAlive` プロパティが false の場合には、各 `.send( )` 関数が実行された後。
 
 
 
@@ -258,11 +258,11 @@ The SMTP connection is automatically closed:
 #### 説明
 
 `.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
-> The `transporter` object must have already been created using the `SMTP New transporter` command.
+> `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
-The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the `SMTP New transporter` command description.
+この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが false であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。そ例外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、`SMTP New transporter` コマンドの説明を参照してください。
 
-*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。 The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
+*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
 
 
 
