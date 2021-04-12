@@ -28,21 +28,21 @@ Attachment objects provide the following read-only properties and functions:
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| 参照          | タイプ               |    | 説明                                                                   |
-| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| path        | テキスト              | -> | Path of the attachment file                                          |
-| blob        | BLOB              | -> | BLOB containing the attachment                                       |
-| name        | テキスト              | -> | Name + extension used by the mail client to designate the attachment |
-| cid         | テキスト              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
-| type        | テキスト              | -> | Value of the content-type header                                     |
-| disposition | テキスト              | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| 戻り値         | 4D.MailAttachment | <- | Attachment object                                                    |
+| 参照          | タイプ               |    | 説明                                                     |
+| ----------- | ----------------- |:--:| ------------------------------------------------------ |
+| path        | テキスト              | -> | 添付ファイルのパス                                              |
+| blob        | BLOB              | -> | 添付を格納した BLOB                                           |
+| name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
+| cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
+| type        | テキスト              | -> | content-type ヘッダーの値                                    |
+| disposition | テキスト              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
+| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
 <!-- END REF -->
 
 
 #### 説明
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](EmailObjectClass.md#email-object)<!-- END REF -->.
+`MAIL New attachment` コマンドは、 <!-- REF #_command_.MAIL_New_attachment.Summary -->[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) に追加することができる添付オブジェクトを作成します<!-- END REF -->。
 
 You can pass either a path or a Blob to define the attachment.
 
@@ -61,7 +61,7 @@ You can use the optional *type* parameter to explicitly set the `content-type` o
 
 By default, if the *type* parameter is omitted or contains an empty string, the `content-type` of the attachment file is based on its extension. The following rules are applied for the main MIME types:
 
-| Extension | Content Type                  |
+| 拡張子       | Content-Type                  |
 | --------- | ----------------------------- |
 | jpg, jpeg | image/jpeg                    |
 | png       | image/png                     |
@@ -78,7 +78,7 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 | xml       | application/xml               |
 | htm, html | text/html                     |
 | mp3       | audio/mpeg                    |
-| *other*   | application/octet-stream      |
+| *その他*     | application/octet-stream      |
 
 The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
 
@@ -94,11 +94,11 @@ By default, if the *disposition* parameter is omitted:
 
 #### 例題 1
 
-You want to send an email with a user-selected file as an attachment and an image embedded in the HTML body:
+ユーザーが選択したファイルを添付し、HTML 本文に画像を埋め込んだメールを送信します:
 
 ```4d
-$doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
+$doc:=Select document("";"*";"添付するファイルを選択したください";0)
+If (OK=1) // もしドキュメントが選択されていれば
 
 C_OBJECT($email;$server;$transporter)
 
@@ -111,11 +111,11 @@ $transporter:=SMTP New transporter($server)
 $email:=New object
 $email.from:="test_user@mail.com"
 $email.to:="test_user@mail.com"
-$email.subject:="This is a test message with attachments"
+$email.subject:="添付の付いたテストメッセージです"
 
-//add a link to download file
+// ファイルをダウンロードするリンクを追加します
 $email.attachments:=New collection(MAIL New attachment(Document))
-//insert an inline picture (use a cid)
+// インラインピクチャーを挿入します (cid を使用)
 $email.attachments[1]:=MAIL New attachment("c:\\Pictures\\4D.jpg";"";"4D")
 
 $email.htmlBody:="<html>"+\
@@ -125,14 +125,14 @@ $email.htmlBody:="<html>"+\
 "</head>"+\
 "</html>"
 
-$transporter.send($email) //send mail
+$transporter.send($email) // メールを送信します
 
 End if
 ```
 
 #### 例題 2
 
-You want to send an email with a 4D Write Pro area as an attachment:
+4D Write Pro エリアを添付したメールを送信します:
 
 ```4d
 C_BLOB($blob)
@@ -149,8 +149,8 @@ $transporter:=SMTP New transporter($server)
 $email:=New object
 $email.from:="user@mail.com"
 $email.to:="customer@mail.com"
-$email.subject:="New annual report"
-$email.textBody:="Please find enclosed our latest annual report."
+$email.subject:="新規年次レポート"
+$email.textBody:="添付のとおり、新しい年次レポートをご連絡します。"
 $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx"))
 
 $transporter.send($email)
@@ -165,20 +165,20 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| 参照          | タイプ               |    | 説明                                                                   |
-| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| path        | テキスト              | -> | Path of the attachment file                                          |
-| blob        | BLOB              | -> | BLOB containing the attachment                                       |
-| name        | テキスト              | -> | Name + extension used by the mail client to designate the attachment |
-| cid         | テキスト              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
-| type        | テキスト              | -> | Value of the content-type header                                     |
-| disposition | テキスト              | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| 戻り値         | 4D.MailAttachment | <- | Attachment object                                                    |
+| 参照          | タイプ               |    | 説明                                                     |
+| ----------- | ----------------- |:--:| ------------------------------------------------------ |
+| path        | テキスト              | -> | 添付ファイルのパス                                              |
+| blob        | BLOB              | -> | 添付を格納した BLOB                                           |
+| name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
+| cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
+| type        | テキスト              | -> | content-type ヘッダーの値                                    |
+| disposition | テキスト              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
+| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
 <!-- END REF -->
 
 #### 説明
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
+`4D.MailAttachment.new()` 関数は、 <!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 この関数の機能は、[`MAIL New attachment`](#mail-new-attachment) コマンドと同一です。
 
 
 ## .cid
@@ -189,7 +189,7 @@ The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary
 
 #### 説明
 
-The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
+`.cid` プロパティは、 <!-- REF #MailAttachmentClass.cid.Summary --> 添付ファイルの ID を格納します<!-- END REF -->。 このプロパティは HTMLメッセージでのみ使用されます。 このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
 
 
 ## .disposition
@@ -200,9 +200,9 @@ The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the I
 
 #### 説明
 
-The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->. Two values are available:
+`.disposition` プロパティは、 <!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値を格納します<!-- END REF -->。 二つの値が利用可能です:
 
-*   "inline": the attachment is rendered within the message contents, at the "cid" location. The rendering depends on the mail client.
+*   "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 The rendering depends on the mail client.
 *   "attachment": the attachment is provided as a link in the message.
 
 
