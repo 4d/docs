@@ -63,7 +63,7 @@ Function add($x : Integer)
 
 ## Paramètres nommés
 
-## Paramètres nommés Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. Vous pouvez déclarer des paramètres en utilisant un **nom de paramètre** avec un **type de paramètre**, séparés par deux-points.
 
 - Pour les fonctions de classe, les paramètres sont déclarés avec le mot clé `Function`.
 - Pour les méthodes (méthodes projet, méthodes objet formulaire, méthodes de base de données et les triggers), les paramètres sont déclarés à l'aide du mot clé `#DECLARE` saisi au début du code de la méthode.
