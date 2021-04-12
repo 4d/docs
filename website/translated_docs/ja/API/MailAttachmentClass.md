@@ -82,10 +82,10 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 
 The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
 
-| 定数                          | 結果           | 説明                                                                                                                                                                                                   |
-| --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mail disposition attachment | "attachment" | Set the Content-disposition header value to "attachment", which means that the attachment file must be provided as a link in the message.                                                            |
-| mail disposition inline     | "inline"     | Set the Content-disposition header value to "inline", which means that the attachment must be rendered within the message contents, at the "cid" location. The rendering depends on the mail client. |
+| 定数                          | 結果           | 説明                                                                                                                                                                                       |
+| --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mail disposition attachment | "attachment" | Set the Content-disposition header value to "attachment", which means that the attachment file must be provided as a link in the message.                                                |
+| mail disposition inline     | "inline"     | Set the Content-disposition header value to "inline", which means that the attachment must be rendered within the message contents, at the "cid" location. レンダリングの結果はメールクライアントによって異なります。 |
 
 By default, if the *disposition* parameter is omitted:
 
@@ -189,7 +189,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.cid` プロパティは、 <!-- REF #MailAttachmentClass.cid.Summary --> 添付ファイルの ID を格納します<!-- END REF -->。 このプロパティは HTMLメッセージでのみ使用されます。 このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
+`.cid` プロパティは、 <!-- REF #MailAttachmentClass.cid.Summary --> 添付ファイルの ID<!-- END REF -->を格納します。 このプロパティは HTMLメッセージでのみ使用されます。 このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
 
 
 ## .disposition
@@ -200,10 +200,10 @@ $transporter.send($email)
 
 #### 説明
 
-`.disposition` プロパティは、 <!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値を格納します<!-- END REF -->。 二つの値が利用可能です:
+`.disposition` プロパティは、 <!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値<!-- END REF -->を格納します。 二つの値が利用可能です:
 
-*   "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 The rendering depends on the mail client.
-*   "attachment": the attachment is provided as a link in the message.
+*   "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 レンダリングの結果はメールクライアントによって異なります。
+*   "attachment": 添付ファイルはメッセージ内でリンクとして提供されます。
 
 
 ## .getContent()
@@ -212,15 +212,15 @@ $transporter.send($email)
 **.getContent()** : Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 参照  | タイプ  |    | 説明                        |
-| --- | ---- |:--:| ------------------------- |
-| 戻り値 | BLOB | <- | Content of the attachment |
+| 参照  | タイプ  |    | 説明    |
+| --- | ---- |:--:| ----- |
+| 戻り値 | BLOB | <- | 添付の中身 |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a BLOB<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
+`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を BLOB として返します<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
 
 
@@ -232,7 +232,7 @@ The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary 
 
 #### 説明
 
-The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](#mail-new-attachment) command.
+`.name` プロパティは、 <!-- REF #MailAttachmentClass.name.Summary -->添付ファイルの名前と拡張子<!-- END REF -->を格納します。  [`MAIL New attachment`](#mail-new-attachment) コマンドで別の名称を指定しなかった場合のデフォルトは、ファイルの名称です。
 
 ## .path
 
@@ -242,7 +242,7 @@ The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the 
 
 #### 説明
 
-The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the full path of the attachment, if it exists<!-- END REF -->.
+`.path` プロパティは、 <!-- REF #MailAttachmentClass.path.Summary -->添付ファイルのフルパス<!-- END REF -->(存在すれば) を格納します。
 
 
 ## .type
@@ -253,7 +253,7 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 #### 説明
 
-The `.type` property contains <!-- REF #MailAttachmentClass.type.Summary -->the `content-type` of the attachment file<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](#mail-new-attachment) command, the `content-type` is based on its file extension.
+`.type` プロパティは、 <!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type`<!-- END REF -->を格納します。 [`MAIL New attachment`](#mail-new-attachment) コマンドにて、このタイプが明示的に渡されていない場合、`content-type` はファイルの拡張子に基づきます。
 
 
 
