@@ -606,7 +606,7 @@ $status:=$transporter.send($email)
 In *mail*, pass the content and the structure details of the email to convert. This includes information such as the email addresses (sender and recipient(s)), the message itself, and the type of display for the message.
 > 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the email object.
 
-In *options*, you can set a specific charset and encoding configuration for the mail. The following properties are available:
+In *options*, you can set a specific charset and encoding configuration for the mail. 次のプロパティを利用することができます:
 
 | プロパティ         | タイプ  | 説明                                                                                                                                     |
 | ------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------- |
