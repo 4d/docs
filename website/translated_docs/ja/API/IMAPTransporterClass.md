@@ -1617,35 +1617,35 @@ SearchKey3 = FLAGGED DRAFT
 > 文字の大小は通常区別されません。
 
 - *searchCriteria* 引数が null 文字列の場合、検索は "すべてを選択" と同等です。
-- If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
+- 引数が複数の検索キーを格納している場合、それらすべてに合致する和集合 (AND) が検索結果になります。
 
 ```
 searchCriteria = FLAGGED FROM "SMITH"
 ```
-... returns all messages with \Flagged flag set AND sent by Smith.
-- You can use the **OR** or **NOT** operators as follows:
+... この検索結果は \Flagged フラグが設定されていて、かつ Smith から送られたメッセージをすべて返します。
+- **OR** および **NOT** 演算子を、以下のように使用することができます:
 
 ```
 searchCriteria = OR SEEN FLAGGED
 ```
-... returns all messages with \Seen flag set OR \Flagged flag set
+... \Seen フラグが設定されている、あるいは \Flagged フラグが設定されているメッセージをすべて返します。
 
 ```
 searchCriteria = NOT SEEN
 ```
-... returns all messages with \Seen flag not set.
+... \Seen フラグが設定されていないメッセージをすべて返します。
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
 ```
-... returns message whose content-type header contains “Mixed” and does not contain “Text”.
+... content-type ヘッダーが "Mixed" を格納しているもののうち、"Text" は格納していないメッセージを返します。
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
 ```
-... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+... content-type ヘッダーが "e" を格納しているもののうち、Subject ヘッダーが "o"を格納していないもの、かつ content-type ヘッダーが"Mixed" でないメッセージを返します。
 
-As concerns the last two examples, notice that the result of the search is different when you remove the parentheses of the first search key list.
+最後の 2例については、最初の検索キーリストのカッコを取り除いてしまうと検索結果が異なることに注意してください。
 
 - The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.
 
