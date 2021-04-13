@@ -3,7 +3,7 @@ id: EmailObjectClass
 title: Email
 ---
 
-Creating, sending or receiving emails in 4D is done by handling an `Email` object.
+4Dにおけるメールの作成・送信・受信は `Email` オブジェクトの操作よっておこなわれます。
 
 `Email` objects are created when receiving mails through a *transporter* class function:
 
@@ -19,9 +19,9 @@ You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send
 
 ### Email オブジェクト
 
-Email objects provide the following properties:
+Email オブジェクトは次のプロパティを提供します:
 
-> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the Email object.
+> 4D は Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
 
 |                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,14 +49,14 @@ Email objects provide the following properties:
 | [<!-- INCLUDE #EmailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.to.Summary -->|
 
 
-### Email Addresses
+### メールアドレス
 
-All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) accept a value of text, object, or collection type.
+メールアドレスを格納するプロパティ ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) はすべて、テキスト・オブジェクト・コレクション型の値を受け付けます。
 
 #### テキスト
 
-- single email: "somebody@domain.com"
-- single display name+email: "Somebody <somebody@domain.com>"
+- 単一のメール: "somebody@domain.com"
+- 単一の表示名+メール: "Somebody <somebody@domain.com>"
 - several emails: "Somebody <somebody@domain.com>,me@home.org"
 
 #### オブジェクト
