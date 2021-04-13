@@ -7,11 +7,11 @@ title: コンボボックス
 
 ![](assets/en/FormObjects/combo_box.png)
 
-Fundamentally, you treat a combo box as an enterable area that uses its object, array or a choice list as the set of default values.
+基本的にコンボボックスは入力エリアと同じように取り扱い、オブジェクト、配列、または選択リストを一連のデフォルト値として使用します。
 
-## Handling combo boxes
+## コンボボックスの操作
 
-Use the [`On Data Change`](Events/onDataChange.md) event to manage entries into the enterable area, as you would for any input form object.
+入力エリアへの入力内容は、その他の入力フォームオブジェクトと同様に [`On Data Change`](Events/onDataChange.md) イベントを使用して管理します。
 
 You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
 
