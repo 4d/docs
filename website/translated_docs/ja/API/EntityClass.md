@@ -53,7 +53,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 #### 説明
 
-Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
+データクラス属性はすべてエンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
 > Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
 The attribute value type depends on the attribute [kind](DataClassAttributeClass.md#kind) (relation or storage):
