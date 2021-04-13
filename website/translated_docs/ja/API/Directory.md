@@ -21,7 +21,7 @@ title: Directory クラス
 
 #### 説明
 
-`.creationDate` プロパティは、 <!-- REF #directory.creationDate.Summary -->フォルダーの作成日を返します<!-- END REF -->。
+`.creationDate` プロパティは、 <!-- REF #directory.creationDate.Summary -->フォルダーの作成日<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -45,7 +45,7 @@ title: Directory クラス
 
 #### 説明
 
-`.creationTime` プロパティは、 <!-- REF #directory.creationTime.Summary -->フォルダーの作成時刻を返します<!-- END REF --> (00:00 からの経過秒数の形式)。
+`.creationTime` プロパティは、 <!-- REF #directory.creationTime.Summary -->フォルダーの作成時刻<!-- END REF --> を返します (00:00 からの経過秒数の形式)。
 
 このプロパティは **読み取り専用** です。 
 
@@ -69,7 +69,7 @@ title: Directory クラス
 
 #### 説明
 
-`.exists` プロパティは、 <!-- REF #directory.exists.Summary -->ディスク上にフォルダーが存在する場合は true を返します<!-- END REF -->(それ以外の場合は false)。
+`.exists` プロパティは、 <!-- REF #directory.exists.Summary -->ディスク上にフォルダーが存在する場合は true<!-- END REF -->を返します (それ以外の場合は false)。
 
 このプロパティは **読み取り専用** です。 
 
@@ -94,7 +94,7 @@ title: Directory クラス
 
 #### 説明
 
-`.extension` プロパティは、 <!-- REF #directory.extension.Summary -->フォルダー名の拡張子を返します (あれば)<!-- END REF -->。 An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+`.extension` プロパティは、 <!-- REF #directory.extension.Summary -->フォルダー名の拡張子<!-- END REF -->を返します (あれば)。 An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
 
 このプロパティは **読み取り専用** です。 
 
@@ -118,7 +118,7 @@ title: Directory クラス
 
 #### 説明
 
-`.fullName` プロパティは、 <!-- REF #directory.fullName.Summary -->拡張子 (あれば) を含めたフォルダーの完全な名称を返します<!-- END REF -->。
+`.fullName` プロパティは、 <!-- REF #directory.fullName.Summary -->拡張子 (あれば) を含めたフォルダーの完全な名称<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -142,7 +142,7 @@ title: Directory クラス
 
 #### 説明
 
-`.hidden` プロパティは、 <!-- REF #directory.hidden.Summary --> フォルダーがシステムレベルで "非表示" に設定されていれば true を返します<!-- END REF -->(それ以外の場合は false)。
+`.hidden` プロパティは、 <!-- REF #directory.hidden.Summary --> フォルダーがシステムレベルで "非表示" に設定されていれば true<!-- END REF -->を返します (それ以外の場合は false)。
 
 このプロパティは **読み取り専用** です。 
 
@@ -167,7 +167,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isAlias` プロパティは、 <!-- REF #directory.isAlias.Summary -->`Folder` オブジェクトに対しては常に **false** を返します<!-- END REF -->。
+`.isAlias` プロパティは、 <!-- REF #directory.isAlias.Summary -->`Folder` オブジェクトに対しては常に **false**<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -190,7 +190,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isFile` プロパティは、 <!-- REF #directory.isFile.Summary -->フォルダーに対しては常に **false** を返します<!-- END REF -->。
+`.isFile` プロパティは、 <!-- REF #directory.isFile.Summary -->フォルダーに対しては常に **false**<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -213,7 +213,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isFolder` プロパティは、 <!-- REF #directory.isFolder.Summary -->フォルダーに対しては常に **true** を返します<!-- END REF -->。
+`.isFolder` プロパティは、 <!-- REF #directory.isFolder.Summary -->フォルダーに対しては常に **true**<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -236,7 +236,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isPackage` プロパティは、 <!-- REF #directory.isPackage.Summary -->フォルダーが macOS上のパッケージである (かつディスク上に存在している) 場合に true を返します<!-- END REF -->。 それ以外の場合は false を返します。
+`.isPackage` プロパティは、 <!-- REF #directory.isPackage.Summary -->フォルダーが macOS上のパッケージである (かつディスク上に存在している) 場合に true<!-- END REF -->を返します。 それ以外の場合は false を返します。
 
 Windows 上においては、`.isPackage` は常に **false** を返します。
 
@@ -262,7 +262,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.modificationDate` プロパティは。 <!-- REF #directory.modificationDate.Summary --> フォルダーの最終変更日を返します<!-- END REF -->。
+`.modificationDate` プロパティは、 <!-- REF #directory.modificationDate.Summary --> フォルダーの最終変更日<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -286,7 +286,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.modificationTime` プロパティは、 <!-- REF #directory.modificationTime.Summary -->フォルダーの最終変更時刻を返します<!-- END REF --> (00:00 からの経過秒数の形式)。
+`.modificationTime` プロパティは、 <!-- REF #directory.modificationTime.Summary -->フォルダーの最終変更時刻<!-- END REF --> を返します (00:00 からの経過秒数の形式)。
 
 このプロパティは **読み取り専用** です。 
 
@@ -311,7 +311,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.name` プロパティは、 <!-- REF #directory.name.Summary --> フォルダーの名前を、拡張子 (あれば) を含まずに返します<!-- END REF -->。
+`.name` プロパティは、 <!-- REF #directory.name.Summary --> 拡張子 (あれば) を含まないフォルダー名<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
@@ -334,7 +334,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.original` プロパティは、 <!-- REF #directory.original.Summary -->対象フォルダーと同じフォルダーオブジェクトを返します<!-- END REF -->。
+`.original` プロパティは、 <!-- REF #directory.original.Summary -->対象フォルダーと同じフォルダーオブジェクト<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。
 > This property is available on folders to allow generic code to process folders or files.
@@ -359,7 +359,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.parent` プロパティは、 <!-- REF #directory.parent.Summary -->対象フォルダーの親フォルダーオブジェクトを返します<!-- END REF -->。 If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+`.parent` プロパティは、 <!-- REF #directory.parent.Summary -->対象フォルダーの親フォルダーオブジェクト<!-- END REF -->を返します。 If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
 If the folder does not have a parent (root), the null value is returned.
 
@@ -385,7 +385,7 @@ If the folder does not have a parent (root), the null value is returned.
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #directory.path.Summary -->フォルダのPOSIXパスを返します<!-- END REF -->。 If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+`.path` プロパティは、 <!-- REF #directory.path.Summary -->フォルダーの POSIXパス<!-- END REF -->を返します。 If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
 このプロパティは **読み取り専用** です。 
 
@@ -408,7 +408,7 @@ If the folder does not have a parent (root), the null value is returned.
 
 #### 説明
 
-`.platformPath` プロパティは、 <!-- REF #directory.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたフォルダーのパスを返します<!-- END REF -->。
+`.platformPath` プロパティは、 <!-- REF #directory.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたフォルダーのパス<!-- END REF -->を返します。
 
 このプロパティは **読み取り専用** です。 
 
