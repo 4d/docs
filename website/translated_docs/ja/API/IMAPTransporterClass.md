@@ -1663,11 +1663,11 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 - **文字列値の検索キー**: string はあらゆる文字列を含みうるため、引用符でくくらなければなりません。 文字列が特殊文字 (スペース文字など) をまったく含まない場合には、引用符で括る必要はありません。 このような文字列を引用符でくくることは、渡した文字列値が正確に解釈されることを保証します。 例: `searchCriteria = FROM "SMITH"`<br /> 文字列を使用するすべての検索キーに対し、フィールドの文字列に検索キーが含まれる場合には検索に合致したとみなされます。 合致は文字の大小を区別しません。
 
-- **Search-keys with a field-name value**: the field-name is the name of a header field. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+- **field-name 値の検索キー**: field-name はヘッダーフィールドの名称です。 例: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
-- **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
+- **フラグ値の検索キー**: flag は一つ以上のキーワードを (標準のフラグを含めて) 受け入れます。複数指定する場合にはスペースで区切ります。 例: `searchCriteria = KEYWORD \Flagged \Draft`
 
-- **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+- **メッセージセット値の検索キー**: 複数のメッセージを識別します。 メッセージシーケンス番号は、1 から始まりメールボックスのメッセージの総数までの連続した番号です。 個別の番号はカンマで区切ります。コロンは、その前後の番号を含めた連続した番号を指定します。 例:<br /> `2,4:7,9,12:*` は、15通あるメールボックスの場合に `2,4,5,6,7,9,12,13,14,15` を指定します。 `searchCriteria = 1:5 ANSWERED` は、メッセージシーケンス番号 1 から 5番のメッセージのうち、\Answered フラグが設定されているメッセージを検索します。 `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
 
 
 #### Authorized search-keys
