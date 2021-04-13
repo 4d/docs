@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="18 R6 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>IMAPTransporter · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server."/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="IMAPTransporter · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v18 R6 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v18 R5</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/API/imapTransporterClass.html">English</a></li><li><a href="/docs/de/API/imapTransporterClass.html">Deutsch</a></li><li><a href="/docs/es/API/imapTransporterClass.html">Español</a></li><li><a href="/docs/fr/API/imapTransporterClass.html">Français</a></li><li><a href="/docs/pt/API/imapTransporterClass.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="18 R6 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>IMAPTransporter · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="`IMAPTransporter` クラスを使って、IMAP メールサーバーからメッセージを取得することができます。"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="IMAPTransporter · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="`IMAPTransporter` クラスを使って、IMAP メールサーバーからメッセージを取得することができます。"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v18 R6 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v18 R5</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/API/imapTransporterClass.html">English</a></li><li><a href="/docs/de/API/imapTransporterClass.html">Deutsch</a></li><li><a href="/docs/es/API/imapTransporterClass.html">Español</a></li><li><a href="/docs/fr/API/imapTransporterClass.html">Français</a></li><li><a href="/docs/pt/API/imapTransporterClass.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,9 +66,9 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/API/imapTransporterClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">IMAPTransporter</h1></header><article><div><span><p>The <code>IMAPTransporter</code> class allows you to retrieve messages from a IMAP email server.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/API/imapTransporterClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">IMAPTransporter</h1></header><article><div><span><p><code>IMAPTransporter</code> クラスを使って、IMAP メールサーバーからメッセージを取得することができます。</p>
 <h3><a class="anchor" aria-hidden="true" id="imap-transporter-オブジェクト"></a><a href="#imap-transporter-オブジェクト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IMAP Transporter オブジェクト</h3>
-<p>IMAP Transporter objects are instantiated with the <a href="#imap-new-transporter">IMAP New transporter</a> command. これらは、次のプロパティや関数を持ちます:</p>
+<p>IMAP Transporter オブジェクトは <a href="#imap-new-transporter">IMP New transporter</a> コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:</p>
 <table>
 <thead>
 <tr><th></th></tr>
@@ -123,32 +123,32 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>IMAP New transporter</code> コマンドは、<em>server</em> 引数の指定に応じて 新規の IMAP接続を設定します 。戻り値は、新しい <em>IMAP transporter</em> オブジェクトです。 The returned transporter object will then usually be used to receive emails.</p>
-<p>In the <em>server</em> parameter, pass an object containing the following properties:</p>
+<p><code>IMAP New transporter</code> コマンドは、<em>server</em> 引数の指定に応じて 新規の IMAP接続を設定します 。戻り値は、新しい <em>IMAP transporter</em> オブジェクトです。 返された transporter オブジェクトは、通常メールの受信に使用されます。</p>
+<p><em>server</em> 引数として、以下のプロパティを持つオブジェクトを渡します:</p>
 <table>
 <thead>
-<tr><th><em>server</em></th><th>Default value (if omitted)</th></tr>
+<tr><th><em>server</em></th><th>デフォルト値 (省略時)</th></tr>
 </thead>
 <tbody>
 <tr><td><a href="#acceptunsecureconnection"><strong>.acceptUnsecureConnection</strong> : Boolean</a><p>    暗号化されていない接続の確立が許可されてれば <strong>true</strong></td><td>False</td></tr>
-<tr><td>.<strong>accessTokenOAuth2</strong>: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in <em><a href="#imap-transporter-object">IMAP transporter</a></em> object.</td><td>none</td></tr>
-<tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    メールサーバーのセッションを開くのに使用される認証モード</td><td>the most secure authentication mode supported by the server is used</td></tr>
+<tr><td>.<strong>accessTokenOAuth2</strong>: Text<p>OAuth 2 認証の資格情報を表すテキスト文字列。 <code>authenticationMode</code> が OAUTH2 の場合のみ使用されます。 <code>accessTokenOAuth2</code> が使用されているが <code>authenticationMode</code> が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 <em><a href="#imap-transporter-オブジェクト">IMAP transporter</a></em> オブジェクトには返されません。</td><td>なし</td></tr>
+<tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    メールサーバーのセッションを開くのに使用される認証モード</td><td>サーバーがサポートするもっともセキュアな認証モードが使用されます</td></tr>
 <tr><td><a href="#checkconnectiondelay"><strong>.checkConnectionDelay</strong> : Integer</a><p>    サーバー接続をチェックするまでの最長時間 (秒単位)</td><td>300</td></tr>
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    サーバー接続の確立までに待機する最長時間 (秒単位)</td><td>30</td></tr>
-<tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    ホストサーバーの名前または IPアドレス</td><td><em>mandatory</em></td></tr>
-<tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    メール接続に対して定義された拡張ログファイル (あれば) へのフルパス</td><td>none</td></tr>
-<tr><td>.<strong>password</strong> : Text<p>User password for authentication on the server. Not returned in <em><a href="#imap-transporter-object">IMAP transporter</a></em> object.</td><td>none</td></tr>
+<tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    ホストサーバーの名前または IPアドレス</td><td><em>必須</em></td></tr>
+<tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    メール接続に対して定義された拡張ログファイル (あれば) へのフルパス</td><td>なし</td></tr>
+<tr><td>.<strong>password</strong> : Text<p>サーバーとの認証のためのユーザーパスワード <em><a href="#imap-transporter-オブジェクト">IMAP transporter</a></em> オブジェクトには返されません。</td><td>なし</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     メール通信に使用されるポート番号</td><td>993</td></tr>
-<tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     メールサーバーでの認証に使用されたユーザー名</td><td>none</td></tr>
+<tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     メールサーバーでの認証に使用されたユーザー名</td><td>なし</td></tr>
 </tbody>
 </table>
 <blockquote>
-<p><strong>Warning</strong>: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.</p>
+<p><strong>警告</strong>: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="戻り値"></a><a href="#戻り値" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
-<p>The function returns an <a href="#imap-transporter-object"><strong>IMAP transporter object</strong></a>. All returned properties are <strong>read-only</strong>.</p>
+<p>この関数は、<a href="#imap-transporter-オブジェクト"><strong>IMAP transporter オブジェクト</strong></a> を返します。 返されるプロパティはすべて <strong>読み取り専用</strong> です。</p>
 <blockquote>
-<p>The IMAP connection is automatically closed when the transporter object is destroyed.</p>
+<p>IMAP接続は、transporter オブジェクトが消去された時点で自動的に閉じられます。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$server</span>:=New object
@@ -236,22 +236,22 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.addFlags()</code> 関数は、 <code>msgIDs</code> のメッセージに対して、<code>keywords</code> で指定したフラグを追加します。</p>
-<p>In the <code>msgIDs</code> parameter, you can pass either:</p>
+<p><code>msgIDs</code> には、以下のいずれかを渡すことができます:</p>
 <ul>
-<li><p>a <em>collection</em> containing the unique IDs of specific messages or</p></li>
-<li><p>the unique ID (<em>text</em>) of a single message or</p></li>
-<li><p>the following constant (<em>longint</em>) for all messages in the selected mailbox:</p>
+<li><p>指定するメッセージの固有ID を格納した <em>コレクション</em></p></li>
+<li><p>単一のメッセージの固有ID (<em>テキスト</em>)</p></li>
+<li><p>以下の定数 (<em>longint</em>) を使用することで、選択されているメールボックスの全メッセージを指定することができます:</p>
 <table>
 <thead>
 <tr><th>定数</th><th>結果</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>IMAP all</td><td>1</td><td>Select all messages in the selected mailbox</td></tr>
+<tr><td>IMAP all</td><td>1</td><td>選択されたメールボックスの全メッセージを選択します</td></tr>
 </tbody>
 </table>
 </li>
 </ul>
-<p>The <code>keywords</code> parameter lets you pass an object with keyword values for specific flags to add to <code>msgIDs</code>. You can pass any of the following keywords:</p>
+<p><code>keywords</code> には、<code>msgIDs</code> 引数で指定したメッセージに対して追加するフラグのキーワード値を格納したオブジェクトを渡します。 次のキーワードを渡すことができます:</p>
 <table>
 <thead>
 <tr><th>参照</th><th>タイプ</th><th>説明</th></tr>
@@ -330,28 +330,28 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.append()</code> 関数は、 <code>destinationBox</code> に指定したメールボックスに、<code>mailObj</code> のメールを追加します。</p>
-<p>In the <code>mailObj</code> parameter, pass an Email object. For a comprehensive description of mail properties, see <a href="emails.html#email-object">Email object</a>.  The <code>.append()</code> function supports keyword tags in the Email object's <code>keywords</code> attribute.</p>
-<p>The optional <code>destinationBox</code> parameter lets you pass the name of a mailbox where the <code>mailObj</code> will be appended. If omitted, the current mailbox is used.</p>
-<p>In the optional <code>options</code> parameter, you can pass an object to define the charset and encoding for specific parts of the email. 次のプロパティを含みます:</p>
+<p><code>mailObj</code> には、Email オブジェクトを渡します。 メールプロパティに関する包括的な詳細については、<a href="emails.html#email-オブジェクト">Email オブジェクト</a> を参照ください。  <code>.append()</code> 関数は Email オブジェクトの <code>keywords</code> 属性内のキーワードタグをサポートします。</p>
+<p>任意の <code>destinationBox</code> には、<code>mailObj</code> が追加されるメールボックスの名前を指定することができます。 省略した場合は、カレントメールボックスが使用されます。</p>
+<p>任意の <code>options</code> には、メールの特定部分の文字セットやエンコーディングを定義するオブジェクトを渡すことができます。 次のプロパティを含みます:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>headerCharset</td><td>テキスト</td><td>Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values: See possible charsets table below</td></tr>
-<tr><td>bodyCharset</td><td>テキスト</td><td>Charset and encoding used for the html and text body contents of the email. Possible values: See possible charsets table below</td></tr>
+<tr><td>headerCharset</td><td>テキスト</td><td>メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。</td></tr>
+<tr><td>bodyCharset</td><td>テキスト</td><td>メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取り得る値: 以下の可能な文字セットテーブルを参照ください。</td></tr>
 </tbody>
 </table>
-<p>Possible charsets:</p>
+<p>使用可能な文字セット:</p>
 <table>
 <thead>
 <tr><th>定数</th><th>結果</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li>headerCharset: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; Quoted-printable if possible, otherwise UTF-8 &amp; Quoted-printable</li><li>bodyCharset: US-ASCII if possible, Japanese (ISO-2022-JP) &amp; 7-bit if possible, otherwise UTF-8 &amp; Quoted-printable</li></ul></td></tr>
+<tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li>headerCharset: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>bodyCharset: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul></td></tr>
 <tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li>headerCharset: ISO-8859-1 &amp; Quoted-printable</li><li>bodyCharset: ISO-8859-1 &amp; 8-bit</li></ul></td></tr>
-<tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td>headerCharset &amp; bodyCharset: US-ASCII if possible, otherwise UTF-8 &amp; Quoted-printable (<strong>default value</strong>)</td></tr>
-<tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td>headerCharset &amp; bodyCharset: US-ASCII if possible, otherwise UTF-8 &amp; base64</td></tr>
+<tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td>headerCharset &amp; bodyCharset: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (<strong>デフォルト値</strong>)</td></tr>
+<tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td>headerCharset &amp; bodyCharset: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64</td></tr>
 </tbody>
 </table>
 <p><strong>返されるオブジェクト</strong></p>
@@ -370,7 +370,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-2"></a><a href="#例題-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<p>To save an email in the Drafts mailbox:</p>
+<p>Drafts メールボックスにメールを保存します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$settings</span>; <span class="hljs-variable">$status</span>; <span class="hljs-variable">$msg</span>; <span class="hljs-variable">$imap</span>: Object
 
 <span class="hljs-variable">$settings</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"host"</span>; <span class="hljs-string">"domain.com"</span>; <span class="hljs-string">"user"</span>; <span class="hljs-string">"xxxx"</span>; <span class="hljs-string">"password"</span>; <span class="hljs-string">"xxxx"</span>; <span class="hljs-string">"port"</span>; <span class="hljs-number">993</span>)
@@ -465,9 +465,9 @@
 <p></details></p>
 <p><strong>.checkConnectionDelay</strong> : Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.checkConnectionDelay</code> 関数は、 サーバー接続をチェックするまでの最長時間 (秒単位)を格納します。  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the <em>server</em> object, the value is 300.</p>
+<p><code>.checkConnectionDelay</code> 関数は、 サーバー接続をチェックするまでの最長時間 (秒単位)を格納します。  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが <em>server</em> オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。</p>
 <blockquote>
-<p><strong>Warning</strong>: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.</p>
+<p><strong>警告</strong>: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="connectiontimeout"></a><a href="#connectiontimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.connectionTimeOut</h2>
 <p><details><summary>履歴</summary></p>
@@ -510,10 +510,10 @@
 <p><code>.copy()</code> 関数は、 <em>msgsIDs</em> または <em>allMsgs</em> で定義されたメッセージを IMAP サーバーの <em>destinationBox</em> へとコピーします。</p>
 <p>以下のものを渡すことができます:</p>
 <ul>
-<li>in the <em>msgsIDs</em> parameter, a collection containing the unique IDs of the specific messages to copy, or</li>
-<li>in the <em>allMsgs</em> parameter, the <code>IMAP all</code> constant (integer) to copy all messages in the selected mailbox.</li>
+<li><em>msgsIDs</em> には、コピーするメッセージの固有ID を格納したコレクション</li>
+<li><em>allMsgs</em> には、選択されているメールボックスの全メッセージをコピーするための定数 (倍長整数型):</li>
 </ul>
-<p>The <em>destinationBox</em> parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.</p>
+<p><em>destinationBox</em> には、メッセージのコピー先メールボックスの名称をテキスト値で渡すことができます。</p>
 <p><strong>返されるオブジェクト</strong></p>
 <p>この関数は、IMAP ステータスを表すオブジェクトを返します:</p>
 <table>
@@ -597,10 +597,10 @@
 <p><code>.delete()</code> 関数は、 <code>msgsIDs</code> または <code>allMsgs</code> が指定するメッセージに対して &quot;削除済み&quot; フラグを設定します。</p>
 <p>以下のものを渡すことができます:</p>
 <ul>
-<li>in the <code>msgsIDs</code> parameter, a collection containing the unique IDs of the specific messages to delete, or</li>
-<li>in the <code>allMsgs</code> parameter, the <code>IMAP all</code> constant (integer) to delete all messages in the selected mailbox.</li>
+<li><code>msgsIDs</code> には、削除するメッセージの固有ID を格納したコレクション</li>
+<li><code>allMsgs</code> には、選択されているメールボックスの全メッセージを削除するための定数 (倍長整数型):</li>
 </ul>
-<p>Executing this function does not actually remove messages. Messages with the &quot;delete&quot; flag can still be found by the <a href="#searchmails">.searchMails()</a> function. Flagged messages are deleted from the IMAP server with the <a href="#expunge"><code>.expunge()</code></a> function or by selecting another mailbox or when the <a href="#imap-transporter-object">transporter object</a> (created with <a href="#imap-new-transporter">IMAP New transporter</a>) is destroyed.</p>
+<p>この関数を実行しても、メールが実際に削除される訳ではありません。 &quot;削除済み&quot; フラグがつけられたメッセージも引き続き <a href="#searchmails">.searchMails()</a> 関数によって検索可能です。 フラグがつけられたメッセージは、<a href="#expunge"><code>.expunge()</code></a> を実行したときか、別のメールボックスを選択したとき、あるいは(<a href="#imap-new-transporter">IMAP New transporter</a> で作成された) <a href="#imap-transporter-オブジェクト">transporter オブジェクト</a> が消去されたときにのみ、IMAPサーバーから削除されます。</p>
 <p><strong>返されるオブジェクト</strong></p>
 <p>この関数は、IMAP ステータスを表すオブジェクトを返します:</p>
 <table>
@@ -741,18 +741,18 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.getBoxInfo()</code> 関数は、 <em>name</em> が指定するメールボックスに対応する <code>boxInfo</code> オブジェクトを返します。 This function returns the same information as <a href="#selectbox"><code>.selectBox()</code></a> without changing the current mailbox.</p>
-<p>In the optional <em>name</em> parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the <a href="#getdelimiter"><code>.getDelimiter()</code></a> function.</p>
+<p><code>.getBoxInfo()</code> 関数は、 <em>name</em> が指定するメールボックスに対応する <code>boxInfo</code> オブジェクトを返します。 この関数は、<a href="#selectbox"><code>.selectBox()</code></a> と同じ情報を返しますが、カレントメールボックスは変えません。</p>
+<p>任意の <em>name</em> パラメーターには、アクセスするメールボックスの名称を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は <a href="#getdelimiter"><code>.getDelimiter()</code></a> 関数で調べることができます。</p>
 <p><strong>返されるオブジェクト</strong></p>
-<p>The <code>boxInfo</code> object returned contains the following properties:</p>
+<p>返される <code>boxInfo</code> オブジェクトには、以下のプロパティが格納されています:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
 <tr><td>name</td><td>text</td><td>メールボックスの名称</td></tr>
-<tr><td>mailCount</td><td>number</td><td>Number of messages in the mailbox</td></tr>
-<tr><td>mailRecent</td><td>number</td><td>Number of messages with the &quot;recent&quot; flag (indicating new messages)</td></tr>
+<tr><td>mailCount</td><td>number</td><td>メールボックス内のメッセージの数</td></tr>
+<tr><td>mailRecent</td><td>number</td><td>(新しいメッセージであることを表す) &quot;recent&quot; フラグがついたメッセージの数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-4"></a><a href="#例題-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -783,25 +783,25 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.getBoxList()</code> 関数は、 利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します。 This function allows you to locally manage the list of messages located on the IMAP mail server.</p>
+<p><code>.getBoxList()</code> 関数は、 利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します。 この関数を使用すると、IMAPメールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。</p>
 <h4><a class="anchor" aria-hidden="true" id="戻り値-1"></a><a href="#戻り値-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
-<p>Each object of the returned collection contains the following properties:</p>
+<p>返されるコレクションの各オブジェクトには、以下のプロパティが格納されています:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
 <tr><td>[].name</td><td>text</td><td>メールボックスの名称</td></tr>
-<tr><td>[].selectable</td><td>boolean</td><td>Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul></td></tr>
-<tr><td>[].inferior</td><td>boolean</td><td>Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul></td></tr>
-<tr><td>[].interesting</td><td>boolean</td><td>Indicates if the mailbox has been marked &quot;interesting&quot; by the server: <ul><li>true - The mailbox has been marked &quot;interesting&quot; by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked &quot;interesting&quot; by the server.</li></ul></td></tr>
+<tr><td>[].selectable</td><td>boolean</td><td>アクセス権でメールボックスを選択できるかどうかを表します: <ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul></td></tr>
+<tr><td>[].inferior</td><td>boolean</td><td>アクセス権でメールボックス内に下の階層レベルを作成できるかどうかを表します: <ul><li>true - 下の階層レベルは作成可能</li><li>false - 下の階層レベルは作成不可能</li></ul></td></tr>
+<tr><td>[].interesting</td><td>boolean</td><td>サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します: <ul><li>true - メールボックスはサーバーから &quot;interesting&quot; のマーク付けをされています。 たとえば、メールボックスには新着メッセージが入っている場合が考えられます。</li><li>false - メールボックスはサーバーから &quot;interesting&quot; のマーク付けをされていません。</li></ul></td></tr>
 </tbody>
 </table>
-<p>If the account does not contain any mailboxes, an empty collection is returned.</p>
+<p>アカウントにメールボックスが一つもない場合、空のコレクションが返されます。</p>
 <blockquote>
 <ul>
-<li>If there is no open connection, <code>.getBoxList()</code> will open a connection.</li>
-<li>If the connection has not been used since the designated connection delay (see <code>IMAP New transporter</code>), the <code>.checkConnection( )</code> function is automatically called.</li>
+<li>開いている接続がない場合、<code>.getBoxList()</code> は接続を開きます。</li>
+<li>接続が指定された時間 (<code>IMAP New transporter</code> 参照) 以上に使用されなかった場合には、<code>.checkConnection( )</code> 関数が自動的に呼び出されます。</li>
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-5"></a><a href="#例題-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -848,8 +848,8 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p>メールボックス名の区切り文字</p>
 <blockquote>
 <ul>
-<li>If there is no open connection, <code>.getDelimiter()</code> will open a connection.</li>
-<li>If the connection has not been used since the <a href="#checkconnectiondelay">designated connection delay</a>, the <a href="#checkconnection"><code>.checkConnection()</code></a> function is automatically called.</li>
+<li>開いている接続がない場合、<code>.getDelimiter()</code> は接続を開きます。</li>
+<li>接続が指定された時間 (<a href="#checkconnectiondelay">IMAP New transporter</a> 参照) 以上に使用されなかった場合には、<a href="#checkconnection"><code>.checkConnection()</code></a> 関数が自動的に呼び出されます。</li>
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-6"></a><a href="#例題-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -883,26 +883,26 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </thead>
 <tbody>
 <tr><td>msgNumber</td><td>整数</td><td style="text-align:center">-&gt;</td><td>メッセージのシーケンス番号</td></tr>
-<tr><td>msgID</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>Unique ID of the message</td></tr>
+<tr><td>msgID</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID</td></tr>
 <tr><td>options</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>メッセージ管理オプション</td></tr>
 <tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td><a href="/docs/ja/API/emails.html#email-オブジェクト">Email オブジェクト</a></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.getMail()</code> 関数は、 <code>IMAP_transporter</code> が指定するメールボックス内の、<em>msgNumber</em> または <em>msgID</em> に対応するメールを <code>Email</code> オブジェクトとして返します。 This function allows you to locally handle the email contents.</p>
-<p>In the first parameter, you can pass either:</p>
+<p><code>.getMail()</code> 関数は、 <code>IMAP_transporter</code> が指定するメールボックス内の、<em>msgNumber</em> または <em>msgID</em> に対応するメールを <code>Email</code> オブジェクトとして返します。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。</p>
+<p>最初の引数として、次のいずれかを渡すことができます:</p>
 <ul>
-<li><em>msgNumber</em>, an <em>integer</em> value indicating the sequence number of the message to retrieve or</li>
-<li><em>msgID</em>, a <em>text</em> value indicating the unique ID of the message to retrieve.</li>
+<li><em>msgNumber</em> に、取得するメッセージのシーケンス番号 (<em>倍長整数</em>) を渡します。</li>
+<li><em>msgID</em>に、取得するメッセージの固有ID (<em>テキスト</em>) を渡します。</li>
 </ul>
-<p>The optional <em>options</em> parameter allows you pass an object defining additional instructions for handling the message. The following properties are available:</p>
+<p>任意の <em>options</em> 引数として、メッセージの扱い方を定義する追加のオブジェクトを渡すことができます。 次のプロパティを利用することができます:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>updateSeen</td><td>boolean</td><td>If True, the message is marked as &quot;seen&quot; in the mailbox. If False, the message is not marked as &quot;seen&quot;. Default value: True</td></tr>
-<tr><td>withBody</td><td>boolean</td><td>Pass True to return the body of the message. If False, only the message header is returned. Default value: True</td></tr>
+<tr><td>updateSeen</td><td>boolean</td><td>true 時には、メールボックス内でメッセージを &quot;既読&quot; にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true</td></tr>
+<tr><td>withBody</td><td>boolean</td><td>true を渡すとメッセージ本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -913,7 +913,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="戻り値-3"></a><a href="#戻り値-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
-<p><code>.getMail()</code> returns an <a href="/docs/ja/API/emails.html#email-object"><code>Email</code> object</a> with the following specific IMAP properties: <em>id</em>, <em>receivedAt</em>, and <em>size</em>.</p>
+<p><code>.getMail()</code> は、以下の IMAP特有のプロパティを持つ <a href="/docs/ja/API/emails.html#email-オブジェクト"><code>Email</code> オブジェクト</a>を返します: <em>id</em>、<em>receivedAt</em>、および <em>size</em>。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-7"></a><a href="#例題-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>ID = 1のメッセージを取得します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object<span class="hljs-keyword">
@@ -963,23 +963,23 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p><code>.getMails()</code> 関数は、 <code>Email</code> オブジェクトのコレクションを格納したオブジェクトを返します。</p>
 <p><strong>第一シンタックス:</strong></p>
 <p><strong><em>.getMails( ids { ; options } ) -&gt; result</em></strong></p>
-<p>The first syntax allows you to retrieve messages based on their IDs.</p>
-<p>In the <em>ids</em> parameter, pass a collection of IDs for the messages to return. You can get the IDs with <a href="#getmail"><code>.getMail()</code></a>.</p>
-<p>The optional <em>options</em> parameter allows you to define the parts of the messages to be returned. See the <strong>Options</strong> table below for a description of the available properties.</p>
+<p>第一シンタックスを使用すると、メッセージID に基づいてメッセージを取得することができます。</p>
+<p><em>ids</em> 引数として、取得するメッセージID のコレクションを渡します。 これらの ID は <a href="#getmail"><code>.getMail()</code></a> で取得することができます。</p>
+<p>任意の <em>options</em> 引数を渡すと、返されるメッセージのパートを定義することができます。 利用可能なプロパティについては、以下の <strong>オプション</strong> の表を参照ください。</p>
 <p><strong>第二シンタックス:</strong></p>
 <p><strong><em>.getMails( startMsg ; endMsg { ; options } ) -&gt; result</em></strong></p>
-<p>The second syntax allows you to retrieve messages based on a sequential range. The values passed represent the position of the messages in the mailbox.</p>
-<p>In the <em>startMsg</em> parameter, pass an <em>integer</em> value corresponding to the number of the first message in a sequential range. If you pass a negative number (<em>startMsg</em> &lt;= 0), the first message of the mailbox will be used as the beginning of the sequence.</p>
-<p>In the <em>endMsg</em> parameter, pass an <em>integer</em> value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (<em>endMsg</em> &lt;= 0), the last message of the mailbox will be used as the end of the sequence.</p>
-<p>The optional <em>options</em> parameter allows you to define the parts of the messages to be returned.</p>
+<p>第二シンタックスを使用すると、連続したレンジに基づいてメッセージを取得することができます。 渡される値はメールボックス内でのメッセージの位置を表します。</p>
+<p><em>startMsg</em> には、連続したレンジの最初のメッセージの番号に対応する <em>倍長整数</em> の値を渡します。 負の値 (<em>startMsg</em> &lt;= 0) を渡した場合、メールボックスの最初のメッセージが連続レンジの先頭メッセージとして扱われます。</p>
+<p><em>endMsg</em> には、連続レンジに含める最後のメッセージの番号に対応する <em>倍長整数</em> の値を渡します。 負の値 (<em>startMsg</em> &lt;= 0) を渡した場合、メールボックスの最後のメッセージが連続レンジの最終メッセージとして扱われます。</p>
+<p>任意の <em>options</em> 引数を渡すと、返されるメッセージのパートを定義することができます。</p>
 <p><strong>オプション</strong></p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>updateSeen</td><td>ブール</td><td>If True, the specified messages are marked as &quot;seen&quot; in the mailbox. If False, the messages are not marked as &quot;seen&quot;. Default value: True</td></tr>
-<tr><td>withBody</td><td>ブール</td><td>Pass True to return the body of the specified messages. If False, only the message headers are returned. Default value: True</td></tr>
+<tr><td>updateSeen</td><td>ブール</td><td>true 時には、指定されたメッセージを &quot;既読&quot; にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true</td></tr>
+<tr><td>withBody</td><td>ブール</td><td>true を渡すと指定されたメッセージの本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -989,18 +989,18 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="戻り値-4"></a><a href="#戻り値-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
-<p><code>.getMails()</code> returns an object containing the following collections:</p>
+<p><code>.getMails()</code> は、以下のコレクションを格納したオブジェクトを返します。</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>list</td><td>コレクション</td><td>Collection of <a href="/docs/ja/API/emails.html#email-object"><code>Email</code> objects</a>. If no Email objects are found, an empty collection is returned.</td></tr>
-<tr><td>notFound</td><td>コレクション</td><td>Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.</td></tr>
+<tr><td>list</td><td>コレクション</td><td><a href="/docs/ja/API/emails.html#email-オブジェクト"><code>Email</code></a> オブジェクトのコレクション。 Email オブジェクトが見つからない場合、空のコレクションが返されます。</td></tr>
+<tr><td>notFound</td><td>コレクション</td><td>使用したシンタックスによって返されるものが異なります:<br><ul><li>第一シンタックス - 指定した ID のうち、存在しなかったメッセージの ID</li><li>第二シンタックス - startMsg と endMsg の間の番号のうち、存在しなかったメッセージの番号</li></ul>すべてのメッセージが見つかった場合には、空のコレクションが返されます。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-8"></a><a href="#例題-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<p>You want to retrieve the 20 most recent emails without changing their &quot;seen&quot; status:</p>
+<p>直近の 20件のメールを、&quot;既読&quot; ステータスを変更せずに取得します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>,<span class="hljs-variable">$boxInfo</span>,<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter 
 
@@ -1043,32 +1043,32 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </thead>
 <tbody>
 <tr><td>msgNumber</td><td>整数</td><td style="text-align:center">-&gt;</td><td>メッセージのシーケンス番号</td></tr>
-<tr><td>msgID</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>Unique ID of the message</td></tr>
+<tr><td>msgID</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>メッセージの固有ID</td></tr>
 <tr><td>updateSeen</td><td>ブール</td><td style="text-align:center">-&gt;</td><td>true 時には、メールボックス内でメッセージを &quot;既読&quot; にします。 false 時にはメッセージの状態は変化しません。</td></tr>
 <tr><td>戻り値</td><td>BLOB</td><td style="text-align:center">&lt;-</td><td>メールサーバーから返された MIME文字列の BLOB</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-17"></a><a href="#説明-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.getMIMEAsBlob()</code> 関数は、 <code>IMAP_transporter</code> が指定するメールボックス内の、<em>msgNumber</em> または <em>msgID</em> に対応するメッセージの MIMEコンテンツを格納した BLOB を返します。</p>
-<p>In the first parameter, you can pass either:</p>
+<p>最初の引数として、次のいずれかを渡すことができます:</p>
 <ul>
-<li><em>msgNumber</em>, an <em>integer</em> value indicating the sequence number of the message to retrieve or</li>
-<li><em>msgID</em>, a <em>text</em> value indicating the unique ID of the message to retrieve.</li>
+<li><em>msgNumber</em> に、取得するメッセージのシーケンス番号 (<em>倍長整数</em>) を渡します。</li>
+<li><em>msgID</em>に、取得するメッセージの固有ID (<em>テキスト</em>) を渡します。</li>
 </ul>
-<p>The optional <em>updateSeen</em> parameter allows you to specify if the message is marked as &quot;seen&quot; in the mailbox. 以下のものを渡すことができます:</p>
+<p>任意の <em>updateSeen</em> 引数を渡すと、メールボックス内でメッセージが &quot;既読&quot; とマークされるかどうかを指定します。 以下のものを渡すことができます:</p>
 <ul>
-<li><strong>True</strong> - to mark the message as &quot;seen&quot; (indicating the message has been read)</li>
-<li><strong>False</strong> - to leave the message's &quot;seen&quot; status untouched</li>
+<li><strong>True</strong> - メッセージは &quot;既読&quot; とマークされます (このメッセージが読まれたことを表します)</li>
+<li><strong>False</strong> - メッセージの &quot;既読&quot; ステータスは変化しません。</li>
 </ul>
 <blockquote>
 <ul>
 <li>The function returns an empty BLOB if <em>msgNumber</em> or msgID* designates a non-existing message,</li>
 <li>If no mailbox is selected with the <a href="#selectbox"><code>.selectBox()</code></a> command, an error is generated,</li>
-<li>If there is no open connection, <code>.getMIMEAsBlob()</code> will open a connection the last mailbox specified with <code>.selectBox()</code>.</li>
+<li>開いている接続がない場合、<code>.getMIMEAsBlob()</code> は <code>.selectBox()</code> で最後に指定されたメールボックスへの接続を開きます。</li>
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="戻り値-5"></a><a href="#戻り値-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
-<p><code>.getMIMEAsBlob()</code> returns a <code>BLOB</code> which can be archived in a database or converted to an <a href="/docs/ja/API/emails.html#email-object"><code>Email</code> object</a> with the <code>MAIL Convert from MIME</code> command.</p>
+<p><code>.getMIMEAsBlob()</code> は <code>BLOB</code> を返します。この BLOB はデータベースにアーカイブしたり、<code>MAIL Convert from MIME</code> コマンドを使用して <a href="/docs/ja/API/emails.html#email-object"><code>Email</code> オブジェクト</a> へと変換したりすることができます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-9"></a><a href="#例題-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$boxInfo </span>: Variant<span class="hljs-keyword">
@@ -1151,10 +1151,10 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p><code>.move()</code> 関数は、 <em>msgsIDs</em> または <em>allMsgs</em> で定義されたメッセージを IMAP サーバーの <em>destinationBox</em> へと移動します。</p>
 <p>以下のものを渡すことができます:</p>
 <ul>
-<li>in the <em>msgsIDs</em> parameter, a collection containing the unique IDs of the specific messages to move, or</li>
-<li>in the <em>allMsgs</em> parameter, the <code>IMAP all</code> constant (integer) to move all messages in the selected mailbox.</li>
+<li><em>msgsIDs</em> には、移動するメッセージの固有ID を格納したコレクション</li>
+<li><em>allMsgs</em> には、選択されているメールボックスの全メッセージを移動するための定数 (倍長整数型):</li>
 </ul>
-<p>The <em>destinationBox</em> parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.</p>
+<p><em>destinationBox</em> には、メッセージの移動先メールボックスの名称をテキスト値で渡すことができます。</p>
 <blockquote>
 <p>This function is only supported by IMAP servers compliant with RFC <a href="https://tools.ietf.org/html/rfc8474">8474</a>.</p>
 </blockquote>
@@ -1239,8 +1239,8 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-21"></a><a href="#説明-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.numToID()</code> 関数は、現在選択されているメールボックスにおいて、 <em>startMsg</em> および <em>endMsg</em> で指定された連続した範囲のメッセージのシーケンス番号を IMAP固有IDへと変換します 。</p>
-<p>In the <em>startMsg</em> parameter, pass an integer value corresponding to the number of the first message in a sequential range. If you pass a negative number (<em>startMsg</em> &lt;= 0), the first message of the mailbox will be used as the beginning of the sequence.</p>
-<p>In the <em>endMsg</em> parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (<em>endMsg</em> &lt;= 0), the last message of the mailbox will be used as the end of the sequence.</p>
+<p><em>startMsg</em> には、連続したレンジの最初のメッセージの番号に対応する <em>倍長整数</em> の値を渡します。 負の値 (<em>startMsg</em> &lt;= 0) を渡した場合、メールボックスの最初のメッセージが連続レンジの先頭メッセージとして扱われます。</p>
+<p><em>endMsg</em> には、連続レンジに含める最後のメッセージの番号に対応する <em>倍長整数</em> の値を渡します。 負の値 (<em>startMsg</em> &lt;= 0) を渡した場合、メールボックスの最後のメッセージが連続レンジの最終メッセージとして扱われます。</p>
 <h4><a class="anchor" aria-hidden="true" id="戻り値-6"></a><a href="#戻り値-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
 <p>メソッドは文字列 (固有ID) のコレクションを返します。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-10"></a><a href="#例題-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -1289,22 +1289,22 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.removeFlags()</code> 関数は、 <code>msgIDs</code> のメッセージに対して、<code>keywords</code> で指定したフラグを削除します。</p>
-<p>In the <code>msgIDs</code> parameter, you can pass either:</p>
+<p><code>msgIDs</code> には、以下のいずれかを渡すことができます:</p>
 <ul>
-<li><p>a <em>collection</em> containing the unique IDs of specific messages or</p></li>
-<li><p>the unique ID (<em>text</em>) of a single message or</p></li>
-<li><p>the following constant (<em>longint</em>) for all messages in the selected mailbox:</p>
+<li><p>指定するメッセージの固有ID を格納した <em>コレクション</em></p></li>
+<li><p>単一のメッセージの固有ID (<em>テキスト</em>)</p></li>
+<li><p>以下の定数 (<em>longint</em>) を使用することで、選択されているメールボックスの全メッセージを指定することができます:</p>
 <table>
 <thead>
 <tr><th>定数</th><th>結果</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>IMAP all</td><td>1</td><td>Select all messages in the selected mailbox</td></tr>
+<tr><td>IMAP all</td><td>1</td><td>選択されたメールボックスの全メッセージを選択します</td></tr>
 </tbody>
 </table>
 </li>
 </ul>
-<p>The <code>keywords</code> parameter lets you pass an object with keyword values for specific flags to remove from <code>msgIDs</code>. You can pass any of the following keywords:</p>
+<p><code>keywords</code> には、<code>msgIDs</code> 引数で指定したメッセージから削除するフラグのキーワード値を格納したオブジェクトを渡します。 次のキーワードを渡すことができます:</p>
 <table>
 <thead>
 <tr><th>参照</th><th>タイプ</th><th>説明</th></tr>
@@ -1397,89 +1397,89 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <blockquote>
 <p>This function is based upon the specification for the <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol">IMAP protocol</a>.</p>
 </blockquote>
-<p><code>.searchMails()</code> 関数は、 カレントメールボックスにおいて <em>searchCriteria</em> の検索条件に合致するメッセージを検索します。 <em>searchCriteria</em> consists of one or more search keys.</p>
-<p><em>searchCriteria</em> is a text parameter listing one or more search keys (see <a href="#authorized-search-keys">Authorized search-keys</a> below) associated or not with values to look for. A search key may be a single or multiple items. たとえば:</p>
+<p><code>.searchMails()</code> 関数は、 カレントメールボックスにおいて <em>searchCriteria</em> の検索条件に合致するメッセージを検索します。 <em>searchCriteria</em> 引数には、一つ以上の検索キーを格納します。</p>
+<p><em>searchCriteria</em> はテキスト型の引数で、一つ以上の検索キー (詳細は後述の <a href="#利用可能な検索キー">利用可能な検索キー</a> 参照) を格納し、検索する値を渡します (渡さない場合もあります)。 検索キーは単一または複数の項目からなります。 たとえば:</p>
 <pre><code class="hljs"><span class="hljs-attr">SearchKey1</span> = FLAGGED
 <span class="hljs-attr">SearchKey2</span> = NOT FLAGGED
 <span class="hljs-attr">SearchKey3</span> = FLAGGED DRAFT
 </code></pre>
 <blockquote>
-<p>Matching is usually not case-sensitive</p>
+<p>文字の大小は通常区別されません。</p>
 </blockquote>
 <ul>
-<li>If the <em>searchCriteria</em> is a null string, the search will be equivalent to a “select all”.</li>
-<li>If the <em>searchCriteria</em> includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.</li>
+<li><em>searchCriteria</em> 引数が null 文字列の場合、検索は &quot;すべてを選択&quot; と同等です。</li>
+<li>引数が複数の検索キーを格納している場合、それらすべてに合致する和集合 (AND) が検索結果になります。</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = FLAGGED FROM <span class="hljs-string">"SMITH"</span>
 </code></pre>
-<p>... returns all messages with \Flagged flag set AND sent by Smith.</p>
+<p>... この検索結果は \Flagged フラグが設定されていて、かつ Smith から送られたメッセージをすべて返します。</p>
 <ul>
-<li>You can use the <strong>OR</strong> or <strong>NOT</strong> operators as follows:</li>
+<li><strong>OR</strong> および <strong>NOT</strong> 演算子を、以下のように使用することができます:</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = OR SEEN FLAGGED
 </code></pre>
-<p>... returns all messages with \Seen flag set OR \Flagged flag set</p>
+<p>... \Seen フラグが設定されている、あるいは \Flagged フラグが設定されているメッセージをすべて返します。</p>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = NOT SEEN
 </code></pre>
-<p>... returns all messages with \Seen flag not set.</p>
+<p>... \Seen フラグが設定されていないメッセージをすべて返します。</p>
 <pre><code class="hljs">searchCriteria = <span class="hljs-keyword">HEADER</span> CONTENT<span class="hljs-params">-TYPE</span> <span class="hljs-string">"MIXED"</span> <span class="hljs-literal">NOT</span> <span class="hljs-keyword">HEADER</span> CONTENT<span class="hljs-params">-TYPE</span> <span class="hljs-string">"TEXT"</span><span class="hljs-params">...</span>
 </code></pre>
-<p>... returns message whose content-type header contains “Mixed” and does not contain “Text”.</p>
+<p>... content-type ヘッダーが &quot;Mixed&quot; を格納しているもののうち、&quot;Text&quot; は格納していないメッセージを返します。</p>
 <pre><code class="hljs">searchCriteria = <span class="hljs-keyword">HEADER</span> CONTENT-<span class="hljs-keyword">TYPE</span> "E" <span class="hljs-keyword">NOT</span> SUBJECT "o" <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">HEADER</span> CONTENT-<span class="hljs-keyword">TYPE</span> "MIXED"
 </code></pre>
-<p>... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.</p>
-<p>As concerns the last two examples, notice that the result of the search is different when you remove the parentheses of the first search key list.</p>
+<p>... content-type ヘッダーが &quot;e&quot; を格納しているもののうち、Subject ヘッダーが &quot;o&quot;を格納していないもの、かつ content-type ヘッダーが&quot;Mixed&quot; でないメッセージを返します。</p>
+<p>最後の 2例については、最初の検索キーリストのカッコを取り除いてしまうと検索結果が異なることに注意してください。</p>
 <ul>
-<li>The <em>searchCriteria</em> may include the optional [CHARSET] specification. This consists of the &quot;CHARSET&quot; word followed by a registered [CHARSET] (US ASCII, ISO-8859). It indicates the charset of the <em>searchCriteria</em> string. Therefore, you must convert the <em>searchCriteria</em> string into the specified charset if you use the [CHARSET] specification (see the <code>CONVERT FROM TEXT</code> or <code>Convert to text</code> commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.</li>
+<li><em>searchCriteria</em> 引数には任意の [CHARSET] 指定を含めることができます。 これは &quot;CHARSET&quot; という単語の後に実際の文字コード [CHARSET] (US ASCII, ISO-8859 など) が続きます。 これは <em>searchCriteria</em> 文字列の文字コードを指定します。 そのため、[CHARSET] 指定を使用する場合には <em>searchCriteria</em> 文字列を指定された文字コードへと変換する必要があります (詳細については <code>CONVERT FROM TEXT</code> または <code>Convert to text</code> コマンドを参照ください)。 デフォルトでは、searchCriteria 引数に拡張された文字列が含まれていた場合には4D はそれを Quotable Printable へとエンコードします。</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = CHARSET <span class="hljs-string">"ISO-8859"</span> BODY <span class="hljs-string">"Help"</span>
 </code></pre>
-<p>... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.</p>
-<h4><a class="anchor" aria-hidden="true" id="search-value-types"></a><a href="#search-value-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search value types</h4>
-<p>Search-keys may request the value to search for:</p>
+<p>... これは、検索条件に iso-8859 文字コードを使用し、必要に応じてサーバーは検索前に検索条件をこの文字コードに変換しなければならない、ということを意味します。</p>
+<h4><a class="anchor" aria-hidden="true" id="検索する値の型について"></a><a href="#検索する値の型について" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>検索する値の型について</h4>
+<p>検索キーによっては、次の型の検索値が必要となる場合があります:</p>
 <ul>
-<li><p><strong>Search-keys with a date value</strong>: the date is a string that must be formatted as follows: <em>date-day+&quot;-&quot;+date-month+&quot;-&quot;+date-year</em> where date-day indicates the number of the day of the month (max. 2 characters), date-month indicates the name of the month (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) and date-year indicates the year (4 characters). Example: <code>searchCriteria = SENTBEFORE 1-Feb-2020</code> (a date does not usually need to be quoted since it does not contain any special characters)</p></li>
-<li><p><strong>Search-keys with a string value</strong>: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Example: <code>searchCriteria = FROM &quot;SMITH&quot;</code> For all search keys that use strings, a message matches the key if the string is a substring of the field. Matching is not case-sensitive.</p></li>
-<li><p><strong>Search-keys with a field-name value</strong>: the field-name is the name of a header field. Example: <code>searchCriteria = HEADER CONTENT-TYPE &quot;MIXED&quot;</code></p></li>
-<li><p><strong>Search-keys with a flag value</strong>: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: <code>searchCriteria = KEYWORD \Flagged \Draft</code></p></li>
-<li><p><strong>Search-keys with a message set value</strong>: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Examples: <code>2,4:7,9,12:*</code> is <code>2,4,5,6,7,9,12,13,14,15</code> for a mailbox with 15 messages. <code>searchCriteria = 1:5 ANSWERED</code> search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. <code>searchCriteria= 2,4 ANSWERED</code> search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.</p></li>
+<li><p><strong>日付値の検索キー</strong>: date は日付を指定する文字列で、以下のようにフォーマットされている必要があります: <em>date-day+&quot;-&quot;+date-month+&quot;-&quot;+date-year</em>。ここでの date-day は日付の数値 (最大2桁) を意味し、date-month は月の名前 (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) を意味し、date-year は年 (4桁) を意味します。 例: <code>searchCriteria = SENTBEFORE 1-Feb-2000</code> (日付は特殊文字を含まないため、通常は引用符でくくる必要はありません)</p></li>
+<li><p><strong>文字列値の検索キー</strong>: string はあらゆる文字列を含みうるため、引用符でくくらなければなりません。 文字列が特殊文字 (スペース文字など) をまったく含まない場合には、引用符で括る必要はありません。 このような文字列を引用符でくくることは、渡した文字列値が正確に解釈されることを保証します。 例: <code>searchCriteria = FROM &quot;SMITH&quot;</code><br /> 文字列を使用するすべての検索キーに対し、フィールドの文字列に検索キーが含まれる場合には検索に合致したとみなされます。 合致は文字の大小を区別しません。</p></li>
+<li><p><strong>field-name 値の検索キー</strong>: field-name はヘッダーフィールドの名称です。 例: <code>searchCriteria = HEADER CONTENT-TYPE &quot;MIXED&quot;</code></p></li>
+<li><p><strong>フラグ値の検索キー</strong>: flag は一つ以上のキーワードを (標準のフラグを含めて) 受け入れます。複数指定する場合にはスペースで区切ります。 例: <code>searchCriteria = KEYWORD \Flagged \Draft</code></p></li>
+<li><p><strong>メッセージセット値の検索キー</strong>: 複数のメッセージを識別します。 メッセージシーケンス番号は、1 から始まりメールボックスのメッセージの総数までの連続した番号です。 個別の番号はカンマで区切ります。コロンは、その前後の番号を含めた連続した番号を指定します。 例:<br /> <code>2,4:7,9,12:*</code> は、15通あるメールボックスの場合に <code>2,4,5,6,7,9,12,13,14,15</code> を指定します。 <code>searchCriteria = 1:5 ANSWERED</code> は、メッセージシーケンス番号 1 から 5番のメッセージのうち、\Answered フラグが設定されているメッセージを検索します。 <code>searchCriteria= 2,4 ANSWERED</code> は、メッセージセレクション (メッセージ番号 2番と4番) のうち、\Answered フラグが設定されているメッセージを検索します。</p></li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="authorized-search-keys"></a><a href="#authorized-search-keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authorized search-keys</h4>
-<p><strong>ALL</strong>: All messages in the mailbox.<br>
-<strong>ANSWERED</strong>: Messages with the \Answered flag set.<br>
-<strong>UNANSWERED</strong>: Messages that do not have the \Answered flag set.<br>
-<strong>DELETED</strong>: Messages with the \Deleted flag set.<br>
-<strong>UNDELETED</strong>: Messages that do not have the \Deleted flag set.<br>
-<strong>DRAFT</strong>: Messages with the \Draft flag set.<br>
-<strong>UNDRAFT</strong>: Messages that do not have the \Draft flag set.<br>
-<strong>FLAGGED</strong>: Messages with the \Flagged flag set.<br>
-<strong>UNFLAGGED</strong>: Messages that do not have the \Flagged flag set.<br>
-<strong>RECENT</strong>: Messages that have the \Recent flag set.<br>
-<strong>OLD</strong>: Messages that do not have the \Recent flag set.<br>
-<strong>SEEN</strong>: Messages that have the \Seen flag set.<br>
-<strong>UNSEEN</strong>: Messages that do not have the \Seen flag set.<br>
-<strong>NEW</strong>: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.<br>
-<strong>KEYWORD</strong> <flag>: Messages with the specified keyword set.<br>
-<strong>UNKEYWORD</strong> <flag>: Messages that do not have the specified keyword set.<br>
-<strong>BEFORE</strong> <date>: Messages whose internal date is earlier than the specified date.<br>
-<strong>ON</strong> <date>: Messages whose internal date is within the specified date.<br>
-<strong>SINCE</strong> <date>: Messages whose internal date is within or later than the specified date.<br>
-<strong>SENTBEFORE</strong> <date>: Messages whose Date header is earlier than the specified date.<br>
-<strong>SENTON</strong> <date>: Messages whose Date header is within the specified date.<br>
-<strong>SENTSINCE</strong> <date>: Messages whose Date header is within or later than the specified date.<br>
-<strong>TO</strong> <string>: Messages that contain the specified string in the TO header.<br>
-<strong>FROM</strong> <string>: Messages that contain the specified string in the FROM header.<br>
-<strong>CC</strong> <string>: Messages that contain the specified string in the CC header.<br>
-<strong>BCC</strong> <string>: Messages that contain the specified string in the BCC header.<br>
-<strong>SUBJECT</strong> <string>: Messages that contain the specified string in the Subject header.<br>
-<strong>BODY</strong> <string>: Messages that contain the specified string in the message body.<br>
-<strong>TEXT</strong> <string>: Messages that contain the specified string in the header or in the message body.<br>
-<strong>HEADER</strong> &lt;field-name&gt; <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.<br>
-<strong>UID</strong> <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.<br>
-<strong>LARGER</strong> <n>: Messages with a size larger than the specified number of bytes.<br>
-<strong>SMALLER</strong> <n>: Messages with a size smaller than the specified number of bytes.<br>
-<strong>NOT</strong> &lt;search-key&gt;: Messages that do not match the specified search key.<br>
-<strong>OR</strong> &lt;search-key1&gt; &lt;search-key2&gt;: Messages that match either search key.</p>
+<h4><a class="anchor" aria-hidden="true" id="利用可能な検索キー"></a><a href="#利用可能な検索キー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>利用可能な検索キー</h4>
+<p><strong>ALL</strong>: メールボックスの全メッセージ<br>
+<strong>ANSWERED</strong>: \Answered フラグが設定されたメッセージ<br>
+<strong>UNANSWERED</strong>: \Answered フラグが設定されていないメッセージ<br>
+<strong>DELETED</strong>: \Deleted フラグが設定されたメッセージ<br>
+<strong>UNDELETED</strong>: \Deleted フラグが設定されていないメッセージ<br>
+<strong>DRAFT</strong>: \Draft フラグが設定されているメッセージ<br>
+<strong>UNDRAFT</strong>: \Draft フラグが設定されていないメッセージ<br>
+<strong>FLAGGED</strong>: \Flagged フラグが設定されているメッセージ<br>
+<strong>UNFLAGGED</strong>: \Flagged フラグが設定されていないメッセージ<br>
+<strong>RECENT</strong>: \Recent フラグが設定されているメッセージ<br>
+<strong>OLD</strong>: \Recent フラグが設定されていないメッセージ<br>
+<strong>SEEN</strong>: \Seen フラグが設定されているメッセージ<br>
+<strong>UNSEEN</strong>: \Seen フラグが設定されていないメッセージ<br>
+<strong>NEW</strong>: \Recent フラグが設定されているが \Seen フラグが設定されていないメッセージ。 これは機能的には “(RECENT UNSEEN)” と同じです。<br>
+<strong>KEYWORD</strong> <flag>: 指定されたキーワードが設定されているメッセージ<br>
+<strong>UNKEYWORD</strong> <flag>: 指定されたキーワードが設定されていないメッセージ<br>
+<strong>BEFORE</strong> <date>: 内部の日付が指定日より前のメッセージ<br>
+<strong>ON</strong> <date>: 内部の日付が指定日に合致するメッセージ<br>
+<strong>SINCE</strong> <date>: 内部の日付が指定日より後のメッセージ<br>
+<strong>SENTBEFORE</strong> <date>: 日付ヘッダーが指定日より前のメッセージ<br>
+<strong>SENTON</strong> <date>: 日付ヘッダーが指定日に合致するメッセージ<br>
+<strong>SENTSINCE</strong> <date>: 日付ヘッダーが指定日以降のメッセージ<br>
+<strong>TO</strong> <string>: TO ヘッダーに指定文字列が含まれているメッセージ<br>
+<strong>FROM</strong> <string>: FROM ヘッダーに指定文字列が含まれているメッセージ<br>
+<strong>CC</strong> <string>: CC ヘッダーに指定文字列が含まれているメッセージ<br>
+<strong>BCC</strong> <string>: BCC ヘッダーに指定文字列が含まれているメッセージ<br>
+<strong>SUBJECT</strong> <string>: 件名ヘッダーに指定文字列が含まれているメッセージ<br>
+<strong>BODY</strong> <string>: メッセージ本文に指定文字列が含まれているメッセージ<br>
+<strong>TEXT</strong> <string>: ヘッダーまたはメッセージ本文に指定文字列が含まれているメッセージ<br>
+<strong>HEADER</strong> &lt;field-name&gt; <string>: 指定フィールド名のヘッダーを持ち、そのフィールド内に指定文字列が含まれているメッセージ<br>
+<strong>UID</strong> <message UID>: 指定された固有識別子に対応する固有識別子を持つメッセージ<br>
+<strong>LARGER</strong> <n>: 指定バイト数以上のサイズを持つメッセージ<br>
+<strong>SMALLER</strong> <n>: 指定バイト数以下のサイズを持つメッセージ<br>
+<strong>NOT</strong> &lt;search-key&gt;: 指定検索キーに合致しないメッセージ<br>
+<strong>OR</strong> &lt;search-key1&gt; &lt;search-key2&gt;: いずれかの検索キーに合致するメッセージ</p>
 <h2><a class="anchor" aria-hidden="true" id="selectbox"></a><a href="#selectbox" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.selectBox()</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -1503,38 +1503,38 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-25"></a><a href="#説明-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.selectBox()</code> 関数は、 <em>name</em> に指定したメールボックスをカレントメールボックスとして選択します。 This function allows you to retrieve information about the mailbox.</p>
+<p><code>.selectBox()</code> 関数は、 <em>name</em> に指定したメールボックスをカレントメールボックスとして選択します。 この関数を使用するとメールボックスに関する情報を取得することができます。</p>
 <blockquote>
-<p>To get the information from a mailbox without changing the current mailbox, use <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.</p>
+<p>カレントメールボックスを変更せずに、メールボックスから情報を取得するには、<a href="#getboxinfo"><code>.getBoxInfo()</code></a> を使用します。</p>
 </blockquote>
-<p>In the <em>name</em> parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the <a href="#getdelimiter"><code>.getDelimiter()</code></a> function.</p>
-<p>The optional <em>state</em> parameter defines the type of access to the mailbox. The possible values are:</p>
+<p><em>name</em> には、アクセスするメールボックスの名前を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は <a href="#getdelimiter"><code>.getDelimiter()</code></a> 関数で調べることができます。</p>
+<p>任意の <em>state</em> 引数を渡すと、メールボックスへのアクセスタイプを定義できます。 取りうる値は以下の通りです:</p>
 <table>
 <thead>
 <tr><th>定数</th><th>結果</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>IMAP read only state</td><td>1</td><td>The selected mailbox is accessed with read only privileges. Messages with a &quot;recent&quot; flag (indicating new messages) remain unchanged.</td></tr>
-<tr><td>IMAP read write state</td><td>0</td><td>The selected mailbox is accessed with read and write privileges. Messages are considered &quot;seen&quot; and lose the &quot;recent&quot; flag (indicating new messages). (Default value)</td></tr>
+<tr><td>IMAP read only state</td><td>1</td><td>選択されたメールボックスは読み取り専用権限でアクセスされます。 新しいメッセージを表す &quot;新着&quot; フラグはそのまま変化しません。</td></tr>
+<tr><td>IMAP read write state</td><td>0</td><td>選択されたメールボックスは読み書き可能権限でアクセスされます。 メッセージは &quot;既読&quot; と判断され、&quot;新着&quot; フラグは失われます。 (デフォルト値)</td></tr>
 </tbody>
 </table>
 <blockquote>
 <ul>
-<li>The function generates an error and returns <strong>Null</strong> if name designates a non-existing mailbox.</li>
-<li>If there is no open connection, <code>.selectBox()</code> will open a connection.</li>
-<li>If the connection has not been used since the designated connection delay (see <code>IMAP New transporter</code>), the <a href="#checkconnection"><code>.checkConnection()</code></a> function is automatically called.</li>
+<li>name 引数が存在しないメールボックスを指定した場合、関数はエラーを生成し <strong>Null</strong> を返します。</li>
+<li>開いている接続がない場合、<code>.selectBox()</code> は接続を開きます。</li>
+<li>接続が指定された時間 (<code>IMAP New transporter</code> 参照) 以上に使用されなかった場合には、<a href="#checkconnection"><code>.checkConnection()</code></a> 関数が自動的に呼び出されます。</li>
 </ul>
 </blockquote>
 <p><strong>返されるオブジェクト</strong></p>
-<p>The <code>boxInfo</code> object returned contains the following properties:</p>
+<p>返される <code>boxInfo</code> オブジェクトには、以下のプロパティが格納されています:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
 <tr><td>name</td><td>テキスト</td><td>メールボックスの名称</td></tr>
-<tr><td>mailCount</td><td>number</td><td>Number of messages in the mailbox</td></tr>
-<tr><td>mailRecent</td><td>number</td><td>Number of messages with the &quot;recent&quot; flag</td></tr>
+<tr><td>mailCount</td><td>number</td><td>メールボックス内のメッセージの数</td></tr>
+<tr><td>mailRecent</td><td>number</td><td>&quot;recent&quot; フラグがついたメッセージの数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-12"></a><a href="#例題-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
