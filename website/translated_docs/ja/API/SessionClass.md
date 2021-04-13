@@ -52,7 +52,7 @@ title: セッション
 
 - `On Web Authentication`、`On Web Connection`、および `On REST Authentication` データベースメソッド
 - RESTリクエストで呼び出された ORDA [データモデルクラス関数](ORDA/ordaClasses.md)
-- 準動的ページにおいて、4Dタグ (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE) を介して処理されるコード
+- セミダイナミックページにおいて、4Dタグ (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE) を介して処理されるコード
 - "公開オプション: 4DタグとURL(4DACTION...)" を有効化されたうえで、4DACTION/ URL から呼び出されたプロジェクトメソッド
 
 

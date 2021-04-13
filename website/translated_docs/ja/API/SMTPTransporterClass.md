@@ -54,7 +54,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 #### 説明
 
-`SMTP New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。戻り値は、新しい *[SMTP transporter](#smtp-transporter-object)* オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。
+`SMTP New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。戻り値は、新しい *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。
 
 > このコマンドは SMTPサーバーとの接続を開始しません。 SMTP接続は、実際には [`.send()`](#send) 関数が実行された時に開かれます。  
 > 
