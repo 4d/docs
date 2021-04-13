@@ -10,11 +10,11 @@ title: Email
 - IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) および [`.getMails()`](IMAPTransporterClass.md#getmails) 関数は IMAPサーバーからメールを受信します。
 - POP3 - [`.getMail()`](POP3TransporterClass.md#getmail) 関数は POP3サーバーからメールを受信します。
 
-> また、[`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4Dコマンドを使って新規かつ空の `Email` オブジェクトを作成してから、[Email オブジェクトプロパティ](#email-オブジェクト) を設定していくことも可能です。
+> You can also create a new, blank `Email` object by calling the [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4D command, and then fill it with [Email object properties](#email-object).
 
-`Email` オブジェクトは SMTP [`.send()`](SMTPTransporterClass.md#send) 関数を使って送信します。
+You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
 
-[`MAIL Convert from MIME`](#mail-convert-from-mime) および [`MAIL Convert to MIME`](#mail-convert-to-mime) コマンドは、MIME コンテンツから `Email` オブジェクトに、またはその逆の変換をおこなうのに使用できます。
+[`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
 
 ### Email オブジェクト
@@ -121,7 +121,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 `.attachments` プロパティは、 <!-- REF #EmailObjectClass.attachments.Summary -->`4D.MailAttachment` オブジェクトのコレクション<!-- END REF -->を格納します。
 
-MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) コマンドによって定義されます。 MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
+Attachment objects are defined through the [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md).
 
 
 
@@ -516,7 +516,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 `MAIL Convert from MIME` コマンドは、 <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->MIMEドキュメントを有効な Emailオブジェクトへと変換します<!-- END REF -->。
 > 戻り値の Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
 
-*mime* には、変換する有効な MIME ドキュメントを渡します。 これはどのメールサーバーまたはアプリケーションから提供されたものでも可能です。 *mime* 引数として、BLOB またはテキストを渡すことができます。 MIME がファイルから渡された場合、文字セットと改行コード変換に関する問題を避けるため、BLOB型の引数を使用することが推奨されます。
+Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
 
 #### 返されるオブジェクト
 
@@ -524,7 +524,7 @@ Email オブジェクト。
 
 #### 例題 1
 
-テキストドキュメントとして保存された MIME のメールのテンプレートを読み込み、メールを送信します。
+You want to load a mail template saved as MIME in a text document and send an email:
 
 ```4d
 C_BLOB($mime)
@@ -548,19 +548,19 @@ $status:=$transporter.send($mail)
 
 #### 例題 2
 
-この例題では、ピクチャーが含まれた 4D Write Pro ドキュメントを直接送信します:
+In this example, you send directly a 4D Write Pro document containing pictures:
 
 ```4d
 C_TEXT($mime)
 C_OBJECT($email;$server;$transporter;$status)
 
-// 4D Write Pro ドキュメントを MIME に書き出します
+// Mime export of the 4D Write Pro document
 WP EXPORT VARIABLE(WParea;$mime;wk mime html)
 
-// 4D Write Pro MIME 変数をメールオブジェクトに変換します
+// convert 4D Write Pro Mime variable in mail object
 $email:=MAIL Convert from MIME($mime)
 
-// Email オブジェクトのヘッダーを設定します
+// Fill your mail object headers
 $email.subject:="4D Write Pro HTML body"
 $email.from:="YourEmail@gmail.com"
 $email.to:="RecipientEmail@mail.com"
@@ -601,12 +601,12 @@ $status:=$transporter.send($email)
 
 #### 説明
 
-`MAIL Convert to MIME` コマンドは、 <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->Emailオブジェクトを MIMEテキストへと変換します<!-- END REF -->。 このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。 また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
+`MAIL Convert to MIME` コマンドは、 <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->Emailオブジェクトを MIMEテキストへと変換します<!-- END REF -->。 This command is called internally by [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) to format the email object before sending it. It can be used to analyze the MIME format of the object.
 
-*mail* には、変換するメールのコンテンツとストラクチャーの詳細を渡します。 この情報には、メールアドレス (送信者と受信者)、メッセージそのもの、メッセージの表示タイプなどが含まれます。
-> Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
+In *mail*, pass the content and the structure details of the email to convert. This includes information such as the email addresses (sender and recipient(s)), the message itself, and the type of display for the message.
+> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the email object.
 
-*options* 引数を渡すと、メールに対して特定の文字セットとエンコーディング設定を指定することができます。 次のプロパティを利用することができます:
+In *options*, you can set a specific charset and encoding configuration for the mail. 次のプロパティを利用することができます:
 
 | プロパティ         | タイプ  | 説明                                                                                                                                     |
 | ------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------- |
