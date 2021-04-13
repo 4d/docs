@@ -1667,46 +1667,46 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 - **フラグ値の検索キー**: flag は一つ以上のキーワードを (標準のフラグを含めて) 受け入れます。複数指定する場合にはスペースで区切ります。 例: `searchCriteria = KEYWORD \Flagged \Draft`
 
-- **メッセージセット値の検索キー**: 複数のメッセージを識別します。 メッセージシーケンス番号は、1 から始まりメールボックスのメッセージの総数までの連続した番号です。 個別の番号はカンマで区切ります。コロンは、その前後の番号を含めた連続した番号を指定します。 例:<br /> `2,4:7,9,12:*` は、15通あるメールボックスの場合に `2,4,5,6,7,9,12,13,14,15` を指定します。 `searchCriteria = 1:5 ANSWERED` は、メッセージシーケンス番号 1 から 5番のメッセージのうち、\Answered フラグが設定されているメッセージを検索します。 `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+- **メッセージセット値の検索キー**: 複数のメッセージを識別します。 メッセージシーケンス番号は、1 から始まりメールボックスのメッセージの総数までの連続した番号です。 個別の番号はカンマで区切ります。コロンは、その前後の番号を含めた連続した番号を指定します。 例:<br /> `2,4:7,9,12:*` は、15通あるメールボックスの場合に `2,4,5,6,7,9,12,13,14,15` を指定します。 `searchCriteria = 1:5 ANSWERED` は、メッセージシーケンス番号 1 から 5番のメッセージのうち、\Answered フラグが設定されているメッセージを検索します。 `searchCriteria= 2,4 ANSWERED` は、メッセージセレクション (メッセージ番号 2番と4番) のうち、\Answered フラグが設定されているメッセージを検索します。
 
 
-#### Authorized search-keys
+#### 利用可能な検索キー
 
-**ALL**: All messages in the mailbox.  
-**ANSWERED**: Messages with the \Answered flag set.  
-**UNANSWERED**: Messages that do not have the \Answered flag set.  
-**DELETED**: Messages with the \Deleted flag set.  
-**UNDELETED**: Messages that do not have the \Deleted flag set.  
-**DRAFT**: Messages with the \Draft flag set.  
-**UNDRAFT**: Messages that do not have the \Draft flag set.  
-**FLAGGED**: Messages with the \Flagged flag set.  
-**UNFLAGGED**: Messages that do not have the \Flagged flag set.  
-**RECENT**: Messages that have the \Recent flag set.  
-**OLD**: Messages that do not have the \Recent flag set.  
-**SEEN**: Messages that have the \Seen flag set.  
-**UNSEEN**: Messages that do not have the \Seen flag set.  
-**NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.  
-**KEYWORD** <flag>: Messages with the specified keyword set.  
-**UNKEYWORD** <flag>: Messages that do not have the specified keyword set.  
-**BEFORE** <date>: Messages whose internal date is earlier than the specified date.  
-**ON** <date>: Messages whose internal date is within the specified date.  
-**SINCE** <date>: Messages whose internal date is within or later than the specified date.  
-**SENTBEFORE** <date>: Messages whose Date header is earlier than the specified date.  
-**SENTON** <date>: Messages whose Date header is within the specified date.  
-**SENTSINCE** <date>: Messages whose Date header is within or later than the specified date.  
-**TO** <string>: Messages that contain the specified string in the TO header.  
-**FROM** <string>: Messages that contain the specified string in the FROM header.  
-**CC** <string>: Messages that contain the specified string in the CC header.  
-**BCC** <string>: Messages that contain the specified string in the BCC header.  
-**SUBJECT** <string>: Messages that contain the specified string in the Subject header.  
-**BODY** <string>: Messages that contain the specified string in the message body.  
-**TEXT** <string>: Messages that contain the specified string in the header or in the message body.  
-**HEADER** <field-name> <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
-**UID** <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.  
-**LARGER** <n>: Messages with a size larger than the specified number of bytes.  
-**SMALLER** <n>: Messages with a size smaller than the specified number of bytes.  
-**NOT** <search-key>: Messages that do not match the specified search key.  
-**OR** <search-key1> <search-key2>: Messages that match either search key.  
+**ALL**: メールボックスの全メッセージ  
+**ANSWERED**: \Answered フラグが設定されたメッセージ  
+**UNANSWERED**: \Answered フラグが設定されていないメッセージ  
+**DELETED**: \Deleted フラグが設定されたメッセージ  
+**UNDELETED**: \Deleted フラグが設定されていないメッセージ  
+**DRAFT**: \Draft フラグが設定されているメッセージ  
+**UNDRAFT**: \Draft フラグが設定されていないメッセージ  
+**FLAGGED**: \Flagged フラグが設定されているメッセージ  
+**UNFLAGGED**: \Flagged フラグが設定されていないメッセージ  
+**RECENT**: \Recent フラグが設定されているメッセージ  
+**OLD**: \Recent フラグが設定されていないメッセージ  
+**SEEN**: \Seen フラグが設定されているメッセージ  
+**UNSEEN**: \Seen フラグが設定されていないメッセージ  
+**NEW**: \Recent フラグが設定されているが \Seen フラグが設定されていないメッセージ。 これは機能的には “(RECENT UNSEEN)” と同じです。  
+**KEYWORD** <flag>: 指定されたキーワードが設定されているメッセージ  
+**UNKEYWORD** <flag>: 指定されたキーワードが設定されていないメッセージ  
+**BEFORE** <date>: 内部の日付が指定日より前のメッセージ  
+**ON** <date>: 内部の日付が指定日に合致するメッセージ  
+**SINCE** <date>: 内部の日付が指定日より後のメッセージ  
+**SENTBEFORE** <date>: 日付ヘッダーが指定日より前のメッセージ  
+**SENTON** <date>: 日付ヘッダーが指定日に合致するメッセージ  
+**SENTSINCE** <date>: 日付ヘッダーが指定日以降のメッセージ  
+**TO** <string>: TO ヘッダーに指定文字列が含まれているメッセージ  
+**FROM** <string>: FROM ヘッダーに指定文字列が含まれているメッセージ  
+**CC** <string>: CC ヘッダーに指定文字列が含まれているメッセージ  
+**BCC** <string>: BCC ヘッダーに指定文字列が含まれているメッセージ  
+**SUBJECT** <string>: 件名ヘッダーに指定文字列が含まれているメッセージ  
+**BODY** <string>: メッセージ本文に指定文字列が含まれているメッセージ  
+**TEXT** <string>: ヘッダーまたはメッセージ本文に指定文字列が含まれているメッセージ  
+**HEADER** <field-name> <string>: 指定フィールド名のヘッダーを持ち、そのフィールド内に指定文字列が含まれているメッセージ  
+**UID** <message UID>: 指定された固有識別子に対応する固有識別子を持つメッセージ  
+**LARGER** <n>: 指定バイト数以上のサイズを持つメッセージ  
+**SMALLER** <n>: 指定バイト数以下のサイズを持つメッセージ  
+**NOT** <search-key>: 指定検索キーに合致しないメッセージ  
+**OR** <search-key1> <search-key2>: いずれかの検索キーに合致するメッセージ  
 
 
 <!-- END REF -->
@@ -1736,29 +1736,29 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 #### 説明
 
 `.selectBox()` 関数は、 <!-- REF #IMAPTransporterClass.selectBox().Summary -->`name` に指定したメールボックスをカレントメールボックスとして選択します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
-> To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
+> カレントメールボックスを変更せずに、メールボックスから情報を取得するには、[`.getBoxInfo()`](#getboxinfo) を使用します。
 
 In the `name` parameter, pass the name of the mailbox to access. この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。
 
-The optional `state` parameter defines the type of access to the mailbox. The possible values are:
+The optional `state` parameter defines the type of access to the mailbox. 取りうる値は以下の通りです:
 
-| 定数                    | 結果 | 説明                                                                                                                                                                    |
-| --------------------- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1  | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                 |
-| IMAP read write state | 0  | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Default value) |
-> * The function generates an error and returns **Null** if name designates a non-existing mailbox.
-> * If there is no open connection, `.selectBox()` will open a connection.
-> * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
+| 定数                    | 結果 | 説明                                                                         |
+| --------------------- | -- | -------------------------------------------------------------------------- |
+| IMAP read only state  | 1  | 選択されたメールボックスは読み取り専用権限でアクセスされます。 新しいメッセージを表す "新着" フラグはそのまま変化しません。           |
+| IMAP read write state | 0  | 選択されたメールボックスは読み書き可能権限でアクセスされます。 メッセージは "既読" と判断され、"新着" フラグは失われます。 (デフォルト値) |
+> * name 引数が存在しないメールボックスを指定した場合、関数はエラーを生成し **Null** を返します。
+> * 開いている接続がない場合、`.selectBox()` は接続を開きます。
+> * 接続が指定された時間 (`IMAP New transporter` 参照) 以上に使用されなかった場合には、[`.checkConnection()`](#checkconnection) 関数が自動的に呼び出されます。
 
 **返されるオブジェクト**
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ      | タイプ    | 説明                                        |
-| ---------- | ------ | ----------------------------------------- |
-| name       | テキスト   | メールボックスの名称                                |
-| mailCount  | number | メールボックス内のメッセージの数                          |
-| mailRecent | number | Number of messages with the "recent" flag |
+| プロパティ      | タイプ    | 説明                      |
+| ---------- | ------ | ----------------------- |
+| name       | テキスト   | メールボックスの名称              |
+| mailCount  | number | メールボックス内のメッセージの数        |
+| mailRecent | number | "recent" フラグがついたメッセージの数 |
 
 
 #### 例題
