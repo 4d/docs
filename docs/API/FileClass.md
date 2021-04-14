@@ -1,6 +1,6 @@
 ---
 id: FileClass
-title: File 
+title: File
 ---
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
@@ -203,6 +203,7 @@ Creation of a preferences file in the database folder:
 |---|---|
 |v17 R5|Added
 </details>
+
 
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
