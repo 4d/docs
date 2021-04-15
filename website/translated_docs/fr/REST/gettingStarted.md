@@ -64,7 +64,7 @@ Le serveur REST répond :
 }
 ```
 
-Cela signifie que le datastore contient le dataclass Employees. You can see the dataclass attributes by typing:
+Cela signifie que le datastore contient le dataclass Employees. Vous pouvez voir les attributs de la dataclass en tapant :
 
 ```
 /rest/$catalog/Employees
@@ -135,4 +135,4 @@ Il existe plusieurs possibilités pour filtrer les données à recevoir. Par exe
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.  
+L'[API REST](REST_requests.md) de 4D fournit plusieurs commandes pour interagir avec les applications 4D.  
