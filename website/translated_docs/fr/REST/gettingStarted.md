@@ -3,21 +3,21 @@ id: gettingStarted
 title: Prise en main
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D applications.
+4D vous fournit un serveur REST puissant, qui permet d'accéder directement aux données stockées dans vos applications 4D.
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+Le serveur REST est inclus dans 4D et 4D Server et automatiquement disponible dans vos applications 4D [une fois configuré](configuration.md).
 
 Cette section est destinée à vous familiariser avec la fonctionnalité REST à l'aide d'un exemple simple. Nous allons :
-- create and configure a basic 4D application project
-- access data from the 4D project through REST using a standard browser.
+- créer et configurer un projet d'application 4D basique
+- accéder aux données du projet 4D via REST à l'aide d'un navigateur standard.
 
-To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Bien entendu, vous pouvez également utiliser une architecture distante.
+Pour simplifier l'exemple, nous allons utiliser 4D et un navigateur qui s'exécutent sur la même machine. Bien entendu, vous pouvez également utiliser une architecture distante.
 
 
 
-## Creating and configuring the 4D project
+## Créer et configurer le projet 4D
 
-1. Launch your 4D or 4D Server application and create a new project. Vous pouvez, par exemple, le nommer "Emp4D".
+1. Lancez votre application 4D ou 4D Server et créez un nouveau projet. Vous pouvez, par exemple, le nommer "Emp4D".
 
 2. Dans l'éditeur de structure, créez une table [Employees] et ajoutez-y les champs suivants :
     - Lastname (Alpha)
@@ -32,7 +32,7 @@ To keep the example simple, we’re going to use 4D and a browser that are runni
 
 ![](assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Affichez la page **ressources Web/REST** de la boîte de dialogue des Propriétés et [cochez l'option Exposer en tant que serveur REST](configuration.md#starting-the-rest-server).
 
 5. Dans le menu **Exécuter**, sélectionnez **Démarrer le serveur Web** (si nécessaire), puis sélectionnez **Tester le serveur Web**.
 
