@@ -161,9 +161,9 @@ Exemples avec les états coché / non coché / surligné :
 
 ### Bevel
 
-The Bevel check box button style combines the appearance of the [Regular](#regular) button style (*i.e.*, a rectangle with a descriptive title) with the [Toolbar Button](#toolbar-button) button style's behavior.
+La case à cocher Bevel combine l'apparence du style de bouton [Classique](#regular) (c'est-à-dire un rectangle avec un libellé descriptif) et le comportement du style de bouton [Barre d'outils](#toolbar-button).
 
-The Bevel button style has a light gray background with a title. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
+Le style de bouton Bevel possède un fond gris clair et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 Exemples avec les états coché / non coché / surligné :
 
@@ -190,15 +190,15 @@ Exemples avec les états coché / non coché / surligné :
 
 ### Bevel arrondi
 
-The Rounded Bevel check box button style is nearly identical to the [Bevel](#bevel) button style except, depending on the OS, the corners of the button may be rounded. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+Le style de bouton de la case à cocher Bevel arrondi est presque identique au style de bouton [Bevel](#bevel), à l'exception des coins du bouton qui peuvent, selon le système d'exploitation, être arrondis. Comme pour le style de bouton Bevel, le style de bouton Bevel arrondi combine l'apparence du style de bouton [Classique](#regular) et le comportement du style de bouton [Barre outils](#toolbar-button).
 
-The Rounded Bevel button style has a light gray background with a title. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
+Le style de bouton Bevel arrondi possède un fond gris clair et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
 Exemple sous macOS :
 
   ![](assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> On Windows, the Rounded Bevel button style is identical to the [Bevel](#bevel) button style.
+> Sous Windows, le style de bouton Bevel arrondi est identique au style de bouton [Bevel](#bevel).
 
 
 #### Exemple JSON :
@@ -221,7 +221,7 @@ Exemple sous macOS :
 
 ### OS X Gradient
 
-The OS X Gradient check box button style is nearly identical to the [Bevel](#bevel) button style. As with the Bevel button style, the OS X Gradient button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+Le style du bouton OS X Gradient est presque identique au style du bouton [Bevel](#bevel). As with the Bevel button style, the OS X Gradient button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
 The OS X Gradient button style has a light gray background with a title and may be displayed as a two-tone system button on macOS. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
