@@ -47,8 +47,8 @@ webServer:=WEB Server
 webServer:=WEB Server(Web server database)
 ```
 
-If the application uses components and you want to call:
-- the host application's web server from a component or
+Si l'application utilise des composants et que vous souhaitez appeler :
+- le serveur Web de l'application hôte à partir d'un composant ou
 - le serveur qui a reçu la requête (quel que soit le serveur)
 
 vous pouvez également utiliser :
