@@ -597,6 +597,8 @@ In the *attributePath* parameter, pass the entity attribute whose distinct value
 3.  数値
 4.  日付
 
+You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
+
 デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
 
 An error is returned if:
@@ -611,6 +613,12 @@ You want to get a collection containing a single element per country name:
 ```4d
  var $countries : Collection
  $countries:=ds.Employee.all().distinct("address.country")
+```
+
+`nicknames` is a collection and `extra` is an object attribute:
+
+```4d
+$values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
 
 <!-- END REF -->

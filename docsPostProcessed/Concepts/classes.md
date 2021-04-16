@@ -104,7 +104,7 @@ Available classes are accessible from their class stores. Two class stores are a
 - `4D` for built-in class store
 
  
-### cs 
+### `cs`
 
 #### cs -> classStore
 
@@ -122,7 +122,7 @@ You want to create a new instance of an object of `myClass`:
 $instance:=cs.myClass.new()
 ```
 
-### 4D
+### `4D`
 
 #### 4D -> classStore
 
@@ -171,7 +171,7 @@ Specific 4D keywords can be used in class definitions:
 - `Class extends <ClassName>` to define inheritance.
 
 
-### Function
+### `Function`
 
 #### Syntax
 
@@ -272,6 +272,7 @@ Function getArea()->$result : Integer
 
 ```4d
 // In a project method
+
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -281,7 +282,7 @@ $area:=$rect.getArea() //5000
 
 
 
-### Class constructor
+### `Class Constructor`
 
 #### Syntax
 
@@ -319,7 +320,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
-### Class extends \<ClassName>
+### `Class extends <ClassName>`
 
 #### Syntax
 
@@ -347,6 +348,7 @@ This example creates a class called `Square` from a class called `Polygon`.
  
 ```4d
 //Class: Square
+
 //path: Classes/Square.4dm 
 
 Class extends Polygon
@@ -365,7 +367,7 @@ Class constructor ($side : Integer)
 		$0:=This.height*This.width
 ```
 
-### Super
+### `Super`
 
 
 #### Super {( param{;...;paramN} )} {-> Object} 
@@ -472,7 +474,7 @@ $square:=cs.Square.new()
 $message:=$square.description() //I have 4 sides which are all equal
 ```
 
-### This
+### `This`
 
 #### This -> Object
 
@@ -537,14 +539,14 @@ In this example, the object assigned to the variable $o doesn't have its own *f*
 Several commands of the 4D language allows you to handle class features.
 
 
-### OB Class
+### `OB Class`
 
 #### OB Class ( object ) -> Object | Null
 
 `OB Class` returns the class of the object passed in parameter. 
 
 
-### OB Instance of
+### `OB Instance of`
 
 #### OB Instance of ( object ; class ) -> Boolean
 

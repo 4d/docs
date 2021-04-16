@@ -63,20 +63,20 @@ The following table lists all supported `varType` values:
 
 |varType|Contents|
 |---|---|
-|Text|Text value|
-|Date|Date value|
-|Time|Time value|
-|Boolean|Boolean value|
-|Integer|Long integer value|
-|Real|Real value|
-|Pointer|Pointer value|
-|Picture|Picture value|
-|Blob|BLOB value|
-|Collection|Collection value|
-|Variant|Variant value|
-|Object|Object with default class (4D.Object)|
-|4D.*className*|Object of the 4D class name|
-|cs.*className*|Object of the user class name|
+|`Text`|Text value|
+|`Date`|Date value|
+|`Time`|Time value|
+|`Boolean`|Boolean value|
+|`Integer`|Long integer value|
+|`Real`|Real value|
+|`Pointer`|Pointer value|
+|`Picture`|Picture value|
+|`Blob`|BLOB value|
+|`Collection`|Collection value|
+|`Variant`|Variant value|
+|`Object`|Object with default class (4D.Object)|
+|`4D.<className>`|Object of the 4D class name|
+|`cs.<className>`|Object of the user class name|
 
 #### Examples
 
