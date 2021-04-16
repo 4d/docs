@@ -266,9 +266,9 @@ title: Transporter クラス
 
 #### 説明
 
-`.logFile` プロパティは、 <!-- REF #transporter.logFile.Summary -->メール接続に対して定義された拡張ログファイル (あれば) へのフルパス<!-- END REF -->を格納します。 It can be relative (to the current Logs folder) or absolute.
+`.logFile` プロパティは、 <!-- REF #transporter.logFile.Summary -->メール接続に対して定義された拡張ログファイル (あれば) へのフルパス<!-- END REF -->を格納します。 パスは、カレント Logs フォルダーを基準とした相対パス、あるいは絶対パスを指定できます。
 
-Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:
+`SET DATABASE PARAMETER` コマンドで有効化される通常のログファイルとは異なり、拡張ログファイルはすべての送信されたメールの MIMEコンテンツを保存し、サイズ制限がありません。 拡張ログファイルの詳細については、以下の章をそれぞれ参照ください:
 
 *   **SMTP 接続** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   **POP3 接続** - [4DPOP3Log.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -297,7 +297,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 #### 説明
 
-`.port` プロパティは、 <!-- REF #transporter.port.Summary --> メール通信に使用されるポート番号<!-- END REF -->を格納します。 By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
+`.port` プロパティは、 <!-- REF #transporter.port.Summary --> メール通信に使用されるポート番号<!-- END REF -->を格納します。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
 
 *   **SMTP** - 587
 *   **POP3** - 995
@@ -379,15 +379,15 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 この関数はメールサーバーにリクエストを送信し、メールステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ      |                          | タイプ        | 説明                                                                                                           |
-| ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| success    |                          | boolean    | True if the check is successful, False otherwise                                                             |
-| status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
-| statusText |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
-| errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |
-|            | \[ ].errCode            | number     | 4Dエラーコード                                                                                                     |
-|            | \[ ].message            | text       | 4Dエラーの詳細                                                                                                     |
-|            | \[ ].componentSignature | text       | エラーを返した内部コンポーネントの署名                                                                                          |
+| プロパティ      |                          | タイプ        | 説明                                                |
+| ---------- | ------------------------ | ---------- | ------------------------------------------------- |
+| success    |                          | boolean    | チェックが成功した場合には true、それ以外は false                    |
+| status     |                          | number     | (SMTPのみ) メールサーバーから返されたコード (メール処理に関係ない問題の場合には 0)   |
+| statusText |                          | text       | メールサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| errors     |                          | collection | 4Dエラースタック (メールサーバーレスポンスが受信できた場合には返されません)          |
+|            | \[ ].errCode            | number     | 4Dエラーコード                                          |
+|            | \[ ].message            | text       | 4Dエラーの詳細                                          |
+|            | \[ ].componentSignature | text       | エラーを返した内部コンポーネントの署名                               |
 
 
 
