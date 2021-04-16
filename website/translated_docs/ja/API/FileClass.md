@@ -205,6 +205,7 @@ Creation of a preferences file in the database folder:
 | v17 R5 | 追加 |
 </details>
 
+
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
