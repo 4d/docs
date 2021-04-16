@@ -23,21 +23,21 @@ title: Transporter クラス
 
 `.acceptUnsecureConnection` プロパティは、暗号化された接続が不可能な場合に、 <!-- REF #transporter.acceptUnsecureConnection.Summary -->暗号化されていない接続の確立が許可されてれば **true**<!-- END REF --> を格納します。
 
-It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
+暗号化されていない接続が許可されていない場合には **false** が格納されており、その場合に暗号化された接続が不可能な場合にはエラーが返されます。
 
-Available secured ports are:
+使用可能なセキュアなポートは次のとおりです:
 
 - SMTP
     - 465: SMTPS
-    - 587 or 25: SMTP with STARTTLS upgrade if supported by the server.
+    - 587 または 25: STARTTLS アップグレードがされた SMTP (サーバーがサポートしていれば)
 
 - IMAP
-    - 143: IMAP non-encrypted port
-    - 993: IMAP with STARTTLS upgrade if supported by the server
+    - 143: IMAP 非暗号化ポート
+    - 993: STARTTLS アップグレードがされた IMAP (サーバーがサポートしていれば)
 
 - POP3
-    - 110: POP3 non-encrypted port
-    - 995: POP3 with STARTTLS upgrade if supported by the server.
+    - 110: POP3 非暗号化ポート
+    - 995: STARTTLS アップグレードがされた POP3 (サーバーがサポートしていれば)
 <!-- END REF -->
 
 --- 
@@ -58,16 +58,16 @@ Available secured ports are:
 
 `.authenticationMode` プロパティは、 <!-- REF #transporter.authenticationMode.Summary -->メールサーバーのセッションを開くのに使用される認証モード<!-- END REF -->を格納します。
 
-By default, the most secured mode supported by the server is used.
+デフォルトでは、サーバーによってサポートされている最も安全なモードが使用されます。
 
-Possible values are:
+とりうる値:
 
-| 結果       | 定数                             | 説明                                     |
-| -------- | ------------------------------ | -------------------------------------- |
-| CRAM-MD5 | `IMAP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
-| LOGIN    | `IMAP authentication login`    | Authentication using LOGIN protocol    |
-| OAUTH2   | `IMAP authentication OAUTH2`   | Authentication using OAuth2 protocol   |
-| PLAIN    | `IMAP authentication plain`    | Authentication using PLAIN protocol    |
+| 結果       | 定数                             | 説明                    |
+| -------- | ------------------------------ | --------------------- |
+| CRAM-MD5 | `IMAP authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証 |
+| LOGIN    | `IMAP authentication login`    | LOGIN プロトコルを使用した認証    |
+| OAUTH2   | `IMAP authentication OAUTH2`   | OAuth2 プロトコルを使用した認証   |
+| PLAIN    | `IMAP authentication plain`    | PLAIN プロトコルを使用した認証    |
 
 <!-- END REF -->
 
@@ -89,17 +89,17 @@ Possible values are:
 
 `.authenticationMode` プロパティは、メールサーバーのセッションを開くのに使用される認証モードを格納します。
 
-By default, the most secured mode supported by the server is used.
+デフォルトでは、サーバーによってサポートされている最も安全なモードが使用されます。
 
-Possible values are:
+とりうる値:
 
-| 結果       | 定数                             | 説明                                             |
-| -------- | ------------------------------ | ---------------------------------------------- |
-| APOP     | `POP3 authentication APOP`     | Authentication using APOP protocol (POP3 only) |
-| CRAM-MD5 | `POP3 authentication CRAM-MD5` | Authentication using CRAM-MD5 protocol         |
-| LOGIN    | `POP3 authentication login`    | Authentication using LOGIN protocol            |
-| OAUTH2   | `POP3 authentication OAUTH2`   | Authentication using OAuth2 protocol           |
-| PLAIN    | `POP3 authentication plain`    | Authentication using PLAIN protocol            |
+| 結果       | 定数                             | 説明                          |
+| -------- | ------------------------------ | --------------------------- |
+| APOP     | `POP3 authentication APOP`     | APOP プロトコルを使用した認証 (POP3 のみ) |
+| CRAM-MD5 | `POP3 authentication CRAM-MD5` | CRAM-MD5 プロトコルを使用した認証       |
+| LOGIN    | `POP3 authentication login`    | LOGIN プロトコルを使用した認証          |
+| OAUTH2   | `POP3 authentication OAUTH2`   | OAuth2 プロトコルを使用した認証         |
+| PLAIN    | `POP3 authentication plain`    | PLAIN プロトコルを使用した認証          |
 
 <!-- END REF -->
 
@@ -121,16 +121,16 @@ Possible values are:
 
 `.authenticationMode` プロパティは、メールサーバーのセッションを開くのに使用される認証モードを格納します。
 
-By default, the most secured mode supported by the server is used.
+デフォルトでは、サーバーによってサポートされている最も安全なモードが使用されます。
 
-Possible values are:
+とりうる値:
 
-| 結果       | 定数                             | 説明                                     |
-| -------- | ------------------------------ | -------------------------------------- |
-| CRAM-MD5 | `SMTP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
-| LOGIN    | `SMTP authentication login`    | Authentication using LOGIN protocol    |
-| OAUTH2   | `SMTP authentication OAUTH2`   | Authentication using OAuth2 protocol   |
-| PLAIN    | `SMTP authentication plain`    | Authentication using PLAIN protocol    |
+| 結果       | 定数                             | 説明                    |
+| -------- | ------------------------------ | --------------------- |
+| CRAM-MD5 | `SMTP authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証 |
+| LOGIN    | `SMTP authentication login`    | LOGIN プロトコルを使用した認証    |
+| OAUTH2   | `SMTP authentication OAUTH2`   | OAuth2 プロトコルを使用した認証   |
+| PLAIN    | `SMTP authentication plain`    | PLAIN プロトコルを使用した認証    |
 
 <!-- END REF -->
 
@@ -154,18 +154,18 @@ Possible values are:
 
 `.bodyCharset` プロパティは、 <!-- REF #transporter.bodyCharset.Summary -->  メール本文で使用される文字セットとエンコーディング<!-- END REF -->を格納します。
 
-*   subject,
-*   attachment filename(s),
-*   email name.
+*   件名
+*   添付ファイル名
+*   メール名
 
 **とりうる値:**
 
-| 定数                       | 結果                             | 説明                                                                                                            |
-| ------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                     |
-| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                     |
-| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**) |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64                               |
+| 定数                       | 結果                             | 説明                                                                                           |
+| ------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------- |
+| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul>                                                                    |
+| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 &amp; Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 &amp; 8-bit</li></ul>                                                                    |
+| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: 可能なら US-ASCII、それが不可なら UTF-8 & Quoted-printable (**デフォルト値**) |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: 可能な場合は US-ASCII、それ以外は UTF-8 & base64                        |
 
 <!-- END REF -->
 
@@ -188,7 +188,7 @@ Possible values are:
 
 #### 説明
 
-`.connectionTimeOut` プロパティは、 <!-- REF #transporter.connectionTimeOut.Summary -->サーバー接続の確立までに待機する最長時間 (秒単位)<!-- END REF -->を格納します。 By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
+`.connectionTimeOut` プロパティは、 <!-- REF #transporter.connectionTimeOut.Summary -->サーバー接続の確立までに待機する最長時間 (秒単位)<!-- END REF -->を格納します。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される `server` オブジェクトにおいて、 このプロパティが指定されなかった場合のデフォルトは 30 です。
 
 <!-- END REF -->
 
@@ -210,20 +210,20 @@ Possible values are:
 
 #### 説明
 
-`.headerCharset` プロパティは、 <!-- REF #transporter.headerCharset.Summary --> メールヘッダーで使用される文字セットとエンコーディング<!-- END REF -->を格納します。 The header includes the following parts of the email:
+`.headerCharset` プロパティは、 <!-- REF #transporter.headerCharset.Summary --> メールヘッダーで使用される文字セットとエンコーディング<!-- END REF -->を格納します。 ヘッダーにはメールの次の要素を含みます:
 
-*   subject,
-*   attachment filename(s),
-*   email name.
+*   件名
+*   添付ファイル名
+*   メール名
 
 **とりうる値:**
 
-| 定数                       | 結果                             | 説明                                                                                                        |
-| ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                 |
-| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                |
-| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value) |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64                           |
+| 定数                       | 結果                             | 説明                                                                                       |
+| ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------- |
+| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>*bodyCharset*: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul>                                                                |
+| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 &amp; Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 &amp; 8-bit</li></ul>                                                               |
+| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: 可能なら US-ASCII、それが不可なら UTF-8 & Quoted-printable (デフォルト値) |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: 可能な場合は US-ASCII、それ以外は UTF-8 & base64                    |
 
 <!-- END REF -->
 
