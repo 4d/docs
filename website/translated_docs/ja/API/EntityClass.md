@@ -378,7 +378,7 @@ The object returned by `.drop( )` contains the following properties:
 |               | client_version      | text                  |                                                                                                                       |
 |               |                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
 | errors        |                     | collection of objects |                                                                                                                       |
-|               | message             | text                  | Error message                                                                                                         |
+|               | message             | text                  | エラーメッセージ                                                                                                              |
 |               | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                          |
 |               | errCode             | number                | エラーコード                                                                                                                |
 
@@ -938,7 +938,7 @@ The object returned by `.lock( )` contains the following properties:
 |                  | client_version      | text                  |                                                                                                                     |
 |                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
 | errors           |                     | collection of objects |                                                                                                                     |
-|                  | message             | text                  | Error message                                                                                                       |
+|                  | message             | text                  | エラーメッセージ                                                                                                            |
 |                  | component signature | text                  | internal component signature (e.g. "dmbg" stands for the database component)                                        |
 |                  | errCode             | number                | エラーコード                                                                                                              |
 
@@ -1195,7 +1195,7 @@ The object returned by `.save()` contains the following properties:
 |              | client_version     | text                  |                                                                                                                         |
 |              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
 | errors       |                    | collection of objects |                                                                                                                         |
-|              | message            | text                  | Error message                                                                                                           |
+|              | message            | text                  | エラーメッセージ                                                                                                                |
 |              | componentSignature | text                  | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
 |              | errCode            | number                | エラーコード                                                                                                                  |
 
