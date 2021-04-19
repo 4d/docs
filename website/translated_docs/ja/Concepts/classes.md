@@ -273,7 +273,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-> メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 For example:
+> メソッド内の引数宣言に使用される [従来の 4D シンタックス](parameters.md#sequential-parameters) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 たとえば:
 > 
 > ```4d
 Function add($x : Integer)
@@ -287,18 +287,18 @@ Function add($x : Integer)
 
 
 
-#### Example
+#### 例題
 
 
 
 ```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
+// クラス: Rectangle
+Class Constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
 
-// Function definition
+// 関数定義
 Function getArea()->$result : Integer
     $result:=(This.height)*(This.width)
 ```
@@ -307,8 +307,7 @@ Function getArea()->$result : Integer
 
 
 ```4d
-// In a project method
-
+// プロジェクトメソッドにて
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -325,12 +324,12 @@ $area:=$rect.getArea() //5000
 
 
 
-#### Syntax
+#### シンタックス
 
 
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 Class Constructor({$parameterName : type; ...})
 // コード
 ```
@@ -338,21 +337,21 @@ Class Constructor({$parameterName : type; ...})
 
 クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。  
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+クラスコンストラクターが定義されていると、 [`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
-
-
+クラスコンストラクター関数の場合には、 `Current method name` コマンドは次を返します: "*\<ClassName>:constructor*" (例: "MyClass:constructor")。
 
 
 
-#### Example:
+
+
+#### 例題:
 
 
 
 ```4d
-// Class: MyClass
-// Class constructor of MyClass
+// クラス: MyClass
+// MyClass のクラスコンストラクター
 Class Constructor ($name : Text)
     This.name:=$name
 ```
@@ -361,8 +360,8 @@ Class Constructor ($name : Text)
 
 
 ```4d
-// In a project method
-// You can instantiate an object
+// プロジェクトメソッドにて
+// オブジェクトをインスタンス化します
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
@@ -378,51 +377,51 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
-#### Syntax
+#### シンタックス
 
 
 
 ```4d
-// Class: ChildClass
+// クラス: ChildClass
 Class extends <ParentClass>
 ```
 
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+クラス宣言において `Class extends` キーワードを使うと、別のユーザークラスの子ユーザークラスを作成することができます。 この子クラスは、親クラスのすべての機能を継承します。
 
-Class extension must respect the following rules:
+クラス継承は次のルールに沿っている必要があります:
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- ユーザークラスはビルトインクラスを継承できません (例外は 4D.Object で、すべてのユーザークラスにデフォルトで継承されます)
+- ユーザークラスは、別のプロジェクトやコンポーネントのユーザークラスを継承できません。
+- ユーザークラスは、自身を継承することはできません。
+- 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
+コードエディターやインタープリターは、これらのルールが破られていても検知することはできません。コンパイラーおよび "シンタックスチェック" のみがエラーを生成します。
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+派生クラスは、`Super` コマンドを使って親クラスのコンストラクターを呼び出すことができます。
 
 
 
-#### Example
+#### 例題
 
-This example creates a class called `Square` from a class called `Polygon`.
+`Polygon` クラスを継承した `Square` クラスを作成します。
 
 
 
 ```4d
-//Class: Square
+// クラス: Square
 
-//path: Classes/Square.4dm 
+// パス: Classes/Square.4dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
-    // It calls the parent class's constructor with lengths
-    // provided for the Polygon's width and height
+// 親クラスのコンストラクターを呼び出します
+// 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
     Super($side;$side)
-    // In derived classes, Super must be called before you
-    // can use 'This'
+	// 派生クラスにおいては、'This' を使用するより先に
+	// Super を呼び出しておく必要があります
     This.name:="Square"
 
     Function getArea()
@@ -440,17 +439,17 @@ Class constructor ($side : Integer)
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-| Parameter | Type   |    | Description                                    |
-| --------- | ------ | -- | ---------------------------------------------- |
-| param     | mixed  | -> | Parameter(s) to pass to the parent constructor |
-| Result    | object | <- | Object's parent                                |
+| 引数     | 型      |    | 説明               |
+| ------ | ------ | -- | ---------------- |
+| param  | mixed  | -> | 親コンストラクターに受け渡す引数 |
+| Result | object | <- | 親オブジェクト          |
 
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+`Super` キーワードによってスーパークラス (親クラス) を呼び出すことができます。
 
-`Super` serves two different purposes:
+`Super` は次の2つの目的のために使います:
 
-- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. コンストラクター内で使用する際には、`Super` コマンドは単独で使用され、また `This` キーワードよりも先に使用される必要があります。
+- [コンストラクターコード](#class-constructor) 内において、 `Super` はスーパークラスのコンストラクターを呼び出すコマンドです。 コンストラクター内で使用する際には、`Super` コマンドは単独で使用され、また `This` キーワードよりも先に使用される必要があります。
   
       - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
     - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
