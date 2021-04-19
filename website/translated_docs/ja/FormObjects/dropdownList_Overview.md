@@ -27,17 +27,17 @@ You can create different types of drop-down lists with different features. To de
 
 ## Handling drop-down lists
 
-### Using an object
+### オブジェクトの使用
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
-| プロパティ          | タイプ                | 説明                                                                                                                                                                                                                                                     |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `values`       | コレクション             | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>文字列</li><li>数値</li><li>日付</li><li>times</li>If empty or not defined, the drop-down list is empty |
-| `index`        | number             | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                   |
-| `currentValue` | same as Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                     |
+| プロパティ          | タイプ                | 説明                                                                                                                                                                                                          |
+| -------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | コレクション             | 必須 - スカラー値のコレクション。 すべての同じ型の値でなくてはなりません。 サポートされている型:<li>文字列</li><li>数値</li><li>日付</li><li>時間</li>If empty or not defined, the drop-down list is empty |
+| `index`        | number             | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                        |
+| `currentValue` | same as Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                          |
 
-If the object contains other properties, they are ignored.
+オブジェクトにその他のプロパティが含まれている場合、それらは無視されます。
 
 To initialize the object associated to the drop-down list, you can:
 
