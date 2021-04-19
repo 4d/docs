@@ -617,35 +617,35 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 `.provideDataKey()` 関数は、 <!-- REF #DataStoreClass.provideDataKey().Summary -->データストアのカレントデータファイルのデータ暗号化キーを受け取り、暗号化されたデータと合致するかどうかチェックします<!-- END REF -->。 この関数は、暗号化されたデータベースを開くときや、データファイルの再暗号化など暗号化キーが必要となる暗号化オペレーションを実行する際に使用します。
 
 
-> * The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
-> * The `.provideDataKey()` function cannot be called from a remote 4D or an encrypted remote datastore.
+> * `.provideDataKey()` 関数は暗号化されたデータベース内で呼び出される必要があります。 暗号化されていないデータベース内で呼び出した場合、エラー2003 (暗号化キーはデータと合致しません) が返されます。 データベースが暗号化されているかどうかを調べるには `Data file encryption status` コマンドを使用します。
+> * リモートの 4D または暗号化されたリモートデータストアから、`.provideDataKey()` 関数を呼び出すことはできません。
 
-If you use the *curPassPhrase* parameter, pass the string used to generate the data encryption key. When you use this parameter, an encryption key is generated.
+*curPassPhrase* パラメーターを使用する場合は、データ暗号化キーの生成に使用した文字列を渡します。 このパラメーターを使用した場合、暗号化キーが生成されます。
 
-If you use the *curDataKey* parameter, pass an object (with *encodedKey* property) that contains the data encryption key. This key may have been generated with the `New data key` command.
+*curDataKey* パラメーターを使用する場合は、データ暗号化キー (*encodedKey* プロパティ) を格納するオブジェクトを渡します。 このキーは、`New data key` コマンドで生成された可能性があります。
 
-If a valid data encryption key is provided, it is added to the *keyChain* in memory and the encryption mode is enabled:
+有効な暗号化キーが提供された場合、そのキーはメモリ内の *keyChain* に追加され、暗号化モードが有効になります:
 
-*   all data modifications in encryptable tables are encrypted on disk (.4DD, .journal. 4Dindx files)
-*   all data loaded from encryptable tables is decrypted in memory
+*   暗号化可能テーブルに対するデータ編集はすべて、ディスク上 (.4DD、.journal、 .4Dindx ファイル) で暗号化されます。
+*   暗号化可能テーブルから読み出したすべてのデータは、メモリ内で復号化されます。
 
 **戻り値**
 
-The result of the command is described in the returned object:
+コマンドの実行結果は、戻り値のオブジェクトに格納されます:
 
-| プロパティ      |                          | タイプ    | 説明                                                                              |
-| ---------- | ------------------------ | ------ | ------------------------------------------------------------------------------- |
-| success    |                          | ブール    | True if the provided encryption key matches the encrypted data, False otherwise |
-|            |                          |        | Properties below are returned only if success is *FALSE*                        |
-| status     |                          | 数値     | Error code (4 if the provided encryption key is wrong)                          |
-| statusText |                          | テキスト   | Error message                                                                   |
-| errors     |                          | コレクション | Stack of errors. The first error has the highest index                          |
-|            | \[ ].componentSignature | テキスト   | Internal component name                                                         |
-|            | \[ ].errCode            | 数値     | Error number                                                                    |
-|            | \[ ].message            | テキスト   | Error message                                                                   |
+| プロパティ      |                          | タイプ    | 説明                                          |
+| ---------- | ------------------------ | ------ | ------------------------------------------- |
+| success    |                          | ブール    | 提供された暗号化キーが暗号化データと合致すれば true、それ以外は false    |
+|            |                          |        | 以下のプロパティは、success が *FALSE* であった場合にのみ返されます。 |
+| status     |                          | 数値     | エラーコード (提供された暗号化キーが間違っていた場合には 4)            |
+| statusText |                          | テキスト   | エラーメッセージ                                    |
+| errors     |                          | コレクション | エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。       |
+|            | \[ ].componentSignature | テキスト   | 内部コンポーネント名                                  |
+|            | \[ ].errCode            | 数値     | エラー番号                                       |
+|            | \[ ].message            | テキスト   | エラーメッセージ                                    |
 
 
-If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
+*curPassphrase* および *curDataKey* のどちらの引数も渡されなかった場合、`.provideDataKey()` は **null** を返します (この場合エラーは生成されません)。
 
 
 
@@ -659,13 +659,13 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
  var $keyStatus : Object
  var $passphrase : Text
 
- $passphrase:=Request("Enter the passphrase")
+ $passphrase:=Request("パスフレーズを入力してください。")
  If(OK=1)
     $keyStatus:=ds.provideDataKey($passphrase)
     If($keyStatus.success)
-       ALERT("You have provided a valid encryption key")
+       ALERT("提供された暗号化キーは有効です。")
     Else
-       ALERT("You have provided an invalid encryption key, you will not be able to work with encrypted data")
+       ALERT("提供された暗号化キーは無効です。暗号化データの編集はできません。")
     End if
  End if
 ```
@@ -697,9 +697,9 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 `.setAdminProtection()` 関数は、 <!-- REF #DataStoreClass.setAdminProtection().Summary -->`WebAdmin`セッションにおける [データエクスプローラー](Admin/dataExplorer.md) 含め、[Web管理ポート](Admin/webAdmin.md#httpポート)上でのデータアクセスを無効に設定することができます<!-- END REF -->。 
 
-By default when the function is not called, access to data is always granted on the web administration port for a session with `WebAdmin` privilege using the Data Explorer. In some configurations, for example when the application server is hosted on a third-party machine, you might not want the administrator to be able to view your data, although they can edit the server configuration, including the [access key](Admin/webAdmin.md#access-key) settings. 
+この関数が呼び出されなかった場合のデフォルトでは、データエクスプローラーを使用した `WebAdmin` 権限を持つセッションについて、Web管理ポート上のデータアクセスは常に許可されます。 環境によっては (たとえば、アプリケーションサーバーが第三者のマシン上でホストされている場合)、 管理者に対して [access key](Admin/webAdmin.md#access-key) 設定を含むサーバー設定の編集は許可しても、データ閲覧はできないようにしたいかもしれません。 
 
-In this case, you can call this function to disable the data access from Data Explorer on the web admin port of the machine, even if the user session has the `WebAdmin` privilege. When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted. 
+このような場合にこの関数を呼び出すことで、ユーザーセッションが `WebAdmin` 権限を持っていても、マシンの Web管理ポート上でのデータエクスプローラーによるデータアクセスを無効にすることができます。 When this function is executed, the data file is immediately protected and the status is stored on disk: the data file will be protected even if the application is restarted. 
 
 
 
