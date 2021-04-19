@@ -49,15 +49,15 @@ To supply the labels for a tab control, you can use:
 - a choice list
 - an array
 
-### Using an object
+### オブジェクトの使用
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
-| プロパティ          | タイプ    | 説明                                                                                                                                    |
-| -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | コレクション | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
-| `currentValue` | テキスト   | Currently selected value                                                                                                              |
+| プロパティ          | タイプ    | 説明                                                                                                              |
+| -------------- | ------ | --------------------------------------------------------------------------------------------------------------- |
+| `values`       | コレクション | 必須 - スカラー値のコレクション。 Only string values are supported. If invalid, empty or not defined, the tab control is empty |
+| `index`        | number | Index of the currently tab control page (value between 0 and `collection.length-1`)                             |
+| `currentValue` | テキスト   | Currently selected value                                                                                        |
 
 The initialization code must be executed before the form is presented to the user.
 
