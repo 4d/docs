@@ -528,12 +528,12 @@ Function getArea()
 
 #### 例題 2
 
-クラスメンバーメソッド内で `Super` を使う例です。 You created the `Rectangle` class with a function:
+クラスメンバーメソッド内で `Super` を使う例です。 メンバーメソッドを持つ `Rectangle` クラスを作成します:
 
 
 
 ```4d
-//Class: Rectangle
+// クラス: Rectangle
 
 Function nbSides()
     var $0 : Text
@@ -541,12 +541,12 @@ Function nbSides()
 ```
 
 
-You also created the `Square` class with a function calling the superclass function:
+`Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:
 
 
 
 ```4d
-//Class: Square
+// クラス: Square
 
 Class extends Rectangle
 
@@ -556,7 +556,7 @@ Function description()
 ```
 
 
-Then you can write in a project method:
+すると、プロジェクトメソッド内には次のように書けます:
 
 
 
@@ -576,12 +576,12 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 #### This -> Object
 
-| Parameter | Type   |    | Description    |
-| --------- | ------ | -- | -------------- |
-| Result    | object | <- | Current object |
+| 引数     | 型      |    | 説明         |
+| ------ | ------ | -- | ---------- |
+| Result | object | <- | カレントオブジェクト |
 
 
-The `This` keyword returns a reference to the currently processed object. `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) で使用することができます。
+`This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) で使用することができます。
 
 `This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。 
 
@@ -647,14 +647,14 @@ $val:=$o.f() //8
 ```
 
 
-この例では、変数 $o に代入されたオブジェクトは *f* プロパティを持たないため、これをクラスより継承します。 Since *f* is called as a method of $o, its `This` refers to $o. 
+この例では、変数 $o に代入されたオブジェクトは *f* プロパティを持たないため、これをクラスより継承します。 *f* は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
 
 
 
 
-## Class commands
+## クラスコマンド
 
-Several commands of the 4D language allows you to handle class features.
+4D ランゲージには、クラス機能を扱う複数のコマンドがあります。
 
 
 
@@ -665,7 +665,7 @@ Several commands of the 4D language allows you to handle class features.
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter. 
+`OB Class` は引数として渡したオブジェクトのクラスを返します。 
 
 
 
@@ -676,4 +676,4 @@ Several commands of the 4D language allows you to handle class features.
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`object` が `class`、またはその子クラスに属していれば、`OB Instance of` は `true` を返します。それ以外の場合は `false` を返します。
