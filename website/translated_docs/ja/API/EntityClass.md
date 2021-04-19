@@ -1303,7 +1303,7 @@ Updating an entity with `dk auto merge` option:
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
 
 *   all storage entity attributes
-*   attributes of the `relatedEntity` [kind](DataClassAttributeClass.md#kind): you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.
+*   attributes of the `relatedEntity` [kind](DataClassAttributeClass.md#kind): you get a property with the same name as the related entity (name of the many-to-one link). 属性は単純な形式で取得されます。
 *   attributes of the `relatedEntities` [kind](DataClassAttributeClass.md#kind): attribute is not returned.
 
 
