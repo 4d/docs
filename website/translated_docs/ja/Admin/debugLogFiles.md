@@ -118,7 +118,7 @@ For each process, the following fields are logged:
 | systemid                          | System ID                                                      |
 | server\_process\_id           | Process ID on Server                                           |
 | remote\_process\_id           | Process ID on Client                                           |
-| process\_name                   | Process name                                                   |
+| process\_name                   | プロセス名                                                          |
 | cID                               | Identifier of 4D Connection                                    |
 | uID                               | Identifier of 4D Client                                        |
 | IP Client                         | IPv4/IPv6 address                                              |
