@@ -69,7 +69,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## 新しいコレクション
+## `New collection`
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -148,7 +148,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 
-## 新規の共有コレクション
+## `New shared collection`
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -1311,7 +1311,6 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### 例題
 
-
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1559,6 +1558,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 `.length` プロパティは、コレクション作成時に初期化されます。 要素を追加・削除すると、必要に応じて length は更新されます。 このプロパティは **読み取り専用** です (これを使用してコレクションのサイズを設定することはできません)。
 
 #### 例題
+
 
 ```4d
  var $col : Collection // $col.length が 0 に初期化されます
@@ -2324,6 +2324,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 *   計算結果がコレクションの length より大きい場合には、*index* は length に設定されます。
 
 *howMany* には、*index* の位置から削除する要素の数を渡します。 *howMany* が省略された場合、1つの要素のみが削除されます。
+
 
 
 空のコレクションから要素を削除しようとした場合、関数は何もしません (エラーは生成されません)。
