@@ -13,20 +13,20 @@ title: コンボボックス
 
 入力エリアへの入力内容は、その他の入力フォームオブジェクトと同様に [`On Data Change`](Events/onDataChange.md) イベントを使用して管理します。
 
-You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
+コンボボックスの初期化方法は、[ドロップダウンリスト](dropdownList_Overview.md#overview) とまったく同じで、オブジェクト、配列、または選択リストを使用できます。
 
-### Using an object
+### オブジェクトの使用
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
+コンボボックスのデータソースとして、[コレクション](Concepts/dt_collection) を内包した [オブジェクト](Concepts/dt_object.md) を使用できます。 このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
-| プロパティ          | タイプ                | 説明                                                                                                                                                                                                                                                |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | コレクション             | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>文字列</li><li>数値</li><li>日付</li><li>times</li>If empty or not defined, the combo box is empty |
-| `currentValue` | same as Collection | Text entered by the user                                                                                                                                                                                                                          |
+| プロパティ          | タイプ                | 説明                                                                                                                                                                                |
+| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | コレクション             | 必須 - スカラー値のコレクション。 すべての同じ型の値でなくてはなりません。 サポートされている型:<li>文字列</li><li>数値</li><li>日付</li><li>時間</li>空、または未定義の場合、コンボボックスは空になります |
+| `currentValue` | same as Collection | ユーザーによる入力値                                                                                                                                                                        |
 
-If the object contains other properties, they are ignored.
+オブジェクトにその他のプロパティが含まれている場合、それらは無視されます。
 
-When the user enters text into the combo box, the `currentValue` property of the object gets the entered text.
+ユーザーによってコンボボックスに入力されたテキストは、オブジェクトの `currentValue` プロパティが受け取ります。
 
 ### 配列の使用
 
