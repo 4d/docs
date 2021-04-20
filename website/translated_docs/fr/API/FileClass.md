@@ -35,7 +35,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->
 |
 | [<!-- INCLUDE #document.isFile.Syntax -->](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
-| [<!-- INCLUDE #document.isFolder.Syntax -->](#isFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
+| [<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
 | [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
 | [<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary -->|
 | [<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
@@ -142,7 +142,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -204,6 +204,7 @@ Creation of a preferences file in the database folder:
 | ------- | ------------- |
 | v17 R5  | Ajoutées      |
 </details>
+
 
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -300,7 +301,7 @@ You want to delete a specific file in the database folder:
     $tempo.delete()
     ALERT("User preference file deleted.")
  End if
-``` 
+```
 <!-- END REF -->
 
 
@@ -506,7 +507,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 
-<!-- REF file.rename().Desc --> 
+<!-- REF file.rename().Desc -->
 ## .rename()
 
 <details><summary>Historique</summary>
@@ -613,8 +614,8 @@ var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021" 
-$info.ProductVersion:="1.0.0" 
+$info.LegalCopyright:="Copyright 4D 2021"
+$info.ProductVersion:="1.0.0"
 $exeFile.setAppInfo($info)
 ```
 
@@ -634,7 +635,7 @@ $infoPlistFile.setAppInfo($info)
 
 [.getAppInfo()](#getappinfo)
 
-<!-- REF file.setContent().Desc --> 
+<!-- REF file.setContent().Desc -->
 ## .setContent()
 
 <details><summary>Historique</summary>
@@ -671,7 +672,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 
-<!-- REF file.setText().Desc --> 
+<!-- REF file.setText().Desc -->
 ## .setText()
 
 
