@@ -19,7 +19,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
-| [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setAdminProtection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary --> |
@@ -77,7 +77,7 @@ Using the main datastore on the 4D database:
 
 #### Example 2
 
-```4d
+```4d 
  var $connectTo; $firstFrench; $firstForeign : Object
 
  var $frenchStudents; $foreignStudents : cs.DataStore
@@ -168,7 +168,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 Connection to a remote datastore without user / password:
 
 ```4d
- var $connectTo : Object
+ var $connectTo : Object 
  var $remoteDS : cs.DataStore
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
@@ -180,7 +180,7 @@ Connection to a remote datastore without user / password:
 Connection to a remote datastore with user / password / timeout / tls:
 
 ```4d
- var $connectTo : Object
+ var $connectTo : Object 
  var $remoteDS : cs.DataStore
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
     "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
@@ -193,7 +193,7 @@ Connection to a remote datastore with user / password / timeout / tls:
 Working with several remote datastores:
 
 ```4d
- var $connectTo : Object
+ var $connectTo : Object 
  var $frenchStudents; $foreignStudents : cs.DataStore
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
@@ -205,7 +205,7 @@ Working with several remote datastores:
 
 #### Error management
 
-In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`.
+In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`. 
 
 
 
@@ -421,8 +421,8 @@ On a remote datastore:
   //"localID":"students",
   //"networked":true,
   //"connection":{hostname:"111.222.33.44:8044","tls":false,"idleTimeout":2880,"user":"marie"}}
-```
-
+``` 
+ 
 
 <!-- END REF -->
 
@@ -529,7 +529,7 @@ When this function is not called, new entity selections can be shareable, depend
 > This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used.
 
 
-> **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](EntitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity.
+> **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](EntitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity. 
 
 
 <!-- END REF -->
@@ -594,7 +594,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 #### Example
 
-```4d
+```4d 
  var $keyStatus : Object
  var $passphrase : Text
 
@@ -608,7 +608,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
     End if
  End if
 ```
-
+ 
 
 <!-- END REF -->
 
@@ -698,7 +698,7 @@ For a description of the ORDA request log format, please refer to the [**ORDA cl
 
 You want to log ORDA client requests in a file and use the log sequence number:
 
-```4d
+```4d 
  var $file : 4D.File
  var $e : cs.PersonsEntity
 
@@ -715,7 +715,7 @@ You want to log ORDA client requests in a file and use the log sequence number:
 
 You want to log ORDA client requests in memory:
 
-```4d
+```4d 
  var $es : cs.PersonsSelection
  var $log : Collection
 
@@ -728,7 +728,7 @@ You want to log ORDA client requests in memory:
  $log:=ds.getRequestLog()
  ALERT("The longest request lasted: "+String($log.max("duration"))+" ms")
 ```
-
+ 
 <!-- END REF -->
 
 
@@ -764,7 +764,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 #### Example
 
 
-```4d
+```4d 
  var $connect; $status : Object
  var $person : cs.PersonsEntity
  var $ds : cs.DataStore
@@ -794,7 +794,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
     $ds.validateTransaction()
  End if
 ```
-
+ 
 
 <!-- END REF -->
 

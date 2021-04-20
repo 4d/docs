@@ -33,11 +33,11 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|
 | [<!-- INCLUDE #IMAPTransporterClass.move().Syntax -->](#move)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.move().Summary -->|
-| [<!-- INCLUDE #IMAPTransporterClass.numToID().Syntax -->](#numtoid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.numToID().Summary -->|
+| [<!-- INCLUDE #IMAPTransporterClass.numToID().Syntax -->](#numToID)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.numToID().Summary -->|
 | [<!-- INCLUDE #IMAPTransporterClass.removeFlags().Syntax -->](#removeflags)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.removeFlags().Summary -->|
 | [<!-- INCLUDE #IMAPTransporterClass.renameBox().Syntax -->](#renamebox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.renameBox().Summary -->|
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|
-| [<!-- INCLUDE #IMAPTransporterClass.searchMails().Syntax -->](#searchmails)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.searchMails().Summary -->|
+| [<!-- INCLUDE #IMAPTransporterClass.searchMails().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.searchMails().Summary -->|
 | [<!-- INCLUDE #IMAPTransporterClass.selectBox().Syntax -->](#selectbox)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.selectBox().Summary -->|
 | [<!-- INCLUDE #IMAPTransporterClass.subscribe().Syntax -->](#subscribe)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.subscribe().Summary -->|
 | [<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Syntax -->](#unsubscribe)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Summary -->|
@@ -126,7 +126,7 @@ End if
 #### 説明
 
 `4D.IMAPTransporter.new()` 関数は、 <!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`IMAP New transporter`](#imap-new-transporter) コマンドと同一です。
-
+ 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
 
@@ -336,7 +336,7 @@ $status:=$imap.append($msg; "Drafts")
 #### 説明
 
 `.checkConnectionDelay` 関数は、 <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->サーバー接続をチェックするまでの最長時間 (秒単位)<!-- END REF -->を格納します。  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが *server* オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。
-> **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。
+> **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。 
 
 
 
@@ -471,15 +471,15 @@ $status:=$imap.append($msg; "Drafts")
 
 #### 説明
 
-`.createBox()` 関数は、 <!-- REF #IMAPTransporterClass.createBox().Summary -->`name` に指定した名称の新規メールボックスを作成します<!-- END REF -->。 IMAPサーバーの階層区切り文字がメールボックス名内に含まれる場合、IMAPサーバーは指定のメールボックスを作成するのに必要な親階層を作成します。
+`.createBox()` 関数は、 <!-- REF #IMAPTransporterClass.createBox().Summary -->`name` に指定した名称の新規メールボックスを作成します<!-- END REF -->。 If the IMAP server’s hierarchy separator character appears elsewhere in the mailbox name, the IMAP server will create any parent names needed to create the given mailbox.
 
-たとえば、"/" が階層区切り文字として使われるサーバーにおいて、"Projects/IMAP/Doc" を作成しようとした場合:
+In other words, an attempt to create "Projects/IMAP/Doc" on a server in which "/" is the hierarchy separator character will create:
 
-*   "Projects" & "IMAP" がすでに存在する場合は "Doc" メールボックスのみを作成します。
-*   “Projects” のみが存在する場合は、"IMAP" & "Doc" メールボックスを作成します。
-*   いずれも存在しない場合には、"Projects" & “IMAP” & "Doc" メールボックスをそれぞれ作成します。
+*   Only the "Doc" mailbox if "Projects" & "IMAP" already exist.
+*   "IMAP" & "Doc" mailboxes if only “Projects” already exists.
+*   "Projects" & “IMAP” & "Doc" mailboxes, if they do not already exist.
 
-`name` には、新しいメールボックスの名前を渡します。
+In the `name` parameter, pass the name of the new mailbox.
 
 
 **返されるオブジェクト**
@@ -661,12 +661,12 @@ End if
 
 #### 説明
 
-`.deleteBox()` 関数は、 <!-- REF #IMAPTransporterClass.deleteBox().Summary -->`name` に指定した名称のメールボックスを IMAPサーバーから完全に削除します<!-- END REF -->。 存在しないメールボックス、または INBOX を削除しようとして場合には、エラーが生成されます。
+`.deleteBox()` 関数は、 <!-- REF #IMAPTransporterClass.deleteBox().Summary -->`name` に指定した名称のメールボックスを IMAPサーバーから完全に削除します<!-- END REF -->。 Attempting to delete an INBOX or a mailbox that does not exist will generate an error.
 
-`name` には、削除するメールボックスの名前を渡します。
-> * 子メールボックスを持つ親メールボックスが "\Noselect" 属性を持っている場合、そのメールボックスは削除できません。
-> * 削除されるメールボックス内のメッセージもすべて削除されます。
-> * メールボックス削除の可否はメールサーバーに依存します。
+In the `name` parameter, pass the name of the mailbox to delete.
+> * The function cannot delete a mailbox that has child mailboxes if the parent mailbox has the "\Noselect" attribute.
+> * All messages in the deleted mailbox will also be deleted.
+> * The ability to delete a mailbox depends on the mail server.
 
 
 **返されるオブジェクト**
@@ -868,11 +868,11 @@ $status:=$transporter.expunge()
 
 `.getBoxList()` 関数は、 <!-- REF #IMAPTransporterClass.getBoxList().Summary -->利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します<!-- END REF -->。 この関数を使用すると、IMAPメールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
-任意の `parameters` パラメーターには、返されるメールボックスをフィルターするための値を格納したオブジェクトを渡すことができます。 以下のものを渡すことができます:
+In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. 以下のものを渡すことができます:
 
 | プロパティ        | タイプ | 説明                                                   |
 | ------------ | --- | ---------------------------------------------------- |
-| isSubscribed | ブール | <li>**True**: 購読しているメールボックスのみを返します。</li><li> **False**: すべての利用可能なメールボックスを返します</li> |
+| isSubscribed | ブール | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li> |
 
 #### 戻り値
 
@@ -1007,15 +1007,15 @@ $status:=$transporter.expunge()
 | ---------- | ------- | -------------------------------------------------------------------------- |
 | updateSeen | boolean | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
 | withBody   | boolean | true を渡すとメッセージ本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true           |
-> * *msgID* 引数が存在しないメッセージを指定した場合、関数はエラーを生成し **Null** を返します。
-> * [`.selectBox()`](#selectbox) によって選択されたメールボックスがない場合、エラーが生成されます。
-> * 開いている接続がない場合、`.getMail()` は [`.selectBox()`](#selectbox) で最後に指定されたメールボックスへの接続を開きます。
+> * The function generates an error and returns **Null** if *msgID* designates a non-existing message,
+> * If no mailbox is selected with the [`.selectBox()`](#selectbox) function, an error is generated,
+> * If there is no open connection, `.getMail()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox)`.
 
 
 
 #### 戻り値
 
-`.getMail()` は、以下の IMAP特有のプロパティを持つ [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト)を返します: *id*、*receivedAt*、および *size*。
+`.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object) with the following specific IMAP properties: *id*, *receivedAt*, and *size*.
 
 #### 例題
 
@@ -1065,7 +1065,7 @@ ID = 1のメッセージを取得します:
 | startMsg | 整数     | -> | 先頭メッセージのシーケンス番号                                          |
 | endMsg   | 整数     | -> | 最後のメッセージのシーケンス番号                                         |
 | options  | オブジェクト | -> | メッセージ管理オプション                                             |
-| 戻り値      | オブジェクト | <- | 次のコレクションを格納したオブジェクト:<br><ul><li>[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) のコレクション</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul> |
+| 戻り値      | オブジェクト | <- | 次のコレクションを格納したオブジェクト:<br><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul> |
 <!-- END REF -->
 
 
@@ -1081,7 +1081,7 @@ ID = 1のメッセージを取得します:
 
 *ids* 引数として、取得するメッセージID のコレクションを渡します。 これらの ID は [`.getMail()`](#getmail) で取得することができます。
 
-任意の *options* 引数を渡すと、返されるメッセージのパートを定義することができます。 利用可能なプロパティについては、以下の **オプション** の表を参照ください。
+任意の *options* 引数を渡すと、返されるメッセージのパーツを定義することができます。 利用可能なプロパティについては、以下の **オプション** の表を参照ください。
 
 **第二シンタックス:**
 
@@ -1093,7 +1093,7 @@ ID = 1のメッセージを取得します:
 
 *endMsg* には、連続レンジに含める最後のメッセージの番号に対応する *倍長整数* の値を渡します。 負の値 (*startMsg* <= 0) を渡した場合、メールボックスの最後のメッセージが連続レンジの最終メッセージとして扱われます。
 
-任意の *options* 引数を渡すと、返されるメッセージのパートを定義することができます。
+任意の *options* 引数を渡すと、返されるメッセージのパーツを定義することができます。
 
 **オプション**
 
@@ -1101,8 +1101,8 @@ ID = 1のメッセージを取得します:
 | ---------- | --- | ---------------------------------------------------------------------- |
 | updateSeen | ブール | true 時には、指定されたメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
 | withBody   | ブール | true を渡すと指定されたメッセージの本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true |
-> * [`.selectBox()`](#selectbox) によって選択されたメールボックスがない場合、エラーが生成されます。
-> * 開いている接続がない場合、`.getMails()` は [`.selectBox()`](#selectbox) で最後に指定されたメールボックスへの接続を開きます。
+> * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated.
+> * If there is no open connection, `.getMails()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox).
 
 
 #### 戻り値
@@ -1110,11 +1110,11 @@ ID = 1のメッセージを取得します:
 `.getMails()` は、以下のコレクションを格納したオブジェクトを返します。
 
 
-| プロパティ | タイプ    | 説明                                                                                               |
-| ----- | ------ | ------------------------------------------------------------------------------------------------ |
-| list  | コレクション | [`Email`](EmailObjectClass.md#email-オブジェクト) オブジェクトのコレクション。 Email オブジェクトが見つからない場合、空のコレクションが返されます。 |
+| プロパティ | タイプ    | 説明                                                                                                       |
+| ----- | ------ | -------------------------------------------------------------------------------------------------------- |
+| list  | コレクション | Collection of [`Email` objects](EmailObjectClass.md#email-object). Email オブジェクトが見つからない場合、空のコレクションが返されます。 |
 
-|notFound |コレクション| 次の要素のコレクション:<br><ul><li>第一シンタックス - 指定した ID のうち、存在しなかったメッセージの ID</li><li>第二シンタックス - startMsg と endMsg の間の番号のうち、存在しなかったメッセージの番号</li></ul>すべてのメッセージが見つかった場合には、空のコレクションが返されます。|
+|notFound |Collection| Collection of:<br><ul><li>第一シンタックス - 指定した ID のうち、存在しなかったメッセージの ID</li><li>第二シンタックス - startMsg と endMsg の間の番号のうち、存在しなかったメッセージの番号</li></ul>An empty collection is returned if all messages are found.|
 
 
 #### 例題
@@ -1123,10 +1123,10 @@ ID = 1のメッセージを取得します:
 
 ```4d
  var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+ var $transporter : 4D.IMAPTransporter 
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" // 必須
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -1134,11 +1134,11 @@ ID = 1のメッセージを取得します:
   //create transporter
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  // メールボックスを選択します
  $boxInfo:=$transporter.selectBox("INBOX")
 
   If($boxInfo.mailCount>0)
-        // retrieve the headers of the last 20 messages without marking them as read
+        // 直近20件のメッセージのヘッダーを、"既読" にせずに取得します
     $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
         New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
@@ -1189,14 +1189,14 @@ ID = 1のメッセージを取得します:
 
 *   **True** - メッセージは "既読" とマークされます (このメッセージが読まれたことを表します)
 *   **False** - メッセージの "既読" ステータスは変化しません。
-> * *msgNumber* または *msgID* 引数が存在しないメッセージを指定した場合、関数は空の BLOB を返します。
-> * [`.selectBox()`](#selectbox) によって選択されたメールボックスがない場合、エラーが生成されます。
+> * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
+> * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
 > * 開いている接続がない場合、`.getMIMEAsBlob()` は `.selectBox()` で最後に指定されたメールボックスへの接続を開きます。
 
 
 #### 戻り値
 
-`.getMIMEAsBlob()` は `BLOB` を返します。この BLOB はデータベースにアーカイブしたり、`MAIL Convert from MIME` コマンドを使用して [`Email` オブジェクト](EmailObjectClass.md#email-object) へと変換したりすることができます。
+`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
 
 
 #### 例題
@@ -1271,7 +1271,7 @@ ID = 1のメッセージを取得します:
 
 *destinationBox* には、メッセージの移動先メールボックスの名称をテキスト値で渡すことができます。
 
-> RFC [8474](https://tools.ietf.org/html/rfc8474) に準拠している IMAPサーバーでのみ、この関数はサポートされます。
+> This function is only supported by IMAP servers compliant with RFC [8474](https://tools.ietf.org/html/rfc8474).
 
 
 **返されるオブジェクト**
@@ -1519,11 +1519,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 #### 説明
 
-`.renameBox()` 関数は、 <!-- REF #IMAPTransporterClass.renameBox().Summary -->IMAPサーバー上でメールボックスの名称を変更します<!-- END REF -->。 存在しないメールボックスの名称を変更しようとしたり、すでに使われているメールボックス名に変更しようとしたりすると、エラーが生成されます。
+`.renameBox()` 関数は、 <!-- REF #IMAPTransporterClass.renameBox().Summary -->IMAPサーバー上でメールボックスの名称を変更します<!-- END REF -->。 Attempting to rename a mailbox from a mailbox name that does not exist or to a mailbox name that already exists will generate an error.
 
-`currentName` には、名称変更するメールボックスの名前を渡します。
+In the `currentName` parameter, pass the name of the mailbox to be renamed.
 
-メールボックスの新しい名称は `newName` に渡します。
+Pass the new name for the mailbox in the `newName` parameter.
 
 
 **返されるオブジェクト**
@@ -1542,7 +1542,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 #### 例題
 
-“Invoices” メールボックスを “Bills” に名称変更します:
+To to rename your “Invoices” mailbox to “Bills”:
 
 ```4d
 var $pw : text
@@ -1550,7 +1550,7 @@ var $options; $transporter; $status : object
 
 $options:=New object
 
-$pw:=Request("パスワードを入力してください:")
+$pw:=Request("Please enter your password:")
 
 If(OK=1) $options.host:="imap.gmail.com"
 $options.user:="test@gmail.com"
@@ -1558,13 +1558,13 @@ $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// メールボックスの名称変更
+// rename mailbox
 $status:=$transporter.renameBox("Invoices"; "Bills")
 
 If ($status.success)
-   ALERT("メールボックスの名称が変更されました。")
+   ALERT("Mailbox renaming successful!")
    Else
-   ALERT("エラー: "+$status.statusText)
+   ALERT("Error: "+$status.statusText)
  End if
 End if
 ```
@@ -1602,7 +1602,7 @@ End if
 
 #### 説明
 
-> この関数は、[IMAP プロトコル](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol) の仕様に基づいています。
+> This function is based upon the specification for the [IMAP protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
 `.searchMails()` 関数は、 <!-- REF #IMAPTransporterClass.searchMails().Summary -->カレントメールボックスにおいて *searchCriteria* の検索条件に合致するメッセージを検索します<!-- END REF -->。 *searchCriteria* 引数には、一つ以上の検索キーを格納します。
 
@@ -1738,9 +1738,9 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 `.selectBox()` 関数は、 <!-- REF #IMAPTransporterClass.selectBox().Summary -->`name` に指定したメールボックスをカレントメールボックスとして選択します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
 > カレントメールボックスを変更せずに、メールボックスから情報を取得するには、[`.getBoxInfo()`](#getboxinfo) を使用します。
 
-`name` には、アクセスするメールボックスの名前を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。
+In the `name` parameter, pass the name of the mailbox to access. この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。
 
-任意の `state` 引数を渡すと、メールボックスへのアクセスタイプを定義できます。 取りうる値は以下の通りです:
+The optional `state` parameter defines the type of access to the mailbox. 取りうる値は以下の通りです:
 
 | 定数                    | 結果 | 説明                                                                         |
 | --------------------- | -- | -------------------------------------------------------------------------- |
@@ -1802,9 +1802,9 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 #### 説明
 
-`.subscribe()` 関数は、 <!-- REF #IMAPTransporterClass.subscribe().Summary -->IMAPサーバーの購読メールボックスとして任意のメールボックスを追加・削除します<!-- END REF -->。 利用可能なメールボックスが大量にある場合、すべてを取得するのを避けるため、確認したいメールボックスだけを購読することができます。
+`.subscribe()` 関数は、 <!-- REF #IMAPTransporterClass.subscribe().Summary -->IMAPサーバーの購読メールボックスとして任意のメールボックスを追加・削除します<!-- END REF -->。 As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.
 
-`name` には、購読するメールボックスの名前を渡します。
+In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
 
 **返されるオブジェクト**
 
@@ -1823,7 +1823,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 #### 例題
 
-"Bills" 階層下の "Atlas Corp” メールボックスを購読します:
+To subscribe to the "Atlas Corp” mailbox in the "Bills" hierarchy:
 
 ```4d
 var $pw; $name : text
@@ -1831,7 +1831,7 @@ var $options; $transporter; $status : object
 
 $options:=New object
 
-$pw:=Request("パスワードを入力してください:")
+$pw:=Request("Please enter your password:")
 
 If(OK=1) $options.host:="imap.gmail.com"
 $options.user:="test@gmail.com"
@@ -1843,9 +1843,9 @@ $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
 $status:=$transporter.subscribe($name)
 
 If ($status.success)
-   ALERT("メールボックスの購読に成功しました。")
+   ALERT("Mailbox subscription successful!")
    Else
-   ALERT("エラー: "+$status.statusText)
+   ALERT("Error: "+$status.statusText)
    End if
 End if
 ```
@@ -1875,9 +1875,9 @@ End if
 
 #### 説明
 
-`.unsubscribe()` 関数は、 <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->指定したメールボックスを購読メールボックスから削除します<!-- END REF -->。 これにより、確認するメールボックスの数を減らせます。
+`.unsubscribe()` 関数は、 <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->指定したメールボックスを購読メールボックスから削除します<!-- END REF -->。 This allows you reduce the number of mailboxes you usually see.
 
-`name` には、購読を解除するメールボックスの名前を渡します。
+In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
 
 **返されるオブジェクト**
 
@@ -1896,7 +1896,7 @@ End if
 
 #### 例題
 
-"Bills" 階層下の "Atlas Corp” メールボックスの購読を解除します:
+To unsubscribe from the "Atlas Corp” mailbox in the "Bills" hierarchy:
 
 ```4d
 var $pw; $name : text
@@ -1904,7 +1904,7 @@ var $options; $transporter; $status : object
 
 $options:=New object
 
-$pw:=Request("パスワードを入力してください:")
+$pw:=Request("Please enter your password:")
 
 If(OK=1) $options.host:="imap.gmail.com"
 $options.user:="test@gmail.com"
@@ -1916,9 +1916,9 @@ $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
 $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
-   ALERT("メールボックスの購読を解除しました。")
+   ALERT("Mailbox unsubscription successful!")
    Else
-   ALERT("エラー: "+$status.statusText)
+   ALERT("Error: "+$status.statusText)
    End if
 End if
 ```
@@ -1933,3 +1933,11 @@ End if
 
 
 <style> h2 { background: #d9ebff;}</style>
+
+
+
+
+
+
+
+
