@@ -68,7 +68,7 @@ Une collection est initialisée avec :
 
 
 
-## Nouvelle collection
+## `Nouvelle collection`
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -147,7 +147,7 @@ You create a new collection and then add a new element:
 
 
 
-## Nouvelle collection partagée
+## `Nouvelle collection partagée`
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -1310,7 +1310,6 @@ Optionally, you can pass the index of collection from which to start the search 
 
 #### Exemple
 
-
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1558,6 +1557,7 @@ The `.length` property <!-- REF #collection.length.Summary -->returns the number
 The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
 
 #### Exemple
+
 
 ```4d
  var $col : Collection //$col.length initialized to 0
@@ -2327,6 +2327,7 @@ In *index*, pass the position where you want the element to be removed from the 
 *   If the calculated value > the length of the collection, *index* is set to the length.
 
 In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+
 
 
 If you try to remove an element from an empty collection, the method does nothing (no error is generated).
