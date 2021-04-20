@@ -599,9 +599,9 @@ $result:=$sel[0].lock() //動作しません
 3.  数値
 4.  日付
 
-You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
+*attributePath* がオブジェクト内のパスの場合、`[]` を使ってコレクションを指定できます (例題参照)。
 
-デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
+デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、*option* に `dk diacritical` 定数を渡します。
 
 以下の場合には、エラーが返されます:
 
@@ -610,14 +610,14 @@ You can use the `[]` notation to designate a collection when *attributePath* is 
 
 #### 例題
 
-You want to get a collection containing a single element per country name:
+国名ごとに重複しない要素を格納するコレクションを取得します:
 
 ```4d
  var $countries : Collection
  $countries:=ds.Employee.all().distinct("address.country")
 ```
 
-`nicknames` is a collection and `extra` is an object attribute:
+`extra` がオブジェクト属性で、`nicknames` がコレクションの場合:
 
 ```4d
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
@@ -650,7 +650,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 #### 説明
 
 `.drop()` 関数は、 <!-- REF #EntitySelectionClass.drop().Summary -->データストアのデータクラスに対応するテーブルから、エンティティセレクションに所属しているエンティティを削除します<!-- END REF -->。 エンティティセレクションはメモリ内に残ります。
-> Removing entities is permanent and cannot be undone. It is recommended to call this action in a transaction in order to have a rollback option.
+> エンティティの削除は恒久的なものであり、取り消しはできません。 ロールバックで戻すことができるように、この関数はトランザクション内で呼び出すことが推奨されています。
 
 If a locked entity is encountered during the execution of `.drop()`, it is not removed. By default, the method processes all entities of the entity selection and returns non-droppable entities in the entity selection. If you want the method to stop execution at the first encountered non-droppable entity, pass the `dk stop dropping on first error` constant in the *mode* parameter.
 
