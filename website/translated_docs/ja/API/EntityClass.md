@@ -1169,52 +1169,52 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 *mode* 引数を渡さなかった場合のデフォルトでは、いずれの属性に関わらず同エンティティが他のプロセスまたはユーザーによって変更されていた場合にエラーを返します (以下参照)。
 
-Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. The resulting data saved in the entity will be the combination (the "merge") of all non-concurrent modifications (if modifications were applied to the same attribute, the save fails and an error is returned, even with the auto merge mode).
-> The automatic merge mode is not available for attributes of Picture, Object, and Text type when stored outside of the record. Concurrent changes in these attributes will result in a `dk status stamp has changed` error.
+*mode* に `dk auto merge` オプションを渡すと自動マージモードが有効化され、別のプロセス/ユーザーが同エンティティに対して同時に変更をおこなっていても、異なる属性に対する変更であればエラーは生成されません。 エンティティに保存されるデータは、別々の変更処理の組み合わせ ("マージ (併合)") になります (同じ属性に対して変更がおこなわれた場合には、自動マージモードであっても保存は失敗し、エラーが返されます)。
+> ピクチャー・オブジェクト・テキスト型属性で、データを外部保存にしている場合には、自動マージモードは利用できません。 これらの属性に同時の変更があった場合には `dk status stamp has changed` エラーになります。
 
 **戻り値**
 
-The object returned by `.save()` contains the following properties:
+`.save()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ        |                    | タイプ           | 説明                                                                                                                      |
-| ------------ | ------------------ | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| success      |                    | boolean       | True if the save action is successful, False otherwise.                                                                 |
-|              |                    |               | ***Available only if `dk auto merge` option is used***:                                                                 |
-| autoMerged   |                    | boolean       | True if an auto merge was done, False otherwise.                                                                        |
-|              |                    |               | ***エラーの場合にのみ利用可能***:                                                                                                    |
-| status       |                    | number        | Error code, [see below](#status-and-statustext)                                                                         |
-| statusText   |                    | text          | Description of the error, [see below](#status-and-statustext)                                                           |
-|              |                    |               | ***Available only in case of pessimistic lock error***:                                                                 |
-| lockKindText |                    | text          | "Locked by record"                                                                                                      |
-| lockInfo     |                    | object        | ロック元についての情報                                                                                                             |
-|              | task_id            | number        | プロセスID                                                                                                                  |
-|              | user_name          | text          | マシン上でのセッションユーザー名                                                                                                        |
-|              | user4d_id          | text          | 4Dデータベースディレクトリでのユーザー名                                                                                                   |
-|              | host_name          | text          | マシン名                                                                                                                    |
-|              | task_name          | text          | プロセス名                                                                                                                   |
-|              | client_version     | text          |                                                                                                                         |
-|              |                    |               | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
-| errors       |                    | オブジェクトのコレクション |                                                                                                                         |
-|              | message            | text          | エラーメッセージ                                                                                                                |
-|              | componentSignature | text          | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
-|              | errCode            | number        | エラーコード                                                                                                                  |
+| プロパティ        |                    | タイプ           | 説明                                                                       |
+| ------------ | ------------------ | ------------- | ------------------------------------------------------------------------ |
+| success      |                    | boolean       | 保存に成功した場合には true、それ以外は false                                             |
+|              |                    |               | ***`dk auto merge` オプションが使用されていた場合にのみ利用可能***:                            |
+| autoMerged   |                    | boolean       | 自動マージが実行された場合には true、それ以外は false                                         |
+|              |                    |               | ***エラーの場合にのみ利用可能***:                                                     |
+| status       |                    | number        | エラーコード、[以下参照](#status-と-statustext)                                      |
+| statusText   |                    | text          | エラーの詳細、[以下参照](#status-と-statustext)                                      |
+|              |                    |               | ***ペシミスティック・ロックエラーの場合にのみ利用可能***:                                         |
+| lockKindText |                    | text          | "Locked by record"                                                       |
+| lockInfo     |                    | object        | ロック元についての情報                                                              |
+|              | task_id            | number        | プロセスID                                                                   |
+|              | user_name          | text          | マシン上でのセッションユーザー名                                                         |
+|              | user4d_id          | text          | 4Dデータベースディレクトリでのユーザー名                                                    |
+|              | host_name          | text          | マシン名                                                                     |
+|              | task_name          | text          | プロセス名                                                                    |
+|              | client_version     | text          |                                                                          |
+|              |                    |               | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
+| errors       |                    | オブジェクトのコレクション |                                                                          |
+|              | message            | text          | エラーメッセージ                                                                 |
+|              | componentSignature | text          | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|              | errCode            | number        | エラーコード                                                                   |
 
-##### status and statusText
+##### status と statusText
 
-The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
+エラー時には Result オブジェクトの `status` あるいは `statusText` プロパティに以下のいずれかの値が返されます:
 
-| 定数                                        | 結果 | 説明                                                                                                                                                                                                         |
-| ----------------------------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6  | (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity.<p><p>**Associated statusText**: "Auto merge failed" |
-| `dk status entity does not exist anymore` | 5  | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>**Associated statusText**: "Entity doesnot exist anymore"                             |
-| `dk status locked`                        | 3  | エンティティはペシミスティック・ロックでロックされています。<p><p>**割り当てられた statusText**: "既にロックされています"                                                                                  |
-| `dk status serious error`                 | 4  | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<p><p>**割り当てられた statusText**: "その他のエラー"                                                                    |
-| `dk status stamp has changed`             | 2  | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br>**割り当てられた statusText**: "スタンプが変更されています"   |
+| 定数                                        | 結果 | 説明                                                                                                                                                                                                       |
+| ----------------------------------------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status automerge failed`              | 6  | (`dk auto merge` オプションが使用されたときのみ) エンティティを保存するときに自動マージオプションが失敗しました。<p><p>**割り当てられた statusText**: "自動マージ失敗"                                                |
+| `dk status entity does not exist anymore` | 5  | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br>**割り当てられた statusText**: "エンティティはもう存在しません"                                           |
+| `dk status locked`                        | 3  | エンティティはペシミスティック・ロックでロックされています。<p><p>**割り当てられた statusText**: "既にロックされています"                                                                                |
+| `dk status serious error`                 | 4  | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<p><p>**割り当てられた statusText**: "その他のエラー"                                                                  |
+| `dk status stamp has changed`             | 2  | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br>**割り当てられた statusText**: "スタンプが変更されています" |
 
 
 #### 例題 1
 
-Creating a new entity:
+新しいエンティティを作成します:
 
 ```4d
  var $status : Object
@@ -1224,13 +1224,13 @@ Creating a new entity:
  $employee.lastName:="Smith"
  $status:=$employee.save()
  If($status.success)
-    ALERT("Employee created")
+    ALERT("Employee が作成されました")
  End if
 ```
 
 #### 例題 2
 
-Updating an entity without `dk auto merge` option:
+`dk auto merge` オプションを使わずにエンティティを更新します:
 
 ```4d
  var $status : Object
@@ -1242,7 +1242,7 @@ Updating an entity without `dk auto merge` option:
  $status:=$employee.save()
  Case of
     :($status.success)
-       ALERT("Employee updated")
+       ALERT("Employee が更新されました")
     :($status.status=dk status stamp has changed)
        ALERT($status.statusText)
  End case
@@ -1250,7 +1250,7 @@ Updating an entity without `dk auto merge` option:
 
 #### 例題 3
 
-Updating an entity with `dk auto merge` option:
+`dk auto merge` オプションを使ってエンティティを更新します:
 
 ```4d
  var $status : Object
@@ -1264,7 +1264,7 @@ Updating an entity with `dk auto merge` option:
  $status:=$employee.save(dk auto merge)
  Case of
     :($status.success)
-       ALERT("Employee updated")
+       ALERT("Employee を更新しました")
     :($status.status=dk status automerge failed)
        ALERT($status.statusText)
  End case
@@ -1298,9 +1298,9 @@ Updating an entity with `dk auto merge` option:
 
 #### 説明
 
-`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 Property names in the object match attribute names of the entity.
+`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルトされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
 
-If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
+*filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
 *   all storage entity attributes
 *   attributes of the `relatedEntity` [kind](DataClassAttributeClass.md#kind): you get a property with the same name as the related entity (name of the many-to-one link). 属性は単純な形式で取得されます。
