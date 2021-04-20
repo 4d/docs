@@ -162,9 +162,9 @@ $result:=$sel[0].lock() //動作しません
 *   *attributeName* で指定した属性がリレートエンティティズ型の場合: `.attributeName` は *attributeName* と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
 
-エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 In this case, if no entities are returned, the result is an empty entity selection.
+エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションです。
 
-If the attribute does not exist in the entity selection, an error is returned.
+属性がエンティティセレクション内に存在しない場合、エラーが返されます。
 
 
 
@@ -173,16 +173,16 @@ If the attribute does not exist in the entity selection, an error is returned.
 
 #### 例題 1
 
-Projection of storage values:
+ストレージ値の投影:
 
 
 ```4d
  var $firstNames : Collection
  $entitySelection:=ds.Employee.all()
- $firstNames:=$entitySelection.firstName // firstName type is string
+ $firstNames:=$entitySelection.firstName // firstName は文字列型です
 ```
 
-The resulting collection is a collection of strings, for example:
+返されるのは文字列のコレクションとなります。例:
 
 ```4d
 [
@@ -194,26 +194,26 @@ The resulting collection is a collection of strings, for example:
 
 #### 例題 2
 
-Projection of related entity:
+リレートエンティティの投影:
 
 ```4d
  var $es; $entitySelection : cs.EmployeeSelection
  $entitySelection:=ds.Employee.all()
- $es:=$entitySelection.employer // employer is related to a Company dataClass
+ $es:=$entitySelection.employer // employer は Companyデータクラスにリレートされています
 ```
 
-The resulting object is an entity selection of Company with duplications removed (if any).
+返されるオブジェクトは、重複してるもの (あれば) を取り除いた、Company のエンティティセレクションです。
 
 #### 例題 3
 
-Projection of related entities:
+リレートエンティティズの投影:
 
 ```4d
  var $es : cs.EmployeeSelection
- $es:=ds.Employee.all().directReports // directReports is related to Employee dataclass
+ $es:=ds.Employee.all().directReports // directReports は Employee データクラスにリレートされています
 ```
 
-The resulting object is an entity selection of Employee with duplications removed (if any).
+返されるオブジェクトは、重複してるもの (あれば) を取り除いた、Employee のエンティティセレクションです。
 
 <!-- END REF -->
 
@@ -245,34 +245,35 @@ The resulting object is an entity selection of Employee with duplications remove
 #### 説明
 
 `.add()` 関数は、 <!-- REF #EntitySelectionClass.add().Summary -->*entity* に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->。
-> This function modifies the original entity selection.
+> このコマンドは、元のエンティティセレクションを変更します。
 
-**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
+**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 
-*   If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
-*   If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
+*   エンティティセレクションが順列ありの場合、*entity* 引数のエンティティはセレクションの最後に追加されます。 同じエンティティへの参照がそのエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
+*   エンティティセレクションが順列なしの場合、*entity* 引数のエンティティはセレクションの不特定の場所へ追加され、順番付けはされません。
 > 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
-The modified entity selection is returned by the function, so that function calls can be chained.
+編集されたエンティティセレクションが関数から返されるため、関数の呼び出しをつなげることができます。
 
-An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
+*entity* 引数のエンティティとエンティティセレクションが同じデータクラスに属していない場合、エラーが発生します。 追加するエンティティが Null であった場合には、エラーは発生しません。
 
 #### 例題 1
 
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@")
+ $employees:=ds.Employee.query("lastName = :1";"S@") // 共有可能なエンティティセレクションです
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //The $employee entity is added to the $employees entity selection
+ $employees:=$employees.copy() // 追加可能なエンティティセレクションを取得します
+ $employees.add($employee) // $employee エンティティが $employees エンティティセレクションへと追加されます
 ```
 
 #### 例題 2
 
-Calls to the function can be chained:
+関数の呼び出しをつないでいくことができます:
 
 ```4d
  var $sel : cs.ProductSelection
@@ -282,6 +283,7 @@ Calls to the function can be chained:
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
  $sel:=ds.Product.query("ID > 50")
+ $sel:=$sel.copy()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
