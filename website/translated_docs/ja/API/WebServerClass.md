@@ -59,10 +59,10 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 ## WEB Server
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                           |
-| ------ | ---------------------------- |
-| v18 R3 | 追加                           |
-| v19    | .sessionCookieSameSite をサポート |
+| バージョン  | 内容                                 |
+| ------ | ---------------------------------- |
+| v18 R3 | 追加                                 |
+| v19    | support for .sessionCookieSameSite |
 
 </details>
 
