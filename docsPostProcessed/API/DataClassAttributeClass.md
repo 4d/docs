@@ -12,7 +12,7 @@ Dataclass attributes are available as properties of their respective classes. Fo
 
 This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [**Entities**](EntityClass.md).
 
-`DataClassAttribute` objects have properties that you can read to get information about your dataclass attributes. 
+`DataClassAttribute` objects have properties that you can read to get information about your dataclass attributes.
 
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
@@ -20,22 +20,22 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 ||
 |---|
-|[**.autoFilled** : Boolean](#autoFilled)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains True if the attribute value is automatically filled by 4D|
-|[**.fieldNumber** : Integer](#fieldNumber)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains the internal 4D field number of the attribute |
-|[**.fieldType** : Integer](#fieldType)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains the 4D database type of the attribute |
+|[**.autoFilled** : Boolean](#autofilled)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains True if the attribute value is automatically filled by 4D|
+|[**.fieldNumber** : Integer](#fieldnumber)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains the internal 4D field number of the attribute |
+|[**.fieldType** : Integer](#fieldtype)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains the 4D database type of the attribute |
 |[**.indexed** : Boolean](#indexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains **True** if there is a B-tree or a Cluster B-tree index on the attribute |
-|[**.inverseName** : Text](#inverseName)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the attribute which is at the other side of the relation |
-|[**.keyWordIndexed** : Boolean](#keyWordIndexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains **True** if there is a keyword index on the attribute |
+|[**.inverseName** : Text](#inversename)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the attribute which is at the other side of the relation |
+|[**.keyWordIndexed** : Boolean](#keywordindexed)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains **True** if there is a keyword index on the attribute |
 |[**.kind** : Text](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the category of the attribute |
 |[**.mandatory** : Boolean](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains True if Null value input is rejected for the attribute |
 |[**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the `dataClassAttribute` object as string |
-|[**.relatedDataClass** : Text](#relatedDataClass)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the dataclass related to the attribute |
+|[**.relatedDataClass** : Text](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the name of the dataclass related to the attribute |
 |[**.type** : Text](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains the conceptual value type of the attribute |
 |[**.unique** : Boolean](#unique)<p>&nbsp;&nbsp;&nbsp;&nbsp;contains True if the attribute value must be unique |
 
 
 
-## .autoFilled 
+## .autoFilled
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -55,14 +55,14 @@ The `.autoFilled` property contains True if the attribute value is automatically
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
->For generic programming, you can use **Bool**(dataClassAttribute.autoFilled) to get a valid value (false) even if `.autoFilled` is not returned. 
+>For generic programming, you can use **Bool**(dataClassAttribute.autoFilled) to get a valid value (false) even if `.autoFilled` is not returned.
 
 
 
 
 
 
-## .fieldNumber 
+## .fieldNumber
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -75,11 +75,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 #### Description
 
-The `.fieldNumber` property contains the internal 4D field number of the attribute. 
+The `.fieldNumber` property contains the internal 4D field number of the attribute.
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
->For generic programming, you can use **Num**(dataClassAttribute.fieldNumber) to get a valid value (0) even if `.fieldNumber` is not returned. 
+>For generic programming, you can use **Num**(dataClassAttribute.fieldNumber) to get a valid value (0) even if `.fieldNumber` is not returned.
 
 
 
@@ -129,7 +129,7 @@ The `.indexed` property contains **True** if there is a B-tree or a Cluster B-tr
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
->For generic programming, you can use **Bool**(dataClassAttribute.indexed) to get a valid value (false) even if `.indexed` is not returned. 
+>For generic programming, you can use **Bool**(dataClassAttribute.indexed) to get a valid value (false) even if `.indexed` is not returned.
 
 
 
@@ -175,7 +175,7 @@ The `.keyWordIndexed` property contains **True** if there is a keyword index on 
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
 
->For generic programming, you can use **Bool**(dataClassAttribute.keyWordIndexed) to get a valid value (false) even if `.keyWordIndexed` is not returned. 
+>For generic programming, you can use **Bool**(dataClassAttribute.keyWordIndexed) to get a valid value (false) even if `.keyWordIndexed` is not returned.
 
 
 
@@ -231,13 +231,13 @@ Given the following table and relation:
 
 #### Description
 
-The `.mandatory` property contains True if Null value input is rejected for the attribute. 
+The `.mandatory` property contains True if Null value input is rejected for the attribute.
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
 
->For generic programming, you can use **Bool**(dataClassAttribute.mandatory) to get a valid value (false) even if `.mandatory` is not returned. 
+>For generic programming, you can use **Bool**(dataClassAttribute.mandatory) to get a valid value (false) even if `.mandatory` is not returned.
 
->**Warning**: This property corresponds to the "Reject NULL value input" field property at the 4D database level. It is unrelated to the existing "Mandatory" property which is a data entry control option for a table. 
+>**Warning**: This property corresponds to the "Reject NULL value input" field property at the 4D database level. It is unrelated to the existing "Mandatory" property which is a data entry control option for a table.
 
 
 
@@ -256,7 +256,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 #### Description
 
-The `.name` property returns the name of the `dataClassAttribute` object as string. 
+The `.name` property returns the name of the `dataClassAttribute` object as string.
 
 #### Example
 
@@ -284,7 +284,7 @@ The `.name` property returns the name of the `dataClassAttribute` object as stri
 
 >This property is only available with attributes of the "relatedEntity" or "relatedEntities" [`.kind`](#kind) property.
 
-The `.relatedDataClass` property returns the name of the dataclass related to the attribute. 
+The `.relatedDataClass` property returns the name of the dataclass related to the attribute.
 
 #### Example
 
@@ -317,7 +317,7 @@ Given the following tables and relations:
 
 #### Description
 
-The `.type` property contains the conceptual value type of the attribute, useful for generic programming. 
+The `.type` property contains the conceptual value type of the attribute, useful for generic programming.
 
 The conceptual value type depends on the attribute [`.kind`](#kind).
 
@@ -350,7 +350,7 @@ The `.unique` property contains True if the attribute value must be unique. This
 
 This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
 
->For generic programming, you can use **Bool**(dataClassAttribute.unique) to get a valid value (false) even if `.unique` is not returned. 
+>For generic programming, you can use **Bool**(dataClassAttribute.unique) to get a valid value (false) even if `.unique` is not returned.
 
 
 <style> h2 { background: #d9ebff;}</style>

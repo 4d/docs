@@ -16,9 +16,9 @@ Attachment objects provide the following read-only properties and functions:
 |[**.cid** : Text](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp; the ID of the attachment|
 |[**.disposition** : Text](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;the value of the `Content-Disposition` header|
 |[**.getContent()** : Blob](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;returns the contents of the attachment object in a BLOB|
-|[**.name** : Text](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;the name and extension of the attachment|
-|[**.path** : Text](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;the full path of the attachment, if it exists|
-|[**.type** : Text](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;the `content-type` of the attachment file|
+|[**.name** : Text](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;the name and extension of the attachment|
+|[**.path** : Text](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;the full path of the attachment, if it exists|
+|[**.type** : Text](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;the `content-type` of the attachment file|
 
 
 ## MAIL New attachment
