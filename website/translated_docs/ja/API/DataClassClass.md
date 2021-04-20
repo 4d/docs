@@ -1,6 +1,6 @@
 ---
 id: DataClassClass
-title: データクラス
+title: DataClass
 ---
 
 
@@ -862,7 +862,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 *queryString* 引数にフォーミュラを挿入 (上記参照) する代わりに、formula オブジェクトをブール検索条件として直接渡すことができます。 トークナイズの利点を生かせる、コードが検索しやすく読みやすい、などといった面から、クエリにおけるフォーミュラオブジェクトの使用は **推奨** されています。
 
-このフォーミュラは、`Formula` または `Formula from string` コマンドによって作成されたものでなくてはなりません。 In this case:
+このフォーミュラは、`Formula` または `Formula from string` コマンドによって作成されたものでなくてはなりません。 この場合において:
 
 *   フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
 *   処理中のエンティティはフォーミュラ内において `This` で参照されます。
