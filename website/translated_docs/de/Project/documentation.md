@@ -11,7 +11,7 @@ The following project elements accept documentation:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Formulare
-- Tables and Fields
+- Tabellen und Felder
 
 Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 
@@ -37,24 +37,24 @@ All documentation files are stored in the `Documentation` folder, located at the
 
 The `Documentation` folder architecture is the following:
 
-- **Documentation**
-    + **Classes**
+- `Documentation`
+    + `Classes`
         * myClass.md
-    + **DatabaseMethods**
+    + `DatabaseMethods`
         * onStartup.md
         * ...
-    + **Formulare**
+    + `Formulare`
         * loginDial.md
         * ...
-    + **Methoden**
+    + `Methoden`
         * myMethod.md
         * ...
-    + **TableForms**
+    + `TableForms`
         * **1**
             - input.md
             - ...
         * ...
-    + **Trigger**
+    + `Trigger`
         * table1.md
         * ...
 

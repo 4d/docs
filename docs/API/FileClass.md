@@ -1,6 +1,6 @@
 ---
 id: FileClass
-title: File 
+title: File
 ---
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
@@ -34,7 +34,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |[<!-- INCLUDE #document.hidden.Syntax -->](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
 |[<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->
 |[<!-- INCLUDE #document.isFile.Syntax -->](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
-|[<!-- INCLUDE #document.isFolder.Syntax -->](#isFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
+|[<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
 |[<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
 |[<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary -->|
 |[<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
@@ -83,7 +83,7 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
 
-> Only absolute pathnames are supported with the `File` command. 
+> Only absolute pathnames are supported with the `File` command.
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
@@ -141,7 +141,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -203,6 +203,7 @@ Creation of a preferences file in the database folder:
 |---|---|
 |v17 R5|Added
 </details>
+
 
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -300,7 +301,7 @@ You want to delete a specific file in the database folder:
     $tempo.delete()
     ALERT("User preference file deleted.")
  End if
-``` 
+```
 <!-- END REF -->
 
 
@@ -342,7 +343,7 @@ You want to delete a specific file in the database folder:
 
 The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe** or **.plist** file information as an object<!-- END REF -->.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated). 
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.  
 
@@ -350,7 +351,7 @@ The function must be used with an existing .exe or .plist file. If the file does
 
 > Reading a .exe is only possible on Windows.
 
-All property values are Text. 
+All property values are Text.
 
 |Property|Type|
 |---|---|
@@ -506,7 +507,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 
-<!-- REF file.rename().Desc --> 
+<!-- REF file.rename().Desc -->
 ## .rename()
 
 <details><summary>History</summary>
@@ -573,9 +574,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated). 
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format. 
+> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
 ***info* parameter object with a .exe file**
 
@@ -594,16 +595,16 @@ Each valid property set in the *info* object parameter is written in the version
 |FileVersion|Text|
 |OriginalFilename|Text|
 
-If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified. 
+If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
 
 ***info* parameter object with a .plist file**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible. 
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
 
 If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.  
 
-> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor. 
+> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
 
 #### Example
 
@@ -613,8 +614,8 @@ var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021" 
-$info.ProductVersion:="1.0.0" 
+$info.LegalCopyright:="Copyright 4D 2021"
+$info.ProductVersion:="1.0.0"
 $exeFile.setAppInfo($info)
 ```
 
@@ -634,7 +635,7 @@ $infoPlistFile.setAppInfo($info)
 
 [.getAppInfo()](#getappinfo)
 
-<!-- REF file.setContent().Desc --> 
+<!-- REF file.setContent().Desc -->
 ## .setContent()
 
 <details><summary>History</summary>
@@ -671,7 +672,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 
-<!-- REF file.setText().Desc --> 
+<!-- REF file.setText().Desc -->
 ## .setText()
 
 
@@ -707,9 +708,9 @@ Optionally, you can designate the character set to be used for writing the conte
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
+> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM. 
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
 

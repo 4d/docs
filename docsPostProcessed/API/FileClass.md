@@ -1,6 +1,6 @@
 ---
 id: FileClass
-title: File 
+title: File
 ---
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
@@ -34,7 +34,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |[**.hidden** : Boolean](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is set as "hidden" at the system level|
 |[**.isAlias** : Boolean](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file is an alias, a shortcut, or a symbolic link
 |[**.isFile** : Boolean](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;always true for a file|
-|[**.isFolder** : Boolean](#isFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
+|[**.isFolder** : Boolean](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;always false for a file|
 |[**.isWritable** : Boolean](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;true if the file exists on disk and is writable|
 |[**.modificationDate** : Date](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;the date of the file's last modification|
 |[**.modificationTime** : Time](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;the time of the file's last modification|
@@ -79,7 +79,7 @@ The `File` command creates and returns a new object of the `4D.File` type. The c
 
 In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
 
-> Only absolute pathnames are supported with the `File` command. 
+> Only absolute pathnames are supported with the `File` command.
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
@@ -136,7 +136,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `4D.File.new()` function creates and returns a new object of the `4D.File` type. It is identical to the [`File`](#file) command (shortcut).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
 
 
 ## .copyTo()
@@ -235,6 +235,7 @@ Creation of a preferences file in the database folder:
 |---|---|
 |v17 R5|Added
 </details>
+
 
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File
 |Parameter|Type||Description|
@@ -354,7 +355,7 @@ You want to delete a specific file in the database folder:
     $tempo.delete()
     ALERT("User preference file deleted.")
  End if
-``` 
+```
 
 
 
@@ -437,7 +438,7 @@ This property is **read-only**.
 
 The `.getAppInfo()` function returns the contents of a **.exe** or **.plist** file information as an object.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated). 
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function returns an empty object (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.  
 
@@ -445,7 +446,7 @@ The function must be used with an existing .exe or .plist file. If the file does
 
 > Reading a .exe is only possible on Windows.
 
-All property values are Text. 
+All property values are Text.
 
 |Property|Type|
 |---|---|
@@ -938,7 +939,6 @@ This property is **read-only**.
 
 
 
- 
 ## .rename()
 
 <details><summary>History</summary>
@@ -995,9 +995,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function writes the *info* properties as information contents of a **.exe** or **.plist** file.
 
-The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated). 
+The function must be used with an existing .exe or .plist file. If the file does not exist on disk or is not a valid .exe or .plist file, the function does nothing (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format. 
+> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
 ***info* parameter object with a .exe file**
 
@@ -1016,16 +1016,16 @@ Each valid property set in the *info* object parameter is written in the version
 |FileVersion|Text|
 |OriginalFilename|Text|
 
-If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified. 
+If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
 
 ***info* parameter object with a .plist file**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible. 
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
 
 If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.  
 
-> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor. 
+> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
 
 #### Example
 
@@ -1035,8 +1035,8 @@ var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021" 
-$info.ProductVersion:="1.0.0" 
+$info.LegalCopyright:="Copyright 4D 2021"
+$info.ProductVersion:="1.0.0"
 $exeFile.setAppInfo($info)
 ```
 
@@ -1056,7 +1056,6 @@ $infoPlistFile.setAppInfo($info)
 
 [.getAppInfo()](#getappinfo)
 
- 
 ## .setContent()
 
 <details><summary>History</summary>
@@ -1088,7 +1087,6 @@ The `.setContent( )` function rewrites the entire content of the file using the 
 
 
 
- 
 ## .setText()
 
 
@@ -1120,9 +1118,9 @@ Optionally, you can designate the character set to be used for writing the conte
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command. 
+> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM. 
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
 

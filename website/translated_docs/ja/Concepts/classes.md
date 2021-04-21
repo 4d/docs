@@ -103,7 +103,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 - `4D` - ビルトインクラスストア
 
 
-### cs
+### `cs`
 
 #### cs -> classStore
 
@@ -121,7 +121,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 $instance:=cs.myClass.new()
 ```
 
-### 4D
+### `4D`
 
 #### 4D -> classStore
 
@@ -176,7 +176,7 @@ Class オブジェクトは [共有オブジェクト](shared.md) です。し�
 
 
 
-### Function
+### `Function`
 
 
 
@@ -320,7 +320,7 @@ $area:=$rect.getArea() //5000
 
 
 
-### Class Constructor
+### `Class Constructor`
 
 
 
@@ -337,9 +337,9 @@ Class Constructor({$parameterName : type; ...})
 
 クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。  
 
-クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (引数を指定している場合は `new()` 関数に渡します)。
+クラスコンストラクターが定義されていると、 [`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
-クラスコンストラクター関数の場合には、`Current method name` コマンドは次を返します: "*\<ClassName>:constructor*" (例: "MyClass:constructor")。
+クラスコンストラクター関数の場合には、 `Current method name` コマンドは次を返します: "*\<ClassName>:constructor*" (例: "MyClass:constructor")。
 
 
 
@@ -373,7 +373,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 
 
-### Class extends \<ClassName>
+### `Class extends <ClassName>`
 
 
 
@@ -398,7 +398,7 @@ Class extends <ParentClass>
 
 コードエディターやインタープリターは、これらのルールが破られていても検知することはできません。コンパイラーおよび "シンタックスチェック" のみがエラーを生成します。
 
-派生クラスは、[`Super`](#super) コマンドを使って親クラスのコンストラクターを呼び出すことができます。.
+派生クラスは、`Super` コマンドを使って親クラスのコンストラクターを呼び出すことができます。
 
 
 
@@ -410,14 +410,15 @@ Class extends <ParentClass>
 
 ```4d
 // クラス: Square
+
 // パス: Classes/Square.4dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
-    // 親クラスのコンストラクターを呼び出します
-    // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
+// 親クラスのコンストラクターを呼び出します
+// 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
     Super($side;$side)
 	// 派生クラスにおいては、'This' を使用するより先に
 	// Super を呼び出しておく必要があります
@@ -431,17 +432,17 @@ Class constructor ($side : Integer)
 
 
 
-### Super
+### `Super`
 
 
 
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-| 引数    | 型      |    | 説明               |
-| ----- | ------ | -- | ---------------- |
-| param | mixed  | -> | 親コンストラクターに受け渡す引数 |
-| 戻り値   | object | <- | 親オブジェクト          |
+| 引数     | 型      |    | 説明               |
+| ------ | ------ | -- | ---------------- |
+| param  | mixed  | -> | 親コンストラクターに受け渡す引数 |
+| Result | object | <- | 親オブジェクト          |
 
 
 `Super` キーワードによってスーパークラス (親クラス) を呼び出すことができます。
@@ -563,21 +564,21 @@ Function description()
 var $square : Object
 var $message : Text
 $square:=cs.Square.new()
-$message:=$square.description() // "I have 4 sides which are all equal"
+$message:=$square.description() //I have 4 sides which are all equal
 ```
 
 
 
 
-### This
+### `This`
 
 
 
 #### This -> Object
 
-| 引数  | 型      |    | 説明         |
-| --- | ------ | -- | ---------- |
-| 戻り値 | object | <- | カレントオブジェクト |
+| 引数     | 型      |    | 説明         |
+| ------ | ------ | -- | ---------- |
+| Result | object | <- | カレントオブジェクト |
 
 
 `This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) で使用することができます。
@@ -658,7 +659,7 @@ $val:=$o.f() //8
 
 
 
-### OB Class
+### `OB Class`
 
 
 
@@ -669,7 +670,7 @@ $val:=$o.f() //8
 
 
 
-### OB Instance of
+### `OB Instance of`
 
 
 

@@ -49,11 +49,11 @@ They provide the following properties and functions:
 |[**.openSSLVersion** : Text](#opensslversion)<p>&nbsp;&nbsp;&nbsp;&nbsp;version of the OpenSSL library used|
 |[**.perfectForwardSecrecy** : Boolean](#perfectforwardsecrecy)<p>&nbsp;&nbsp;&nbsp;&nbsp;PFS availability on the server|
 |[**.rootFolder** : Text](#rootfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;path of web server root folder|
-|[**.scalableSession** : Boolean](#scalableSession)<p>&nbsp;&nbsp;&nbsp;&nbsp;True if scalable sessions are used in the web server, and False otherwise|
+|[**.scalableSession** : Boolean](#scalablesession)<p>&nbsp;&nbsp;&nbsp;&nbsp;True if scalable sessions are used in the web server, and False otherwise|
 [**.sessionCookieDomain** : Text](#sessioncookiedomain)<p>&nbsp;&nbsp;&nbsp;&nbsp;"domain" field of the session cookie|
 |[**.sessionCookieName** : Text](#sessioncookiename)<p>&nbsp;&nbsp;&nbsp;&nbsp;name of the cookie used for storing the session ID|
 |[**.sessionCookiePath** : Text](#sessioncookiepath)<p>&nbsp;&nbsp;&nbsp;&nbsp;"path" field of the session cookie|
-|[**.sessionCookieSameSite** : Text](#sessionCookieSameSite)<p>&nbsp;&nbsp;&nbsp;&nbsp;"SameSite" session cookie value|
+|[**.sessionCookieSameSite** : Text](#sessioncookiesamesite)<p>&nbsp;&nbsp;&nbsp;&nbsp;"SameSite" session cookie value|
 |[**.sessionIPAddressValidation** : Boolean](#sessionipaddressvalidation)<p>&nbsp;&nbsp;&nbsp;&nbsp;IP address validation for session cookies|
 |[
 **.start**() : Object<br>**.start**( *settings* : Object ) : Object](#start)<p>&nbsp;&nbsp;&nbsp;&nbsp;starts the web server on which it is applied|
@@ -599,7 +599,7 @@ The "SameSite" session cookie value. Possible values (using constants):
 |---|---|---|
 |Web SameSite Strict|"Strict"|*Default value* - Cookies are only sent in a first-party context|
 |Web SameSite Lax|"Lax"|Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link).|
-|Web SameSite None|"None"|Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. 
+|Web SameSite None|"None"|Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests.
 
 See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) description for detailed information.
 

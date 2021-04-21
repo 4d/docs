@@ -19,7 +19,7 @@ The following properties and functions from the [File](FileClass.md) class are a
 |[**.hidden** : Boolean](FileClass.md#hidden)||
 |[**.isAlias** : Boolean](FileClass.md#isalias)||
 |[**.isFile** : Boolean](FileClass.md#isfile)||
-|[**.isFolder** : Boolean](FileClass.md#ifFolder)||
+|[**.isFolder** : Boolean](FileClass.md#isfolder)||
 |[**.isWritable** : Boolean](FileClass.md#iswritable)|Always false with ZIP archive|
 |[**.modificationDate** : Date](FileClass.md#modificationdate)||
 |[**.modificationTime** : Time](FileClass.md#modificationtime)||

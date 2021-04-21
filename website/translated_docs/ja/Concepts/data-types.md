@@ -10,22 +10,22 @@ title: データタイプの概要
 | データタイプ                                | データベース  | ランゲージ   | [`var` 宣言](variables.md#using-the-var-keyword) | [`C_` または `ARRAY` 宣言](variables.md#using-a-c_-directive) |
 | ------------------------------------- | ------- | ------- | ---------------------------------------------- | -------------------------------------------------------- |
 | [文字列](dt_string.md)                   | ◯       | テキストに変換 | -                                              | -                                                        |
-| [テキスト](Concepts/dt_string.md)         | ◯       | ◯       | テキスト                                           | `C_TEXT`, `ARRAY TEXT`                                   |
-| [日付](Concepts/dt_date.md)             | ◯       | ◯       | 日付                                             | `C_DATE`, `ARRAY DATE`                                   |
-| [時間](Concepts/dt_time.md)             | ◯       | ◯       | 時間                                             | `C_TIME`, `ARRAY TIME`                                   |
-| [ブール](Concepts/dt_boolean.md)         | ◯       | ◯       | ブール                                            | `C_BOOLEAN`, `ARRAY BOOLEAN`                             |
-| [整数](Concepts/dt_number.md)           | ◯       | 倍長整数に変換 | 整数                                             | `ARRAY INTEGER`                                          |
-| [倍長整数](Concepts/dt_number.md)         | ◯       | ◯       | 整数                                             | `C_LONGINT`, `ARRAY LONGINT`                             |
+| [テキスト](Concepts/dt_string.md)         | ◯       | ◯       | `テキスト`                                         | `C_TEXT`, `ARRAY TEXT`                                   |
+| [日付](Concepts/dt_date.md)             | ◯       | ◯       | `日付`                                           | `C_DATE`, `ARRAY DATE`                                   |
+| [時間](Concepts/dt_time.md)             | ◯       | ◯       | `時間`                                           | `C_TIME`, `ARRAY TIME`                                   |
+| [ブール](Concepts/dt_boolean.md)         | ◯       | ◯       | `ブール`                                          | `C_BOOLEAN`, `ARRAY BOOLEAN`                             |
+| [整数](Concepts/dt_number.md)           | ◯       | 倍長整数に変換 | `整数`                                           | `ARRAY INTEGER`                                          |
+| [倍長整数](Concepts/dt_number.md)         | ◯       | ◯       | `整数`                                           | `C_LONGINT`, `ARRAY LONGINT`                             |
 | [64ビット整数](Concepts/dt_number.md)      | ◯ (SQL) | 実数に変換   | -                                              | -                                                        |
-| [実数](Concepts/dt_number.md)           | ◯       | ◯       | 実数                                             | `C_REAL`, `ARRAY REAL`                                   |
+| [実数](Concepts/dt_number.md)           | ◯       | ◯       | `実数`                                           | `C_REAL`, `ARRAY REAL`                                   |
 | [未定義](Concepts/dt_null_undefined.md)  | -       | ◯       | -                                              | -                                                        |
 | [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                                              | -                                                        |
-| [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | ポインター                                          | `C_POINTER`, `ARRAY POINTER`                             |
-| [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | ピクチャー                                          | `C_PICTURE`, `ARRAY PICTURE`                             |
-| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | BLOB                                           | `C_BLOB`, `ARRAY BLOB`                                   |
-| [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | オブジェクト                                         | `C_OBJECT`, `ARRAY OBJECT`                               |
-| [コレクション](Concepts/dt_collection.md)   | -       | ◯       | コレクション                                         | `C_COLLECTION`                                           |
-| [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | バリアント                                          | `C_VARIANT`                                              |
+| [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | `ポインター`                                        | `C_POINTER`, `ARRAY POINTER`                             |
+| [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | `ピクチャー`                                        | `C_PICTURE`, `ARRAY PICTURE`                             |
+| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `BLOB`                                         | `C_BLOB`, `ARRAY BLOB`                                   |
+| [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | `オブジェクト`                                       | `C_OBJECT`, `ARRAY OBJECT`                               |
+| [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `コレクション`                                       | `C_COLLECTION`                                           |
+| [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | `バリアント`                                        | `C_VARIANT`                                              |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
@@ -71,11 +71,11 @@ title: データタイプの概要
 
 | データタイプ  | 文字列に変換 | 数値に変換 | 日付に変換 | 時間に変換 | ブールに変換 |
 | ------- | ------ | ----- | ----- | ----- | ------ |
-| 文字列 (1) |        | Num   | 日付    | 時間    | Bool   |
-| 数値 (2)  | 文字列    |       |       |       | Bool   |
-| 日付      | 文字列    |       |       |       | Bool   |
-| 時間      | 文字列    |       |       |       | Bool   |
-| ブール     |        | Num   |       |       |        |
+| 文字列 (1) |        | `Num` | `日付`  | `時間`  | `Bool` |
+| 数値 (2)  | `文字列`  |       |       |       | `Bool` |
+| 日付      | `文字列`  |       |       |       | `Bool` |
+| 時間      | `文字列`  |       |       |       | `Bool` |
+| ブール     |        | `Num` |       |       |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
 
