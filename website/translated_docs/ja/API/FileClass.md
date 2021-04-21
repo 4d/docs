@@ -14,7 +14,7 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-### File オブジェクト
+### File object
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -35,7 +35,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->
 |
 | [<!-- INCLUDE #document.isFile.Syntax -->](#isfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
-| [<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
+| [<!-- INCLUDE #document.isFolder.Syntax -->](#isFolder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
 | [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
 | [<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary -->|
 | [<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
@@ -113,7 +113,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 | HTTP debug log file               | 9  | Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                              |
 | HTTP log file                     | 8  | Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.                                                                                                                                                                                                                                                                                                              |
 | IMAP Log file                     | 23 | Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                           |
-| Last backup file                  | 2  | 任意の場所に格納されている、最終バックアップファイル (名称は: \<applicationName>[bkpNum].4BK)                                                                                                                                                                                                                                                                                                                                        |
+| Last backup file                  | 2  | Last backup file, named \<applicationName>[bkpNum].4BK, stored at a custom location.                                                                                                                                                                                                                                                                                                                    |
 | Last journal integration log file | 22 | Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred                                                                                                                                                                                            |
 | Repair log file                   | 7  | Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Stored in the Logs folder.                                                                                                                                                                                                                                                                               |
 | Request log file                  | 10 | Standard client/server request log file (excluding Web requests) created by the `SET DATABASE PARAMETER(4D Server log recording)` or `SET DATABASE PARAMETER(Client log recording)` commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
@@ -142,7 +142,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 `4D.File.new()` 関数は、 <!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`File`](#file) command (shortcut).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`. 
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -204,7 +204,6 @@ Creation of a preferences file in the database folder:
 | ------ | -- |
 | v17 R5 | 追加 |
 </details>
-
 
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -301,7 +300,7 @@ You want to delete a specific file in the database folder:
     $tempo.delete()
     ALERT("User preference file deleted.")
  End if
-```
+``` 
 <!-- END REF -->
 
 
@@ -507,7 +506,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 
-<!-- REF file.rename().Desc -->
+<!-- REF file.rename().Desc --> 
 ## .rename()
 
 <details><summary>履歴</summary>
@@ -614,8 +613,8 @@ var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021"
-$info.ProductVersion:="1.0.0"
+$info.LegalCopyright:="Copyright 4D 2021" 
+$info.ProductVersion:="1.0.0" 
 $exeFile.setAppInfo($info)
 ```
 
@@ -635,7 +634,7 @@ $infoPlistFile.setAppInfo($info)
 
 [.getAppInfo()](#getappinfo)
 
-<!-- REF file.setContent().Desc -->
+<!-- REF file.setContent().Desc --> 
 ## .setContent()
 
 <details><summary>履歴</summary>
@@ -672,7 +671,7 @@ $infoPlistFile.setAppInfo($info)
 
 
 
-<!-- REF file.setText().Desc -->
+<!-- REF file.setText().Desc --> 
 ## .setText()
 
 
@@ -716,13 +715,13 @@ If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the 
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
 
-| 定数                            | 結果 | 説明                                                                                                        |
-| ----------------------------- | -- | --------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0  | No processing                                                                                             |
-| `Document with native format` | 1  | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2  | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                           |
-| `Document with CR`            | 3  | Line breaks are converted to OS X format: CR (carriage return)                                            |
-| `Document with LF`            | 4  | Line breaks are converted to Unix format: LF (line feed)                                                  |
+| 定数                            | 結果 | 説明                                                                                                                                                             |
+| ----------------------------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0  | No processing                                                                                                                                                  |
+| `Document with native format` | 1  | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows |
+| `Document with CRLF`          | 2  | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                |
+| `Document with CR`            | 3  | Line breaks are converted to OS X format: CR (carriage return)                                                                                                 |
+| `Document with LF`            | 4  | Line breaks are converted to Unix format: LF (line feed)                                                                                                       |
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
