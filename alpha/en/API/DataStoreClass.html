@@ -84,7 +84,7 @@
 <tr><td><a href="#getrequestlog"><strong>.getRequestLog()</strong> : Collection</a><p>    returns the ORDA requests logged in memory on the client side</td></tr>
 <tr><td><a href="#makeselectionsalterable"><strong>.makeSelectionsAlterable()</strong></a><p>    sets all entity selections as alterable by default in the current application datastores</td></tr>
 <tr><td><a href="#providedatakey"><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object </a><p>    allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data</td></tr>
-<tr><td><a href="#setAdminProtection"><strong>.setAdminProtection</strong>( <em>status</em> : Boolean )</a><p>    allows disabling any data access on the <a href="/docs/alpha/en/Admin/webAdmin.html#http-port">web admin port</a>, including for the <a href="/docs/alpha/en/Admin/dataExplorer.html">Data Explorer</a> in <code>WebAdmin</code> sessions</td></tr>
+<tr><td><a href="#setadminprotection"><strong>.setAdminProtection</strong>( <em>status</em> : Boolean )</a><p>    allows disabling any data access on the <a href="/docs/alpha/en/Admin/webAdmin.html#http-port">web admin port</a>, including for the <a href="/docs/alpha/en/Admin/dataExplorer.html">Data Explorer</a> in <code>WebAdmin</code> sessions</td></tr>
 <tr><td><a href="#startrequestlog"><strong>.startRequestLog</strong>()<br><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</a><p>    starts the logging of ORDA requests on the client side</td></tr>
 <tr><td><a href="#starttransaction"><strong>.startTransaction()</strong></a><p>    starts a transaction in the current process on the database matching the datastore to which it applies</td></tr>
 <tr><td><a href="#stoprequestlog"><strong>.stopRequestLog()</strong>  </a><p>    stops any logging of ORDA requests on the client side</td></tr>
@@ -137,7 +137,7 @@
 
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
  <span class="hljs-variable">$frenchStudents</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"french"</span>)
- 
+
  <span class="hljs-variable">$connectTo</span>.hostname:=<span class="hljs-string">"192.168.18.11:8050"</span>
  <span class="hljs-variable">$foreignStudents</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"foreign"</span>)
   <span class="hljs-comment">//...</span>
@@ -210,7 +210,7 @@
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="example-1-1"></a><a href="#example-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <p>Connection to a remote datastore without user / password:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword"> 
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
  <span class="hljs-variable">$remoteDS</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"students"</span>)
@@ -218,7 +218,7 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-2-1"></a><a href="#example-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
 <p>Connection to a remote datastore with user / password / timeout / tls:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword"> 
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"type"</span>;<span class="hljs-string">"4D Server"</span>;<span class="hljs-string">"hostname"</span>;\<span class="hljs-string">"192.168.18.11:4443"</span>;\  
     <span class="hljs-string">"user"</span>;<span class="hljs-string">"marie"</span>;<span class="hljs-string">"password"</span>;<span class="hljs-variable">$pwd</span>;<span class="hljs-string">"idleTimeout"</span>;<span class="hljs-number">70</span>;<span class="hljs-string">"tls"</span>;<span class="hljs-literal">True</span>)
@@ -227,7 +227,7 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h4>
 <p>Working with several remote datastores:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword"> 
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connectTo </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$frenchStudents</span>; <span class="hljs-variable">$foreignStudents </span>: cs.DataStore
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"192.168.18.11:8044"</span>)
  <span class="hljs-variable">$frenchStudents</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"french"</span>)
@@ -257,7 +257,7 @@
  var</span> <span class="hljs-variable">$sel </span>: cs.EmployeeSelection
  <span class="hljs-variable">$emp</span>:=ds.Employee <span class="hljs-comment">//$emp contains the Employee dataclass</span>
  <span class="hljs-variable">$sel</span>:=<span class="hljs-variable">$emp</span>.<span class="hljs-function">all</span>() <span class="hljs-comment">//gets an entity selection of all employees</span>
- 
+
   <span class="hljs-comment">//you could also write directly:</span>
  <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">all</span>()
 </code></pre>
@@ -338,9 +338,9 @@
 <h4><a class="anchor" aria-hidden="true" id="example-5"></a><a href="#example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>You want to know the number of encrypted tables in the current data file:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object
- 
+
  <span class="hljs-variable">$status</span>:=dataStore.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
- 
+
  If</span>(<span class="hljs-variable">$status</span>.isEncrypted) <span class="hljs-comment">//the database is encrypted</span>
 <span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$vcount</span>)
 <span class="hljs-function">    C_TEXT</span>(<span class="hljs-variable">$tabName</span>)<span class="hljs-keyword">
@@ -394,10 +394,10 @@
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="example-1-2"></a><a href="#example-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$info </span>: Object
- 
+
  <span class="hljs-variable">$info</span>:=ds.<span class="hljs-function">getInfo</span>() <span class="hljs-comment">//Executed on 4D Server or 4D</span>
   <span class="hljs-comment">//{"type":"4D","networked":false,"localID":""}</span>
- 
+
  <span class="hljs-variable">$info</span>:=ds.<span class="hljs-function">getInfo</span>() <span class="hljs-comment">// Executed on 4D remote</span>
   <span class="hljs-comment">//{"type":"4D","networked":true,"localID":""}</span>
 </code></pre>
@@ -405,11 +405,11 @@
 <p>On a remote datastore:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">  var</span> <span class="hljs-variable">$remoteDS </span>: cs.DataStore<span class="hljs-keyword">
   var</span> <span class="hljs-variable">$info</span>; <span class="hljs-variable">$connectTo </span>: Object
- 
+
  <span class="hljs-variable">$connectTo</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"111.222.33.44:8044"</span>;<span class="hljs-string">"user"</span>;<span class="hljs-string">"marie"</span>;<span class="hljs-string">"password"</span>;<span class="hljs-string">"aaaa"</span>)
  <span class="hljs-variable">$remoteDS</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connectTo</span>;<span class="hljs-string">"students"</span>)
  <span class="hljs-variable">$info</span>:=<span class="hljs-variable">$remoteDS</span>.<span class="hljs-function">getInfo</span>()
- 
+
   <span class="hljs-comment">//{"type":"4D Server",</span>
   <span class="hljs-comment">//"localID":"students",</span>
   <span class="hljs-comment">//"networked":true,</span>
@@ -556,7 +556,7 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 <h4><a class="anchor" aria-hidden="true" id="example-7"></a><a href="#example-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$keyStatus </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$passphrase </span>: Text
- 
+
  <span class="hljs-variable">$passphrase</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Enter the passphrase"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
     <span class="hljs-variable">$keyStatus</span>:=ds.<span class="hljs-function">provideDataKey</span>(<span class="hljs-variable">$passphrase</span>)<span class="hljs-keyword">
@@ -638,7 +638,7 @@ If <code>.startRequestLog( )</code> is called with a file while a logging was pr
  var</span> <span class="hljs-variable">$e </span>: cs.PersonsEntity
 
  <span class="hljs-variable">$file</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/LOGS/ORDARequests.txt"</span>) <span class="hljs-comment">//logs folder</span>
- 
+
 <span class="hljs-function"> SET DATABASE PARAMETER</span>(Client Log Recording;<span class="hljs-number">1</span>) <span class="hljs-comment">//to trigger the global log sequence number</span>
  ds.<span class="hljs-function">startRequestLog</span>(<span class="hljs-variable">$file</span>)
  <span class="hljs-variable">$e</span>:=ds.Persons.<span class="hljs-function">get</span>(<span class="hljs-number">30001</span>) <span class="hljs-comment">//send a request</span>
@@ -649,13 +649,13 @@ If <code>.startRequestLog( )</code> is called with a file while a logging was pr
 <p>You want to log ORDA client requests in memory:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.PersonsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$log </span>: Collection
-  
+
  ds.<span class="hljs-function">startRequestLog</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">//keep 3 requests in memory</span>
- 
+
  <span class="hljs-variable">$es</span>:=ds.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"name=:1"</span>;<span class="hljs-string">"Marie"</span>)
  <span class="hljs-variable">$es</span>:=ds.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"name IN :1"</span>;<span class="hljs-function">New collection</span>(<span class="hljs-string">"Marie"</span>))
  <span class="hljs-variable">$es</span>:=ds.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"name=:1"</span>;<span class="hljs-string">"So@"</span>)
- 
+
  <span class="hljs-variable">$log</span>:=ds.<span class="hljs-function">getRequestLog</span>()
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"The longest request lasted: "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$log</span>.<span class="hljs-function">max</span>(<span class="hljs-string">"duration"</span>))+<span class="hljs-string">" ms"</span>)
 </code></pre>
@@ -691,7 +691,7 @@ If <code>.startRequestLog( )</code> is called with a file while a logging was pr
  var</span> <span class="hljs-variable">$ds </span>: cs.DataStore<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$choice </span>: Text<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$error </span>: Boolean<span class="hljs-keyword">
- 
+
  Case of</span>
     :(<span class="hljs-variable">$choice</span>=<span class="hljs-string">"local"</span>)
        <span class="hljs-variable">$ds</span>:=ds
@@ -699,10 +699,10 @@ If <code>.startRequestLog( )</code> is called with a file while a logging was pr
        <span class="hljs-variable">$connect</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>;<span class="hljs-string">"111.222.3.4:8044"</span>)
        <span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-variable">$connect</span>;<span class="hljs-string">"myRemoteDS"</span>)<span class="hljs-keyword">
  End case</span>
- 
+
  <span class="hljs-variable">$ds</span>.<span class="hljs-function">startTransaction</span>()
  <span class="hljs-variable">$person</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">query</span>(<span class="hljs-string">"lastname=:1"</span>;<span class="hljs-string">"Peters"</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword">
- 
+
  If</span>(<span class="hljs-variable">$person</span>#<span class="hljs-literal">Null</span>)
     <span class="hljs-variable">$person</span>.lastname:=<span class="hljs-string">"Smith"</span>
     <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$person</span>.<span class="hljs-function">save</span>()<span class="hljs-keyword">

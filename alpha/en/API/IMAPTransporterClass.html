@@ -96,11 +96,11 @@
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    the path of the extended log file defined (if any) for the mail connection</td></tr>
 <tr><td>[</td></tr>
 <tr><td><strong>.move</strong>( <em>msgsIDs</em> : Collection ; <em>destinationBox</em> : Text ) : Object<br><strong>.move</strong>( <em>allMsgs</em> : Integer ; <em>destinationBox</em> : Text ) : Object](#move)<p>    moves the messages defined by <em>msgsIDs</em> or <em>allMsgs</em> to the <em>destinationBox</em> on the IMAP server</td></tr>
-<tr><td><a href="#numToID"><strong>.numToID</strong>( <em>startMsg</em> : Integer ; <em>endMsg</em> : Integer ) : Collection</a><p>    converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by <em>startMsg</em> and <em>endMsg</em></td></tr>
+<tr><td><a href="#numtoid"><strong>.numToID</strong>( <em>startMsg</em> : Integer ; <em>endMsg</em> : Integer ) : Collection</a><p>    converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by <em>startMsg</em> and <em>endMsg</em></td></tr>
 <tr><td><a href="#removeflags"><strong>.removeFlags</strong>( <em>msgIDs</em> : Collection ; <em>keywords</em> :  Object ) : Object<br><strong>.removeFlags</strong>( <em>msgIDs</em> : Text ; <em>keywords</em> :  Object ) : Object<br><strong>.removeFlags</strong>( <em>msgIDs</em> : Longint ; <em>keywords</em> :  Object ) : Object</a><p>    removes flags from the <code>msgIDs</code> for the specified <code>keywords</code></td></tr>
 <tr><td><a href="#renamebox"><strong>.renameBox</strong>( <em>currentName</em> : Text ; <em>newName</em> : Text ) : Object</a><p>    changes the name of a mailbox on the IMAP server</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     the port number used for mail transactions</td></tr>
-<tr><td><a href="#selectbox"><strong>.searchMails</strong>( <em>searchCriteria</em> : Text ) : Collection</a><p>    searches for messages that match the given <em>searchCriteria</em> in the current mailbox</td></tr>
+<tr><td><a href="#searchmails"><strong>.searchMails</strong>( <em>searchCriteria</em> : Text ) : Collection</a><p>    searches for messages that match the given <em>searchCriteria</em> in the current mailbox</td></tr>
 <tr><td><a href="#selectbox"><strong>.selectBox</strong>( <em>name</em> : Text { ; <em>state</em> : Integer } ) : Object</a><p>    selects the <code>name</code> mailbox as the current mailbox</td></tr>
 <tr><td><a href="#subscribe"><strong>.subscribe</strong>( <em>name</em> : Text ) : Object</a><p>    allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes</td></tr>
 <tr><td><a href="#unsubscribe"><strong>.unsubscribe</strong>( <em>name</em> : Text ) : Object</a><p>    removes a mailbox from a set of subscribed mailboxes</td></tr>
@@ -163,10 +163,10 @@
 <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 <span class="hljs-variable">$server</span>.logFile:=<span class="hljs-string">"LogTest.txt"</span> <span class="hljs-comment">//log to save in the Logs folder</span><span class="hljs-keyword">
- 
+
 var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">checkConnection</span>()<span class="hljs-keyword">
 If</span>(<span class="hljs-function">Not</span>(<span class="hljs-variable">$status</span>.success))
 <span class="hljs-function">   ALERT</span>(<span class="hljs-string">"An error occurred: "</span>+<span class="hljs-variable">$status</span>.statusText)<span class="hljs-keyword">
@@ -293,19 +293,19 @@ End if</span>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$options</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object
- 
+
 <span class="hljs-variable">$options</span>:=New object
 <span class="hljs-variable">$options</span>.host:=<span class="hljs-string">"imap.gmail.com"</span>
 <span class="hljs-variable">$options</span>.port:=<span class="hljs-number">993</span>
 <span class="hljs-variable">$options</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$options</span>.password:=<span class="hljs-string">"xxxxx"</span>
- 
+
 <span class="hljs-comment">// Create transporter</span>
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
- 
+
 <span class="hljs-comment">// Select mailbox</span>
 <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)
- 
+
 <span class="hljs-comment">// Mark all messages from INBOX as read/seen</span>
 <span class="hljs-variable">$flags</span>:=New object
 <span class="hljs-variable">$flags</span>[<span class="hljs-string">"$seen"</span>]:=<span class="hljs-literal">True</span>
@@ -540,21 +540,21 @@ End if</span>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailIds </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
- 
+
   <span class="hljs-comment">//get collection of message unique IDs</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"subject \"4D new feature:\""</span>)
- 
+
   <span class="hljs-comment">// copy found messages to the "documents" mailbox</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">copy</span>(<span class="hljs-variable">$mailIds</span>;<span class="hljs-string">"documents"</span>)
 </code></pre>
@@ -562,19 +562,19 @@ End if</span>
 <p>To copy all messages in the current mailbox:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
 
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
- 
+
   <span class="hljs-comment">// copy all messages to the "documents" mailbox</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">copy</span>(IMAP all;<span class="hljs-string">"documents"</span>)
 </code></pre>
@@ -697,21 +697,21 @@ End if</span>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailIds </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Inbox"</span>)
- 
+
   <span class="hljs-comment">//get collection of message unique IDs</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"subject \"Reports\""</span>)
- 
+
   <span class="hljs-comment">// Delete selected messages</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(<span class="hljs-variable">$mailIds</span>)
 </code></pre>
@@ -719,18 +719,18 @@ End if</span>
 <p>To delete all messages in the current mailbox:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Junk Email"</span>)
- 
+
   <span class="hljs-comment">// delete all messages in the current mailbox</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(IMAP all)
 </code></pre>
@@ -846,23 +846,23 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="example-5"></a><a href="#example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$options</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$ids </span>: Collection
- 
+
 <span class="hljs-variable">$options</span>:=New object
 <span class="hljs-variable">$options</span>.host:=<span class="hljs-string">"imap.gmail.com"</span>
 <span class="hljs-variable">$options</span>.port:=<span class="hljs-number">993</span>
 <span class="hljs-variable">$options</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$options</span>.password:=<span class="hljs-string">"xxxxx"</span>
- 
+
 <span class="hljs-comment">// Create transporter</span>
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
- 
+
 <span class="hljs-comment">// Select mailbox</span>
 <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)
- 
+
 <span class="hljs-comment">// Find and delete all seen messages in INBOX</span>
 <span class="hljs-variable">$ids</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"SEEN"</span>)
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(<span class="hljs-variable">$ids</span>)
- 
+
 <span class="hljs-comment">// Purge all messages flagged as deleted</span>
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">expunge</span>()
 </code></pre>
@@ -906,7 +906,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <h4><a class="anchor" aria-hidden="true" id="example-6"></a><a href="#example-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
  <span class="hljs-variable">$info</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getBoxInfo</span>(<span class="hljs-string">"INBOX"</span>)
 <span class="hljs-function"> ALERT</span>(<span class="hljs-string">"INBOX contains "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$info</span>.mailRecent)+<span class="hljs-string">" recent emails."</span>)
 </code></pre>
@@ -966,9 +966,9 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <h4><a class="anchor" aria-hidden="true" id="example-7"></a><a href="#example-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
  <span class="hljs-variable">$boxList</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getBoxList</span>()<span class="hljs-keyword">
- 
+
  For each</span>(<span class="hljs-variable">$box</span>;<span class="hljs-variable">$boxList</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-variable">$box</span>.interesting)
        <span class="hljs-variable">$split</span>:=<span class="hljs-function">Split string</span>(<span class="hljs-variable">$box</span>.name;<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getDelimiter</span>())
@@ -1014,9 +1014,9 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <h4><a class="anchor" aria-hidden="true" id="example-8"></a><a href="#example-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
  <span class="hljs-variable">$boxList</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getBoxList</span>()<span class="hljs-keyword">
- 
+
  For each</span>(<span class="hljs-variable">$box</span>;<span class="hljs-variable">$boxList</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-variable">$box</span>.interesting)
        <span class="hljs-variable">$split</span>:=<span class="hljs-function">Split string</span>(<span class="hljs-variable">$box</span>.name;<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getDelimiter</span>())
@@ -1078,19 +1078,19 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$info</span>; <span class="hljs-variable">$mail</span>; <span class="hljs-variable">$boxInfo </span>: Variant<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
   <span class="hljs-comment">//create transporter</span>
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Inbox"</span>)
- 
+
   <span class="hljs-comment">//get Email object with ID 1</span>
  <span class="hljs-variable">$mail</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getMail</span>(<span class="hljs-number">1</span>)
 </code></pre>
@@ -1161,20 +1161,20 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <h4><a class="anchor" aria-hidden="true" id="example-10"></a><a href="#example-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>You want to retrieve the 20 most recent emails without changing their &quot;seen&quot; status:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>,<span class="hljs-variable">$boxInfo</span>,<span class="hljs-variable">$result </span>: Object<span class="hljs-keyword">
- var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter 
- 
+ var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
   <span class="hljs-comment">//create transporter</span>
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)<span class="hljs-keyword">
- 
+
   If</span>(<span class="hljs-variable">$boxInfo</span>.mailCount&gt;<span class="hljs-number">0</span>)
         <span class="hljs-comment">// retrieve the headers of the last 20 messages without marking them as read</span>
     <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getMails</span>(<span class="hljs-variable">$boxInfo</span>.mailCount<span class="hljs-number">-20</span>;<span class="hljs-variable">$boxInfo</span>.mailCount;\
@@ -1233,19 +1233,19 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
  var</span> <span class="hljs-variable">$boxInfo </span>: Variant<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$blob </span>: Blob<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
   <span class="hljs-comment">//create transporter</span>
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Inbox"</span>)
- 
+
   <span class="hljs-comment">//get BLOB</span>
  <span class="hljs-variable">$blob</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getMIMEAsBlob</span>(<span class="hljs-number">1</span>)
 </code></pre>
@@ -1337,21 +1337,21 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailIds </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
- 
+
   <span class="hljs-comment">//get collection of message unique IDs</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"subject \"4D new feature:\""</span>)
- 
+
   <span class="hljs-comment">// Move found messages from the current mailbox to the "documents" mailbox</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">move</span>(<span class="hljs-variable">$mailIds</span>;<span class="hljs-string">"documents"</span>)
 </code></pre>
@@ -1359,18 +1359,18 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p>To move all messages in the current mailbox:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
- 
+
   <span class="hljs-comment">// move all messages in the current mailbox to the "documents" mailbox</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">move</span>(IMAP all;<span class="hljs-string">"documents"</span>)
 </code></pre>
@@ -1406,21 +1406,21 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailIds </span>: Collection
- 
+
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
- 
+
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
- 
+
   <span class="hljs-comment">//select mailbox</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
- 
+
   <span class="hljs-comment">//get IDs for 5 last messages received</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">numToID</span>((<span class="hljs-variable">$boxInfo</span>.mailCount<span class="hljs-number">-5</span>);<span class="hljs-variable">$boxInfo</span>.mailCount)
- 
+
   <span class="hljs-comment">//delete the messages from the current mailbox</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(<span class="hljs-variable">$mailIds</span>)
 </code></pre>
@@ -1494,19 +1494,19 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </table>
 <h4><a class="anchor" aria-hidden="true" id="example-13"></a><a href="#example-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$options</span>;<span class="hljs-variable">$transporter</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object
- 
+
 <span class="hljs-variable">$options</span>:=New object
 <span class="hljs-variable">$options</span>.host:=<span class="hljs-string">"imap.gmail.com"</span>
 <span class="hljs-variable">$options</span>.port:=<span class="hljs-number">993</span>
 <span class="hljs-variable">$options</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$options</span>.password:=<span class="hljs-string">"xxxxx"</span>
- 
+
 <span class="hljs-comment">// Create transporter</span>
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
- 
+
 <span class="hljs-comment">// Select mailbox</span>
 <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)
- 
+
 <span class="hljs-comment">// Mark all messages from INBOX as unseen</span>
 <span class="hljs-variable">$flags</span>:=New object
 <span class="hljs-variable">$flags</span>[<span class="hljs-string">"$seen"</span>]:=<span class="hljs-literal">True</span>
@@ -1782,7 +1782,7 @@ Examples:
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span><span class="hljs-keyword">
- 
+
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)

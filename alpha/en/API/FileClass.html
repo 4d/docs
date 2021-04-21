@@ -94,7 +94,7 @@
 <tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>    true if the file is set as &quot;hidden&quot; at the system level</td></tr>
 <tr><td><a href="#isalias"><strong>.isAlias</strong> : Boolean</a><p>    true if the file is an alias, a shortcut, or a symbolic link</td></tr>
 <tr><td><a href="#isfile"><strong>.isFile</strong> : Boolean</a><p>    always true for a file</td></tr>
-<tr><td><a href="#isFolder"><strong>.isFolder</strong> : Boolean</a><p>    always false for a file</td></tr>
+<tr><td><a href="#isfolder"><strong>.isFolder</strong> : Boolean</a><p>    always false for a file</td></tr>
 <tr><td><a href="#iswritable"><strong>.isWritable</strong> : Boolean</a><p>    true if the file exists on disk and is writable</td></tr>
 <tr><td><a href="#modificationdate"><strong>.modificationDate</strong> : Date</a><p>    the date of the file's last modification</td></tr>
 <tr><td><a href="#modificationtime"><strong>.modificationTime</strong> : Time</a><p>    the time of the file's last modification</td></tr>
@@ -942,8 +942,8 @@ var</span> <span class="hljs-variable">$exeFile </span>: 4D.File<span class="hlj
 var</span> <span class="hljs-variable">$info </span>: Object
 <span class="hljs-variable">$exeFile</span>:=<span class="hljs-function">File</span>(Application file; fk platform path)
 <span class="hljs-variable">$info</span>:=New object
-<span class="hljs-variable">$info</span>.LegalCopyright:=<span class="hljs-string">"Copyright 4D 2021"</span> 
-<span class="hljs-variable">$info</span>.ProductVersion:=<span class="hljs-string">"1.0.0"</span> 
+<span class="hljs-variable">$info</span>.LegalCopyright:=<span class="hljs-string">"Copyright 4D 2021"</span>
+<span class="hljs-variable">$info</span>.ProductVersion:=<span class="hljs-string">"1.0.0"</span>
 <span class="hljs-variable">$exeFile</span>.<span class="hljs-function">setAppInfo</span>(<span class="hljs-variable">$info</span>)
 </code></pre>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// set some keys in an info.plist file (all platforms)</span><span class="hljs-keyword">
